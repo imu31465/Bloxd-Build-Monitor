@@ -1,502 +1,502 @@
 export const id = 247;
 export const ids = [247];
 export const modules = {
-  41050: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => ik,
-      g: () => yk
+  41055: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => XS,
+      d: () => xS
     });
-    var Xk = Ik(1886);
-    let Tk = !1;
+    var tS = gS(2073);
+    let bS = !1;
 
-    function ik() {
-      Tk = !0
+    function XS() {
+      bS = !0
     }
 
-    function yk() {
-      Tk && (Tk = !1, (0, Xk.c)())
+    function xS() {
+      bS && (bS = !1, (0, tS.c)())
     }
   },
-  41047: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => yk,
-      g: () => ik,
-      j: () => lk
+  41053: (SS, HS, gS) => {
+    gS.d(HS, {
+      c: () => xS,
+      f: () => XS,
+      i: () => NS
     });
-    var Xk = Ik(40583),
-      Tk = Ik(40596);
+    var tS = gS(40612),
+      bS = gS(40625);
 
-    function ik(kk) {
-      if (kk.queries.drawCensus() < Xk.xb.BYTES) return null;
-      const Fk = kk.memoryData(kk.scratch(), Xk.xb.BYTES, 4, "the draw census");
-      return null === Fk ? null : {
-        terrainOpaque: Xk.xb.terrainOpaque(Fk, 0),
-        terrainTransparent: Xk.xb.terrainTransparent(Fk, 0),
-        terrainPack: Xk.xb.terrainPack(Fk, 0),
-        earthSky: Xk.xb.earthSky(Fk, 0),
-        skyMeshes: Xk.xb.skyMeshes(Fk, 0),
-        regular: Xk.xb.regular(Fk, 0),
-        thin: Xk.xb.thin(Fk, 0),
-        line: Xk.xb.line(Fk, 0),
-        text: Xk.xb.text(Fk, 0),
-        particles: Xk.xb.particles(Fk, 0),
-        terrainParts: Xk.xb.terrainParts(Fk, 0),
-        terrainCompiling: Xk.xb.terrainCompiling(Fk, 0),
-        ringCopiesMax: Xk.xb.ringCopiesMax(Fk, 0),
-        ringBusyWrites: Xk.xb.ringBusyWrites(Fk, 0)
+    function XS(SS) {
+      if (SS.queries.drawCensus() < tS.kb.BYTES) return null;
+      const HS = SS.memoryData(SS.scratch(), tS.kb.BYTES, 4, "the draw census");
+      return null === HS ? null : {
+        terrainOpaque: tS.kb.terrainOpaque(HS, 0),
+        terrainTransparent: tS.kb.terrainTransparent(HS, 0),
+        terrainPack: tS.kb.terrainPack(HS, 0),
+        earthSky: tS.kb.earthSky(HS, 0),
+        skyMeshes: tS.kb.skyMeshes(HS, 0),
+        regular: tS.kb.regular(HS, 0),
+        thin: tS.kb.thin(HS, 0),
+        line: tS.kb.line(HS, 0),
+        text: tS.kb.text(HS, 0),
+        particles: tS.kb.particles(HS, 0),
+        terrainParts: tS.kb.terrainParts(HS, 0),
+        terrainCompiling: tS.kb.terrainCompiling(HS, 0),
+        ringCopiesMax: tS.kb.ringCopiesMax(HS, 0),
+        ringBusyWrites: tS.kb.ringBusyWrites(HS, 0)
       }
     }
 
-    function yk(kk) {
+    function xS(SS) {
       const {
-        terrainOpaque: Fk,
-        terrainTransparent: Ik,
-        earthSky: Xk,
-        skyMeshes: Tk,
-        regular: ik,
-        thin: yk,
-        line: lk,
-        text: ak,
-        particles: qk
-      } = kk;
-      return Fk + Ik + Xk + Tk + ik + yk + lk + ak + qk
+        terrainOpaque: HS,
+        terrainTransparent: gS,
+        earthSky: tS,
+        skyMeshes: bS,
+        regular: XS,
+        thin: xS,
+        line: NS,
+        text: qS,
+        particles: uS
+      } = SS;
+      return HS + gS + tS + bS + XS + xS + NS + qS + uS
     }
 
-    function lk() {
-      const kk = (0, Tk.k)();
-      return !0 === (null === kk || void 0 === kk ? void 0 : kk.isCoreRunning) ? function(kk) {
-        const Fk = ik(kk);
-        if (null === Fk) return [];
+    function NS() {
+      const SS = (0, bS.h)();
+      return !0 === (null === SS || void 0 === SS ? void 0 : SS.isCoreRunning) ? function(SS) {
+        const HS = XS(SS);
+        if (null === HS) return [];
         const {
-          terrainOpaque: Ik,
-          terrainTransparent: Xk,
-          terrainPack: Tk,
-          earthSky: lk,
-          skyMeshes: ak,
-          regular: qk,
-          thin: Lk,
-          line: tk,
-          text: Zk,
-          particles: jk
-        } = Fk;
+          terrainOpaque: gS,
+          terrainTransparent: tS,
+          terrainPack: bS,
+          earthSky: NS,
+          skyMeshes: qS,
+          regular: uS,
+          thin: IS,
+          line: fS,
+          text: kS,
+          particles: aS
+        } = HS;
         return [{
           label: "Drawn",
-          value: `${yk(Fk)}`
+          value: `${xS(HS)}`
         }, {
           label: "Terrain",
-          value: `${Ik} opaque / ${Xk} transparent (${Tk} shader pack)`
+          value: `${gS} opaque / ${tS} transparent (${bS} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${qk} / ${Lk}`
+          value: `${uS} / ${IS}`
         }, {
           label: "Text / Lines",
-          value: `${Zk} / ${tk}`
+          value: `${kS} / ${fS}`
         }, {
           label: "Sky / Particles",
-          value: `${lk+ak} / ${jk}`
+          value: `${NS+qS} / ${aS}`
         }]
-      }(kk.api) : []
+      }(SS.api) : []
     }
   },
-  41029: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => ek,
-      i: () => Zk,
-      m: () => jk
+  41042: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => KS,
+      c: () => kS,
+      f: () => aS
     });
-    var Xk = Ik(1891),
-      Tk = Ik(1272),
-      ik = Ik(40596),
-      yk = Ik(40609),
-      lk = Ik(40614),
-      ak = Ik(40636);
-    const qk = new Tk.d;
-    let Lk = !1;
+    var tS = gS(2077),
+      bS = gS(1371),
+      XS = gS(40625),
+      xS = gS(40649),
+      NS = gS(40655),
+      qS = gS(40666);
+    const uS = new bS.d;
+    let IS = !1;
 
-    function tk(kk) {
-      const Fk = (0, ik.k)();
-      return null !== Fk && +kk === Fk.api.localId
+    function fS(SS) {
+      const HS = (0, XS.h)();
+      return null !== HS && +SS === HS.api.localId
     }
 
-    function Zk() {
-      Lk || (Lk = !0, (0, ak.l)(yk.m, (kk => {
-        var Fk, Ik;
-        const Xk = (0, lk.e)(yk.m, kk);
-        if (!(0, lk.c)(Xk)) return;
-        const Tk = Xk;
-        tk(Tk.wX) && jk(Tk.HX, {
-          icon: Tk.sT,
-          level: Tk.zT,
-          displayName: null !== (Fk = Tk.JX) && void 0 !== Fk ? Fk : null,
-          durationMs: null !== (Ik = Tk.VT) && void 0 !== Ik ? Ik : null
+    function kS() {
+      IS || (IS = !0, (0, qS.l)(xS.s, (SS => {
+        var HS, gS;
+        const tS = (0, NS.e)(xS.s, SS);
+        if (!(0, NS.b)(tS)) return;
+        const bS = tS;
+        fS(bS.Kt) && aS(bS.jt, {
+          icon: bS.Ob,
+          level: bS.Eb,
+          displayName: null !== (HS = bS.Gt) && void 0 !== HS ? HS : null,
+          durationMs: null !== (gS = bS.cb) && void 0 !== gS ? gS : null
         })
-      })), (0, ak.l)(yk.J, (kk => {
-        const Fk = (0, lk.e)(yk.J, kk);
-        if (!(0, lk.c)(Fk)) return;
-        const Ik = Fk;
-        tk(Ik.wX) && Xk.e.remove(Ik.HX)
-      })), (0, ak.f)((() => {
-        Xk.e.clear()
+      })), (0, qS.l)(xS.X, (SS => {
+        const HS = (0, NS.e)(xS.X, SS);
+        if (!(0, NS.b)(HS)) return;
+        const gS = HS;
+        fS(gS.Kt) && tS.e.remove(gS.jt)
+      })), (0, qS.f)((() => {
+        tS.e.clear()
       })))
     }
 
-    function jk(kk, Fk) {
-      Xk.e.update(kk, Fk), qk.forEach((Fk => {
-        Fk(kk)
+    function aS(SS, HS) {
+      tS.e.update(SS, HS), uS.forEach((HS => {
+        HS(SS)
       }))
     }
-    const ek = {
+    const KS = {
       localEffectUpdated: {
-        watch: kk => qk.add(kk)
+        watch: SS => uS.add(SS)
       }
     }
   },
-  41037: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => Lk
+  41046: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => IS
     });
-    var Xk = Ik(4799),
-      Tk = Ik(4797),
-      ik = Ik(40623),
-      yk = Ik(40636);
-    const lk = new Set(Xk.M),
-      ak = Xk.M.map((kk => (new TextEncoder).encode(kk))),
-      qk = new Map;
+    var tS = gS(4935),
+      bS = gS(4926),
+      XS = gS(40658),
+      xS = gS(40666);
+    const NS = new Set(tS.O),
+      qS = tS.O.map((SS => (new TextEncoder).encode(SS))),
+      uS = new Map;
 
-    function Lk(kk, Fk) {
-      var Ik;
-      return null === (Ik = qk.get(kk)) || void 0 === Ik ? void 0 : Ik[Fk]
-    }(0, yk.l)(Xk.sc.NewOtherEntitySettings, (kk => {
-      kk.payloadKind === Tk.fc.Msgpack && ak.some((Fk => function(kk, Fk) {
-        const Ik = Fk[0];
-        for (let Xk = kk.indexOf(Ik); - 1 !== Xk && Xk + Fk.length <= kk.length; Xk = kk.indexOf(Ik, Xk + 1)) {
-          let Ik = 1;
-          for (; Ik < Fk.length && kk[Xk + Ik] === Fk[Ik];) Ik++;
-          if (Ik === Fk.length) return !0
+    function IS(SS, HS) {
+      var gS;
+      return null === (gS = uS.get(SS)) || void 0 === gS ? void 0 : gS[HS]
+    }(0, xS.l)(tS.kc.NewOtherEntitySettings, (SS => {
+      SS.payloadKind === bS.xc.Msgpack && qS.some((HS => function(SS, HS) {
+        const gS = HS[0];
+        for (let tS = SS.indexOf(gS); - 1 !== tS && tS + HS.length <= SS.length; tS = SS.indexOf(gS, tS + 1)) {
+          let gS = 1;
+          for (; gS < HS.length && SS[tS + gS] === HS[gS];) gS++;
+          if (gS === HS.length) return !0
         }
         return !1
-      }(kk.payload, Fk))) && function(kk) {
-        if (null === kk || "object" !== typeof kk || null === kk.settings || "object" !== typeof kk.settings) return;
-        const Fk = String(kk.eId),
-          Ik = kk.settings;
-        let Xk = qk.get(Fk);
-        for (const Tk in Ik) {
-          if (!lk.has(Tk)) continue;
-          const kk = Ik[Tk];
-          null === kk || void 0 === kk ? Xk && delete Xk[Tk] : (Xk ??= {}, Xk[Tk] = kk)
+      }(SS.payload, HS))) && function(SS) {
+        if (null === SS || "object" !== typeof SS || null === SS.settings || "object" !== typeof SS.settings) return;
+        const HS = String(SS.eId),
+          gS = SS.settings;
+        let tS = uS.get(HS);
+        for (const bS in gS) {
+          if (!NS.has(bS)) continue;
+          const SS = gS[bS];
+          null === SS || void 0 === SS ? tS && delete tS[bS] : (tS ??= {}, tS[bS] = SS)
         }
-        Xk && qk.set(Fk, Xk)
-      }((0, ik.b)(kk.payload))
-    })), (0, yk.f)((() => {
-      qk.clear()
+        tS && uS.set(HS, tS)
+      }((0, XS.c)(SS.payload))
+    })), (0, xS.f)((() => {
+      uS.clear()
     }))
   },
-  41020: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => jk,
-      f: () => qk,
-      g: () => tk
+  41035: (SS, HS, gS) => {
+    gS.d(HS, {
+      c: () => aS,
+      g: () => uS,
+      j: () => fS
     });
-    var Xk = Ik(38986),
-      Tk = Ik(1881),
-      ik = Ik(1272),
-      yk = Ik(40609),
-      lk = Ik(40614),
-      ak = Ik(40636);
-    const qk = new Xk.d;
-    let Lk = {};
+    var tS = gS(39023),
+      bS = gS(2069),
+      XS = gS(1371),
+      xS = gS(40649),
+      NS = gS(40655),
+      qS = gS(40666);
+    const uS = new tS.c;
+    let IS = {};
 
-    function tk(kk) {
-      return Lk[kk]
+    function fS(SS) {
+      return IS[SS]
     }
-    const Zk = new ik.d;
+    const kS = new XS.d;
 
-    function jk(kk) {
-      return Zk.add(kk)
+    function aS(SS) {
+      return kS.add(SS)
     }
 
-    function ek(kk) {
-      Zk.callEach(kk, "a roster listener")
-    }(0, ak.l)(yk.T, (kk => {
-      const Fk = (0, lk.e)(yk.T, kk);
-      if (void 0 === Fk) return;
-      const Ik = Fk.DI.some((kk => {
+    function KS(SS) {
+      kS.callEach(SS, "a roster listener")
+    }(0, qS.l)(xS.cb, (SS => {
+      const HS = (0, NS.e)(xS.cb, SS);
+      if (void 0 === HS) return;
+      const gS = HS.og.some((SS => {
           let {
-            MI: Fk,
-            kX: Ik
-          } = kk;
-          return null !== Ik && qk.has(Fk) && qk.getName(Fk) !== Ik
+            lg: HS,
+            mg: gS
+          } = SS;
+          return null !== gS && uS.has(HS) && uS.getName(HS) !== gS
         })),
         {
-          added: Xk,
-          removed: ik,
-          settingChanges: ak
-        } = qk.apply(Fk),
-        Lk = new Set;
-      for (const Tk of ak)
-        for (const kk in Tk.settings) Lk.add(kk);
-      const tk = Ik || Xk.length > 0 || ik.length > 0;
-      (tk || Lk.has("hideNameSeed")) && function() {
-        const kk = new Map;
-        for (const Fk of qk.ids()) {
-          const Ik = qk.getName(Fk),
-            Xk = qk.getSetting(Fk, "hideNameSeed");
-          void 0 !== Ik && void 0 !== Xk && null !== Xk && kk.set(Ik, Xk)
+          added: tS,
+          removed: XS,
+          settingChanges: qS
+        } = uS.apply(HS),
+        IS = new Set;
+      for (const bS of qS)
+        for (const SS in bS.settings) IS.add(SS);
+      const fS = gS || tS.length > 0 || XS.length > 0;
+      (fS || IS.has("hideNameSeed")) && function() {
+        const SS = new Map;
+        for (const HS of uS.ids()) {
+          const gS = uS.getName(HS),
+            tS = uS.getSetting(HS, "hideNameSeed");
+          void 0 !== gS && void 0 !== tS && null !== tS && SS.set(gS, tS)
         }
-        Tk.d.replaceAll(kk)
-      }(), ek({
+        bS.c.replaceAll(SS)
+      }(), KS({
         kind: "roster",
-        members: tk,
-        settings: Lk
+        members: fS,
+        settings: IS
       })
-    })), (0, ak.l)(yk.I, (kk => {
-      const Fk = (0, lk.e)(yk.I, kk);
-      if (void 0 !== Fk) {
+    })), (0, qS.l)(xS.W, (SS => {
+      const HS = (0, NS.e)(xS.W, SS);
+      if (void 0 !== HS) {
         for (const {
-            sX: kk,
-            VX: Ik,
-            zX: Xk
+            Dt: SS,
+            wt: gS,
+            ht: tS
           }
-          of Fk) Lk[kk] = {
-          ...Lk[kk],
-          [Ik]: Xk
+          of HS) IS[SS] = {
+          ...IS[SS],
+          [gS]: tS
         };
-        ek({
+        KS({
           kind: "cosmetics",
-          updates: Fk
+          updates: HS
         })
       }
-    })), (0, ak.f)((() => {
-      qk.clear(), Lk = {}, Tk.d.clear(), ek({
+    })), (0, qS.f)((() => {
+      uS.clear(), IS = {}, bS.c.clear(), KS({
         kind: "reset"
       })
-    })), (0, ak.j)((() => {
-      qk.clear(), ek({
+    })), (0, qS.h)((() => {
+      uS.clear(), KS({
         kind: "reset"
       })
     }))
   },
-  41045: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Ek,
-      i: () => Hk,
-      l: () => pk,
-      m: () => uk
+  41049: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => dS,
+      e: () => GS,
+      i: () => LS,
+      j: () => YS
     });
-    var Xk = Ik(1253),
-      Tk = Ik(614),
-      ik = Ik(95),
-      yk = Ik(4799),
-      lk = Ik(40583),
-      ak = Ik(40604),
-      qk = Ik(40596),
-      Lk = Ik(41037),
-      tk = Ik(41020),
-      Zk = Ik(40614),
-      jk = Ik(40636);
+    var tS = gS(1348),
+      bS = gS(665),
+      XS = gS(104),
+      xS = gS(4935),
+      NS = gS(40612),
+      qS = gS(40643),
+      uS = gS(40625),
+      IS = gS(41046),
+      fS = gS(41035),
+      kS = gS(40655),
+      aS = gS(40666);
 
-    function ek(kk) {
+    function KS(SS) {
       let {
-        deadEId: Fk,
-        killerEId: Ik,
-        killerLifeformType: Xk,
-        withItem: Tk,
-        killstreak: ik
-      } = kk;
+        deadEId: HS,
+        killerEId: gS,
+        killerLifeformType: tS,
+        withItem: bS,
+        killstreak: XS
+      } = SS;
       return {
-        killer: Kk({
-          eId: Ik,
-          lifeformType: Xk
+        killer: QS({
+          eId: gS,
+          lifeformType: tS
         }),
-        victim: Kk({
-          eId: Fk
+        victim: QS({
+          eId: HS
         }),
-        withItem: Tk,
-        killstreak: ik
+        withItem: bS,
+        killstreak: XS
       }
     }
 
-    function wk(kk) {
+    function jS(SS) {
       let {
-        killer: Fk,
-        victim: Ik,
-        withItem: Xk
-      } = kk;
+        killer: HS,
+        victim: gS,
+        withItem: tS
+      } = SS;
       return {
-        killer: Kk(Fk),
-        victim: Kk(Ik),
-        withItem: Xk,
+        killer: QS(HS),
+        victim: QS(gS),
+        withItem: tS,
         killstreak: 0
       }
     }
 
-    function Hk(kk) {
-      zk && vk((() => "killed" === kk.kind ? ek(kk.body) : wk(kk.body)))
+    function GS(SS) {
+      ZS && OS((() => "killed" === SS.kind ? KS(SS.body) : jS(SS.body)))
     }
-    const Jk = "#2727f1",
-      xk = "#912c2c";
+    const CS = "#2727f1",
+      nS = "#912c2c";
 
-    function Pk(kk, Fk) {
-      var Ik;
-      return tk.f.has(kk) ? null === (Ik = tk.f.getSettings(kk)) || void 0 === Ik ? void 0 : Ik[Fk] : (0, Lk.c)(kk, Fk)
+    function PS(SS, HS) {
+      var gS;
+      return fS.g.has(SS) ? null === (gS = fS.g.getSettings(SS)) || void 0 === gS ? void 0 : gS[HS] : (0, IS.b)(SS, HS)
     }
 
-    function Kk(kk) {
-      var Fk, Ik, yk, lk, Lk;
+    function QS(SS) {
+      var HS, gS, xS, NS, IS;
       let {
-        eId: Zk,
-        name: jk,
-        colour: ek,
-        lifeformType: wk
-      } = kk;
-      if (void 0 === Zk || null === Zk || "" === Zk) {
-        const kk = jk || null;
+        eId: kS,
+        name: aS,
+        colour: KS,
+        lifeformType: jS
+      } = SS;
+      if (void 0 === kS || null === kS || "" === kS) {
+        const SS = aS || null;
         return {
           id: null,
-          shownName: kk,
-          lifeformType: null === kk && null !== wk && void 0 !== wk ? wk : null,
-          colour: ek || null,
+          shownName: SS,
+          lifeformType: null === SS && null !== jS && void 0 !== jS ? jS : null,
+          colour: KS || null,
           local: !1,
           realName: null
         }
       }
-      const Hk = String(Zk),
-        Kk = null === (Fk = (0, qk.k)()) || void 0 === Fk ? void 0 : Fk.api,
-        Qk = void 0 !== Kk && String(Kk.localId) === Hk,
-        sk = null !== (Ik = tk.f.getName(Hk)) && void 0 !== Ik ? Ik : null,
-        Vk = null !== (yk = Pk(Hk, "hideNameSeed")) && void 0 !== yk ? yk : null;
-      let zk = null === sk ? null : (0, Xk.e)(sk, !ik.featureFlags.canSeeRealPlayerNames, Vk) || null,
-        Sk = null;
-      if (null === zk && void 0 !== Kk) {
-        const kk = Kk.getEntityType(Hk);
-        "Player" !== kk && (zk = (0, ak.l)(Kk, +Hk) || null), Sk = Tk.m.includes(kk) ? kk : null
+      const GS = String(kS),
+        QS = null === (HS = (0, uS.h)()) || void 0 === HS ? void 0 : HS.api,
+        DS = void 0 !== QS && String(QS.localId) === GS,
+        wS = null !== (gS = fS.g.getName(GS)) && void 0 !== gS ? gS : null,
+        hS = null !== (xS = PS(GS, "hideNameSeed")) && void 0 !== xS ? xS : null;
+      let ZS = null === wS ? null : (0, tS.d)(wS, !XS.featureFlags.canSeeRealPlayerNames, hS) || null,
+        JS = null;
+      if (null === ZS && void 0 !== QS) {
+        const SS = QS.getEntityType(GS);
+        "Player" !== SS && (ZS = (0, qS.h)(QS, +GS) || null), JS = bS.j.includes(SS) ? SS : null
       }
       return {
-        id: Hk,
-        shownName: zk,
-        lifeformType: null === zk && null !== (lk = null !== (Lk = Sk) && void 0 !== Lk ? Lk : wk) && void 0 !== lk ? lk : null,
-        colour: ek || Pk(Hk, "killfeedColour") || (Qk ? Jk : xk),
-        local: Qk,
-        realName: sk
+        id: GS,
+        shownName: ZS,
+        lifeformType: null === ZS && null !== (NS = null !== (IS = JS) && void 0 !== IS ? IS : jS) && void 0 !== NS ? NS : null,
+        colour: KS || PS(GS, "killfeedColour") || (DS ? CS : nS),
+        local: DS,
+        realName: wS
       }
     }
-    const Qk = 32;
-    let sk = [],
-      Vk = null,
-      zk = !1,
-      Sk = !1;
+    const DS = 32;
+    let wS = [],
+      hS = null,
+      ZS = !1,
+      JS = !1;
 
-    function vk(kk) {
-      null === Vk ? (sk.length === Qk && sk.shift(), sk.push(kk)) : Vk(kk())
+    function OS(SS) {
+      null === hS ? (wS.length === DS && wS.shift(), wS.push(SS)) : hS(SS())
     }
 
-    function Ek() {
-      Sk || (Sk = !0, (0, jk.l)(yk.sc.PlayerKilled, (kk => {
-        const Fk = (0, Zk.g)(kk);
-        (0, Zk.c)(Fk) && vk((() => ek(Fk)))
-      })), (0, jk.l)(yk.sc.CustomKillfeed, (kk => {
-        const Fk = (0, Zk.g)(kk);
-        (0, Zk.c)(Fk) && (0, Zk.c)(Fk.killer) && (0, Zk.c)(Fk.victim) && vk((() => wk(Fk)))
-      })), (0, jk.f)((() => {
-        sk = []
+    function dS() {
+      JS || (JS = !0, (0, aS.l)(xS.kc.PlayerKilled, (SS => {
+        const HS = (0, kS.g)(SS);
+        (0, kS.b)(HS) && OS((() => KS(HS)))
+      })), (0, aS.l)(xS.kc.CustomKillfeed, (SS => {
+        const HS = (0, kS.g)(SS);
+        (0, kS.b)(HS) && (0, kS.b)(HS.killer) && (0, kS.b)(HS.victim) && OS((() => jS(HS)))
+      })), (0, aS.f)((() => {
+        wS = []
       })))
     }
-    const Ok = Object.freeze([0, 0, 0]),
-      nk = [0, 0, 0],
-      Gk = [0, 0, 0],
-      pk = {
+    const cS = Object.freeze([0, 0, 0]),
+      vS = [0, 0, 0],
+      ES = [0, 0, 0],
+      LS = {
         kill: {
-          watch(kk) {
-            if (zk = !0, 0 === sk.length) return Vk = kk, () => {
-              zk = !1, Vk = null
+          watch(SS) {
+            if (ZS = !0, 0 === wS.length) return hS = SS, () => {
+              ZS = !1, hS = null
             };
-            const Fk = setTimeout((() => {
-              const Fk = sk;
-              sk = [], Vk = kk;
-              for (const Xk of Fk) try {
-                kk(Xk())
-              } catch (Ik) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", Ik)
+            const HS = setTimeout((() => {
+              const HS = wS;
+              wS = [], hS = SS;
+              for (const tS of HS) try {
+                SS(tS())
+              } catch (gS) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", gS)
               }
             }), 0);
             return () => {
-              clearTimeout(Fk), zk = !1, Vk = null
+              clearTimeout(HS), ZS = !1, hS = null
             }
           }
         }
       },
-      uk = {
+      YS = {
         localPos() {
-          const kk = (0, qk.k)();
-          if (null === kk) return Ok;
-          const Fk = kk.api.apiView;
-          for (let Ik = 0; Ik < 3; Ik++) nk[Ik] = lk.y.localPos(Fk, 0, Ik);
-          return nk
+          const SS = (0, uS.h)();
+          if (null === SS) return cS;
+          const HS = SS.api.apiView;
+          for (let gS = 0; gS < 3; gS++) vS[gS] = NS.t.localPos(HS, 0, gS);
+          return vS
         },
         targetedBlockPos() {
-          const kk = (0, qk.k)();
-          if (null === kk || lk.y.targetBlockId(kk.api.apiView, 0) === lk._c) return null;
-          for (let Fk = 0; Fk < 3; Fk++) Gk[Fk] = lk.y.targetBlock(kk.api.apiView, 0, Fk);
-          return Gk
+          const SS = (0, uS.h)();
+          if (null === SS || NS.t.targetBlockId(SS.api.apiView, 0) === NS.Tc) return null;
+          for (let HS = 0; HS < 3; HS++) ES[HS] = NS.t.targetBlock(SS.api.apiView, 0, HS);
+          return ES
         }
       }
   },
-  38986: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => Xk
+  39023: (SS, HS, gS) => {
+    gS.d(HS, {
+      c: () => tS
     });
-    class Xk {
+    class tS {
       constructor() {
         this.members = new Map
       }
-      apply(kk) {
-        const Fk = {
+      apply(SS) {
+        const HS = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const Xk of kk.DI) {
-          let kk = this.members.get(Xk.MI);
-          if (kk || (kk = {
+        for (const tS of SS.og) {
+          let SS = this.members.get(tS.lg);
+          if (SS || (SS = {
               name: null,
               settings: {}
-            }, this.members.set(Xk.MI, kk), Fk.added.push(Xk.MI)), null !== Xk.kX && (kk.name = Xk.kX), null !== Xk.FX || Xk.IX.length > 0) {
-            const Ik = null === Xk.FX ? {} : JSON.parse(Xk.FX);
-            Object.assign(kk.settings, Ik);
-            for (const Fk of Xk.IX) delete kk.settings[Fk], Ik[Fk] = void 0;
-            Fk.settingChanges.push({
-              playerId: Xk.MI,
-              settings: Ik
+            }, this.members.set(tS.lg, SS), HS.added.push(tS.lg)), null !== tS.mg && (SS.name = tS.mg), null !== tS.eg || tS.rg.length > 0) {
+            const gS = null === tS.eg ? {} : JSON.parse(tS.eg);
+            Object.assign(SS.settings, gS);
+            for (const HS of tS.rg) delete SS.settings[HS], gS[HS] = void 0;
+            HS.settingChanges.push({
+              playerId: tS.lg,
+              settings: gS
             })
           }
         }
-        for (const Xk of kk.XX) {
-          const kk = this.members.get(Xk);
-          var Ik;
-          if (kk) this.members.delete(Xk), Fk.removed.push({
-            playerId: Xk,
-            name: null !== (Ik = kk.name) && void 0 !== Ik ? Ik : void 0
+        for (const tS of SS.St) {
+          const SS = this.members.get(tS);
+          var gS;
+          if (SS) this.members.delete(tS), HS.removed.push({
+            playerId: tS,
+            name: null !== (gS = SS.name) && void 0 !== gS ? gS : void 0
           })
         }
-        return Fk
+        return HS
       }
-      has(kk) {
-        return this.members.has(kk)
+      has(SS) {
+        return this.members.has(SS)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(kk) {
-        var Fk, Ik;
-        return null !== (Fk = null === (Ik = this.members.get(kk)) || void 0 === Ik ? void 0 : Ik.name) && void 0 !== Fk ? Fk : void 0
+      getName(SS) {
+        var HS, gS;
+        return null !== (HS = null === (gS = this.members.get(SS)) || void 0 === gS ? void 0 : gS.name) && void 0 !== HS ? HS : void 0
       }
-      getSettings(kk) {
-        var Fk;
-        return null === (Fk = this.members.get(kk)) || void 0 === Fk ? void 0 : Fk.settings
+      getSettings(SS) {
+        var HS;
+        return null === (HS = this.members.get(SS)) || void 0 === HS ? void 0 : HS.settings
       }
-      getSetting(kk, Fk) {
-        var Ik;
-        return null === (Ik = this.members.get(kk)) || void 0 === Ik ? void 0 : Ik.settings[Fk]
+      getSetting(SS, HS) {
+        var gS;
+        return null === (gS = this.members.get(SS)) || void 0 === gS ? void 0 : gS.settings[HS]
       }
       clear() {
         this.members.clear()
@@ -505,4 +505,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

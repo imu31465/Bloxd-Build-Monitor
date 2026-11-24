@@ -1,53 +1,53 @@
 export const id = 86;
 export const ids = [86];
 export const modules = {
-  4784: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Kk,
-      c: () => Jk
+  4904: (SS, HS, gS) => {
+    gS.d(HS, {
+      c: () => QS,
+      f: () => CS
     });
-    var Xk = Ik(1283),
-      Tk = Ik(34);
-    var ik = Ik(337);
-    var yk = Ik(628);
-    var lk = Ik(2331),
-      ak = Ik(4792),
-      qk = Ik(4801),
-      Lk = Ik(4814);
-    class tk {
-      constructor(kk, Fk, Ik, Xk, Tk, ik) {
-        this.id = kk, this.type = Fk, this.parameters = Ik, this.tearDownNotification = Xk, this.onDonePromise = Tk, this.resolveRequest = ik
+    var tS = gS(1386),
+      bS = gS(31);
+    var XS = gS(387);
+    var xS = gS(680);
+    var NS = gS(2510),
+      qS = gS(4911),
+      uS = gS(4938),
+      IS = gS(4954);
+    class fS {
+      constructor(SS, HS, gS, tS, bS, XS) {
+        this.id = SS, this.type = HS, this.parameters = gS, this.tearDownNotification = tS, this.onDonePromise = bS, this.resolveRequest = XS
       }
     }
-    const Zk = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
-    class jk {
-      constructor(kk, Fk, Ik, Xk, Tk, ik) {
-        this.id = kk, this.type = Fk, this.parameters = Ik, this.resolveRequest = Xk, this.onDonePromise = Tk, this.tearDownNotification = ik, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
-        const yk = Jk[Fk];
-        if (!yk) throw console.error(`No QTE implementation registered for type: ${Fk}`), new Error(`No QTE implementation registered for type: ${Fk}`);
-        this.implementation = new yk(Ik, (kk => {
-          this.isCompleted = !0, this.resolveRequest(kk)
+    const kS = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
+    class aS {
+      constructor(SS, HS, gS, tS, bS, XS) {
+        this.id = SS, this.type = HS, this.parameters = gS, this.resolveRequest = tS, this.onDonePromise = bS, this.tearDownNotification = XS, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
+        const xS = CS[HS];
+        if (!xS) throw console.error(`No QTE implementation registered for type: ${HS}`), new Error(`No QTE implementation registered for type: ${HS}`);
+        this.implementation = new xS(gS, (SS => {
+          this.isCompleted = !0, this.resolveRequest(SS)
         }), this.tearDownNotification), this.setupInputHandlers()
       }
       setupInputHandlers() {
-        this.mouseSub = Tk.g.subscribe("QTEMouseState", (kk => {
+        this.mouseSub = bS.k.subscribe("QTEMouseState", (SS => {
           let {
-            isDown: Fk
-          } = kk;
-          this.isCompleted || this.implementation.handleMouseInput(Fk)
-        })), this.stopInputActions = (0, qk.g)((kk => {
-          this.isCompleted || !Zk.has(kk.action) && !(0, qk.f)(kk) || this.implementation.handleMouseInput(kk.down)
-        })), this.tickSub = Tk.g.subscribe("noaTick", (kk => {
+            isDown: HS
+          } = SS;
+          this.isCompleted || this.implementation.handleMouseInput(HS)
+        })), this.stopInputActions = (0, uS.h)((SS => {
+          this.isCompleted || !kS.has(SS.action) && !(0, uS.e)(SS) || this.implementation.handleMouseInput(SS.down)
+        })), this.tickSub = bS.k.subscribe("noaTick", (SS => {
           if (this.isCompleted) return;
-          const Fk = kk / 1e3;
-          this.implementation.handleTick(Fk)
-        })), this.stopShellTicks = (0, ak.y)((() => {
-          this.isCompleted || this.implementation.handleTick(lk.x / 1e3)
+          const HS = SS / 1e3;
+          this.implementation.handleTick(HS)
+        })), this.stopShellTicks = (0, qS.w)((() => {
+          this.isCompleted || this.implementation.handleTick(NS.u / 1e3)
         }))
       }
       cleanup() {
-        var kk, Fk;
-        this.mouseSub && (Tk.g.unsubscribe(this.mouseSub), this.mouseSub = null), null === (kk = this.stopInputActions) || void 0 === kk || kk.call(this), this.stopInputActions = null, null === (Fk = this.stopShellTicks) || void 0 === Fk || Fk.call(this), this.stopShellTicks = null, this.tickSub && (Tk.g.unsubscribe(this.tickSub), this.tickSub = null)
+        var SS, HS;
+        this.mouseSub && (bS.k.unsubscribe(this.mouseSub), this.mouseSub = null), null === (SS = this.stopInputActions) || void 0 === SS || SS.call(this), this.stopInputActions = null, null === (HS = this.stopShellTicks) || void 0 === HS || HS.call(this), this.stopShellTicks = null, this.tickSub && (bS.k.unsubscribe(this.tickSub), this.tickSub = null)
       }
       async waitUntilDone() {
         await this.onDonePromise
@@ -59,28 +59,28 @@ export const modules = {
         this.isCompleted = !0, this.cleanup(), this.implementation.tearDown()
       }
     }
-    const ek = new Xk.c,
-      wk = new Map;
-    let Hk = null;
-    const Jk = {
+    const KS = new tS.e,
+      jS = new Map;
+    let GS = null;
+    const CS = {
       progressBar: class {
-        constructor(kk, Fk, Ik) {
-          var Xk, Tk, ik, yk;
-          this.resolveRequest = Fk, this.tearDownNotification = Ik, this.progress = 0, this.oI = void 0, this.vI = void 0, this.EI = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
-          const lk = kk;
-          this.oI = null !== (Xk = lk.oI) && void 0 !== Xk ? Xk : .075, this.vI = null !== (Tk = lk.vI) && void 0 !== Tk ? Tk : 1, this.progress = null !== (ik = lk.SI) && void 0 !== ik ? ik : 30, this.EI = null !== (yk = lk.EI) && void 0 !== yk && yk, this.parameters = lk
+        constructor(SS, HS, gS) {
+          var tS, bS, XS, xS;
+          this.resolveRequest = HS, this.tearDownNotification = gS, this.progress = 0, this.Dg = void 0, this.wg = void 0, this.hg = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
+          const NS = SS;
+          this.Dg = null !== (tS = NS.Dg) && void 0 !== tS ? tS : .075, this.wg = null !== (bS = NS.wg) && void 0 !== bS ? bS : 1, this.progress = null !== (XS = NS.Qg) && void 0 !== XS ? XS : 30, this.hg = null !== (xS = NS.hg) && void 0 !== xS && xS, this.parameters = NS
         }
-        handleMouseInput(kk) {
-          kk && !this.isCompleted && (this.clickCount++, this.progress += this.vI, this.progress >= 100 && this.complete(!0))
+        handleMouseInput(SS) {
+          SS && !this.isCompleted && (this.clickCount++, this.progress += this.wg, this.progress >= 100 && this.complete(!0))
         }
         handleTick() {
           if (!this.isCompleted)
-            if (this.progress -= this.oI, this.EI && this.progress <= 0) this.complete(!1);
+            if (this.progress -= this.Dg, this.hg && this.progress <= 0) this.complete(!1);
             else if (this.progress <= 0) this.progress = 0;
           else if (this.progress >= 100) return void this.complete(!0)
         }
-        complete(kk) {
-          this.isCompleted = !0, this.resolveRequest(kk)
+        complete(SS) {
+          this.isCompleted = !0, this.resolveRequest(SS)
         }
         getState() {
           return {
@@ -98,30 +98,30 @@ export const modules = {
         }
       },
       timedClick: class {
-        constructor(kk, Fk, Ik) {
-          var Xk;
-          this.resolveRequest = Fk, this.tearDownNotification = Ik, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = kk, this.timeWindowMs = null !== (Xk = this.parameters.uI) && void 0 !== Xk ? Xk : 3e3, this.startTime = Date.now()
+        constructor(SS, HS, gS) {
+          var tS;
+          this.resolveRequest = HS, this.tearDownNotification = gS, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = SS, this.timeWindowMs = null !== (tS = this.parameters.vg) && void 0 !== tS ? tS : 3e3, this.startTime = Date.now()
         }
-        handleMouseInput(kk) {
-          if (!kk || this.isCompleted) return;
+        handleMouseInput(SS) {
+          if (!SS || this.isCompleted) return;
           Date.now() - this.startTime <= this.timeWindowMs && this.complete(!0)
         }
         handleTick() {
           if (this.isCompleted) return;
           Date.now() - this.startTime > this.timeWindowMs && this.complete(!1)
         }
-        complete(kk) {
-          this.isCompleted = !0, this.resolveRequest(kk)
+        complete(SS) {
+          this.isCompleted = !0, this.resolveRequest(SS)
         }
         getState() {
-          const kk = Date.now() - this.startTime,
-            Fk = Math.max(0, this.timeWindowMs - kk);
+          const SS = Date.now() - this.startTime,
+            HS = Math.max(0, this.timeWindowMs - SS);
           return {
             type: this.type,
             parameters: this.parameters,
             state: {
-              timeRemaining: Fk,
-              uI: this.timeWindowMs
+              timeRemaining: HS,
+              vg: this.timeWindowMs
             },
             isActive: !0
           }
@@ -131,49 +131,49 @@ export const modules = {
         }
       },
       gravityBar: class {
-        constructor(kk, Fk, Ik) {
-          var Xk;
-          this.resolveRequest = Fk, this.tearDownNotification = Ik, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
-          const Tk = kk;
+        constructor(SS, HS, gS) {
+          var tS;
+          this.resolveRequest = HS, this.tearDownNotification = gS, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
+          const bS = SS;
           this.parameters = {
-            ...Tk,
-            CI: ik.e.clamp(Tk.CI, .05, 1)
-          }, this.progress = null !== (Xk = Tk.SI) && void 0 !== Xk ? Xk : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+            ...bS,
+            Ag: XS.b.clamp(bS.Ag, .05, 1)
+          }, this.progress = null !== (tS = bS.Qg) && void 0 !== tS ? tS : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
-        handleMouseInput(kk) {
-          this.isMouseDown = kk
+        handleMouseInput(SS) {
+          this.isMouseDown = SS
         }
-        handleTick(kk) {
-          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(kk))
+        handleTick(SS) {
+          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(SS))
         }
         updateMover() {
           this.ticksUntilDirectionChange--, (this.ticksUntilDirectionChange <= 0 || Math.abs(this.moverPosition - this.moverTarget) < .02) && this.pickNewMoverTarget();
-          const kk = Math.sign(this.moverTarget - this.moverPosition);
-          this.moverPosition += kk * this.parameters.NI * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
+          const SS = Math.sign(this.moverTarget - this.moverPosition);
+          this.moverPosition += SS * this.parameters.yg * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
         }
         pickNewMoverTarget() {
           this.moverTarget = Math.random(), this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
         randomNumTicksUntilDirectionChange() {
-          const kk = ik.e.clamp(1 - .7 * this.parameters.cI, 0, 1.4);
-          return Math.floor(60 * kk + 40 * Math.random())
+          const SS = XS.b.clamp(1 - .7 * this.parameters.Vg, 0, 1.4);
+          return Math.floor(60 * SS + 40 * Math.random())
         }
         updateCatchZone() {
-          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.WI : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = ik.e.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
-          const kk = this.parameters.CI / 2,
-            Fk = kk,
-            Ik = 1 - kk;
-          this.catchZonePosition <= Fk ? (this.catchZonePosition = Fk, this.catchZoneVelocity = 0) : this.catchZonePosition >= Ik && (this.catchZonePosition = Ik, this.catchZoneVelocity = 0)
+          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.ig : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = XS.b.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
+          const SS = this.parameters.Ag / 2,
+            HS = SS,
+            gS = 1 - SS;
+          this.catchZonePosition <= HS ? (this.catchZonePosition = HS, this.catchZoneVelocity = 0) : this.catchZonePosition >= gS && (this.catchZonePosition = gS, this.catchZoneVelocity = 0)
         }
         isMoverInCatchZone() {
-          const kk = this.parameters.CI / 2;
-          return this.moverPosition >= this.catchZonePosition - kk && this.moverPosition <= this.catchZonePosition + kk
+          const SS = this.parameters.Ag / 2;
+          return this.moverPosition >= this.catchZonePosition - SS && this.moverPosition <= this.catchZonePosition + SS
         }
-        updateProgress(kk) {
-          this.isMoverInCatchZone() ? this.progress += this.parameters.fI * kk : this.progress -= this.parameters.BI * kk, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.EI && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
+        updateProgress(SS) {
+          this.isMoverInCatchZone() ? this.progress += this.parameters.Wg * SS : this.progress -= this.parameters.zg * SS, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.hg && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
         }
-        complete(kk) {
-          this.isCompleted = !0, this.resolveRequest(kk)
+        complete(SS) {
+          this.isCompleted = !0, this.resolveRequest(SS)
         }
         getState() {
           return {
@@ -181,7 +181,7 @@ export const modules = {
             parameters: this.parameters,
             state: {
               catchZonePosition: this.catchZonePosition,
-              CI: this.parameters.CI,
+              Ag: this.parameters.Ag,
               moverPosition: this.moverPosition,
               progress: this.progress,
               isCatching: this.isMoverInCatchZone()
@@ -194,38 +194,38 @@ export const modules = {
         }
       },
       precisionBar: class {
-        constructor(kk, Fk, Ik) {
-          var Xk, Tk, yk, lk, ak;
-          this.resolveRequest = Fk, this.tearDownNotification = Ik, this.startTime = void 0, this.speed = void 0, this.YI = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
-          const qk = kk;
+        constructor(SS, HS, gS) {
+          var tS, bS, xS, NS, qS;
+          this.resolveRequest = HS, this.tearDownNotification = gS, this.startTime = void 0, this.speed = void 0, this.sg = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
+          const uS = SS;
           this.parameters = {
-            ...qk,
-            speed: null !== (Xk = qk.speed) && void 0 !== Xk ? Xk : .5,
-            YI: ik.e.clamp(qk.YI, .05, 1),
-            label: null !== (Tk = qk.label) && void 0 !== Tk ? Tk : [{
+            ...uS,
+            speed: null !== (tS = uS.speed) && void 0 !== tS ? tS : .5,
+            sg: XS.b.clamp(uS.sg, .05, 1),
+            label: null !== (bS = uS.label) && void 0 !== bS ? bS : [{
               str: "Click when the marker is within the green zone."
             }],
-            icon: null !== (yk = qk.icon) && void 0 !== yk ? yk : null,
-            scale: null !== (lk = qk.scale) && void 0 !== lk ? lk : 1,
-            rotation: null !== (ak = qk.rotation) && void 0 !== ak ? ak : 0
-          }, this.speed = this.parameters.speed, this.YI = this.parameters.YI, this.startTime = Date.now()
+            icon: null !== (xS = uS.icon) && void 0 !== xS ? xS : null,
+            scale: null !== (NS = uS.scale) && void 0 !== NS ? NS : 1,
+            rotation: null !== (qS = uS.rotation) && void 0 !== qS ? qS : 0
+          }, this.speed = this.parameters.speed, this.sg = this.parameters.sg, this.startTime = Date.now()
         }
-        handleMouseInput(kk) {
-          if (kk) {
+        handleMouseInput(SS) {
+          if (SS) {
             this.updateMarkerPosition();
-            const kk = Math.abs(this.markerPosition - .5) <= this.YI / 2;
-            this.complete(kk)
+            const SS = Math.abs(this.markerPosition - .5) <= this.sg / 2;
+            this.complete(SS)
           }
         }
         handleTick() {
           this.isCompleted || this.updateMarkerPosition()
         }
         updateMarkerPosition() {
-          const kk = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
-          this.markerPosition = kk <= .5 ? 2 * kk : 2 - 2 * kk
+          const SS = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
+          this.markerPosition = SS <= .5 ? 2 * SS : 2 - 2 * SS
         }
-        complete(kk) {
-          this.isCompleted = !0, this.resolveRequest(kk)
+        complete(SS) {
+          this.isCompleted = !0, this.resolveRequest(SS)
         }
         getState() {
           return this.updateMarkerPosition(), {
@@ -242,29 +242,29 @@ export const modules = {
         }
       },
       rhythmClick: class {
-        constructor(kk, Fk, Ik) {
-          this.resolveRequest = Fk, this.tearDownNotification = Ik, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = kk, this.shrinkStartTime = Date.now()
+        constructor(SS, HS, gS) {
+          this.resolveRequest = HS, this.tearDownNotification = gS, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = SS, this.shrinkStartTime = Date.now()
         }
-        handleMouseInput(kk) {
-          if (!kk || this.isCompleted) return;
-          const Fk = this.getOuterCircleProgress();
-          if (Fk <= this.parameters.hI && Fk >= -this.parameters.hI) {
-            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.gI) return void this.complete(!0)
+        handleMouseInput(SS) {
+          if (!SS || this.isCompleted) return;
+          const HS = this.getOuterCircleProgress();
+          if (HS <= this.parameters.Rg && HS >= -this.parameters.Rg) {
+            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.Mg) return void this.complete(!0)
           } else this.handleMiss();
           this.shrinkStartTime = Date.now()
         }
         handleMiss() {
-          this.misses++, this.lastClickResult = !1, !(0, yk.Q)(this.parameters.rI) && this.misses > this.parameters.rI ? this.complete(!1) : this.shrinkStartTime = Date.now()
+          this.misses++, this.lastClickResult = !1, !(0, xS.K)(this.parameters.Tg) && this.misses > this.parameters.Tg ? this.complete(!1) : this.shrinkStartTime = Date.now()
         }
         handleTick() {
           if (this.isCompleted) return;
-          this.getOuterCircleProgress() < -this.parameters.hI && this.handleMiss()
+          this.getOuterCircleProgress() < -this.parameters.Rg && this.handleMiss()
         }
         getOuterCircleProgress() {
-          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.mI
+          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.Fg
         }
-        complete(kk) {
-          this.isCompleted = !0, this.resolveRequest(kk)
+        complete(SS) {
+          this.isCompleted = !0, this.resolveRequest(SS)
         }
         getState() {
           return {
@@ -273,7 +273,7 @@ export const modules = {
             state: {
               outerCircleProgress: this.getOuterCircleProgress(),
               successes: this.successes,
-              gI: this.parameters.gI,
+              Mg: this.parameters.Mg,
               misses: this.misses,
               lastClickResult: this.lastClickResult
             },
@@ -286,61 +286,61 @@ export const modules = {
       }
     };
 
-    function xk() {
-      (0, Lk.g)(lk.A.Qte, Hk ? lk.A.Qte : 0), Hk ? Tk.g.GL("qteStateUpdated", Hk.getState()) : Tk.g.GL("qteStateUpdated", {
+    function nS() {
+      (0, IS.i)(NS.A.Qte, GS ? NS.A.Qte : 0), GS ? bS.k.cj("qteStateUpdated", GS.getState()) : bS.k.cj("qteStateUpdated", {
         type: null,
         typeSpecificParameters: null,
         isActive: !1
       })
     }
-    class Pk {
-      constructor(kk, Fk) {
-        this.resultPromise = kk, this.tearDownQTE = Fk
+    class PS {
+      constructor(SS, HS) {
+        this.resultPromise = SS, this.tearDownQTE = HS
       }
-      static create(kk, Fk, Ik) {
-        const Xk = Promise.race([kk, Fk]);
-        return new Pk(Xk, Ik)
+      static create(SS, HS, gS) {
+        const tS = Promise.race([SS, HS]);
+        return new PS(tS, gS)
       }
       async getResult() {
         return await this.resultPromise
       }
     }
-    class Kk {
-      static queueQTE(kk, Fk, Ik) {
-        let Xk, Tk;
-        const ik = new Promise((kk => {
-            Xk = kk
+    class QS {
+      static queueQTE(SS, HS, gS) {
+        let tS, bS;
+        const XS = new Promise((SS => {
+            tS = SS
           })),
-          yk = new Promise((kk => {
-            Tk = () => {
-              kk("qteTornDown")
+          xS = new Promise((SS => {
+            bS = () => {
+              SS("qteTornDown")
             }
           })),
-          lk = Promise.race([ik, yk]).then((() => {})),
-          ak = new tk(kk, Fk, Ik, Tk, lk, Xk);
-        return wk.set(kk, ak), ek.enqueue(ak), Hk || this.processNextQTE(), Pk.create(ik, yk, Tk)
+          NS = Promise.race([XS, xS]).then((() => {})),
+          qS = new fS(SS, HS, gS, bS, NS, tS);
+        return jS.set(SS, qS), KS.enqueue(qS), GS || this.processNextQTE(), PS.create(XS, xS, bS)
       }
       static async processNextQTE() {
-        if (Hk || ek.ye()) return void(ek.ye() && Hk && (Hk = null, xk()));
-        const kk = await ek.dequeue();
-        if (!wk.has(kk.id)) return void await this.processNextQTE();
-        wk.delete(kk.id);
-        const Fk = new jk(kk.id, kk.type, kk.parameters, kk.resolveRequest, kk.onDonePromise, kk.tearDownNotification);
-        Hk = Fk, xk();
+        if (GS || KS.IK()) return void(KS.IK() && GS && (GS = null, nS()));
+        const SS = await KS.dequeue();
+        if (!jS.has(SS.id)) return void await this.processNextQTE();
+        jS.delete(SS.id);
+        const HS = new aS(SS.id, SS.type, SS.parameters, SS.resolveRequest, SS.onDonePromise, SS.tearDownNotification);
+        GS = HS, nS();
         try {
-          await Fk.waitUntilDone()
-        } catch (Ik) {
-          console.error("Error while waiting for QTE to resolve:", Ik.stack)
+          await HS.waitUntilDone()
+        } catch (gS) {
+          console.error("Error while waiting for QTE to resolve:", gS.stack)
         }
-        Hk === Fk && (Hk.cleanup(), Hk = null, xk()), await this.processNextQTE()
+        GS === HS && (GS.cleanup(), GS = null, nS()), await this.processNextQTE()
       }
-      static cancelQTE(kk) {
-        if (Hk && Hk.id === kk) return Hk.tearDown(), Hk = null, xk(), void this.processNextQTE();
-        const Fk = wk.get(kk);
-        Fk && (wk.delete(kk), Fk.tearDownNotification())
+      static cancelQTE(SS) {
+        if (GS && GS.id === SS) return GS.tearDown(), GS = null, nS(), void this.processNextQTE();
+        const HS = jS.get(SS);
+        HS && (jS.delete(SS), HS.tearDownNotification())
       }
       static getCurrentState() {
-        return Hk ? Hk.getState() : {
+        return GS ? GS.getState() : {
           type: null,
           parameters: null,
           state: null,
@@ -348,209 +348,209 @@ export const modules = {
         }
       }
       static reset() {
-        Hk && (Hk.tearDown(), Hk = null), wk.forEach(((kk, Fk) => {
-          this.cancelQTE(Fk)
-        })), ek.emptyQueue(), wk.clear(), xk()
+        GS && (GS.tearDown(), GS = null), jS.forEach(((SS, HS) => {
+          this.cancelQTE(HS)
+        })), KS.emptyQueue(), jS.clear(), nS()
       }
     }
   },
-  4792: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      A: () => Ok,
-      D: () => xk,
-      F: () => yk,
-      I: () => lk,
-      L: () => Sk,
-      c: () => zk,
-      g: () => Kk,
-      k: () => Gk,
-      l: () => nk,
-      o: () => Jk,
-      s: () => sk,
-      t: () => Pk,
-      u: () => Qk,
-      y: () => vk,
-      z: () => Ek
+  4911: (SS, HS, gS) => {
+    gS.d(HS, {
+      A: () => dS,
+      B: () => cS,
+      D: () => nS,
+      H: () => xS,
+      J: () => NS,
+      M: () => JS,
+      e: () => ZS,
+      f: () => QS,
+      i: () => ES,
+      j: () => vS,
+      k: () => CS,
+      n: () => wS,
+      r: () => PS,
+      t: () => DS,
+      w: () => OS
     });
-    var Xk = Ik(4794);
-    const Tk = {
+    var tS = gS(4917);
+    const bS = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let ik = Tk;
+    let XS = bS;
 
-    function yk(kk) {
-      ik = null !== kk && void 0 !== kk ? kk : Tk
+    function xS(SS) {
+      XS = null !== SS && void 0 !== SS ? SS : bS
     }
 
-    function lk() {
-      return ik
+    function NS() {
+      return XS
     }
-    const ak = new Set,
-      qk = new Set;
-    let Lk = -1;
-    const tk = new Set,
-      Zk = new Set;
-    let jk = 0,
-      ek = 0;
-    const wk = new Set,
-      Hk = new Set;
+    const qS = new Set,
+      uS = new Set;
+    let IS = -1;
+    const fS = new Set,
+      kS = new Set;
+    let aS = 0,
+      KS = 0;
+    const jS = new Set,
+      GS = new Set;
 
-    function Jk(kk) {
-      return ak.add(kk), () => {
-        ak.delete(kk)
+    function CS(SS) {
+      return qS.add(SS), () => {
+        qS.delete(SS)
       }
     }
 
-    function xk(kk, Fk) {
-      for (const Xk of ak) try {
-        Xk(kk)
-      } catch (Ik) {
-        Fk(Ik)
+    function nS(SS, HS) {
+      for (const tS of qS) try {
+        tS(SS)
+      } catch (gS) {
+        HS(gS)
       }
     }
 
-    function Pk(kk) {
-      return qk.add(kk), () => {
-        qk.delete(kk)
+    function PS(SS) {
+      return uS.add(SS), () => {
+        uS.delete(SS)
       }
     }
 
-    function Kk(kk, Fk) {
-      const Ik = Lk < 0 ? 0 : kk - Lk;
-      Lk = kk;
-      for (const Tk of qk) try {
-        Tk(Ik)
-      } catch (Xk) {
-        Fk(Xk)
+    function QS(SS, HS) {
+      const gS = IS < 0 ? 0 : SS - IS;
+      IS = SS;
+      for (const bS of uS) try {
+        bS(gS)
+      } catch (tS) {
+        HS(tS)
       }
     }
 
-    function Qk(kk) {
-      return tk.add(kk), () => {
-        tk.delete(kk)
+    function DS(SS) {
+      return fS.add(SS), () => {
+        fS.delete(SS)
       }
     }
 
-    function sk(kk) {
-      return Zk.add(kk), () => {
-        Zk.delete(kk)
+    function wS(SS) {
+      return kS.add(SS), () => {
+        kS.delete(SS)
       }
     }
-    let Vk = 0;
+    let hS = 0;
 
-    function zk(kk) {
-      Vk += kk
+    function ZS(SS) {
+      hS += SS
     }
 
-    function Sk() {
-      const kk = Vk;
-      return Vk = 0, kk
+    function JS() {
+      const SS = hS;
+      return hS = 0, SS
     }
 
-    function vk(kk) {
-      return wk.add(kk), () => {
-        wk.delete(kk)
-      }
-    }
-
-    function Ek(kk) {
-      return Hk.add(kk), () => {
-        Hk.delete(kk)
+    function OS(SS) {
+      return jS.add(SS), () => {
+        jS.delete(SS)
       }
     }
 
-    function Ok() {
-      jk = 0, ek = 0, Lk = -1
+    function dS(SS) {
+      return GS.add(SS), () => {
+        GS.delete(SS)
+      }
     }
 
-    function nk(kk, Fk) {
-      if ("paced" === kk) return ek += Fk, null;
-      if ("drawn" !== kk && "skipped" !== kk) return null;
-      const Ik = Fk + ek;
-      return ek = 0, Ik
+    function cS() {
+      aS = 0, KS = 0, IS = -1
     }
 
-    function Gk(kk, Fk, Ik, Tk) {
-      const ik = (0, Xk.f)(Fk),
-        yk = kk > 0 ? performance.now() : 0;
-      for (let Xk = 0; Xk < kk; Xk++)
-        for (const kk of wk) try {
-          kk()
-        } catch (lk) {
-          Tk(lk)
+    function vS(SS, HS) {
+      if ("paced" === SS) return KS += HS, null;
+      if ("drawn" !== SS && "skipped" !== SS) return null;
+      const gS = HS + KS;
+      return KS = 0, gS
+    }
+
+    function ES(SS, HS, gS, bS) {
+      const XS = (0, tS.h)(HS),
+        xS = SS > 0 ? performance.now() : 0;
+      for (let tS = 0; tS < SS; tS++)
+        for (const SS of jS) try {
+          SS()
+        } catch (NS) {
+          bS(NS)
         }
-      if (kk > 0 && zk(performance.now() - yk), null !== Ik) {
-        for (const kk of tk) try {
-          kk(Ik)
-        } catch (lk) {
-          Tk(lk)
+      if (SS > 0 && ZS(performance.now() - xS), null !== gS) {
+        for (const SS of fS) try {
+          SS(gS)
+        } catch (NS) {
+          bS(NS)
         }
-        jk += Ik
+        aS += gS
       }
-      if ("drawn" === Fk) {
-        const kk = jk;
-        jk = 0;
-        for (const Fk of Zk) try {
-          Fk(kk)
-        } catch (lk) {
-          Tk(lk)
+      if ("drawn" === HS) {
+        const SS = aS;
+        aS = 0;
+        for (const HS of kS) try {
+          HS(SS)
+        } catch (NS) {
+          bS(NS)
         }
       }
-      for (const Xk of Hk) try {
-        Xk(kk, ik)
-      } catch (lk) {
-        Tk(lk)
+      for (const tS of GS) try {
+        tS(SS, XS)
+      } catch (NS) {
+        bS(NS)
       }
     }
   },
-  4801: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => ak,
-      f: () => ik,
-      g: () => lk
+  4938: (SS, HS, gS) => {
+    gS.d(HS, {
+      d: () => qS,
+      e: () => XS,
+      h: () => NS
     });
-    var Xk = Ik(2331),
-      Tk = Ik(4810);
+    var tS = gS(2510),
+      bS = gS(4947);
 
-    function ik(kk) {
+    function XS(SS) {
       let {
-        action: Fk,
-        flags: Ik
-      } = kk;
-      return "mid-fire" === Fk && 0 !== (Ik & Xk.e.AltLeftClick)
+        action: HS,
+        flags: gS
+      } = SS;
+      return "mid-fire" === HS && 0 !== (gS & tS.b.AltLeftClick)
     }
-    const yk = new Set;
+    const xS = new Set;
 
-    function lk(kk) {
-      return yk.add(kk), () => {
-        yk.delete(kk)
+    function NS(SS) {
+      return xS.add(SS), () => {
+        xS.delete(SS)
       }
     }
 
-    function ak(kk) {
-      const Fk = Tk.e[255 & kk];
-      if (void 0 === Fk) return;
-      const Ik = kk >>> 8 & 255,
-        ik = {
-          action: Fk,
-          down: 0 !== (Ik & Xk.e.Down),
-          flags: Ik,
-          press: kk >>> 16
+    function qS(SS) {
+      const HS = bS.b[255 & SS];
+      if (void 0 === HS) return;
+      const gS = SS >>> 8 & 255,
+        XS = {
+          action: HS,
+          down: 0 !== (gS & tS.b.Down),
+          flags: gS,
+          press: SS >>> 16
         };
-      for (const Xk of yk) Xk(ik)
+      for (const tS of xS) tS(XS)
     }
   },
-  4810: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Tk,
-      g: () => ik,
-      k: () => yk,
-      o: () => Xk,
-      s: () => lk
+  4947: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => bS,
+      f: () => XS,
+      g: () => xS,
+      i: () => tS,
+      j: () => NS
     });
-    const Xk = {
+    const tS = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -747,8 +747,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      Tk = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      ik = {
+      bS = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      XS = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -811,63 +811,63 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      yk = {
+      xS = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      lk = [16]
+      NS = [16]
   },
-  4814: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => lk,
-      f: () => yk,
-      g: () => qk
+  4954: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => NS,
+      e: () => xS,
+      i: () => uS
     });
-    var Xk = Ik(2331),
-      Tk = Ik(2338);
-    const ik = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var tS = gS(2510),
+      bS = gS(2517);
+    const XS = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function yk(kk) {
-      return kk instanceof HTMLElement && (!!(kk.isContentEditable || kk instanceof HTMLTextAreaElement || kk instanceof HTMLSelectElement) || kk instanceof HTMLInputElement && !ik.has(kk.type))
+    function xS(SS) {
+      return SS instanceof HTMLElement && (!!(SS.isContentEditable || SS instanceof HTMLTextAreaElement || SS instanceof HTMLSelectElement) || SS instanceof HTMLInputElement && !XS.has(SS.type))
     }
 
-    function lk(kk) {
-      let Fk = null;
-      const Ik = Ik => {
-          const Tk = yk(Ik);
-          Tk !== Fk && (Fk = Tk, kk(Xk.m.UiCapture, Xk.A.Keyboard, 0, 0, Tk ? Xk.A.Keyboard : 0))
+    function NS(SS) {
+      let HS = null;
+      const gS = gS => {
+          const bS = xS(gS);
+          bS !== HS && (HS = bS, SS(tS.g.UiCapture, tS.A.Keyboard, 0, 0, bS ? tS.A.Keyboard : 0))
         },
-        Tk = kk => {
-          Ik(kk.target)
+        bS = SS => {
+          gS(SS.target)
         },
-        ik = kk => {
-          Ik(kk.relatedTarget)
+        XS = SS => {
+          gS(SS.relatedTarget)
         },
-        lk = () => {
-          Ik(document.activeElement)
+        NS = () => {
+          gS(document.activeElement)
         },
-        ak = {
+        qS = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", Tk, ak), document.addEventListener("focusout", ik, ak), document.addEventListener("keydown", lk, ak), Ik(document.activeElement), () => {
-        document.removeEventListener("focusin", Tk, ak), document.removeEventListener("focusout", ik, ak), document.removeEventListener("keydown", lk, ak)
+      return document.addEventListener("focusin", bS, qS), document.addEventListener("focusout", XS, qS), document.addEventListener("keydown", NS, qS), gS(document.activeElement), () => {
+        document.removeEventListener("focusin", bS, qS), document.removeEventListener("focusout", XS, qS), document.removeEventListener("keydown", NS, qS)
       }
     }
-    const ak = new Map;
+    const qS = new Map;
 
-    function qk(kk, Fk) {
-      var Ik;
-      let Xk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      ak.set(Xk, (null !== (Ik = ak.get(Xk)) && void 0 !== Ik ? Ik : 0) & ~kk | Fk & kk);
-      let ik = 0;
-      for (const Tk of ak.values()) ik |= Tk;
-      return (0, Tk.x)(kk, ik & kk)
+    function uS(SS, HS) {
+      var gS;
+      let tS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      qS.set(tS, (null !== (gS = qS.get(tS)) && void 0 !== gS ? gS : 0) & ~SS | HS & SS);
+      let XS = 0;
+      for (const bS of qS.values()) XS |= bS;
+      return (0, bS.D)(SS, XS & SS)
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

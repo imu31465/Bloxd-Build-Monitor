@@ -1,509 +1,509 @@
 export const id = 77;
 export const ids = [77];
 export const modules = {
-  4692: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => fF,
-      f: () => ZI,
-      j: () => DF,
-      m: () => II,
-      p: () => mF,
-      q: () => MF,
-      u: () => CF,
-      x: () => YF,
-      z: () => OF,
-      C: () => tI,
-      F: () => LI,
-      I: () => AF,
-      L: () => UF
+  4812: (SS, HS, gS) => {
+    gS.d(HS, {
+      d: () => pH,
+      h: () => fg,
+      j: () => mH,
+      m: () => Hg,
+      q: () => TH,
+      r: () => eH,
+      t: () => iH,
+      v: () => MH,
+      z: () => cH,
+      D: () => Ig,
+      H: () => ug,
+      K: () => FH,
+      O: () => VH
     });
-    var Xk = Ik(2801);
-    const Tk = Function.prototype.toString,
-      ik = RegExp.prototype.exec,
-      yk = Reflect.apply,
-      lk = Function.prototype.call,
-      ak = Function.prototype.apply,
-      qk = Function.prototype.bind,
-      Lk = Object.defineProperty,
-      tk = Uint8Array;
-    let Zk, jk;
+    var tS = gS(3021);
+    const bS = Function.prototype.toString,
+      XS = RegExp.prototype.exec,
+      xS = Reflect.apply,
+      NS = Function.prototype.call,
+      qS = Function.prototype.apply,
+      uS = Function.prototype.bind,
+      IS = Object.defineProperty,
+      fS = Uint8Array;
+    let kS, aS;
     try {
-      Zk = globalThis.crypto, jk = void 0 === Zk || null === Zk ? void 0 : Zk.getRandomValues
+      kS = globalThis.crypto, aS = void 0 === kS || null === kS ? void 0 : kS.getRandomValues
     } catch {}
-    const ek = "bloxdBindApply";
-    let wk;
+    const KS = "bloxdBindApply";
+    let jS;
     try {
-      const kk = lk;
-      Lk(kk, ek, {
+      const SS = NS;
+      IS(SS, KS, {
         __proto__: null,
-        value: qk,
+        value: uS,
         configurable: !0
       });
       try {
-        wk = kk[ek](ak)
+        jS = SS[KS](qS)
       } finally {
-        delete kk[ek]
+        delete SS[KS]
       }
     } catch {}
-    const Hk = 16,
-      Jk = 256,
-      xk = 0,
-      Pk = 1,
-      Kk = 2,
-      Qk = 3;
-    let sk, Vk = xk,
-      zk = yk,
-      Sk = 0;
+    const GS = 16,
+      CS = 256,
+      nS = 0,
+      PS = 1,
+      QS = 2,
+      DS = 3;
+    let wS, hS = nS,
+      ZS = xS,
+      JS = 0;
 
-    function vk(kk, Fk) {
-      return kk === `function ${Fk}() { [native code] }` || kk === `function ${Fk}() {\n    [native code]\n}`
+    function OS(SS, HS) {
+      return SS === `function ${HS}() { [native code] }` || SS === `function ${HS}() {\n    [native code]\n}`
     }
-    const Ek = 0,
-      Ok = 1,
-      nk = 2;
-    let Gk = Ek;
+    const dS = 0,
+      cS = 1,
+      vS = 2;
+    let ES = dS;
 
-    function pk(kk, Fk, Ik) {
-      if (Gk === nk && Vk === Pk && ! function() {
-          const kk = sk;
-          return Sk >= Jk && (zk(jk, Zk, [kk]), Sk = 0), kk[Sk++] < 256 / Hk
-        }()) return function(kk, Fk, Ik) {
-        return zk(kk, Fk, Ik ?? 0)
+    function LS(SS, HS, gS) {
+      if (ES === vS && hS === PS && ! function() {
+          const SS = wS;
+          return JS >= CS && (ZS(aS, kS, [SS]), JS = 0), SS[JS++] < 256 / GS
+        }()) return function(SS, HS, gS) {
+        return ZS(SS, HS, gS ?? 0)
       }(...arguments);
-      if (Gk === Ek || Vk === Kk) return yk(kk, Fk, Ik);
-      let Xk;
-      Gk = Ek;
+      if (ES === dS || hS === QS) return xS(SS, HS, gS);
+      let tS;
+      ES = dS;
       try {
-        Vk === xk && (Vk = Qk, Vk = function() {
-          const kk = yk(Tk, yk, []);
-          if (vk(kk, "apply")) return Kk;
-          if (null === yk(ik, /\(\.\.\.arguments\)/, [kk]) && null === yk(ik, /^function\s*\(\.\.\.[\w$]+\)/, [kk])) return Kk;
-          if ("function" !== typeof wk || "function" !== typeof lk || "function" !== typeof ak || "function" !== typeof qk || "function" !== typeof Lk || "function" !== typeof jk || "function" !== typeof tk || !vk(yk(Tk, lk, []), "call") || !vk(yk(Tk, ak, []), "apply") || !vk(yk(Tk, qk, []), "bind") || !vk(yk(Tk, Lk, []), "defineProperty") || !vk(yk(Tk, jk, []), "getRandomValues") || !vk(yk(Tk, tk, []), "Uint8Array")) return Kk;
-          const Fk = wk,
-            Ik = {},
-            Xk = function(kk) {
-              return this === Ik && kk === Ik
+        hS === nS && (hS = DS, hS = function() {
+          const SS = xS(bS, xS, []);
+          if (OS(SS, "apply")) return QS;
+          if (null === xS(XS, /\(\.\.\.arguments\)/, [SS]) && null === xS(XS, /^function\s*\(\.\.\.[\w$]+\)/, [SS])) return QS;
+          if ("function" !== typeof jS || "function" !== typeof NS || "function" !== typeof qS || "function" !== typeof uS || "function" !== typeof IS || "function" !== typeof aS || "function" !== typeof fS || !OS(xS(bS, NS, []), "call") || !OS(xS(bS, qS, []), "apply") || !OS(xS(bS, uS, []), "bind") || !OS(xS(bS, IS, []), "defineProperty") || !OS(xS(bS, aS, []), "getRandomValues") || !OS(xS(bS, fS, []), "Uint8Array")) return QS;
+          const HS = jS,
+            gS = {},
+            tS = function(SS) {
+              return this === gS && SS === gS
             };
           try {
-            if (!0 !== Fk(Xk, Ik, [Ik])) return Kk;
-            const kk = new tk(Jk);
-            Fk(jk, Zk, [kk]), sk = kk
+            if (!0 !== HS(tS, gS, [gS])) return QS;
+            const SS = new fS(CS);
+            HS(aS, kS, [SS]), wS = SS
           } catch {
-            return Kk
+            return QS
           }
-          return zk = Fk, Pk
-        }()), Xk = yk(kk, Fk, Ik)
-      } catch (ek) {
-        throw Vk = Kk, ek
+          return ZS = HS, PS
+        }()), tS = xS(SS, HS, gS)
+      } catch (KS) {
+        throw hS = QS, KS
       }
-      return Gk = nk, Xk
+      return ES = vS, tS
     }
-    let uk = yk;
+    let YS = xS;
 
-    function bk() {
-      return (uk === yk ? 0 : 3) + Gk
-    }
-
-    function Rk() {
-      const kk = bk();
-      return uk = yk, kk
+    function AS() {
+      return (YS === xS ? 0 : 3) + ES
     }
 
-    function Uk(kk) {
-      uk = kk >= 3 ? pk : yk, Gk = kk % 3
-    }
-    const Ck = Function.prototype.toString,
-      Nk = Object.getOwnPropertyDescriptor,
-      ck = Object.prototype.hasOwnProperty,
-      Wk = RegExp.prototype.exec,
-      fk = TextEncoder.prototype.encodeInto,
-      Bk = String.prototype.startsWith,
-      dk = Number.prototype.toString,
-      Yk = WeakMap.prototype.get,
-      Ak = WeakMap.prototype.set,
-      gk = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
-      mk = new TextEncoder,
-      hk = new Uint8Array(1024),
-      rk = 9999999,
-      Dk = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
-      Mk = new WeakMap;
-
-    function kF(kk) {
-      if ("function" !== typeof kk) return "#a0.0";
-      const Fk = uk(Yk, Mk, [kk]);
-      if (void 0 !== Fk) return Fk;
-      const Ik = uk(Ck, kk, []),
-        Xk = Ik.length > rk ? rk : Ik.length,
-        Tk = `#${function(kk,Fk){const Ik=uk(Wk,gk,[Fk]);if(null===Ik)return"s";const Xk=Ik[1];if("ProxyObject"===Xk)return"p";if(""!==Xk)return uk(Bk,Xk,["bound "])?"b":"n";try{const Fk=Nk(kk,"name"),Ik=void 0!==Fk&&uk(ck,Fk,["value"])?Fk.value:void 0;return"string"===typeof Ik&&uk(Bk,Ik,["bound "])?"b":"p"}catch{return"p"}}(kk,Ik)}${Xk}.${function(kk){const{written:Fk}=uk(fk,mk,[kk,hk]);let Ik=2166136261;for(let Xk=0;Xk<Fk;Xk++)Ik=(Ik^hk[Xk])>>>0,Ik=Ik+(Ik<<1)+(Ik<<4)+(Ik<<7)+(Ik<<8)+(Ik<<24)>>>0;return uk(dk,Ik,[36])}(Ik)}`;
-      return uk(Ak, Mk, [kk, Tk]), Tk
+    function yS() {
+      const SS = AS();
+      return YS = xS, SS
     }
 
-    function FF(kk) {
-      const Fk = uk(Wk, Dk, [kk]);
-      return null === Fk ? kk : Fk[1]
+    function VS(SS) {
+      YS = SS >= 3 ? LS : xS, ES = SS % 3
     }
-    var IF = Ik(2809);
-    const XF = Function.prototype.toString,
-      TF = Object.getOwnPropertyDescriptor,
-      iF = RegExp.prototype.exec,
-      yF = Object.prototype.hasOwnProperty,
-      lF = Set.prototype.has,
-      aF = WeakMap.prototype.get,
-      qF = WeakMap.prototype.set,
-      LF = Reflect.get,
-      tF = Object.getPrototypeOf,
-      ZF = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+    const iS = Function.prototype.toString,
+      WS = Object.getOwnPropertyDescriptor,
+      zS = Object.prototype.hasOwnProperty,
+      US = RegExp.prototype.exec,
+      pS = TextEncoder.prototype.encodeInto,
+      sS = String.prototype.startsWith,
+      BS = Number.prototype.toString,
+      MS = WeakMap.prototype.get,
+      FS = WeakMap.prototype.set,
+      RS = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
+      TS = new TextEncoder,
+      oS = new Uint8Array(1024),
+      lS = 9999999,
+      mS = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
+      eS = new WeakMap;
 
-    function jF(kk, Fk, Ik) {
+    function rS(SS) {
+      if ("function" !== typeof SS) return "#a0.0";
+      const HS = YS(MS, eS, [SS]);
+      if (void 0 !== HS) return HS;
+      const gS = YS(iS, SS, []),
+        tS = gS.length > lS ? lS : gS.length,
+        bS = `#${function(SS,HS){const gS=YS(US,RS,[HS]);if(null===gS)return"s";const tS=gS[1];if("ProxyObject"===tS)return"p";if(""!==tS)return YS(sS,tS,["bound "])?"b":"n";try{const HS=WS(SS,"name"),gS=void 0!==HS&&YS(zS,HS,["value"])?HS.value:void 0;return"string"===typeof gS&&YS(sS,gS,["bound "])?"b":"p"}catch{return"p"}}(SS,gS)}${tS}.${function(SS){const{written:HS}=YS(pS,TS,[SS,oS]);let gS=2166136261;for(let tS=0;tS<HS;tS++)gS=(gS^oS[tS])>>>0,gS=gS+(gS<<1)+(gS<<4)+(gS<<7)+(gS<<8)+(gS<<24)>>>0;return YS(BS,gS,[36])}(gS)}`;
+      return YS(FS, eS, [SS, bS]), bS
+    }
+
+    function SH(SS) {
+      const HS = YS(US, mS, [SS]);
+      return null === HS ? SS : HS[1]
+    }
+    var HH = gS(3035);
+    const gH = Function.prototype.toString,
+      tH = Object.getOwnPropertyDescriptor,
+      bH = RegExp.prototype.exec,
+      XH = Object.prototype.hasOwnProperty,
+      xH = Set.prototype.has,
+      NH = WeakMap.prototype.get,
+      qH = WeakMap.prototype.set,
+      uH = Reflect.get,
+      IH = Object.getPrototypeOf,
+      fH = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+
+    function kH(SS, HS, gS) {
       return {
-        code: kk,
-        holder: Fk,
-        key: Ik,
+        code: SS,
+        holder: HS,
+        key: gS,
         ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        native: new RegExp(`^function (get )?${Ik}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
+        native: new RegExp(`^function (get )?${gS}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
       }
     }
 
-    function eF() {
-      return ZF
+    function aH() {
+      return fH
     }
-    const wF = ZF?.Instance.prototype,
-      HF = ZF?.Memory.prototype;
+    const KH = fH?.Instance.prototype,
+      jH = fH?.Memory.prototype;
 
-    function JF() {
-      return HF
+    function GH() {
+      return jH
     }
-    let xF, PF;
+    let CH, nH;
     try {
-      const kk = globalThis.crypto,
-        Fk = kk?.subtle;
-      xF = kk ? tF(kk) : void 0, PF = Fk ? tF(Fk) : void 0
+      const SS = globalThis.crypto,
+        HS = SS?.subtle;
+      CH = SS ? IH(SS) : void 0, nH = HS ? IH(HS) : void 0
     } catch {}
 
-    function KF(kk, Fk) {
-      for (let Ik = kk; void 0 !== Ik && null !== Ik; Ik = tF(Ik)) {
-        const kk = TF(Ik, Fk);
-        if (kk) return kk
+    function PH(SS, HS) {
+      for (let gS = SS; void 0 !== gS && null !== gS; gS = IH(gS)) {
+        const SS = tH(gS, HS);
+        if (SS) return SS
       }
     }
-    const QF = [jF("in", eF, "instantiate", {
+    const QH = [kH("in", aH, "instantiate", {
       tier: "weighted",
       onNamespace: !0
-    }), jF("is", eF, "instantiateStreaming", {
+    }), kH("is", aH, "instantiateStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), jF("co", eF, "compile", {
+    }), kH("co", aH, "compile", {
       tier: "weighted",
       onNamespace: !0
-    }), jF("cs", eF, "compileStreaming", {
+    }), kH("cs", aH, "compileStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), jF("mo", eF, "Module", {
+    }), kH("mo", aH, "Module", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), jF("it", eF, "Instance", {
+    }), kH("it", aH, "Instance", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), jF("me", eF, "Memory", {
+    }), kH("me", aH, "Memory", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), jF("ex", (function() {
-      return wF
+    }), kH("ex", (function() {
+      return KH
     }), "exports", {
       isGetter: !0,
       tier: "punished"
-    }), jF("bu", JF, "buffer", {
+    }), kH("bu", GH, "buffer", {
       isGetter: !0,
       tier: "punished"
-    }), jF("gr", JF, "grow", {
+    }), kH("gr", GH, "grow", {
       tier: "punished"
-    }), jF("rc", (function() {
+    }), kH("rc", (function() {
       return "undefined" === typeof Response ? void 0 : Response.prototype
-    }), "clone"), jF("cr", (function() {
+    }), "clone"), kH("cr", (function() {
       return globalThis
     }), "crypto", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), jF("su", (function() {
-      return xF
+    }), kH("su", (function() {
+      return CH
     }), "subtle", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), jF("dg", (function() {
-      return PF
+    }), kH("dg", (function() {
+      return nH
     }), "digest", {
       tier: "punished",
       inSecureContext: !0
     })];
 
-    function sF(kk) {
-      let Fk;
+    function DH(SS) {
+      let HS;
       try {
-        const Ik = LF(globalThis, kk);
-        Fk = "function" === typeof Ik ? Ik.prototype : void 0
+        const gS = uH(globalThis, SS);
+        HS = "function" === typeof gS ? gS.prototype : void 0
       } catch {}
-      return () => Fk
+      return () => HS
     }
 
-    function VF(kk, Fk, Ik) {
-      return Ik.map((Ik => jF(kk, Fk, Ik)))
+    function wH(SS, HS, gS) {
+      return gS.map((gS => kH(SS, HS, gS)))
     }
-    const zF = jF("rx", sF("HTMLCanvasElement"), "getContext"),
-      SF = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
-      oF = {
-        webgpu: [...VF("gd", sF("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...VF("gq", sF("GPUQueue"), ["submit", "writeBuffer"]), ...VF("ge", sF("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...VF("gp", sF("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), zF],
-        webgl: [...VF("g2", sF("WebGL2RenderingContext"), [...SF, "drawArraysInstanced", "drawElementsInstanced"]), zF],
-        webgl1: [...VF("g1", sF("WebGLRenderingContext"), SF), zF]
+    const hH = kH("rx", DH("HTMLCanvasElement"), "getContext"),
+      ZH = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
+      JH = {
+        webgpu: [...wH("gd", DH("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...wH("gq", DH("GPUQueue"), ["submit", "writeBuffer"]), ...wH("ge", DH("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...wH("gp", DH("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), hH],
+        webgl: [...wH("g2", DH("WebGL2RenderingContext"), [...ZH, "drawArraysInstanced", "drawElementsInstanced"]), hH],
+        webgl1: [...wH("g1", DH("WebGLRenderingContext"), ZH), hH]
       };
-    let vF = [];
-    const EF = new WeakMap;
+    let OH = [];
+    const dH = new WeakMap;
 
-    function OF(kk, Fk) {
-      const Ik = Rk();
+    function cH(SS, HS) {
+      const gS = yS();
       try {
-        uk(qF, EF, [kk, Fk])
+        YS(qH, dH, [SS, HS])
       } finally {
-        Uk(Ik)
+        VS(gS)
       }
     }
 
-    function nF(kk) {
+    function vH(SS) {
       try {
-        const Fk = aI(kk),
-          Ik = uk(aF, EF, [Fk]);
-        return FI(Ik, kk) ? GF(kk, !0) : `${GF(kk,!1)}${kF(Ik??Fk)}`
+        const HS = Ng(SS),
+          gS = YS(NH, dH, [HS]);
+        return Sg(gS, SS) ? EH(SS, !0) : `${EH(SS,!1)}${rS(gS??HS)}`
       } catch {
-        return `${GF(kk,!1)}${kF(void 0)}`
+        return `${EH(SS,!1)}${rS(void 0)}`
       }
     }
 
-    function GF(kk, Fk) {
+    function EH(SS, HS) {
       let {
-        code: Ik,
-        key: Xk
-      } = kk;
-      return `wh:${Ik}${Fk?"-dbg":""}:${Xk}`
+        code: gS,
+        key: tS
+      } = SS;
+      return `wh:${gS}${HS?"-dbg":""}:${tS}`
     }
 
-    function pF(kk) {
-      return Object.values(oF).flatMap((Fk => Fk.map((Fk => GF(Fk, kk)))))
+    function LH(SS) {
+      return Object.values(JH).flatMap((HS => HS.map((HS => EH(HS, SS)))))
     }
-    const uF = new Set(pF(!0)),
-      bF = new Set([...pF(!1), ...uF]),
-      RF = GF(zF, !1);
+    const YH = new Set(LH(!0)),
+      AH = new Set([...LH(!1), ...YH]),
+      yH = EH(hH, !1);
 
-    function UF(kk) {
-      vF = oF[kk]
+    function VH(SS) {
+      OH = JH[SS]
     }
 
-    function CF(kk) {
-      const Fk = Rk();
+    function iH(SS) {
+      const HS = yS();
       try {
-        return NF(kk) || NF(FF(kk))
+        return WH(SS) || WH(SH(SS))
       } finally {
-        Uk(Fk)
+        VS(HS)
       }
     }
 
-    function NF(kk) {
-      return uk(lF, bF, [kk])
+    function WH(SS) {
+      return YS(xH, AH, [SS])
     }
 
-    function cF(kk) {
-      return new Set(QF.filter((Fk => Fk.tier === kk)).map((kk => `wh:${kk.code}`)))
+    function zH(SS) {
+      return new Set(QH.filter((HS => HS.tier === SS)).map((SS => `wh:${SS.code}`)))
     }
-    const WF = cF("punished"),
-      fF = !1,
-      BF = new Set(IF.d),
-      dF = cF("weighted");
+    const UH = zH("punished"),
+      pH = !1,
+      sH = new Set(HH.d),
+      BH = zH("weighted");
 
-    function YF(kk) {
-      const Fk = Rk();
+    function MH(SS) {
+      const HS = yS();
       try {
-        return gF(FF(kk))
+        return RH(SH(SS))
       } finally {
-        Uk(Fk)
+        VS(HS)
       }
     }
 
-    function AF(kk) {
-      const Fk = Rk();
+    function FH(SS) {
+      const HS = yS();
       try {
-        return FF(kk)
+        return SH(SS)
       } finally {
-        Uk(Fk)
+        VS(HS)
       }
     }
 
-    function gF(kk) {
-      return uk(lF, dF, [kk])
+    function RH(SS) {
+      return YS(xH, BH, [SS])
     }
 
-    function mF(kk) {
-      const Fk = Rk();
+    function TH(SS) {
+      const HS = yS();
       try {
-        return hF(kk)
+        return oH(SS)
       } finally {
-        Uk(Fk)
+        VS(HS)
       }
     }
 
-    function hF(kk) {
-      return uk(lF, BF, [kk])
+    function oH(SS) {
+      return YS(xH, sH, [SS])
     }
 
-    function rF(kk) {
-      return "wb" === kk || uk(lF, WF, [kk])
+    function lH(SS) {
+      return "wb" === SS || YS(xH, UH, [SS])
     }
 
-    function DF(kk) {
-      const Fk = Rk();
+    function mH(SS) {
+      const HS = yS();
       try {
-        return rF(kk) || hF(kk)
+        return lH(SS) || oH(SS)
       } finally {
-        Uk(Fk)
+        VS(HS)
       }
     }
 
-    function MF(kk) {
-      const Fk = Rk();
+    function eH(SS) {
+      const HS = yS();
       try {
-        return "wb" === kk || fF && rF(kk)
+        return "wb" === SS || pH && lH(SS)
       } finally {
-        Uk(Fk)
+        VS(HS)
       }
     }
 
-    function kI(kk, Fk) {
+    function rH(SS, HS) {
       let {
-        isGetter: Ik
-      } = Fk;
-      const Xk = TF(kk, Ik ? "get" : "value");
-      return void 0 === Xk ? void 0 : Xk.value
+        isGetter: gS
+      } = HS;
+      const tS = tH(SS, gS ? "get" : "value");
+      return void 0 === tS ? void 0 : tS.value
     }
 
-    function FI(kk, Fk) {
+    function Sg(SS, HS) {
       let {
-        isConstructor: Ik,
-        native: Xk
-      } = Fk;
-      return "function" === typeof kk && (!(!Ik && uk(yF, kk, ["prototype"])) && null !== uk(iF, Xk, [uk(XF, kk, [])]))
+        isConstructor: gS,
+        native: tS
+      } = HS;
+      return "function" === typeof SS && (!(!gS && YS(XH, SS, ["prototype"])) && null !== YS(bH, tS, [YS(gH, SS, [])]))
     }
 
-    function II(kk, Fk) {
-      return FI(kk, jF("", (() => {}), Fk, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
+    function Hg(SS, HS) {
+      return Sg(SS, kH("", (() => {}), HS, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
         isConstructor: !0
       } : {}))
     }
-    let XI = null,
-      TI = !1;
+    let gg = null,
+      tg = !1;
 
-    function iI() {
+    function bg() {
       try {
-        return globalThis.WebAssembly === ZF
+        return globalThis.WebAssembly === fH
       } catch {
         return !1
       }
     }
 
-    function yI(kk) {
+    function Xg(SS) {
       try {
-        return function(kk) {
+        return function(SS) {
           const {
-            holder: Fk,
-            key: Ik,
-            onNamespace: Xk,
-            inSecureContext: Tk
-          } = kk, ik = Fk(), yk = KF(ik, Ik);
-          if (!yk) return !(Tk && !0 === globalThis.isSecureContext);
-          const lk = kI(yk, kk);
-          if (!FI(lk, kk)) return !1;
-          if (Xk) {
-            const Fk = globalThis.WebAssembly;
-            if (Fk !== ik && null !== Fk && ("object" === typeof Fk || "function" === typeof Fk)) {
-              const Xk = LF(Fk, Ik);
-              return Xk === lk || void 0 === Xk || FI(Xk, kk)
+            holder: HS,
+            key: gS,
+            onNamespace: tS,
+            inSecureContext: bS
+          } = SS, XS = HS(), xS = PH(XS, gS);
+          if (!xS) return !(bS && !0 === globalThis.isSecureContext);
+          const NS = rH(xS, SS);
+          if (!Sg(NS, SS)) return !1;
+          if (tS) {
+            const HS = globalThis.WebAssembly;
+            if (HS !== XS && null !== HS && ("object" === typeof HS || "function" === typeof HS)) {
+              const tS = uH(HS, gS);
+              return tS === NS || void 0 === tS || Sg(tS, SS)
             }
           }
           return !0
-        }(kk)
+        }(SS)
       } catch {
         return !1
       }
     }
 
-    function lI(kk) {
-      const Fk = `wh:${kk.code}`;
-      if ("punished" === kk.tier) return Fk;
+    function xg(SS) {
+      const HS = `wh:${SS.code}`;
+      if ("punished" === SS.tier) return HS;
       try {
-        return `${Fk}${kF(aI(kk))}`
+        return `${HS}${rS(Ng(SS))}`
       } catch {
-        return `${Fk}${kF(void 0)}`
+        return `${HS}${rS(void 0)}`
       }
     }
 
-    function aI(kk) {
-      const Fk = KF(kk.holder(), kk.key),
-        Ik = void 0 === Fk ? void 0 : kI(Fk, kk);
-      return kk.onNamespace && !iI() && FI(Ik, kk) ? LF(globalThis.WebAssembly, kk.key) : Ik
+    function Ng(SS) {
+      const HS = PH(SS.holder(), SS.key),
+        gS = void 0 === HS ? void 0 : rH(HS, SS);
+      return SS.onNamespace && !bg() && Sg(gS, SS) ? uH(globalThis.WebAssembly, SS.key) : gS
     }
 
-    function qI(kk) {
-      if (rF(kk)) return 5;
-      const Fk = FF(kk);
-      return gF(Fk) ? 4 : hF(kk) ? 3 : NF(Fk) ? function(kk) {
-        return uk(lF, uF, [kk])
-      }(Fk) ? -1 : Fk === RF ? 0 : 1 : 2
+    function qg(SS) {
+      if (lH(SS)) return 5;
+      const HS = SH(SS);
+      return RH(HS) ? 4 : oH(SS) ? 3 : WH(HS) ? function(SS) {
+        return YS(xH, YH, [SS])
+      }(HS) ? -1 : HS === yH ? 0 : 1 : 2
     }
 
-    function LI() {
-      const kk = function() {
-        const kk = bk();
-        return Vk === xk || Vk === Pk ? (uk = pk, Gk = Ok) : uk = yk, kk
+    function ug() {
+      const SS = function() {
+        const SS = AS();
+        return hS === nS || hS === PS ? (YS = LS, ES = cS) : YS = xS, SS
       }();
       try {
-        if (null === XI || !rF(XI)) {
-          const kk = function() {
-            if (void 0 === ZF) return null;
-            let kk = iI() ? null : "wh:wa";
-            const Fk = Fk => {
-              null !== Fk && (null === kk || qI(Fk) > qI(kk)) && (kk = Fk)
+        if (null === gg || !lH(gg)) {
+          const SS = function() {
+            if (void 0 === fH) return null;
+            let SS = bg() ? null : "wh:wa";
+            const HS = HS => {
+              null !== HS && (null === SS || qg(HS) > qg(SS)) && (SS = HS)
             };
-            for (let Ik = 0; Ik < QF.length; Ik++) {
-              const kk = QF[Ik];
-              void 0 === kk || yI(kk) || Fk(lI(kk))
+            for (let gS = 0; gS < QH.length; gS++) {
+              const SS = QH[gS];
+              void 0 === SS || Xg(SS) || HS(xg(SS))
             }
-            Fk((0, IF.p)());
-            for (let Ik = 0; Ik < vF.length; Ik++) {
-              const kk = vF[Ik];
-              void 0 === kk || yI(kk) || Fk(nF(kk))
+            HS((0, HH.n)());
+            for (let gS = 0; gS < OH.length; gS++) {
+              const SS = OH[gS];
+              void 0 === SS || Xg(SS) || HS(vH(SS))
             }
-            return kk
+            return SS
           }();
-          (null === XI || null !== kk && qI(kk) > qI(XI)) && (XI = kk)
+          (null === gg || null !== SS && qg(SS) > qg(gg)) && (gg = SS)
         }
       } finally {
-        Uk(kk)
+        VS(SS)
       }
     }
 
-    function tI() {
-      TI = !0
+    function Ig() {
+      tg = !0
     }
 
-    function ZI() {
-      if (TI) return "wb";
-      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && LI(), null !== XI) return XI;
-      if (void 0 === ZF) return "wn:unsupported";
-      const kk = (0, Xk.n)();
-      return null === kk ? null : `wn:${kk}`
+    function fg() {
+      if (tg) return "wb";
+      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && ug(), null !== gg) return gg;
+      if (void 0 === fH) return "wn:unsupported";
+      const SS = (0, tS.t)();
+      return null === SS ? null : `wn:${SS}`
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

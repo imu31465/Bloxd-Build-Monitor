@@ -1,80 +1,80 @@
 export const id = 249;
 export const ids = [249];
 export const modules = {
-  39792: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      playDocsSound: () => lk
+  39847: (SS, HS, gS) => {
+    gS.r(HS), gS.d(HS, {
+      playDocsSound: () => NS
     });
-    var Xk = Ik(4857),
-      Tk = Ik(36772),
-      ik = Ik(1194);
-    const yk = new Map;
+    var tS = gS(5005),
+      bS = gS(36773),
+      XS = gS(1286);
+    const xS = new Map;
 
-    function lk(kk, Fk, Ik, lk, ak) {
-      let qk, Lk = null,
-        tk = 0,
-        Zk = 0;
-      if (Fk) qk = new Xk.Howl({
-        src: [`${ik.clientSideServerUrls.staticUrl}/sounds/music/${kk}.mp3`],
+    function NS(SS, HS, gS, NS, qS) {
+      let uS, IS = null,
+        fS = 0,
+        kS = 0;
+      if (HS) uS = new tS.Howl({
+        src: [`${XS.clientSideServerUrls.staticUrl}/sounds/music/${SS}.mp3`],
         html5: !0,
-        volume: Ik
+        volume: gS
       });
       else {
-        var jk;
-        Lk = (0, Tk.j)(kk);
-        const Fk = (0, Tk.g)(Lk),
-          Ik = null !== (jk = Fk.sprite[kk]) && void 0 !== jk ? jk : null;
-        if (!Ik) throw new Error(`Docs sound ${kk} is not in sprite sheet ${Lk}`);
-        tk = Ik[0] / 1e3, Zk = Ik[1] / 1e3, qk = yk.get(Lk), qk || (qk = new Xk.Howl({
-          ...Fk,
+        var aS;
+        IS = (0, bS.l)(SS);
+        const HS = (0, bS.i)(IS),
+          gS = null !== (aS = HS.sprite[SS]) && void 0 !== aS ? aS : null;
+        if (!gS) throw new Error(`Docs sound ${SS} is not in sprite sheet ${IS}`);
+        fS = gS[0] / 1e3, kS = gS[1] / 1e3, uS = xS.get(IS), uS || (uS = new tS.Howl({
+          ...HS,
           volume: 1
-        }), yk.set(Lk, qk))
+        }), xS.set(IS, uS))
       }
-      const ek = Fk ? qk.play() : qk.play(kk);
-      qk.volume(Ik, ek), lk > 0 && qk.seek(tk + lk, ek);
-      const wk = () => Fk ? qk.duration() : Zk;
-      let Hk = !1;
-      const Jk = kk => {
-          Hk || (Hk = !0, qk.off("play", xk, ek), qk.off("end", Pk, ek), qk.off("loaderror", Qk), qk.off("playerror", Kk, ek), Fk && qk.unload(), ak.onEnd(kk))
+      const KS = HS ? uS.play() : uS.play(SS);
+      uS.volume(gS, KS), NS > 0 && uS.seek(fS + NS, KS);
+      const jS = () => HS ? uS.duration() : kS;
+      let GS = !1;
+      const CS = SS => {
+          GS || (GS = !0, uS.off("play", nS, KS), uS.off("end", PS, KS), uS.off("loaderror", DS), uS.off("playerror", QS, KS), HS && uS.unload(), qS.onEnd(SS))
         },
-        xk = () => {
-          ak.onPlay(wk())
+        nS = () => {
+          qS.onPlay(jS())
         },
-        Pk = () => {
-          Jk(!1)
+        PS = () => {
+          CS(!1)
         },
-        Kk = (Fk, Ik) => {
-          console.error(`Could not play docs sound ${kk}`, Ik), Jk(!0)
+        QS = (HS, gS) => {
+          console.error(`Could not play docs sound ${SS}`, gS), CS(!0)
         },
-        Qk = (kk, Fk) => {
-          null !== Lk && yk.get(Lk) === qk && (yk.delete(Lk), qk.unload()), Kk(kk, Fk)
+        DS = (SS, HS) => {
+          null !== IS && xS.get(IS) === uS && (xS.delete(IS), uS.unload()), QS(SS, HS)
         };
-      return qk.on("play", xk, ek), qk.once("end", Pk, ek), qk.once("loaderror", Qk), qk.once("playerror", Kk, ek), {
+      return uS.on("play", nS, KS), uS.once("end", PS, KS), uS.once("loaderror", DS), uS.once("playerror", QS, KS), {
         pause: () => {
-          qk.pause(ek)
+          uS.pause(KS)
         },
         resume: () => {
-          qk.play(ek)
+          uS.play(KS)
         },
-        seek: kk => {
-          const Fk = wk(),
-            Ik = Math.max(kk, 0);
-          qk.seek(tk + (Fk > 0 ? Math.min(Ik, Fk) : Ik), ek)
+        seek: SS => {
+          const HS = jS(),
+            gS = Math.max(SS, 0);
+          uS.seek(fS + (HS > 0 ? Math.min(gS, HS) : gS), KS)
         },
-        OJ: () => {
-          const kk = qk.seek(ek);
-          return "number" === typeof kk ? Math.max(0, kk - tk) : 0
+        lC: () => {
+          const SS = uS.seek(KS);
+          return "number" === typeof SS ? Math.max(0, SS - fS) : 0
         },
-        getDuration: wk,
-        setVolume: kk => {
-          qk.volume(kk, ek)
+        getDuration: jS,
+        setVolume: SS => {
+          uS.volume(SS, KS)
         },
         stop: () => {
-          Hk || (qk.stop(ek), Jk(!1))
+          GS || (uS.stop(KS), CS(!1))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

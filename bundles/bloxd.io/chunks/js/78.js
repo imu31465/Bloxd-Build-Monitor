@@ -1,272 +1,272 @@
 export const id = 78;
 export const ids = [78, 93];
 export const modules = {
-    4829: (kk, Fk, Ik) => {
-      Ik.d(Fk, {
-        e: () => Hk,
-        h: () => Jk
+    4967: (SS, HS, gS) => {
+      gS.d(HS, {
+        e: () => GS,
+        f: () => CS
       });
-      var Xk = Ik(1055),
-        Tk = Ik.n(Xk),
-        ik = Ik(58),
-        yk = Ik(1179),
-        lk = Ik(4833),
-        ak = Ik(1849),
-        qk = Ik(2349),
-        Lk = Ik(4837),
-        tk = Ik(1096);
-      const Zk = new WeakMap;
-      let jk = 0;
+      var tS = gS(1121),
+        bS = gS.n(tS),
+        XS = gS(64),
+        xS = gS(1281),
+        NS = gS(4976),
+        qS = gS(2031),
+        uS = gS(2537),
+        IS = gS(4985),
+        fS = gS(1181);
+      const kS = new WeakMap;
+      let aS = 0;
 
-      function ek(kk) {
-        let Fk = Zk.get(kk);
-        return void 0 === Fk && (Fk = jk++, Zk.set(kk, Fk)), Fk
+      function KS(SS) {
+        let HS = kS.get(SS);
+        return void 0 === HS && (HS = aS++, kS.set(SS, HS)), HS
       }
 
-      function wk(kk) {
+      function jS(SS) {
         let {
-          piece: Fk
-        } = kk;
-        return "space" === Fk.kind ? (0, tk.jsx)(tk.Fragment, {
-          children: Fk.text
-        }) : (0, tk.jsx)("span", {
+          piece: HS
+        } = SS;
+        return "space" === HS.kind ? (0, fS.jsx)(fS.Fragment, {
+          children: HS.text
+        }) : (0, fS.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${Fk.delayMs}ms`
+            "--word-delay": `${HS.delayMs}ms`
           },
-          children: (0, tk.jsx)(lk.b, {
-            text: "icon" === Fk.kind ? `[[${Fk.icon}]]` : Fk.text
+          children: (0, fS.jsx)(NS.c, {
+            text: "icon" === HS.kind ? `[[${HS.icon}]]` : HS.text
           })
         })
       }
 
-      function Hk(kk) {
+      function GS(SS) {
         let {
-          display: Fk
-        } = kk;
+          display: HS
+        } = SS;
         const {
-          selectedLanguage: Ik
-        } = (0, yk.y)(), Xk = (0, ik.useMemo)((() => (0, Lk.d)((0, Lk.e)(Fk).plan.pieces)), [Fk, Ik.code]);
-        return (0, tk.jsxs)("div", {
-          className: Tk()("Dialogue", {
-            DialogueAnimateIn: !1 !== Fk.animateIn
+          selectedLanguage: gS
+        } = (0, xS.F)(), tS = (0, XS.useMemo)((() => (0, IS.c)((0, IS.g)(HS).plan.pieces)), [HS, gS.code]);
+        return (0, fS.jsxs)("div", {
+          className: bS()("Dialogue", {
+            DialogueAnimateIn: !1 !== HS.animateIn
           }),
-          children: [Fk.speakerName && (0, tk.jsx)(ak.c, {
-            text: Fk.speakerName,
+          children: [HS.speakerName && (0, fS.jsx)(qS.c, {
+            text: HS.speakerName,
             className: "DialogueSpeaker"
-          }), (0, tk.jsx)("p", {
+          }), (0, fS.jsx)("p", {
             className: "DialogueLine",
-            children: Xk.map(((kk, Fk) => 1 === kk.length && "space" === kk[0].kind ? kk[0].text : (0, tk.jsx)("span", {
+            children: tS.map(((SS, HS) => 1 === SS.length && "space" === SS[0].kind ? SS[0].text : (0, fS.jsx)("span", {
               className: "DialogueGlue",
-              children: kk.map(((kk, Fk) => (0, tk.jsx)(wk, {
-                piece: kk
-              }, Fk)))
-            }, Fk)))
+              children: SS.map(((SS, HS) => (0, fS.jsx)(jS, {
+                piece: SS
+              }, HS)))
+            }, HS)))
           })]
         })
       }
-      const Jk = (0, ik.memo)((function() {
-        const kk = (0, qk.j)("dialogue");
-        return (0, tk.jsx)("div", {
+      const CS = (0, XS.memo)((function() {
+        const SS = (0, uS.i)("dialogue");
+        return (0, fS.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: kk && (0, tk.jsx)(Hk, {
-            display: kk
-          }, ek(kk))
+          children: SS && (0, fS.jsx)(GS, {
+            display: SS
+          }, KS(SS))
         })
       }))
     },
-    4707: (kk, Fk, Ik) => {
-        Ik.r(Fk), Ik.d(Fk, {
-          default: () => Fy
+    4826: (SS, HS, gS) => {
+        gS.r(HS), gS.d(HS, {
+          default: () => rX
         });
-        var Xk = Ik(58),
-          Tk = Ik(1055),
-          ik = Ik.n(Tk),
-          yk = Ik(1481),
-          lk = Ik(1485),
-          ak = Ik(25),
-          qk = Ik(74),
-          Lk = Ik(4714),
-          tk = Ik(4729),
-          Zk = Ik(4731),
-          jk = Ik(4335),
-          ek = Ik(1096);
-        const wk = "/textures/docs/icons";
+        var tS = gS(64),
+          bS = gS(1121),
+          XS = gS.n(bS),
+          xS = gS(1615),
+          NS = gS(1622),
+          qS = gS(24),
+          uS = gS(77),
+          IS = gS(4832),
+          fS = gS(4848),
+          kS = gS(4855),
+          aS = gS(4481),
+          KS = gS(1181);
+        const jS = "/textures/docs/icons";
 
-        function Hk(kk) {
+        function GS(SS) {
           let {
-            name: Fk,
-            isTinted: Ik,
-            className: Xk,
-            style: Tk
-          } = kk;
-          const yk = `${wk}/${Fk}.png`;
-          return Ik ? (0, ek.jsxs)("span", {
-            className: ik()("DocsPixelIcon", "Tinted", Xk),
+            name: HS,
+            isTinted: gS,
+            className: tS,
+            style: bS
+          } = SS;
+          const xS = `${jS}/${HS}.png`;
+          return gS ? (0, KS.jsxs)("span", {
+            className: XS()("DocsPixelIcon", "Tinted", tS),
             "aria-hidden": "true",
-            style: Tk,
-            children: [(0, ek.jsx)("span", {
+            style: bS,
+            children: [(0, KS.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${yk}")`,
-                WebkitMaskImage: `url("${yk}")`
+                maskImage: `url("${xS}")`,
+                WebkitMaskImage: `url("${xS}")`
               }
-            }), (0, ek.jsx)("img", {
-              src: yk,
+            }), (0, KS.jsx)("img", {
+              src: xS,
               alt: ""
             })]
-          }) : (0, ek.jsx)("img", {
-            className: ik()("DocsPixelIcon", Xk),
-            src: yk,
+          }) : (0, KS.jsx)("img", {
+            className: XS()("DocsPixelIcon", tS),
+            src: xS,
             alt: "",
             "aria-hidden": "true",
-            style: Tk
+            style: bS
           })
         }
-        const Jk = 1500;
+        const CS = 1500;
 
-        function xk() {
-          const [kk, Fk] = (0, Xk.useState)(null);
-          (0, Xk.useEffect)((() => {
-            if (null === kk) return;
-            const Ik = setTimeout((() => {
-              Fk(null)
-            }), Jk);
+        function nS() {
+          const [SS, HS] = (0, tS.useState)(null);
+          (0, tS.useEffect)((() => {
+            if (null === SS) return;
+            const gS = setTimeout((() => {
+              HS(null)
+            }), CS);
             return () => {
-              clearTimeout(Ik)
+              clearTimeout(gS)
             }
-          }), [kk]);
-          return [kk, kk => {
-            (0, jk.b)(kk).then((() => {
-              Fk({
-                text: kk,
+          }), [SS]);
+          return [SS, SS => {
+            (0, aS.e)(SS).then((() => {
+              HS({
+                text: SS,
                 failed: !1
               })
-            }), (Ik => {
-              console.error("Could not copy to the clipboard", Ik), Fk({
-                text: kk,
+            }), (gS => {
+              console.error("Could not copy to the clipboard", gS), HS({
+                text: SS,
                 failed: !0
               })
             }))
           }]
         }
 
-        function Pk(kk) {
+        function PS(SS) {
           let {
-            text: Fk,
-            label: Ik,
-            className: Xk
-          } = kk;
-          const [Tk, yk] = xk(), lk = !1 === (null === Tk || void 0 === Tk ? void 0 : Tk.failed);
-          return (0, ek.jsxs)("button", {
+            text: HS,
+            label: gS,
+            className: tS
+          } = SS;
+          const [bS, xS] = nS(), NS = !1 === (null === bS || void 0 === bS ? void 0 : bS.failed);
+          return (0, KS.jsxs)("button", {
             type: "button",
-            className: ik()("DocsCopyButton", Xk, {
-              Copied: lk
+            className: XS()("DocsCopyButton", tS, {
+              Copied: NS
             }),
-            title: `Copy ${Fk.length>40?"to clipboard":Fk}`,
-            "aria-label": Ik ? void 0 : `Copy ${Fk}`,
-            onClick: kk => {
-              kk.stopPropagation(), yk(Fk)
+            title: `Copy ${HS.length>40?"to clipboard":HS}`,
+            "aria-label": gS ? void 0 : `Copy ${HS}`,
+            onClick: SS => {
+              SS.stopPropagation(), xS(HS)
             },
-            children: [(0, ek.jsx)(Hk, {
-              name: lk ? "check" : "copy"
-            }), Ik && (0, ek.jsx)("span", {
-              children: lk ? "Copied" : null !== Tk && void 0 !== Tk && Tk.failed ? "Copy failed" : Ik
+            children: [(0, KS.jsx)(GS, {
+              name: NS ? "check" : "copy"
+            }), gS && (0, KS.jsx)("span", {
+              children: NS ? "Copied" : null !== bS && void 0 !== bS && bS.failed ? "Copy failed" : gS
             })]
           })
         }
-        Lk.c.registerLanguage("javascript", tk.b), Lk.c.registerLanguage("typescript", Zk.d);
-        const Kk = {
+        IS.d.registerLanguage("javascript", fS.e), IS.d.registerLanguage("typescript", kS.d);
+        const QS = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          Qk = {
+          DS = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          sk = 24;
+          wS = 24;
 
-        function Vk(kk) {
+        function hS(SS) {
           let {
-            code: Fk,
-            lang: Ik,
-            compact: Tk = !1
-          } = kk;
-          const yk = (0, Xk.useMemo)((() => function(kk, Fk) {
-              const Ik = Kk[Fk];
-              return Ik ? Lk.c.highlight(kk, {
-                language: Ik
-              }).value : kk.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(Fk, Ik)), [Fk, Ik]),
-            lk = Fk.split("\n").length,
-            ak = !Tk && lk > sk + 6,
-            [qk, tk] = (0, Xk.useState)(!1),
-            Zk = Kk[Ik];
-          return (0, ek.jsxs)("div", {
-            className: ik()("DocsCodeBlock", {
-              Compact: Tk,
-              Collapsed: ak && !qk
+            code: HS,
+            lang: gS,
+            compact: bS = !1
+          } = SS;
+          const xS = (0, tS.useMemo)((() => function(SS, HS) {
+              const gS = QS[HS];
+              return gS ? IS.d.highlight(SS, {
+                language: gS
+              }).value : SS.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(HS, gS)), [HS, gS]),
+            NS = HS.split("\n").length,
+            qS = !bS && NS > wS + 6,
+            [uS, fS] = (0, tS.useState)(!1),
+            kS = QS[gS];
+          return (0, KS.jsxs)("div", {
+            className: XS()("DocsCodeBlock", {
+              Compact: bS,
+              Collapsed: qS && !uS
             }),
-            children: [!Tk && (0, ek.jsxs)("div", {
+            children: [!bS && (0, KS.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, ek.jsx)("span", {
+              children: [(0, KS.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: Zk ? Qk[Zk] : "Text"
-              }), (0, ek.jsx)(Pk, {
-                text: Fk,
+                children: kS ? DS[kS] : "Text"
+              }), (0, KS.jsx)(PS, {
+                text: HS,
                 label: "Copy"
               })]
-            }), (0, ek.jsx)("pre", {
-              children: (0, ek.jsx)("code", {
+            }), (0, KS.jsx)("pre", {
+              children: (0, KS.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: yk
+                  __html: xS
                 }
               })
-            }), ak && (0, ek.jsxs)("button", {
+            }), qS && (0, KS.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": qk,
+              "aria-expanded": uS,
               onClick: () => {
-                tk(!qk)
+                fS(!uS)
               },
-              children: [(0, ek.jsx)(Hk, {
-                name: qk ? "chevron-up" : "chevron-down"
-              }), qk ? "Show less" : `Show all ${lk} lines`]
+              children: [(0, KS.jsx)(GS, {
+                name: uS ? "chevron-up" : "chevron-down"
+              }), uS ? "Show less" : `Show all ${NS} lines`]
             })]
           })
         }
-        var zk = Ik(4739);
-        var Sk = Ik(4745);
-        const vk = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var ZS = gS(4859);
+        var JS = gS(4867);
+        const OS = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function Ek(kk) {
-          const Fk = new Map;
-          let Ik, Xk = [],
-            Tk = !1;
-          const ik = () => {
-            Ik && Fk.set(Ik.name, Ik.lines.join("\n").trimEnd())
+        function dS(SS) {
+          const HS = new Map;
+          let gS, tS = [],
+            bS = !1;
+          const XS = () => {
+            gS && HS.set(gS.name, gS.lines.join("\n").trimEnd())
           };
-          for (const yk of kk.split("\n")) {
-            const kk = yk.match(vk);
-            Tk || yk.startsWith("/*") ? (Tk || (ik(), Ik = void 0), Xk.push(yk), Tk = !yk.includes("*/")) : kk ? (ik(), Ik = {
-              name: kk[1],
-              lines: [...Xk, yk]
-            }, Xk = []) : Ik && (yk.startsWith(" ") || yk.startsWith("\t") || /^[}\])|]/.test(yk)) ? Ik.lines.push(yk) : Ik && "" !== yk.trim() && (ik(), Ik = void 0)
+          for (const xS of SS.split("\n")) {
+            const SS = xS.match(OS);
+            bS || xS.startsWith("/*") ? (bS || (XS(), gS = void 0), tS.push(xS), bS = !xS.includes("*/")) : SS ? (XS(), gS = {
+              name: SS[1],
+              lines: [...tS, xS]
+            }, tS = []) : gS && (xS.startsWith(" ") || xS.startsWith("\t") || /^[}\])|]/.test(xS)) ? gS.lines.push(xS) : gS && "" !== xS.trim() && (XS(), gS = void 0)
           }
-          return ik(), Fk
+          return XS(), HS
         }
 
-        function Ok(kk) {
-          return "methods" === kk || "callbacks" === kk || "settings" === kk
+        function cS(SS) {
+          return "methods" === SS || "callbacks" === SS || "settings" === SS
         }
-        const nk = {
+        const vS = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (kk, Fk) => `api.setClientOption(playerId, "${kk}", ${Fk})`
+              setterSnippet: (SS, HS) => `api.setClientOption(playerId, "${SS}", ${HS})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (kk, Fk) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${kk}", ${Fk})`
+              setterSnippet: (SS, HS) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${SS}", ${HS})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (kk, Fk) => `api.setMobSetting(mobId, "${kk}", ${Fk})`
+              setterSnippet: (SS, HS) => `api.setMobSetting(mobId, "${SS}", ${HS})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (kk, Fk) => `api.setVehicleSetting(vehicleId, "${kk}", ${Fk})`
+              setterSnippet: (SS, HS) => `api.setVehicleSetting(vehicleId, "${SS}", ${HS})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          Gk = {
+          ES = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function pk(kk) {
-          return kk.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function LS(SS) {
+          return SS.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function uk(kk) {
-          let Fk = !1;
-          return kk.split("\n").map((kk => (kk.startsWith("```") && (Fk = !Fk), !Fk && /^#{3,} /.test(kk) ? kk.slice(1) : kk))).join("\n")
+        function YS(SS) {
+          let HS = !1;
+          return SS.split("\n").map((SS => (SS.startsWith("```") && (HS = !HS), !HS && /^#{3,} /.test(SS) ? SS.slice(1) : SS))).join("\n")
         }
 
-        function bk(kk) {
-          return "readme" === kk ? "getting-started" : pk(kk)
+        function AS(SS) {
+          return "readme" === SS ? "getting-started" : LS(SS)
         }
-        const Rk = "## Glossary of Referenced Types";
-        const Uk = [{
+        const yS = "## Glossary of Referenced Types";
+        const VS = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...Sk.d.flatMap((kk => {
-            const Fk = {
-              id: kk.id,
-              slug: bk(kk.id),
-              title: kk.title,
-              markdown: kk.content,
-              ...nk[kk.id]
+          }, ...JS.d.flatMap((SS => {
+            const HS = {
+              id: SS.id,
+              slug: AS(SS.id),
+              title: SS.title,
+              markdown: SS.content,
+              ...vS[SS.id]
             };
-            if ("readme" === kk.id) return function(kk) {
-              const Fk = kk.markdown.indexOf(Rk),
-                Ik = kk.markdown.indexOf("\n```", Fk),
-                Xk = kk.markdown.indexOf("\n```", Ik + 1);
-              if (-1 === Fk || -1 === Ik || -1 === Xk) throw new Error(`Getting started has no "${Rk}" section with a code block`);
-              const Tk = kk.markdown.slice(Fk + 31, Ik).trim(),
-                ik = [...Ek(kk.markdown.slice(kk.markdown.indexOf("\n", Ik + 1) + 1, Xk))].map((kk => {
-                  let [Fk, Ik] = kk;
-                  return `## ${Fk}\n\n\`\`\`ts\n${Ik}\n\`\`\`\n`
+            if ("readme" === SS.id) return function(SS) {
+              const HS = SS.markdown.indexOf(yS),
+                gS = SS.markdown.indexOf("\n```", HS),
+                tS = SS.markdown.indexOf("\n```", gS + 1);
+              if (-1 === HS || -1 === gS || -1 === tS) throw new Error(`Getting started has no "${yS}" section with a code block`);
+              const bS = SS.markdown.slice(HS + 31, gS).trim(),
+                XS = [...dS(SS.markdown.slice(SS.markdown.indexOf("\n", gS + 1) + 1, tS))].map((SS => {
+                  let [HS, gS] = SS;
+                  return `## ${HS}\n\n\`\`\`ts\n${gS}\n\`\`\`\n`
                 })),
-                yk = kk.markdown.slice(kk.markdown.indexOf("\n", Xk + 1) + 1);
+                xS = SS.markdown.slice(SS.markdown.indexOf("\n", tS + 1) + 1);
               return [{
-                ...kk,
-                markdown: `${kk.markdown.slice(0,Fk)}${yk}`
+                ...SS,
+                markdown: `${SS.markdown.slice(0,HS)}${xS}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${Tk}\n\n${ik.join("\n")}`
+                markdown: `# Types\n\n${bS}\n\n${XS.join("\n")}`
               }]
-            }(Fk);
-            if ("howTo" === kk.id) {
+            }(HS);
+            if ("howTo" === SS.id) {
               const {
-                parent: kk,
-                guides: Ik
-              } = function(kk) {
-                const [Fk, ...Ik] = kk.markdown.split(/^(?=## )/m), Xk = [Fk], Tk = [];
-                for (const yk of Ik) {
-                  var ik;
-                  const Fk = yk.indexOf("\n"),
-                    Ik = yk.slice(3, Fk).trim(),
-                    lk = yk.slice(Fk + 1);
-                  if (!lk.includes("```")) {
-                    Xk.push(yk);
+                parent: SS,
+                guides: gS
+              } = function(SS) {
+                const [HS, ...gS] = SS.markdown.split(/^(?=## )/m), tS = [HS], bS = [];
+                for (const xS of gS) {
+                  var XS;
+                  const HS = xS.indexOf("\n"),
+                    gS = xS.slice(3, HS).trim(),
+                    NS = xS.slice(HS + 1);
+                  if (!NS.includes("```")) {
+                    tS.push(xS);
                     continue
                   }
-                  const ak = null !== (ik = Gk[Ik]) && void 0 !== ik ? ik : {
+                  const qS = null !== (XS = ES[gS]) && void 0 !== XS ? XS : {
                     icon: "lightbulb",
-                    summary: `How to use ${Ik.toLowerCase()} in World Code.`
+                    summary: `How to use ${gS.toLowerCase()} in World Code.`
                   };
-                  Tk.push({
-                    id: `${kk.id}${Ik.split(/[^A-Za-z0-9]+/).map((kk=>kk.charAt(0).toUpperCase()+kk.slice(1))).join("")}`,
-                    slug: `${kk.slug}-${pk(Ik)}`,
-                    title: Ik,
+                  bS.push({
+                    id: `${SS.id}${gS.split(/[^A-Za-z0-9]+/).map((SS=>SS.charAt(0).toUpperCase()+SS.slice(1))).join("")}`,
+                    slug: `${SS.slug}-${LS(gS)}`,
+                    title: gS,
                     layout: "article",
-                    sourceAnchor: (0, zk.t)(Ik),
-                    markdown: `# ${Ik}\n\n${uk(lk)}`,
-                    ...ak
+                    sourceAnchor: (0, ZS.r)(gS),
+                    markdown: `# ${gS}\n\n${YS(NS)}`,
+                    ...qS
                   })
                 }
                 return {
                   parent: {
-                    ...kk,
-                    markdown: Xk.join(""),
-                    childPageIds: Tk.map((kk => kk.id))
+                    ...SS,
+                    markdown: tS.join(""),
+                    childPageIds: bS.map((SS => SS.id))
                   },
-                  guides: Tk
+                  guides: bS
                 }
-              }(Fk);
-              return [kk, ...Ik]
+              }(HS);
+              return [SS, ...gS]
             }
-            return [Fk]
+            return [HS]
           }))],
-          Ck = [{
+          iS = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...Uk.filter((kk => void 0 !== kk.sourceAnchor)).map((kk => kk.id))]
+            pageIds: ["howTo", ...VS.filter((SS => void 0 !== SS.sourceAnchor)).map((SS => SS.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function Nk(kk) {
-          return Uk.find((Fk => Fk.id === kk))
+        function WS(SS) {
+          return VS.find((HS => HS.id === SS))
         }
-        const ck = new Map;
+        const zS = new Map;
 
-        function Wk(kk) {
-          let Fk = ck.get(kk.id);
-          return Fk || (Fk = (0, zk.w)(kk.markdown, "changelog" === kk.layout ? 3 : 2), ck.set(kk.id, Fk)), Fk
-        }
-
-        function fk(kk, Fk) {
-          return Wk(kk).sections.some((kk => kk.heading.anchor === Fk || kk.blocks.some((kk => "heading" === kk.kind && kk.anchor === Fk))))
+        function US(SS) {
+          let HS = zS.get(SS.id);
+          return HS || (HS = (0, ZS.y)(SS.markdown, "changelog" === SS.layout ? 3 : 2), zS.set(SS.id, HS)), HS
         }
 
-        function Bk(kk) {
-          const [Fk, ...Ik] = kk.replace(/^#/, "").split("-"), Xk = Uk.find((kk => kk.id === Fk));
-          if (!Xk) return null;
-          const Tk = Ik.length > 0 ? (0, zk.t)(Ik.join("-")) : "";
-          for (const yk of null !== (ik = Xk.childPageIds) && void 0 !== ik ? ik : []) {
-            var ik;
-            const kk = Nk(yk);
-            if (kk.sourceAnchor === Tk) return {
-              page: kk,
+        function pS(SS, HS) {
+          return US(SS).sections.some((SS => SS.heading.anchor === HS || SS.blocks.some((SS => "heading" === SS.kind && SS.anchor === HS))))
+        }
+
+        function sS(SS) {
+          const [HS, ...gS] = SS.replace(/^#/, "").split("-"), tS = VS.find((SS => SS.id === HS));
+          if (!tS) return null;
+          const bS = gS.length > 0 ? (0, ZS.r)(gS.join("-")) : "";
+          for (const xS of null !== (XS = tS.childPageIds) && void 0 !== XS ? XS : []) {
+            var XS;
+            const SS = WS(xS);
+            if (SS.sourceAnchor === bS) return {
+              page: SS,
               anchor: ""
             };
-            if (fk(kk, Tk)) return {
-              page: kk,
-              anchor: Tk
+            if (pS(SS, bS)) return {
+              page: SS,
+              anchor: bS
             }
           }
           return {
-            page: Xk,
-            anchor: Tk
+            page: tS,
+            anchor: bS
           }
         }
-        const dk = {
+        const BS = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function Yk(kk, Fk) {
-          let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const Xk = Fk.slug ? `${kk}/${Fk.slug}` : kk;
-          return Ik ? `${Xk}#${Ik}` : Xk
+        function MS(SS, HS) {
+          let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const tS = HS.slug ? `${SS}/${HS.slug}` : SS;
+          return gS ? `${tS}#${gS}` : tS
         }
-        var Ak = Ik(4761);
-        const gk = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          mk = new Set(["GameApi", "Console", "_TypeOf"]),
-          hk = 4;
+        var FS = gS(4887);
+        const RS = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          TS = new Set(["GameApi", "Console", "_TypeOf"]),
+          oS = 4;
 
-        function rk(kk) {
-          let Fk = kk.length;
-          for (; Fk > 0 && "" === kk[Fk - 1].trim();) Fk--;
-          return kk.slice(0, Fk)
+        function lS(SS) {
+          let HS = SS.length;
+          for (; HS > 0 && "" === SS[HS - 1].trim();) HS--;
+          return SS.slice(0, HS)
         }
 
-        function Dk(kk) {
-          var Fk;
-          const Ik = rk(kk);
-          if (null === (Fk = Ik.at(-1)) || void 0 === Fk || !Fk.trimEnd().endsWith("*/")) return {
-            lines: Ik,
+        function mS(SS) {
+          var HS;
+          const gS = lS(SS);
+          if (null === (HS = gS.at(-1)) || void 0 === HS || !HS.trimEnd().endsWith("*/")) return {
+            lines: gS,
             doc: ""
           };
-          const Xk = Ik.findLastIndex((kk => kk.startsWith("/**")));
-          return -1 === Xk ? {
-            lines: Ik,
+          const tS = gS.findLastIndex((SS => SS.startsWith("/**")));
+          return -1 === tS ? {
+            lines: gS,
             doc: ""
           } : {
-            lines: rk(Ik.slice(0, Xk)),
-            doc: Ik.slice(Xk).join("\n")
+            lines: lS(gS.slice(0, tS)),
+            doc: gS.slice(tS).join("\n")
           }
         }
 
-        function Mk(kk) {
-          var Fk;
-          const Ik = kk.split("\n"),
-            Xk = Ik.flatMap(((kk, Fk) => gk.test(kk) ? [Fk] : []));
-          let Tk = Dk(Ik.slice(0, null !== (Fk = Xk[0]) && void 0 !== Fk ? Fk : Ik.length)).doc;
-          return Xk.map(((kk, Fk) => {
-            var ik;
-            const yk = Dk(Ik.slice(kk, null !== (ik = Xk[Fk + 1]) && void 0 !== ik ? ik : Ik.length)),
-              lk = {
-                name: Ik[kk].match(gk)[1],
-                doc: Tk,
-                lines: yk.lines
+        function eS(SS) {
+          var HS;
+          const gS = SS.split("\n"),
+            tS = gS.flatMap(((SS, HS) => RS.test(SS) ? [HS] : []));
+          let bS = mS(gS.slice(0, null !== (HS = tS[0]) && void 0 !== HS ? HS : gS.length)).doc;
+          return tS.map(((SS, HS) => {
+            var XS;
+            const xS = mS(gS.slice(SS, null !== (XS = tS[HS + 1]) && void 0 !== XS ? XS : gS.length)),
+              NS = {
+                name: gS[SS].match(RS)[1],
+                doc: bS,
+                lines: xS.lines
               };
-            return Tk = yk.doc, lk
+            return bS = xS.doc, NS
           }))
         }
 
-        function kF(kk) {
-          var Fk;
-          const Ik = kk.match(/^readonly \[([\s\S]*)\]$/);
-          return Ik ? null !== (Fk = Ik[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== Fk ? Fk : [] : null
+        function rS(SS) {
+          var HS;
+          const gS = SS.match(/^readonly \[([\s\S]*)\]$/);
+          return gS ? null !== (HS = gS[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== HS ? HS : [] : null
         }
 
-        function FF(kk) {
-          if (!kk.startsWith("{") || !kk.endsWith("}")) return null;
-          const Fk = {
+        function SH(SS) {
+          if (!SS.startsWith("{") || !SS.endsWith("}")) return null;
+          const HS = {
               keys: [],
               values: []
             },
-            Ik = kk => {
-              const Ik = kk.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              Ik && (Fk.keys.push(Ik[1].startsWith('"') ? Ik[1] : `"${Ik[1]}"`), Fk.values.push(Ik[2].trim()))
+            gS = SS => {
+              const gS = SS.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              gS && (HS.keys.push(gS[1].startsWith('"') ? gS[1] : `"${gS[1]}"`), HS.values.push(gS[2].trim()))
             };
-          let Xk = 0,
-            Tk = "";
-          for (const ik of kk.slice(1, -1)) "{[(".includes(ik) ? Xk++ : "}])".includes(ik) && Xk--, ";" === ik && 0 === Xk ? (Ik(Tk), Tk = "") : Tk += ik;
-          return Ik(Tk), Fk
+          let tS = 0,
+            bS = "";
+          for (const XS of SS.slice(1, -1)) "{[(".includes(XS) ? tS++ : "}])".includes(XS) && tS--, ";" === XS && 0 === tS ? (gS(bS), bS = "") : bS += XS;
+          return gS(bS), HS
         }
 
-        function IF(kk) {
-          return kk.length > hk ? `\n\t| ${kk.join("\n\t| ")}` : kk.join(" | ")
+        function HH(SS) {
+          return SS.length > oS ? `\n\t| ${SS.join("\n\t| ")}` : SS.join(" | ")
         }
 
-        function XF(kk, Fk) {
-          const Ik = function(kk, Fk) {
-            return kk.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((kk, Ik) => {
-              var Xk;
-              const Tk = null === (Xk = Fk.get(Ik)) || void 0 === Xk ? void 0 : Xk.object;
-              return Tk ? IF(Tk.values) : kk
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((kk, Ik) => {
-              var Xk, Tk;
-              const ik = null === (Xk = Fk.get(Ik)) || void 0 === Xk || null === (Tk = Xk.object) || void 0 === Tk ? void 0 : Tk.values.map(kF);
-              return null !== ik && void 0 !== ik && ik.every((kk => null !== kk)) ? IF([...new Set(ik.flat())]) : kk
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((kk, Ik) => {
-              var Xk;
-              const Tk = null === (Xk = Fk.get(Ik)) || void 0 === Xk ? void 0 : Xk.members;
-              return Tk ? IF(Tk) : kk
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((kk, Ik) => {
-              var Xk;
-              const Tk = null === (Xk = Fk.get(Ik)) || void 0 === Xk ? void 0 : Xk.object;
-              return Tk ? IF(Tk.keys) : kk
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((kk, Ik) => {
-              var Xk, Tk;
-              return null !== (Xk = null === (Tk = Fk.get(Ik)) || void 0 === Tk ? void 0 : Tk.text) && void 0 !== Xk ? Xk : kk
+        function gH(SS, HS) {
+          const gS = function(SS, HS) {
+            return SS.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((SS, gS) => {
+              var tS;
+              const bS = null === (tS = HS.get(gS)) || void 0 === tS ? void 0 : tS.object;
+              return bS ? HH(bS.values) : SS
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((SS, gS) => {
+              var tS, bS;
+              const XS = null === (tS = HS.get(gS)) || void 0 === tS || null === (bS = tS.object) || void 0 === bS ? void 0 : bS.values.map(rS);
+              return null !== XS && void 0 !== XS && XS.every((SS => null !== SS)) ? HH([...new Set(XS.flat())]) : SS
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((SS, gS) => {
+              var tS;
+              const bS = null === (tS = HS.get(gS)) || void 0 === tS ? void 0 : tS.members;
+              return bS ? HH(bS) : SS
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((SS, gS) => {
+              var tS;
+              const bS = null === (tS = HS.get(gS)) || void 0 === tS ? void 0 : tS.object;
+              return bS ? HH(bS.keys) : SS
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((SS, gS) => {
+              var tS, bS;
+              return null !== (tS = null === (bS = HS.get(gS)) || void 0 === bS ? void 0 : bS.text) && void 0 !== tS ? tS : SS
             }))
-          }(kk.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), Fk);
-          return [kk.doc, Ik].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(SS.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), HS);
+          return [SS.doc, gS].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function TF(kk) {
-          const Fk = Mk(kk),
-            Ik = function(kk) {
-              const Fk = new Map,
-                Ik = kk.find((kk => "_TypeOf" === kk.name));
-              let Xk = null;
-              const Tk = () => {
-                if (Xk) {
-                  const kk = Xk.lines.join("\n");
-                  Fk.set(Xk.name, {
-                    text: kk,
-                    members: kF(kk),
-                    object: FF(kk)
+        function tH(SS) {
+          const HS = eS(SS),
+            gS = function(SS) {
+              const HS = new Map,
+                gS = SS.find((SS => "_TypeOf" === SS.name));
+              let tS = null;
+              const bS = () => {
+                if (tS) {
+                  const SS = tS.lines.join("\n");
+                  HS.set(tS.name, {
+                    text: SS,
+                    members: rS(SS),
+                    object: SH(SS)
                   })
                 }
               };
-              for (const ik of Ik.lines.slice(1, -1)) {
-                const kk = ik.match(/^\t([\w$]+): (.+)$/);
-                kk ? (Tk(), Xk = {
-                  name: kk[1],
-                  lines: [kk[2]]
-                }) : Xk && Xk.lines.push(ik.replace(/^\t/, ""))
+              for (const XS of gS.lines.slice(1, -1)) {
+                const SS = XS.match(/^\t([\w$]+): (.+)$/);
+                SS ? (bS(), tS = {
+                  name: SS[1],
+                  lines: [SS[2]]
+                }) : tS && tS.lines.push(XS.replace(/^\t/, ""))
               }
-              return Tk(), Fk
-            }(Fk),
-            Xk = new Map;
-          for (const Tk of Fk) mk.has(Tk.name) || Xk.has(Tk.name) || Xk.set(Tk.name, XF(Tk, Ik));
-          return Xk
+              return bS(), HS
+            }(HS),
+            tS = new Map;
+          for (const bS of HS) TS.has(bS.name) || tS.has(bS.name) || tS.set(bS.name, gH(bS, gS));
+          return tS
         }
-        let iF, yF, lF;
+        let bH, XH, xH;
 
-        function aF() {
-          return yF ??= function(kk) {
-            const Fk = Mk(kk).find((kk => "GameApi" === kk.name)),
-              Ik = new Map,
-              Xk = Fk.lines;
-            for (let ik = 0; ik < Xk.length; ik++) {
-              var Tk;
-              if (!Xk[ik].trimStart().startsWith("/**")) continue;
-              const kk = ik;
-              for (; ik < Xk.length && !Xk[ik].includes("*/");) ik++;
-              const Fk = null === (Tk = Xk[ik + 1]) || void 0 === Tk ? void 0 : Tk.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!Fk) continue;
-              let yk = null;
-              const lk = [];
-              let ak = "description",
-                qk = !1;
-              for (const Ik of Xk.slice(kk, ik + 1).join("\n").split("\n").map((kk => kk.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const kk = Ik.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                kk ? (yk = kk[1].trim(), ak = "deprecation") : Ik.startsWith("@") ? (ak = "otherTag", qk = !0) : "" === Ik.trim() ? qk || (ak = "description", lk.push(Ik)) : "deprecation" !== ak || /^[A-Z]/.test(Ik.trim()) ? "otherTag" !== ak && (ak = "description", lk.push(Ik)) : yk = `${yk} ${Ik.trim()}`.trim()
+        function NH() {
+          return XH ??= function(SS) {
+            const HS = eS(SS).find((SS => "GameApi" === SS.name)),
+              gS = new Map,
+              tS = HS.lines;
+            for (let XS = 0; XS < tS.length; XS++) {
+              var bS;
+              if (!tS[XS].trimStart().startsWith("/**")) continue;
+              const SS = XS;
+              for (; XS < tS.length && !tS[XS].includes("*/");) XS++;
+              const HS = null === (bS = tS[XS + 1]) || void 0 === bS ? void 0 : bS.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!HS) continue;
+              let xS = null;
+              const NS = [];
+              let qS = "description",
+                uS = !1;
+              for (const gS of tS.slice(SS, XS + 1).join("\n").split("\n").map((SS => SS.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const SS = gS.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                SS ? (xS = SS[1].trim(), qS = "deprecation") : gS.startsWith("@") ? (qS = "otherTag", uS = !0) : "" === gS.trim() ? uS || (qS = "description", NS.push(gS)) : "deprecation" !== qS || /^[A-Z]/.test(gS.trim()) ? "otherTag" !== qS && (qS = "description", NS.push(gS)) : xS = `${xS} ${gS.trim()}`.trim()
               }
-              Ik.set(Fk[1], {
-                deprecation: yk,
-                description: lk.join("\n").trim()
+              gS.set(HS[1], {
+                deprecation: xS,
+                description: NS.join("\n").trim()
               })
             }
-            return Ik
-          }(Ak.default), yF
+            return gS
+          }(FS.default), XH
         }
 
-        function qF() {
-          if (!lF) {
-            lF = new Map;
-            for (const kk of Uk) {
-              const Fk = (0, zk.u)(Wk(kk)).flatMap((kk => kk.blocks));
-              for (const kk of (0, zk.n)(Fk))
-                if ("ts" === kk.lang || "typescript" === kk.lang)
-                  for (const [Fk, Ik] of Ek(kk.code)) lF.set(Fk, Ik)
+        function qH() {
+          if (!xH) {
+            xH = new Map;
+            for (const SS of VS) {
+              const HS = (0, ZS.u)(US(SS)).flatMap((SS => SS.blocks));
+              for (const SS of (0, ZS.h)(HS))
+                if ("ts" === SS.lang || "typescript" === SS.lang)
+                  for (const [HS, gS] of dS(SS.code)) xH.set(HS, gS)
             }
-            for (const [kk, Fk] of(iF ??= TF(Ak.default), iF)) lF.has(kk) || lF.set(kk, Fk)
+            for (const [SS, HS] of(bH ??= tH(FS.default), bH)) xH.has(SS) || xH.set(SS, HS)
           }
-          return lF
+          return xH
         }
-        const LF = {
+        const uH = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let tF;
+        let IH;
 
-        function ZF() {
-          if (!tF) {
-            tF = new Map;
-            for (const kk of Uk)
-              if (Ok(kk.layout))
-                for (const Fk of Wk(kk).sections) tF.has(Fk.heading.text) || tF.set(Fk.heading.text, {
-                  pageId: kk.id,
-                  anchor: Fk.heading.anchor
+        function fH() {
+          if (!IH) {
+            IH = new Map;
+            for (const SS of VS)
+              if (cS(SS.layout))
+                for (const HS of US(SS).sections) IH.has(HS.heading.text) || IH.set(HS.heading.text, {
+                  pageId: SS.id,
+                  anchor: HS.heading.anchor
                 })
           }
-          return tF
+          return IH
         }
 
-        function jF(kk) {
-          const Fk = kk.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return Fk ? ZF().get(Fk[1]) : void 0
+        function kH(SS) {
+          const HS = SS.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return HS ? fH().get(HS[1]) : void 0
         }
-        const eF = (0, Xk.createContext)("/docs"),
-          wF = (0, Xk.createContext)(null),
-          HF = (0, Xk.createContext)(!1),
-          JF = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const aH = (0, tS.createContext)("/docs"),
+          KH = (0, tS.createContext)(null),
+          jH = (0, tS.createContext)(!1),
+          GH = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function xF(kk) {
-          const Fk = kk.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return Fk ? Fk[1] : null
+        function CH(SS) {
+          const HS = SS.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return HS ? HS[1] : null
         }
 
-        function PF(kk) {
+        function nH(SS) {
           let {
-            colour: Fk
-          } = kk;
-          return (0, ek.jsx)("span", {
+            colour: HS
+          } = SS;
+          return (0, KS.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: Fk
+              background: HS
             },
             "aria-hidden": "true"
           })
         }
 
-        function KF(kk) {
-          const Fk = [];
-          let Ik = 0;
-          for (const Xk of kk.matchAll(JF)) Fk.push(kk.slice(Ik, Xk.index), (0, ek.jsx)(PF, {
-            colour: Xk[0]
-          }), Xk[0]), Ik = Xk.index + Xk[0].length;
-          return Fk.push(kk.slice(Ik)), Fk
+        function PH(SS) {
+          const HS = [];
+          let gS = 0;
+          for (const tS of SS.matchAll(GH)) HS.push(SS.slice(gS, tS.index), (0, KS.jsx)(nH, {
+            colour: tS[0]
+          }), tS[0]), gS = tS.index + tS[0].length;
+          return HS.push(SS.slice(gS)), HS
         }
 
-        function QF(kk) {
+        function QH(SS) {
           let {
-            href: Fk,
-            children: Ik
-          } = kk;
-          const Tk = (0, Xk.useContext)(eF);
-          if (Fk.startsWith("#")) {
-            const kk = Bk(Fk);
-            if (kk) return (0, ek.jsx)(yk.e, {
-              to: Yk(Tk, kk.page, kk.anchor),
-              children: (0, ek.jsx)(HF.Provider, {
+            href: HS,
+            children: gS
+          } = SS;
+          const bS = (0, tS.useContext)(aH);
+          if (HS.startsWith("#")) {
+            const SS = sS(HS);
+            if (SS) return (0, KS.jsx)(xS.c, {
+              to: MS(bS, SS.page, SS.anchor),
+              children: (0, KS.jsx)(jH.Provider, {
                 value: !0,
-                children: Ik
+                children: gS
               })
             })
           }
-          return (0, ek.jsx)("a", {
-            href: Fk,
+          return (0, KS.jsx)("a", {
+            href: HS,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, ek.jsx)(HF.Provider, {
+            children: (0, KS.jsx)(jH.Provider, {
               value: !0,
-              children: Ik
+              children: gS
             })
           })
         }
 
-        function sF(kk) {
+        function DH(SS) {
           let {
-            code: Fk
-          } = kk;
-          const Ik = (0, Xk.useContext)(eF);
-          if ((0, Xk.useContext)(HF)) return (0, ek.jsx)("code", {
+            code: HS
+          } = SS;
+          const gS = (0, tS.useContext)(aH);
+          if ((0, tS.useContext)(jH)) return (0, KS.jsx)("code", {
             className: "DocsInlineCode",
-            children: Fk
+            children: HS
           });
-          if (qF().has(Fk)) return (0, ek.jsx)(oF, {
-            type: Fk
+          if (qH().has(HS)) return (0, KS.jsx)(JH, {
+            type: HS
           });
-          const Tk = jF(Fk);
-          if (Tk) return (0, ek.jsx)(yk.e, {
+          const bS = kH(HS);
+          if (bS) return (0, KS.jsx)(xS.c, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: Yk(Ik, Nk(Tk.pageId), Tk.anchor),
-            children: Fk
+            to: MS(gS, WS(bS.pageId), bS.anchor),
+            children: HS
           });
-          const ik = xF(Fk);
-          return (0, ek.jsxs)("code", {
+          const XS = CH(HS);
+          return (0, KS.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [ik && (0, ek.jsx)(PF, {
-              colour: ik
-            }), Fk]
+            children: [XS && (0, KS.jsx)(nH, {
+              colour: XS
+            }), HS]
           })
         }
 
-        function VF(kk) {
+        function wH(SS) {
           let {
-            text: Fk
-          } = kk;
-          const Ik = [];
-          let Tk = 0;
-          for (const Xk of Fk.matchAll(zk.h)) {
-            Xk.index > Tk && Ik.push(...KF(Fk.slice(Tk, Xk.index)));
-            const [, kk, ik, yk, lk, ak] = Xk;
-            kk ? Ik.push((0, ek.jsx)(sF, {
-              code: (0, zk.p)(kk, ik)
-            })) : yk ? Ik.push((0, ek.jsx)("strong", {
-              children: (0, ek.jsx)(VF, {
-                text: yk
+            text: HS
+          } = SS;
+          const gS = [];
+          let bS = 0;
+          for (const tS of HS.matchAll(ZS.e)) {
+            tS.index > bS && gS.push(...PH(HS.slice(bS, tS.index)));
+            const [, SS, XS, xS, NS, qS] = tS;
+            SS ? gS.push((0, KS.jsx)(DH, {
+              code: (0, ZS.l)(SS, XS)
+            })) : xS ? gS.push((0, KS.jsx)("strong", {
+              children: (0, KS.jsx)(wH, {
+                text: xS
               })
-            })) : Ik.push((0, ek.jsx)(QF, {
-              href: ak,
-              children: (0, ek.jsx)(VF, {
-                text: lk
+            })) : gS.push((0, KS.jsx)(QH, {
+              href: qS,
+              children: (0, KS.jsx)(wH, {
+                text: NS
               })
-            })), Tk = Xk.index + Xk[0].length
+            })), bS = tS.index + tS[0].length
           }
-          return Tk < Fk.length && Ik.push(...KF(Fk.slice(Tk))), (0, ek.jsx)(ek.Fragment, {
-            children: Ik.map(((kk, Fk) => (0, ek.jsx)(Xk.Fragment, {
-              children: kk
-            }, Fk)))
+          return bS < HS.length && gS.push(...PH(HS.slice(bS))), (0, KS.jsx)(KS.Fragment, {
+            children: gS.map(((SS, HS) => (0, KS.jsx)(tS.Fragment, {
+              children: SS
+            }, HS)))
           })
         }
-        const zF = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          SF = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const hH = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          ZH = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function oF(kk) {
+        function JH(SS) {
           let {
-            type: Fk
-          } = kk;
-          const Ik = qF(),
-            Tk = [];
-          for (const Xk of Fk.trim().matchAll(zF)) {
-            const [kk, Fk, ik, yk, lk] = Xk;
-            Fk ? Tk.push((0, ek.jsx)("span", {
+            type: HS
+          } = SS;
+          const gS = qH(),
+            bS = [];
+          for (const tS of HS.trim().matchAll(hH)) {
+            const [SS, HS, XS, xS, NS] = tS;
+            HS ? bS.push((0, KS.jsx)("span", {
               className: "DocsTypeString",
-              children: kk
-            })) : ik && Ik.has(ik) ? Tk.push((0, ek.jsx)(GF, {
-              name: ik,
-              definition: Ik.get(ik)
-            })) : ik ? Tk.push((0, ek.jsx)("span", {
-              className: SF.has(ik) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: kk
-            })) : yk ? Tk.push((0, ek.jsx)("span", {
+              children: SS
+            })) : XS && gS.has(XS) ? bS.push((0, KS.jsx)(EH, {
+              name: XS,
+              definition: gS.get(XS)
+            })) : XS ? bS.push((0, KS.jsx)("span", {
+              className: ZH.has(XS) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: SS
+            })) : xS ? bS.push((0, KS.jsx)("span", {
               className: "DocsTypeNumber",
-              children: kk
-            })) : lk ? Tk.push(" ") : Tk.push((0, ek.jsx)("span", {
+              children: SS
+            })) : NS ? bS.push(" ") : bS.push((0, KS.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: kk
+              children: SS
             }))
           }
-          return (0, ek.jsx)("code", {
+          return (0, KS.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: Tk.map(((kk, Fk) => (0, ek.jsx)(Xk.Fragment, {
-              children: kk
-            }, Fk)))
+            children: bS.map(((SS, HS) => (0, KS.jsx)(tS.Fragment, {
+              children: SS
+            }, HS)))
           })
         }
-        const vF = 480,
-          EF = 6,
-          OF = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let nF = 0;
+        const OH = 480,
+          dH = 6,
+          cH = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let vH = 0;
 
-        function GF(kk) {
+        function EH(SS) {
           let {
-            name: Fk,
-            definition: Ik
-          } = kk;
-          const Tk = (0, Xk.useContext)(eF),
-            ik = LF[Fk],
-            lk = (0, Xk.useRef)(null),
-            ak = (0, Xk.useRef)(null),
-            Lk = (0, Xk.useRef)(null),
-            [tk, Zk] = (0, Xk.useState)(!1),
-            [jk, wk] = (0, Xk.useState)(null),
-            Jk = (0, Xk.useRef)(),
-            xk = (0, Xk.useContext)(wF),
-            [Pk] = (0, Xk.useState)((() => "DocsTypePopover-" + nF++)),
-            Kk = () => {
-              clearTimeout(Jk.current), Zk(!0)
+            name: HS,
+            definition: gS
+          } = SS;
+          const bS = (0, tS.useContext)(aH),
+            XS = uH[HS],
+            NS = (0, tS.useRef)(null),
+            qS = (0, tS.useRef)(null),
+            IS = (0, tS.useRef)(null),
+            [fS, kS] = (0, tS.useState)(!1),
+            [aS, jS] = (0, tS.useState)(null),
+            CS = (0, tS.useRef)(),
+            nS = (0, tS.useContext)(KH),
+            [PS] = (0, tS.useState)((() => "DocsTypePopover-" + vH++)),
+            QS = () => {
+              clearTimeout(CS.current), kS(!0)
             },
-            Qk = () => {
-              clearTimeout(Jk.current), Jk.current = setTimeout((() => {
-                Zk(!1)
+            DS = () => {
+              clearTimeout(CS.current), CS.current = setTimeout((() => {
+                kS(!1)
               }), 120)
             };
-          return (0, Xk.useEffect)((() => {
-            if (!tk) return;
-            const kk = kk => {
-              if ("Escape" === kk.key) {
-                var Fk, Ik;
-                if (null !== (Fk = ak.current) && void 0 !== Fk && Fk.contains(document.activeElement)) null === (Ik = lk.current) || void 0 === Ik || Ik.focus();
-                Zk(!1)
+          return (0, tS.useEffect)((() => {
+            if (!fS) return;
+            const SS = SS => {
+              if ("Escape" === SS.key) {
+                var HS, gS;
+                if (null !== (HS = qS.current) && void 0 !== HS && HS.contains(document.activeElement)) null === (gS = NS.current) || void 0 === gS || gS.focus();
+                kS(!1)
               }
             };
-            return document.addEventListener("keydown", kk), () => {
-              document.removeEventListener("keydown", kk)
+            return document.addEventListener("keydown", SS), () => {
+              document.removeEventListener("keydown", SS)
             }
-          }), [tk]), (0, Xk.useEffect)((() => () => {
-            clearTimeout(Jk.current)
-          }), []), (0, Xk.useLayoutEffect)((() => {
-            if (!tk || !lk.current || !ak.current) return void wk(null);
-            const kk = lk.current.getBoundingClientRect(),
-              Fk = ak.current.offsetHeight,
-              Ik = Math.min(vF, window.innerWidth - 32),
-              Xk = Math.min(Math.max(16, kk.left), window.innerWidth - Ik - 16),
-              Tk = kk.bottom + EF + Fk < window.innerHeight;
-            wk({
-              left: Xk,
-              top: Tk ? kk.bottom + EF : Math.max(16, kk.top - EF - Fk)
+          }), [fS]), (0, tS.useEffect)((() => () => {
+            clearTimeout(CS.current)
+          }), []), (0, tS.useLayoutEffect)((() => {
+            if (!fS || !NS.current || !qS.current) return void jS(null);
+            const SS = NS.current.getBoundingClientRect(),
+              HS = qS.current.offsetHeight,
+              gS = Math.min(OH, window.innerWidth - 32),
+              tS = Math.min(Math.max(16, SS.left), window.innerWidth - gS - 16),
+              bS = SS.bottom + dH + HS < window.innerHeight;
+            jS({
+              left: tS,
+              top: bS ? SS.bottom + dH : Math.max(16, SS.top - dH - HS)
             })
-          }), [tk]), (0, ek.jsxs)(ek.Fragment, {
-            children: [(0, ek.jsx)("button", {
+          }), [fS]), (0, KS.jsxs)(KS.Fragment, {
+            children: [(0, KS.jsx)("button", {
               type: "button",
-              ref: lk,
+              ref: NS,
               className: "DocsTypeLink",
-              "aria-expanded": tk,
-              "aria-describedby": tk ? Pk : void 0,
-              onMouseEnter: Kk,
-              onMouseLeave: Qk,
-              onFocus: Kk,
-              onBlur: Qk,
-              onKeyDown: kk => {
-                "Tab" === kk.key && !kk.shiftKey && Lk.current && (kk.preventDefault(), Lk.current.focus())
+              "aria-expanded": fS,
+              "aria-describedby": fS ? PS : void 0,
+              onMouseEnter: QS,
+              onMouseLeave: DS,
+              onFocus: QS,
+              onBlur: DS,
+              onKeyDown: SS => {
+                "Tab" === SS.key && !SS.shiftKey && IS.current && (SS.preventDefault(), IS.current.focus())
               },
-              onClick: Kk,
-              children: Fk
-            }), tk && (0, qk.createPortal)((0, ek.jsxs)("span", {
-              ref: ak,
-              id: Pk,
+              onClick: QS,
+              children: HS
+            }), fS && (0, uS.createPortal)((0, KS.jsxs)("span", {
+              ref: qS,
+              id: PS,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: jk ? {
-                left: jk.left,
-                top: jk.top,
-                maxWidth: vF
+              style: aS ? {
+                left: aS.left,
+                top: aS.top,
+                maxWidth: OH
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: Kk,
-              onMouseLeave: Qk,
-              onFocus: Kk,
-              onBlur: Qk,
-              children: [(0, ek.jsxs)("span", {
+              onMouseEnter: QS,
+              onMouseLeave: DS,
+              onFocus: QS,
+              onBlur: DS,
+              children: [(0, KS.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, ek.jsx)("span", {
+                children: [(0, KS.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: Fk
-                }), ik && (0, ek.jsxs)(yk.e, {
-                  ref: Lk,
+                  children: HS
+                }), XS && (0, KS.jsxs)(xS.c, {
+                  ref: IS,
                   className: "DocsTypePopoverLink",
-                  to: Yk(Tk, Nk(ik)),
+                  to: MS(bS, WS(XS)),
                   onClick: () => {
-                    Zk(!1)
+                    kS(!1)
                   },
-                  onKeyDown: kk => {
-                    if ("Tab" === kk.key) {
-                      var Fk;
-                      if (kk.preventDefault(), kk.shiftKey || !lk.current || ! function(kk, Fk) {
-                          const Ik = [...document.querySelectorAll(OF)],
-                            Xk = Ik.slice(Ik.indexOf(kk) + 1).find((kk => kk.getClientRects().length > 0 && !(null !== Fk && void 0 !== Fk && Fk.contains(kk))));
-                          return null === Xk || void 0 === Xk || Xk.focus(), void 0 !== Xk
-                        }(lk.current, ak.current)) null === (Fk = lk.current) || void 0 === Fk || Fk.focus();
-                      kk.shiftKey || Zk(!1)
+                  onKeyDown: SS => {
+                    if ("Tab" === SS.key) {
+                      var HS;
+                      if (SS.preventDefault(), SS.shiftKey || !NS.current || ! function(SS, HS) {
+                          const gS = [...document.querySelectorAll(cH)],
+                            tS = gS.slice(gS.indexOf(SS) + 1).find((SS => SS.getClientRects().length > 0 && !(null !== HS && void 0 !== HS && HS.contains(SS))));
+                          return null === tS || void 0 === tS || tS.focus(), void 0 !== tS
+                        }(NS.current, qS.current)) null === (HS = NS.current) || void 0 === HS || HS.focus();
+                      SS.shiftKey || kS(!1)
                     }
                   },
-                  children: [Nk(ik).title, (0, ek.jsx)(Hk, {
+                  children: [WS(XS).title, (0, KS.jsx)(GS, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, ek.jsx)(Vk, {
+              }), (0, KS.jsx)(hS, {
                 lang: "ts",
-                code: Ik,
+                code: gS,
                 compact: !0
               })]
-            }), null !== xk && void 0 !== xk ? xk : document.body)]
+            }), null !== nS && void 0 !== nS ? nS : document.body)]
           })
         }
-        var pF = Ik(187),
-          uF = Ik(4767),
-          bF = Ik(4775),
-          RF = Ik(4784);
-        const UF = {
+        var LH = gS(198),
+          YH = gS(4894),
+          AH = gS(4898),
+          yH = gS(4904);
+        const VH = {
           progressBar: {
-            SI: 30,
-            oI: .075,
-            vI: 5,
-            EI: !1,
+            Qg: 30,
+            Dg: .075,
+            wg: 5,
+            hg: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            GI: "fa-solid fa-computer-mouse",
+            Og: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            uI: 3e3,
+            vg: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            bI: !0,
+            Eg: !0,
             scale: 3,
             rotation: 15,
-            RI: !1
+            Lg: !1
           },
           gravityBar: {
-            SI: 30,
-            CI: .25,
-            NI: 3,
-            cI: .8,
+            Qg: 30,
+            Ag: .25,
+            yg: 3,
+            Vg: .8,
             gravity: 1,
-            WI: 1.5,
-            fI: 8,
-            BI: 4,
-            EI: !1,
+            ig: 1.5,
+            Wg: 8,
+            zg: 4,
+            hg: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            YI: .15,
+            sg: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            gI: 5,
-            mI: 1200,
-            hI: .15,
-            rI: 3,
+            Mg: 5,
+            Fg: 1200,
+            Rg: .15,
+            Tg: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var CF = Ik(318),
-          NF = Ik(1926);
+        var iH = gS(369),
+          WH = gS(2115);
 
-        function cF(kk) {
-          return kk.startsWith("fa-")
+        function zH(SS) {
+          return SS.startsWith("fa-")
         }
-        const WF = {
+        const UH = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          fF = {
+          pH = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function BF(kk) {
-          return "string" === typeof kk ? "text" : "entityName" in kk || "translationKey" in kk ? "other" : (0, CF.Db)(kk) ? "progressBar" : (0, CF.Ab)(kk) ? "keyBinding" : "icon" in kk ? "icon" : "str" in kk && "string" === typeof kk.str ? "text" : "other"
+        function sH(SS) {
+          return "string" === typeof SS ? "text" : "entityName" in SS || "translationKey" in SS ? "other" : (0, iH.zb)(SS) ? "progressBar" : (0, iH.vb)(SS) ? "keyBinding" : "icon" in SS ? "icon" : "str" in SS && "string" === typeof SS.str ? "text" : "other"
         }
-        const dF = [{
+        const BH = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          YF = {
+          MH = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...dF],
+            }, ...BH],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: NF.l
+                options: WH.k
               },
               isRequired: !0
-            }, ...dF],
+            }, ...BH],
             other: []
           };
 
-        function AF(kk) {
-          return "string" === typeof kk ? {
-            str: kk
-          } : kk
+        function FH(SS) {
+          return "string" === typeof SS ? {
+            str: SS
+          } : SS
         }
 
-        function gF(kk, Fk) {
-          let Ik = AF(kk);
-          for (const Xk of Fk) Ik = Ik && "object" === typeof Ik ? Ik[Xk] : void 0;
-          return Ik
+        function RH(SS, HS) {
+          let gS = FH(SS);
+          for (const tS of HS) gS = gS && "object" === typeof gS ? gS[tS] : void 0;
+          return gS
         }
 
-        function mF(kk, Fk, Ik) {
-          const Xk = (kk, Tk) => {
-            var ik;
-            const yk = Fk[Tk],
-              lk = {
-                ...kk
+        function TH(SS, HS, gS) {
+          const tS = (SS, bS) => {
+            var XS;
+            const xS = HS[bS],
+              NS = {
+                ...SS
               };
-            if (Tk === Fk.length - 1) return void 0 === Ik ? delete lk[yk] : lk[yk] = Ik, lk;
-            const ak = Xk(null !== (ik = kk[yk]) && void 0 !== ik ? ik : {}, Tk + 1);
-            return 0 === Object.keys(ak).length ? delete lk[yk] : lk[yk] = ak, lk
+            if (bS === HS.length - 1) return void 0 === gS ? delete NS[xS] : NS[xS] = gS, NS;
+            const qS = tS(null !== (XS = SS[xS]) && void 0 !== XS ? XS : {}, bS + 1);
+            return 0 === Object.keys(qS).length ? delete NS[xS] : NS[xS] = qS, NS
           };
-          return function(kk) {
-            const Fk = Object.keys(kk);
-            return "string" === typeof kk.str && 1 === Fk.length ? kk.str : kk
-          }(Xk(AF(kk), 0))
+          return function(SS) {
+            const HS = Object.keys(SS);
+            return "string" === typeof SS.str && 1 === HS.length ? SS.str : SS
+          }(tS(FH(SS), 0))
         }
 
-        function hF(kk, Fk) {
-          const Ik = BF(kk),
-            Xk = YF[Ik].find((kk => kk.path.join(".") === Fk.join("."))),
-            Tk = null !== Xk && void 0 !== Xk && Xk.isRequired && "other" !== Ik ? gF(fF[Ik], Fk) : void 0;
-          return mF(kk, Fk, Tk)
+        function oH(SS, HS) {
+          const gS = sH(SS),
+            tS = MH[gS].find((SS => SS.path.join(".") === HS.join("."))),
+            bS = null !== tS && void 0 !== tS && tS.isRequired && "other" !== gS ? RH(pH[gS], HS) : void 0;
+          return TH(SS, HS, bS)
         }
 
-        function rF(kk) {
-          switch (BF(kk)) {
+        function lH(SS) {
+          switch (sH(SS)) {
             case "text":
-              return String(gF(kk, ["str"]));
+              return String(RH(SS, ["str"]));
             case "icon":
-              return String(gF(kk, ["icon"]));
+              return String(RH(SS, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(gF(kk,["progress"])))}%`;
+              return `${Math.round(100*Number(RH(SS,["progress"])))}%`;
             case "keyBinding":
-              return String(gF(kk, ["action"]));
+              return String(RH(SS, ["action"]));
             case "other":
-              return JSON.stringify(kk)
+              return JSON.stringify(SS)
           }
         }
-        const DF = /^[A-Za-z_$][\w$]*$/;
+        const mH = /^[A-Za-z_$][\w$]*$/;
 
-        function MF(kk) {
-          if (Array.isArray(kk)) return `[${kk.map(MF).join(", ")}]`;
-          if (kk && "object" === typeof kk) {
-            const Fk = Object.entries(kk).map((kk => {
-              let [Fk, Ik] = kk;
-              return `${DF.test(Fk)?Fk:JSON.stringify(Fk)}: ${MF(Ik)}`
+        function eH(SS) {
+          if (Array.isArray(SS)) return `[${SS.map(eH).join(", ")}]`;
+          if (SS && "object" === typeof SS) {
+            const HS = Object.entries(SS).map((SS => {
+              let [HS, gS] = SS;
+              return `${mH.test(HS)?HS:JSON.stringify(HS)}: ${eH(gS)}`
             }));
-            return 0 === Fk.length ? "{}" : `{ ${Fk.join(", ")} }`
+            return 0 === HS.length ? "{}" : `{ ${HS.join(", ")} }`
           }
-          return JSON.stringify(kk)
+          return JSON.stringify(SS)
         }
 
-        function kI(kk) {
-          const Fk = kk.map(MF),
-            Ik = `[${Fk.join(", ")}]`;
-          return Ik.length <= 60 ? Ik : `[\n${Fk.map((kk=>`    ${kk},`)).join("\n")}\n]`
+        function rH(SS) {
+          const HS = SS.map(eH),
+            gS = `[${HS.join(", ")}]`;
+          return gS.length <= 60 ? gS : `[\n${HS.map((SS=>`    ${SS},`)).join("\n")}\n]`
         }
-        const FI = {
+        const Sg = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function II(kk) {
-          let Fk = "";
-          for (let Tk = 0; Tk < kk.length; Tk++) {
-            const ik = kk[Tk];
-            if ("\\" === ik) {
-              var Ik;
-              const Xk = null !== (Ik = kk[Tk + 1]) && void 0 !== Ik ? Ik : "";
-              Fk += "'" === Xk ? "'" : ik + Xk, Tk++
-            } else if ('"' === ik) Fk += '\\"';
+        function Hg(SS) {
+          let HS = "";
+          for (let bS = 0; bS < SS.length; bS++) {
+            const XS = SS[bS];
+            if ("\\" === XS) {
+              var gS;
+              const tS = null !== (gS = SS[bS + 1]) && void 0 !== gS ? gS : "";
+              HS += "'" === tS ? "'" : XS + tS, bS++
+            } else if ('"' === XS) HS += '\\"';
             else {
-              var Xk;
-              Fk += null !== (Xk = FI[ik]) && void 0 !== Xk ? Xk : ik
+              var tS;
+              HS += null !== (tS = Sg[XS]) && void 0 !== tS ? tS : XS
             }
           }
-          return `"${Fk}"`
+          return `"${HS}"`
         }
 
-        function XI(kk) {
-          if ("string" === typeof kk) return !0;
-          if (!kk || "object" !== typeof kk || Array.isArray(kk)) return !1;
-          const Fk = kk;
-          return "ProgressBar" === Fk.type ? "number" === typeof Fk.progress : "StyledKeyBinding" === Fk.type ? NF.l.includes(Fk.action) : "string" === typeof Fk.icon || "string" === typeof Fk.str || "string" === typeof Fk.entityName || "string" === typeof Fk.translationKey
+        function gg(SS) {
+          if ("string" === typeof SS) return !0;
+          if (!SS || "object" !== typeof SS || Array.isArray(SS)) return !1;
+          const HS = SS;
+          return "ProgressBar" === HS.type ? "number" === typeof HS.progress : "StyledKeyBinding" === HS.type ? WH.k.includes(HS.action) : "string" === typeof HS.icon || "string" === typeof HS.str || "string" === typeof HS.entityName || "string" === typeof HS.translationKey
         }
 
-        function TI(kk) {
-          let Fk;
+        function tg(SS) {
+          let HS;
           try {
-            Fk = function(kk) {
-              let Fk = "",
-                Ik = "",
-                Xk = 0;
-              const Tk = () => {
-                Fk += Ik.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), Ik = ""
+            HS = function(SS) {
+              let HS = "",
+                gS = "",
+                tS = 0;
+              const bS = () => {
+                HS += gS.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), gS = ""
               };
-              for (; Xk < kk.length;) {
-                const ik = kk.slice(Xk).search(/["'`]|\/\//);
-                if (-1 === ik) {
-                  Ik += kk.slice(Xk);
+              for (; tS < SS.length;) {
+                const XS = SS.slice(tS).search(/["'`]|\/\//);
+                if (-1 === XS) {
+                  gS += SS.slice(tS);
                   break
                 }
-                Ik += kk.slice(Xk, Xk + ik);
-                const yk = Xk + ik,
-                  lk = kk[yk];
-                if ("/" === lk) {
-                  const Fk = kk.indexOf("\n", yk);
-                  Xk = -1 === Fk ? kk.length : Fk;
+                gS += SS.slice(tS, tS + XS);
+                const xS = tS + XS,
+                  NS = SS[xS];
+                if ("/" === NS) {
+                  const HS = SS.indexOf("\n", xS);
+                  tS = -1 === HS ? SS.length : HS;
                   continue
                 }
-                if (Tk(), "`" === lk) throw new Error("Use quotes rather than template strings.");
-                let ak = yk + 1;
-                for (; ak < kk.length && kk[ak] !== lk;) ak += "\\" === kk[ak] ? 2 : 1;
-                if (ak >= kk.length) throw new Error("A string is missing its closing quote.");
-                const qk = kk.slice(yk + 1, ak);
-                Fk += II(qk), Xk = ak + 1
+                if (bS(), "`" === NS) throw new Error("Use quotes rather than template strings.");
+                let qS = xS + 1;
+                for (; qS < SS.length && SS[qS] !== NS;) qS += "\\" === SS[qS] ? 2 : 1;
+                if (qS >= SS.length) throw new Error("A string is missing its closing quote.");
+                const uS = SS.slice(xS + 1, qS);
+                HS += Hg(uS), tS = qS + 1
               }
-              return Tk(), JSON.parse(Fk)
-            }(kk.trim())
-          } catch (Xk) {
+              return bS(), JSON.parse(HS)
+            }(SS.trim())
+          } catch (tS) {
             return {
               parts: null,
-              error: Xk instanceof SyntaxError ? "This isn't a valid array yet." : Xk.message
+              error: tS instanceof SyntaxError ? "This isn't a valid array yet." : tS.message
             }
           }
-          if (!Array.isArray(Fk)) return {
+          if (!Array.isArray(HS)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const Ik = Fk.findIndex((kk => !XI(kk)));
-          return -1 !== Ik ? {
+          const gS = HS.findIndex((SS => !gg(SS)));
+          return -1 !== gS ? {
             parts: null,
-            error: `Part ${Ik+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${gS+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: Fk,
+            parts: HS,
             error: null
           }
         }
-        const iI = 1 / pF.f.clientTicksPerSecond,
-          yI = 700,
-          lI = {
+        const bg = 1 / LH.e.clientTicksPerSecond,
+          Xg = 700,
+          xg = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          aI = {
-            progressBar: UF.progressBar.GI,
-            timedClick: UF.timedClick.icon,
-            gravityBar: UF.gravityBar.icon,
-            precisionBar: UF.precisionBar.icon,
-            rhythmClick: UF.rhythmClick.icon
+          Ng = {
+            progressBar: VH.progressBar.Og,
+            timedClick: VH.timedClick.icon,
+            gravityBar: VH.gravityBar.icon,
+            precisionBar: VH.precisionBar.icon,
+            rhythmClick: VH.rhythmClick.icon
           };
 
-        function qI(kk) {
+        function qg(SS) {
           let {
-            type: Fk
-          } = kk;
-          const [Ik, Tk] = (0, Xk.useState)("ready"), [yk, lk] = (0, Xk.useState)(1), [ak, qk] = (0, Xk.useState)(!0), Lk = (0, Xk.useRef)(null), tk = (0, Xk.useRef)(null), Zk = (0, Xk.useRef)(null), jk = (0, Xk.useRef)(new Set), wk = (0, Xk.useRef)(!1), Jk = aI[Fk], xk = (0, Xk.useMemo)((() => ({
+            type: HS
+          } = SS;
+          const [gS, bS] = (0, tS.useState)("ready"), [xS, NS] = (0, tS.useState)(1), [qS, uS] = (0, tS.useState)(!0), IS = (0, tS.useRef)(null), fS = (0, tS.useRef)(null), kS = (0, tS.useRef)(null), aS = (0, tS.useRef)(new Set), jS = (0, tS.useRef)(!1), CS = Ng[HS], nS = (0, tS.useMemo)((() => ({
             getState: () => {
-              var kk, Fk;
-              return null !== (kk = null === (Fk = Zk.current) || void 0 === Fk ? void 0 : Fk.getState()) && void 0 !== kk ? kk : lI
+              var SS, HS;
+              return null !== (SS = null === (HS = kS.current) || void 0 === HS ? void 0 : HS.getState()) && void 0 !== SS ? SS : xg
             },
-            onFrame: kk => (jk.current.add(kk), () => {
-              jk.current.delete(kk)
+            onFrame: SS => (aS.current.add(SS), () => {
+              aS.current.delete(SS)
             })
           })), []);
-          (0, Xk.useEffect)((() => {
-            const kk = Lk.current,
-              Fk = tk.current;
-            if (!kk || !Fk) return;
-            const Ik = new ResizeObserver((() => {
-              lk(kk.clientWidth / Math.max(1, Fk.offsetWidth))
+          (0, tS.useEffect)((() => {
+            const SS = IS.current,
+              HS = fS.current;
+            if (!SS || !HS) return;
+            const gS = new ResizeObserver((() => {
+              NS(SS.clientWidth / Math.max(1, HS.offsetWidth))
             }));
-            return Ik.observe(kk), () => {
-              Ik.disconnect()
+            return gS.observe(SS), () => {
+              gS.disconnect()
             }
-          }), []), (0, Xk.useEffect)((() => {
-            var kk;
-            if ("playing" !== Ik) return;
-            let Xk = !1;
-            const ik = new RF.c[Fk](UF[Fk], (kk => {
-              Xk = !0, qk(!1), Tk(kk ? "succeeded" : "failed")
+          }), []), (0, tS.useEffect)((() => {
+            var SS;
+            if ("playing" !== gS) return;
+            let tS = !1;
+            const XS = new yH.f[HS](VH[HS], (SS => {
+              tS = !0, uS(!1), bS(SS ? "succeeded" : "failed")
             }), (() => {}));
-            Zk.current = ik;
-            let yk = 0,
-              lk = performance.now(),
-              ak = requestAnimationFrame((function kk(Fk) {
-                for (yk += Math.min(.25, (Fk - lk) / 1e3), lk = Fk; yk >= iI && !Xk;) yk -= iI, ik.handleTick(iI);
-                for (const Ik of jk.current) Ik();
-                Xk || (ak = requestAnimationFrame(kk))
+            kS.current = XS;
+            let xS = 0,
+              NS = performance.now(),
+              qS = requestAnimationFrame((function SS(HS) {
+                for (xS += Math.min(.25, (HS - NS) / 1e3), NS = HS; xS >= bg && !tS;) xS -= bg, XS.handleTick(bg);
+                for (const gS of aS.current) gS();
+                tS || (qS = requestAnimationFrame(SS))
               }));
-            return null === (kk = Lk.current) || void 0 === kk || kk.focus({
+            return null === (SS = IS.current) || void 0 === SS || SS.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(ak), ik.tearDown(), Zk.current = null, wk.current = !1
+              cancelAnimationFrame(qS), XS.tearDown(), kS.current = null, jS.current = !1
             }
-          }), [Ik, Fk]), (0, Xk.useEffect)((() => {
-            if (ak) return;
-            const kk = setTimeout((() => {
-              qk(!0)
-            }), yI);
+          }), [gS, HS]), (0, tS.useEffect)((() => {
+            if (qS) return;
+            const SS = setTimeout((() => {
+              uS(!0)
+            }), Xg);
             return () => {
-              clearTimeout(kk)
+              clearTimeout(SS)
             }
-          }), [ak]);
-          const Pk = kk => {
-            var Fk;
-            "playing" === Ik && wk.current !== kk && (wk.current = kk, null === (Fk = Zk.current) || void 0 === Fk || Fk.handleMouseInput(kk))
+          }), [qS]);
+          const PS = SS => {
+            var HS;
+            "playing" === gS && jS.current !== SS && (jS.current = SS, null === (HS = kS.current) || void 0 === HS || HS.handleMouseInput(SS))
           };
-          return (0, ek.jsxs)("div", {
+          return (0, KS.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, ek.jsxs)("div", {
-              ref: Lk,
-              className: ik()("DocsQteStage", {
-                Playing: "playing" === Ik
+            children: [(0, KS.jsxs)("div", {
+              ref: IS,
+              className: XS()("DocsQteStage", {
+                Playing: "playing" === gS
               }),
-              tabIndex: "playing" === Ik ? 0 : -1,
-              role: "playing" === Ik ? "button" : void 0,
-              "aria-label": "playing" === Ik ? `${Fk} quick time event: click or press Space` : void 0,
-              onPointerDown: kk => {
-                0 === kk.button && Pk(!0)
+              tabIndex: "playing" === gS ? 0 : -1,
+              role: "playing" === gS ? "button" : void 0,
+              "aria-label": "playing" === gS ? `${HS} quick time event: click or press Space` : void 0,
+              onPointerDown: SS => {
+                0 === SS.button && PS(!0)
               },
               onPointerUp: () => {
-                Pk(!1)
+                PS(!1)
               },
               onPointerLeave: () => {
-                Pk(!1)
+                PS(!1)
               },
               onPointerCancel: () => {
-                Pk(!1)
+                PS(!1)
               },
-              onKeyDown: kk => {
-                "playing" !== Ik || " " !== kk.key && "Enter" !== kk.key || (kk.preventDefault(), Pk(!0))
+              onKeyDown: SS => {
+                "playing" !== gS || " " !== SS.key && "Enter" !== SS.key || (SS.preventDefault(), PS(!0))
               },
-              onKeyUp: kk => {
-                "playing" !== Ik || " " !== kk.key && "Enter" !== kk.key || Pk(!1)
+              onKeyUp: SS => {
+                "playing" !== gS || " " !== SS.key && "Enter" !== SS.key || PS(!1)
               },
-              children: [(0, ek.jsx)("div", {
-                ref: tk,
+              children: [(0, KS.jsx)("div", {
+                ref: fS,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${yk})`
+                  transform: `scale(${xS})`
                 },
-                children: "playing" === Ik && (0, ek.jsx)(bF.d.Provider, {
-                  value: xk,
-                  children: (0, ek.jsx)(uF.b, {
+                children: "playing" === gS && (0, KS.jsx)(AH.c.Provider, {
+                  value: nS,
+                  children: (0, KS.jsx)(YH.d, {
                     qte: {
-                      type: Fk,
-                      parameters: UF[Fk]
+                      type: HS,
+                      parameters: VH[HS]
                     }
                   })
                 })
-              }), "playing" !== Ik && (0, ek.jsxs)("div", {
+              }), "playing" !== gS && (0, KS.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== Ik && (0, ek.jsxs)("div", {
-                  className: ik()("DocsQteResult", "succeeded" === Ik ? "Succeeded" : "Failed"),
-                  children: [(0, ek.jsx)(Hk, {
-                    name: "succeeded" === Ik ? "check" : "cross",
+                children: ["ready" !== gS && (0, KS.jsxs)("div", {
+                  className: XS()("DocsQteResult", "succeeded" === gS ? "Succeeded" : "Failed"),
+                  children: [(0, KS.jsx)(GS, {
+                    name: "succeeded" === gS ? "check" : "cross",
                     isTinted: !0
-                  }), (0, ek.jsx)("span", {
-                    children: "succeeded" === Ik ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, KS.jsx)("span", {
+                    children: "succeeded" === gS ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, ek.jsxs)("button", {
+                }), (0, KS.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !ak,
+                  disabled: !qS,
                   onClick: () => {
-                    Tk("playing")
+                    bS("playing")
                   },
-                  children: [(0, ek.jsx)(Hk, {
-                    name: "ready" === Ik ? "play" : "replay"
-                  }), (0, ek.jsx)("span", {
-                    children: "ready" === Ik ? `Try ${Fk}` : "Play again"
+                  children: [(0, KS.jsx)(GS, {
+                    name: "ready" === gS ? "play" : "replay"
+                  }), (0, KS.jsx)("span", {
+                    children: "ready" === gS ? `Try ${HS}` : "Play again"
                   })]
                 })]
               })]
-            }), Jk && !cF(Jk) && (0, ek.jsxs)("p", {
+            }), CS && !zH(CS) && (0, KS.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, ek.jsx)("code", {
-                children: Jk
+              children: ["The ", (0, KS.jsx)("code", {
+                children: CS
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function LI(kk) {
+        function ug(SS) {
           let {
-            level: Fk,
-            text: Ik,
-            anchor: Xk,
-            className: Tk
-          } = kk;
-          const yk = `h${Math.min(Fk,6)}`;
-          return (0, ek.jsxs)(yk, {
-                id: Xk,
-                className: ik()("DocsHeading", Tk),
-                children: [(0, ek.jsx)(VF, {
-                      text: Ik
-                    }), (0, ek.jsx)("a", {
+            level: HS,
+            text: gS,
+            anchor: tS,
+            className: bS
+          } = SS;
+          const xS = `h${Math.min(HS,6)}`;
+          return (0, KS.jsxs)(xS, {
+                id: tS,
+                className: XS()("DocsHeading", bS),
+                children: [(0, KS.jsx)(wH, {
+                      text: gS
+                    }), (0, KS.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${Xk}`,
-                        "aria-label": `Link to ${Ik.replace(/`/g,"")}`,children:"#"})]})}function tI(kk){let{items:Fk,ordered:Ik}=kk;const Xk=Ik?"ol":"ul";return(0,ek.jsx)(Xk,{className:"DocsList",children:Fk.map(((kk,Fk)=>(0,ek.jsxs)("li",{children:[(0,ek.jsx)(VF,{text:kk.text}),kk.children.length>0&&(0,ek.jsx)(tI,{items:kk.children,ordered:Ik})]},Fk)))})}function ZI(kk){const Fk=kk[0],Ik="paragraph"===(null===Fk||void 0===Fk?void 0:Fk.kind)?Fk.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(Ik)?"warning":/^\*\*(tip|prefer)/.test(Ik)?"tip":"note"}function jI(kk){let{block:Fk}=kk;switch(Fk.kind){case"heading":return(0,ek.jsx)(LI,{level:Fk.level,text:Fk.text,anchor:Fk.anchor});case"paragraph":return(0,ek.jsx)("p",{children:(0,ek.jsx)(VF,{text:Fk.text})});case"code":{const kk="ts"===Fk.lang?function(kk){const Fk=kk.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return Fk&&Object.hasOwn(UF,Fk[1])?Fk[1]:null}(Fk.code):null;return(0,ek.jsxs)(ek.Fragment,{children:[(0,ek.jsx)(Vk,{code:Fk.code,lang:Fk.lang}),kk&&(0,ek.jsx)(qI,{type:kk})]})}case"table":return(0,ek.jsx)("div",{className:"DocsTableScroll",children:(0,ek.jsxs)("table",{className:"DocsTable",children:[(0,ek.jsx)("thead",{children:(0,ek.jsx)("tr",{children:Fk.header.map(((kk,Fk)=>(0,ek.jsx)("th",{children:(0,ek.jsx)(VF,{text:kk})},Fk)))})}),(0,ek.jsx)("tbody",{children:Fk.rows.map(((kk,Fk)=>(0,ek.jsx)("tr",{children:kk.map(((kk,Fk)=>(0,ek.jsx)("td",{children:(0,ek.jsx)(VF,{text:kk})},Fk)))},Fk)))})]})});case"list":return(0,ek.jsx)(tI,{items:Fk.items,ordered:Fk.ordered});case"quote":return(0,ek.jsx)("aside",{className:ik()("DocsCallout",ZI(Fk.blocks)),children:(0,ek.jsx)(eI,{blocks:Fk.blocks})});case"rule":return(0,ek.jsx)("hr",{className:"DocsRule"})}}function eI(kk){let{blocks:Fk}=kk;return(0,ek.jsx)(ek.Fragment,{children:Fk.map(((kk,Fk)=>(0,ek.jsx)(jI,{block:kk},Fk)))})}var wI=Ik(4747),HI=Ik(4755);function JI(kk){return"blocks"===kk||"items"===kk}const xI=new Map;function PI(kk){let Fk=xI.get(kk);return Fk||(Fk=function(kk){const Fk={entries:[],legend:[],notes:[],examples:[]};let Ik=!1;for(const ik of kk.split(/\r?\n/).slice(1)){if(ik.startsWith("#")){const kk=ik.replace(/^# ?/,""),Xk=kk.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);Xk?Fk.legend.push({code:Xk[1],meaning:Xk[2],usage:Xk[3].trim()}):/^Examples:/.test(kk.trim())?Ik=!0:Ik&&kk.trim()?Fk.examples.push(kk.trim()):kk.trim()&&!/^\s/.test(kk)&&Fk.notes.push(kk.trim());continue}const kk=ik.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var Xk,Tk;kk&&Fk.entries.push({name:kk[1],variants:null!==(Xk=null===(Tk=kk[2])||void 0===Tk?void 0:Tk.split(","))&&void 0!==Xk?Xk:[]})}return Fk}("blocks"===kk?wI:HI),xI.set(kk,Fk)),Fk}function KI(kk){let{className:Fk,value:Ik,placeholder:Xk,label:Tk,onChange:ik,count:yk,children:lk}=kk;return(0,ek.jsxs)("div",{className:Fk,children:[(0,ek.jsx)(Hk,{name:"magnifying-glass"}),(0,ek.jsx)("input",{type:"search",value:Ik,placeholder:Xk,"aria-label":Tk,onChange:kk=>{ik(kk.target.value)}}),lk,yk&&(0,ek.jsxs)("span",{className:"DocsFilterCount",children:[yk.visible," of ",yk.total]})]})}var QI=Ik(1066);function sI(kk){const Fk=kk.trim().match(/^(` {
+                        href: `#${tS}`,
+                        "aria-label": `Link to ${gS.replace(/`/g,"")}`,children:"#"})]})}function Ig(SS){let{items:HS,ordered:gS}=SS;const tS=gS?"ol":"ul";return(0,KS.jsx)(tS,{className:"DocsList",children:HS.map(((SS,HS)=>(0,KS.jsxs)("li",{children:[(0,KS.jsx)(wH,{text:SS.text}),SS.children.length>0&&(0,KS.jsx)(Ig,{items:SS.children,ordered:gS})]},HS)))})}function fg(SS){const HS=SS[0],gS="paragraph"===(null===HS||void 0===HS?void 0:HS.kind)?HS.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(gS)?"warning":/^\*\*(tip|prefer)/.test(gS)?"tip":"note"}function kg(SS){let{block:HS}=SS;switch(HS.kind){case"heading":return(0,KS.jsx)(ug,{level:HS.level,text:HS.text,anchor:HS.anchor});case"paragraph":return(0,KS.jsx)("p",{children:(0,KS.jsx)(wH,{text:HS.text})});case"code":{const SS="ts"===HS.lang?function(SS){const HS=SS.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return HS&&Object.hasOwn(VH,HS[1])?HS[1]:null}(HS.code):null;return(0,KS.jsxs)(KS.Fragment,{children:[(0,KS.jsx)(hS,{code:HS.code,lang:HS.lang}),SS&&(0,KS.jsx)(qg,{type:SS})]})}case"table":return(0,KS.jsx)("div",{className:"DocsTableScroll",children:(0,KS.jsxs)("table",{className:"DocsTable",children:[(0,KS.jsx)("thead",{children:(0,KS.jsx)("tr",{children:HS.header.map(((SS,HS)=>(0,KS.jsx)("th",{children:(0,KS.jsx)(wH,{text:SS})},HS)))})}),(0,KS.jsx)("tbody",{children:HS.rows.map(((SS,HS)=>(0,KS.jsx)("tr",{children:SS.map(((SS,HS)=>(0,KS.jsx)("td",{children:(0,KS.jsx)(wH,{text:SS})},HS)))},HS)))})]})});case"list":return(0,KS.jsx)(Ig,{items:HS.items,ordered:HS.ordered});case"quote":return(0,KS.jsx)("aside",{className:XS()("DocsCallout",fg(HS.blocks)),children:(0,KS.jsx)(ag,{blocks:HS.blocks})});case"rule":return(0,KS.jsx)("hr",{className:"DocsRule"})}}function ag(SS){let{blocks:HS}=SS;return(0,KS.jsx)(KS.Fragment,{children:HS.map(((SS,HS)=>(0,KS.jsx)(kg,{block:SS},HS)))})}var Kg=gS(4874),jg=gS(4879);function Gg(SS){return"blocks"===SS||"items"===SS}const Cg=new Map;function ng(SS){let HS=Cg.get(SS);return HS||(HS=function(SS){const HS={entries:[],legend:[],notes:[],examples:[]};let gS=!1;for(const XS of SS.split(/\r?\n/).slice(1)){if(XS.startsWith("#")){const SS=XS.replace(/^# ?/,""),tS=SS.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);tS?HS.legend.push({code:tS[1],meaning:tS[2],usage:tS[3].trim()}):/^Examples:/.test(SS.trim())?gS=!0:gS&&SS.trim()?HS.examples.push(SS.trim()):SS.trim()&&!/^\s/.test(SS)&&HS.notes.push(SS.trim());continue}const SS=XS.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var tS,bS;SS&&HS.entries.push({name:SS[1],variants:null!==(tS=null===(bS=SS[2])||void 0===bS?void 0:bS.split(","))&&void 0!==tS?tS:[]})}return HS}("blocks"===SS?Kg:jg),Cg.set(SS,HS)),HS}function Pg(SS){let{className:HS,value:gS,placeholder:tS,label:bS,onChange:XS,count:xS,children:NS}=SS;return(0,KS.jsxs)("div",{className:HS,children:[(0,KS.jsx)(GS,{name:"magnifying-glass"}),(0,KS.jsx)("input",{type:"search",value:gS,placeholder:tS,"aria-label":bS,onChange:SS=>{XS(SS.target.value)}}),NS,xS&&(0,KS.jsxs)("span",{className:"DocsFilterCount",children:[xS.visible," of ",xS.total]})]})}var Qg=gS(1127);function Dg(SS){const HS=SS.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return Fk?Fk[2]:null}function VI(kk){return"paragraph"===kk.kind&&""===kk.text.trim()}function zI(kk){const Fk={name:kk.heading.text,description:[],params:[],returns:null};let Ik="description";for(const Tk of kk.blocks)if(!VI(Tk))if("heading"===Tk.kind&&/^Parameters:?$/.test(Tk.text))Ik="params";else if("heading"===Tk.kind&&/^Returns:?$/.test(Tk.text))Ik="returns",Fk.returns={type:"",description:[]};else if("params"!==Ik||"table"!==Tk.kind){if("returns"===Ik&&"paragraph"===Tk.kind&&""===Fk.returns.type){const kk=sI(Tk.text);if(null!==kk){Fk.returns.type=kk.replaceAll("\\|","|");continue}}"returns"===Ik?Fk.returns.description.push(Tk):Fk.description.push(Tk)}else for(const[kk,Ik,ik]of Tk.rows){var Xk;Fk.params.push({name:kk,type:null!==(Xk=sI(Ik))&&void 0!==Xk?Xk:Ik,description:null!==ik&&void 0!==ik?ik:""})}return Fk}const SI=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function oI(kk){return kk.filter((kk=>!VI(kk)))}const vI=/^[\w][\w .'&!:()-]*$/,EI=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function OI(kk){var Fk;if("code"===kk.kind&&"text"===kk.lang){const Fk=kk.code.split("\n").map((kk=>kk.trim())).filter(Boolean);return Fk.length>0&&Fk.every((kk=>vI.test(kk)))?Fk.map((kk=>({name:kk}))):null}return"paragraph"===kk.kind&&EI.test(kk.text.trim())?[...kk.text.matchAll(/`([ ^ `]+)` / g)].flatMap((kk => kk[1].split(/,\s*/).map((kk => ({
-                              name: kk.trim()
-                            }))))): "table" === kk.kind && null !== (Fk = kk.header[0]) && void 0 !== Fk && Fk.startsWith("Song") ? kk.rows.map((kk => {
-                              let [Fk, Ik] = kk;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return HS?HS[2]:null}function wg(SS){return"paragraph"===SS.kind&&""===SS.text.trim()}function hg(SS){const HS={name:SS.heading.text,description:[],params:[],returns:null};let gS="description";for(const bS of SS.blocks)if(!wg(bS))if("heading"===bS.kind&&/^Parameters:?$/.test(bS.text))gS="params";else if("heading"===bS.kind&&/^Returns:?$/.test(bS.text))gS="returns",HS.returns={type:"",description:[]};else if("params"!==gS||"table"!==bS.kind){if("returns"===gS&&"paragraph"===bS.kind&&""===HS.returns.type){const SS=Dg(bS.text);if(null!==SS){HS.returns.type=SS.replaceAll("\\|","|");continue}}"returns"===gS?HS.returns.description.push(bS):HS.description.push(bS)}else for(const[SS,gS,XS]of bS.rows){var tS;HS.params.push({name:SS,type:null!==(tS=Dg(gS))&&void 0!==tS?tS:gS,description:null!==XS&&void 0!==XS?XS:""})}return HS}const Zg=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function Jg(SS){return SS.filter((SS=>!wg(SS)))}const Og=/^[\w][\w .'&!:()-]*$/,dg=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function cg(SS){var HS;if("code"===SS.kind&&"text"===SS.lang){const HS=SS.code.split("\n").map((SS=>SS.trim())).filter(Boolean);return HS.length>0&&HS.every((SS=>Og.test(SS)))?HS.map((SS=>({name:SS}))):null}return"paragraph"===SS.kind&&dg.test(SS.text.trim())?[...SS.text.matchAll(/`([ ^ `]+)` / g)].flatMap((SS => SS[1].split(/,\s*/).map((SS => ({
+                              name: SS.trim()
+                            }))))): "table" === SS.kind && null !== (HS = SS.header[0]) && void 0 !== HS && HS.startsWith("Song") ? SS.rows.map((SS => {
+                              let [HS, gS] = SS;
                               return {
-                                name: Fk.replace(/`/g, ""),
-                                caption: Ik
+                                name: HS.replace(/`/g, ""),
+                                caption: gS
                               }
                             })) : null
                           }
 
-                          function nI(kk) {
-                            const Fk = [];
-                            for (const Ik of kk) {
-                              const kk = OI(Ik),
-                                Xk = Fk.at(-1),
-                                Tk = "table" === Ik.kind;
-                              kk ? "names" === (null === Xk || void 0 === Xk ? void 0 : Xk.kind) && Xk.isSongs === Tk ? Xk.names.push(...kk) : Fk.push({
+                          function vg(SS) {
+                            const HS = [];
+                            for (const gS of SS) {
+                              const SS = cg(gS),
+                                tS = HS.at(-1),
+                                bS = "table" === gS.kind;
+                              SS ? "names" === (null === tS || void 0 === tS ? void 0 : tS.kind) && tS.isSongs === bS ? tS.names.push(...SS) : HS.push({
                                 kind: "names",
-                                names: kk,
-                                isSongs: Tk
-                              }) : Fk.push({
+                                names: SS,
+                                isSongs: bS
+                              }) : HS.push({
                                 kind: "block",
-                                block: Ik
+                                block: gS
                               })
                             }
-                            return Fk
+                            return HS
                           }
-                          const GI = {
+                          const Eg = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function pI(kk, Fk) {
-                            return `${GI[kk]}-${(0,zk.t)(Fk)}`
+                          function Lg(SS, HS) {
+                            return `${Eg[SS]}-${(0,ZS.r)(HS)}`
                           }
-                          const uI = new WeakMap;
+                          const Yg = new WeakMap;
 
-                          function bI(kk, Fk, Ik) {
-                            let Xk = uI.get(Fk);
-                            if (!Xk) {
-                              Xk = new Map;
-                              const Ik = new Set;
-                              for (const Tk of (0, zk.u)(Fk)) {
-                                const Fk = nI(oI(Tk.blocks)).map((Fk => {
-                                  if ("block" === Fk.kind) return Fk;
+                          function Ag(SS, HS, gS) {
+                            let tS = Yg.get(HS);
+                            if (!tS) {
+                              tS = new Map;
+                              const gS = new Set;
+                              for (const bS of (0, ZS.u)(HS)) {
+                                const HS = vg(Jg(bS.blocks)).map((HS => {
+                                  if ("block" === HS.kind) return HS;
                                   return {
                                     kind: "names",
-                                    names: Fk.names.map((Fk => {
-                                      var Xk, ik;
-                                      const yk = pI(kk, Fk.name);
-                                      let lk = yk;
-                                      for (let kk = 2; Ik.has(lk); kk++) lk = `${yk}-${kk}`;
-                                      return Ik.add(lk), {
-                                        ...Fk,
-                                        anchor: lk,
-                                        heading: null !== (Xk = null === (ik = Tk.heading) || void 0 === ik ? void 0 : ik.text) && void 0 !== Xk ? Xk : ""
+                                    names: HS.names.map((HS => {
+                                      var tS, XS;
+                                      const xS = Lg(SS, HS.name);
+                                      let NS = xS;
+                                      for (let SS = 2; gS.has(NS); SS++) NS = `${xS}-${SS}`;
+                                      return gS.add(NS), {
+                                        ...HS,
+                                        anchor: NS,
+                                        heading: null !== (tS = null === (XS = bS.heading) || void 0 === XS ? void 0 : XS.text) && void 0 !== tS ? tS : ""
                                       }
                                     })),
-                                    isSongs: Fk.isSongs
+                                    isSongs: HS.isSongs
                                   }
                                 }));
-                                Xk.set(Tk.blocks, Fk)
+                                tS.set(bS.blocks, HS)
                               }
-                              uI.set(Fk, Xk)
+                              Yg.set(HS, tS)
                             }
-                            const Tk = Xk.get(Ik);
-                            if (!Tk) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return Tk
+                            const bS = tS.get(gS);
+                            if (!bS) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return bS
                           }
-                          const RI = "/textures/docs/skinPreviews",
-                            UI = [{
+                          const yg = "/textures/docs/skinPreviews",
+                            Vg = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var CI = Ik(4196),
-                            NI = Ik(4210);
+                          var ig = gS(4346),
+                            Wg = gS(4356);
 
-                          function cI(kk) {
-                            return Object.hasOwn(CI.g, kk) ? CI.g[kk] : null
+                          function zg(SS) {
+                            return Object.hasOwn(ig.g, SS) ? ig.g[SS] : null
                           }
-                          const WI = {
+                          const Ug = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: NI.d.Standard
+                            blendMode: Wg.g.Standard
                           };
 
-                          function fI(kk, Fk, Ik) {
-                            return Fk + (Ik - Fk) * kk()
+                          function pg(SS, HS, gS) {
+                            return HS + (gS - HS) * SS()
                           }
 
-                          function BI(kk, Fk, Ik) {
-                            return kk + (Fk - kk) * Ik
+                          function sg(SS, HS, gS) {
+                            return SS + (HS - SS) * gS
                           }
 
-                          function dI(kk) {
-                            return kk.length > 0 && "timeFraction" in kk[0]
+                          function Bg(SS) {
+                            return SS.length > 0 && "timeFraction" in SS[0]
                           }
 
-                          function YI(kk, Fk) {
-                            if (0 === kk.colorGradients.length) return [{
+                          function Mg(SS, HS) {
+                            if (0 === SS.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!dI(kk.colorGradients)) {
-                              const Ik = kk.colorGradients,
+                            if (!Bg(SS.colorGradients)) {
+                              const gS = SS.colorGradients,
                                 {
-                                  color: Xk
-                                } = Ik[Math.floor(Fk() * Ik.length) % Ik.length];
+                                  color: tS
+                                } = gS[Math.floor(HS() * gS.length) % gS.length];
                               return [{
                                 at: 0,
-                                colour: [Xk[0] / 255, Xk[1] / 255, Xk[2] / 255, 1]
+                                colour: [tS[0] / 255, tS[1] / 255, tS[2] / 255, 1]
                               }]
                             }
-                            return [...kk.colorGradients].sort(((kk, Fk) => kk.timeFraction - Fk.timeFraction)).map((kk => {
-                              var Ik, Xk, Tk;
-                              const ik = kk.minColor,
-                                yk = null !== (Ik = kk.maxColor) && void 0 !== Ik ? Ik : ik,
-                                lk = Fk(),
-                                ak = [BI(ik[0], yk[0], lk) / 255, BI(ik[1], yk[1], lk) / 255, BI(ik[2], yk[2], lk) / 255, BI(null !== (Xk = ik[3]) && void 0 !== Xk ? Xk : 1, null !== (Tk = yk[3]) && void 0 !== Tk ? Tk : 1, lk)];
+                            return [...SS.colorGradients].sort(((SS, HS) => SS.timeFraction - HS.timeFraction)).map((SS => {
+                              var gS, tS, bS;
+                              const XS = SS.minColor,
+                                xS = null !== (gS = SS.maxColor) && void 0 !== gS ? gS : XS,
+                                NS = HS(),
+                                qS = [sg(XS[0], xS[0], NS) / 255, sg(XS[1], xS[1], NS) / 255, sg(XS[2], xS[2], NS) / 255, sg(null !== (tS = XS[3]) && void 0 !== tS ? tS : 1, null !== (bS = xS[3]) && void 0 !== bS ? bS : 1, NS)];
                               return {
-                                at: kk.timeFraction,
-                                colour: ak
+                                at: SS.timeFraction,
+                                colour: qS
                               }
                             }))
                           }
 
-                          function AI(kk, Fk, Ik, Xk) {
-                            const Tk = fI(Xk, kk.minEmitPower, kk.maxEmitPower),
-                              ik = Fk => fI(Xk, Math.min(kk.dir1[Fk], kk.dir2[Fk]), Math.max(kk.dir1[Fk], kk.dir2[Fk])) * Tk,
-                              yk = [...kk.velocityGradients].sort(((kk, Fk) => kk.timeFraction - Fk.timeFraction)).map((kk => ({
-                                at: kk.timeFraction,
-                                factor: fI(Xk, kk.factor, kk.factor2)
+                          function Fg(SS, HS, gS, tS) {
+                            const bS = pg(tS, SS.minEmitPower, SS.maxEmitPower),
+                              XS = HS => pg(tS, Math.min(SS.dir1[HS], SS.dir2[HS]), Math.max(SS.dir1[HS], SS.dir2[HS])) * bS,
+                              xS = [...SS.velocityGradients].sort(((SS, HS) => SS.timeFraction - HS.timeFraction)).map((SS => ({
+                                at: SS.timeFraction,
+                                factor: pg(tS, SS.factor, SS.factor2)
                               })));
                             return {
-                              pos: [fI(Xk, Fk[0], Ik[0]), fI(Xk, Fk[1], Ik[1]), fI(Xk, Fk[2], Ik[2])],
-                              dir: [ik(0), ik(1), ik(2)],
+                              pos: [pg(tS, HS[0], gS[0]), pg(tS, HS[1], gS[1]), pg(tS, HS[2], gS[2])],
+                              dir: [XS(0), XS(1), XS(2)],
                               age: 0,
-                              life: fI(Xk, kk.minLifeTime, kk.maxLifeTime),
-                              size: fI(Xk, kk.minSize, kk.maxSize),
-                              colours: YI(kk, Xk),
-                              velocityFactors: yk
+                              life: pg(tS, SS.minLifeTime, SS.maxLifeTime),
+                              size: pg(tS, SS.minSize, SS.maxSize),
+                              colours: Mg(SS, tS),
+                              velocityFactors: xS
                             }
                           }
 
-                          function gI(kk, Fk, Ik, Xk) {
-                            if (Fk < kk[0].at) return Ik(Math.min(1, kk.length - 1));
-                            for (let Tk = 0; Tk < kk.length - 1; Tk++)
-                              if (Fk <= kk[Tk + 1].at) {
-                                const ik = kk[Tk + 1].at - kk[Tk].at;
-                                return Xk(Ik(Tk), Ik(Tk + 1), ik > 0 ? (Fk - kk[Tk].at) / ik : 1)
-                              } return Ik(kk.length - 1)
+                          function Rg(SS, HS, gS, tS) {
+                            if (HS < SS[0].at) return gS(Math.min(1, SS.length - 1));
+                            for (let bS = 0; bS < SS.length - 1; bS++)
+                              if (HS <= SS[bS + 1].at) {
+                                const XS = SS[bS + 1].at - SS[bS].at;
+                                return tS(gS(bS), gS(bS + 1), XS > 0 ? (HS - SS[bS].at) / XS : 1)
+                              } return gS(SS.length - 1)
                           }
 
-                          function mI(kk) {
-                            return gI(kk.colours, kk.age / kk.life, (Fk => kk.colours[Fk].colour), ((kk, Fk, Ik) => [BI(kk[0], Fk[0], Ik), BI(kk[1], Fk[1], Ik), BI(kk[2], Fk[2], Ik), BI(kk[3], Fk[3], Ik)]))
+                          function Tg(SS) {
+                            return Rg(SS.colours, SS.age / SS.life, (HS => SS.colours[HS].colour), ((SS, HS, gS) => [sg(SS[0], HS[0], gS), sg(SS[1], HS[1], gS), sg(SS[2], HS[2], gS), sg(SS[3], HS[3], gS)]))
                           }
 
-                          function hI(kk, Fk, Ik) {
-                            if (kk.age += Ik, kk.age >= kk.life) return !1;
-                            const Xk = function(kk) {
-                              return 0 === kk.velocityFactors.length ? 1 : gI(kk.velocityFactors, kk.age / kk.life, (Fk => kk.velocityFactors[Fk].factor), BI)
-                            }(kk) * Ik;
-                            for (let ik = 0; ik < 3; ik++) {
-                              var Tk;
-                              kk.pos[ik] += kk.dir[ik] * Xk, kk.dir[ik] += (null !== (Tk = Fk[ik]) && void 0 !== Tk ? Tk : 0) * Ik
+                          function og(SS, HS, gS) {
+                            if (SS.age += gS, SS.age >= SS.life) return !1;
+                            const tS = function(SS) {
+                              return 0 === SS.velocityFactors.length ? 1 : Rg(SS.velocityFactors, SS.age / SS.life, (HS => SS.velocityFactors[HS].factor), sg)
+                            }(SS) * gS;
+                            for (let XS = 0; XS < 3; XS++) {
+                              var bS;
+                              SS.pos[XS] += SS.dir[XS] * tS, SS.dir[XS] += (null !== (bS = HS[XS]) && void 0 !== bS ? bS : 0) * gS
                             }
                             return !0
                           }
 
-                          function rI(kk) {
-                            return String(Math.round(1e6 * kk) / 1e6)
+                          function lg(SS) {
+                            return String(Math.round(1e6 * SS) / 1e6)
                           }
 
-                          function DI(kk) {
-                            return `[${kk.map(rI).join(", ")}]`
+                          function mg(SS) {
+                            return `[${SS.map(lg).join(", ")}]`
                           }
 
-                          function MI(kk, Fk) {
-                            const Ik = `${Fk}    `;
-                            return `[\n${(dI(kk)?kk.map((kk=>{const Fk=[`${Ik}    timeFraction: ${rI(kk.timeFraction)},`,`${Ik}    minColor: ${DI(kk.minColor)},`];return kk.maxColor&&Fk.push(`${Ik}    maxColor: ${DI(kk.maxColor)},`),`${Ik}{\n${Fk.join("\n")}\n${Ik}},`})):kk.map((kk=>`
+                          function eg(SS, HS) {
+                            const gS = `${HS}    `;
+                            return `[\n${(Bg(SS)?SS.map((SS=>{const HS=[`${gS}    timeFraction: ${lg(SS.timeFraction)},`,`${gS}    minColor: ${mg(SS.minColor)},`];return SS.maxColor&&HS.push(`${gS}    maxColor: ${mg(SS.maxColor)},`),`${gS}{\n${HS.join("\n")}\n${gS}},`})):SS.map((SS=>`
                             $ {
-                              Ik
+                              gS
                             } {
                               color: $ {
-                                DI(kk.color)
+                                mg(SS.color)
                               }
-                            }, `))).join("\n")}\n${Fk}]`
+                            }, `))).join("\n")}\n${HS}]`
                           }
-                          const kX = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            FX = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const IX = .6;
+                          const rg = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            St = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const Ht = .6;
 
-                          function XX(kk, Fk) {
-                            return `${Fk?"song":"sound"}:${kk}`
+                          function gt(SS, HS) {
+                            return `${HS?"song":"sound"}:${SS}`
                           }
-                          let TX = {
+                          let tt = {
                               track: null,
-                              volume: IX
+                              volume: Ht
                             },
-                            iX = null,
-                            yX = 0,
-                            lX = 0;
-                          const aX = new Set;
+                            bt = null,
+                            Xt = 0,
+                            xt = 0;
+                          const Nt = new Set;
 
-                          function qX(kk) {
-                            TX = {
-                              ...TX,
-                              ...kk
-                            }, aX.forEach((kk => {
-                              kk()
+                          function qt(SS) {
+                            tt = {
+                              ...tt,
+                              ...SS
+                            }, Nt.forEach((SS => {
+                              SS()
                             }))
                           }
 
-                          function LX(kk) {
-                            TX.track && qX({
+                          function ut(SS) {
+                            tt.track && qt({
                               track: {
-                                ...TX.track,
-                                ...kk
+                                ...tt.track,
+                                ...SS
                               }
                             })
                           }
 
-                          function tX(kk) {
-                            const [Fk, Ik] = (0, Xk.useState)((() => kk(TX))), Tk = (0, Xk.useRef)(kk);
-                            return Tk.current = kk, (0, Xk.useEffect)((() => {
-                              const kk = () => {
-                                Ik((() => Tk.current(TX)))
+                          function It(SS) {
+                            const [HS, gS] = (0, tS.useState)((() => SS(tt))), bS = (0, tS.useRef)(SS);
+                            return bS.current = SS, (0, tS.useEffect)((() => {
+                              const SS = () => {
+                                gS((() => bS.current(tt)))
                               };
-                              return aX.add(kk), kk(), () => {
-                                aX.delete(kk)
+                              return Nt.add(SS), SS(), () => {
+                                Nt.delete(SS)
                               }
-                            }), []), Fk
+                            }), []), HS
                           }
 
-                          function ZX() {
-                            yX++;
-                            const kk = iX;
-                            iX = null, null === kk || void 0 === kk || kk.stop()
+                          function ft() {
+                            Xt++;
+                            const SS = bt;
+                            bt = null, null === SS || void 0 === SS || SS.stop()
                           }
 
-                          function jX(kk, Fk) {
-                            let Xk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            ZX();
-                            const Tk = yX,
+                          function kt(SS, HS) {
+                            let tS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            ft();
+                            const bS = Xt,
                               {
-                                track: ik
-                              } = TX,
-                              yk = ik && ik.name === kk && ik.isSong === Fk ? ik.duration : 0;
-                            lX = Xk, qX({
+                                track: XS
+                              } = tt,
+                              xS = XS && XS.name === SS && XS.isSong === HS ? XS.duration : 0;
+                            xt = tS, qt({
                               track: {
-                                name: kk,
-                                isSong: Fk,
+                                name: SS,
+                                isSong: HS,
                                 status: "loading",
-                                duration: yk
+                                duration: xS
                               }
-                            }), Promise.all([Ik.e(222), Ik.e(249)]).then((() => Ik(39792))).then((Ik => {
+                            }), Promise.all([gS.e(222), gS.e(249)]).then((() => gS(39847))).then((gS => {
                               let {
-                                playDocsSound: ik
-                              } = Ik;
-                              Tk === yX && (iX = ik(kk, Fk, TX.volume, Xk, {
-                                onPlay: kk => {
-                                  Tk === yX && LX({
+                                playDocsSound: XS
+                              } = gS;
+                              bS === Xt && (bt = XS(SS, HS, tt.volume, tS, {
+                                onPlay: SS => {
+                                  bS === Xt && ut({
                                     status: "playing",
-                                    duration: kk
+                                    duration: SS
                                   })
                                 },
-                                onEnd: kk => {
-                                  var Fk, Ik;
-                                  Tk === yX && (iX = null, kk ? qX({
+                                onEnd: SS => {
+                                  var HS, gS;
+                                  bS === Xt && (bt = null, SS ? qt({
                                     track: null
-                                  }) : (lX = null !== (Fk = null === (Ik = TX.track) || void 0 === Ik ? void 0 : Ik.duration) && void 0 !== Fk ? Fk : 0, LX({
+                                  }) : (xt = null !== (HS = null === (gS = tt.track) || void 0 === gS ? void 0 : gS.duration) && void 0 !== HS ? HS : 0, ut({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((Fk => {
-                              console.error(`Could not play docs sound ${kk}`, Fk), Tk === yX && qX({
+                            })).catch((HS => {
+                              console.error(`Could not play docs sound ${SS}`, HS), bS === Xt && qt({
                                 track: null
                               })
                             }))
                           }
 
-                          function eX() {
+                          function Kt() {
                             const {
-                              track: kk
-                            } = TX;
-                            if (!kk) return;
-                            if ("playing" === kk.status && iX) return lX = iX.OJ(), iX.pause(), void LX({
+                              track: SS
+                            } = tt;
+                            if (!SS) return;
+                            if ("playing" === SS.status && bt) return xt = bt.lC(), bt.pause(), void ut({
                               status: "paused"
                             });
-                            if ("loading" === kk.status) return ZX(), void LX({
+                            if ("loading" === SS.status) return ft(), void ut({
                               status: "paused"
                             });
-                            if (iX) return void iX.resume();
-                            const Fk = kk.duration > 0 && lX >= kk.duration - .05;
-                            jX(kk.name, kk.isSong, Fk ? 0 : lX)
+                            if (bt) return void bt.resume();
+                            const HS = SS.duration > 0 && xt >= SS.duration - .05;
+                            kt(SS.name, SS.isSong, HS ? 0 : xt)
                           }
 
-                          function wX() {
-                            var kk;
-                            return iX && "playing" === (null === (kk = TX.track) || void 0 === kk ? void 0 : kk.status) ? iX.OJ() : lX
+                          function jt() {
+                            var SS;
+                            return bt && "playing" === (null === (SS = tt.track) || void 0 === SS ? void 0 : SS.status) ? bt.lC() : xt
                           }
 
-                          function HX(kk) {
-                            var Fk;
-                            null === (Fk = iX) || void 0 === Fk || Fk.setVolume(kk), qX({
-                              volume: kk
+                          function Gt(SS) {
+                            var HS;
+                            null === (HS = bt) || void 0 === HS || HS.setVolume(SS), qt({
+                              volume: SS
                             })
                           }
 
-                          function JX() {
-                            ZX(), lX = 0, qX({
+                          function Ct() {
+                            ft(), xt = 0, qt({
                               track: null
                             })
                           }
-                          const xX = (0, Xk.createContext)(null);
-                          let PX = null;
+                          const nt = (0, tS.createContext)(null);
+                          let Pt = null;
 
-                          function KX() {
-                            const [kk, Fk] = (0, Xk.useState)(null);
-                            return (0, Xk.useEffect)((() => {
-                              let kk = !1;
-                              return PX ??= Promise.all([Ik.e(72), Ik.e(75), Ik.e(74), Ik.e(73), Ik.e(186), Ik.e(98), Ik.e(226)]).then((() => Ik(39784))), PX.then((Ik => {
-                                kk || Fk(Ik)
-                              }), (kk => {
-                                console.error("Could not load the docs gallery's textures", kk), PX = null
+                          function Qt() {
+                            const [SS, HS] = (0, tS.useState)(null);
+                            return (0, tS.useEffect)((() => {
+                              let SS = !1;
+                              return Pt ??= Promise.all([gS.e(72), gS.e(75), gS.e(74), gS.e(73), gS.e(186), gS.e(98), gS.e(226)]).then((() => gS(39839))), Pt.then((gS => {
+                                SS || HS(gS)
+                              }), (SS => {
+                                console.error("Could not load the docs gallery's textures", SS), Pt = null
                               })), () => {
-                                kk = !0
+                                SS = !0
                               }
-                            }), []), kk
+                            }), []), SS
                           }
-                          const QX = 24,
-                            sX = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const Dt = 24,
+                            wt = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function VX(kk, Fk) {
-                            const Ik = "skins" === kk ? function(kk, Fk) {
-                              const Ik = UI.find((Fk => kk.startsWith(Fk.heading)));
-                              return Ik ? function(kk, Fk) {
-                                return `${kk}-${Fk}`
-                              }(Ik.prefix, Fk) : null
-                            }(Fk.heading, Fk.name) : null;
-                            return null === Ik ? null : `${RI}/${Ik}.webp`
+                          function ht(SS, HS) {
+                            const gS = "skins" === SS ? function(SS, HS) {
+                              const gS = Vg.find((HS => SS.startsWith(HS.heading)));
+                              return gS ? function(SS, HS) {
+                                return `${SS}-${HS}`
+                              }(gS.prefix, HS) : null
+                            }(HS.heading, HS.name) : null;
+                            return null === gS ? null : `${yg}/${gS}.webp`
                           }
 
-                          function zX(kk) {
+                          function Zt(SS) {
                             let {
-                              kind: Fk,
-                              entry: Ik,
-                              assets: Tk,
-                              renderedUrl: yk
-                            } = kk;
+                              kind: HS,
+                              entry: gS,
+                              assets: bS,
+                              renderedUrl: xS
+                            } = SS;
                             const {
-                              name: lk
-                            } = Ik, [ak, qk] = (0, Xk.useState)(!1);
-                            if ("icons" === Fk && cF(lk)) return (0, ek.jsx)(QI.e, {
+                              name: NS
+                            } = gS, [qS, uS] = (0, tS.useState)(!1);
+                            if ("icons" === HS && zH(NS)) return (0, KS.jsx)(Qg.d, {
                               className: "DocsTileIcon",
-                              name: lk
+                              name: NS
                             });
-                            let Lk = null;
-                            var tk;
-                            if ("icons" === Fk) Lk = null !== (tk = null === Tk || void 0 === Tk ? void 0 : Tk.getIngameIconUrl(lk)) && void 0 !== tk ? tk : null;
-                            else if ("particles" === Fk) {
-                              var Zk, jk, wk;
-                              Lk = null !== (Zk = null === Tk || void 0 === Tk ? void 0 : Tk.getParticleTextureUrl(null !== (jk = null === (wk = cI(lk)) || void 0 === wk ? void 0 : wk.texture) && void 0 !== jk ? jk : lk)) && void 0 !== Zk ? Zk : null
-                            } else "skins" === Fk && (Lk = null !== yk && void 0 !== yk ? yk : sX.test(lk) ? `/textures/charSkins/previews/${lk}_preview.png` : null);
-                            return !Lk || ak ? (0, ek.jsx)(Hk, {
+                            let IS = null;
+                            var fS;
+                            if ("icons" === HS) IS = null !== (fS = null === bS || void 0 === bS ? void 0 : bS.getIngameIconUrl(NS)) && void 0 !== fS ? fS : null;
+                            else if ("particles" === HS) {
+                              var kS, aS, jS;
+                              IS = null !== (kS = null === bS || void 0 === bS ? void 0 : bS.getParticleTextureUrl(null !== (aS = null === (jS = zg(NS)) || void 0 === jS ? void 0 : jS.texture) && void 0 !== aS ? aS : NS)) && void 0 !== kS ? kS : null
+                            } else "skins" === HS && (IS = null !== xS && void 0 !== xS ? xS : wt.test(NS) ? `/textures/charSkins/previews/${NS}_preview.png` : null);
+                            return !IS || qS ? (0, KS.jsx)(GS, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === Fk ? "person" : "image"
-                            }) : (0, ek.jsx)("img", {
-                              className: ik()("DocsTileImage", {
-                                Pixelated: "skins" !== Fk
+                              name: "skins" === HS ? "person" : "image"
+                            }) : (0, KS.jsx)("img", {
+                              className: XS()("DocsTileImage", {
+                                Pixelated: "skins" !== HS
                               }),
-                              src: Lk,
-                              srcSet: Lk === yk ? `${Lk} 2x` : void 0,
+                              src: IS,
+                              srcSet: IS === xS ? `${IS} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${Lk}`), qk(!0)
+                                console.warn(`Docs gallery: could not load ${IS}`), uS(!0)
                               }
                             })
                           }
 
-                          function SX(kk) {
+                          function Jt(SS) {
                             let {
-                              entry: Fk,
-                              isSong: Ik
-                            } = kk;
-                            const Xk = tX((kk => {
+                              entry: HS,
+                              isSong: gS
+                            } = SS;
+                            const tS = It((SS => {
                                 let {
-                                  track: Xk
-                                } = kk;
-                                return (null === Xk || void 0 === Xk ? void 0 : Xk.name) === Fk.name && Xk.isSong === Ik ? Xk.status : null
+                                  track: tS
+                                } = SS;
+                                return (null === tS || void 0 === tS ? void 0 : tS.name) === HS.name && tS.isSong === gS ? tS.status : null
                               })),
-                              Tk = null !== Xk && "paused" !== Xk;
-                            return (0, ek.jsxs)("button", {
+                              bS = null !== tS && "paused" !== tS;
+                            return (0, KS.jsxs)("button", {
                               type: "button",
-                              id: Fk.anchor,
-                              className: ik()("DocsSoundTile", {
-                                Playing: Tk
+                              id: HS.anchor,
+                              className: XS()("DocsSoundTile", {
+                                Playing: bS
                               }),
-                              "data-docs-track": XX(Fk.name, Ik),
-                              "aria-label": Tk ? `Pause ${Fk.name}` : `Play ${Fk.name}`,
+                              "data-docs-track": gt(HS.name, gS),
+                              "aria-label": bS ? `Pause ${HS.name}` : `Play ${HS.name}`,
                               onClick: () => {
-                                null !== Xk ? eX() : jX(Fk.name, Ik)
+                                null !== tS ? Kt() : kt(HS.name, gS)
                               },
-                              children: [(0, ek.jsx)("span", {
+                              children: [(0, KS.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, ek.jsx)(Hk, {
-                                  name: Tk ? "pause" : "play"
+                                children: (0, KS.jsx)(GS, {
+                                  name: bS ? "pause" : "play"
                                 })
-                              }), (0, ek.jsx)("code", {
+                              }), (0, KS.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: Fk.name
-                              }), Fk.caption && (0, ek.jsx)("span", {
+                                children: HS.name
+                              }), HS.caption && (0, KS.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: Fk.caption
+                                children: HS.caption
                               })]
                             })
                           }
 
-                          function oX(kk) {
+                          function Ot(SS) {
                             let {
-                              kind: Fk,
-                              names: Ik,
-                              isSongs: Tk
-                            } = kk;
-                            const yk = KX(),
-                              [lk, ak] = xk(),
-                              qk = !1 === (null === lk || void 0 === lk ? void 0 : lk.failed) ? lk.text : null,
-                              Lk = (0, Xk.useContext)(xX),
-                              [tk, Zk] = (0, Xk.useState)(""),
-                              jk = tk.trim().toLowerCase(),
-                              wk = jk ? Ik.filter((kk => kk.name.toLowerCase().includes(jk))) : Ik;
-                            return (0, ek.jsxs)("div", {
+                              kind: HS,
+                              names: gS,
+                              isSongs: bS
+                            } = SS;
+                            const xS = Qt(),
+                              [NS, qS] = nS(),
+                              uS = !1 === (null === NS || void 0 === NS ? void 0 : NS.failed) ? NS.text : null,
+                              IS = (0, tS.useContext)(nt),
+                              [fS, kS] = (0, tS.useState)(""),
+                              aS = fS.trim().toLowerCase(),
+                              jS = aS ? gS.filter((SS => SS.name.toLowerCase().includes(aS))) : gS;
+                            return (0, KS.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [Ik.length > QX && (0, ek.jsx)(KI, {
+                              children: [gS.length > Dt && (0, KS.jsx)(Pg, {
                                 className: "DocsGalleryFilter",
-                                value: tk,
-                                placeholder: `Filter ${Ik.length} names\u2026`,
+                                value: fS,
+                                placeholder: `Filter ${gS.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: Zk,
-                                count: jk ? {
-                                  visible: wk.length,
-                                  total: Ik.length
+                                onChange: kS,
+                                count: aS ? {
+                                  visible: jS.length,
+                                  total: gS.length
                                 } : null
-                              }), (0, ek.jsx)("div", {
-                                className: ik()("DocsGalleryGrid", `Kind-${Fk}`, {
-                                  Songs: Tk
+                              }), (0, KS.jsx)("div", {
+                                className: XS()("DocsGalleryGrid", `Kind-${HS}`, {
+                                  Songs: bS
                                 }),
-                                children: wk.map((kk => {
-                                  if ("sounds" === Fk) return (0, ek.jsx)(SX, {
-                                    entry: kk,
-                                    isSong: Tk
-                                  }, kk.anchor);
-                                  if (Lk && "particles" === Fk && cI(kk.name)) return (0, ek.jsxs)("button", {
+                                children: jS.map((SS => {
+                                  if ("sounds" === HS) return (0, KS.jsx)(Jt, {
+                                    entry: SS,
+                                    isSong: bS
+                                  }, SS.anchor);
+                                  if (IS && "particles" === HS && zg(SS.name)) return (0, KS.jsxs)("button", {
                                     type: "button",
-                                    id: kk.anchor,
-                                    className: ik()("DocsTile Previewable", {
-                                      Copied: qk === kk.name
+                                    id: SS.anchor,
+                                    className: XS()("DocsTile Previewable", {
+                                      Copied: uS === SS.name
                                     }),
-                                    title: `Play "${kk.name}" in the playground and copy its name`,
+                                    title: `Play "${SS.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      Lk(kk.name), ak(kk.name)
+                                      IS(SS.name), qS(SS.name)
                                     },
-                                    children: [(0, ek.jsxs)("span", {
+                                    children: [(0, KS.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, ek.jsx)(zX, {
-                                        kind: Fk,
-                                        entry: kk,
-                                        assets: yk,
+                                      children: [(0, KS.jsx)(Zt, {
+                                        kind: HS,
+                                        entry: SS,
+                                        assets: xS,
                                         renderedUrl: null
-                                      }), (0, ek.jsx)("span", {
+                                      }), (0, KS.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, ek.jsx)(Hk, {
+                                        children: (0, KS.jsx)(GS, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, ek.jsx)("span", {
+                                    }), (0, KS.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: qk === kk.name ? "Copied!" : kk.name
+                                      children: uS === SS.name ? "Copied!" : SS.name
                                     })]
-                                  }, kk.anchor);
-                                  const Ik = VX(Fk, kk);
-                                  return (0, ek.jsxs)("button", {
+                                  }, SS.anchor);
+                                  const gS = ht(HS, SS);
+                                  return (0, KS.jsxs)("button", {
                                     type: "button",
-                                    id: kk.anchor,
-                                    className: ik()("DocsTile", {
-                                      Copied: qk === kk.name
+                                    id: SS.anchor,
+                                    className: XS()("DocsTile", {
+                                      Copied: uS === SS.name
                                     }),
-                                    title: `Copy "${kk.name}"`,
+                                    title: `Copy "${SS.name}"`,
                                     onClick: () => {
-                                      ak(kk.name)
+                                      qS(SS.name)
                                     },
-                                    children: [(0, ek.jsx)("span", {
-                                      className: ik()("DocsTilePreview", {
-                                        Rendered: null !== Ik
+                                    children: [(0, KS.jsx)("span", {
+                                      className: XS()("DocsTilePreview", {
+                                        Rendered: null !== gS
                                       }),
-                                      children: (0, ek.jsx)(zX, {
-                                        kind: Fk,
-                                        entry: kk,
-                                        assets: yk,
-                                        renderedUrl: Ik
+                                      children: (0, KS.jsx)(Zt, {
+                                        kind: HS,
+                                        entry: SS,
+                                        assets: xS,
+                                        renderedUrl: gS
                                       })
-                                    }), (0, ek.jsx)("span", {
+                                    }), (0, KS.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: qk === kk.name ? "Copied!" : kk.name
+                                      children: uS === SS.name ? "Copied!" : SS.name
                                     })]
-                                  }, kk.anchor)
+                                  }, SS.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function vX(kk) {
+                          function dt(SS) {
                             let {
-                              kind: Fk,
-                              content: Ik,
-                              blocks: Xk
-                            } = kk;
-                            return (0, ek.jsx)(ek.Fragment, {
-                              children: bI(Fk, Ik, Xk).map(((kk, Ik) => "block" === kk.kind ? (0, ek.jsx)(jI, {
-                                block: kk.block
-                              }, Ik) : (0, ek.jsx)(oX, {
-                                kind: Fk,
-                                names: kk.names,
-                                isSongs: kk.isSongs
-                              }, Ik)))
+                              kind: HS,
+                              content: gS,
+                              blocks: tS
+                            } = SS;
+                            return (0, KS.jsx)(KS.Fragment, {
+                              children: Ag(HS, gS, tS).map(((SS, gS) => "block" === SS.kind ? (0, KS.jsx)(kg, {
+                                block: SS.block
+                              }, gS) : (0, KS.jsx)(Ot, {
+                                kind: HS,
+                                names: SS.names,
+                                isSongs: SS.isSongs
+                              }, gS)))
                             })
                           }
-                          const EX = [{
+                          const ct = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,420 +2161,420 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function OX(kk) {
+                          function vt(SS) {
                             let {
-                              cards: Fk = EX,
-                              label: Ik = "Start here"
-                            } = kk;
-                            const Tk = (0, Xk.useContext)(eF);
-                            return (0, ek.jsx)("nav", {
+                              cards: HS = ct,
+                              label: gS = "Start here"
+                            } = SS;
+                            const bS = (0, tS.useContext)(aH);
+                            return (0, KS.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": Ik,
-                              children: Fk.map((kk => {
+                              "aria-label": gS,
+                              children: HS.map((SS => {
                                 let {
-                                  pageId: Fk,
-                                  countNoun: Ik
-                                } = kk;
-                                const Xk = Nk(Fk);
-                                return (0, ek.jsxs)(yk.e, {
-                                  to: Yk(Tk, Xk),
+                                  pageId: HS,
+                                  countNoun: gS
+                                } = SS;
+                                const tS = WS(HS);
+                                return (0, KS.jsxs)(xS.c, {
+                                  to: MS(bS, tS),
                                   className: "DocsLandingCard",
-                                  children: [(0, ek.jsx)("span", {
+                                  children: [(0, KS.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, ek.jsx)(Hk, {
-                                      name: Xk.icon
+                                    children: (0, KS.jsx)(GS, {
+                                      name: tS.icon
                                     })
-                                  }), (0, ek.jsx)("span", {
+                                  }), (0, KS.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: Xk.title
-                                  }), (0, ek.jsx)("span", {
+                                    children: tS.title
+                                  }), (0, KS.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: Xk.summary
-                                  }), Ik && (0, ek.jsxs)("span", {
+                                    children: tS.summary
+                                  }), gS && (0, KS.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [Wk(Xk).sections.length, " ", Ik]
+                                    children: [US(tS).sections.length, " ", gS]
                                   })]
-                                }, Fk)
+                                }, HS)
                               }))
                             })
                           }
-                          const nX = 240;
+                          const Et = 240;
 
-                          function GX(kk) {
+                          function Lt(SS) {
                             let {
-                              faces: Fk
-                            } = kk;
-                            return (0, ek.jsxs)("span", {
+                              faces: HS
+                            } = SS;
+                            return (0, KS.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, ek.jsx)("span", {
+                              children: [(0, KS.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${Fk.top}")`
+                                  backgroundImage: `url("${HS.top}")`
                                 }
-                              }), (0, ek.jsx)("span", {
+                              }), (0, KS.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${Fk.left}")`
+                                  backgroundImage: `url("${HS.left}")`
                                 }
-                              }), (0, ek.jsx)("span", {
+                              }), (0, KS.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${Fk.right}")`
+                                  backgroundImage: `url("${HS.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function pX(kk) {
+                          function Yt(SS) {
                             let {
-                              src: Fk
-                            } = kk;
-                            const [Ik, Tk] = (0, Xk.useState)(!1);
-                            return Ik ? null : (0, ek.jsx)("img", {
-                              src: Fk,
+                              src: HS
+                            } = SS;
+                            const [gS, bS] = (0, tS.useState)(!1);
+                            return gS ? null : (0, KS.jsx)("img", {
+                              src: HS,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${Fk}`), Tk(!0)
+                                console.warn(`Docs catalogue: could not load ${HS}`), bS(!0)
                               }
                             })
                           }
 
-                          function uX(kk) {
+                          function At(SS) {
                             let {
-                              kind: Fk
-                            } = kk;
-                            const Ik = PI(Fk),
-                              Tk = KX(),
-                              yk = (0, lk.q)(),
-                              [ak, qk] = (0, Xk.useState)(""),
-                              [Lk, tk] = (0, Xk.useState)(null),
-                              [Zk, jk] = (0, Xk.useState)(nX),
-                              [wk, Jk] = (0, Xk.useState)(null),
-                              xk = (0, Xk.useRef)(null),
-                              Kk = ak.trim().toLowerCase();
-                            (0, Xk.useEffect)((() => {
-                              const kk = (0, zk.s)(yk.hash),
-                                Xk = Ik.entries.find((Ik => pI(Fk, Ik.name) === kk));
-                              if (Xk) xk.current = Xk.name, qk(Xk.name), tk(null), Jk(Xk.name);
-                              else if (null !== xk.current) {
-                                const kk = xk.current;
-                                xk.current = null, qk((Fk => Fk === kk ? "" : Fk)), Jk(null)
+                              kind: HS
+                            } = SS;
+                            const gS = ng(HS),
+                              bS = Qt(),
+                              xS = (0, NS.t)(),
+                              [qS, uS] = (0, tS.useState)(""),
+                              [IS, fS] = (0, tS.useState)(null),
+                              [kS, aS] = (0, tS.useState)(Et),
+                              [jS, CS] = (0, tS.useState)(null),
+                              nS = (0, tS.useRef)(null),
+                              QS = qS.trim().toLowerCase();
+                            (0, tS.useEffect)((() => {
+                              const SS = (0, ZS.n)(xS.hash),
+                                tS = gS.entries.find((gS => Lg(HS, gS.name) === SS));
+                              if (tS) nS.current = tS.name, uS(tS.name), fS(null), CS(tS.name);
+                              else if (null !== nS.current) {
+                                const SS = nS.current;
+                                nS.current = null, uS((HS => HS === SS ? "" : HS)), CS(null)
                               }
-                            }), [Ik, Fk, yk.hash, yk.key]), (0, Xk.useEffect)((() => {
-                              var kk;
-                              null !== wk && (null === (kk = document.getElementById(pI(Fk, wk))) || void 0 === kk || kk.scrollIntoView({
+                            }), [gS, HS, xS.hash, xS.key]), (0, tS.useEffect)((() => {
+                              var SS;
+                              null !== jS && (null === (SS = document.getElementById(Lg(HS, jS))) || void 0 === SS || SS.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [Fk, wk]);
-                            const Qk = Ik.entries.filter((kk => (!Kk || kk.name.toLowerCase().includes(Kk)) && (!Lk || kk.variants.includes(Lk))));
-                            return (0, ek.jsxs)("div", {
+                            }), [HS, jS]);
+                            const DS = gS.entries.filter((SS => (!QS || SS.name.toLowerCase().includes(QS)) && (!IS || SS.variants.includes(IS))));
+                            return (0, KS.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [Ik.notes.length > 0 && (0, ek.jsx)("div", {
+                              children: [gS.notes.length > 0 && (0, KS.jsx)("div", {
                                 className: "DocsProse",
-                                children: Ik.notes.map((kk => (0, ek.jsx)("p", {
-                                  children: kk
-                                }, kk)))
-                              }), Ik.legend.length > 0 && (0, ek.jsx)("div", {
+                                children: gS.notes.map((SS => (0, KS.jsx)("p", {
+                                  children: SS
+                                }, SS)))
+                              }), gS.legend.length > 0 && (0, KS.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, ek.jsxs)("table", {
+                                children: (0, KS.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, ek.jsx)("thead", {
-                                    children: (0, ek.jsxs)("tr", {
-                                      children: [(0, ek.jsx)("th", {
+                                  children: [(0, KS.jsx)("thead", {
+                                    children: (0, KS.jsxs)("tr", {
+                                      children: [(0, KS.jsx)("th", {
                                         children: "Code"
-                                      }), (0, ek.jsx)("th", {
+                                      }), (0, KS.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, ek.jsx)("th", {
+                                      }), (0, KS.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, ek.jsx)("tbody", {
-                                    children: Ik.legend.map((kk => (0, ek.jsxs)("tr", {
-                                      children: [(0, ek.jsx)("td", {
-                                        children: (0, ek.jsx)("button", {
+                                  }), (0, KS.jsx)("tbody", {
+                                    children: gS.legend.map((SS => (0, KS.jsxs)("tr", {
+                                      children: [(0, KS.jsx)("td", {
+                                        children: (0, KS.jsx)("button", {
                                           type: "button",
-                                          className: ik()("DocsVariantChip", {
-                                            Active: Lk === kk.code
+                                          className: XS()("DocsVariantChip", {
+                                            Active: IS === SS.code
                                           }),
-                                          "aria-pressed": Lk === kk.code,
-                                          title: `Show only ${Fk} with ${kk.meaning} variants`,
+                                          "aria-pressed": IS === SS.code,
+                                          title: `Show only ${HS} with ${SS.meaning} variants`,
                                           onClick: () => {
-                                            tk(Lk === kk.code ? null : kk.code)
+                                            fS(IS === SS.code ? null : SS.code)
                                           },
-                                          children: kk.code
+                                          children: SS.code
                                         })
-                                      }), (0, ek.jsx)("td", {
-                                        children: kk.meaning
-                                      }), (0, ek.jsx)("td", {
-                                        children: (0, ek.jsx)("code", {
+                                      }), (0, KS.jsx)("td", {
+                                        children: SS.meaning
+                                      }), (0, KS.jsx)("td", {
+                                        children: (0, KS.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: kk.usage
+                                          children: SS.usage
                                         })
                                       })]
-                                    }, kk.code)))
+                                    }, SS.code)))
                                   })]
                                 })
-                              }), Ik.examples.length > 0 && (0, ek.jsx)(Vk, {
+                              }), gS.examples.length > 0 && (0, KS.jsx)(hS, {
                                 lang: "text",
-                                code: Ik.examples.join("\n")
-                              }), (0, ek.jsx)(KI, {
+                                code: gS.examples.join("\n")
+                              }), (0, KS.jsx)(Pg, {
                                 className: "DocsFilterBar",
-                                value: ak,
-                                placeholder: `Search ${Ik.entries.length} ${Fk}\u2026`,
-                                label: `Search ${Fk}`,
-                                onChange: kk => {
-                                  qk(kk), jk(nX)
+                                value: qS,
+                                placeholder: `Search ${gS.entries.length} ${HS}\u2026`,
+                                label: `Search ${HS}`,
+                                onChange: SS => {
+                                  uS(SS), aS(Et)
                                 },
-                                count: Kk || Lk ? {
-                                  visible: Qk.length,
-                                  total: Ik.entries.length
+                                count: QS || IS ? {
+                                  visible: DS.length,
+                                  total: gS.entries.length
                                 } : null,
-                                children: Lk && (0, ek.jsxs)("button", {
+                                children: IS && (0, KS.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    tk(null)
+                                    fS(null)
                                   },
-                                  children: [Lk, " ", (0, ek.jsx)(Hk, {
+                                  children: [IS, " ", (0, KS.jsx)(GS, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, ek.jsx)("div", {
+                              }), (0, KS.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: Qk.slice(0, Zk).map((kk => {
-                                  const Ik = "blocks" === Fk ? null === Tk || void 0 === Tk ? void 0 : Tk.getBlockFaces(kk.name) : null,
-                                    Xk = Tk && !Ik ? Tk.getItemTextureUrl(kk.name) : null;
-                                  return (0, ek.jsxs)("div", {
-                                    id: pI(Fk, kk.name),
-                                    className: ik()("DocsCatalogueTile", {
-                                      Linked: kk.name === wk
+                                children: DS.slice(0, kS).map((SS => {
+                                  const gS = "blocks" === HS ? null === bS || void 0 === bS ? void 0 : bS.getBlockFaces(SS.name) : null,
+                                    tS = bS && !gS ? bS.getItemTextureUrl(SS.name) : null;
+                                  return (0, KS.jsxs)("div", {
+                                    id: Lg(HS, SS.name),
+                                    className: XS()("DocsCatalogueTile", {
+                                      Linked: SS.name === jS
                                     }),
-                                    children: [(0, ek.jsxs)("span", {
+                                    children: [(0, KS.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [Ik && (0, ek.jsx)(GX, {
-                                        faces: Ik
-                                      }), Xk && (0, ek.jsx)(pX, {
-                                        src: Xk
+                                      children: [gS && (0, KS.jsx)(Lt, {
+                                        faces: gS
+                                      }), tS && (0, KS.jsx)(Yt, {
+                                        src: tS
                                       })]
-                                    }), (0, ek.jsx)("span", {
+                                    }), (0, KS.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: kk.name
-                                    }), kk.variants.length > 0 && (0, ek.jsx)("span", {
+                                      children: SS.name
+                                    }), SS.variants.length > 0 && (0, KS.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: kk.variants.map((kk => (0, ek.jsx)("span", {
-                                        children: kk
-                                      }, kk)))
-                                    }), (0, ek.jsx)(Pk, {
-                                      text: kk.name,
+                                      children: SS.variants.map((SS => (0, KS.jsx)("span", {
+                                        children: SS
+                                      }, SS)))
+                                    }), (0, KS.jsx)(PS, {
+                                      text: SS.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, kk.name)
+                                  }, SS.name)
                                 }))
-                              }), Qk.length > Zk && (0, ek.jsxs)("button", {
+                              }), DS.length > kS && (0, KS.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  jk(Qk.length)
+                                  aS(DS.length)
                                 },
-                                children: ["Show all ", Qk.length]
-                              }), 0 === Qk.length && (0, ek.jsxs)("p", {
+                                children: ["Show all ", DS.length]
+                              }), 0 === DS.length && (0, KS.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", Fk, " match."]
+                                children: ["No ", HS, " match."]
                               })]
                             })
                           }
-                          var bX = Ik(4821),
-                            RX = Ik(1534);
-                          const UX = .95 * bX.d;
+                          var yt = gS(4960),
+                            Vt = gS(1678);
+                          const it = .95 * yt.c;
 
-                          function CX(kk) {
-                            return /^\s*```/.test(kk)
+                          function Wt(SS) {
+                            return /^\s*```/.test(SS)
                           }
 
-                          function NX(kk, Fk) {
-                            const Ik = [
+                          function zt(SS, HS) {
+                            const gS = [
                               []
                             ];
-                            let Xk = !1;
-                            for (const Tk of kk.split("\n")) !Xk && Fk(Tk) && Ik.at(-1).length > 0 && Ik.push([]), CX(Tk) && (Xk = !Xk), Ik.at(-1).push(Tk);
-                            return Ik.map((kk => kk.join("\n").trim())).filter(Boolean)
+                            let tS = !1;
+                            for (const bS of SS.split("\n")) !tS && HS(bS) && gS.at(-1).length > 0 && gS.push([]), Wt(bS) && (tS = !tS), gS.at(-1).push(bS);
+                            return gS.map((SS => SS.join("\n").trim())).filter(Boolean)
                           }
 
-                          function cX(kk, Fk) {
-                            const Ik = `${"#".repeat(Fk)} `,
-                              Xk = [];
-                            let Tk = !1;
-                            for (const ik of kk.split("\n")) CX(ik) ? Tk = !Tk : !Tk && ik.startsWith(Ik) && Xk.push(ik.slice(Ik.length).trim());
-                            return Xk
+                          function Ut(SS, HS) {
+                            const gS = `${"#".repeat(HS)} `,
+                              tS = [];
+                            let bS = !1;
+                            for (const XS of SS.split("\n")) Wt(XS) ? bS = !bS : !bS && XS.startsWith(gS) && tS.push(XS.slice(gS.length).trim());
+                            return tS
                           }
 
-                          function WX(kk) {
-                            return kk.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function pt(SS) {
+                            return SS.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class fX {
-                            constructor(kk, Fk) {
-                              this.origin = Fk, this.pages = void 0, this.partPaths = new Map;
-                              const Ik = kk.map((kk => {
-                                const Fk = Fk => this.resolveLinks(kk, Fk).length,
-                                  Ik = function(kk, Fk) {
-                                    const Ik = kk.map((kk => Fk(kk.markdown) + 2)),
-                                      Xk = Ik.reduce(((kk, Fk) => kk + Fk), 0),
-                                      Tk = Xk / Math.ceil(Xk / UX),
-                                      ik = [];
-                                    let yk = 0;
-                                    return kk.forEach(((kk, Fk) => {
-                                      const Xk = Ik[Fk];
-                                      (0 === ik.length || yk + Xk > UX || yk + Xk / 2 > Tk) && (ik.push([]), yk = 0), ik.at(-1).push(kk), yk += Xk
-                                    })), ik
-                                  }(function(kk, Fk) {
-                                    return NX(kk, (kk => kk.startsWith("## "))).flatMap((kk => {
-                                      var Ik;
-                                      const Xk = null !== (Ik = cX(kk, 2)[0]) && void 0 !== Ik ? Ik : "";
-                                      if (Fk(kk) <= UX) return [{
-                                        markdown: kk,
-                                        section: Xk
+                          class st {
+                            constructor(SS, HS) {
+                              this.origin = HS, this.pages = void 0, this.partPaths = new Map;
+                              const gS = SS.map((SS => {
+                                const HS = HS => this.resolveLinks(SS, HS).length,
+                                  gS = function(SS, HS) {
+                                    const gS = SS.map((SS => HS(SS.markdown) + 2)),
+                                      tS = gS.reduce(((SS, HS) => SS + HS), 0),
+                                      bS = tS / Math.ceil(tS / it),
+                                      XS = [];
+                                    let xS = 0;
+                                    return SS.forEach(((SS, HS) => {
+                                      const tS = gS[HS];
+                                      (0 === XS.length || xS + tS > it || xS + tS / 2 > bS) && (XS.push([]), xS = 0), XS.at(-1).push(SS), xS += tS
+                                    })), XS
+                                  }(function(SS, HS) {
+                                    return zt(SS, (SS => SS.startsWith("## "))).flatMap((SS => {
+                                      var gS;
+                                      const tS = null !== (gS = Ut(SS, 2)[0]) && void 0 !== gS ? gS : "";
+                                      if (HS(SS) <= it) return [{
+                                        markdown: SS,
+                                        section: tS
                                       }];
-                                      let Tk = !1,
-                                        ik = "";
-                                      return NX(kk, (kk => {
-                                        const Fk = Tk && "" !== kk.trim();
-                                        return Tk = "" === kk.trim(), Fk
-                                      })).map((kk => {
-                                        var Fk;
-                                        const Ik = cX(kk, 3),
-                                          Tk = kk.startsWith("### ") ? Ik[0] : ik;
-                                        return ik = null !== (Fk = Ik.at(-1)) && void 0 !== Fk ? Fk : ik, {
-                                          markdown: kk,
-                                          section: Xk || Tk
+                                      let bS = !1,
+                                        XS = "";
+                                      return zt(SS, (SS => {
+                                        const HS = bS && "" !== SS.trim();
+                                        return bS = "" === SS.trim(), HS
+                                      })).map((SS => {
+                                        var HS;
+                                        const gS = Ut(SS, 3),
+                                          bS = SS.startsWith("### ") ? gS[0] : XS;
+                                        return XS = null !== (HS = gS.at(-1)) && void 0 !== HS ? HS : XS, {
+                                          markdown: SS,
+                                          section: tS || bS
                                         }
                                       }))
                                     }))
-                                  }(WX(kk), Fk), Fk);
+                                  }(pt(SS), HS), HS);
                                 return {
-                                  page: kk,
-                                  groups: Ik.length > 1 ? Ik : []
+                                  page: SS,
+                                  groups: gS.length > 1 ? gS : []
                                 }
                               }));
                               for (const {
-                                  page: Xk,
-                                  groups: Tk
+                                  page: tS,
+                                  groups: bS
                                 }
-                                of Ik) Tk.forEach(((kk, Fk) => {
-                                const Ik = (0, bX.t)(Xk.slug, Fk);
-                                for (const Tk of kk.flatMap((kk => [...cX(kk.markdown, 2), ...cX(kk.markdown, 3)]))) {
-                                  const kk = `${Xk.id}#${(0,zk.t)(Tk)}`;
-                                  this.partPaths.has(kk) || this.partPaths.set(kk, Ik)
+                                of gS) bS.forEach(((SS, HS) => {
+                                const gS = (0, yt.u)(tS.slug, HS);
+                                for (const bS of SS.flatMap((SS => [...Ut(SS.markdown, 2), ...Ut(SS.markdown, 3)]))) {
+                                  const SS = `${tS.id}#${(0,ZS.r)(bS)}`;
+                                  this.partPaths.has(SS) || this.partPaths.set(SS, gS)
                                 }
                               }));
-                              this.pages = Ik.map((kk => {
+                              this.pages = gS.map((SS => {
                                 let {
-                                  page: Fk,
-                                  groups: Ik
-                                } = kk;
+                                  page: HS,
+                                  groups: gS
+                                } = SS;
                                 return {
-                                  page: Fk,
-                                  path: (0, bX.r)(Fk.slug),
-                                  markdown: `# ${Fk.title}\n\n${this.resolveLinks(Fk,WX(Fk))}\n`,
-                                  parts: Ik.map(((kk, Xk) => this.renderPart(Fk, kk, Xk, Ik.length)))
+                                  page: HS,
+                                  path: (0, yt.t)(HS.slug),
+                                  markdown: `# ${HS.title}\n\n${this.resolveLinks(HS,pt(HS))}\n`,
+                                  parts: gS.map(((SS, tS) => this.renderPart(HS, SS, tS, gS.length)))
                                 }
                               }))
                             }
-                            url(kk) {
-                              return `${this.origin}${kk}`
+                            url(SS) {
+                              return `${this.origin}${SS}`
                             }
-                            getPage(kk) {
-                              return this.pages.find((Fk => Fk.page.id === kk))
+                            getPage(SS) {
+                              return this.pages.find((HS => HS.page.id === SS))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((kk => (kk.parts.length > 0 ? kk.parts : [{
-                                path: kk.path,
+                              return this.pages.flatMap((SS => (SS.parts.length > 0 ? SS.parts : [{
+                                path: SS.path,
                                 label: "",
-                                markdown: kk.markdown
-                              }]).filter((kk => kk.markdown.length > bX.d))))
+                                markdown: SS.markdown
+                              }]).filter((SS => SS.markdown.length > yt.c))))
                             }
-                            markdownUrl(kk, Fk) {
-                              const Ik = Fk && this.partPaths.get(`${kk.id}#${Fk}`) || (0, bX.r)(kk.slug);
-                              return this.url(Fk ? `${Ik}#${Fk}` : Ik)
+                            markdownUrl(SS, HS) {
+                              const gS = HS && this.partPaths.get(`${SS.id}#${HS}`) || (0, yt.t)(SS.slug);
+                              return this.url(HS ? `${gS}#${HS}` : gS)
                             }
-                            resolveLinks(kk, Fk) {
-                              return Fk.replace(/\]\((#[^)]+)\)/g, ((Fk, Ik) => {
-                                var Xk;
-                                const Tk = null !== (Xk = Bk(Ik)) && void 0 !== Xk ? Xk : this.samePageTarget(kk, Ik);
-                                return Tk ? `](${this.markdownUrl(Tk.page,Tk.anchor)})` : Fk
+                            resolveLinks(SS, HS) {
+                              return HS.replace(/\]\((#[^)]+)\)/g, ((HS, gS) => {
+                                var tS;
+                                const bS = null !== (tS = sS(gS)) && void 0 !== tS ? tS : this.samePageTarget(SS, gS);
+                                return bS ? `](${this.markdownUrl(bS.page,bS.anchor)})` : HS
                               }))
                             }
-                            samePageTarget(kk, Fk) {
-                              const Ik = (0, zk.t)(Fk.slice(1));
-                              return fk(kk, Ik) ? {
-                                page: kk,
-                                anchor: Ik
+                            samePageTarget(SS, HS) {
+                              const gS = (0, ZS.r)(HS.slice(1));
+                              return pS(SS, gS) ? {
+                                page: SS,
+                                anchor: gS
                               } : null
                             }
-                            renderPart(kk, Fk, Ik, Xk) {
-                              const Tk = function(kk) {
-                                  const Fk = kk.map((kk => kk.section)).filter(Boolean);
-                                  if (0 === Fk.length) return "";
-                                  const Ik = Fk[0],
-                                    Xk = Fk.at(-1);
-                                  return Ik === Xk ? Ik : `${Ik} to ${Xk}`
-                                }(Fk),
-                                ik = Fk.map((kk => kk.markdown)).join("\n\n"),
-                                yk = Tk ? `It covers ${Tk}. ` : "",
-                                lk = `Part ${Ik+1} of ${Xk} of [${kk.title}](${this.url((0,bX.r)(kk.slug))}). ${yk}[llms.txt](${this.url(bX.g)}) lists every part.`;
+                            renderPart(SS, HS, gS, tS) {
+                              const bS = function(SS) {
+                                  const HS = SS.map((SS => SS.section)).filter(Boolean);
+                                  if (0 === HS.length) return "";
+                                  const gS = HS[0],
+                                    tS = HS.at(-1);
+                                  return gS === tS ? gS : `${gS} to ${tS}`
+                                }(HS),
+                                XS = HS.map((SS => SS.markdown)).join("\n\n"),
+                                xS = bS ? `It covers ${bS}. ` : "",
+                                NS = `Part ${gS+1} of ${tS} of [${SS.title}](${this.url((0,yt.t)(SS.slug))}). ${xS}[llms.txt](${this.url(yt.h)}) lists every part.`;
                               return {
-                                path: (0, bX.t)(kk.slug, Ik),
-                                label: Tk,
-                                markdown: `# ${kk.title}, part ${Ik+1} of ${Xk}\n\n${lk}\n\n${this.resolveLinks(kk,ik)}\n`
+                                path: (0, yt.u)(SS.slug, gS),
+                                label: bS,
+                                markdown: `# ${SS.title}, part ${gS+1} of ${tS}\n\n${NS}\n\n${this.resolveLinks(SS,XS)}\n`
                               }
                             }
-                            llmsTxt(kk) {
-                              const Fk = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${BX(bX.d)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const Ik of Ck) {
-                                Fk.push("", `## ${Ik.title}`, "");
-                                for (const kk of Ik.pageIds) {
-                                  const Ik = this.getPage(kk),
+                            llmsTxt(SS) {
+                              const HS = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${Bt(yt.c)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const gS of iS) {
+                                HS.push("", `## ${gS.title}`, "");
+                                for (const SS of gS.pageIds) {
+                                  const gS = this.getPage(SS),
                                     {
-                                      page: Xk,
-                                      parts: Tk
-                                    } = Ik,
-                                    ik = `About ${BX(Ik.markdown.length)} tokens${Tk.length>0?`, in ${Tk.length} parts:`:"."}`;
-                                  Fk.push(`- [${Xk.title}](${this.url(Ik.path)}): ${Xk.summary} ${ik}`), Tk.forEach(((kk, Ik) => {
-                                    Fk.push(`  - [Part ${Ik+1}${kk.label?`: ${kk.label}`:""}](${this.url(kk.path)})`)
+                                      page: tS,
+                                      parts: bS
+                                    } = gS,
+                                    XS = `About ${Bt(gS.markdown.length)} tokens${bS.length>0?`, in ${bS.length} parts:`:"."}`;
+                                  HS.push(`- [${tS.title}](${this.url(gS.path)}): ${tS.summary} ${XS}`), bS.forEach(((SS, gS) => {
+                                    HS.push(`  - [Part ${gS+1}${SS.label?`: ${SS.label}`:""}](${this.url(SS.path)})`)
                                   }))
                                 }
                               }
-                              return Fk.push("", "## Optional", "", `- [Every page in one file](${this.url(bX.f)}): About ${BX(kk.length)} tokens, for a model with a large context window.`, ""), Fk.join("\n")
+                              return HS.push("", "## Optional", "", `- [Every page in one file](${this.url(yt.d)}): About ${Bt(SS.length)} tokens, for a model with a large context window.`, ""), HS.join("\n")
                             }
                             llmsFullTxt() {
-                              return Ck.flatMap((kk => kk.pageIds.map((kk => this.getPage(kk).markdown)))).join("\n---\n\n")
+                              return iS.flatMap((SS => SS.pageIds.map((SS => this.getPage(SS).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const kk = this.llmsFullTxt(),
-                                Fk = this.llmsTxt(kk),
-                                Ik = new Map([
-                                  [bX.k, Fk],
-                                  [bX.g, Fk],
-                                  [bX.f, kk]
+                              const SS = this.llmsFullTxt(),
+                                HS = this.llmsTxt(SS),
+                                gS = new Map([
+                                  [yt.m, HS],
+                                  [yt.h, HS],
+                                  [yt.d, SS]
                                 ]);
-                              for (const Xk of this.pages) {
-                                Ik.set(Xk.path, Xk.markdown);
-                                for (const kk of Xk.parts) Ik.set(kk.path, kk.markdown)
+                              for (const tS of this.pages) {
+                                gS.set(tS.path, tS.markdown);
+                                for (const SS of tS.parts) gS.set(SS.path, SS.markdown)
                               }
-                              return Ik
+                              return gS
                             }
                           }
 
-                          function BX(kk) {
-                            return `${Math.max(1,Math.round(kk/4e3))}K`
+                          function Bt(SS) {
+                            return `${Math.max(1,Math.round(SS/4e3))}K`
                           }
-                          let dX = null;
+                          let Mt = null;
 
-                          function YX() {
-                            return dX ??= new fX(Uk, RX.b), dX
+                          function Ft() {
+                            return Mt ??= new st(VS, Vt.d), Mt
                           }
-                          const AX = [{
+                          const Rt = [{
                             name: "ChatGPT",
                             url: "https://chatgpt.com/?hints=search&q="
                           }, {
@@ -2582,373 +2582,373 @@ export const modules = {
                             url: "https://claude.ai/new?q="
                           }];
 
-                          function gX(kk) {
-                            return YX().getPage(kk.id).parts.length > 0 ? `Read ${bX.h}, then the parts of the Bloxd Code API's ${kk.title} page it lists, so I can ask questions about it.` : `Read ${RX.b}${(0,bX.r)(kk.slug)} so I can ask questions about it. ${bX.h} lists every page of the Bloxd Code API docs.`
+                          function Tt(SS) {
+                            return Ft().getPage(SS.id).parts.length > 0 ? `Read ${yt.j}, then the parts of the Bloxd Code API's ${SS.title} page it lists, so I can ask questions about it.` : `Read ${Vt.d}${(0,yt.t)(SS.slug)} so I can ask questions about it. ${yt.j} lists every page of the Bloxd Code API docs.`
                           }
 
-                          function mX(kk) {
+                          function ot(SS) {
                             let {
-                              page: Fk
-                            } = kk;
-                            const [Ik, Xk] = xk();
-                            return (0, ek.jsxs)("div", {
+                              page: HS
+                            } = SS;
+                            const [gS, tS] = nS();
+                            return (0, KS.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, ek.jsxs)("button", {
+                              children: [(0, KS.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  Xk(YX().getPage(Fk.id).markdown)
+                                  tS(Ft().getPage(HS.id).markdown)
                                 },
-                                children: [(0, ek.jsx)(Hk, {
-                                  name: !1 === (null === Ik || void 0 === Ik ? void 0 : Ik.failed) ? "check" : "copy"
-                                }), (0, ek.jsx)("span", {
-                                  children: Ik ? Ik.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, KS.jsx)(GS, {
+                                  name: !1 === (null === gS || void 0 === gS ? void 0 : gS.failed) ? "check" : "copy"
+                                }), (0, KS.jsx)("span", {
+                                  children: gS ? gS.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), AX.map((kk => (0, ek.jsxs)("a", {
+                              }), Rt.map((SS => (0, KS.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: `${kk.url}${encodeURIComponent(gX(Fk))}`,
+                                href: `${SS.url}${encodeURIComponent(Tt(HS))}`,
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, ek.jsx)(Hk, {
+                                children: [(0, KS.jsx)(GS, {
                                   name: "external-link"
-                                }), (0, ek.jsxs)("span", {
-                                  children: ["Open in ", kk.name]
+                                }), (0, KS.jsxs)("span", {
+                                  children: ["Open in ", SS.name]
                                 })]
-                              }, kk.name)))]
+                              }, SS.name)))]
                             })
                           }
 
-                          function hX(kk) {
-                            return `#${[0,1,2].map((Fk=>Math.round(Math.min(255,Math.max(0,kk[Fk]))).toString(16).padStart(2,"0"))).join("")}`
+                          function lt(SS) {
+                            return `#${[0,1,2].map((HS=>Math.round(Math.min(255,Math.max(0,SS[HS]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function rX(kk) {
-                            return [parseInt(kk.slice(1, 3), 16), parseInt(kk.slice(3, 5), 16), parseInt(kk.slice(5, 7), 16)]
+                          function mt(SS) {
+                            return [parseInt(SS.slice(1, 3), 16), parseInt(SS.slice(3, 5), 16), parseInt(SS.slice(5, 7), 16)]
                           }
 
-                          function DX(kk) {
+                          function et(SS) {
                             let {
-                              label: Fk,
-                              min: Ik,
-                              max: Xk,
-                              step: Tk,
-                              low: ik,
-                              high: yk,
-                              onChange: lk
-                            } = kk;
-                            return (0, ek.jsxs)("div", {
+                              label: HS,
+                              min: gS,
+                              max: tS,
+                              step: bS,
+                              low: XS,
+                              high: xS,
+                              onChange: NS
+                            } = SS;
+                            return (0, KS.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, ek.jsxs)("div", {
+                              children: [(0, KS.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, ek.jsx)("span", {
-                                  children: Fk
-                                }), (0, ek.jsx)("span", {
+                                children: [(0, KS.jsx)("span", {
+                                  children: HS
+                                }), (0, KS.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: ik === yk ? ik : `${ik}\u2013${yk}`
+                                  children: XS === xS ? XS : `${XS}\u2013${xS}`
                                 })]
-                              }), (0, ek.jsxs)("div", {
+                              }), (0, KS.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, ek.jsx)("input", {
+                                children: [(0, KS.jsx)("input", {
                                   type: "range",
-                                  min: Ik,
-                                  max: Xk,
-                                  step: Tk,
-                                  value: Math.min(Xk, ik),
-                                  "aria-label": `Minimum ${Fk.toLowerCase()}`,
-                                  onChange: kk => {
-                                    const Fk = Number(kk.target.value);
-                                    lk(Fk, Math.max(Fk, yk))
+                                  min: gS,
+                                  max: tS,
+                                  step: bS,
+                                  value: Math.min(tS, XS),
+                                  "aria-label": `Minimum ${HS.toLowerCase()}`,
+                                  onChange: SS => {
+                                    const HS = Number(SS.target.value);
+                                    NS(HS, Math.max(HS, xS))
                                   }
-                                }), (0, ek.jsx)("input", {
+                                }), (0, KS.jsx)("input", {
                                   type: "range",
-                                  min: Ik,
-                                  max: Xk,
-                                  step: Tk,
-                                  value: Math.min(Xk, yk),
-                                  "aria-label": `Maximum ${Fk.toLowerCase()}`,
-                                  onChange: kk => {
-                                    const Fk = Number(kk.target.value);
-                                    lk(Math.min(Fk, ik), Fk)
+                                  min: gS,
+                                  max: tS,
+                                  step: bS,
+                                  value: Math.min(tS, xS),
+                                  "aria-label": `Maximum ${HS.toLowerCase()}`,
+                                  onChange: SS => {
+                                    const HS = Number(SS.target.value);
+                                    NS(Math.min(HS, XS), HS)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function MX(kk) {
+                          function rt(SS) {
                             let {
-                              label: Fk,
-                              min: Ik,
-                              max: Xk,
-                              step: Tk,
-                              value: ik,
-                              onChange: yk,
-                              format: lk = String
-                            } = kk;
-                            return (0, ek.jsxs)("div", {
+                              label: HS,
+                              min: gS,
+                              max: tS,
+                              step: bS,
+                              value: XS,
+                              onChange: xS,
+                              format: NS = String
+                            } = SS;
+                            return (0, KS.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, ek.jsxs)("div", {
+                              children: [(0, KS.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, ek.jsx)("span", {
-                                  children: Fk
-                                }), (0, ek.jsx)("span", {
+                                children: [(0, KS.jsx)("span", {
+                                  children: HS
+                                }), (0, KS.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: lk(ik)
+                                  children: NS(XS)
                                 })]
-                              }), (0, ek.jsx)("input", {
+                              }), (0, KS.jsx)("input", {
                                 type: "range",
-                                min: Ik,
-                                max: Xk,
-                                step: Tk,
-                                value: Math.min(Xk, Math.max(Ik, ik)),
-                                "aria-label": Fk,
-                                onChange: kk => {
-                                  yk(Number(kk.target.value))
+                                min: gS,
+                                max: tS,
+                                step: bS,
+                                value: Math.min(tS, Math.max(gS, XS)),
+                                "aria-label": HS,
+                                onChange: SS => {
+                                  xS(Number(SS.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function kT(kk) {
+                          function Sb(SS) {
                             let {
-                              opts: Fk,
-                              onChange: Ik
-                            } = kk;
-                            const Xk = Fk.colorGradients;
-                            if (!dI(Xk)) return (0, ek.jsxs)("div", {
+                              opts: HS,
+                              onChange: gS
+                            } = SS;
+                            const tS = HS.colorGradients;
+                            if (!Bg(tS)) return (0, KS.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, ek.jsx)("div", {
+                              children: [(0, KS.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, ek.jsx)("span", {
+                                children: (0, KS.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, ek.jsx)("div", {
+                              }), (0, KS.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: Xk.map(((kk, Fk) => (0, ek.jsx)("input", {
+                                children: tS.map(((SS, HS) => (0, KS.jsx)("input", {
                                   type: "color",
-                                  value: hX(kk.color),
-                                  "aria-label": `Colour ${Fk+1}`,
-                                  onChange: kk => {
-                                    const Tk = [...Xk];
-                                    Tk[Fk] = {
-                                      color: rX(kk.target.value)
-                                    }, Ik(Tk)
+                                  value: lt(SS.color),
+                                  "aria-label": `Colour ${HS+1}`,
+                                  onChange: SS => {
+                                    const bS = [...tS];
+                                    bS[HS] = {
+                                      color: mt(SS.target.value)
+                                    }, gS(bS)
                                   }
-                                }, Fk)))
+                                }, HS)))
                               })]
                             });
-                            const Tk = (kk, Fk) => {
-                              const Tk = [...Xk];
-                              Tk[kk] = Fk, Ik(Tk)
+                            const bS = (SS, HS) => {
+                              const bS = [...tS];
+                              bS[SS] = HS, gS(bS)
                             };
-                            return (0, ek.jsxs)("div", {
+                            return (0, KS.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, ek.jsxs)("div", {
+                              children: [(0, KS.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, ek.jsx)("span", {
+                                children: [(0, KS.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, ek.jsx)("span", {
+                                }), (0, KS.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), Xk.map(((kk, Fk) => {
-                                var Ik;
-                                const Xk = null !== (Ik = kk.maxColor) && void 0 !== Ik ? Ik : kk.minColor;
-                                return (0, ek.jsxs)("div", {
+                              }), tS.map(((SS, HS) => {
+                                var gS;
+                                const tS = null !== (gS = SS.maxColor) && void 0 !== gS ? gS : SS.minColor;
+                                return (0, KS.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, ek.jsxs)("span", {
+                                  children: [(0, KS.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * kk.timeFraction), "%"]
-                                  }), (0, ek.jsx)("span", {
+                                    children: [Math.round(100 * SS.timeFraction), "%"]
+                                  }), (0, KS.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${hX(kk.minColor)}, ${hX(Xk)})`
+                                      background: `linear-gradient(90deg, ${lt(SS.minColor)}, ${lt(tS)})`
                                     }
-                                  }), (0, ek.jsx)("input", {
+                                  }), (0, KS.jsx)("input", {
                                     type: "color",
-                                    value: hX(kk.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*kk.timeFraction)}%`,
-                                    onChange: Ik => {
-                                      Tk(Fk, {
-                                        ...kk,
-                                        minColor: [...rX(Ik.target.value), kk.minColor[3]]
+                                    value: lt(SS.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*SS.timeFraction)}%`,
+                                    onChange: gS => {
+                                      bS(HS, {
+                                        ...SS,
+                                        minColor: [...mt(gS.target.value), SS.minColor[3]]
                                       })
                                     }
-                                  }), (0, ek.jsx)("input", {
+                                  }), (0, KS.jsx)("input", {
                                     type: "color",
-                                    value: hX(Xk),
-                                    "aria-label": `Maximum colour at ${Math.round(100*kk.timeFraction)}%`,
-                                    onChange: Ik => {
-                                      Tk(Fk, {
-                                        ...kk,
-                                        maxColor: [...rX(Ik.target.value), Xk[3]]
+                                    value: lt(tS),
+                                    "aria-label": `Maximum colour at ${Math.round(100*SS.timeFraction)}%`,
+                                    onChange: gS => {
+                                      bS(HS, {
+                                        ...SS,
+                                        maxColor: [...mt(gS.target.value), tS[3]]
                                       })
                                     }
                                   })]
-                                }, Fk)
+                                }, HS)
                               }))]
                             })
                           }
-                          const FT = [-.5, -.5, -.5],
-                            IT = [.5, .5, .5],
-                            XT = [0, 1, 2, 3, 4, 5, 6, 7].map((kk => [1 & kk ? IT[0] : FT[0], 2 & kk ? IT[1] : FT[1], 4 & kk ? IT[2] : FT[2]]));class TT {
+                          const Hb = [-.5, -.5, -.5],
+                            gb = [.5, .5, .5],
+                            tb = [0, 1, 2, 3, 4, 5, 6, 7].map((SS => [1 & SS ? gb[0] : Hb[0], 2 & SS ? gb[1] : Hb[1], 4 & SS ? gb[2] : Hb[2]]));class bb {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(kk, Fk, Ik, Xk) {
-                              const Tk = Math.round(31 * Fk),
-                                ik = Math.round(31 * Ik),
-                                yk = Math.round(31 * Xk),
-                                lk = `${Tk}|${ik}|${yk}`;
-                              let ak = this.tints.get(kk);
-                              (!ak || ak.size > 2e3) && (ak = new Map, this.tints.set(kk, ak));
-                              let qk = ak.get(lk);
-                              if (qk) return qk;
-                              qk = document.createElement("canvas"), qk.width = kk.naturalWidth || 16, qk.height = kk.naturalHeight || 16;
-                              const Lk = qk.getContext("2d");
-                              return Lk ? (Lk.imageSmoothingEnabled = !1, Lk.drawImage(kk, 0, 0, qk.width, qk.height), Lk.globalCompositeOperation = "multiply", Lk.fillStyle = `rgb(${Tk/31*255}, ${ik/31*255}, ${yk/31*255})`, Lk.fillRect(0, 0, qk.width, qk.height), Lk.globalCompositeOperation = "destination-in", Lk.drawImage(kk, 0, 0, qk.width, qk.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), ak.set(lk, qk), qk
+                            get(SS, HS, gS, tS) {
+                              const bS = Math.round(31 * HS),
+                                XS = Math.round(31 * gS),
+                                xS = Math.round(31 * tS),
+                                NS = `${bS}|${XS}|${xS}`;
+                              let qS = this.tints.get(SS);
+                              (!qS || qS.size > 2e3) && (qS = new Map, this.tints.set(SS, qS));
+                              let uS = qS.get(NS);
+                              if (uS) return uS;
+                              uS = document.createElement("canvas"), uS.width = SS.naturalWidth || 16, uS.height = SS.naturalHeight || 16;
+                              const IS = uS.getContext("2d");
+                              return IS ? (IS.imageSmoothingEnabled = !1, IS.drawImage(SS, 0, 0, uS.width, uS.height), IS.globalCompositeOperation = "multiply", IS.fillStyle = `rgb(${bS/31*255}, ${XS/31*255}, ${xS/31*255})`, IS.fillRect(0, 0, uS.width, uS.height), IS.globalCompositeOperation = "destination-in", IS.drawImage(SS, 0, 0, uS.width, uS.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), qS.set(NS, uS), uS
                             }
                           }
 
-                          function iT(kk) {
+                          function Xb(SS) {
                             let {
-                              opts: Fk,
-                              textureUrl: Ik,
-                              burst: Tk,
-                              paused: ik
-                            } = kk;
-                            const yk = (0, Xk.useRef)(null),
-                              lk = (0, Xk.useRef)(Fk);
-                            lk.current = Fk;
-                            const ak = (0, Xk.useRef)(ik);
-                            ak.current = ik;
-                            const qk = (0, Xk.useRef)(null),
-                              Lk = (0, Xk.useRef)(null),
-                              tk = (0, Xk.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(kk) {
-                                let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const Ik = [-.5, -.5, -.5],
-                                  Xk = [.5, .5, .5];
-                                let Tk = .5;
-                                for (let ik = 0; ik < 40; ik++) {
-                                  const ik = AI(kk, Ik, Xk, Fk),
-                                    yk = Math.max(ik.life / 30, .001);
-                                  for (; hI(ik, kk.gravity, yk);) Tk = Math.max(Tk, Math.hypot(ik.pos[0], ik.pos[1], ik.pos[2]) + ik.size / 2)
+                              opts: HS,
+                              textureUrl: gS,
+                              burst: bS,
+                              paused: XS
+                            } = SS;
+                            const xS = (0, tS.useRef)(null),
+                              NS = (0, tS.useRef)(HS);
+                            NS.current = HS;
+                            const qS = (0, tS.useRef)(XS);
+                            qS.current = XS;
+                            const uS = (0, tS.useRef)(null),
+                              IS = (0, tS.useRef)(null),
+                              fS = (0, tS.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(SS) {
+                                let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const gS = [-.5, -.5, -.5],
+                                  tS = [.5, .5, .5];
+                                let bS = .5;
+                                for (let XS = 0; XS < 40; XS++) {
+                                  const XS = Fg(SS, gS, tS, HS),
+                                    xS = Math.max(XS.life / 30, .001);
+                                  for (; og(XS, SS.gravity, xS);) bS = Math.max(bS, Math.hypot(XS.pos[0], XS.pos[1], XS.pos[2]) + XS.size / 2)
                                 }
-                                return Tk
-                              }(Fk)))), [Fk]),
-                              Zk = (0, Xk.useRef)(tk);
-                            return Zk.current = tk, (0, Xk.useEffect)((() => {
-                              if (qk.current = null, !Ik) return;
-                              const kk = new Image;
-                              let Fk = !1;
-                              return kk.onload = () => {
-                                Fk || (qk.current = kk)
-                              }, kk.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${Ik}`)
-                              }, kk.src = Ik, () => {
-                                Fk = !0
+                                return bS
+                              }(HS)))), [HS]),
+                              kS = (0, tS.useRef)(fS);
+                            return kS.current = fS, (0, tS.useEffect)((() => {
+                              if (uS.current = null, !gS) return;
+                              const SS = new Image;
+                              let HS = !1;
+                              return SS.onload = () => {
+                                HS || (uS.current = SS)
+                              }, SS.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${gS}`)
+                              }, SS.src = gS, () => {
+                                HS = !0
                               }
-                            }), [Ik]), (0, Xk.useEffect)((() => {
-                              var kk;
-                              null === (kk = Lk.current) || void 0 === kk || kk.call(Lk)
-                            }), [Fk, Tk]), (0, Xk.useEffect)((() => {
-                              const kk = yk.current,
-                                Fk = null === kk || void 0 === kk ? void 0 : kk.getContext("2d");
-                              if (!kk || !Fk) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const Ik = new TT;
-                              let Xk = [],
-                                Tk = 0,
-                                ik = -.7,
-                                tk = Zk.current,
-                                jk = performance.now(),
-                                ek = 0,
-                                wk = !0,
-                                Hk = null;
-                              const Jk = () => {
-                                const kk = lk.current,
-                                  Fk = Math.min(400, Math.max(0, Math.ceil(kk.manualEmitCount)));
-                                Xk = [];
-                                for (let Ik = 0; Ik < Fk; Ik++) Xk.push(AI(kk, FT, IT, Math.random));
-                                Tk = 0
+                            }), [gS]), (0, tS.useEffect)((() => {
+                              var SS;
+                              null === (SS = IS.current) || void 0 === SS || SS.call(IS)
+                            }), [HS, bS]), (0, tS.useEffect)((() => {
+                              const SS = xS.current,
+                                HS = null === SS || void 0 === SS ? void 0 : SS.getContext("2d");
+                              if (!SS || !HS) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const gS = new bb;
+                              let tS = [],
+                                bS = 0,
+                                XS = -.7,
+                                fS = kS.current,
+                                aS = performance.now(),
+                                KS = 0,
+                                jS = !0,
+                                GS = null;
+                              const CS = () => {
+                                const SS = NS.current,
+                                  HS = Math.min(400, Math.max(0, Math.ceil(SS.manualEmitCount)));
+                                tS = [];
+                                for (let gS = 0; gS < HS; gS++) tS.push(Fg(SS, Hb, gb, Math.random));
+                                bS = 0
                               };
-                              Lk.current = Jk, Jk();
-                              const xk = yk => {
-                                ek = requestAnimationFrame(xk);
-                                const Lk = Math.min(.05, (yk - jk) / 1e3);
-                                if (jk = yk, !wk) return;
-                                const Pk = window.devicePixelRatio || 1,
-                                  Kk = Math.round(kk.clientWidth * Pk),
-                                  Qk = Math.round(kk.clientHeight * Pk);
-                                if (0 === Kk || 0 === Qk) return;
-                                kk.width === Kk && kk.height === Qk || (kk.width = Kk, kk.height = Qk);
-                                const sk = lk.current;
-                                null === Hk && (ik += .18 * Lk), tk += (Zk.current - tk) * Math.min(1, 4 * Lk);
-                                const Vk = .6 * Lk;
-                                Xk = Xk.filter((kk => hI(kk, sk.gravity, Vk))), 0 !== Xk.length || ak.current || (Tk += Lk, Tk > .6 && Jk());
-                                const zk = function(kk, Fk, Ik, Xk) {
-                                  const Tk = 3.2 * Xk,
-                                    ik = .44 * Math.min(kk, Fk) * Tk / Xk,
-                                    yk = Math.cos(Ik),
-                                    lk = Math.sin(Ik),
-                                    ak = Math.cos(.42),
-                                    qk = Math.sin(.42);
-                                  return (Ik, Xk, Lk) => {
-                                    const tk = Ik * lk + Lk * yk,
-                                      Zk = Tk - (Xk * qk + tk * ak);
-                                    if (Zk < .05) return null;
-                                    const jk = ik / Zk;
+                              IS.current = CS, CS();
+                              const nS = xS => {
+                                KS = requestAnimationFrame(nS);
+                                const IS = Math.min(.05, (xS - aS) / 1e3);
+                                if (aS = xS, !jS) return;
+                                const PS = window.devicePixelRatio || 1,
+                                  QS = Math.round(SS.clientWidth * PS),
+                                  DS = Math.round(SS.clientHeight * PS);
+                                if (0 === QS || 0 === DS) return;
+                                SS.width === QS && SS.height === DS || (SS.width = QS, SS.height = DS);
+                                const wS = NS.current;
+                                null === GS && (XS += .18 * IS), fS += (kS.current - fS) * Math.min(1, 4 * IS);
+                                const hS = .6 * IS;
+                                tS = tS.filter((SS => og(SS, wS.gravity, hS))), 0 !== tS.length || qS.current || (bS += IS, bS > .6 && CS());
+                                const ZS = function(SS, HS, gS, tS) {
+                                  const bS = 3.2 * tS,
+                                    XS = .44 * Math.min(SS, HS) * bS / tS,
+                                    xS = Math.cos(gS),
+                                    NS = Math.sin(gS),
+                                    qS = Math.cos(.42),
+                                    uS = Math.sin(.42);
+                                  return (gS, tS, IS) => {
+                                    const fS = gS * NS + IS * xS,
+                                      kS = bS - (tS * uS + fS * qS);
+                                    if (kS < .05) return null;
+                                    const aS = XS / kS;
                                     return {
-                                      x: kk / 2 + (Ik * yk - Lk * lk) * jk,
-                                      y: Fk / 2 - (Xk * ak - tk * qk) * jk,
-                                      scale: jk,
-                                      depth: Zk
+                                      x: SS / 2 + (gS * xS - IS * NS) * aS,
+                                      y: HS / 2 - (tS * qS - fS * uS) * aS,
+                                      scale: aS,
+                                      depth: kS
                                     }
                                   }
-                                }(Kk, Qk, ik, tk);
-                                ! function(kk, Fk, Ik, Xk, Tk) {
-                                  const ik = kk.createLinearGradient(0, 0, 0, Ik);
-                                  ik.addColorStop(0, "#23262d"), ik.addColorStop(1, "#16181c"), kk.globalCompositeOperation = "source-over", kk.globalAlpha = 1, kk.fillStyle = ik, kk.fillRect(0, 0, Fk, Ik);
-                                  const yk = (Fk, Ik) => {
-                                      const Tk = Xk(Fk[0], Fk[1], Fk[2]),
-                                        ik = Xk(Ik[0], Ik[1], Ik[2]);
-                                      Tk && ik && (kk.beginPath(), kk.moveTo(Tk.x, Tk.y), kk.lineTo(ik.x, ik.y), kk.stroke())
+                                }(QS, DS, XS, fS);
+                                ! function(SS, HS, gS, tS, bS) {
+                                  const XS = SS.createLinearGradient(0, 0, 0, gS);
+                                  XS.addColorStop(0, "#23262d"), XS.addColorStop(1, "#16181c"), SS.globalCompositeOperation = "source-over", SS.globalAlpha = 1, SS.fillStyle = XS, SS.fillRect(0, 0, HS, gS);
+                                  const xS = (HS, gS) => {
+                                      const bS = tS(HS[0], HS[1], HS[2]),
+                                        XS = tS(gS[0], gS[1], gS[2]);
+                                      bS && XS && (SS.beginPath(), SS.moveTo(bS.x, bS.y), SS.lineTo(XS.x, XS.y), SS.stroke())
                                     },
-                                    lk = Math.ceil(Tk) + 1,
-                                    ak = FT[1];
-                                  kk.lineWidth = 1, kk.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let qk = -lk; qk <= lk; qk++) yk([qk + .5, ak, .5 - lk], [qk + .5, ak, lk + .5]), yk([.5 - lk, ak, qk + .5], [lk + .5, ak, qk + .5]);
-                                  kk.strokeStyle = "rgba(255, 255, 255, 0.28)", kk.setLineDash([4, 4]);
-                                  for (const qk of XT)
-                                    for (const kk of XT) {
-                                      const Fk = [0, 1, 2].filter((Fk => qk[Fk] !== kk[Fk]));
-                                      1 === Fk.length && qk[Fk[0]] < kk[Fk[0]] && yk(qk, kk)
+                                    NS = Math.ceil(bS) + 1,
+                                    qS = Hb[1];
+                                  SS.lineWidth = 1, SS.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let uS = -NS; uS <= NS; uS++) xS([uS + .5, qS, .5 - NS], [uS + .5, qS, NS + .5]), xS([.5 - NS, qS, uS + .5], [NS + .5, qS, uS + .5]);
+                                  SS.strokeStyle = "rgba(255, 255, 255, 0.28)", SS.setLineDash([4, 4]);
+                                  for (const uS of tb)
+                                    for (const SS of tb) {
+                                      const HS = [0, 1, 2].filter((HS => uS[HS] !== SS[HS]));
+                                      1 === HS.length && uS[HS[0]] < SS[HS[0]] && xS(uS, SS)
                                     }
-                                  kk.setLineDash([])
-                                }(Fk, Kk, Qk, zk, tk);
-                                const Sk = qk.current,
-                                  vk = Xk.map((kk => ({
-                                    particle: kk,
-                                    at: zk(kk.pos[0], kk.pos[1], kk.pos[2])
-                                  }))).filter((kk => null !== kk.at)).sort(((kk, Fk) => Fk.at.depth - kk.at.depth));
-                                Fk.imageSmoothingEnabled = !1;
-                                for (const kk of function(kk) {
-                                    switch (kk) {
-                                      case NI.d.OneOne:
+                                  SS.setLineDash([])
+                                }(HS, QS, DS, ZS, fS);
+                                const JS = uS.current,
+                                  OS = tS.map((SS => ({
+                                    particle: SS,
+                                    at: ZS(SS.pos[0], SS.pos[1], SS.pos[2])
+                                  }))).filter((SS => null !== SS.at)).sort(((SS, HS) => HS.at.depth - SS.at.depth));
+                                HS.imageSmoothingEnabled = !1;
+                                for (const SS of function(SS) {
+                                    switch (SS) {
+                                      case Wg.g.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case NI.d.Add:
+                                      case Wg.g.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case NI.d.Multiply:
+                                      case Wg.g.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case NI.d.MultiplyAdd:
+                                      case Wg.g.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2962,665 +2962,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(sk.blendMode)) {
-                                  Fk.globalCompositeOperation = kk.operation;
+                                  }(wS.blendMode)) {
+                                  HS.globalCompositeOperation = SS.operation;
                                   for (const {
-                                      particle: Xk,
-                                      at: Tk
+                                      particle: tS,
+                                      at: bS
                                     }
-                                    of vk) {
-                                    const [ik, yk, lk, ak] = mI(Xk), qk = Math.max(1, Xk.size * Tk.scale);
-                                    Fk.globalAlpha = kk.usesAlpha ? Math.min(1, Math.max(0, ak)) : 1, Sk ? Fk.drawImage(Ik.get(Sk, ik, yk, lk), Tk.x - qk / 2, Tk.y - qk / 2, qk, qk) : (Fk.fillStyle = `rgb(${255*ik}, ${255*yk}, ${255*lk})`, Fk.fillRect(Tk.x - qk / 2, Tk.y - qk / 2, qk, qk))
+                                    of OS) {
+                                    const [XS, xS, NS, qS] = Tg(tS), uS = Math.max(1, tS.size * bS.scale);
+                                    HS.globalAlpha = SS.usesAlpha ? Math.min(1, Math.max(0, qS)) : 1, JS ? HS.drawImage(gS.get(JS, XS, xS, NS), bS.x - uS / 2, bS.y - uS / 2, uS, uS) : (HS.fillStyle = `rgb(${255*XS}, ${255*xS}, ${255*NS})`, HS.fillRect(bS.x - uS / 2, bS.y - uS / 2, uS, uS))
                                   }
                                 }
-                                Fk.globalCompositeOperation = "source-over", Fk.globalAlpha = 1
+                                HS.globalCompositeOperation = "source-over", HS.globalAlpha = 1
                               };
-                              ek = requestAnimationFrame(xk);
-                              const Pk = new IntersectionObserver((kk => {
-                                let [Fk] = kk;
-                                wk = Fk.isIntersecting
+                              KS = requestAnimationFrame(nS);
+                              const PS = new IntersectionObserver((SS => {
+                                let [HS] = SS;
+                                jS = HS.isIntersecting
                               }));
-                              Pk.observe(kk);
-                              const Kk = Fk => {
-                                  Hk = Fk.clientX, kk.setPointerCapture(Fk.pointerId)
+                              PS.observe(SS);
+                              const QS = HS => {
+                                  GS = HS.clientX, SS.setPointerCapture(HS.pointerId)
                                 },
-                                Qk = kk => {
-                                  null !== Hk && (ik += .01 * (kk.clientX - Hk), Hk = kk.clientX)
+                                DS = SS => {
+                                  null !== GS && (XS += .01 * (SS.clientX - GS), GS = SS.clientX)
                                 },
-                                sk = () => {
-                                  Hk = null
+                                wS = () => {
+                                  GS = null
                                 };
-                              return kk.addEventListener("pointerdown", Kk), kk.addEventListener("pointermove", Qk), kk.addEventListener("pointerup", sk), kk.addEventListener("pointercancel", sk), () => {
-                                cancelAnimationFrame(ek), Pk.disconnect(), Lk.current = null, kk.removeEventListener("pointerdown", Kk), kk.removeEventListener("pointermove", Qk), kk.removeEventListener("pointerup", sk), kk.removeEventListener("pointercancel", sk)
+                              return SS.addEventListener("pointerdown", QS), SS.addEventListener("pointermove", DS), SS.addEventListener("pointerup", wS), SS.addEventListener("pointercancel", wS), () => {
+                                cancelAnimationFrame(KS), PS.disconnect(), IS.current = null, SS.removeEventListener("pointerdown", QS), SS.removeEventListener("pointermove", DS), SS.removeEventListener("pointerup", wS), SS.removeEventListener("pointercancel", wS)
                               }
-                            }), []), (0, ek.jsx)("canvas", {
-                              ref: yk,
+                            }), []), (0, KS.jsx)("canvas", {
+                              ref: xS,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${Fk.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${HS.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const yT = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            lT = [{
-                              mode: NI.d.OneOne,
+                          const xb = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            Nb = [{
+                              mode: Wg.g.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: NI.d.Standard,
+                              mode: Wg.g.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: NI.d.Add,
+                              mode: Wg.g.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: NI.d.Multiply,
+                              mode: Wg.g.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: NI.d.MultiplyAdd,
+                              mode: Wg.g.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            aT = (0, Xk.forwardRef)((function(kk, Fk) {
-                              var Ik, Tk;
+                            qb = (0, tS.forwardRef)((function(SS, HS) {
+                              var gS, bS;
                               let {
-                                textures: yk
-                              } = kk;
-                              const lk = KX(),
-                                ak = (0, Xk.useRef)(null),
-                                [qk, Lk] = (0, Xk.useState)(WI),
-                                [tk, Zk] = (0, Xk.useState)("example"),
-                                [jk, wk] = (0, Xk.useState)(0),
-                                [Jk, xk] = (0, Xk.useState)(!1),
-                                Kk = kk => {
-                                  const Fk = "example" === kk ? WI : cI(kk);
-                                  Fk && (Lk(Fk), Zk(kk))
+                                textures: xS
+                              } = SS;
+                              const NS = Qt(),
+                                qS = (0, tS.useRef)(null),
+                                [uS, IS] = (0, tS.useState)(Ug),
+                                [fS, kS] = (0, tS.useState)("example"),
+                                [aS, jS] = (0, tS.useState)(0),
+                                [CS, nS] = (0, tS.useState)(!1),
+                                QS = SS => {
+                                  const HS = "example" === SS ? Ug : zg(SS);
+                                  HS && (IS(HS), kS(SS))
                                 };
-                              (0, Xk.useImperativeHandle)(Fk, (() => ({
-                                preview: kk => {
-                                  var Fk;
-                                  Kk(kk), null === (Fk = ak.current) || void 0 === Fk || Fk.scrollIntoView({
+                              (0, tS.useImperativeHandle)(HS, (() => ({
+                                preview: SS => {
+                                  var HS;
+                                  QS(SS), null === (HS = qS.current) || void 0 === HS || HS.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const Qk = kk => {
-                                  Lk({
-                                    ...qk,
-                                    ...kk
-                                  }), Zk(null)
+                              const DS = SS => {
+                                  IS({
+                                    ...uS,
+                                    ...SS
+                                  }), kS(null)
                                 },
-                                sk = function(kk, Fk) {
-                                  if (null !== Fk) return `${kX}    presetId: "${Fk}",\n${FX}\n})`;
-                                  const Ik = kk.velocityGradients.map((kk => `        {\n            timeFraction: ${rI(kk.timeFraction)},\n            factor: ${rI(kk.factor)},\n            factor2: ${rI(kk.factor2)},\n        },`)),
-                                    Xk = [`    dir1: ${DI(kk.dir1)},`, `    dir2: ${DI(kk.dir2)},`, FX, `    texture: "${kk.texture}",`, `    minLifeTime: ${rI(kk.minLifeTime)},`, `    maxLifeTime: ${rI(kk.maxLifeTime)},`, `    minEmitPower: ${rI(kk.minEmitPower)},`, `    maxEmitPower: ${rI(kk.maxEmitPower)},`, `    minSize: ${rI(kk.minSize)},`, `    maxSize: ${rI(kk.maxSize)},`, `    manualEmitCount: ${rI(kk.manualEmitCount)},`, `    gravity: ${DI(kk.gravity)},`, `    colorGradients: ${MI(kk.colorGradients,"    ")},`, `    velocityGradients: ${Ik.length>0?`[\n${Ik.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${rI(kk.blendMode)},`];
-                                  return void 0 !== kk.hideDist && Xk.push(`    hideDist: ${rI(kk.hideDist)},`), `${kX}${Xk.join("\n")}\n})`
-                                }(qk, null === tk || "example" === tk ? null : tk),
-                                zk = yk.includes(qk.texture) ? yk : [...yk, qk.texture];
-                              return (0, ek.jsxs)("section", {
-                                ref: ak,
+                                wS = function(SS, HS) {
+                                  if (null !== HS) return `${rg}    presetId: "${HS}",\n${St}\n})`;
+                                  const gS = SS.velocityGradients.map((SS => `        {\n            timeFraction: ${lg(SS.timeFraction)},\n            factor: ${lg(SS.factor)},\n            factor2: ${lg(SS.factor2)},\n        },`)),
+                                    tS = [`    dir1: ${mg(SS.dir1)},`, `    dir2: ${mg(SS.dir2)},`, St, `    texture: "${SS.texture}",`, `    minLifeTime: ${lg(SS.minLifeTime)},`, `    maxLifeTime: ${lg(SS.maxLifeTime)},`, `    minEmitPower: ${lg(SS.minEmitPower)},`, `    maxEmitPower: ${lg(SS.maxEmitPower)},`, `    minSize: ${lg(SS.minSize)},`, `    maxSize: ${lg(SS.maxSize)},`, `    manualEmitCount: ${lg(SS.manualEmitCount)},`, `    gravity: ${mg(SS.gravity)},`, `    colorGradients: ${eg(SS.colorGradients,"    ")},`, `    velocityGradients: ${gS.length>0?`[\n${gS.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${lg(SS.blendMode)},`];
+                                  return void 0 !== SS.hideDist && tS.push(`    hideDist: ${lg(SS.hideDist)},`), `${rg}${tS.join("\n")}\n})`
+                                }(uS, null === fS || "example" === fS ? null : fS),
+                                ZS = xS.includes(uS.texture) ? xS : [...xS, uS.texture];
+                              return (0, KS.jsxs)("section", {
+                                ref: qS,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, ek.jsxs)("header", {
+                                children: [(0, KS.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, ek.jsxs)("div", {
-                                    children: [(0, ek.jsx)("div", {
+                                  children: [(0, KS.jsxs)("div", {
+                                    children: [(0, KS.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, ek.jsx)("div", {
+                                    }), (0, KS.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, ek.jsx)(Pk, {
-                                    text: sk,
+                                  }), (0, KS.jsx)(PS, {
+                                    text: wS,
                                     label: "Copy code"
                                   })]
-                                }), (0, ek.jsxs)("div", {
+                                }), (0, KS.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, ek.jsx)("button", {
+                                  children: [(0, KS.jsx)("button", {
                                     type: "button",
-                                    className: ik()("DocsVariantChip", {
-                                      Active: "example" === tk
+                                    className: XS()("DocsVariantChip", {
+                                      Active: "example" === fS
                                     }),
                                     onClick: () => {
-                                      Kk("example")
+                                      QS("example")
                                     },
                                     children: "Example"
-                                  }), yT.filter((kk => null !== cI(kk))).map((kk => (0, ek.jsx)("button", {
+                                  }), xb.filter((SS => null !== zg(SS))).map((SS => (0, KS.jsx)("button", {
                                     type: "button",
-                                    className: ik()("DocsVariantChip", {
-                                      Active: tk === kk
+                                    className: XS()("DocsVariantChip", {
+                                      Active: fS === SS
                                     }),
                                     onClick: () => {
-                                      Kk(kk)
+                                      QS(SS)
                                     },
-                                    children: kk
-                                  }, kk))), (0, ek.jsxs)("select", {
+                                    children: SS
+                                  }, SS))), (0, KS.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== tk && void 0 !== tk ? tk : "custom",
+                                    value: null !== fS && void 0 !== fS ? fS : "custom",
                                     "aria-label": "Preset",
-                                    onChange: kk => {
-                                      Kk(kk.target.value)
+                                    onChange: SS => {
+                                      QS(SS.target.value)
                                     },
-                                    children: [(0, ek.jsx)("option", {
+                                    children: [(0, KS.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === tk && (0, ek.jsx)("option", {
+                                    }), null === fS && (0, KS.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), CI.e.map((kk => (0, ek.jsx)("option", {
-                                      value: kk,
-                                      children: kk
-                                    }, kk)))]
+                                    }), ig.e.map((SS => (0, KS.jsx)("option", {
+                                      value: SS,
+                                      children: SS
+                                    }, SS)))]
                                   })]
-                                }), (0, ek.jsxs)("div", {
+                                }), (0, KS.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, ek.jsxs)("div", {
+                                  children: [(0, KS.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, ek.jsx)(iT, {
-                                      opts: qk,
-                                      textureUrl: null !== (Ik = null === lk || void 0 === lk ? void 0 : lk.getParticleTextureUrl(qk.texture)) && void 0 !== Ik ? Ik : null,
-                                      burst: jk,
-                                      paused: Jk
-                                    }), (0, ek.jsxs)("div", {
+                                    children: [(0, KS.jsx)(Xb, {
+                                      opts: uS,
+                                      textureUrl: null !== (gS = null === NS || void 0 === NS ? void 0 : NS.getParticleTextureUrl(uS.texture)) && void 0 !== gS ? gS : null,
+                                      burst: aS,
+                                      paused: CS
+                                    }), (0, KS.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, ek.jsxs)("button", {
+                                      children: [(0, KS.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          wk(jk + 1)
+                                          jS(aS + 1)
                                         },
-                                        children: [(0, ek.jsx)(Hk, {
+                                        children: [(0, KS.jsx)(GS, {
                                           name: "replay"
-                                        }), (0, ek.jsx)("span", {
+                                        }), (0, KS.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, ek.jsxs)("button", {
+                                      }), (0, KS.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": Jk,
+                                        "aria-pressed": CS,
                                         onClick: () => {
-                                          xk(!Jk)
+                                          nS(!CS)
                                         },
-                                        children: [(0, ek.jsx)(Hk, {
-                                          name: Jk ? "play" : "pause"
-                                        }), (0, ek.jsx)("span", {
-                                          children: Jk ? "Loop" : "Stop looping"
+                                        children: [(0, KS.jsx)(GS, {
+                                          name: CS ? "play" : "pause"
+                                        }), (0, KS.jsx)("span", {
+                                          children: CS ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, ek.jsxs)("div", {
+                                  }), (0, KS.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, ek.jsxs)("div", {
+                                    children: [(0, KS.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, ek.jsxs)("div", {
+                                      children: [(0, KS.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, ek.jsx)("span", {
+                                        children: [(0, KS.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, ek.jsx)("code", {
+                                        }), (0, KS.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: qk.texture
+                                          children: uS.texture
                                         })]
-                                      }), (0, ek.jsx)("div", {
+                                      }), (0, KS.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: zk.map((kk => {
-                                          var Fk;
-                                          const Ik = null !== (Fk = null === lk || void 0 === lk ? void 0 : lk.getParticleTextureUrl(kk)) && void 0 !== Fk ? Fk : null;
-                                          return (0, ek.jsx)("button", {
+                                        children: ZS.map((SS => {
+                                          var HS;
+                                          const gS = null !== (HS = null === NS || void 0 === NS ? void 0 : NS.getParticleTextureUrl(SS)) && void 0 !== HS ? HS : null;
+                                          return (0, KS.jsx)("button", {
                                             type: "button",
-                                            className: ik()("DocsParticleTexture", {
-                                              Active: qk.texture === kk
+                                            className: XS()("DocsParticleTexture", {
+                                              Active: uS.texture === SS
                                             }),
-                                            title: kk,
-                                            "aria-label": kk,
-                                            "aria-pressed": qk.texture === kk,
+                                            title: SS,
+                                            "aria-label": SS,
+                                            "aria-pressed": uS.texture === SS,
                                             onClick: () => {
-                                              Qk({
-                                                texture: kk
+                                              DS({
+                                                texture: SS
                                               })
                                             },
-                                            children: Ik ? (0, ek.jsx)("img", {
-                                              src: Ik,
+                                            children: gS ? (0, KS.jsx)("img", {
+                                              src: gS,
                                               alt: ""
-                                            }) : (0, ek.jsx)(Hk, {
+                                            }) : (0, KS.jsx)(GS, {
                                               name: "image"
                                             })
-                                          }, kk)
+                                          }, SS)
                                         }))
                                       })]
-                                    }), (0, ek.jsx)(MX, {
+                                    }), (0, KS.jsx)(rt, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: qk.manualEmitCount,
-                                      onChange: kk => {
-                                        Qk({
-                                          manualEmitCount: kk
+                                      value: uS.manualEmitCount,
+                                      onChange: SS => {
+                                        DS({
+                                          manualEmitCount: SS
                                         })
                                       }
-                                    }), (0, ek.jsx)(DX, {
+                                    }), (0, KS.jsx)(et, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: qk.minLifeTime,
-                                      high: qk.maxLifeTime,
-                                      onChange: (kk, Fk) => {
-                                        Qk({
-                                          minLifeTime: kk,
-                                          maxLifeTime: Fk
+                                      low: uS.minLifeTime,
+                                      high: uS.maxLifeTime,
+                                      onChange: (SS, HS) => {
+                                        DS({
+                                          minLifeTime: SS,
+                                          maxLifeTime: HS
                                         })
                                       }
-                                    }), (0, ek.jsx)(DX, {
+                                    }), (0, KS.jsx)(et, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: qk.minEmitPower,
-                                      high: qk.maxEmitPower,
-                                      onChange: (kk, Fk) => {
-                                        Qk({
-                                          minEmitPower: kk,
-                                          maxEmitPower: Fk
+                                      low: uS.minEmitPower,
+                                      high: uS.maxEmitPower,
+                                      onChange: (SS, HS) => {
+                                        DS({
+                                          minEmitPower: SS,
+                                          maxEmitPower: HS
                                         })
                                       }
-                                    }), (0, ek.jsx)(DX, {
+                                    }), (0, KS.jsx)(et, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: qk.minSize,
-                                      high: qk.maxSize,
-                                      onChange: (kk, Fk) => {
-                                        Qk({
-                                          minSize: kk,
-                                          maxSize: Fk
+                                      low: uS.minSize,
+                                      high: uS.maxSize,
+                                      onChange: (SS, HS) => {
+                                        DS({
+                                          minSize: SS,
+                                          maxSize: HS
                                         })
                                       }
-                                    }), (0, ek.jsx)(MX, {
+                                    }), (0, KS.jsx)(rt, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (Tk = qk.gravity[1]) && void 0 !== Tk ? Tk : 0,
-                                      onChange: kk => {
-                                        var Fk, Ik;
-                                        Qk({
-                                          gravity: [null !== (Fk = qk.gravity[0]) && void 0 !== Fk ? Fk : 0, kk, null !== (Ik = qk.gravity[2]) && void 0 !== Ik ? Ik : 0]
+                                      value: null !== (bS = uS.gravity[1]) && void 0 !== bS ? bS : 0,
+                                      onChange: SS => {
+                                        var HS, gS;
+                                        DS({
+                                          gravity: [null !== (HS = uS.gravity[0]) && void 0 !== HS ? HS : 0, SS, null !== (gS = uS.gravity[2]) && void 0 !== gS ? gS : 0]
                                         })
                                       }
-                                    }), (0, ek.jsxs)("div", {
+                                    }), (0, KS.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, ek.jsx)("div", {
+                                      children: [(0, KS.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, ek.jsx)("span", {
+                                        children: (0, KS.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, ek.jsx)("select", {
+                                      }), (0, KS.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: qk.blendMode,
+                                        value: uS.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: kk => {
-                                          Qk({
-                                            blendMode: Number(kk.target.value)
+                                        onChange: SS => {
+                                          DS({
+                                            blendMode: Number(SS.target.value)
                                           })
                                         },
-                                        children: lT.map((kk => {
+                                        children: Nb.map((SS => {
                                           let {
-                                            mode: Fk,
-                                            label: Ik
-                                          } = kk;
-                                          return (0, ek.jsx)("option", {
-                                            value: Fk,
-                                            children: Ik
-                                          }, Fk)
+                                            mode: HS,
+                                            label: gS
+                                          } = SS;
+                                          return (0, KS.jsx)("option", {
+                                            value: HS,
+                                            children: gS
+                                          }, HS)
                                         }))
                                       })]
-                                    }), (0, ek.jsx)(kT, {
-                                      opts: qk,
-                                      onChange: kk => {
-                                        Qk({
-                                          colorGradients: kk
+                                    }), (0, KS.jsx)(Sb, {
+                                      opts: uS,
+                                      onChange: SS => {
+                                        DS({
+                                          colorGradients: SS
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, ek.jsx)(Vk, {
-                                  code: sk,
+                                }), (0, KS.jsx)(hS, {
+                                  code: wS,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var qT = Ik(4466),
-                            LT = Ik(1849);
+                          var ub = gS(4593),
+                            Ib = gS(2031);
 
-                          function tT(kk, Fk) {
-                            return kk ? qT.c.includes(Fk) ? kk.getIngameIconUrl(Fk) : kk.getItemIconUrl(Fk) : null
+                          function fb(SS, HS) {
+                            return SS ? ub.d.includes(HS) ? SS.getIngameIconUrl(HS) : SS.getItemIconUrl(HS) : null
                           }
 
-                          function ZT(kk) {
-                            var Fk, Ik, Xk;
+                          function kb(SS) {
+                            var HS, gS, tS;
                             let {
-                              part: Tk,
-                              assets: yk
-                            } = kk;
-                            const lk = tT(yk, Tk.icon),
-                              ak = null !== (Fk = null === (Ik = Tk.style) || void 0 === Ik ? void 0 : Ik.fontSize) && void 0 !== Fk ? Fk : "1.8em",
-                              qk = (0, CF.fc)(Tk.style);
-                            return (0, ek.jsxs)("span", {
-                              className: ik()("DocsBloxdTextIcon", {
-                                Missing: !lk
+                              part: bS,
+                              assets: xS
+                            } = SS;
+                            const NS = fb(xS, bS.icon),
+                              qS = null !== (HS = null === (gS = bS.style) || void 0 === gS ? void 0 : gS.fontSize) && void 0 !== HS ? HS : "1.8em",
+                              uS = (0, iH.Zb)(bS.style);
+                            return (0, KS.jsxs)("span", {
+                              className: XS()("DocsBloxdTextIcon", {
+                                Missing: !NS
                               }),
                               style: {
-                                width: ak,
-                                height: ak,
-                                opacity: null === (Xk = Tk.style) || void 0 === Xk ? void 0 : Xk.opacity
+                                width: qS,
+                                height: qS,
+                                opacity: null === (tS = bS.style) || void 0 === tS ? void 0 : tS.opacity
                               },
-                              title: lk ? void 0 : `No Bloxd icon, item or block is called "${Tk.icon}"`,
-                              children: [lk && qk && (0, ek.jsx)("span", {
+                              title: NS ? void 0 : `No Bloxd icon, item or block is called "${bS.icon}"`,
+                              children: [NS && uS && (0, KS.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: qk,
-                                  maskImage: `url("${lk}")`,
-                                  WebkitMaskImage: `url("${lk}")`
+                                  background: uS,
+                                  maskImage: `url("${NS}")`,
+                                  WebkitMaskImage: `url("${NS}")`
                                 }
-                              }), lk ? (0, ek.jsx)("img", {
-                                src: lk,
+                              }), NS ? (0, KS.jsx)("img", {
+                                src: NS,
                                 alt: "",
-                                className: ik()({
-                                  Tinted: qk
+                                className: XS()({
+                                  Tinted: uS
                                 })
-                              }) : (0, ek.jsx)(Hk, {
+                              }) : (0, KS.jsx)(GS, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function jT(kk) {
+                          function ab(SS) {
                             let {
-                              parts: Fk,
-                              className: Ik
-                            } = kk;
-                            const Xk = KX(),
-                              Tk = [];
-                            let yk = [];
-                            const lk = kk => {
-                              yk.length > 0 && (Tk.push((0, ek.jsx)(LT.c, {
-                                text: yk
-                              }, `run-${kk}`)), yk = [])
+                              parts: HS,
+                              className: gS
+                            } = SS;
+                            const tS = Qt(),
+                              bS = [];
+                            let xS = [];
+                            const NS = SS => {
+                              xS.length > 0 && (bS.push((0, KS.jsx)(Ib.c, {
+                                text: xS
+                              }, `run-${SS}`)), xS = [])
                             };
-                            return Fk.forEach(((kk, Fk) => {
-                              "icon" !== BF(kk) || cF(kk.icon) ? yk.push(kk) : (lk(Fk), Tk.push((0, ek.jsx)(ZT, {
-                                part: kk,
-                                assets: Xk
-                              }, `icon-${Fk}`)))
-                            })), lk(Fk.length), (0, ek.jsx)("div", {
-                              className: ik()("DocsStyledTextPreview", Ik),
-                              children: Tk
+                            return HS.forEach(((SS, HS) => {
+                              "icon" !== sH(SS) || zH(SS.icon) ? xS.push(SS) : (NS(HS), bS.push((0, KS.jsx)(kb, {
+                                part: SS,
+                                assets: tS
+                              }, `icon-${HS}`)))
+                            })), NS(HS.length), (0, KS.jsx)("div", {
+                              className: XS()("DocsStyledTextPreview", gS),
+                              children: bS
                             })
                           }
-                          const eT = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let wT = null;
+                          const Kb = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let jb = null;
 
-                          function HT(kk) {
-                            if (wT ??= document.createElement("canvas").getContext("2d"), !wT) return "#000000";
-                            wT.fillStyle = "#000000", wT.fillStyle = kk;
-                            const Fk = wT.fillStyle;
-                            return Fk.startsWith("#") ? Fk : "#000000"
+                          function Gb(SS) {
+                            if (jb ??= document.createElement("canvas").getContext("2d"), !jb) return "#000000";
+                            jb.fillStyle = "#000000", jb.fillStyle = SS;
+                            const HS = jb.fillStyle;
+                            return HS.startsWith("#") ? HS : "#000000"
                           }
 
-                          function JT(kk) {
+                          function Cb(SS) {
                             let {
-                              value: Fk,
-                              label: Ik,
-                              onChange: Xk
-                            } = kk;
-                            return (0, ek.jsxs)("span", {
+                              value: HS,
+                              label: gS,
+                              onChange: tS
+                            } = SS;
+                            return (0, KS.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, ek.jsx)("input", {
+                              children: [(0, KS.jsx)("input", {
                                 type: "color",
-                                value: HT(Fk),
-                                "aria-label": `${Ik} picker`,
-                                onChange: kk => {
-                                  Xk(kk.target.value)
+                                value: Gb(HS),
+                                "aria-label": `${gS} picker`,
+                                onChange: SS => {
+                                  tS(SS.target.value)
                                 }
-                              }), (0, ek.jsx)("input", {
+                              }), (0, KS.jsx)("input", {
                                 type: "text",
-                                value: Fk,
+                                value: HS,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": Ik,
+                                "aria-label": gS,
                                 spellCheck: !1,
-                                onChange: kk => {
-                                  Xk(kk.target.value)
+                                onChange: SS => {
+                                  tS(SS.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function xT(kk) {
+                          function nb(SS) {
                             let {
-                              value: Fk,
-                              fontAwesomeIcons: Ik,
-                              onChange: Tk
-                            } = kk;
-                            const yk = KX(),
-                              [lk, ak] = (0, Xk.useState)(cF(Fk) ? "fontAwesome" : "bloxd"),
-                              [qk, Lk] = (0, Xk.useState)(""),
-                              tk = qk.trim().toLowerCase(),
-                              Zk = "bloxd" === lk ? qT.c : Ik,
-                              jk = tk ? Zk.filter((kk => kk.toLowerCase().includes(tk))) : Zk;
-                            return (0, ek.jsxs)("div", {
+                              value: HS,
+                              fontAwesomeIcons: gS,
+                              onChange: bS
+                            } = SS;
+                            const xS = Qt(),
+                              [NS, qS] = (0, tS.useState)(zH(HS) ? "fontAwesome" : "bloxd"),
+                              [uS, IS] = (0, tS.useState)(""),
+                              fS = uS.trim().toLowerCase(),
+                              kS = "bloxd" === NS ? ub.d : gS,
+                              aS = fS ? kS.filter((SS => SS.toLowerCase().includes(fS))) : kS;
+                            return (0, KS.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, ek.jsx)("input", {
+                              children: [(0, KS.jsx)("input", {
                                 type: "text",
-                                value: Fk,
+                                value: HS,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: kk => {
-                                  Tk(kk.target.value)
+                                onChange: SS => {
+                                  bS(SS.target.value)
                                 }
-                              }), (0, ek.jsx)("p", {
+                              }), (0, KS.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, ek.jsxs)("div", {
+                              }), (0, KS.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((kk => (0, ek.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((SS => (0, KS.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": lk === kk,
-                                    className: ik()("DocsVariantChip", {
-                                      Active: lk === kk
+                                    "aria-selected": NS === SS,
+                                    className: XS()("DocsVariantChip", {
+                                      Active: NS === SS
                                     }),
                                     onClick: () => {
-                                      ak(kk)
+                                      qS(SS)
                                     },
-                                    children: "bloxd" === kk ? `Bloxd icons (${qT.c.length})` : `Font Awesome (${Ik.length})`
-                                  }, kk))), (0, ek.jsx)("input", {
+                                    children: "bloxd" === SS ? `Bloxd icons (${ub.d.length})` : `Font Awesome (${gS.length})`
+                                  }, SS))), (0, KS.jsx)("input", {
                                     type: "search",
-                                    value: qk,
+                                    value: uS,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: kk => {
-                                      Lk(kk.target.value)
+                                    onChange: SS => {
+                                      IS(SS.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, ek.jsxs)("div", {
+                              }), (0, KS.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [jk.map((kk => {
-                                  const Ik = "bloxd" === lk ? tT(yk, kk) : null;
-                                  return (0, ek.jsx)("button", {
+                                children: [aS.map((SS => {
+                                  const gS = "bloxd" === NS ? fb(xS, SS) : null;
+                                  return (0, KS.jsx)("button", {
                                     type: "button",
-                                    title: kk,
-                                    "aria-label": kk,
-                                    "aria-pressed": kk === Fk,
-                                    className: ik()("DocsIconPickerOption", {
-                                      Active: kk === Fk
+                                    title: SS,
+                                    "aria-label": SS,
+                                    "aria-pressed": SS === HS,
+                                    className: XS()("DocsIconPickerOption", {
+                                      Active: SS === HS
                                     }),
                                     onClick: () => {
-                                      Tk(kk)
+                                      bS(SS)
                                     },
-                                    children: "fontAwesome" === lk ? (0, ek.jsx)(QI.e, {
-                                      name: kk
-                                    }) : Ik ? (0, ek.jsx)("img", {
-                                      src: Ik,
+                                    children: "fontAwesome" === NS ? (0, KS.jsx)(Qg.d, {
+                                      name: SS
+                                    }) : gS ? (0, KS.jsx)("img", {
+                                      src: gS,
                                       alt: ""
-                                    }) : (0, ek.jsx)(Hk, {
+                                    }) : (0, KS.jsx)(GS, {
                                       name: "image"
                                     })
-                                  }, kk)
-                                })), 0 === jk.length && (0, ek.jsxs)("p", {
+                                  }, SS)
+                                })), 0 === aS.length && (0, KS.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", qk, "\u201d."]
+                                  children: ["No icons match \u201c", uS, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function PT(kk) {
+                          function Pb(SS) {
                             let {
-                              property: Fk,
-                              value: Ik,
-                              fontAwesomeIcons: Xk,
-                              onChange: Tk
-                            } = kk;
+                              property: HS,
+                              value: gS,
+                              fontAwesomeIcons: tS,
+                              onChange: bS
+                            } = SS;
                             const {
-                              field: ik,
-                              label: yk
-                            } = Fk, lk = kk => "" !== kk || Fk.isRequired ? kk : void 0;
-                            switch (ik.kind) {
+                              field: XS,
+                              label: xS
+                            } = HS, NS = SS => "" !== SS || HS.isRequired ? SS : void 0;
+                            switch (XS.kind) {
                               case "text":
-                                return ik.multiline ? (0, ek.jsx)("textarea", {
-                                  value: String(null !== Ik && void 0 !== Ik ? Ik : ""),
+                                return XS.multiline ? (0, KS.jsx)("textarea", {
+                                  value: String(null !== gS && void 0 !== gS ? gS : ""),
                                   rows: 2,
-                                  "aria-label": yk,
-                                  onChange: kk => {
-                                    Tk(kk.target.value)
+                                  "aria-label": xS,
+                                  onChange: SS => {
+                                    bS(SS.target.value)
                                   }
-                                }) : (0, ek.jsx)("input", {
+                                }) : (0, KS.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== Ik && void 0 !== Ik ? Ik : ""),
-                                  "aria-label": yk,
-                                  onChange: kk => {
-                                    Tk(lk(kk.target.value))
+                                  value: String(null !== gS && void 0 !== gS ? gS : ""),
+                                  "aria-label": xS,
+                                  onChange: SS => {
+                                    bS(NS(SS.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, ek.jsx)("input", {
+                                return (0, KS.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== Ik && void 0 !== Ik ? Ik : ""),
-                                  placeholder: Fk.defaultText,
+                                  value: String(null !== gS && void 0 !== gS ? gS : ""),
+                                  placeholder: HS.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": yk,
+                                  "aria-label": xS,
                                   spellCheck: !1,
-                                  onChange: kk => {
-                                    Tk(lk(kk.target.value.trim()))
+                                  onChange: SS => {
+                                    bS(NS(SS.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, ek.jsx)(JT, {
-                                  value: String(null !== Ik && void 0 !== Ik ? Ik : ""),
-                                  label: yk,
-                                  onChange: kk => {
-                                    Tk(lk(kk))
+                                return (0, KS.jsx)(Cb, {
+                                  value: String(null !== gS && void 0 !== gS ? gS : ""),
+                                  label: xS,
+                                  onChange: SS => {
+                                    bS(NS(SS))
                                   }
                                 });
                               case "colours": {
-                                const kk = Array.isArray(Ik) ? Ik : [],
-                                  Fk = kk => {
-                                    Tk(kk.length > 0 ? kk : void 0)
+                                const SS = Array.isArray(gS) ? gS : [],
+                                  HS = SS => {
+                                    bS(SS.length > 0 ? SS : void 0)
                                   };
-                                return (0, ek.jsxs)("div", {
+                                return (0, KS.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [kk.map(((Ik, Xk) => (0, ek.jsxs)("span", {
+                                  children: [SS.map(((gS, tS) => (0, KS.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, ek.jsx)(JT, {
-                                      value: Ik,
-                                      label: `${yk} ${Xk+1}`,
-                                      onChange: Ik => {
-                                        Fk(kk.map(((kk, Fk) => Fk === Xk ? Ik : kk)))
+                                    children: [(0, KS.jsx)(Cb, {
+                                      value: gS,
+                                      label: `${xS} ${tS+1}`,
+                                      onChange: gS => {
+                                        HS(SS.map(((SS, HS) => HS === tS ? gS : SS)))
                                       }
-                                    }), (0, ek.jsx)("button", {
+                                    }), (0, KS.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${Xk+1}`,
+                                      "aria-label": `Remove colour ${tS+1}`,
                                       onClick: () => {
-                                        Fk(kk.filter(((kk, Fk) => Fk !== Xk)))
+                                        HS(SS.filter(((SS, HS) => HS !== tS)))
                                       },
-                                      children: (0, ek.jsx)(Hk, {
+                                      children: (0, KS.jsx)(GS, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, Xk))), (0, ek.jsxs)("button", {
+                                  }, tS))), (0, KS.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var Ik;
-                                      Fk([...kk, null !== (Ik = kk.at(-1)) && void 0 !== Ik ? Ik : "#ffffff"])
+                                      var gS;
+                                      HS([...SS, null !== (gS = SS.at(-1)) && void 0 !== gS ? gS : "#ffffff"])
                                     },
-                                    children: [(0, ek.jsx)(Hk, {
+                                    children: [(0, KS.jsx)(GS, {
                                       name: "plus"
-                                    }), 0 === kk.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === SS.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var ak;
-                                const kk = "number" === typeof Ik ? Ik : Number(null !== (ak = Fk.defaultText) && void 0 !== ak ? ak : 0);
-                                return (0, ek.jsxs)("span", {
+                                var qS;
+                                const SS = "number" === typeof gS ? gS : Number(null !== (qS = HS.defaultText) && void 0 !== qS ? qS : 0);
+                                return (0, KS.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, ek.jsx)("input", {
+                                  children: [(0, KS.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: kk,
-                                    "aria-label": yk,
-                                    onChange: kk => {
-                                      Tk(Number(kk.target.value))
+                                    value: SS,
+                                    "aria-label": xS,
+                                    onChange: SS => {
+                                      bS(Number(SS.target.value))
                                     }
-                                  }), (0, ek.jsx)("output", {
-                                    children: kk.toFixed(2)
+                                  }), (0, KS.jsx)("output", {
+                                    children: SS.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, ek.jsxs)("select", {
-                                  value: String(null !== Ik && void 0 !== Ik ? Ik : ""),
-                                  "aria-label": yk,
-                                  onChange: kk => {
-                                    Tk(lk(kk.target.value))
+                                return (0, KS.jsxs)("select", {
+                                  value: String(null !== gS && void 0 !== gS ? gS : ""),
+                                  "aria-label": xS,
+                                  onChange: SS => {
+                                    bS(NS(SS.target.value))
                                   },
-                                  children: [!Fk.isRequired && (0, ek.jsxs)("option", {
+                                  children: [!HS.isRequired && (0, KS.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", Fk.defaultText, ")"]
-                                  }), ik.options.map((kk => (0, ek.jsx)("option", {
-                                    value: kk,
-                                    children: kk
-                                  }, kk)))]
+                                    children: ["Default (", HS.defaultText, ")"]
+                                  }), XS.options.map((SS => (0, KS.jsx)("option", {
+                                    value: SS,
+                                    children: SS
+                                  }, SS)))]
                                 });
                               case "icon":
-                                return (0, ek.jsx)(xT, {
-                                  value: String(null !== Ik && void 0 !== Ik ? Ik : ""),
-                                  fontAwesomeIcons: Xk,
-                                  onChange: Tk
+                                return (0, KS.jsx)(nb, {
+                                  value: String(null !== gS && void 0 !== gS ? gS : ""),
+                                  fontAwesomeIcons: tS,
+                                  onChange: bS
                                 })
                             }
                           }
 
-                          function KT(kk) {
-                            let Fk;
+                          function Qb(SS) {
+                            let HS;
                             try {
-                              Fk = JSON.parse(kk)
-                            } catch (Ik) {
+                              HS = JSON.parse(SS)
+                            } catch (gS) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${Ik.message}`
+                                error: `Not valid JSON yet: ${gS.message}`
                               }
                             }
-                            return XI(Fk) ? {
-                              part: Fk,
+                            return gg(HS) ? {
+                              part: HS,
                               error: null
                             } : {
                               part: null,
@@ -3628,150 +3628,150 @@ export const modules = {
                             }
                           }
 
-                          function QT(kk) {
+                          function Db(SS) {
                             let {
-                              parts: Fk,
-                              index: Ik,
-                              fontAwesomeIcons: Tk,
-                              onChange: ik,
-                              iG: yk,
-                              onClose: lk
-                            } = kk;
-                            const ak = (0, Xk.useContext)(wF),
-                              Lk = (0, Xk.useRef)(null),
-                              tk = Fk[Ik],
-                              Zk = BF(tk),
-                              [jk, wk] = (0, Xk.useState)((() => JSON.stringify(tk, null, 2))),
-                              Jk = (0, Xk.useMemo)((() => "other" === Zk ? KT(jk).error : null), [Zk, jk]);
-                            (0, Xk.useEffect)((() => {
-                              var kk;
-                              null === (kk = Lk.current) || void 0 === kk || kk.focus()
+                              parts: HS,
+                              index: gS,
+                              fontAwesomeIcons: bS,
+                              onChange: XS,
+                              pE: xS,
+                              onClose: NS
+                            } = SS;
+                            const qS = (0, tS.useContext)(KH),
+                              IS = (0, tS.useRef)(null),
+                              fS = HS[gS],
+                              kS = sH(fS),
+                              [aS, jS] = (0, tS.useState)((() => JSON.stringify(fS, null, 2))),
+                              CS = (0, tS.useMemo)((() => "other" === kS ? Qb(aS).error : null), [kS, aS]);
+                            (0, tS.useEffect)((() => {
+                              var SS;
+                              null === (SS = IS.current) || void 0 === SS || SS.focus()
                             }), []);
-                            const xk = (0, ek.jsx)("div", {
+                            const nS = (0, KS.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: kk => {
-                                kk.target === kk.currentTarget && lk()
+                              onMouseDown: SS => {
+                                SS.target === SS.currentTarget && NS()
                               },
-                              children: (0, ek.jsxs)("div", {
-                                ref: Lk,
+                              children: (0, KS.jsxs)("div", {
+                                ref: IS,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${Ik+1}: ${WF[Zk]}`,
+                                "aria-label": `Edit part ${gS+1}: ${UH[kS]}`,
                                 tabIndex: -1,
-                                onKeyDown: kk => {
-                                  "Escape" === kk.key ? (kk.stopPropagation(), lk()) : "Tab" === kk.key && Lk.current && function(kk, Fk) {
-                                    const Ik = Array.from(kk.querySelectorAll(OF)),
-                                      Xk = Ik[0],
-                                      Tk = Ik.at(-1);
-                                    if (!Xk || !Tk) return;
-                                    const ik = document.activeElement;
-                                    !Fk.shiftKey || ik !== Xk && ik !== kk ? Fk.shiftKey || ik !== Tk || (Fk.preventDefault(), Xk.focus()) : (Fk.preventDefault(), Tk.focus())
-                                  }(Lk.current, kk)
+                                onKeyDown: SS => {
+                                  "Escape" === SS.key ? (SS.stopPropagation(), NS()) : "Tab" === SS.key && IS.current && function(SS, HS) {
+                                    const gS = Array.from(SS.querySelectorAll(cH)),
+                                      tS = gS[0],
+                                      bS = gS.at(-1);
+                                    if (!tS || !bS) return;
+                                    const XS = document.activeElement;
+                                    !HS.shiftKey || XS !== tS && XS !== SS ? HS.shiftKey || XS !== bS || (HS.preventDefault(), tS.focus()) : (HS.preventDefault(), bS.focus())
+                                  }(IS.current, SS)
                                 },
-                                children: [(0, ek.jsxs)("header", {
+                                children: [(0, KS.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, ek.jsxs)("div", {
-                                    children: [(0, ek.jsxs)("div", {
+                                  children: [(0, KS.jsxs)("div", {
+                                    children: [(0, KS.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", Ik + 1]
-                                    }), (0, ek.jsx)("div", {
+                                      children: ["Part ", gS + 1]
+                                    }), (0, KS.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: WF[Zk]
+                                      children: UH[kS]
                                     })]
-                                  }), (0, ek.jsx)("button", {
+                                  }), (0, KS.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: lk,
-                                    children: (0, ek.jsx)(Hk, {
+                                    onClick: NS,
+                                    children: (0, KS.jsx)(GS, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, ek.jsx)(jT, {
-                                  parts: Fk,
+                                }), (0, KS.jsx)(ab, {
+                                  parts: HS,
                                   className: "DocsTextDialogPreview"
-                                }), (0, ek.jsx)("div", {
+                                }), (0, KS.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === Zk ? (0, ek.jsxs)("label", {
+                                  children: "other" === kS ? (0, KS.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, ek.jsx)("span", {
+                                    children: [(0, KS.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, ek.jsx)("textarea", {
+                                    }), (0, KS.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: jk,
+                                      value: aS,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: kk => {
-                                        wk(kk.target.value);
-                                        const Fk = KT(kk.target.value);
-                                        null !== Fk.part && ik(Fk.part)
+                                      onChange: SS => {
+                                        jS(SS.target.value);
+                                        const HS = Qb(SS.target.value);
+                                        null !== HS.part && XS(HS.part)
                                       }
-                                    }), Jk && (0, ek.jsx)("span", {
+                                    }), CS && (0, KS.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: Jk
+                                      children: CS
                                     })]
-                                  }) : YF[Zk].map((kk => {
-                                    const Fk = gF(tk, kk.path),
-                                      Ik = kk.isRequired ? JSON.stringify(hF(tk, kk.path)) === JSON.stringify(tk) : void 0 === Fk;
-                                    return (0, ek.jsxs)("div", {
+                                  }) : MH[kS].map((SS => {
+                                    const HS = RH(fS, SS.path),
+                                      gS = SS.isRequired ? JSON.stringify(oH(fS, SS.path)) === JSON.stringify(fS) : void 0 === HS;
+                                    return (0, KS.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, ek.jsxs)("div", {
+                                      children: [(0, KS.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, ek.jsx)("span", {
-                                          children: kk.label
-                                        }), (0, ek.jsxs)("button", {
+                                        children: [(0, KS.jsx)("span", {
+                                          children: SS.label
+                                        }), (0, KS.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: Ik,
-                                          "aria-label": `Reset ${kk.label.toLowerCase()} to default`,
+                                          disabled: gS,
+                                          "aria-label": `Reset ${SS.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            ik(hF(tk, kk.path))
+                                            XS(oH(fS, SS.path))
                                           },
-                                          children: [(0, ek.jsx)(Hk, {
+                                          children: [(0, KS.jsx)(GS, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, ek.jsx)(PT, {
-                                        property: kk,
-                                        value: Fk,
-                                        fontAwesomeIcons: Tk,
-                                        onChange: Fk => {
-                                          ik(mF(tk, kk.path, Fk))
+                                      }), (0, KS.jsx)(Pb, {
+                                        property: SS,
+                                        value: HS,
+                                        fontAwesomeIcons: bS,
+                                        onChange: HS => {
+                                          XS(TH(fS, SS.path, HS))
                                         }
-                                      }), !kk.isRequired && (0, ek.jsxs)("span", {
+                                      }), !SS.isRequired && (0, KS.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", kk.defaultText]
+                                        children: ["Default: ", SS.defaultText]
                                       })]
-                                    }, kk.path.join("."))
+                                    }, SS.path.join("."))
                                   }))
-                                }), (0, ek.jsxs)("footer", {
+                                }), (0, KS.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, ek.jsxs)("button", {
+                                  children: [(0, KS.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: yk,
-                                    children: [(0, ek.jsx)(Hk, {
+                                    onClick: xS,
+                                    children: [(0, KS.jsx)(GS, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, ek.jsx)("button", {
+                                  }), (0, KS.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: lk,
+                                    onClick: NS,
                                     children: "Done"
                                   })]
-                                }), (0, ek.jsx)("datalist", {
+                                }), (0, KS.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: eT.map((kk => (0, ek.jsx)("option", {
-                                    value: kk
-                                  }, kk)))
+                                  children: Kb.map((SS => (0, KS.jsx)("option", {
+                                    value: SS
+                                  }, SS)))
                                 })]
                               })
                             });
-                            return ak ? (0, qk.createPortal)(xk, ak) : xk
+                            return qS ? (0, uS.createPortal)(nS, qS) : nS
                           }
-                          const sT = [{
+                          const wb = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3815,265 +3815,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            VT = Object.keys(fF);
+                            hb = Object.keys(pH);
 
-                          function zT(kk) {
+                          function Zb(SS) {
                             let {
-                              fontAwesomeIcons: Fk
-                            } = kk;
-                            const [Ik, Tk] = (0, Xk.useState)(sT[0].parts), [yk, lk] = (0, Xk.useState)((() => kI(sT[0].parts))), [ak, qk] = (0, Xk.useState)(null), [Lk, tk] = (0, Xk.useState)(!1), [Zk, jk] = (0, Xk.useState)(null), [wk, Jk] = (0, Xk.useState)(!1), [xk, Pk] = (0, Xk.useState)(null), Kk = (0, Xk.useRef)(null), Qk = kI(Ik);
-                            (0, Xk.useLayoutEffect)((() => {
-                              var kk;
-                              if (!xk) return;
-                              const Fk = kk => {
-                                  var Fk;
-                                  return null === (Fk = Kk.current) || void 0 === Fk ? void 0 : Fk.querySelector(`[data-focus-key="${kk}"]`)
+                              fontAwesomeIcons: HS
+                            } = SS;
+                            const [gS, bS] = (0, tS.useState)(wb[0].parts), [xS, NS] = (0, tS.useState)((() => rH(wb[0].parts))), [qS, uS] = (0, tS.useState)(null), [IS, fS] = (0, tS.useState)(!1), [kS, aS] = (0, tS.useState)(null), [jS, CS] = (0, tS.useState)(!1), [nS, PS] = (0, tS.useState)(null), QS = (0, tS.useRef)(null), DS = rH(gS);
+                            (0, tS.useLayoutEffect)((() => {
+                              var SS;
+                              if (!nS) return;
+                              const HS = SS => {
+                                  var HS;
+                                  return null === (HS = QS.current) || void 0 === HS ? void 0 : HS.querySelector(`[data-focus-key="${SS}"]`)
                                 },
-                                Ik = Fk(xk.key);
-                              null === (kk = Ik && !Ik.disabled ? Ik : Fk(xk.fallback)) || void 0 === kk || kk.focus(), Pk(null)
-                            }), [xk]);
-                            const sk = kk => {
-                                Tk(kk), lk(kI(kk)), qk(null)
+                                gS = HS(nS.key);
+                              null === (SS = gS && !gS.disabled ? gS : HS(nS.fallback)) || void 0 === SS || SS.focus(), PS(null)
+                            }), [nS]);
+                            const wS = SS => {
+                                bS(SS), NS(rH(SS)), uS(null)
                               },
-                              zk = kk => {
-                                sk(Ik.filter(((Fk, Ik) => Ik !== kk))), Pk({
-                                  key: `edit-${Math.min(kk,Ik.length-2)}`,
+                              ZS = SS => {
+                                wS(gS.filter(((HS, gS) => gS !== SS))), PS({
+                                  key: `edit-${Math.min(SS,gS.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              Sk = (kk, Fk) => {
-                                const Xk = [...Ik],
-                                  [Tk] = Xk.splice(kk, 1);
-                                Xk.splice(kk + Fk, 0, Tk), sk(Xk);
-                                Pk({
-                                  key: `${Fk<0?"up":"down"}-${kk+Fk}`,
-                                  fallback: `edit-${kk+Fk}`
+                              JS = (SS, HS) => {
+                                const tS = [...gS],
+                                  [bS] = tS.splice(SS, 1);
+                                tS.splice(SS + HS, 0, bS), wS(tS);
+                                PS({
+                                  key: `${HS<0?"up":"down"}-${SS+HS}`,
+                                  fallback: `edit-${SS+HS}`
                                 })
                               };
-                            return (0, ek.jsxs)("section", {
-                              ref: Kk,
+                            return (0, KS.jsxs)("section", {
+                              ref: QS,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, ek.jsx)("header", {
+                              children: [(0, KS.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, ek.jsxs)("div", {
-                                  children: [(0, ek.jsx)("div", {
+                                children: (0, KS.jsxs)("div", {
+                                  children: [(0, KS.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, ek.jsx)("div", {
+                                  }), (0, KS.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, ek.jsx)("div", {
+                              }), (0, KS.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: sT.map((kk => (0, ek.jsx)("button", {
+                                children: wb.map((SS => (0, KS.jsx)("button", {
                                   type: "button",
-                                  className: ik()("DocsVariantChip", {
-                                    Active: Qk === kI(kk.parts)
+                                  className: XS()("DocsVariantChip", {
+                                    Active: DS === rH(SS.parts)
                                   }),
                                   onClick: () => {
-                                    sk(kk.parts)
+                                    wS(SS.parts)
                                   },
-                                  children: kk.label
-                                }, kk.label)))
-                              }), (0, ek.jsx)(jT, {
-                                parts: Ik,
+                                  children: SS.label
+                                }, SS.label)))
+                              }), (0, KS.jsx)(ab, {
+                                parts: gS,
                                 className: "DocsTextEditorPreview"
-                              }), (0, ek.jsxs)("div", {
+                              }), (0, KS.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, ek.jsxs)("div", {
+                                children: [(0, KS.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, ek.jsx)("div", {
+                                  children: [(0, KS.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, ek.jsxs)("ol", {
+                                  }), (0, KS.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [Ik.map(((kk, Fk) => {
-                                      const Xk = BF(kk);
-                                      return (0, ek.jsxs)("li", {
+                                    children: [gS.map(((SS, HS) => {
+                                      const tS = sH(SS);
+                                      return (0, KS.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, ek.jsxs)("button", {
+                                        children: [(0, KS.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${Fk}`,
-                                          "aria-label": `Edit part ${Fk+1}, ${WF[Xk]}`,
+                                          "data-focus-key": `edit-${HS}`,
+                                          "aria-label": `Edit part ${HS+1}, ${UH[tS]}`,
                                           onClick: () => {
-                                            jk(Fk)
+                                            aS(HS)
                                           },
-                                          children: [(0, ek.jsx)("span", {
+                                          children: [(0, KS.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: WF[Xk]
-                                          }), (0, ek.jsx)(jT, {
-                                            parts: [kk],
+                                            children: UH[tS]
+                                          }), (0, KS.jsx)(ab, {
+                                            parts: [SS],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== Xk && (0, ek.jsx)("code", {
+                                          }), "text" !== tS && (0, KS.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: rF(kk)
+                                            children: lH(SS)
                                           })]
-                                        }), (0, ek.jsxs)("span", {
+                                        }), (0, KS.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, ek.jsx)("button", {
+                                          children: [(0, KS.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${Fk+1} up`,
-                                            "data-focus-key": `up-${Fk}`,
-                                            disabled: 0 === Fk,
+                                            "aria-label": `Move part ${HS+1} up`,
+                                            "data-focus-key": `up-${HS}`,
+                                            disabled: 0 === HS,
                                             onClick: () => {
-                                              Sk(Fk, -1)
+                                              JS(HS, -1)
                                             },
-                                            children: (0, ek.jsx)(Hk, {
+                                            children: (0, KS.jsx)(GS, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, ek.jsx)("button", {
+                                          }), (0, KS.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${Fk+1} down`,
-                                            "data-focus-key": `down-${Fk}`,
-                                            disabled: Fk === Ik.length - 1,
+                                            "aria-label": `Move part ${HS+1} down`,
+                                            "data-focus-key": `down-${HS}`,
+                                            disabled: HS === gS.length - 1,
                                             onClick: () => {
-                                              Sk(Fk, 1)
+                                              JS(HS, 1)
                                             },
-                                            children: (0, ek.jsx)(Hk, {
+                                            children: (0, KS.jsx)(GS, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, ek.jsx)("button", {
+                                          }), (0, KS.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${Fk+1}`,
+                                            "aria-label": `Remove part ${HS+1}`,
                                             onClick: () => {
-                                              zk(Fk)
+                                              ZS(HS)
                                             },
-                                            children: (0, ek.jsx)(Hk, {
+                                            children: (0, KS.jsx)(GS, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, Fk)
-                                    })), 0 === Ik.length && (0, ek.jsx)("li", {
+                                      }, HS)
+                                    })), 0 === gS.length && (0, KS.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, ek.jsxs)("div", {
+                                  }), (0, KS.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: kk => {
-                                      "Escape" === kk.key && wk && (kk.stopPropagation(), Jk(!1), Pk({
+                                    onKeyDown: SS => {
+                                      "Escape" === SS.key && jS && (SS.stopPropagation(), CS(!1), PS({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, ek.jsxs)("button", {
+                                    children: [(0, KS.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": wk,
+                                      "aria-expanded": jS,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        Jk(!wk)
+                                        CS(!jS)
                                       },
-                                      children: [(0, ek.jsx)(Hk, {
+                                      children: [(0, KS.jsx)(GS, {
                                         name: "plus"
-                                      }), "Add a part", (0, ek.jsx)(Hk, {
-                                        name: wk ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, KS.jsx)(GS, {
+                                        name: jS ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), wk && (0, ek.jsx)("ul", {
+                                    }), jS && (0, KS.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: VT.map((kk => (0, ek.jsx)("li", {
-                                        children: (0, ek.jsx)("button", {
+                                      children: hb.map((SS => (0, KS.jsx)("li", {
+                                        children: (0, KS.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (kk => {
-                                              sk([...Ik, fF[kk]]), Jk(!1), jk(Ik.length)
-                                            })(kk)
+                                            (SS => {
+                                              wS([...gS, pH[SS]]), CS(!1), aS(gS.length)
+                                            })(SS)
                                           },
-                                          children: WF[kk]
+                                          children: UH[SS]
                                         })
-                                      }, kk)))
+                                      }, SS)))
                                     })]
                                   })]
-                                }), (0, ek.jsxs)("div", {
+                                }), (0, KS.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, ek.jsxs)("div", {
+                                  children: [(0, KS.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, ek.jsxs)("button", {
+                                    children: ["Code", (0, KS.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": Lk,
+                                      "aria-pressed": IS,
                                       onClick: () => {
-                                        tk(!Lk)
+                                        fS(!IS)
                                       },
-                                      children: [(0, ek.jsx)(Hk, {
-                                        name: Lk ? "check" : "pencil"
-                                      }), Lk ? "Done" : "Edit"]
+                                      children: [(0, KS.jsx)(GS, {
+                                        name: IS ? "check" : "pencil"
+                                      }), IS ? "Done" : "Edit"]
                                     })]
-                                  }), Lk ? (0, ek.jsxs)(ek.Fragment, {
-                                    children: [(0, ek.jsx)("textarea", {
+                                  }), IS ? (0, KS.jsxs)(KS.Fragment, {
+                                    children: [(0, KS.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: yk,
+                                      value: xS,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: kk => {
-                                        lk(kk.target.value);
-                                        const Fk = TI(kk.target.value);
-                                        qk(Fk.error), Fk.parts && Tk(Fk.parts)
+                                      onChange: SS => {
+                                        NS(SS.target.value);
+                                        const HS = tg(SS.target.value);
+                                        uS(HS.error), HS.parts && bS(HS.parts)
                                       }
-                                    }), ak && (0, ek.jsx)("p", {
+                                    }), qS && (0, KS.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: ak
+                                      children: qS
                                     })]
-                                  }) : (0, ek.jsx)(Vk, {
+                                  }) : (0, KS.jsx)(hS, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${Qk})`
+                                    code: `api.sendMessage(playerId, ${DS})`
                                   })]
                                 })]
-                              }), null !== Zk && Zk < Ik.length && (0, ek.jsx)(QT, {
-                                parts: Ik,
-                                index: Zk,
-                                fontAwesomeIcons: Fk,
-                                onChange: kk => {
-                                  ((kk, Fk) => {
-                                    sk(Ik.map(((Ik, Xk) => Xk === kk ? Fk : Ik)))
-                                  })(Zk, kk)
+                              }), null !== kS && kS < gS.length && (0, KS.jsx)(Db, {
+                                parts: gS,
+                                index: kS,
+                                fontAwesomeIcons: HS,
+                                onChange: SS => {
+                                  ((SS, HS) => {
+                                    wS(gS.map(((gS, tS) => tS === SS ? HS : gS)))
+                                  })(kS, SS)
                                 },
-                                iG: () => {
-                                  zk(Zk), jk(null)
+                                pE: () => {
+                                  ZS(kS), aS(null)
                                 },
                                 onClose: () => {
-                                  jk(null), Pk({
-                                    key: `edit-${Zk}`,
+                                  aS(null), PS({
+                                    key: `edit-${kS}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var ST = Ik(4843),
-                            oT = Ik(4829),
-                            vT = Ik(4837),
-                            ET = Ik(4850);
-                          const OT = 40,
-                            nT = 800,
-                            GT = 150,
-                            pT = 8e3,
-                            uT = 2e3;
+                          var Jb = gS(4992),
+                            Ob = gS(4967),
+                            db = gS(4985),
+                            cb = gS(5e3);
+                          const vb = 40,
+                            Eb = 800,
+                            Lb = 150,
+                            Yb = 8e3,
+                            Ab = 2e3;
 
-                          function bT(kk, Fk) {
-                            return 12 * Math.log2(Fk / kk)
+                          function yb(SS, HS) {
+                            return 12 * Math.log2(HS / SS)
                           }
 
-                          function RT(kk, Fk) {
-                            return Math.round(kk * 2 ** (Fk / 12) * 10) / 10
+                          function Vb(SS, HS) {
+                            return Math.round(SS * 2 ** (HS / 12) * 10) / 10
                           }
 
-                          function UT(kk) {
-                            return `${kk} ms`
+                          function ib(SS) {
+                            return `${SS} ms`
                           }
 
-                          function CT(kk) {
-                            return `${kk} st`
+                          function Wb(SS) {
+                            return `${SS} st`
                           }
-                          const NT = [{
+                          const zb = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4091,769 +4091,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function cT(kk) {
+                          function Ub(SS) {
                             let {
-                              synth: Fk,
-                              onChange: Ik
-                            } = kk;
-                            const Xk = (0, ST.k)(Fk);
-                            return (0, ek.jsxs)("div", {
+                              synth: HS,
+                              onChange: gS
+                            } = SS;
+                            const tS = (0, Jb.j)(HS);
+                            return (0, KS.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, ek.jsxs)("div", {
+                              children: [(0, KS.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, ek.jsx)("div", {
+                                children: [(0, KS.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, ek.jsxs)("div", {
+                                }), (0, KS.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, ek.jsx)("div", {
+                                  children: [(0, KS.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, ek.jsx)("span", {
+                                    children: (0, KS.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, ek.jsx)("div", {
+                                  }), (0, KS.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: ST.d.map((kk => (0, ek.jsx)("button", {
+                                    children: Jb.e.map((SS => (0, KS.jsx)("button", {
                                       type: "button",
-                                      className: ik()("DocsVariantChip", {
-                                        Active: Fk.waveform === kk
+                                      className: XS()("DocsVariantChip", {
+                                        Active: HS.waveform === SS
                                       }),
-                                      "aria-pressed": Fk.waveform === kk,
+                                      "aria-pressed": HS.waveform === SS,
                                       onClick: () => {
-                                        Ik({
-                                          waveform: kk
+                                        gS({
+                                          waveform: SS
                                         })
                                       },
-                                      children: kk
-                                    }, kk)))
+                                      children: SS
+                                    }, SS)))
                                   })]
-                                }), (0, ek.jsx)(MX, {
+                                }), (0, KS.jsx)(rt, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: bT(OT, nT),
+                                  max: yb(vb, Eb),
                                   step: .1,
-                                  value: bT(OT, Fk.pitchHz),
-                                  format: () => `${Fk.pitchHz} Hz`,
-                                  onChange: kk => {
-                                    Ik({
-                                      pitchHz: RT(OT, kk)
+                                  value: yb(vb, HS.pitchHz),
+                                  format: () => `${HS.pitchHz} Hz`,
+                                  onChange: SS => {
+                                    gS({
+                                      pitchHz: Vb(vb, SS)
                                     })
                                   }
-                                }), (0, ek.jsx)(MX, {
+                                }), (0, KS.jsx)(rt, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: Fk.syllableMs,
-                                  format: UT,
-                                  onChange: kk => {
-                                    Ik({
-                                      syllableMs: kk
+                                  value: HS.syllableMs,
+                                  format: ib,
+                                  onChange: SS => {
+                                    gS({
+                                      syllableMs: SS
                                     })
                                   }
-                                }), (0, ek.jsx)(MX, {
+                                }), (0, KS.jsx)(rt, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: Fk.volume,
-                                  onChange: kk => {
-                                    Ik({
-                                      volume: kk
+                                  value: HS.volume,
+                                  onChange: SS => {
+                                    gS({
+                                      volume: SS
                                     })
                                   }
                                 })]
-                              }), (0, ek.jsxs)("div", {
+                              }), (0, KS.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, ek.jsx)("div", {
+                                children: [(0, KS.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, ek.jsx)(MX, {
+                                }), (0, KS.jsx)(rt, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: Fk.durationMs,
-                                  format: UT,
-                                  onChange: kk => {
-                                    Ik({
-                                      durationMs: kk
+                                  value: HS.durationMs,
+                                  format: ib,
+                                  onChange: SS => {
+                                    gS({
+                                      durationMs: SS
                                     })
                                   }
-                                }), (0, ek.jsx)(MX, {
+                                }), (0, KS.jsx)(rt, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: Xk.durationMs,
+                                  max: tS.durationMs,
                                   step: 1,
-                                  value: Xk.attackMs,
-                                  format: UT,
-                                  onChange: kk => {
-                                    Ik({
-                                      attackMs: kk
+                                  value: tS.attackMs,
+                                  format: ib,
+                                  onChange: SS => {
+                                    gS({
+                                      attackMs: SS
                                     })
                                   }
-                                }), (0, ek.jsx)(MX, {
+                                }), (0, KS.jsx)(rt, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: Xk.durationMs - Xk.attackMs,
+                                  max: tS.durationMs - tS.attackMs,
                                   step: 1,
-                                  value: Xk.releaseMs,
-                                  format: UT,
-                                  onChange: kk => {
-                                    Ik({
-                                      releaseMs: kk
+                                  value: tS.releaseMs,
+                                  format: ib,
+                                  onChange: SS => {
+                                    gS({
+                                      releaseMs: SS
                                     })
                                   }
-                                }), (0, ek.jsx)(MX, {
+                                }), (0, KS.jsx)(rt, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: Fk.glideSemitones,
-                                  format: CT,
-                                  onChange: kk => {
-                                    Ik({
-                                      glideSemitones: kk
+                                  value: HS.glideSemitones,
+                                  format: Wb,
+                                  onChange: SS => {
+                                    gS({
+                                      glideSemitones: SS
                                     })
                                   }
-                                }), (0, ek.jsxs)("label", {
+                                }), (0, KS.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, ek.jsx)("input", {
+                                  children: [(0, KS.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== Fk.lowpassHz,
-                                    onChange: kk => {
-                                      Ik({
-                                        lowpassHz: kk.target.checked ? uT : null
+                                    checked: null !== HS.lowpassHz,
+                                    onChange: SS => {
+                                      gS({
+                                        lowpassHz: SS.target.checked ? Ab : null
                                       })
                                     }
-                                  }), (0, ek.jsx)("span", {
+                                  }), (0, KS.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== Fk.lowpassHz && (0, ek.jsx)(MX, {
+                                }), null !== HS.lowpassHz && (0, KS.jsx)(rt, {
                                   label: "Filter",
                                   min: 0,
-                                  max: bT(GT, pT),
+                                  max: yb(Lb, Yb),
                                   step: .1,
-                                  value: bT(GT, Fk.lowpassHz),
-                                  format: () => `${Fk.lowpassHz} Hz`,
-                                  onChange: kk => {
-                                    Ik({
-                                      lowpassHz: RT(GT, kk)
+                                  value: yb(Lb, HS.lowpassHz),
+                                  format: () => `${HS.lowpassHz} Hz`,
+                                  onChange: SS => {
+                                    gS({
+                                      lowpassHz: Vb(Lb, SS)
                                     })
                                   }
                                 })]
-                              }), (0, ek.jsxs)("div", {
+                              }), (0, KS.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, ek.jsx)("div", {
+                                children: [(0, KS.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), NT.map((kk => {
+                                }), zb.map((SS => {
                                   let {
-                                    key: Xk,
-                                    label: Tk,
-                                    max: ik
-                                  } = kk;
-                                  return (0, ek.jsx)(MX, {
-                                    label: Tk,
+                                    key: tS,
+                                    label: bS,
+                                    max: XS
+                                  } = SS;
+                                  return (0, KS.jsx)(rt, {
+                                    label: bS,
                                     min: 0,
-                                    max: ik,
+                                    max: XS,
                                     step: .1,
-                                    value: Fk.intonation[Xk],
-                                    format: CT,
-                                    onChange: kk => {
-                                      Ik({
+                                    value: HS.intonation[tS],
+                                    format: Wb,
+                                    onChange: SS => {
+                                      gS({
                                         intonation: {
-                                          ...Fk.intonation,
-                                          [Xk]: kk
+                                          ...HS.intonation,
+                                          [tS]: SS
                                         }
                                       })
                                     }
-                                  }, Xk)
+                                  }, tS)
                                 }))]
                               })]
                             })
                           }
-                          const WT = Object.keys(ST.g),
-                            fT = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const pb = Object.keys(Jb.g),
+                            sb = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function BT(kk) {
-                            var Fk;
-                            const Ik = JSON.stringify((0, ST.k)(kk));
-                            return null !== (Fk = WT.find((kk => JSON.stringify((0, ST.k)(ST.g[kk])) === Ik))) && void 0 !== Fk ? Fk : null
+                          function Bb(SS) {
+                            var HS;
+                            const gS = JSON.stringify((0, Jb.j)(SS));
+                            return null !== (HS = pb.find((SS => JSON.stringify((0, Jb.j)(Jb.g[SS])) === gS))) && void 0 !== HS ? HS : null
                           }
 
-                          function dT(kk) {
-                            let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof kk || null === kk) return JSON.stringify(kk);
-                            return `{\n${Object.entries(kk).map((kk=>{let[Ik,Xk]=kk;return`${Fk}    ${Ik}: ${dT(Xk,`${Fk}    `)},`})).join("\n")}\n${Fk}}`
+                          function Mb(SS) {
+                            let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof SS || null === SS) return JSON.stringify(SS);
+                            return `{\n${Object.entries(SS).map((SS=>{let[gS,tS]=SS;return`${HS}    ${gS}: ${Mb(tS,`${HS}    `)},`})).join("\n")}\n${HS}}`
                           }
 
-                          function YT(kk, Fk, Ik) {
-                            const Xk = BT(kk),
-                              Tk = [`    line: ${JSON.stringify(Fk)},`];
-                            return Ik && Tk.push(`    speakerName: ${JSON.stringify(Ik)},`), Tk.push("    voice,"), `const voice = ${Xk?JSON.stringify(Xk):dT((0,ST.k)(kk))}\n\napi.setClientOption(playerId, "dialogue", {\n${Tk.join("\n")}\n})`
+                          function Fb(SS, HS, gS) {
+                            const tS = Bb(SS),
+                              bS = [`    line: ${JSON.stringify(HS)},`];
+                            return gS && bS.push(`    speakerName: ${JSON.stringify(gS)},`), bS.push("    voice,"), `const voice = ${tS?JSON.stringify(tS):Mb((0,Jb.j)(SS))}\n\napi.setClientOption(playerId, "dialogue", {\n${bS.join("\n")}\n})`
                           }
-                          const AT = 400,
-                            gT = 90;
-                          let mT = null;
+                          const Rb = 400,
+                            Tb = 90;
+                          let ob = null;
 
-                          function hT(kk, Fk, Ik) {
-                            return mT ??= new AudioContext, mT.resume(), (0, ET.e)(mT, mT.destination, kk, Fk, Ik, (() => {}))
+                          function lb(SS, HS, gS) {
+                            return ob ??= new AudioContext, ob.resume(), (0, cb.c)(ob, ob.destination, SS, HS, gS, (() => {}))
                           }
 
-                          function rT() {
-                            const [kk, Fk] = (0, Xk.useState)(ST.g.regular), [Ik, Tk] = (0, Xk.useState)(fT[0]), [yk, lk] = (0, Xk.useState)("Innkeeper"), [ak, qk] = (0, Xk.useState)(0), Lk = tX((kk => kk.volume)), tk = (0, Xk.useRef)(null), Zk = (0, Xk.useRef)(0), jk = (0, Xk.useRef)(0), wk = () => {
-                              var kk;
-                              null === (kk = tk.current) || void 0 === kk || kk.call(tk), tk.current = null
+                          function mb() {
+                            const [SS, HS] = (0, tS.useState)(Jb.g.regular), [gS, bS] = (0, tS.useState)(sb[0]), [xS, NS] = (0, tS.useState)("Innkeeper"), [qS, uS] = (0, tS.useState)(0), IS = It((SS => SS.volume)), fS = (0, tS.useRef)(null), kS = (0, tS.useRef)(0), aS = (0, tS.useRef)(0), jS = () => {
+                              var SS;
+                              null === (SS = fS.current) || void 0 === SS || SS.call(fS), fS.current = null
                             };
-                            (0, Xk.useEffect)((() => () => {
-                              var kk;
-                              null === (kk = tk.current) || void 0 === kk || kk.call(tk), window.clearTimeout(Zk.current)
+                            (0, tS.useEffect)((() => () => {
+                              var SS;
+                              null === (SS = fS.current) || void 0 === SS || SS.call(fS), window.clearTimeout(kS.current)
                             }), []);
-                            const Jk = (0, Xk.useMemo)((() => ({
-                                line: Ik,
-                                speakerName: yk || void 0,
-                                voice: kk
-                              })), [Ik, yk, kk]),
-                              xk = (0, Xk.useRef)(Jk);
-                            xk.current = Jk;
-                            const Kk = BT(kk),
-                              Qk = kk => {
-                                window.clearTimeout(Zk.current), wk();
+                            const CS = (0, tS.useMemo)((() => ({
+                                line: gS,
+                                speakerName: xS || void 0,
+                                voice: SS
+                              })), [gS, xS, SS]),
+                              nS = (0, tS.useRef)(CS);
+                            nS.current = CS;
+                            const QS = Bb(SS),
+                              DS = SS => {
+                                window.clearTimeout(kS.current), jS();
                                 const {
-                                  plan: Fk,
-                                  synth: Ik
-                                } = (0, vT.e)(kk);
-                                Ik && (tk.current = hT(Ik, Fk.blips, Lk)), qk((kk => kk + 1))
+                                  plan: HS,
+                                  synth: gS
+                                } = (0, db.g)(SS);
+                                gS && (fS.current = lb(gS, HS.blips, IS)), uS((SS => SS + 1))
                               },
-                              sk = YT(kk, Ik, yk);
-                            return (0, ek.jsxs)("section", {
+                              wS = Fb(SS, gS, xS);
+                            return (0, KS.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, ek.jsxs)("header", {
+                              children: [(0, KS.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, ek.jsxs)("div", {
-                                  children: [(0, ek.jsx)("div", {
+                                children: [(0, KS.jsxs)("div", {
+                                  children: [(0, KS.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, ek.jsx)("div", {
+                                  }), (0, KS.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, ek.jsx)(Pk, {
-                                  text: sk,
+                                }), (0, KS.jsx)(PS, {
+                                  text: wS,
                                   label: "Copy code"
                                 })]
-                              }), (0, ek.jsxs)("div", {
+                              }), (0, KS.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [WT.map((kk => (0, ek.jsx)("button", {
+                                children: [pb.map((SS => (0, KS.jsx)("button", {
                                   type: "button",
-                                  className: ik()("DocsVariantChip", {
-                                    Active: Kk === kk
+                                  className: XS()("DocsVariantChip", {
+                                    Active: QS === SS
                                   }),
-                                  "aria-pressed": Kk === kk,
+                                  "aria-pressed": QS === SS,
                                   onClick: () => {
-                                    (kk => {
-                                      const Ik = ST.g[kk];
-                                      Fk(Ik), Qk({
-                                        ...Jk,
-                                        voice: Ik
+                                    (SS => {
+                                      const gS = Jb.g[SS];
+                                      HS(gS), DS({
+                                        ...CS,
+                                        voice: gS
                                       })
-                                    })(kk)
+                                    })(SS)
                                   },
-                                  children: kk
-                                }, kk))), !Kk && (0, ek.jsx)("span", {
+                                  children: SS
+                                }, SS))), !QS && (0, KS.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, ek.jsxs)("div", {
+                              }), (0, KS.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, ek.jsxs)("div", {
+                                children: [(0, KS.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, ek.jsx)("div", {
+                                  children: [(0, KS.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, ek.jsx)(oT.e, {
-                                      display: Jk
-                                    }, ak)
-                                  }), (0, ek.jsxs)("form", {
+                                    children: (0, KS.jsx)(Ob.e, {
+                                      display: CS
+                                    }, qS)
+                                  }), (0, KS.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: kk => {
-                                      kk.preventDefault(), Qk(Jk)
+                                    onSubmit: SS => {
+                                      SS.preventDefault(), DS(CS)
                                     },
-                                    children: [(0, ek.jsx)("input", {
-                                      value: Ik,
+                                    children: [(0, KS.jsx)("input", {
+                                      value: gS,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: kk => {
-                                        Tk(kk.target.value)
+                                      onChange: SS => {
+                                        bS(SS.target.value)
                                       }
-                                    }), (0, ek.jsxs)("button", {
+                                    }), (0, KS.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, ek.jsx)(Hk, {
+                                      children: [(0, KS.jsx)(GS, {
                                         name: "play"
-                                      }), (0, ek.jsx)("span", {
+                                      }), (0, KS.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, ek.jsx)("div", {
+                                  }), (0, KS.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: fT.map((kk => (0, ek.jsx)("button", {
+                                    children: sb.map((SS => (0, KS.jsx)("button", {
                                       type: "button",
-                                      className: ik()("DocsVariantChip", {
-                                        Active: Ik === kk
+                                      className: XS()("DocsVariantChip", {
+                                        Active: gS === SS
                                       }),
                                       onClick: () => {
-                                        var Fk;
-                                        Tk(Fk = kk), Qk({
-                                          ...Jk,
-                                          line: Fk
+                                        var HS;
+                                        bS(HS = SS), DS({
+                                          ...CS,
+                                          line: HS
                                         })
                                       },
-                                      children: kk
-                                    }, kk)))
-                                  }), (0, ek.jsxs)("label", {
+                                      children: SS
+                                    }, SS)))
+                                  }), (0, KS.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, ek.jsx)("span", {
+                                    children: [(0, KS.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, ek.jsx)("input", {
-                                      value: yk,
+                                    }), (0, KS.jsx)("input", {
+                                      value: xS,
                                       placeholder: "No name",
-                                      onChange: kk => {
-                                        lk(kk.target.value)
+                                      onChange: SS => {
+                                        NS(SS.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, ek.jsx)(cT, {
-                                  synth: kk,
-                                  onChange: Ik => {
-                                    const Xk = {
-                                      ...kk,
-                                      ...Ik
+                                }), (0, KS.jsx)(Ub, {
+                                  synth: SS,
+                                  onChange: gS => {
+                                    const tS = {
+                                      ...SS,
+                                      ...gS
                                     };
-                                    Fk(Xk);
-                                    const Tk = {
-                                        ...Jk,
-                                        voice: Xk
+                                    HS(tS);
+                                    const bS = {
+                                        ...CS,
+                                        voice: tS
                                       },
-                                      ik = performance.now();
-                                    if (ik - jk.current >= gT) {
-                                      jk.current = ik, wk();
-                                      const kk = (0, vT.e)(Tk).plan.blips[0];
-                                      kk && (tk.current = hT((0, ST.k)(Xk), [{
-                                        ...kk,
+                                      XS = performance.now();
+                                    if (XS - aS.current >= Tb) {
+                                      aS.current = XS, jS();
+                                      const SS = (0, db.g)(bS).plan.blips[0];
+                                      SS && (fS.current = lb((0, Jb.j)(tS), [{
+                                        ...SS,
                                         atMs: 0
-                                      }], Lk))
+                                      }], IS))
                                     }
-                                    window.clearTimeout(Zk.current), Zk.current = window.setTimeout((() => {
-                                      Qk(xk.current)
-                                    }), AT)
+                                    window.clearTimeout(kS.current), kS.current = window.setTimeout((() => {
+                                      DS(nS.current)
+                                    }), Rb)
                                   }
                                 })]
-                              }), (0, ek.jsx)(Vk, {
-                                code: sk,
+                              }), (0, KS.jsx)(hS, {
+                                code: wS,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var DT = Ik(4866);
-                          const MT = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            ki = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            Fi = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${ki}`, "g"), DT.l],
+                          var eb = gS(5017);
+                          const rb = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            SX = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            HX = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${SX}`, "g"), eb.m],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, DT.l]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, eb.m]
                             ];
 
-                          function Ii(kk) {
-                            return `${kk.pageId}#${kk.anchor}`
+                          function gX(SS) {
+                            return `${SS.pageId}#${SS.anchor}`
                           }
-                          let Xi, Ti, ii;
+                          let tX, bX, XX;
 
-                          function yi(kk) {
-                            const Fk = (0, zk.l)(kk),
-                              Ik = new Set;
-                            for (const [, , Xk] of Fk.matchAll(zk.d)) {
-                              const kk = Xk.startsWith("#") ? Bk(Xk) : null,
-                                Fk = kk ? Ii({
-                                  pageId: kk.page.id,
-                                  anchor: kk.anchor
+                          function xX(SS) {
+                            const HS = (0, ZS.f)(SS),
+                              gS = new Set;
+                            for (const [, , tS] of HS.matchAll(ZS.d)) {
+                              const SS = tS.startsWith("#") ? sS(tS) : null,
+                                HS = SS ? gX({
+                                  pageId: SS.page.id,
+                                  anchor: SS.anchor
                                 }) : null;
-                              null !== Fk && (Xi || (Xi = new Set(Uk.flatMap((kk => Ok(kk.layout) ? Wk(kk).sections.map((Fk => Ii({
-                                pageId: kk.id,
-                                anchor: Fk.heading.anchor
-                              }))) : [])))), Xi).has(Fk) && Ik.add(Fk)
+                              null !== HS && (tX || (tX = new Set(VS.flatMap((SS => cS(SS.layout) ? US(SS).sections.map((HS => gX({
+                                pageId: SS.id,
+                                anchor: HS.heading.anchor
+                              }))) : [])))), tX).has(HS) && gS.add(HS)
                             }
-                            for (const [, , Xk] of Fk.matchAll(MT)) {
-                              const kk = jF(Xk);
-                              kk && Ik.add(Ii(kk))
+                            for (const [, , tS] of HS.matchAll(rb)) {
+                              const SS = kH(tS);
+                              SS && gS.add(gX(SS))
                             }
-                            return Ik
+                            return gS
                           }
 
-                          function li(kk, Fk) {
-                            const Ik = new Set,
-                              Xk = function(kk) {
-                                return kk.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(kk);
-                            for (const [, Tk] of Xk.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) Ik.add(Tk);
-                            for (const [Tk, ik] of Fi)
-                              for (const [, kk] of(0, DT.e)(Xk, Tk, ik)) Fk.has(kk) && Ik.add(kk);
-                            return Ik
+                          function NX(SS, HS) {
+                            const gS = new Set,
+                              tS = function(SS) {
+                                return SS.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(SS);
+                            for (const [, bS] of tS.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) gS.add(bS);
+                            for (const [bS, XS] of HX)
+                              for (const [, SS] of(0, eb.f)(tS, bS, XS)) HS.has(SS) && gS.add(SS);
+                            return gS
                           }
 
-                          function ai(kk, Fk, Ik, Xk) {
-                            const Tk = kk.get(Fk);
-                            Tk ? !Xk && Tk.some((kk => kk.pageId === Ik.pageId)) || Tk.push(Ik) : kk.set(Fk, [Ik])
+                          function qX(SS, HS, gS, tS) {
+                            const bS = SS.get(HS);
+                            bS ? !tS && bS.some((SS => SS.pageId === gS.pageId)) || bS.push(gS) : SS.set(HS, [gS])
                           }
-                          const qi = /^[A-Za-z_$][\w$]*$/;
+                          const uX = /^[A-Za-z_$][\w$]*$/;
 
-                          function Li(kk) {
-                            return qi.test(kk.name) ? kk.name : "options"
-                          }
-
-                          function ti(kk, Fk) {
-                            const Ik = kk.params.map(Li).join(", ");
-                            return Fk ? `${kk.name} = (${Ik}) => {\n\t\n}` : `api.${kk.name}(${Ik})`
+                          function IX(SS) {
+                            return uX.test(SS.name) ? SS.name : "options"
                           }
 
-                          function Zi(kk) {
+                          function fX(SS, HS) {
+                            const gS = SS.params.map(IX).join(", ");
+                            return HS ? `${SS.name} = (${gS}) => {\n\t\n}` : `api.${SS.name}(${gS})`
+                          }
+
+                          function kX(SS) {
                             let {
-                              method: Fk,
-                              isCallback: Ik
-                            } = kk;
-                            return (0, ek.jsxs)("div", {
+                              method: HS,
+                              isCallback: gS
+                            } = SS;
+                            return (0, KS.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, ek.jsxs)("span", {
+                              children: [(0, KS.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [Ik ? (0, ek.jsxs)(ek.Fragment, {
-                                  children: [(0, ek.jsx)("span", {
+                                children: [gS ? (0, KS.jsxs)(KS.Fragment, {
+                                  children: [(0, KS.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: Fk.name
-                                  }), (0, ek.jsx)("span", {
+                                    children: HS.name
+                                  }), (0, KS.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, ek.jsxs)(ek.Fragment, {
-                                  children: [(0, ek.jsx)("span", {
+                                }) : (0, KS.jsxs)(KS.Fragment, {
+                                  children: [(0, KS.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, ek.jsx)("span", {
+                                  }), (0, KS.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: Fk.name
-                                  }), (0, ek.jsx)("span", {
+                                    children: HS.name
+                                  }), (0, KS.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), Fk.params.map(((kk, Ik) => (0, ek.jsxs)(Xk.Fragment, {
-                                  children: [Ik > 0 && (0, ek.jsx)("span", {
+                                }), HS.params.map(((SS, gS) => (0, KS.jsxs)(tS.Fragment, {
+                                  children: [gS > 0 && (0, KS.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, ek.jsx)("a", {
+                                  }), (0, KS.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${Fk.name}-${Li(kk)}`,
-                                    children: kk.name
+                                    href: `#${HS.name}-${IX(SS)}`,
+                                    children: SS.name
                                   })]
-                                }, kk.name))), (0, ek.jsx)("span", {
+                                }, SS.name))), (0, KS.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: Ik ? ") => " : ")"
-                                }), Ik && !Fk.returns && (0, ek.jsx)("span", {
+                                  children: gS ? ") => " : ")"
+                                }), gS && !HS.returns && (0, KS.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), Fk.returns && Fk.returns.type && (0, ek.jsxs)("span", {
+                              }), HS.returns && HS.returns.type && (0, KS.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!Ik && (0, ek.jsx)("span", {
+                                children: [!gS && (0, KS.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, ek.jsx)(oF, {
-                                  type: Fk.returns.type
+                                }), (0, KS.jsx)(JH, {
+                                  type: HS.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function ji(kk) {
+                          function aX(SS) {
                             let {
-                              title: Fk,
-                              references: Ik
-                            } = kk;
-                            const Tk = (0, Xk.useContext)(eF);
-                            return (0, ek.jsxs)("div", {
+                              title: HS,
+                              references: gS
+                            } = SS;
+                            const bS = (0, tS.useContext)(aH);
+                            return (0, KS.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, ek.jsx)("span", {
+                              children: [(0, KS.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: Fk
-                              }), Ik.map((kk => (0, ek.jsx)(yk.e, {
-                                to: Yk(Tk, Nk(kk.pageId), kk.anchor),
-                                children: kk.label
-                              }, `${kk.pageId}#${kk.anchor}`)))]
+                                children: HS
+                              }), gS.map((SS => (0, KS.jsx)(xS.c, {
+                                to: MS(bS, WS(SS.pageId), SS.anchor),
+                                children: SS.label
+                              }, `${SS.pageId}#${SS.anchor}`)))]
                             })
                           }
 
-                          function ei(kk) {
-                            var Fk, Ik;
+                          function KX(SS) {
+                            var HS, gS;
                             let {
-                              pageId: Xk,
-                              anchor: Tk
-                            } = kk;
-                            const ik = Ii({
-                                pageId: Xk,
-                                anchor: Tk
+                              pageId: tS,
+                              anchor: bS
+                            } = SS;
+                            const XS = gX({
+                                pageId: tS,
+                                anchor: bS
                               }),
-                              yk = null !== (Fk = function() {
-                                if (!ii) {
-                                  ii = new Map;
-                                  const Xk = new Set(Uk.filter((kk => "callbacks" === kk.layout)).flatMap((kk => Wk(kk).sections.map((kk => kk.heading.text)))));
-                                  for (const Tk of Uk)
-                                    if ("article" === Tk.layout || "snippets" === Tk.layout)
-                                      for (const ik of (0, zk.u)(Wk(Tk)))
+                              xS = null !== (HS = function() {
+                                if (!XX) {
+                                  XX = new Map;
+                                  const tS = new Set(VS.filter((SS => "callbacks" === SS.layout)).flatMap((SS => US(SS).sections.map((SS => SS.heading.text)))));
+                                  for (const bS of VS)
+                                    if ("article" === bS.layout || "snippets" === bS.layout)
+                                      for (const XS of (0, ZS.u)(US(bS)))
                                         for (const {
-                                            code: yk
+                                            code: xS
                                           }
-                                          of(0, zk.n)(ik.blocks))
-                                          for (const lk of li(yk, Xk)) {
-                                            const Xk = ZF().get(lk);
-                                            if (Xk) {
-                                              var kk, Fk, Ik;
-                                              const yk = {
-                                                pageId: Tk.id,
-                                                anchor: null !== (kk = null === (Fk = ik.heading) || void 0 === Fk ? void 0 : Fk.anchor) && void 0 !== kk ? kk : "",
-                                                label: null !== (Ik = Tk.navTitle) && void 0 !== Ik ? Ik : Tk.title
+                                          of(0, ZS.h)(XS.blocks))
+                                          for (const NS of NX(xS, tS)) {
+                                            const tS = fH().get(NS);
+                                            if (tS) {
+                                              var SS, HS, gS;
+                                              const xS = {
+                                                pageId: bS.id,
+                                                anchor: null !== (SS = null === (HS = XS.heading) || void 0 === HS ? void 0 : HS.anchor) && void 0 !== SS ? SS : "",
+                                                label: null !== (gS = bS.navTitle) && void 0 !== gS ? gS : bS.title
                                               };
-                                              ai(ii, Ii(Xk), yk, !1)
+                                              qX(XX, gX(tS), xS, !1)
                                             }
                                           }
                                 }
-                                return ii
-                              }().get(ik)) && void 0 !== Fk ? Fk : [],
-                              lk = null !== (Ik = function() {
-                                if (!Ti) {
-                                  Ti = new Map;
-                                  const kk = Nk("changelog");
-                                  for (const Fk of Wk(kk).sections) {
-                                    const Ik = new Set(Fk.blocks.flatMap((kk => [...yi(kk)])));
-                                    for (const Xk of Ik) {
-                                      const Ik = {
-                                        pageId: kk.id,
-                                        anchor: Fk.heading.anchor,
-                                        label: Fk.heading.text
+                                return XX
+                              }().get(XS)) && void 0 !== HS ? HS : [],
+                              NS = null !== (gS = function() {
+                                if (!bX) {
+                                  bX = new Map;
+                                  const SS = WS("changelog");
+                                  for (const HS of US(SS).sections) {
+                                    const gS = new Set(HS.blocks.flatMap((SS => [...xX(SS)])));
+                                    for (const tS of gS) {
+                                      const gS = {
+                                        pageId: SS.id,
+                                        anchor: HS.heading.anchor,
+                                        label: HS.heading.text
                                       };
-                                      ai(Ti, Xk, Ik, !0)
+                                      qX(bX, tS, gS, !0)
                                     }
                                   }
                                 }
-                                return Ti
-                              }().get(ik)) && void 0 !== Ik ? Ik : [];
-                            return 0 === yk.length && 0 === lk.length ? null : (0, ek.jsxs)("footer", {
+                                return bX
+                              }().get(XS)) && void 0 !== gS ? gS : [];
+                            return 0 === xS.length && 0 === NS.length ? null : (0, KS.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [yk.length > 0 && (0, ek.jsx)(ji, {
+                              children: [xS.length > 0 && (0, KS.jsx)(aX, {
                                 title: "Used in",
-                                references: yk
-                              }), lk.length > 0 && (0, ek.jsx)(ji, {
+                                references: xS
+                              }), NS.length > 0 && (0, KS.jsx)(aX, {
                                 title: "Changelog",
-                                references: lk
+                                references: NS
                               })]
                             })
                           }
 
-                          function wi(kk) {
+                          function jX(SS) {
                             let {
-                              method: Fk,
-                              pageId: Ik,
-                              anchor: Xk,
-                              isCallback: Tk
-                            } = kk;
-                            const ik = Tk ? void 0 : aF().get(Fk.name),
-                              yk = Fk.description.length > 0 || null === ik || void 0 === ik || !ik.description ? Fk.description : (0, zk.A)(ik.description);
-                            return (0, ek.jsxs)("article", {
+                              method: HS,
+                              pageId: gS,
+                              anchor: tS,
+                              isCallback: bS
+                            } = SS;
+                            const XS = bS ? void 0 : NH().get(HS.name),
+                              xS = HS.description.length > 0 || null === XS || void 0 === XS || !XS.description ? HS.description : (0, ZS.A)(XS.description);
+                            return (0, KS.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, ek.jsxs)("header", {
+                              children: [(0, KS.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, ek.jsx)(LI, {
+                                children: [(0, KS.jsx)(ug, {
                                   level: 2,
-                                  text: Fk.name,
-                                  anchor: Xk,
+                                  text: HS.name,
+                                  anchor: tS,
                                   className: "DocsCardTitle"
-                                }), (0, ek.jsx)(Pk, {
-                                  text: ti(Fk, Tk),
-                                  label: Tk ? "Copy handler" : "Copy call",
+                                }), (0, KS.jsx)(PS, {
+                                  text: fX(HS, bS),
+                                  label: bS ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, ek.jsx)(Zi, {
-                                method: Fk,
-                                isCallback: Tk
-                              }), ik && null !== ik.deprecation && (0, ek.jsxs)("aside", {
+                              }), (0, KS.jsx)(kX, {
+                                method: HS,
+                                isCallback: bS
+                              }), XS && null !== XS.deprecation && (0, KS.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, ek.jsx)("strong", {
+                                children: [(0, KS.jsx)("strong", {
                                   children: "Deprecated"
-                                }), ik.deprecation && (0, ek.jsxs)(ek.Fragment, {
-                                  children: [": ", (0, ek.jsx)(VF, {
-                                    text: (lk = ik.deprecation, (0, DT.s)(lk, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, DT.j)("`\\w"), (kk => {
-                                      let [Fk] = kk;
-                                      return ZF().has(Fk) ? `\`${Fk}\`` : Fk
+                                }), XS.deprecation && (0, KS.jsxs)(KS.Fragment, {
+                                  children: [": ", (0, KS.jsx)(wH, {
+                                    text: (NS = XS.deprecation, (0, eb.v)(NS, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, eb.k)("`\\w"), (SS => {
+                                      let [HS] = SS;
+                                      return fH().has(HS) ? `\`${HS}\`` : HS
                                     })))
                                   })]
                                 })]
-                              }), yk.length > 0 && (0, ek.jsx)("div", {
+                              }), xS.length > 0 && (0, KS.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, ek.jsx)(eI, {
-                                  blocks: yk
+                                children: (0, KS.jsx)(ag, {
+                                  blocks: xS
                                 })
-                              }), Fk.params.length > 0 && (0, ek.jsxs)("section", {
+                              }), HS.params.length > 0 && (0, KS.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, ek.jsx)("h3", {
+                                children: [(0, KS.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, ek.jsx)("dl", {
+                                }), (0, KS.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: Fk.params.map((kk => (0, ek.jsxs)("div", {
-                                    id: `${Fk.name}-${Li(kk)}`,
+                                  children: HS.params.map((SS => (0, KS.jsxs)("div", {
+                                    id: `${HS.name}-${IX(SS)}`,
                                     className: "DocsParam",
-                                    children: [(0, ek.jsxs)("dt", {
-                                      children: [(0, ek.jsx)("code", {
+                                    children: [(0, KS.jsxs)("dt", {
+                                      children: [(0, KS.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: kk.name
-                                      }), (0, ek.jsx)(oF, {
-                                        type: kk.type
+                                        children: SS.name
+                                      }), (0, KS.jsx)(JH, {
+                                        type: SS.type
                                       })]
-                                    }), kk.description && (0, ek.jsx)("dd", {
-                                      children: (0, ek.jsx)(VF, {
-                                        text: kk.description
+                                    }), SS.description && (0, KS.jsx)("dd", {
+                                      children: (0, KS.jsx)(wH, {
+                                        text: SS.description
                                       })
                                     })]
-                                  }, kk.name)))
+                                  }, SS.name)))
                                 })]
-                              }), Fk.returns && (Fk.returns.type || Fk.returns.description.length > 0) && (0, ek.jsxs)("section", {
+                              }), HS.returns && (HS.returns.type || HS.returns.description.length > 0) && (0, KS.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, ek.jsx)("h3", {
+                                children: [(0, KS.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, ek.jsxs)("div", {
+                                }), (0, KS.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [Fk.returns.type && (0, ek.jsx)(oF, {
-                                    type: Fk.returns.type
-                                  }), Fk.returns.description.length > 0 && (0, ek.jsx)("div", {
+                                  children: [HS.returns.type && (0, KS.jsx)(JH, {
+                                    type: HS.returns.type
+                                  }), HS.returns.description.length > 0 && (0, KS.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, ek.jsx)(eI, {
-                                      blocks: Fk.returns.description
+                                    children: (0, KS.jsx)(ag, {
+                                      blocks: HS.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, ek.jsx)(ei, {
-                                pageId: Ik,
-                                anchor: Xk
+                              }), (0, KS.jsx)(KX, {
+                                pageId: gS,
+                                anchor: tS
                               })]
                             });
-                            var lk
+                            var NS
                           }
 
-                          function Hi(kk) {
-                            var Fk;
-                            return null !== kk.defaultValue && "undefined" !== kk.defaultValue ? kk.defaultValue : null !== (Fk = kk.example) && void 0 !== Fk ? Fk : "value"
+                          function GX(SS) {
+                            var HS;
+                            return null !== SS.defaultValue && "undefined" !== SS.defaultValue ? SS.defaultValue : null !== (HS = SS.example) && void 0 !== HS ? HS : "value"
                           }
 
-                          function Ji(kk) {
+                          function CX(SS) {
                             let {
-                              setting: Fk,
-                              pageId: Ik,
-                              anchor: Xk,
-                              setterSnippet: Tk
-                            } = kk;
-                            const ik = null === Fk.defaultValue ? null : xF(Fk.defaultValue);
-                            return (0, ek.jsxs)("article", {
+                              setting: HS,
+                              pageId: gS,
+                              anchor: tS,
+                              setterSnippet: bS
+                            } = SS;
+                            const XS = null === HS.defaultValue ? null : CH(HS.defaultValue);
+                            return (0, KS.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, ek.jsxs)("header", {
+                              children: [(0, KS.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, ek.jsx)(LI, {
+                                children: [(0, KS.jsx)(ug, {
                                   level: 2,
-                                  text: Fk.name,
-                                  anchor: Xk,
+                                  text: HS.name,
+                                  anchor: tS,
                                   className: "DocsCardTitle"
-                                }), (0, ek.jsx)(Pk, {
-                                  text: Tk(Fk.name, Hi(Fk)),
+                                }), (0, KS.jsx)(PS, {
+                                  text: bS(HS.name, GX(HS)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, ek.jsxs)("dl", {
+                              }), (0, KS.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, ek.jsxs)("div", {
-                                  children: [(0, ek.jsx)("dt", {
+                                children: [(0, KS.jsxs)("div", {
+                                  children: [(0, KS.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, ek.jsx)("dd", {
-                                    children: (0, ek.jsx)(oF, {
-                                      type: Fk.type
+                                  }), (0, KS.jsx)("dd", {
+                                    children: (0, KS.jsx)(JH, {
+                                      type: HS.type
                                     })
                                   })]
-                                }), null !== Fk.defaultValue && (0, ek.jsxs)("div", {
-                                  children: [(0, ek.jsx)("dt", {
+                                }), null !== HS.defaultValue && (0, KS.jsxs)("div", {
+                                  children: [(0, KS.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, ek.jsx)("dd", {
-                                    children: (0, ek.jsxs)("code", {
+                                  }), (0, KS.jsx)("dd", {
+                                    children: (0, KS.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [ik && (0, ek.jsx)(PF, {
-                                        colour: ik
-                                      }), Fk.defaultValue]
+                                      children: [XS && (0, KS.jsx)(nH, {
+                                        colour: XS
+                                      }), HS.defaultValue]
                                     })
                                   })]
-                                }), null !== Fk.example && (0, ek.jsxs)("div", {
-                                  children: [(0, ek.jsx)("dt", {
+                                }), null !== HS.example && (0, KS.jsxs)("div", {
+                                  children: [(0, KS.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, ek.jsx)("dd", {
-                                    children: (0, ek.jsx)("code", {
+                                  }), (0, KS.jsx)("dd", {
+                                    children: (0, KS.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: Fk.example
+                                      children: HS.example
                                     })
                                   })]
                                 })]
-                              }), Fk.description.length > 0 && (0, ek.jsx)("div", {
+                              }), HS.description.length > 0 && (0, KS.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, ek.jsx)(eI, {
-                                  blocks: Fk.description
+                                children: (0, KS.jsx)(ag, {
+                                  blocks: HS.description
                                 })
-                              }), (0, ek.jsx)(ei, {
-                                pageId: Ik,
-                                anchor: Xk
+                              }), (0, KS.jsx)(KX, {
+                                pageId: gS,
+                                anchor: tS
                               })]
                             })
                           }
 
-                          function xi(kk) {
+                          function nX(SS) {
                             let {
-                              section: Fk
-                            } = kk;
-                            return (0, ek.jsxs)("article", {
+                              section: HS
+                            } = SS;
+                            return (0, KS.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, ek.jsx)(LI, {
+                              children: [(0, KS.jsx)(ug, {
                                 level: 2,
-                                text: Fk.heading.text,
-                                anchor: Fk.heading.anchor,
+                                text: HS.heading.text,
+                                anchor: HS.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, ek.jsx)("div", {
+                              }), (0, KS.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, ek.jsx)(eI, {
-                                  blocks: Fk.blocks
+                                children: (0, KS.jsx)(ag, {
+                                  blocks: HS.blocks
                                 })
                               })]
                             })
                           }
 
-                          function Pi(kk) {
+                          function PX(SS) {
                             let {
-                              section: Fk
-                            } = kk;
-                            return (0, ek.jsxs)("section", {
+                              section: HS
+                            } = SS;
+                            return (0, KS.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, ek.jsx)(LI, {
-                                level: Fk.heading.level,
-                                text: Fk.heading.text,
-                                anchor: Fk.heading.anchor
-                              }), (0, ek.jsx)(eI, {
-                                blocks: Fk.blocks
+                              children: [(0, KS.jsx)(ug, {
+                                level: HS.heading.level,
+                                text: HS.heading.text,
+                                anchor: HS.heading.anchor
+                              }), (0, KS.jsx)(ag, {
+                                blocks: HS.blocks
                               })]
                             })
                           }
-                          const Ki = {
+                          const QX = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4862,337 +4862,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function Qi(kk) {
+                          function DX(SS) {
                             let {
-                              page: Fk,
-                              section: Ik
-                            } = kk;
-                            if ("methods" === Fk.layout || "callbacks" === Fk.layout) return (0, ek.jsx)(wi, {
-                              method: zI(Ik),
-                              pageId: Fk.id,
-                              anchor: Ik.heading.anchor,
-                              isCallback: "callbacks" === Fk.layout
+                              page: HS,
+                              section: gS
+                            } = SS;
+                            if ("methods" === HS.layout || "callbacks" === HS.layout) return (0, KS.jsx)(jX, {
+                              method: hg(gS),
+                              pageId: HS.id,
+                              anchor: gS.heading.anchor,
+                              isCallback: "callbacks" === HS.layout
                             });
-                            if ("settings" === Fk.layout) {
-                              const kk = function(kk) {
-                                const Fk = {
-                                  name: kk.heading.text,
+                            if ("settings" === HS.layout) {
+                              const SS = function(SS) {
+                                const HS = {
+                                  name: SS.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const Xk of kk.blocks) {
-                                  var Ik;
-                                  if (VI(Xk)) continue;
-                                  const kk = "paragraph" === Xk.kind ? Xk.text.match(SI) : null;
-                                  if (!kk) {
-                                    Fk.description.push(Xk);
+                                for (const tS of SS.blocks) {
+                                  var gS;
+                                  if (wg(tS)) continue;
+                                  const SS = "paragraph" === tS.kind ? tS.text.match(Zg) : null;
+                                  if (!SS) {
+                                    HS.description.push(tS);
                                     continue
                                   }
-                                  const Tk = null !== (Ik = sI(kk[2])) && void 0 !== Ik ? Ik : kk[2];
-                                  "Type" === kk[1] ? Fk.type = Tk : "Default" === kk[1] ? Fk.defaultValue = Tk : "" !== Tk && (Fk.example = Tk)
+                                  const bS = null !== (gS = Dg(SS[2])) && void 0 !== gS ? gS : SS[2];
+                                  "Type" === SS[1] ? HS.type = bS : "Default" === SS[1] ? HS.defaultValue = bS : "" !== bS && (HS.example = bS)
                                 }
-                                return Fk.type ? Fk : null
-                              }(Ik);
-                              if (kk) return (0, ek.jsx)(Ji, {
-                                setting: kk,
-                                pageId: Fk.id,
-                                anchor: Ik.heading.anchor,
-                                setterSnippet: Fk.setterSnippet
+                                return HS.type ? HS : null
+                              }(gS);
+                              if (SS) return (0, KS.jsx)(CX, {
+                                setting: SS,
+                                pageId: HS.id,
+                                anchor: gS.heading.anchor,
+                                setterSnippet: HS.setterSnippet
                               })
                             }
-                            return "snippets" === Fk.layout ? (0, ek.jsx)(xi, {
-                              section: Ik
-                            }) : "changelog" === Fk.layout ? (0, ek.jsxs)("section", {
+                            return "snippets" === HS.layout ? (0, KS.jsx)(nX, {
+                              section: gS
+                            }) : "changelog" === HS.layout ? (0, KS.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, ek.jsx)("div", {
+                              children: [(0, KS.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, ek.jsx)(LI, {
+                                children: (0, KS.jsx)(ug, {
                                   level: 2,
-                                  text: Ik.heading.text,
-                                  anchor: Ik.heading.anchor
+                                  text: gS.heading.text,
+                                  anchor: gS.heading.anchor
                                 })
-                              }), (0, ek.jsx)("div", {
+                              }), (0, KS.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, ek.jsx)(eI, {
-                                  blocks: oI(Ik.blocks)
+                                children: (0, KS.jsx)(ag, {
+                                  blocks: Jg(gS.blocks)
                                 })
                               })]
-                            }) : Fk.gallery ? (0, ek.jsxs)("section", {
+                            }) : HS.gallery ? (0, KS.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, ek.jsx)(LI, {
-                                level: Ik.heading.level,
-                                text: Ik.heading.text,
-                                anchor: Ik.heading.anchor
-                              }), (0, ek.jsx)(vX, {
-                                kind: Fk.gallery,
-                                content: Wk(Fk),
-                                blocks: Ik.blocks
+                              children: [(0, KS.jsx)(ug, {
+                                level: gS.heading.level,
+                                text: gS.heading.text,
+                                anchor: gS.heading.anchor
+                              }), (0, KS.jsx)(dt, {
+                                kind: HS.gallery,
+                                content: US(HS),
+                                blocks: gS.blocks
                               })]
-                            }) : (0, ek.jsx)(Pi, {
-                              section: Ik
+                            }) : (0, KS.jsx)(PX, {
+                              section: gS
                             })
                           }
 
-                          function si(kk) {
+                          function wX(SS) {
                             let {
-                              page: Fk,
-                              onTocChange: Ik
-                            } = kk;
-                            const Tk = Wk(Fk),
-                              [ik, yk] = (0, Xk.useState)(""),
-                              lk = "article" !== Fk.layout,
-                              ak = JI(Fk.gallery) ? Fk.gallery : null,
-                              qk = null !== ak,
-                              Lk = ik.trim().toLowerCase(),
-                              tk = (0, Xk.useRef)(null),
-                              Zk = (0, Xk.useCallback)((kk => {
-                                var Fk;
-                                null === (Fk = tk.current) || void 0 === Fk || Fk.preview(kk)
+                              page: HS,
+                              onTocChange: gS
+                            } = SS;
+                            const bS = US(HS),
+                              [XS, xS] = (0, tS.useState)(""),
+                              NS = "article" !== HS.layout,
+                              qS = Gg(HS.gallery) ? HS.gallery : null,
+                              uS = null !== qS,
+                              IS = XS.trim().toLowerCase(),
+                              fS = (0, tS.useRef)(null),
+                              kS = (0, tS.useCallback)((SS => {
+                                var HS;
+                                null === (HS = fS.current) || void 0 === HS || HS.preview(SS)
                               }), []),
-                              jk = (0, Xk.useMemo)((() => {
-                                if (!Fk.hasParticlePlayground) return [];
-                                const kk = nI(Tk.intro).find((kk => "names" === kk.kind && !kk.names.some((kk => null !== cI(kk.name)))));
-                                return "names" === (null === kk || void 0 === kk ? void 0 : kk.kind) ? kk.names.map((kk => kk.name)) : []
-                              }), [Fk, Tk]),
-                              wk = (0, Xk.useMemo)((() => {
-                                if (!Fk.hasTextPlayground) return [];
-                                const kk = Tk.sections.flatMap((kk => kk.blocks.flatMap((kk => {
-                                  var Fk;
-                                  return (null !== (Fk = OI(kk)) && void 0 !== Fk ? Fk : []).flatMap((kk => cF(kk.name) ? [kk.name] : []))
+                              aS = (0, tS.useMemo)((() => {
+                                if (!HS.hasParticlePlayground) return [];
+                                const SS = vg(bS.intro).find((SS => "names" === SS.kind && !SS.names.some((SS => null !== zg(SS.name)))));
+                                return "names" === (null === SS || void 0 === SS ? void 0 : SS.kind) ? SS.names.map((SS => SS.name)) : []
+                              }), [HS, bS]),
+                              jS = (0, tS.useMemo)((() => {
+                                if (!HS.hasTextPlayground) return [];
+                                const SS = bS.sections.flatMap((SS => SS.blocks.flatMap((SS => {
+                                  var HS;
+                                  return (null !== (HS = cg(SS)) && void 0 !== HS ? HS : []).flatMap((SS => zH(SS.name) ? [SS.name] : []))
                                 }))));
-                                return [...new Set(kk)]
-                              }), [Fk, Tk]),
-                              Hk = (0, Xk.useMemo)((() => Lk ? Tk.sections.filter((kk => function(kk, Fk) {
-                                return !!kk.heading.text.toLowerCase().includes(Fk) || kk.blocks.some((kk => (0, zk.l)(kk).toLowerCase().includes(Fk)))
-                              }(kk, Lk))) : Tk.sections), [Tk, Lk]),
-                              Jk = (0, Xk.useMemo)((() => function(kk, Fk) {
-                                return "article" !== kk.layout ? Fk.map((kk => ({
-                                  anchor: kk.heading.anchor,
-                                  text: kk.heading.text,
+                                return [...new Set(SS)]
+                              }), [HS, bS]),
+                              GS = (0, tS.useMemo)((() => IS ? bS.sections.filter((SS => function(SS, HS) {
+                                return !!SS.heading.text.toLowerCase().includes(HS) || SS.blocks.some((SS => (0, ZS.f)(SS).toLowerCase().includes(HS)))
+                              }(SS, IS))) : bS.sections), [bS, IS]),
+                              CS = (0, tS.useMemo)((() => function(SS, HS) {
+                                return "article" !== SS.layout ? HS.map((SS => ({
+                                  anchor: SS.heading.anchor,
+                                  text: SS.heading.text,
                                   level: 2
-                                }))) : Fk.flatMap((kk => {
-                                  const Fk = kk.blocks.flatMap((kk => "heading" === kk.kind && 3 === kk.level ? [{
-                                    anchor: kk.anchor,
-                                    text: kk.text,
+                                }))) : HS.flatMap((SS => {
+                                  const HS = SS.blocks.flatMap((SS => "heading" === SS.kind && 3 === SS.level ? [{
+                                    anchor: SS.anchor,
+                                    text: SS.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: kk.heading.anchor,
-                                    text: kk.heading.text,
+                                    anchor: SS.heading.anchor,
+                                    text: SS.heading.text,
                                     level: 2
-                                  }, ...Fk]
+                                  }, ...HS]
                                 }))
-                              }(Fk, Hk)), [Fk, Hk]);
-                            return (0, Xk.useEffect)((() => {
-                              Ik(Jk)
-                            }), [Jk, Ik]), (0, ek.jsxs)("article", {
+                              }(HS, GS)), [HS, GS]);
+                            return (0, tS.useEffect)((() => {
+                              gS(CS)
+                            }), [CS, gS]), (0, KS.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, ek.jsxs)("header", {
+                              children: [(0, KS.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, ek.jsx)("h1", {
+                                children: [(0, KS.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: Tk.title || Fk.title
-                                }), (0, ek.jsx)("p", {
+                                  children: bS.title || HS.title
+                                }), (0, KS.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: Fk.summary
-                                }), (0, ek.jsx)(mX, {
-                                  page: Fk
-                                }), lk && (0, ek.jsx)("div", {
+                                  children: HS.summary
+                                }), (0, KS.jsx)(ot, {
+                                  page: HS
+                                }), NS && (0, KS.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, ek.jsxs)("span", {
-                                    children: [(0, ek.jsx)("strong", {
-                                      children: Tk.sections.length
-                                    }), " ", Ki[Fk.layout]]
+                                  children: (0, KS.jsxs)("span", {
+                                    children: [(0, KS.jsx)("strong", {
+                                      children: bS.sections.length
+                                    }), " ", QX[HS.layout]]
                                   })
                                 })]
-                              }), "" === Fk.slug && (0, ek.jsx)(OX, {}), ak && (0, ek.jsx)(uX, {
-                                kind: ak
-                              }, ak), Fk.hasParticlePlayground && (0, ek.jsx)(aT, {
-                                ref: tk,
-                                textures: jk
-                              }), !qk && Tk.intro.length > 0 && (0, ek.jsx)("div", {
+                              }), "" === HS.slug && (0, KS.jsx)(vt, {}), qS && (0, KS.jsx)(At, {
+                                kind: qS
+                              }, qS), HS.hasParticlePlayground && (0, KS.jsx)(qb, {
+                                ref: fS,
+                                textures: aS
+                              }), !uS && bS.intro.length > 0 && (0, KS.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: Fk.gallery ? (0, ek.jsx)(xX.Provider, {
-                                  value: Fk.hasParticlePlayground ? Zk : null,
-                                  children: (0, ek.jsx)(vX, {
-                                    kind: Fk.gallery,
-                                    content: Tk,
-                                    blocks: Tk.intro
+                                children: HS.gallery ? (0, KS.jsx)(nt.Provider, {
+                                  value: HS.hasParticlePlayground ? kS : null,
+                                  children: (0, KS.jsx)(dt, {
+                                    kind: HS.gallery,
+                                    content: bS,
+                                    blocks: bS.intro
                                   })
-                                }) : (0, ek.jsx)(eI, {
-                                  blocks: oI(Tk.intro)
+                                }) : (0, KS.jsx)(ag, {
+                                  blocks: Jg(bS.intro)
                                 })
-                              }), Fk.hasTextPlayground && (0, ek.jsx)(zT, {
-                                fontAwesomeIcons: wk
-                              }), Fk.hasVoicePlayground && (0, ek.jsx)(rT, {}), Fk.childPageIds && (0, ek.jsx)(OX, {
-                                cards: Fk.childPageIds.map((kk => ({
-                                  pageId: kk
+                              }), HS.hasTextPlayground && (0, KS.jsx)(Zb, {
+                                fontAwesomeIcons: jS
+                              }), HS.hasVoicePlayground && (0, KS.jsx)(mb, {}), HS.childPageIds && (0, KS.jsx)(vt, {
+                                cards: HS.childPageIds.map((SS => ({
+                                  pageId: SS
                                 }))),
-                                label: Fk.title
-                              }), lk && (0, ek.jsx)(KI, {
+                                label: HS.title
+                              }), NS && (0, KS.jsx)(Pg, {
                                 className: "DocsFilterBar",
-                                value: ik,
-                                placeholder: `Filter ${Tk.sections.length} ${Ki[Fk.layout]}\u2026`,
-                                label: `Filter ${Ki[Fk.layout]}`,
-                                onChange: yk,
-                                count: Lk ? {
-                                  visible: Hk.length,
-                                  total: Tk.sections.length
+                                value: XS,
+                                placeholder: `Filter ${bS.sections.length} ${QX[HS.layout]}\u2026`,
+                                label: `Filter ${QX[HS.layout]}`,
+                                onChange: xS,
+                                count: IS ? {
+                                  visible: GS.length,
+                                  total: bS.sections.length
                                 } : null
-                              }), !qk && (0, ek.jsxs)("div", {
-                                className: `DocsSections Layout-${Fk.layout}`,
-                                children: [Hk.map((kk => (0, ek.jsx)(Qi, {
-                                  page: Fk,
-                                  section: kk
-                                }, kk.heading.anchor))), 0 === Hk.length && (0, ek.jsxs)("p", {
+                              }), !uS && (0, KS.jsxs)("div", {
+                                className: `DocsSections Layout-${HS.layout}`,
+                                children: [GS.map((SS => (0, KS.jsx)(DX, {
+                                  page: HS,
+                                  section: SS
+                                }, SS.heading.anchor))), 0 === GS.length && (0, KS.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", Ki[Fk.layout], " match \u201c", ik, "\u201d."]
+                                  children: ["No ", QX[HS.layout], " match \u201c", XS, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const Vi = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const hX = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function zi(kk) {
+                          function ZX(SS) {
                             let {
-                              entry: Fk,
-                              isActive: Ik,
-                              onNavigate: Xk,
-                              label: Tk,
-                              children: yk
-                            } = kk;
-                            return (0, ek.jsx)("a", {
-                              href: `#${Fk.anchor}`,
-                              "aria-label": Tk,
-                              className: ik()(`Level${Fk.level}`, {
-                                Active: Ik
+                              entry: HS,
+                              isActive: gS,
+                              onNavigate: tS,
+                              label: bS,
+                              children: xS
+                            } = SS;
+                            return (0, KS.jsx)("a", {
+                              href: `#${HS.anchor}`,
+                              "aria-label": bS,
+                              className: XS()(`Level${HS.level}`, {
+                                Active: gS
                               }),
-                              "aria-current": Ik ? "location" : void 0,
-                              onClick: kk => {
-                                kk.preventDefault(), Xk(Fk.anchor)
+                              "aria-current": gS ? "location" : void 0,
+                              onClick: SS => {
+                                SS.preventDefault(), tS(HS.anchor)
                               },
-                              children: yk
+                              children: xS
                             })
                           }
 
-                          function Si(kk) {
+                          function JX(SS) {
                             let {
-                              toc: Fk,
-                              activeAnchor: Ik,
-                              onNavigate: Tk
-                            } = kk;
-                            const yk = Math.max(0, Fk.findIndex((kk => kk.anchor === Ik))),
-                              lk = (0, Xk.useRef)(null),
-                              ak = (0, Xk.useRef)(!1);
-                            (0, Xk.useEffect)((() => {
-                              var kk, Ik;
-                              const Xk = null === (kk = lk.current) || void 0 === kk ? void 0 : kk.closest(".DocsToc"),
-                                Tk = null === (Ik = lk.current) || void 0 === Ik ? void 0 : Ik.querySelector(".DocsTimelineNotch.Active");
-                              if (!Xk || !Tk) return;
-                              let ik = 0;
-                              if (yk === Fk.length - 1) ik = Xk.scrollHeight;
-                              else if (yk > 0) {
-                                const kk = Xk.getBoundingClientRect(),
-                                  Fk = Tk.getBoundingClientRect();
-                                ik = Xk.scrollTop + Fk.top + Fk.height / 2 - (kk.top + Xk.clientHeight / 2)
+                              toc: HS,
+                              activeAnchor: gS,
+                              onNavigate: bS
+                            } = SS;
+                            const xS = Math.max(0, HS.findIndex((SS => SS.anchor === gS))),
+                              NS = (0, tS.useRef)(null),
+                              qS = (0, tS.useRef)(!1);
+                            (0, tS.useEffect)((() => {
+                              var SS, gS;
+                              const tS = null === (SS = NS.current) || void 0 === SS ? void 0 : SS.closest(".DocsToc"),
+                                bS = null === (gS = NS.current) || void 0 === gS ? void 0 : gS.querySelector(".DocsTimelineNotch.Active");
+                              if (!tS || !bS) return;
+                              let XS = 0;
+                              if (xS === HS.length - 1) XS = tS.scrollHeight;
+                              else if (xS > 0) {
+                                const SS = tS.getBoundingClientRect(),
+                                  HS = bS.getBoundingClientRect();
+                                XS = tS.scrollTop + HS.top + HS.height / 2 - (SS.top + tS.clientHeight / 2)
                               }
-                              Xk.scrollTo({
-                                top: ik,
-                                behavior: ak.current ? "smooth" : "auto"
-                              }), ak.current = !0
-                            }), [yk, Fk.length]);
-                            const qk = [];
-                            return Fk.forEach(((kk, Fk) => {
-                              var Ik, Xk, Tk;
-                              const ik = function(kk) {
-                                  const Fk = kk.trim().match(Vi);
-                                  return Fk ? {
-                                    day: Fk[1],
-                                    month: `${Fk[2]} ${Fk[3]}`
+                              tS.scrollTo({
+                                top: XS,
+                                behavior: qS.current ? "smooth" : "auto"
+                              }), qS.current = !0
+                            }), [xS, HS.length]);
+                            const uS = [];
+                            return HS.forEach(((SS, HS) => {
+                              var gS, tS, bS;
+                              const XS = function(SS) {
+                                  const HS = SS.trim().match(hX);
+                                  return HS ? {
+                                    day: HS[1],
+                                    month: `${HS[2]} ${HS[3]}`
                                   } : null
-                                }(kk.text),
-                                yk = null !== (Ik = null === ik || void 0 === ik ? void 0 : ik.month) && void 0 !== Ik ? Ik : null;
-                              null !== yk && (null === (Xk = qk.at(-1)) || void 0 === Xk ? void 0 : Xk.month) === yk || qk.push({
-                                month: yk,
+                                }(SS.text),
+                                xS = null !== (gS = null === XS || void 0 === XS ? void 0 : XS.month) && void 0 !== gS ? gS : null;
+                              null !== xS && (null === (tS = uS.at(-1)) || void 0 === tS ? void 0 : tS.month) === xS || uS.push({
+                                month: xS,
                                 entries: []
-                              }), qk.at(-1).entries.push({
-                                entry: kk,
-                                day: null !== (Tk = null === ik || void 0 === ik ? void 0 : ik.day) && void 0 !== Tk ? Tk : null,
-                                index: Fk
+                              }), uS.at(-1).entries.push({
+                                entry: SS,
+                                day: null !== (bS = null === XS || void 0 === XS ? void 0 : XS.day) && void 0 !== bS ? bS : null,
+                                index: HS
                               })
-                            })), (0, ek.jsx)("ol", {
-                              ref: lk,
+                            })), (0, KS.jsx)("ol", {
+                              ref: NS,
                               className: "DocsTimeline",
-                              children: qk.map((kk => {
+                              children: uS.map((SS => {
                                 let {
-                                  month: Fk,
-                                  entries: Ik
-                                } = kk;
-                                return (0, ek.jsxs)("li", {
+                                  month: HS,
+                                  entries: gS
+                                } = SS;
+                                return (0, KS.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [Fk && (0, ek.jsx)("span", {
+                                  children: [HS && (0, KS.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: Fk
-                                  }), (0, ek.jsx)("ol", {
-                                    children: Ik.map((kk => {
+                                    children: HS
+                                  }), (0, KS.jsx)("ol", {
+                                    children: gS.map((SS => {
                                       let {
-                                        entry: Fk,
-                                        day: Ik,
-                                        index: Xk
-                                      } = kk;
-                                      return (0, ek.jsx)("li", {
-                                        className: ik()("DocsTimelineNotch", {
-                                          Passed: Xk < yk,
-                                          Active: Xk === yk
+                                        entry: HS,
+                                        day: gS,
+                                        index: tS
+                                      } = SS;
+                                      return (0, KS.jsx)("li", {
+                                        className: XS()("DocsTimelineNotch", {
+                                          Passed: tS < xS,
+                                          Active: tS === xS
                                         }),
-                                        children: (0, ek.jsx)(zi, {
-                                          entry: Fk,
-                                          isActive: Xk === yk,
-                                          onNavigate: Tk,
-                                          label: Fk.text,
-                                          children: (0, ek.jsx)("span", {
+                                        children: (0, KS.jsx)(ZX, {
+                                          entry: HS,
+                                          isActive: tS === xS,
+                                          onNavigate: bS,
+                                          label: HS.text,
+                                          children: (0, KS.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== Ik && void 0 !== Ik ? Ik : Fk.text
+                                            children: null !== gS && void 0 !== gS ? gS : HS.text
                                           })
                                         })
-                                      }, Fk.anchor)
+                                      }, HS.anchor)
                                     }))
                                   })]
-                                }, Ik[0].entry.anchor)
+                                }, gS[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function oi(kk) {
+                          function OX(SS) {
                             let {
-                              isChangelog: Fk,
-                              toc: Ik,
-                              activeAnchor: Xk,
-                              onNavigate: Tk
-                            } = kk;
-                            return 0 === Ik.length ? null : (0, ek.jsxs)(ek.Fragment, {
-                              children: [(0, ek.jsx)("div", {
+                              isChangelog: HS,
+                              toc: gS,
+                              activeAnchor: tS,
+                              onNavigate: bS
+                            } = SS;
+                            return 0 === gS.length ? null : (0, KS.jsxs)(KS.Fragment, {
+                              children: [(0, KS.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: Fk ? "Updates" : "On this page"
-                              }), Fk ? (0, ek.jsx)(Si, {
-                                toc: Ik,
-                                activeAnchor: Xk,
-                                onNavigate: Tk
-                              }) : (0, ek.jsx)("ul", {
-                                children: Ik.map((kk => (0, ek.jsx)("li", {
-                                  children: (0, ek.jsx)(zi, {
-                                    entry: kk,
-                                    isActive: kk.anchor === Xk,
-                                    onNavigate: Tk,
-                                    children: kk.text.replace(/`/g, "")
+                                children: HS ? "Updates" : "On this page"
+                              }), HS ? (0, KS.jsx)(JX, {
+                                toc: gS,
+                                activeAnchor: tS,
+                                onNavigate: bS
+                              }) : (0, KS.jsx)("ul", {
+                                children: gS.map((SS => (0, KS.jsx)("li", {
+                                  children: (0, KS.jsx)(ZX, {
+                                    entry: SS,
+                                    isActive: SS.anchor === tS,
+                                    onNavigate: bS,
+                                    children: SS.text.replace(/`/g, "")
                                   })
-                                }, kk.anchor)))
+                                }, SS.anchor)))
                               })]
                             })
                           }
-                          const vi = {
+                          const dX = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5200,7 +5200,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            Ei = {
+                            cX = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5208,1086 +5208,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            Oi = 20,
-                            ni = 10,
-                            Gi = 40,
-                            ui = 120;
-                          let bi;
+                            vX = 20,
+                            EX = 10,
+                            LX = 40,
+                            YX = 120;
+                          let AX;
 
-                          function Ri(kk) {
-                            const Fk = kk.gallery;
-                            if (!Fk) return [];
-                            if (JI(Fk)) return function(kk) {
-                              return PI(kk).entries.map((kk => kk.name))
-                            }(Fk).map((Ik => ({
-                              page: kk,
-                              anchor: pI(Fk, Ik),
-                              title: Ik,
-                              kind: Ei[Fk],
+                          function yX(SS) {
+                            const HS = SS.gallery;
+                            if (!HS) return [];
+                            if (Gg(HS)) return function(SS) {
+                              return ng(SS).entries.map((SS => SS.name))
+                            }(HS).map((gS => ({
+                              page: SS,
+                              anchor: Lg(HS, gS),
+                              title: gS,
+                              kind: cX[HS],
                               text: "",
-                              listedUnder: kk.title
+                              listedUnder: SS.title
                             })));
-                            const Ik = Wk(kk);
-                            return (0, zk.u)(Ik).flatMap((Xk => {
-                              const Tk = Xk.heading ? `${kk.title} \u203a ${Xk.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : kk.title;
-                              return bI(Fk, Ik, Xk.blocks).flatMap((Ik => "names" !== Ik.kind ? [] : Ik.names.map((Xk => {
-                                const ik = Ik.isSongs ? "Song" : Ei[Fk];
+                            const gS = US(SS);
+                            return (0, ZS.u)(gS).flatMap((tS => {
+                              const bS = tS.heading ? `${SS.title} \u203a ${tS.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : SS.title;
+                              return Ag(HS, gS, tS.blocks).flatMap((gS => "names" !== gS.kind ? [] : gS.names.map((tS => {
+                                const XS = gS.isSongs ? "Song" : cX[HS];
                                 return {
-                                  page: kk,
-                                  anchor: Xk.anchor,
-                                  title: Xk.name,
-                                  kind: ik,
+                                  page: SS,
+                                  anchor: tS.anchor,
+                                  title: tS.name,
+                                  kind: XS,
                                   text: "",
-                                  listedUnder: Tk
+                                  listedUnder: bS
                                 }
                               }))))
                             }))
                           }
 
-                          function Ui(kk, Fk, Ik) {
-                            const Xk = kk.title.toLowerCase();
-                            let Tk = 0;
-                            if (Xk === Fk) Tk = 100;
-                            else if (Xk.startsWith(Fk)) Tk = 80;
-                            else if (Xk.includes(Fk)) Tk = 60;
-                            else if (Ik.every((kk => Xk.includes(kk)))) Tk = 45;
+                          function VX(SS, HS, gS) {
+                            const tS = SS.title.toLowerCase();
+                            let bS = 0;
+                            if (tS === HS) bS = 100;
+                            else if (tS.startsWith(HS)) bS = 80;
+                            else if (tS.includes(HS)) bS = 60;
+                            else if (gS.every((SS => tS.includes(SS)))) bS = 45;
                             else {
-                              if (!kk.text.toLowerCase().includes(Fk)) return 0;
-                              Tk = 20
+                              if (!SS.text.toLowerCase().includes(HS)) return 0;
+                              bS = 20
                             }
-                            return Tk - Math.min(Xk.length / 10, 9) + ("Page" === kk.kind ? 8 : "Method" === kk.kind ? 3 : 0) - (kk.listedUnder ? Oi : 0)
+                            return bS - Math.min(tS.length / 10, 9) + ("Page" === SS.kind ? 8 : "Method" === SS.kind ? 3 : 0) - (SS.listedUnder ? vX : 0)
                           }
 
-                          function Ci(kk, Fk) {
-                            const Ik = kk.toLowerCase().indexOf(Fk),
-                              Xk = Math.max(0, Ik - ui / 3);
-                            return `${Xk>0?"\u2026":""}${kk.slice(Xk,Xk+ui)}${Xk+ui<kk.length?"\u2026":""}`
+                          function iX(SS, HS) {
+                            const gS = SS.toLowerCase().indexOf(HS),
+                              tS = Math.max(0, gS - YX / 3);
+                            return `${tS>0?"\u2026":""}${SS.slice(tS,tS+YX)}${tS+YX<SS.length?"\u2026":""}`
                           }
 
-                          function Ni(kk) {
+                          function WX(SS) {
                             let {
-                              text: Fk,
-                              query: Ik
-                            } = kk;
-                            const Xk = Ik ? Fk.toLowerCase().indexOf(Ik) : -1;
-                            return -1 === Xk ? (0, ek.jsx)(ek.Fragment, {
-                              children: Fk
-                            }) : (0, ek.jsxs)(ek.Fragment, {
-                              children: [Fk.slice(0, Xk), (0, ek.jsx)("mark", {
-                                children: Fk.slice(Xk, Xk + Ik.length)
-                              }), Fk.slice(Xk + Ik.length)]
+                              text: HS,
+                              query: gS
+                            } = SS;
+                            const tS = gS ? HS.toLowerCase().indexOf(gS) : -1;
+                            return -1 === tS ? (0, KS.jsx)(KS.Fragment, {
+                              children: HS
+                            }) : (0, KS.jsxs)(KS.Fragment, {
+                              children: [HS.slice(0, tS), (0, KS.jsx)("mark", {
+                                children: HS.slice(tS, tS + gS.length)
+                              }), HS.slice(tS + gS.length)]
                             })
                           }
 
-                          function ci(kk) {
+                          function zX(SS) {
                             let {
-                              basePath: Fk,
-                              onClose: Ik
-                            } = kk;
-                            const Tk = (0, lk.u)(),
-                              [yk, ak] = (0, Xk.useState)(""),
-                              [qk, Lk] = (0, Xk.useState)(0),
-                              tk = (0, Xk.useRef)(null),
-                              Zk = (0, Xk.useRef)(null),
-                              jk = yk.trim().toLowerCase(),
-                              wk = (0, Xk.useMemo)((() => {
-                                const kk = (bi || (bi = Uk.flatMap((kk => {
-                                  const Fk = Wk(kk);
+                              basePath: HS,
+                              onClose: gS
+                            } = SS;
+                            const bS = (0, NS.u)(),
+                              [xS, qS] = (0, tS.useState)(""),
+                              [uS, IS] = (0, tS.useState)(0),
+                              fS = (0, tS.useRef)(null),
+                              kS = (0, tS.useRef)(null),
+                              aS = xS.trim().toLowerCase(),
+                              jS = (0, tS.useMemo)((() => {
+                                const SS = (AX || (AX = VS.flatMap((SS => {
+                                  const HS = US(SS);
                                   return [{
-                                    page: kk,
+                                    page: SS,
                                     anchor: "",
-                                    title: kk.title,
+                                    title: SS.title,
                                     kind: "Page",
-                                    text: kk.summary
-                                  }, ...Fk.sections.flatMap((Fk => {
-                                    const Ik = Fk.blocks.filter((kk => "paragraph" === kk.kind)).map(zk.l).join(" ").replace(/[`*]/g, ""),
-                                      Xk = {
-                                        page: kk,
-                                        anchor: Fk.heading.anchor,
-                                        title: Fk.heading.text.replace(/`/g, ""),
-                                        kind: vi[kk.layout],
-                                        text: Ik
+                                    text: SS.summary
+                                  }, ...HS.sections.flatMap((HS => {
+                                    const gS = HS.blocks.filter((SS => "paragraph" === SS.kind)).map(ZS.f).join(" ").replace(/[`*]/g, ""),
+                                      tS = {
+                                        page: SS,
+                                        anchor: HS.heading.anchor,
+                                        title: HS.heading.text.replace(/`/g, ""),
+                                        kind: dX[SS.layout],
+                                        text: gS
                                       },
-                                      Tk = Fk.blocks.flatMap((Fk => "article" === kk.layout && "heading" === Fk.kind && 3 === Fk.level ? [{
-                                        page: kk,
-                                        anchor: Fk.anchor,
-                                        title: Fk.text.replace(/`/g, ""),
+                                      bS = HS.blocks.flatMap((HS => "article" === SS.layout && "heading" === HS.kind && 3 === HS.level ? [{
+                                        page: SS,
+                                        anchor: HS.anchor,
+                                        title: HS.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: Xk.title
+                                        text: tS.title
                                       }] : []));
-                                    return [Xk, ...Tk]
-                                  })), ...Ri(kk)]
-                                }))), bi);
-                                if (!jk) return kk.filter((kk => "Page" === kk.kind));
-                                const Fk = jk.split(/\s+/);
-                                let Ik = 0;
-                                return kk.map((kk => ({
-                                  entry: kk,
-                                  score: Ui(kk, jk, Fk)
-                                }))).filter((kk => kk.score > 0)).sort(((kk, Fk) => Fk.score - kk.score)).filter((kk => !kk.entry.listedUnder || (Ik++, Ik <= ni))).slice(0, Gi).map((kk => kk.entry))
-                              }), [jk]);
-                            (0, Xk.useEffect)((() => {
-                              Lk(0)
-                            }), [jk]), (0, Xk.useEffect)((() => {
-                              const kk = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [tS, ...bS]
+                                  })), ...yX(SS)]
+                                }))), AX);
+                                if (!aS) return SS.filter((SS => "Page" === SS.kind));
+                                const HS = aS.split(/\s+/);
+                                let gS = 0;
+                                return SS.map((SS => ({
+                                  entry: SS,
+                                  score: VX(SS, aS, HS)
+                                }))).filter((SS => SS.score > 0)).sort(((SS, HS) => HS.score - SS.score)).filter((SS => !SS.entry.listedUnder || (gS++, gS <= EX))).slice(0, LX).map((SS => SS.entry))
+                              }), [aS]);
+                            (0, tS.useEffect)((() => {
+                              IS(0)
+                            }), [aS]), (0, tS.useEffect)((() => {
+                              const SS = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === kk || void 0 === kk || kk.focus()
+                                null === SS || void 0 === SS || SS.focus()
                               }
-                            }), []), (0, Xk.useEffect)((() => {
-                              var kk, Fk;
-                              null === (kk = tk.current) || void 0 === kk || null === (Fk = kk.querySelector(".Active")) || void 0 === Fk || Fk.scrollIntoView({
+                            }), []), (0, tS.useEffect)((() => {
+                              var SS, HS;
+                              null === (SS = fS.current) || void 0 === SS || null === (HS = SS.querySelector(".Active")) || void 0 === HS || HS.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [qk]);
-                            const Jk = kk => {
-                              Tk(Yk(Fk, kk.page, kk.anchor)), Ik()
+                            }), [uS]);
+                            const CS = SS => {
+                              bS(MS(HS, SS.page, SS.anchor)), gS()
                             };
-                            return (0, ek.jsx)("div", {
+                            return (0, KS.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: kk => {
-                                kk.target === kk.currentTarget && Ik()
+                              onMouseDown: SS => {
+                                SS.target === SS.currentTarget && gS()
                               },
-                              children: (0, ek.jsxs)("div", {
+                              children: (0, KS.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: kk => {
-                                  kk.target !== Zk.current && kk.preventDefault()
+                                onMouseDown: SS => {
+                                  SS.target !== kS.current && SS.preventDefault()
                                 },
-                                onKeyDown: kk => {
-                                  if ("Escape" === kk.key) Ik();
-                                  else if ("Tab" === kk.key) {
-                                    var Fk;
-                                    kk.preventDefault(), null === (Fk = Zk.current) || void 0 === Fk || Fk.focus()
+                                onKeyDown: SS => {
+                                  if ("Escape" === SS.key) gS();
+                                  else if ("Tab" === SS.key) {
+                                    var HS;
+                                    SS.preventDefault(), null === (HS = kS.current) || void 0 === HS || HS.focus()
                                   }
                                 },
-                                children: [(0, ek.jsxs)("div", {
+                                children: [(0, KS.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, ek.jsx)(Hk, {
+                                  children: [(0, KS.jsx)(GS, {
                                     name: "magnifying-glass"
-                                  }), (0, ek.jsx)("input", {
-                                    ref: Zk,
+                                  }), (0, KS.jsx)("input", {
+                                    ref: kS,
                                     autoFocus: !0,
-                                    value: yk,
+                                    value: xS,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": wk.length > 0 ? `DocsSearchResult-${qk}` : void 0,
-                                    onChange: kk => {
-                                      ak(kk.target.value)
+                                    "aria-activedescendant": jS.length > 0 ? `DocsSearchResult-${uS}` : void 0,
+                                    onChange: SS => {
+                                      qS(SS.target.value)
                                     },
-                                    onKeyDown: kk => {
-                                      if ("ArrowDown" === kk.key || "ArrowUp" === kk.key) {
-                                        kk.preventDefault();
-                                        const Fk = "ArrowDown" === kk.key ? 1 : -1;
-                                        Lk((qk + Fk + wk.length) % Math.max(wk.length, 1))
-                                      } else "Enter" === kk.key && wk[qk] && Jk(wk[qk])
+                                    onKeyDown: SS => {
+                                      if ("ArrowDown" === SS.key || "ArrowUp" === SS.key) {
+                                        SS.preventDefault();
+                                        const HS = "ArrowDown" === SS.key ? 1 : -1;
+                                        IS((uS + HS + jS.length) % Math.max(jS.length, 1))
+                                      } else "Enter" === SS.key && jS[uS] && CS(jS[uS])
                                     }
-                                  }), (0, ek.jsx)("kbd", {
+                                  }), (0, KS.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, ek.jsxs)("ul", {
+                                }), (0, KS.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: tk,
+                                  ref: fS,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!jk && (0, ek.jsx)("li", {
+                                  children: [!aS && (0, KS.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), wk.map(((kk, Fk) => {
-                                    var Ik;
-                                    return (0, ek.jsxs)("li", {
-                                      id: `DocsSearchResult-${Fk}`,
+                                  }), jS.map(((SS, HS) => {
+                                    var gS;
+                                    return (0, KS.jsxs)("li", {
+                                      id: `DocsSearchResult-${HS}`,
                                       role: "option",
-                                      "aria-selected": Fk === qk,
-                                      className: ik()("DocsSearchResult", {
-                                        Active: Fk === qk
+                                      "aria-selected": HS === uS,
+                                      className: XS()("DocsSearchResult", {
+                                        Active: HS === uS
                                       }),
                                       onMouseMove: () => {
-                                        Lk(Fk)
+                                        IS(HS)
                                       },
                                       onClick: () => {
-                                        Jk(kk)
+                                        CS(SS)
                                       },
-                                      children: [(0, ek.jsx)(Hk, {
-                                        name: kk.page.icon
-                                      }), (0, ek.jsxs)("div", {
+                                      children: [(0, KS.jsx)(GS, {
+                                        name: SS.page.icon
+                                      }), (0, KS.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, ek.jsx)("div", {
+                                        children: [(0, KS.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, ek.jsx)(Ni, {
-                                            text: kk.title,
-                                            query: jk
+                                          children: (0, KS.jsx)(WX, {
+                                            text: SS.title,
+                                            query: aS
                                           })
-                                        }), kk.text && (0, ek.jsx)("div", {
+                                        }), SS.text && (0, KS.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, ek.jsx)(Ni, {
-                                            text: Ci(kk.text, jk),
-                                            query: jk
+                                          children: (0, KS.jsx)(WX, {
+                                            text: iX(SS.text, aS),
+                                            query: aS
                                           })
                                         })]
-                                      }), (0, ek.jsx)("span", {
+                                      }), (0, KS.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === kk.kind ? "Page" : null !== (Ik = kk.listedUnder) && void 0 !== Ik ? Ik : `${kk.kind} \xb7 ${kk.page.title}`
+                                        children: "Page" === SS.kind ? "Page" : null !== (gS = SS.listedUnder) && void 0 !== gS ? gS : `${SS.kind} \xb7 ${SS.page.title}`
                                       })]
-                                    }, `${kk.page.id}#${kk.anchor}`)
-                                  })), jk && 0 === wk.length && (0, ek.jsxs)("li", {
+                                    }, `${SS.page.id}#${SS.anchor}`)
+                                  })), aS && 0 === jS.length && (0, KS.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", yk, "\u201d."]
+                                    children: ["Nothing matches \u201c", xS, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function Wi(kk, Fk) {
-                            if (Fk < 10) return `${kk.toFixed(1)}s`;
-                            const Ik = Math.floor(kk);
-                            return `${Math.floor(Ik/60)}:${String(Ik%60).padStart(2,"0")}`
+                          function UX(SS, HS) {
+                            if (HS < 10) return `${SS.toFixed(1)}s`;
+                            const gS = Math.floor(SS);
+                            return `${Math.floor(gS/60)}:${String(gS%60).padStart(2,"0")}`
                           }
 
-                          function fi() {
-                            const kk = tX((kk => kk.track)),
-                              Fk = tX((kk => kk.volume)),
-                              [Ik, Tk] = (0, Xk.useState)(0),
-                              yk = (0, Xk.useRef)(IX);
-                            if ((0, Xk.useEffect)((() => {
-                                if (!kk) return;
-                                if (Tk(wX()), "playing" !== kk.status) return;
-                                let Fk = 0;
-                                const Ik = () => {
-                                  Tk(wX()), Fk = requestAnimationFrame(Ik)
+                          function pX() {
+                            const SS = It((SS => SS.track)),
+                              HS = It((SS => SS.volume)),
+                              [gS, bS] = (0, tS.useState)(0),
+                              xS = (0, tS.useRef)(Ht);
+                            if ((0, tS.useEffect)((() => {
+                                if (!SS) return;
+                                if (bS(jt()), "playing" !== SS.status) return;
+                                let HS = 0;
+                                const gS = () => {
+                                  bS(jt()), HS = requestAnimationFrame(gS)
                                 };
-                                return Fk = requestAnimationFrame(Ik), () => {
-                                  cancelAnimationFrame(Fk)
+                                return HS = requestAnimationFrame(gS), () => {
+                                  cancelAnimationFrame(HS)
                                 }
-                              }), [kk]), !kk) return null;
-                            const lk = "paused" !== kk.status,
-                              ak = Math.min(Ik, kk.duration);
-                            return (0, ek.jsx)("div", {
+                              }), [SS]), !SS) return null;
+                            const NS = "paused" !== SS.status,
+                              qS = Math.min(gS, SS.duration);
+                            return (0, KS.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, ek.jsxs)("section", {
+                              children: (0, KS.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, ek.jsx)("button", {
+                                children: [(0, KS.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": lk ? `Pause ${kk.name}` : `Play ${kk.name}`,
-                                  onClick: eX,
-                                  children: (0, ek.jsx)(Hk, {
-                                    name: lk ? "pause" : "play"
+                                  "aria-label": NS ? `Pause ${SS.name}` : `Play ${SS.name}`,
+                                  onClick: Kt,
+                                  children: (0, KS.jsx)(GS, {
+                                    name: NS ? "pause" : "play"
                                   })
-                                }), (0, ek.jsxs)("div", {
+                                }), (0, KS.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, ek.jsxs)("div", {
+                                  children: [(0, KS.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, ek.jsx)("code", {
-                                      children: kk.name
-                                    }), (0, ek.jsx)("span", {
-                                      children: kk.isSong ? "Song" : "Sound"
+                                    children: [(0, KS.jsx)("code", {
+                                      children: SS.name
+                                    }), (0, KS.jsx)("span", {
+                                      children: SS.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, ek.jsxs)("div", {
+                                  }), (0, KS.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, ek.jsx)("span", {
-                                      children: Wi(ak, kk.duration)
-                                    }), (0, ek.jsx)("input", {
+                                    children: [(0, KS.jsx)("span", {
+                                      children: UX(qS, SS.duration)
+                                    }), (0, KS.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: kk.duration || 1,
+                                      max: SS.duration || 1,
                                       step: .01,
-                                      value: ak,
-                                      disabled: 0 === kk.duration,
+                                      value: qS,
+                                      disabled: 0 === SS.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${Wi(ak,kk.duration)} of ${Wi(kk.duration,kk.duration)}`,
-                                      onChange: kk => {
-                                        const Fk = Number(kk.target.value);
-                                        ! function(kk) {
-                                          var Fk;
-                                          lX = kk, null === (Fk = iX) || void 0 === Fk || Fk.seek(kk)
-                                        }(Fk), Tk(Fk)
+                                      "aria-valuetext": `${UX(qS,SS.duration)} of ${UX(SS.duration,SS.duration)}`,
+                                      onChange: SS => {
+                                        const HS = Number(SS.target.value);
+                                        ! function(SS) {
+                                          var HS;
+                                          xt = SS, null === (HS = bt) || void 0 === HS || HS.seek(SS)
+                                        }(HS), bS(HS)
                                       }
-                                    }), (0, ek.jsx)("span", {
-                                      children: kk.duration > 0 ? Wi(kk.duration, kk.duration) : "\u2013"
+                                    }), (0, KS.jsx)("span", {
+                                      children: SS.duration > 0 ? UX(SS.duration, SS.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, ek.jsxs)("div", {
+                                }), (0, KS.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, ek.jsx)("button", {
+                                  children: [(0, KS.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === Fk ? "Unmute" : "Mute",
+                                    "aria-label": 0 === HS ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === Fk ? HX(yk.current) : (yk.current = Fk, HX(0))
+                                      0 === HS ? Gt(xS.current) : (xS.current = HS, Gt(0))
                                     },
-                                    children: (0, ek.jsx)(Hk, {
+                                    children: (0, KS.jsx)(GS, {
                                       name: "volume",
-                                      className: ik()({
-                                        Muted: 0 === Fk
+                                      className: XS()({
+                                        Muted: 0 === HS
                                       })
                                     })
-                                  }), (0, ek.jsx)("input", {
+                                  }), (0, KS.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: Fk,
+                                    value: HS,
                                     "aria-label": "Volume",
-                                    onChange: kk => {
-                                      HX(Number(kk.target.value))
+                                    onChange: SS => {
+                                      Gt(Number(SS.target.value))
                                     }
                                   })]
-                                }), (0, ek.jsx)("button", {
+                                }), (0, KS.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var Fk;
-                                    null === (Fk = document.querySelector(`[data-docs-track="${CSS.escape(XX(kk.name,kk.isSong))}"]`)) || void 0 === Fk || Fk.focus(), JX()
+                                    var HS;
+                                    null === (HS = document.querySelector(`[data-docs-track="${CSS.escape(gt(SS.name,SS.isSong))}"]`)) || void 0 === HS || HS.focus(), Ct()
                                   },
-                                  children: (0, ek.jsx)(Hk, {
+                                  children: (0, KS.jsx)(GS, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var Bi = Ik(41);
-                          const di = "docsTheme",
-                            Yi = window.matchMedia("(prefers-color-scheme: light)");
+                          var sX = gS(45);
+                          const BX = "docsTheme",
+                            MX = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function Ai(kk) {
+                          function FX(SS) {
                             let {
-                              theme: Fk,
-                              onChange: Ik
-                            } = kk;
-                            const Xk = "dark" === Fk ? "light" : "dark";
-                            return (0, ek.jsx)("button", {
+                              theme: HS,
+                              onChange: gS
+                            } = SS;
+                            const tS = "dark" === HS ? "light" : "dark";
+                            return (0, KS.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${Xk} theme`,
-                              title: `Switch to ${Xk} theme`,
+                              "aria-label": `Switch to ${tS} theme`,
+                              title: `Switch to ${tS} theme`,
                               onClick: () => {
-                                Ik(Xk)
+                                gS(tS)
                               },
-                              children: (0, ek.jsx)(Hk, {
-                                name: "dark" === Fk ? "moon" : "sun"
+                              children: (0, KS.jsx)(GS, {
+                                name: "dark" === HS ? "moon" : "sun"
                               })
                             })
                           }
-                          const gi = "https://github.com/Bloxdy/code-api",
-                            mi = "https://discord.gg/playbloxd",
-                            ri = 180,
-                            Di = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const RX = "https://github.com/Bloxdy/code-api",
+                            TX = "https://discord.gg/playbloxd",
+                            oX = 180,
+                            lX = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function Mi(kk) {
+                          function mX(SS) {
                             let {
-                              basePath: Fk,
-                              activePageId: Ik,
-                              onNavigate: Xk
-                            } = kk;
-                            return (0, ek.jsx)("nav", {
+                              basePath: HS,
+                              activePageId: gS,
+                              onNavigate: tS
+                            } = SS;
+                            return (0, KS.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: Ck.map((kk => (0, ek.jsxs)("div", {
+                              children: iS.map((SS => (0, KS.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, ek.jsx)("div", {
+                                children: [(0, KS.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: kk.title
-                                }), kk.pageIds.map((kk => {
-                                  var Tk;
-                                  const lk = Nk(kk);
-                                  return (0, ek.jsxs)(yk.e, {
-                                    to: Yk(Fk, lk),
-                                    className: ik()("DocsNavLink", {
-                                      Active: lk.id === Ik
+                                  children: SS.title
+                                }), SS.pageIds.map((SS => {
+                                  var bS;
+                                  const NS = WS(SS);
+                                  return (0, KS.jsxs)(xS.c, {
+                                    to: MS(HS, NS),
+                                    className: XS()("DocsNavLink", {
+                                      Active: NS.id === gS
                                     }),
-                                    "aria-current": lk.id === Ik ? "page" : void 0,
-                                    onClick: Xk,
-                                    children: [(0, ek.jsx)(Hk, {
-                                      name: lk.icon
-                                    }), (0, ek.jsx)("span", {
-                                      children: null !== (Tk = lk.navTitle) && void 0 !== Tk ? Tk : lk.title
+                                    "aria-current": NS.id === gS ? "page" : void 0,
+                                    onClick: tS,
+                                    children: [(0, KS.jsx)(GS, {
+                                      name: NS.icon
+                                    }), (0, KS.jsx)("span", {
+                                      children: null !== (bS = NS.navTitle) && void 0 !== bS ? bS : NS.title
                                     })]
-                                  }, lk.id)
+                                  }, NS.id)
                                 }))]
-                              }, kk.title)))
+                              }, SS.title)))
                             })
                           }
 
-                          function ky(kk) {
+                          function eX(SS) {
                             let {
-                              basePath: Fk,
-                              pageId: Ik
-                            } = kk;
-                            const Xk = Ck.flatMap((kk => kk.pageIds)),
-                              Tk = Xk.indexOf(Ik),
-                              ik = Tk > 0 ? Nk(Xk[Tk - 1]) : null,
-                              lk = Tk < Xk.length - 1 ? Nk(Xk[Tk + 1]) : null;
-                            return (0, ek.jsxs)("nav", {
+                              basePath: HS,
+                              pageId: gS
+                            } = SS;
+                            const tS = iS.flatMap((SS => SS.pageIds)),
+                              bS = tS.indexOf(gS),
+                              XS = bS > 0 ? WS(tS[bS - 1]) : null,
+                              NS = bS < tS.length - 1 ? WS(tS[bS + 1]) : null;
+                            return (0, KS.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [ik ? (0, ek.jsxs)(yk.e, {
+                              children: [XS ? (0, KS.jsxs)(xS.c, {
                                 className: "DocsPagerLink Previous",
-                                to: Yk(Fk, ik),
-                                children: [(0, ek.jsx)("span", {
+                                to: MS(HS, XS),
+                                children: [(0, KS.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, ek.jsx)("span", {
+                                }), (0, KS.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: ik.title
+                                  children: XS.title
                                 })]
-                              }) : (0, ek.jsx)("span", {}), lk && (0, ek.jsxs)(yk.e, {
+                              }) : (0, KS.jsx)("span", {}), NS && (0, KS.jsxs)(xS.c, {
                                 className: "DocsPagerLink Next",
-                                to: Yk(Fk, lk),
-                                children: [(0, ek.jsx)("span", {
+                                to: MS(HS, NS),
+                                children: [(0, KS.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, ek.jsx)("span", {
+                                }), (0, KS.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: lk.title
+                                  children: NS.title
                                 })]
                               })]
                             })
                           }
 
-                          function Fy(kk) {
+                          function rX(SS) {
                             let {
-                              basePath: Fk,
-                              embedded: Ik = !1
-                            } = kk;
+                              basePath: HS,
+                              embedded: gS = !1
+                            } = SS;
                             const {
-                              pageSlug: Tk = ""
-                            } = (0, lk.A)(), qk = (0, lk.q)(), Lk = (0, lk.u)(), tk = (Zk = Tk, Uk.find((kk => kk.slug === Zk)));
-                            var Zk;
-                            const [jk, wk] = function() {
-                              const [kk, Fk] = (0, Xk.useState)((() => {
-                                const kk = Bi.j.getItem(di);
-                                return "dark" === kk || "light" === kk ? kk : null
-                              })), [Ik, Tk] = (0, Xk.useState)(Yi.matches ? "light" : "dark");
-                              return (0, Xk.useEffect)((() => {
-                                const kk = () => {
-                                  Tk(Yi.matches ? "light" : "dark")
+                              pageSlug: bS = ""
+                            } = (0, NS.z)(), uS = (0, NS.t)(), IS = (0, NS.u)(), fS = (kS = bS, VS.find((SS => SS.slug === kS)));
+                            var kS;
+                            const [aS, jS] = function() {
+                              const [SS, HS] = (0, tS.useState)((() => {
+                                const SS = sX.g.getItem(BX);
+                                return "dark" === SS || "light" === SS ? SS : null
+                              })), [gS, bS] = (0, tS.useState)(MX.matches ? "light" : "dark");
+                              return (0, tS.useEffect)((() => {
+                                const SS = () => {
+                                  bS(MX.matches ? "light" : "dark")
                                 };
-                                return Yi.addEventListener("change", kk), () => {
-                                  Yi.removeEventListener("change", kk)
+                                return MX.addEventListener("change", SS), () => {
+                                  MX.removeEventListener("change", SS)
                                 }
-                              }), []), [null !== kk && void 0 !== kk ? kk : Ik, kk => {
-                                Bi.j.setItem(di, kk), Fk(kk)
+                              }), []), [null !== SS && void 0 !== SS ? SS : gS, SS => {
+                                sX.g.setItem(BX, SS), HS(SS)
                               }]
-                            }(), [Jk, xk] = (0, Xk.useState)(null), [Pk, Kk] = (0, Xk.useState)(!1), [Qk, sk] = (0, Xk.useState)(!1), [Vk, Sk] = (0, Xk.useState)([]), vk = function(kk, Fk) {
-                              const [Ik, Tk] = (0, Xk.useState)("");
-                              return (0, Xk.useEffect)((() => {
-                                if (!Fk) return;
-                                let Ik = 0;
-                                const Xk = () => {
-                                    var Xk, ik;
-                                    Ik = 0;
-                                    const yk = Fk.getBoundingClientRect().top + ri;
-                                    let lk = null !== (Xk = null === (ik = kk[0]) || void 0 === ik ? void 0 : ik.anchor) && void 0 !== Xk ? Xk : "";
-                                    for (const Fk of kk) {
-                                      const kk = document.getElementById(Fk.anchor);
-                                      kk && kk.getBoundingClientRect().top <= yk && (lk = Fk.anchor)
+                            }(), [CS, nS] = (0, tS.useState)(null), [PS, QS] = (0, tS.useState)(!1), [DS, wS] = (0, tS.useState)(!1), [hS, JS] = (0, tS.useState)([]), OS = function(SS, HS) {
+                              const [gS, bS] = (0, tS.useState)("");
+                              return (0, tS.useEffect)((() => {
+                                if (!HS) return;
+                                let gS = 0;
+                                const tS = () => {
+                                    var tS, XS;
+                                    gS = 0;
+                                    const xS = HS.getBoundingClientRect().top + oX;
+                                    let NS = null !== (tS = null === (XS = SS[0]) || void 0 === XS ? void 0 : XS.anchor) && void 0 !== tS ? tS : "";
+                                    for (const HS of SS) {
+                                      const SS = document.getElementById(HS.anchor);
+                                      SS && SS.getBoundingClientRect().top <= xS && (NS = HS.anchor)
                                     }
-                                    Fk.scrollTop + Fk.clientHeight >= Fk.scrollHeight - 2 && Fk.scrollTop > 0 && kk.length > 0 && (lk = kk[kk.length - 1].anchor), Tk(lk)
+                                    HS.scrollTop + HS.clientHeight >= HS.scrollHeight - 2 && HS.scrollTop > 0 && SS.length > 0 && (NS = SS[SS.length - 1].anchor), bS(NS)
                                   },
-                                  ik = () => {
-                                    Ik || (Ik = requestAnimationFrame(Xk))
+                                  XS = () => {
+                                    gS || (gS = requestAnimationFrame(tS))
                                   };
-                                return Xk(), Fk.addEventListener("scroll", ik, {
+                                return tS(), HS.addEventListener("scroll", XS, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(Ik), Fk.removeEventListener("scroll", ik)
+                                  cancelAnimationFrame(gS), HS.removeEventListener("scroll", XS)
                                 }
-                              }), [kk, Fk]), Ik
-                            }(Vk, Jk), Ek = "" === Tk && qk.hash ? function(kk) {
-                              const Fk = (0, zk.s)(kk);
-                              if (fk(Nk("welcome"), Fk)) return null;
-                              const Ik = Object.hasOwn(dk, Fk) ? dk[Fk] : null;
-                              if (Ik) return {
-                                page: Nk(Ik.pageId),
-                                anchor: Ik.anchor
+                              }), [SS, HS]), gS
+                            }(hS, CS), dS = "" === bS && uS.hash ? function(SS) {
+                              const HS = (0, ZS.n)(SS);
+                              if (pS(WS("welcome"), HS)) return null;
+                              const gS = Object.hasOwn(BS, HS) ? BS[HS] : null;
+                              if (gS) return {
+                                page: WS(gS.pageId),
+                                anchor: gS.anchor
                               };
-                              const Xk = Nk("readme");
-                              return fk(Xk, Fk) ? {
-                                page: Xk,
-                                anchor: Fk
-                              } : Bk(`#${Fk}`)
-                            }(qk.hash) : null;
-                            (0, Xk.useEffect)((() => (ak.d.set({
+                              const tS = WS("readme");
+                              return pS(tS, HS) ? {
+                                page: tS,
+                                anchor: HS
+                              } : sS(`#${HS}`)
+                            }(uS.hash) : null;
+                            (0, tS.useEffect)((() => (qS.b.set({
                               musicOnFromPage: !1
                             }), () => {
-                              ak.d.set({
+                              qS.b.set({
                                 musicOnFromPage: !0
-                              }), JX()
-                            })), []), (0, Xk.useEffect)((() => {
-                              const kk = kk => {
-                                const Fk = kk.target;
-                                if (Fk.closest(".DocsTextDialog")) return;
-                                const Ik = Fk.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(Fk.tagName);
-                                "k" === kk.key && (kk.metaKey || kk.ctrlKey) || "/" === kk.key && !Ik ? (kk.preventDefault(), sk(!0)) : "Escape" === kk.key && Kk(!1)
+                              }), Ct()
+                            })), []), (0, tS.useEffect)((() => {
+                              const SS = SS => {
+                                const HS = SS.target;
+                                if (HS.closest(".DocsTextDialog")) return;
+                                const gS = HS.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(HS.tagName);
+                                "k" === SS.key && (SS.metaKey || SS.ctrlKey) || "/" === SS.key && !gS ? (SS.preventDefault(), wS(!0)) : "Escape" === SS.key && QS(!1)
                               };
-                              return window.addEventListener("keydown", kk), () => {
-                                window.removeEventListener("keydown", kk)
+                              return window.addEventListener("keydown", SS), () => {
+                                window.removeEventListener("keydown", SS)
                               }
                             }), []);
-                            const Ok = (0, Xk.useRef)(null);
-                            (0, Xk.useLayoutEffect)((() => {
-                              var kk, Fk;
-                              if (!Jk) return;
-                              const Ik = Ok.current === qk.pathname;
-                              Ok.current = qk.pathname;
-                              const Xk = (0, zk.s)(qk.hash),
-                                Tk = Xk ? document.getElementById(Xk) : null;
-                              if (null === (kk = Jk.querySelector(".DocsTargeted")) || void 0 === kk || kk.classList.remove("DocsTargeted"), null === Tk || void 0 === Tk || null === (Fk = Tk.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === Fk || Fk.classList.add("DocsTargeted"), Tk) {
-                                var ik;
-                                const kk = Tk.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (ik = Tk.closest(".DocsChangelogEntry")) && void 0 !== ik ? ik : Tk).scrollIntoView({
-                                  block: kk ? "center" : "start",
-                                  behavior: Ik ? "smooth" : "auto"
+                            const cS = (0, tS.useRef)(null);
+                            (0, tS.useLayoutEffect)((() => {
+                              var SS, HS;
+                              if (!CS) return;
+                              const gS = cS.current === uS.pathname;
+                              cS.current = uS.pathname;
+                              const tS = (0, ZS.n)(uS.hash),
+                                bS = tS ? document.getElementById(tS) : null;
+                              if (null === (SS = CS.querySelector(".DocsTargeted")) || void 0 === SS || SS.classList.remove("DocsTargeted"), null === bS || void 0 === bS || null === (HS = bS.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === HS || HS.classList.add("DocsTargeted"), bS) {
+                                var XS;
+                                const SS = bS.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (XS = bS.closest(".DocsChangelogEntry")) && void 0 !== XS ? XS : bS).scrollIntoView({
+                                  block: SS ? "center" : "start",
+                                  behavior: gS ? "smooth" : "auto"
                                 })
-                              } else Ik || Jk.scrollTo({
+                              } else gS || CS.scrollTo({
                                 top: 0
                               })
-                            }), [Jk, qk.pathname, qk.hash, qk.key]);
-                            const nk = (0, Xk.useCallback)((() => {
-                                Kk(!1)
+                            }), [CS, uS.pathname, uS.hash, uS.key]);
+                            const vS = (0, tS.useCallback)((() => {
+                                QS(!1)
                               }), []),
-                              Gk = (0, Xk.useCallback)((kk => {
-                                Lk({
-                                  hash: kk
+                              ES = (0, tS.useCallback)((SS => {
+                                IS({
+                                  hash: SS
                                 })
-                              }), [Lk]);
-                            if (Ek) return (0, ek.jsx)(lk.d, {
+                              }), [IS]);
+                            if (dS) return (0, KS.jsx)(NS.e, {
                               replace: !0,
-                              to: Yk(Fk, Ek.page, Ek.anchor)
+                              to: MS(HS, dS.page, dS.anchor)
                             });
-                            if (!tk) return (0, ek.jsx)(lk.d, {
+                            if (!fS) return (0, KS.jsx)(NS.e, {
                               replace: !0,
-                              to: Fk
+                              to: HS
                             });
-                            const pk = Ik ? "div" : "main";
-                            return (0, ek.jsx)(eF.Provider, {
-                              value: Fk,
-                              children: (0, ek.jsx)(wF.Provider, {
-                                value: Jk,
-                                children: (0, ek.jsxs)("div", {
-                                  ref: xk,
-                                  className: ik()("DocsSite", {
-                                    Embedded: Ik,
-                                    NavOpen: Pk
+                            const LS = gS ? "div" : "main";
+                            return (0, KS.jsx)(aH.Provider, {
+                              value: HS,
+                              children: (0, KS.jsx)(KH.Provider, {
+                                value: CS,
+                                children: (0, KS.jsxs)("div", {
+                                  ref: nS,
+                                  className: XS()("DocsSite", {
+                                    Embedded: gS,
+                                    NavOpen: PS
                                   }),
-                                  "data-theme": jk,
-                                  children: [(0, ek.jsxs)("header", {
+                                  "data-theme": aS,
+                                  children: [(0, KS.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, ek.jsx)("button", {
+                                    children: [(0, KS.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": Pk ? "Close menu" : "Open menu",
-                                      "aria-expanded": Pk,
+                                      "aria-label": PS ? "Close menu" : "Open menu",
+                                      "aria-expanded": PS,
                                       onClick: () => {
-                                        Kk(!Pk)
+                                        QS(!PS)
                                       },
-                                      children: (0, ek.jsx)(Hk, {
-                                        name: Pk ? "cross" : "menu"
+                                      children: (0, KS.jsx)(GS, {
+                                        name: PS ? "cross" : "menu"
                                       })
-                                    }), (0, ek.jsxs)(yk.e, {
-                                      to: Fk,
+                                    }), (0, KS.jsxs)(xS.c, {
+                                      to: HS,
                                       className: "DocsBrand",
-                                      children: [(0, ek.jsx)("img", {
+                                      children: [(0, KS.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, ek.jsx)("span", {
+                                      }), (0, KS.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, ek.jsx)("span", {
+                                      }), (0, KS.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, ek.jsxs)("button", {
+                                    }), (0, KS.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        sk(!0)
+                                        wS(!0)
                                       },
-                                      children: [(0, ek.jsx)(Hk, {
+                                      children: [(0, KS.jsx)(GS, {
                                         name: "magnifying-glass"
-                                      }), (0, ek.jsx)("span", {
+                                      }), (0, KS.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, ek.jsxs)("kbd", {
-                                        children: [Di ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, KS.jsxs)("kbd", {
+                                        children: [lX ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, ek.jsxs)("div", {
+                                    }), (0, KS.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, ek.jsxs)("a", {
-                                        href: mi,
+                                      children: [(0, KS.jsxs)("a", {
+                                        href: TX,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, ek.jsx)(Hk, {
+                                        children: [(0, KS.jsx)(GS, {
                                           name: "discord"
-                                        }), (0, ek.jsx)("span", {
+                                        }), (0, KS.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, ek.jsxs)("a", {
-                                        href: gi,
+                                      }), (0, KS.jsxs)("a", {
+                                        href: RX,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, ek.jsx)(Hk, {
+                                        children: [(0, KS.jsx)(GS, {
                                           name: "external-link"
-                                        }), (0, ek.jsx)("span", {
+                                        }), (0, KS.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !Ik && (0, ek.jsxs)(yk.e, {
+                                      }), !gS && (0, KS.jsxs)(xS.c, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, ek.jsx)(Hk, {
+                                        children: [(0, KS.jsx)(GS, {
                                           name: "play"
-                                        }), (0, ek.jsx)("span", {
+                                        }), (0, KS.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, ek.jsx)(Ai, {
-                                        theme: jk,
-                                        onChange: wk
+                                      }), (0, KS.jsx)(FX, {
+                                        theme: aS,
+                                        onChange: jS
                                       })]
                                     })]
-                                  }), (0, ek.jsxs)("div", {
+                                  }), (0, KS.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, ek.jsx)("aside", {
+                                    children: [(0, KS.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, ek.jsx)(Mi, {
-                                        basePath: Fk,
-                                        activePageId: tk.id,
-                                        onNavigate: nk
+                                      children: (0, KS.jsx)(mX, {
+                                        basePath: HS,
+                                        activePageId: fS.id,
+                                        onNavigate: vS
                                       })
-                                    }), (0, ek.jsx)("div", {
+                                    }), (0, KS.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: nk
-                                    }), (0, ek.jsxs)(pk, {
+                                      onClick: vS
+                                    }), (0, KS.jsxs)(LS, {
                                       className: "DocsMain",
-                                      children: [(0, ek.jsx)(si, {
-                                        page: tk,
-                                        onTocChange: Sk
-                                      }, tk.id), (0, ek.jsx)(ky, {
-                                        basePath: Fk,
-                                        pageId: tk.id
+                                      children: [(0, KS.jsx)(wX, {
+                                        page: fS,
+                                        onTocChange: JS
+                                      }, fS.id), (0, KS.jsx)(eX, {
+                                        basePath: HS,
+                                        pageId: fS.id
                                       })]
-                                    }), (0, ek.jsx)("aside", {
-                                      className: ik()("DocsToc", {
-                                        Timeline: "changelog" === tk.layout
+                                    }), (0, KS.jsx)("aside", {
+                                      className: XS()("DocsToc", {
+                                        Timeline: "changelog" === fS.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, ek.jsx)(oi, {
-                                        isChangelog: "changelog" === tk.layout,
-                                        toc: Vk,
-                                        activeAnchor: vk,
-                                        onNavigate: Gk
+                                      children: (0, KS.jsx)(OX, {
+                                        isChangelog: "changelog" === fS.layout,
+                                        toc: hS,
+                                        activeAnchor: OS,
+                                        onNavigate: ES
                                       })
                                     })]
-                                  }), (0, ek.jsx)(fi, {}), Qk && (0, ek.jsx)(ci, {
-                                    basePath: Fk,
+                                  }), (0, KS.jsx)(pX, {}), DS && (0, KS.jsx)(zX, {
+                                    basePath: HS,
                                     onClose: () => {
-                                      sk(!1)
+                                      wS(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 4739: (kk, Fk, Ik) => {
-                          Ik.d(Fk, {
-                            A: () => Zk,
-                            d: () => Xk,
-                            h: () => yk,
-                            l: () => Hk,
-                            n: () => wk,
-                            p: () => lk,
-                            s: () => Tk,
-                            t: () => ik,
-                            u: () => ek,
-                            w: () => jk
+                        }, 4859: (SS, HS, gS) => {
+                          gS.d(HS, {
+                            A: () => kS,
+                            d: () => tS,
+                            e: () => xS,
+                            f: () => GS,
+                            h: () => jS,
+                            l: () => NS,
+                            n: () => bS,
+                            r: () => XS,
+                            u: () => KS,
+                            y: () => aS
                           });
-                          const Xk = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const tS = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function Tk(kk) {
+                          function bS(SS) {
                             try {
-                              return decodeURIComponent(kk.slice(1))
+                              return decodeURIComponent(SS.slice(1))
                             } catch {
-                              return kk.slice(1)
+                              return SS.slice(1)
                             }
                           }
 
-                          function ik(kk) {
-                            return kk.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function XS(SS) {
+                            return SS.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const yk = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Xk.source}`, "g");
+                          const xS = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${tS.source}`, "g");
 
-                          function lk(kk, Fk) {
-                            return 2 === kk.length ? Fk.replace(/^ (.*) $/, "$1") : Fk
-                          }
-
-                          function ak(kk) {
-                            return "" === kk.trim()
+                          function NS(SS, HS) {
+                            return 2 === SS.length ? HS.replace(/^ (.*) $/, "$1") : HS
                           }
 
-                          function qk(kk) {
-                            const Fk = [];
-                            for (const Ik of kk.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Fk.length > 0 && Fk[Fk.length - 1].endsWith("\\") ? Fk[Fk.length - 1] += `|${Ik}` : Fk.push(Ik);
-                            return Fk.map((kk => kk.trim().replaceAll("\\|", "|")))
+                          function qS(SS) {
+                            return "" === SS.trim()
                           }
-                          const Lk = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function tk(kk) {
-                            const Fk = [],
-                              Ik = [{
+                          function uS(SS) {
+                            const HS = [];
+                            for (const gS of SS.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) HS.length > 0 && HS[HS.length - 1].endsWith("\\") ? HS[HS.length - 1] += `|${gS}` : HS.push(gS);
+                            return HS.map((SS => SS.trim().replaceAll("\\|", "|")))
+                          }
+                          const IS = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function fS(SS) {
+                            const HS = [],
+                              gS = [{
                                 indent: -1,
-                                items: Fk
+                                items: HS
                               }];
-                            let Xk = null;
-                            for (const Tk of kk) {
-                              const kk = Tk.match(Lk);
-                              if (!kk) {
-                                Xk && (Xk.text += ` ${Tk.trim()}`);
+                            let tS = null;
+                            for (const bS of SS) {
+                              const SS = bS.match(IS);
+                              if (!SS) {
+                                tS && (tS.text += ` ${bS.trim()}`);
                                 continue
                               }
-                              const Fk = kk[1].replace(/\t/g, "  ").length;
-                              for (; Fk <= Ik[Ik.length - 1].indent;) Ik.pop();
-                              Xk = {
-                                text: kk[3].trim(),
+                              const HS = SS[1].replace(/\t/g, "  ").length;
+                              for (; HS <= gS[gS.length - 1].indent;) gS.pop();
+                              tS = {
+                                text: SS[3].trim(),
                                 children: []
-                              }, Ik[Ik.length - 1].items.push(Xk), Ik.push({
-                                indent: Fk,
-                                items: Xk.children
+                              }, gS[gS.length - 1].items.push(tS), gS.push({
+                                indent: HS,
+                                items: tS.children
                               })
                             }
-                            return Fk
+                            return HS
                           }
 
-                          function Zk(kk) {
-                            const Fk = kk.replace(/\r\n/g, "\n").split("\n"),
-                              Ik = [];
-                            let Xk = 0;
-                            for (; Xk < Fk.length;) {
-                              const kk = Fk[Xk];
-                              if (ak(kk)) {
-                                Xk++;
+                          function kS(SS) {
+                            const HS = SS.replace(/\r\n/g, "\n").split("\n"),
+                              gS = [];
+                            let tS = 0;
+                            for (; tS < HS.length;) {
+                              const SS = HS[tS];
+                              if (qS(SS)) {
+                                tS++;
                                 continue
                               }
-                              const Tk = kk.match(/^\s*```\s*(\w*)\s*$/);
-                              if (Tk) {
-                                const kk = [];
-                                for (Xk++; Xk < Fk.length && !/^\s*```\s*$/.test(Fk[Xk]);) kk.push(Fk[Xk]), Xk++;
-                                Xk++, Ik.push({
+                              const bS = SS.match(/^\s*```\s*(\w*)\s*$/);
+                              if (bS) {
+                                const SS = [];
+                                for (tS++; tS < HS.length && !/^\s*```\s*$/.test(HS[tS]);) SS.push(HS[tS]), tS++;
+                                tS++, gS.push({
                                   kind: "code",
-                                  lang: Tk[1] || "text",
-                                  code: kk.join("\n").replace(/\s+$/, "")
+                                  lang: bS[1] || "text",
+                                  code: SS.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const yk = kk.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (yk) {
-                                const kk = yk[2].trim();
-                                Ik.push({
+                              const xS = SS.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (xS) {
+                                const SS = xS[2].trim();
+                                gS.push({
                                   kind: "heading",
-                                  level: yk[1].length,
-                                  text: kk,
-                                  anchor: ik(kk)
-                                }), Xk++;
+                                  level: xS[1].length,
+                                  text: SS,
+                                  anchor: XS(SS)
+                                }), tS++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(kk)) {
-                                Ik.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(SS)) {
+                                gS.push({
                                   kind: "rule"
-                                }), Xk++;
+                                }), tS++;
                                 continue
                               }
-                              if (kk.trim().startsWith("|") && Xk + 1 < Fk.length && /^\s*\|[\s:|-]+\|\s*$/.test(Fk[Xk + 1])) {
-                                const Tk = qk(kk),
-                                  ik = [];
-                                for (Xk += 2; Xk < Fk.length && Fk[Xk].trim().startsWith("|");) ik.push(qk(Fk[Xk])), Xk++;
-                                Ik.push({
+                              if (SS.trim().startsWith("|") && tS + 1 < HS.length && /^\s*\|[\s:|-]+\|\s*$/.test(HS[tS + 1])) {
+                                const bS = uS(SS),
+                                  XS = [];
+                                for (tS += 2; tS < HS.length && HS[tS].trim().startsWith("|");) XS.push(uS(HS[tS])), tS++;
+                                gS.push({
                                   kind: "table",
-                                  header: Tk,
-                                  rows: ik
+                                  header: bS,
+                                  rows: XS
                                 });
                                 continue
                               }
-                              if (kk.startsWith(">")) {
-                                const kk = [];
-                                for (; Xk < Fk.length && Fk[Xk].startsWith(">");) kk.push(Fk[Xk].replace(/^>\s?/, "")), Xk++;
-                                Ik.push({
+                              if (SS.startsWith(">")) {
+                                const SS = [];
+                                for (; tS < HS.length && HS[tS].startsWith(">");) SS.push(HS[tS].replace(/^>\s?/, "")), tS++;
+                                gS.push({
                                   kind: "quote",
-                                  blocks: Zk(kk.join("\n"))
+                                  blocks: kS(SS.join("\n"))
                                 });
                                 continue
                               }
-                              if (Lk.test(kk)) {
-                                const Tk = [],
-                                  ik = /^\s*\d+\./.test(kk);
-                                for (; Xk < Fk.length && !ak(Fk[Xk]) && (Lk.test(Fk[Xk]) || /^\s+\S/.test(Fk[Xk]));) Tk.push(Fk[Xk]), Xk++;
-                                Ik.push({
+                              if (IS.test(SS)) {
+                                const bS = [],
+                                  XS = /^\s*\d+\./.test(SS);
+                                for (; tS < HS.length && !qS(HS[tS]) && (IS.test(HS[tS]) || /^\s+\S/.test(HS[tS]));) bS.push(HS[tS]), tS++;
+                                gS.push({
                                   kind: "list",
-                                  ordered: ik,
-                                  items: tk(Tk)
+                                  ordered: XS,
+                                  items: fS(bS)
                                 });
                                 continue
                               }
-                              const lk = [];
-                              for (; Xk < Fk.length && !ak(Fk[Xk]) && !/^\s*```/.test(Fk[Xk]) && !/^#{1,6}\s/.test(Fk[Xk]) && !Fk[Xk].startsWith(">") && !Lk.test(Fk[Xk]) && (!Fk[Xk].trim().startsWith("|") || 0 !== lk.length);) lk.push(Fk[Xk].trim()), Xk++;
-                              0 === lk.length && (lk.push(Fk[Xk].trim()), Xk++), Ik.push({
+                              const NS = [];
+                              for (; tS < HS.length && !qS(HS[tS]) && !/^\s*```/.test(HS[tS]) && !/^#{1,6}\s/.test(HS[tS]) && !HS[tS].startsWith(">") && !IS.test(HS[tS]) && (!HS[tS].trim().startsWith("|") || 0 !== NS.length);) NS.push(HS[tS].trim()), tS++;
+                              0 === NS.length && (NS.push(HS[tS].trim()), tS++), gS.push({
                                 kind: "paragraph",
-                                text: lk.join(" ")
+                                text: NS.join(" ")
                               })
                             }
-                            return Ik
+                            return gS
                           }
 
-                          function jk(kk) {
-                            let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const Ik = Zk(kk);
-                            let Xk = "";
-                            const Tk = [],
-                              ik = [],
-                              yk = new Map;
-                            for (const qk of Ik) {
-                              if ("heading" === qk.kind) {
-                                var lk;
-                                const kk = (null !== (lk = yk.get(qk.anchor)) && void 0 !== lk ? lk : 0) + 1;
-                                yk.set(qk.anchor, kk), kk > 1 && (qk.anchor = `${qk.anchor}-${kk}`)
+                          function aS(SS) {
+                            let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const gS = kS(SS);
+                            let tS = "";
+                            const bS = [],
+                              XS = [],
+                              xS = new Map;
+                            for (const uS of gS) {
+                              if ("heading" === uS.kind) {
+                                var NS;
+                                const SS = (null !== (NS = xS.get(uS.anchor)) && void 0 !== NS ? NS : 0) + 1;
+                                xS.set(uS.anchor, SS), SS > 1 && (uS.anchor = `${uS.anchor}-${SS}`)
                               }
-                              if ("heading" === qk.kind && 1 === qk.level && !Xk) {
-                                Xk = qk.text;
+                              if ("heading" === uS.kind && 1 === uS.level && !tS) {
+                                tS = uS.text;
                                 continue
                               }
-                              if ("heading" === qk.kind && qk.level <= Fk) {
-                                ik.push({
-                                  heading: qk,
+                              if ("heading" === uS.kind && uS.level <= HS) {
+                                XS.push({
+                                  heading: uS,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const kk = ik.at(-1);
-                              kk ? kk.blocks.push(qk) : Tk.push(qk)
+                              const SS = XS.at(-1);
+                              SS ? SS.blocks.push(uS) : bS.push(uS)
                             }
-                            const ak = kk => {
+                            const qS = SS => {
                               for (;
-                                "rule" === (null === (Fk = kk.at(-1)) || void 0 === Fk ? void 0 : Fk.kind);) {
-                                var Fk;
-                                kk.pop()
+                                "rule" === (null === (HS = SS.at(-1)) || void 0 === HS ? void 0 : HS.kind);) {
+                                var HS;
+                                SS.pop()
                               }
                             };
-                            ak(Tk);
-                            for (const qk of ik) ak(qk.blocks);
+                            qS(bS);
+                            for (const uS of XS) qS(uS.blocks);
                             return {
-                              title: Xk,
-                              intro: Tk,
-                              sections: ik
+                              title: tS,
+                              intro: bS,
+                              sections: XS
                             }
                           }
 
-                          function ek(kk) {
+                          function KS(SS) {
                             return [{
                               heading: null,
-                              blocks: kk.intro
-                            }, ...kk.sections.map((kk => ({
-                              heading: kk.heading,
-                              blocks: kk.blocks
+                              blocks: SS.intro
+                            }, ...SS.sections.map((SS => ({
+                              heading: SS.heading,
+                              blocks: SS.blocks
                             })))]
                           }
 
-                          function wk(kk) {
-                            return kk.flatMap((kk => "code" === kk.kind ? [kk] : "quote" === kk.kind ? wk(kk.blocks) : []))
+                          function jS(SS) {
+                            return SS.flatMap((SS => "code" === SS.kind ? [SS] : "quote" === SS.kind ? jS(SS.blocks) : []))
                           }
 
-                          function Hk(kk) {
-                            switch (kk.kind) {
+                          function GS(SS) {
+                            switch (SS.kind) {
                               case "heading":
                               case "paragraph":
-                                return kk.text;
+                                return SS.text;
                               case "code":
-                                return kk.code;
+                                return SS.code;
                               case "table":
-                                return [kk.header, ...kk.rows].map((kk => kk.join(" "))).join(" ");
+                                return [SS.header, ...SS.rows].map((SS => SS.join(" "))).join(" ");
                               case "list": {
-                                const Fk = kk => kk.map((kk => `${kk.text} ${Fk(kk.children)}`)).join(" ");
-                                return Fk(kk.items)
+                                const HS = SS => SS.map((SS => `${SS.text} ${HS(SS.children)}`)).join(" ");
+                                return HS(SS.items)
                               }
                               case "quote":
-                                return kk.blocks.map(Hk).join(" ");
+                                return SS.blocks.map(GS).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 4833: (kk, Fk, Ik) => {
-                          Ik.d(Fk, {
-                            b: () => lk
+                        }, 4976: (SS, HS, gS) => {
+                          gS.d(HS, {
+                            c: () => NS
                           });
-                          var Xk = Ik(58),
-                            Tk = Ik(318),
-                            ik = Ik(1864),
-                            yk = Ik(1096);
+                          var tS = gS(64),
+                            bS = gS(369),
+                            XS = gS(2050),
+                            xS = gS(1181);
 
-                          function lk(kk) {
+                          function NS(SS) {
                             let {
-                              text: Fk
-                            } = kk;
-                            const Ik = [];
-                            let lk = "";
-                            return (0, Tk.oc)(Fk).forEach(((kk, Fk) => {
-                              if ("string" === typeof kk || !(0, ik.e)(kk.icon)) return void(lk += "string" === typeof kk ? kk : kk.icon);
-                              const Tk = Math.max(0, lk.trimEnd().search(/\S{1,12}$/));
-                              Ik.push((0, yk.jsxs)(Xk.Fragment, {
-                                children: [lk.slice(0, Tk), (0, yk.jsxs)("span", {
+                              text: HS
+                            } = SS;
+                            const gS = [];
+                            let NS = "";
+                            return (0, bS.ec)(HS).forEach(((SS, HS) => {
+                              if ("string" === typeof SS || !(0, XS.g)(SS.icon)) return void(NS += "string" === typeof SS ? SS : SS.icon);
+                              const bS = Math.max(0, NS.trimEnd().search(/\S{1,12}$/));
+                              gS.push((0, xS.jsxs)(tS.Fragment, {
+                                children: [NS.slice(0, bS), (0, xS.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [lk.slice(Tk), (0, yk.jsx)("span", {
+                                  children: [NS.slice(bS), (0, xS.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": kk.icon,
-                                    children: (0, yk.jsx)(ik.d, {
-                                      itemName: kk.icon,
+                                    "aria-label": SS.icon,
+                                    children: (0, xS.jsx)(XS.e, {
+                                      itemName: SS.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, Fk)), lk = ""
-                            })), Ik.push(lk), (0, yk.jsx)(yk.Fragment, {
-                              children: Ik
+                              }, HS)), NS = ""
+                            })), gS.push(NS), (0, xS.jsx)(xS.Fragment, {
+                              children: gS
                             })
                           }
-                        }, 4767: (kk, Fk, Ik) => {
-                          Ik.d(Fk, {
-                            d: () => xk,
-                            b: () => Jk
+                        }, 4894: (SS, HS, gS) => {
+                          gS.d(HS, {
+                            f: () => nS,
+                            d: () => CS
                           });
-                          var Xk = Ik(58),
-                            Tk = Ik(1402),
-                            ik = Ik(1849),
-                            yk = Ik(4775),
-                            lk = Ik(1096);
-                          const ak = (0, Xk.memo)((function(kk) {
+                          var tS = gS(64),
+                            bS = gS(1522),
+                            XS = gS(2031),
+                            xS = gS(4898),
+                            NS = gS(1181);
+                          const qS = (0, tS.memo)((function(SS) {
                             let {
-                              initialParameters: Fk
-                            } = kk;
-                            const Ik = (0, Xk.useRef)(null),
-                              Tk = (0, Xk.useRef)(null),
-                              ak = (0, Xk.useRef)(0),
-                              qk = (0, Xk.useRef)(null),
-                              Lk = Fk.description,
-                              tk = Fk.GI,
+                              initialParameters: HS
+                            } = SS;
+                            const gS = (0, tS.useRef)(null),
+                              bS = (0, tS.useRef)(null),
+                              qS = (0, tS.useRef)(0),
+                              uS = (0, tS.useRef)(null),
+                              IS = HS.description,
+                              fS = HS.Og,
                               {
-                                scale: Zk,
-                                rotation: jk
-                              } = null !== Fk && void 0 !== Fk ? Fk : {},
-                              ek = (0, yk.g)();
-                            return (0, Xk.useEffect)((() => {
-                              const kk = ek.onFrame((() => {
-                                const kk = ek.getState();
-                                if (!kk.isActive || !Ik.current || !Tk.current) return;
-                                const Fk = kk.state;
-                                if (Ik.current.value = Fk.progress, Fk.clickCount > ak.current) {
-                                  ak.current = Fk.clickCount;
-                                  const kk = Tk.current;
-                                  kk.classList.add("pulse"), qk.current = setTimeout((() => {
-                                    kk.classList.remove("pulse")
+                                scale: kS,
+                                rotation: aS
+                              } = null !== HS && void 0 !== HS ? HS : {},
+                              KS = (0, xS.d)();
+                            return (0, tS.useEffect)((() => {
+                              const SS = KS.onFrame((() => {
+                                const SS = KS.getState();
+                                if (!SS.isActive || !gS.current || !bS.current) return;
+                                const HS = SS.state;
+                                if (gS.current.value = HS.progress, HS.clickCount > qS.current) {
+                                  qS.current = HS.clickCount;
+                                  const SS = bS.current;
+                                  SS.classList.add("pulse"), uS.current = setTimeout((() => {
+                                    SS.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(qk.current), kk()
+                                clearTimeout(uS.current), SS()
                               }
-                            }), [ek]), (0, lk.jsx)(lk.Fragment, {
-                              children: (0, lk.jsxs)("div", {
+                            }), [KS]), (0, NS.jsx)(NS.Fragment, {
+                              children: (0, NS.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== Zk && {
-                                    "--scale": Zk
+                                  ...null !== kS && {
+                                    "--scale": kS
                                   },
-                                  ...null !== jk && {
-                                    "--rotation": `${jk}deg`
+                                  ...null !== aS && {
+                                    "--rotation": `${aS}deg`
                                   }
                                 },
-                                children: [(0, lk.jsx)("progress", {
+                                children: [(0, NS.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: Ik
-                                }), (0, lk.jsx)("span", {
+                                  ref: gS
+                                }), (0, NS.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: Tk,
-                                  children: (0, lk.jsx)(ik.c, {
+                                  ref: bS,
+                                  children: (0, NS.jsx)(XS.c, {
                                     text: [{
-                                      icon: tk
+                                      icon: fS
                                     }]
                                   })
-                                }), (0, lk.jsx)("div", {
+                                }), (0, NS.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, lk.jsx)(ik.c, {
-                                    text: Lk
+                                  children: (0, NS.jsx)(XS.c, {
+                                    text: IS
                                   })
                                 })]
                               })
                             })
                           }));
-                          var qk = Ik(1055),
-                            Lk = Ik.n(qk);
-                          const tk = 2 * Math.PI * 90,
-                            Zk = (0, Xk.memo)((function(kk) {
+                          var uS = gS(1121),
+                            IS = gS.n(uS);
+                          const fS = 2 * Math.PI * 90,
+                            kS = (0, tS.memo)((function(SS) {
                               let {
-                                initialParameters: Fk
-                              } = kk;
-                              const Ik = (0, Xk.useRef)(null),
-                                Tk = (0, Xk.useRef)(null),
-                                ak = (0, Xk.useRef)(null),
-                                qk = Fk.label,
-                                Zk = Fk.icon,
-                                jk = Fk.bI,
+                                initialParameters: HS
+                              } = SS;
+                              const gS = (0, tS.useRef)(null),
+                                bS = (0, tS.useRef)(null),
+                                qS = (0, tS.useRef)(null),
+                                uS = HS.label,
+                                kS = HS.icon,
+                                aS = HS.Eg,
                                 {
-                                  scale: ek,
-                                  rotation: wk,
-                                  RI: Hk
-                                } = null !== Fk && void 0 !== Fk ? Fk : {},
-                                Jk = (0, yk.g)();
-                              return (0, Xk.useEffect)((() => {
-                                const kk = Jk.onFrame((() => {
-                                  var kk, Fk;
-                                  const Xk = Jk.getState();
-                                  if (!Xk.isActive || !Tk.current) return;
-                                  const ik = Xk.state,
-                                    yk = null !== (kk = ik.timeRemaining) && void 0 !== kk ? kk : 0,
-                                    lk = null !== (Fk = ik.uI) && void 0 !== Fk ? Fk : 1,
-                                    qk = tk * (1 - yk / lk);
-                                  Tk.current.style.strokeDashoffset = `${qk}`, Ik.current && (Ik.current.style.opacity = yk > 0 ? "1" : "0"), ak.current && jk && (ak.current.textContent = `${(yk/1e3).toFixed(1)}s`)
+                                  scale: KS,
+                                  rotation: jS,
+                                  Lg: GS
+                                } = null !== HS && void 0 !== HS ? HS : {},
+                                CS = (0, xS.d)();
+                              return (0, tS.useEffect)((() => {
+                                const SS = CS.onFrame((() => {
+                                  var SS, HS;
+                                  const tS = CS.getState();
+                                  if (!tS.isActive || !bS.current) return;
+                                  const XS = tS.state,
+                                    xS = null !== (SS = XS.timeRemaining) && void 0 !== SS ? SS : 0,
+                                    NS = null !== (HS = XS.vg) && void 0 !== HS ? HS : 1,
+                                    uS = fS * (1 - xS / NS);
+                                  bS.current.style.strokeDashoffset = `${uS}`, gS.current && (gS.current.style.opacity = xS > 0 ? "1" : "0"), qS.current && aS && (qS.current.textContent = `${(xS/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  kk()
+                                  SS()
                                 }
-                              }), [Jk, jk]), (0, lk.jsxs)("div", {
+                              }), [CS, aS]), (0, NS.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: Ik,
+                                ref: gS,
                                 style: {
-                                  ...null !== ek && {
-                                    "--scale": ek
+                                  ...null !== KS && {
+                                    "--scale": KS
                                   },
-                                  ...null !== wk && {
-                                    "--rotation": `${wk}deg`
+                                  ...null !== jS && {
+                                    "--rotation": `${jS}deg`
                                   }
                                 },
-                                children: [(0, lk.jsxs)("div", {
+                                children: [(0, NS.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, lk.jsxs)("svg", {
+                                  children: [(0, NS.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, lk.jsx)("circle", {
+                                    children: [(0, NS.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, lk.jsx)("circle", {
+                                    }), (0, NS.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6295,80 +6295,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: tk,
-                                      ref: Tk
+                                      strokeDasharray: fS,
+                                      ref: bS
                                     })]
-                                  }), (0, lk.jsx)("div", {
+                                  }), (0, NS.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, lk.jsx)(ik.c, {
+                                    children: (0, NS.jsx)(XS.c, {
                                       text: [{
-                                        icon: Zk
+                                        icon: kS
                                       }],
-                                      className: Lk()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: Hk
+                                      className: IS()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: GS
                                       })
                                     })
                                   })]
-                                }), (0, lk.jsxs)("div", {
+                                }), (0, NS.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, lk.jsx)(ik.c, {
-                                    text: qk,
+                                  children: [(0, NS.jsx)(XS.c, {
+                                    text: uS,
                                     className: "QTETimedClickLabelText"
-                                  }), jk && (0, lk.jsx)("span", {
+                                  }), aS && (0, NS.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: ak
+                                    ref: qS
                                   })]
                                 })]
                               })
                             })),
-                            jk = (0, Xk.memo)((function(kk) {
+                            aS = (0, tS.memo)((function(SS) {
                               let {
-                                initialParameters: Fk
-                              } = kk;
-                              const Ik = (0, Xk.useRef)(null),
-                                Tk = (0, Xk.useRef)(null),
-                                ak = (0, Xk.useRef)(null),
-                                qk = (0, Xk.useRef)(!1),
-                                Lk = Fk.description,
-                                tk = null === Fk || void 0 === Fk ? void 0 : Fk.icon,
-                                Zk = (0, yk.g)();
-                              return (0, Xk.useEffect)((() => {
-                                const kk = Zk.onFrame((() => {
-                                  const kk = Zk.getState();
-                                  if (!kk.isActive) return;
-                                  const Fk = kk.state;
-                                  if (Ik.current) {
-                                    const kk = 100 * (Fk.catchZonePosition - Fk.CI / 2);
-                                    Ik.current.style.left = `${kk}%`, Ik.current.style.width = 100 * Fk.CI + "%", Fk.isCatching !== qk.current && (qk.current = Fk.isCatching, Fk.isCatching ? Ik.current.classList.add("catching") : Ik.current.classList.remove("catching"))
+                                initialParameters: HS
+                              } = SS;
+                              const gS = (0, tS.useRef)(null),
+                                bS = (0, tS.useRef)(null),
+                                qS = (0, tS.useRef)(null),
+                                uS = (0, tS.useRef)(!1),
+                                IS = HS.description,
+                                fS = null === HS || void 0 === HS ? void 0 : HS.icon,
+                                kS = (0, xS.d)();
+                              return (0, tS.useEffect)((() => {
+                                const SS = kS.onFrame((() => {
+                                  const SS = kS.getState();
+                                  if (!SS.isActive) return;
+                                  const HS = SS.state;
+                                  if (gS.current) {
+                                    const SS = 100 * (HS.catchZonePosition - HS.Ag / 2);
+                                    gS.current.style.left = `${SS}%`, gS.current.style.width = 100 * HS.Ag + "%", HS.isCatching !== uS.current && (uS.current = HS.isCatching, HS.isCatching ? gS.current.classList.add("catching") : gS.current.classList.remove("catching"))
                                   }
-                                  Tk.current && (Tk.current.style.left = 100 * Fk.moverPosition + "%"), ak.current && (ak.current.value = Fk.progress)
+                                  bS.current && (bS.current.style.left = 100 * HS.moverPosition + "%"), qS.current && (qS.current.value = HS.progress)
                                 }));
                                 return () => {
-                                  kk()
+                                  SS()
                                 }
-                              }), [Zk]), (0, lk.jsxs)("div", {
+                              }), [kS]), (0, NS.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, lk.jsx)("div", {
+                                children: [(0, NS.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, lk.jsx)(ik.c, {
-                                    text: Lk
+                                  children: (0, NS.jsx)(XS.c, {
+                                    text: IS
                                   })
-                                }), (0, lk.jsx)("progress", {
+                                }), (0, NS.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: ak
-                                }), (0, lk.jsxs)("div", {
+                                  ref: qS
+                                }), (0, NS.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, lk.jsx)("div", {
+                                  children: [(0, NS.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: Ik
-                                  }), (0, lk.jsx)("div", {
+                                    ref: gS
+                                  }), (0, NS.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: Tk,
-                                    children: (0, lk.jsx)("span", {
-                                      children: tk && (0, lk.jsx)(ik.c, {
+                                    ref: bS,
+                                    children: (0, NS.jsx)("span", {
+                                      children: fS && (0, NS.jsx)(XS.c, {
                                         text: [{
-                                          icon: tk,
+                                          icon: fS,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6379,749 +6379,749 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var ek = Ik(628);
-                          const wk = (0, Xk.memo)((function(kk) {
+                          var KS = gS(680);
+                          const jS = (0, tS.memo)((function(SS) {
                               let {
-                                initialParameters: Fk
-                              } = kk;
-                              const Ik = (0, Xk.useRef)(null),
-                                Tk = Fk.label,
-                                ak = Fk.YI,
+                                initialParameters: HS
+                              } = SS;
+                              const gS = (0, tS.useRef)(null),
+                                bS = HS.label,
+                                qS = HS.sg,
                                 {
-                                  icon: qk,
-                                  scale: Lk,
-                                  rotation: tk
-                                } = null !== Fk && void 0 !== Fk ? Fk : {},
-                                Zk = 100 * (.5 - ak / 2),
-                                jk = 100 * ak,
-                                wk = (0, yk.g)();
-                              return (0, Xk.useEffect)((() => {
-                                const kk = wk.onFrame((() => {
-                                  const kk = wk.getState();
-                                  if (!kk.isActive || !Ik.current) return;
-                                  const Fk = kk.state;
-                                  Ik.current.style.left = 100 * Fk.markerPosition + "%"
+                                  icon: uS,
+                                  scale: IS,
+                                  rotation: fS
+                                } = null !== HS && void 0 !== HS ? HS : {},
+                                kS = 100 * (.5 - qS / 2),
+                                aS = 100 * qS,
+                                jS = (0, xS.d)();
+                              return (0, tS.useEffect)((() => {
+                                const SS = jS.onFrame((() => {
+                                  const SS = jS.getState();
+                                  if (!SS.isActive || !gS.current) return;
+                                  const HS = SS.state;
+                                  gS.current.style.left = 100 * HS.markerPosition + "%"
                                 }));
                                 return () => {
-                                  kk()
+                                  SS()
                                 }
-                              }), [wk]), (0, lk.jsxs)("div", {
+                              }), [jS]), (0, NS.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, ek.Q)(Lk) && {
-                                    "--scale": Lk
+                                  ...!(0, KS.K)(IS) && {
+                                    "--scale": IS
                                   },
-                                  ...!(0, ek.Q)(tk) && {
-                                    "--rotation": `${tk}deg`
+                                  ...!(0, KS.K)(fS) && {
+                                    "--rotation": `${fS}deg`
                                   }
                                 },
-                                children: [qk && (0, lk.jsx)(ik.c, {
+                                children: [uS && (0, NS.jsx)(XS.c, {
                                   text: [{
-                                    icon: qk
+                                    icon: uS
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, lk.jsxs)("div", {
+                                }), (0, NS.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, lk.jsx)("div", {
+                                  children: [(0, NS.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${Zk}%`,
-                                      width: `${jk}%`
+                                      left: `${kS}%`,
+                                      width: `${aS}%`
                                     }
-                                  }), (0, lk.jsx)("div", {
+                                  }), (0, NS.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: Ik
+                                    ref: gS
                                   })]
-                                }), (0, lk.jsx)("div", {
+                                }), (0, NS.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, lk.jsx)(ik.c, {
-                                    text: Tk
+                                  children: (0, NS.jsx)(XS.c, {
+                                    text: bS
                                   })
                                 })]
                               })
                             })),
-                            Hk = (0, Xk.memo)((function(kk) {
+                            GS = (0, tS.memo)((function(SS) {
                               let {
-                                initialParameters: Fk
-                              } = kk;
-                              const Ik = (0, Xk.useRef)(null),
-                                [Tk, ak] = (0, Xk.useState)((() => new Array(Fk.gI).fill("pending"))),
-                                [qk, Lk] = (0, Xk.useState)((() => {
-                                  const kk = Fk.rI;
-                                  return (0, ek.Q)(kk) || kk <= 0 ? [] : new Array(kk).fill("pending")
+                                initialParameters: HS
+                              } = SS;
+                              const gS = (0, tS.useRef)(null),
+                                [bS, qS] = (0, tS.useState)((() => new Array(HS.Mg).fill("pending"))),
+                                [uS, IS] = (0, tS.useState)((() => {
+                                  const SS = HS.Tg;
+                                  return (0, KS.K)(SS) || SS <= 0 ? [] : new Array(SS).fill("pending")
                                 })),
-                                tk = Fk.label,
+                                fS = HS.label,
                                 {
-                                  icon: Zk
-                                } = Fk,
-                                jk = (0, Xk.useRef)(0),
-                                wk = (0, Xk.useRef)(0),
-                                Hk = (0, Xk.useRef)([]),
-                                Jk = (0, yk.g)();
-                              return (0, Xk.useEffect)((() => {
-                                const kk = Jk.onFrame((() => {
-                                  const kk = Jk.getState();
-                                  if (!kk.isActive || !Ik.current) return;
-                                  const Fk = kk.state,
-                                    Xk = 30 + 60 * Fk.outerCircleProgress;
-                                  if (Ik.current.setAttribute("r", String(Xk)), !0 === Fk.lastClickResult && Fk.successes > jk.current) {
-                                    Ik.current.classList.remove("QTERhythmClickOuterCircle--miss"), Ik.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const kk = setTimeout((() => {
-                                      var kk;
-                                      null === (kk = Ik.current) || void 0 === kk || kk.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: kS
+                                } = HS,
+                                aS = (0, tS.useRef)(0),
+                                jS = (0, tS.useRef)(0),
+                                GS = (0, tS.useRef)([]),
+                                CS = (0, xS.d)();
+                              return (0, tS.useEffect)((() => {
+                                const SS = CS.onFrame((() => {
+                                  const SS = CS.getState();
+                                  if (!SS.isActive || !gS.current) return;
+                                  const HS = SS.state,
+                                    tS = 30 + 60 * HS.outerCircleProgress;
+                                  if (gS.current.setAttribute("r", String(tS)), !0 === HS.lastClickResult && HS.successes > aS.current) {
+                                    gS.current.classList.remove("QTERhythmClickOuterCircle--miss"), gS.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const SS = setTimeout((() => {
+                                      var SS;
+                                      null === (SS = gS.current) || void 0 === SS || SS.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    Hk.current.push(kk)
-                                  } else if (!1 === Fk.lastClickResult && Fk.misses > wk.current) {
-                                    Ik.current.classList.remove("QTERhythmClickOuterCircle--hit"), Ik.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const kk = setTimeout((() => {
-                                      var kk;
-                                      null === (kk = Ik.current) || void 0 === kk || kk.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    GS.current.push(SS)
+                                  } else if (!1 === HS.lastClickResult && HS.misses > jS.current) {
+                                    gS.current.classList.remove("QTERhythmClickOuterCircle--hit"), gS.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const SS = setTimeout((() => {
+                                      var SS;
+                                      null === (SS = gS.current) || void 0 === SS || SS.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    Hk.current.push(kk)
+                                    GS.current.push(SS)
                                   }
-                                  Fk.successes === jk.current && Fk.misses === wk.current || (jk.current = Fk.successes, wk.current = Fk.misses, ak((kk => {
-                                    const Ik = [...kk];
-                                    for (let Xk = 0; Xk < Fk.gI; Xk++) Ik[Xk] = Xk < Fk.successes ? "success" : "pending";
-                                    return Ik
-                                  })), Lk((kk => {
-                                    if (0 === kk.length) return kk;
-                                    const Ik = [...kk];
-                                    for (let Xk = 0; Xk < Ik.length; Xk++) Ik[Xk] = Xk < Fk.misses ? "miss" : "pending";
-                                    return Ik
+                                  HS.successes === aS.current && HS.misses === jS.current || (aS.current = HS.successes, jS.current = HS.misses, qS((SS => {
+                                    const gS = [...SS];
+                                    for (let tS = 0; tS < HS.Mg; tS++) gS[tS] = tS < HS.successes ? "success" : "pending";
+                                    return gS
+                                  })), IS((SS => {
+                                    if (0 === SS.length) return SS;
+                                    const gS = [...SS];
+                                    for (let tS = 0; tS < gS.length; tS++) gS[tS] = tS < HS.misses ? "miss" : "pending";
+                                    return gS
                                   })))
                                 }));
                                 return () => {
-                                  kk();
-                                  for (const kk of Hk.current) clearTimeout(kk);
-                                  Hk.current = []
+                                  SS();
+                                  for (const SS of GS.current) clearTimeout(SS);
+                                  GS.current = []
                                 }
-                              }), [Jk]), (0, lk.jsxs)("div", {
+                              }), [CS]), (0, NS.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, lk.jsx)("div", {
+                                children: [(0, NS.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: Tk.map(((kk, Fk) => (0, lk.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === kk ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, Fk)))
-                                }), (0, lk.jsxs)("div", {
+                                  children: bS.map(((SS, HS) => (0, NS.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === SS ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, HS)))
+                                }), (0, NS.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, lk.jsxs)("svg", {
+                                  children: [(0, NS.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, lk.jsx)("circle", {
+                                    children: [(0, NS.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, lk.jsx)("circle", {
+                                    }), (0, NS.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: Ik
+                                      ref: gS
                                     })]
-                                  }), Zk && (0, lk.jsx)("div", {
+                                  }), kS && (0, NS.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, lk.jsx)(ik.c, {
+                                    children: (0, NS.jsx)(XS.c, {
                                       text: [{
-                                        icon: Zk
+                                        icon: kS
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), qk.length > 0 && (0, lk.jsx)("div", {
+                                }), uS.length > 0 && (0, NS.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: qk.map(((kk, Fk) => (0, lk.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === kk ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, Fk)))
-                                }), (0, lk.jsx)("div", {
+                                  children: uS.map(((SS, HS) => (0, NS.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === SS ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, HS)))
+                                }), (0, NS.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, lk.jsx)(ik.c, {
-                                    text: tk
+                                  children: (0, NS.jsx)(XS.c, {
+                                    text: fS
                                   })
                                 })]
                               })
                             }));
 
-                          function Jk(kk) {
+                          function CS(SS) {
                             let {
-                              qte: Fk
-                            } = kk;
-                            switch (Fk.type) {
+                              qte: HS
+                            } = SS;
+                            switch (HS.type) {
                               case "progressBar":
-                                return (0, lk.jsx)(ak, {
-                                  initialParameters: Fk.parameters
+                                return (0, NS.jsx)(qS, {
+                                  initialParameters: HS.parameters
                                 });
                               case "timedClick":
-                                return (0, lk.jsx)(Zk, {
-                                  initialParameters: Fk.parameters
+                                return (0, NS.jsx)(kS, {
+                                  initialParameters: HS.parameters
                                 });
                               case "gravityBar":
-                                return (0, lk.jsx)(jk, {
-                                  initialParameters: Fk.parameters
+                                return (0, NS.jsx)(aS, {
+                                  initialParameters: HS.parameters
                                 });
                               case "precisionBar":
-                                return (0, lk.jsx)(wk, {
-                                  initialParameters: Fk.parameters
+                                return (0, NS.jsx)(jS, {
+                                  initialParameters: HS.parameters
                                 });
                               case "rhythmClick":
-                                return (0, lk.jsx)(Hk, {
-                                  initialParameters: Fk.parameters
+                                return (0, NS.jsx)(GS, {
+                                  initialParameters: HS.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const xk = (0, Xk.memo)((function() {
-                            const [kk, Fk] = (0, Xk.useState)({
+                          const nS = (0, tS.memo)((function() {
+                            const [SS, HS] = (0, tS.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, Tk.d)("qteStateUpdated", (kk => {
-                              Fk(kk)
-                            })), kk.isActive && kk.type ? (0, lk.jsx)("div", {
+                            return (0, bS.g)("qteStateUpdated", (SS => {
+                              HS(SS)
+                            })), SS.isActive && SS.type ? (0, NS.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, lk.jsx)(Jk, {
-                                qte: kk
+                              children: (0, NS.jsx)(CS, {
+                                qte: SS
                               })
                             }) : null
                           }))
-                        }, 4775: (kk, Fk, Ik) => {
-                          Ik.d(Fk, {
-                            d: () => lk,
-                            g: () => ak
+                        }, 4898: (SS, HS, gS) => {
+                          gS.d(HS, {
+                            c: () => NS,
+                            d: () => qS
                           });
-                          var Xk = Ik(58),
-                            Tk = Ik(1276),
-                            ik = Ik(4784);
-                          const yk = {
-                              getState: () => ik.b.getCurrentState(),
-                              onFrame: Tk.u
+                          var tS = gS(64),
+                            bS = gS(1378),
+                            XS = gS(4904);
+                          const xS = {
+                              getState: () => XS.c.getCurrentState(),
+                              onFrame: bS.q
                             },
-                            lk = (0, Xk.createContext)(yk);
+                            NS = (0, tS.createContext)(xS);
 
-                          function ak() {
-                            return (0, Xk.useContext)(lk)
+                          function qS() {
+                            return (0, tS.useContext)(NS)
                           }
-                        }, 4837: (kk, Fk, Ik) => {
-                          Ik.d(Fk, {
-                            d: () => bk,
-                            e: () => uk
+                        }, 4985: (SS, HS, gS) => {
+                          gS.d(HS, {
+                            c: () => AS,
+                            g: () => YS
                           });
-                          var Xk = Ik(4843),
-                            Tk = Ik(318);
-                          const ik = 120,
-                            yk = 260,
-                            lk = 1.15,
-                            ak = 1.2,
-                            qk = 2,
-                            Lk = 1.08,
-                            tk = .8,
-                            Zk = .95,
-                            jk = 8,
-                            ek = "[\"')\\]\u300d\u300f\uff09]*",
-                            wk = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${ek}$`),
-                            Hk = new RegExp(`[?\uff1f]${ek}$`),
-                            Jk = new RegExp(`[!\uff01]${ek}$`),
-                            xk = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            Pk = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            Kk = new RegExp(`[${Pk}]`),
-                            Qk = new RegExp(`[${Pk}]|[^${Pk}]+`, "g"),
-                            sk = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var tS = gS(4992),
+                            bS = gS(369);
+                          const XS = 120,
+                            xS = 260,
+                            NS = 1.15,
+                            qS = 1.2,
+                            uS = 2,
+                            IS = 1.08,
+                            fS = .8,
+                            kS = .95,
+                            aS = 8,
+                            KS = "[\"')\\]\u300d\u300f\uff09]*",
+                            jS = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${KS}$`),
+                            GS = new RegExp(`[?\uff1f]${KS}$`),
+                            CS = new RegExp(`[!\uff01]${KS}$`),
+                            nS = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            PS = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            QS = new RegExp(`[${PS}]`),
+                            DS = new RegExp(`[${PS}]|[^${PS}]+`, "g"),
+                            wS = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function Vk(kk) {
-                            let Fk = 2166136261;
-                            for (let Ik = 0; Ik < kk.length; Ik++) Fk ^= kk.charCodeAt(Ik), Fk = Math.imul(Fk, 16777619);
-                            return (Fk >>> 0) / 4294967295 * 2 - 1
+                          function hS(SS) {
+                            let HS = 2166136261;
+                            for (let gS = 0; gS < SS.length; gS++) HS ^= SS.charCodeAt(gS), HS = Math.imul(HS, 16777619);
+                            return (HS >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function zk(kk) {
-                            var Fk;
-                            if (Kk.test(kk)) return 1;
-                            const Ik = kk.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              Xk = Ik.replace(/[^0-9]/g, "");
-                            if (Xk.length > 0 && !/\p{L}/u.test(Ik)) return Math.min(Xk.length, 4);
-                            const Tk = null !== (Fk = Ik.match(sk)) && void 0 !== Fk ? Fk : [];
-                            if (0 === Tk.length) {
-                              var ik, yk;
-                              const kk = null !== (ik = null === (yk = Ik.match(/\p{L}/gu)) || void 0 === yk ? void 0 : yk.length) && void 0 !== ik ? ik : 0;
-                              return 0 === kk ? 0 : Math.min(Math.max(1, Math.round(kk / 2.5)), jk)
+                          function ZS(SS) {
+                            var HS;
+                            if (QS.test(SS)) return 1;
+                            const gS = SS.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              tS = gS.replace(/[^0-9]/g, "");
+                            if (tS.length > 0 && !/\p{L}/u.test(gS)) return Math.min(tS.length, 4);
+                            const bS = null !== (HS = gS.match(wS)) && void 0 !== HS ? HS : [];
+                            if (0 === bS.length) {
+                              var XS, xS;
+                              const SS = null !== (XS = null === (xS = gS.match(/\p{L}/gu)) || void 0 === xS ? void 0 : xS.length) && void 0 !== XS ? XS : 0;
+                              return 0 === SS ? 0 : Math.min(Math.max(1, Math.round(SS / 2.5)), aS)
                             }
-                            const lk = Ik.replace(/[^\p{L}]/gu, ""),
-                              ak = Tk.length > 1 && "e" === Tk.at(-1) && lk.endsWith("e") && !lk.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(kk.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(Tk.length - (ak ? 1 : 0), jk)
+                            const NS = gS.replace(/[^\p{L}]/gu, ""),
+                              qS = bS.length > 1 && "e" === bS.at(-1) && NS.endsWith("e") && !NS.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(SS.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(bS.length - (qS ? 1 : 0), aS)
                           }
 
-                          function Sk(kk) {
-                            return kk.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function JS(SS) {
+                            return SS.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function vk(kk) {
-                            const Fk = kk.replace(/[^\p{L}]/gu, "");
-                            return Fk.length >= 2 && Fk === Fk.toUpperCase() && Fk !== Fk.toLowerCase()
+                          function OS(SS) {
+                            const HS = SS.replace(/[^\p{L}]/gu, "");
+                            return HS.length >= 2 && HS === HS.toUpperCase() && HS !== HS.toLowerCase()
                           }
 
-                          function Ek(kk, Fk) {
-                            var Ik;
-                            const jk = Fk && (0, Xk.k)(Fk),
-                              ek = null !== (Ik = null === jk || void 0 === jk ? void 0 : jk.syllableMs) && void 0 !== Ik ? Ik : Xk.b,
-                              Pk = function(kk) {
-                                const Fk = [];
-                                for (const Xk of (0, Tk.oc)(kk))
-                                  if ("string" === typeof Xk)
-                                    for (const kk of Xk.split(/(\s+)/)) {
-                                      if ("" === kk) continue;
-                                      if (/^\s+$/.test(kk)) {
-                                        Fk.push({
+                          function dS(SS, HS) {
+                            var gS;
+                            const aS = HS && (0, tS.j)(HS),
+                              KS = null !== (gS = null === aS || void 0 === aS ? void 0 : aS.syllableMs) && void 0 !== gS ? gS : tS.d,
+                              PS = function(SS) {
+                                const HS = [];
+                                for (const tS of (0, bS.ec)(SS))
+                                  if ("string" === typeof tS)
+                                    for (const SS of tS.split(/(\s+)/)) {
+                                      if ("" === SS) continue;
+                                      if (/^\s+$/.test(SS)) {
+                                        HS.push({
                                           kind: "space",
-                                          text: kk
+                                          text: SS
                                         });
                                         continue
                                       }
-                                      if (!Kk.test(kk)) {
-                                        Fk.push({
+                                      if (!QS.test(SS)) {
+                                        HS.push({
                                           kind: "word",
-                                          text: kk,
+                                          text: SS,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let Xk = !0;
-                                      for (const Tk of null !== (Ik = kk.match(Qk)) && void 0 !== Ik ? Ik : []) {
-                                        var Ik;
-                                        const kk = Fk.at(-1);
-                                        Xk || "word" !== (null === kk || void 0 === kk ? void 0 : kk.kind) || Kk.test(Tk) || /[\p{L}\p{N}]/u.test(Tk) ? (Xk || Fk.push({
+                                      let tS = !0;
+                                      for (const bS of null !== (gS = SS.match(DS)) && void 0 !== gS ? gS : []) {
+                                        var gS;
+                                        const SS = HS.at(-1);
+                                        tS || "word" !== (null === SS || void 0 === SS ? void 0 : SS.kind) || QS.test(bS) || /[\p{L}\p{N}]/u.test(bS) ? (tS || HS.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), Fk.push({
+                                        }), HS.push({
                                           kind: "word",
-                                          text: Tk,
+                                          text: bS,
                                           delayMs: 0
-                                        }), Xk = !1) : kk.text += Tk
+                                        }), tS = !1) : SS.text += bS
                                       }
-                                    } else Fk.push({
+                                    } else HS.push({
                                       kind: "icon",
-                                      text: Xk.icon,
+                                      text: tS.icon,
                                       delayMs: 0
                                     });
-                                return Fk
-                              }(kk),
-                              sk = [];
-                            let Ek = [];
-                            for (const Xk of Pk) "space" !== Xk.kind && (Ek.push(Xk), wk.test(Xk.text) && (sk.push(Ek), Ek = []));
-                            sk.push(Ek);
-                            const Ok = [];
-                            let nk = 0;
-                            for (const Xk of sk) {
-                              var Gk, pk;
-                              const kk = null !== (Gk = null === (pk = Xk.at(-1)) || void 0 === pk ? void 0 : pk.text) && void 0 !== Gk ? Gk : "",
-                                Fk = Hk.test(kk),
-                                Ik = Jk.test(kk),
-                                Tk = Xk.map((kk => "word" === kk.kind ? zk(kk.text) : 1)),
-                                Pk = Tk.findLastIndex((kk => kk > 0));
-                              for (const [Hk, Jk] of Xk.entries()) {
-                                const kk = "word" === Jk.kind,
-                                  Xk = Tk[Hk];
-                                Jk.delayMs = nk;
-                                for (let Tk = 0; jk && Tk < Xk; Tk++) {
+                                return HS
+                              }(SS),
+                              wS = [];
+                            let dS = [];
+                            for (const tS of PS) "space" !== tS.kind && (dS.push(tS), jS.test(tS.text) && (wS.push(dS), dS = []));
+                            wS.push(dS);
+                            const cS = [];
+                            let vS = 0;
+                            for (const tS of wS) {
+                              var ES, LS;
+                              const SS = null !== (ES = null === (LS = tS.at(-1)) || void 0 === LS ? void 0 : LS.text) && void 0 !== ES ? ES : "",
+                                HS = GS.test(SS),
+                                gS = CS.test(SS),
+                                bS = tS.map((SS => "word" === SS.kind ? ZS(SS.text) : 1)),
+                                PS = bS.findLastIndex((SS => SS > 0));
+                              for (const [GS, CS] of tS.entries()) {
+                                const SS = "word" === CS.kind,
+                                  tS = bS[GS];
+                                CS.delayMs = vS;
+                                for (let bS = 0; aS && bS < tS; bS++) {
                                   const {
-                                    intonation: ik
-                                  } = jk;
-                                  let yk = Pk > 0 ? -ik.declineSemitones * (Hk / Pk) : 0;
-                                  yk += Vk(`${Sk(Jk.text)}|${Tk}`) * ik.variationSemitones;
-                                  const wk = Math.min(1, ik.variationSemitones);
-                                  let xk = jk.glideSemitones,
-                                    Kk = 1;
-                                  Ik && (yk += ik.exclaimLiftSemitones, Kk *= lk), Fk && Hk === Pk && (yk += ik.questionRiseSemitones * (Xk > 1 ? .5 + .5 * Tk / (Xk - 1) : 1), Tk === Xk - 1 && (xk = Math.abs(xk) + ik.questionRiseSemitones / 2)), kk && vk(Jk.text) && (yk += qk * wk, Kk *= ak), Xk > 1 && 0 === Tk && (yk += tk * wk, Kk *= Lk), Ok.push({
-                                    atMs: nk + Tk * ek,
-                                    semitones: yk,
-                                    glideSemitones: xk,
-                                    durationMs: Tk < Xk - 1 ? Math.min(jk.durationMs, ek * Zk) : jk.durationMs,
-                                    level: Kk
+                                    intonation: XS
+                                  } = aS;
+                                  let xS = PS > 0 ? -XS.declineSemitones * (GS / PS) : 0;
+                                  xS += hS(`${JS(CS.text)}|${bS}`) * XS.variationSemitones;
+                                  const jS = Math.min(1, XS.variationSemitones);
+                                  let nS = aS.glideSemitones,
+                                    QS = 1;
+                                  gS && (xS += XS.exclaimLiftSemitones, QS *= NS), HS && GS === PS && (xS += XS.questionRiseSemitones * (tS > 1 ? .5 + .5 * bS / (tS - 1) : 1), bS === tS - 1 && (nS = Math.abs(nS) + XS.questionRiseSemitones / 2)), SS && OS(CS.text) && (xS += uS * jS, QS *= qS), tS > 1 && 0 === bS && (xS += fS * jS, QS *= IS), cS.push({
+                                    atMs: vS + bS * KS,
+                                    semitones: xS,
+                                    glideSemitones: nS,
+                                    durationMs: bS < tS - 1 ? Math.min(aS.durationMs, KS * kS) : aS.durationMs,
+                                    level: QS
                                   })
                                 }
-                                nk += Xk * ek + (wk.test(Jk.text) ? yk : xk.test(Jk.text) ? ik : 0)
+                                vS += tS * KS + (jS.test(CS.text) ? xS : nS.test(CS.text) ? XS : 0)
                               }
                             }
                             return {
-                              pieces: Pk.map((kk => "space" === kk.kind ? kk : "icon" === kk.kind ? {
+                              pieces: PS.map((SS => "space" === SS.kind ? SS : "icon" === SS.kind ? {
                                 kind: "icon",
-                                icon: kk.text,
-                                delayMs: kk.delayMs
+                                icon: SS.text,
+                                delayMs: SS.delayMs
                               } : {
                                 kind: "word",
-                                text: kk.text,
-                                delayMs: kk.delayMs
+                                text: SS.text,
+                                delayMs: SS.delayMs
                               })),
-                              blips: Ok
+                              blips: cS
                             }
                           }
-                          var Ok = Ik(1179),
-                            nk = Ik(1241),
-                            Gk = Ik(1881);
+                          var cS = gS(1281),
+                            vS = gS(1334),
+                            ES = gS(2069);
 
-                          function pk(kk) {
-                            if ("string" === typeof kk) return kk;
-                            const Fk = nk.d.get().getCurrentLanguageCode();
-                            return (0, Ok.q)(Fk, kk.translationKey, (0, Ok.m)(kk.params, Gk.d.shown))
+                          function LS(SS) {
+                            if ("string" === typeof SS) return SS;
+                            const HS = vS.f.get().getCurrentLanguageCode();
+                            return (0, cS.x)(HS, SS.translationKey, (0, cS.t)(SS.params, ES.c.shown))
                           }
 
-                          function uk(kk) {
-                            const Fk = void 0 === kk.voice ? null : (0, Xk.n)(kk.voice),
-                              Ik = Fk && (0, Xk.k)(Fk);
+                          function YS(SS) {
+                            const HS = void 0 === SS.voice ? null : (0, tS.k)(SS.voice),
+                              gS = HS && (0, tS.j)(HS);
                             return {
-                              plan: Ek(pk(kk.line), Ik),
-                              synth: Ik
+                              plan: dS(LS(SS.line), gS),
+                              synth: gS
                             }
                           }
 
-                          function bk(kk) {
-                            const Fk = [];
-                            let Ik = [];
-                            for (const [Tk, ik] of kk.entries()) {
-                              var Xk;
-                              "space" === ik.kind && (" " !== ik.text || "icon" !== (null === (Xk = kk[Tk + 1]) || void 0 === Xk ? void 0 : Xk.kind)) ? (Ik.length > 0 && Fk.push(Ik), Fk.push([ik]), Ik = []) : Ik.push(ik)
+                          function AS(SS) {
+                            const HS = [];
+                            let gS = [];
+                            for (const [bS, XS] of SS.entries()) {
+                              var tS;
+                              "space" === XS.kind && (" " !== XS.text || "icon" !== (null === (tS = SS[bS + 1]) || void 0 === tS ? void 0 : tS.kind)) ? (gS.length > 0 && HS.push(gS), HS.push([XS]), gS = []) : gS.push(XS)
                             }
-                            return Ik.length > 0 && Fk.push(Ik), Fk
+                            return gS.length > 0 && HS.push(gS), HS
                           }
-                        }, 4850: (kk, Fk, Ik) => {
-                          Ik.d(Fk, {
-                            e: () => Lk,
-                            i: () => tk
+                        }, 5e3: (SS, HS, gS) => {
+                          gS.d(HS, {
+                            c: () => IS,
+                            d: () => fS
                           });
-                          var Xk = Ik(4857),
-                            Tk = Ik(25);
-                          const ik = .25,
-                            yk = .85,
-                            lk = .02,
-                            ak = .01;
+                          var tS = gS(5005),
+                            bS = gS(24);
+                          const XS = .25,
+                            xS = .85,
+                            NS = .02,
+                            qS = .01;
 
-                          function qk(kk, Fk, Ik, Xk, Tk, ik, lk) {
+                          function uS(SS, HS, gS, tS, bS, XS, NS) {
                             const {
-                              waveform: ak,
-                              pitchHz: qk,
-                              attackMs: Lk,
-                              releaseMs: tk,
-                              lowpassHz: Zk
-                            } = Ik, jk = Tk + Xk.durationMs / 1e3, ek = qk * 2 ** (Xk.semitones / 12), wk = kk.createOscillator();
-                            wk.type = ak, wk.frequency.setValueAtTime(ek, Tk), wk.frequency.exponentialRampToValueAtTime(ek * 2 ** (Xk.glideSemitones / 12), jk);
-                            const Hk = Tk + Math.min(Lk, Xk.durationMs) / 1e3,
-                              Jk = kk.createGain();
-                            Jk.gain.setValueAtTime(0, Tk), Jk.gain.linearRampToValueAtTime(ik, Hk), Jk.gain.linearRampToValueAtTime(ik * yk, Math.max(Hk, jk - tk / 1e3)), Jk.gain.linearRampToValueAtTime(0, jk);
-                            const xk = [wk];
-                            if (null !== Zk) {
-                              const Fk = kk.createBiquadFilter();
-                              Fk.type = "lowpass", Fk.frequency.value = Zk, xk.push(Fk)
+                              waveform: qS,
+                              pitchHz: uS,
+                              attackMs: IS,
+                              releaseMs: fS,
+                              lowpassHz: kS
+                            } = gS, aS = bS + tS.durationMs / 1e3, KS = uS * 2 ** (tS.semitones / 12), jS = SS.createOscillator();
+                            jS.type = qS, jS.frequency.setValueAtTime(KS, bS), jS.frequency.exponentialRampToValueAtTime(KS * 2 ** (tS.glideSemitones / 12), aS);
+                            const GS = bS + Math.min(IS, tS.durationMs) / 1e3,
+                              CS = SS.createGain();
+                            CS.gain.setValueAtTime(0, bS), CS.gain.linearRampToValueAtTime(XS, GS), CS.gain.linearRampToValueAtTime(XS * xS, Math.max(GS, aS - fS / 1e3)), CS.gain.linearRampToValueAtTime(0, aS);
+                            const nS = [jS];
+                            if (null !== kS) {
+                              const HS = SS.createBiquadFilter();
+                              HS.type = "lowpass", HS.frequency.value = kS, nS.push(HS)
                             }
-                            xk.push(Jk, Fk);
-                            for (let yk = 1; yk < xk.length; yk++) xk[yk - 1].connect(xk[yk]);
-                            return wk.onended = () => {
-                              for (const kk of xk.slice(0, -1)) kk.disconnect();
-                              lk()
-                            }, wk.start(Tk), wk.stop(jk), wk
+                            nS.push(CS, HS);
+                            for (let xS = 1; xS < nS.length; xS++) nS[xS - 1].connect(nS[xS]);
+                            return jS.onended = () => {
+                              for (const SS of nS.slice(0, -1)) SS.disconnect();
+                              NS()
+                            }, jS.start(bS), jS.stop(aS), jS
                           }
 
-                          function Lk(kk, Fk, Ik, Xk, Tk, yk) {
-                            if (0 === Xk.length) return yk(), () => {};
-                            const Lk = ik * Ik.volume * Tk,
-                              tk = kk.createGain();
-                            tk.connect(Fk);
-                            const Zk = kk.currentTime + lk,
-                              jk = new Set;
-                            for (const ik of Xk) {
-                              const Fk = qk(kk, tk, Ik, ik, Zk + ik.atMs / 1e3, Lk * ik.level, (() => {
-                                jk.delete(Fk), 0 === jk.size && (tk.disconnect(), yk())
+                          function IS(SS, HS, gS, tS, bS, xS) {
+                            if (0 === tS.length) return xS(), () => {};
+                            const IS = XS * gS.volume * bS,
+                              fS = SS.createGain();
+                            fS.connect(HS);
+                            const kS = SS.currentTime + NS,
+                              aS = new Set;
+                            for (const XS of tS) {
+                              const HS = uS(SS, fS, gS, XS, kS + XS.atMs / 1e3, IS * XS.level, (() => {
+                                aS.delete(HS), 0 === aS.size && (fS.disconnect(), xS())
                               }));
-                              jk.add(Fk)
+                              aS.add(HS)
                             }
                             return () => {
-                              const Fk = kk.currentTime;
-                              tk.gain.setTargetAtTime(0, Fk, ak);
-                              for (const kk of jk) try {
-                                kk.stop(Fk + 5 * ak)
+                              const HS = SS.currentTime;
+                              fS.gain.setTargetAtTime(0, HS, qS);
+                              for (const SS of aS) try {
+                                SS.stop(HS + 5 * qS)
                               } catch {}
                             }
                           }
 
-                          function tk(kk, Fk) {
-                            var Ik;
-                            const ik = Xk.Howler.ctx,
-                              yk = Xk.Howler.masterGain;
-                            if (!ik || !yk || !Tk.d.get("soundOnFromAd")) return () => {};
-                            const lk = Xk.Howler;
-                            return null === (Ik = lk._autoResume) || void 0 === Ik || Ik.call(lk), Lk(ik, yk, kk, Fk, Tk.d.get("soundVolume"), (() => {
-                              var kk;
-                              null === (kk = lk._autoSuspend) || void 0 === kk || kk.call(lk)
+                          function fS(SS, HS) {
+                            var gS;
+                            const XS = tS.Howler.ctx,
+                              xS = tS.Howler.masterGain;
+                            if (!XS || !xS || !bS.b.get("soundOnFromAd")) return () => {};
+                            const NS = tS.Howler;
+                            return null === (gS = NS._autoResume) || void 0 === gS || gS.call(NS), IS(XS, xS, SS, HS, bS.b.get("soundVolume"), (() => {
+                              var SS;
+                              null === (SS = NS._autoSuspend) || void 0 === SS || SS.call(NS)
                             }))
                           }
-                        }, 4857: (kk, Fk, Ik) => {
-                          Ik.r(Fk), Ik.d(Fk, {
-                            Howl: () => Tk.Howl,
-                            Howler: () => Tk.Howler,
-                            musicOutput: () => Hk,
-                            readyAudioContext: () => Jk
+                        }, 5005: (SS, HS, gS) => {
+                          gS.r(HS), gS.d(HS, {
+                            Howl: () => bS.Howl,
+                            Howler: () => bS.Howler,
+                            musicOutput: () => GS,
+                            readyAudioContext: () => CS
                           });
-                          var Xk, Tk = Ik(4863),
-                            ik = Ik(3378),
-                            yk = Ik(4636);
-                          const lk = Tk.Howler;
+                          var tS, bS = gS(5011),
+                            XS = gS(3577),
+                            xS = gS(4775);
+                          const NS = bS.Howler;
 
-                          function ak() {
-                            var kk, Fk;
-                            if (lk.ctx || !lk.usingWebAudio || "undefined" === typeof AudioContext || !(0, yk.h)()) return;
-                            const Ik = navigator.audioSession;
-                            let Xk;
-                            "auto" === (null === Ik || void 0 === Ik ? void 0 : Ik.type) && (Ik.type = "ambient");
+                          function qS() {
+                            var SS, HS;
+                            if (NS.ctx || !NS.usingWebAudio || "undefined" === typeof AudioContext || !(0, xS.k)()) return;
+                            const gS = navigator.audioSession;
+                            let tS;
+                            "auto" === (null === gS || void 0 === gS ? void 0 : gS.type) && (gS.type = "ambient");
                             try {
-                              Xk = new AudioContext({
+                              tS = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const Tk = Xk.createGain();
-                            Tk.gain.setValueAtTime(lk._muted ? 0 : null !== (kk = lk._volume) && void 0 !== kk ? kk : 1, Xk.currentTime), Tk.connect(Xk.destination), lk.ctx = Xk, lk.masterGain = Tk, null === (Fk = lk._setup) || void 0 === Fk || Fk.call(lk)
+                            const bS = tS.createGain();
+                            bS.gain.setValueAtTime(NS._muted ? 0 : null !== (SS = NS._volume) && void 0 !== SS ? SS : 1, tS.currentTime), bS.connect(tS.destination), NS.ctx = tS, NS.masterGain = bS, null === (HS = NS._setup) || void 0 === HS || HS.call(NS)
                           }
-                          lk._mobileUnloaded = !0;
-                          const qk = lk.volume.bind(Tk.Howler);
-                          lk.volume = function() {
-                            return ak(), qk(...arguments)
+                          NS._mobileUnloaded = !0;
+                          const uS = NS.volume.bind(bS.Howler);
+                          NS.volume = function() {
+                            return qS(), uS(...arguments)
                           };
-                          const Lk = lk.mute.bind(Tk.Howler);
-                          lk.mute = kk => (ak(), Lk(kk));
-                          const tk = Tk.Howl.prototype,
-                            Zk = tk.init;
+                          const IS = NS.mute.bind(bS.Howler);
+                          NS.mute = SS => (qS(), IS(SS));
+                          const fS = bS.Howl.prototype,
+                            kS = fS.init;
 
-                          function jk() {
-                            for (; lk._html5AudioPool.length < lk.html5PoolSize;) {
-                              const kk = new Audio;
-                              kk._unlocked = !0, lk._releaseHtml5Audio(kk)
+                          function aS() {
+                            for (; NS._html5AudioPool.length < NS.html5PoolSize;) {
+                              const SS = new Audio;
+                              SS._unlocked = !0, NS._releaseHtml5Audio(SS)
                             }
-                            for (const Fk of lk._howls)
-                              if (!Fk._webAudio)
-                                for (const Ik of Fk._getSoundIds()) {
-                                  var kk;
-                                  const Xk = null === (kk = Fk._soundById(Ik)) || void 0 === kk ? void 0 : kk._node;
-                                  Xk && !Xk._unlocked && (Xk._unlocked = !0, Xk.load())
+                            for (const HS of NS._howls)
+                              if (!HS._webAudio)
+                                for (const gS of HS._getSoundIds()) {
+                                  var SS;
+                                  const tS = null === (SS = HS._soundById(gS)) || void 0 === SS ? void 0 : SS._node;
+                                  tS && !tS._unlocked && (tS._unlocked = !0, tS.load())
                                 }
                           }
-                          tk.init = function(kk) {
-                            return ak(), Zk.call(this, kk)
-                          }, (0, yk.h)() && (lk._unlockAudio = () => {
-                            const kk = lk.ctx;
-                            if (lk._audioUnlocked || !kk) return;
-                            lk.autoUnlock = !1;
-                            const Fk = kk.createBuffer(1, 1, 22050);
-                            lk._scratchBuffer = Fk;
-                            const Ik = new AbortController;
-                            let Xk = "afterPaint";
-                            const Tk = () => {
-                                var Xk;
-                                if (lk._audioUnlocked) return;
-                                null === (Xk = lk._autoResume) || void 0 === Xk || Xk.call(lk);
-                                const Tk = kk.createBufferSource();
-                                Tk.buffer = Fk, Tk.connect(kk.destination), Tk.start(0), kk.resume().catch((() => {})), Tk.onended = () => {
-                                  Tk.disconnect(0), lk._audioUnlocked = !0, Ik.abort();
-                                  for (const kk of lk._howls) kk._emit("unlock")
+                          fS.init = function(SS) {
+                            return qS(), kS.call(this, SS)
+                          }, (0, xS.k)() && (NS._unlockAudio = () => {
+                            const SS = NS.ctx;
+                            if (NS._audioUnlocked || !SS) return;
+                            NS.autoUnlock = !1;
+                            const HS = SS.createBuffer(1, 1, 22050);
+                            NS._scratchBuffer = HS;
+                            const gS = new AbortController;
+                            let tS = "afterPaint";
+                            const bS = () => {
+                                var tS;
+                                if (NS._audioUnlocked) return;
+                                null === (tS = NS._autoResume) || void 0 === tS || tS.call(NS);
+                                const bS = SS.createBufferSource();
+                                bS.buffer = HS, bS.connect(SS.destination), bS.start(0), SS.resume().catch((() => {})), bS.onended = () => {
+                                  bS.disconnect(0), NS._audioUnlocked = !0, gS.abort();
+                                  for (const SS of NS._howls) SS._emit("unlock")
                                 }
                               },
-                              ak = () => {
-                                jk(), Tk()
+                              qS = () => {
+                                aS(), bS()
                               },
-                              qk = Fk => {
-                                if (jk(), "inTap" === Xk) {
-                                  if ("running" === kk.state) return;
-                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), Tk()
-                                } else "afterPaint" === Xk && (Xk = "queued", (0, ik.b)(Fk.timeStamp, (() => {
-                                  Xk = "inTap", Tk()
+                              uS = HS => {
+                                if (aS(), "inTap" === tS) {
+                                  if ("running" === SS.state) return;
+                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), bS()
+                                } else "afterPaint" === tS && (tS = "queued", (0, XS.d)(HS.timeStamp, (() => {
+                                  tS = "inTap", bS()
                                 })))
                               };
-                            for (const ik of ["touchstart", "touchend"]) document.addEventListener(ik, ak, {
+                            for (const XS of ["touchstart", "touchend"]) document.addEventListener(XS, qS, {
                               capture: !0,
-                              signal: Ik.signal
+                              signal: gS.signal
                             });
-                            for (const ik of yk.b) document.addEventListener(ik, qk, {
+                            for (const XS of xS.e) document.addEventListener(XS, uS, {
                               capture: !0,
-                              signal: Ik.signal
+                              signal: gS.signal
                             })
                           });
-                          let ek = 0;
-                          const wk = null === (Xk = lk._autoSuspend) || void 0 === Xk ? void 0 : Xk.bind(Tk.Howler);
+                          let KS = 0;
+                          const jS = null === (tS = NS._autoSuspend) || void 0 === tS ? void 0 : tS.bind(bS.Howler);
 
-                          function Hk() {
-                            Jk();
+                          function GS() {
+                            CS();
                             const {
-                              ctx: kk,
-                              masterGain: Fk
-                            } = lk;
-                            return kk && Fk ? {
-                              ctx: kk,
-                              destination: Fk,
-                              holdAwake: kk => {
-                                var Fk, Ik;
-                                (ek += kk ? 1 : -1, kk) ? null === (Fk = lk._autoResume) || void 0 === Fk || Fk.call(lk): null === (Ik = lk._autoSuspend) || void 0 === Ik || Ik.call(lk)
+                              ctx: SS,
+                              masterGain: HS
+                            } = NS;
+                            return SS && HS ? {
+                              ctx: SS,
+                              destination: HS,
+                              holdAwake: SS => {
+                                var HS, gS;
+                                (KS += SS ? 1 : -1, SS) ? null === (HS = NS._autoResume) || void 0 === HS || HS.call(NS): null === (gS = NS._autoSuspend) || void 0 === gS || gS.call(NS)
                               },
                               wake: () => {
-                                var Fk;
-                                "running" !== kk.state && (null === (Fk = lk._autoResume) || void 0 === Fk || Fk.call(lk), kk.resume().catch((() => {})))
+                                var HS;
+                                "running" !== SS.state && (null === (HS = NS._autoResume) || void 0 === HS || HS.call(NS), SS.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function Jk() {
-                            var kk;
-                            (lk.volume(), lk.ctx && lk.autoUnlock) && (null === (kk = lk._unlockAudio) || void 0 === kk || kk.call(lk))
+                          function CS() {
+                            var SS;
+                            (NS.volume(), NS.ctx && NS.autoUnlock) && (null === (SS = NS._unlockAudio) || void 0 === SS || SS.call(NS))
                           }
-                          wk && (lk._autoSuspend = () => ek > 0 ? Tk.Howler : wk())
-                        }, 4866: (kk, Fk, Ik) => {
-                          function Xk(kk) {
+                          jS && (NS._autoSuspend = () => KS > 0 ? bS.Howler : jS())
+                        }, 5017: (SS, HS, gS) => {
+                          function tS(SS) {
                             return {
-                              notAfter: kk
+                              notAfter: SS
                             }
                           }
-                          Ik.d(Fk, {
-                            b: () => ak,
-                            e: () => qk,
-                            g: () => lk,
-                            j: () => Xk,
-                            l: () => Tk,
-                            m: () => ik,
-                            o: () => yk,
-                            s: () => Lk,
-                            u: () => tk
+                          gS.d(HS, {
+                            b: () => qS,
+                            f: () => uS,
+                            j: () => NS,
+                            k: () => tS,
+                            m: () => bS,
+                            q: () => XS,
+                            r: () => xS,
+                            v: () => IS,
+                            z: () => fS
                           });
-                          const Tk = Xk("\\w$."),
-                            ik = Xk("\\w.,");
+                          const bS = tS("\\w$."),
+                            XS = tS("\\w.,");
 
-                          function yk(kk) {
-                            return Fk => ak(Fk, kk)
+                          function xS(SS) {
+                            return HS => qS(HS, SS)
                           }
 
-                          function lk(kk) {
-                            return Fk => !kk.test(Fk.input.slice(0, Fk.index))
+                          function NS(SS) {
+                            return HS => !SS.test(HS.input.slice(0, HS.index))
                           }
 
-                          function ak(kk, Fk) {
-                            return kk.index > 0 && new RegExp(`[${Fk}]`).test(kk.input[kk.index - 1])
+                          function qS(SS, HS) {
+                            return SS.index > 0 && new RegExp(`[${HS}]`).test(SS.input[SS.index - 1])
                           }
 
-                          function qk(kk, Fk, Ik) {
-                            return function(kk) {
-                              return void 0 !== kk && "function" !== typeof kk
-                            }(Ik) ? function(kk, Fk, Ik) {
-                              const Xk = Fk.flags.replace(/[gy]/g, ""),
-                                Tk = new RegExp(`[^${Ik}](?:${Fk.source})`, `${Xk}g`),
-                                ik = [],
-                                yk = Ik => {
-                                  const Xk = Ik.index + Ik[0].length;
-                                  return ("" === Ik[0] ? Zk(kk, Fk, Xk) : Xk) - 1
+                          function uS(SS, HS, gS) {
+                            return function(SS) {
+                              return void 0 !== SS && "function" !== typeof SS
+                            }(gS) ? function(SS, HS, gS) {
+                              const tS = HS.flags.replace(/[gy]/g, ""),
+                                bS = new RegExp(`[^${gS}](?:${HS.source})`, `${tS}g`),
+                                XS = [],
+                                xS = gS => {
+                                  const tS = gS.index + gS[0].length;
+                                  return ("" === gS[0] ? kS(SS, HS, tS) : tS) - 1
                                 },
-                                lk = new RegExp(`(?:${Fk.source})`, `${Xk}y`).exec(kk);
-                              if (lk) {
-                                if (ik.push(lk), !Fk.global) return ik;
-                                Tk.lastIndex = yk(lk)
+                                NS = new RegExp(`(?:${HS.source})`, `${tS}y`).exec(SS);
+                              if (NS) {
+                                if (XS.push(NS), !HS.global) return XS;
+                                bS.lastIndex = xS(NS)
                               }
-                              for (let ak = Tk.exec(kk); ak; ak = Tk.exec(kk)) {
-                                const Ik = Zk(kk, Fk, ak.index) - ak.index;
-                                if (ak[0] = ak[0].slice(Ik), ak.index += Ik, ik.push(ak), !Fk.global) break;
-                                Tk.lastIndex = yk(ak)
+                              for (let qS = bS.exec(SS); qS; qS = bS.exec(SS)) {
+                                const gS = kS(SS, HS, qS.index) - qS.index;
+                                if (qS[0] = qS[0].slice(gS), qS.index += gS, XS.push(qS), !HS.global) break;
+                                bS.lastIndex = xS(qS)
                               }
-                              return ik
-                            }(kk, Fk, Ik.notAfter) : function(kk, Fk, Ik) {
-                              const Xk = new RegExp(Fk.source, `${Fk.flags.replace(/[gy]/g,"")}g`),
-                                Tk = [];
-                              for (let ik = Xk.exec(kk); ik; ik = Xk.exec(kk))
-                                if (!Ik || Ik(ik)) {
-                                  if (Tk.push(ik), !Fk.global) break;
-                                  "" === ik[0] && (Xk.lastIndex = Zk(kk, Fk, Xk.lastIndex))
-                                } else Xk.lastIndex = Zk(kk, Fk, ik.index);
-                              return Tk
-                            }(kk, Fk, Ik)
+                              return XS
+                            }(SS, HS, gS.notAfter) : function(SS, HS, gS) {
+                              const tS = new RegExp(HS.source, `${HS.flags.replace(/[gy]/g,"")}g`),
+                                bS = [];
+                              for (let XS = tS.exec(SS); XS; XS = tS.exec(SS))
+                                if (!gS || gS(XS)) {
+                                  if (bS.push(XS), !HS.global) break;
+                                  "" === XS[0] && (tS.lastIndex = kS(SS, HS, tS.lastIndex))
+                                } else tS.lastIndex = kS(SS, HS, XS.index);
+                              return bS
+                            }(SS, HS, gS)
                           }
 
-                          function Lk(kk, Fk, Ik, Xk) {
-                            let Tk = "",
-                              ik = 0;
-                            for (const yk of qk(kk, Fk, Ik)) Tk += kk.slice(ik, yk.index) + Xk(yk), ik = yk.index + yk[0].length;
-                            return Tk + kk.slice(ik)
+                          function IS(SS, HS, gS, tS) {
+                            let bS = "",
+                              XS = 0;
+                            for (const xS of uS(SS, HS, gS)) bS += SS.slice(XS, xS.index) + tS(xS), XS = xS.index + xS[0].length;
+                            return bS + SS.slice(XS)
                           }
 
-                          function tk(kk, Fk, Ik) {
-                            const Xk = [];
-                            let Tk = 0;
-                            for (const ik of qk(kk, Fk, Ik)) Xk.push(kk.slice(Tk, ik.index)), Tk = ik.index + ik[0].length;
-                            return [...Xk, kk.slice(Tk)]
+                          function fS(SS, HS, gS) {
+                            const tS = [];
+                            let bS = 0;
+                            for (const XS of uS(SS, HS, gS)) tS.push(SS.slice(bS, XS.index)), bS = XS.index + XS[0].length;
+                            return [...tS, SS.slice(bS)]
                           }
 
-                          function Zk(kk, Fk, Ik) {
-                            var Xk;
-                            return Ik + (Fk.unicode && (null !== (Xk = kk.codePointAt(Ik)) && void 0 !== Xk ? Xk : 0) > 65535 ? 2 : 1)
+                          function kS(SS, HS, gS) {
+                            var tS;
+                            return gS + (HS.unicode && (null !== (tS = SS.codePointAt(gS)) && void 0 !== tS ? tS : 0) > 65535 ? 2 : 1)
                           }
-                        }, 4821: (kk, Fk, Ik) => {
-                          Ik.d(Fk, {
-                            d: () => Tk,
-                            f: () => ak,
-                            g: () => ik,
-                            h: () => yk,
-                            k: () => lk,
-                            o: () => Hk,
-                            r: () => Lk,
-                            t: () => tk,
-                            w: () => wk,
-                            z: () => jk
+                        }, 4960: (SS, HS, gS) => {
+                          gS.d(HS, {
+                            c: () => bS,
+                            d: () => qS,
+                            h: () => XS,
+                            j: () => xS,
+                            m: () => NS,
+                            q: () => GS,
+                            t: () => IS,
+                            u: () => fS,
+                            v: () => jS,
+                            x: () => aS
                           });
-                          var Xk = Ik(1534);
-                          const Tk = 24e3,
-                            ik = "/docs/llms.txt",
-                            yk = `${Xk.b}${ik}`,
-                            lk = "/llms.txt",
-                            ak = "/docs/llms-full.txt";
+                          var tS = gS(1678);
+                          const bS = 24e3,
+                            XS = "/docs/llms.txt",
+                            xS = `${tS.d}${XS}`,
+                            NS = "/llms.txt",
+                            qS = "/docs/llms-full.txt";
 
-                          function qk(kk) {
-                            return kk || "index"
+                          function uS(SS) {
+                            return SS || "index"
                           }
 
-                          function Lk(kk) {
-                            return `/docs/${qk(kk)}.md`
+                          function IS(SS) {
+                            return `/docs/${uS(SS)}.md`
                           }
 
-                          function tk(kk, Fk) {
-                            return `/docs/${qk(kk)}/${Fk+1}.md`
+                          function fS(SS, HS) {
+                            return `/docs/${uS(SS)}/${HS+1}.md`
                           }
-                          const Zk = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const kS = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function jk(kk) {
-                            const Fk = Zk.exec(kk);
-                            return null === Fk ? null : {
-                              name: Fk[1],
-                              part: void 0 === Fk[2] ? null : Number(Fk[2])
+                          function aS(SS) {
+                            const HS = kS.exec(SS);
+                            return null === HS ? null : {
+                              name: HS[1],
+                              part: void 0 === HS[2] ? null : Number(HS[2])
                             }
                           }
-                          const ek = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const KS = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function wk(kk) {
-                            const Fk = ek.exec(kk);
-                            if (null === Fk) return null;
-                            const [, Ik = "", Xk] = Fk;
-                            return void 0 === Xk ? Lk(Ik) : tk(Ik, Number(Xk) - 1)
+                          function jS(SS) {
+                            const HS = KS.exec(SS);
+                            if (null === HS) return null;
+                            const [, gS = "", tS] = HS;
+                            return void 0 === tS ? IS(gS) : fS(gS, Number(tS) - 1)
                           }
 
-                          function Hk(kk) {
-                            return `/docsHtml/${qk(kk)}.html`
+                          function GS(SS) {
+                            return `/docsHtml/${uS(SS)}.html`
                           }
-                        }, 4843: (kk, Fk, Ik) => {
-                          Ik.d(Fk, {
-                            b: () => Tk,
-                            d: () => Xk,
-                            g: () => ik,
-                            k: () => ak,
-                            n: () => yk
+                        }, 4992: (SS, HS, gS) => {
+                          gS.d(HS, {
+                            d: () => bS,
+                            e: () => tS,
+                            g: () => XS,
+                            j: () => qS,
+                            k: () => xS
                           });
-                          const Xk = ["sine", "triangle", "square", "sawtooth"],
-                            Tk = 55,
-                            ik = {
+                          const tS = ["sine", "triangle", "square", "sawtooth"],
+                            bS = 55,
+                            XS = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7260,38 +7260,38 @@ export const modules = {
                               }
                             };
 
-                          function yk(kk) {
-                            return "string" !== typeof kk ? kk : Object.hasOwn(ik, kk) ? ik[kk] : null
+                          function xS(SS) {
+                            return "string" !== typeof SS ? SS : Object.hasOwn(XS, SS) ? XS[SS] : null
                           }
 
-                          function lk(kk, Fk, Ik) {
-                            return Math.min(Ik, Math.max(Fk, kk))
+                          function NS(SS, HS, gS) {
+                            return Math.min(gS, Math.max(HS, SS))
                           }
 
-                          function ak(kk) {
-                            const Fk = lk(kk.durationMs, 10, 500),
-                              Ik = lk(kk.attackMs, 0, Fk),
+                          function qS(SS) {
+                            const HS = NS(SS.durationMs, 10, 500),
+                              gS = NS(SS.attackMs, 0, HS),
                               {
-                                intonation: Tk
-                              } = kk;
+                                intonation: bS
+                              } = SS;
                             return {
-                              waveform: Xk.includes(kk.waveform) ? kk.waveform : "sine",
-                              pitchHz: lk(kk.pitchHz, 20, 4e3),
-                              glideSemitones: lk(kk.glideSemitones, -24, 24),
-                              durationMs: Fk,
-                              attackMs: Ik,
-                              releaseMs: lk(kk.releaseMs, 0, Fk - Ik),
-                              lowpassHz: null === kk.lowpassHz ? null : lk(kk.lowpassHz, 20, 2e4),
-                              volume: lk(kk.volume, 0, 2),
+                              waveform: tS.includes(SS.waveform) ? SS.waveform : "sine",
+                              pitchHz: NS(SS.pitchHz, 20, 4e3),
+                              glideSemitones: NS(SS.glideSemitones, -24, 24),
+                              durationMs: HS,
+                              attackMs: gS,
+                              releaseMs: NS(SS.releaseMs, 0, HS - gS),
+                              lowpassHz: null === SS.lowpassHz ? null : NS(SS.lowpassHz, 20, 2e4),
+                              volume: NS(SS.volume, 0, 2),
                               intonation: {
-                                variationSemitones: lk(Tk.variationSemitones, 0, 6),
-                                declineSemitones: lk(Tk.declineSemitones, 0, 12),
-                                questionRiseSemitones: lk(Tk.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: lk(Tk.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: NS(bS.variationSemitones, 0, 6),
+                                declineSemitones: NS(bS.declineSemitones, 0, 12),
+                                questionRiseSemitones: NS(bS.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: NS(bS.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: lk(kk.syllableMs, 25, 200)
+                              syllableMs: NS(SS.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const kk in modules) Object.freeze(modules[kk]);
+                      for (const SS in modules) Object.freeze(modules[SS]);

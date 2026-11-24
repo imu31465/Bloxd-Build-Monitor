@@ -1,493 +1,493 @@
 export const id = 95;
 export const ids = [93, 94, 95];
 export const modules = {
-  36618: (kk, Fk, Ik) => {
-    function Xk(kk, Fk, Ik, Xk) {
-      return !(Ik && !kk.aimable) && (!Fk || kk.gun && "head" !== Xk)
+  36647: (SS, HS, gS) => {
+    function tS(SS, HS, gS, tS) {
+      return !(gS && !SS.aimable) && (!HS || SS.gun && "head" !== tS)
     }
 
-    function Tk(kk) {
-      return Math.max(.1 * kk, 1)
+    function bS(SS) {
+      return Math.max(.1 * SS, 1)
     }
 
-    function ik(kk, Fk) {
-      return !kk && Fk
+    function XS(SS, HS) {
+      return !SS && HS
     }
-    Ik.d(Fk, {
-      e: () => ik,
-      h: () => Tk,
-      k: () => Xk
+    gS.d(HS, {
+      d: () => XS,
+      e: () => bS,
+      g: () => tS
     })
   },
-  36620: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => lk,
-      g: () => yk
+  36650: (SS, HS, gS) => {
+    gS.d(HS, {
+      c: () => NS,
+      f: () => xS
     });
-    let Xk = null;
-    const Tk = {
+    let tS = null;
+    const bS = {
         crosshairAccuracy: [],
         turnDamageIndicators: []
       },
-      ik = {
-        crosshairAccuracy: kk => {
-          const Fk = Tk.crosshairAccuracy.at(-1);
-          Fk ? Fk.hook(kk) : Xk = kk
+      XS = {
+        crosshairAccuracy: SS => {
+          const HS = bS.crosshairAccuracy.at(-1);
+          HS ? HS.hook(SS) : tS = SS
         },
-        turnDamageIndicators: kk => {
-          var Fk;
-          null === (Fk = Tk.turnDamageIndicators.at(-1)) || void 0 === Fk || Fk.hook(kk)
+        turnDamageIndicators: SS => {
+          var HS;
+          null === (HS = bS.turnDamageIndicators.at(-1)) || void 0 === HS || HS.hook(SS)
         }
       };
 
-    function yk(kk, Fk) {
-      const Ik = {
-          hook: Fk
+    function xS(SS, HS) {
+      const gS = {
+          hook: HS
         },
-        yk = Tk[kk];
-      if (yk.push(Ik), "crosshairAccuracy" === kk && null !== Xk) {
-        const kk = Xk;
-        Xk = null, ik.crosshairAccuracy(kk)
+        xS = bS[SS];
+      if (xS.push(gS), "crosshairAccuracy" === SS && null !== tS) {
+        const SS = tS;
+        tS = null, XS.crosshairAccuracy(SS)
       }
       return () => {
-        const kk = yk.indexOf(Ik); - 1 !== kk && yk.splice(kk, 1)
+        const SS = xS.indexOf(gS); - 1 !== SS && xS.splice(SS, 1)
       }
     }
 
-    function lk() {
-      return ik
+    function NS() {
+      return XS
     }
   },
-  36432: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      countDecodesAs: () => tk,
-      decodedAudio: () => Zk
+  36448: (SS, HS, gS) => {
+    gS.r(HS), gS.d(HS, {
+      countDecodesAs: () => fS,
+      decodedAudio: () => kS
     });
-    var Xk = Ik(3191),
-      Tk = Ik(4857);
-    const ik = Tk.Howler,
-      yk = new Map;
-    let lk = 0;
-    const ak = {
+    var tS = gS(3408),
+      bS = gS(5005);
+    const XS = bS.Howler,
+      xS = new Map;
+    let NS = 0;
+    const qS = {
         song: 0,
         sheet: 0
       },
-      qk = new WeakMap,
-      Lk = new WeakSet;
+      uS = new WeakMap,
+      IS = new WeakSet;
 
-    function tk(kk, Fk) {
-      return qk.set(kk, Fk), kk
+    function fS(SS, HS) {
+      return uS.set(SS, HS), SS
     }
 
-    function Zk() {
+    function kS() {
       return {
-        bytes: lk,
-        songsDecoded: ak.song,
-        sheetsDecoded: ak.sheet
+        bytes: NS,
+        songsDecoded: qS.song,
+        sheetsDecoded: qS.sheet
       }
     }
 
-    function jk(kk) {
-      if (Lk.has(kk)) return;
-      Lk.add(kk);
-      const Fk = 1 === kk.decodeAudioData.length,
-        Ik = kk.decodeAudioData.bind(kk);
-      kk.decodeAudioData = (kk, Xk, Tk) => {
-        const Lk = kk => {
-          const Fk = ik._howls.filter((kk => "loaded" !== kk._state));
+    function aS(SS) {
+      if (IS.has(SS)) return;
+      IS.add(SS);
+      const HS = 1 === SS.decodeAudioData.length,
+        gS = SS.decodeAudioData.bind(SS);
+      SS.decodeAudioData = (SS, tS, bS) => {
+        const IS = SS => {
+          const HS = XS._howls.filter((SS => "loaded" !== SS._state));
           try {
-            null === Xk || void 0 === Xk || Xk(kk)
+            null === tS || void 0 === tS || tS(SS)
           } finally {
-            const Ik = Fk.find((kk => "loaded" === kk._state));
-            void 0 !== Ik && "string" === typeof Ik._src && function(kk, Fk, Ik) {
-              var Xk;
-              lk += Ik - (null !== (Xk = yk.get(Fk)) && void 0 !== Xk ? Xk : 0), yk.set(Fk, Ik);
-              const Tk = qk.get(kk);
-              void 0 !== Tk && ak[Tk]++
-            }(Ik, Ik._src, kk.length * kk.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
+            const gS = HS.find((SS => "loaded" === SS._state));
+            void 0 !== gS && "string" === typeof gS._src && function(SS, HS, gS) {
+              var tS;
+              NS += gS - (null !== (tS = xS.get(HS)) && void 0 !== tS ? tS : 0), xS.set(HS, gS);
+              const bS = uS.get(SS);
+              void 0 !== bS && qS[bS]++
+            }(gS, gS._src, SS.length * SS.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
           }
-          return kk
+          return SS
         };
-        if (!Fk) return Ik(kk, Lk, Tk);
-        const tk = Ik(kk).then(Lk);
-        return tk.catch((kk => {
-          null === Tk || void 0 === Tk || Tk(kk)
-        })), tk
+        if (!HS) return gS(SS, IS, bS);
+        const fS = gS(SS).then(IS);
+        return fS.catch((SS => {
+          null === bS || void 0 === bS || bS(SS)
+        })), fS
       }
-    }(0, Xk.d)(Zk);
-    const ek = Tk.Howl.prototype,
-      wk = ek.init;
-    ek.init = function(kk) {
-      return Tk.Howler.volume(), ik.ctx && jk(ik.ctx), wk.call(this, kk)
+    }(0, tS.f)(kS);
+    const KS = bS.Howl.prototype,
+      jS = KS.init;
+    KS.init = function(SS) {
+      return bS.Howler.volume(), XS.ctx && aS(XS.ctx), jS.call(this, SS)
     };
-    const Hk = ek.unload;
-    ek.unload = function() {
-      const kk = this._src,
-        Fk = Hk.call(this);
-      if ("string" !== typeof kk) return Fk;
-      const Ik = yk.get(kk);
-      return void 0 !== Ik && function(kk) {
-        return !ik._howls.some((Fk => Fk._src === kk || "string" === typeof Fk._src && kk.indexOf(Fk._src) >= 0))
-      }(kk) && (yk.delete(kk), lk -= Ik), Fk
+    const GS = KS.unload;
+    KS.unload = function() {
+      const SS = this._src,
+        HS = GS.call(this);
+      if ("string" !== typeof SS) return HS;
+      const gS = xS.get(SS);
+      return void 0 !== gS && function(SS) {
+        return !XS._howls.some((HS => HS._src === SS || "string" === typeof HS._src && SS.indexOf(HS._src) >= 0))
+      }(SS) && (xS.delete(SS), NS -= gS), HS
     }
   },
-  36803: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => ak
+  36808: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => qS
     });
-    var Xk = Ik(25),
-      Tk = Ik(36772),
-      ik = Ik(2473),
-      yk = Ik(36810),
-      lk = Ik(4857);
-    const ak = function(kk) {
-      const Fk = new Set;
-      return Ik => {
-        var Xk;
-        const ik = null === (Xk = [...Tk.e].find((kk => {
-          let [, Fk] = kk;
-          return Fk.includes(Ik)
-        }))) || void 0 === Xk ? void 0 : Xk[0];
-        if (void 0 === ik || Fk.has(ik)) return;
-        Fk.add(ik);
-        ! function(kk, Fk) {
+    var tS = gS(24),
+      bS = gS(36773),
+      XS = gS(2677),
+      xS = gS(36814),
+      NS = gS(5005);
+    const qS = function(SS) {
+      const HS = new Set;
+      return gS => {
+        var tS;
+        const XS = null === (tS = [...bS.c].find((SS => {
+          let [, HS] = SS;
+          return HS.includes(gS)
+        }))) || void 0 === tS ? void 0 : tS[0];
+        if (void 0 === XS || HS.has(XS)) return;
+        HS.add(XS);
+        ! function(SS, HS) {
           let {
-            afterJoin: Ik,
-            joining: Xk,
-            idle: Tk,
-            fetchFile: ik
-          } = Fk;
-          const yk = Fk => {
-            Fk >= kk.length || Ik((() => {
-              Tk((() => {
-                Xk() ? yk(Fk) : ik(kk[Fk]).catch((() => {})).finally((() => {
-                  yk(Fk + 1)
+            afterJoin: gS,
+            joining: tS,
+            idle: bS,
+            fetchFile: XS
+          } = HS;
+          const xS = HS => {
+            HS >= SS.length || gS((() => {
+              bS((() => {
+                tS() ? xS(HS) : XS(SS[HS]).catch((() => {})).finally((() => {
+                  xS(HS + 1)
                 }))
               }))
             }))
           };
-          yk(0)
-        }(Tk.e.get(ik).filter((kk => kk !== Ik)).flatMap((Fk => {
-          const Ik = (Xk = (0, Tk.g)(Fk).src, ik = kk.canPlay, Xk.find((kk => {
-            var Fk;
-            const Ik = null === (Fk = /\.([^.]+)$/.exec(kk.split("?", 1)[0])) || void 0 === Fk ? void 0 : Fk[1];
-            return void 0 !== Ik && ik(Ik.toLowerCase())
+          xS(0)
+        }(bS.c.get(XS).filter((SS => SS !== gS)).flatMap((HS => {
+          const gS = (tS = (0, bS.i)(HS).src, XS = SS.canPlay, tS.find((SS => {
+            var HS;
+            const gS = null === (HS = /\.([^.]+)$/.exec(SS.split("?", 1)[0])) || void 0 === HS ? void 0 : HS[1];
+            return void 0 !== gS && XS(gS.toLowerCase())
           })));
-          var Xk, ik;
-          return void 0 === Ik ? [] : [Ik]
-        })), kk)
+          var tS, XS;
+          return void 0 === gS ? [] : [gS]
+        })), SS)
       }
     }({
-      afterJoin: kk => {
-        (0, ik.c)(Xk.d.get("gameState"), kk)
+      afterJoin: SS => {
+        (0, XS.c)(tS.b.get("gameState"), SS)
       },
-      joining: () => (0, ik.e)(Xk.d.get("gameState")),
-      idle: Ik(243).b,
-      fetchFile: yk.e,
-      canPlay: kk => !!lk.Howler.codecs(kk)
+      joining: () => (0, XS.g)(tS.b.get("gameState")),
+      idle: gS(278).c,
+      fetchFile: xS.e,
+      canPlay: SS => !!NS.Howler.codecs(SS)
     })
   },
-  36810: (kk, Fk, Ik) => {
-    async function Xk(kk) {
-      const Fk = await fetch(kk, {
+  36814: (SS, HS, gS) => {
+    async function tS(SS) {
+      const HS = await fetch(SS, {
         priority: "low"
       });
-      if (!Fk.ok) throw new Error(`Fetching ${kk} failed: HTTP ${Fk.status}`);
-      const Ik = Fk.body.getReader();
-      for (; !(await Ik.read()).done;);
+      if (!HS.ok) throw new Error(`Fetching ${SS} failed: HTTP ${HS.status}`);
+      const gS = HS.body.getReader();
+      for (; !(await gS.read()).done;);
     }
-    Ik.d(Fk, {
-      e: () => Xk
+    gS.d(HS, {
+      e: () => tS
     })
   },
-  36777: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => Tk
+  36780: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => bS
     });
-    const Xk = ["end", "stop", "playerror"];
+    const tS = ["end", "stop", "playerror"];
 
-    function Tk(kk, Fk) {
-      const Ik = () => {
-        if (function(kk) {
-            return "loaded" === kk.state() && !kk.playing() && !kk._playLock
-          }(kk)) {
-          for (const Fk of Xk) kk.off(Fk, Ik);
-          kk.unload(), Fk()
+    function bS(SS, HS) {
+      const gS = () => {
+        if (function(SS) {
+            return "loaded" === SS.state() && !SS.playing() && !SS._playLock
+          }(SS)) {
+          for (const HS of tS) SS.off(HS, gS);
+          SS.unload(), HS()
         }
       };
-      for (const Tk of Xk) kk.on(Tk, Ik);
-      Ik()
+      for (const bS of tS) SS.on(bS, gS);
+      gS()
     }
   },
-  4857: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      Howl: () => Tk.Howl,
-      Howler: () => Tk.Howler,
-      musicOutput: () => Hk,
-      readyAudioContext: () => Jk
+  5005: (SS, HS, gS) => {
+    gS.r(HS), gS.d(HS, {
+      Howl: () => bS.Howl,
+      Howler: () => bS.Howler,
+      musicOutput: () => GS,
+      readyAudioContext: () => CS
     });
-    var Xk, Tk = Ik(4863),
-      ik = Ik(3378),
-      yk = Ik(4636);
-    const lk = Tk.Howler;
+    var tS, bS = gS(5011),
+      XS = gS(3577),
+      xS = gS(4775);
+    const NS = bS.Howler;
 
-    function ak() {
-      var kk, Fk;
-      if (lk.ctx || !lk.usingWebAudio || "undefined" === typeof AudioContext || !(0, yk.h)()) return;
-      const Ik = navigator.audioSession;
-      let Xk;
-      "auto" === (null === Ik || void 0 === Ik ? void 0 : Ik.type) && (Ik.type = "ambient");
+    function qS() {
+      var SS, HS;
+      if (NS.ctx || !NS.usingWebAudio || "undefined" === typeof AudioContext || !(0, xS.k)()) return;
+      const gS = navigator.audioSession;
+      let tS;
+      "auto" === (null === gS || void 0 === gS ? void 0 : gS.type) && (gS.type = "ambient");
       try {
-        Xk = new AudioContext({
+        tS = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const Tk = Xk.createGain();
-      Tk.gain.setValueAtTime(lk._muted ? 0 : null !== (kk = lk._volume) && void 0 !== kk ? kk : 1, Xk.currentTime), Tk.connect(Xk.destination), lk.ctx = Xk, lk.masterGain = Tk, null === (Fk = lk._setup) || void 0 === Fk || Fk.call(lk)
+      const bS = tS.createGain();
+      bS.gain.setValueAtTime(NS._muted ? 0 : null !== (SS = NS._volume) && void 0 !== SS ? SS : 1, tS.currentTime), bS.connect(tS.destination), NS.ctx = tS, NS.masterGain = bS, null === (HS = NS._setup) || void 0 === HS || HS.call(NS)
     }
-    lk._mobileUnloaded = !0;
-    const qk = lk.volume.bind(Tk.Howler);
-    lk.volume = function() {
-      return ak(), qk(...arguments)
+    NS._mobileUnloaded = !0;
+    const uS = NS.volume.bind(bS.Howler);
+    NS.volume = function() {
+      return qS(), uS(...arguments)
     };
-    const Lk = lk.mute.bind(Tk.Howler);
-    lk.mute = kk => (ak(), Lk(kk));
-    const tk = Tk.Howl.prototype,
-      Zk = tk.init;
+    const IS = NS.mute.bind(bS.Howler);
+    NS.mute = SS => (qS(), IS(SS));
+    const fS = bS.Howl.prototype,
+      kS = fS.init;
 
-    function jk() {
-      for (; lk._html5AudioPool.length < lk.html5PoolSize;) {
-        const kk = new Audio;
-        kk._unlocked = !0, lk._releaseHtml5Audio(kk)
+    function aS() {
+      for (; NS._html5AudioPool.length < NS.html5PoolSize;) {
+        const SS = new Audio;
+        SS._unlocked = !0, NS._releaseHtml5Audio(SS)
       }
-      for (const Fk of lk._howls)
-        if (!Fk._webAudio)
-          for (const Ik of Fk._getSoundIds()) {
-            var kk;
-            const Xk = null === (kk = Fk._soundById(Ik)) || void 0 === kk ? void 0 : kk._node;
-            Xk && !Xk._unlocked && (Xk._unlocked = !0, Xk.load())
+      for (const HS of NS._howls)
+        if (!HS._webAudio)
+          for (const gS of HS._getSoundIds()) {
+            var SS;
+            const tS = null === (SS = HS._soundById(gS)) || void 0 === SS ? void 0 : SS._node;
+            tS && !tS._unlocked && (tS._unlocked = !0, tS.load())
           }
     }
-    tk.init = function(kk) {
-      return ak(), Zk.call(this, kk)
-    }, (0, yk.h)() && (lk._unlockAudio = () => {
-      const kk = lk.ctx;
-      if (lk._audioUnlocked || !kk) return;
-      lk.autoUnlock = !1;
-      const Fk = kk.createBuffer(1, 1, 22050);
-      lk._scratchBuffer = Fk;
-      const Ik = new AbortController;
-      let Xk = "afterPaint";
-      const Tk = () => {
-          var Xk;
-          if (lk._audioUnlocked) return;
-          null === (Xk = lk._autoResume) || void 0 === Xk || Xk.call(lk);
-          const Tk = kk.createBufferSource();
-          Tk.buffer = Fk, Tk.connect(kk.destination), Tk.start(0), kk.resume().catch((() => {})), Tk.onended = () => {
-            Tk.disconnect(0), lk._audioUnlocked = !0, Ik.abort();
-            for (const kk of lk._howls) kk._emit("unlock")
+    fS.init = function(SS) {
+      return qS(), kS.call(this, SS)
+    }, (0, xS.k)() && (NS._unlockAudio = () => {
+      const SS = NS.ctx;
+      if (NS._audioUnlocked || !SS) return;
+      NS.autoUnlock = !1;
+      const HS = SS.createBuffer(1, 1, 22050);
+      NS._scratchBuffer = HS;
+      const gS = new AbortController;
+      let tS = "afterPaint";
+      const bS = () => {
+          var tS;
+          if (NS._audioUnlocked) return;
+          null === (tS = NS._autoResume) || void 0 === tS || tS.call(NS);
+          const bS = SS.createBufferSource();
+          bS.buffer = HS, bS.connect(SS.destination), bS.start(0), SS.resume().catch((() => {})), bS.onended = () => {
+            bS.disconnect(0), NS._audioUnlocked = !0, gS.abort();
+            for (const SS of NS._howls) SS._emit("unlock")
           }
         },
-        ak = () => {
-          jk(), Tk()
+        qS = () => {
+          aS(), bS()
         },
-        qk = Fk => {
-          if (jk(), "inTap" === Xk) {
-            if ("running" === kk.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), Tk()
-          } else "afterPaint" === Xk && (Xk = "queued", (0, ik.b)(Fk.timeStamp, (() => {
-            Xk = "inTap", Tk()
+        uS = HS => {
+          if (aS(), "inTap" === tS) {
+            if ("running" === SS.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), bS()
+          } else "afterPaint" === tS && (tS = "queued", (0, XS.d)(HS.timeStamp, (() => {
+            tS = "inTap", bS()
           })))
         };
-      for (const ik of ["touchstart", "touchend"]) document.addEventListener(ik, ak, {
+      for (const XS of ["touchstart", "touchend"]) document.addEventListener(XS, qS, {
         capture: !0,
-        signal: Ik.signal
+        signal: gS.signal
       });
-      for (const ik of yk.b) document.addEventListener(ik, qk, {
+      for (const XS of xS.e) document.addEventListener(XS, uS, {
         capture: !0,
-        signal: Ik.signal
+        signal: gS.signal
       })
     });
-    let ek = 0;
-    const wk = null === (Xk = lk._autoSuspend) || void 0 === Xk ? void 0 : Xk.bind(Tk.Howler);
+    let KS = 0;
+    const jS = null === (tS = NS._autoSuspend) || void 0 === tS ? void 0 : tS.bind(bS.Howler);
 
-    function Hk() {
-      Jk();
+    function GS() {
+      CS();
       const {
-        ctx: kk,
-        masterGain: Fk
-      } = lk;
-      return kk && Fk ? {
-        ctx: kk,
-        destination: Fk,
-        holdAwake: kk => {
-          var Fk, Ik;
-          (ek += kk ? 1 : -1, kk) ? null === (Fk = lk._autoResume) || void 0 === Fk || Fk.call(lk): null === (Ik = lk._autoSuspend) || void 0 === Ik || Ik.call(lk)
+        ctx: SS,
+        masterGain: HS
+      } = NS;
+      return SS && HS ? {
+        ctx: SS,
+        destination: HS,
+        holdAwake: SS => {
+          var HS, gS;
+          (KS += SS ? 1 : -1, SS) ? null === (HS = NS._autoResume) || void 0 === HS || HS.call(NS): null === (gS = NS._autoSuspend) || void 0 === gS || gS.call(NS)
         },
         wake: () => {
-          var Fk;
-          "running" !== kk.state && (null === (Fk = lk._autoResume) || void 0 === Fk || Fk.call(lk), kk.resume().catch((() => {})))
+          var HS;
+          "running" !== SS.state && (null === (HS = NS._autoResume) || void 0 === HS || HS.call(NS), SS.resume().catch((() => {})))
         }
       } : null
     }
 
-    function Jk() {
-      var kk;
-      (lk.volume(), lk.ctx && lk.autoUnlock) && (null === (kk = lk._unlockAudio) || void 0 === kk || kk.call(lk))
+    function CS() {
+      var SS;
+      (NS.volume(), NS.ctx && NS.autoUnlock) && (null === (SS = NS._unlockAudio) || void 0 === SS || SS.call(NS))
     }
-    wk && (lk._autoSuspend = () => ek > 0 ? Tk.Howler : wk())
+    jS && (NS._autoSuspend = () => KS > 0 ? bS.Howler : jS())
   },
-  36796: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Xk
+  36801: (SS, HS, gS) => {
+    gS.d(HS, {
+      e: () => tS
     });
-    const Xk = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
+    const tS = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
   },
-  36789: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => yk,
-      g: () => Tk,
-      k: () => Xk
+  36793: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => xS,
+      d: () => bS,
+      g: () => tS
     });
 
-    function Xk(kk) {
-      return kk.replace(/[_\-\s]*\d+$/, "") || kk
+    function tS(SS) {
+      return SS.replace(/[_\-\s]*\d+$/, "") || SS
     }
 
-    function Tk(kk, Fk, Ik) {
-      return Ik <= 0 ? 0 : kk * Ik / Math.max(Fk, Ik)
+    function bS(SS, HS, gS) {
+      return gS <= 0 ? 0 : SS * gS / Math.max(HS, gS)
     }
 
-    function ik(kk, Fk) {
-      const Ik = kk.getDurationMs();
-      return Ik > 0 ? kk.loudness * Math.max(0, 1 - (Fk - kk.startMs) / Ik) : 0
+    function XS(SS, HS) {
+      const gS = SS.getDurationMs();
+      return gS > 0 ? SS.loudness * Math.max(0, 1 - (HS - SS.startMs) / gS) : 0
     }
-    class yk {
+    class xS {
       constructor() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = kk, this.maxPerGroup = Fk, this.voices = []
+        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = SS, this.maxPerGroup = HS, this.voices = []
       }
-      admit(kk) {
-        if (this.voices = this.voices.filter((kk => kk.isAlive())), null !== kk.group) {
-          const Fk = this.voices.filter((Fk => Fk.group === kk.group));
-          if (Fk.length >= this.maxPerGroup && !this.dropLeastWorth(Fk, kk)) return !1
+      admit(SS) {
+        if (this.voices = this.voices.filter((SS => SS.isAlive())), null !== SS.group) {
+          const HS = this.voices.filter((HS => HS.group === SS.group));
+          if (HS.length >= this.maxPerGroup && !this.dropLeastWorth(HS, SS)) return !1
         }
-        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, kk)) && (this.voices.push(kk), !0)
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, SS)) && (this.voices.push(SS), !0)
       }
-      dropLeastWorth(kk, Fk) {
-        let Ik = null,
-          Xk = 1 / 0;
-        for (const Tk of kk) {
-          if (!Tk.canStop()) continue;
-          const kk = ik(Tk, Fk.startMs);
-          kk < Xk && (Ik = Tk, Xk = kk)
+      dropLeastWorth(SS, HS) {
+        let gS = null,
+          tS = 1 / 0;
+        for (const bS of SS) {
+          if (!bS.canStop()) continue;
+          const SS = XS(bS, HS.startMs);
+          SS < tS && (gS = bS, tS = SS)
         }
-        return !(!Ik || Fk.loudness < Xk) && (this.voices.splice(this.voices.indexOf(Ik), 1), Ik.stop(), !0)
+        return !(!gS || HS.loudness < tS) && (this.voices.splice(this.voices.indexOf(gS), 1), gS.stop(), !0)
       }
     }
   },
-  36824: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => ik,
-      h: () => yk,
-      i: () => Xk
+  36822: (SS, HS, gS) => {
+    gS.d(HS, {
+      d: () => XS,
+      e: () => xS,
+      h: () => tS
     });
-    class Xk {
-      constructor(kk) {
-        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = kk
+    class tS {
+      constructor(SS) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = SS
       }
-      setMultiplierType(kk, Fk) {
-        var Ik;
-        this.multipliers[kk] = Fk, null === (Ik = this._onUpdate) || void 0 === Ik || Ik.call(this)
+      setMultiplierType(SS, HS) {
+        var gS;
+        this.multipliers[SS] = HS, null === (gS = this._onUpdate) || void 0 === gS || gS.call(this)
       }
-      removeMultiplier(kk) {
-        var Fk;
-        delete this.multipliers[kk], null === (Fk = this._onUpdate) || void 0 === Fk || Fk.call(this)
+      removeMultiplier(SS) {
+        var HS;
+        delete this.multipliers[SS], null === (HS = this._onUpdate) || void 0 === HS || HS.call(this)
       }
-      getMultiplierType(kk) {
-        return this.multipliers[kk]
+      getMultiplierType(SS) {
+        return this.multipliers[SS]
       }
       getTotalMultipliedVal() {
-        let kk = 1;
-        for (const Fk in this.multipliers) kk *= this.multipliers[Fk];
-        return kk
+        let SS = 1;
+        for (const HS in this.multipliers) SS *= this.multipliers[HS];
+        return SS
       }
     }
-    class Tk {
+    class bS {
       constructor() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = kk
+        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = SS
       }
-      setBooleanType(kk, Fk) {
-        const Ik = this._getTotalBooleanVal();
-        this.booleans[kk] = !!Fk;
-        const Xk = this.getTotalBooleanVal();
-        var Tk;
-        Xk !== Ik && (null === (Tk = this._onUpdate) || void 0 === Tk || Tk.call(this, Xk, this.booleans));
-        return Xk
+      setBooleanType(SS, HS) {
+        const gS = this._getTotalBooleanVal();
+        this.booleans[SS] = !!HS;
+        const tS = this.getTotalBooleanVal();
+        var bS;
+        tS !== gS && (null === (bS = this._onUpdate) || void 0 === bS || bS.call(this, tS, this.booleans));
+        return tS
       }
-      removeBoolean(kk) {
-        const Fk = this._getTotalBooleanVal();
-        delete this.booleans[kk];
-        const Ik = this._getTotalBooleanVal();
-        var Xk;
-        null !== Ik && Ik !== Fk && (null === (Xk = this._onUpdate) || void 0 === Xk || Xk.call(this, Ik, this.booleans));
-        return null !== Ik && void 0 !== Ik && Ik
+      removeBoolean(SS) {
+        const HS = this._getTotalBooleanVal();
+        delete this.booleans[SS];
+        const gS = this._getTotalBooleanVal();
+        var tS;
+        null !== gS && gS !== HS && (null === (tS = this._onUpdate) || void 0 === tS || tS.call(this, gS, this.booleans));
+        return null !== gS && void 0 !== gS && gS
       }
-      getBooleanType(kk) {
-        return this.booleans[kk]
+      getBooleanType(SS) {
+        return this.booleans[SS]
       }
       getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
       forceUpdate() {
-        var kk;
-        null === (kk = this._onUpdate) || void 0 === kk || kk.call(this, this.getTotalBooleanVal(), this.booleans)
+        var SS;
+        null === (SS = this._onUpdate) || void 0 === SS || SS.call(this, this.getTotalBooleanVal(), this.booleans)
       }
       _getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
     }
-    class ik extends Tk {
+    class XS extends bS {
       getTotalBooleanVal() {
-        const kk = this._getTotalBooleanVal();
-        if (null === kk) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return kk
+        const SS = this._getTotalBooleanVal();
+        if (null === SS) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return SS
       }
       _getTotalBooleanVal() {
-        let kk = !1,
-          Fk = !0;
-        for (const Ik in this.booleans) kk = !0, Fk &&= this.booleans[Ik];
-        return kk ? Fk : null
+        let SS = !1,
+          HS = !0;
+        for (const gS in this.booleans) SS = !0, HS &&= this.booleans[gS];
+        return SS ? HS : null
       }
     }
-    class yk extends Tk {
+    class xS extends bS {
       getTotalBooleanVal() {
-        const kk = this._getTotalBooleanVal();
-        if (null === kk) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return kk
+        const SS = this._getTotalBooleanVal();
+        if (null === SS) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return SS
       }
       _getTotalBooleanVal() {
-        let kk = !1,
-          Fk = !1;
-        for (const Ik in this.booleans) kk = !0, Fk ||= this.booleans[Ik];
-        return kk ? Fk : null
+        let SS = !1,
+          HS = !1;
+        for (const gS in this.booleans) SS = !0, HS ||= this.booleans[gS];
+        return SS ? HS : null
       }
     }
   },
-  36816: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => ik,
-      e: () => Xk,
-      f: () => Tk
+  36820: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => XS,
+      e: () => tS,
+      f: () => bS
     });
-    const Xk = 15,
-      Tk = 3,
-      ik = 30
+    const tS = 15,
+      bS = 3,
+      XS = 30
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

@@ -1,192 +1,192 @@
 export const id = 201;
 export const ids = [201];
 export const modules = {
-  34248: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Tk,
-      d: () => ik
+  34297: (SS, HS, gS) => {
+    gS.d(HS, {
+      d: () => bS,
+      f: () => XS
     });
-    var Xk = Ik(3175);
+    var tS = gS(3403);
 
-    function Tk() {
+    function bS() {
       if ("undefined" === typeof BroadcastChannel) return null;
-      const kk = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      const SS = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
       try {
-        const Fk = new BroadcastChannel(Xk.j);
-        Fk.postMessage({
-          stored: kk
-        }), Fk.close()
+        const HS = new BroadcastChannel(tS.h);
+        HS.postMessage({
+          stored: SS
+        }), HS.close()
       } catch {
         return null
       }
-      return kk
+      return SS
     }
 
-    function ik(kk) {
-      const Fk = "object" === typeof kk && null !== kk ? kk.stored : null;
-      return "string" === typeof Fk ? Fk : null
+    function XS(SS) {
+      const HS = "object" === typeof SS && null !== SS ? SS.stored : null;
+      return "string" === typeof HS ? HS : null
     }
   },
-  34245: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => yk,
-      f: () => Tk,
-      g: () => ik
+  34289: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => xS,
+      e: () => bS,
+      h: () => XS
     });
-    var Xk = Ik(3175);
-    async function Tk(kk, Fk, Ik) {
-      let Tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-      const ik = yk(await kk.getItem(Xk.f, Fk));
-      if (null === ik || Tk()) return null;
-      const lk = await kk.getItem(Xk.i, Fk);
-      return Tk() ? null : (await async function(kk) {
-        await Promise.all([kk.removeItem(Xk.f), kk.removeItem(Xk.i)])
-      }(kk).catch(Ik), {
-        pack: ik,
-        source: "string" === typeof lk ? lk : null
+    var tS = gS(3403);
+    async function bS(SS, HS, gS) {
+      let bS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const XS = xS(await SS.getItem(tS.d, HS));
+      if (null === XS || bS()) return null;
+      const NS = await SS.getItem(tS.g, HS);
+      return bS() ? null : (await async function(SS) {
+        await Promise.all([SS.removeItem(tS.d), SS.removeItem(tS.g)])
+      }(SS).catch(gS), {
+        pack: XS,
+        source: "string" === typeof NS ? NS : null
       })
     }
 
-    function ik(kk) {
-      return (0, Xk.s)() ? Promise.resolve(null) : Tk(kk, !1, (kk => {
-        console.error("Error removing temporary texture pack: ", kk)
-      }), Xk.s)
+    function XS(SS) {
+      return (0, tS.n)() ? Promise.resolve(null) : bS(SS, !1, (SS => {
+        console.error("Error removing temporary texture pack: ", SS)
+      }), tS.n)
     }
 
-    function yk(kk) {
-      if ("object" !== typeof kk || null === kk) return null;
-      const Fk = kk.metaData;
-      return "object" !== typeof Fk || null === Fk || "string" !== typeof Fk.id ? null : kk
+    function xS(SS) {
+      if ("object" !== typeof SS || null === SS) return null;
+      const HS = SS.metaData;
+      return "object" !== typeof HS || null === HS || "string" !== typeof HS.id ? null : SS
     }
   },
-  50988: (kk, Fk, Ik) => {
-    function Xk(kk) {
-      return null === kk.gameSource ? "player" : "customGame"
+  51027: (SS, HS, gS) => {
+    function tS(SS) {
+      return null === SS.gameSource ? "player" : "customGame"
     }
-    Ik.d(Fk, {
-      c: () => ik,
-      f: () => wk,
-      g: () => ek,
-      h: () => Xk
+    gS.d(HS, {
+      c: () => XS,
+      d: () => jS,
+      h: () => KS,
+      k: () => tS
     });
-    const Tk = /^data:[\w.+/-]*;base64,[A-Za-z0-9+/]*={0,2}$/;
+    const bS = /^data:[\w.+/-]*;base64,[A-Za-z0-9+/]*={0,2}$/;
 
-    function ik(kk) {
-      return "" === kk || "string" === typeof kk && Tk.test(kk)
+    function XS(SS) {
+      return "" === SS || "string" === typeof SS && bS.test(SS)
     }
 
-    function yk(kk) {
-      return "object" === typeof kk && null !== kk && ("earth" === kk.type || Object.entries(kk).every((kk => {
-        let [Fk, Ik] = kk;
-        return "type" === Fk || ik(Ik)
+    function xS(SS) {
+      return "object" === typeof SS && null !== SS && ("earth" === SS.type || Object.entries(SS).every((SS => {
+        let [HS, gS] = SS;
+        return "type" === HS || XS(gS)
       })))
     }
-    const lk = /(?:src|image|image-set|cross-fade)\(/i,
-      ak = /url\(\s*(?:"(?<doubleQuoted>[^"]*)"|'(?<singleQuoted>[^']*)'|(?<unquoted>[^"'()\s]*))\s*\)/gi,
-      qk = /url\(/gi,
-      Lk = ["https://bloxd.invalid/", "http://bloxd.invalid/"],
-      tk = new Set([...Lk.map((kk => new URL(kk).origin)), "https://fonts.gstatic.com"]),
-      Zk = new Set(["https://i.imgur.com/MEcjBFQ.png"]);
+    const NS = /(?:src|image|image-set|cross-fade)\(/i,
+      qS = /url\(\s*(?:"(?<doubleQuoted>[^"]*)"|'(?<singleQuoted>[^']*)'|(?<unquoted>[^"'()\s]*))\s*\)/gi,
+      uS = /url\(/gi,
+      IS = ["https://bloxd.invalid/", "http://bloxd.invalid/"],
+      fS = new Set([...IS.map((SS => new URL(SS).origin)), "https://fonts.gstatic.com"]),
+      kS = new Set(["https://i.imgur.com/MEcjBFQ.png"]);
 
-    function jk(kk) {
-      var Fk, Ik;
-      if (kk.includes("\\") || lk.test(kk)) return !0;
-      const Xk = [...kk.matchAll(ak)];
-      return Xk.length !== (null !== (Fk = null === (Ik = kk.match(qk)) || void 0 === Ik ? void 0 : Ik.length) && void 0 !== Fk ? Fk : 0) || !Xk.every((kk => {
-        var Fk, Ik, Xk;
+    function aS(SS) {
+      var HS, gS;
+      if (SS.includes("\\") || NS.test(SS)) return !0;
+      const tS = [...SS.matchAll(qS)];
+      return tS.length !== (null !== (HS = null === (gS = SS.match(uS)) || void 0 === gS ? void 0 : gS.length) && void 0 !== HS ? HS : 0) || !tS.every((SS => {
+        var HS, gS, tS;
         let {
-          groups: Tk
-        } = kk;
-        return function(kk) {
+          groups: bS
+        } = SS;
+        return function(SS) {
           try {
-            return Lk.every((Fk => {
-              const Ik = new URL(kk, Fk);
-              return "data:" === Ik.protocol || tk.has(Ik.origin) || Zk.has(Ik.href)
+            return IS.every((HS => {
+              const gS = new URL(SS, HS);
+              return "data:" === gS.protocol || fS.has(gS.origin) || kS.has(gS.href)
             }))
           } catch {
             return !1
           }
-        }(null !== (Fk = null !== (Ik = null !== (Xk = null === Tk || void 0 === Tk ? void 0 : Tk.doubleQuoted) && void 0 !== Xk ? Xk : null === Tk || void 0 === Tk ? void 0 : Tk.singleQuoted) && void 0 !== Ik ? Ik : null === Tk || void 0 === Tk ? void 0 : Tk.unquoted) && void 0 !== Fk ? Fk : "")
+        }(null !== (HS = null !== (gS = null !== (tS = null === bS || void 0 === bS ? void 0 : bS.doubleQuoted) && void 0 !== tS ? tS : null === bS || void 0 === bS ? void 0 : bS.singleQuoted) && void 0 !== gS ? gS : null === bS || void 0 === bS ? void 0 : bS.unquoted) && void 0 !== HS ? HS : "")
       }))
     }
 
-    function ek(kk) {
-      var Fk, Ik, Xk, Tk, lk, ak, qk;
-      const Lk = [...Object.values(null !== (Fk = kk.textureOverrides) && void 0 !== Fk ? Fk : {}), ...Object.values(null !== (Ik = kk.modelOverrides) && void 0 !== Ik ? Ik : {})],
-        tk = [...Object.values(null !== (Xk = null === (Tk = kk.customCss) || void 0 === Tk ? void 0 : Tk.fontFaces) && void 0 !== Xk ? Xk : {}), ...Object.values(null !== (lk = null === (ak = kk.customCss) || void 0 === ak ? void 0 : ak.classStyles) && void 0 !== lk ? lk : {})].flatMap((kk => Object.values(null !== kk && void 0 !== kk ? kk : {})));
-      return !Lk.every(ik) || !Object.values(null !== (qk = kk.skyBoxes) && void 0 !== qk ? qk : {}).every(yk) || tk.some((kk => "string" === typeof kk && jk(kk)))
+    function KS(SS) {
+      var HS, gS, tS, bS, NS, qS, uS;
+      const IS = [...Object.values(null !== (HS = SS.textureOverrides) && void 0 !== HS ? HS : {}), ...Object.values(null !== (gS = SS.modelOverrides) && void 0 !== gS ? gS : {})],
+        fS = [...Object.values(null !== (tS = null === (bS = SS.customCss) || void 0 === bS ? void 0 : bS.fontFaces) && void 0 !== tS ? tS : {}), ...Object.values(null !== (NS = null === (qS = SS.customCss) || void 0 === qS ? void 0 : qS.classStyles) && void 0 !== NS ? NS : {})].flatMap((SS => Object.values(null !== SS && void 0 !== SS ? SS : {})));
+      return !IS.every(XS) || !Object.values(null !== (uS = SS.skyBoxes) && void 0 !== uS ? uS : {}).every(xS) || fS.some((SS => "string" === typeof SS && aS(SS)))
     }
 
-    function wk(kk, Fk) {
-      if (null === kk || "player" === Fk || !ek(kk)) return kk;
-      const Ik = {
-        ...kk
+    function jS(SS, HS) {
+      if (null === SS || "player" === HS || !KS(SS)) return SS;
+      const gS = {
+        ...SS
       };
-      return kk.textureOverrides && (Ik.textureOverrides = Jk(kk.textureOverrides, ik, "texture")), kk.modelOverrides && (Ik.modelOverrides = Jk(kk.modelOverrides, ik, "model")), kk.skyBoxes && (Ik.skyBoxes = Jk(kk.skyBoxes, yk, "sky")), kk.customCss && (Ik.customCss = function(kk) {
-        const Fk = kk => Jk(kk, (kk => "string" === typeof kk && !jk(kk)), "CSS"),
+      return SS.textureOverrides && (gS.textureOverrides = CS(SS.textureOverrides, XS, "texture")), SS.modelOverrides && (gS.modelOverrides = CS(SS.modelOverrides, XS, "model")), SS.skyBoxes && (gS.skyBoxes = CS(SS.skyBoxes, xS, "sky")), SS.customCss && (gS.customCss = function(SS) {
+        const HS = SS => CS(SS, (SS => "string" === typeof SS && !aS(SS)), "CSS"),
           {
-            fontFaces: Ik,
-            classStyles: Xk
-          } = Hk(kk) ? kk : {},
-          Tk = {};
-        for (const [ik, yk] of Object.entries(Hk(Xk) ? Xk : {})) Tk[ik] = Fk(yk);
+            fontFaces: gS,
+            classStyles: tS
+          } = GS(SS) ? SS : {},
+          bS = {};
+        for (const [XS, xS] of Object.entries(GS(tS) ? tS : {})) bS[XS] = HS(xS);
         return {
-          fontFaces: (Array.isArray(Ik) ? Ik : []).map(Fk),
-          classStyles: Tk
+          fontFaces: (Array.isArray(gS) ? gS : []).map(HS),
+          classStyles: bS
         }
-      }(kk.customCss)), Ik
+      }(SS.customCss)), gS
     }
 
-    function Hk(kk) {
-      return "object" === typeof kk && null !== kk && !Array.isArray(kk)
+    function GS(SS) {
+      return "object" === typeof SS && null !== SS && !Array.isArray(SS)
     }
 
-    function Jk(kk, Fk, Ik) {
-      const Xk = Object.entries(Hk(kk) ? kk : {}),
-        Tk = Xk.filter((kk => {
-          let [, Ik] = kk;
-          return !Fk(Ik)
+    function CS(SS, HS, gS) {
+      const tS = Object.entries(GS(SS) ? SS : {}),
+        bS = tS.filter((SS => {
+          let [, gS] = SS;
+          return !HS(gS)
         }));
-      if (Tk.length > 0) {
-        const kk = Tk.map((kk => {
-          let [Fk] = kk;
-          return Fk
+      if (bS.length > 0) {
+        const SS = bS.map((SS => {
+          let [HS] = SS;
+          return HS
         }));
-        console.warn(`Ignoring a custom game texture pack's ${Ik} files that name another site: ${kk.join(", ")}`)
+        console.warn(`Ignoring a custom game texture pack's ${gS} files that name another site: ${SS.join(", ")}`)
       }
-      return Object.fromEntries(Xk.filter((kk => {
-        let [, Ik] = kk;
-        return Fk(Ik)
+      return Object.fromEntries(tS.filter((SS => {
+        let [, gS] = SS;
+        return HS(gS)
       })))
     }
   },
-  50992: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => ek,
-      f: () => Pk,
-      j: () => xk
+  51036: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => KS,
+      e: () => PS,
+      f: () => nS
     });
-    var Xk = Ik(1018),
-      Tk = Ik(2071),
-      ik = Ik(3170),
-      yk = Ik(3175),
-      lk = Ik(34248),
-      ak = Ik(34245),
-      qk = Ik(50988),
-      Lk = Ik(41003),
-      tk = Ik(40978),
-      Zk = Ik(5071);
-    const jk = {
+    var tS = gS(1087),
+      bS = gS(2256),
+      XS = gS(3395),
+      xS = gS(3403),
+      NS = gS(34297),
+      qS = gS(34289),
+      uS = gS(51027),
+      IS = gS(41017),
+      fS = gS(40991),
+      kS = gS(5242);
+    const aS = {
       pack: null,
       gameSource: null
     };
-    class ek {
-      constructor(kk) {
-        this.host = kk, this.ready = void 0, this.state = jk, this.playerPack = null, this.onGamePack = !1, this.confirmGamePack = null, this.skippedKey = null, this.ownAnnouncements = new Set, this.listeners = new Map, this.ownListeners = new Set, this.changes = 0, this.picks = 0, this.playerPicked = !1, this.ownChanges = 0, this.ee = !1, (0, yk.k)(), this.ready = this.readStored()
+    class KS {
+      constructor(SS) {
+        this.host = SS, this.ready = void 0, this.state = aS, this.playerPack = null, this.onGamePack = !1, this.confirmGamePack = null, this.skippedKey = null, this.ownAnnouncements = new Set, this.listeners = new Map, this.ownListeners = new Set, this.changes = 0, this.picks = 0, this.playerPicked = !1, this.ownChanges = 0, this.nK = !1, (0, xS.l)(), this.ready = this.readStored()
       }
-      readyWithin(kk) {
-        return Promise.race([this.ready, new Promise((Fk => {
-          setTimeout(Fk, kk)
+      readyWithin(SS) {
+        return Promise.race([this.ready, new Promise((HS => {
+          setTimeout(HS, SS)
         }))])
       }
       current() {
@@ -198,102 +198,102 @@ export const modules = {
           gameSource: null
         }
       }
-      onPlayerPackChange(kk) {
-        return this.ownListeners.add(kk), () => {
-          this.ownListeners.delete(kk)
+      onPlayerPackChange(SS) {
+        return this.ownListeners.add(SS), () => {
+          this.ownListeners.delete(SS)
         }
       }
-      isUsingCustomGameTexturePack(kk) {
-        return (0, tk.g)(this.state, kk)
+      isUsingCustomGameTexturePack(SS) {
+        return (0, fS.f)(this.state, SS)
       }
-      setGamePackConfirm(kk) {
-        this.confirmGamePack = kk
+      setGamePackConfirm(SS) {
+        this.confirmGamePack = SS
       }
-      subscribe(kk) {
-        return this.listeners.set(kk, null), this.ready.then((() => {
-          this.deliver(kk)
+      subscribe(SS) {
+        return this.listeners.set(SS, null), this.ready.then((() => {
+          this.deliver(SS)
         })), () => {
-          this.listeners.delete(kk)
+          this.listeners.delete(SS)
         }
       }
-      async setPlayerPack(kk) {
-        const Fk = Hk(kk) ? null : kk;
-        this.picks++, this.playerPicked = !0, this.ownChanges++, this.setOwn(Fk), this.change({
-          pack: Fk,
+      async setPlayerPack(SS) {
+        const HS = GS(SS) ? null : SS;
+        this.picks++, this.playerPicked = !0, this.ownChanges++, this.setOwn(HS), this.change({
+          pack: HS,
           gameSource: null
         }, !1);
-        const Ik = await this.storePlayerPack(Fk);
-        return Ik && this.announce(), Ik
+        const gS = await this.storePlayerPack(HS);
+        return gS && this.announce(), gS
       }
-      async packForGame(kk, Fk, Ik) {
-        await this.readyWithin(Math.max(0, (null !== Ik && void 0 !== Ik ? Ik : performance.now() + Lk.c) - performance.now()));
-        const Tk = ++this.picks,
-          ik = (0, Xk.j)(kk) ? (0, Xk.n)(kk) : null;
-        if (null === ik) return void this.usePlayerPack();
-        let yk;
-        const lk = function(kk) {
-          let Fk;
-          const Ik = new Promise(((Ik, Xk) => {
-            Fk = setTimeout((() => {
-              Xk(new Error(`no answer in ${kk} ms`))
-            }), kk)
+      async packForGame(SS, HS, gS) {
+        await this.readyWithin(Math.max(0, (null !== gS && void 0 !== gS ? gS : performance.now() + IS.d) - performance.now()));
+        const bS = ++this.picks,
+          XS = (0, tS.m)(SS) ? (0, tS.t)(SS) : null;
+        if (null === XS) return void this.usePlayerPack();
+        let xS;
+        const NS = function(SS) {
+          let HS;
+          const gS = new Promise(((gS, tS) => {
+            HS = setTimeout((() => {
+              tS(new Error(`no answer in ${SS} ms`))
+            }), SS)
           }));
-          return Ik.catch((() => {})), {
-            passed: Ik,
+          return gS.catch((() => {})), {
+            passed: gS,
             clear: () => {
-              clearTimeout(Fk)
+              clearTimeout(HS)
             }
           }
         }(2e4);
         try {
-          const kk = await Promise.race([Fk.packKey(ik), lk.passed]);
-          if (null !== kk && this.onGamePack && this.state.gameSource === kk) return;
-          if (null !== kk && kk === this.skippedKey) return void(this.ee || this.picks !== Tk || this.usePlayerPack());
-          yk = null === kk ? null : await Promise.race([wk(ik, kk, Fk), lk.passed])
-        } catch (tk) {
-          const kk = !this.ee && this.picks === Tk && this.holdsOtherGamePack(ik);
-          return this.host.warn(`the texture pack of ${ik} didn't load: ${kk?"the player's own shows":"the pack in play stays"}`, tk), void(kk && this.usePlayerPack())
+          const SS = await Promise.race([HS.packKey(XS), NS.passed]);
+          if (null !== SS && this.onGamePack && this.state.gameSource === SS) return;
+          if (null !== SS && SS === this.skippedKey) return void(this.nK || this.picks !== bS || this.usePlayerPack());
+          xS = null === SS ? null : await Promise.race([jS(XS, SS, HS), NS.passed])
+        } catch (fS) {
+          const SS = !this.nK && this.picks === bS && this.holdsOtherGamePack(XS);
+          return this.host.warn(`the texture pack of ${XS} didn't load: ${SS?"the player's own shows":"the pack in play stays"}`, fS), void(SS && this.usePlayerPack())
         } finally {
-          lk.clear()
+          NS.clear()
         }
-        if (this.ee || this.picks !== Tk) return;
-        null !== yk && (0, qk.g)(yk.pack) && (this.host.warn(`the texture pack of ${ik} names files on other sites: the player's own shows`, null), yk = null);
-        const ak = null === yk || await this.confirmed(yk.pack, ik) ? null : yk.key;
-        this.ee || this.picks !== Tk || (null !== ak && (this.skippedKey = ak, yk = null), null === yk ? this.usePlayerPack() : (this.onGamePack = !0, this.change({
-          pack: yk.pack,
-          gameSource: yk.key
+        if (this.nK || this.picks !== bS) return;
+        null !== xS && (0, uS.h)(xS.pack) && (this.host.warn(`the texture pack of ${XS} names files on other sites: the player's own shows`, null), xS = null);
+        const qS = null === xS || await this.confirmed(xS.pack, XS) ? null : xS.key;
+        this.nK || this.picks !== bS || (null !== qS && (this.skippedKey = qS, xS = null), null === xS ? this.usePlayerPack() : (this.onGamePack = !0, this.change({
+          pack: xS.pack,
+          gameSource: xS.key
         }, !0)))
       }
       endGamePack() {
         this.picks++, this.usePlayerPack()
       }
-      holdsOtherGamePack(kk) {
-        return this.onGamePack && "" !== this.state.gameSource && !this.isUsingCustomGameTexturePack(kk)
+      holdsOtherGamePack(SS) {
+        return this.onGamePack && "" !== this.state.gameSource && !this.isUsingCustomGameTexturePack(SS)
       }
-      async confirmed(kk, Fk) {
-        const Ik = this.confirmGamePack;
-        if (null === Ik) return !0;
+      async confirmed(SS, HS) {
+        const gS = this.confirmGamePack;
+        if (null === gS) return !0;
         try {
-          return await Ik(kk, Fk)
-        } catch (Xk) {
-          return this.host.warn(`the texture pack prompt of ${Fk} failed: the pack is skipped`, Xk), !1
+          return await gS(SS, HS)
+        } catch (tS) {
+          return this.host.warn(`the texture pack prompt of ${HS} failed: the pack is skipped`, tS), !1
         }
       }
       async readPlayerPack() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        if (null !== kk && this.ownAnnouncements.delete(kk)) return;
+        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        if (null !== SS && this.ownAnnouncements.delete(SS)) return;
         await this.ready;
-        const Fk = this.ownChanges;
-        let Ik;
+        const HS = this.ownChanges;
+        let gS;
         try {
-          Ik = await this.host.store.getItem(yk.b, !0)
-        } catch (Tk) {
-          return void this.host.warn("the stored texture pack didn't read again: the pack in play stays", Tk)
+          gS = await this.host.store.getItem(xS.b, !0)
+        } catch (bS) {
+          return void this.host.warn("the stored texture pack didn't read again: the pack in play stays", bS)
         }
-        if (this.ee || this.ownChanges !== Fk) return;
-        const Xk = Jk(Ik);
-        (0, Zk.e)(Xk, this.playerPack) || (this.ownChanges++, this.setOwn(Xk), this.onGamePack || this.change({
-          pack: Xk,
+        if (this.nK || this.ownChanges !== HS) return;
+        const tS = CS(gS);
+        (0, kS.d)(tS, this.playerPack) || (this.ownChanges++, this.setOwn(tS), this.onGamePack || this.change({
+          pack: tS,
           gameSource: null
         }, !1))
       }
@@ -301,68 +301,68 @@ export const modules = {
         this.picks++
       }
       dispose() {
-        this.ee = !0, this.listeners.clear()
+        this.nK = !0, this.listeners.clear()
       }
       async readStored() {
         const {
-          store: kk,
-          warn: Fk
+          store: SS,
+          warn: HS
         } = this.host;
-        await Promise.all([!1 === this.host.oneShot ? void 0 : (0, ak.f)(kk, !0, (kk => {
-          Fk("the custom game's texture pack wasn't removed from storage", kk)
-        })).then((kk => {
-          this.takeOneShot(kk)
-        }), (kk => {
-          Fk("the custom game's texture pack didn't read: the player's own shows", kk)
-        })), kk.getItem(yk.b, !0).then((kk => {
-          this.takeStoredOwn(kk)
-        }), (kk => {
-          Fk("the stored texture pack didn't read: the default pack shows", kk), this.takeStoredOwn(null)
+        await Promise.all([!1 === this.host.oneShot ? void 0 : (0, qS.e)(SS, !0, (SS => {
+          HS("the custom game's texture pack wasn't removed from storage", SS)
+        })).then((SS => {
+          this.takeOneShot(SS)
+        }), (SS => {
+          HS("the custom game's texture pack didn't read: the player's own shows", SS)
+        })), SS.getItem(xS.b, !0).then((SS => {
+          this.takeStoredOwn(SS)
+        }), (SS => {
+          HS("the stored texture pack didn't read: the default pack shows", SS), this.takeStoredOwn(null)
         }))]), this.update()
       }
-      takeOneShot(kk) {
-        var Fk;
-        null === kk || this.ee || this.changes > 0 || this.picks > 0 || ((0, qk.g)(kk.pack) ? this.host.warn("the custom game's texture pack names files on other sites: the player's own shows", null) : (this.onGamePack = !0, this.state = {
-          pack: kk.pack,
-          gameSource: null !== (Fk = kk.source) && void 0 !== Fk ? Fk : ""
+      takeOneShot(SS) {
+        var HS;
+        null === SS || this.nK || this.changes > 0 || this.picks > 0 || ((0, uS.h)(SS.pack) ? this.host.warn("the custom game's texture pack names files on other sites: the player's own shows", null) : (this.onGamePack = !0, this.state = {
+          pack: SS.pack,
+          gameSource: null !== (HS = SS.source) && void 0 !== HS ? HS : ""
         }))
       }
-      takeStoredOwn(kk) {
-        if (this.playerPicked || this.ee) return;
-        if (this.ownChanges++, this.setOwn(Jk(kk)), this.onGamePack) return;
-        const Fk = {
+      takeStoredOwn(SS) {
+        if (this.playerPicked || this.nK) return;
+        if (this.ownChanges++, this.setOwn(CS(SS)), this.onGamePack) return;
+        const HS = {
           pack: this.playerPack,
           gameSource: null
         };
-        0 === this.changes ? this.state = Fk : this.change(Fk, !1)
+        0 === this.changes ? this.state = HS : this.change(HS, !1)
       }
       async update() {
-        const kk = this.playerPack,
-          Fk = null === kk || void 0 === kk ? void 0 : kk.metaData.id;
-        if (!kk || !Fk || !this.host.fetchLatest || Fk === Tk.b || Fk === Tk.l.CUSTOM) return;
-        const Ik = Tk.p[Fk];
-        if (void 0 === Ik || kk.metaData.version >= Ik) return;
-        let Xk;
+        const SS = this.playerPack,
+          HS = null === SS || void 0 === SS ? void 0 : SS.metaData.id;
+        if (!SS || !HS || !this.host.fetchLatest || HS === bS.d || HS === bS.q.CUSTOM) return;
+        const gS = bS.u[HS];
+        if (void 0 === gS || SS.metaData.version >= gS) return;
+        let tS;
         try {
-          Xk = Jk(await this.host.fetchLatest(Fk))
-        } catch (ik) {
-          return void this.host.warn(`texture pack ${Fk} didn't update to version ${Ik}`, ik)
+          tS = CS(await this.host.fetchLatest(HS))
+        } catch (XS) {
+          return void this.host.warn(`texture pack ${HS} didn't update to version ${gS}`, XS)
         }
-        null === Xk || this.ee || this.playerPack !== kk || (this.ownChanges++, this.setOwn(Xk), this.onGamePack || this.change({
-          pack: Xk,
+        null === tS || this.nK || this.playerPack !== SS || (this.ownChanges++, this.setOwn(tS), this.onGamePack || this.change({
+          pack: tS,
           gameSource: null
-        }, !1), await this.storePlayerPack(Xk) && this.announce())
+        }, !1), await this.storePlayerPack(tS) && this.announce())
       }
       announce() {
-        const kk = (0, lk.b)();
-        null !== kk && this.ownAnnouncements.add(kk)
+        const SS = (0, NS.d)();
+        null !== SS && this.ownAnnouncements.add(SS)
       }
-      setOwn(kk) {
-        this.playerPack = kk;
-        for (const Ik of [...this.ownListeners]) try {
-          Ik()
-        } catch (Fk) {
-          this.host.warn("a texture pack listener threw", Fk)
+      setOwn(SS) {
+        this.playerPack = SS;
+        for (const gS of [...this.ownListeners]) try {
+          gS()
+        } catch (HS) {
+          this.host.warn("a texture pack listener threw", HS)
         }
       }
       usePlayerPack() {
@@ -371,72 +371,72 @@ export const modules = {
           gameSource: null
         }, !1)
       }
-      async storePlayerPack(kk) {
+      async storePlayerPack(SS) {
         try {
-          return null === kk ? (await this.host.store.removeItem(yk.b), !0) : await this.host.store.setItem(yk.b, kk)
-        } catch (Fk) {
-          return this.host.warn("the texture pack wasn't stored: it shows until the page reloads", Fk), !1
+          return null === SS ? (await this.host.store.removeItem(xS.b), !0) : await this.host.store.setItem(xS.b, SS)
+        } catch (HS) {
+          return this.host.warn("the texture pack wasn't stored: it shows until the page reloads", HS), !1
         }
       }
-      change(kk, Fk) {
-        if (!this.ee) {
-          this.changes++, this.onGamePack = Fk, this.state = kk;
-          for (const kk of [...this.listeners.keys()]) this.deliver(kk)
+      change(SS, HS) {
+        if (!this.nK) {
+          this.changes++, this.onGamePack = HS, this.state = SS;
+          for (const SS of [...this.listeners.keys()]) this.deliver(SS)
         }
       }
-      deliver(kk) {
-        if (!this.ee && this.listeners.has(kk) && this.listeners.get(kk) !== this.state) {
-          this.listeners.set(kk, this.state);
+      deliver(SS) {
+        if (!this.nK && this.listeners.has(SS) && this.listeners.get(SS) !== this.state) {
+          this.listeners.set(SS, this.state);
           try {
-            kk(this.state)
-          } catch (Fk) {
-            this.host.warn("a texture pack listener threw", Fk)
+            SS(this.state)
+          } catch (HS) {
+            this.host.warn("a texture pack listener threw", HS)
           }
         }
       }
     }
-    async function wk(kk, Fk, Ik) {
-      const Xk = (0, ak.e)(await Ik.fetchPack(Fk));
-      if (null !== Xk) return {
-        pack: Xk,
-        key: Fk
+    async function jS(SS, HS, gS) {
+      const tS = (0, qS.b)(await gS.fetchPack(HS));
+      if (null !== tS) return {
+        pack: tS,
+        key: HS
       };
-      const Tk = await Ik.packKey(kk);
-      if (null === Tk) return null;
-      const ik = (0, ak.e)(await Ik.fetchPack(Tk));
-      if (null === ik) throw new Error(`no texture pack at ${Tk}`);
+      const bS = await gS.packKey(SS);
+      if (null === bS) return null;
+      const XS = (0, qS.b)(await gS.fetchPack(bS));
+      if (null === XS) throw new Error(`no texture pack at ${bS}`);
       return {
-        pack: ik,
-        key: Tk
+        pack: XS,
+        key: bS
       }
     }
 
-    function Hk(kk) {
-      return null === kk || kk.metaData.id === Tk.b
+    function GS(SS) {
+      return null === SS || SS.metaData.id === bS.d
     }
 
-    function Jk(kk) {
-      const Fk = (0, ak.e)(kk);
-      return Hk(Fk) ? null : Fk
+    function CS(SS) {
+      const HS = (0, qS.b)(SS);
+      return GS(HS) ? null : HS
     }
-    async function xk(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ik.d;
-      if (null === kk.pack) return null;
+    async function nS(SS) {
+      let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : XS.b;
+      if (null === SS.pack) return null;
       const {
-        packAssets: Xk
-      } = await Promise.all([Ik.e(203), Ik.e(44)]).then((() => Ik(61481)));
-      return Xk(kk, Fk)
+        packAssets: tS
+      } = await Promise.all([gS.e(203), gS.e(44)]).then((() => gS(61560)));
+      return tS(SS, HS)
     }
 
-    function Pk(kk) {
-      const Fk = (0, yk.u)();
-      return null === Fk ? () => {} : (Fk.onmessage = Fk => {
-        kk.readPlayerPack((0, lk.d)(Fk.data))
+    function PS(SS) {
+      const HS = (0, xS.r)();
+      return null === HS ? () => {} : (HS.onmessage = HS => {
+        SS.readPlayerPack((0, NS.f)(HS.data))
       }, () => {
-        Fk.close()
+        HS.close()
       })
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

@@ -1,68 +1,68 @@
 export const id = 351;
 export const ids = [351];
 export const modules = {
-  42554: (kk, Fk, Ik) => {
-    function Xk(kk) {
-      return Math.floor(kk / 8)
+  42561: (SS, HS, gS) => {
+    function tS(SS) {
+      return Math.floor(SS / 8)
     }
 
-    function Tk(kk) {
-      return 1 << kk % 8
+    function bS(SS) {
+      return 1 << SS % 8
     }
-    Ik.d(Fk, {
-      OptimizeIndices: () => yk
+    gS.d(HS, {
+      OptimizeIndices: () => xS
     });
-    class ik {
-      constructor(kk) {
-        this.size = kk, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+    class XS {
+      constructor(SS) {
+        this.size = SS, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
-      get(kk) {
-        if (kk >= this.size) throw new RangeError("Bit index out of range");
-        const Fk = Xk(kk),
-          Ik = Tk(kk);
-        return 0 !== (this._byteArray[Fk] & Ik)
+      get(SS) {
+        if (SS >= this.size) throw new RangeError("Bit index out of range");
+        const HS = tS(SS),
+          gS = bS(SS);
+        return 0 !== (this._byteArray[HS] & gS)
       }
-      set(kk, Fk) {
-        if (kk >= this.size) throw new RangeError("Bit index out of range");
-        const Ik = Xk(kk),
-          ik = Tk(kk);
-        Fk ? this._byteArray[Ik] |= ik : this._byteArray[Ik] &= ~ik
+      set(SS, HS) {
+        if (SS >= this.size) throw new RangeError("Bit index out of range");
+        const gS = tS(SS),
+          XS = bS(SS);
+        HS ? this._byteArray[gS] |= XS : this._byteArray[gS] &= ~XS
       }
     }
 
-    function yk(kk) {
-      const Fk = [],
-        Ik = kk.length / 3;
-      for (let ik = 0; ik < Ik; ik++) Fk.push([kk[3 * ik], kk[3 * ik + 1], kk[3 * ik + 2]]);
-      const Xk = new Map;
-      for (let ik = 0; ik < Fk.length; ik++) {
-        const kk = Fk[ik];
-        for (const Fk of kk) {
-          let kk = Xk.get(Fk);
-          kk || Xk.set(Fk, kk = []), kk.push(ik)
+    function xS(SS) {
+      const HS = [],
+        gS = SS.length / 3;
+      for (let XS = 0; XS < gS; XS++) HS.push([SS[3 * XS], SS[3 * XS + 1], SS[3 * XS + 2]]);
+      const tS = new Map;
+      for (let XS = 0; XS < HS.length; XS++) {
+        const SS = HS[XS];
+        for (const HS of SS) {
+          let SS = tS.get(HS);
+          SS || tS.set(HS, SS = []), SS.push(XS)
         }
       }
-      const Tk = new ik(Ik),
-        yk = [],
-        lk = kk => {
-          const Ik = [kk];
-          for (; Ik.length > 0;) {
-            const kk = Ik.pop();
-            if (!Tk.get(kk)) {
-              Tk.set(kk, !0), yk.push(Fk[kk]);
-              for (const ik of Fk[kk]) {
-                const kk = Xk.get(ik);
-                if (!kk) return;
-                for (const Fk of kk) Tk.get(Fk) || Ik.push(Fk)
+      const bS = new XS(gS),
+        xS = [],
+        NS = SS => {
+          const gS = [SS];
+          for (; gS.length > 0;) {
+            const SS = gS.pop();
+            if (!bS.get(SS)) {
+              bS.set(SS, !0), xS.push(HS[SS]);
+              for (const XS of HS[SS]) {
+                const SS = tS.get(XS);
+                if (!SS) return;
+                for (const HS of SS) bS.get(HS) || gS.push(HS)
               }
             }
           }
         };
-      for (let ik = 0; ik < Ik; ik++) Tk.get(ik) || lk(ik);
-      let ak = 0;
-      for (const ik of yk) kk[ak++] = ik[0], kk[ak++] = ik[1], kk[ak++] = ik[2]
+      for (let XS = 0; XS < gS; XS++) bS.get(XS) || NS(XS);
+      let qS = 0;
+      for (const XS of xS) SS[qS++] = XS[0], SS[qS++] = XS[1], SS[qS++] = XS[2]
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

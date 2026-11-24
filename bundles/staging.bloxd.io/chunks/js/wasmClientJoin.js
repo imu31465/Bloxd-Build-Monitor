@@ -1,31 +1,31 @@
 export const id = 57;
 export const ids = [57];
 export const modules = {
-  40623: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Tk,
-      c: () => Lk
+  40658: (SS, HS, gS) => {
+    gS.d(HS, {
+      c: () => bS,
+      f: () => IS
     });
-    const Xk = new TextDecoder;
+    const tS = new TextDecoder;
 
-    function Tk(kk) {
-      const Fk = new ik(kk),
-        Ik = Fk.value();
-      if (Fk.at !== kk.length) throw new Error(`msgpack: ${kk.length-Fk.at} bytes after the value`);
-      return Ik
+    function bS(SS) {
+      const HS = new XS(SS),
+        gS = HS.value();
+      if (HS.at !== SS.length) throw new Error(`msgpack: ${SS.length-HS.at} bytes after the value`);
+      return gS
     }
-    class ik {
-      constructor(kk) {
-        this.bytes = kk, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(kk.buffer, kk.byteOffset, kk.byteLength)
+    class XS {
+      constructor(SS) {
+        this.bytes = SS, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(SS.buffer, SS.byteOffset, SS.byteLength)
       }
       value() {
-        const kk = this.u8();
-        if (kk <= 127) return kk;
-        if (kk >= 224) return kk - 256;
-        if (kk >= 128 && kk <= 143) return this.map(15 & kk);
-        if (kk >= 144 && kk <= 159) return this.array(15 & kk);
-        if (kk >= 160 && kk <= 191) return this.str(31 & kk);
-        switch (kk) {
+        const SS = this.u8();
+        if (SS <= 127) return SS;
+        if (SS >= 224) return SS - 256;
+        if (SS >= 128 && SS <= 143) return this.map(15 & SS);
+        if (SS >= 144 && SS <= 159) return this.array(15 & SS);
+        if (SS >= 160 && SS <= 191) return this.str(31 & SS);
+        switch (SS) {
           case 192:
             return null;
           case 194:
@@ -89,13 +89,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${kk.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${SS.toString(16)} at ${this.at-1}`)
         }
       }
-      take(kk) {
-        const Fk = this.at;
-        if (Fk + kk > this.bytes.length) throw new Error(`msgpack: ${kk} bytes past the end at ${Fk}`);
-        return this.at = Fk + kk, Fk
+      take(SS) {
+        const HS = this.at;
+        if (HS + SS > this.bytes.length) throw new Error(`msgpack: ${SS} bytes past the end at ${HS}`);
+        return this.at = HS + SS, HS
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -106,323 +106,323 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(kk) {
-        const Fk = this.take(8);
-        return kk ? this.view.getBigInt64(Fk, !1) : this.view.getBigUint64(Fk, !1)
+      int64(SS) {
+        const HS = this.take(8);
+        return SS ? this.view.getBigInt64(HS, !1) : this.view.getBigUint64(HS, !1)
       }
-      str(kk) {
-        const Fk = this.take(kk),
-          Ik = this.bytes;
-        if (kk < 16) {
-          let Tk = "";
-          for (let ik = Fk; ik < Fk + kk; ik++) {
-            const yk = Ik[ik];
-            if (yk >= 128) return Xk.decode(Ik.subarray(Fk, Fk + kk));
-            Tk += String.fromCharCode(yk)
+      str(SS) {
+        const HS = this.take(SS),
+          gS = this.bytes;
+        if (SS < 16) {
+          let bS = "";
+          for (let XS = HS; XS < HS + SS; XS++) {
+            const xS = gS[XS];
+            if (xS >= 128) return tS.decode(gS.subarray(HS, HS + SS));
+            bS += String.fromCharCode(xS)
           }
-          return Tk
+          return bS
         }
-        return Xk.decode(Ik.subarray(Fk, Fk + kk))
+        return tS.decode(gS.subarray(HS, HS + SS))
       }
-      bin(kk) {
-        const Fk = this.take(kk);
-        return this.bytes.subarray(Fk, Fk + kk)
+      bin(SS) {
+        const HS = this.take(SS);
+        return this.bytes.subarray(HS, HS + SS)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(kk) {
+      array(SS) {
         this.enter();
-        const Fk = [];
-        for (let Ik = 0; Ik < kk; Ik++) Fk.push(this.value());
-        return this.depth--, Fk
+        const HS = [];
+        for (let gS = 0; gS < SS; gS++) HS.push(this.value());
+        return this.depth--, HS
       }
-      map(kk) {
+      map(SS) {
         this.enter();
-        const Fk = {};
-        for (let Ik = 0; Ik < kk; Ik++) {
-          const kk = this.value(),
-            Ik = this.value();
-          Fk["__proto__" === kk ? "__proto_" : String(kk)] = Ik
+        const HS = {};
+        for (let gS = 0; gS < SS; gS++) {
+          const SS = this.value(),
+            gS = this.value();
+          HS["__proto__" === SS ? "__proto_" : String(SS)] = gS
         }
-        return this.depth--, Fk
+        return this.depth--, HS
       }
-      ext(kk) {
-        const Fk = this.view.getInt8(this.take(1)),
-          Ik = this.take(kk);
-        if (0 !== Fk) {
-          if (-1 === Fk) {
-            if (1 === kk) return new Date(NaN);
-            if (4 === kk) return new Date(1e3 * this.view.getUint32(Ik, !1));
-            if (8 === kk) {
-              const kk = this.view.getUint32(Ik, !1),
-                Fk = kk >>> 2,
-                Xk = 4294967296 * (3 & kk) + this.view.getUint32(Ik + 4, !1);
-              return new Date(1e3 * Xk + Fk / 1e6)
+      ext(SS) {
+        const HS = this.view.getInt8(this.take(1)),
+          gS = this.take(SS);
+        if (0 !== HS) {
+          if (-1 === HS) {
+            if (1 === SS) return new Date(NaN);
+            if (4 === SS) return new Date(1e3 * this.view.getUint32(gS, !1));
+            if (8 === SS) {
+              const SS = this.view.getUint32(gS, !1),
+                HS = SS >>> 2,
+                tS = 4294967296 * (3 & SS) + this.view.getUint32(gS + 4, !1);
+              return new Date(1e3 * tS + HS / 1e6)
             }
-            if (12 === kk) {
-              const kk = this.view.getUint32(Ik, !1),
-                Fk = 4294967296 * this.view.getInt32(Ik + 4, !1) + this.view.getUint32(Ik + 8, !1);
-              return new Date(1e3 * Fk + kk / 1e6)
+            if (12 === SS) {
+              const SS = this.view.getUint32(gS, !1),
+                HS = 4294967296 * this.view.getInt32(gS + 4, !1) + this.view.getUint32(gS + 8, !1);
+              return new Date(1e3 * HS + SS / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${Fk} of ${kk} bytes`)
+          throw new Error(`msgpack: ext type ${HS} of ${SS} bytes`)
         }
       }
     }
-    const yk = new TextEncoder,
-      lk = -(2n ** 63n),
-      ak = 2n ** 63n - 1n,
-      qk = 2n ** 64n - 1n;
+    const xS = new TextEncoder,
+      NS = -(2n ** 63n),
+      qS = 2n ** 63n - 1n,
+      uS = 2n ** 64n - 1n;
 
-    function Lk(kk) {
-      const Fk = new tk;
-      return Fk.value(kk, 0), Fk.bytes()
+    function IS(SS) {
+      const HS = new fS;
+      return HS.value(SS, 0), HS.bytes()
     }
-    class tk {
+    class fS {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(kk, Fk) {
-        if (Fk > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof kk) {
+      value(SS, HS) {
+        if (HS > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof SS) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(kk ? 195 : 194);
+            return void this.u8(SS ? 195 : 194);
           case "number":
-            return void this.number(kk);
+            return void this.number(SS);
           case "bigint":
-            return void this.bigint(kk);
+            return void this.bigint(SS);
           case "string":
-            return void this.string(kk);
+            return void this.string(SS);
           case "object":
-            if (null === kk) this.u8(192);
-            else if (kk instanceof Uint8Array) this.head(kk.length, 196, -1, 197, 198), this.room(kk.length), this.buf.set(kk, this.at), this.at += kk.length;
-            else if (Array.isArray(kk)) {
-              this.head(kk.length, 220, 144, 220, 221);
-              for (const Ik of kk) this.value(Ik, Fk + 1)
+            if (null === SS) this.u8(192);
+            else if (SS instanceof Uint8Array) this.head(SS.length, 196, -1, 197, 198), this.room(SS.length), this.buf.set(SS, this.at), this.at += SS.length;
+            else if (Array.isArray(SS)) {
+              this.head(SS.length, 220, 144, 220, 221);
+              for (const gS of SS) this.value(gS, HS + 1)
             } else {
-              var Ik, Xk;
-              if (Object.getPrototypeOf(kk) !== Object.prototype && null !== Object.getPrototypeOf(kk)) throw new Error(`msgpack: can't encode a ${null!==(Ik=null===(Xk=kk.constructor)||void 0===Xk?void 0:Xk.name)&&void 0!==Ik?Ik:"object"}`);
+              var gS, tS;
+              if (Object.getPrototypeOf(SS) !== Object.prototype && null !== Object.getPrototypeOf(SS)) throw new Error(`msgpack: can't encode a ${null!==(gS=null===(tS=SS.constructor)||void 0===tS?void 0:tS.name)&&void 0!==gS?gS:"object"}`);
               {
-                const Ik = Object.keys(kk);
-                this.head(Ik.length, 222, 128, 222, 223);
-                for (const Xk of Ik) this.string(Xk), this.value(kk[Xk], Fk + 1)
+                const gS = Object.keys(SS);
+                this.head(gS.length, 222, 128, 222, 223);
+                for (const tS of gS) this.string(tS), this.value(SS[tS], HS + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof kk)
+            throw new Error("msgpack: can't encode a " + typeof SS)
         }
       }
-      number(kk) {
-        Number.isInteger(kk) && kk >= -2147483648 && kk <= 4294967295 ? kk >= 0 ? kk < 128 ? this.u8(kk) : kk < 256 ? (this.u8(204), this.u8(kk)) : kk < 65536 ? (this.u8(205), this.u16(kk)) : (this.u8(206), this.u32(kk)) : kk >= -32 ? this.u8(kk + 256) : kk >= -128 ? (this.u8(208), this.u8(kk + 256)) : kk >= -32768 ? (this.u8(209), this.u16(kk + 65536)) : (this.u8(210), this.u32(kk >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, kk, !1), this.at += 8)
+      number(SS) {
+        Number.isInteger(SS) && SS >= -2147483648 && SS <= 4294967295 ? SS >= 0 ? SS < 128 ? this.u8(SS) : SS < 256 ? (this.u8(204), this.u8(SS)) : SS < 65536 ? (this.u8(205), this.u16(SS)) : (this.u8(206), this.u32(SS)) : SS >= -32 ? this.u8(SS + 256) : SS >= -128 ? (this.u8(208), this.u8(SS + 256)) : SS >= -32768 ? (this.u8(209), this.u16(SS + 65536)) : (this.u8(210), this.u32(SS >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, SS, !1), this.at += 8)
       }
-      bigint(kk) {
-        const Fk = kk >= lk && kk <= ak;
-        if (!Fk && (kk < 0n || kk > qk)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(Fk ? 211 : 207), this.room(8), Fk ? this.view.setBigInt64(this.at, kk, !1) : this.view.setBigUint64(this.at, kk, !1), this.at += 8
+      bigint(SS) {
+        const HS = SS >= NS && SS <= qS;
+        if (!HS && (SS < 0n || SS > uS)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(HS ? 211 : 207), this.room(8), HS ? this.view.setBigInt64(this.at, SS, !1) : this.view.setBigUint64(this.at, SS, !1), this.at += 8
       }
-      string(kk) {
-        const Fk = yk.encode(kk);
-        this.head(Fk.length, 217, 160, 218, 219), this.room(Fk.length), this.buf.set(Fk, this.at), this.at += Fk.length
+      string(SS) {
+        const HS = xS.encode(SS);
+        this.head(HS.length, 217, 160, 218, 219), this.room(HS.length), this.buf.set(HS, this.at), this.at += HS.length
       }
-      head(kk, Fk, Ik, Xk, Tk) {
-        Ik >= 0 && kk < (160 === Ik ? 32 : 16) ? this.u8(Ik | kk) : Fk !== Xk && kk < 256 ? (this.u8(Fk), this.u8(kk)) : kk < 65536 ? (this.u8(Xk), this.u16(kk)) : (this.u8(Tk), this.u32(kk))
+      head(SS, HS, gS, tS, bS) {
+        gS >= 0 && SS < (160 === gS ? 32 : 16) ? this.u8(gS | SS) : HS !== tS && SS < 256 ? (this.u8(HS), this.u8(SS)) : SS < 65536 ? (this.u8(tS), this.u16(SS)) : (this.u8(bS), this.u32(SS))
       }
-      room(kk) {
-        if (this.at + kk <= this.buf.length) return;
-        let Fk = 2 * this.buf.length;
-        for (; Fk < this.at + kk;) Fk *= 2;
-        const Ik = new Uint8Array(Fk);
-        Ik.set(this.buf.subarray(0, this.at)), this.buf = Ik, this.view = new DataView(Ik.buffer)
+      room(SS) {
+        if (this.at + SS <= this.buf.length) return;
+        let HS = 2 * this.buf.length;
+        for (; HS < this.at + SS;) HS *= 2;
+        const gS = new Uint8Array(HS);
+        gS.set(this.buf.subarray(0, this.at)), this.buf = gS, this.view = new DataView(gS.buffer)
       }
-      u8(kk) {
-        this.room(1), this.buf[this.at++] = kk
+      u8(SS) {
+        this.room(1), this.buf[this.at++] = SS
       }
-      u16(kk) {
-        this.room(2), this.view.setUint16(this.at, kk, !1), this.at += 2
+      u16(SS) {
+        this.room(2), this.view.setUint16(this.at, SS, !1), this.at += 2
       }
-      u32(kk) {
-        this.room(4), this.view.setUint32(this.at, kk, !1), this.at += 4
+      u32(SS) {
+        this.room(4), this.view.setUint32(this.at, SS, !1), this.at += 4
       }
     }
   },
-  50964: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      joinRoom: () => tk,
-      leaveHeldSeat: () => Jk,
-      resumeRoom: () => jk
+  51e3: (SS, HS, gS) => {
+    gS.r(HS), gS.d(HS, {
+      joinRoom: () => fS,
+      leaveHeldSeat: () => CS,
+      resumeRoom: () => aS
     });
-    var Xk = Ik(149),
-      Tk = Ik(1199),
-      ik = Ik(36486),
-      yk = Ik(40623),
-      lk = Ik(4797),
-      ak = Ik(40689),
-      qk = Ik(40917);
-    const Lk = Uint8Array.of(13, ...(0, yk.c)(Xk.f));
-    async function tk(kk, Fk) {
-      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    var tS = gS(160),
+      bS = gS(1290),
+      XS = gS(36503),
+      xS = gS(40658),
+      NS = gS(4926),
+      qS = gS(40716),
+      uS = gS(40931);
+    const IS = Uint8Array.of(13, ...(0, xS.f)(tS.c));
+    async function fS(SS, HS) {
+      let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
       try {
-        return await Zk(kk, Fk, Ik)
-      } catch (Tk) {
-        var Xk;
-        const ik = await (null === (Xk = Fk.optionsAfterRefusal) || void 0 === Xk ? void 0 : Xk.call(Fk, Tk));
-        if (!ik) throw Tk;
-        return Zk(kk, {
-          ...Fk,
-          joinOptions: ik
+        return await kS(SS, HS, gS)
+      } catch (bS) {
+        var tS;
+        const XS = await (null === (tS = HS.optionsAfterRefusal) || void 0 === tS ? void 0 : tS.call(HS, bS));
+        if (!XS) throw bS;
+        return kS(SS, {
+          ...HS,
+          joinOptions: XS
         }, {
-          ...Ik,
+          ...gS,
           early: void 0
         })
       }
     }
-    async function Zk(kk, Fk, Ik) {
-      var Xk;
+    async function kS(SS, HS, gS) {
+      var tS;
       const {
-        signal: ik
-      } = Ik, yk = () => (0, qk.f)(Fk.endpoint, Fk.roomName, Fk.joinOptions, Ik), {
-        early: lk
-      } = Ik, ak = lk ? null !== (Xk = await lk.take(ik)) && void 0 !== Xk ? Xk : await lk.reserveInstead(yk, ik) : await yk();
-      return (0, Tk.m)(ik), Hk(kk, Fk.endpoint, ak, Ik, !1)
+        signal: XS
+      } = gS, xS = () => (0, uS.j)(HS.endpoint, HS.roomName, HS.joinOptions, gS), {
+        early: NS
+      } = gS, qS = NS ? null !== (tS = await NS.take(XS)) && void 0 !== tS ? tS : await NS.reserveInstead(xS, XS) : await xS();
+      return (0, bS.m)(XS), GS(SS, HS.endpoint, qS, gS, !1)
     }
-    async function jk(kk, Fk, Ik, Xk) {
-      let ik = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      const yk = await (0, qk.e)(Fk, Ik, Xk, ik);
-      return (0, Tk.m)(ik.signal), Hk(kk, Fk, yk, ik, !0)
-    }
-
-    function ek(kk, Fk, Ik) {
-      const Xk = (0, qk.i)(kk, Fk);
-      return Ik.createSocket ? Ik.createSocket(Xk) : new WebSocket(Xk)
+    async function aS(SS, HS, gS, tS) {
+      let XS = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      const xS = await (0, uS.f)(HS, gS, tS, XS);
+      return (0, bS.m)(XS.signal), GS(SS, HS, xS, XS, !0)
     }
 
-    function wk(kk, Fk, Ik) {
-      var Xk;
-      let Tk = !1;
-      return (null !== (Xk = kk.setTimer) && void 0 !== Xk ? Xk : (kk, Fk) => {
-        setTimeout(kk, Fk)
+    function KS(SS, HS, gS) {
+      const tS = (0, uS.k)(SS, HS);
+      return gS.createSocket ? gS.createSocket(tS) : new WebSocket(tS)
+    }
+
+    function jS(SS, HS, gS) {
+      var tS;
+      let bS = !1;
+      return (null !== (tS = SS.setTimer) && void 0 !== tS ? tS : (SS, HS) => {
+        setTimeout(SS, HS)
       })((() => {
-        Tk || Fk()
-      }), Ik), () => {
-        Tk = !0
+        bS || HS()
+      }), gS), () => {
+        bS = !0
       }
     }
-    async function Hk(kk, Fk, Ik, Xk, yk) {
+    async function GS(SS, HS, gS, tS, xS) {
       const {
-        signal: qk
-      } = Xk, tk = ek(Fk, Ik, Xk);
-      let Zk = !1,
-        jk = null,
-        Hk = null;
-      const Jk = [];
-      let xk = !1,
-        Pk = !1;
-      const Kk = kk => {
-        var Fk;
-        Pk = !0, null === (Fk = Hk) || void 0 === Fk || Fk.reject(new ak.b("the room socket closed before the resume", "closed", kk.code))
+        signal: uS
+      } = tS, fS = KS(HS, gS, tS);
+      let kS = !1,
+        aS = null,
+        GS = null;
+      const CS = [];
+      let nS = !1,
+        PS = !1;
+      const QS = SS => {
+        var HS;
+        PS = !0, null === (HS = GS) || void 0 === HS || HS.reject(new qS.d("the room socket closed before the resume", "closed", SS.code))
       };
-      yk && tk.addEventListener("close", Kk);
-      const Qk = (kk, Fk) => {
-          var Ik;
-          if (kk === (yk ? lk.I.Resumed : lk.I.Activated)) xk = !0, null === (Ik = Hk) || void 0 === Ik || Ik.resolve();
-          else if (!yk || kk !== lk.I.ResumeRefused && kk !== lk.I.Activated)
-            if (kk === lk.I.Error) {
-              var Xk;
-              null === (Xk = Hk) || void 0 === Xk || Xk.reject(new ak.b(`the room refused the join (code ${Fk})`, "roomError", Fk))
+      xS && fS.addEventListener("close", QS);
+      const DS = (SS, HS) => {
+          var gS;
+          if (SS === (xS ? NS.E.Resumed : NS.E.Activated)) nS = !0, null === (gS = GS) || void 0 === gS || gS.resolve();
+          else if (!xS || SS !== NS.E.ResumeRefused && SS !== NS.E.Activated)
+            if (SS === NS.E.Error) {
+              var tS;
+              null === (tS = GS) || void 0 === tS || tS.reject(new qS.d(`the room refused the join (code ${HS})`, "roomError", HS))
             } else {
-              var Tk;
-              null === (Tk = Hk) || void 0 === Tk || Tk.reject(new ak.b("the room socket closed before the join", "closed", Fk, null, Zk))
+              var bS;
+              null === (bS = GS) || void 0 === bS || bS.reject(new qS.d("the room socket closed before the join", "closed", HS, null, kS))
             }
           else {
-            var ik;
-            null === (ik = Hk) || void 0 === ik || ik.reject(new ak.m("the core refused the resume: it held no game"))
+            var XS;
+            null === (XS = GS) || void 0 === XS || XS.reject(new qS.l("the core refused the resume: it held no game"))
           }
         },
-        sk = kk.onConnection(((kk, Fk, Ik) => {
-          null === jk ? Jk.push([kk, Fk, Ik]) : kk === jk && Qk(Fk, Ik)
+        wS = SS.onConnection(((SS, HS, gS) => {
+          null === aS ? CS.push([SS, HS, gS]) : SS === aS && DS(HS, gS)
         })),
-        Vk = kk.attachSocket(tk);
-      if (null === Vk) throw sk(), new ak.b("the core could not take the room socket", "attach");
-      var zk;
-      (jk = Vk, yk) && (null === (zk = Xk.onAttached) || void 0 === zk || zk.call(Xk));
-      const Sk = yk ? null : new ik.e((() => {
-        var Fk, Ik;
-        null === (Fk = kk.flushNet) || void 0 === Fk || Fk.call(kk), null === (Ik = Hk) || void 0 === Ik || Ik.reject(new ik.f(Zk ? "socket" : "socket_unopened"))
+        hS = SS.attachSocket(fS);
+      if (null === hS) throw wS(), new qS.d("the core could not take the room socket", "attach");
+      var ZS;
+      (aS = hS, xS) && (null === (ZS = tS.onAttached) || void 0 === ZS || ZS.call(tS));
+      const JS = xS ? null : new XS.d((() => {
+        var HS, gS;
+        null === (HS = SS.flushNet) || void 0 === HS || HS.call(SS), null === (gS = GS) || void 0 === gS || gS.reject(new XS.e(kS ? "socket" : "socket_unopened"))
       }));
-      tk.addEventListener("open", (() => {
-        Zk = !0, null === Sk || void 0 === Sk || Sk.socketOpened()
+      fS.addEventListener("open", (() => {
+        kS = !0, null === JS || void 0 === JS || JS.socketOpened()
       }), {
         once: !0
       });
-      let vk = !1;
-      const Ek = () => {
-        if (vk) return;
-        if (vk = !0, sk(), yk && (tk.removeEventListener("close", Kk), !xk && !(null !== qk && void 0 !== qk && qk.aborted && (0, Tk.e)(qk) instanceof ak.o))) return void(Pk || kk.closeSocket(Vk));
-        xk && kk.leaveRoom(Vk) || kk.sendRaw(Vk, ak.i) ? wk(Xk, (() => {
-          kk.closeSocket(Vk)
-        }), ak.f) : kk.closeSocket(Vk)
+      let OS = !1;
+      const dS = () => {
+        if (OS) return;
+        if (OS = !0, wS(), xS && (fS.removeEventListener("close", QS), !nS && !(null !== uS && void 0 !== uS && uS.aborted && (0, bS.c)(uS) instanceof qS.m))) return void(PS || SS.closeSocket(hS));
+        nS && SS.leaveRoom(hS) || SS.sendRaw(hS, qS.j) ? jS(tS, (() => {
+          SS.closeSocket(hS)
+        }), qS.g) : SS.closeSocket(hS)
       };
       try {
-        await new Promise(((Fk, Ik) => {
-          const Xk = () => {
-            var Fk;
-            yk && (null === (Fk = kk.flushNet) || void 0 === Fk || Fk.call(kk));
-            Ik((0, Tk.e)(qk))
+        await new Promise(((HS, gS) => {
+          const tS = () => {
+            var HS;
+            xS && (null === (HS = SS.flushNet) || void 0 === HS || HS.call(SS));
+            gS((0, bS.c)(uS))
           };
-          null === qk || void 0 === qk || qk.addEventListener("abort", Xk, {
+          null === uS || void 0 === uS || uS.addEventListener("abort", tS, {
             once: !0
-          }), Hk = {
+          }), GS = {
             resolve: () => {
-              null === qk || void 0 === qk || qk.removeEventListener("abort", Xk), Fk()
+              null === uS || void 0 === uS || uS.removeEventListener("abort", tS), HS()
             },
-            reject: kk => {
-              null === qk || void 0 === qk || qk.removeEventListener("abort", Xk), Ik(kk)
+            reject: SS => {
+              null === uS || void 0 === uS || uS.removeEventListener("abort", tS), gS(SS)
             }
           };
-          for (const [kk, Tk, ik] of Jk.splice(0)) kk === jk && Qk(Tk, ik)
-        })), null === Sk || void 0 === Sk || Sk.answered()
-      } catch (Ok) {
-        throw Ek(), Ok
+          for (const [SS, bS, XS] of CS.splice(0)) SS === aS && DS(bS, XS)
+        })), null === JS || void 0 === JS || JS.answered()
+      } catch (cS) {
+        throw dS(), cS
       } finally {
-        null === Sk || void 0 === Sk || Sk.stop()
+        null === JS || void 0 === JS || JS.stop()
       }
-      yk && tk.removeEventListener("close", Kk);
+      xS && fS.removeEventListener("close", QS);
       return {
-        conn: Vk,
-        seat: Ik,
-        leave: Ek,
+        conn: hS,
+        seat: gS,
+        leave: dS,
         detach: () => {
-          vk = !0, sk()
+          OS = !0, wS()
         },
-        endJoinAd: () => !vk && kk.sendRaw(Vk, Lk)
+        endJoinAd: () => !OS && SS.sendRaw(hS, IS)
       }
     }
-    async function Jk(kk, Fk, Ik) {
-      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    async function CS(SS, HS, gS) {
+      let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       try {
-        const Tk = ek(kk, await (0, qk.e)(kk, Fk, Ik, Xk), Xk);
-        Tk.binaryType = "arraybuffer", await new Promise((kk => {
-          const Fk = wk(Xk, (() => {
-            Tk.close(), kk()
-          }), ak.f);
-          Tk.addEventListener("open", (() => {
-            Tk.send(ak.i)
-          })), Tk.addEventListener("close", (() => {
-            Fk(), kk()
+        const bS = KS(SS, await (0, uS.f)(SS, HS, gS, tS), tS);
+        bS.binaryType = "arraybuffer", await new Promise((SS => {
+          const HS = jS(tS, (() => {
+            bS.close(), SS()
+          }), qS.g);
+          bS.addEventListener("open", (() => {
+            bS.send(qS.j)
+          })), bS.addEventListener("close", (() => {
+            HS(), SS()
           }))
         }))
-      } catch (Tk) {
-        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", Tk)
+      } catch (bS) {
+        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", bS)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

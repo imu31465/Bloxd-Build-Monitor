@@ -1,95 +1,95 @@
 export const id = 234;
 export const ids = [234];
 export const modules = {
-  61288: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      DEVTOOLS_SHADERS: () => ik,
-      registerDevtoolsShader: () => yk
+  61336: (SS, HS, gS) => {
+    gS.r(HS), gS.d(HS, {
+      DEVTOOLS_SHADERS: () => XS,
+      registerDevtoolsShader: () => xS
     });
-    var Xk = Ik(39837),
-      Tk = Ik(37249);
-    const ik = {
-      devtoolsNormal: function(kk) {
+    var tS = gS(39899),
+      bS = gS(37209);
+    const XS = {
+      devtoolsNormal: function(SS) {
         return {
-          vertex: `\n\t\t\t${(0,Tk.i)(kk,"position","vec3")}\n\t\t\t${(0,Tk.i)(kk,"normal","vec3")}\n\t\t\t${(0,Tk.Kb)(kk,"worldViewProjection","mat4")}\n\t\t\t${(0,Tk.Kb)(kk,"world","mat4")}\n\t\t\t${(0,Tk.Qb)(kk,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,Tk.Ub)(kk,`\n\t\t\t\t${(0,Tk.l)(kk)} = ${(0,Tk.Mb)(kk,"worldViewProjection")} * ${(0,Tk.m)(kk,"vec4",(0,Tk.Wb)(kk,"position"),"1.0")};\n\t\t\t\t${(0,Tk.Zb)(kk,"vNormal")} = normalize((${(0,Tk.Mb)(kk,"world")} * ${(0,Tk.m)(kk,"vec4",(0,Tk.Wb)(kk,"normal"),"0.0")}).xyz);\n\t\t\t`)}\n\t\t`,
-          fragment: `\n\t\t\t${(0,Tk.Qb)(kk,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,Tk.T)(kk,`\n\t\t\t\t\n\t\t\t\t${(0,Tk.G)(kk,"vec3","normalColor",`abs(${(0,Tk.X)(kk,"vNormal")})`)}\n\t\t\t\t${(0,Tk.O)(kk)} = ${(0,Tk.m)(kk,"vec4","normalColor","1.0")};\n\t\t\t`)}\n\t\t`
+          vertex: `\n\t\t\t${(0,bS.g)(SS,"position","vec3")}\n\t\t\t${(0,bS.g)(SS,"normal","vec3")}\n\t\t\t${(0,bS.Cb)(SS,"worldViewProjection","mat4")}\n\t\t\t${(0,bS.Cb)(SS,"world","mat4")}\n\t\t\t${(0,bS.Jb)(SS,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,bS.Mb)(SS,`\n\t\t\t\t${(0,bS.l)(SS)} = ${(0,bS.Gb)(SS,"worldViewProjection")} * ${(0,bS.o)(SS,"vec4",(0,bS.Pb)(SS,"position"),"1.0")};\n\t\t\t\t${(0,bS.Sb)(SS,"vNormal")} = normalize((${(0,bS.Gb)(SS,"world")} * ${(0,bS.o)(SS,"vec4",(0,bS.Pb)(SS,"normal"),"0.0")}).xyz);\n\t\t\t`)}\n\t\t`,
+          fragment: `\n\t\t\t${(0,bS.Jb)(SS,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,bS.O)(SS,`\n\t\t\t\t\n\t\t\t\t${(0,bS.A)(SS,"vec3","normalColor",`abs(${(0,bS.S)(SS,"vNormal")})`)}\n\t\t\t\t${(0,bS.K)(SS)} = ${(0,bS.o)(SS,"vec4","normalColor","1.0")};\n\t\t\t`)}\n\t\t`
         }
       },
-      devtoolsWhite: function(kk) {
+      devtoolsWhite: function(SS) {
         return {
-          vertex: `\n\t\t\t${(0,Tk.i)(kk,"position","vec3")}\n\t\t\t${(0,Tk.Kb)(kk,"worldViewProjection","mat4")}\n\n\t\t\t${(0,Tk.Ub)(kk,`\n\t\t\t\t${(0,Tk.l)(kk)} = ${(0,Tk.Mb)(kk,"worldViewProjection")} * ${(0,Tk.m)(kk,"vec4",(0,Tk.Wb)(kk,"position"),"1.0")};\n\t\t\t`)}\n\t\t`,
-          fragment: `\n\t\t\t${(0,Tk.T)(kk,`\n\t\t\t\t${(0,Tk.O)(kk)} = ${(0,Tk.m)(kk,"vec4","1.0","1.0","1.0","1.0")};\n\t\t\t`)}\n\t\t`
+          vertex: `\n\t\t\t${(0,bS.g)(SS,"position","vec3")}\n\t\t\t${(0,bS.Cb)(SS,"worldViewProjection","mat4")}\n\n\t\t\t${(0,bS.Mb)(SS,`\n\t\t\t\t${(0,bS.l)(SS)} = ${(0,bS.Gb)(SS,"worldViewProjection")} * ${(0,bS.o)(SS,"vec4",(0,bS.Pb)(SS,"position"),"1.0")};\n\t\t\t`)}\n\t\t`,
+          fragment: `\n\t\t\t${(0,bS.O)(SS,`\n\t\t\t\t${(0,bS.K)(SS)} = ${(0,bS.o)(SS,"vec4","1.0","1.0","1.0","1.0")};\n\t\t\t`)}\n\t\t`
         }
       },
-      devtoolsDepth: function(kk) {
+      devtoolsDepth: function(SS) {
         return {
-          vertex: `\n\t\t\t${(0,Tk.i)(kk,"position","vec3")}\n\t\t\t${(0,Tk.Kb)(kk,"worldViewProjection","mat4")}\n\t\t\t${(0,Tk.Kb)(kk,"world","mat4")}\n\t\t\t${(0,Tk.Kb)(kk,"cameraPosition","vec3")}\n\t\t\t${(0,Tk.Qb)(kk,"vDepth","float","mediump")}\n\n\t\t\t${(0,Tk.Ub)(kk,`\n\t\t\t\t${(0,Tk.l)(kk)} = ${(0,Tk.Mb)(kk,"worldViewProjection")} * ${(0,Tk.m)(kk,"vec4",(0,Tk.Wb)(kk,"position"),"1.0")};\n\t\t\t\t${(0,Tk.G)(kk,"vec3","worldPosition",`(${(0,Tk.Mb)(kk,"world")} * ${(0,Tk.m)(kk,"vec4",(0,Tk.Wb)(kk,"position"),"1.0")}).xyz`)}\n\t\t\t\t${(0,Tk.Zb)(kk,"vDepth")} = distance(worldPosition, ${(0,Tk.Mb)(kk,"cameraPosition")});\n\t\t\t`)}\n\t\t`,
-          fragment: `\n\t\t\t${(0,Tk.Qb)(kk,"vDepth","float","mediump")}\n\t\t\t${(0,Tk.Kb)(kk,"maxDepth","float")}\n\t\t\t${(0,Tk.Kb)(kk,"minDepth","float")}\n\n\t\t\t${(0,Tk.T)(kk,`\n\t\t\t\t\n\t\t\t\t${(0,Tk.G)(kk,"float","normalizedDepth",`clamp((${(0,Tk.X)(kk,"vDepth")} - ${(0,Tk.Mb)(kk,"minDepth")}) / (${(0,Tk.Mb)(kk,"maxDepth")} - ${(0,Tk.Mb)(kk,"minDepth")}), 0.0, 1.0)`)}\n\t\t\t\t${(0,Tk.G)(kk,"float","gray","1.0 - normalizedDepth")}\n\t\t\t\t${(0,Tk.O)(kk)} = ${(0,Tk.m)(kk,"vec4","gray","gray","gray","1.0")};\n\t\t\t`)}\n\t\t`
+          vertex: `\n\t\t\t${(0,bS.g)(SS,"position","vec3")}\n\t\t\t${(0,bS.Cb)(SS,"worldViewProjection","mat4")}\n\t\t\t${(0,bS.Cb)(SS,"world","mat4")}\n\t\t\t${(0,bS.Cb)(SS,"cameraPosition","vec3")}\n\t\t\t${(0,bS.Jb)(SS,"vDepth","float","mediump")}\n\n\t\t\t${(0,bS.Mb)(SS,`\n\t\t\t\t${(0,bS.l)(SS)} = ${(0,bS.Gb)(SS,"worldViewProjection")} * ${(0,bS.o)(SS,"vec4",(0,bS.Pb)(SS,"position"),"1.0")};\n\t\t\t\t${(0,bS.A)(SS,"vec3","worldPosition",`(${(0,bS.Gb)(SS,"world")} * ${(0,bS.o)(SS,"vec4",(0,bS.Pb)(SS,"position"),"1.0")}).xyz`)}\n\t\t\t\t${(0,bS.Sb)(SS,"vDepth")} = distance(worldPosition, ${(0,bS.Gb)(SS,"cameraPosition")});\n\t\t\t`)}\n\t\t`,
+          fragment: `\n\t\t\t${(0,bS.Jb)(SS,"vDepth","float","mediump")}\n\t\t\t${(0,bS.Cb)(SS,"maxDepth","float")}\n\t\t\t${(0,bS.Cb)(SS,"minDepth","float")}\n\n\t\t\t${(0,bS.O)(SS,`\n\t\t\t\t\n\t\t\t\t${(0,bS.A)(SS,"float","normalizedDepth",`clamp((${(0,bS.S)(SS,"vDepth")} - ${(0,bS.Gb)(SS,"minDepth")}) / (${(0,bS.Gb)(SS,"maxDepth")} - ${(0,bS.Gb)(SS,"minDepth")}), 0.0, 1.0)`)}\n\t\t\t\t${(0,bS.A)(SS,"float","gray","1.0 - normalizedDepth")}\n\t\t\t\t${(0,bS.K)(SS)} = ${(0,bS.o)(SS,"vec4","gray","gray","gray","1.0")};\n\t\t\t`)}\n\t\t`
         }
       }
     };
 
-    function yk(kk, Fk) {
+    function xS(SS, HS) {
       const {
-        vertex: Ik,
-        fragment: Tk
-      } = ik[kk](Fk), yk = Xk.b.GetShadersStore(Fk);
-      yk[`${kk}VertexShader`] = Ik, yk[`${kk}FragmentShader`] = Tk
+        vertex: gS,
+        fragment: bS
+      } = XS[SS](HS), xS = tS.c.GetShadersStore(HS);
+      xS[`${SS}VertexShader`] = gS, xS[`${SS}FragmentShader`] = bS
     }
   },
-  37249: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      $: () => Gk,
-      C: () => tk,
-      Cb: () => Qk,
-      G: () => Lk,
-      Gb: () => qk,
-      H: () => zk,
-      I: () => pk,
-      K: () => ik,
-      Kb: () => Jk,
-      Mb: () => nk,
-      O: () => Rk,
-      Qb: () => Hk,
-      R: () => bk,
-      T: () => Kk,
-      Ub: () => Pk,
-      Wb: () => vk,
-      X: () => Ok,
-      Zb: () => Ek,
-      ab: () => Nk,
-      e: () => Xk,
-      eb: () => Tk,
-      hb: () => uk,
-      i: () => wk,
-      k: () => Sk,
-      l: () => xk,
-      lb: () => Wk,
-      m: () => ak,
-      ob: () => Bk,
-      p: () => Uk,
-      pb: () => Vk,
-      qb: () => sk,
-      t: () => Ck,
-      tb: () => fk,
-      u: () => Zk,
-      vb: () => dk,
-      y: () => jk,
-      yb: () => ck
+  37209: (SS, HS, gS) => {
+    gS.d(HS, {
+      $: () => bS,
+      A: () => IS,
+      B: () => ZS,
+      Cb: () => CS,
+      D: () => LS,
+      G: () => XS,
+      Gb: () => vS,
+      Jb: () => GS,
+      K: () => yS,
+      Mb: () => PS,
+      N: () => AS,
+      O: () => QS,
+      Pb: () => OS,
+      S: () => cS,
+      Sb: () => dS,
+      W: () => ES,
+      Y: () => WS,
+      cb: () => YS,
+      e: () => tS,
+      eb: () => US,
+      fb: () => sS,
+      g: () => jS,
+      j: () => JS,
+      jb: () => hS,
+      l: () => nS,
+      lb: () => wS,
+      mb: () => pS,
+      o: () => qS,
+      ob: () => BS,
+      p: () => VS,
+      q: () => iS,
+      qb: () => zS,
+      u: () => kS,
+      ub: () => DS,
+      y: () => aS,
+      yb: () => uS,
+      z: () => fS
     });
-    const Xk = {
+    const tS = {
       GLSL: 0,
       WGSL: 1
     };
 
-    function Tk(kk) {
-      return kk === Xk.WGSL
+    function bS(SS) {
+      return SS === tS.WGSL
     }
 
-    function ik(kk, Fk, Ik) {
-      return Tk(kk) ? Ik : Fk
+    function XS(SS, HS, gS) {
+      return bS(SS) ? gS : HS
     }
-    const yk = new Map([
+    const xS = new Map([
       ["int", "i32"],
       ["float", "f32"],
       ["vec2", "vec2f"],
@@ -100,185 +100,185 @@ export const modules = {
       ["mat4", "mat4x4f"]
     ]);
 
-    function lk(kk, Fk) {
-      if (!Tk(kk)) return Fk;
-      const Ik = yk.get(Fk);
-      if (!Ik) throw new Error(`No WGSL name for shader type "${Fk}"`);
-      return Ik
+    function NS(SS, HS) {
+      if (!bS(SS)) return HS;
+      const gS = xS.get(HS);
+      if (!gS) throw new Error(`No WGSL name for shader type "${HS}"`);
+      return gS
     }
 
-    function ak(kk, Fk) {
-      for (var Ik = arguments.length, Xk = new Array(Ik > 2 ? Ik - 2 : 0), Tk = 2; Tk < Ik; Tk++) Xk[Tk - 2] = arguments[Tk];
-      return `${lk(kk,Fk)}(${Xk.join(", ")})`
+    function qS(SS, HS) {
+      for (var gS = arguments.length, tS = new Array(gS > 2 ? gS - 2 : 0), bS = 2; bS < gS; bS++) tS[bS - 2] = arguments[bS];
+      return `${NS(SS,HS)}(${tS.join(", ")})`
     }
 
-    function qk(kk, Fk) {
-      return ak(kk, "int", Fk)
+    function uS(SS, HS) {
+      return qS(SS, "int", HS)
     }
 
-    function Lk(kk, Fk, Ik, Xk, ik) {
-      return Tk(kk) ? `var ${Ik}: ${lk(kk,Fk)} = ${Xk};` : `${ek(kk,ik)}${Fk} ${Ik} = ${Xk};`
+    function IS(SS, HS, gS, tS, XS) {
+      return bS(SS) ? `var ${gS}: ${NS(SS,HS)} = ${tS};` : `${KS(SS,XS)}${HS} ${gS} = ${tS};`
     }
 
-    function tk(kk, Fk, Ik) {
-      return Tk(kk) ? `var ${Ik}: ${lk(kk,Fk)};` : `${Fk} ${Ik};`
+    function fS(SS, HS, gS) {
+      return bS(SS) ? `var ${gS}: ${NS(SS,HS)};` : `${HS} ${gS};`
     }
 
-    function Zk(kk, Fk, Ik, Xk) {
-      return Tk(kk) ? `const ${Ik}: ${lk(kk,Fk)} = ${Xk};` : `const ${Fk} ${Ik} = ${Xk};`
+    function kS(SS, HS, gS, tS) {
+      return bS(SS) ? `const ${gS}: ${NS(SS,HS)} = ${tS};` : `const ${HS} ${gS} = ${tS};`
     }
 
-    function jk(kk, Fk, Ik, Xk, ik) {
-      if (Tk(kk)) {
-        return `fn ${Ik}(${Xk.map((Fk=>`${Fk.name}: ${lk(kk,Fk.type)}`)).join(", ")}) -> ${lk(kk,Fk)} {${ik}}`
+    function aS(SS, HS, gS, tS, XS) {
+      if (bS(SS)) {
+        return `fn ${gS}(${tS.map((HS=>`${HS.name}: ${NS(SS,HS.type)}`)).join(", ")}) -> ${NS(SS,HS)} {${XS}}`
       }
-      return `${Fk} ${Ik}(${Xk.map((kk=>`${kk.type} ${kk.name}`)).join(", ")}) {${ik}}`
+      return `${HS} ${gS}(${tS.map((SS=>`${SS.type} ${SS.name}`)).join(", ")}) {${XS}}`
     }
 
-    function ek(kk, Fk) {
-      return !Fk || Tk(kk) ? "" : `${Fk} `
+    function KS(SS, HS) {
+      return !HS || bS(SS) ? "" : `${HS} `
     }
 
-    function wk(kk, Fk, Ik, Xk) {
-      return Tk(kk) ? `attribute ${Fk}: ${lk(kk,Ik)};` : `attribute ${ek(kk,Xk)}${Ik} ${Fk};`
+    function jS(SS, HS, gS, tS) {
+      return bS(SS) ? `attribute ${HS}: ${NS(SS,gS)};` : `attribute ${KS(SS,tS)}${gS} ${HS};`
     }
 
-    function Hk(kk, Fk, Ik, Xk) {
-      return Tk(kk) ? `varying ${Fk}: ${lk(kk,Ik)};` : `varying ${ek(kk,Xk)}${Ik} ${Fk};`
+    function GS(SS, HS, gS, tS) {
+      return bS(SS) ? `varying ${HS}: ${NS(SS,gS)};` : `varying ${KS(SS,tS)}${gS} ${HS};`
     }
 
-    function Jk(kk, Fk, Ik) {
-      return Tk(kk) ? `uniform ${Fk}: ${lk(kk,Ik)};` : `uniform ${Ik} ${Fk};`
+    function CS(SS, HS, gS) {
+      return bS(SS) ? `uniform ${HS}: ${NS(SS,gS)};` : `uniform ${gS} ${HS};`
     }
 
-    function xk(kk) {
-      return Tk(kk) ? "vertexOutputs.position" : "gl_Position"
+    function nS(SS) {
+      return bS(SS) ? "vertexOutputs.position" : "gl_Position"
     }
 
-    function Pk(kk, Fk) {
-      return Tk(kk) ? `@vertex\nfn main(input: VertexInputs) -> FragmentInputs {${Fk}}` : `void main() {${Fk}}`
+    function PS(SS, HS) {
+      return bS(SS) ? `@vertex\nfn main(input: VertexInputs) -> FragmentInputs {${HS}}` : `void main() {${HS}}`
     }
 
-    function Kk(kk, Fk) {
-      return Tk(kk) ? `@fragment\nfn main(input: FragmentInputs) -> FragmentOutputs {${Fk}}` : `void main() {${Fk}}`
+    function QS(SS, HS) {
+      return bS(SS) ? `@fragment\nfn main(input: FragmentInputs) -> FragmentOutputs {${HS}}` : `void main() {${HS}}`
     }
 
-    function Qk(kk, Fk, Ik) {
-      if (Tk(kk)) {
-        return [`var ${Fk}Sampler: sampler;`, `var ${Fk}: ${"2dArray"===Ik?"texture_2d_array<f32>":"texture_2d<f32>"};`].join("\n")
+    function DS(SS, HS, gS) {
+      if (bS(SS)) {
+        return [`var ${HS}Sampler: sampler;`, `var ${HS}: ${"2dArray"===gS?"texture_2d_array<f32>":"texture_2d<f32>"};`].join("\n")
       }
-      return `uniform highp ${"2dArray"===Ik?"sampler2DArray":"sampler2D"} ${Fk};`
+      return `uniform highp ${"2dArray"===gS?"sampler2DArray":"sampler2D"} ${HS};`
     }
 
-    function sk(kk, Fk, Ik) {
-      return Tk(kk) ? `textureSample(${Fk}, ${Fk}Sampler, ${Ik})` : `texture2D(${Fk}, ${Ik})`
+    function wS(SS, HS, gS) {
+      return bS(SS) ? `textureSample(${HS}, ${HS}Sampler, ${gS})` : `texture2D(${HS}, ${gS})`
     }
 
-    function Vk(kk, Fk, Ik, Xk, ik) {
-      if (Tk(kk)) {
-        return `${ik?"textureSampleLevel":"textureSample"}(${Fk}, ${Fk}Sampler, ${Ik}, ${qk(kk,`round(${Xk})`)}${ik?`, ${ik}`:""})`
+    function hS(SS, HS, gS, tS, XS) {
+      if (bS(SS)) {
+        return `${XS?"textureSampleLevel":"textureSample"}(${HS}, ${HS}Sampler, ${gS}, ${uS(SS,`round(${tS})`)}${XS?`, ${XS}`:""})`
       }
-      const yk = ak(kk, "vec3", Ik, Xk);
-      return ik ? `textureLod(${Fk}, ${yk}, ${ik})` : `texture(${Fk}, ${yk})`
+      const xS = qS(SS, "vec3", gS, tS);
+      return XS ? `textureLod(${HS}, ${xS}, ${XS})` : `texture(${HS}, ${xS})`
     }
 
-    function zk(kk) {
-      return Tk(kk) ? "!baseColor\\=\\w+\\(diffuseSampler,diffuseSamplerSampler,fragmentInputs\\.vDiffuseUV\\+uvOffset\\);" : "!baseColor\\=\\w+\\(diffuseSampler,vDiffuseUV\\+uvOffset\\);"
+    function ZS(SS) {
+      return bS(SS) ? "!baseColor\\=\\w+\\(diffuseSampler,diffuseSamplerSampler,fragmentInputs\\.vDiffuseUV\\+uvOffset\\);" : "!baseColor\\=\\w+\\(diffuseSampler,vDiffuseUV\\+uvOffset\\);"
     }
 
-    function Sk(kk) {
-      return Tk(kk) ? {
+    function JS(SS) {
+      return bS(SS) ? {
         "!varying vMainUV1: vec2f;": "centroid varying vMainUV1: vec2f;"
       } : {
         "!varying vec2 vMainUV1;": "#ifdef WEBGL2\ncentroid varying vec2 vMainUV1;\n#else\nvarying vec2 vMainUV1;\n#endif"
       }
     }
 
-    function vk(kk, Fk) {
-      return Tk(kk) ? `vertexInputs.${Fk}` : Fk
+    function OS(SS, HS) {
+      return bS(SS) ? `vertexInputs.${HS}` : HS
     }
 
-    function Ek(kk, Fk) {
-      return Tk(kk) ? `vertexOutputs.${Fk}` : Fk
+    function dS(SS, HS) {
+      return bS(SS) ? `vertexOutputs.${HS}` : HS
     }
 
-    function Ok(kk, Fk) {
-      return Tk(kk) ? `fragmentInputs.${Fk}` : Fk
+    function cS(SS, HS) {
+      return bS(SS) ? `fragmentInputs.${HS}` : HS
     }
 
-    function nk(kk, Fk) {
-      return Tk(kk) ? `uniforms.${Fk}` : Fk
+    function vS(SS, HS) {
+      return bS(SS) ? `uniforms.${HS}` : HS
     }
 
-    function Gk(kk, Fk, Ik) {
-      return Tk(kk) ? `frame.${Fk}` : Ik
+    function ES(SS, HS, gS) {
+      return bS(SS) ? `frame.${HS}` : gS
     }
 
-    function pk(kk) {
-      return Tk(kk) ? "scene.vEyePosition" : "vEyePosition"
+    function LS(SS) {
+      return bS(SS) ? "scene.vEyePosition" : "vEyePosition"
     }
 
-    function uk(kk) {
-      return Tk(kk) ? "mesh.visibility" : "visibility"
+    function YS(SS) {
+      return bS(SS) ? "mesh.visibility" : "visibility"
     }
 
-    function bk(kk) {
-      return Tk(kk) ? "fragmentInputs.position" : "gl_FragCoord"
+    function AS(SS) {
+      return bS(SS) ? "fragmentInputs.position" : "gl_FragCoord"
     }
 
-    function Rk(kk) {
-      return Tk(kk) ? "fragmentOutputs.color" : "gl_FragColor"
+    function yS(SS) {
+      return bS(SS) ? "fragmentOutputs.color" : "gl_FragColor"
     }
 
-    function Uk(kk, Fk) {
-      return Tk(kk) ? `dpdx(${Fk})` : `dFdx(${Fk})`
+    function VS(SS, HS) {
+      return bS(SS) ? `dpdx(${HS})` : `dFdx(${HS})`
     }
 
-    function Ck(kk, Fk) {
-      return Tk(kk) ? `dpdy(${Fk})` : `dFdy(${Fk})`
+    function iS(SS, HS) {
+      return bS(SS) ? `dpdy(${HS})` : `dFdy(${HS})`
     }
 
-    function Nk(kk, Fk) {
-      return Tk(kk) ? `inverseSqrt(${Fk})` : `inversesqrt(${Fk})`
+    function WS(SS, HS) {
+      return bS(SS) ? `inverseSqrt(${HS})` : `inversesqrt(${HS})`
     }
 
-    function ck(kk, Fk, Ik, Xk) {
-      return Tk(kk) ? `select(${Xk}, ${Ik}, ${Fk})` : `((${Fk}) ? (${Ik}) : (${Xk}))`
+    function zS(SS, HS, gS, tS) {
+      return bS(SS) ? `select(${tS}, ${gS}, ${HS})` : `((${HS}) ? (${gS}) : (${tS}))`
     }
 
-    function Wk(kk, Fk, Ik) {
-      return Tk(kk) ? `((${Fk}) - (${Ik}) * floor((${Fk}) / (${Ik})))` : `mod(${Fk}, ${Ik})`
+    function US(SS, HS, gS) {
+      return bS(SS) ? `((${HS}) - (${gS}) * floor((${HS}) / (${gS})))` : `mod(${HS}, ${gS})`
     }
 
-    function fk(kk, Fk, Ik) {
-      return Tk(kk) ? `${Fk} = vec4f(${Ik}, ${Fk}.a);` : `${Fk}.rgb = ${Ik};`
+    function pS(SS, HS, gS) {
+      return bS(SS) ? `${HS} = vec4f(${gS}, ${HS}.a);` : `${HS}.rgb = ${gS};`
     }
 
-    function Bk(kk, Fk, Ik) {
-      return Tk(kk) ? `${Fk} = vec4f(${Fk}.rgb * (${Ik}), ${Fk}.a);` : `${Fk}.rgb *= ${Ik};`
+    function sS(SS, HS, gS) {
+      return bS(SS) ? `${HS} = vec4f(${HS}.rgb * (${gS}), ${HS}.a);` : `${HS}.rgb *= ${gS};`
     }
 
-    function dk(kk, Fk, Ik) {
-      return Tk(kk) ? `${Fk} = vec4f(${Ik}, ${Fk}.w);` : `${Fk}.xyz = ${Ik};`
+    function BS(SS, HS, gS) {
+      return bS(SS) ? `${HS} = vec4f(${gS}, ${HS}.w);` : `${HS}.xyz = ${gS};`
     }
   },
-  39837: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Xk
+  39899: (SS, HS, gS) => {
+    gS.d(HS, {
+      c: () => tS
     });
-    class Xk {
+    class tS {
       static GetShadersRepository() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Xk.ShadersRepository : Xk.ShadersRepositoryWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? tS.ShadersRepository : tS.ShadersRepositoryWGSL
       }
       static GetShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Xk.ShadersStore : Xk.ShadersStoreWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? tS.ShadersStore : tS.ShadersStoreWGSL
       }
       static GetIncludesShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Xk.IncludesShadersStore : Xk.IncludesShadersStoreWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? tS.IncludesShadersStore : tS.IncludesShadersStoreWGSL
       }
     }
-    Xk.ShadersRepository = "src/Shaders/", Xk.ShadersStore = {}, Xk.IncludesShadersStore = {}, Xk.ShadersRepositoryWGSL = "src/ShadersWGSL/", Xk.ShadersStoreWGSL = {}, Xk.IncludesShadersStoreWGSL = {}
+    tS.ShadersRepository = "src/Shaders/", tS.ShadersStore = {}, tS.IncludesShadersStore = {}, tS.ShadersRepositoryWGSL = "src/ShadersWGSL/", tS.ShadersStoreWGSL = {}, tS.IncludesShadersStoreWGSL = {}
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

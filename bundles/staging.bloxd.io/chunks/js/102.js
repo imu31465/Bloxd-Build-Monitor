@@ -1,79 +1,79 @@
 export const id = 102;
 export const ids = [102];
 export const modules = {
-  4911: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Zk
+  5065: (SS, HS, gS) => {
+    gS.d(HS, {
+      d: () => kS
     });
-    var Xk = Ik(1055),
-      Tk = Ik.n(Xk),
-      ik = Ik(1066),
-      yk = Ik(1318),
-      lk = Ik(3442),
-      ak = Ik(129),
-      qk = Ik(3488),
-      Lk = Ik(3475),
-      tk = Ik(1096);
+    var tS = gS(1121),
+      bS = gS.n(tS),
+      XS = gS(1127),
+      xS = gS(1419),
+      NS = gS(3639),
+      qS = gS(138),
+      uS = gS(3676),
+      IS = gS(3665),
+      fS = gS(1181);
 
-    function Zk(kk) {
+    function kS(SS) {
       let {
-        game: Fk
-      } = kk;
-      const Ik = (0, ak.p)() ? "large" : "small",
-        Xk = (0, qk.h)(Fk, Ik),
-        Zk = (0, lk.e)(Xk),
-        jk = void 0 !== Zk.blurhash;
-      return (0, tk.jsxs)("div", {
+        game: HS
+      } = SS;
+      const gS = (0, qS.j)() ? "large" : "small",
+        tS = (0, uS.c)(HS, gS),
+        kS = (0, NS.f)(tS),
+        aS = void 0 !== kS.blurhash;
+      return (0, fS.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [Zk.isLoading && !jk && (0, tk.jsx)(yk.c, {
+        children: [kS.isLoading && !aS && (0, fS.jsx)(xS.c, {
           loaderType: "Secondary"
-        }), !Zk.failed && (null !== Zk.src || jk) && (0, tk.jsx)("div", {
-          className: Tk()("SchematicImage", Lk.g, {
-            SchematicImageFadeIn: Zk.fadeIn && !jk
+        }), !kS.failed && (null !== kS.src || aS) && (0, fS.jsx)("div", {
+          className: bS()("SchematicImage", IS.h, {
+            SchematicImageFadeIn: kS.fadeIn && !aS
           }),
-          style: (0, Lk.f)(Zk),
-          children: (0, tk.jsx)(Lk.d, {
-            image: Zk
+          style: (0, IS.g)(kS),
+          children: (0, fS.jsx)(IS.c, {
+            image: kS
           })
-        }), Zk.failed && (0, tk.jsx)("div", {
+        }), kS.failed && (0, fS.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, tk.jsx)(ik.e, {
+          children: (0, fS.jsx)(XS.d, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  6506: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      default: () => Nk
+  6722: (SS, HS, gS) => {
+    gS.r(HS), gS.d(HS, {
+      default: () => WS
     });
-    Ik(4903);
-    var Xk = Ik(58),
-      Tk = Ik(1055),
-      ik = Ik.n(Tk),
-      yk = Ik(318),
-      lk = Ik(1023),
-      ak = Ik(1217),
-      qk = Ik(1016),
-      Lk = Ik(1179),
-      tk = Ik(1453),
-      Zk = Ik(3498),
-      jk = Ik(1118),
-      ek = Ik(4911),
-      wk = Ik(2525),
-      Hk = Ik(1406),
-      Jk = Ik(4556),
-      xk = Ik(4914),
-      Pk = Ik(1318),
-      Kk = Ik(1475),
-      Qk = Ik(4550),
-      sk = Ik(2438),
-      Vk = Ik(4922),
-      zk = Ik(6419),
-      Sk = Ik(1504),
-      vk = Ik(1096);
-    const Ek = [{
+    gS(5060);
+    var tS = gS(64),
+      bS = gS(1121),
+      XS = gS.n(bS),
+      xS = gS(369),
+      NS = gS(1097),
+      qS = gS(1309),
+      uS = gS(1081),
+      IS = gS(1281),
+      fS = gS(1588),
+      kS = gS(3687),
+      aS = gS(1211),
+      KS = gS(5065),
+      jS = gS(2725),
+      GS = gS(1528),
+      CS = gS(4697),
+      nS = gS(5072),
+      PS = gS(1419),
+      QS = gS(1608),
+      DS = gS(4693),
+      wS = gS(2641),
+      hS = gS(5074),
+      ZS = gS(6629),
+      JS = gS(1641),
+      OS = gS(1181);
+    const dS = [{
         scope: "customGames",
         title: "studio:leaderboardCustomGames"
       }, {
@@ -83,407 +83,407 @@ export const modules = {
         scope: "dormantGames",
         title: "studio:leaderboardDormantGames"
       }],
-      Ok = 25,
-      nk = "scope",
-      Gk = "category",
-      pk = "customGames";
-    const uk = 7,
-      bk = {
+      cS = 25,
+      vS = "scope",
+      ES = "category",
+      LS = "customGames";
+    const YS = 7,
+      AS = {
         playsPerDay: null,
         avgPlaytimeMinutes: null,
         retention: null
       };
 
-    function Rk(kk) {
+    function yS(SS) {
       let {
-        position: Fk
-      } = kk;
-      const Ik = zk.e[Fk];
-      return (0, vk.jsxs)("td", {
-        className: ik()("StudioLeaderboardPosition", {
-          StudioLeaderboardTopPosition: void 0 !== Ik,
-          [`StudioLeaderboardTopPosition${Fk}`]: void 0 !== Ik
+        position: HS
+      } = SS;
+      const gS = ZS.e[HS];
+      return (0, OS.jsxs)("td", {
+        className: XS()("StudioLeaderboardPosition", {
+          StudioLeaderboardTopPosition: void 0 !== gS,
+          [`StudioLeaderboardTopPosition${HS}`]: void 0 !== gS
         }),
-        children: [void 0 !== Ik && (0, vk.jsx)("img", {
+        children: [void 0 !== gS && (0, OS.jsx)("img", {
           className: "StudioLeaderboardPositionItem",
-          src: Ik,
+          src: gS,
           alt: ""
-        }), Fk]
+        }), HS]
       })
     }
 
-    function Uk(kk) {
+    function VS(SS) {
       let {
-        discoverability: Fk
-      } = kk;
+        discoverability: HS
+      } = SS;
       const {
-        playsPerDay: Ik,
-        avgPlaytimeMinutes: Tk,
-        retention: ik
-      } = null === Fk ? bk : (0, Zk.i)(Fk);
-      return (0, vk.jsxs)(Xk.Fragment, {
-        children: [(0, vk.jsx)("td", {
-          children: null !== Ik ? (0, Zk.d)(Ik) : "-"
-        }), (0, vk.jsx)("td", {
-          children: null !== Tk ? (0, Zk.f)(Tk) : "-"
-        }), (0, vk.jsx)("td", {
-          children: null !== ik ? (0, Zk.g)(ik) : "-"
+        playsPerDay: gS,
+        avgPlaytimeMinutes: bS,
+        retention: XS
+      } = null === HS ? AS : (0, kS.j)(HS);
+      return (0, OS.jsxs)(tS.Fragment, {
+        children: [(0, OS.jsx)("td", {
+          children: null !== gS ? (0, kS.c)(gS) : "-"
+        }), (0, OS.jsx)("td", {
+          children: null !== bS ? (0, kS.g)(bS) : "-"
+        }), (0, OS.jsx)("td", {
+          children: null !== XS ? (0, kS.h)(XS) : "-"
         })]
       })
     }
 
-    function Ck(kk) {
+    function iS(SS) {
       let {
-        discoverability: Fk
-      } = kk;
-      return (0, vk.jsx)("td", {
+        discoverability: HS
+      } = SS;
+      return (0, OS.jsx)("td", {
         className: "StudioLeaderboardEngagementScore",
-        children: void 0 !== (null === Fk || void 0 === Fk ? void 0 : Fk.engagementScore) ? (0, ak.Q)(Math.round(Fk.engagementScore)) : "-"
+        children: void 0 !== (null === HS || void 0 === HS ? void 0 : HS.engagementScore) ? (0, qS.R)(Math.round(HS.engagementScore)) : "-"
       })
     }
 
-    function Nk() {
-      var kk, Fk;
+    function WS() {
+      var SS, HS;
       const {
-        t: Ik
-      } = (0, Lk.y)(), Tk = (0, Kk.useNavigatePreserveSearch)(), {
-        userContext: ik,
-        isUserContextUpdating: zk
-      } = (0, jk.d)(), bk = (0, sk.l)(), [Nk, ck] = (0, Qk.k)(), Wk = (fk = Nk.get(nk), Ek.some((kk => kk.scope === fk)) ? fk : pk);
-      var fk;
-      const Bk = function(kk) {
-          return yk.W.includes(kk) ? kk : null
-        }(Nk.get(Gk)),
-        dk = (0, Qk.f)(Nk.get(Qk.b)),
-        [Yk, Ak] = (0, Xk.useState)(null),
-        [gk, mk] = (0, Xk.useState)(!1);
+        t: gS
+      } = (0, IS.F)(), bS = (0, QS.useNavigatePreserveSearch)(), {
+        userContext: XS,
+        isUserContextUpdating: ZS
+      } = (0, aS.b)(), AS = (0, wS.k)(), [WS, zS] = (0, DS.m)(), US = (pS = WS.get(vS), dS.some((SS => SS.scope === pS)) ? pS : LS);
+      var pS;
+      const sS = function(SS) {
+          return xS.X.includes(SS) ? SS : null
+        }(WS.get(ES)),
+        BS = (0, DS.e)(WS.get(DS.c)),
+        [MS, FS] = (0, tS.useState)(null),
+        [RS, TS] = (0, tS.useState)(!1);
 
-      function hk(kk) {
-        ck((Fk => {
-          (0, Qk.g)(Fk, nk, kk.scope === pk ? null : kk.scope), (0, Qk.g)(Fk, Gk, kk.category), (0, Qk.i)(Fk, kk.page)
+      function oS(SS) {
+        zS((HS => {
+          (0, DS.f)(HS, vS, SS.scope === LS ? null : SS.scope), (0, DS.f)(HS, ES, SS.category), (0, DS.i)(HS, SS.page)
         }))
       }
-      const rk = !zk && ik.playerHasRank("developer"),
-        Dk = rk && "allGames" === Wk,
-        Mk = rk && "dormantGames" === Wk;
-      (0, Xk.useEffect)((() => {
-        if (zk) return;
-        let kk = !1;
-        return Ak(null), mk(!1), tk.e.getPublishedGamePreviews(ik, {
+      const lS = !ZS && XS.playerHasRank("developer"),
+        mS = lS && "allGames" === US,
+        eS = lS && "dormantGames" === US;
+      (0, tS.useEffect)((() => {
+        if (ZS) return;
+        let SS = !1;
+        return FS(null), TS(!1), fS.b.getPublishedGamePreviews(XS, {
           searchQuery: null,
-          pageNumber: dk,
-          pageSize: Ok,
+          pageNumber: BS,
+          pageSize: cS,
           onlyFavouriteGames: !1,
           onlyOwnedGames: !1,
           onlyApprovedGames: !1,
           schematicIdsToExclude: [],
-          gameCategories: null !== Bk ? [Bk] : [],
+          gameCategories: null !== sS ? [sS] : [],
           upAndComing: !1,
-          dormantGames: Mk,
+          dormantGames: eS,
           sortByEngagementScore: !0,
-          firstPartyGameNames: Dk ? qk.e : void 0,
+          firstPartyGameNames: mS ? uS.b : void 0,
           includeOwners: !0
-        }).then((Fk => {
-          kk || Ak(Fk)
-        })).catch((Fk => {
-          console.error("Failed to load the studio leaderboard", Fk), kk || mk(!0)
+        }).then((HS => {
+          SS || FS(HS)
+        })).catch((HS => {
+          console.error("Failed to load the studio leaderboard", HS), SS || TS(!0)
         })), () => {
-          kk = !0
+          SS = !0
         }
-      }), [zk, Dk, Mk, Bk, dk, ik]);
-      const kF = null !== (kk = null === Yk || void 0 === Yk ? void 0 : Yk.results) && void 0 !== kk ? kk : null,
-        FF = function(kk, Fk, Ik) {
-          const [Tk, ik] = (0, Xk.useState)({}), yk = Ik ? (null !== kk && void 0 !== kk ? kk : []).flatMap((kk => "firstPartyGame" === kk.type ? [(0, lk.d)(kk.gameNameWithVariation, !0)] : [])).join(",") : "", ak = (0, Xk.useMemo)((() => "" === yk ? [] : yk.split(",")), [yk]);
-          return (0, Xk.useEffect)((() => {
-            if (0 === ak.length) return void ik({});
-            let kk = !1;
-            return tk.e.getGamesByAnalyticsIds(Fk, ak).then((Fk => {
-              kk || ik(Fk)
-            })).catch((kk => {
-              console.error("Failed to load first party discoverability for the studio leaderboard", kk)
+      }), [ZS, mS, eS, sS, BS, XS]);
+      const rS = null !== (SS = null === MS || void 0 === MS ? void 0 : MS.results) && void 0 !== SS ? SS : null,
+        SH = function(SS, HS, gS) {
+          const [bS, XS] = (0, tS.useState)({}), xS = gS ? (null !== SS && void 0 !== SS ? SS : []).flatMap((SS => "firstPartyGame" === SS.type ? [(0, NS.c)(SS.gameNameWithVariation, !0)] : [])).join(",") : "", qS = (0, tS.useMemo)((() => "" === xS ? [] : xS.split(",")), [xS]);
+          return (0, tS.useEffect)((() => {
+            if (0 === qS.length) return void XS({});
+            let SS = !1;
+            return fS.b.getGamesByAnalyticsIds(HS, qS).then((HS => {
+              SS || XS(HS)
+            })).catch((SS => {
+              console.error("Failed to load first party discoverability for the studio leaderboard", SS)
             })), () => {
-              kk = !0
+              SS = !0
             }
-          }), [ak, Fk]), Tk
-        }(kF, ik, rk),
-        IF = null !== kF ? function(kk, Fk, Ik, Xk, Tk) {
-          return kk.map(((kk, ik) => {
-            var yk;
-            const ak = Xk + ik + 1;
-            if ("customGame" === kk.type) {
-              const Fk = kk.preview;
+          }), [qS, HS]), bS
+        }(rS, XS, lS),
+        HH = null !== rS ? function(SS, HS, gS, tS, bS) {
+          return SS.map(((SS, XS) => {
+            var xS;
+            const qS = tS + XS + 1;
+            if ("customGame" === SS.type) {
+              const HS = SS.preview;
               return {
-                key: Fk.schematicId,
-                position: ak,
-                thumbnail: (0, vk.jsx)(ek.b, {
-                  game: Fk
+                key: HS.schematicId,
+                position: qS,
+                thumbnail: (0, OS.jsx)(KS.d, {
+                  game: HS
                 }),
-                name: Fk.name,
-                owner: kk.owner,
-                category: Fk.gameCategory,
-                ccu: Fk.ccu,
-                favourites: Fk.favourites,
-                discoverability: (0, Zk.j)(Fk) ? Fk : null,
-                url: (0, Sk.m)((0, lk.c)(Fk.schematicId))
+                name: HS.name,
+                owner: SS.owner,
+                category: HS.gameCategory,
+                ccu: HS.ccu,
+                favourites: HS.favourites,
+                discoverability: (0, kS.k)(HS) ? HS : null,
+                url: (0, JS.p)((0, NS.b)(HS.schematicId))
               }
             }
-            const qk = kk.gameNameWithVariation,
-              Lk = (0, lk.d)(qk, !0);
+            const uS = SS.gameNameWithVariation,
+              IS = (0, NS.c)(uS, !0);
             return {
-              key: qk,
-              position: ak,
-              thumbnail: (0, vk.jsx)(Vk.c, {
-                game: qk
+              key: uS,
+              position: qS,
+              thumbnail: (0, OS.jsx)(hS.e, {
+                game: uS
               }),
-              name: (0, Sk.k)(qk, Tk),
+              name: (0, JS.m)(uS, bS),
               owner: null,
-              category: (0, Sk.c)(qk),
-              ccu: (0, sk.b)(qk, Fk),
+              category: (0, JS.c)(uS),
+              ccu: (0, wS.d)(uS, HS),
               favourites: null,
-              discoverability: null !== (yk = Ik[Lk]) && void 0 !== yk ? yk : null,
-              url: (0, Sk.m)(Lk)
+              discoverability: null !== (xS = gS[IS]) && void 0 !== xS ? xS : null,
+              url: (0, JS.p)(IS)
             }
           }))
-        }(kF, bk, FF, (dk - 1) * Ok, Ik) : [],
-        XF = !gk && null === Yk,
-        TF = !XF && !gk && 0 === IF.length,
-        iF = null !== (Fk = null === Yk || void 0 === Yk ? void 0 : Yk.totalPages) && void 0 !== Fk ? Fk : 1;
-      return (0, vk.jsxs)("div", {
+        }(rS, AS, SH, (BS - 1) * cS, gS) : [],
+        gH = !RS && null === MS,
+        tH = !gH && !RS && 0 === HH.length,
+        bH = null !== (HS = null === MS || void 0 === MS ? void 0 : MS.totalPages) && void 0 !== HS ? HS : 1;
+      return (0, OS.jsxs)("div", {
         className: "StudioPage StudioLeaderboard",
-        children: [(0, vk.jsx)("div", {
+        children: [(0, OS.jsx)("div", {
           className: "StudioPageHeader",
-          children: (0, vk.jsx)("h1", {
+          children: (0, OS.jsx)("h1", {
             className: "StudioPageTitle",
-            children: Ik("studio:leaderboard")
+            children: gS("studio:leaderboard")
           })
-        }), (0, vk.jsxs)("div", {
+        }), (0, OS.jsxs)("div", {
           className: "StudioLeaderboardBanner",
-          children: [!Mk && (0, vk.jsx)("div", {
-            children: Ik("studio:leaderboardBanner")
-          }), Mk && (0, vk.jsx)("div", {
-            children: Ik("studio:leaderboardDormantBanner")
-          }), (0, vk.jsx)("div", {
-            children: Ik("studio:leaderboardMetricsBanner", {
-              days: uk
+          children: [!eS && (0, OS.jsx)("div", {
+            children: gS("studio:leaderboardBanner")
+          }), eS && (0, OS.jsx)("div", {
+            children: gS("studio:leaderboardDormantBanner")
+          }), (0, OS.jsx)("div", {
+            children: gS("studio:leaderboardMetricsBanner", {
+              days: YS
             })
           })]
-        }), rk && (0, vk.jsx)("div", {
+        }), lS && (0, OS.jsx)("div", {
           className: "StudioLeaderboardScopes",
-          children: Ek.map((kk => (0, vk.jsx)(Hk.Q, {
-            active: Wk === kk.scope,
+          children: dS.map((SS => (0, OS.jsx)(GS.P, {
+            active: US === SS.scope,
             onClick: () => {
-              hk({
-                scope: kk.scope,
-                category: Bk,
+              oS({
+                scope: SS.scope,
+                category: sS,
                 page: 1
               })
             },
-            children: Ik(kk.title)
-          }, kk.scope)))
-        }), (0, vk.jsxs)("div", {
+            children: gS(SS.title)
+          }, SS.scope)))
+        }), (0, OS.jsxs)("div", {
           className: "StudioLeaderboardCategories",
-          children: [(0, vk.jsx)(Hk.Q, {
-            active: null === Bk,
+          children: [(0, OS.jsx)(GS.P, {
+            active: null === sS,
             onClick: () => {
-              hk({
-                scope: Wk,
+              oS({
+                scope: US,
                 category: null,
                 page: 1
               })
             },
-            children: Ik("studio:leaderboardAllCategories")
-          }), yk.W.map((kk => (0, vk.jsx)(Hk.Q, {
-            active: Bk === kk,
+            children: gS("studio:leaderboardAllCategories")
+          }), xS.X.map((SS => (0, OS.jsx)(GS.P, {
+            active: sS === SS,
             onClick: () => {
-              hk({
-                scope: Wk,
-                category: kk,
+              oS({
+                scope: US,
+                category: SS,
                 page: 1
               })
             },
-            children: (0, yk.eb)(kk)
-          }, kk)))]
-        }), XF && (0, vk.jsx)("div", {
+            children: (0, xS.hb)(SS)
+          }, SS)))]
+        }), gH && (0, OS.jsx)("div", {
           className: "StudioPageLoader AnimFadeIn",
-          children: (0, vk.jsx)(Pk.c, {})
-        }), gk && (0, vk.jsx)("div", {
+          children: (0, OS.jsx)(PS.c, {})
+        }), RS && (0, OS.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: Ik("studio:failedToLoadLeaderboard")
-        }), TF && (0, vk.jsx)("div", {
+          children: gS("studio:failedToLoadLeaderboard")
+        }), tH && (0, OS.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: Ik("studio:leaderboardEmpty")
-        }), !XF && !gk && !TF && (0, vk.jsx)("div", {
+          children: gS("studio:leaderboardEmpty")
+        }), !gH && !RS && !tH && (0, OS.jsx)("div", {
           className: "StudioLeaderboardTableScroll AnimFadeIn",
-          children: (0, vk.jsx)(xk.e, {
+          children: (0, OS.jsx)(nS.c, {
             className: "StudioTable",
             columns: [{
               key: "position",
               header: "#"
             }, {
               key: "game",
-              header: Ik("general:game")
+              header: gS("general:game")
             }, {
               key: "owner",
-              header: Ik("general:owner")
-            }, ...null === Bk ? [{
+              header: gS("general:owner")
+            }, ...null === sS ? [{
               key: "category",
-              header: Ik("general:category")
-            }] : [], ...rk ? [{
+              header: gS("general:category")
+            }] : [], ...lS ? [{
               key: "engagementScore",
               header: "engagementScore"
             }] : [], {
               key: "playsPerDay",
-              header: Ik("studio:leaderboardPlaysPerDay")
+              header: gS("studio:leaderboardPlaysPerDay")
             }, {
               key: "sessionLength",
-              header: Ik("studio:leaderboardSessionLength")
+              header: gS("studio:leaderboardSessionLength")
             }, {
               key: "retention",
-              header: Ik("studio:leaderboardSessionsPerPlayer")
-            }, ...Mk ? [] : [{
+              header: gS("studio:leaderboardSessionsPerPlayer")
+            }, ...eS ? [] : [{
               key: "ccu",
-              header: Ik("studio:metricCcu")
+              header: gS("studio:metricCcu")
             }], {
               key: "favourites",
-              header: Ik("general:favourites")
+              header: gS("general:favourites")
             }],
-            rows: IF,
-            getRowKey: kk => kk.key,
-            renderRow: kk => (0, vk.jsxs)("tr", {
+            rows: HH,
+            getRowKey: SS => SS.key,
+            renderRow: SS => (0, OS.jsxs)("tr", {
               onClick: () => {
-                Tk(kk.url)
+                bS(SS.url)
               },
-              children: [(0, vk.jsx)(Rk, {
-                position: kk.position
-              }), (0, vk.jsx)("td", {
-                children: (0, vk.jsx)(Vk.g, {
-                  thumbnail: kk.thumbnail,
-                  name: kk.name
+              children: [(0, OS.jsx)(yS, {
+                position: SS.position
+              }), (0, OS.jsx)("td", {
+                children: (0, OS.jsx)(hS.f, {
+                  thumbnail: SS.thumbnail,
+                  name: SS.name
                 })
-              }), (0, vk.jsxs)("td", {
+              }), (0, OS.jsxs)("td", {
                 className: "StudioLeaderboardOwner",
-                children: [null === kk.owner && "-", null !== kk.owner && (0, vk.jsx)(wk.g, {
-                  playerSocialPreview: kk.owner,
+                children: [null === SS.owner && "-", null !== SS.owner && (0, OS.jsx)(jS.g, {
+                  playerSocialPreview: SS.owner,
                   showLocation: !1,
                   opensProfileCard: !1
                 })]
-              }), null === Bk && (0, vk.jsx)("td", {
-                children: (0, yk.eb)(kk.category)
-              }), rk && (0, vk.jsx)(Ck, {
-                discoverability: kk.discoverability
-              }), (0, vk.jsx)(Uk, {
-                discoverability: kk.discoverability
-              }), !Mk && (0, vk.jsx)("td", {
-                children: null !== kk.ccu ? (0, ak.Q)(kk.ccu) : "-"
-              }), (0, vk.jsx)("td", {
-                children: null !== kk.favourites ? (0, ak.Q)(kk.favourites) : "-"
+              }), null === sS && (0, OS.jsx)("td", {
+                children: (0, xS.hb)(SS.category)
+              }), lS && (0, OS.jsx)(iS, {
+                discoverability: SS.discoverability
+              }), (0, OS.jsx)(VS, {
+                discoverability: SS.discoverability
+              }), !eS && (0, OS.jsx)("td", {
+                children: null !== SS.ccu ? (0, qS.R)(SS.ccu) : "-"
+              }), (0, OS.jsx)("td", {
+                children: null !== SS.favourites ? (0, qS.R)(SS.favourites) : "-"
               })]
             })
           })
-        }), !gk && (0, vk.jsx)(Jk.e, {
+        }), !RS && (0, OS.jsx)(CS.c, {
           className: "AnimFadeIn",
-          page: dk,
-          totalPages: iF,
-          onSetPage: kk => {
-            hk({
-              scope: Wk,
-              category: Bk,
-              page: kk
+          page: BS,
+          totalPages: bH,
+          onSetPage: SS => {
+            oS({
+              scope: US,
+              category: sS,
+              page: SS
             })
           }
         })]
       })
     }
   },
-  4922: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => yk,
-      g: () => ik
+  5074: (SS, HS, gS) => {
+    gS.d(HS, {
+      e: () => xS,
+      f: () => XS
     });
-    var Xk = Ik(1504),
-      Tk = Ik(1096);
+    var tS = gS(1641),
+      bS = gS(1181);
 
-    function ik(kk) {
+    function XS(SS) {
       let {
-        thumbnail: Fk,
-        name: Ik
-      } = kk;
-      return (0, Tk.jsxs)("div", {
+        thumbnail: HS,
+        name: gS
+      } = SS;
+      return (0, bS.jsxs)("div", {
         className: "StudioTableGameCell",
-        children: [(0, Tk.jsx)("div", {
+        children: [(0, bS.jsx)("div", {
           className: "StudioTableThumbnail",
-          children: Fk
-        }), (0, Tk.jsx)("span", {
+          children: HS
+        }), (0, bS.jsx)("span", {
           className: "StudioTableGameName",
-          children: Ik
+          children: gS
         })]
       })
     }
 
-    function yk(kk) {
+    function xS(SS) {
       let {
-        game: Fk
-      } = kk;
-      return (0, Tk.jsx)("img", {
+        game: HS
+      } = SS;
+      return (0, bS.jsx)("img", {
         className: "StudioTableThumbnailImage",
-        src: (0, Xk.g)(Fk),
+        src: (0, tS.i)(HS),
         alt: ""
       })
     }
   },
-  6419: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Xk
+  6629: (SS, HS, gS) => {
+    gS.d(HS, {
+      e: () => tS
     });
-    const Xk = {
-      1: Ik(6422),
-      2: Ik(6428),
-      3: Ik(6433)
+    const tS = {
+      1: gS(6631),
+      2: gS(6633),
+      3: gS(6635)
     }
   },
-  4914: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => lk
+  5072: (SS, HS, gS) => {
+    gS.d(HS, {
+      c: () => NS
     });
-    var Xk = Ik(58),
-      Tk = Ik(1055),
-      ik = Ik.n(Tk),
-      yk = Ik(1096);
+    var tS = gS(64),
+      bS = gS(1121),
+      XS = gS.n(bS),
+      xS = gS(1181);
 
-    function lk(kk) {
+    function NS(SS) {
       let {
-        columns: Fk,
-        rows: Ik,
-        getRowKey: Tk,
-        renderRow: lk,
-        className: ak
-      } = kk;
-      return (0, yk.jsxs)("table", {
-        className: ik()("Table", ak),
-        children: [(0, yk.jsx)("thead", {
-          children: (0, yk.jsx)("tr", {
-            children: Fk.map((kk => (0, yk.jsx)("th", {
-              children: kk.header
-            }, kk.key)))
+        columns: HS,
+        rows: gS,
+        getRowKey: bS,
+        renderRow: NS,
+        className: qS
+      } = SS;
+      return (0, xS.jsxs)("table", {
+        className: XS()("Table", qS),
+        children: [(0, xS.jsx)("thead", {
+          children: (0, xS.jsx)("tr", {
+            children: HS.map((SS => (0, xS.jsx)("th", {
+              children: SS.header
+            }, SS.key)))
           })
-        }), (0, yk.jsx)("tbody", {
-          children: Ik.map((kk => (0, yk.jsx)(Xk.Fragment, {
-            children: lk(kk)
-          }, Tk(kk))))
+        }), (0, xS.jsx)("tbody", {
+          children: gS.map((SS => (0, xS.jsx)(tS.Fragment, {
+            children: NS(SS)
+          }, bS(SS))))
         })]
       })
     }
   },
-  4903: () => {},
-  6422: kk => {
-    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
+  5060: () => {},
+  6631: SS => {
+    SS.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
   },
-  6428: kk => {
-    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
+  6633: SS => {
+    SS.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
   },
-  6433: kk => {
-    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
+  6635: SS => {
+    SS.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

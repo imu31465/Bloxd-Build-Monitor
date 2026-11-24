@@ -1,225 +1,225 @@
 export const id = 195;
 export const ids = [195];
 export const modules = {
-  36370: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      showOnboardingPopup: () => Rk
+  36388: (SS, HS, gS) => {
+    gS.r(HS), gS.d(HS, {
+      showOnboardingPopup: () => yS
     });
-    var Xk = Ik(58),
-      Tk = Ik(1179),
-      ik = Ik(1324),
-      yk = Ik(1406),
-      lk = Ik(4294),
-      ak = Ik(1518),
-      qk = Ik(1515),
-      Lk = Ik(2148),
-      tk = Ik(1055),
-      Zk = Ik.n(tk),
-      jk = Ik(1120),
-      ek = Ik(36375),
-      wk = Ik(1066),
-      Hk = Ik(2300),
-      Jk = Ik(3428),
-      xk = Ik(1118),
-      Pk = Ik(1096);
-    const Kk = Object.entries(ak.c).filter((kk => {
-      let [, Fk] = kk;
-      return "default" === Fk.cosmeticPack
+    var tS = gS(64),
+      bS = gS(1281),
+      XS = gS(1435),
+      xS = gS(1528),
+      NS = gS(4446),
+      qS = gS(1657),
+      uS = gS(1653),
+      IS = gS(2340),
+      fS = gS(1121),
+      kS = gS.n(fS),
+      aS = gS(1216),
+      KS = gS(36393),
+      jS = gS(1127),
+      GS = gS(2480),
+      CS = gS(3623),
+      nS = gS(1211),
+      PS = gS(1181);
+    const QS = Object.entries(qS.c).filter((SS => {
+      let [, HS] = SS;
+      return "default" === HS.cosmeticPack
     }));
 
-    function Qk(kk) {
-      return qk.d.default.colourGroups[kk].colours.map(((kk, Fk) => {
+    function DS(SS) {
+      return uS.c.default.colourGroups[SS].colours.map(((SS, HS) => {
         let {
-          rbg: Ik,
-          order: Xk
-        } = kk;
+          rbg: gS,
+          order: tS
+        } = SS;
         return {
-          rbg: Ik,
-          order: Xk,
-          index: Fk
+          rbg: gS,
+          order: tS,
+          index: HS
         }
-      })).sort(((kk, Fk) => kk.order - Fk.order))
+      })).sort(((SS, HS) => SS.order - HS.order))
     }
-    const sk = Qk("eyes"),
-      Vk = Qk("skin");
+    const wS = DS("eyes"),
+      hS = DS("skin");
 
-    function zk(kk, Fk) {
-      var Ik;
-      if (void 0 === Fk || "default" !== (null === (Ik = (0, Lk.k)(kk, Fk)) || void 0 === Ik ? void 0 : Ik.cosmeticPack)) return null;
-      const Xk = (0, Lk.j)(Fk);
-      return Xk && [Xk[0], Number(Xk[1])]
-    }
-
-    function Sk(kk, Fk, Ik) {
-      return `${kk}_${Fk}_${Ik}`
+    function ZS(SS, HS) {
+      var gS;
+      if (void 0 === HS || "default" !== (null === (gS = (0, IS.j)(SS, HS)) || void 0 === gS ? void 0 : gS.cosmeticPack)) return null;
+      const tS = (0, IS.i)(HS);
+      return tS && [tS[0], Number(tS[1])]
     }
 
-    function vk(kk) {
+    function JS(SS, HS, gS) {
+      return `${SS}_${HS}_${gS}`
+    }
+
+    function OS(SS) {
       let {
-        label: Fk,
-        colours: Ik,
-        picked: Xk,
-        onPick: ik
-      } = kk;
+        label: HS,
+        colours: gS,
+        picked: tS,
+        onPick: XS
+      } = SS;
       const {
-        t: yk
-      } = (0, Tk.y)();
-      return (0, Pk.jsxs)("div", {
+        t: xS
+      } = (0, bS.F)();
+      return (0, PS.jsxs)("div", {
         className: "OnboardingColours",
-        children: [(0, Pk.jsx)("div", {
+        children: [(0, PS.jsx)("div", {
           className: "OnboardingColoursLabel",
-          children: Fk
-        }), (0, Pk.jsx)("div", {
+          children: HS
+        }), (0, PS.jsx)("div", {
           className: "OnboardingSwatches",
           role: "radiogroup",
-          "aria-label": Fk,
-          children: Ik.map(((kk, Fk) => {
+          "aria-label": HS,
+          children: gS.map(((SS, HS) => {
             let {
-              rbg: Ik,
-              index: Tk
-            } = kk;
-            return (0, Pk.jsx)("button", {
+              rbg: gS,
+              index: bS
+            } = SS;
+            return (0, PS.jsx)("button", {
               type: "button",
-              className: Zk()("OnboardingSwatch", {
-                OnboardingSwatchSelected: Tk === Xk
+              className: kS()("OnboardingSwatch", {
+                OnboardingSwatchSelected: bS === tS
               }),
               style: {
-                backgroundColor: `rgb(${Ik.join(",")})`
+                backgroundColor: `rgb(${gS.join(",")})`
               },
               role: "radio",
-              "aria-checked": Tk === Xk,
-              "aria-label": yk("homePage:onboardingColour", {
-                number: Fk + 1
+              "aria-checked": bS === tS,
+              "aria-label": xS("homePage:onboardingColour", {
+                number: HS + 1
               }),
               onClick: () => {
-                ik(Tk)
+                XS(bS)
               }
-            }, Tk)
+            }, bS)
           }))
         })]
       })
     }
 
-    function Ek() {
+    function dS() {
       const {
-        t: kk
-      } = (0, Tk.y)(), {
-        userContext: Fk,
-        isUserContextUpdating: Ik
-      } = (0, xk.d)(), [ik, yk] = (0, Xk.useState)(!1), [, ak] = (0, Xk.useReducer)((kk => kk + 1), 0), qk = (0, Xk.useRef)({}), Lk = (0, Xk.useRef)(null), tk = (0, Jk.d)(), Qk = {
-        ...Fk.getPlayerCosmetics(),
-        ...Lk.current
-      }, Ek = (0, Xk.useRef)(null);
-      (0, Xk.useEffect)((() => {
-        var kk;
-        ik && (null === (kk = Ek.current) || void 0 === kk || kk.scrollIntoView({
+        t: SS
+      } = (0, bS.F)(), {
+        userContext: HS,
+        isUserContextUpdating: gS
+      } = (0, nS.b)(), [XS, xS] = (0, tS.useState)(!1), [, qS] = (0, tS.useReducer)((SS => SS + 1), 0), uS = (0, tS.useRef)({}), IS = (0, tS.useRef)(null), fS = (0, CS.b)(), DS = {
+        ...HS.getPlayerCosmetics(),
+        ...IS.current
+      }, dS = (0, tS.useRef)(null);
+      (0, tS.useEffect)((() => {
+        var SS;
+        XS && (null === (SS = dS.current) || void 0 === SS || SS.scrollIntoView({
           block: "nearest"
         }))
-      }), [ik]);
-      const Ok = (kk, Fk) => {
-          (0, ek.e)(kk, Object.entries(Fk)), tk.current ? ak() : kk.publishUpdateIfCurrent()
+      }), [XS]);
+      const cS = (SS, HS) => {
+          (0, KS.e)(SS, Object.entries(HS)), fS.current ? qS() : SS.publishUpdateIfCurrent()
         },
-        nk = kk => {
-          const Xk = {
-            ...Lk.current,
-            ...kk
+        vS = SS => {
+          const tS = {
+            ...IS.current,
+            ...SS
           };
-          if (!Ik) return Lk.current = null, void Ok(Fk, Xk);
-          Lk.current = Xk, ak(), jk.userContextManager.getCurrentUserContext().then((kk => {
-            Lk.current === Xk && (Lk.current = null, Ok(kk, Xk))
-          })).catch((kk => {
-            console.warn("Couldn't put on the onboarding look held for the account", kk), Lk.current === Xk && (Lk.current = null, tk.current && ak())
+          if (!gS) return IS.current = null, void cS(HS, tS);
+          IS.current = tS, qS(), aS.userContextManager.getCurrentUserContext().then((SS => {
+            IS.current === tS && (IS.current = null, cS(SS, tS))
+          })).catch((SS => {
+            console.warn("Couldn't put on the onboarding look held for the account", SS), IS.current === tS && (IS.current = null, fS.current && qS())
           }))
         };
-      (0, Xk.useEffect)((() => () => {
-        Fk.publishUpdateIfCurrent()
-      }), [Fk]);
-      const Gk = zk("eyes", Qk.eyes),
-        pk = zk("skin", Qk.skin);
-      return (0, Pk.jsxs)(Pk.Fragment, {
-        children: [(0, Pk.jsx)("div", {
+      (0, tS.useEffect)((() => () => {
+        HS.publishUpdateIfCurrent()
+      }), [HS]);
+      const ES = ZS("eyes", DS.eyes),
+        LS = ZS("skin", DS.skin);
+      return (0, PS.jsxs)(PS.Fragment, {
+        children: [(0, PS.jsx)("div", {
           className: "OnboardingPresets",
-          children: Kk.map(((Fk, Ik) => {
-            let [Xk, {
-              cosmetics: Tk
-            }] = Fk;
-            const ik = function(kk, Fk) {
-              return Object.entries(Fk).every((Fk => {
-                let [Ik, Xk] = Fk;
-                return "skin" === Ik || ("eyes" === Ik ? (null === (Tk = zk("eyes", kk.eyes)) || void 0 === Tk ? void 0 : Tk[0]) === (null === (ik = zk("eyes", Xk)) || void 0 === ik ? void 0 : ik[0]) : kk[Ik] === Xk);
-                var Tk, ik
+          children: QS.map(((HS, gS) => {
+            let [tS, {
+              cosmetics: bS
+            }] = HS;
+            const XS = function(SS, HS) {
+              return Object.entries(HS).every((HS => {
+                let [gS, tS] = HS;
+                return "skin" === gS || ("eyes" === gS ? (null === (bS = ZS("eyes", SS.eyes)) || void 0 === bS ? void 0 : bS[0]) === (null === (XS = ZS("eyes", tS)) || void 0 === XS ? void 0 : XS[0]) : SS[gS] === tS);
+                var bS, XS
               }))
-            }(Qk, Tk);
-            return (0, Pk.jsx)("button", {
+            }(DS, bS);
+            return (0, PS.jsx)("button", {
               type: "button",
-              className: Zk()("OnboardingPreset", {
-                OnboardingPresetSelected: ik
+              className: kS()("OnboardingPreset", {
+                OnboardingPresetSelected: XS
               }),
-              "aria-label": kk("homePage:onboardingPreset", {
-                number: Ik + 1
+              "aria-label": SS("homePage:onboardingPreset", {
+                number: gS + 1
               }),
-              "aria-pressed": ik,
+              "aria-pressed": XS,
               onClick: () => {
-                (0, lk.d)(`preset.${Xk}`);
+                (0, NS.i)(`preset.${tS}`);
                 const {
-                  eyes: kk,
-                  skin: Fk
-                } = qk.current;
-                nk({
-                  ...Tk,
-                  ...void 0 !== kk && {
-                    eyes: Sk("eyes", zk("eyes", Tk.eyes)[0], kk)
+                  eyes: SS,
+                  skin: HS
+                } = uS.current;
+                vS({
+                  ...bS,
+                  ...void 0 !== SS && {
+                    eyes: JS("eyes", ZS("eyes", bS.eyes)[0], SS)
                   },
-                  ...void 0 !== Fk && {
-                    skin: Sk("skin", "0", Fk)
+                  ...void 0 !== HS && {
+                    skin: JS("skin", "0", HS)
                   }
                 })
               },
-              children: (0, Pk.jsx)("div", {
+              children: (0, PS.jsx)("div", {
                 className: "OnboardingPresetImage",
                 style: {
-                  backgroundImage: `url(/textures/charSkins/previews/character_${Xk}_preview.png)`
+                  backgroundImage: `url(/textures/charSkins/previews/character_${tS}_preview.png)`
                 }
               })
-            }, Xk)
+            }, tS)
           }))
-        }), (0, Pk.jsxs)("button", {
+        }), (0, PS.jsxs)("button", {
           type: "button",
           className: "OnboardingMoreOptions",
-          "aria-expanded": ik,
+          "aria-expanded": XS,
           onClick: () => {
-            ik || (0, lk.d)("more"), yk(!ik)
+            XS || (0, NS.i)("more"), xS(!XS)
           },
-          children: [kk("homePage:onboardingMoreOptions"), (0, Pk.jsx)(wk.e, {
-            name: ik ? "caret-up" : "caret-down"
+          children: [SS("homePage:onboardingMoreOptions"), (0, PS.jsx)(jS.d, {
+            name: XS ? "caret-up" : "caret-down"
           })]
-        }), ik && (0, Pk.jsxs)("div", {
-          ref: Ek,
+        }), XS && (0, PS.jsxs)("div", {
+          ref: dS,
           className: "OnboardingMore",
-          children: [(0, Pk.jsx)("div", {
+          children: [(0, PS.jsx)("div", {
             className: "OnboardingMorePreview",
-            children: (0, Pk.jsx)(Hk.e, {
-              cosmetics: Qk
+            children: (0, PS.jsx)(GS.e, {
+              cosmetics: DS
             })
-          }), (0, Pk.jsxs)("div", {
+          }), (0, PS.jsxs)("div", {
             className: "OnboardingMoreColours",
-            children: [(0, Pk.jsx)(vk, {
-              label: kk("homePage:onboardingEyeColour"),
-              colours: sk,
-              picked: null === Gk || void 0 === Gk ? void 0 : Gk[1],
-              onPick: kk => {
-                var Fk;
-                (0, lk.d)("eyes"), qk.current.eyes = kk, nk({
-                  eyes: Sk("eyes", null !== (Fk = null === Gk || void 0 === Gk ? void 0 : Gk[0]) && void 0 !== Fk ? Fk : "0", kk)
+            children: [(0, PS.jsx)(OS, {
+              label: SS("homePage:onboardingEyeColour"),
+              colours: wS,
+              picked: null === ES || void 0 === ES ? void 0 : ES[1],
+              onPick: SS => {
+                var HS;
+                (0, NS.i)("eyes"), uS.current.eyes = SS, vS({
+                  eyes: JS("eyes", null !== (HS = null === ES || void 0 === ES ? void 0 : ES[0]) && void 0 !== HS ? HS : "0", SS)
                 })
               }
-            }), (0, Pk.jsx)(vk, {
-              label: kk("homePage:onboardingSkinColour"),
-              colours: Vk,
-              picked: null === pk || void 0 === pk ? void 0 : pk[1],
-              onPick: kk => {
-                (0, lk.d)("skin"), qk.current.skin = kk, nk({
-                  skin: Sk("skin", "0", kk)
+            }), (0, PS.jsx)(OS, {
+              label: SS("homePage:onboardingSkinColour"),
+              colours: hS,
+              picked: null === LS || void 0 === LS ? void 0 : LS[1],
+              onPick: SS => {
+                (0, NS.i)("skin"), uS.current.skin = SS, vS({
+                  skin: JS("skin", "0", SS)
                 })
               }
             })]
@@ -227,339 +227,339 @@ export const modules = {
         })]
       })
     }
-    var Ok = Ik(1253),
-      nk = Ik(25),
-      Gk = Ik(34051),
-      pk = Ik(1318),
-      uk = Ik(1617);
+    var cS = gS(1348),
+      vS = gS(24),
+      ES = gS(34124),
+      LS = gS(1419),
+      YS = gS(1774);
 
-    function bk(kk) {
+    function AS(SS) {
       const {
-        t: Fk
-      } = (0, Tk.y)(), {
-        userContext: Ik,
-        isUserContextUpdating: ik
-      } = (0, xk.d)(), ak = ik ? null : Ik.getPlayerName(), qk = (0, Xk.useRef)(null), [Lk, tk] = (0, Xk.useState)((() => null === ak ? (0, Ok.g)() : null)), [Zk, jk] = (0, Xk.useState)(null), [ek, Hk] = (0, Xk.useState)(!1), Kk = (0, Xk.useRef)("Gj"), Qk = (0, Jk.d)(), sk = (0, Xk.useRef)(null !== Lk), Vk = (0, Xk.useRef)(!1), zk = null !== Lk && void 0 !== Lk ? Lk : ak, Sk = (0, Xk.useRef)(null), vk = kk => {
-        qk.current && (qk.current.value = kk), tk(kk)
-      }, Ek = (0, Xk.useRef)(!1);
-      (0, Xk.useEffect)((() => {
-        var kk, Fk;
-        !ek && Ek.current && (Ek.current = !1, null === (kk = qk.current) || void 0 === kk || kk.focus(), null === (Fk = qk.current) || void 0 === Fk || Fk.select())
-      }), [ek]);
-      const bk = (0, Xk.useRef)(null);
-      (0, Xk.useEffect)((() => {
-        var kk;
-        null !== Zk && (null === (kk = bk.current) || void 0 === kk || kk.scrollIntoView({
+        t: HS
+      } = (0, bS.F)(), {
+        userContext: gS,
+        isUserContextUpdating: XS
+      } = (0, nS.b)(), qS = XS ? null : gS.getPlayerName(), uS = (0, tS.useRef)(null), [IS, fS] = (0, tS.useState)((() => null === qS ? (0, cS.f)() : null)), [kS, aS] = (0, tS.useState)(null), [KS, GS] = (0, tS.useState)(!1), QS = (0, tS.useRef)("ia"), DS = (0, CS.b)(), wS = (0, tS.useRef)(null !== IS), hS = (0, tS.useRef)(!1), ZS = null !== IS && void 0 !== IS ? IS : qS, JS = (0, tS.useRef)(null), OS = SS => {
+        uS.current && (uS.current.value = SS), fS(SS)
+      }, dS = (0, tS.useRef)(!1);
+      (0, tS.useEffect)((() => {
+        var SS, HS;
+        !KS && dS.current && (dS.current = !1, null === (SS = uS.current) || void 0 === SS || SS.focus(), null === (HS = uS.current) || void 0 === HS || HS.select())
+      }), [KS]);
+      const AS = (0, tS.useRef)(null);
+      (0, tS.useEffect)((() => {
+        var SS;
+        null !== kS && (null === (SS = AS.current) || void 0 === SS || SS.scrollIntoView({
           block: "nearest"
         }))
-      }), [Zk]);
-      const Rk = (kk, Fk) => {
-        const Ik = document.activeElement === qk.current || Ek.current;
-        Hk(!0), jk(null), kk.then((kk => {
-          Qk.current && (Hk(!1), Ek.current = Ik, Fk(kk))
+      }), [kS]);
+      const yS = (SS, HS) => {
+        const gS = document.activeElement === uS.current || dS.current;
+        GS(!0), aS(null), SS.then((SS => {
+          DS.current && (GS(!1), dS.current = gS, HS(SS))
         }))
       };
-      (0, Xk.useEffect)((() => {
-        var kk, Fk;
-        nk.d.get("isTouchScreen") || (null === (kk = qk.current) || void 0 === kk || kk.focus(), null === (Fk = qk.current) || void 0 === Fk || Fk.select())
+      (0, tS.useEffect)((() => {
+        var SS, HS;
+        vS.b.get("isTouchScreen") || (null === (SS = uS.current) || void 0 === SS || SS.focus(), null === (HS = uS.current) || void 0 === HS || HS.select())
       }), []);
-      const Uk = () => {
-          (0, lk.e)(Kk.current), kk()
+      const VS = () => {
+          (0, NS.l)(QS.current), SS()
         },
-        Ck = kk => "refused" === kk.outcome ? kk.message : Fk((0, Gk.f)(kk.failure)),
-        Nk = kk => !(kk.length >= Ok.m) && (jk({
+        iS = SS => "refused" === SS.outcome ? SS.message : HS((0, ES.c)(SS.failure)),
+        WS = SS => !(SS.length >= cS.i) && (aS({
           kind: "error",
-          message: Fk("homePage:changeNameMinLengthError", {
-            length: Ok.m
+          message: HS("homePage:changeNameMinLengthError", {
+            length: cS.i
           })
         }), !0),
-        ck = kk => {
-          var Xk, Tk, ik;
-          kk.toLowerCase() !== (null === (Xk = null !== (Tk = null === (ik = Sk.current) || void 0 === ik ? void 0 : ik.name) && void 0 !== Tk ? Tk : ak) || void 0 === Xk ? void 0 : Xk.toLowerCase()) ? Nk(kk) || Rk((0, Gk.e)(Ik, kk), (Ik => {
-            "taken" !== Ik.outcome ? "refused" !== Ik.outcome && "failed" !== Ik.outcome ? Ik.name !== kk ? (Kk.current = "suffixed", Sk.current = {
-              name: Ik.name,
-              outcome: Kk.current
-            }, vk(Ik.name), jk({
+        zS = SS => {
+          var tS, bS, XS;
+          SS.toLowerCase() !== (null === (tS = null !== (bS = null === (XS = JS.current) || void 0 === XS ? void 0 : XS.name) && void 0 !== bS ? bS : qS) || void 0 === tS ? void 0 : tS.toLowerCase()) ? WS(SS) || yS((0, ES.b)(gS, SS), (gS => {
+            "taken" !== gS.outcome ? "refused" !== gS.outcome && "failed" !== gS.outcome ? gS.name !== SS ? (QS.current = "suffixed", JS.current = {
+              name: gS.name,
+              outcome: QS.current
+            }, OS(gS.name), aS({
               kind: "suffixed",
-              taken: kk,
-              name: Ik.name
-            })) : Uk() : jk({
+              taken: SS,
+              name: gS.name
+            })) : VS() : aS({
               kind: "error",
-              message: Ck(Ik)
-            }) : jk({
+              message: iS(gS)
+            }) : aS({
               kind: "error",
-              message: Fk("homePage:onboardingNameAllTaken")
+              message: HS("homePage:onboardingNameAllTaken")
             })
-          })) : Uk()
+          })) : VS()
         };
-      (0, Xk.useEffect)((() => {
-        if (!ek || null !== ak || !Vk.current) return;
-        const kk = setTimeout((() => {
-          Vk.current = !1, Hk(!1), jk({
+      (0, tS.useEffect)((() => {
+        if (!KS || null !== qS || !hS.current) return;
+        const SS = setTimeout((() => {
+          hS.current = !1, GS(!1), aS({
             kind: "noAccount"
           })
         }), 2e4);
         return () => {
-          clearTimeout(kk)
+          clearTimeout(SS)
         }
-      }), [ek, ak]), (0, Xk.useEffect)((() => {
-        if (null === ak) return;
-        const kk = sk.current && "Gj" === Kk.current && Ik.isLoggedIn();
-        sk.current = !1, "noAccount" === (null === Zk || void 0 === Zk ? void 0 : Zk.kind) && jk(null), kk && vk(ak), Vk.current && (Vk.current = !1, Hk(!1), ck(kk ? ak : zk))
-      }), [ak]);
-      const Wk = "error" === (null === Zk || void 0 === Zk ? void 0 : Zk.kind) ? Zk.message : "noAccount" === (null === Zk || void 0 === Zk ? void 0 : Zk.kind) ? Fk("homePage:onboardingNameNoAccount") : null;
+      }), [KS, qS]), (0, tS.useEffect)((() => {
+        if (null === qS) return;
+        const SS = wS.current && "ia" === QS.current && gS.isLoggedIn();
+        wS.current = !1, "noAccount" === (null === kS || void 0 === kS ? void 0 : kS.kind) && aS(null), SS && OS(qS), hS.current && (hS.current = !1, GS(!1), zS(SS ? qS : ZS))
+      }), [qS]);
+      const US = "error" === (null === kS || void 0 === kS ? void 0 : kS.kind) ? kS.message : "noAccount" === (null === kS || void 0 === kS ? void 0 : kS.kind) ? HS("homePage:onboardingNameNoAccount") : null;
       return {
-        field: (0, Pk.jsxs)("div", {
+        field: (0, PS.jsxs)("div", {
           className: "OnboardingNameField",
-          ref: bk,
-          children: [(0, Pk.jsx)("div", {
+          ref: AS,
+          children: [(0, PS.jsx)("div", {
             className: "OnboardingSubtitle",
-            children: Fk("general:name")
-          }), null === zk && (0, Pk.jsx)(pk.c, {}), null !== zk && (0, Pk.jsxs)("div", {
+            children: HS("general:name")
+          }), null === ZS && (0, PS.jsx)(LS.c, {}), null !== ZS && (0, PS.jsxs)("div", {
             className: "OnboardingNameRow",
-            children: [(0, Pk.jsx)(uk.c, {
+            children: [(0, PS.jsx)(YS.e, {
               className: "OnboardingNameInput",
-              ariaLabel: Fk("general:name"),
-              maxLength: Ok.j,
-              defaultValue: zk,
-              domRef: qk,
-              forcedText: ek ? zk : null,
+              ariaLabel: HS("general:name"),
+              maxLength: cS.g,
+              defaultValue: ZS,
+              domRef: uS,
+              forcedText: KS ? ZS : null,
               onEnter: () => {
-                var kk;
-                null === (kk = qk.current) || void 0 === kk || kk.blur()
+                var SS;
+                null === (SS = uS.current) || void 0 === SS || SS.blur()
               },
-              onValueChange: kk => {
-                const Ik = (0, Ok.r)(kk);
-                Ik !== kk && qk.current && (qk.current.value = Ik), jk(Ik !== kk ? {
+              onValueChange: SS => {
+                const gS = (0, cS.l)(SS);
+                gS !== SS && uS.current && (uS.current.value = gS), aS(gS !== SS ? {
                   kind: "error",
-                  message: Fk("homePage:nameCharacters")
-                } : null), Ik !== zk && (Kk.current = "changed"), tk(Ik)
+                  message: HS("homePage:nameCharacters")
+                } : null), gS !== ZS && (QS.current = "changed"), fS(gS)
               }
-            }), (0, Pk.jsx)(yk.d, {
+            }), (0, PS.jsx)(xS.g, {
               className: "OnboardingRandomName",
-              ariaLabel: Fk("homePage:onboardingRandomName"),
-              disabled: ek,
+              ariaLabel: HS("homePage:onboardingRandomName"),
+              disabled: KS,
               onClick: () => {
                 (() => {
-                  if (jk(null), null === ak || Ik.isLoggedIn()) return vk((0, Ok.g)()), void(Kk.current = "rolled");
-                  Rk((0, Gk.l)(Ik), (kk => {
-                    var Fk, Xk;
-                    if ("refused" === kk.outcome || "failed" === kk.outcome) return vk(Ik.getPlayerName()), Kk.current = null !== (Fk = null === (Xk = Sk.current) || void 0 === Xk ? void 0 : Xk.outcome) && void 0 !== Fk ? Fk : "Gj", void jk({
+                  if (aS(null), null === qS || gS.isLoggedIn()) return OS((0, cS.f)()), void(QS.current = "rolled");
+                  yS((0, ES.h)(gS), (SS => {
+                    var HS, tS;
+                    if ("refused" === SS.outcome || "failed" === SS.outcome) return OS(gS.getPlayerName()), QS.current = null !== (HS = null === (tS = JS.current) || void 0 === tS ? void 0 : tS.outcome) && void 0 !== HS ? HS : "ia", void aS({
                       kind: "error",
-                      message: Ck(kk)
+                      message: iS(SS)
                     });
-                    Kk.current = "rolled", Sk.current = {
-                      name: kk.name,
+                    QS.current = "rolled", JS.current = {
+                      name: SS.name,
                       outcome: "rolled"
-                    }, vk(kk.name)
+                    }, OS(SS.name)
                   }))
                 })()
               },
-              children: (0, Pk.jsx)(wk.e, {
+              children: (0, PS.jsx)(jS.d, {
                 name: "dice"
               })
             })]
-          }), "suffixed" === (null === Zk || void 0 === Zk ? void 0 : Zk.kind) && (0, Pk.jsx)("div", {
+          }), "suffixed" === (null === kS || void 0 === kS ? void 0 : kS.kind) && (0, PS.jsx)("div", {
             className: "OnboardingNameNote",
-            children: Fk("homePage:onboardingNameSuffixed", {
-              taken: Zk.taken,
-              name: Zk.name
+            children: HS("homePage:onboardingNameSuffixed", {
+              taken: kS.taken,
+              name: kS.name
             })
-          }), null !== Wk && (0, Pk.jsx)("div", {
+          }), null !== US && (0, PS.jsx)("div", {
             className: "OnboardingNameNote OnboardingNameError",
-            children: Wk
+            children: US
           })]
         }),
         submit: () => {
-          if (!ek && null !== zk) {
-            if (null === ak) {
-              if (Nk(zk)) return;
-              return Ek.current = document.activeElement === qk.current, Vk.current = !0, Hk(!0), void jk(null)
+          if (!KS && null !== ZS) {
+            if (null === qS) {
+              if (WS(ZS)) return;
+              return dS.current = document.activeElement === uS.current, hS.current = !0, GS(!0), void aS(null)
             }
-            ck(zk)
+            zS(ZS)
           }
         },
-        busy: ek,
-        ready: null !== zk
+        busy: KS,
+        ready: null !== ZS
       }
     }
 
-    function Rk() {
-      const kk = {
+    function yS() {
+      const SS = {
         finished: !1
       };
-      ik.NotificationProvider.showCustomPopup({
-        body: Fk => (0, Pk.jsx)(Uk, {
+      XS.NotificationProvider.showCustomPopup({
+        body: HS => (0, PS.jsx)(VS, {
           onFinish: () => {
-            (0, lk.c)(), kk.finished = !0, Fk()
+            (0, NS.f)(), SS.finished = !0, HS()
           }
         }),
         middleScreenPopupClassName: "OnboardingPopup",
         ignoreBackgroundPress: !0,
         onClose: () => {
-          kk.finished || (0, lk.b)()
+          SS.finished || (0, NS.b)()
         }
       })
     }
 
-    function Uk(kk) {
+    function VS(SS) {
       let {
-        onFinish: Fk
-      } = kk;
+        onFinish: HS
+      } = SS;
       const {
-        t: Ik
-      } = (0, Tk.y)(), ik = bk(Fk);
-      return (0, Xk.useEffect)((() => {
-        (0, lk.i)()
-      }), []), (0, Pk.jsxs)("div", {
+        t: gS
+      } = (0, bS.F)(), XS = AS(HS);
+      return (0, tS.useEffect)((() => {
+        (0, NS.n)()
+      }), []), (0, PS.jsxs)("div", {
         className: "Onboarding",
-        children: [(0, Pk.jsx)("div", {
+        children: [(0, PS.jsx)("div", {
           className: "OnboardingTitle",
-          children: Ik("homePage:onboardingTitle")
-        }), (0, Pk.jsxs)("div", {
+          children: gS("homePage:onboardingTitle")
+        }), (0, PS.jsxs)("div", {
           className: "OnboardingBody",
-          children: [ik.field, (0, Pk.jsx)(Ek, {})]
-        }), (0, Pk.jsx)("div", {
+          children: [XS.field, (0, PS.jsx)(dS, {})]
+        }), (0, PS.jsx)("div", {
           className: "OnboardingFooter",
-          children: (0, Pk.jsx)(yk.m, {
+          children: (0, PS.jsx)(xS.p, {
             className: "OnboardingPrimaryButton",
             padDefaultFocus: !0,
-            loading: ik.busy,
-            disabled: !ik.ready,
-            onClick: ik.submit,
-            children: Ik("homePage:onboardingDone")
+            loading: XS.busy,
+            disabled: !XS.ready,
+            onClick: XS.submit,
+            children: gS("homePage:onboardingDone")
           })
         })]
       })
     }
   },
-  36375: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => yk
+  36393: (SS, HS, gS) => {
+    gS.d(HS, {
+      e: () => xS
     });
-    var Xk = Ik(1875),
-      Tk = Ik(1453);
-    const ik = new class {
+    var tS = gS(2060),
+      bS = gS(1588);
+    const XS = new class {
       constructor() {
         this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
       }
-      save(kk, Fk) {
-        kk !== this.userContext && this.sendHeld(), this.userContext = kk;
-        for (const [Xk, Tk] of Fk) this.pending.set(Xk, Tk);
+      save(SS, HS) {
+        SS !== this.userContext && this.sendHeld(), this.userContext = SS;
+        for (const [tS, bS] of HS) this.pending.set(tS, bS);
         if (null !== this.timer) return;
-        const Ik = this.lastSentAt + 1100 - Date.now();
-        Ik <= 0 ? this.send(kk) : (this.timer = setTimeout((() => {
+        const gS = this.lastSentAt + 1100 - Date.now();
+        gS <= 0 ? this.send(SS) : (this.timer = setTimeout((() => {
           this.sendHeld()
-        }), Ik), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
+        }), gS), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.sendHeld()
         }))))
       }
       sendHeld() {
         null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
       }
-      send(kk) {
-        const Fk = Array.from(this.pending, (kk => {
-          let [Fk, Ik] = kk;
+      send(SS) {
+        const HS = Array.from(this.pending, (SS => {
+          let [HS, gS] = SS;
           return {
-            VX: Fk,
-            zX: Ik
+            wt: HS,
+            ht: gS
           }
         }));
-        this.pending.clear(), this.lastSentAt = Date.now(), Tk.e.updateCosmetics(kk, Fk).catch((kk => {
-          console.error("Failed to update cosmetics", kk)
+        this.pending.clear(), this.lastSentAt = Date.now(), bS.b.updateCosmetics(SS, HS).catch((SS => {
+          console.error("Failed to update cosmetics", SS)
         }))
       }
     };
 
-    function yk(kk, Fk) {
-      for (const [Ik, Xk] of Fk) kk.setPlayerCosmetics(Ik, Xk);
-      if (null === Xk.gameBridge.latest("connectedGame").websocketUrl) ik.save(kk, Fk);
+    function xS(SS, HS) {
+      for (const [gS, tS] of HS) SS.setPlayerCosmetics(gS, tS);
+      if (null === tS.gameBridge.latest("connectedGame").websocketUrl) XS.save(SS, HS);
       else
-        for (const [Ik, Tk] of Fk) Xk.gameBridge.send("updateMyCosmetic", {
-          VX: Ik,
-          zX: Tk
+        for (const [gS, bS] of HS) tS.gameBridge.send("updateMyCosmetic", {
+          wt: gS,
+          ht: bS
         })
     }
   },
-  34051: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => xk,
-      f: () => qk,
-      h: () => wk,
-      l: () => ek
+  34124: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => nS,
+      c: () => uS,
+      g: () => jS,
+      h: () => KS
     });
-    var Xk = Ik(149),
-      Tk = Ik(1253),
-      ik = Ik(1194),
-      yk = Ik(1120),
-      lk = Ik(1658);
-    const ak = {
+    var tS = gS(160),
+      bS = gS(1348),
+      XS = gS(1286),
+      xS = gS(1216),
+      NS = gS(1835);
+    const qS = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function qk(kk) {
-      return ak[kk]
+    function uS(SS) {
+      return qS[SS]
     }
 
-    function Lk(kk) {
-      return (0, lk.d)(kk) ? "outdated" : kk instanceof Xk.b ? 429 === kk.httpCode ? "busy" : "server" : "offline"
+    function IS(SS) {
+      return (0, NS.b)(SS) ? "outdated" : SS instanceof tS.b ? 429 === SS.httpCode ? "busy" : "server" : "offline"
     }
 
-    function tk(kk, Fk, Ik) {
-      return (0, yk.postJsonWithMetricsCookiesAndJsonResponse)(`${ik.clientSideServerUrls.indexUrl}${Fk}`, Ik, {
+    function fS(SS, HS, gS) {
+      return (0, xS.postJsonWithMetricsCookiesAndJsonResponse)(`${XS.clientSideServerUrls.indexUrl}${HS}`, gS, {
         retries: 3
-      }, kk.getMetricsCookies()).catch((kk => (console.error("Bad response from the server when trying to change name:", Fk, kk), {
+      }, SS.getMetricsCookies()).catch((SS => (console.error("Bad response from the server when trying to change name:", HS, SS), {
         outcome: "failed",
-        failure: Lk(kk)
+        failure: IS(SS)
       })))
     }
 
-    function Zk(kk) {
-      return "outcome" in kk && "failed" === kk.outcome
+    function kS(SS) {
+      return "outcome" in SS && "failed" === SS.outcome
     }
 
-    function jk(kk) {
-      return console.error("Error when trying to get with new name from DB", kk), {
+    function aS(SS) {
+      return console.error("Error when trying to get with new name from DB", SS), {
         outcome: "refused",
-        message: kk
+        message: SS
       }
     }
-    async function ek(kk) {
-      const Fk = await tk(kk, "/index/name/random", {});
-      return Zk(Fk) ? Fk : "err" in Fk ? jk(Fk.err) : (kk.setPlayerName(Fk.name), {
+    async function KS(SS) {
+      const HS = await fS(SS, "/index/name/random", {});
+      return kS(HS) ? HS : "err" in HS ? aS(HS.err) : (SS.setPlayerName(HS.name), {
         outcome: "changed",
-        name: Fk.name
+        name: HS.name
       })
     }
-    async function wk(kk, Fk) {
-      const Ik = await tk(kk, "/index/name/update", {
-        name: Fk
+    async function jS(SS, HS) {
+      const gS = await fS(SS, "/index/name/update", {
+        name: HS
       });
-      return Zk(Ik) ? Ik : "err" in Ik ? jk(Ik.err) : Ik.nameExists ? {
+      return kS(gS) ? gS : "err" in gS ? aS(gS.err) : gS.nameExists ? {
         outcome: "taken"
-      } : (kk.setPlayerName(Fk), {
+      } : (SS.setPlayerName(HS), {
         outcome: "changed",
-        name: Fk
+        name: HS
       })
     }
 
-    function Hk(kk, Fk) {
-      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const Xk = 1 === Fk ? 1 : 10 ** (Fk - 1),
-        ik = String(Xk + Math.floor(Ik() * (10 ** Fk - Xk)));
-      return `${kk.slice(0,Tk.j-Fk)}${ik}`
+    function GS(SS, HS) {
+      let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const tS = 1 === HS ? 1 : 10 ** (HS - 1),
+        XS = String(tS + Math.floor(gS() * (10 ** HS - tS)));
+      return `${SS.slice(0,bS.g-HS)}${XS}`
     }
-    const Jk = [1, 2, 3, 4];
-    async function xk(kk, Fk) {
-      const Ik = await wk(kk, Fk);
-      if ("taken" !== Ik.outcome) return Ik;
-      for (const Xk of Jk) {
-        const Ik = Hk(Fk, Xk),
-          Tk = await wk(kk, Ik);
-        if ("taken" !== Tk.outcome) return Tk
+    const CS = [1, 2, 3, 4];
+    async function nS(SS, HS) {
+      const gS = await jS(SS, HS);
+      if ("taken" !== gS.outcome) return gS;
+      for (const tS of CS) {
+        const gS = GS(HS, tS),
+          bS = await jS(SS, gS);
+        if ("taken" !== bS.outcome) return bS
       }
       return {
         outcome: "taken"
@@ -568,4 +568,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

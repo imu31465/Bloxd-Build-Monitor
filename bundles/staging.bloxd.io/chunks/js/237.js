@@ -1,28 +1,28 @@
 export const id = 237;
 export const ids = [237, 238];
 export const modules = {
-  40259: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Lk,
-      e: () => Zk
+  40295: (SS, HS, gS) => {
+    gS.d(HS, {
+      d: () => IS,
+      h: () => kS
     });
-    var Xk = Ik(40003),
-      Tk = Ik(40011),
-      ik = Ik(37153),
-      yk = Ik(37331),
-      lk = Ik(40265),
-      ak = Ik(40218),
-      qk = Ik(37201);
-    let Lk = (() => {
-        var kk;
-        let Fk, Ik, ak = lk.b,
-          qk = [],
-          Lk = [],
-          tk = [],
-          Zk = [];
-        return kk = class extends ak {
-          constructor(kk, Fk, Ik, Tk) {
-            super(kk, Ik, Tk), this.groundColor = (0, Xk.n)(this, qk, new yk.e(0, 0, 0)), this.direction = ((0, Xk.n)(this, Lk), (0, Xk.n)(this, tk, void 0)), (0, Xk.n)(this, Zk), this.direction = Fk || ik.t.Up()
+    var tS = gS(40041),
+      bS = gS(40048),
+      XS = gS(37117),
+      xS = gS(37300),
+      NS = gS(40304),
+      qS = gS(40256),
+      uS = gS(37164);
+    let IS = (() => {
+        var SS;
+        let HS, gS, qS = NS.e,
+          uS = [],
+          IS = [],
+          fS = [],
+          kS = [];
+        return SS = class extends qS {
+          constructor(SS, HS, gS, bS) {
+            super(SS, gS, bS), this.groundColor = (0, tS.k)(this, uS, new xS.b(0, 0, 0)), this.direction = ((0, tS.k)(this, IS), (0, tS.k)(this, fS, void 0)), (0, tS.k)(this, kS), this.direction = HS || XS.n.Up()
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
@@ -30,332 +30,332 @@ export const modules = {
           getClassName() {
             return "HemisphericLight"
           }
-          setDirectionToTarget(kk) {
-            return this.direction = ik.t.Normalize(kk.subtract(ik.t.Zero())), this.direction
+          setDirectionToTarget(SS) {
+            return this.direction = XS.n.Normalize(SS.subtract(XS.n.Zero())), this.direction
           }
           getShadowGenerator() {
             return null
           }
-          transferToEffect(kk, Fk) {
-            const Ik = ik.t.Normalize(this.direction);
-            return this._uniformBuffer.updateFloat4("vLightData", Ik.x, Ik.y, Ik.z, 0, Fk), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), Fk), this
+          transferToEffect(SS, HS) {
+            const gS = XS.n.Normalize(this.direction);
+            return this._uniformBuffer.updateFloat4("vLightData", gS.x, gS.y, gS.z, 0, HS), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), HS), this
           }
-          transferToNodeMaterialEffect(kk, Fk) {
-            const Ik = ik.t.Normalize(this.direction);
-            return kk.setFloat3(Fk, Ik.x, Ik.y, Ik.z), this
+          transferToNodeMaterialEffect(SS, HS) {
+            const gS = XS.n.Normalize(this.direction);
+            return SS.setFloat3(HS, gS.x, gS.y, gS.z), this
           }
           computeWorldMatrix() {
-            return this._worldMatrix || (this._worldMatrix = ik.c.Identity()), this._worldMatrix
+            return this._worldMatrix || (this._worldMatrix = XS.e.Identity()), this._worldMatrix
           }
           getTypeID() {
-            return lk.b.LIGHTTYPEID_HEMISPHERICLIGHT
+            return NS.e.LIGHTTYPEID_HEMISPHERICLIGHT
           }
-          prepareLightSpecificDefines(kk, Fk) {
-            kk["HEMILIGHT" + Fk] = !0
+          prepareLightSpecificDefines(SS, HS) {
+            SS["HEMILIGHT" + HS] = !0
           }
         }, (() => {
-          const ik = "function" === typeof Symbol && Symbol.metadata ? Object.create(ak[Symbol.metadata] ?? null) : void 0;
-          Fk = [(0, Tk.n)()], Ik = [(0, Tk.H)()], (0, Xk.j)(null, null, Fk, {
+          const XS = "function" === typeof Symbol && Symbol.metadata ? Object.create(qS[Symbol.metadata] ?? null) : void 0;
+          HS = [(0, bS.k)()], gS = [(0, bS.I)()], (0, tS.j)(null, null, HS, {
             kind: "field",
             name: "groundColor",
             static: !1,
             private: !1,
             access: {
-              has: kk => "groundColor" in kk,
-              get: kk => kk.groundColor,
-              set: (kk, Fk) => {
-                kk.groundColor = Fk
+              has: SS => "groundColor" in SS,
+              get: SS => SS.groundColor,
+              set: (SS, HS) => {
+                SS.groundColor = HS
               }
             },
-            metadata: ik
-          }, qk, Lk), (0, Xk.j)(null, null, Ik, {
+            metadata: XS
+          }, uS, IS), (0, tS.j)(null, null, gS, {
             kind: "field",
             name: "direction",
             static: !1,
             private: !1,
             access: {
-              has: kk => "direction" in kk,
-              get: kk => kk.direction,
-              set: (kk, Fk) => {
-                kk.direction = Fk
+              has: SS => "direction" in SS,
+              get: SS => SS.direction,
+              set: (SS, HS) => {
+                SS.direction = HS
               }
             },
-            metadata: ik
-          }, tk, Zk), ik && Object.defineProperty(kk, Symbol.metadata, {
+            metadata: XS
+          }, fS, kS), XS && Object.defineProperty(SS, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: ik
+            value: XS
           })
-        })(), kk
+        })(), SS
       })(),
-      tk = !1;
+      fS = !1;
 
-    function Zk() {
-      tk || (tk = !0, ak.b.AddNodeConstructor("Light_Type_3", ((kk, Fk) => () => new Lk(kk, ik.t.Zero(), Fk))), (0, qk.f)("BABYLON.HemisphericLight", Lk))
+    function kS() {
+      fS || (fS = !0, qS.e.AddNodeConstructor("Light_Type_3", ((SS, HS) => () => new IS(SS, XS.n.Zero(), HS))), (0, uS.f)("BABYLON.HemisphericLight", IS))
     }
   },
-  37780: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Tk
+  37783: (SS, HS, gS) => {
+    gS.d(HS, {
+      d: () => bS
     });
-    var Xk = Ik(37785);
-    class Tk {
-      static GetPlanes(kk) {
-        const Fk = [];
-        for (let Ik = 0; Ik < 6; Ik++) Fk.push(new Xk.e(0, 0, 0, 0));
-        return Tk.GetPlanesToRef(kk, Fk), Fk
+    var tS = gS(37791);
+    class bS {
+      static GetPlanes(SS) {
+        const HS = [];
+        for (let gS = 0; gS < 6; gS++) HS.push(new tS.e(0, 0, 0, 0));
+        return bS.GetPlanesToRef(SS, HS), HS
       }
-      static GetNearPlaneToRef(kk, Fk) {
-        const Ik = kk.m;
-        Fk.normal.x = Ik[3] + Ik[2], Fk.normal.y = Ik[7] + Ik[6], Fk.normal.z = Ik[11] + Ik[10], Fk.d = Ik[15] + Ik[14], Fk.normalize()
+      static GetNearPlaneToRef(SS, HS) {
+        const gS = SS.m;
+        HS.normal.x = gS[3] + gS[2], HS.normal.y = gS[7] + gS[6], HS.normal.z = gS[11] + gS[10], HS.d = gS[15] + gS[14], HS.normalize()
       }
-      static GetFarPlaneToRef(kk, Fk) {
-        const Ik = kk.m;
-        Fk.normal.x = Ik[3] - Ik[2], Fk.normal.y = Ik[7] - Ik[6], Fk.normal.z = Ik[11] - Ik[10], Fk.d = Ik[15] - Ik[14], Fk.normalize()
+      static GetFarPlaneToRef(SS, HS) {
+        const gS = SS.m;
+        HS.normal.x = gS[3] - gS[2], HS.normal.y = gS[7] - gS[6], HS.normal.z = gS[11] - gS[10], HS.d = gS[15] - gS[14], HS.normalize()
       }
-      static GetLeftPlaneToRef(kk, Fk) {
-        const Ik = kk.m;
-        Fk.normal.x = Ik[3] + Ik[0], Fk.normal.y = Ik[7] + Ik[4], Fk.normal.z = Ik[11] + Ik[8], Fk.d = Ik[15] + Ik[12], Fk.normalize()
+      static GetLeftPlaneToRef(SS, HS) {
+        const gS = SS.m;
+        HS.normal.x = gS[3] + gS[0], HS.normal.y = gS[7] + gS[4], HS.normal.z = gS[11] + gS[8], HS.d = gS[15] + gS[12], HS.normalize()
       }
-      static GetRightPlaneToRef(kk, Fk) {
-        const Ik = kk.m;
-        Fk.normal.x = Ik[3] - Ik[0], Fk.normal.y = Ik[7] - Ik[4], Fk.normal.z = Ik[11] - Ik[8], Fk.d = Ik[15] - Ik[12], Fk.normalize()
+      static GetRightPlaneToRef(SS, HS) {
+        const gS = SS.m;
+        HS.normal.x = gS[3] - gS[0], HS.normal.y = gS[7] - gS[4], HS.normal.z = gS[11] - gS[8], HS.d = gS[15] - gS[12], HS.normalize()
       }
-      static GetTopPlaneToRef(kk, Fk) {
-        const Ik = kk.m;
-        Fk.normal.x = Ik[3] - Ik[1], Fk.normal.y = Ik[7] - Ik[5], Fk.normal.z = Ik[11] - Ik[9], Fk.d = Ik[15] - Ik[13], Fk.normalize()
+      static GetTopPlaneToRef(SS, HS) {
+        const gS = SS.m;
+        HS.normal.x = gS[3] - gS[1], HS.normal.y = gS[7] - gS[5], HS.normal.z = gS[11] - gS[9], HS.d = gS[15] - gS[13], HS.normalize()
       }
-      static GetBottomPlaneToRef(kk, Fk) {
-        const Ik = kk.m;
-        Fk.normal.x = Ik[3] + Ik[1], Fk.normal.y = Ik[7] + Ik[5], Fk.normal.z = Ik[11] + Ik[9], Fk.d = Ik[15] + Ik[13], Fk.normalize()
+      static GetBottomPlaneToRef(SS, HS) {
+        const gS = SS.m;
+        HS.normal.x = gS[3] + gS[1], HS.normal.y = gS[7] + gS[5], HS.normal.z = gS[11] + gS[9], HS.d = gS[15] + gS[13], HS.normalize()
       }
-      static GetPlanesToRef(kk, Fk) {
-        Tk.GetNearPlaneToRef(kk, Fk[0]), Tk.GetFarPlaneToRef(kk, Fk[1]), Tk.GetLeftPlaneToRef(kk, Fk[2]), Tk.GetRightPlaneToRef(kk, Fk[3]), Tk.GetTopPlaneToRef(kk, Fk[4]), Tk.GetBottomPlaneToRef(kk, Fk[5])
+      static GetPlanesToRef(SS, HS) {
+        bS.GetNearPlaneToRef(SS, HS[0]), bS.GetFarPlaneToRef(SS, HS[1]), bS.GetLeftPlaneToRef(SS, HS[2]), bS.GetRightPlaneToRef(SS, HS[3]), bS.GetTopPlaneToRef(SS, HS[4]), bS.GetBottomPlaneToRef(SS, HS[5])
       }
-      static IsPointInFrustum(kk, Fk) {
-        for (let Ik = 0; Ik < 6; Ik++)
-          if (Fk[Ik].dotCoordinate(kk) < 0) return !1;
+      static IsPointInFrustum(SS, HS) {
+        for (let gS = 0; gS < 6; gS++)
+          if (HS[gS].dotCoordinate(SS) < 0) return !1;
         return !0
       }
     }
   },
-  37785: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Tk
+  37791: (SS, HS, gS) => {
+    gS.d(HS, {
+      e: () => bS
     });
-    var Xk = Ik(37153);
-    class Tk {
-      constructor(kk, Fk, Ik, Tk) {
-        this.normal = new Xk.t(kk, Fk, Ik), this.d = Tk
+    var tS = gS(37117);
+    class bS {
+      constructor(SS, HS, gS, bS) {
+        this.normal = new tS.n(SS, HS, gS), this.d = bS
       }
-      iXk() {
+      lgS() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new Tk(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new bS(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let kk = this.normal.getHashCode();
-        return kk = 397 * kk ^ this.d, kk
+        let SS = this.normal.getHashCode();
+        return SS = 397 * SS ^ this.d, SS
       }
       normalize() {
-        const kk = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let Fk = 0;
-        return 0 !== kk && (Fk = 1 / kk), this.normal.x *= Fk, this.normal.y *= Fk, this.normal.z *= Fk, this.d *= Fk, this
+        const SS = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let HS = 0;
+        return 0 !== SS && (HS = 1 / SS), this.normal.x *= HS, this.normal.y *= HS, this.normal.z *= HS, this.d *= HS, this
       }
-      transform(kk) {
-        const Fk = Tk._TmpMatrix;
-        kk.invertToRef(Fk);
-        const Ik = Fk.m,
-          Xk = this.normal.x,
-          ik = this.normal.y,
-          yk = this.normal.z,
-          lk = this.d,
-          ak = Xk * Ik[0] + ik * Ik[1] + yk * Ik[2] + lk * Ik[3],
-          qk = Xk * Ik[4] + ik * Ik[5] + yk * Ik[6] + lk * Ik[7],
-          Lk = Xk * Ik[8] + ik * Ik[9] + yk * Ik[10] + lk * Ik[11],
-          tk = Xk * Ik[12] + ik * Ik[13] + yk * Ik[14] + lk * Ik[15];
-        return new Tk(ak, qk, Lk, tk)
+      transform(SS) {
+        const HS = bS._TmpMatrix;
+        SS.invertToRef(HS);
+        const gS = HS.m,
+          tS = this.normal.x,
+          XS = this.normal.y,
+          xS = this.normal.z,
+          NS = this.d,
+          qS = tS * gS[0] + XS * gS[1] + xS * gS[2] + NS * gS[3],
+          uS = tS * gS[4] + XS * gS[5] + xS * gS[6] + NS * gS[7],
+          IS = tS * gS[8] + XS * gS[9] + xS * gS[10] + NS * gS[11],
+          fS = tS * gS[12] + XS * gS[13] + xS * gS[14] + NS * gS[15];
+        return new bS(qS, uS, IS, fS)
       }
-      dotCoordinate(kk) {
-        return this.normal.x * kk.x + this.normal.y * kk.y + this.normal.z * kk.z + this.d
+      dotCoordinate(SS) {
+        return this.normal.x * SS.x + this.normal.y * SS.y + this.normal.z * SS.z + this.d
       }
-      copyFromPoints(kk, Fk, Ik) {
-        const Xk = Fk.x - kk.x,
-          Tk = Fk.y - kk.y,
-          ik = Fk.z - kk.z,
-          yk = Ik.x - kk.x,
-          lk = Ik.y - kk.y,
-          ak = Ik.z - kk.z,
-          qk = Tk * ak - ik * lk,
-          Lk = ik * yk - Xk * ak,
-          tk = Xk * lk - Tk * yk,
-          Zk = Math.sqrt(qk * qk + Lk * Lk + tk * tk);
-        let jk;
-        return jk = 0 !== Zk ? 1 / Zk : 0, this.normal.x = qk * jk, this.normal.y = Lk * jk, this.normal.z = tk * jk, this.d = -(this.normal.x * kk.x + this.normal.y * kk.y + this.normal.z * kk.z), this
+      copyFromPoints(SS, HS, gS) {
+        const tS = HS.x - SS.x,
+          bS = HS.y - SS.y,
+          XS = HS.z - SS.z,
+          xS = gS.x - SS.x,
+          NS = gS.y - SS.y,
+          qS = gS.z - SS.z,
+          uS = bS * qS - XS * NS,
+          IS = XS * xS - tS * qS,
+          fS = tS * NS - bS * xS,
+          kS = Math.sqrt(uS * uS + IS * IS + fS * fS);
+        let aS;
+        return aS = 0 !== kS ? 1 / kS : 0, this.normal.x = uS * aS, this.normal.y = IS * aS, this.normal.z = fS * aS, this.d = -(this.normal.x * SS.x + this.normal.y * SS.y + this.normal.z * SS.z), this
       }
-      isFrontFacingTo(kk, Fk) {
-        return Xk.t.Dot(this.normal, kk) <= Fk
+      isFrontFacingTo(SS, HS) {
+        return tS.n.Dot(this.normal, SS) <= HS
       }
-      signedDistanceTo(kk) {
-        return Xk.t.Dot(kk, this.normal) + this.d
+      signedDistanceTo(SS) {
+        return tS.n.Dot(SS, this.normal) + this.d
       }
-      static FromArray(kk) {
-        return new Tk(kk[0], kk[1], kk[2], kk[3])
+      static FromArray(SS) {
+        return new bS(SS[0], SS[1], SS[2], SS[3])
       }
-      static FromPoints(kk, Fk, Ik) {
-        const Xk = new Tk(0, 0, 0, 0);
-        return Xk.copyFromPoints(kk, Fk, Ik), Xk
+      static FromPoints(SS, HS, gS) {
+        const tS = new bS(0, 0, 0, 0);
+        return tS.copyFromPoints(SS, HS, gS), tS
       }
-      static FromPositionAndNormal(kk, Fk) {
-        const Ik = new Tk(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(kk, Fk, Ik)
+      static FromPositionAndNormal(SS, HS) {
+        const gS = new bS(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(SS, HS, gS)
       }
-      static FromPositionAndNormalToRef(kk, Fk, Ik) {
-        return Ik.normal.kS(Fk), Ik.normal.normalize(), Ik.d = -kk.dot(Ik.normal), Ik
+      static FromPositionAndNormalToRef(SS, HS, gS) {
+        return gS.normal.dJ(HS), gS.normal.normalize(), gS.d = -SS.dot(gS.normal), gS
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(kk, Fk, Ik) {
-        const Tk = -(Fk.x * kk.x + Fk.y * kk.y + Fk.z * kk.z);
-        return Xk.t.Dot(Ik, Fk) + Tk
+      static SignedDistanceToPlaneFromPositionAndNormal(SS, HS, gS) {
+        const bS = -(HS.x * SS.x + HS.y * SS.y + HS.z * SS.z);
+        return tS.n.Dot(gS, HS) + bS
       }
     }
-    Tk._TmpMatrix = Xk.c.Identity()
+    bS._TmpMatrix = tS.e.Identity()
   },
-  38099: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => Xk
+  38134: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => tS
     });
-    class Xk {
-      constructor(kk, Fk, Ik, Xk) {
-        this.x = kk, this.y = Fk, this.width = Ik, this.height = Xk
+    class tS {
+      constructor(SS, HS, gS, tS) {
+        this.x = SS, this.y = HS, this.width = gS, this.height = tS
       }
-      toGlobal(kk, Fk) {
-        return new Xk(this.x * kk, this.y * Fk, this.width * kk, this.height * Fk)
+      toGlobal(SS, HS) {
+        return new tS(this.x * SS, this.y * HS, this.width * SS, this.height * HS)
       }
-      toGlobalToRef(kk, Fk, Ik) {
-        return Ik.x = this.x * kk, Ik.y = this.y * Fk, Ik.width = this.width * kk, Ik.height = this.height * Fk, this
+      toGlobalToRef(SS, HS, gS) {
+        return gS.x = this.x * SS, gS.y = this.y * HS, gS.width = this.width * SS, gS.height = this.height * HS, this
       }
       clone() {
-        return new Xk(this.x, this.y, this.width, this.height)
+        return new tS(this.x, this.y, this.width, this.height)
       }
     }
   },
-  38666: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => ik
+  38683: (SS, HS, gS) => {
+    gS.d(HS, {
+      d: () => XS
     });
-    var Xk = Ik(38674);
-    const Tk = (kk, Fk, Ik) => kk ? kk.getClassName && "Mesh" === kk.getClassName() ? null : !kk.getClassName || "SubMesh" !== kk.getClassName() && "PhysicsBody" !== kk.getClassName() ? kk.clone ? kk.clone() : Array.isArray(kk) ? kk.slice() : Ik && "object" === typeof kk ? {
-      ...kk
-    } : null : kk.clone(Fk) : null;
-    class ik {
-      static DeepCopy(kk, Fk, Ik, ik) {
-        let yk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const lk = function(kk) {
-          const Fk = [];
+    var tS = gS(38687);
+    const bS = (SS, HS, gS) => SS ? SS.getClassName && "Mesh" === SS.getClassName() ? null : !SS.getClassName || "SubMesh" !== SS.getClassName() && "PhysicsBody" !== SS.getClassName() ? SS.clone ? SS.clone() : Array.isArray(SS) ? SS.slice() : gS && "object" === typeof SS ? {
+      ...SS
+    } : null : SS.clone(HS) : null;
+    class XS {
+      static DeepCopy(SS, HS, gS, XS) {
+        let xS = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const NS = function(SS) {
+          const HS = [];
           do {
-            const Ik = Object.getOwnPropertyNames(kk);
-            for (const kk of Ik) - 1 === Fk.indexOf(kk) && Fk.push(kk)
-          } while (kk = Object.getPrototypeOf(kk));
-          return Fk
-        }(kk);
-        for (const qk of lk) {
-          if ("_" === qk[0] && (!ik || -1 === ik.indexOf(qk))) continue;
-          if (qk.endsWith("Observable")) continue;
-          if (Ik && -1 !== Ik.indexOf(qk)) continue;
-          const lk = kk[qk],
-            Lk = typeof lk;
-          if ("function" !== Lk) try {
-            if ("object" === Lk)
-              if (lk instanceof Uint8Array) Fk[qk] = Uint8Array.from(lk);
-              else if (lk instanceof Array) {
-              if (Fk[qk] = [], lk.length > 0)
-                if ("object" == typeof lk[0])
-                  for (let kk = 0; kk < lk.length; kk++) {
-                    const Ik = Tk(lk[kk], Fk, yk); - 1 === Fk[qk].indexOf(Ik) && Fk[qk].push(Ik)
-                  } else Fk[qk] = lk.slice(0)
-            } else Fk[qk] = Tk(lk, Fk, yk);
-            else Fk[qk] = lk
-          } catch (ak) {
-            Xk.e.Warn(ak.message)
+            const gS = Object.getOwnPropertyNames(SS);
+            for (const SS of gS) - 1 === HS.indexOf(SS) && HS.push(SS)
+          } while (SS = Object.getPrototypeOf(SS));
+          return HS
+        }(SS);
+        for (const uS of NS) {
+          if ("_" === uS[0] && (!XS || -1 === XS.indexOf(uS))) continue;
+          if (uS.endsWith("Observable")) continue;
+          if (gS && -1 !== gS.indexOf(uS)) continue;
+          const NS = SS[uS],
+            IS = typeof NS;
+          if ("function" !== IS) try {
+            if ("object" === IS)
+              if (NS instanceof Uint8Array) HS[uS] = Uint8Array.from(NS);
+              else if (NS instanceof Array) {
+              if (HS[uS] = [], NS.length > 0)
+                if ("object" == typeof NS[0])
+                  for (let SS = 0; SS < NS.length; SS++) {
+                    const gS = bS(NS[SS], HS, xS); - 1 === HS[uS].indexOf(gS) && HS[uS].push(gS)
+                  } else HS[uS] = NS.slice(0)
+            } else HS[uS] = bS(NS, HS, xS);
+            else HS[uS] = NS
+          } catch (qS) {
+            tS.b.Warn(qS.message)
           }
         }
       }
     }
   },
-  37902: (kk, Fk, Ik) => {
-    function Xk() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (kk => {
-        const Fk = 16 * Math.random() | 0;
-        return ("x" === kk ? Fk : 3 & Fk | 8).toString(16)
+  37933: (SS, HS, gS) => {
+    function tS() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (SS => {
+        const HS = 16 * Math.random() | 0;
+        return ("x" === SS ? HS : 3 & HS | 8).toString(16)
       }))
     }
-    Ik.d(Fk, {
-      e: () => Xk
+    gS.d(HS, {
+      c: () => tS
     })
   },
-  38674: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Xk
+  38687: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => tS
     });
-    class Xk {
-      static _CheckLimit(kk, Fk) {
-        let Ik = Xk._LogLimitOutputs[kk];
-        return Ik ? Ik.current++ : (Ik = {
-          limit: Fk,
+    class tS {
+      static _CheckLimit(SS, HS) {
+        let gS = tS._LogLimitOutputs[SS];
+        return gS ? gS.current++ : (gS = {
+          limit: HS,
           current: 1
-        }, Xk._LogLimitOutputs[kk] = Ik), Ik.current <= Ik.limit
+        }, tS._LogLimitOutputs[SS] = gS), gS.current <= gS.limit
       }
-      static _GenerateLimitMessage(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const Ik = Xk._LogLimitOutputs[kk];
-        if (!Ik || !Xk.MessageLimitReached) return;
-        const Tk = this._Levels[Fk];
-        Ik.current === Ik.limit && Xk[Tk.name](Xk.MessageLimitReached.replace(/%LIMIT%/g, "" + Ik.limit).replace(/%TYPE%/g, Tk.name ?? ""))
+      static _GenerateLimitMessage(SS) {
+        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const gS = tS._LogLimitOutputs[SS];
+        if (!gS || !tS.MessageLimitReached) return;
+        const bS = this._Levels[HS];
+        gS.current === gS.limit && tS[bS.name](tS.MessageLimitReached.replace(/%LIMIT%/g, "" + gS.limit).replace(/%TYPE%/g, bS.name ?? ""))
       }
-      static _AddLogEntry(kk) {
-        Xk._LogCache = kk + Xk._LogCache, Xk.OnNewCacheEntry && Xk.OnNewCacheEntry(kk)
+      static _AddLogEntry(SS) {
+        tS._LogCache = SS + tS._LogCache, tS.OnNewCacheEntry && tS.OnNewCacheEntry(SS)
       }
-      static _FormatMessage(kk) {
-        const Fk = kk => kk < 10 ? "0" + kk : "" + kk,
-          Ik = new Date;
-        return "[" + Fk(Ik.getHours()) + ":" + Fk(Ik.getMinutes()) + ":" + Fk(Ik.getSeconds()) + "]: " + kk
+      static _FormatMessage(SS) {
+        const HS = SS => SS < 10 ? "0" + SS : "" + SS,
+          gS = new Date;
+        return "[" + HS(gS.getHours()) + ":" + HS(gS.getMinutes()) + ":" + HS(gS.getSeconds()) + "]: " + SS
       }
-      static _LogDisabled(kk, Fk) {}
+      static _LogDisabled(SS, HS) {}
       static _LogEnabled() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Fk = arguments.length > 1 ? arguments[1] : void 0,
-          Ik = arguments.length > 2 ? arguments[2] : void 0;
-        const Tk = Array.isArray(Fk) ? Fk[0] : Fk;
-        if (void 0 !== Ik && !Xk._CheckLimit(Tk, Ik)) return;
-        const ik = Xk._FormatMessage(Tk),
-          yk = this._Levels[kk],
-          lk = Array.isArray(Fk) ? Fk.slice(1) : [];
-        yk.logFunc && yk.logFunc("BJS - " + ik, ...lk);
-        const ak = `<div style='color:${yk.color}'>${ik}</div><br>`;
-        Xk._AddLogEntry(ak), Xk._GenerateLimitMessage(Tk, kk)
+        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          HS = arguments.length > 1 ? arguments[1] : void 0,
+          gS = arguments.length > 2 ? arguments[2] : void 0;
+        const bS = Array.isArray(HS) ? HS[0] : HS;
+        if (void 0 !== gS && !tS._CheckLimit(bS, gS)) return;
+        const XS = tS._FormatMessage(bS),
+          xS = this._Levels[SS],
+          NS = Array.isArray(HS) ? HS.slice(1) : [];
+        xS.logFunc && xS.logFunc("BJS - " + XS, ...NS);
+        const qS = `<div style='color:${xS.color}'>${XS}</div><br>`;
+        tS._AddLogEntry(qS), tS._GenerateLimitMessage(bS, SS)
       }
       static get LogCache() {
-        return Xk._LogCache
+        return tS._LogCache
       }
       static ClearLogCache() {
-        Xk._LogCache = "", Xk._LogLimitOutputs = {}, Xk.errorsCount = 0
+        tS._LogCache = "", tS._LogLimitOutputs = {}, tS.errorsCount = 0
       }
-      static set LogLevels(kk) {
-        Xk.Log = Xk._LogDisabled, Xk.Warn = Xk._LogDisabled, Xk.Error = Xk._LogDisabled;
-        const Fk = [Xk.MessageLogLevel, Xk.WarningLogLevel, Xk.ErrorLogLevel];
-        for (const Ik of Fk)
-          if ((kk & Ik) === Ik) {
-            const kk = this._Levels[Ik];
-            Xk[kk.name] = Xk._LogEnabled.bind(Xk, Ik)
+      static set LogLevels(SS) {
+        tS.Log = tS._LogDisabled, tS.Warn = tS._LogDisabled, tS.Error = tS._LogDisabled;
+        const HS = [tS.MessageLogLevel, tS.WarningLogLevel, tS.ErrorLogLevel];
+        for (const gS of HS)
+          if ((SS & gS) === gS) {
+            const SS = this._Levels[gS];
+            tS[SS.name] = tS._LogEnabled.bind(tS, gS)
           }
       }
     }
-    Xk.NoneLogLevel = 0, Xk.MessageLogLevel = 1, Xk.WarningLogLevel = 2, Xk.ErrorLogLevel = 4, Xk.AllLogLevel = 7, Xk.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Xk._LogCache = "", Xk._LogLimitOutputs = {}, Xk._Levels = [{}, {
+    tS.NoneLogLevel = 0, tS.MessageLogLevel = 1, tS.WarningLogLevel = 2, tS.ErrorLogLevel = 4, tS.AllLogLevel = 7, tS.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", tS._LogCache = "", tS._LogLimitOutputs = {}, tS._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -367,102 +367,102 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Xk.errorsCount = 0, Xk.Log = Xk._LogEnabled.bind(Xk, Xk.MessageLogLevel), Xk.Warn = Xk._LogEnabled.bind(Xk, Xk.WarningLogLevel), Xk.Error = Xk._LogEnabled.bind(Xk, Xk.ErrorLogLevel)
+    }], tS.errorsCount = 0, tS.Log = tS._LogEnabled.bind(tS, tS.MessageLogLevel), tS.Warn = tS._LogEnabled.bind(tS, tS.WarningLogLevel), tS.Error = tS._LogEnabled.bind(tS, tS.ErrorLogLevel)
   },
-  61276: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      CreateScreenshot: () => Uk,
-      CreateScreenshotAsync: () => Ck,
-      CreateScreenshotForFrameGraphAsync: () => fk,
-      CreateScreenshotUsingRenderTarget: () => ck,
-      CreateScreenshotUsingRenderTargetAsync: () => Wk,
-      CreateScreenshotWithResizeAsync: () => Nk,
-      RegisterScreenshotTools: () => Ak,
-      ScreenshotTools: () => dk
+  61309: (SS, HS, gS) => {
+    gS.r(HS), gS.d(HS, {
+      CreateScreenshot: () => VS,
+      CreateScreenshotAsync: () => iS,
+      CreateScreenshotForFrameGraphAsync: () => pS,
+      CreateScreenshotUsingRenderTarget: () => zS,
+      CreateScreenshotUsingRenderTargetAsync: () => US,
+      CreateScreenshotWithResizeAsync: () => WS,
+      RegisterScreenshotTools: () => FS,
+      ScreenshotTools: () => BS
     });
-    var Xk = Ik(40489),
-      Tk = Ik(41815),
-      ik = Ik(41795),
-      yk = Ik(40021),
-      lk = Ik(41797),
-      ak = Ik(37178),
-      qk = Ik(37153);
-    class Lk extends lk.e {
-      static _GetDefines(kk) {
-        if (!kk) return null;
-        return kk.extractDriverInfo().toLowerCase().indexOf("mali") > -1 ? "#define MALI 1\n" : null
+    var tS = gS(40510),
+      bS = gS(41844),
+      XS = gS(41822),
+      xS = gS(40068),
+      NS = gS(41825),
+      qS = gS(37138),
+      uS = gS(37117);
+    class IS extends NS.f {
+      static _GetDefines(SS) {
+        if (!SS) return null;
+        return SS.extractDriverInfo().toLowerCase().indexOf("mali") > -1 ? "#define MALI 1\n" : null
       }
-      _gatherImports(kk, Fk) {
-        kk ? (this._webGPUReady = !0, Fk.push(Promise.all([Ik.e(375).then((() => Ik(61491))), Ik.e(376).then((() => Ik(61498)))]))) : Fk.push(Promise.all([Ik.e(377).then((() => Ik(61503))), Ik.e(378).then((() => Ik(61507)))]))
+      _gatherImports(SS, HS) {
+        SS ? (this._webGPUReady = !0, HS.push(Promise.all([gS.e(375).then((() => gS(61570))), gS.e(376).then((() => gS(61577)))]))) : HS.push(Promise.all([gS.e(377).then((() => gS(61582))), gS.e(378).then((() => gS(61589)))]))
       }
-      constructor(kk) {
-        const Fk = {
+      constructor(SS) {
+        const HS = {
           ...arguments.length > 2 ? arguments[2] : void 0,
-          name: kk,
-          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || ak.e.LastCreatedEngine,
+          name: SS,
+          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || qS.d.LastCreatedEngine,
           useShaderStore: !0,
           useAsPostProcess: !0,
-          vertexShader: Lk.VertexUrl,
-          fragmentShader: Lk.FragmentUrl,
-          uniforms: Lk.Uniforms
+          vertexShader: IS.VertexUrl,
+          fragmentShader: IS.FragmentUrl,
+          uniforms: IS.Uniforms
         };
         super({
-          ...Fk,
-          defines: Lk._GetDefines(Fk.engine)
-        }), this.texelSize = new qk.p(0, 0)
+          ...HS,
+          defines: IS._GetDefines(HS.engine)
+        }), this.texelSize = new uS.m(0, 0)
       }
       bind() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        super.bind(kk), this._drawWrapper.effect.setFloat2("texelSize", this.texelSize.x, this.texelSize.y)
+        let SS = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        super.bind(SS), this._drawWrapper.effect.setFloat2("texelSize", this.texelSize.x, this.texelSize.y)
       }
     }
-    Lk.VertexUrl = "fxaa", Lk.FragmentUrl = "fxaa", Lk.Uniforms = ["texelSize"];
-    class tk extends ik.e {
+    IS.VertexUrl = "fxaa", IS.FragmentUrl = "fxaa", IS.Uniforms = ["texelSize"];
+    class fS extends XS.e {
       getClassName() {
         return "FxaaPostProcess"
       }
-      constructor(kk, Fk) {
-        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          Tk = arguments.length > 3 ? arguments[3] : void 0,
-          ik = arguments.length > 4 ? arguments[4] : void 0,
-          yk = arguments.length > 5 ? arguments[5] : void 0,
-          lk = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
-        const ak = {
-          uniforms: Lk.Uniforms,
-          size: "number" === typeof Fk ? Fk : void 0,
-          camera: Ik,
-          samplingMode: Tk || Xk.g.BILINEAR_SAMPLINGMODE,
-          engine: ik,
-          reusable: yk,
-          textureType: lk,
-          ...Fk
+      constructor(SS, HS) {
+        let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          bS = arguments.length > 3 ? arguments[3] : void 0,
+          XS = arguments.length > 4 ? arguments[4] : void 0,
+          xS = arguments.length > 5 ? arguments[5] : void 0,
+          NS = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
+        const qS = {
+          uniforms: IS.Uniforms,
+          size: "number" === typeof HS ? HS : void 0,
+          camera: gS,
+          samplingMode: bS || tS.i.BILINEAR_SAMPLINGMODE,
+          engine: XS,
+          reusable: xS,
+          textureType: NS,
+          ...HS
         };
-        super(kk, Lk.FragmentUrl, {
-          effectWrapper: "number" !== typeof Fk && Fk.effectWrapper ? void 0 : new Lk(kk, ik, ak),
-          ...ak
-        }), this.onApplyObservable.add((kk => {
+        super(SS, IS.FragmentUrl, {
+          effectWrapper: "number" !== typeof HS && HS.effectWrapper ? void 0 : new IS(SS, XS, qS),
+          ...qS
+        }), this.onApplyObservable.add((SS => {
           this._effectWrapper.texelSize = this.texelSize
         }))
       }
-      static _Parse(kk, Fk, Ik, Xk) {
-        return yk.b.Parse((() => new tk(kk.name, kk.options, Fk, kk.renderTargetSamplingMode, Ik.Oe(), kk.reusable)), kk, Ik, Xk)
+      static _Parse(SS, HS, gS, tS) {
+        return xS.b.Parse((() => new fS(SS.name, SS.options, HS, SS.renderTargetSamplingMode, gS.AK(), SS.reusable)), SS, gS, tS)
       }
     }
-    var Zk = Ik(38674),
-      jk = Ik(40097),
-      ek = Ik(41826),
-      wk = Ik(41809),
-      Hk = Ik(39878);
-    const Jk = 0;
-    class xk {
-      constructor(kk, Fk, Ik) {
-        this.name = kk, this._parentTask = Fk, this._context = Ik, this.disabled = !1
+    var kS = gS(38687),
+      aS = gS(40133),
+      KS = gS(41859),
+      jS = gS(41838),
+      GS = gS(39937);
+    const CS = 0;
+    class nS {
+      constructor(SS, HS, gS) {
+        this.name = SS, this._parentTask = HS, this._context = gS, this.disabled = !1
       }
-      setInitializeFunc(kk) {
-        this._initFunc = kk
+      setInitializeFunc(SS) {
+        this._initFunc = SS
       }
-      setExecuteFunc(kk) {
-        this._executeFunc = kk
+      setExecuteFunc(SS) {
+        this._executeFunc = SS
       }
       _execute() {
         this.disabled || this._executeFunc(this._context)
@@ -475,27 +475,27 @@ export const modules = {
       }
       _dispose() {}
     }
-    class Pk extends xk {
-      static IsObjectListPass(kk) {
-        return void 0 !== kk.setObjectList
+    class PS extends nS {
+      static IsObjectListPass(SS) {
+        return void 0 !== SS.setObjectList
       }
       get objectList() {
         return this._objectList
       }
-      setObjectList(kk) {
-        this._objectList = kk
+      setObjectList(SS) {
+        this._objectList = SS
       }
-      constructor(kk, Fk, Ik, Xk) {
-        super(kk, Fk, Ik), this._engine = Xk
+      constructor(SS, HS, gS, tS) {
+        super(SS, HS, gS), this._engine = tS
       }
       _isValid() {
-        const kk = super._isValid();
-        return kk || (void 0 !== this._objectList ? null : "Object list is not set (call setObjectList to set it)")
+        const SS = super._isValid();
+        return SS || (void 0 !== this._objectList ? null : "Object list is not set (call setObjectList to set it)")
       }
     }
-    class Kk extends xk {
-      static IsRenderPass(kk) {
-        return void 0 !== kk.setRenderTarget
+    class QS extends nS {
+      static IsRenderPass(SS) {
+        return void 0 !== SS.setRenderTarget
       }
       get renderTarget() {
         return this._renderTarget
@@ -506,34 +506,34 @@ export const modules = {
       get frameGraphRenderTarget() {
         return this._frameGraphRenderTarget
       }
-      constructor(kk, Fk, Ik, Xk) {
-        super(kk, Fk, Ik), this._dependencies = new Set, this.depthReadOnly = !1, this.stencilReadOnly = !1, this._engine = Xk
+      constructor(SS, HS, gS, tS) {
+        super(SS, HS, gS), this._dependencies = new Set, this.depthReadOnly = !1, this.stencilReadOnly = !1, this._engine = tS
       }
-      setRenderTarget(kk) {
-        this._renderTarget = kk
+      setRenderTarget(SS) {
+        this._renderTarget = SS
       }
-      setRenderTargetDepth(kk) {
-        this._renderTargetDepth = kk
+      setRenderTargetDepth(SS) {
+        this._renderTargetDepth = SS
       }
-      addDependencies(kk) {
-        if (void 0 !== kk)
-          if (Array.isArray(kk))
-            for (const Fk of kk) this._dependencies.add(Fk);
-          else this._dependencies.add(kk)
+      addDependencies(SS) {
+        if (void 0 !== SS)
+          if (Array.isArray(SS))
+            for (const HS of SS) this._dependencies.add(HS);
+          else this._dependencies.add(SS)
       }
-      collectDependencies(kk) {
-        const Fk = this._dependencies.keys();
-        for (let Ik = Fk.next(); !0 !== Ik.done; Ik = Fk.next()) kk.add(Ik.value);
+      collectDependencies(SS) {
+        const HS = this._dependencies.keys();
+        for (let gS = HS.next(); !0 !== gS.done; gS = HS.next()) SS.add(gS.value);
         if (void 0 !== this._renderTarget)
           if (Array.isArray(this._renderTarget))
-            for (const Ik of this._renderTarget) void 0 !== Ik && kk.add(Ik);
-          else kk.add(this._renderTarget);
-        void 0 !== this._renderTargetDepth && kk.add(this._renderTargetDepth)
+            for (const gS of this._renderTarget) void 0 !== gS && SS.add(gS);
+          else SS.add(this._renderTarget);
+        void 0 !== this._renderTargetDepth && SS.add(this._renderTargetDepth)
       }
-      setOutputLayerAndFaceIndices(kk) {
-        const Fk = this.frameGraphRenderTarget.renderTargetWrapper;
-        if (Fk)
-          for (const Ik of kk) Fk.setLayerAndFaceIndex(Ik.targetIndex, Ik.layerIndex, Ik.faceIndex)
+      setOutputLayerAndFaceIndices(SS) {
+        const HS = this.frameGraphRenderTarget.renderTargetWrapper;
+        if (HS)
+          for (const gS of SS) HS.setLayerAndFaceIndex(gS.targetIndex, gS.layerIndex, gS.faceIndex)
       }
       _initialize() {
         this._frameGraphRenderTarget = this._context.createRenderTarget(this.name, this._renderTarget, this._renderTargetDepth, this.depthReadOnly, this.stencilReadOnly), super._initialize()
@@ -542,26 +542,26 @@ export const modules = {
         this._context.bindRenderTarget(this._frameGraphRenderTarget), super._execute(), this._context.restoreDefaultFramebuffer()
       }
       _isValid() {
-        const kk = super._isValid();
-        return kk || (void 0 !== this._renderTarget || void 0 !== this.renderTargetDepth ? null : "Render target and render target depth cannot both be undefined.")
+        const SS = super._isValid();
+        return SS || (void 0 !== this._renderTarget || void 0 !== this.renderTargetDepth ? null : "Render target and render target depth cannot both be undefined.")
       }
       _dispose() {
         this._frameGraphRenderTarget?.dispose()
       }
     }
-    var Qk = Ik(37187);
-    class sk {
+    var DS = gS(37144);
+    class wS {
       get name() {
         return this._name
       }
-      set name(kk) {
-        this._name = kk
+      set name(SS) {
+        this._name = SS
       }
       get disabled() {
         return this._disabled
       }
-      set disabled(kk) {
-        this._disabled = kk
+      set disabled(SS) {
+        this._disabled = SS
       }
       get passes() {
         return this._passes
@@ -581,61 +581,61 @@ export const modules = {
       dispose() {
         this._reset(), this.onTexturesAllocatedObservable.clear(), this.onBeforeTaskExecute.clear(), this.onAfterTaskExecute.clear()
       }
-      constructor(kk, Fk) {
-        this._passes = [], this._passesDisabled = [], this._disabled = !1, this.onTexturesAllocatedObservable = new Qk.e, this.onBeforeTaskExecute = new Qk.e, this.onAfterTaskExecute = new Qk.e, this.name = kk, this._frameGraph = Fk, this._reset()
+      constructor(SS, HS) {
+        this._passes = [], this._passesDisabled = [], this._disabled = !1, this.onTexturesAllocatedObservable = new DS.e, this.onBeforeTaskExecute = new DS.e, this.onAfterTaskExecute = new DS.e, this.name = SS, this._frameGraph = HS, this._reset()
       }
       _reset() {
-        for (const kk of this._passes) kk._dispose();
-        for (const kk of this._passesDisabled) kk._dispose();
+        for (const SS of this._passes) SS._dispose();
+        for (const SS of this._passesDisabled) SS._dispose();
         this._passes.length = 0, this._passesDisabled.length = 0
       }
-      _addPass(kk, Fk) {
-        Fk ? this._passesDisabled.push(kk) : this._passes.push(kk)
+      _addPass(SS, HS) {
+        HS ? this._passesDisabled.push(SS) : this._passes.push(SS)
       }
       _checkTask() {
-        let kk, Fk = null,
-          Ik = null;
-        for (const lk of this._passes) {
-          const Xk = lk._isValid();
-          if (Xk) throw new Error(`Pass "${lk.name}" is not valid. ${Xk}`);
-          if (Kk.IsRenderPass(lk)) {
-            const kk = Array.isArray(lk.renderTarget) ? lk.renderTarget : [lk.renderTarget];
-            Fk = [];
-            for (const Ik of kk) void 0 !== Ik && Fk.push(this._frameGraph.textureManager.getTextureFromHandle(Ik));
-            Ik = void 0 !== lk.renderTargetDepth ? this._frameGraph.textureManager.getTextureFromHandle(lk.renderTargetDepth) : null
-          } else Pk.IsObjectListPass(lk) && (kk = lk.objectList)
+        let SS, HS = null,
+          gS = null;
+        for (const NS of this._passes) {
+          const tS = NS._isValid();
+          if (tS) throw new Error(`Pass "${NS.name}" is not valid. ${tS}`);
+          if (QS.IsRenderPass(NS)) {
+            const SS = Array.isArray(NS.renderTarget) ? NS.renderTarget : [NS.renderTarget];
+            HS = [];
+            for (const gS of SS) void 0 !== gS && HS.push(this._frameGraph.textureManager.getTextureFromHandle(gS));
+            gS = void 0 !== NS.renderTargetDepth ? this._frameGraph.textureManager.getTextureFromHandle(NS.renderTargetDepth) : null
+          } else PS.IsObjectListPass(NS) && (SS = NS.objectList)
         }
-        let Xk, Tk = null,
-          ik = [],
-          yk = null;
-        for (const lk of this._passesDisabled) {
-          const kk = lk._isValid();
-          if (kk) throw new Error(`Pass "${lk.name}" is not valid. ${kk}`);
-          if (Kk.IsRenderPass(lk)) {
-            const kk = Array.isArray(lk.renderTarget) ? lk.renderTarget : [lk.renderTarget];
-            Tk = [];
-            for (const Fk of kk) void 0 !== Fk && Tk.push(this._frameGraph.textureManager.getTextureFromHandle(Fk));
-            ik = kk, yk = void 0 !== lk.renderTargetDepth ? this._frameGraph.textureManager.getTextureFromHandle(lk.renderTargetDepth) : null
-          } else Pk.IsObjectListPass(lk) && (Xk = lk.objectList)
+        let tS, bS = null,
+          XS = [],
+          xS = null;
+        for (const NS of this._passesDisabled) {
+          const SS = NS._isValid();
+          if (SS) throw new Error(`Pass "${NS.name}" is not valid. ${SS}`);
+          if (QS.IsRenderPass(NS)) {
+            const SS = Array.isArray(NS.renderTarget) ? NS.renderTarget : [NS.renderTarget];
+            bS = [];
+            for (const HS of SS) void 0 !== HS && bS.push(this._frameGraph.textureManager.getTextureFromHandle(HS));
+            XS = SS, xS = void 0 !== NS.renderTargetDepth ? this._frameGraph.textureManager.getTextureFromHandle(NS.renderTargetDepth) : null
+          } else PS.IsObjectListPass(NS) && (tS = NS.objectList)
         }
         if (this._passesDisabled.length > 0) {
-          if (!this._checkSameRenderTarget(Fk, Tk)) {
-            let kk = !0;
-            for (const Fk of ik)
-              if (void 0 !== Fk && !this._frameGraph.textureManager.isHistoryTexture(Fk)) {
-                kk = !1;
+          if (!this._checkSameRenderTarget(HS, bS)) {
+            let SS = !0;
+            for (const HS of XS)
+              if (void 0 !== HS && !this._frameGraph.textureManager.isHistoryTexture(HS)) {
+                SS = !1;
                 break
-              } if (!kk) throw new Error(`The output texture of the task "${this.name}" is different when it is enabled or disabled.`)
+              } if (!SS) throw new Error(`The output texture of the task "${this.name}" is different when it is enabled or disabled.`)
           }
-          if (Ik !== yk && null !== yk) throw new Error(`The output depth texture of the task "${this.name}" is different when it is enabled or disabled.`);
-          if (kk !== Xk && null !== Xk) throw new Error(`The output object list of the task "${this.name}" is different when it is enabled or disabled.`)
+          if (gS !== xS && null !== xS) throw new Error(`The output depth texture of the task "${this.name}" is different when it is enabled or disabled.`);
+          if (SS !== tS && null !== tS) throw new Error(`The output object list of the task "${this.name}" is different when it is enabled or disabled.`)
         }
       }
       _execute() {
-        const kk = this._disabled && this._passesDisabled.length > 0 ? this._passesDisabled : this._passes;
+        const SS = this._disabled && this._passesDisabled.length > 0 ? this._passesDisabled : this._passes;
         this.onBeforeTaskExecute.notifyObservers(this), this._frameGraph.engine._debugPushGroup?.(`${this.getClassName()} (${this.name})`);
         try {
-          for (const Fk of kk) Fk._execute()
+          for (const HS of SS) HS._execute()
         } finally {
           this._frameGraph.engine._debugPopGroup?.()
         }
@@ -644,32 +644,32 @@ export const modules = {
       _initializePasses() {
         this._frameGraph.engine._debugPushGroup?.(`${this.getClassName()} (${this.name})`);
         try {
-          for (const kk of this._passes) kk._initialize();
-          for (const kk of this._passesDisabled) kk._initialize()
+          for (const SS of this._passes) SS._initialize();
+          for (const SS of this._passesDisabled) SS._initialize()
         } finally {
           this._frameGraph.engine._debugPopGroup?.()
         }
       }
-      _checkSameRenderTarget(kk, Fk) {
-        if (null === kk || null === Fk) return kk === Fk;
-        if (kk.length !== Fk.length) return !1;
-        for (let Ik = 0; Ik < kk.length; Ik++)
-          if (kk[Ik] !== Fk[Ik]) return !1;
+      _checkSameRenderTarget(SS, HS) {
+        if (null === SS || null === HS) return SS === HS;
+        if (SS.length !== HS.length) return !1;
+        for (let gS = 0; gS < SS.length; gS++)
+          if (SS[gS] !== HS[gS]) return !1;
         return !0
       }
     }
-    class Vk extends sk {
+    class hS extends wS {
       get alphaMode() {
         return this.postProcess.alphaMode
       }
-      set alphaMode(kk) {
-        this.postProcess.alphaMode = kk
+      set alphaMode(SS) {
+        this.postProcess.alphaMode = SS
       }
       get drawWrapper() {
         return this._postProcessDrawWrapper
       }
-      constructor(kk, Fk, Ik) {
-        super(kk, Fk), this.sourceSamplingMode = 2, this.depthReadOnly = !1, this.stencilReadOnly = !1, this.disableColorWrite = !1, this.drawBackFace = !1, this.depthTest = !0, this.postProcess = Ik, this._postProcessDrawWrapper = this.postProcess.drawWrapper, this.outputTexture = this._frameGraph.textureManager.createDanglingHandle(), this.outputDepthAttachmentTexture = this._frameGraph.textureManager.createDanglingHandle()
+      constructor(SS, HS, gS) {
+        super(SS, HS), this.sourceSamplingMode = 2, this.depthReadOnly = !1, this.stencilReadOnly = !1, this.disableColorWrite = !1, this.drawBackFace = !1, this.depthTest = !0, this.postProcess = gS, this._postProcessDrawWrapper = this.postProcess.drawWrapper, this.outputTexture = this._frameGraph.textureManager.createDanglingHandle(), this.outputDepthAttachmentTexture = this._frameGraph.textureManager.createDanglingHandle()
       }
       isReady() {
         return this.postProcess.isReady()
@@ -678,361 +678,361 @@ export const modules = {
         return "FrameGraphPostProcessTask"
       }
       record() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          Fk = arguments.length > 1 ? arguments[1] : void 0,
-          Ik = arguments.length > 2 ? arguments[2] : void 0;
+        let SS = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          HS = arguments.length > 1 ? arguments[1] : void 0,
+          gS = arguments.length > 2 ? arguments[2] : void 0;
         if (void 0 === this.sourceTexture && void 0 === this.targetTexture) throw new Error(`FrameGraphPostProcessTask "${this.name}": sourceTexture or targetTexture is required`);
-        const Xk = void 0 !== this.sourceTexture ? this._frameGraph.textureManager.getTextureCreationOptions(this.sourceTexture) : void 0;
-        if (Xk && (Xk.options.samples = 1), this._frameGraph.textureManager.resolveDanglingHandle(this.outputTexture, this.targetTexture, this.name, Xk), void 0 !== this.depthAttachmentTexture && this._frameGraph.textureManager.resolveDanglingHandle(this.outputDepthAttachmentTexture, this.depthAttachmentTexture), Xk) {
-          const kk = this._frameGraph.textureManager.getTextureAbsoluteDimensions(Xk);
-          this._sourceWidth = kk.width, this._sourceHeight = kk.height
+        const tS = void 0 !== this.sourceTexture ? this._frameGraph.textureManager.getTextureCreationOptions(this.sourceTexture) : void 0;
+        if (tS && (tS.options.samples = 1), this._frameGraph.textureManager.resolveDanglingHandle(this.outputTexture, this.targetTexture, this.name, tS), void 0 !== this.depthAttachmentTexture && this._frameGraph.textureManager.resolveDanglingHandle(this.outputDepthAttachmentTexture, this.depthAttachmentTexture), tS) {
+          const SS = this._frameGraph.textureManager.getTextureAbsoluteDimensions(tS);
+          this._sourceWidth = SS.width, this._sourceHeight = SS.height
         }
-        const Tk = this._frameGraph.textureManager.getTextureDescription(this.outputTexture);
-        this._outputWidth = Tk.size.width, this._outputHeight = Tk.size.height;
-        const ik = this._frameGraph.addRenderPass(this.name);
-        if (ik.depthReadOnly = this.depthReadOnly, ik.stencilReadOnly = this.stencilReadOnly, ik.addDependencies(this.sourceTexture), ik.setRenderTarget(this.outputTexture), ik.setRenderTargetDepth(this.depthAttachmentTexture), ik.setExecuteFunc((kk => {
-            kk.pushDebugGroup(`Apply post-process (${this.name})`), void 0 !== this.sourceTexture && kk.setTextureSamplingMode(this.sourceTexture, this.sourceSamplingMode), Fk?.(kk), this.viewport && kk.setViewport(this.viewport), kk.applyFullScreenEffect(this._postProcessDrawWrapper, (() => {
-              void 0 !== this.sourceTexture && kk.bindTextureHandle(this._postProcessDrawWrapper.effect, "textureSampler", this.sourceTexture), Ik?.(kk), this.postProcess.bind()
-            }), this.stencilState, this.disableColorWrite, this.drawBackFace, this.depthTest, void 0 !== this.viewport), kk.restoreDefaultFramebuffer(), kk.popDebugGroup()
-          })), !kk) {
-          const kk = this._frameGraph.addRenderPass(this.name + "_disabled", !0);
-          kk.depthReadOnly = this.depthReadOnly, kk.stencilReadOnly = this.stencilReadOnly, kk.addDependencies(this.sourceTexture), kk.setRenderTarget(this.outputTexture), kk.setRenderTargetDepth(this.depthAttachmentTexture), kk.setExecuteFunc((kk => {
-            void 0 !== this.sourceTexture && 0 === this.alphaMode && (this.viewport && kk.setViewport(this.viewport), kk.copyTexture(this.sourceTexture, void 0, void 0 !== this.viewport))
+        const bS = this._frameGraph.textureManager.getTextureDescription(this.outputTexture);
+        this._outputWidth = bS.size.width, this._outputHeight = bS.size.height;
+        const XS = this._frameGraph.addRenderPass(this.name);
+        if (XS.depthReadOnly = this.depthReadOnly, XS.stencilReadOnly = this.stencilReadOnly, XS.addDependencies(this.sourceTexture), XS.setRenderTarget(this.outputTexture), XS.setRenderTargetDepth(this.depthAttachmentTexture), XS.setExecuteFunc((SS => {
+            SS.pushDebugGroup(`Apply post-process (${this.name})`), void 0 !== this.sourceTexture && SS.setTextureSamplingMode(this.sourceTexture, this.sourceSamplingMode), HS?.(SS), this.viewport && SS.setViewport(this.viewport), SS.applyFullScreenEffect(this._postProcessDrawWrapper, (() => {
+              void 0 !== this.sourceTexture && SS.bindTextureHandle(this._postProcessDrawWrapper.effect, "textureSampler", this.sourceTexture), gS?.(SS), this.postProcess.bind()
+            }), this.stencilState, this.disableColorWrite, this.drawBackFace, this.depthTest, void 0 !== this.viewport), SS.restoreDefaultFramebuffer(), SS.popDebugGroup()
+          })), !SS) {
+          const SS = this._frameGraph.addRenderPass(this.name + "_disabled", !0);
+          SS.depthReadOnly = this.depthReadOnly, SS.stencilReadOnly = this.stencilReadOnly, SS.addDependencies(this.sourceTexture), SS.setRenderTarget(this.outputTexture), SS.setRenderTargetDepth(this.depthAttachmentTexture), SS.setExecuteFunc((SS => {
+            void 0 !== this.sourceTexture && 0 === this.alphaMode && (this.viewport && SS.setViewport(this.viewport), SS.copyTexture(this.sourceTexture, void 0, void 0 !== this.viewport))
           }))
         }
-        return ik
+        return XS
       }
       dispose() {
         this.postProcess.dispose(), super.dispose()
       }
     }
-    class zk extends Vk {
-      constructor(kk, Fk, Ik) {
-        super(kk, Fk, Ik || new Lk(kk, Fk.engine))
+    class ZS extends hS {
+      constructor(SS, HS, gS) {
+        super(SS, HS, gS || new IS(SS, HS.engine))
       }
       getClassName() {
         return "FrameGraphFXAATask"
       }
       record() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          Fk = arguments.length > 1 ? arguments[1] : void 0,
-          Ik = arguments.length > 2 ? arguments[2] : void 0;
-        const Xk = super.record(kk, Fk, Ik);
-        return this.postProcess.texelSize.x = 1 / this._sourceWidth, this.postProcess.texelSize.y = 1 / this._sourceHeight, Xk
+        let SS = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          HS = arguments.length > 1 ? arguments[1] : void 0,
+          gS = arguments.length > 2 ? arguments[2] : void 0;
+        const tS = super.record(SS, HS, gS);
+        return this.postProcess.texelSize.x = 1 / this._sourceWidth, this.postProcess.texelSize.y = 1 / this._sourceHeight, tS
       }
     }
-    var Sk = Ik(41822);
-    class vk extends Vk {
-      constructor(kk, Fk, Ik) {
-        super(kk, Fk, Ik || new Sk.g(kk, Fk.engine))
+    var JS = gS(41851);
+    class OS extends hS {
+      constructor(SS, HS, gS) {
+        super(SS, HS, gS || new JS.f(SS, HS.engine))
       }
       getClassName() {
         return "FrameGraphPassTask"
       }
     }
-    var Ek = Ik(40090),
-      Ok = Ik(40169),
-      nk = Ik(40139),
-      Gk = Ik(40259),
-      pk = Ik(37331);
-    class uk {
-      getRenderCamera(kk) {
+    var dS = gS(40131),
+      cS = gS(40218),
+      vS = gS(40176),
+      ES = gS(40295),
+      LS = gS(37300);
+    class YS {
+      getRenderCamera(SS) {
         if (this._renderCamera) return this._renderCamera;
         {
-          let Fk;
-          return Fk = this.originalScene.activeCameras && this.originalScene.activeCameras.length > 1 ? this.originalScene.activeCameras[this.originalScene.activeCameras.length - 1] : this.originalScene.activeCamera, kk && Fk && Fk.isRigCamera ? Fk.rigParent : Fk
+          let HS;
+          return HS = this.originalScene.activeCameras && this.originalScene.activeCameras.length > 1 ? this.originalScene.activeCameras[this.originalScene.activeCameras.length - 1] : this.originalScene.activeCamera, SS && HS && HS.isRigCamera ? HS.rigParent : HS
         }
       }
-      setRenderCamera(kk) {
-        this._renderCamera = kk
+      setRenderCamera(SS) {
+        this._renderCamera = SS
       }
       _getSharedGizmoLight() {
-        return this._sharedGizmoLight || (this._sharedGizmoLight = new Gk.b("shared gizmo light", new qk.t(0, 1, 0), this.utilityLayerScene), this._sharedGizmoLight.intensity = 2, this._sharedGizmoLight.groundColor = pk.e.Gray()), this._sharedGizmoLight
+        return this._sharedGizmoLight || (this._sharedGizmoLight = new ES.d("shared gizmo light", new uS.n(0, 1, 0), this.utilityLayerScene), this._sharedGizmoLight.intensity = 2, this._sharedGizmoLight.groundColor = LS.b.Gray()), this._sharedGizmoLight
       }
       static get DefaultUtilityLayer() {
-        return null == uk._DefaultUtilityLayer ? uk._CreateDefaultUtilityLayerFromScene(ak.e.LastCreatedScene) : uk._DefaultUtilityLayer
+        return null == YS._DefaultUtilityLayer ? YS._CreateDefaultUtilityLayerFromScene(qS.d.LastCreatedScene) : YS._DefaultUtilityLayer
       }
-      static _CreateDefaultUtilityLayerFromScene(kk) {
-        return uk._DefaultUtilityLayer = new uk(kk), uk._DefaultUtilityLayer.originalScene.hG.addOnce((() => {
-          uk._DefaultUtilityLayer = null
-        })), uk._DefaultUtilityLayer
+      static _CreateDefaultUtilityLayerFromScene(SS) {
+        return YS._DefaultUtilityLayer = new YS(SS), YS._DefaultUtilityLayer.originalScene.bY.addOnce((() => {
+          YS._DefaultUtilityLayer = null
+        })), YS._DefaultUtilityLayer
       }
       static get DefaultKeepDepthUtilityLayer() {
-        return null == uk._DefaultKeepDepthUtilityLayer ? uk._CreateDefaultKeepUtilityLayerFromScene(ak.e.LastCreatedScene) : uk._DefaultKeepDepthUtilityLayer
+        return null == YS._DefaultKeepDepthUtilityLayer ? YS._CreateDefaultKeepUtilityLayerFromScene(qS.d.LastCreatedScene) : YS._DefaultKeepDepthUtilityLayer
       }
-      static _CreateDefaultKeepUtilityLayerFromScene(kk) {
-        return uk._DefaultKeepDepthUtilityLayer = new uk(kk), uk._DefaultKeepDepthUtilityLayer.utilityLayerScene.autoClearDepthAndStencil = !1, uk._DefaultKeepDepthUtilityLayer.originalScene.hG.addOnce((() => {
-          uk._DefaultKeepDepthUtilityLayer = null
-        })), uk._DefaultKeepDepthUtilityLayer
+      static _CreateDefaultKeepUtilityLayerFromScene(SS) {
+        return YS._DefaultKeepDepthUtilityLayer = new YS(SS), YS._DefaultKeepDepthUtilityLayer.utilityLayerScene.autoClearDepthAndStencil = !1, YS._DefaultKeepDepthUtilityLayer.originalScene.bY.addOnce((() => {
+          YS._DefaultKeepDepthUtilityLayer = null
+        })), YS._DefaultKeepDepthUtilityLayer
       }
-      constructor(kk) {
-        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          Ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this.originalScene = kk, this.handleEvents = Fk, this._pointerCaptures = {}, this._lastPointerEvents = {}, this._sharedGizmoLight = null, this._renderCamera = null, this.pickUtilitySceneFirst = !0, this.shouldRender = !0, this.onlyCheckPointerDownEvents = !0, this.processAllEvents = !1, this.pickingEnabled = !0, this.onPointerOutObservable = new Qk.e, this.utilityLayerScene = new Ek.f(kk.Oe(), {
+      constructor(SS) {
+        let HS = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          gS = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this.originalScene = SS, this.handleEvents = HS, this._pointerCaptures = {}, this._lastPointerEvents = {}, this._sharedGizmoLight = null, this._renderCamera = null, this.pickUtilitySceneFirst = !0, this.shouldRender = !0, this.onlyCheckPointerDownEvents = !0, this.processAllEvents = !1, this.pickingEnabled = !0, this.onPointerOutObservable = new DS.e, this.utilityLayerScene = new dS.i(SS.AK(), {
           virtual: !0,
-          useFloatingOrigin: kk.floatingOriginMode
-        }), this.utilityLayerScene.useRightHandedSystem = kk.useRightHandedSystem, this.utilityLayerScene._allowPostProcessClearColor = !1, this.utilityLayerScene.postProcessesEnabled = !1, this.utilityLayerScene.detachControl(), Fk && (this._originalPointerObserver = kk.onPrePointerObservable.add((Fk => {
+          useFloatingOrigin: SS.floatingOriginMode
+        }), this.utilityLayerScene.useRightHandedSystem = SS.useRightHandedSystem, this.utilityLayerScene._allowPostProcessClearColor = !1, this.utilityLayerScene.postProcessesEnabled = !1, this.utilityLayerScene.detachControl(), HS && (this._originalPointerObserver = SS.onPrePointerObservable.add((HS => {
           if (!this.utilityLayerScene.activeCamera) return;
           if (!this.pickingEnabled) return;
-          if (!this.processAllEvents && Fk.type !== Ok.d.POINTERMOVE && Fk.type !== Ok.d.POINTERUP && Fk.type !== Ok.d.POINTERDOWN && Fk.type !== Ok.d.POINTERDOUBLETAP) return;
-          this.utilityLayerScene.pointerX = kk.pointerX, this.utilityLayerScene.pointerY = kk.pointerY;
-          const Ik = Fk.event;
-          if (kk.isPointerCaptured(Ik.pointerId)) return void(this._pointerCaptures[Ik.pointerId] = !1);
-          const Xk = Ik => {
-              let Xk;
-              if (Fk.nearInteractionPickingInfo) Xk = Fk.nearInteractionPickingInfo.pickedMesh.mG() == Ik ? Fk.nearInteractionPickingInfo : new nk.b;
-              else if (Ik !== this.utilityLayerScene && Fk.originalPickingInfo) Xk = Fk.originalPickingInfo;
+          if (!this.processAllEvents && HS.type !== cS.d.POINTERMOVE && HS.type !== cS.d.POINTERUP && HS.type !== cS.d.POINTERDOWN && HS.type !== cS.d.POINTERDOUBLETAP) return;
+          this.utilityLayerScene.pointerX = SS.pointerX, this.utilityLayerScene.pointerY = SS.pointerY;
+          const gS = HS.event;
+          if (SS.isPointerCaptured(gS.pointerId)) return void(this._pointerCaptures[gS.pointerId] = !1);
+          const tS = gS => {
+              let tS;
+              if (HS.nearInteractionPickingInfo) tS = HS.nearInteractionPickingInfo.pickedMesh.lL() == gS ? HS.nearInteractionPickingInfo : new vS.c;
+              else if (gS !== this.utilityLayerScene && HS.originalPickingInfo) tS = HS.originalPickingInfo;
               else {
-                let Tk = null;
-                this._renderCamera && (Tk = Ik._activeCamera, Ik._activeCamera = this._renderCamera, Fk.ray = null), Xk = Fk.ray ? Ik.pickWithRay(Fk.ray) : Ik.rZ(kk.pointerX, kk.pointerY), Tk && (Ik._activeCamera = Tk)
+                let bS = null;
+                this._renderCamera && (bS = gS._activeCamera, gS._activeCamera = this._renderCamera, HS.ray = null), tS = HS.ray ? gS.pickWithRay(HS.ray) : gS.Sa(SS.pointerX, SS.pointerY), bS && (gS._activeCamera = bS)
               }
-              return Xk
+              return tS
             },
-            Tk = Xk(this.utilityLayerScene);
-          if (!Fk.ray && Tk && (Fk.ray = Tk.ray), Fk.originalPickingInfo?.aimTransform && Tk && (Tk.aimTransform = Fk.originalPickingInfo.aimTransform, Tk.gripTransform = Fk.originalPickingInfo.gripTransform), this.utilityLayerScene.onPrePointerObservable.notifyObservers(Fk), this.onlyCheckPointerDownEvents && Fk.type != Ok.d.POINTERDOWN) return Fk.skipOnPointerObservable || this.utilityLayerScene.onPointerObservable.notifyObservers(new Ok.j(Fk.type, Fk.event, Tk), Fk.type), void(Fk.type === Ok.d.POINTERUP && this._pointerCaptures[Ik.pointerId] && (this._pointerCaptures[Ik.pointerId] = !1));
-          if (this.utilityLayerScene.autoClearDepthAndStencil || this.pickUtilitySceneFirst) Tk && Tk.hit && (Fk.skipOnPointerObservable || this.utilityLayerScene.onPointerObservable.notifyObservers(new Ok.j(Fk.type, Fk.event, Tk), Fk.type), Fk.skipOnPointerObservable = !0);
+            bS = tS(this.utilityLayerScene);
+          if (!HS.ray && bS && (HS.ray = bS.ray), HS.originalPickingInfo?.aimTransform && bS && (bS.aimTransform = HS.originalPickingInfo.aimTransform, bS.gripTransform = HS.originalPickingInfo.gripTransform), this.utilityLayerScene.onPrePointerObservable.notifyObservers(HS), this.onlyCheckPointerDownEvents && HS.type != cS.d.POINTERDOWN) return HS.skipOnPointerObservable || this.utilityLayerScene.onPointerObservable.notifyObservers(new cS.l(HS.type, HS.event, bS), HS.type), void(HS.type === cS.d.POINTERUP && this._pointerCaptures[gS.pointerId] && (this._pointerCaptures[gS.pointerId] = !1));
+          if (this.utilityLayerScene.autoClearDepthAndStencil || this.pickUtilitySceneFirst) bS && bS.hit && (HS.skipOnPointerObservable || this.utilityLayerScene.onPointerObservable.notifyObservers(new cS.l(HS.type, HS.event, bS), HS.type), HS.skipOnPointerObservable = !0);
           else {
-            const Ik = Xk(kk),
-              ik = Fk.event;
-            Ik && Tk && (0 === Tk.distance && Ik.pickedMesh ? this.mainSceneTrackerPredicate && this.mainSceneTrackerPredicate(Ik.pickedMesh) ? (this._notifyObservers(Fk, Ik, ik), Fk.skipOnPointerObservable = !0) : Fk.type === Ok.d.POINTERDOWN ? (this._pointerCaptures[ik.pointerId] = !0, this._notifyObservers(Fk, Ik, ik)) : Fk.type !== Ok.d.POINTERMOVE && Fk.type !== Ok.d.POINTERUP || (this._lastPointerEvents[ik.pointerId] && (this.onPointerOutObservable.notifyObservers(ik.pointerId), delete this._lastPointerEvents[ik.pointerId]), this._notifyObservers(Fk, Ik, ik)) : !this._pointerCaptures[ik.pointerId] && (Tk.distance < Ik.distance || 0 === Ik.distance) ? (this._notifyObservers(Fk, Tk, ik), Fk.skipOnPointerObservable || (Fk.skipOnPointerObservable = Tk.distance > 0)) : !this._pointerCaptures[ik.pointerId] && Tk.distance >= Ik.distance && (this.mainSceneTrackerPredicate && this.mainSceneTrackerPredicate(Ik.pickedMesh) ? (this._notifyObservers(Fk, Ik, ik), Fk.skipOnPointerObservable = !0) : (Fk.type !== Ok.d.POINTERMOVE && Fk.type !== Ok.d.POINTERUP || this._lastPointerEvents[ik.pointerId] && (this.onPointerOutObservable.notifyObservers(ik.pointerId), delete this._lastPointerEvents[ik.pointerId]), this._notifyObservers(Fk, Tk, ik))), Fk.type === Ok.d.POINTERUP && this._pointerCaptures[ik.pointerId] && (this._pointerCaptures[ik.pointerId] = !1))
+            const gS = tS(SS),
+              XS = HS.event;
+            gS && bS && (0 === bS.distance && gS.pickedMesh ? this.mainSceneTrackerPredicate && this.mainSceneTrackerPredicate(gS.pickedMesh) ? (this._notifyObservers(HS, gS, XS), HS.skipOnPointerObservable = !0) : HS.type === cS.d.POINTERDOWN ? (this._pointerCaptures[XS.pointerId] = !0, this._notifyObservers(HS, gS, XS)) : HS.type !== cS.d.POINTERMOVE && HS.type !== cS.d.POINTERUP || (this._lastPointerEvents[XS.pointerId] && (this.onPointerOutObservable.notifyObservers(XS.pointerId), delete this._lastPointerEvents[XS.pointerId]), this._notifyObservers(HS, gS, XS)) : !this._pointerCaptures[XS.pointerId] && (bS.distance < gS.distance || 0 === gS.distance) ? (this._notifyObservers(HS, bS, XS), HS.skipOnPointerObservable || (HS.skipOnPointerObservable = bS.distance > 0)) : !this._pointerCaptures[XS.pointerId] && bS.distance >= gS.distance && (this.mainSceneTrackerPredicate && this.mainSceneTrackerPredicate(gS.pickedMesh) ? (this._notifyObservers(HS, gS, XS), HS.skipOnPointerObservable = !0) : (HS.type !== cS.d.POINTERMOVE && HS.type !== cS.d.POINTERUP || this._lastPointerEvents[XS.pointerId] && (this.onPointerOutObservable.notifyObservers(XS.pointerId), delete this._lastPointerEvents[XS.pointerId]), this._notifyObservers(HS, bS, XS))), HS.type === cS.d.POINTERUP && this._pointerCaptures[XS.pointerId] && (this._pointerCaptures[XS.pointerId] = !1))
           }
-        })), this._originalPointerObserver && kk.onPrePointerObservable.makeObserverTopPriority(this._originalPointerObserver)), this.utilityLayerScene.autoClear = !1, Ik || (this._afterRenderObserver = this.originalScene.onAfterRenderCameraObservable.add((kk => {
-          this.shouldRender && kk == this.getRenderCamera() && this.render()
-        }))), this._sceneDisposeObserver = this.originalScene.hG.add((() => {
+        })), this._originalPointerObserver && SS.onPrePointerObservable.makeObserverTopPriority(this._originalPointerObserver)), this.utilityLayerScene.autoClear = !1, gS || (this._afterRenderObserver = this.originalScene.onAfterRenderCameraObservable.add((SS => {
+          this.shouldRender && SS == this.getRenderCamera() && this.render()
+        }))), this._sceneDisposeObserver = this.originalScene.bY.add((() => {
           this.dispose()
         })), this._updateCamera()
       }
-      _notifyObservers(kk, Fk, Ik) {
-        kk.skipOnPointerObservable || (this.utilityLayerScene.onPointerObservable.notifyObservers(new Ok.j(kk.type, kk.event, Fk), kk.type), this._lastPointerEvents[Ik.pointerId] = !0)
+      _notifyObservers(SS, HS, gS) {
+        SS.skipOnPointerObservable || (this.utilityLayerScene.onPointerObservable.notifyObservers(new cS.l(SS.type, SS.event, HS), SS.type), this._lastPointerEvents[gS.pointerId] = !0)
       }
       render() {
         if (this._updateCamera(), this.utilityLayerScene.activeCamera) {
-          const kk = this.utilityLayerScene.activeCamera.mG(),
-            Fk = this.utilityLayerScene.activeCamera;
-          Fk._scene = this.utilityLayerScene, Fk.leftCamera && (Fk.leftCamera._scene = this.utilityLayerScene), Fk.rightCamera && (Fk.rightCamera._scene = this.utilityLayerScene), this.utilityLayerScene.render(!1), Fk._scene = kk, Fk.leftCamera && (Fk.leftCamera._scene = kk), Fk.rightCamera && (Fk.rightCamera._scene = kk)
+          const SS = this.utilityLayerScene.activeCamera.lL(),
+            HS = this.utilityLayerScene.activeCamera;
+          HS._scene = this.utilityLayerScene, HS.leftCamera && (HS.leftCamera._scene = this.utilityLayerScene), HS.rightCamera && (HS.rightCamera._scene = this.utilityLayerScene), this.utilityLayerScene.render(!1), HS._scene = SS, HS.leftCamera && (HS.leftCamera._scene = SS), HS.rightCamera && (HS.rightCamera._scene = SS)
         }
       }
       dispose() {
-        this.onPointerOutObservable.clear(), this._afterRenderObserver && this.originalScene.onAfterRenderCameraObservable.remove(this._afterRenderObserver), this._sceneDisposeObserver && this.originalScene.hG.remove(this._sceneDisposeObserver), this._originalPointerObserver && this.originalScene.onPrePointerObservable.remove(this._originalPointerObserver), this.utilityLayerScene.dispose()
+        this.onPointerOutObservable.clear(), this._afterRenderObserver && this.originalScene.onAfterRenderCameraObservable.remove(this._afterRenderObserver), this._sceneDisposeObserver && this.originalScene.bY.remove(this._sceneDisposeObserver), this._originalPointerObserver && this.originalScene.onPrePointerObservable.remove(this._originalPointerObserver), this.utilityLayerScene.dispose()
       }
       _updateCamera() {
         this.utilityLayerScene.cameraToUseForPointers = this.getRenderCamera(), this.utilityLayerScene.activeCamera = this.getRenderCamera()
       }
     }
-    uk._DefaultUtilityLayer = null, uk._DefaultKeepDepthUtilityLayer = null;
-    const bk = {
-      FindMainCamera: function(kk) {
-        return kk.findMainCamera()
+    YS._DefaultUtilityLayer = null, YS._DefaultKeepDepthUtilityLayer = null;
+    const AS = {
+      FindMainCamera: function(SS) {
+        return SS.findMainCamera()
       },
-      FindMainObjectRenderer: function(kk) {
-        return kk.findMainObjectRenderer()
+      FindMainObjectRenderer: function(SS) {
+        return SS.findMainObjectRenderer()
       },
-      CreateUtilityLayerRenderer: function(kk) {
-        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const Ik = kk.Yw,
-          Xk = new uk(Ik, Fk, !0);
-        Xk.utilityLayerScene.activeCamera = Ik.activeCamera;
-        let Tk = bk.FindMainCamera(Ik.frameGraph);
-        !Tk && Ik.cameras.length > 0 && (Tk = Ik.cameras[0]), Tk && (Xk.setRenderCamera(Tk), Xk.utilityLayerScene.activeCamera = Tk);
-        const ik = Ik.onAfterRenderObservable.add((() => {
-          Xk.render()
+      CreateUtilityLayerRenderer: function(SS) {
+        let HS = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const gS = SS.Bj,
+          tS = new YS(gS, HS, !0);
+        tS.utilityLayerScene.activeCamera = gS.activeCamera;
+        let bS = AS.FindMainCamera(gS.frameGraph);
+        !bS && gS.cameras.length > 0 && (bS = gS.cameras[0]), bS && (tS.setRenderCamera(bS), tS.utilityLayerScene.activeCamera = bS);
+        const XS = gS.onAfterRenderObservable.add((() => {
+          tS.render()
         }));
-        return Xk.utilityLayerScene.hG.addOnce((() => {
-          Ik.onAfterRenderObservable.remove(ik)
-        })), Xk
+        return tS.utilityLayerScene.bY.addOnce((() => {
+          gS.onAfterRenderObservable.remove(XS)
+        })), tS
       }
     };
-    let Rk = null;
+    let yS = null;
 
-    function Uk(kk, Fk, Ik, Xk) {
-      let Tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
-        ik = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        yk = arguments.length > 6 ? arguments[6] : void 0,
-        lk = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-        ak = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
+    function VS(SS, HS, gS, tS) {
+      let bS = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
+        XS = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        xS = arguments.length > 6 ? arguments[6] : void 0,
+        NS = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        qS = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
       const {
-        height: qk,
-        width: Lk
-      } = Bk(kk, Fk, Ik);
-      if (!qk || !Lk) return void Zk.e.Error("Invalid 'size' parameter !");
-      const tk = Fk.mG();
-      let ek = tk.activeCamera !== Fk;
-      if (tk.frameGraph) {
-        const kk = bk.FindMainObjectRenderer(tk.frameGraph);
-        kk && (ek = kk.camera !== Fk)
+        height: uS,
+        width: IS
+      } = sS(SS, HS, gS);
+      if (!uS || !IS) return void kS.b.Error("Invalid 'size' parameter !");
+      const fS = HS.lL();
+      let KS = fS.activeCamera !== HS;
+      if (fS.frameGraph) {
+        const SS = AS.FindMainObjectRenderer(fS.frameGraph);
+        SS && (KS = SS.camera !== HS)
       }
-      ek ? ck(kk, Fk, Ik, (kk => {
-        if (ik) {
-          const Fk = new Blob([kk]);
-          jk.h.DownloadBlob(Fk), Xk && Xk("")
-        } else Xk && Xk(kk)
-      }), Tk, 1, kk.getCreationOptions().antialias, void 0, void 0, void 0, void 0, yk) : kk.onEndFrameObservable.addOnce((() => {
-        Rk || (Rk = document.createElement("canvas")), Rk.width = Lk, Rk.height = qk;
-        const Fk = Rk.getContext("2d"),
-          Ik = kk.getRenderingCanvas();
-        if (!Fk || !Ik) return void Zk.e.Error("Failed to create screenshot. Rendering context or rendering canvas is not available.");
-        const ek = Ik.width,
-          wk = Ik.height,
-          Hk = Rk.width,
-          Jk = Rk.height,
-          xk = Hk / ek,
-          Pk = Jk / wk,
-          Kk = lk ? Math.max(xk, Pk) : Math.min(xk, Pk),
-          Qk = ek * Kk,
-          sk = wk * Kk,
-          Vk = (Hk - Qk) / 2,
-          zk = (Jk - sk) / 2;
-        Fk.save(), Fk.fillStyle = ak ? tk.clearColor.toHexString() : "rgba(0, 0, 0, 0)", Fk.fillRect(0, 0, Lk, qk), Fk.restore(), Fk.drawImage(Ik, 0, 0, ek, wk, Vk, zk, Qk, sk), ik ? (jk.h.EncodeScreenshotCanvasData(Rk, void 0, Tk, void 0, yk), Xk && Xk("")) : jk.h.EncodeScreenshotCanvasData(Rk, Xk, Tk, void 0, yk)
+      KS ? zS(SS, HS, gS, (SS => {
+        if (XS) {
+          const HS = new Blob([SS]);
+          aS.k.DownloadBlob(HS), tS && tS("")
+        } else tS && tS(SS)
+      }), bS, 1, SS.getCreationOptions().antialias, void 0, void 0, void 0, void 0, xS) : SS.onEndFrameObservable.addOnce((() => {
+        yS || (yS = document.createElement("canvas")), yS.width = IS, yS.height = uS;
+        const HS = yS.getContext("2d"),
+          gS = SS.getRenderingCanvas();
+        if (!HS || !gS) return void kS.b.Error("Failed to create screenshot. Rendering context or rendering canvas is not available.");
+        const KS = gS.width,
+          jS = gS.height,
+          GS = yS.width,
+          CS = yS.height,
+          nS = GS / KS,
+          PS = CS / jS,
+          QS = NS ? Math.max(nS, PS) : Math.min(nS, PS),
+          DS = KS * QS,
+          wS = jS * QS,
+          hS = (GS - DS) / 2,
+          ZS = (CS - wS) / 2;
+        HS.save(), HS.fillStyle = qS ? fS.clearColor.toHexString() : "rgba(0, 0, 0, 0)", HS.fillRect(0, 0, IS, uS), HS.restore(), HS.drawImage(gS, 0, 0, KS, jS, hS, ZS, DS, wS), XS ? (aS.k.EncodeScreenshotCanvasData(yS, void 0, bS, void 0, xS), tS && tS("")) : aS.k.EncodeScreenshotCanvasData(yS, tS, bS, void 0, xS)
       }))
     }
-    async function Ck(kk, Fk, Ik) {
-      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
-        Tk = arguments.length > 4 ? arguments[4] : void 0,
-        ik = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        yk = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        lk = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
-      return await new Promise(((ak, qk) => {
-        Uk(kk, Fk, Ik, (kk => {
-          "undefined" !== typeof kk ? ak(kk) : qk(new Error("Data is undefined"))
-        }), Xk, lk, Tk, ik, yk)
+    async function iS(SS, HS, gS) {
+      let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
+        bS = arguments.length > 4 ? arguments[4] : void 0,
+        XS = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        xS = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        NS = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
+      return await new Promise(((qS, uS) => {
+        VS(SS, HS, gS, (SS => {
+          "undefined" !== typeof SS ? qS(SS) : uS(new Error("Data is undefined"))
+        }), tS, NS, bS, XS, xS)
       }))
     }
-    async function Nk(kk, Fk, Ik, Xk) {
-      let Tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
-        ik = arguments.length > 5 ? arguments[5] : void 0,
-        yk = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-      return await new Promise((lk => {
-        Uk(kk, Fk, {
-          width: Ik,
-          height: Xk
+    async function WS(SS, HS, gS, tS) {
+      let bS = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
+        XS = arguments.length > 5 ? arguments[5] : void 0,
+        xS = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+      return await new Promise((NS => {
+        VS(SS, HS, {
+          width: gS,
+          height: tS
         }, (() => {
-          lk()
-        }), Tk, !0, ik, yk)
+          NS()
+        }), bS, !0, XS, xS)
       }))
     }
 
-    function ck(kk, Fk, ik, yk) {
-      let lk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
-        ak = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
-        qk = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        Lk = arguments.length > 7 ? arguments[7] : void 0,
-        jk = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-        Jk = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
-        xk = !(arguments.length > 10 && void 0 !== arguments[10]) || arguments[10],
-        Pk = arguments.length > 11 ? arguments[11] : void 0,
-        Kk = arguments.length > 12 ? arguments[12] : void 0,
-        Qk = arguments.length > 13 ? arguments[13] : void 0,
-        sk = arguments.length > 14 && void 0 !== arguments[14] ? arguments[14] : 3e4,
-        Vk = arguments.length > 15 ? arguments[15] : void 0;
-      const zk = Fk.mG();
-      if (zk.frameGraph) return void fk(zk.frameGraph, Fk, ik, lk, ak, qk, Lk, Pk, Qk, !yk).then((kk => {
-        yk && yk(kk)
+    function zS(SS, HS, XS, xS) {
+      let NS = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
+        qS = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
+        uS = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        IS = arguments.length > 7 ? arguments[7] : void 0,
+        aS = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        CS = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
+        nS = !(arguments.length > 10 && void 0 !== arguments[10]) || arguments[10],
+        PS = arguments.length > 11 ? arguments[11] : void 0,
+        QS = arguments.length > 12 ? arguments[12] : void 0,
+        DS = arguments.length > 13 ? arguments[13] : void 0,
+        wS = arguments.length > 14 && void 0 !== arguments[14] ? arguments[14] : 3e4,
+        hS = arguments.length > 15 ? arguments[15] : void 0;
+      const ZS = HS.lL();
+      if (ZS.frameGraph) return void pS(ZS.frameGraph, HS, XS, NS, qS, uS, IS, PS, DS, !xS).then((SS => {
+        xS && xS(SS)
       }));
       const {
-        height: Sk,
-        width: vk,
-        finalWidth: Ek,
-        finalHeight: Ok
-      } = Bk(kk, Fk, ik), nk = {
-        width: vk,
-        height: Sk
+        height: JS,
+        width: OS,
+        finalWidth: dS,
+        finalHeight: cS
+      } = sS(SS, HS, XS), vS = {
+        width: OS,
+        height: JS
       };
-      if (!Sk || !vk) return void Zk.e.Error("Invalid 'size' parameter !");
-      kk.skipFrameRender = !0;
-      const Gk = kk.getRenderWidth,
-        pk = kk.getRenderHeight;
-      kk.getRenderWidth = function() {
-        return !(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && kk._currentRenderTarget ? kk._currentRenderTarget.width : vk
-      }, kk.getRenderHeight = function() {
-        return !(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && kk._currentRenderTarget ? kk._currentRenderTarget.height : Sk
-      }, kk.onResizeObservable.hasObservers() && kk.onResizeObservable.notifyObservers(kk);
-      const uk = new Tk.c("screenShot", nk, zk, !1, !1, 0, !1, Xk.g.BILINEAR_SAMPLINGMODE, void 0, Jk, void 0, void 0, void 0, ak);
-      uk.renderList = zk.meshes.slice(), uk.samples = ak, uk.renderSprites = jk, uk.activeCamera = Fk, uk.forceLayerMaskCheck = xk, Kk?.(uk);
-      const bk = Qk || ek.DumpData,
-        Rk = () => {
-          zk.incrementRenderId(), zk.resetCachedMaterial(), (0, Hk.h)((() => uk.isReadyForRendering() && Fk.isReady(!0)), (() => {
-            kk.onEndFrameObservable.addOnce((() => {
-              Ek === vk && Ok === Sk ? uk.readPixels(void 0, void 0, void 0, !1).then((kk => {
-                bk(vk, Sk, kk, yk, lk, Lk, !0, void 0, Pk), uk.dispose()
-              })) : (kk.isWebGPU ? Ik.e(371).then((() => Ik(61438))) : Ik.e(372).then((() => Ik(61445)))).then((async () => await (0, wk.e)("pass", uk.getInternalTexture(), zk, void 0, void 0, void 0, Ek, Ok).then((Fk => {
-                kk._readTexturePixels(Fk, Ek, Ok, -1, 0, null, !0, !1, 0, 0).then((kk => {
-                  bk(Ek, Ok, kk, yk, lk, Lk, !0, void 0, Pk), Fk.dispose()
+      if (!JS || !OS) return void kS.b.Error("Invalid 'size' parameter !");
+      SS.skipFrameRender = !0;
+      const ES = SS.getRenderWidth,
+        LS = SS.getRenderHeight;
+      SS.getRenderWidth = function() {
+        return !(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && SS._currentRenderTarget ? SS._currentRenderTarget.width : OS
+      }, SS.getRenderHeight = function() {
+        return !(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && SS._currentRenderTarget ? SS._currentRenderTarget.height : JS
+      }, SS.onResizeObservable.hasObservers() && SS.onResizeObservable.notifyObservers(SS);
+      const YS = new bS.c("screenShot", vS, ZS, !1, !1, 0, !1, tS.i.BILINEAR_SAMPLINGMODE, void 0, CS, void 0, void 0, void 0, qS);
+      YS.renderList = ZS.meshes.slice(), YS.samples = qS, YS.renderSprites = aS, YS.activeCamera = HS, YS.forceLayerMaskCheck = nS, QS?.(YS);
+      const AS = DS || KS.DumpData,
+        yS = () => {
+          ZS.incrementRenderId(), ZS.resetCachedMaterial(), (0, GS.g)((() => YS.isReadyForRendering() && HS.isReady(!0)), (() => {
+            SS.onEndFrameObservable.addOnce((() => {
+              dS === OS && cS === JS ? YS.readPixels(void 0, void 0, void 0, !1).then((SS => {
+                AS(OS, JS, SS, xS, NS, IS, !0, void 0, PS), YS.dispose()
+              })) : (SS.isWebGPU ? gS.e(371).then((() => gS(61506))) : gS.e(372).then((() => gS(61513)))).then((async () => await (0, jS.d)("pass", YS.getInternalTexture(), ZS, void 0, void 0, void 0, dS, cS).then((HS => {
+                SS._readTexturePixels(HS, dS, cS, -1, 0, null, !0, !1, 0, 0).then((SS => {
+                  AS(dS, cS, SS, xS, NS, IS, !0, void 0, PS), HS.dispose()
                 }))
               }))))
-            })), zk.incrementRenderId(), zk.resetCachedMaterial();
-            const Xk = zk.activeCamera,
-              Tk = zk.activeCameras,
-              ik = Fk.outputRenderTarget,
-              ak = zk.spritesEnabled;
-            zk.activeCamera = Fk, zk.activeCameras = null, Fk.outputRenderTarget = uk, zk.spritesEnabled = jk;
-            const qk = zk.meshes;
-            zk.meshes = uk.renderList || zk.meshes;
+            })), ZS.incrementRenderId(), ZS.resetCachedMaterial();
+            const tS = ZS.activeCamera,
+              bS = ZS.activeCameras,
+              XS = HS.outputRenderTarget,
+              qS = ZS.spritesEnabled;
+            ZS.activeCamera = HS, ZS.activeCameras = null, HS.outputRenderTarget = YS, ZS.spritesEnabled = aS;
+            const uS = ZS.meshes;
+            ZS.meshes = YS.renderList || ZS.meshes;
             try {
-              zk.render()
+              ZS.render()
             } finally {
-              zk.activeCamera = Xk, zk.activeCameras = Tk, Fk.outputRenderTarget = ik, zk.spritesEnabled = ak, zk.meshes = qk, kk.getRenderWidth = Gk, kk.getRenderHeight = pk, kk.onResizeObservable.hasObservers() && kk.onResizeObservable.notifyObservers(kk), Fk.getProjectionMatrix(!0), kk.skipFrameRender = !1
+              ZS.activeCamera = tS, ZS.activeCameras = bS, HS.outputRenderTarget = XS, ZS.spritesEnabled = qS, ZS.meshes = uS, SS.getRenderWidth = ES, SS.getRenderHeight = LS, SS.onResizeObservable.hasObservers() && SS.onResizeObservable.notifyObservers(SS), HS.getProjectionMatrix(!0), SS.skipFrameRender = !1
             }
           }), (() => {
-            kk.skipFrameRender = !1, kk.getRenderWidth = Gk, kk.getRenderHeight = pk, Vk?.()
-          }), void 0, sk)
+            SS.skipFrameRender = !1, SS.getRenderWidth = ES, SS.getRenderHeight = LS, hS?.()
+          }), void 0, wS)
         };
-      if (qk) {
-        const kk = new tk("antialiasing", 1, zk.activeCamera);
-        uk.addPostProcess(kk), kk.autoClear = !0, kk.onEffectCreatedObservable.addOnce((kk => {
-          kk.isReady() ? Rk() : kk.onCompiled = () => {
-            Rk()
+      if (uS) {
+        const SS = new fS("antialiasing", 1, ZS.activeCamera);
+        YS.addPostProcess(SS), SS.autoClear = !0, SS.onEffectCreatedObservable.addOnce((SS => {
+          SS.isReady() ? yS() : SS.onCompiled = () => {
+            yS()
           }
         }))
-      } else Rk()
+      } else yS()
     }
-    async function Wk(kk, Fk, Ik) {
-      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
-        Tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
-        ik = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        yk = arguments.length > 6 ? arguments[6] : void 0,
-        lk = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-        ak = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-        qk = !(arguments.length > 9 && void 0 !== arguments[9]) || arguments[9],
-        Lk = arguments.length > 10 ? arguments[10] : void 0,
-        tk = arguments.length > 11 ? arguments[11] : void 0,
-        Zk = arguments.length > 12 ? arguments[12] : void 0;
-      return await new Promise(((jk, ek) => {
-        ck(kk, Fk, Ik, (kk => {
-          "undefined" !== typeof kk ? jk(kk) : ek(new Error("Data is undefined"))
-        }), Xk, Tk, ik, yk, lk, ak, qk, Lk, tk, Zk)
+    async function US(SS, HS, gS) {
+      let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
+        bS = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
+        XS = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        xS = arguments.length > 6 ? arguments[6] : void 0,
+        NS = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        qS = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        uS = !(arguments.length > 9 && void 0 !== arguments[9]) || arguments[9],
+        IS = arguments.length > 10 ? arguments[10] : void 0,
+        fS = arguments.length > 11 ? arguments[11] : void 0,
+        kS = arguments.length > 12 ? arguments[12] : void 0;
+      return await new Promise(((aS, KS) => {
+        zS(SS, HS, gS, (SS => {
+          "undefined" !== typeof SS ? aS(SS) : KS(new Error("Data is undefined"))
+        }), tS, bS, XS, xS, NS, qS, uS, IS, fS, kS)
       }))
     }
-    async function fk(kk, Fk, Ik) {
-      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
-        Tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
-        ik = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        yk = arguments.length > 6 ? arguments[6] : void 0,
-        lk = arguments.length > 7 ? arguments[7] : void 0,
-        ak = arguments.length > 8 ? arguments[8] : void 0,
-        qk = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
-        Lk = arguments.length > 10 ? arguments[10] : void 0;
-      const tk = kk.engine,
-        Zk = kk.textureManager,
+    async function pS(SS, HS, gS) {
+      let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
+        bS = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
+        XS = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        xS = arguments.length > 6 ? arguments[6] : void 0,
+        NS = arguments.length > 7 ? arguments[7] : void 0,
+        qS = arguments.length > 8 ? arguments[8] : void 0,
+        uS = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
+        IS = arguments.length > 10 ? arguments[10] : void 0;
+      const fS = SS.engine,
+        kS = SS.textureManager,
         {
-          height: jk,
-          width: wk,
-          finalWidth: Hk,
-          finalHeight: xk
-        } = Bk(tk, Fk, Ik),
-        Pk = {
-          width: wk,
-          height: jk
+          height: aS,
+          width: jS,
+          finalWidth: GS,
+          finalHeight: nS
+        } = sS(fS, HS, gS),
+        PS = {
+          width: jS,
+          height: aS
         },
-        Kk = ak || ek.DumpData,
-        Qk = kk.tasks,
-        sk = Qk.length,
-        Vk = kk.pausedExecution,
-        Sk = tk.getCaps().parallelShaderCompile;
-      Zk.setBackBufferTextures(0, 0, {
-        size: Pk,
+        QS = qS || KS.DumpData,
+        DS = SS.tasks,
+        wS = DS.length,
+        hS = SS.pausedExecution,
+        JS = fS.getCaps().parallelShaderCompile;
+      kS.setBackBufferTextures(0, 0, {
+        size: PS,
         options: {
           createMipMaps: !1,
-          samples: Tk,
+          samples: bS,
           types: [0],
           formats: [5],
           useSRGBBuffers: [!1],
@@ -1041,29 +1041,29 @@ export const modules = {
         },
         sizeIsPercentage: !1
       }, {
-        size: Pk,
+        size: PS,
         options: {
           createMipMaps: !1,
-          samples: Tk,
+          samples: bS,
           types: [0],
-          formats: [tk.isStencilEnable ? 13 : 14],
+          formats: [fS.isStencilEnable ? 13 : 14],
           useSRGBBuffers: [!1],
           creationFlags: [0],
           labels: ["screenshot depth"]
         },
         sizeIsPercentage: !1
       });
-      let Ek = Jk;
-      if (ik) {
-        const Fk = new zk("fxaa", kk);
-        Fk.sourceTexture = Ek, Ek = Fk.outputTexture, kk.addTask(Fk)
+      let dS = CS;
+      if (XS) {
+        const HS = new ZS("fxaa", SS);
+        HS.sourceTexture = dS, dS = HS.outputTexture, SS.addTask(HS)
       }
-      if (Hk !== wk || xk !== jk) {
-        const Fk = new vk("pass", kk);
-        Fk.sourceTexture = Ek, Fk.targetTexture = kk.textureManager.createRenderTargetTexture("pass_output", {
+      if (GS !== jS || nS !== aS) {
+        const HS = new OS("pass", SS);
+        HS.sourceTexture = dS, HS.targetTexture = SS.textureManager.createRenderTargetTexture("pass_output", {
           size: {
-            width: Hk,
-            height: xk
+            width: GS,
+            height: nS
           },
           options: {
             createMipMaps: !1,
@@ -1074,57 +1074,57 @@ export const modules = {
             useSRGBBuffers: [!1]
           },
           sizeIsPercentage: !1
-        }), Ek = Fk.outputTexture, kk.addTask(Fk)
+        }), dS = HS.outputTexture, SS.addTask(HS)
       }
-      const Ok = bk.FindMainObjectRenderer(kk);
-      let nk = null;
-      Ok && (nk = Ok.camera, Ok.camera = Fk), tk.getCaps().parallelShaderCompile = void 0, await kk.buildAsync();
-      const Gk = Lk ?? (Zk.hasHistoryTextures ? 32 : 1);
-      for (let ek = 0; ek < Gk; ++ek) kk.execute();
-      kk.pausedExecution = !0, tk.getCaps().parallelShaderCompile = Sk;
-      for (let ek = sk; ek < Qk.length; ++ek) kk.tasks[ek].dispose();
-      kk.tasks.length = sk, Ok && nk && (Ok.camera = nk);
-      const pk = kk.textureManager.getTextureFromHandle(Ek);
-      return pk.incrementReferences(), Zk.resetBackBufferTextures(), await kk.buildAsync(), kk.pausedExecution = Vk, new Promise((kk => {
-        tk._readTexturePixels(pk, Hk, xk, -1, 0, null, !0, !1, 0, 0).then((async Fk => {
-          pk.dispose(), Kk(Hk, xk, Fk, qk ? void 0 : Fk => kk(Fk), Xk, yk, !0, void 0, lk), qk && kk(null)
+      const cS = AS.FindMainObjectRenderer(SS);
+      let vS = null;
+      cS && (vS = cS.camera, cS.camera = HS), fS.getCaps().parallelShaderCompile = void 0, await SS.buildAsync();
+      const ES = IS ?? (kS.hasHistoryTextures ? 32 : 1);
+      for (let KS = 0; KS < ES; ++KS) SS.execute();
+      SS.pausedExecution = !0, fS.getCaps().parallelShaderCompile = JS;
+      for (let KS = wS; KS < DS.length; ++KS) SS.tasks[KS].dispose();
+      SS.tasks.length = wS, cS && vS && (cS.camera = vS);
+      const LS = SS.textureManager.getTextureFromHandle(dS);
+      return LS.incrementReferences(), kS.resetBackBufferTextures(), await SS.buildAsync(), SS.pausedExecution = hS, new Promise((SS => {
+        fS._readTexturePixels(LS, GS, nS, -1, 0, null, !0, !1, 0, 0).then((async HS => {
+          LS.dispose(), QS(GS, nS, HS, uS ? void 0 : HS => SS(HS), tS, xS, !0, void 0, NS), uS && SS(null)
         }))
       }))
     }
 
-    function Bk(kk, Fk, Ik) {
-      let Xk = 0,
-        Tk = 0,
-        ik = 0,
-        yk = 0;
-      if ("object" === typeof Ik) {
-        const lk = Ik.precision ? Math.abs(Ik.precision) : 1;
-        Ik.width && Ik.height ? (Xk = Ik.height * lk, Tk = Ik.width * lk) : Ik.width && !Ik.height ? (Tk = Ik.width * lk, Xk = Math.round(Tk / kk.getAspectRatio(Fk))) : Ik.height && !Ik.width ? (Xk = Ik.height * lk, Tk = Math.round(Xk * kk.getAspectRatio(Fk))) : (Tk = Math.round(kk.getRenderWidth() * lk), Xk = Math.round(Tk / kk.getAspectRatio(Fk))), Ik.finalWidth && Ik.finalHeight ? (yk = Ik.finalHeight, ik = Ik.finalWidth) : Ik.finalWidth && !Ik.finalHeight ? (ik = Ik.finalWidth, yk = Math.round(ik / kk.getAspectRatio(Fk))) : Ik.finalHeight && !Ik.finalWidth ? (yk = Ik.finalHeight, ik = Math.round(yk * kk.getAspectRatio(Fk))) : (ik = Tk, yk = Xk)
-      } else isNaN(Ik) || (Xk = Ik, Tk = Ik, ik = Ik, yk = Ik);
-      return Tk && (Tk = Math.floor(Tk)), Xk && (Xk = Math.floor(Xk)), ik && (ik = Math.floor(ik)), yk && (yk = Math.floor(yk)), {
-        height: 0 | Xk,
-        width: 0 | Tk,
-        finalWidth: 0 | ik,
-        finalHeight: 0 | yk
+    function sS(SS, HS, gS) {
+      let tS = 0,
+        bS = 0,
+        XS = 0,
+        xS = 0;
+      if ("object" === typeof gS) {
+        const NS = gS.precision ? Math.abs(gS.precision) : 1;
+        gS.width && gS.height ? (tS = gS.height * NS, bS = gS.width * NS) : gS.width && !gS.height ? (bS = gS.width * NS, tS = Math.round(bS / SS.getAspectRatio(HS))) : gS.height && !gS.width ? (tS = gS.height * NS, bS = Math.round(tS * SS.getAspectRatio(HS))) : (bS = Math.round(SS.getRenderWidth() * NS), tS = Math.round(bS / SS.getAspectRatio(HS))), gS.finalWidth && gS.finalHeight ? (xS = gS.finalHeight, XS = gS.finalWidth) : gS.finalWidth && !gS.finalHeight ? (XS = gS.finalWidth, xS = Math.round(XS / SS.getAspectRatio(HS))) : gS.finalHeight && !gS.finalWidth ? (xS = gS.finalHeight, XS = Math.round(xS * SS.getAspectRatio(HS))) : (XS = bS, xS = tS)
+      } else isNaN(gS) || (tS = gS, bS = gS, XS = gS, xS = gS);
+      return bS && (bS = Math.floor(bS)), tS && (tS = Math.floor(tS)), XS && (XS = Math.floor(XS)), xS && (xS = Math.floor(xS)), {
+        height: 0 | tS,
+        width: 0 | bS,
+        finalWidth: 0 | XS,
+        finalHeight: 0 | xS
       }
     }
-    const dk = {
-      CreateScreenshot: Uk,
-      CreateScreenshotAsync: Ck,
-      CreateScreenshotWithResizeAsync: Nk,
-      CreateScreenshotUsingRenderTarget: ck,
-      CreateScreenshotUsingRenderTargetAsync: Wk,
-      CreateScreenshotForFrameGraphAsync: fk
+    const BS = {
+      CreateScreenshot: VS,
+      CreateScreenshotAsync: iS,
+      CreateScreenshotWithResizeAsync: WS,
+      CreateScreenshotUsingRenderTarget: zS,
+      CreateScreenshotUsingRenderTargetAsync: US,
+      CreateScreenshotForFrameGraphAsync: pS
     };
-    let Yk = !1;
+    let MS = !1;
 
-    function Ak() {
-      if (Yk) return;
-      Yk = !0;
-      jk.h.CreateScreenshot = Uk, jk.h.CreateScreenshotAsync = Ck, jk.h.CreateScreenshotUsingRenderTarget = ck, jk.h.CreateScreenshotUsingRenderTargetAsync = Wk
+    function FS() {
+      if (MS) return;
+      MS = !0;
+      aS.k.CreateScreenshot = VS, aS.k.CreateScreenshotAsync = iS, aS.k.CreateScreenshotUsingRenderTarget = zS, aS.k.CreateScreenshotUsingRenderTargetAsync = US
     }
-    Ak()
+    FS()
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

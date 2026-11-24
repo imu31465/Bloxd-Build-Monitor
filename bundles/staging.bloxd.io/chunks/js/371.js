@@ -1,19 +1,19 @@
 export const id = 371;
 export const ids = [371];
 export const modules = {
-  61438: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      passPixelShaderWGSL: () => yk
+  61506: (SS, HS, gS) => {
+    gS.r(HS), gS.d(HS, {
+      passPixelShaderWGSL: () => xS
     });
-    var Xk = Ik(39837);
-    const Tk = "passPixelShader",
-      ik = "varying vUV: vec2f;var textureSamplerSampler: sampler;var textureSampler: texture_2d<f32>;\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {fragmentOutputs.color=textureSample(textureSampler,textureSamplerSampler,input.vUV);}";
-    Xk.b.ShadersStoreWGSL[Tk] || (Xk.b.ShadersStoreWGSL[Tk] = ik);
-    const yk = {
-      name: Tk,
-      shader: ik
+    var tS = gS(39899);
+    const bS = "passPixelShader",
+      XS = "varying vUV: vec2f;var textureSamplerSampler: sampler;var textureSampler: texture_2d<f32>;\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {fragmentOutputs.color=textureSample(textureSampler,textureSamplerSampler,input.vUV);}";
+    tS.c.ShadersStoreWGSL[bS] || (tS.c.ShadersStoreWGSL[bS] = XS);
+    const xS = {
+      name: bS,
+      shader: XS
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

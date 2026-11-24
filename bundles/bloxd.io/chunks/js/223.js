@@ -1,327 +1,327 @@
 export const id = 223;
 export const ids = [223];
 export const modules = {
-  39629: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => Xk,
-      f: () => Tk
+  39690: (SS, HS, gS) => {
+    gS.d(HS, {
+      d: () => tS,
+      h: () => bS
     });
-    const Xk = "The world isn't loaded, so no blocks can be seen.",
-      Tk = "The world isn't loaded, so nothing in it can be seen."
+    const tS = "The world isn't loaded, so no blocks can be seen.",
+      bS = "The world isn't loaded, so nothing in it can be seen."
   },
-  39109: (kk, Fk, Ik) => {
-    function Xk(kk) {
-      return !(!kk.lobbyLeaderboardInfo && !kk.lobbyManage)
+  39127: (SS, HS, gS) => {
+    function tS(SS) {
+      return !(!SS.lobbyLeaderboardInfo && !SS.lobbyManage)
     }
-    Ik.d(Fk, {
-      b: () => Xk
+    gS.d(HS, {
+      e: () => tS
     })
   },
-  36840: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => ik,
-      e: () => Tk
+  36835: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => XS,
+      d: () => bS
     });
-    let Xk = () => null;
+    let tS = () => null;
 
-    function Tk(kk) {
-      Xk = kk
+    function bS(SS) {
+      tS = SS
     }
 
-    function ik(kk, Fk) {
-      return Xk(kk, Fk)
+    function XS(SS, HS) {
+      return tS(SS, HS)
     }
   },
-  40602: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => wk,
-      g: () => Pk,
-      h: () => xk,
-      l: () => Hk
+  40637: (SS, HS, gS) => {
+    gS.d(HS, {
+      c: () => jS,
+      f: () => PS,
+      i: () => nS,
+      l: () => GS
     });
-    var Xk = Ik(34),
-      Tk = Ik(40604),
-      ik = Ik(40596),
-      yk = Ik(40609),
-      lk = Ik(40598),
-      ak = Ik(40614),
-      qk = Ik(40636);
+    var tS = gS(31),
+      bS = gS(40643),
+      XS = gS(40625),
+      xS = gS(40649),
+      NS = gS(40632),
+      qS = gS(40655),
+      uS = gS(40666);
 
-    function Lk(kk) {
-      var Fk, Ik;
-      const Xk = (0, ik.k)();
-      return Xk ? null === (Fk = (0, Tk.e)(Xk.api, kk[0], kk[1], kk[2])) || void 0 === Fk || null === (Ik = Fk.persisted) || void 0 === Ik ? void 0 : Ik.shared : void 0
+    function IS(SS) {
+      var HS, gS;
+      const tS = (0, XS.h)();
+      return tS ? null === (HS = (0, bS.c)(tS.api, SS[0], SS[1], SS[2])) || void 0 === HS || null === (gS = HS.persisted) || void 0 === gS ? void 0 : gS.shared : void 0
     }
 
-    function tk(kk) {
-      return `${kk[0]},${kk[1]},${kk[2]}`
+    function fS(SS) {
+      return `${SS[0]},${SS[1]},${SS[2]}`
     }
-    const Zk = new Map;
-    let jk = null,
-      ek = 0;
+    const kS = new Map;
+    let aS = null,
+      KS = 0;
 
-    function wk() {
-      return ek
+    function jS() {
+      return KS
     }
 
-    function Hk(kk) {
-      const Fk = null !== jk && jk.key === tk(kk.pos) ? jk.type : null;
-      if (null === Fk) return kk;
-      let Ik = null;
-      if ("Iron" === Fk) {
+    function GS(SS) {
+      const HS = null !== aS && aS.key === fS(SS.pos) ? aS.type : null;
+      if (null === HS) return SS;
+      let gS = null;
+      if ("Iron" === HS) {
         const {
-          cachedPasskey: Fk,
-          ...Xk
-        } = Jk(kk.pos);
-        Ik = {
-          yy: null !== Fk && void 0 !== Fk ? Fk : [0, 0, 0, 0],
-          ...Xk
+          cachedPasskey: HS,
+          ...tS
+        } = CS(SS.pos);
+        gS = {
+          Xx: null !== HS && void 0 !== HS ? HS : [0, 0, 0, 0],
+          ...tS
         }
       }
       return {
-        ...kk,
-        type: Fk,
-        ironChest: Ik
+        ...SS,
+        type: HS,
+        ironChest: gS
       }
     }
 
-    function Jk(kk) {
-      const Fk = Lk(kk),
-        Ik = null === Fk || void 0 === Fk ? void 0 : Fk.ownerDbId,
-        Xk = function(kk) {
-          var Fk;
-          let Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Lk(kk);
-          const Xk = tk(kk),
-            Tk = Zk.get(Xk);
-          return Tk ? Tk.lastOpened < (null !== (Fk = null === Ik || void 0 === Ik ? void 0 : Ik.passkeyLastUpdated) && void 0 !== Fk ? Fk : 0) ? (Zk.delete(Xk), null) : [...Tk.yy] : null
-        }(kk, Fk);
-      return void 0 === Ik ? {
-        cachedPasskey: Xk
+    function CS(SS) {
+      const HS = IS(SS),
+        gS = null === HS || void 0 === HS ? void 0 : HS.ownerDbId,
+        tS = function(SS) {
+          var HS;
+          let gS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : IS(SS);
+          const tS = fS(SS),
+            bS = kS.get(tS);
+          return bS ? bS.lastOpened < (null !== (HS = null === gS || void 0 === gS ? void 0 : gS.passkeyLastUpdated) && void 0 !== HS ? HS : 0) ? (kS.delete(tS), null) : [...bS.Xx] : null
+        }(SS, HS);
+      return void 0 === gS ? {
+        cachedPasskey: tS
       } : {
-        ownerDbId: Ik,
-        cachedPasskey: Xk
+        ownerDbId: gS,
+        cachedPasskey: tS
       }
-    }(0, qk.l)(yk.d, (kk => {
-      const Fk = (0, ak.e)(yk.d, kk);
-      if (!(0, ak.c)(Fk) || Fk.GX) return;
-      if (ek++, !Fk.SX || null === Fk.EX) return void(jk = null);
-      const Ik = tk(Fk.EX);
-      jk = {
-        key: Ik,
-        type: Fk.vX
-      }, null !== Fk.OX && Zk.set(Ik, {
-        yy: [...Fk.OX],
+    }(0, uS.l)(xS.d, (SS => {
+      const HS = (0, qS.e)(xS.d, SS);
+      if (!(0, qS.b)(HS) || HS.vt) return;
+      if (KS++, !HS.Zt || null === HS.dt) return void(aS = null);
+      const gS = fS(HS.dt);
+      aS = {
+        key: gS,
+        type: HS.Ot
+      }, null !== HS.ct && kS.set(gS, {
+        Xx: [...HS.ct],
         lastOpened: Date.now()
       })
-    })), (0, qk.f)((() => {
-      Zk.clear(), jk = null, ek++
-    })), (0, qk.j)((() => {
-      null !== jk && (jk = null, ek++, Xk.g.GL("chestToggleFromServer", !1, !0))
+    })), (0, uS.f)((() => {
+      kS.clear(), aS = null, KS++
+    })), (0, uS.h)((() => {
+      null !== aS && (aS = null, KS++, tS.k.cj("chestToggleFromServer", !1, !0))
     }));
-    const xk = {
+    const nS = {
         boardEditRequested: {
-          watch: kk => (0, Xk.i)("EditBoard", (Fk => {
+          watch: SS => (0, tS.m)("EditBoard", (HS => {
             let {
-              pos: Ik
-            } = Fk;
-            if (null === Ik) return void kk(null);
-            const Xk = (0, ik.k)(),
-              Tk = (0, ik.y)();
-            Xk && Tk && kk(Tk.readBoardToEdit(Xk.api, Xk.chunks, Ik))
+              pos: gS
+            } = HS;
+            if (null === gS) return void SS(null);
+            const tS = (0, XS.h)(),
+              bS = (0, XS.q)();
+            tS && bS && SS(bS.readBoardToEdit(tS.api, tS.chunks, gS))
           }))
         },
         ironChestOpenRequested: {
-          watch: kk => (0, Xk.i)("OpenIronChest", (Fk => {
+          watch: SS => (0, tS.m)("OpenIronChest", (HS => {
             let {
-              pos: Ik
-            } = Fk;
-            kk(function(kk) {
+              pos: gS
+            } = HS;
+            SS(function(SS) {
               return {
-                pos: kk,
-                ...Jk(kk)
+                pos: SS,
+                ...CS(SS)
               }
-            }(Ik))
+            }(gS))
           }))
         }
       },
-      Pk = {
-        writeOnBoard(kk) {
-          var Fk;
+      PS = {
+        writeOnBoard(SS) {
+          var HS;
           let {
-            pos: Ik,
-            text: Xk,
-            textSize: Tk
-          } = kk;
-          null === (Fk = (0, ik.k)()) || void 0 === Fk || Fk.send(lk.e.UpdateBoard, (0, lk.ab)({
-            Wy: Ik,
-            Yy: Xk,
-            Ay: Tk
+            pos: gS,
+            text: tS,
+            textSize: bS
+          } = SS;
+          null === (HS = (0, XS.h)()) || void 0 === HS || HS.send(NS.b.UpdateBoard, (0, NS.W)({
+            sx: gS,
+            Bx: tS,
+            Mx: bS
           }))
         },
-        writeBook(kk) {
-          var Fk;
+        writeBook(SS) {
+          var HS;
           let {
-            pages: Ik,
-            title: Xk,
-            published: Tk
-          } = kk;
-          null === (Fk = (0, ik.k)()) || void 0 === Fk || Fk.send(lk.e.UpdateBook, (0, lk.db)({
-            wq: Ik,
-            Hq: Xk,
-            Jq: Tk
+            pages: gS,
+            title: tS,
+            published: bS
+          } = SS;
+          null === (HS = (0, XS.h)()) || void 0 === HS || HS.send(NS.b.UpdateBook, (0, NS._)({
+            ju: gS,
+            Gu: tS,
+            Cu: bS
           }))
         },
-        writeNameTag(kk) {
-          var Fk;
-          null === (Fk = (0, ik.k)()) || void 0 === Fk || Fk.send(lk.e.UpdateNameTag, kk)
+        writeNameTag(SS) {
+          var HS;
+          null === (HS = (0, XS.h)()) || void 0 === HS || HS.send(NS.b.UpdateNameTag, SS)
         },
-        setCustomLobbyBlock(kk) {
+        setCustomLobbyBlock(SS) {
           let {
-            pos: Fk,
-            blockName: Ik
-          } = kk;
-          const Xk = (0, ik.y)(),
-            Tk = (0, ik.k)();
-          Xk && Tk && Tk.send(lk.e.SetCustomLobbyBlock, (0, lk.O)({
-            iL: Xk.blockIdOf(Ik),
-            TL: Fk
+            pos: HS,
+            blockName: gS
+          } = SS;
+          const tS = (0, XS.q)(),
+            bS = (0, XS.h)();
+          tS && bS && bS.send(NS.b.SetCustomLobbyBlock, (0, NS.K)({
+            XI: tS.blockIdOf(gS),
+            bI: HS
           }))
         }
       }
   },
-  40658: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => ak,
-      d: () => yk,
-      g: () => lk
+  40681: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => qS,
+      d: () => xS,
+      h: () => NS
     });
-    var Xk = Ik(40583),
-      Tk = Ik(4792),
-      ik = Ik(40596);
+    var tS = gS(40612),
+      bS = gS(4911),
+      XS = gS(40625);
 
-    function yk() {
-      var kk;
-      const Fk = null === (kk = (0, ik.k)()) || void 0 === kk ? void 0 : kk.api.localId;
-      return void 0 === Fk || Fk === Xk.Yc ? null : String(Fk)
+    function xS() {
+      var SS;
+      const HS = null === (SS = (0, XS.h)()) || void 0 === SS ? void 0 : SS.api.localId;
+      return void 0 === HS || HS === tS.Sc ? null : String(HS)
     }
 
-    function lk(kk) {
-      const Fk = (0, ik.k)();
-      if (null !== Fk) return kk(Fk);
-      let Ik = null;
-      const Xk = (0, Tk.u)((() => {
-        const Fk = (0, ik.k)();
-        null !== Fk && null === Ik && (Xk(), Ik = kk(Fk))
+    function NS(SS) {
+      const HS = (0, XS.h)();
+      if (null !== HS) return SS(HS);
+      let gS = null;
+      const tS = (0, bS.t)((() => {
+        const HS = (0, XS.h)();
+        null !== HS && null === gS && (tS(), gS = SS(HS))
       }));
       return () => {
-        var kk;
-        Xk(), null === (kk = Ik) || void 0 === kk || kk()
+        var SS;
+        tS(), null === (SS = gS) || void 0 === SS || SS()
       }
     }
 
-    function ak(kk, Fk, Ik) {
+    function qS(SS, HS, gS) {
       return {
         current: () => {
-          const Ik = (0, ik.k)();
-          return null === Ik ? Fk : kk(Ik)()
+          const gS = (0, XS.h)();
+          return null === gS ? HS : SS(gS)()
         },
-        watch: Fk => lk((Xk => {
-          const Tk = kk(Xk);
-          let ik = Tk();
-          return Fk(ik), Ik((() => {
-            const kk = Tk();
-            kk !== ik && (ik = kk, Fk(kk))
+        watch: HS => NS((tS => {
+          const bS = SS(tS);
+          let XS = bS();
+          return HS(XS), gS((() => {
+            const SS = bS();
+            SS !== XS && (XS = SS, HS(SS))
           }))
         }))
       }
     }
   },
-  40649: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => qk
+  40678: (SS, HS, gS) => {
+    gS.d(HS, {
+      e: () => uS
     });
-    var Xk = Ik(40596),
-      Tk = Ik(40658),
-      ik = Ik(40661);
+    var tS = gS(40625),
+      bS = gS(40681),
+      XS = gS(40689);
 
-    function yk() {
-      var kk, Fk;
-      return null !== (kk = null === (Fk = (0, Xk.k)()) || void 0 === Fk ? void 0 : Fk.itemBridgeSources) && void 0 !== kk ? kk : ik.b
+    function xS() {
+      var SS, HS;
+      return null !== (SS = null === (HS = (0, tS.h)()) || void 0 === HS ? void 0 : HS.itemBridgeSources) && void 0 !== SS ? SS : XS.e
     }
 
-    function lk(kk) {
+    function NS(SS) {
       return {
-        current: () => yk().states[kk].current(),
-        watch: Fk => (0, Tk.g)((Ik => {
-          const Xk = Ik.itemBridgeSources.states[kk];
-          return Fk(Xk.current()), Xk.watch(Fk)
+        current: () => xS().states[SS].current(),
+        watch: HS => (0, bS.h)((gS => {
+          const tS = gS.itemBridgeSources.states[SS];
+          return HS(tS.current()), tS.watch(HS)
         }))
       }
     }
 
-    function ak(kk) {
+    function qS(SS) {
       return {
-        watch: Fk => (0, Tk.g)((Ik => Ik.itemBridgeSources.events[kk].watch(Fk)))
+        watch: HS => (0, bS.h)((gS => gS.itemBridgeSources.events[SS].watch(HS)))
       }
     }
-    const qk = {
+    const uS = {
       states: {
-        inventory: lk("inventory"),
-        hotbar: lk("hotbar"),
-        crafting: lk("crafting"),
-        heldItemAim: lk("heldItemAim")
+        inventory: NS("inventory"),
+        hotbar: NS("hotbar"),
+        crafting: NS("crafting"),
+        heldItemAim: NS("heldItemAim")
       },
       events: {
-        hotbarSlotRequested: ak("hotbarSlotRequested"),
-        hotbarScrolled: ak("hotbarScrolled"),
-        numberKeyPressed: ak("numberKeyPressed"),
-        inventoryDropRequested: ak("inventoryDropRequested"),
-        chestToggled: ak("chestToggled"),
-        chestRefreshed: ak("chestRefreshed"),
-        inventorySynced: ak("inventorySynced"),
-        enchantingTableOpened: ak("enchantingTableOpened")
+        hotbarSlotRequested: qS("hotbarSlotRequested"),
+        hotbarScrolled: qS("hotbarScrolled"),
+        numberKeyPressed: qS("numberKeyPressed"),
+        inventoryDropRequested: qS("inventoryDropRequested"),
+        chestToggled: qS("chestToggled"),
+        chestRefreshed: qS("chestRefreshed"),
+        inventorySynced: qS("inventorySynced"),
+        enchantingTableOpened: qS("enchantingTableOpened")
       },
       commands: {
-        selectHotbarSlot: kk => yk().commands.selectHotbarSlot(kk),
-        removeInventoryItem: kk => yk().commands.removeInventoryItem(kk),
-        swapInventorySlots: kk => yk().commands.swapInventorySlots(kk),
-        moveInventoryItem: kk => yk().commands.moveInventoryItem(kk),
-        quickMoveInventoryItem: kk => yk().commands.quickMoveInventoryItem(kk),
-        closeChest: kk => yk().commands.closeChest(kk),
-        focusCrafting: kk => yk().commands.focusCrafting(kk),
-        craftRecipe: kk => yk().commands.craftRecipe(kk),
-        salvageItem: kk => yk().commands.salvageItem(kk),
-        enchantItem: kk => yk().commands.enchantItem(kk)
+        selectHotbarSlot: SS => xS().commands.selectHotbarSlot(SS),
+        removeInventoryItem: SS => xS().commands.removeInventoryItem(SS),
+        swapInventorySlots: SS => xS().commands.swapInventorySlots(SS),
+        moveInventoryItem: SS => xS().commands.moveInventoryItem(SS),
+        quickMoveInventoryItem: SS => xS().commands.quickMoveInventoryItem(SS),
+        closeChest: SS => xS().commands.closeChest(SS),
+        focusCrafting: SS => xS().commands.focusCrafting(SS),
+        craftRecipe: SS => xS().commands.craftRecipe(SS),
+        salvageItem: SS => xS().commands.salvageItem(SS),
+        enchantItem: SS => xS().commands.enchantItem(SS)
       },
       queries: {
-        enchantingOffer: kk => yk().queries.enchantingOffer(kk)
+        enchantingOffer: SS => xS().queries.enchantingOffer(SS)
       }
     }
   },
-  40661: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => lk
+  40689: (SS, HS, gS) => {
+    gS.d(HS, {
+      e: () => NS
     });
-    var Xk = Ik(39629);
+    var tS = gS(39690);
 
-    function Tk(kk) {
+    function bS(SS) {
       return {
-        current: () => kk,
+        current: () => SS,
         watch: () => () => {}
       }
     }
 
-    function ik() {}
-    const yk = Object.freeze([0, 0, 0]),
-      lk = {
+    function XS() {}
+    const xS = Object.freeze([0, 0, 0]),
+      NS = {
         states: {
-          health: Tk({
+          health: bS({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: Tk({
+          inventory: bS({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -329,63 +329,63 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: Tk({
+          hotbar: bS({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: Tk({
+          stationItems: bS({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: Tk({}),
-          creativeVisibility: Tk({
+          itemInfo: bS({}),
+          creativeVisibility: bS({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: Tk(null),
-          heldItemAim: Tk({
+          aura: bS(null),
+          heldItemAim: bS({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: Tk(!1),
-          gliderBoostFuel: Tk(0),
-          flight: Tk({
+          crouching: bS(!1),
+          gliderBoostFuel: bS(0),
+          flight: bS({
             canFly: !1,
             flying: !1
           }),
-          crafting: Tk({
+          crafting: bS({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: Tk({
+          players: bS({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: Tk({}),
-          fullInventory: Tk(!1),
-          crosshairTarget: Tk({
+          lobbyLeaderboardRows: bS({}),
+          fullInventory: bS(!1),
+          crosshairTarget: bS({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: Tk(!0),
-          freeCamera: Tk({
+          localPlayerAlive: bS(!0),
+          freeCamera: bS({
             allowed: !1,
             movesFly: !1
           }),
-          replay: Tk(null),
-          replayEdits: Tk(null),
-          replayRecorder: Tk({
+          replay: bS(null),
+          replayEdits: bS(null),
+          replayRecorder: bS({
             recording: !1,
             clipping: !1,
             hasClipBuffer: !1,
             seconds: 0
           }),
-          replayVideoExporting: Tk(!1)
+          replayVideoExporting: bS(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -447,87 +447,87 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: ik,
+          selectHotbarSlot: XS,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: ik,
-          setInventoryOpen: ik,
-          changeIronChestPasskey: ik,
-          dragReplayCamera: ik,
-          applyTemporaryThirdPerson: ik,
-          holdEmoteWheel: ik,
-          recordFlyingMiddleText: ik,
-          focusCrafting: ik,
+          closeChest: XS,
+          setInventoryOpen: XS,
+          changeIronChestPasskey: XS,
+          dragReplayCamera: XS,
+          applyTemporaryThirdPerson: XS,
+          holdEmoteWheel: XS,
+          recordFlyingMiddleText: XS,
+          focusCrafting: XS,
           craftRecipe: () => ({
-            il: 0,
-            jy: null,
+            XN: 0,
+            jx: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: ik,
-          setShopOpen: ik,
-          buyShopItem: ik,
-          lobbyManage: ik,
-          sendChatMessage: ik,
-          ignorePlayer: ik,
-          reportPlayer: ik,
-          reportWorldCodeChat: ik,
-          requestDiscordReportKey: ik,
-          reportLobbyOrGame: ik,
-          playEmote: ik,
-          updateMyCosmetic: ik,
-          writeOnBoard: ik,
-          writeBook: ik,
-          writeNameTag: ik,
-          setCustomLobbyBlock: ik,
-          openIronChest: ik,
-          sendCodeCollab: ik,
-          clickCodeBlock: ik,
-          bindCustomButtonKeys: ik,
-          pressCustomButton: ik,
-          moveReplayFreecam: ik,
-          holdReplayFreecamVertical: ik,
-          respawn: ik,
-          wakeUp: ik,
-          requestLeaderboard: ik,
-          completeTask: ik,
-          setServerCookie: ik,
-          answerUiRequest: ik,
-          chooseRewardedAd: ik,
-          setCameraZoom: ik,
-          setFreeCameraMovesFly: ik,
-          setBlockHighlight: ik,
-          setCrosshairInteractPrompt: ik,
-          setLookSensitivity: ik,
-          replayAction: ik,
-          setReplayPlaying: ik,
-          seekReplay: ik,
-          setReplayCameraMode: ik,
-          syncReplayCameraMode: ik,
-          setReplayCameraKeyframe: ik,
-          moveReplayCameraKeyframe: ik,
-          deleteReplayCameraKeyframes: ik,
-          setReplayPlaybackMark: ik,
+          enchantItem: XS,
+          setShopOpen: XS,
+          buyShopItem: XS,
+          lobbyManage: XS,
+          sendChatMessage: XS,
+          ignorePlayer: XS,
+          reportPlayer: XS,
+          reportWorldCodeChat: XS,
+          requestDiscordReportKey: XS,
+          reportLobbyOrGame: XS,
+          playEmote: XS,
+          updateMyCosmetic: XS,
+          writeOnBoard: XS,
+          writeBook: XS,
+          writeNameTag: XS,
+          setCustomLobbyBlock: XS,
+          openIronChest: XS,
+          sendCodeCollab: XS,
+          clickCodeBlock: XS,
+          bindCustomButtonKeys: XS,
+          pressCustomButton: XS,
+          moveReplayFreecam: XS,
+          holdReplayFreecamVertical: XS,
+          respawn: XS,
+          wakeUp: XS,
+          requestLeaderboard: XS,
+          completeTask: XS,
+          setServerCookie: XS,
+          answerUiRequest: XS,
+          chooseRewardedAd: XS,
+          setCameraZoom: XS,
+          setFreeCameraMovesFly: XS,
+          setBlockHighlight: XS,
+          setCrosshairInteractPrompt: XS,
+          setLookSensitivity: XS,
+          replayAction: XS,
+          setReplayPlaying: XS,
+          seekReplay: XS,
+          setReplayCameraMode: XS,
+          syncReplayCameraMode: XS,
+          setReplayCameraKeyframe: XS,
+          moveReplayCameraKeyframe: XS,
+          deleteReplayCameraKeyframes: XS,
+          setReplayPlaybackMark: XS,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: ik,
-          exportReplayVideo: ik,
-          toggleRecording: ik,
-          saveClip: ik,
-          setRecorderPrefs: ik,
-          setReplayViewerOpen: ik
+          holdReplayForShaderPackFailure: XS,
+          exportReplayVideo: XS,
+          toggleRecording: XS,
+          saveClip: XS,
+          setRecorderPrefs: XS,
+          setReplayViewerOpen: XS
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => Xk.c,
-          worldCodeAiGameState: () => Xk.f
+          worldCodeAiChunk: () => tS.d,
+          worldCodeAiGameState: () => tS.h
         },
         lookups: {
-          localPos: () => yk,
+          localPos: () => xS,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -545,316 +545,316 @@ export const modules = {
         }
       }
   },
-  40592: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => Sk,
-      g: () => zk,
-      h: () => vk,
-      j: () => Vk,
-      n: () => Qk
+  40616: (SS, HS, gS) => {
+    gS.d(HS, {
+      e: () => JS,
+      i: () => ZS,
+      j: () => OS,
+      m: () => hS,
+      o: () => DS
     });
-    var Xk = Ik(39243),
-      Tk = Ik(1217),
-      ik = Ik(1894),
-      yk = Ik(1905),
-      lk = Ik(3229),
-      ak = Ik(36840),
-      qk = Ik(1301),
-      Lk = Ik(40596),
-      tk = Ik(4814),
-      Zk = Ik(2331),
-      jk = Ik(40598),
-      ek = Ik(40602),
-      wk = Ik(40649);
-    let Hk = null;
+    var tS = gS(39248),
+      bS = gS(1309),
+      XS = gS(2083),
+      xS = gS(2097),
+      NS = gS(3437),
+      qS = gS(36835),
+      uS = gS(1400),
+      IS = gS(40625),
+      fS = gS(4954),
+      kS = gS(2510),
+      aS = gS(40632),
+      KS = gS(40637),
+      jS = gS(40678);
+    let GS = null;
 
-    function Jk(kk) {
-      const Fk = new Map,
-        Ik = Ik => {
-          if ("string" !== typeof Ik) return;
-          let Xk = Fk.get(Ik);
-          return void 0 === Xk && (Xk = kk(Ik), void 0 !== Xk && Fk.set(Ik, Xk)), Xk
+    function CS(SS) {
+      const HS = new Map,
+        gS = gS => {
+          if ("string" !== typeof gS) return;
+          let tS = HS.get(gS);
+          return void 0 === tS && (tS = SS(gS), void 0 !== tS && HS.set(gS, tS)), tS
         };
       return new Proxy({}, {
-        get: (kk, Fk) => Ik(Fk),
-        has: (kk, Fk) => void 0 !== Ik(Fk)
+        get: (SS, HS) => gS(HS),
+        has: (SS, HS) => void 0 !== gS(HS)
       })
     }
 
-    function xk(kk) {
-      const Fk = (0, lk.e)(kk);
-      return void 0 !== Fk && (0, lk.i)(Fk) === kk
+    function nS(SS) {
+      const HS = (0, NS.d)(SS);
+      return void 0 !== HS && (0, NS.e)(HS) === SS
     }
 
-    function Pk(kk) {
-      var Fk;
-      const Ik = null === (Fk = (0, Lk.k)()) || void 0 === Fk ? void 0 : Fk.tables;
-      if (void 0 === Ik || !xk(kk)) return;
-      const Xk = {
-          displayName: Ik.getDisplayName(kk)
+    function PS(SS) {
+      var HS;
+      const gS = null === (HS = (0, IS.h)()) || void 0 === HS ? void 0 : HS.tables;
+      if (void 0 === gS || !nS(SS)) return;
+      const tS = {
+          displayName: gS.getDisplayName(SS)
         },
-        Tk = Ik.getItemStat(kk, "description");
-      void 0 !== Tk && null !== Tk && (Xk.description = Tk);
+        bS = gS.getItemStat(SS, "description");
+      void 0 !== bS && null !== bS && (tS.description = bS);
       const {
-        rootName: ik
-      } = Ik.getMetaInfo(kk);
-      ik !== kk && (Xk.rootName = ik);
-      const yk = Ik.getItemStat(kk, "armourReduction");
-      return void 0 !== yk && null !== yk && (Xk.armourReduction = yk), Xk
-    }(0, Lk.A)((kk => {
-      Hk = kk
+        rootName: XS
+      } = gS.getMetaInfo(SS);
+      XS !== SS && (tS.rootName = XS);
+      const xS = gS.getItemStat(SS, "armourReduction");
+      return void 0 !== xS && null !== xS && (tS.armourReduction = xS), tS
+    }(0, IS.t)((SS => {
+      GS = SS
     }));
-    const Kk = (0, yk.j)("DisplayName", "Description");
+    const QS = (0, xS.j)("DisplayName", "Description");
 
-    function Qk() {
-      return Boolean(ik.e.get("useInventory") && ik.e.get("useFullInventory"))
+    function DS() {
+      return Boolean(XS.d.get("useInventory") && XS.d.get("useFullInventory"))
     }
-    let sk = null;
-    const Vk = {
+    let wS = null;
+    const hS = {
         inventory: function() {
-          const kk = wk.c.states.inventory;
-          let Fk = null;
-          const Ik = kk => {
-            var Ik;
-            return null === kk.chest ? kk : ((null === (Ik = Fk) || void 0 === Ik ? void 0 : Ik.from) === kk && Fk.chestVersion === (0, ek.d)() || (Fk = {
-              from: kk,
-              chestVersion: (0, ek.d)(),
+          const SS = jS.e.states.inventory;
+          let HS = null;
+          const gS = SS => {
+            var gS;
+            return null === SS.chest ? SS : ((null === (gS = HS) || void 0 === gS ? void 0 : gS.from) === SS && HS.chestVersion === (0, KS.c)() || (HS = {
+              from: SS,
+              chestVersion: (0, KS.c)(),
               view: {
-                ...kk,
-                chest: (0, ek.l)(kk.chest)
+                ...SS,
+                chest: (0, KS.l)(SS.chest)
               }
-            }), Fk.view)
+            }), HS.view)
           };
           return {
-            current: () => Ik(kk.current()),
-            watch: Fk => kk.watch((kk => {
-              Fk(Ik(kk))
+            current: () => gS(SS.current()),
+            watch: HS => SS.watch((SS => {
+              HS(gS(SS))
             }))
           }
         }(),
-        crafting: wk.c.states.crafting,
+        crafting: jS.e.states.crafting,
         stationItems: {
           current() {
-            var kk;
-            return (null === (kk = sk) || void 0 === kk ? void 0 : kk.namesVersion) !== (0, lk.k)() && (sk = {
-              namesVersion: (0, lk.k)(),
+            var SS;
+            return (null === (SS = wS) || void 0 === SS ? void 0 : SS.namesVersion) !== (0, NS.g)() && (wS = {
+              namesVersion: (0, NS.g)(),
               items: {
-                enchantable: Jk((kk => {
-                  const Fk = (0, lk.e)(kk);
-                  return void 0 !== Fk && null !== Hk && Hk.enchantmentPerksOf(Fk).length > 0 || void 0
+                enchantable: CS((SS => {
+                  const HS = (0, NS.d)(SS);
+                  return void 0 !== HS && null !== GS && GS.enchantmentPerksOf(HS).length > 0 || void 0
                 })),
-                salvageable: Jk((kk => !(!xk(kk) || null === (0, ak.c)(kk)) || void 0))
+                salvageable: CS((SS => !(!nS(SS) || null === (0, qS.b)(SS)) || void 0))
               }
-            }), sk.items
+            }), wS.items
           },
           watch: () => () => {}
         },
         itemInfo: function() {
-          let kk = null;
-          const Fk = () => {
-            var Fk;
-            return (null === (Fk = kk) || void 0 === Fk ? void 0 : Fk.namesVersion) !== (0, lk.k)() && (kk = {
-              namesVersion: (0, lk.k)(),
-              infos: Jk(Pk)
-            }), kk.infos
+          let SS = null;
+          const HS = () => {
+            var HS;
+            return (null === (HS = SS) || void 0 === HS ? void 0 : HS.namesVersion) !== (0, NS.g)() && (SS = {
+              namesVersion: (0, NS.g)(),
+              infos: CS(PS)
+            }), SS.infos
           };
           return {
-            current: Fk,
-            watch: Ik => (0, yk.s)((Xk => {
-              Xk.some(Kk) && (kk = null, Ik(Fk()))
+            current: HS,
+            watch: gS => (0, xS.w)((tS => {
+              tS.some(QS) && (SS = null, gS(HS()))
             }))
           }
         }(),
-        creativeVisibility: (0, yk.p)((function() {
-          const kk = {};
-          for (const Tk of null !== (Fk = null === (Ik = Hk) || void 0 === Ik ? void 0 : Ik.creativeItemIds()) && void 0 !== Fk ? Fk : []) {
-            var Fk, Ik, yk, ak;
-            const qk = (0, lk.i)(Tk);
-            if (void 0 === qk) continue;
-            const Lk = null !== (yk = ik.e.get((0, Xk.g)(qk, "showInCreativeInven"))) && void 0 !== yk ? yk : null === (ak = Hk) || void 0 === ak ? void 0 : ak.showInCreativeInvenOf(Tk);
-            "boolean" === typeof Lk && (kk[qk] = Lk)
+        creativeVisibility: (0, xS.r)((function() {
+          const SS = {};
+          for (const bS of null !== (HS = null === (gS = GS) || void 0 === gS ? void 0 : gS.creativeItemIds()) && void 0 !== HS ? HS : []) {
+            var HS, gS, xS, qS;
+            const uS = (0, NS.e)(bS);
+            if (void 0 === uS) continue;
+            const IS = null !== (xS = XS.d.get((0, tS.e)(uS, "showInCreativeInven"))) && void 0 !== xS ? xS : null === (qS = GS) || void 0 === qS ? void 0 : qS.showInCreativeInvenOf(bS);
+            "boolean" === typeof IS && (SS[uS] = IS)
           }
           return {
-            publicLobby: (0, Tk.K)((0, qk.d)().lobbyName),
-            shownInGame: kk
+            publicLobby: (0, bS.P)((0, uS.e)().lobbyName),
+            shownInGame: SS
           }
-        }), ["connectedGameChanged"], (0, yk.j)("ShowInCreativeInven")),
-        fullInventory: (0, yk.p)(Qk, [], (0, yk.n)("useInventory", "useFullInventory"))
+        }), ["connectedGameChanged"], (0, xS.j)("ShowInCreativeInven")),
+        fullInventory: (0, xS.r)(DS, [], (0, xS.n)("useInventory", "useFullInventory"))
       },
-      zk = {
-        inventoryDropRequested: wk.c.events.inventoryDropRequested,
-        chestToggled: wk.c.events.chestToggled,
-        chestRefreshed: wk.c.events.chestRefreshed,
-        inventorySynced: wk.c.events.inventorySynced,
-        enchantingTableOpened: wk.c.events.enchantingTableOpened
+      ZS = {
+        inventoryDropRequested: jS.e.events.inventoryDropRequested,
+        chestToggled: jS.e.events.chestToggled,
+        chestRefreshed: jS.e.events.chestRefreshed,
+        inventorySynced: jS.e.events.inventorySynced,
+        enchantingTableOpened: jS.e.events.enchantingTableOpened
       },
-      Sk = {
-        removeInventoryItem: wk.c.commands.removeInventoryItem,
-        swapInventorySlots: wk.c.commands.swapInventorySlots,
-        moveInventoryItem: wk.c.commands.moveInventoryItem,
-        quickMoveInventoryItem: wk.c.commands.quickMoveInventoryItem,
-        closeChest: wk.c.commands.closeChest,
-        setInventoryOpen(kk) {
-          (0, tk.g)(Zk.A.InventoryOpen, kk ? Zk.A.InventoryOpen : 0)
+      JS = {
+        removeInventoryItem: jS.e.commands.removeInventoryItem,
+        swapInventorySlots: jS.e.commands.swapInventorySlots,
+        moveInventoryItem: jS.e.commands.moveInventoryItem,
+        quickMoveInventoryItem: jS.e.commands.quickMoveInventoryItem,
+        closeChest: jS.e.commands.closeChest,
+        setInventoryOpen(SS) {
+          (0, fS.i)(kS.A.InventoryOpen, SS ? kS.A.InventoryOpen : 0)
         },
-        focusCrafting: wk.c.commands.focusCrafting,
-        craftRecipe: wk.c.commands.craftRecipe,
-        salvageItem: wk.c.commands.salvageItem,
-        enchantItem: wk.c.commands.enchantItem,
-        changeIronChestPasskey(kk) {
-          var Fk;
+        focusCrafting: jS.e.commands.focusCrafting,
+        craftRecipe: jS.e.commands.craftRecipe,
+        salvageItem: jS.e.commands.salvageItem,
+        enchantItem: jS.e.commands.enchantItem,
+        changeIronChestPasskey(SS) {
+          var HS;
           let {
-            pos: Ik,
-            yy: Xk
-          } = kk;
-          null === (Fk = (0, Lk.k)()) || void 0 === Fk || Fk.send(jk.e.ChangeIronChestPasskey, (0, jk.j)({
-            EX: Ik,
-            yy: Xk
+            pos: gS,
+            Xx: tS
+          } = SS;
+          null === (HS = (0, IS.h)()) || void 0 === HS || HS.send(aS.b.ChangeIronChestPasskey, (0, aS.i)({
+            dt: gS,
+            Xx: tS
           }))
         },
-        openIronChest(kk) {
-          var Fk;
+        openIronChest(SS) {
+          var HS;
           let {
-            pos: Ik,
-            yy: Xk
-          } = kk;
-          null === (Fk = (0, Lk.k)()) || void 0 === Fk || Fk.send(jk.e.OpenIronChest, (0, jk.F)({
-            EX: Ik,
-            yy: Xk
+            pos: gS,
+            Xx: tS
+          } = SS;
+          null === (HS = (0, IS.h)()) || void 0 === HS || HS.send(aS.b.OpenIronChest, (0, aS.B)({
+            dt: gS,
+            Xx: tS
           }))
         }
       },
-      vk = {
-        enchantingOffer: wk.c.queries.enchantingOffer
+      OS = {
+        enchantingOffer: jS.e.queries.enchantingOffer
       }
   },
-  40641: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Xk,
-      e: () => Lk,
-      f: () => yk,
-      g: () => Tk,
-      i: () => lk,
-      l: () => qk
+  40672: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => tS,
+      c: () => IS,
+      d: () => xS,
+      h: () => bS,
+      j: () => NS,
+      m: () => uS
     });
-    class Xk extends Error {
+    class tS extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function Tk(kk) {
-      return kk instanceof RangeError && /call stack/i.test(kk.message) || kk instanceof Error && "InternalError" === kk.name && /recursion/i.test(kk.message)
+    function bS(SS) {
+      return SS instanceof RangeError && /call stack/i.test(SS.message) || SS instanceof Error && "InternalError" === SS.name && /recursion/i.test(SS.message)
     }
-    const ik = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const XS = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function yk(kk) {
-      var Fk;
-      return kk instanceof WebAssembly.RuntimeError || kk instanceof Xk || Tk(kk) && ik.test(null !== (Fk = kk.stack) && void 0 !== Fk ? Fk : "")
-    }
-
-    function lk(kk, Fk) {
-      if (yk(kk)) throw kk;
-      console.error(Fk, kk)
+    function xS(SS) {
+      var HS;
+      return SS instanceof WebAssembly.RuntimeError || SS instanceof tS || bS(SS) && XS.test(null !== (HS = SS.stack) && void 0 !== HS ? HS : "")
     }
 
-    function ak(kk, Fk, Ik, Tk, ik) {
-      if (Fk % Tk !== 0 || Fk + Ik > kk.byteLength) throw new Xk(`${ik}: ${Ik} bytes at ${Fk}, ${Tk}-aligned, outside ${kk.byteLength} bytes of memory`)
+    function NS(SS, HS) {
+      if (xS(SS)) throw SS;
+      console.error(HS, SS)
     }
 
-    function qk(kk, Fk, Ik, Xk, Tk) {
-      return 0 === Ik ? null : (ak(Fk, Ik, Xk * kk.BYTES_PER_ELEMENT, kk.BYTES_PER_ELEMENT, Tk), new kk(Fk, Ik, Xk))
+    function qS(SS, HS, gS, bS, XS) {
+      if (HS % bS !== 0 || HS + gS > SS.byteLength) throw new tS(`${XS}: ${gS} bytes at ${HS}, ${bS}-aligned, outside ${SS.byteLength} bytes of memory`)
     }
 
-    function Lk(kk, Fk, Ik, Xk, Tk) {
-      return 0 === Fk ? null : (ak(kk, Fk, Ik, Xk, Tk), new DataView(kk, Fk, Ik))
+    function uS(SS, HS, gS, tS, bS) {
+      return 0 === gS ? null : (qS(HS, gS, tS * SS.BYTES_PER_ELEMENT, SS.BYTES_PER_ELEMENT, bS), new SS(HS, gS, tS))
+    }
+
+    function IS(SS, HS, gS, tS, bS) {
+      return 0 === HS ? null : (qS(SS, HS, gS, tS, bS), new DataView(SS, HS, gS))
     }
   },
-  40596: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      A: () => tk,
-      C: () => ek,
-      e: () => Xk,
-      i: () => Jk,
-      k: () => wk,
-      n: () => Hk,
-      r: () => Zk,
-      u: () => jk,
-      y: () => Lk
+  40625: (SS, HS, gS) => {
+    gS.d(HS, {
+      c: () => tS,
+      f: () => CS,
+      h: () => jS,
+      i: () => GS,
+      k: () => kS,
+      m: () => aS,
+      q: () => IS,
+      t: () => fS,
+      x: () => KS
     });
-    class Xk extends Error {
-      constructor(kk) {
-        super(`the join's code did not load: ${kk instanceof Error?kk.message:String(kk)}`, {
-          cause: kk
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === kk || void 0 === kk ? void 0 : kk.request
+    class tS extends Error {
+      constructor(SS) {
+        super(`the join's code did not load: ${SS instanceof Error?SS.message:String(SS)}`, {
+          cause: SS
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === SS || void 0 === SS ? void 0 : SS.request
       }
     }
-    let Tk = null,
-      ik = null,
-      yk = null;
-    const lk = [];
-    let ak = null;
+    let bS = null,
+      XS = null,
+      xS = null;
+    const NS = [];
+    let qS = null;
 
-    function qk(kk, Fk) {
+    function uS(SS, HS) {
       try {
-        kk(Fk)
-      } catch (Ik) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", Ik)
+        SS(HS)
+      } catch (gS) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", gS)
       }
     }
 
-    function Lk() {
-      return ak
+    function IS() {
+      return qS
     }
 
-    function tk(kk) {
-      lk.push(kk), null !== ak && qk(kk, ak)
+    function fS(SS) {
+      NS.push(SS), null !== qS && uS(SS, qS)
     }
 
-    function Zk(kk) {
-      return Tk ??= Promise.all([Ik.e(72), Ik.e(96), Ik.e(221), Ik.e(77), Ik.e(222), Ik.e(198), Ik.e(95), Ik.e(240), Ik.e(269), Ik.e(197), Ik.e(210), Ik.e(189), Ik.e(196), Ik.e(191), Ik.e(142), Ik.e(87), Ik.e(121), Ik.e(247), Ik.e(56)]).then((() => Ik(42580))).then((Fk => {
-        Fk.loadAudio(kk), ak = Fk;
-        for (const kk of lk) qk(kk, Fk);
-        return Fk
-      })).catch((kk => {
-        throw Tk = null, kk
-      })), Tk
+    function kS(SS) {
+      return bS ??= Promise.all([gS.e(72), gS.e(96), gS.e(221), gS.e(77), gS.e(222), gS.e(198), gS.e(95), gS.e(240), gS.e(269), gS.e(197), gS.e(210), gS.e(189), gS.e(196), gS.e(191), gS.e(142), gS.e(87), gS.e(121), gS.e(247), gS.e(56)]).then((() => gS(42593))).then((HS => {
+        HS.loadAudio(SS), qS = HS;
+        for (const SS of NS) uS(SS, HS);
+        return HS
+      })).catch((SS => {
+        throw bS = null, SS
+      })), bS
     }
-    async function jk(kk, Fk) {
+    async function aS(SS, HS) {
       try {
-        const Ik = await Zk(kk);
-        await Ik.loadClientGame(Fk)
-      } catch (Ik) {
-        throw new Xk(Ik)
+        const gS = await kS(SS);
+        await gS.loadClientGame(HS)
+      } catch (gS) {
+        throw new tS(gS)
       }
     }
 
-    function ek(kk, Fk) {
-      ik = {
-        running: kk,
-        shell: Fk
+    function KS(SS, HS) {
+      XS = {
+        running: SS,
+        shell: HS
       }
     }
 
-    function wk() {
-      return yk
+    function jS() {
+      return xS
     }
-    async function Hk(kk) {
-      const Fk = ik;
-      if ((null === Fk || void 0 === Fk ? void 0 : Fk.running) !== kk) throw new Error("the core's session has ended");
-      const Ik = await Zk(Fk.shell.audio).catch((kk => {
-        throw new Xk(kk)
+    async function GS(SS) {
+      const HS = XS;
+      if ((null === HS || void 0 === HS ? void 0 : HS.running) !== SS) throw new Error("the core's session has ended");
+      const gS = await kS(HS.shell.audio).catch((SS => {
+        throw new tS(SS)
       }));
-      if (null !== yk) return yk;
-      if (ik !== Fk || kk.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (yk = Ik.startGameHost(kk, Fk.shell), null === yk) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return yk
+      if (null !== xS) return xS;
+      if (XS !== HS || SS.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (xS = gS.startGameHost(SS, HS.shell), null === xS) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return xS
     }
 
-    function Jk() {
-      null !== yk && (null !== ak ? ak.endGameHost(yk) : yk.closeGame()), yk = null, ik = null
+    function CS() {
+      null !== xS && (null !== qS ? qS.endGameHost(xS) : xS.closeGame()), xS = null, XS = null
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

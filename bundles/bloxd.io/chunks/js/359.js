@@ -1,27 +1,27 @@
 export const id = 359;
 export const ids = [359];
 export const modules = {
-  61359: (kk, Fk, Ik) => {
-    function Xk(kk, Fk, Ik, Xk, Tk, ik, yk) {
-      const lk = Fk,
-        ak = Xk,
-        qk = Ik;
-      kk[qk + 0] = lk[ak + 0], kk[qk + 1] = lk[ak + 1], kk[qk + 2] = lk[ak + 2], kk[qk + 3] = lk[ak + 3], kk[qk + 4] = lk[ak + 4], kk[qk + 5] = lk[ak + 5], kk[qk + 6] = lk[ak + 6], kk[qk + 7] = lk[ak + 7], kk[qk + 8] = lk[ak + 8], kk[qk + 9] = lk[ak + 9], kk[qk + 10] = lk[ak + 10], kk[qk + 11] = lk[ak + 11], kk[qk + 12] = lk[ak + 12] - Tk, kk[qk + 13] = lk[ak + 13] - ik, kk[qk + 14] = lk[ak + 14] - yk, kk[qk + 15] = lk[ak + 15]
+  61411: (SS, HS, gS) => {
+    function tS(SS, HS, gS, tS, bS, XS, xS) {
+      const NS = HS,
+        qS = tS,
+        uS = gS;
+      SS[uS + 0] = NS[qS + 0], SS[uS + 1] = NS[qS + 1], SS[uS + 2] = NS[qS + 2], SS[uS + 3] = NS[qS + 3], SS[uS + 4] = NS[qS + 4], SS[uS + 5] = NS[qS + 5], SS[uS + 6] = NS[qS + 6], SS[uS + 7] = NS[qS + 7], SS[uS + 8] = NS[qS + 8], SS[uS + 9] = NS[qS + 9], SS[uS + 10] = NS[qS + 10], SS[uS + 11] = NS[qS + 11], SS[uS + 12] = NS[qS + 12] - bS, SS[uS + 13] = NS[qS + 13] - XS, SS[uS + 14] = NS[qS + 14] - xS, SS[uS + 15] = NS[qS + 15]
     }
 
-    function Tk(kk) {
-      return (Fk, Ik, Tk, ik) => {
-        const yk = kk.camera;
-        if (!yk) return void Xk(Fk, Ik, Tk, ik, 0, 0, 0);
-        const lk = yk.worldMatrix;
-        Xk(Fk, Ik, Tk, ik, lk[12], lk[13], lk[14])
+    function bS(SS) {
+      return (HS, gS, bS, XS) => {
+        const xS = SS.camera;
+        if (!xS) return void tS(HS, gS, bS, XS, 0, 0, 0);
+        const NS = xS.worldMatrix;
+        tS(HS, gS, bS, XS, NS[12], NS[13], NS[14])
       }
     }
-    Ik.r(Fk), Ik.d(Fk, {
-      makePackMeshWorld: () => Tk,
-      packMat4IntoF32WithOffset: () => Xk
+    gS.r(HS), gS.d(HS, {
+      makePackMeshWorld: () => bS,
+      packMat4IntoF32WithOffset: () => tS
     })
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

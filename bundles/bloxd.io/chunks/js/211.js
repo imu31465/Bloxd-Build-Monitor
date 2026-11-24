@@ -1,19 +1,19 @@
 export const id = 211;
 export const ids = [211];
 export const modules = {
-  36486: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => yk,
-      f: () => Tk,
-      g: () => ik
+  36503: (SS, HS, gS) => {
+    gS.d(HS, {
+      d: () => xS,
+      e: () => bS,
+      i: () => XS
     });
-    var Xk = Ik(1729);
-    class Tk extends Error {
-      constructor(kk) {
-        super("The game server didn't answer in time"), this.leg = kk, this.name = "SeatRequestTimedOut"
+    var tS = gS(1920);
+    class bS extends Error {
+      constructor(SS) {
+        super("The game server didn't answer in time"), this.leg = SS, this.name = "SeatRequestTimedOut"
       }
     }
-    const ik = new class {
+    const XS = new class {
       constructor() {
         this.count = 0, this.answers = 0, this.waiting = new Set
       }
@@ -25,505 +25,505 @@ export const modules = {
       }
       add() {
         this.count++;
-        for (const kk of this.waiting) kk()
+        for (const SS of this.waiting) SS()
       }
       remove() {
         this.count--
       }
-      whenSlow(kk) {
-        return this.count > 0 || kk.aborted ? Promise.resolve(!kk.aborted) : new Promise((Fk => {
-          const Ik = () => {
-            this.waiting.delete(Ik), Fk(!kk.aborted)
+      whenSlow(SS) {
+        return this.count > 0 || SS.aborted ? Promise.resolve(!SS.aborted) : new Promise((HS => {
+          const gS = () => {
+            this.waiting.delete(gS), HS(!SS.aborted)
           };
-          this.waiting.add(Ik), kk.addEventListener("abort", Ik, {
+          this.waiting.add(gS), SS.addEventListener("abort", gS, {
             once: !0
           })
         }))
       }
     };
-    class yk {
-      constructor(kk) {
-        this.timeout = void 0, this.slow = void 0, this.countedSlow = !1, this.timeout = new Xk.c(45e3, kk), this.slow = new Xk.c(8e3, (() => {
-          this.countedSlow = !0, ik.add()
+    class xS {
+      constructor(SS) {
+        this.timeout = void 0, this.slow = void 0, this.countedSlow = !1, this.timeout = new tS.d(45e3, SS), this.slow = new tS.d(8e3, (() => {
+          this.countedSlow = !0, XS.add()
         }))
       }
       restart() {
-        ik.answer(), this.uncountSlow(), this.timeout.restart(), this.slow.restart()
+        XS.answer(), this.uncountSlow(), this.timeout.restart(), this.slow.restart()
       }
       stop() {
         this.timeout.stop(), this.slow.stop(), this.uncountSlow()
       }
       answered() {
-        this.stop(), ik.answer()
+        this.stop(), XS.answer()
       }
       socketOpened() {
-        this.slow.stop(), this.uncountSlow(), ik.answer()
+        this.slow.stop(), this.uncountSlow(), XS.answer()
       }
       uncountSlow() {
-        this.countedSlow && (this.countedSlow = !1, ik.remove())
+        this.countedSlow && (this.countedSlow = !1, XS.remove())
       }
     }
   },
-  36245: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Xk,
-      h: () => Tk,
-      k: () => ik,
-      m: () => yk
+  36282: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => tS,
+      d: () => bS,
+      h: () => XS,
+      j: () => xS
     });
-    const Xk = 1024,
-      Tk = 1024 * Xk;
+    const tS = 1024,
+      bS = 1024 * tS;
 
-    function ik(kk) {
-      return 2 ** Math.floor(Math.log2(Math.max(1, kk / Tk)))
+    function XS(SS) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, SS / bS)))
     }
 
-    function yk(kk) {
-      return (kk / Tk).toFixed(1)
+    function xS(SS) {
+      return (SS / bS).toFixed(1)
     }
   },
-  36474: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => ik,
-      g: () => ak,
-      h: () => lk,
-      k: () => yk,
-      n: () => qk,
-      r: () => Lk,
-      s: () => Zk
+  36493: (SS, HS, gS) => {
+    gS.d(HS, {
+      d: () => XS,
+      f: () => qS,
+      j: () => NS,
+      m: () => xS,
+      p: () => uS,
+      s: () => IS,
+      u: () => kS
     });
-    var Xk = Ik(187);
-    const Tk = 32 * Ik(36245).h,
-      ik = 6144,
-      yk = 4608,
-      lk = 512,
-      ak = function() {
-        const kk = Zk(Xk.f.maxChunkHorizAddDistance + 1, Xk.f.maxChunkVertAddDistance + 1);
-        let Fk = kk;
-        for (; tk(Fk) < kk;) Fk++;
-        return Fk
+    var tS = gS(198);
+    const bS = 32 * gS(36282).d,
+      XS = 6144,
+      xS = 4608,
+      NS = 512,
+      qS = function() {
+        const SS = kS(tS.e.maxChunkHorizAddDistance + 1, tS.e.maxChunkVertAddDistance + 1);
+        let HS = SS;
+        for (; fS(HS) < SS;) HS++;
+        return HS
       }();
 
-    function qk(kk) {
-      return Math.floor(Tk * kk / ik)
+    function uS(SS) {
+      return Math.floor(bS * SS / XS)
     }
 
-    function Lk(kk) {
-      const Fk = tk(kk);
-      let Ik = Xk.f.maxChunkHorizAddDistance,
-        Tk = Xk.f.maxChunkVertAddDistance;
-      if (Zk(Ik + 1, Tk + 1) <= Fk) return null;
-      for (; Zk(Ik + 1, Tk + 1) > Fk && (Ik > 0 || Tk > 0);) Ik > Tk ? Ik-- : Tk--;
+    function IS(SS) {
+      const HS = fS(SS);
+      let gS = tS.e.maxChunkHorizAddDistance,
+        bS = tS.e.maxChunkVertAddDistance;
+      if (kS(gS + 1, bS + 1) <= HS) return null;
+      for (; kS(gS + 1, bS + 1) > HS && (gS > 0 || bS > 0);) gS > bS ? gS-- : bS--;
       return {
-        horizontal: Ik,
-        vertical: Tk
+        horizontal: gS,
+        vertical: bS
       }
     }
 
-    function tk(kk) {
-      return kk - Math.floor(kk / 6)
+    function fS(SS) {
+      return SS - Math.floor(SS / 6)
     }
 
-    function Zk(kk, Fk) {
-      const Ik = Math.max(kk, Fk);
-      let Xk = 0;
-      for (let Tk = -Ik; Tk <= Ik; Tk++)
-        for (let ik = -Ik; ik <= Ik; ik++)
-          for (let yk = -Ik; yk <= Ik; yk++) jk(kk, Fk, Tk, ik, yk) && Xk++;
-      return Xk
+    function kS(SS, HS) {
+      const gS = Math.max(SS, HS);
+      let tS = 0;
+      for (let bS = -gS; bS <= gS; bS++)
+        for (let XS = -gS; XS <= gS; XS++)
+          for (let xS = -gS; xS <= gS; xS++) aS(SS, HS, bS, XS, xS) && tS++;
+      return tS
     }
 
-    function jk(kk, Fk, Ik, Xk, Tk) {
-      const ik = Ik * Ik + Tk * Tk;
-      return kk === Fk ? ik + Xk * Xk <= kk * kk : kk > Fk ? Math.abs(Xk) <= Fk && ik + Xk * Xk <= kk * kk : ik <= kk * kk && ik + Xk * Xk <= Fk * Fk
+    function aS(SS, HS, gS, tS, bS) {
+      const XS = gS * gS + bS * bS;
+      return SS === HS ? XS + tS * tS <= SS * SS : SS > HS ? Math.abs(tS) <= HS && XS + tS * tS <= SS * SS : XS <= SS * SS && XS + tS * tS <= HS * HS
     }
   },
-  36466: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Kk,
-      g: () => Gk,
-      h: () => nk,
-      i: () => Ok,
-      m: () => Ek
+  36485: (SS, HS, gS) => {
+    gS.d(HS, {
+      c: () => QS,
+      e: () => ES,
+      i: () => vS,
+      m: () => cS,
+      o: () => dS
     });
-    var Xk = Ik(187),
-      Tk = Ik(95),
-      ik = Ik(129),
-      yk = Ik(284),
-      lk = Ik(4371),
-      ak = Ik(650),
-      qk = Ik(36474),
-      Lk = Ik(36479);
-    const tk = 1048576,
-      Zk = 1024 * tk,
-      jk = 400 * tk,
-      ek = 147456,
-      wk = .5,
-      Hk = 1.5 * Zk,
-      Jk = 768 * tk;
+    var tS = gS(198),
+      bS = gS(104),
+      XS = gS(138),
+      xS = gS(321),
+      NS = gS(4518),
+      qS = gS(703),
+      uS = gS(36493),
+      IS = gS(36498);
+    const fS = 1048576,
+      kS = 1024 * fS,
+      aS = 400 * fS,
+      KS = 147456,
+      jS = .5,
+      GS = 1.5 * kS,
+      CS = 768 * fS;
 
-    function xk(kk) {
+    function nS(SS) {
       const {
-        os: Fk,
-        deviceMemory: Ik
-      } = kk;
-      if ("ios" === Fk) switch ((0, yk.e)(kk)) {
+        os: HS,
+        deviceMemory: gS
+      } = SS;
+      if ("ios" === HS) switch ((0, xS.i)(SS)) {
         case "ipad_m":
           return {
-            footprintBytes: Pk(qk.c), basis: "ipad-m", namesLimit: !1
+            footprintBytes: PS(uS.d), basis: "ipad-m", namesLimit: !1
           };
         case "ipad":
           return {
-            footprintBytes: Jk, basis: "ipad", namesLimit: !0
+            footprintBytes: CS, basis: "ipad", namesLimit: !0
           };
         case "iphone_6gb":
           return {
-            footprintBytes: Hk, basis: "iphone-6gb", namesLimit: !0
+            footprintBytes: GS, basis: "iphone-6gb", namesLimit: !0
           };
         case "iphone":
           return {
-            footprintBytes: Jk, basis: "iphone", namesLimit: !0
+            footprintBytes: CS, basis: "iphone", namesLimit: !0
           }
       }
-      return "number" === typeof Ik && Number.isFinite(Ik) && Ik > 0 ? {
-        footprintBytes: Ik * Zk * wk,
-        basis: `memory-${Ik}`,
+      return "number" === typeof gS && Number.isFinite(gS) && gS > 0 ? {
+        footprintBytes: gS * kS * jS,
+        basis: `memory-${gS}`,
         namesLimit: !0
-      } : "android" === Fk ? {
-        footprintBytes: Jk,
+      } : "android" === HS ? {
+        footprintBytes: CS,
         basis: "android",
         namesLimit: !0
       } : {
-        footprintBytes: Pk(qk.k),
+        footprintBytes: PS(uS.m),
         basis: "unreported",
         namesLimit: !1
       }
     }
 
-    function Pk(kk) {
-      return jk + kk * ek
+    function PS(SS) {
+      return aS + SS * KS
     }
 
-    function Kk() {
-      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sk(),
-        Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ik.v;
-      if ("android" !== kk.os || "mobileAndroid" === Fk) return !0;
+    function QS() {
+      let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : JS(),
+        HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : XS.r;
+      if ("android" !== SS.os || "mobileAndroid" === HS) return !0;
       const {
-        footprintBytes: Ik,
-        basis: Xk
-      } = xk(kk);
-      return "android" === Xk || Ik > 2 * Zk
+        footprintBytes: gS,
+        basis: tS
+      } = nS(SS);
+      return "android" === tS || gS > 2 * kS
     }
 
-    function Qk(kk, Fk, Ik) {
-      var Tk, ik;
+    function DS(SS, HS, gS) {
+      var bS, XS;
       let {
-        footprintBytes: yk,
-        basis: lk,
-        namesLimit: ak
-      } = xk(kk);
-      if (Ik) {
-        const kk = Math.min(yk, Pk(qk.c));
-        yk = jk + Math.max(0, kk - jk) / 2, lk += "+killed", ak = !0
+        footprintBytes: xS,
+        basis: NS,
+        namesLimit: qS
+      } = nS(SS);
+      if (gS) {
+        const SS = Math.min(xS, PS(uS.d));
+        xS = aS + Math.max(0, SS - aS) / 2, NS += "+killed", qS = !0
       }
-      null !== Fk && Pk(Fk) < yk && (yk = Pk(Fk), lk += "+learned", ak = !0);
-      const Lk = function(kk) {
-          const Fk = Math.floor((kk - jk) / ek);
-          return Math.min(qk.c, Math.max(qk.h, Fk))
-        }(yk),
-        tk = ak && Lk < qk.c ? Math.min(Lk, qk.g) : Lk,
-        Zk = (0, qk.r)(tk);
+      null !== HS && PS(HS) < xS && (xS = PS(HS), NS += "+learned", qS = !0);
+      const IS = function(SS) {
+          const HS = Math.floor((SS - aS) / KS);
+          return Math.min(uS.d, Math.max(uS.j, HS))
+        }(xS),
+        fS = qS && IS < uS.d ? Math.min(IS, uS.f) : IS,
+        kS = (0, uS.s)(fS);
       return {
-        footprintBytes: yk,
-        shedFootprintBytes: ak ? Math.max(yk, Pk(tk)) : null,
-        chunkCap: tk,
-        maxHorizDistance: null !== (Tk = null === Zk || void 0 === Zk ? void 0 : Zk.horizontal) && void 0 !== Tk ? Tk : Xk.f.maxChunkHorizAddDistance,
-        maxVertDistance: null !== (ik = null === Zk || void 0 === Zk ? void 0 : Zk.vertical) && void 0 !== ik ? ik : Xk.f.maxChunkVertAddDistance,
-        basis: lk
+        footprintBytes: xS,
+        shedFootprintBytes: qS ? Math.max(xS, PS(fS)) : null,
+        chunkCap: fS,
+        maxHorizDistance: null !== (bS = null === kS || void 0 === kS ? void 0 : kS.horizontal) && void 0 !== bS ? bS : tS.e.maxChunkHorizAddDistance,
+        maxVertDistance: null !== (XS = null === kS || void 0 === kS ? void 0 : kS.vertical) && void 0 !== XS ? XS : tS.e.maxChunkVertAddDistance,
+        basis: NS
       }
     }
-    let sk = null,
-      Vk = null,
-      zk = null;
+    let wS = null,
+      hS = null,
+      ZS = null;
 
-    function Sk() {
-      return sk ??= {
-        os: (0, Tk.getOperatingSystem)(),
+    function JS() {
+      return wS ??= {
+        os: (0, bS.getOperatingSystem)(),
         deviceMemory: navigator.deviceMemory,
-        ...(0, yk.i)()
-      }, sk
+        ...(0, xS.k)()
+      }, wS
     }
 
-    function vk() {
-      return Qk(Sk(), (0, lk.f)(), (0, ak.G)("wasm").length > 0)
+    function OS() {
+      return DS(JS(), (0, NS.g)(), (0, qS.P)("wasm").length > 0)
     }
 
-    function Ek() {
-      return zk ??= (0, Lk.i)(Qk(Sk(), null, !1).chunkCap), zk
+    function dS() {
+      return ZS ??= (0, IS.n)(DS(JS(), null, !1).chunkCap), ZS
     }
 
-    function Ok() {
-      return Vk ??= vk(), Vk
+    function cS() {
+      return hS ??= OS(), hS
     }
 
-    function nk() {
-      var kk;
-      return (null !== (kk = Vk) && void 0 !== kk ? kk : vk()).basis
+    function vS() {
+      var SS;
+      return (null !== (SS = hS) && void 0 !== SS ? SS : OS()).basis
     }
 
-    function Gk(kk, Fk) {
-      return kk.setChunkCap(Fk.chunkCap)
+    function ES(SS, HS) {
+      return SS.setChunkCap(HS.chunkCap)
     }
   },
-  36479: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Sk,
-      f: () => Kk,
-      g: () => tk,
-      h: () => Qk,
-      i: () => Jk,
-      l: () => Vk,
-      s: () => zk
+  36498: (SS, HS, gS) => {
+    gS.d(HS, {
+      d: () => JS,
+      h: () => QS,
+      j: () => fS,
+      l: () => DS,
+      n: () => CS,
+      q: () => hS,
+      t: () => ZS
     });
-    var Xk = Ik(36245),
-      Tk = Ik(36474);
-    const ik = 64 * Xk.e,
-      yk = 40 * Xk.h,
-      lk = 36 * Xk.h,
-      ak = 20 * Xk.h,
-      qk = 2 * Xk.h,
-      Lk = 5 * Xk.h;
+    var tS = gS(36282),
+      bS = gS(36493);
+    const XS = 64 * tS.b,
+      xS = 40 * tS.d,
+      NS = 36 * tS.d,
+      qS = 20 * tS.d,
+      uS = 2 * tS.d,
+      IS = 5 * tS.d;
 
-    function tk(kk) {
-      return "footprint" !== kk
+    function fS(SS) {
+      return "footprint" !== SS
     }
-    const Zk = 2 * Xk.h,
-      jk = 4 * Xk.h,
-      ek = 35 * Xk.h + Zk + jk,
-      wk = 6.5 * Xk.h,
-      Hk = 132.5 * Xk.e;
+    const kS = 2 * tS.d,
+      aS = 4 * tS.d,
+      KS = 35 * tS.d + kS + aS,
+      jS = 6.5 * tS.d,
+      GS = 132.5 * tS.b;
 
-    function Jk(kk) {
-      const Fk = wk + (0, Tk.n)(kk) + kk * Hk;
-      return Math.ceil((2 * ek + Fk) / ik) * ik
+    function CS(SS) {
+      const HS = jS + (0, bS.p)(SS) + SS * GS;
+      return Math.ceil((2 * KS + HS) / XS) * XS
     }
-    Jk(Tk.c), Xk.h, Xk.h, Xk.h;
-    const xk = {
-        targetBytes: yk,
-        leastBytes: ak
+    CS(bS.d), tS.d, tS.d, tS.d;
+    const nS = {
+        targetBytes: xS,
+        leastBytes: qS
       },
-      Pk = {
-        targetBytes: lk,
-        leastBytes: ak
+      PS = {
+        targetBytes: NS,
+        leastBytes: qS
       };
 
-    function Kk(kk) {
+    function QS(SS) {
       return {
-        targetBytes: kk,
+        targetBytes: SS,
         leastBytes: 0
       }
     }
 
-    function Qk(kk) {
-      return kk >= Tk.c ? xk : Pk
+    function DS(SS) {
+      return SS >= bS.d ? nS : PS
     }
-    const sk = 2 * ik;
+    const wS = 2 * XS;
 
-    function Vk(kk, Fk, Ik) {
-      return kk + Fk + sk > Ik
+    function hS(SS, HS, gS) {
+      return SS + HS + wS > gS
     }
-    const zk = {
+    const ZS = {
       now: () => performance.now(),
-      requestIdle: "function" === typeof requestIdleCallback ? kk => {
-        requestIdleCallback(kk)
+      requestIdle: "function" === typeof requestIdleCallback ? SS => {
+        requestIdleCallback(SS)
       } : null
     };
-    class Sk {
-      constructor(kk, Fk, Ik) {
-        let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : zk;
-        this.memory = kk, this.readPeakStoredChunks = Fk, this.onError = Ik, this.clock = Xk, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
+    class JS {
+      constructor(SS, HS, gS) {
+        let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ZS;
+        this.memory = SS, this.readPeakStoredChunks = HS, this.onError = gS, this.clock = tS, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
           reserves: 0,
           allocations: 0
         }, this.joinReserveTaken = null, this.ceilingBytes = null, this.ballastCheckAt = -1 / 0, this.ballastPeakBytes = 0, this.distanceInUse = null, this.footprint = null
       }
-      setShed(kk, Fk, Ik) {
+      setShed(SS, HS, gS) {
         this.shedding = {
-          shed: kk,
-          Mj: Fk,
-          readDistanceInUse: Ik
+          shed: SS,
+          tK: HS,
+          readDistanceInUse: gS
         }
       }
       shedDistanceInUse() {
         return this.distanceInUse
       }
-      setFootprint(kk) {
-        this.footprint = kk
+      setFootprint(SS) {
+        this.footprint = SS
       }
-      setCeiling(kk) {
-        this.ceilingBytes = kk, this.call((() => {
-          this.memory.setCeiling(kk)
+      setCeiling(SS) {
+        this.ceilingBytes = SS, this.call((() => {
+          this.memory.setCeiling(SS)
         }), void 0)
       }
-      ceilingMayRefuse(kk, Fk) {
-        var Ik;
-        return Vk(this.memory.memoryBytes(), kk, null !== (Ik = this.ceilingBytes) && void 0 !== Ik ? Ik : Fk)
+      ceilingMayRefuse(SS, HS) {
+        var gS;
+        return hS(this.memory.memoryBytes(), SS, null !== (gS = this.ceilingBytes) && void 0 !== gS ? gS : HS)
       }
-      reserveAtJoin(kk) {
+      reserveAtJoin(SS) {
         let {
-          targetBytes: Fk,
-          leastBytes: Ik
-        } = kk;
-        const Xk = this.memory.memoryBytes(),
-          Tk = Xk + Ik,
-          ik = Math.max(Fk + (this.ballastOn() ? Lk : 0), Tk),
-          yk = this.call((() => this.memory.reserveUpFront(ik) ? "target" : ik > Tk && this.memory.reserveUpFront(Tk) ? "least" : "none"), "none");
+          targetBytes: HS,
+          leastBytes: gS
+        } = SS;
+        const tS = this.memory.memoryBytes(),
+          bS = tS + gS,
+          XS = Math.max(HS + (this.ballastOn() ? IS : 0), bS),
+          xS = this.call((() => this.memory.reserveUpFront(XS) ? "target" : XS > bS && this.memory.reserveUpFront(bS) ? "least" : "none"), "none");
         if (this.stopped) return !1;
-        if ("target" !== yk) {
-          const kk = "least" === yk ? `took ${Tk} bytes instead` : "frames grow it in steps";
-          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${ik} bytes was refused at ${Xk} bytes; ${kk}`)
+        if ("target" !== xS) {
+          const SS = "least" === xS ? `took ${bS} bytes instead` : "frames grow it in steps";
+          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${XS} bytes was refused at ${tS} bytes; ${SS}`)
         }
-        return this.joinReserveTaken = yk, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== yk && this.shedFor("joinReserve"), "none" !== yk
+        return this.joinReserveTaken = xS, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== xS && this.shedFor("joinReserve"), "none" !== xS
       }
       afterFrame() {
         if (this.stopped) return;
-        const kk = this.clock.now(),
-          Fk = null !== this.stepsHeldUntil && kk >= this.stepsHeldUntil;
-        if (Fk && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
-        if (null === this.stepsHeldUntil && kk >= this.ballastCheckAt && (this.takeBallast(kk), this.stopped)) return;
-        const Ik = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
-          Xk = Fk && "now" === Ik ? "none" : Ik,
+        const SS = this.clock.now(),
+          HS = null !== this.stepsHeldUntil && SS >= this.stepsHeldUntil;
+        if (HS && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
+        if (null === this.stepsHeldUntil && SS >= this.ballastCheckAt && (this.takeBallast(SS), this.stopped)) return;
+        const gS = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
+          tS = HS && "now" === gS ? "none" : gS,
           {
-            requestIdle: Tk
+            requestIdle: bS
           } = this.clock;
-        "now" === Xk || null !== this.pendingSince && kk - this.pendingSince >= 500 ? this.step() : "idle" === Xk && null === this.pendingSince && (null === Tk ? this.step() : (this.pendingSince = kk, Tk((() => {
+        "now" === tS || null !== this.pendingSince && SS - this.pendingSince >= 500 ? this.step() : "idle" === tS && null === this.pendingSince && (null === bS ? this.step() : (this.pendingSince = SS, bS((() => {
           null !== this.pendingSince && this.step()
-        })))), kk - this.statsAt >= 1e3 && (this.statsAt = kk, this.refreshStats(), this.checkFootprint())
+        })))), SS - this.statsAt >= 1e3 && (this.statsAt = SS, this.refreshStats(), this.checkFootprint())
       }
       refreshStats() {
         this.call((() => {
-          var kk, Fk;
-          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (Fk = this.shedding.readDistanceInUse()) && void 0 !== Fk ? Fk : this.distanceInUse);
-          null === (kk = this.footprint) || void 0 === kk || kk.read(this.memory.memoryBytes() + this.workersMemoryBytes())
+          var SS, HS;
+          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (HS = this.shedding.readDistanceInUse()) && void 0 !== HS ? HS : this.distanceInUse);
+          null === (SS = this.footprint) || void 0 === SS || SS.read(this.memory.memoryBytes() + this.workersMemoryBytes())
         }), void 0)
       }
       stop() {
         this.stopped = !0, this.pendingSince = null
       }
-      noteMeshWorker(kk, Fk) {
-        this.noteWorker(`Mesh${kk}`, Fk)
+      noteMeshWorker(SS, HS) {
+        this.noteWorker(`Mesh${SS}`, HS)
       }
-      meshWorkerGone(kk) {
-        this.workerGone(`Mesh${kk}`)
+      meshWorkerGone(SS) {
+        this.workerGone(`Mesh${SS}`)
       }
-      noteWorldgen(kk) {
-        this.noteWorker("Worldgen", kk)
+      noteWorldgen(SS) {
+        this.noteWorker("Worldgen", SS)
       }
       worldgenGone() {
         this.workerGone("Worldgen")
       }
-      noteWorker(kk, Fk) {
-        const Ik = this.workers.get(kk);
-        null !== Ik && void 0 !== Ik && Ik.gone && (this.replacedRefusals.reserves += Ik.stats.reservesRefused, this.replacedRefusals.allocations += Ik.stats.allocationsRefused), this.workers.set(kk, {
-          stats: Fk,
+      noteWorker(SS, HS) {
+        const gS = this.workers.get(SS);
+        null !== gS && void 0 !== gS && gS.gone && (this.replacedRefusals.reserves += gS.stats.reservesRefused, this.replacedRefusals.allocations += gS.stats.allocationsRefused), this.workers.set(SS, {
+          stats: HS,
           gone: !1
         })
       }
-      workerGone(kk) {
-        const Fk = this.workers.get(kk);
-        Fk && (Fk.gone = !0)
+      workerGone(SS) {
+        const HS = this.workers.get(SS);
+        HS && (HS.gone = !0)
       }
       details() {
-        var kk, Fk;
-        const Ik = {
-          wasmMemoryNow: `${(0,Xk.m)(this.memory.memoryBytes())} MiB`
+        var SS, HS;
+        const gS = {
+          wasmMemoryNow: `${(0,tS.j)(this.memory.memoryBytes())} MiB`
         };
-        null !== this.joinReserveTaken && (Ik.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (Ik.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
-        const Tk = this.main;
-        if (Tk) {
-          Ik.wasmMemoryMain = vk(Tk);
-          const kk = Math.max(0, Tk.peakLiveBytes - this.ballastPeakBytes),
-            Fk = 0 === this.peakStoredChunks ? "-" : (kk / this.peakStoredChunks / Xk.e).toFixed(1);
-          Ik.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${Fk} KiB`
+        null !== this.joinReserveTaken && (gS.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (gS.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
+        const bS = this.main;
+        if (bS) {
+          gS.wasmMemoryMain = OS(bS);
+          const SS = Math.max(0, bS.peakLiveBytes - this.ballastPeakBytes),
+            HS = 0 === this.peakStoredChunks ? "-" : (SS / this.peakStoredChunks / tS.b).toFixed(1);
+          gS.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${HS} KiB`
         }
-        for (const [Xk, {
-            stats: yk,
-            gone: lk
-          }] of this.workers) Ik[`wasmMemory${Xk}`] = vk(yk) + (lk ? " (gone)" : "");
-        const ik = null !== (kk = null === (Fk = this.footprint) || void 0 === Fk ? void 0 : Fk.describe()) && void 0 !== kk ? kk : null;
-        return null !== ik && (Ik.wasmMemoryFootprint = ik), Ik
+        for (const [tS, {
+            stats: xS,
+            gone: NS
+          }] of this.workers) gS[`wasmMemory${tS}`] = OS(xS) + (NS ? " (gone)" : "");
+        const XS = null !== (SS = null === (HS = this.footprint) || void 0 === HS ? void 0 : HS.describe()) && void 0 !== SS ? SS : null;
+        return null !== XS && (gS.wasmMemoryFootprint = XS), gS
       }
       pageKillSnapshot() {
-        var kk, Fk, Ik, Tk, ik;
-        let yk = (null !== (kk = null === (Fk = this.main) || void 0 === Fk ? void 0 : Fk.reservesRefused) && void 0 !== kk ? kk : 0) + this.replacedRefusals.reserves,
-          lk = (null !== (Ik = null === (Tk = this.main) || void 0 === Tk ? void 0 : Tk.allocationsRefused) && void 0 !== Ik ? Ik : 0) + this.replacedRefusals.allocations;
+        var SS, HS, gS, bS, XS;
+        let xS = (null !== (SS = null === (HS = this.main) || void 0 === HS ? void 0 : HS.reservesRefused) && void 0 !== SS ? SS : 0) + this.replacedRefusals.reserves,
+          NS = (null !== (gS = null === (bS = this.main) || void 0 === bS ? void 0 : bS.allocationsRefused) && void 0 !== gS ? gS : 0) + this.replacedRefusals.allocations;
         for (const {
-            stats: Xk
+            stats: tS
           }
-          of this.workers.values()) yk += Xk.reservesRefused, lk += Xk.allocationsRefused;
+          of this.workers.values()) xS += tS.reservesRefused, NS += tS.allocationsRefused;
         return {
-          wasmMainMiB: Number((0, Xk.m)(this.memory.memoryBytes())),
-          wasmWorkersMiB: Number((0, Xk.m)(this.workersMemoryBytes())),
+          wasmMainMiB: Number((0, tS.j)(this.memory.memoryBytes())),
+          wasmWorkersMiB: Number((0, tS.j)(this.workersMemoryBytes())),
           peakStoredChunks: this.peakStoredChunks,
-          refusedReserves: yk,
-          refusedAllocations: lk,
+          refusedReserves: xS,
+          refusedAllocations: NS,
           sheds: this.sheds,
-          ...null === (ik = this.footprint) || void 0 === ik ? void 0 : ik.snapshot()
+          ...null === (XS = this.footprint) || void 0 === XS ? void 0 : XS.snapshot()
         }
       }
       workersMemoryBytes() {
-        let kk = 0;
+        let SS = 0;
         for (const {
-            stats: Fk,
-            gone: Ik
+            stats: HS,
+            gone: gS
           }
-          of this.workers.values()) kk += Ik ? 0 : Fk.memoryBytes;
-        return kk
+          of this.workers.values()) SS += gS ? 0 : HS.memoryBytes;
+        return SS
       }
       checkFootprint() {
         null === this.footprint || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil || this.footprint.takeShed() && this.shedFor("footprint")
       }
       step() {
-        this.pendingSince = null, this.call((() => this.memory.reserveAhead(qk)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
+        this.pendingSince = null, this.call((() => this.memory.reserveAhead(uS)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
       }
       ballastOn() {
         return null !== this.shedding
       }
-      takeBallast(kk) {
+      takeBallast(SS) {
         if (!this.ballastOn() || null === this.joinReserveTaken) return;
-        this.ballastCheckAt = kk + 1e3;
-        const Fk = this.call((() => this.memory.takeBallast()), 0);
-        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, Fk)
+        this.ballastCheckAt = SS + 1e3;
+        const HS = this.call((() => this.memory.takeBallast()), 0);
+        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, HS)
       }
       takePressure() {
         return this.ballastOn() && this.call((() => this.memory.takePressure()), !1)
       }
-      stopSteps(kk) {
-        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${kk}: frames grow on demand from here`)
+      stopSteps(SS) {
+        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${SS}: frames grow on demand from here`)
       }
-      shedFor(kk) {
+      shedFor(SS) {
         const {
-          shedding: Fk
+          shedding: HS
         } = this;
-        if (null === Fk) return;
+        if (null === HS) return;
         this.pendingSince = null;
-        const Ik = this.call((() => Fk.shed(kk)), null);
-        this.stopped || (null !== Ik ? (this.sheds++, this.shedCap = Ik, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats(), Fk.Mj(kk, this.sheds, this.details())) : tk(kk) && this.stopSteps("nothing is left to shed"))
+        const gS = this.call((() => HS.shed(SS)), null);
+        this.stopped || (null !== gS ? (this.sheds++, this.shedCap = gS, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats(), HS.tK(SS, this.sheds, this.details())) : fS(SS) && this.stopSteps("nothing is left to shed"))
       }
-      call(kk, Fk) {
-        if (this.stopped) return Fk;
+      call(SS, HS) {
+        if (this.stopped) return HS;
         try {
-          return kk()
-        } catch (Ik) {
-          return this.stop(), this.onError(Ik), Fk
+          return SS()
+        } catch (gS) {
+          return this.stop(), this.onError(gS), HS
         }
       }
     }
 
-    function vk(kk) {
-      const Fk = (kk, Fk) => `${kk}/${(0,Xk.m)(Fk)}`;
-      return `memory ${(0,Xk.m)(kk.memoryBytes)} live ${(0,Xk.m)(kk.liveBytes)} peak ${(0,Xk.m)(kk.peakLiveBytes)} unused ${(0,Xk.m)(kk.unusedBytes)} ceiling ${(0,Xk.m)(kk.ceilingBytes)} MiB; grows upFront ${Fk(kk.grows.upFront,kk.grownBytes.upFront)} ahead ${Fk(kk.grows.ahead,kk.grownBytes.ahead)} inFrame ${Fk(kk.grows.onDemandInFrame,kk.grownBytes.onDemandInFrame)} other ${Fk(kk.grows.onDemand,kk.grownBytes.onDemand)}; refused reserves ${kk.reservesRefused} allocations ${kk.allocationsRefused}`
+    function OS(SS) {
+      const HS = (SS, HS) => `${SS}/${(0,tS.j)(HS)}`;
+      return `memory ${(0,tS.j)(SS.memoryBytes)} live ${(0,tS.j)(SS.liveBytes)} peak ${(0,tS.j)(SS.peakLiveBytes)} unused ${(0,tS.j)(SS.unusedBytes)} ceiling ${(0,tS.j)(SS.ceilingBytes)} MiB; grows upFront ${HS(SS.grows.upFront,SS.grownBytes.upFront)} ahead ${HS(SS.grows.ahead,SS.grownBytes.ahead)} inFrame ${HS(SS.grows.onDemandInFrame,SS.grownBytes.onDemandInFrame)} other ${HS(SS.grows.onDemand,SS.grownBytes.onDemand)}; refused reserves ${SS.reservesRefused} allocations ${SS.allocationsRefused}`
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

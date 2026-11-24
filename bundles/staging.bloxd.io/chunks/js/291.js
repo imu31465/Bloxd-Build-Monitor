@@ -1,156 +1,156 @@
 export const id = 291;
 export const ids = [291];
 export const modules = {
-  41287: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      CharacterPreview: () => tk
+  41290: (SS, HS, gS) => {
+    gS.r(HS), gS.d(HS, {
+      CharacterPreview: () => fS
     });
-    var Xk = Ik(58),
-      Tk = Ik(2679),
-      ik = Ik(1231),
-      yk = Ik(2492),
-      lk = Ik(34218),
-      ak = Ik(3586),
-      qk = Ik(1096);
-    const Lk = .6 * Math.PI,
-      tk = (0, Xk.memo)((0, Xk.forwardRef)((function(kk, Fk) {
+    var tS = gS(64),
+      bS = gS(2890),
+      XS = gS(1327),
+      xS = gS(2692),
+      NS = gS(34267),
+      qS = gS(3760),
+      uS = gS(1181);
+    const IS = .6 * Math.PI,
+      fS = (0, tS.memo)((0, tS.forwardRef)((function(SS, HS) {
         let {
-          onReady: Ik,
-          onDrawn: tk,
-          owner: Zk = "other",
-          framing: jk = "player",
-          forcedCosmetics: ek,
-          Il: wk,
-          emotePlaySeq: Hk,
-          turntableFromYaw: Jk = null
-        } = kk;
-        const xk = (0, Xk.useRef)(null),
+          onReady: gS,
+          onDrawn: fS,
+          owner: kS = "other",
+          framing: aS = "player",
+          forcedCosmetics: KS,
+          gN: jS,
+          emotePlaySeq: GS,
+          turntableFromYaw: CS = null
+        } = SS;
+        const nS = (0, tS.useRef)(null),
           {
-            width: Pk,
-            height: Kk
-          } = (0, Tk.b)(xk),
-          Qk = (0, Xk.useRef)(null),
-          sk = (0, Xk.useRef)({}),
-          Vk = (0, Xk.useRef)({}),
-          [zk, Sk] = (0, Xk.useState)(!1),
-          vk = (0, Xk.useRef)(Ik);
-        vk.current = Ik;
-        const Ek = (0, Xk.useRef)(tk);
-        Ek.current = tk;
-        const Ok = (0, Xk.useRef)(null),
-          nk = (0, Xk.useRef)(!1),
-          Gk = (0, Xk.useRef)(!1),
-          pk = (0, Xk.useCallback)((() => {
-            const kk = Qk.current;
-            if (!kk || !Ek.current || nk.current || !Gk.current) return;
-            const Fk = {};
-            Ok.current = Fk, queueMicrotask((() => {
-              if (Ok.current !== Fk) return;
-              const Ik = Promise.all(ik.w.map((Fk => kk.untilDrawn(Fk)))).catch((kk => {
-                  console.error("Failed to draw the character preview", kk)
+            width: PS,
+            height: QS
+          } = (0, bS.d)(nS),
+          DS = (0, tS.useRef)(null),
+          wS = (0, tS.useRef)({}),
+          hS = (0, tS.useRef)({}),
+          [ZS, JS] = (0, tS.useState)(!1),
+          OS = (0, tS.useRef)(gS);
+        OS.current = gS;
+        const dS = (0, tS.useRef)(fS);
+        dS.current = fS;
+        const cS = (0, tS.useRef)(null),
+          vS = (0, tS.useRef)(!1),
+          ES = (0, tS.useRef)(!1),
+          LS = (0, tS.useCallback)((() => {
+            const SS = DS.current;
+            if (!SS || !dS.current || vS.current || !ES.current) return;
+            const HS = {};
+            cS.current = HS, queueMicrotask((() => {
+              if (cS.current !== HS) return;
+              const gS = Promise.all(XS.r.map((HS => SS.untilDrawn(HS)))).catch((SS => {
+                  console.error("Failed to draw the character preview", SS)
                 })),
-                Xk = new Promise((kk => {
-                  setTimeout(kk, 1e4)
+                tS = new Promise((SS => {
+                  setTimeout(SS, 1e4)
                 }));
-              Promise.race([Ik, Xk]).then((() => {
-                var Ik;
-                Qk.current !== kk || Ok.current !== Fk || nk.current || (nk.current = !0, null === (Ik = Ek.current) || void 0 === Ik || Ik.call(Ek))
+              Promise.race([gS, tS]).then((() => {
+                var gS;
+                DS.current !== SS || cS.current !== HS || vS.current || (vS.current = !0, null === (gS = dS.current) || void 0 === gS || gS.call(dS))
               }))
             }))
           }), []);
-        return (0, Xk.useImperativeHandle)(Fk, (() => {
-          const kk = (kk, Fk) => {
-            var Ik;
-            (sk.current[kk] = Fk, null !== ek && void 0 !== ek && ek[kk]) || (null === (Ik = Qk.current) || void 0 === Ik || Ik.setCosmetic(kk, Fk), pk())
+        return (0, tS.useImperativeHandle)(HS, (() => {
+          const SS = (SS, HS) => {
+            var gS;
+            (wS.current[SS] = HS, null !== KS && void 0 !== KS && KS[SS]) || (null === (gS = DS.current) || void 0 === gS || gS.setCosmetic(SS, HS), LS())
           };
           return {
-            updateCosmetic: kk,
-            setAllCosmetics(Fk) {
-              for (const Xk of ik.w) {
-                var Ik;
-                kk(Xk, null !== (Ik = Fk[Xk]) && void 0 !== Ik ? Ik : (0, yk.c)(Xk))
+            updateCosmetic: SS,
+            setAllCosmetics(HS) {
+              for (const tS of XS.r) {
+                var gS;
+                SS(tS, null !== (gS = HS[tS]) && void 0 !== gS ? gS : (0, xS.b)(tS))
               }
             },
             isReady() {
-              var kk, Fk;
-              return null !== (kk = null === (Fk = Qk.current) || void 0 === Fk ? void 0 : Fk.isReady()) && void 0 !== kk && kk
+              var SS, HS;
+              return null !== (SS = null === (HS = DS.current) || void 0 === HS ? void 0 : HS.isReady()) && void 0 !== SS && SS
             },
             resetCamera() {
-              var kk;
-              null === (kk = Qk.current) || void 0 === kk || kk.resetCamera()
+              var SS;
+              null === (SS = DS.current) || void 0 === SS || SS.resetCamera()
             },
-            setOrbit(kk) {
-              var Fk;
-              null === (Fk = Qk.current) || void 0 === Fk || Fk.setOrbit(kk)
+            setOrbit(SS) {
+              var HS;
+              null === (HS = DS.current) || void 0 === HS || HS.setOrbit(SS)
             },
-            async ensureReadyForCapture(kk) {
-              var Fk;
-              await (null === (Fk = Qk.current) || void 0 === Fk ? void 0 : Fk.untilDrawn(kk))
+            async ensureReadyForCapture(SS) {
+              var HS;
+              await (null === (HS = DS.current) || void 0 === HS ? void 0 : HS.untilDrawn(SS))
             },
             getDevTools() {
-              var kk;
-              return null !== (kk = Qk.current) && void 0 !== kk && kk.isReady() ? Qk.current.dev : null
+              var SS;
+              return null !== (SS = DS.current) && void 0 !== SS && SS.isReady() ? DS.current.dev : null
             }
           }
-        }), [ek, pk]), (0, Xk.useEffect)((() => {
-          const kk = ak.d.register(Zk),
-            Fk = lk.h.openCharacter(xk.current, jk);
-          Qk.current = Fk;
-          let Ik = !0;
-          return Fk.ready.then((() => {
-            Ik && (Sk(!0), vk.current())
-          })).catch((kk => {
-            console.error("Failed to set up the character preview", kk)
+        }), [KS, LS]), (0, tS.useEffect)((() => {
+          const SS = qS.b.register(kS),
+            HS = NS.g.openCharacter(nS.current, aS);
+          DS.current = HS;
+          let gS = !0;
+          return HS.ready.then((() => {
+            gS && (JS(!0), OS.current())
+          })).catch((SS => {
+            console.error("Failed to set up the character preview", SS)
           })), () => {
-            Ik = !1, kk(), Fk.resetCamera(), Fk.close(), Qk.current = null
+            gS = !1, SS(), HS.resetCamera(), HS.close(), DS.current = null
           }
-        }), []), (0, Xk.useEffect)((() => {
-          Pk <= 0 || Kk <= 0 || Qk.current.resize(Pk, Kk)
-        }), [Pk, Kk]), (0, Xk.useEffect)((() => {
-          if (!zk) return;
-          const kk = Vk.current;
-          for (const Fk of ik.w) {
-            const Ik = null === ek || void 0 === ek ? void 0 : ek[Fk],
-              Xk = kk[Fk];
-            Ik && Ik !== Xk ? Qk.current.setCosmetic(Fk, Ik) : !Ik && Xk && sk.current[Fk] && Qk.current.setCosmetic(Fk, sk.current[Fk])
+        }), []), (0, tS.useEffect)((() => {
+          PS <= 0 || QS <= 0 || DS.current.resize(PS, QS)
+        }), [PS, QS]), (0, tS.useEffect)((() => {
+          if (!ZS) return;
+          const SS = hS.current;
+          for (const HS of XS.r) {
+            const gS = null === KS || void 0 === KS ? void 0 : KS[HS],
+              tS = SS[HS];
+            gS && gS !== tS ? DS.current.setCosmetic(HS, gS) : !gS && tS && wS.current[HS] && DS.current.setCosmetic(HS, wS.current[HS])
           }
-          Vk.current = {
-            ...ek
-          }, Gk.current = !0, pk()
-        }), [ek, zk, pk]), (0, Xk.useEffect)((() => {
-          zk && Qk.current.playEmote(null !== wk && void 0 !== wk ? wk : null)
-        }), [wk, Hk, zk]), (0, Xk.useEffect)((() => {
-          if (!zk || null === Jk) return;
-          const kk = Qk.current,
+          hS.current = {
+            ...KS
+          }, ES.current = !0, LS()
+        }), [KS, ZS, LS]), (0, tS.useEffect)((() => {
+          ZS && DS.current.playEmote(null !== jS && void 0 !== jS ? jS : null)
+        }), [jS, GS, ZS]), (0, tS.useEffect)((() => {
+          if (!ZS || null === CS) return;
+          const SS = DS.current,
             {
-              pitch: Fk,
-              radius: Ik
-            } = lk.c[jk];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return kk.setOrbit({
-            yaw: Jk + Lk,
-            pitch: Fk,
-            radius: Ik
+              pitch: HS,
+              radius: gS
+            } = NS.b[aS];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return SS.setOrbit({
+            yaw: CS + IS,
+            pitch: HS,
+            radius: gS
           }), () => {
-            kk.resetCamera()
+            SS.resetCamera()
           };
-          const Xk = performance.now();
-          let Tk = 0;
-          const ik = yk => {
-            kk.setOrbit({
-              yaw: Jk + (yk - Xk) / 6e3 * 2 * Math.PI,
-              pitch: Fk,
-              radius: Ik
-            }), Tk = requestAnimationFrame(ik)
+          const tS = performance.now();
+          let bS = 0;
+          const XS = xS => {
+            SS.setOrbit({
+              yaw: CS + (xS - tS) / 6e3 * 2 * Math.PI,
+              pitch: HS,
+              radius: gS
+            }), bS = requestAnimationFrame(XS)
           };
-          return Tk = requestAnimationFrame(ik), () => {
-            cancelAnimationFrame(Tk), kk.resetCamera()
+          return bS = requestAnimationFrame(XS), () => {
+            cancelAnimationFrame(bS), SS.resetCamera()
           }
-        }), [zk, Jk]), (0, qk.jsx)("div", {
+        }), [ZS, CS]), (0, uS.jsx)("div", {
           className: "CharCustomisationPreview",
-          ref: xk
+          ref: nS
         })
       })))
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

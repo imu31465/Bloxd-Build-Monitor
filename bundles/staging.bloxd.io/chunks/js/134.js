@@ -1,26 +1,26 @@
 export const id = 134;
 export const ids = [134];
 export const modules = {
-  38762: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => ak,
-      g: () => tk,
-      i: () => wk,
-      k: () => Lk,
-      l: () => qk,
-      o: () => jk
+  38784: (SS, HS, gS) => {
+    gS.d(HS, {
+      c: () => qS,
+      e: () => fS,
+      i: () => jS,
+      k: () => IS,
+      n: () => uS,
+      r: () => aS
     });
-    var Xk = Ik(314),
-      Tk = Ik(1652);
-    const ik = "A valid external Instance reference no longer exists.",
-      yk = [
+    var tS = gS(364),
+      bS = gS(1830);
+    const XS = "A valid external Instance reference no longer exists.",
+      xS = [
         [1e4, "<10s", "lt10s"],
         [6e4, "<1m", "lt1m"],
         [3e5, "<5m", "lt5m"],
         [18e5, "<30m", "lt30m"],
         [1 / 0, "30m+", "ge30m"]
       ],
-      lk = [
+      NS = [
         [1e3, "lt1s"],
         [2e3, "lt2s"],
         [5e3, "lt5s"],
@@ -28,202 +28,202 @@ export const modules = {
         [3e4, "lt30s"],
         [1 / 0, "ge30s"]
       ];
-    const ak = {
+    const qS = {
       WebGPU: "WebGPU device lost",
       WebGL2: "WebGL2 context lost"
     };
 
-    function qk(kk, Fk) {
-      return kk ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(kk) {
-        var Fk;
-        const Ik = null !== (Fk = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(kk)) && void 0 !== Fk ? Fk : /failed with ([A-Z][A-Z0-9_]+)/.exec(kk);
-        return Ik ? Ik[1] : kk.includes(ik) ? "gpu_process_lost" : "other"
-      }(Fk)
+    function uS(SS, HS) {
+      return SS ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(SS) {
+        var HS;
+        const gS = null !== (HS = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(SS)) && void 0 !== HS ? HS : /failed with ([A-Z][A-Z0-9_]+)/.exec(SS);
+        return gS ? gS[1] : SS.includes(XS) ? "gpu_process_lost" : "other"
+      }(HS)
     }
 
-    function Lk(kk) {
-      return `${(null===kk||void 0===kk?void 0:kk.vendor)||"unknown vendor"} ${(null===kk||void 0===kk?void 0:kk.architecture)||"unknown architecture"}`
+    function IS(SS) {
+      return `${(null===SS||void 0===SS?void 0:SS.vendor)||"unknown vendor"} ${(null===SS||void 0===SS?void 0:SS.architecture)||"unknown architecture"}`
     }
 
-    function tk(kk) {
-      return Hk(kk)[1]
+    function fS(SS) {
+      return GS(SS)[1]
     }
 
-    function Zk(kk) {
-      return Hk(kk)[2]
+    function kS(SS) {
+      return GS(SS)[2]
     }
 
-    function jk(kk, Fk, Ik) {
-      const Tk = (0, Xk.e)(),
-        ik = null !== Tk && Tk >= Fk,
-        yk = document.hidden ? "hidden" : ik ? "shown" : "visible",
-        lk = ik ? Ik - Tk : null;
+    function aS(SS, HS, gS) {
+      const bS = (0, tS.f)(),
+        XS = null !== bS && bS >= HS,
+        xS = document.hidden ? "hidden" : XS ? "shown" : "visible",
+        NS = XS ? gS - bS : null;
       return {
-        page: null === lk ? yk : `${yk}${tk(lk)}`,
-        code: `${kk}_${null===lk?yk:`${yk}_${Zk(lk)}`}_${ek(Ik)}`
+        page: null === NS ? xS : `${xS}${fS(NS)}`,
+        code: `${SS}_${null===NS?xS:`${xS}_${kS(NS)}`}_${KS(gS)}`
       }
     }
 
-    function ek(kk) {
-      if ((0, Tk.c)()) return "ad_open";
-      const Fk = (0, Tk.b)();
-      return null === Fk ? "ad_none" : `ad_${Zk(kk-Fk.endedAt)}_${Fk.pageHid?"h":"v"}`
+    function KS(SS) {
+      if ((0, bS.g)()) return "ad_open";
+      const HS = (0, bS.c)();
+      return null === HS ? "ad_none" : `ad_${kS(SS-HS.endedAt)}_${HS.pageHid?"h":"v"}`
     }
 
-    function wk(kk) {
-      return Jk(lk, kk)[1]
+    function jS(SS) {
+      return CS(NS, SS)[1]
     }
 
-    function Hk(kk) {
-      return Jk(yk, kk)
+    function GS(SS) {
+      return CS(xS, SS)
     }
 
-    function Jk(kk, Fk) {
-      var Ik;
-      return null !== (Ik = kk.find((kk => {
-        let [Ik] = kk;
-        return Fk < Ik
-      }))) && void 0 !== Ik ? Ik : kk[kk.length - 1]
+    function CS(SS, HS) {
+      var gS;
+      return null !== (gS = SS.find((SS => {
+        let [gS] = SS;
+        return HS < gS
+      }))) && void 0 !== gS ? gS : SS[SS.length - 1]
     }
   },
-  39058: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => ak
+  39083: (SS, HS, gS) => {
+    gS.d(HS, {
+      d: () => qS
     });
-    var Xk = Ik(8880),
-      Tk = Ik(36486),
-      ik = Ik(39066);
-    const yk = {
+    var tS = gS(9093),
+      bS = gS(36503),
+      XS = gS(39087);
+    const xS = {
         seat: "seat_timeout",
         socket_unopened: "socket_timeout_unopened",
         socket: "socket_timeout"
       },
-      lk = {
+      NS = {
         seat: "seat_lost",
         socket_unopened: "socket_unopened",
         socket: "socket_closed"
       };
 
-    function ak(kk, Fk) {
-      if (kk instanceof Tk.f) return {
-        at: yk[Fk],
+    function qS(SS, HS) {
+      if (SS instanceof bS.e) return {
+        at: xS[HS],
         code: 0
       };
-      const Ik = (0, Xk.g)(kk),
-        ak = "number" === typeof Ik ? Ik : 0;
-      return null !== (0, ik.l)(ak).name ? {
+      const gS = (0, tS.i)(SS),
+        qS = "number" === typeof gS ? gS : 0;
+      return null !== (0, XS.k)(qS).name ? {
         at: "refused",
-        code: ak
+        code: qS
       } : {
-        at: lk[Fk],
-        code: ak
+        at: NS[HS],
+        code: qS
       }
     }
   },
-  8880: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => ik,
-      g: () => yk,
-      j: () => lk,
-      n: () => qk,
-      p: () => ak
+  9093: (SS, HS, gS) => {
+    gS.d(HS, {
+      e: () => XS,
+      i: () => xS,
+      j: () => NS,
+      l: () => uS,
+      m: () => qS
     });
-    var Xk = Ik(187),
-      Tk = Ik(4612);
+    var tS = gS(198),
+      bS = gS(4749);
 
-    function ik(kk) {
-      return yk(kk) === Xk.d.gameOrPluginOnPlayerAuthRejected.code
+    function XS(SS) {
+      return xS(SS) === tS.c.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function yk(kk) {
-      return "object" === typeof kk && null !== kk ? kk.code : void 0
+    function xS(SS) {
+      return "object" === typeof SS && null !== SS ? SS.code : void 0
     }
 
-    function lk(kk) {
-      var Fk;
-      return null !== (Fk = Object.keys(Tk.b).find((Fk => Tk.b[Fk] === kk))) && void 0 !== Fk ? Fk : null
+    function NS(SS) {
+      var HS;
+      return null !== (HS = Object.keys(bS.e).find((HS => bS.e[HS] === SS))) && void 0 !== HS ? HS : null
     }
 
-    function ak(kk) {
-      return "notWhitelisted" === kk ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function qS(SS) {
+      return "notWhitelisted" === SS ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const qk = {
+    const uS = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  39066: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Tk,
-      e: () => ik,
-      i: () => lk,
-      l: () => Lk,
-      n: () => ak,
-      p: () => yk
+  39087: (SS, HS, gS) => {
+    gS.d(HS, {
+      c: () => bS,
+      d: () => XS,
+      g: () => NS,
+      k: () => IS,
+      l: () => qS,
+      m: () => xS
     });
-    var Xk = Ik(187);
-    const Tk = 3e3,
-      ik = 15e3;
+    var tS = gS(198);
+    const bS = 3e3,
+      XS = 15e3;
 
-    function yk(kk) {
-      const Fk = kk.endsWith(Xk.m);
+    function xS(SS) {
+      const HS = SS.endsWith(tS.g);
       return {
-        text: (Fk ? kk.slice(0, -Xk.m.length) : kk) || null,
-        dropsCache: Fk
+        text: (HS ? SS.slice(0, -tS.g.length) : SS) || null,
+        dropsCache: HS
       }
     }
-    const lk = "Either your internet isn't working or this is a bug.";
+    const NS = "Either your internet isn't working or this is a bug.";
 
-    function ak(kk, Fk) {
-      const Ik = Lk(kk);
-      return null !== Ik.name && "" === Xk.d[Ik.name].text && null !== Fk ? Fk : Ik.reason
+    function qS(SS, HS) {
+      const gS = IS(SS);
+      return null !== gS.name && "" === tS.c[gS.name].text && null !== HS ? HS : gS.reason
     }
-    const qk = "You were removed from the game.";
+    const uS = "You were removed from the game.";
 
-    function Lk(kk) {
-      var Fk;
-      let Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const Tk = null !== (Fk = Object.keys(Xk.d).find((Fk => Xk.d[Fk].code === kk))) && void 0 !== Fk ? Fk : null;
-      if (null === Tk) return {
-        code: kk,
-        name: Tk,
-        reason: null !== Ik && void 0 !== Ik ? Ik : `${lk}\nCode: ${kk}`,
+    function IS(SS) {
+      var HS;
+      let gS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const bS = null !== (HS = Object.keys(tS.c).find((HS => tS.c[HS].code === SS))) && void 0 !== HS ? HS : null;
+      if (null === bS) return {
+        code: SS,
+        name: bS,
+        reason: null !== gS && void 0 !== gS ? gS : `${NS}\nCode: ${SS}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: ik,
-        canReconnect: yk = !1
-      } = Xk.d[Tk], ak = kk === Xk.d.outdatedVersion.code || kk === Xk.d.loadRecaptchaError.code;
+        text: XS,
+        canReconnect: xS = !1
+      } = tS.c[bS], qS = SS === tS.c.outdatedVersion.code || SS === tS.c.loadRecaptchaError.code;
       return {
-        code: kk,
-        name: Tk,
-        reason: "" !== ik ? ik : null !== Ik && void 0 !== Ik ? Ik : kk === Xk.d.gameOrPluginKick.code ? qk : `Code: ${kk}`,
-        canReconnect: yk,
-        automaticallyReconnect: kk === Xk.d.customGameUpdated.code || kk === Xk.d.duplicateLobbyNameError.code,
-        requiresRefresh: ak
+        code: SS,
+        name: bS,
+        reason: "" !== XS ? XS : null !== gS && void 0 !== gS ? gS : SS === tS.c.gameOrPluginKick.code ? uS : `Code: ${SS}`,
+        canReconnect: xS,
+        automaticallyReconnect: SS === tS.c.customGameUpdated.code || SS === tS.c.duplicateLobbyNameError.code,
+        requiresRefresh: qS
       }
     }
   },
-  36879: (kk, Fk, Ik) => {
-    function Xk(kk) {
-      return "fetch" === kk || "timeout" === kk || "integrity" === kk ? "download" : "browser"
+  36877: (SS, HS, gS) => {
+    function tS(SS) {
+      return "fetch" === SS || "timeout" === SS || "integrity" === SS ? "download" : "browser"
     }
-    Ik.d(Fk, {
-      d: () => Tk,
-      f: () => yk,
-      i: () => ak,
-      j: () => lk,
-      l: () => Xk,
-      p: () => ik
+    gS.d(HS, {
+      b: () => bS,
+      e: () => xS,
+      i: () => qS,
+      m: () => NS,
+      n: () => tS,
+      p: () => XS
     });
-    const Tk = "https://discord.gg/playbloxd";
+    const bS = "https://discord.gg/playbloxd";
 
-    function ik(kk) {
-      return "download" === kk ? {
+    function XS(SS) {
+      return "download" === SS ? {
         icon: "wifi",
         title: "wasmScreens:downloadFailedTitle",
         help: "wasmScreens:downloadFailedHelp",
@@ -242,21 +242,21 @@ export const modules = {
       }
     }
 
-    function yk(kk, Fk) {
+    function xS(SS, HS) {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:crashTitle",
-        help: Fk ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        help: HS ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
         helpValues: {
-          code: kk.code
+          code: SS.code
         },
-        discordLink: Fk,
+        discordLink: HS,
         confirm: "general:reload",
         cancel: "general:back"
       }
     }
 
-    function lk() {
+    function NS() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:turnstilePageTitle",
@@ -268,74 +268,74 @@ export const modules = {
       }
     }
 
-    function ak(kk, Fk, Ik) {
+    function qS(SS, HS, gS) {
       return {
         icon: "wifi",
         title: "wasmScreens:disconnectedTitle",
-        help: Ik ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        help: gS ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
         helpValues: {
-          reason: kk.reason
+          reason: SS.reason
         },
-        discordLink: null === kk.name,
-        confirm: Fk ? "general:reconnect" : kk.requiresRefresh ? "general:reload" : "general:ok",
+        discordLink: null === SS.name,
+        confirm: HS ? "general:reconnect" : SS.requiresRefresh ? "general:reload" : "general:ok",
         cancel: null
       }
     }
   },
-  36297: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => hk,
-      c: () => kF,
-      e: () => Dk,
-      h: () => mk
+  36322: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => oS,
+      e: () => rS,
+      g: () => mS,
+      i: () => TS
     });
-    var Xk = Ik(2801),
-      Tk = Ik(2809),
-      ik = Ik(6599),
-      yk = Ik(4692),
-      lk = Ik(2806),
-      ak = Ik(2803);
-    const qk = "bloxd-wasmDownloaded",
-      Lk = 12;
+    var tS = gS(3021),
+      bS = gS(3035),
+      XS = gS(6819),
+      xS = gS(4812),
+      NS = gS(3033),
+      qS = gS(3030);
+    const uS = "bloxd-wasmDownloaded",
+      IS = 12;
 
-    function tk(kk) {
-      return kk.pathname.slice(kk.pathname.lastIndexOf("/") + 1)
+    function fS(SS) {
+      return SS.pathname.slice(SS.pathname.lastIndexOf("/") + 1)
     }
 
-    function Zk() {
+    function kS() {
       try {
         if ("undefined" === typeof localStorage) return null;
-        const kk = JSON.parse(localStorage.getItem(qk) ?? "[]");
-        return Array.isArray(kk) ? kk.filter((kk => "string" === typeof kk)) : []
-      } catch (kk) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", kk), null
+        const SS = JSON.parse(localStorage.getItem(uS) ?? "[]");
+        return Array.isArray(SS) ? SS.filter((SS => "string" === typeof SS)) : []
+      } catch (SS) {
+        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", SS), null
       }
     }
-    const jk = Reflect.apply,
-      ek = "undefined" === typeof Worker ? void 0 : Worker,
-      wk = ek?.prototype.postMessage,
-      Hk = ek?.prototype.terminate,
-      Jk = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      xk = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      Pk = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      Kk = function() {
+    const aS = Reflect.apply,
+      KS = "undefined" === typeof Worker ? void 0 : Worker,
+      jS = KS?.prototype.postMessage,
+      GS = KS?.prototype.terminate,
+      CS = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
+      nS = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
+      PS = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
+      QS = function() {
         try {
-          return (0, yk.m)(ek, "Worker", !0) && (0, yk.m)(wk, "postMessage") && (0, yk.m)(Hk, "terminate") && (0, yk.m)(Pk, "buffer") && void 0 !== Jk && void 0 !== xk
+          return (0, xS.m)(KS, "Worker", !0) && (0, xS.m)(jS, "postMessage") && (0, xS.m)(GS, "terminate") && (0, xS.m)(PS, "buffer") && void 0 !== CS && void 0 !== nS
         } catch {
           return !1
         }
       }();
-    let Qk = !1;
+    let DS = !1;
 
-    function sk() {
-      return Kk && !Qk
+    function wS() {
+      return QS && !DS
     }
-    class Vk {
+    class hS {
       worker = null;
       failed = !1;
       constructor() {
-        if (sk()) try {
-          this.worker = Sk(), jk(Jk, this.worker, ["error", () => {
+        if (wS()) try {
+          this.worker = JS(), aS(CS, this.worker, ["error", () => {
             this.failed = !0
           }])
         } catch {
@@ -343,125 +343,125 @@ export const modules = {
         }
       }
       take() {
-        const kk = this.worker;
-        if (this.worker = null, null !== kk && this.failed) throw jk(Hk, kk, []), new Error("it did not run");
-        return kk
+        const SS = this.worker;
+        if (this.worker = null, null !== SS && this.failed) throw aS(GS, SS, []), new Error("it did not run");
+        return SS
       }
       stop() {
-        const kk = this.worker;
-        this.worker = null, null !== kk && jk(Hk, kk, [])
+        const SS = this.worker;
+        this.worker = null, null !== SS && aS(GS, SS, [])
       }
     }
-    class zk {
+    class ZS {
       decoded;
       worker;
       reject;
-      constructor(kk, Fk, Ik, Xk, ik) {
+      constructor(SS, HS, gS, tS, XS) {
         try {
-          this.worker = ik?.take() ?? Sk()
-        } catch (qk) {
-          throw Qk = !0, new Error(`The zstd decoder's worker did not start: ${(0,lk.d)(qk)}`)
+          this.worker = XS?.take() ?? JS()
+        } catch (uS) {
+          throw DS = !0, new Error(`The zstd decoder's worker did not start: ${(0,NS.f)(uS)}`)
         }
-        const yk = this.worker;
-        this.decoded = (0, Tk.i)(((Fk, Tk) => {
-          this.reject = Tk;
-          const ik = (kk, Fk) => {
-            jk(Jk, yk, [kk, Fk])
+        const xS = this.worker;
+        this.decoded = (0, bS.i)(((HS, bS) => {
+          this.reject = bS;
+          const XS = (SS, HS) => {
+            aS(CS, xS, [SS, HS])
           };
-          ik("message", (kk => {
-            Xk();
+          XS("message", (SS => {
+            tS();
             try {
-              const Xk = jk(xk, kk, []);
-              if (!0 === Xk) Fk();
+              const tS = aS(nS, SS, []);
+              if (!0 === tS) HS();
               else {
-                if ("string" === typeof Xk) throw Xk.startsWith(lk.c) && (Qk = !0), new Error(Xk);
-                Ik(Xk, jk(ak.z, Xk, []))
+                if ("string" === typeof tS) throw tS.startsWith(NS.d) && (DS = !0), new Error(tS);
+                gS(tS, aS(qS.A, tS, []))
               }
-            } catch (qk) {
-              Tk(qk)
+            } catch (uS) {
+              bS(uS)
             }
-          })), ik("error", (() => {
-            Qk = !0, Tk(new Error("The zstd decoder's worker did not run"))
-          })), ik("messageerror", (() => {
-            Tk(new Error(`${kk}'s decoder sent a piece that could not be read`))
+          })), XS("error", (() => {
+            DS = !0, bS(new Error("The zstd decoder's worker did not run"))
+          })), XS("messageerror", (() => {
+            bS(new Error(`${SS}'s decoder sent a piece that could not be read`))
           }))
-        })), (0, ak.Y)(this.decoded), jk(wk, yk, [
-          [kk, Fk]
+        })), (0, qS.U)(this.decoded), aS(jS, xS, [
+          [SS, HS]
         ])
       }
-      push(kk) {
-        jk(wk, this.worker, [kk, [jk(Pk, kk, [])]])
+      push(SS) {
+        aS(jS, this.worker, [SS, [aS(PS, SS, [])]])
       }
       end() {
-        jk(wk, this.worker, [null])
+        aS(jS, this.worker, [null])
       }
       markWorkerFailed() {
-        Qk = !0
+        DS = !0
       }
-      fail(kk) {
-        this.reject(kk), this.terminate()
+      fail(SS) {
+        this.reject(SS), this.terminate()
       }
       terminate() {
-        jk(Hk, this.worker, [])
+        aS(GS, this.worker, [])
       }
     }
 
-    function Sk() {
-      if (globalThis.Worker !== ek) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(Ik.p + Ik.u(67), Ik.b), {
+    function JS() {
+      if (globalThis.Worker !== KS) throw new Error("Worker is not the one the page loaded with");
+      return new Worker(new URL(gS.p + gS.u(67), gS.b), {
         name: "wasmZstdDecoder",
         type: "module"
       })
     }
-    const vk = Reflect.apply,
-      Ek = ArrayBuffer,
-      Ok = "undefined" === typeof Response ? void 0 : Response,
-      nk = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      Gk = function() {
-        let kk;
-        void 0 !== nk && new nk({
+    const OS = Reflect.apply,
+      dS = ArrayBuffer,
+      cS = "undefined" === typeof Response ? void 0 : Response,
+      vS = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
+      ES = function() {
+        let SS;
+        void 0 !== vS && new vS({
           __proto__: null,
-          start(Fk) {
+          start(HS) {
             const {
-              enqueue: Ik,
-              close: Xk,
-              error: Tk
-            } = Object.getPrototypeOf(Fk);
-            kk = {
-              enqueue: Ik,
-              close: Xk,
-              error: Tk
+              enqueue: gS,
+              close: tS,
+              error: bS
+            } = Object.getPrototypeOf(HS);
+            SS = {
+              enqueue: gS,
+              close: tS,
+              error: bS
             }
           }
         }, {
           __proto__: null
         });
-        return kk
+        return SS
       }(),
-      pk = function() {
+      LS = function() {
         try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== Gk && (0, yk.m)(Ok, "Response", !0) && (0, yk.m)(nk, "ReadableStream", !0) && (0, yk.m)(Gk.enqueue, "enqueue") && (0, yk.m)(Gk.close, "close") && (0, yk.m)(Gk.error, "error") && (0, yk.m)(ak.cb, "body") && (0, yk.m)(ak.Q, "getReader") && (0, yk.m)(ak.$, "read")
+          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== ES && (0, xS.m)(cS, "Response", !0) && (0, xS.m)(vS, "ReadableStream", !0) && (0, xS.m)(ES.enqueue, "enqueue") && (0, xS.m)(ES.close, "close") && (0, xS.m)(ES.error, "error") && (0, xS.m)(qS.Z, "body") && (0, xS.m)(qS.O, "getReader") && (0, xS.m)(qS.W, "read")
         } catch {
           return !1
         }
       }();
-    async function uk(kk, Fk, Ik, Xk, ik, yk, qk) {
-      const Lk = new Ek(Fk),
+    async function YS(SS, HS, gS, tS, XS, xS, uS) {
+      const IS = new dS(HS),
         {
-          controller: tk,
-          compiled: Zk
-        } = function(kk) {
+          controller: fS,
+          compiled: kS
+        } = function(SS) {
           try {
-            let kk;
-            const Fk = new nk({
+            let SS;
+            const HS = new vS({
                 __proto__: null,
-                start(Fk) {
-                  kk = Fk
+                start(HS) {
+                  SS = HS
                 }
               }, {
                 __proto__: null
               }),
-              Ik = new Ok(Fk, {
+              gS = new cS(HS, {
                 __proto__: null,
                 headers: {
                   __proto__: null,
@@ -469,387 +469,387 @@ export const modules = {
                 }
               });
             return {
-              controller: kk,
-              compiled: (0, ak.Y)((0, ak.B)((0, ak.ib)(Ik)))
+              controller: SS,
+              compiled: (0, qS.U)((0, qS.D)((0, qS.gb)(gS)))
             }
-          } catch (Fk) {
-            throw new Error(`${kk} could not be streamed into a compile: ${(0,lk.d)(Fk)}`)
+          } catch (HS) {
+            throw new Error(`${SS} could not be streamed into a compile: ${(0,NS.f)(HS)}`)
           }
-        }(kk),
+        }(SS),
         {
-          enqueue: jk,
-          close: ek,
-          error: wk
-        } = Gk,
-        Hk = kk => {
+          enqueue: aS,
+          close: KS,
+          error: jS
+        } = ES,
+        GS = SS => {
           try {
-            vk(wk, tk, [kk])
+            OS(jS, fS, [SS])
           } catch {}
         };
-      let Jk = 0;
-      const xk = (Ik, Xk) => {
-        if (Jk + Xk > Fk) throw new Error(`${kk} decoded past its module's ${Fk} bytes`);
-        vk(ak.fb, new ak.n(Lk), [new ak.n(Ik), Jk]);
+      let CS = 0;
+      const nS = (gS, tS) => {
+        if (CS + tS > HS) throw new Error(`${SS} decoded past its module's ${HS} bytes`);
+        OS(qS.$, new qS.p(IS), [new qS.p(gS), CS]);
         try {
-          vk(jk, tk, [new ak.n(Lk, Jk, Xk)])
+          OS(aS, fS, [new qS.p(IS, CS, tS)])
         } catch {}
-        Jk += Xk
+        CS += tS
       };
-      let Pk, Kk;
+      let PS, QS;
       try {
-        Pk = new zk(kk, Fk, xk, Xk, qk)
-      } catch (Sk) {
-        throw Hk(Sk), Sk
+        PS = new ZS(SS, HS, nS, tS, uS)
+      } catch (JS) {
+        throw GS(JS), JS
       }
-      const Qk = kk => {
-        Pk.fail(kk), void 0 !== Kk && bk(Kk)
+      const DS = SS => {
+        PS.fail(SS), void 0 !== QS && AS(QS)
       };
-      let sk = !1;
-      Ik.addEventListener("abort", (() => {
-        sk && Pk.markWorkerFailed(), Qk(new Error(`${kk} stalled`))
+      let wS = !1;
+      gS.addEventListener("abort", (() => {
+        wS && PS.markWorkerFailed(), DS(new Error(`${SS} stalled`))
       }), {
         once: !0
-      }), (0, Tk.t)(Zk, (() => {}), Qk);
+      }), (0, bS.s)(kS, (() => {}), DS);
       try {
-        let yk;
+        let xS;
         try {
-          yk = await fetch(kk, {
-            signal: Ik
+          xS = await fetch(SS, {
+            signal: gS
           })
-        } catch (Sk) {
-          throw new Error(`Fetching ${kk} failed: ${(0,lk.d)(Sk)}`)
+        } catch (JS) {
+          throw new Error(`Fetching ${SS} failed: ${(0,NS.f)(JS)}`)
         }
         const {
-          ok: qk,
-          status: Lk,
-          body: tk
-        } = function(kk, Fk) {
+          ok: uS,
+          status: IS,
+          body: fS
+        } = function(SS, HS) {
           try {
             const {
-              ok: kk,
-              status: Ik
-            } = Fk;
+              ok: SS,
+              status: gS
+            } = HS;
             return {
-              ok: kk,
-              status: Ik,
-              body: vk(ak.cb, Fk, [])
+              ok: SS,
+              status: gS,
+              body: OS(qS.Z, HS, [])
             }
           } catch {
-            throw new Error(`${kk} came in a response a page script made`)
+            throw new Error(`${SS} came in a response a page script made`)
           }
-        }(kk, yk);
-        if (!qk) throw new Error(`Fetching ${kk} failed: HTTP ${Lk}`);
-        Xk();
-        const Zk = vk(ak.Q, tk, []);
-        Kk = Zk;
-        const jk = () => {
-          bk(Zk)
+        }(SS, xS);
+        if (!uS) throw new Error(`Fetching ${SS} failed: HTTP ${IS}`);
+        tS();
+        const kS = OS(qS.O, fS, []);
+        QS = kS;
+        const aS = () => {
+          AS(kS)
         };
-        for ((0, Tk.t)(Pk.decoded, jk, jk);;) {
-          let Fk;
+        for ((0, bS.s)(PS.decoded, aS, aS);;) {
+          let HS;
           try {
-            Fk = await vk(ak.$, Zk, [])
-          } catch (Sk) {
-            throw new Error(`Downloading ${kk} failed: ${(0,lk.d)(Sk)}`)
+            HS = await OS(qS.W, kS, [])
+          } catch (JS) {
+            throw new Error(`Downloading ${SS} failed: ${(0,NS.f)(JS)}`)
           }
-          if (Fk.done) break;
-          Xk(), Pk.push(Fk.value)
+          if (HS.done) break;
+          tS(), PS.push(HS.value)
         }
-        if (sk = !0, Pk.end(), await Pk.decoded, ik(), Jk !== Fk) throw new Error(`${kk} ended before its module did`)
-      } catch (Sk) {
-        throw Hk(Sk), Qk(Sk), Sk
+        if (wS = !0, PS.end(), await PS.decoded, XS(), CS !== HS) throw new Error(`${SS} ended before its module did`)
+      } catch (JS) {
+        throw GS(JS), DS(JS), JS
       }
-      Pk.terminate();
+      PS.terminate();
       try {
-        vk(ek, tk, [])
+        OS(KS, fS, [])
       } catch {}
-      const Vk = await Zk;
-      return void 0 !== yk && await (0, ak.A)(kk, new ak.n(Lk), {
-        sha256: yk.sha256,
+      const hS = await kS;
+      return void 0 !== xS && await (0, qS.C)(SS, new qS.p(IS), {
+        sha256: xS.sha256,
         onMismatch: () => {}
-      }), Vk
+      }), hS
     }
 
-    function bk(kk) {
+    function AS(SS) {
       try {
-        (0, ak.Y)(kk.cancel())
+        (0, qS.U)(SS.cancel())
       } catch {}
     }
-    const Rk = ".zst.bin",
-      Uk = 1e3;
-    let Ck = null;
+    const yS = ".zst.bin",
+      VS = 1e3;
+    let iS = null;
 
-    function Nk(kk) {
-      return Ck ??= function() {
-        const kk = new Map,
-          Fk = "bloxd_wasm_webgpu:5121311,bloxd_wasm_webgl:5500808,bloxd_wasm_webgl1:4836347,bloxd_wasm_workers:201241,bloxd_wasm_models:311531,bloxd_wasm_client:3704284";
-        for (const Ik of Fk?.split(",") ?? []) {
-          const [Fk = "", Xk] = Ik.split(":"), Tk = Number(Xk);
-          Number.isInteger(Tk) && Tk > 0 && kk.set(Fk, Tk)
+    function WS(SS) {
+      return iS ??= function() {
+        const SS = new Map,
+          HS = "bloxd_wasm_webgpu:5121239,bloxd_wasm_webgl:5500736,bloxd_wasm_webgl1:4836275,bloxd_wasm_workers:201241,bloxd_wasm_models:311531,bloxd_wasm_client:3704228";
+        for (const gS of HS?.split(",") ?? []) {
+          const [HS = "", tS] = gS.split(":"), bS = Number(tS);
+          Number.isInteger(bS) && bS > 0 && SS.set(HS, bS)
         }
-        return kk
-      }(), Ck.get(kk)
+        return SS
+      }(), iS.get(SS)
     }
-    async function ck(kk, Fk) {
-      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Xk = Nk(kk.name);
-      if (void 0 === Xk) return Wk(await fk(kk, Fk, Ik), "cold-wasm");
-      const ik = pk ? new Vk : null;
-      let yk;
+    async function zS(SS, HS) {
+      let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const tS = WS(SS.name);
+      if (void 0 === tS) return US(await pS(SS, HS, gS), "cold-wasm");
+      const XS = LS ? new hS : null;
+      let xS;
       try {
-        if (qk = kk.url(), Zk()?.includes(tk(qk)) && await async function(kk) {
-            const Fk = new AbortController;
-            let Ik;
-            const Xk = (0, Tk.i)((kk => {
-              Ik = setTimeout((() => {
-                Fk.abort(), kk(null)
-              }), Uk)
+        if (uS = SS.url(), kS()?.includes(fS(uS)) && await async function(SS) {
+            const HS = new AbortController;
+            let gS;
+            const tS = (0, bS.i)((SS => {
+              gS = setTimeout((() => {
+                HS.abort(), SS(null)
+              }), VS)
             }));
             try {
-              const Ik = fetch(kk.href, {
+              const gS = fetch(SS.href, {
                   cache: "only-if-cached",
                   mode: "same-origin",
-                  signal: Fk.signal
+                  signal: HS.signal
                 }),
-                ik = await (0, Tk.s)([Ik, Xk]);
-              return !!ik?.ok && ((0, ak.Y)(ik.body.cancel()), !0)
+                XS = await (0, bS.r)([gS, tS]);
+              return !!XS?.ok && ((0, qS.U)(XS.body.cancel()), !0)
             } catch {
               return !1
             } finally {
-              clearTimeout(Ik)
+              clearTimeout(gS)
             }
-          }(kk.url())) return ik?.stop(), await async function(kk, Fk, Ik, Xk) {
-          let Tk = !1;
-          const ik = Ik && {
-            sha256: Ik.sha256,
+          }(SS.url())) return XS?.stop(), await async function(SS, HS, gS, tS) {
+          let bS = !1;
+          const XS = gS && {
+            sha256: gS.sha256,
             onMismatch: () => {
-              Tk = !0
+              bS = !0
             }
           };
           try {
-            return Wk(await fk(kk, ik, Xk), "warm")
-          } catch (yk) {
-            const Xk = await Bk(kk, Fk, Ik, null);
-            if (null === Xk) throw Tk && Ik.onMismatch(), yk;
-            return console.warn(`${kk.url().href} from the HTTP cache failed: ${(0,lk.d)(yk)}: loaded its copy instead`), Wk(Xk, Tk ? "warm-refused" : "warm-broken")
+            return US(await pS(SS, XS, tS), "warm")
+          } catch (xS) {
+            const tS = await sS(SS, HS, gS, null);
+            if (null === tS) throw bS && gS.onMismatch(), xS;
+            return console.warn(`${SS.url().href} from the HTTP cache failed: ${(0,NS.f)(xS)}: loaded its copy instead`), US(tS, bS ? "warm-refused" : "warm-broken")
           }
-        }(kk, Xk, Fk, Ik);
-        yk = await Bk(kk, Xk, Fk, ik)
+        }(SS, tS, HS, gS);
+        xS = await sS(SS, tS, HS, XS)
       } finally {
-        ik?.stop()
+        XS?.stop()
       }
-      var qk;
-      return null !== yk ? Wk(yk, "cold-worker") : Wk(await fk(kk, Fk, Ik), "cold-wasm")
+      var uS;
+      return null !== xS ? US(xS, "cold-worker") : US(await pS(SS, HS, gS), "cold-wasm")
     }
 
-    function Wk(kk, Fk) {
+    function US(SS, HS) {
       return {
         __proto__: null,
-        module: kk,
-        path: Fk
+        module: SS,
+        path: HS
       }
     }
 
-    function fk(kk, Fk, Ik) {
-      return void 0 === Nk(kk.name) ? (0, ak.G)(kk.url(), Fk, Ik) : (0, ak.G)(kk.url(), Fk, {
-        ...Ik,
+    function pS(SS, HS, gS) {
+      return void 0 === WS(SS.name) ? (0, qS.F)(SS.url(), HS, gS) : (0, qS.F)(SS.url(), HS, {
+        ...gS,
         hideThen: !0,
         onDownloaded: () => {
-          ! function(kk) {
-            const Fk = Zk();
-            if (null === Fk) return;
-            const Ik = tk(kk),
-              Xk = Fk.filter((kk => kk !== Ik));
-            Xk.push(Ik);
+          ! function(SS) {
+            const HS = kS();
+            if (null === HS) return;
+            const gS = fS(SS),
+              tS = HS.filter((SS => SS !== gS));
+            tS.push(gS);
             try {
-              localStorage.setItem(qk, JSON.stringify(Xk.slice(-Lk)))
-            } catch (Tk) {
-              console.warn(`Bloxd wasm: ${Ik} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, Tk)
+              localStorage.setItem(uS, JSON.stringify(tS.slice(-IS)))
+            } catch (bS) {
+              console.warn(`Bloxd wasm: ${gS} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, bS)
             }
-          }(kk.url()), Ik.onDownloaded?.()
+          }(SS.url()), gS.onDownloaded?.()
         }
       })
     }
-    async function Bk(kk, Fk, Ik, Xk) {
-      if (!pk || !sk()) return null;
-      const Tk = kk.url(),
-        ik = `${Tk.href}${Rk}`;
+    async function sS(SS, HS, gS, tS) {
+      if (!LS || !wS()) return null;
+      const bS = SS.url(),
+        XS = `${bS.href}${yS}`;
       try {
-        return await (0, ak.hb)(ik, ((kk, Tk, yk) => uk(ik, Fk, kk, Tk, yk, Ik, Xk)))
-      } catch (yk) {
-        return console.warn(`${(0,lk.d)(yk)}: loading ${Tk.href} instead`), null
+        return await (0, qS.cb)(XS, ((SS, bS, xS) => YS(XS, HS, SS, bS, xS, gS, tS)))
+      } catch (xS) {
+        return console.warn(`${(0,NS.f)(xS)}: loading ${bS.href} instead`), null
       }
     }
-    let dk = null,
-      Yk = !1;
-    const Ak = new Map,
-      gk = new Map;
+    let BS = null,
+      MS = !1;
+    const FS = new Map,
+      RS = new Map;
 
-    function mk(kk, Fk, Ik) {
-      return null === dk ? dk = rk(kk, Fk, Ik?.memoryMaximumBytes) : kk !== dk.build ? console.warn(`Bloxd wasm: ${kk.name} was asked for after ${dk.build.name} started loading, which this thread keeps`) : Fk.name !== dk.workers.name && console.warn(`Bloxd wasm: ${Fk.name} was asked for workers after ${dk.workers.name}, which this thread keeps`), Ik?.reloadFailedDownload && !Yk && (0, Xk.R)() && (Yk = !0, dk = rk(dk.build, dk.workers, dk.memoryMaximumBytes)), dk.loaded
+    function TS(SS, HS, gS) {
+      return null === BS ? BS = lS(SS, HS, gS?.memoryMaximumBytes) : SS !== BS.build ? console.warn(`Bloxd wasm: ${SS.name} was asked for after ${BS.build.name} started loading, which this thread keeps`) : HS.name !== BS.workers.name && console.warn(`Bloxd wasm: ${HS.name} was asked for workers after ${BS.workers.name}, which this thread keeps`), gS?.reloadFailedDownload && !MS && (0, tS.$)() && (MS = !0, BS = lS(BS.build, BS.workers, BS.memoryMaximumBytes)), BS.loaded
     }
 
-    function hk(kk, Fk) {
-      if (null !== dk) return (0, Tk.f)([]);
-      const Ik = kk.filter((kk => !Ak.has(kk.name))).map((kk => {
-        const Ik = new AbortController,
-          Xk = {
-            compiled: fk(kk, (0, ik.c)(kk.name), {
-              priority: Fk,
-              iI: Ik.signal,
+    function oS(SS, HS) {
+      if (null !== BS) return (0, bS.g)([]);
+      const gS = SS.filter((SS => !FS.has(SS.name))).map((SS => {
+        const gS = new AbortController,
+          tS = {
+            compiled: pS(SS, (0, XS.c)(SS.name), {
+              priority: HS,
+              Hg: gS.signal,
               onDownloaded: () => {
-                Xk.downloaded = !0
+                tS.downloaded = !0
               },
               retries: {
                 onRetry: () => {
-                  Xk.downloaded = !1, null !== dk && Ik.abort()
+                  tS.downloaded = !1, null !== BS && gS.abort()
                 }
               }
             }),
-            cancel: Ik,
+            cancel: gS,
             downloaded: !1
           };
-        return Ak.set(kk.name, Xk), (0, Tk.i)((Fk => {
-          (0, Tk.t)(Xk.compiled, (() => {
-            Xk.downloaded = !0, Fk()
-          }), (Xk => {
-            Ik.signal.aborted || console.warn(`Bloxd wasm: ${kk.name}'s compile ahead of the load failed: the load compiles it afresh`, Xk), Fk()
+        return FS.set(SS.name, tS), (0, bS.i)((HS => {
+          (0, bS.s)(tS.compiled, (() => {
+            tS.downloaded = !0, HS()
+          }), (tS => {
+            gS.signal.aborted || console.warn(`Bloxd wasm: ${SS.name}'s compile ahead of the load failed: the load compiles it afresh`, tS), HS()
           }))
         }))
       }));
-      return (0, Tk.f)(Ik)
+      return (0, bS.g)(gS)
     }
 
-    function rk(kk, Fk, Ik) {
-      const ik = (0, Xk.D)((async () => {
-        (0, yk.F)(), gk.clear();
-        const Ik = Mk(kk),
-          Xk = Fk.name === kk.name ? Ik : Mk(Fk);
+    function lS(SS, HS, gS) {
+      const XS = (0, tS.M)((async () => {
+        (0, xS.H)(), RS.clear();
+        const gS = eS(SS),
+          tS = HS.name === SS.name ? gS : eS(HS);
         for (const {
-            cancel: kk
+            cancel: SS
           }
-          of Ak.values()) kk.abort();
-        Ak.clear(), await (0, Tk.f)([Ik, Xk]);
-        const ik = await Ik,
-          lk = await Xk;
-        return (0, yk.F)(), {
-          module: ik,
-          workerModule: lk
+          of FS.values()) SS.abort();
+        FS.clear(), await (0, bS.g)([gS, tS]);
+        const XS = await gS,
+          NS = await tS;
+        return (0, xS.H)(), {
+          module: XS,
+          workerModule: NS
         }
-      }), kk, Ik);
+      }), SS, gS);
       return {
-        build: kk,
-        workers: Fk,
-        memoryMaximumBytes: Ik,
-        loaded: ik
+        build: SS,
+        workers: HS,
+        memoryMaximumBytes: gS,
+        loaded: XS
       }
     }
 
-    function Dk(kk) {
-      return gk.get(kk)
+    function mS(SS) {
+      return RS.get(SS)
     }
 
-    function Mk(kk) {
-      const Fk = performance.now(),
-        Ik = Ak.get(kk.name);
-      Ak.delete(kk.name);
-      const Xk = !0 === Ik?.downloaded ? Ik : void 0;
-      return void 0 !== Ik && void 0 === Xk && Ik.cancel.abort(), (0, Tk.i)(((Ik, ik) => {
-        const yk = (Xk, Tk) => {
-            gk.set(kk.name, {
-              path: Tk,
-              ms: performance.now() - Fk
-            }), Ik(Xk)
+    function eS(SS) {
+      const HS = performance.now(),
+        gS = FS.get(SS.name);
+      FS.delete(SS.name);
+      const tS = !0 === gS?.downloaded ? gS : void 0;
+      return void 0 !== gS && void 0 === tS && gS.cancel.abort(), (0, bS.i)(((gS, XS) => {
+        const xS = (tS, bS) => {
+            RS.set(SS.name, {
+              path: bS,
+              ms: performance.now() - HS
+            }), gS(tS)
           },
-          lk = () => {
-            (0, Tk.t)(FF(kk), (kk => {
+          NS = () => {
+            (0, bS.s)(SH(SS), (SS => {
               let {
-                module: Fk,
-                path: Ik
-              } = kk;
-              yk(Fk, Ik)
-            }), ik)
+                module: HS,
+                path: gS
+              } = SS;
+              xS(HS, gS)
+            }), XS)
           };
-        void 0 === Xk ? lk() : (0, Tk.t)(Xk.compiled, (kk => {
-          yk(kk, "ahead")
-        }), lk)
+        void 0 === tS ? NS() : (0, bS.s)(tS.compiled, (SS => {
+          xS(SS, "ahead")
+        }), NS)
       }))
     }
-    async function kF(kk, Fk) {
+    async function rS(SS, HS) {
       const {
-        module: Ik
-      } = await FF(kk, {
-        retries: Fk
+        module: gS
+      } = await SH(SS, {
+        retries: HS
       });
-      return Ik
+      return gS
     }
-    async function FF(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await ck(kk, (0, ik.c)(kk.name), Fk)
+    async function SH(SS) {
+      let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return await zS(SS, (0, XS.c)(SS.name), HS)
     }
   },
-  6599: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => yk
+  6819: (SS, HS, gS) => {
+    gS.d(HS, {
+      c: () => xS
     });
-    var Xk = Ik(2803);
-    const Tk = {
-      bloxd_wasm: () => "e2f9e22926b42992a62e6da973b3cd1227290abc3e4b086f16ef7a6e7451e01c",
-      bloxd_wasm_client: () => "197b3a58630dd256c73f6be56077b03aba52688d49b256cfcb5b4297a602be6f",
-      bloxd_wasm_workers: () => "c531aa2c5eb2277940017568a817b82729d5bd8e37ed09fdb9542eeedecfabb2",
-      bloxd_wasm_models: () => "82813a7dd849808b1d07d41cb80b2035277c675f83cdbe5540a809aa86e18dae",
-      bloxd_wasm_webgpu: () => "2066e38e37e17624dae8b4b9c559f5daf047cb3ceb4eb8056d5135d5b3d9eb24",
-      bloxd_wasm_webgl: () => "3d1d580992195f6369c2533ce100ae6e8452da7398faf88e49b339f937ec6192",
-      bloxd_wasm_webgl1: () => "8032d9766cccf3c8343274c4d612b6bb3252bd4e5129a88b0ce812c44371db80",
-      bloxd_wasm_replay: () => "8d3f5aa602437d8a622249e4b26ef375d3132f03479495456878d8869447f290",
-      bloxd_wasm_recorder: () => "4e4293beaac6f6862394c42133a435a6ade3bf181e4ae4bc1a5a3c0c8e0c9dd2",
-      bloxd_wasm_anim: () => "125adb66f5cee367958854d2a9364d34f8d55bf2c7b62e20f2a9dcc7b9af5035",
-      bloxd_wasm_textures: () => "b45159af64c2cb22c8ac7c32ed16b3591e0026feb57c6ebfb95e710677904764",
-      bloxd_wasm_shader_pack: () => "b4044fc49c30628f5ddaad152e8054fb78f46958556f35beebe36f24a022d42c"
+    var tS = gS(3030);
+    const bS = {
+      bloxd_wasm: () => "ca276a159dbc87fa5fb24bce01c600e017686becb2aec4d2d8c3ce9d9be10286",
+      bloxd_wasm_client: () => "78d650a75a894f26dfff12d13178b3b18625b3ca51d6ff43ca76c7c6a545160e",
+      bloxd_wasm_workers: () => "141545174c96a6a56bdd55b96874db592d9aa0421d29d01fc5f13e010772908e",
+      bloxd_wasm_models: () => "f9978bc5a15af3d00b08cdd71f12902b1d7af465ab38552c337a8dbca894f2ad",
+      bloxd_wasm_webgpu: () => "b036ba0a8b10236966685420835363e85775cab4add8bde3fee2aab6dab3eedc",
+      bloxd_wasm_webgl: () => "f94a6bd176e034f73eb9d8633ef96f3a4c2ba3c58f8f946158bfc25489809a0e",
+      bloxd_wasm_webgl1: () => "e1bef365f7d6b4c1345c3d7a59fb7d8e9059890b44c25962f6eefa2875a0d8ba",
+      bloxd_wasm_replay: () => "1cd9ae019549ed07be1080a40e72119ca1530d917a5e7c4bff7919777b0d7cc7",
+      bloxd_wasm_recorder: () => "9bf6273ff6c7cd97e192adea241330701cc74623c7e79a51cf18981bf754ac45",
+      bloxd_wasm_anim: () => "e9f60e55d6a938bae2c0cab139b5bc6a9a4c4b1abe3489fe2eaff4a7709eea4a",
+      bloxd_wasm_textures: () => "b1d909a0a1a9dae74a5159a0e981ac598963b92321ef4cc808ac39c91a481383",
+      bloxd_wasm_shader_pack: () => "2cc8a962c1c16c3304b235a366c2decc6556fba05a1b6ce886e0064dd54faac6"
     };
-    var ik = Ik(4692);
+    var XS = gS(4812);
 
-    function yk(kk) {
-      const Fk = Object.prototype.hasOwnProperty.call(Tk, kk) ? Tk[kk]() : void 0;
-      if (void 0 !== Fk) return {
-        sha256: Fk,
-        onMismatch: ik.C
+    function xS(SS) {
+      const HS = Object.prototype.hasOwnProperty.call(bS, SS) ? bS[SS]() : void 0;
+      if (void 0 !== HS) return {
+        sha256: HS,
+        onMismatch: XS.D
       };
-      throw new Xk.g(`${kk} has no release digest, so this build refuses it`)
+      throw new tS.h(`${SS} has no release digest, so this build refuses it`)
     }
   },
-  6622: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Xk,
-      e: () => yk,
-      f: () => lk,
-      h: () => Tk,
-      i: () => ik
+  6832: (SS, HS, gS) => {
+    gS.d(HS, {
+      c: () => tS,
+      d: () => xS,
+      e: () => NS,
+      f: () => bS,
+      h: () => XS
     });
-    const Xk = ["terrain", "liquid", "model"];
+    const tS = ["terrain", "liquid", "model"];
 
-    function Tk() {
-      const kk = [];
-      for (const Fk of [!1, !0])
-        for (const Ik of Xk) kk.push({
-          strict: Fk,
-          program: Ik
+    function bS() {
+      const SS = [];
+      for (const HS of [!1, !0])
+        for (const gS of tS) SS.push({
+          strict: HS,
+          program: gS
         });
-      return kk
+      return SS
     }
 
-    function ik(kk) {
-      return `${kk.strict?"strict":"allow"}.${kk.program}`
+    function XS(SS) {
+      return `${SS.strict?"strict":"allow"}.${SS.program}`
     }
 
-    function yk(kk) {
-      return !kk.hooks.vertex && !kk.hooks.surface && !kk.hooks.light
+    function xS(SS) {
+      return !SS.hooks.vertex && !SS.hooks.surface && !SS.hooks.light
     }
 
-    function lk(kk, Fk) {
-      return "off" !== Fk && (null === kk || kk.some((kk => kk.key.strict === ("strict" === Fk) && !yk(kk))))
+    function NS(SS, HS) {
+      return "off" !== HS && (null === SS || SS.some((SS => SS.key.strict === ("strict" === HS) && !xS(SS))))
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

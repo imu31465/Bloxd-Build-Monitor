@@ -1,311 +1,311 @@
 export const id = 217;
 export const ids = [217];
 export const modules = {
-  36388: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => vk,
-      e: () => Ek,
-      i: () => Pk
+  36412: (SS, HS, gS) => {
+    gS.d(HS, {
+      d: () => OS,
+      e: () => dS,
+      i: () => PS
     });
-    var Xk = Ik(272),
-      Tk = Ik(95);
-    const ik = new(Ik(36393).c)(new URL(Ik.p + Ik.u(3), Ik.b), {
+    var tS = gS(307),
+      bS = gS(104);
+    const XS = new(gS(36415).d)(new URL(gS.p + gS.u(3), gS.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var yk = Ik(1729),
-      lk = Ik(2065);
-    const ak = 1e4,
-      qk = 3e4;
-    let Lk = null,
-      tk = null,
-      Zk = null,
-      jk = !1,
-      ek = 0;
-    const wk = new Map;
-    let Hk = null;
-    const Jk = new Map,
-      xk = new Map;
+    var xS = gS(1920),
+      NS = gS(2251);
+    const qS = 1e4,
+      uS = 3e4;
+    let IS = null,
+      fS = null,
+      kS = null,
+      aS = !1,
+      KS = 0;
+    const jS = new Map;
+    let GS = null;
+    const CS = new Map,
+      nS = new Map;
 
-    function Pk(kk) {
-      const Fk = new Promise(((Fk, Ik) => {
-        const Xk = new Image;
-        Xk.crossOrigin = "anonymous", Xk.fetchPriority = "high", Xk.onload = () => {
-          Fk(Xk)
-        }, Xk.onerror = () => {
-          Ik(new Error(`A block icon's texture did not load: ${kk.slice(0,100)}`))
-        }, Xk.src = kk
+    function PS(SS) {
+      const HS = new Promise(((HS, gS) => {
+        const tS = new Image;
+        tS.crossOrigin = "anonymous", tS.fetchPriority = "high", tS.onload = () => {
+          HS(tS)
+        }, tS.onerror = () => {
+          gS(new Error(`A block icon's texture did not load: ${SS.slice(0,100)}`))
+        }, tS.src = SS
       }));
-      return (0, lk.g)(Fk)
+      return (0, NS.f)(HS)
     }
 
-    function Kk(kk) {
-      var Fk, Ik;
-      jk || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${kk}`), jk = !0, null === (Fk = Lk) || void 0 === Fk || Fk.terminate(), Lk = null, tk = null, Jk.clear(), xk.clear();
-      for (const Xk of wk.values()) Xk(null);
-      wk.clear(), null === (Ik = Hk) || void 0 === Ik || Ik()
+    function QS(SS) {
+      var HS, gS;
+      aS || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${SS}`), aS = !0, null === (HS = IS) || void 0 === HS || HS.terminate(), IS = null, fS = null, CS.clear(), nS.clear();
+      for (const tS of jS.values()) tS(null);
+      jS.clear(), null === (gS = GS) || void 0 === gS || gS()
     }
 
-    function Qk() {
-      return Zk ??= async function() {
+    function DS() {
+      return kS ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === Xk.b.ios_icon_worker_v1 && (0, Tk.isWebKit)()) return;
+        if ("page" === tS.c.ios_icon_worker_v1 && (0, bS.isWebKit)()) return;
         try {
-          Lk = await async function() {
-            return await ik.ready(), ik.start()
+          IS = await async function() {
+            return await XS.ready(), XS.start()
           }()
-        } catch (lk) {
-          return void Kk(`did not start (${String(lk)})`)
+        } catch (NS) {
+          return void QS(`did not start (${String(NS)})`)
         }
-        let kk = () => {};
-        const Fk = new Promise((Fk => {
-          kk = Fk
+        let SS = () => {};
+        const HS = new Promise((HS => {
+          SS = HS
         }));
-        Lk.onmessage = Fk => {
+        IS.onmessage = HS => {
           let {
-            data: Ik
-          } = Fk;
-          if ("started" === Ik.type) tk = Lk, kk();
-          else if ("failed" === Ik.type) Kk(`failed a draw (${Ik.message})`);
+            data: gS
+          } = HS;
+          if ("started" === gS.type) fS = IS, SS();
+          else if ("failed" === gS.type) QS(`failed a draw (${gS.message})`);
           else {
-            var Xk, Tk;
-            null === (Xk = wk.get(Ik.id)) || void 0 === Xk || Xk(Ik.url), wk.delete(Ik.id), null === (Tk = Hk) || void 0 === Tk || Tk()
+            var tS, bS;
+            null === (tS = jS.get(gS.id)) || void 0 === tS || tS(gS.url), jS.delete(gS.id), null === (bS = GS) || void 0 === bS || bS()
           }
-        }, Lk.onerror = Fk => {
-          Fk.preventDefault(), Kk(`stopped (${Fk.message||"its script did not load or run"})`), kk()
+        }, IS.onerror = HS => {
+          HS.preventDefault(), QS(`stopped (${HS.message||"its script did not load or run"})`), SS()
         };
-        const Ik = `did not start in ${qk/1e3} s`;
-        await (0, yk.l)(Fk, qk, Ik).catch((() => {
-          Kk(Ik)
+        const gS = `did not start in ${uS/1e3} s`;
+        await (0, xS.m)(HS, uS, gS).catch((() => {
+          QS(gS)
         }))
-      }(), Zk
+      }(), kS
     }
 
-    function sk() {
-      if (null !== Hk || 0 === wk.size) return;
-      const kk = new Promise((kk => {
-          Hk = kk
+    function wS() {
+      if (null !== GS || 0 === jS.size) return;
+      const SS = new Promise((SS => {
+          GS = SS
         })),
-        Fk = `did not answer in ${ak/1e3} s`;
-      (0, yk.l)(kk, ak, Fk).then((() => {
-        Hk = null, sk()
+        HS = `did not answer in ${qS/1e3} s`;
+      (0, xS.m)(SS, qS, HS).then((() => {
+        GS = null, wS()
       }), (() => {
-        Hk = null, Kk(Fk)
+        GS = null, QS(HS)
       }))
     }
 
-    function Vk(kk, Fk) {
-      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      kk.postMessage(Fk, Ik)
+    function hS(SS, HS) {
+      let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      SS.postMessage(HS, gS)
     }
 
-    function zk(kk, Fk, Ik, Xk) {
-      let Tk = Fk.get(Ik);
-      return void 0 === Tk && (Tk = Xk().then((async Fk => {
+    function ZS(SS, HS, gS, tS) {
+      let bS = HS.get(gS);
+      return void 0 === bS && (bS = tS().then((async HS => {
         let {
-          image: Ik,
-          request: Xk
-        } = Fk;
+          image: gS,
+          request: tS
+        } = HS;
         try {
-          const Fk = await createImageBitmap(Ik);
-          Vk(kk, Xk(Fk), [Fk])
-        } catch (Tk) {
-          Kk(`could not take an image (${String(Tk)})`)
+          const HS = await createImageBitmap(gS);
+          hS(SS, tS(HS), [HS])
+        } catch (bS) {
+          QS(`could not take an image (${String(bS)})`)
         }
-      })), Tk.catch((() => {
-        Fk.get(Ik) === Tk && Fk.delete(Ik)
-      })), Fk.set(Ik, Tk)), Tk
+      })), bS.catch((() => {
+        HS.get(gS) === bS && HS.delete(gS)
+      })), HS.set(gS, bS)), bS
     }
-    async function Sk(kk, Fk) {
-      Qk();
-      const Ik = tk;
-      if (null === Ik) return null;
-      if (await kk(Ik), tk !== Ik) return null;
-      const Xk = ++ek;
-      return new Promise((kk => {
-        wk.set(Xk, kk), Vk(Ik, Fk(Xk)), sk()
+    async function JS(SS, HS) {
+      DS();
+      const gS = fS;
+      if (null === gS) return null;
+      if (await SS(gS), fS !== gS) return null;
+      const tS = ++KS;
+      return new Promise((SS => {
+        jS.set(tS, SS), hS(gS, HS(tS)), wS()
       }))
     }
 
-    function vk(kk, Fk, Ik) {
-      return Sk((Fk => Promise.all([kk.top, kk.left, kk.right].map((kk => function(kk, Fk) {
-        return zk(kk, Jk, Fk, (async () => ({
-          image: await Pk(Fk),
-          request: kk => ({
+    function OS(SS, HS, gS) {
+      return JS((HS => Promise.all([SS.top, SS.left, SS.right].map((SS => function(SS, HS) {
+        return ZS(SS, CS, HS, (async () => ({
+          image: await PS(HS),
+          request: SS => ({
             type: "texture",
-            url: Fk,
-            bitmap: kk
+            url: HS,
+            bitmap: SS
           })
         })))
-      }(Fk, kk))))), (Xk => ({
+      }(HS, SS))))), (tS => ({
         type: "draw",
-        id: Xk,
-        ...kk,
-        size: Fk,
-        outlineWidth: Ik
+        id: tS,
+        ...SS,
+        size: HS,
+        outlineWidth: gS
       })))
     }
 
-    function Ek(kk, Fk, Ik, Xk) {
-      return Sk((Ik => function(kk, Fk, Ik) {
-        return zk(kk, xk, Fk, (async () => {
+    function dS(SS, HS, gS, tS) {
+      return JS((gS => function(SS, HS, gS) {
+        return ZS(SS, nS, HS, (async () => {
           const {
-            texture: kk,
-            ...Xk
-          } = await Ik();
+            texture: SS,
+            ...tS
+          } = await gS();
           return {
-            image: await Pk(kk),
-            request: kk => ({
+            image: await PS(SS),
+            request: SS => ({
               type: "model",
-              name: Fk,
-              bitmap: kk,
-              geometry: Xk
+              name: HS,
+              bitmap: SS,
+              geometry: tS
             })
           }
         }))
-      }(Ik, kk, Fk)), (Fk => ({
+      }(gS, SS, HS)), (HS => ({
         type: "drawModel",
-        id: Fk,
-        name: kk,
-        size: Ik,
-        outlineWidth: Xk
+        id: HS,
+        name: SS,
+        size: gS,
+        outlineWidth: tS
       })))
     }
   },
-  36386: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => Xk,
-      g: () => ak,
-      i: () => yk,
-      k: () => Zk,
-      o: () => qk
+  36403: (SS, HS, gS) => {
+    gS.d(HS, {
+      b: () => tS,
+      f: () => qS,
+      j: () => xS,
+      m: () => kS,
+      n: () => uS
     });
-    const Xk = {
+    const tS = {
         across: Math.SQRT1_2,
         down: Math.SQRT1_2 / 2,
         up: Math.sqrt(3) / 2
       },
-      Tk = .6,
-      ik = {
-        width: 2 * Xk.across,
-        height: 2 * Xk.down + Xk.up
+      bS = .6,
+      XS = {
+        width: 2 * tS.across,
+        height: 2 * tS.down + tS.up
       };
 
-    function yk(kk, Fk) {
-      const Ik = Fk > 0 ? Fk + 1 : 0,
-        yk = kk * Tk - Fk / Xk.across;
-      return Math.max(0, Math.min(yk, (kk - 2 * Ik) / ik.height))
+    function xS(SS, HS) {
+      const gS = HS > 0 ? HS + 1 : 0,
+        xS = SS * bS - HS / tS.across;
+      return Math.max(0, Math.min(xS, (SS - 2 * gS) / XS.height))
     }
-    const lk = [15, 15, 15],
-      ak = {
+    const NS = [15, 15, 15],
+      qS = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function qk(kk, Fk, Ik, Xk) {
+    function uS(SS, HS, gS, tS) {
       const {
-        vertices: Tk,
-        uvs: lk,
-        indices: ak,
-        shades: qk
-      } = kk, Lk = function(kk, Fk) {
-        const Ik = yk(kk, Fk),
-          Xk = ik.width * Ik,
-          Tk = ik.height * Ik;
+        vertices: bS,
+        uvs: NS,
+        indices: qS,
+        shades: uS
+      } = SS, IS = function(SS, HS) {
+        const gS = xS(SS, HS),
+          tS = XS.width * gS,
+          bS = XS.height * gS;
         return {
-          left: (kk - Xk) / 2,
-          top: (kk - Tk) / 2,
-          width: Xk,
-          height: Tk
+          left: (SS - tS) / 2,
+          top: (SS - bS) / 2,
+          width: tS,
+          height: bS
         }
-      }(Ik, Xk), tk = new Float32Array(Tk.length);
-      for (let ik = 0; ik < Tk.length; ik += 3) tk[ik] = Lk.left + Tk[ik] * Lk.width, tk[ik + 1] = Lk.top + Tk[ik + 1] * Lk.height, tk[ik + 2] = Tk[ik + 2];
-      const jk = new Float32Array(Ik * Ik).fill(-1 / 0),
-        ek = new Uint8ClampedArray(Ik * Ik * 4),
-        wk = 255 * kk.alphaCutoff;
-      for (let ik = 0; ik < ak.length; ik += 3) {
-        const [kk, Xk, Tk] = [ak[ik], ak[ik + 1], ak[ik + 2]], [yk, Lk, Zk] = [3 * kk, 3 * Xk, 3 * Tk], [Hk, Jk, xk, Pk, Kk, Qk] = [tk[yk], tk[yk + 1], tk[Lk], tk[Lk + 1], tk[Zk], tk[Zk + 1]], sk = (xk - Hk) * (Qk - Jk) - (Kk - Hk) * (Pk - Jk);
-        if (Math.abs(sk) < 1e-9) continue;
-        const Vk = qk[ik / 3],
-          [zk, Sk, vk, Ek, Ok, nk] = [lk[2 * kk], lk[2 * kk + 1], lk[2 * Xk], lk[2 * Xk + 1], lk[2 * Tk], lk[2 * Tk + 1]],
-          Gk = Math.max(0, Math.floor(Math.min(Hk, xk, Kk))),
-          pk = Math.min(Ik - 1, Math.ceil(Math.max(Hk, xk, Kk))),
-          uk = Math.max(0, Math.floor(Math.min(Jk, Pk, Qk))),
-          bk = Math.min(Ik - 1, Math.ceil(Math.max(Jk, Pk, Qk)));
-        for (let ik = uk; ik <= bk; ik++)
-          for (let kk = Gk; kk <= pk; kk++) {
-            const [Xk, Tk] = [kk + .5, ik + .5], lk = ((Xk - Hk) * (Qk - Jk) - (Kk - Hk) * (Tk - Jk)) / sk, ak = ((xk - Hk) * (Tk - Jk) - (Xk - Hk) * (Pk - Jk)) / sk, qk = 1 - lk - ak;
-            if (qk < 0 || lk < 0 || ak < 0) continue;
-            const Gk = qk * tk[yk + 2] + lk * tk[Lk + 2] + ak * tk[Zk + 2],
-              pk = ik * Ik + kk;
-            if (Gk <= jk[pk]) continue;
-            const uk = Math.max(0, Math.min(Fk.width - 1, Math.floor((qk * zk + lk * vk + ak * Ok) * Fk.width))),
-              bk = 4 * (Math.max(0, Math.min(Fk.height - 1, Math.floor((qk * Sk + lk * Ek + ak * nk) * Fk.height))) * Fk.width + uk);
-            Fk.pixels[bk + 3] < wk || (jk[pk] = Gk, ek[4 * pk] = Fk.pixels[bk] * Vk, ek[4 * pk + 1] = Fk.pixels[bk + 1] * Vk, ek[4 * pk + 2] = Fk.pixels[bk + 2] * Vk, ek[4 * pk + 3] = 255)
+      }(gS, tS), fS = new Float32Array(bS.length);
+      for (let XS = 0; XS < bS.length; XS += 3) fS[XS] = IS.left + bS[XS] * IS.width, fS[XS + 1] = IS.top + bS[XS + 1] * IS.height, fS[XS + 2] = bS[XS + 2];
+      const aS = new Float32Array(gS * gS).fill(-1 / 0),
+        KS = new Uint8ClampedArray(gS * gS * 4),
+        jS = 255 * SS.alphaCutoff;
+      for (let XS = 0; XS < qS.length; XS += 3) {
+        const [SS, tS, bS] = [qS[XS], qS[XS + 1], qS[XS + 2]], [xS, IS, kS] = [3 * SS, 3 * tS, 3 * bS], [GS, CS, nS, PS, QS, DS] = [fS[xS], fS[xS + 1], fS[IS], fS[IS + 1], fS[kS], fS[kS + 1]], wS = (nS - GS) * (DS - CS) - (QS - GS) * (PS - CS);
+        if (Math.abs(wS) < 1e-9) continue;
+        const hS = uS[XS / 3],
+          [ZS, JS, OS, dS, cS, vS] = [NS[2 * SS], NS[2 * SS + 1], NS[2 * tS], NS[2 * tS + 1], NS[2 * bS], NS[2 * bS + 1]],
+          ES = Math.max(0, Math.floor(Math.min(GS, nS, QS))),
+          LS = Math.min(gS - 1, Math.ceil(Math.max(GS, nS, QS))),
+          YS = Math.max(0, Math.floor(Math.min(CS, PS, DS))),
+          AS = Math.min(gS - 1, Math.ceil(Math.max(CS, PS, DS)));
+        for (let XS = YS; XS <= AS; XS++)
+          for (let SS = ES; SS <= LS; SS++) {
+            const [tS, bS] = [SS + .5, XS + .5], NS = ((tS - GS) * (DS - CS) - (QS - GS) * (bS - CS)) / wS, qS = ((nS - GS) * (bS - CS) - (tS - GS) * (PS - CS)) / wS, uS = 1 - NS - qS;
+            if (uS < 0 || NS < 0 || qS < 0) continue;
+            const ES = uS * fS[xS + 2] + NS * fS[IS + 2] + qS * fS[kS + 2],
+              LS = XS * gS + SS;
+            if (ES <= aS[LS]) continue;
+            const YS = Math.max(0, Math.min(HS.width - 1, Math.floor((uS * ZS + NS * OS + qS * cS) * HS.width))),
+              AS = 4 * (Math.max(0, Math.min(HS.height - 1, Math.floor((uS * JS + NS * dS + qS * vS) * HS.height))) * HS.width + YS);
+            HS.pixels[AS + 3] < jS || (aS[LS] = ES, KS[4 * LS] = HS.pixels[AS] * hS, KS[4 * LS + 1] = HS.pixels[AS + 1] * hS, KS[4 * LS + 2] = HS.pixels[AS + 2] * hS, KS[4 * LS + 3] = 255)
           }
       }
-      return Zk(ek, Ik, Xk), ek
+      return kS(KS, gS, tS), KS
     }
-    let Lk = NaN,
-      tk = new Int32Array(0);
+    let IS = NaN,
+      fS = new Int32Array(0);
 
-    function Zk(kk, Fk, Ik) {
-      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Fk => 0 !== kk[4 * Fk + 3];
-      const Tk = new Uint8Array(Fk * Fk);
-      for (let lk = 0; lk < Fk * Fk; lk++) Tk[lk] = Xk(lk) ? 1 : 0;
-      const ik = (kk, Ik) => kk >= 0 && Ik >= 0 && kk < Fk && Ik < Fk && 0 === Tk[Ik * Fk + kk],
-        yk = new Float32Array(Fk * Fk).fill(1 / 0),
-        ak = function(kk) {
-          if (kk !== Lk) {
-            const Fk = Math.ceil(kk + 1),
-              Ik = [];
-            for (let Xk = -Fk; Xk <= Fk; Xk++)
-              for (let Tk = -Fk; Tk <= Fk; Tk++) {
-                const Fk = Tk * Tk + Xk * Xk;
-                Fk > 0 && Fk < (kk + 1) ** 2 && Ik.push(Tk, Xk, Fk)
+    function kS(SS, HS, gS) {
+      let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : HS => 0 !== SS[4 * HS + 3];
+      const bS = new Uint8Array(HS * HS);
+      for (let NS = 0; NS < HS * HS; NS++) bS[NS] = tS(NS) ? 1 : 0;
+      const XS = (SS, gS) => SS >= 0 && gS >= 0 && SS < HS && gS < HS && 0 === bS[gS * HS + SS],
+        xS = new Float32Array(HS * HS).fill(1 / 0),
+        qS = function(SS) {
+          if (SS !== IS) {
+            const HS = Math.ceil(SS + 1),
+              gS = [];
+            for (let tS = -HS; tS <= HS; tS++)
+              for (let bS = -HS; bS <= HS; bS++) {
+                const HS = bS * bS + tS * tS;
+                HS > 0 && HS < (SS + 1) ** 2 && gS.push(bS, tS, HS)
               }
-            Lk = kk, tk = Int32Array.from(Ik)
+            IS = SS, fS = Int32Array.from(gS)
           }
-          return tk
-        }(Ik);
-      for (let lk = 0; lk < Fk; lk++)
-        for (let kk = 0; kk < Fk; kk++) {
-          if (1 === Tk[lk * Fk + kk] && (ik(kk - 1, lk) || ik(kk + 1, lk) || ik(kk, lk - 1) || ik(kk, lk + 1)))
-            for (let Ik = 0; Ik < ak.length; Ik += 3) {
-              const Xk = kk + ak[Ik],
-                Tk = lk + ak[Ik + 1];
-              if (Xk >= 0 && Tk >= 0 && Xk < Fk && Tk < Fk) {
-                const kk = Tk * Fk + Xk;
-                yk[kk] = Math.min(yk[kk], ak[Ik + 2])
+          return fS
+        }(gS);
+      for (let NS = 0; NS < HS; NS++)
+        for (let SS = 0; SS < HS; SS++) {
+          if (1 === bS[NS * HS + SS] && (XS(SS - 1, NS) || XS(SS + 1, NS) || XS(SS, NS - 1) || XS(SS, NS + 1)))
+            for (let gS = 0; gS < qS.length; gS += 3) {
+              const tS = SS + qS[gS],
+                bS = NS + qS[gS + 1];
+              if (tS >= 0 && bS >= 0 && tS < HS && bS < HS) {
+                const SS = bS * HS + tS;
+                xS[SS] = Math.min(xS[SS], qS[gS + 2])
               }
             }
         }
-      for (let qk = 0; qk < Fk * Fk; qk++) 1 !== Tk[qk] && yk[qk] !== 1 / 0 && (kk.set(lk, 4 * qk), kk[4 * qk + 3] = Math.round(255 * Math.min(1, Ik + 1 - Math.sqrt(yk[qk]))))
+      for (let uS = 0; uS < HS * HS; uS++) 1 !== bS[uS] && xS[uS] !== 1 / 0 && (SS.set(NS, 4 * uS), SS[4 * uS + 3] = Math.round(255 * Math.min(1, gS + 1 - Math.sqrt(xS[uS]))))
     }
   },
-  36393: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => Tk
+  36415: (SS, HS, gS) => {
+    gS.d(HS, {
+      d: () => bS
     });
-    const Xk = {
-      wait: function(kk) {
-        return new Promise((Fk => {
-          setTimeout(Fk, kk)
+    const tS = {
+      wait: function(SS) {
+        return new Promise((HS => {
+          setTimeout(HS, SS)
         }))
       },
       stallMs: 2e4
     };
-    class Tk {
-      constructor(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Xk;
-        this.url = kk, this.options = Fk, this.timing = Ik, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = kk
+    class bS {
+      constructor(SS) {
+        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : tS;
+        this.url = SS, this.options = HS, this.timing = gS, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = SS
       }
       ready() {
         if (null === this.fetched) {
-          const kk = new AbortController;
-          this.fetchAbort = kk, this.fetched = this.fetchWithRetries(kk.signal).then((Fk => (this.fetchAbort === kk && (this.fetchAbort = null), Fk)))
+          const SS = new AbortController;
+          this.fetchAbort = SS, this.fetched = this.fetchWithRetries(SS.signal).then((HS => (this.fetchAbort === SS && (this.fetchAbort = null), HS)))
         }
         return this.fetched
       }
@@ -318,51 +318,51 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(kk) {
-        for (let Fk = 0;; Fk++) {
-          const Ik = new URL(this.url);
-          if (Fk > 0 && Ik.searchParams.set("cache-bust", `${Date.now()}-${Fk}`), await this.fetchWhole(Ik, kk)) return this.scriptUrl = Ik, !0;
-          if (Fk >= 3 || kk.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** Fk), kk.aborted) return !1
+      async fetchWithRetries(SS) {
+        for (let HS = 0;; HS++) {
+          const gS = new URL(this.url);
+          if (HS > 0 && gS.searchParams.set("cache-bust", `${Date.now()}-${HS}`), await this.fetchWhole(gS, SS)) return this.scriptUrl = gS, !0;
+          if (HS >= 3 || SS.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** HS), SS.aborted) return !1
         }
       }
-      async fetchWhole(kk, Fk) {
-        const Ik = new AbortController;
-        let Xk;
-        const Tk = () => {
-            clearTimeout(Xk), Xk = setTimeout((() => {
-              Ik.abort()
+      async fetchWhole(SS, HS) {
+        const gS = new AbortController;
+        let tS;
+        const bS = () => {
+            clearTimeout(tS), tS = setTimeout((() => {
+              gS.abort()
             }), this.timing.stallMs)
           },
-          ik = () => {
-            Ik.abort()
+          XS = () => {
+            gS.abort()
           };
-        Fk.addEventListener("abort", ik, {
+        HS.addEventListener("abort", XS, {
           once: !0
-        }), Tk();
+        }), bS();
         try {
-          var yk;
-          const Fk = await fetch(kk, {
-            signal: Ik.signal
+          var xS;
+          const HS = await fetch(SS, {
+            signal: gS.signal
           });
-          if (!Fk.ok) return !1;
-          const Xk = null === (yk = Fk.body) || void 0 === yk ? void 0 : yk.getReader();
-          if (!Xk) return !1;
+          if (!HS.ok) return !1;
+          const tS = null === (xS = HS.body) || void 0 === xS ? void 0 : xS.getReader();
+          if (!tS) return !1;
           for (;;) {
             const {
-              done: kk
-            } = await Xk.read();
-            if (kk) return !0;
-            Tk()
+              done: SS
+            } = await tS.read();
+            if (SS) return !0;
+            bS()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(Xk), Fk.removeEventListener("abort", ik)
+          clearTimeout(tS), HS.removeEventListener("abort", XS)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);

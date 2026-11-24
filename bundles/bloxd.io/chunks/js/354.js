@@ -1,25 +1,25 @@
 export const id = 354;
 export const ids = [354];
 export const modules = {
-  61295: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      WorldCodeAiOutOfUsage: () => ik
+  61347: (SS, HS, gS) => {
+    gS.r(HS), gS.d(HS, {
+      WorldCodeAiOutOfUsage: () => XS
     });
-    var Xk = Ik(1406),
-      Tk = Ik(1096);
+    var tS = gS(1528),
+      bS = gS(1181);
 
-    function ik(kk) {
+    function XS(SS) {
       let {
-        onGetSuperRank: Fk
-      } = kk;
-      return (0, Tk.jsxs)("div", {
+        onGetSuperRank: HS
+      } = SS;
+      return (0, bS.jsxs)("div", {
         className: "WorldCodeAiOutOfUsage",
-        children: [(0, Tk.jsx)("p", {
+        children: [(0, bS.jsx)("p", {
           className: "WorldCodeAiOutOfUsageText",
           children: "You don't have any Super Bot.xd usage left - use Bot.xd or get Super Rank for more usage!"
-        }), (0, Tk.jsx)(Xk.m, {
+        }), (0, bS.jsx)(tS.p, {
           className: "WorldCodeAiOutOfUsageButton",
-          onClick: Fk,
+          onClick: HS,
           children: "Get Super Rank"
         })]
       })
@@ -27,4 +27,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const SS in modules) Object.freeze(modules[SS]);
