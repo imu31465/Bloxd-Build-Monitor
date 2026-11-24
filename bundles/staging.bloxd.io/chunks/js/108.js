@@ -1,173 +1,173 @@
 export const id = 108;
 export const ids = [108];
 export const modules = {
-  4996: (kk, Fk, Ik) => {
-    function Xk(kk) {
-      return Xk = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(kk) {
-        return typeof kk
-      } : function(kk) {
-        return kk && "function" == typeof Symbol && kk.constructor === Symbol && kk !== Symbol.prototype ? "symbol" : typeof kk
-      }, Xk(kk)
+  4961: (mm, Tm, fm) => {
+    function hm(mm) {
+      return hm = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(mm) {
+        return typeof mm
+      } : function(mm) {
+        return mm && "function" == typeof Symbol && mm.constructor === Symbol && mm !== Symbol.prototype ? "symbol" : typeof mm
+      }, hm(mm)
     }
-    Object.defineProperty(Fk, "__esModule", {
+    Object.defineProperty(Tm, "__esModule", {
       value: !0
-    }), Fk.default = void 0;
-    var Tk = tk(Ik(1055)),
-      ik = function(kk, Fk) {
-        if (!Fk && kk && kk.__esModule) return kk;
-        if (null === kk || "object" !== Xk(kk) && "function" !== typeof kk) return {
-          default: kk
+    }), Tm.default = void 0;
+    var Am = pm(fm(1080)),
+      am = function(mm, Tm) {
+        if (!Tm && mm && mm.__esModule) return mm;
+        if (null === mm || "object" !== hm(mm) && "function" !== typeof mm) return {
+          default: mm
         };
-        var Ik = Lk(Fk);
-        if (Ik && Ik.has(kk)) return Ik.get(kk);
-        var Tk = {},
-          ik = Object.defineProperty && Object.getOwnPropertyDescriptor;
-        for (var yk in kk)
-          if ("default" !== yk && Object.prototype.hasOwnProperty.call(kk, yk)) {
-            var lk = ik ? Object.getOwnPropertyDescriptor(kk, yk) : null;
-            lk && (lk.get || lk.set) ? Object.defineProperty(Tk, yk, lk) : Tk[yk] = kk[yk]
-          } Tk.default = kk, Ik && Ik.set(kk, Tk);
-        return Tk
-      }(Ik(58)),
-      yk = tk(Ik(4946)),
-      lk = tk(Ik(5002)),
-      ak = Ik(5007),
-      qk = Ik(1096);
+        var fm = Rm(Tm);
+        if (fm && fm.has(mm)) return fm.get(mm);
+        var Am = {},
+          am = Object.defineProperty && Object.getOwnPropertyDescriptor;
+        for (var xm in mm)
+          if ("default" !== xm && Object.prototype.hasOwnProperty.call(mm, xm)) {
+            var wm = am ? Object.getOwnPropertyDescriptor(mm, xm) : null;
+            wm && (wm.get || wm.set) ? Object.defineProperty(Am, xm, wm) : Am[xm] = mm[xm]
+          } Am.default = mm, fm && fm.set(mm, Am);
+        return Am
+      }(fm(59)),
+      xm = pm(fm(4909)),
+      wm = pm(fm(4966)),
+      Dm = fm(4968),
+      im = fm(1135);
 
-    function Lk(kk) {
+    function Rm(mm) {
       if ("function" !== typeof WeakMap) return null;
-      var Fk = new WeakMap,
-        Ik = new WeakMap;
-      return (Lk = function(kk) {
-        return kk ? Ik : Fk
-      })(kk)
+      var Tm = new WeakMap,
+        fm = new WeakMap;
+      return (Rm = function(mm) {
+        return mm ? fm : Tm
+      })(mm)
     }
 
-    function tk(kk) {
-      return kk && kk.__esModule ? kk : {
-        default: kk
+    function pm(mm) {
+      return mm && mm.__esModule ? mm : {
+        default: mm
       }
     }
 
-    function Zk(kk, Fk) {
-      var Ik = "undefined" !== typeof Symbol && kk[Symbol.iterator] || kk["@@iterator"];
-      if (!Ik) {
-        if (Array.isArray(kk) || (Ik = function(kk, Fk) {
-            if (!kk) return;
-            if ("string" === typeof kk) return jk(kk, Fk);
-            var Ik = Object.prototype.toString.call(kk).slice(8, -1);
-            "Object" === Ik && kk.constructor && (Ik = kk.constructor.name);
-            if ("Map" === Ik || "Set" === Ik) return Array.from(kk);
-            if ("Arguments" === Ik || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(Ik)) return jk(kk, Fk)
-          }(kk)) || Fk && kk && "number" === typeof kk.length) {
-          Ik && (kk = Ik);
-          var Xk = 0,
-            Tk = function() {};
+    function Em(mm, Tm) {
+      var fm = "undefined" !== typeof Symbol && mm[Symbol.iterator] || mm["@@iterator"];
+      if (!fm) {
+        if (Array.isArray(mm) || (fm = function(mm, Tm) {
+            if (!mm) return;
+            if ("string" === typeof mm) return om(mm, Tm);
+            var fm = Object.prototype.toString.call(mm).slice(8, -1);
+            "Object" === fm && mm.constructor && (fm = mm.constructor.name);
+            if ("Map" === fm || "Set" === fm) return Array.from(mm);
+            if ("Arguments" === fm || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(fm)) return om(mm, Tm)
+          }(mm)) || Tm && mm && "number" === typeof mm.length) {
+          fm && (mm = fm);
+          var hm = 0,
+            Am = function() {};
           return {
-            s: Tk,
+            s: Am,
             n: function() {
-              return Xk >= kk.length ? {
+              return hm >= mm.length ? {
                 done: !0
               } : {
                 done: !1,
-                value: kk[Xk++]
+                value: mm[hm++]
               }
             },
-            e: function(kk) {
-              throw kk
+            e: function(mm) {
+              throw mm
             },
-            f: Tk
+            f: Am
           }
         }
         throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }
-      var ik, yk = !0,
-        lk = !1;
+      var am, xm = !0,
+        wm = !1;
       return {
         s: function() {
-          Ik = Ik.call(kk)
+          fm = fm.call(mm)
         },
         n: function() {
-          var kk = Ik.next();
-          return yk = kk.done, kk
+          var mm = fm.next();
+          return xm = mm.done, mm
         },
-        e: function(kk) {
-          lk = !0, ik = kk
+        e: function(mm) {
+          wm = !0, am = mm
         },
         f: function() {
           try {
-            yk || null == Ik.return || Ik.return()
+            xm || null == fm.return || fm.return()
           } finally {
-            if (lk) throw ik
+            if (wm) throw am
           }
         }
       }
     }
 
-    function jk(kk, Fk) {
-      (null == Fk || Fk > kk.length) && (Fk = kk.length);
-      for (var Ik = 0, Xk = new Array(Fk); Ik < Fk; Ik++) Xk[Ik] = kk[Ik];
-      return Xk
+    function om(mm, Tm) {
+      (null == Tm || Tm > mm.length) && (Tm = mm.length);
+      for (var fm = 0, hm = new Array(Tm); fm < Tm; fm++) hm[fm] = mm[fm];
+      return hm
     }
 
-    function ek(kk, Fk) {
-      for (var Ik = 0; Ik < Fk.length; Ik++) {
-        var Xk = Fk[Ik];
-        Xk.enumerable = Xk.enumerable || !1, Xk.configurable = !0, "value" in Xk && (Xk.writable = !0), Object.defineProperty(kk, Xk.key, Xk)
+    function Om(mm, Tm) {
+      for (var fm = 0; fm < Tm.length; fm++) {
+        var hm = Tm[fm];
+        hm.enumerable = hm.enumerable || !1, hm.configurable = !0, "value" in hm && (hm.writable = !0), Object.defineProperty(mm, hm.key, hm)
       }
     }
 
-    function wk(kk, Fk) {
-      return wk = Object.setPrototypeOf || function(kk, Fk) {
-        return kk.__proto__ = Fk, kk
-      }, wk(kk, Fk)
+    function Ym(mm, Tm) {
+      return Ym = Object.setPrototypeOf || function(mm, Tm) {
+        return mm.__proto__ = Tm, mm
+      }, Ym(mm, Tm)
     }
 
-    function Hk(kk) {
-      var Fk = function() {
+    function qm(mm) {
+      var Tm = function() {
         if ("undefined" === typeof Reflect || !Reflect.construct) return !1;
         if (Reflect.construct.sham) return !1;
         if ("function" === typeof Proxy) return !0;
         try {
           return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {}))), !0
-        } catch (kk) {
+        } catch (mm) {
           return !1
         }
       }();
       return function() {
-        var Ik, Tk = xk(kk);
-        if (Fk) {
-          var ik = xk(this).constructor;
-          Ik = Reflect.construct(Tk, arguments, ik)
-        } else Ik = Tk.apply(this, arguments);
-        return function(kk, Fk) {
-          if (Fk && ("object" === Xk(Fk) || "function" === typeof Fk)) return Fk;
-          if (void 0 !== Fk) throw new TypeError("Derived constructors may only return object or undefined");
-          return Jk(kk)
-        }(this, Ik)
+        var fm, Am = Vm(mm);
+        if (Tm) {
+          var am = Vm(this).constructor;
+          fm = Reflect.construct(Am, arguments, am)
+        } else fm = Am.apply(this, arguments);
+        return function(mm, Tm) {
+          if (Tm && ("object" === hm(Tm) || "function" === typeof Tm)) return Tm;
+          if (void 0 !== Tm) throw new TypeError("Derived constructors may only return object or undefined");
+          return jm(mm)
+        }(this, fm)
       }
     }
 
-    function Jk(kk) {
-      if (void 0 === kk) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      return kk
+    function jm(mm) {
+      if (void 0 === mm) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      return mm
     }
 
-    function xk(kk) {
-      return xk = Object.setPrototypeOf ? Object.getPrototypeOf : function(kk) {
-        return kk.__proto__ || Object.getPrototypeOf(kk)
-      }, xk(kk)
+    function Vm(mm) {
+      return Vm = Object.setPrototypeOf ? Object.getPrototypeOf : function(mm) {
+        return mm.__proto__ || Object.getPrototypeOf(mm)
+      }, Vm(mm)
     }
 
-    function Pk(kk, Fk, Ik) {
-      return Fk in kk ? Object.defineProperty(kk, Fk, {
-        value: Ik,
+    function Im(mm, Tm, fm) {
+      return Tm in mm ? Object.defineProperty(mm, Tm, {
+        value: fm,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : kk[Fk] = Ik, kk
+      }) : mm[Tm] = fm, mm
     }
-    var Kk = {
+    var Km = {
         orientation: {
           horizontal: {
             dimension: "width",
@@ -183,258 +183,258 @@ export const modules = {
           }
         }
       },
-      Qk = function(kk) {
-        ! function(kk, Fk) {
-          if ("function" !== typeof Fk && null !== Fk) throw new TypeError("Super expression must either be null or a function");
-          Object.defineProperty(kk, "prototype", {
-            value: Object.create(Fk && Fk.prototype, {
+      Qm = function(mm) {
+        ! function(mm, Tm) {
+          if ("function" !== typeof Tm && null !== Tm) throw new TypeError("Super expression must either be null or a function");
+          Object.defineProperty(mm, "prototype", {
+            value: Object.create(Tm && Tm.prototype, {
               constructor: {
-                value: kk,
+                value: mm,
                 writable: !0,
                 configurable: !0
               }
             }),
             writable: !1
-          }), Fk && wk(kk, Fk)
-        }(yk, kk);
-        var Fk, Ik, Xk, ik = Hk(yk);
+          }), Tm && Ym(mm, Tm)
+        }(xm, mm);
+        var Tm, fm, hm, am = qm(xm);
 
-        function yk(kk, Fk) {
-          var Ik;
-          return function(kk, Fk) {
-            if (!(kk instanceof Fk)) throw new TypeError("Cannot call a class as a function")
-          }(this, yk), Pk(Jk(Ik = ik.call(this, kk, Fk)), "handleFormat", (function(kk) {
-            var Fk = Ik.props.format;
-            return Fk ? Fk(kk) : kk
-          })), Pk(Jk(Ik), "handleUpdate", (function() {
-            if (Ik.slider) {
-              var kk = Ik.props.orientation,
-                Fk = (0, ak.capitalize)(Kk.orientation[kk].dimension),
-                Xk = Ik.slider["offset".concat(Fk)],
-                Tk = Ik.handle["offset".concat(Fk)];
-              Ik.setState({
-                limit: Xk - Tk,
-                grab: Tk / 2
+        function xm(mm, Tm) {
+          var fm;
+          return function(mm, Tm) {
+            if (!(mm instanceof Tm)) throw new TypeError("Cannot call a class as a function")
+          }(this, xm), Im(jm(fm = am.call(this, mm, Tm)), "handleFormat", (function(mm) {
+            var Tm = fm.props.format;
+            return Tm ? Tm(mm) : mm
+          })), Im(jm(fm), "handleUpdate", (function() {
+            if (fm.slider) {
+              var mm = fm.props.orientation,
+                Tm = (0, Dm.capitalize)(Km.orientation[mm].dimension),
+                hm = fm.slider["offset".concat(Tm)],
+                Am = fm.handle["offset".concat(Tm)];
+              fm.setState({
+                limit: hm - Am,
+                grab: Am / 2
               })
             }
-          })), Pk(Jk(Ik), "handleStart", (function(kk) {
-            var Fk = Ik.props.onChangeStart;
-            document.addEventListener("mousemove", Ik.handleDrag), document.addEventListener("mouseup", Ik.handleEnd), Ik.setState({
+          })), Im(jm(fm), "handleStart", (function(mm) {
+            var Tm = fm.props.onChangeStart;
+            document.addEventListener("mousemove", fm.handleDrag), document.addEventListener("mouseup", fm.handleEnd), fm.setState({
               active: !0
             }, (function() {
-              Fk && Fk(kk)
+              Tm && Tm(mm)
             }))
-          })), Pk(Jk(Ik), "handleDrag", (function(kk) {
-            kk.stopPropagation();
-            var Fk = Ik.props.onChange,
-              Xk = kk.target,
-              Tk = Xk.className,
-              ik = Xk.classList,
-              yk = Xk.dataset;
-            if (Fk && "rangeslider__labels" !== Tk) {
-              var lk = Ik.position(kk);
-              ik && ik.contains("rangeslider__label-item") && yk.value && (lk = parseFloat(yk.value)), Fk && Fk(lk, kk)
+          })), Im(jm(fm), "handleDrag", (function(mm) {
+            mm.stopPropagation();
+            var Tm = fm.props.onChange,
+              hm = mm.target,
+              Am = hm.className,
+              am = hm.classList,
+              xm = hm.dataset;
+            if (Tm && "rangeslider__labels" !== Am) {
+              var wm = fm.position(mm);
+              am && am.contains("rangeslider__label-item") && xm.value && (wm = parseFloat(xm.value)), Tm && Tm(wm, mm)
             }
-          })), Pk(Jk(Ik), "handleEnd", (function(kk) {
-            var Fk = Ik.props.onChangeComplete;
-            Ik.setState({
+          })), Im(jm(fm), "handleEnd", (function(mm) {
+            var Tm = fm.props.onChangeComplete;
+            fm.setState({
               active: !1
             }, (function() {
-              Fk && Fk(kk)
-            })), document.removeEventListener("mousemove", Ik.handleDrag), document.removeEventListener("mouseup", Ik.handleEnd)
-          })), Pk(Jk(Ik), "handleKeyDown", (function(kk) {
-            kk.preventDefault();
-            var Fk, Xk = kk.keyCode,
-              Tk = Ik.props,
-              ik = Tk.value,
-              yk = Tk.min,
-              lk = Tk.max,
-              ak = Tk.step,
-              qk = Tk.onChange;
-            switch (Xk) {
+              Tm && Tm(mm)
+            })), document.removeEventListener("mousemove", fm.handleDrag), document.removeEventListener("mouseup", fm.handleEnd)
+          })), Im(jm(fm), "handleKeyDown", (function(mm) {
+            mm.preventDefault();
+            var Tm, hm = mm.keyCode,
+              Am = fm.props,
+              am = Am.value,
+              xm = Am.min,
+              wm = Am.max,
+              Dm = Am.step,
+              im = Am.onChange;
+            switch (hm) {
               case 38:
               case 39:
-                Fk = ik + ak > lk ? lk : ik + ak, qk && qk(Fk, kk);
+                Tm = am + Dm > wm ? wm : am + Dm, im && im(Tm, mm);
                 break;
               case 37:
               case 40:
-                Fk = ik - ak < yk ? yk : ik - ak, qk && qk(Fk, kk)
+                Tm = am - Dm < xm ? xm : am - Dm, im && im(Tm, mm)
             }
-          })), Pk(Jk(Ik), "getPositionFromValue", (function(kk) {
-            var Fk = Ik.state.limit,
-              Xk = Ik.props,
-              Tk = Xk.min,
-              ik = (kk - Tk) / (Xk.max - Tk);
-            return Math.round(ik * Fk)
-          })), Pk(Jk(Ik), "getValueFromPosition", (function(kk) {
-            var Fk = Ik.state.limit,
-              Xk = Ik.props,
-              Tk = Xk.orientation,
-              ik = Xk.min,
-              yk = Xk.max,
-              lk = Xk.step,
-              qk = (0, ak.clamp)(kk, 0, Fk) / (Fk || 1),
-              Lk = lk * Math.round(qk * (yk - ik) / lk),
-              tk = "horizontal" === Tk ? Lk + ik : yk - Lk;
-            return (0, ak.clamp)(tk, ik, yk)
-          })), Pk(Jk(Ik), "position", (function(kk) {
-            var Fk = Ik.state.grab,
-              Xk = Ik.props,
-              Tk = Xk.orientation,
-              ik = Xk.reverse,
-              yk = Ik.slider,
-              lk = Kk.orientation[Tk].coordinate,
-              qk = ik ? Kk.orientation[Tk].reverseDirection : Kk.orientation[Tk].direction,
-              Lk = "client".concat((0, ak.capitalize)(lk)),
-              tk = kk.touches ? kk.touches[0][Lk] : kk[Lk],
-              Zk = yk.getBoundingClientRect()[qk],
-              jk = ik ? Zk - tk - Fk : tk - Zk - Fk;
-            return Ik.getValueFromPosition(jk)
-          })), Pk(Jk(Ik), "coordinates", (function(kk) {
-            var Fk = Ik.state,
-              Xk = Fk.limit,
-              Tk = Fk.grab,
-              ik = Ik.props.orientation,
-              yk = Ik.getValueFromPosition(kk),
-              lk = Ik.getPositionFromValue(yk),
-              ak = "horizontal" === ik ? lk + Tk : lk;
+          })), Im(jm(fm), "getPositionFromValue", (function(mm) {
+            var Tm = fm.state.limit,
+              hm = fm.props,
+              Am = hm.min,
+              am = (mm - Am) / (hm.max - Am);
+            return Math.round(am * Tm)
+          })), Im(jm(fm), "getValueFromPosition", (function(mm) {
+            var Tm = fm.state.limit,
+              hm = fm.props,
+              Am = hm.orientation,
+              am = hm.min,
+              xm = hm.max,
+              wm = hm.step,
+              im = (0, Dm.clamp)(mm, 0, Tm) / (Tm || 1),
+              Rm = wm * Math.round(im * (xm - am) / wm),
+              pm = "horizontal" === Am ? Rm + am : xm - Rm;
+            return (0, Dm.clamp)(pm, am, xm)
+          })), Im(jm(fm), "position", (function(mm) {
+            var Tm = fm.state.grab,
+              hm = fm.props,
+              Am = hm.orientation,
+              am = hm.reverse,
+              xm = fm.slider,
+              wm = Km.orientation[Am].coordinate,
+              im = am ? Km.orientation[Am].reverseDirection : Km.orientation[Am].direction,
+              Rm = "client".concat((0, Dm.capitalize)(wm)),
+              pm = mm.touches ? mm.touches[0][Rm] : mm[Rm],
+              Em = xm.getBoundingClientRect()[im],
+              om = am ? Em - pm - Tm : pm - Em - Tm;
+            return fm.getValueFromPosition(om)
+          })), Im(jm(fm), "coordinates", (function(mm) {
+            var Tm = fm.state,
+              hm = Tm.limit,
+              Am = Tm.grab,
+              am = fm.props.orientation,
+              xm = fm.getValueFromPosition(mm),
+              wm = fm.getPositionFromValue(xm),
+              Dm = "horizontal" === am ? wm + Am : wm;
             return {
-              fill: "horizontal" === ik ? ak : Xk - ak,
-              handle: ak,
-              label: ak
+              fill: "horizontal" === am ? Dm : hm - Dm,
+              handle: Dm,
+              label: Dm
             }
-          })), Pk(Jk(Ik), "renderLabels", (function(kk) {
-            return (0, qk.jsx)("ul", {
-              ref: function(kk) {
-                Ik.labels = kk
+          })), Im(jm(fm), "renderLabels", (function(mm) {
+            return (0, im.jsx)("ul", {
+              ref: function(mm) {
+                fm.labels = mm
               },
-              className: (0, Tk.default)("rangeslider__labels"),
-              children: kk
+              className: (0, Am.default)("rangeslider__labels"),
+              children: mm
             })
-          })), Ik.state = {
+          })), fm.state = {
             active: !1,
             limit: 0,
             grab: 0
-          }, Ik
+          }, fm
         }
-        return Fk = yk, (Ik = [{
+        return Tm = xm, (fm = [{
           key: "componentDidMount",
           value: function() {
-            this.handleUpdate(), new lk.default(this.handleUpdate).observe(this.slider)
+            this.handleUpdate(), new wm.default(this.handleUpdate).observe(this.slider)
           }
         }, {
           key: "render",
           value: function() {
-            var kk = this,
-              Fk = this.props,
-              Ik = Fk.value,
-              Xk = Fk.orientation,
-              ik = Fk.className,
-              yk = Fk.tooltip,
-              lk = Fk.reverse,
-              ak = Fk.labels,
-              Lk = Fk.min,
-              tk = Fk.max,
-              jk = Fk.handleLabel,
-              ek = this.state.active,
-              wk = Kk.orientation[Xk].dimension,
-              Hk = lk ? Kk.orientation[Xk].reverseDirection : Kk.orientation[Xk].direction,
-              Jk = this.getPositionFromValue(Ik),
-              xk = this.coordinates(Jk),
-              Qk = Pk({}, wk, "".concat(xk.fill, "px")),
-              sk = Pk({}, Hk, "".concat(xk.handle, "px")),
-              Vk = yk && ek,
-              zk = [],
-              Sk = Object.keys(ak);
-            if (Sk.length > 0) {
-              var vk, Ek = Zk(Sk = Sk.sort((function(kk, Fk) {
-                return lk ? kk - Fk : Fk - kk
+            var mm = this,
+              Tm = this.props,
+              fm = Tm.value,
+              hm = Tm.orientation,
+              am = Tm.className,
+              xm = Tm.tooltip,
+              wm = Tm.reverse,
+              Dm = Tm.labels,
+              Rm = Tm.min,
+              pm = Tm.max,
+              om = Tm.handleLabel,
+              Om = this.state.active,
+              Ym = Km.orientation[hm].dimension,
+              qm = wm ? Km.orientation[hm].reverseDirection : Km.orientation[hm].direction,
+              jm = this.getPositionFromValue(fm),
+              Vm = this.coordinates(jm),
+              Qm = Im({}, Ym, "".concat(Vm.fill, "px")),
+              nm = Im({}, qm, "".concat(Vm.handle, "px")),
+              Jm = xm && Om,
+              cm = [],
+              zm = Object.keys(Dm);
+            if (zm.length > 0) {
+              var Zm, km = Em(zm = zm.sort((function(mm, Tm) {
+                return wm ? mm - Tm : Tm - mm
               })));
               try {
-                for (Ek.s(); !(vk = Ek.n()).done;) {
-                  var Ok = vk.value,
-                    nk = this.getPositionFromValue(Ok),
-                    Gk = this.coordinates(nk),
-                    pk = Pk({}, Hk, "".concat(Gk.label, "px"));
-                  zk.push((0, qk.jsx)("li", {
-                    className: (0, Tk.default)("rangeslider__label-item"),
-                    "data-value": Ok,
+                for (km.s(); !(Zm = km.n()).done;) {
+                  var bm = Zm.value,
+                    Sm = this.getPositionFromValue(bm),
+                    em = this.coordinates(Sm),
+                    Nm = Im({}, qm, "".concat(em.label, "px"));
+                  cm.push((0, im.jsx)("li", {
+                    className: (0, Am.default)("rangeslider__label-item"),
+                    "data-value": bm,
                     onMouseDown: this.handleDrag,
                     onTouchStart: this.handleStart,
                     onTouchEnd: this.handleEnd,
-                    style: pk,
-                    children: this.props.labels[Ok]
-                  }, Ok))
+                    style: Nm,
+                    children: this.props.labels[bm]
+                  }, bm))
                 }
-              } catch (uk) {
-                Ek.e(uk)
+              } catch (Gm) {
+                km.e(Gm)
               } finally {
-                Ek.f()
+                km.f()
               }
             }
-            return (0, qk.jsxs)("div", {
-              ref: function(Fk) {
-                kk.slider = Fk
+            return (0, im.jsxs)("div", {
+              ref: function(Tm) {
+                mm.slider = Tm
               },
-              className: (0, Tk.default)("rangeslider", "rangeslider-".concat(Xk), {
-                "rangeslider-reverse": lk
-              }, ik),
+              className: (0, Am.default)("rangeslider", "rangeslider-".concat(hm), {
+                "rangeslider-reverse": wm
+              }, am),
               onMouseDown: this.handleDrag,
               onMouseUp: this.handleEnd,
               onTouchStart: this.handleStart,
               onTouchEnd: this.handleEnd,
-              "aria-valuemin": Lk,
-              "aria-valuemax": tk,
-              "aria-valuenow": Ik,
-              "aria-orientation": Xk,
-              children: [(0, qk.jsx)("div", {
+              "aria-valuemin": Rm,
+              "aria-valuemax": pm,
+              "aria-valuenow": fm,
+              "aria-orientation": hm,
+              children: [(0, im.jsx)("div", {
                 className: "rangeslider__fill",
-                style: Qk
-              }), (0, qk.jsxs)("div", {
-                ref: function(Fk) {
-                  kk.handle = Fk
+                style: Qm
+              }), (0, im.jsxs)("div", {
+                ref: function(Tm) {
+                  mm.handle = Tm
                 },
                 className: "rangeslider__handle",
                 onMouseDown: this.handleStart,
                 onTouchMove: this.handleDrag,
                 onTouchEnd: this.handleEnd,
                 onKeyDown: this.handleKeyDown,
-                style: sk,
+                style: nm,
                 tabIndex: 0,
-                children: [Vk && (0, qk.jsx)("div", {
-                  ref: function(Fk) {
-                    kk.tooltip = Fk
+                children: [Jm && (0, im.jsx)("div", {
+                  ref: function(Tm) {
+                    mm.tooltip = Tm
                   },
                   className: "rangeslider__handle-tooltip",
-                  children: (0, qk.jsx)("span", {
-                    children: this.handleFormat(Ik)
+                  children: (0, im.jsx)("span", {
+                    children: this.handleFormat(fm)
                   })
-                }), (0, qk.jsx)("div", {
+                }), (0, im.jsx)("div", {
                   className: "rangeslider__handle-label",
-                  children: jk
+                  children: om
                 })]
-              }), ak && this.renderLabels(zk)]
+              }), Dm && this.renderLabels(cm)]
             })
           }
-        }]) && ek(Fk.prototype, Ik), Xk && ek(Fk, Xk), Object.defineProperty(Fk, "prototype", {
+        }]) && Om(Tm.prototype, fm), hm && Om(Tm, hm), Object.defineProperty(Tm, "prototype", {
           writable: !1
-        }), yk
-      }(ik.Component);
-    Pk(Qk, "propTypes", {
-      min: yk.default.number,
-      max: yk.default.number,
-      step: yk.default.number,
-      value: yk.default.number,
-      orientation: yk.default.string,
-      tooltip: yk.default.bool,
-      reverse: yk.default.bool,
-      labels: yk.default.object,
-      handleLabel: yk.default.string,
-      format: yk.default.func,
-      onChangeStart: yk.default.func,
-      onChange: yk.default.func,
-      onChangeComplete: yk.default.func
-    }), Pk(Qk, "defaultProps", {
+        }), xm
+      }(am.Component);
+    Im(Qm, "propTypes", {
+      min: xm.default.number,
+      max: xm.default.number,
+      step: xm.default.number,
+      value: xm.default.number,
+      orientation: xm.default.string,
+      tooltip: xm.default.bool,
+      reverse: xm.default.bool,
+      labels: xm.default.object,
+      handleLabel: xm.default.string,
+      format: xm.default.func,
+      onChangeStart: xm.default.func,
+      onChange: xm.default.func,
+      onChangeComplete: xm.default.func
+    }), Im(Qm, "defaultProps", {
       min: 0,
       max: 100,
       step: 1,
@@ -445,359 +445,359 @@ export const modules = {
       labels: {},
       handleLabel: ""
     });
-    var sk = Qk;
-    Fk.default = sk
+    var nm = Qm;
+    Tm.default = nm
   },
-  4988: (kk, Fk, Ik) => {
-    var Xk;
-    Fk.c = void 0;
-    var Tk = ((Xk = Ik(4996)) && Xk.__esModule ? Xk : {
-      default: Xk
+  4957: (mm, Tm, fm) => {
+    var hm;
+    Tm.d = void 0;
+    var Am = ((hm = fm(4961)) && hm.__esModule ? hm : {
+      default: hm
     }).default;
-    Fk.c = Tk
+    Tm.d = Am
   },
-  5007: (kk, Fk) => {
-    Object.defineProperty(Fk, "__esModule", {
+  4968: (mm, Tm) => {
+    Object.defineProperty(Tm, "__esModule", {
       value: !0
-    }), Fk.capitalize = function(kk) {
-      return kk.charAt(0).toUpperCase() + kk.substr(1)
-    }, Fk.clamp = function(kk, Fk, Ik) {
-      return Math.min(Math.max(kk, Fk), Ik)
+    }), Tm.capitalize = function(mm) {
+      return mm.charAt(0).toUpperCase() + mm.substr(1)
+    }, Tm.clamp = function(mm, Tm, fm) {
+      return Math.min(Math.max(mm, Tm), fm)
     }
   },
-  4953: (kk, Fk, Ik) => {
-    var Xk = Ik(4960);
+  4917: (mm, Tm, fm) => {
+    var hm = fm(4926);
 
-    function Tk() {}
+    function Am() {}
 
-    function ik() {}
-    ik.resetWarningCache = Tk, kk.exports = function() {
-      function kk(kk, Fk, Ik, Tk, ik, yk) {
-        if (yk !== Xk) {
-          var lk = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw lk.name = "Invariant Violation", lk
+    function am() {}
+    am.resetWarningCache = Am, mm.exports = function() {
+      function mm(mm, Tm, fm, Am, am, xm) {
+        if (xm !== hm) {
+          var wm = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw wm.name = "Invariant Violation", wm
         }
       }
 
-      function Fk() {
-        return kk
+      function Tm() {
+        return mm
       }
-      kk.isRequired = kk;
-      var Ik = {
-        array: kk,
-        bigint: kk,
-        bool: kk,
-        func: kk,
-        number: kk,
-        object: kk,
-        string: kk,
-        symbol: kk,
-        any: kk,
-        arrayOf: Fk,
-        element: kk,
-        elementType: kk,
-        instanceOf: Fk,
-        node: kk,
-        objectOf: Fk,
-        oneOf: Fk,
-        oneOfType: Fk,
-        shape: Fk,
-        exact: Fk,
-        checkPropTypes: ik,
-        resetWarningCache: Tk
+      mm.isRequired = mm;
+      var fm = {
+        array: mm,
+        bigint: mm,
+        bool: mm,
+        func: mm,
+        number: mm,
+        object: mm,
+        string: mm,
+        symbol: mm,
+        any: mm,
+        arrayOf: Tm,
+        element: mm,
+        elementType: mm,
+        instanceOf: Tm,
+        node: mm,
+        objectOf: Tm,
+        oneOf: Tm,
+        oneOfType: Tm,
+        shape: Tm,
+        exact: Tm,
+        checkPropTypes: am,
+        resetWarningCache: Am
       };
-      return Ik.PropTypes = Ik, Ik
+      return fm.PropTypes = fm, fm
     }
   },
-  4946: (kk, Fk, Ik) => {
-    kk.exports = Ik(4953)()
+  4909: (mm, Tm, fm) => {
+    mm.exports = fm(4917)()
   },
-  4960: kk => {
-    kk.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  4926: mm => {
+    mm.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
   },
-  5002: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      default: () => zk
+  4966: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      default: () => cm
     });
-    var Xk = function() {
+    var hm = function() {
         if ("undefined" !== typeof Map) return Map;
 
-        function kk(kk, Fk) {
-          var Ik = -1;
-          return kk.some((function(kk, Xk) {
-            return kk[0] === Fk && (Ik = Xk, !0)
-          })), Ik
+        function mm(mm, Tm) {
+          var fm = -1;
+          return mm.some((function(mm, hm) {
+            return mm[0] === Tm && (fm = hm, !0)
+          })), fm
         }
         return function() {
-          function Fk() {
+          function Tm() {
             this.__entries__ = []
           }
-          return Object.defineProperty(Fk.prototype, "size", {
+          return Object.defineProperty(Tm.prototype, "size", {
             get: function() {
               return this.__entries__.length
             },
             enumerable: !0,
             configurable: !0
-          }), Fk.prototype.get = function(Fk) {
-            var Ik = kk(this.__entries__, Fk),
-              Xk = this.__entries__[Ik];
-            return Xk && Xk[1]
-          }, Fk.prototype.set = function(Fk, Ik) {
-            var Xk = kk(this.__entries__, Fk);
-            ~Xk ? this.__entries__[Xk][1] = Ik : this.__entries__.push([Fk, Ik])
-          }, Fk.prototype.delete = function(Fk) {
-            var Ik = this.__entries__,
-              Xk = kk(Ik, Fk);
-            ~Xk && Ik.splice(Xk, 1)
-          }, Fk.prototype.has = function(Fk) {
-            return !!~kk(this.__entries__, Fk)
-          }, Fk.prototype.clear = function() {
+          }), Tm.prototype.get = function(Tm) {
+            var fm = mm(this.__entries__, Tm),
+              hm = this.__entries__[fm];
+            return hm && hm[1]
+          }, Tm.prototype.set = function(Tm, fm) {
+            var hm = mm(this.__entries__, Tm);
+            ~hm ? this.__entries__[hm][1] = fm : this.__entries__.push([Tm, fm])
+          }, Tm.prototype.delete = function(Tm) {
+            var fm = this.__entries__,
+              hm = mm(fm, Tm);
+            ~hm && fm.splice(hm, 1)
+          }, Tm.prototype.has = function(Tm) {
+            return !!~mm(this.__entries__, Tm)
+          }, Tm.prototype.clear = function() {
             this.__entries__.splice(0)
-          }, Fk.prototype.forEach = function(kk, Fk) {
-            void 0 === Fk && (Fk = null);
-            for (var Ik = 0, Xk = this.__entries__; Ik < Xk.length; Ik++) {
-              var Tk = Xk[Ik];
-              kk.call(Fk, Tk[1], Tk[0])
+          }, Tm.prototype.forEach = function(mm, Tm) {
+            void 0 === Tm && (Tm = null);
+            for (var fm = 0, hm = this.__entries__; fm < hm.length; fm++) {
+              var Am = hm[fm];
+              mm.call(Tm, Am[1], Am[0])
             }
-          }, Fk
+          }, Tm
         }()
       }(),
-      Tk = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
-      ik = "undefined" !== typeof Ik.g && Ik.g.Math === Math ? Ik.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
-      yk = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(ik) : function(kk) {
+      Am = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
+      am = "undefined" !== typeof fm.g && fm.g.Math === Math ? fm.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
+      xm = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(am) : function(mm) {
         return setTimeout((function() {
-          return kk(Date.now())
+          return mm(Date.now())
         }), 1e3 / 60)
       };
-    var lk = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
-      ak = "undefined" !== typeof MutationObserver,
-      qk = function() {
-        function kk() {
-          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(kk, Fk) {
-            var Ik = !1,
-              Xk = !1,
-              Tk = 0;
+    var wm = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
+      Dm = "undefined" !== typeof MutationObserver,
+      im = function() {
+        function mm() {
+          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(mm, Tm) {
+            var fm = !1,
+              hm = !1,
+              Am = 0;
 
-            function ik() {
-              Ik && (Ik = !1, kk()), Xk && ak()
+            function am() {
+              fm && (fm = !1, mm()), hm && Dm()
             }
 
-            function lk() {
-              yk(ik)
+            function wm() {
+              xm(am)
             }
 
-            function ak() {
-              var kk = Date.now();
-              if (Ik) {
-                if (kk - Tk < 2) return;
-                Xk = !0
-              } else Ik = !0, Xk = !1, setTimeout(lk, Fk);
-              Tk = kk
+            function Dm() {
+              var mm = Date.now();
+              if (fm) {
+                if (mm - Am < 2) return;
+                hm = !0
+              } else fm = !0, hm = !1, setTimeout(wm, Tm);
+              Am = mm
             }
-            return ak
+            return Dm
           }(this.refresh.bind(this), 20)
         }
-        return kk.prototype.addObserver = function(kk) {
-          ~this.observers_.indexOf(kk) || this.observers_.push(kk), this.connected_ || this.connect_()
-        }, kk.prototype.removeObserver = function(kk) {
-          var Fk = this.observers_,
-            Ik = Fk.indexOf(kk);
-          ~Ik && Fk.splice(Ik, 1), !Fk.length && this.connected_ && this.disconnect_()
-        }, kk.prototype.refresh = function() {
+        return mm.prototype.addObserver = function(mm) {
+          ~this.observers_.indexOf(mm) || this.observers_.push(mm), this.connected_ || this.connect_()
+        }, mm.prototype.removeObserver = function(mm) {
+          var Tm = this.observers_,
+            fm = Tm.indexOf(mm);
+          ~fm && Tm.splice(fm, 1), !Tm.length && this.connected_ && this.disconnect_()
+        }, mm.prototype.refresh = function() {
           this.updateObservers_() && this.refresh()
-        }, kk.prototype.updateObservers_ = function() {
-          var kk = this.observers_.filter((function(kk) {
-            return kk.gatherActive(), kk.hasActive()
+        }, mm.prototype.updateObservers_ = function() {
+          var mm = this.observers_.filter((function(mm) {
+            return mm.gatherActive(), mm.hasActive()
           }));
-          return kk.forEach((function(kk) {
-            return kk.broadcastActive()
-          })), kk.length > 0
-        }, kk.prototype.connect_ = function() {
-          Tk && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), ak ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
+          return mm.forEach((function(mm) {
+            return mm.broadcastActive()
+          })), mm.length > 0
+        }, mm.prototype.connect_ = function() {
+          Am && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), Dm ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
             attributes: !0,
             childList: !0,
             characterData: !0,
             subtree: !0
           })) : (document.addEventListener("DOMSubtreeModified", this.refresh), this.mutationEventsAdded_ = !0), this.connected_ = !0)
-        }, kk.prototype.disconnect_ = function() {
-          Tk && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
-        }, kk.prototype.onTransitionEnd_ = function(kk) {
-          var Fk = kk.propertyName,
-            Ik = void 0 === Fk ? "" : Fk;
-          lk.some((function(kk) {
-            return !!~Ik.indexOf(kk)
+        }, mm.prototype.disconnect_ = function() {
+          Am && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
+        }, mm.prototype.onTransitionEnd_ = function(mm) {
+          var Tm = mm.propertyName,
+            fm = void 0 === Tm ? "" : Tm;
+          wm.some((function(mm) {
+            return !!~fm.indexOf(mm)
           })) && this.refresh()
-        }, kk.getInstance = function() {
-          return this.instance_ || (this.instance_ = new kk), this.instance_
-        }, kk.instance_ = null, kk
+        }, mm.getInstance = function() {
+          return this.instance_ || (this.instance_ = new mm), this.instance_
+        }, mm.instance_ = null, mm
       }(),
-      Lk = function(kk, Fk) {
-        for (var Ik = 0, Xk = Object.keys(Fk); Ik < Xk.length; Ik++) {
-          var Tk = Xk[Ik];
-          Object.defineProperty(kk, Tk, {
-            value: Fk[Tk],
+      Rm = function(mm, Tm) {
+        for (var fm = 0, hm = Object.keys(Tm); fm < hm.length; fm++) {
+          var Am = hm[fm];
+          Object.defineProperty(mm, Am, {
+            value: Tm[Am],
             enumerable: !1,
             writable: !1,
             configurable: !0
           })
         }
-        return kk
+        return mm
       },
-      tk = function(kk) {
-        return kk && kk.ownerDocument && kk.ownerDocument.defaultView || ik
+      pm = function(mm) {
+        return mm && mm.ownerDocument && mm.ownerDocument.defaultView || am
       },
-      Zk = xk(0, 0, 0, 0);
+      Em = Vm(0, 0, 0, 0);
 
-    function jk(kk) {
-      return parseFloat(kk) || 0
+    function om(mm) {
+      return parseFloat(mm) || 0
     }
 
-    function ek(kk) {
-      for (var Fk = [], Ik = 1; Ik < arguments.length; Ik++) Fk[Ik - 1] = arguments[Ik];
-      return Fk.reduce((function(Fk, Ik) {
-        return Fk + jk(kk["border-" + Ik + "-width"])
+    function Om(mm) {
+      for (var Tm = [], fm = 1; fm < arguments.length; fm++) Tm[fm - 1] = arguments[fm];
+      return Tm.reduce((function(Tm, fm) {
+        return Tm + om(mm["border-" + fm + "-width"])
       }), 0)
     }
 
-    function wk(kk) {
-      var Fk = kk.clientWidth,
-        Ik = kk.clientHeight;
-      if (!Fk && !Ik) return Zk;
-      var Xk = tk(kk).getComputedStyle(kk),
-        Tk = function(kk) {
-          for (var Fk = {}, Ik = 0, Xk = ["top", "right", "bottom", "left"]; Ik < Xk.length; Ik++) {
-            var Tk = Xk[Ik],
-              ik = kk["padding-" + Tk];
-            Fk[Tk] = jk(ik)
+    function Ym(mm) {
+      var Tm = mm.clientWidth,
+        fm = mm.clientHeight;
+      if (!Tm && !fm) return Em;
+      var hm = pm(mm).getComputedStyle(mm),
+        Am = function(mm) {
+          for (var Tm = {}, fm = 0, hm = ["top", "right", "bottom", "left"]; fm < hm.length; fm++) {
+            var Am = hm[fm],
+              am = mm["padding-" + Am];
+            Tm[Am] = om(am)
           }
-          return Fk
-        }(Xk),
-        ik = Tk.left + Tk.right,
-        yk = Tk.top + Tk.bottom,
-        lk = jk(Xk.width),
-        ak = jk(Xk.height);
-      if ("border-box" === Xk.boxSizing && (Math.round(lk + ik) !== Fk && (lk -= ek(Xk, "left", "right") + ik), Math.round(ak + yk) !== Ik && (ak -= ek(Xk, "top", "bottom") + yk)), ! function(kk) {
-          return kk === tk(kk).document.documentElement
-        }(kk)) {
-        var qk = Math.round(lk + ik) - Fk,
-          Lk = Math.round(ak + yk) - Ik;
-        1 !== Math.abs(qk) && (lk -= qk), 1 !== Math.abs(Lk) && (ak -= Lk)
+          return Tm
+        }(hm),
+        am = Am.left + Am.right,
+        xm = Am.top + Am.bottom,
+        wm = om(hm.width),
+        Dm = om(hm.height);
+      if ("border-box" === hm.boxSizing && (Math.round(wm + am) !== Tm && (wm -= Om(hm, "left", "right") + am), Math.round(Dm + xm) !== fm && (Dm -= Om(hm, "top", "bottom") + xm)), ! function(mm) {
+          return mm === pm(mm).document.documentElement
+        }(mm)) {
+        var im = Math.round(wm + am) - Tm,
+          Rm = Math.round(Dm + xm) - fm;
+        1 !== Math.abs(im) && (wm -= im), 1 !== Math.abs(Rm) && (Dm -= Rm)
       }
-      return xk(Tk.left, Tk.top, lk, ak)
+      return Vm(Am.left, Am.top, wm, Dm)
     }
-    var Hk = "undefined" !== typeof SVGGraphicsElement ? function(kk) {
-      return kk instanceof tk(kk).SVGGraphicsElement
-    } : function(kk) {
-      return kk instanceof tk(kk).SVGElement && "function" === typeof kk.getBBox
+    var qm = "undefined" !== typeof SVGGraphicsElement ? function(mm) {
+      return mm instanceof pm(mm).SVGGraphicsElement
+    } : function(mm) {
+      return mm instanceof pm(mm).SVGElement && "function" === typeof mm.getBBox
     };
 
-    function Jk(kk) {
-      return Tk ? Hk(kk) ? function(kk) {
-        var Fk = kk.getBBox();
-        return xk(0, 0, Fk.width, Fk.height)
-      }(kk) : wk(kk) : Zk
+    function jm(mm) {
+      return Am ? qm(mm) ? function(mm) {
+        var Tm = mm.getBBox();
+        return Vm(0, 0, Tm.width, Tm.height)
+      }(mm) : Ym(mm) : Em
     }
 
-    function xk(kk, Fk, Ik, Xk) {
+    function Vm(mm, Tm, fm, hm) {
       return {
-        x: kk,
-        y: Fk,
-        width: Ik,
-        height: Xk
+        x: mm,
+        y: Tm,
+        width: fm,
+        height: hm
       }
     }
-    var Pk = function() {
-        function kk(kk) {
-          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = xk(0, 0, 0, 0), this.target = kk
+    var Im = function() {
+        function mm(mm) {
+          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = Vm(0, 0, 0, 0), this.target = mm
         }
-        return kk.prototype.isActive = function() {
-          var kk = Jk(this.target);
-          return this.contentRect_ = kk, kk.width !== this.broadcastWidth || kk.height !== this.broadcastHeight
-        }, kk.prototype.broadcastRect = function() {
-          var kk = this.contentRect_;
-          return this.broadcastWidth = kk.width, this.broadcastHeight = kk.height, kk
-        }, kk
+        return mm.prototype.isActive = function() {
+          var mm = jm(this.target);
+          return this.contentRect_ = mm, mm.width !== this.broadcastWidth || mm.height !== this.broadcastHeight
+        }, mm.prototype.broadcastRect = function() {
+          var mm = this.contentRect_;
+          return this.broadcastWidth = mm.width, this.broadcastHeight = mm.height, mm
+        }, mm
       }(),
-      Kk = function(kk, Fk) {
-        var Ik = function(kk) {
-          var Fk = kk.x,
-            Ik = kk.y,
-            Xk = kk.width,
-            Tk = kk.height,
-            ik = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
-            yk = Object.create(ik.prototype);
-          return Lk(yk, {
-            x: Fk,
-            y: Ik,
-            width: Xk,
-            height: Tk,
-            top: Ik,
-            right: Fk + Xk,
-            bottom: Tk + Ik,
-            left: Fk
-          }), yk
-        }(Fk);
-        Lk(this, {
-          target: kk,
-          contentRect: Ik
+      Km = function(mm, Tm) {
+        var fm = function(mm) {
+          var Tm = mm.x,
+            fm = mm.y,
+            hm = mm.width,
+            Am = mm.height,
+            am = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
+            xm = Object.create(am.prototype);
+          return Rm(xm, {
+            x: Tm,
+            y: fm,
+            width: hm,
+            height: Am,
+            top: fm,
+            right: Tm + hm,
+            bottom: Am + fm,
+            left: Tm
+          }), xm
+        }(Tm);
+        Rm(this, {
+          target: mm,
+          contentRect: fm
         })
       },
-      Qk = function() {
-        function kk(kk, Fk, Ik) {
-          if (this.activeObservations_ = [], this.observations_ = new Xk, "function" !== typeof kk) throw new TypeError("The callback provided as parameter 1 is not a function.");
-          this.callback_ = kk, this.controller_ = Fk, this.callbackCtx_ = Ik
+      Qm = function() {
+        function mm(mm, Tm, fm) {
+          if (this.activeObservations_ = [], this.observations_ = new hm, "function" !== typeof mm) throw new TypeError("The callback provided as parameter 1 is not a function.");
+          this.callback_ = mm, this.controller_ = Tm, this.callbackCtx_ = fm
         }
-        return kk.prototype.observe = function(kk) {
+        return mm.prototype.observe = function(mm) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(kk instanceof tk(kk).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var Fk = this.observations_;
-            Fk.has(kk) || (Fk.set(kk, new Pk(kk)), this.controller_.addObserver(this), this.controller_.refresh())
+            if (!(mm instanceof pm(mm).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var Tm = this.observations_;
+            Tm.has(mm) || (Tm.set(mm, new Im(mm)), this.controller_.addObserver(this), this.controller_.refresh())
           }
-        }, kk.prototype.unobserve = function(kk) {
+        }, mm.prototype.unobserve = function(mm) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(kk instanceof tk(kk).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var Fk = this.observations_;
-            Fk.has(kk) && (Fk.delete(kk), Fk.size || this.controller_.removeObserver(this))
+            if (!(mm instanceof pm(mm).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var Tm = this.observations_;
+            Tm.has(mm) && (Tm.delete(mm), Tm.size || this.controller_.removeObserver(this))
           }
-        }, kk.prototype.disconnect = function() {
+        }, mm.prototype.disconnect = function() {
           this.clearActive(), this.observations_.clear(), this.controller_.removeObserver(this)
-        }, kk.prototype.gatherActive = function() {
-          var kk = this;
-          this.clearActive(), this.observations_.forEach((function(Fk) {
-            Fk.isActive() && kk.activeObservations_.push(Fk)
+        }, mm.prototype.gatherActive = function() {
+          var mm = this;
+          this.clearActive(), this.observations_.forEach((function(Tm) {
+            Tm.isActive() && mm.activeObservations_.push(Tm)
           }))
-        }, kk.prototype.broadcastActive = function() {
+        }, mm.prototype.broadcastActive = function() {
           if (this.hasActive()) {
-            var kk = this.callbackCtx_,
-              Fk = this.activeObservations_.map((function(kk) {
-                return new Kk(kk.target, kk.broadcastRect())
+            var mm = this.callbackCtx_,
+              Tm = this.activeObservations_.map((function(mm) {
+                return new Km(mm.target, mm.broadcastRect())
               }));
-            this.callback_.call(kk, Fk, kk), this.clearActive()
+            this.callback_.call(mm, Tm, mm), this.clearActive()
           }
-        }, kk.prototype.clearActive = function() {
+        }, mm.prototype.clearActive = function() {
           this.activeObservations_.splice(0)
-        }, kk.prototype.hasActive = function() {
+        }, mm.prototype.hasActive = function() {
           return this.activeObservations_.length > 0
-        }, kk
+        }, mm
       }(),
-      sk = "undefined" !== typeof WeakMap ? new WeakMap : new Xk,
-      Vk = function kk(Fk) {
-        if (!(this instanceof kk)) throw new TypeError("Cannot call a class as a function.");
+      nm = "undefined" !== typeof WeakMap ? new WeakMap : new hm,
+      Jm = function mm(Tm) {
+        if (!(this instanceof mm)) throw new TypeError("Cannot call a class as a function.");
         if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
-        var Ik = qk.getInstance(),
-          Xk = new Qk(Fk, Ik, this);
-        sk.set(this, Xk)
+        var fm = im.getInstance(),
+          hm = new Qm(Tm, fm, this);
+        nm.set(this, hm)
       };
-    ["observe", "unobserve", "disconnect"].forEach((function(kk) {
-      Vk.prototype[kk] = function() {
-        var Fk;
-        return (Fk = sk.get(this))[kk].apply(Fk, arguments)
+    ["observe", "unobserve", "disconnect"].forEach((function(mm) {
+      Jm.prototype[mm] = function() {
+        var Tm;
+        return (Tm = nm.get(this))[mm].apply(Tm, arguments)
       }
     }));
-    const zk = "undefined" !== typeof ik.ResizeObserver ? ik.ResizeObserver : Vk
+    const cm = "undefined" !== typeof am.ResizeObserver ? am.ResizeObserver : Jm
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

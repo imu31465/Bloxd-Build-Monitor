@@ -1,14 +1,14 @@
 export const id = 225;
 export const ids = [225];
 export const modules = {
-  38460: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => ek
+  38570: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => Om
     });
-    var Xk = Ik(187),
-      Tk = Ik(37680);
-    const ik = 1.2,
-      yk = {
+    var hm = fm(198),
+      Am = fm(37721);
+    const am = 1.2,
+      xm = {
         poseRig: "golem",
         physicsBodyDimensions: {
           width: .5,
@@ -20,10 +20,10 @@ export const modules = {
         },
         eyeHeight: 2.3,
         rideHeight: 2.3,
-        Xq: .5,
-        zFk: !1
+        Ri: .5,
+        JTm: !1
       },
-      lk = {
+      wm = {
         physicsBodyDimensions: {
           width: .5,
           height: 2.5
@@ -34,24 +34,24 @@ export const modules = {
         },
         eyeHeight: 2.3,
         rideHeight: 2.3,
-        Xq: .5,
-        zFk: !1
+        Ri: .5,
+        JTm: !1
       },
-      ak = {
+      Dm = {
         physicsBodyDimensions: {
-          width: Xk.f.CH,
-          height: Xk.f.NH
+          width: hm.f.dq,
+          height: hm.f.gq
         },
         hitBoxDimensions: {
-          width: Xk.f.CH + .4,
-          height: Xk.f.NH + .6
+          width: hm.f.dq + .4,
+          height: hm.f.gq + .6
         },
-        eyeHeight: Xk.f.NH * Xk.f.playerEyeToHeightRatio,
-        rideHeight: Xk.f.NH - .3,
-        Xq: .5,
-        zFk: !1
+        eyeHeight: hm.f.gq * hm.f.playerEyeToHeightRatio,
+        rideHeight: hm.f.gq - .3,
+        Ri: .5,
+        JTm: !1
       },
-      qk = {
+      im = {
         physicsBodyDimensions: {
           width: .5,
           height: .95
@@ -62,10 +62,10 @@ export const modules = {
         },
         eyeHeight: .9,
         rideHeight: .5,
-        Xq: .5,
-        zFk: !1
+        Ri: .5,
+        JTm: !1
       },
-      Lk = {
+      Rm = {
         physicsBodyDimensions: {
           width: .5,
           height: 1.8
@@ -76,10 +76,10 @@ export const modules = {
         },
         eyeHeight: 1.3,
         rideHeight: 1.3,
-        Xq: .5,
-        zFk: !1
+        Ri: .5,
+        JTm: !1
       },
-      tk = {
+      pm = {
         physicsBodyDimensions: {
           width: .5,
           height: 1.9
@@ -90,10 +90,10 @@ export const modules = {
         },
         eyeHeight: 1.9,
         rideHeight: 1,
-        Xq: .5,
-        zFk: !1
+        Ri: .5,
+        JTm: !1
       },
-      Zk = {
+      Em = {
         physicsBodyDimensions: {
           width: .5,
           height: 1.9
@@ -104,24 +104,24 @@ export const modules = {
         },
         eyeHeight: 2,
         rideHeight: 1.8,
-        Xq: .5,
-        zFk: !1
+        Ri: .5,
+        JTm: !1
       },
-      jk = {
+      om = {
         Player: {
           defaultName: "Player",
           physicsBodyDimensions: {
-            width: Xk.f.CH,
-            height: Xk.f.NH
+            width: hm.f.dq,
+            height: hm.f.gq
           },
           hitBoxDimensions: {
-            width: Xk.f.CH + .4,
-            height: Xk.f.NH + .6
+            width: hm.f.dq + .4,
+            height: hm.f.gq + .6
           },
-          eyeHeight: Xk.f.NH * Xk.f.playerEyeToHeightRatio,
-          rideHeight: Xk.f.NH - .1,
-          Xq: Tk.f.Xq,
-          zFk: !0
+          eyeHeight: hm.f.gq * hm.f.playerEyeToHeightRatio,
+          rideHeight: hm.f.gq - .1,
+          Ri: Am.f.Ri,
+          JTm: !0
         },
         Pig: {
           poseNameRise: {
@@ -137,8 +137,8 @@ export const modules = {
           },
           eyeHeight: .8,
           rideHeight: .5,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         Cow: {
           physicsBodyDimensions: {
@@ -151,8 +151,8 @@ export const modules = {
           },
           eyeHeight: 1.2,
           rideHeight: 1,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         Sheep: {
           physicsBodyDimensions: {
@@ -165,8 +165,8 @@ export const modules = {
           },
           eyeHeight: 1.2,
           rideHeight: .8,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         Horse: {
           physicsBodyDimensions: {
@@ -179,11 +179,11 @@ export const modules = {
           },
           eyeHeight: 1.9,
           rideHeight: .9,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         Camel: {
-          modelScale: ik,
+          modelScale: am,
           physicsBodyDimensions: {
             width: .6,
             height: 2.52
@@ -194,8 +194,8 @@ export const modules = {
           },
           eyeHeight: 2.52,
           rideHeight: 1.7999999999999998,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         Slime: {
           physicsBodyDimensions: {
@@ -208,37 +208,37 @@ export const modules = {
           },
           eyeHeight: .5,
           rideHeight: .5,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
-        "Cave Golem": yk,
+        "Cave Golem": xm,
         "Draugr Zombie": {
-          ...ak,
+          ...Dm,
           defaultPose: "zombie"
         },
-        "Draugr Skeleton": ak,
-        "Frost Golem": yk,
+        "Draugr Skeleton": Dm,
+        "Frost Golem": xm,
         "Frost Zombie": {
-          ...ak,
+          ...Dm,
           defaultPose: "zombie"
         },
-        "Frost Skeleton": ak,
+        "Frost Skeleton": Dm,
         "Draugr Knight": {
           physicsBodyDimensions: {
-            width: Xk.f.CH,
-            height: Xk.f.NH
+            width: hm.f.dq,
+            height: hm.f.gq
           },
           hitBoxDimensions: {
-            width: Xk.f.CH + .4,
+            width: hm.f.dq + .4,
             height: 2.8
           },
           eyeHeight: 1.9,
           rideHeight: 1.8,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
-        Wolf: qk,
-        Bear: Lk,
+        Wolf: im,
+        Bear: Rm,
         Deer: {
           physicsBodyDimensions: {
             width: .5,
@@ -250,10 +250,10 @@ export const modules = {
           },
           eyeHeight: 1.8,
           rideHeight: .8,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
-        Stag: tk,
+        Stag: pm,
         "Gold Watermelon Stag": {
           physicsBodyDimensions: {
             width: .5,
@@ -265,10 +265,10 @@ export const modules = {
           },
           eyeHeight: 1.9,
           rideHeight: 1,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
-        Gorilla: Zk,
+        Gorilla: Em,
         Wildcat: {
           physicsBodyDimensions: {
             width: .5,
@@ -280,16 +280,16 @@ export const modules = {
           },
           eyeHeight: .55,
           rideHeight: .4,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
-        "Draugr Huntress": ak,
-        "Magma Golem": yk,
-        "Spirit Golem": yk,
-        "Spirit Wolf": qk,
-        "Spirit Bear": Lk,
-        "Spirit Stag": tk,
-        "Spirit Gorilla": Zk,
+        "Draugr Huntress": Dm,
+        "Magma Golem": xm,
+        "Spirit Golem": xm,
+        "Spirit Wolf": im,
+        "Spirit Bear": Rm,
+        "Spirit Stag": pm,
+        "Spirit Gorilla": Em,
         "Draugr Warper": {
           physicsBodyDimensions: {
             width: .5,
@@ -301,8 +301,8 @@ export const modules = {
           },
           eyeHeight: 2.4,
           rideHeight: 2.8,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         "Frost Wraith": {
           poseRig: "wraith",
@@ -316,8 +316,8 @@ export const modules = {
           },
           eyeHeight: 2.3,
           rideHeight: 2.6,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         "Draugr Reaver": {
           physicsBodyDimensions: {
@@ -330,22 +330,22 @@ export const modules = {
           },
           eyeHeight: 2.2,
           rideHeight: 2.5,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         NPC: {
           physicsBodyDimensions: {
-            width: Xk.f.CH,
-            height: Xk.f.NH
+            width: hm.f.dq,
+            height: hm.f.gq
           },
           hitBoxDimensions: {
-            width: Xk.f.CH + .4,
-            height: Xk.f.NH + .6
+            width: hm.f.dq + .4,
+            height: hm.f.gq + .6
           },
-          eyeHeight: Xk.f.NH * Xk.f.playerEyeToHeightRatio,
-          rideHeight: Xk.f.NH - .1,
-          Xq: .5,
-          zFk: !1
+          eyeHeight: hm.f.gq * hm.f.playerEyeToHeightRatio,
+          rideHeight: hm.f.gq - .1,
+          Ri: .5,
+          JTm: !1
         },
         67: {
           physicsBodyDimensions: {
@@ -358,22 +358,22 @@ export const modules = {
           },
           eyeHeight: 1.9,
           rideHeight: 2.5,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         "Bobino Musculino": {
           physicsBodyDimensions: {
-            width: Xk.f.CH,
-            height: Xk.f.NH
+            width: hm.f.dq,
+            height: hm.f.gq
           },
           hitBoxDimensions: {
-            width: Xk.f.CH + .4,
-            height: Xk.f.NH + .6
+            width: hm.f.dq + .4,
+            height: hm.f.gq + .6
           },
-          eyeHeight: Xk.f.NH * Xk.f.playerEyeToHeightRatio,
-          rideHeight: Xk.f.NH - .1,
-          Xq: .5,
-          zFk: !1
+          eyeHeight: hm.f.gq * hm.f.playerEyeToHeightRatio,
+          rideHeight: hm.f.gq - .1,
+          Ri: .5,
+          JTm: !1
         },
         "Capitano Explovissimo": {
           physicsBodyDimensions: {
@@ -386,8 +386,8 @@ export const modules = {
           },
           eyeHeight: 1.5,
           rideHeight: 2,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         "Desert Fennec": {
           physicsBodyDimensions: {
@@ -400,8 +400,8 @@ export const modules = {
           },
           eyeHeight: .65,
           rideHeight: .6,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         "Armour Collector": {
           physicsBodyDimensions: {
@@ -414,8 +414,8 @@ export const modules = {
           },
           eyeHeight: 3.1,
           rideHeight: 3.6,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         "Furnace Knight": {
           physicsBodyDimensions: {
@@ -428,8 +428,8 @@ export const modules = {
           },
           eyeHeight: 2,
           rideHeight: 2.45,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         "Lil Knight": {
           physicsBodyDimensions: {
@@ -442,8 +442,8 @@ export const modules = {
           },
           eyeHeight: 2,
           rideHeight: 2.5,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         "Glass Gremlin": {
           physicsBodyDimensions: {
@@ -456,8 +456,8 @@ export const modules = {
           },
           eyeHeight: 2.2,
           rideHeight: 2.55,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         "Glass Bro": {
           physicsBodyDimensions: {
@@ -470,8 +470,8 @@ export const modules = {
           },
           eyeHeight: 1.8,
           rideHeight: 2.1,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         "Lord Vulcan": {
           physicsBodyDimensions: {
@@ -484,16 +484,16 @@ export const modules = {
           },
           eyeHeight: 4.1,
           rideHeight: 5.4,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         Zombie: {
-          ...ak,
+          ...Dm,
           defaultPose: "zombie"
         },
-        Skeleton: ak,
+        Skeleton: Dm,
         Mummy: {
-          ...ak,
+          ...Dm,
           defaultPose: "zombie"
         },
         Scorpion: {
@@ -507,8 +507,8 @@ export const modules = {
           },
           eyeHeight: .6,
           rideHeight: .9,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         Vulcanite: {
           physicsBodyDimensions: {
@@ -521,8 +521,8 @@ export const modules = {
           },
           eyeHeight: 1.6,
           rideHeight: 2.1,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         "Evil Tome": {
           physicsBodyDimensions: {
@@ -535,8 +535,8 @@ export const modules = {
           },
           eyeHeight: .6,
           rideHeight: .95,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         "Magma Toad": {
           physicsBodyDimensions: {
@@ -549,8 +549,8 @@ export const modules = {
           },
           eyeHeight: 1,
           rideHeight: 1.1,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         Stalker: {
           physicsBodyDimensions: {
@@ -563,8 +563,8 @@ export const modules = {
           },
           eyeHeight: 2.4,
           rideHeight: 2.5,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
         Crone: {
           turnRate: 1.2,
@@ -578,17 +578,17 @@ export const modules = {
           },
           eyeHeight: 2.7,
           rideHeight: 2.8,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         },
-        "Iron Guardian": lk,
-        "Gold Guardian": lk,
-        "Diamond Guardian": lk,
-        "Moonstone Guardian": lk,
-        "Iron Goofy Golem": lk,
-        "Gold Goofy Golem": lk,
-        "Diamond Goofy Golem": lk,
-        "Moonstone Goofy Golem": lk,
+        "Iron Guardian": wm,
+        "Gold Guardian": wm,
+        "Diamond Guardian": wm,
+        "Moonstone Guardian": wm,
+        "Iron Goofy Golem": wm,
+        "Gold Goofy Golem": wm,
+        "Diamond Goofy Golem": wm,
+        "Moonstone Goofy Golem": wm,
         "Tiki Terror": {
           poseRig: "tiki",
           physicsBodyDimensions: {
@@ -601,20 +601,20 @@ export const modules = {
           },
           eyeHeight: 3.9,
           rideHeight: 4.3,
-          Xq: .5,
-          zFk: !1
+          Ri: .5,
+          JTm: !1
         }
       };
 
-    function ek(kk) {
-      return jk[kk]
+    function Om(mm) {
+      return om[mm]
     }
   },
-  37118: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Xk
+  37164: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => hm
     });
-    const Xk = {
+    const hm = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -774,39 +774,39 @@ export const modules = {
       }
     }
   },
-  37686: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => yk
+  37727: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => xm
     });
-    var Xk = Ik(354),
-      Tk = Ik.n(Xk),
-      ik = Ik(1844);
-    let yk;
-    var lk, ak, qk, Lk, tk, Zk, jk, ek, wk;
-    const Hk = [1, "b", 0, 90, "c", "i", "g", 69, 177, 4, 8, 255, "length", 2, 49, 50, 73, "undefined", 120, 63, 6, "fromCodePoint", 7, 12, "push", 95, 238, "h", 35, 9, 79, 91, "e", "f", 8191, 88, 13, 14, 224, 181, 166, 154, null, 47, 10, 59, 123, 3, 127, 188, 128, 80, "a", 40, 11, "d", 226, 60, 15, 135, 144, 145, 146, 150, 151, 152, 136, 137, 138, 139, 147, 148, 149, 158, 159, 140, 141, 142, 143, 70, 17, 193, 180, 24, 1e3, "s=", "=", ";", "/", 5, "ck", 204, 163, 173, 20, void 0, 37, 33, 64, 165, 84, 196, 190, 101, 241, "on"];
+    var hm = fm(362),
+      Am = fm.n(hm),
+      am = fm(1877);
+    let xm;
+    var wm, Dm, im, Rm, pm, Em, om, Om, Ym;
+    const qm = [1, "b", 0, 45, 3, 9, 7, 5, 124, "d", 8, 255, "length", 107, "c", 136, 163, "undefined", void 0, 2, 4, 63, 6, "fromCodePoint", 12, "push", 141, "e", 18, 42, 27, "a", 108, "g", 91, 11, 8191, 88, 13, 14, 111, 176, 170, "f", null, 114, "s", 127, 125, 126, 121, 122, 123, 128, 129, 130, 118, 119, 120, 137, "nf", 227, "i", 149, 10, 159, "h", 21, 46, 77, 143, 37, 81, 140, 57, 20, 156, 202, 29, 70, 248, 47, 203, 89, 216, 98, 60, "on"];
 
-    function Jk(...kk) {
-      return kk[Hk[12]] = Hk[0], typeof lk[kk[Hk[2]]] === Hk[17] ? lk[kk[Hk[2]]] = function(...kk) {
-        for (Ok(kk[Hk[12]] = Hk[0], kk[Hk[0]] = 'z)jAO0*|&hg7f"#CsB~a,;u4Z2x+/%[5It>!1R(U?m^Q<E=vVWiS@8Kq_FDH3pwd}Ne]Gl6:9kTM.oJ${bnYPrLXy`c', kk[Hk[1]] = "" + (kk[Hk[2]] || ""), kk[Hk[4]] = kk[Hk[1]].length, kk[Hk[9]] = [], kk[-Hk[7]] = Hk[2], kk[-Hk[8]] = Hk[2], kk[Hk[6]] = -Hk[0]), kk[-Hk[3]] = Hk[2]; kk[-Hk[3]] < kk[Hk[4]]; kk[-Hk[3]]++)
-          if (kk[Hk[5]] = kk[Hk[0]].indexOf(kk[Hk[1]][kk[-Hk[3]]]), kk[Hk[5]] !== -Hk[0])
-            if (kk[Hk[6]] < Hk[2]) kk[Hk[6]] = kk[Hk[5]];
+    function jm(...mm) {
+      return mm[qm[12]] = qm[0], typeof wm[mm[qm[2]]] === qm[17] ? wm[mm[qm[2]]] = function(...mm) {
+        for (bm(mm[qm[12]] = qm[0], mm[qm[0]] = '8x`.|=%$y54#]~603w{/iICXeW@VJH"c_voG!*u}^T2>[+mzp,1j:gsOQaBP<nENYqZrb?tflA)kRd9LD(7K&;UShMF', mm[qm[1]] = "" + (mm[qm[2]] || ""), mm[qm[4]] = mm[qm[1]].length, mm[qm[9]] = [], mm[qm[7]] = qm[2], mm[-qm[8]] = qm[2], mm[qm[6]] = -qm[0]), mm[qm[3]] = qm[2]; mm[qm[3]] < mm[qm[4]]; mm[qm[3]]++)
+          if (mm[qm[5]] = mm[qm[0]].indexOf(mm[qm[1]][mm[qm[3]]]), mm[qm[5]] !== -qm[0])
+            if (mm[qm[6]] < qm[2]) mm[qm[6]] = mm[qm[5]];
             else {
-              Ok(kk[Hk[6]] += kk[Hk[5]] * Hk[31], kk[-Hk[7]] |= kk[Hk[6]] << kk[-Hk[8]], kk[-Hk[8]] += (kk[Hk[6]] & Hk[34]) > Hk[35] ? Hk[36] : Hk[37]);
+              bm(mm[qm[6]] += mm[qm[5]] * qm[34], mm[qm[7]] |= mm[qm[6]] << mm[-qm[8]], mm[-qm[8]] += (mm[qm[6]] & qm[36]) > qm[37] ? qm[38] : qm[39]);
               do {
-                Ok(kk[Hk[9]].push(kk[-Hk[7]] & Hk[11]), kk[-Hk[7]] >>= Hk[10], kk[-Hk[8]] -= Hk[10])
-              } while (kk[-Hk[8]] > Hk[22]);
-              kk[Hk[6]] = -Hk[0]
-            } return kk[Hk[6]] > -Hk[0] && kk[Hk[9]].push((kk[-Hk[7]] | kk[Hk[6]] << kk[-Hk[8]]) & Hk[11]), xk(kk[Hk[9]])
-      }(ak[kk[Hk[2]]]) : lk[kk[Hk[2]]]
+                bm(mm[qm[9]].push(mm[qm[7]] & qm[11]), mm[qm[7]] >>= qm[10], mm[-qm[8]] -= qm[10])
+              } while (mm[-qm[8]] > qm[6]);
+              mm[qm[6]] = -qm[0]
+            } return mm[qm[6]] > -qm[0] && mm[qm[9]].push((mm[qm[7]] | mm[qm[6]] << mm[-qm[8]]) & qm[11]), Vm(mm[qm[9]])
+      }(Dm[mm[qm[2]]]) : wm[mm[qm[2]]]
     }
 
-    function xk(...kk) {
-      return kk[Hk[12]] = Hk[0], typeof Lk !== Hk[17] && Lk ? (new Lk).decode(new tk(kk[Hk[2]])) : typeof Zk !== Hk[17] && Zk ? Zk.from(kk[Hk[2]]).toString("utf-8") : wk(kk[Hk[2]])
+    function Vm(...mm) {
+      return mm[qm[12]] = qm[0], typeof Rm !== qm[17] && Rm ? (new Rm).decode(new pm(mm[qm[2]])) : typeof Em !== qm[17] && Em ? Em.from(mm[qm[2]]).toString("utf-8") : Ym(mm[qm[2]])
     }
 
-    function Pk() {}
-    Ok(lk = {}, ak = ["&T$kLi~@2wNI#pL?SxtK;F&ZwC/,)", "n*Z[fl:%c##waih", 'I?<%ZvyZvCb]kZ",[3=q..o|.79=PH?x%N7oD8S)wd=B+#gU~:Og:1z', 'M_"q$FG=d3QqipRa:E;.KRz', "[=:.ewnZIFQg}A0[nA38O>`|JHD_AxK/", 'p5Q%rHB"IF3', "_V#hzLyfO}h9}+r?:Gh*4J5Mg#pe8V,>.z", '5*>Mct"v(a)s,v]~UVI[;l+akNf9)9dRr>1TBYA2h#Q', "|Fi+G1x[*gc]20I4]k(.Ho,&zevqnW,>0~N*gwrl5;,.`O&RiSh9JbKTsftN)", 'pK"TsYz[TwYTPA', "_S;Te9O^fNGdLW/1ESGi@MN4$CvOwW5B)?A%)3;md855Fs7x}>a%C.q)", ':,q.w$E)38n_="`m1KtK6$:"k,E#KW|R=F=@KRld>3%g[px/3AA', "HBK@WdL??NKk7nG(,%(/[", "]/Xh6V48.H+D)9.xUf(5)=Wvih*$)", "1T5k<R$Sk#=wVY6(xQZhyv#@Hw#9/O3[^%Y8~", 'IR!%%!W|FBb&)9lZ)%J:P.6Zkwn8o1GZ<TY8@6vm+Hu"`3s>JE8O', 't%PilT!"mNOnzAeBuI5/H8nLmBE._YYm_A{KbtBl5d%9.O4%', "dw(W93;8tf,l}1NB!KUWeTl||", "G*t[2YQv%wroEOhUF:6/K_<f*}wWtV:R+40|O=dmGhHIipY>yVj", "`/M%4YB!<HN/a(:5S?vk@o72.#iH*ptZx4_WCYa)$&", 'G4{h4F#@jhBG[#4>:,l:y:3D+HCn^2^a53".8U~@G}"q&:q%cz', ']Bd.8_o$r"2DMx{>CW.|d8YFgB^{EOZmz3_WrlT>F,r203IZ', "&IKqzVTfkwHo7:d^KxPoVG/fYf<l[j3%CRj", 'hW9*(p9@o_ARr1%4:N{S"iH)', "%hhM(K2%DB%whs@+{NKk#bO1[e4D7j,>", '8FxS+:>}i39u)s)QUG]0:b[1/;Ge9:3[Vh5k4(LfxwODhPVxjh8goEK=4"', '`B^+Ud!"E;$8elhUAIa9J./1[dwe)', "?Aw.klJT_Dq", "4GvhF=FrAh", "9_|hKPB![dWBX#t4YSOo_39**", "e/h*8Uqv*g3@;si/5Rl|y@Bb/#n6,A", "^BoT89+80g?{7C#", ">A~9@omv.8{_,A6agO8gk.A8}8C,PA3%lKaoBYS)IF,>2s_/q>j", ";%_W%@_?)f)v`ZH%sf!9XJRaJd}H`O", "OOJ:VS7aVC$={A", "?F[|h.S%|gU5VY&(Ae^%vM^{?,/+=2fUBfz[X:mdZD;.5AkUVR<TLlodsf", "V5QoXv(1id!eNO+BRQ,oPEW!{~zn{AeZ;4ykQ6kS{Fc0P!C+3:S9/!tF|", "AW=5Sdz1Tw*>~R7xSF4O^M]SlKG_q#026KGo?dq46amkvv&", ".,4W}q*[HB/@Ax$x(*q.D8kMhqmB/:z43KuO&L^jWK&su0g", "bV_WoFZ}3wzKe2[[fWP0mG{?=;QV)", ".wJW!pn=t3*n6Wamx=.x!?PT&gL6.:9aP6(Ofluj", 'P>lg@nWvBK"[b{r!34=5YHGf<&P]iW/!%=~ImRl"EHKW{:w[jF(h%', '|W=h&Ti@^H=.]#)[b_whY(zDAKn&O+lRvw(|g1+8&"5ZwWs,7f4@u@m"iftA)', 'L6IM^{X)B~ToIV[^$**@<S%%2B4V!ni?*%W*D6|m_"', '#3=Ojw)"mB[,g07,sFx+Z', "Q*j9:Tw~*gu$tW*Rf=:*T(n@$3C*&:oUVf3o@dz", "TRK|=d^DDwq6)", ">FQ%A>g~X}B$AU}~0d)JZ:jZ^H,A]D!RO3=qP@$mSK%$qCz%]A2*p$[1r}K", ")O!%kq??0g", "s~e&8dr)", "*K&JERa|rK7A9Cgx", '6VtS:q%M~KCqZH_!qxPx$1*ZT#"GtsF>MS0.%k*&PaMI!xn>UQ>IIv"v$f', ';S;5@dujS}t+|nA2V:y*^{kM0"3', 'FwI+kVT~&"XT7n|a^G)', "eGX@.Y(f*", "[3dKDD}D)~(|IvL?8:utVWK@@hsG^R+^9N^9m_<~*", "gG3TZYh8|", "HV!Tr:s&W~L8wRcmUfw|S=]m|", 'pVe0C10"0}^lNV3^/=}KB14!o8NdeR+Bf~{*(Wy>h,P~)', '9wK@J.6*TBS.R"rm0!ox"', "]Ba%OqjZyBZDA64!/)", "kV$WYYHl]hco@VW+^Ssh@MyfBe?BFVmUuI<TaJq)H,b8#05^", ";I]&6bO~4}NojRj1%3B+&b5m5;pHyv#xlGgIC13=S3M)d6eRAdEg?nz", "Sx65qn11fN0$Bsd%0fW+_3??I~|SFZl~yw;|Z.l4K}N#ms2!+3^S)90)", ")W%/)qZ=|qb3$x~/I?%5/(oSCd[>WO", "QS!9KUM|SFGCyC>43,j", '~f"|gFr|AfAM+ir?6w<gxkK=t3*$5j', 'm,j9bFW"$~4gyYeBC~]%BF")zC._ms6~U:=k(GS||', "*32+VPc{3wsG`ZeR*f&[)V7|zfH#EO[%7)", "%3eI.Y<[Ph;$cxC,Y2B+si6=2N6ouxK+84j", '?S~I?_PDE#Ql>#!~x=O|T(0M|"e8"3DmrkiI+', '?%q@{iNSdC9Inb6~FVMI.1u=/w"R!j', "0W_kKR0)", ';Ij+[vuj#HW5r1VUnA(5~1kF>d9]1HLu=R?*sw!![e"G+vs?Xz', "3w7%YHT*h,Yuan31QxPx!ro)", "?GnS1Mo|5;T7OA", "h~_h*bCvPFV.pZ31mNJ/sYX)", 'tK%@7q9Tp8A+^2g2HHlqrr{f9"w)fva+OCIksF]4`#K', "vKdhEn=fseT~eR0R,3s[rYT>7NQ", 'l^nIK={=m,uBPHa>3hfTKUQ!|"G6TxH/`,M8BFF%4,=w)', "*%q@`YY)=7nIDWNZ0T[/}$)2F,", ">f^S4it|:DC9elUa]4^M08jD]KuA{Yh", ':79htvdSX"/>A(A50Km[o1taR"gpv(L>u:5K#b.=GhMI$6t4>fPx^k!b=~', "/=jMR?D=mNE#{A", "6^+%aY;aVf0vIveZ:hyW2@e~0})M](NBx:~ID3z", '"dHT[@!bg#L6dC"ayE&KhFZ[H7zJIO', "l,u@~.p!M7vB)", '7R%T@M^@Jd5wq6[1o2rifVb"&DVlolc1;?u@]$d)', "kE7TmKfL]a", "qK4W1?K~]KlW[WNB>?YI%?Rv<HR.O:|a|)", "QGWK1?]!QB/|rZ9xD><%x", 'b5JOG9|)7#xVhPoa3w8qLtb"Tw*GZ162Zxj', "OW]xL(iDYKfG5:g(<?O0VWh)", "<,Y&Clv|5f^;:(|(L2L/$qL?ZB^{9CIRIfdhjL:)", '+:]iriqMVfal_VlRS:OqW_g=0ak{cW72/=4[nJ.LX">>X6h', "P69*VGmvS}mAzC2>[GZSz1{f_Ba[C#ExaIA", "mG(.G>cL*Dvk^WK?ZK<g$(oS>hE5>Wt1*IL.}3`rsf_@VA", 'yHt[ES:"<7(A]6)1`/5hWMj^8"<gc2~+I%L|Fdz', "*F2J3Uk|p88kt0o(NK[h", "RRM0h3r!;}vqd#65?fxSuJ!!)K*v)", "$H,%oVkF8a^;WsP+kETSK_(1}fyIRV%%Sz", "qF]8>@EaBd;A7#s,9EkS)=0m|}B+FZ>4b*L:QdC|H&hMzA62C:A", '6*V*FUWm*D_.7vmU$wg+4@H"{d}kS+)^bNo/>roF)f', '#fv@K=9~r"z99O', "!Fv@N9:M;a?wIH%!7R@g9Ta){d@ejbY+z?iS5rA22N0pHn`!j35h", "~?0iFPF%K}po@O6aeA.ikV%lAaK5<+.(t%8qWd5m4Dd67x*Q?*?k!?b%ua<#)", "`8vO*>n@38e{Y!_!DAbSZ(e[o7BG19|a5C,g", "7TZtO=Y!zhS~Tl5R:SZhC1^fWeNe=2?5eS>MtJf=Vd>+Tbh", "$H%gbF4meFgG;9%4#I6::>(@=dzta#V?(N:OoY:mm#lk)", "Z3G:}U=j}8uV!(&", 'i>aoNVY%.He2x04?aIXk[J02,akkJbN5t*2KMVr%yD$1sA"+j;9hvDn>|', "SR6|`v/ZGa];{:?x,)", '9#:kZ:"aV;hVhsy!vSAi"Fq%K}{Chs9(', "?Q+%(kz", "w?3%!!e*z3e6C#>~0:JW#wHm%~93?Hp4RG1o9q|2.BLf)Pb?)I,goiz", "!4%|/:)!CC", '}KC@4v?f#~?.rWw1)W"g^kn>U,cI2V0RTH(W8Px[IFf9AU`4dN)', "@x3gMYw=,F+9=(g", "!3;ON$&1E;t>=WL??TSI<pcGv8jhIYU5P2#q|b<j", ']EH&|TCm!K1$=#K?OhIWSDtm#dc0"3?xV:RT)3blTw(A]#(R!TJ55rr)', '2=^M;Fc=jai.31,/5?i9D6I[p#*R@+`s_Gb&qU")', "~fqWVW*1K};5d6v+d/?*", "@=5_4?5M", "eS(5ob,j", "RQSIvG>j", "+TY&", "}hS&[:z", "+Q;g", "AeKWK=|)", "9^1#C*}n", "Y.2tCB?O", ".>9h36z", "QeMf8mkn", "$e_V+)kn", "ee:f", "mK`2?1J", 'Qe=~"Sbn', "!eHmkmXn", "oz=~I>.n", "4Pl~X", "Qe=~kmXn", "ozMf$pln", "byR&4)Qn", "poR44>bn", "1}%4W~Qn", "0})m~CXn", "Vz~c5=Kn", "Qe=~kmzj0B", "y9.4V1^B|l", "#kI_CCia0B", "ry_V#pXn", "4,)m?~3(", "ZDD4;", "jeMf", ":e=cB", "yPr4j", "VuN}M.9n", "%?i2;", "ry}4[A8n", "42}&j)J", "ry}4;>Ej0B", "4?k~Y>%Bm^", "]U}&ecBC_", "ry}4;>$n", "ozR4ImP(", "Vz/4Fpun", "j,)m?~J", "u@>m(X>d", 'wDMX2:")', "|Nz&2ri`", "rN*g", "yD:m", "[]|e", "G~:m", "o@2_dNJf", 'yDte"', "fLse", "xS6g", "H?/&", "+el~>Cyn", "yYWL0Iec", "(vsf9ZEn", "$k1mCCkn", "/2q&", "<yi2", "0P}4<=Kn", "%cq&", "$Pq4Smln", "P,i[Pp8n", "W0XfpCXn", "NK1HFpJ", ',Ip3r"KA', "^Hph", "KCroD[^N", "1RYP:56", "DuWkSgOA", "wxp3y`LA", "[RCj>#5w", "HdvutPBD", "QKcTt<AY", "jH5hF78", 'ar%H,m"G', "g5/l#", "A})m~CXn", "$Pq4/~tn"]), Ok(qk = function(...kk) {
-      Ok(kk[Hk[12]] = Hk[2], kk[Hk[15]] = [function() {
+    function Im() {}
+    bm(wm = {}, Dm = ["joUJ$oR%6{.l6u?W4mVlsB7]S~wiM|", ")P?Rngl:Q~P$q|y@iHjypbH/E#/lttGcwf<H=<U]OBeE[VhGUo2VTQTG+ge", '$f&HN<y:G]Xiz7"".Gz5Yot)//f<Z?}*9Q9chv8', "es]d)E;Tw0ODc7{i2]z|>n+~MEkxpPU^y@ok6).W%4+", "bsS,tg5/!5|Bx", 'F+i$t!fNv0cLv,ITH]k_4a~(O~A,V7VTVq}%URl"z{7__V6', 's]"$NgMXE{H?&!5}L%`k~)e"o5]Ls*AWp.c5kE%ymPC%)(IGaEL%ZgMw;YW', "MpW_zjy!w5Jl]&t*/NzJl1?ap<(x:.:V", "&A%cTQ.~cNfm^zT}h}kg6RGzbs%%;!!{S+~4bmNHG<7N+36", "~N<c]K5To<$bZ6H2THtR>*~~js*pQV(^3]lAX9hm_IJjj6@J}i.", "o]qsJKR^4O{*0uYeS8", "VHlA_DSHVw;)(Wtu$>y%>thUZ<x3V`F3.,3kW", '2q1gR!~znQ>G[KUo`ax9v,+z$BAtt@"!y,6v!^9B2qFdNtTW?8', "4]vVlpS$9QWq7,Ee!bUf]pLTAwkd2@5/gogO%L8", "F+iHMKQUQBlGYPcHO6`", 'OfmOuzbUQBQt`WsTDcR@Ypw/hwu.QV/iJfOsKP0$Z5$"YK>@Myh,/uKTo/P', "96@_smEmmI,R,,UC#m=$t)NxPEI?p|sVPfb$<t9eY5ucx", "r5N|w(!eZ/6O[zR/6{{Vs*ckw0", ':s3s";%eP#"wp.(^`NDA7a$$[6Q#K@x2@<e%wK8yb~&g"=', "ia}:#uZ%~Z?dq?nXwf1VDfpB&Yie}BxX<@Wj{uJ:nEK#x", '0]w"?<~$|', 'u%vj4UbBMB"O_K;JTXxk(+)m<62Ial%uojH4gj/H/5}$]./Jzq},,Q$/%', "K*okO}DB|", '@fJH}N+G[P0q6*iV{s{l)?H/v05"0@#}', "qXp5+G]Y46P,zty", 'x_u$SzR:d{n#1W`!"ql%+*^{2q@~pV_w~b:g=LK?_ZciYP5', "Pi;1F;zaz0b{H3+V#H}AA?UoWinQ0@aH#aO5s7fx", "Yc!H3O+zk#2?L@u*Gs}su^{BuY=`dpp@2]d1La8", "MA+c$)!eN<8`w<i^y)c:]", '.,8"$?Mwm0}4|.y@[c:4', "V>{jAR5$N<9C|fZ!~_s:fEw~:YDmX`%WEq4d}NBm]w7t8l+}1@jg2nj/%", "r%u$>D/TQi6b<|", 'o]~4=gEB<wR,!K#Wz5k_C9:"$', "(jojF9GNn#7H!V4cn6*4Fs+~OB4s?!v!_s)d@", "]bFj|ghEpZ*4|KF3^qw_aL_]:~Sdlp6", 'MPPg(OF]xZkx1~x",p(_c;k;EQ{Bx', "Sj?1ajI~dPg?B6fe;%%:]OBmB#ddx", "?*=cs7oeuYU)y3T@wf8%((D%JIvPX6r*t.URrgwzd{l|o=", "]|Hc4(l%>6&=x", 'dwps`<_!N{))L`uc%]Rg"nb"i~PP@nY"SwJHajtm)EI73..!G%f,SK[{{<T', "C<yj311:JIWl}P*cy,T%Bm;$|a@By}f*rEkgus[:Pi@wx", "Xf:cLRQ:PQLm06B2Lj&fK9{!5w.*3VEXkcPg~", "`H+)N}o)J6~ip08{[%S|jmckY<555lNwb+EO~O~x.", 'b+~c":Nz308`t,QJjq7jjt2ec0X4x', "y)2_YBjND{+:w<*/>)Ds4!%ma6", "D6])w(cG2q/Bx", "coc|/uA$w{;C2WrW[^3vKuP~$", "RjGdQm:^0],RJK$uL6SJi9HT)i(tE7*WA*~4TG82;s,D+py", "Q+pjXa*(awCi!Pso:fYA|<u!5wip;p%ue@UJIKz;Ry", "|XU:ElqXE0Q#~p0}y]tOFvB^*BIL_.", "DQ^%rm/$;~6E(Do!L#B_^,sB#w=34***+cmRosqGfie~%(1ol2)_!n#x,sUax", ':Xw"Fs.T_a}J07>}Xin4t<_{zgsNS@X^6]M%1,Sa~I`n.7|"_aW%0E8', "H<r_alZ%dE&r)uu*Mq.", "%N,l_:*z;/|n&zqX>wMsJ", "Ut[4Z<aXV6wkOuUT0<x", "3<scnouYBiFW%nR/p^O,t?2m@iQ,1W!**fRcz,.Sg~%5t(wV*b9cAae!>i", 'DQ0vTQ%m{<[ZC=duf+6c{Ky":Y1G"=^W**ajloSx4wEW;e0}<w`l~', 'E.U$#ENTrs+I2*o"_sk_|l7DhiXRw*8e', "WXS|_AjxA6|spV8eZw%RV^mY1soZ@*.{*j%:,dXg#iZNB~FJ^s^,rgho|", 'Z%sRvb&BvZ8kSfG"e^NJMacaHI', 'Aj?f^,u"U/PGx', "uqT_LR%t[6H?sW1J{].", "dW>HVA;?uYEAlp%", 'qs/_ztE"~{&yq!I^8mbHA(GH7sW???x*u5MjGP8"+6Wwp.bw^EQ%e:,~FwLt8', "=,XJ/?Do!YFrOB0}PE0vgN,T|", "y,yvLf|2^~X.=pvwvsW_x!u!p{1Dx=HGgpvj,bN~OB,", '5|J)rlgkk#"i(l:^L#`l*;fNAww?|lD@ojL:,dD^%', "Q+#lkKIH&5N,C*fWS+Byi", 'Wb^%lL5x54wl3pc*cmM_@R@"{]J?n~$', 'Gb=O6RGanE+R80[}r*gcTse"i~+4t(3@3*gcMKLjr<Ick6Io', "Dq6cS1S?Y<.3Z,H!`,tfvs2^!~OGz`FHL*B_z7./+Qi*%n[}.<mA+bnx", 'Np3v!PgTh~876==":i3%d+^!q{[I7WTu"<Y,"', "S.4_*k[mei,Q2WG*`<uRYps^8{@V1Wyc|0u:Juz~26", "I0UfNLNG?sbd>z}uw{&ds7X$lBODx", "+]l%q(K?%BE,1WIG", "KPxV8Owgv5z#,leJ>cO:2tjGmNiLS.s^w_<)t<Do6{D<K`l/!jT_1m2m~ZRHx", '*@T%hfck:sPP&zr"<^[)Vz,zYa)tFW%', 'c<cRX:e`Z0M/:K~Vnse"!Pwx~6^cw3+Vx_(jrLckWwd,L6yWopdc01NXi~', "g]NA:Nx~{5HLI=5/&6#_5Oj/?sD!9?$u0j.", '!]&HTD["Aw', '(+ry??O~+{AJnlEHAbWVpt@"(NmAZ6)WAPTl7u%:_NrDepY23N.', "u@tRH^))%Y(y5pR@{@Jdk)emdET", "e@)yPlKa8]G?~l|>i%y%t(!`$", "$N6:3aPHUY1I9(~isoE|Fs[:JP^Jzu<2#mqsA!/~b5", "BXI$d+O$aBKH<0WJ)qb$jQ8", 'AcX5?<u"d6gRu~IV|<?:<traOYm:@=', "}HVlq&;aD{@l=3]iO^?@KuCyOi.%R.|WXsSs.Lrj?/ooapVHmEW9;+8", "c<hsp&8", "}f6cA(fHRgS0c`d@s5`_r(/?WqU]!P<2Qf[H+k.?#Py5pPF2tsk)V", "&.jdpQjXh~aD_zt{Do@jjkPTD<KgS`yuE6$vGD|e+y", '8<`H.m_![wMm01!e{NZy/9^"c{#bO65@I0sRNo`2~{5%:K~V9J^,w', "RP59jB|{+Ig", "d%Q%pb!)9y;Qx", 'QP.ltgEm4E)g,l+}_X?@_P"):YHqB(HHSjzR&+5~%', "Vqa_DK!{2i]kzVKol+X5obXG10we>tSCsq3kDf^Y(Nkdqeh3(+pVb)7U*~U_x", "Y*evB<e!5OAQ>B.wEJvsk1#g2PL0wlfcex", "z@aj41M;Y<kD7`)cX<S5,jR^_NNt2~7J^)n$)(kT/<DyG@J2KpJc`&>x", "w{@l!PW$Rw", "V^rHI?zz+6n6.@fW)p|dQ&~W+Qwjx", "RcL5&9uD$~6*hfhG!>bHMu8!CYuE5p*crAWk`mE%/Y+6x", "asajQjL;)ird{7.W)*R)=g=N[6e~[K&^gscs[b($u/NIx", 'C]"Jlo1m_0AJdl`{(p:gm7M?I/Mrx', 'Ob8"G^/g,5ZZ6nz}4,tJ?LjXbsrD:<XGx5JdypUoWi"$X@^{RqX,|L*a1NIcx', "r2rg7RNXL<MWPu)uQw~)p&KHLycc|Vf{L8", "!<3kt(FUxa6i>@uutb`jvA6yaErP)?xe9J;@I:jH.saD^.wVGje9R!5x", "m^=4,bgzEQVLs*k/}>_%Bt}a]PJiE~N!J*HO!D]yKY_E;p@T}bS5", "@0IOU9;X1aDtjVy/GXe9Lu~/)q;d(DSC!a@k<oI(NNO|:V)/qbAsb)W/|5", 'D.":K?Mx', "Zjucd(i`", "ao(Lu*Sn", "e~=P", "yE(PH#J", "eoAh", "sg_u(XF}", "SX(u3DL", "/K5T_S+=", "yKl8ZM+=", "KKqT", "/K.6B0,Ul", "C+iqhgdfl", "%%nuKgU?l", "/K.6+S)=", "I<5Tyfs=", "azmJVM/=", "fImVV{a=", "DY,Vj6/=", "PYMS6?)=", "8<6g!.X=", "Gzl8Cf)=", 'VFMS36"}', "@wwVr", "vK5T", "qK.gU", "z%GVv", "8RdY5:1=", ",3#ur", "GzYV$~_=", "VuYJvML", "GzYVr{y=", "I<mV9S%}", "8<|VefR=", "vFMS36L", "GzYVr{NvPU", "V3+6c{,US4", "hOYJKgU?l", "FLr%pm|x", "9N$@", "0o:f", ">ClZ", "5v:f", ":&aei", "uznZ", "=.?@", "[3|J", "ZKs6{?z=", "}E`T1@N=", "y+DS??+=", "|uQJ", "2z#u", "P%YV2.X=", ",gQJ", "y%QV0Sdf*s", 'k*b6,M"BlU', "Rzfuhg%h;", "/uSqKM`}", "0B(1W)>y", "^F_hUJm}<YXM5.$k13sbHH|(+`dO0z$k+fVP+1^=e*O)p%1FzFo?b", "&sA^NlT*UjOz<g4pZ=H/xx}c2qaI`74pzE9055kQZNO[,><b_B", "J7Dl?uSqYa!Q5tk007cFG*?O_U(s@?9GKW>s$", "EQkO", "y%QV1]<=", "uM@b", "tMl*y$.K", "3;c[,]x", "whGX!,yR", "F}@pe`=R", "r&y*&:[R", "%4GE2dl@", "W>?.2aB5", "DM%bB{O", "ka8MZ_oq", ",%1(U", "~YMS6?)=", "y%QV|6A="]), bm(im = function(...mm) {
+      bm(mm[qm[12]] = qm[2], mm[qm[15]] = [function() {
         return globalThis
       }, function() {
         return global
@@ -814,248 +814,202 @@ export const modules = {
         return window
       }, function() {
         return new Function("return this")()
-      }], kk[Hk[1]] = Hk[95], kk[Hk[13]] = []);
+      }], mm[-qm[13]] = qm[18], mm[qm[14]] = []);
       try {
-        Ok(kk[Hk[1]] = Object, kk[Hk[13]][Hk[24]]("".__proto__.constructor.name))
-      } catch (ak) {}
-      kk: for (kk[Hk[14]] = Hk[2]; kk[Hk[14]] < kk[Hk[15]][Hk[12]]; kk[Hk[14]]++) try {
-        for (kk[Hk[1]] = kk[Hk[15]][kk[Hk[14]]](), kk[Hk[16]] = Hk[2]; kk[Hk[16]] < kk[Hk[13]][Hk[12]]; kk[Hk[16]]++)
-          if (typeof kk[Hk[1]][kk[Hk[13]][kk[Hk[16]]]] === Hk[17]) continue kk;
-        return kk[Hk[1]]
-      } catch (ak) {}
-      return kk[Hk[1]] || this
-    }() || {}, Lk = qk.TextDecoder, tk = qk.Uint8Array, Zk = qk.je, jk = qk.String || String, ek = qk.Array || Array, wk = function(...kk) {
-      return Ok(kk[Hk[12]] = Hk[2], kk[Hk[25]] = new ek(Hk[50]), kk[Hk[1]] = jk[Hk[21]] || jk.fromCharCode, kk[Hk[18]] = []),
-        function(Fk) {
-          var Ik, Xk, Tk, ik;
-          for (Ok(Xk = void 0, Tk = Fk[Hk[12]], kk[Hk[18]][Hk[12]] = Hk[2]), ik = Hk[2]; ik < Tk;) Ok(Xk = Fk[ik++], Xk <= Hk[48] ? Ik = Xk : Xk <= 223 ? Ik = (31 & Xk) << Hk[20] | Fk[ik++] & Hk[19] : Xk <= 239 ? Ik = (Xk & Hk[58]) << Hk[23] | (Fk[ik++] & Hk[19]) << Hk[20] | Fk[ik++] & Hk[19] : jk[Hk[21]] ? Ik = (Xk & Hk[22]) << 18 | (Fk[ik++] & Hk[19]) << Hk[23] | (Fk[ik++] & Hk[19]) << Hk[20] | Fk[ik++] & Hk[19] : (Ik = Hk[19], ik += Hk[47]), kk[Hk[18]][Hk[24]](kk[Hk[25]][Ik] || (kk[Hk[25]][Ik] = kk[Hk[1]](Ik))));
-          return kk[Hk[18]].join("")
+        bm(mm[-qm[13]] = Object, mm[qm[14]][qm[25]]("".__proto__.constructor.name))
+      } catch (Dm) {}
+      mm: for (mm[qm[9]] = qm[2]; mm[qm[9]] < mm[qm[15]][qm[12]]; mm[qm[9]]++) try {
+        for (mm[-qm[13]] = mm[qm[15]][mm[qm[9]]](), mm[-qm[16]] = qm[2]; mm[-qm[16]] < mm[qm[14]][qm[12]]; mm[-qm[16]]++)
+          if (typeof mm[-qm[13]][mm[qm[14]][mm[-qm[16]]]] === qm[17]) continue mm;
+        return mm[-qm[13]]
+      } catch (Dm) {}
+      return mm[-qm[13]] || this
+    }() || {}, Rm = im.TextDecoder, pm = im.Uint8Array, Em = im.XO, om = im.String || String, Om = im.Array || Array, Ym = function(...mm) {
+      return bm(mm[qm[12]] = qm[2], mm[qm[26]] = new Om(qm[53]), mm[qm[27]] = om[qm[23]] || om.fromCharCode, mm[qm[19]] = []),
+        function(...Tm) {
+          for (bm(Tm[qm[12]] = qm[0], Tm[qm[0]] = qm[18], Tm[qm[1]] = qm[18], Tm[qm[14]] = Tm[qm[2]][qm[12]], mm[qm[19]][qm[12]] = qm[2]), Tm[qm[20]] = qm[2]; Tm[qm[20]] < Tm[qm[14]];) bm(Tm[qm[1]] = Tm[qm[2]][Tm[qm[20]]++], Tm[qm[1]] <= qm[47] ? Tm[qm[0]] = Tm[qm[1]] : Tm[qm[1]] <= 223 ? Tm[qm[0]] = (31 & Tm[qm[1]]) << qm[22] | Tm[qm[2]][Tm[qm[20]]++] & qm[21] : Tm[qm[1]] <= 239 ? Tm[qm[0]] = (15 & Tm[qm[1]]) << qm[24] | (Tm[qm[2]][Tm[qm[20]]++] & qm[21]) << qm[22] | Tm[qm[2]][Tm[qm[20]]++] & qm[21] : om[qm[23]] ? Tm[qm[0]] = (Tm[qm[1]] & qm[6]) << qm[28] | (Tm[qm[2]][Tm[qm[20]]++] & qm[21]) << qm[24] | (Tm[qm[2]][Tm[qm[20]]++] & qm[21]) << qm[22] | Tm[qm[2]][Tm[qm[20]]++] & qm[21] : (Tm[qm[0]] = qm[21], Tm[qm[20]] += qm[4]), mm[qm[19]][qm[25]](mm[qm[26]][Tm[qm[0]]] || (mm[qm[26]][Tm[qm[0]]] = mm[qm[27]](Tm[qm[0]]))));
+          return mm[qm[19]].join("")
         }
-    }());
-    const Kk = Tk()[Jk(Hk[46])](),
-      Qk = Tk()[Jk(Hk[46])](),
-      sk = Tk()[Jk(Hk[46])](),
-      Vk = Tk()[Jk(Hk[46])](),
-      zk = Tk()[Jk(Hk[46])](),
-      Sk = Tk()[Jk(Hk[46])](),
-      vk = Tk()[Jk(Hk[46])](),
-      Ek = (...kk) => {
-        kk[Hk[12]] = Hk[47];
-        const Fk = Sk;
-        return Tk()[Jk(124) + Jk(125)](Fk, kk[Hk[13]]), Tk()[Jk(126)](kk[Hk[2]], Fk, Tk()[Jk(Hk[48])](Fk, kk[Hk[0]]))
+    }()), jm(qm[13]) in Im && function(...mm) {
+      bm(mm[qm[12]] = qm[2], mm[qm[31]] = function(...mm) {
+        for (bm(mm[qm[12]] = qm[0], mm[qm[0]] = qm[2], mm[-qm[29]] = {}, mm[qm[14]] = qm[2], mm[qm[9]] = qm[2], mm[qm[7]] = qm[2], mm[qm[28]] = mm[qm[2]].length), mm[-qm[16]] = qm[2]; mm[-qm[16]] < mm[qm[28]]; mm[-qm[16]]++) {
+          for (bm(mm[-qm[29]] = {}, mm[qm[14]] = qm[2], mm[qm[9]] = qm[0]), mm[qm[30]] = mm[-qm[16]] + qm[0]; mm[qm[30]] < mm[qm[28]]; mm[qm[30]]++) mm[qm[2]][mm[-qm[16]]].x !== mm[qm[2]][mm[qm[30]]].x || mm[qm[2]][mm[-qm[16]]].y !== mm[qm[2]][mm[qm[30]]].y ? (mm[qm[2]][mm[-qm[16]]].y === mm[qm[2]][mm[qm[30]]].y ? mm[qm[7]] = Number.MAX_SAFE_INTEGER : mm[qm[7]] = (mm[qm[2]][mm[-qm[16]]].x - mm[qm[2]][mm[qm[30]]].x) / (mm[qm[2]][mm[-qm[16]]].y - mm[qm[2]][mm[qm[30]]].y), mm[-qm[29]][mm[qm[7]]] || (mm[-qm[29]][mm[qm[7]]] = qm[2]), bm(mm[-qm[29]][mm[qm[7]]]++, mm[qm[14]] = Math.max(mm[qm[14]], mm[-qm[29]][mm[qm[7]]]))) : mm[qm[9]]++;
+          bm(mm[qm[14]] += mm[qm[9]], mm[qm[0]] = Math.max(mm[qm[0]], mm[qm[14]]))
+        }
+        return mm[qm[0]]
+      }, console.log(mm[qm[31]]))
+    }();
+    const Km = Am()[jm(qm[32])](),
+      Qm = Am()[jm(qm[32])](),
+      nm = Am()[jm(qm[32])](),
+      Jm = Am()[jm(qm[32])](),
+      cm = Am()[jm(qm[32])](),
+      zm = Am()[jm(qm[32])](),
+      Zm = Am()[jm(qm[32])](),
+      km = (...mm) => {
+        function Tm(...mm) {
+          return mm[qm[12]] = qm[0], typeof wm[mm[qm[2]]] === qm[17] ? wm[mm[qm[2]]] = function(...mm) {
+            for (bm(mm[qm[12]] = qm[0], mm[qm[31]] = 'JpnFTgkXPEhDcCQBMVldYAtsIRZeUfHGLiSjNaqmKWOorb;u/8&(+[{|1%]v3<!?yz_}*)>#62~`09^7,.w=@$:5x"4', mm[qm[1]] = "" + (mm[qm[2]] || ""), mm[qm[14]] = mm[qm[1]].length, mm[qm[20]] = [], mm[qm[27]] = qm[2], mm[qm[35]] = qm[2], mm[qm[33]] = -qm[0]), mm[qm[10]] = qm[2]; mm[qm[10]] < mm[qm[14]]; mm[qm[10]]++)
+              if (mm[qm[5]] = mm[qm[31]].indexOf(mm[qm[1]][mm[qm[10]]]), mm[qm[5]] !== -qm[0])
+                if (mm[qm[33]] < qm[2]) mm[qm[33]] = mm[qm[5]];
+                else {
+                  bm(mm[qm[33]] += mm[qm[5]] * qm[34], mm[qm[27]] |= mm[qm[33]] << mm[qm[35]], mm[qm[35]] += (mm[qm[33]] & qm[36]) > qm[37] ? qm[38] : qm[39]);
+                  do {
+                    bm(mm[qm[20]].push(mm[qm[27]] & qm[11]), mm[qm[27]] >>= qm[10], mm[qm[35]] -= qm[10])
+                  } while (mm[qm[35]] > qm[6]);
+                  mm[qm[33]] = -qm[0]
+                } return mm[qm[33]] > -qm[0] && mm[qm[20]].push((mm[qm[27]] | mm[qm[33]] << mm[qm[35]]) & qm[11]), Vm(mm[qm[20]])
+          }(Dm[mm[qm[2]]]) : wm[mm[qm[2]]]
+        }
+        mm[qm[12]] = qm[4];
+        const fm = zm;
+        return Am()[Tm(109) + Tm(110)](fm, mm[qm[19]]), Am()[Tm(qm[40])](mm[qm[2]], fm, Am()[Tm(112)](fm, mm[qm[0]]))
       };
 
-    function Ok() {
-      Ok = function() {}
+    function bm() {
+      bm = function() {}
     }
-    yk = (...kk) => {
-      function Fk(...kk) {
-        return kk[Hk[12]] = Hk[0], typeof lk[kk[Hk[2]]] === Hk[17] ? lk[kk[Hk[2]]] = function(...kk) {
-          for (Ok(kk[Hk[12]] = Hk[0], kk[Hk[0]] = 'J(nDv:_w&2fxk]!e8^QBlMY+t;y%X"jH4#Kr$0bGzF|P5o9<E{.}LsuV*,g/?OWUi6@R=A1)`[c3m~>7pCZqdSaThIN', kk[Hk[1]] = "" + (kk[Hk[2]] || ""), kk[Hk[49]] = kk[Hk[1]].length, kk[Hk[9]] = [], kk[Hk[32]] = Hk[2], kk[Hk[20]] = Hk[2], kk[Hk[6]] = -Hk[0]), kk[Hk[10]] = Hk[2]; kk[Hk[10]] < kk[Hk[49]]; kk[Hk[10]]++)
-            if (kk[Hk[29]] = kk[Hk[0]].indexOf(kk[Hk[1]][kk[Hk[10]]]), kk[Hk[29]] !== -Hk[0])
-              if (kk[Hk[6]] < Hk[2]) kk[Hk[6]] = kk[Hk[29]];
+    xm = (...mm) => {
+      function Tm(...mm) {
+        return mm[qm[12]] = qm[0], typeof wm[mm[qm[2]]] === qm[17] ? wm[mm[qm[2]]] = function(...mm) {
+          for (bm(mm[qm[12]] = qm[0], mm[qm[0]] = 'L}=wEql;JuTo+htK_4/Us5cZArz,)Bv[VCXGyPa><e*%!I12N]:Yb`R8pFH|3xjO#&^m.~DM($g"S6{nf?@Qi0W7k9d', mm[qm[1]] = "" + (mm[qm[2]] || ""), mm[qm[14]] = mm[qm[1]].length, mm[qm[20]] = [], mm[-qm[42]] = qm[2], mm[qm[43]] = qm[2], mm[qm[40]] = -qm[0]), mm[qm[41]] = qm[2]; mm[qm[41]] < mm[qm[14]]; mm[qm[41]]++)
+            if (mm[qm[5]] = mm[qm[0]].indexOf(mm[qm[1]][mm[qm[41]]]), mm[qm[5]] !== -qm[0])
+              if (mm[qm[40]] < qm[2]) mm[qm[40]] = mm[qm[5]];
               else {
-                Ok(kk[Hk[6]] += kk[Hk[29]] * Hk[31], kk[Hk[32]] |= kk[Hk[6]] << kk[Hk[20]], kk[Hk[20]] += (kk[Hk[6]] & Hk[34]) > Hk[35] ? Hk[36] : Hk[37]);
+                bm(mm[qm[40]] += mm[qm[5]] * qm[34], mm[-qm[42]] |= mm[qm[40]] << mm[qm[43]], mm[qm[43]] += (mm[qm[40]] & qm[36]) > qm[37] ? qm[38] : qm[39]);
                 do {
-                  Ok(kk[Hk[9]].push(kk[Hk[32]] & Hk[11]), kk[Hk[32]] >>= Hk[10], kk[Hk[20]] -= Hk[10])
-                } while (kk[Hk[20]] > Hk[22]);
-                kk[Hk[6]] = -Hk[0]
-              } return kk[Hk[6]] > -Hk[0] && kk[Hk[9]].push((kk[Hk[32]] | kk[Hk[6]] << kk[Hk[20]]) & Hk[11]), xk(kk[Hk[9]])
-        }(ak[kk[Hk[2]]]) : lk[kk[Hk[2]]]
+                  bm(mm[qm[20]].push(mm[-qm[42]] & qm[11]), mm[-qm[42]] >>= qm[10], mm[qm[43]] -= qm[10])
+                } while (mm[qm[43]] > qm[6]);
+                mm[qm[40]] = -qm[0]
+              } return mm[qm[40]] > -qm[0] && mm[qm[20]].push((mm[-qm[42]] | mm[qm[40]] << mm[qm[43]]) & qm[11]), Vm(mm[qm[20]])
+        }(Dm[mm[qm[2]]]) : wm[mm[qm[2]]]
       }
-      kk[Hk[12]] = Hk[10], Jk(Hk[50]) in Pk && function(...kk) {
-        kk[Hk[12]] = Hk[2]
+      mm[qm[12]] = qm[10], Tm(113) + qm[46] in Im && function(...mm) {
+        mm[qm[12]] = qm[2]
       }();
-      const Ik = kk[Hk[2]][Jk(131)][Fk(132) + Fk(133) + Fk(134)](kk[Hk[0]]);
-      kk[-Hk[58]] = kk[Hk[2]][Fk(Hk[59])][Fk(Hk[66]) + Fk(Hk[67]) + Fk(Hk[68]) + Fk(Hk[69])](Ik);
-      const Xk = kk[-Hk[58]] === Hk[42] ? kk[Hk[2]][Fk(Hk[59])][Fk(Hk[75]) + Fk(Hk[76]) + Fk(Hk[77]) + Fk(Hk[78])](kk[Hk[0]], Fk(Hk[60]) + Fk(Hk[61]) + Fk(Hk[62]) + Hk[32]) : kk[-Hk[58]][Fk(Hk[60]) + Fk(Hk[61]) + Fk(Hk[62]) + Hk[32]],
-        yk = kk[-Hk[58]] === Hk[42] ? kk[Hk[2]][Fk(Hk[59])][Fk(Hk[70]) + Fk(Hk[71]) + Fk(Hk[72])](kk[Hk[0]], Fk(Hk[63]) + Fk(Hk[64]) + Fk(Hk[65])) : kk[-Hk[58]][Fk(Hk[63]) + Fk(Hk[64]) + Fk(Hk[65])];
-      Ok(Tk()[Fk(153)](Kk, Hk[2], Hk[2], kk[Hk[89]]), Tk().ei(Kk, Kk, Tk()[Fk(Hk[41])], kk[Hk[47]].heading), Tk()[Fk(155)](vk, kk[Hk[9]].TH), vk[Hk[0]] = Hk[2]);
-      const qk = kk[Hk[13]][Fk(156) + Fk(157)]();
-      if (Ok(kk[-Hk[58]] = kk[Hk[2]][Fk(Hk[59])][Fk(Hk[66]) + Fk(Hk[67]) + Fk(Hk[68]) + Fk(Hk[69])](Ik), kk[-Hk[13]] = kk[-Hk[58]] === Hk[42] ? kk[Hk[2]][Fk(Hk[59])][Fk(Hk[70]) + Fk(Hk[71]) + Fk(Hk[72])](kk[Hk[0]], Fk(Hk[73]) + Fk(Hk[74])) : kk[-Hk[58]][Fk(Hk[73]) + Fk(Hk[74])]), !qk && Tk()[Hk[90]](vk) && (kk[-Hk[58]] === Hk[42] ? kk[Hk[2]][Fk(Hk[59])][Fk(Hk[75]) + Fk(Hk[76]) + Fk(Hk[77]) + Fk(Hk[78])](kk[Hk[0]], Fk(160) + Fk(161) + Fk(162)) : kk[-Hk[58]][Fk(Hk[92]) + Fk(164) + Fk(Hk[99]) + Fk(Hk[40])])) {
-        function ek(...kk) {
-          for (Ok(kk[Hk[12]] = Hk[0], kk[Hk[80]] = '{fdALtCjgmeRS<0D`VT8@|3yaH~["x_r+2BU?9)Q>#P]=oEG1(IZws;&Okb*NJ%c:4YqX5F7/,W6!vnz^$}hlK.iMup', kk[Hk[1]] = "" + (kk[Hk[2]] || ""), kk[Hk[47]] = kk[Hk[1]].length, kk[Hk[55]] = [], kk[Hk[32]] = Hk[2], kk[Hk[20]] = Hk[2], kk[Hk[22]] = -Hk[0]), kk[-Hk[79]] = Hk[2]; kk[-Hk[79]] < kk[Hk[47]]; kk[-Hk[79]]++)
-            if (kk[Hk[81]] = kk[Hk[80]].indexOf(kk[Hk[1]][kk[-Hk[79]]]), kk[Hk[81]] !== -Hk[0])
-              if (kk[Hk[22]] < Hk[2]) kk[Hk[22]] = kk[Hk[81]];
+      const fm = mm[qm[2]][Tm(qm[45])][Tm(115) + Tm(116) + Tm(117)](mm[qm[0]]);
+      mm[qm[10]] = mm[qm[2]][Tm(qm[45])][Tm(qm[56]) + Tm(qm[57]) + Tm(qm[58]) + qm[46]](fm);
+      const hm = mm[qm[10]] === qm[44] ? mm[qm[2]][Tm(qm[45])][Tm(qm[50]) + Tm(qm[51]) + Tm(qm[52]) + Tm(qm[8])](mm[qm[0]], Tm(qm[48]) + Tm(qm[49]) + Tm(qm[47]) + qm[27]) : mm[qm[10]][Tm(qm[48]) + Tm(qm[49]) + Tm(qm[47]) + qm[27]],
+        xm = mm[qm[10]] === qm[44] ? mm[qm[2]][Tm(qm[45])][Tm(qm[50]) + Tm(qm[51]) + Tm(qm[52]) + Tm(qm[8])](mm[qm[0]], Tm(qm[53]) + Tm(qm[54]) + Tm(qm[55])) : mm[qm[10]][Tm(qm[53]) + Tm(qm[54]) + Tm(qm[55])];
+      bm(Am()[Tm(131)](Km, qm[2], qm[2], mm[qm[7]]), Am().pa(Km, Km, Am()[Tm(132)], mm[qm[4]].heading), Am()[Tm(133)](Zm, mm[qm[20]].qq), Zm[qm[0]] = qm[2]);
+      const im = mm[qm[19]][Tm(134) + Tm(135)]();
+      if (bm(mm[qm[10]] = mm[qm[2]][Tm(qm[45])][Tm(qm[56]) + Tm(qm[57]) + Tm(qm[58]) + qm[46]](fm), mm[qm[5]] = mm[qm[10]] === qm[44] ? mm[qm[2]][Tm(qm[45])][Tm(qm[50]) + Tm(qm[51]) + Tm(qm[52]) + Tm(qm[8])](mm[qm[0]], Tm(qm[15]) + Tm(qm[59])) : mm[qm[10]][Tm(qm[15]) + Tm(qm[59])]), !im && Am()[qm[60]](Zm) && (mm[qm[10]] === qm[44] ? mm[qm[2]][Tm(qm[45])][Tm(qm[50]) + Tm(qm[51]) + Tm(qm[52]) + Tm(qm[8])](mm[qm[0]], Tm(138) + Tm(139) + Tm(qm[73]) + Tm(qm[26])) : mm[qm[10]][Tm(142) + Tm(qm[70]) + Tm(144)])) {
+        function Om(...mm) {
+          for (bm(mm[qm[12]] = qm[0], mm[qm[31]] = 'Bux2zQ%8@fZA.GJo~*1cPl<0[3v>q=w9y(E4/F]!keHCp,Y5s#dLTni+t&|$NmI}:rbKhD7V{_X?jRWOaMgUS;6)^`"', mm[qm[19]] = "" + (mm[qm[2]] || ""), mm[qm[4]] = mm[qm[19]].length, mm[qm[20]] = [], mm[qm[7]] = qm[2], mm[qm[43]] = qm[2], mm[qm[33]] = -qm[0]), mm[qm[10]] = qm[2]; mm[qm[10]] < mm[qm[4]]; mm[qm[10]]++)
+            if (mm[qm[56]] = mm[qm[31]].indexOf(mm[qm[19]][mm[qm[10]]]), mm[qm[56]] !== -qm[0])
+              if (mm[qm[33]] < qm[2]) mm[qm[33]] = mm[qm[56]];
               else {
-                Ok(kk[Hk[22]] += kk[Hk[81]] * Hk[31], kk[Hk[32]] |= kk[Hk[22]] << kk[Hk[20]], kk[Hk[20]] += (kk[Hk[22]] & Hk[34]) > Hk[35] ? Hk[36] : Hk[37]);
+                bm(mm[qm[33]] += mm[qm[56]] * qm[34], mm[qm[7]] |= mm[qm[33]] << mm[qm[43]], mm[qm[43]] += (mm[qm[33]] & qm[36]) > qm[37] ? qm[38] : qm[39]);
                 do {
-                  Ok(kk[Hk[55]].push(kk[Hk[32]] & Hk[11]), kk[Hk[32]] >>= Hk[10], kk[Hk[20]] -= Hk[10])
-                } while (kk[Hk[20]] > Hk[22]);
-                kk[Hk[22]] = -Hk[0]
-              } return kk[Hk[22]] > -Hk[0] && kk[Hk[55]].push((kk[Hk[32]] | kk[Hk[22]] << kk[Hk[20]]) & Hk[11]), xk(kk[Hk[55]])
+                  bm(mm[qm[20]].push(mm[qm[7]] & qm[11]), mm[qm[7]] >>= qm[10], mm[qm[43]] -= qm[10])
+                } while (mm[qm[43]] > qm[6]);
+                mm[qm[33]] = -qm[0]
+              } return mm[qm[33]] > -qm[0] && mm[qm[20]].push((mm[qm[7]] | mm[qm[33]] << mm[qm[43]]) & qm[11]), Vm(mm[qm[20]])
         }
 
-        function wk(kk) {
-          return typeof lk[kk] === Hk[17] ? lk[kk] = ek(ak[kk]) : lk[kk]
+        function Ym(...mm) {
+          return mm[qm[12]] = qm[0], typeof wm[mm[qm[2]]] === qm[17] ? wm[mm[qm[2]]] = Om(Dm[mm[qm[2]]]) : wm[mm[qm[2]]]
         }
 
-        function Sk(...kk) {
-          kk[Hk[12]] = Hk[2]
+        function jm(...mm) {
+          mm[qm[12]] = qm[2]
         }
-        wk(167) + Hk[4] in Pk && Sk(), Ok(Ek(Qk, Kk, vk), Ek(sk, vk, Kk), Tk()[wk(170)](Vk, vk, sk));
-        const nk = Tk()[wk(171)](vk),
-          Gk = Tk()[wk(172)](Kk, vk) / kk[Hk[89]] / nk,
-          pk = Math[wk(Hk[93])](Gk, Hk[2]) + Hk[0];
-        if (kk[Hk[89]] * kk[Hk[89]] < Tk()[Hk[90]](sk)) {
-          function uk(...kk) {
-            function Fk() {}
-            kk[Hk[12]] = Hk[2], Ok(kk[Hk[1]] = function(...kk) {
-              for (Ok(kk[Hk[12]] = Hk[13], kk[-Hk[3]] = Hk[2], kk[Hk[1]] = Hk[2], kk[Hk[91]] = new Fk(Hk[2]), kk[Hk[55]] = kk[Hk[91]], kk[Hk[20]] = kk[Hk[2]], kk[-Hk[92]] = kk[Hk[0]]); kk[Hk[20]] !== Hk[42] || kk[-Hk[92]] !== Hk[42];) Ok(kk[Hk[1]] = (kk[Hk[20]] ? kk[Hk[20]].val : Hk[2]) + (kk[-Hk[92]] ? kk[-Hk[92]].val : Hk[2]) + kk[-Hk[3]], kk[-Hk[3]] = Math.floor(kk[Hk[1]] / Hk[44]), kk[Hk[55]].next = new Fk(kk[Hk[1]] % Hk[44]), kk[Hk[55]] = kk[Hk[55]].next, kk[Hk[20]] = kk[Hk[20]] ? kk[Hk[20]].next : Hk[42], kk[-Hk[92]] = kk[-Hk[92]] ? kk[-Hk[92]].next : Hk[42]);
-              return kk[-Hk[3]] && (kk[Hk[55]].next = new Fk(kk[-Hk[3]])), kk[Hk[91]].next
-            }, console.log(kk[Hk[1]]))
-          }
-          wk(174) in Pk && uk(), Tk()[wk(175)](Kk, Kk, sk, pk)
-        }
-        Ok(kk[-Hk[13]] = (0, ik.u)(kk[-Hk[13]], 1, Math[wk(Hk[93])](Hk[0], Math[wk(176)](Hk[2], -Gk, Hk[0] - nk / kk[Hk[89]]))), Tk()[wk(Hk[8])](Kk, Kk, Vk))
-      }
-      const Lk = zk;
-      if (Ok(Tk()[Fk(178)](Lk, Kk, vk), Lk[Hk[0]] = Hk[2], kk[Hk[44]] = Tk()[Fk(179)](Lk)), !qk) {
-        function bk(...kk) {
-          for (Ok(kk[Hk[12]] = Hk[0], kk[Hk[0]] = '@cDnVmGqoLaNkA!f9_J&}8Uiw;^j=$X>pt*g#RvSW3yzB[46d+1Kh?Cs)IQEre<H~ZFl|"T2/0YbM%`{]OxP5u(,7.:', kk[Hk[13]] = "" + (kk[Hk[2]] || ""), kk[Hk[47]] = kk[Hk[13]].length, kk[Hk[9]] = [], kk[Hk[32]] = Hk[2], kk[Hk[20]] = Hk[2], kk[Hk[22]] = -Hk[0]), kk[Hk[27]] = Hk[2]; kk[Hk[27]] < kk[Hk[47]]; kk[Hk[27]]++)
-            if (kk[-Hk[94]] = kk[Hk[0]].indexOf(kk[Hk[13]][kk[Hk[27]]]), kk[-Hk[94]] !== -Hk[0])
-              if (kk[Hk[22]] < Hk[2]) kk[Hk[22]] = kk[-Hk[94]];
-              else {
-                Ok(kk[Hk[22]] += kk[-Hk[94]] * Hk[31], kk[Hk[32]] |= kk[Hk[22]] << kk[Hk[20]], kk[Hk[20]] += (kk[Hk[22]] & Hk[34]) > Hk[35] ? Hk[36] : Hk[37]);
-                do {
-                  Ok(kk[Hk[9]].push(kk[Hk[32]] & Hk[11]), kk[Hk[32]] >>= Hk[10], kk[Hk[20]] -= Hk[10])
-                } while (kk[Hk[20]] > Hk[22]);
-                kk[Hk[22]] = -Hk[0]
-              } return kk[Hk[22]] > -Hk[0] && kk[Hk[9]].push((kk[Hk[32]] | kk[Hk[22]] << kk[Hk[20]]) & Hk[11]), xk(kk[Hk[9]])
-        }
-
-        function Rk(...kk) {
-          return kk[Hk[12]] = Hk[0], typeof lk[kk[Hk[2]]] === Hk[17] ? lk[kk[Hk[2]]] = bk(ak[kk[Hk[2]]]) : lk[kk[Hk[2]]]
-        }
-
-        function Uk(...kk) {
-          kk[Hk[12]] = Hk[2];
-          const Fk = require("big-integer");
-          Ok(kk[Hk[41]] = class {
-            static randomPrime(...kk) {
-              kk[Hk[12]] = Hk[0];
-              const Ik = Fk.one.shiftLeft(kk[Hk[2]] - Hk[0]),
-                Xk = Fk.one.shiftLeft(kk[Hk[2]]).prev();
-              for (;;) {
-                let kk = Fk.randBetween(Ik, Xk);
-                if (kk.isProbablePrime(256)) return kk
-              }
-            }
-            static generate(...kk) {
-              kk[Hk[12]] = Hk[0];
-              const Ik = Fk(65537);
-              let Xk, Tk;
-              kk[-Hk[94]] = Hk[95];
-              do {
-                Ok(Xk = this.randomPrime(kk[Hk[2]] / Hk[13]), Tk = this.randomPrime(kk[Hk[2]] / Hk[13]), kk[-Hk[94]] = Fk.lcm(Xk.prev(), Tk.prev()))
-              } while (Fk.gcd(Ik, kk[-Hk[94]]).notEquals(Hk[0]) || Xk.minus(Tk).abs().shiftRight(kk[Hk[2]] / Hk[13] - 100).isZero());
-              return {
-                e: Ik,
-                n: Xk.multiply(Tk),
-                d: Ik.modInv(kk[-Hk[94]])
-              }
-            }
-            static encrypt(...kk) {
-              return kk[Hk[12]] = Hk[47], Fk(kk[Hk[2]]).modPow(kk[Hk[13]], kk[Hk[0]])
-            }
-            static decrypt(...kk) {
-              return kk[Hk[12]] = Hk[47], Fk(kk[Hk[2]]).modPow(kk[Hk[0]], kk[Hk[13]])
-            }
-            static encode(kk) {
-              const Ik = kk.split("").map((kk => kk.charCodeAt())).join("");
-              return Fk(Ik)
-            }
-            static decode(...kk) {
-              kk[Hk[12]] = Hk[0];
-              const Fk = kk[Hk[2]].toString();
-              kk[-Hk[70]] = "";
-              for (let Ik = Hk[2]; Ik < Fk.length; Ik += Hk[13]) {
-                let Xk = Number(Fk.substr(Ik, Hk[13]));
-                Xk <= 30 ? (kk[-Hk[70]] += String.fromCharCode(Number(Fk.substr(Ik, Hk[47]))), Ik++) : kk[-Hk[70]] += String.fromCharCode(Xk)
-              }
-              return kk[-Hk[70]]
-            }
-          }, module.exports = kk[Hk[41]])
-        }
-        Rk(Hk[82]) in Pk && Uk(), kk[Hk[44]] *= kk[-Hk[13]]
-      }
-      const tk = kk[Hk[20]][Fk(Hk[39]) + Fk(182) + Fk(183)],
-        Zk = tk ? Math[Fk(184)](tk, kk[Hk[44]]) : kk[Hk[44]];
-      Tk()[Fk(185) + Fk(186)](Lk, Lk);
-      const jk = kk[Hk[22]] !== Hk[42] && void 0 !== kk[Hk[22]] ? kk[Hk[22]] : kk[Hk[20]][Fk(187) + Fk(Hk[49]) + Fk(189) + Fk(Hk[102])];
-      if (Zk > Hk[2]) {
-        function Ck(...kk) {
-          for (Ok(kk[Hk[12]] = Hk[0], kk[Hk[0]] = '8GAPbftahHkEUW}uQ|=2L>/)e#xdiDFl3nSV,ZO~K<sINXr;?"659wMzR1y.JCo^jcq4+T_7YBv*(`g$%0:p&m[@]!{', kk[Hk[1]] = "" + (kk[Hk[2]] || ""), kk[-Hk[61]] = kk[Hk[1]].length, kk[-Hk[37]] = [], kk[-Hk[97]] = Hk[2], kk[Hk[33]] = Hk[2], kk[Hk[6]] = -Hk[0]), kk[-Hk[96]] = Hk[2]; kk[-Hk[96]] < kk[-Hk[61]]; kk[-Hk[96]]++)
-            if (kk[Hk[5]] = kk[Hk[0]].indexOf(kk[Hk[1]][kk[-Hk[96]]]), kk[Hk[5]] !== -Hk[0])
-              if (kk[Hk[6]] < Hk[2]) kk[Hk[6]] = kk[Hk[5]];
-              else {
-                Ok(kk[Hk[6]] += kk[Hk[5]] * Hk[31], kk[-Hk[97]] |= kk[Hk[6]] << kk[Hk[33]], kk[Hk[33]] += (kk[Hk[6]] & Hk[34]) > Hk[35] ? Hk[36] : Hk[37]);
-                do {
-                  Ok(kk[-Hk[37]].push(kk[-Hk[97]] & Hk[11]), kk[-Hk[97]] >>= Hk[10], kk[Hk[33]] -= Hk[10])
-                } while (kk[Hk[33]] > Hk[22]);
-                kk[Hk[6]] = -Hk[0]
-              } return kk[Hk[6]] > -Hk[0] && kk[-Hk[37]].push((kk[-Hk[97]] | kk[Hk[6]] << kk[Hk[33]]) & Hk[11]), xk(kk[-Hk[37]])
-        }
-
-        function Nk(...kk) {
-          return kk[Hk[12]] = Hk[0], typeof lk[kk[Hk[2]]] === Hk[17] ? lk[kk[Hk[2]]] = Ck(ak[kk[Hk[2]]]) : lk[kk[Hk[2]]]
-        }
-        let ck = kk[Hk[13]][Nk(191) + Nk(192)] * jk;
-        if (!qk) {
-          function fk(...kk) {
-            for (Ok(kk[Hk[12]] = Hk[0], kk[Hk[52]] = '6LNjIWnZHsPGQSapeFgTkfcXEDCBYqmJodlKVRiMtxA;hzU49Obr7?^)u"v#{<1}+]32/>*|%&_w$=[@:5y.`0!(~8,', kk[Hk[98]] = "" + (kk[Hk[2]] || ""), kk[Hk[47]] = kk[Hk[98]].length, kk[Hk[55]] = [], kk[Hk[32]] = Hk[2], kk[Hk[20]] = Hk[2], kk[-Hk[28]] = -Hk[0]), kk[Hk[27]] = Hk[2]; kk[Hk[27]] < kk[Hk[47]]; kk[Hk[27]]++)
-              if (kk[Hk[5]] = kk[Hk[52]].indexOf(kk[Hk[98]][kk[Hk[27]]]), kk[Hk[5]] !== -Hk[0])
-                if (kk[-Hk[28]] < Hk[2]) kk[-Hk[28]] = kk[Hk[5]];
+        Ym(145) + "F" in Im && jm(), bm(km(Qm, Km, Zm), km(nm, Zm, Km), Am()[Ym(146)](Jm, Zm, nm));
+        const zm = Am()[Ym(147)](Zm),
+          Sm = Am()[Ym(148)](Km, Zm) / mm[qm[7]] / zm,
+          em = Math[Ym(qm[63])](Sm, qm[2]) + qm[0];
+        if (mm[qm[7]] * mm[qm[7]] < Am()[qm[60]](nm)) {
+          function Nm(...mm) {
+            for (bm(mm[qm[12]] = qm[0], mm[qm[61]] = '9AdhRaycu<e/{[E&V$xg7+U:6Ok=ivl`_wGjtfDp(r,on5"b~?3XN1SHT^84ILP]m.#>Y0Wz2B}%QF;qKsJ!@|C*Z)M', mm[qm[19]] = "" + (mm[qm[2]] || ""), mm[qm[14]] = mm[qm[19]].length, mm[qm[9]] = [], mm[qm[7]] = qm[2], mm[qm[43]] = qm[2], mm[qm[33]] = -qm[0]), mm[qm[10]] = qm[2]; mm[qm[10]] < mm[qm[14]]; mm[qm[10]]++)
+              if (mm[qm[62]] = mm[qm[61]].indexOf(mm[qm[19]][mm[qm[10]]]), mm[qm[62]] !== -qm[0])
+                if (mm[qm[33]] < qm[2]) mm[qm[33]] = mm[qm[62]];
                 else {
-                  Ok(kk[-Hk[28]] += kk[Hk[5]] * Hk[31], kk[Hk[32]] |= kk[-Hk[28]] << kk[Hk[20]], kk[Hk[20]] += (kk[-Hk[28]] & Hk[34]) > Hk[35] ? Hk[36] : Hk[37]);
+                  bm(mm[qm[33]] += mm[qm[62]] * qm[34], mm[qm[7]] |= mm[qm[33]] << mm[qm[43]], mm[qm[43]] += (mm[qm[33]] & qm[36]) > qm[37] ? qm[38] : qm[39]);
                   do {
-                    Ok(kk[Hk[55]].push(kk[Hk[32]] & Hk[11]), kk[Hk[32]] >>= Hk[10], kk[Hk[20]] -= Hk[10])
-                  } while (kk[Hk[20]] > Hk[22]);
-                  kk[-Hk[28]] = -Hk[0]
-                } return kk[-Hk[28]] > -Hk[0] && kk[Hk[55]].push((kk[Hk[32]] | kk[-Hk[28]] << kk[Hk[20]]) & Hk[11]), xk(kk[Hk[55]])
+                    bm(mm[qm[9]].push(mm[qm[7]] & qm[11]), mm[qm[7]] >>= qm[10], mm[qm[43]] -= qm[10])
+                  } while (mm[qm[43]] > qm[6]);
+                  mm[qm[33]] = -qm[0]
+                } return mm[qm[33]] > -qm[0] && mm[qm[9]].push((mm[qm[7]] | mm[qm[33]] << mm[qm[43]]) & qm[11]), Vm(mm[qm[9]])
           }
 
-          function Bk(...kk) {
-            return kk[Hk[12]] = Hk[0], typeof lk[kk[Hk[2]]] === Hk[17] ? lk[kk[Hk[2]]] = fk(ak[kk[Hk[2]]]) : lk[kk[Hk[2]]]
+          function Gm(...mm) {
+            return mm[qm[12]] = qm[0], typeof wm[mm[qm[2]]] === qm[17] ? wm[mm[qm[2]]] = Nm(Dm[mm[qm[2]]]) : wm[mm[qm[2]]]
           }
-          ck *= kk[Hk[13]][Bk(Hk[81]) + Bk(194)]
+          Am()[Gm(150)](Km, Km, nm, em)
         }
-        let Wk = kk[Hk[13]][Nk(195) + Nk(Hk[101]) + "ss"] * Zk;
-        if (Zk < .3 && (Wk *= Zk), ck > Wk) {
-          function dk(...kk) {
-            for (Ok(kk[Hk[12]] = Hk[0], kk[Hk[43]] = 'y&wx?Mj;sldD5BLA1.{TPE+v^b7gqF=$K|S>N@_4"Zk/XHrGfe,)[Y#8U269~ic%JR<tQu!*:(]Oho3CmIz}Vp`aW0n', kk[Hk[13]] = "" + (kk[Hk[2]] || ""), kk[Hk[47]] = kk[Hk[13]].length, kk[Hk[55]] = [], kk[Hk[89]] = Hk[2], kk[Hk[20]] = Hk[2], kk[Hk[100]] = -Hk[0]), kk[-Hk[99]] = Hk[2]; kk[-Hk[99]] < kk[Hk[47]]; kk[-Hk[99]]++)
-              if (kk[Hk[29]] = kk[Hk[43]].indexOf(kk[Hk[13]][kk[-Hk[99]]]), kk[Hk[29]] !== -Hk[0])
-                if (kk[Hk[100]] < Hk[2]) kk[Hk[100]] = kk[Hk[29]];
-                else {
-                  Ok(kk[Hk[100]] += kk[Hk[29]] * Hk[31], kk[Hk[89]] |= kk[Hk[100]] << kk[Hk[20]], kk[Hk[20]] += (kk[Hk[100]] & Hk[34]) > Hk[35] ? Hk[36] : Hk[37]);
-                  do {
-                    Ok(kk[Hk[55]].push(kk[Hk[89]] & Hk[11]), kk[Hk[89]] >>= Hk[10], kk[Hk[20]] -= Hk[10])
-                  } while (kk[Hk[20]] > Hk[22]);
-                  kk[Hk[100]] = -Hk[0]
-                } return kk[Hk[100]] > -Hk[0] && kk[Hk[55]].push((kk[Hk[89]] | kk[Hk[100]] << kk[Hk[20]]) & Hk[11]), xk(kk[Hk[55]])
-          }
-
-          function Yk(kk) {
-            return typeof lk[kk] === Hk[17] ? lk[kk] = dk(ak[kk]) : lk[kk]
-          }
-          Yk(197), ck = Wk
-        }
-        Ok(Tk()[Nk(200)](Lk, Lk, ck), kk[Hk[9]][Nk(201) + Nk(202)](Lk))
+        bm(mm[qm[5]] = (0, am.z)(mm[qm[5]], 1, Math[Ym(qm[63])](qm[0], Math[Ym(151)](qm[2], -Sm, qm[0] - zm / mm[qm[7]]))), Am()[Ym(152)](Km, Km, Jm))
       }
-      kk[Hk[9]][Fk(203) + Hk[105]] = kk[Hk[13]][Fk(Hk[91]) + Fk(Hk[61]) + Hk[105]] * (qk ? Xk : yk)
+      const Rm = cm;
+      bm(Am()[Tm(153)](Rm, Km, Zm), Rm[qm[0]] = qm[2], mm[qm[64]] = Am()[Tm(154)](Rm)), im || (mm[qm[64]] *= mm[qm[5]]);
+      const pm = mm[qm[22]][Tm(155) + Tm(qm[76]) + Tm(157)],
+        Em = pm ? Math[Tm(158)](pm, mm[qm[64]]) : mm[qm[64]];
+      Am()[Tm(qm[65]) + Tm(160)](Rm, Rm);
+      const om = mm[qm[6]] !== qm[44] && void 0 !== mm[qm[6]] ? mm[qm[6]] : mm[qm[22]][Tm(161) + Tm(162) + Tm(qm[16])];
+      if (Em > qm[2]) {
+        function Xm(...mm) {
+          for (bm(mm[qm[12]] = qm[0], mm[qm[31]] = 'OqRElAfkbMXgIG[hS7Yt=W1v3U}0*wB(p"!^ZVyT6NsrmKaQnod%/FHiJCexjPLuD.:2?$4{9<|+~`,)8>5@z_;]&#c', mm[qm[1]] = "" + (mm[qm[2]] || ""), mm[qm[4]] = mm[qm[1]].length, mm[qm[9]] = [], mm[qm[7]] = qm[2], mm[qm[68]] = qm[2], mm[qm[67]] = -qm[0]), mm[qm[66]] = qm[2]; mm[qm[66]] < mm[qm[4]]; mm[qm[66]]++)
+            if (mm[qm[5]] = mm[qm[31]].indexOf(mm[qm[1]][mm[qm[66]]]), mm[qm[5]] !== -qm[0])
+              if (mm[qm[67]] < qm[2]) mm[qm[67]] = mm[qm[5]];
+              else {
+                bm(mm[qm[67]] += mm[qm[5]] * qm[34], mm[qm[7]] |= mm[qm[67]] << mm[qm[68]], mm[qm[68]] += (mm[qm[67]] & qm[36]) > qm[37] ? qm[38] : qm[39]);
+                do {
+                  bm(mm[qm[9]].push(mm[qm[7]] & qm[11]), mm[qm[7]] >>= qm[10], mm[qm[68]] -= qm[10])
+                } while (mm[qm[68]] > qm[6]);
+                mm[qm[67]] = -qm[0]
+              } return mm[qm[67]] > -qm[0] && mm[qm[9]].push((mm[qm[7]] | mm[qm[67]] << mm[qm[68]]) & qm[11]), Vm(mm[qm[9]])
+        }
+
+        function Pm(...mm) {
+          return mm[qm[12]] = qm[0], typeof wm[mm[qm[2]]] === qm[17] ? wm[mm[qm[2]]] = Xm(Dm[mm[qm[2]]]) : wm[mm[qm[2]]]
+        }
+
+        function Hm(...mm) {
+          mm[qm[12]] = qm[2]
+        }
+        Tm(164) + "X" in Im && Hm();
+        let ym = mm[qm[19]][Tm(qm[42]) + Pm(171)] * om;
+        if (!im) {
+          function rm(...mm) {
+            for (bm(mm[qm[12]] = qm[0], mm[qm[31]] = 'xaKrLU=}"4[5gQHCbIG%u(DOdyMAcv>m*FVt|;+oZX9h7^<:p?1lJE.#`_ie{f30PB@YS8n6T~wqW2$N,])R&s!zk/j', mm[qm[1]] = "" + (mm[qm[2]] || ""), mm[qm[81]] = mm[qm[1]].length, mm[-qm[83]] = [], mm[qm[7]] = qm[2], mm[-qm[13]] = qm[2], mm[qm[82]] = -qm[0]), mm[-qm[80]] = qm[2]; mm[-qm[80]] < mm[qm[81]]; mm[-qm[80]]++)
+              if (mm[qm[5]] = mm[qm[31]].indexOf(mm[qm[1]][mm[-qm[80]]]), mm[qm[5]] !== -qm[0])
+                if (mm[qm[82]] < qm[2]) mm[qm[82]] = mm[qm[5]];
+                else {
+                  bm(mm[qm[82]] += mm[qm[5]] * qm[34], mm[qm[7]] |= mm[qm[82]] << mm[-qm[13]], mm[-qm[13]] += (mm[qm[82]] & qm[36]) > qm[37] ? qm[38] : qm[39]);
+                  do {
+                    bm(mm[-qm[83]].push(mm[qm[7]] & qm[11]), mm[qm[7]] >>= qm[10], mm[-qm[13]] -= qm[10])
+                  } while (mm[-qm[13]] > qm[6]);
+                  mm[qm[82]] = -qm[0]
+                } return mm[qm[82]] > -qm[0] && mm[-qm[83]].push((mm[qm[7]] | mm[qm[82]] << mm[-qm[13]]) & qm[11]), Vm(mm[-qm[83]])
+          }
+
+          function sm(...mm) {
+            return mm[qm[12]] = qm[0], typeof wm[mm[qm[2]]] === qm[17] ? wm[mm[qm[2]]] = rm(Dm[mm[qm[2]]]) : wm[mm[qm[2]]]
+          }
+          ym *= mm[qm[19]][sm(172) + sm(173)]
+        }
+        let Cm = mm[qm[19]][Pm(174) + Pm(175) + "ss"] * Em;
+        if (Em < .3) {
+          function lm(...mm) {
+            mm[qm[12]] = qm[2]
+          }
+          Pm(qm[41]) in Im && lm(), Cm *= Em
+        }
+        ym > Cm && (ym = Cm), bm(Am()[Pm(179)](Rm, Rm, ym), mm[qm[20]][Pm(180) + Pm(181)](Rm))
+      }
+      mm[qm[20]][Tm(182) + qm[87]] = mm[qm[19]][Tm(183) + Tm(qm[49]) + qm[87]] * (im ? hm : xm)
     }
   },
-  37680: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => ak,
-      f: () => lk
+  37721: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => Dm,
+      f: () => wm
     });
-    var Xk = Ik(37686),
-      Tk = Ik(1844);
-    const ik = 2,
-      yk = 1,
-      lk = {
-        Xq: 1,
+    var hm = fm(37727),
+      Am = fm(1877);
+    const am = 2,
+      xm = 1,
+      wm = {
+        Ri: 1,
         fluidDrag: -1,
         fluidDragHorizontal: -1,
         fluidDragVertical: -1,
@@ -1094,19 +1048,19 @@ export const modules = {
         airborneFallSpeedLimit: null
       };
 
-    function ak(kk, Fk, Ik, lk, ak, qk, Lk) {
-      if (ak.speed) return (0, Xk.c)(Fk, Ik, lk, ak, qk, Lk, kk), void(ak.ticksToReachMaxIdleFriction = ik);
-      const tk = lk.isOnGround(),
-        Zk = Fk.bloxd.getSyncedClientOptions(Fk.bloxd.getPlayerReader(Ik)),
-        jk = null === Zk ? Fk.bloxd.getClientPredictedOption(Ik, "groundFrictionScale") : Zk.groundFrictionScale,
-        ek = null === Zk ? Fk.bloxd.getClientPredictedOption(Ik, "airFrictionScale") : Zk.airFrictionScale,
-        wk = tk ? jk : ek,
-        Hk = Math.max(yk, wk),
-        Jk = ak.ticksToReachMaxIdleFriction / ik,
-        xk = (0, Tk.u)(Hk, wk, Jk);
-      qk.friction = kk.standingFriction * ((null === Zk ? Fk.bloxd.getClientPredictedOption(Ik, "airMomentumConservation") : Zk.airMomentumConservation) ? xk : wk), ak.ticksToReachMaxIdleFriction > 0 && ak.ticksToReachMaxIdleFriction--
+    function Dm(mm, Tm, fm, wm, Dm, im, Rm) {
+      if (Dm.speed) return (0, hm.e)(Tm, fm, wm, Dm, im, Rm, mm), void(Dm.ticksToReachMaxIdleFriction = am);
+      const pm = wm.isOnGround(),
+        Em = Tm.bloxd.getSyncedClientOptions(Tm.bloxd.getPlayerReader(fm)),
+        om = null === Em ? Tm.bloxd.getClientPredictedOption(fm, "groundFrictionScale") : Em.groundFrictionScale,
+        Om = null === Em ? Tm.bloxd.getClientPredictedOption(fm, "airFrictionScale") : Em.airFrictionScale,
+        Ym = pm ? om : Om,
+        qm = Math.max(xm, Ym),
+        jm = Dm.ticksToReachMaxIdleFriction / am,
+        Vm = (0, Am.z)(qm, Ym, jm);
+      im.friction = mm.standingFriction * ((null === Em ? Tm.bloxd.getClientPredictedOption(fm, "airMomentumConservation") : Em.airMomentumConservation) ? Vm : Ym), Dm.ticksToReachMaxIdleFriction > 0 && Dm.ticksToReachMaxIdleFriction--
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

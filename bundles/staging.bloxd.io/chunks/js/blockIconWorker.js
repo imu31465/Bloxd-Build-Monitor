@@ -1,325 +1,325 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var kk = __webpack_require__.u,
-        Fk = __webpack_require__.e,
-        Ik = {},
-        Xk = {};
-      __webpack_require__.u = function(Fk) {
-        return kk(Fk) + (Ik.hasOwnProperty(Fk) ? "?" + Ik[Fk] : "")
-      }, __webpack_require__.e = function(Tk) {
-        return Fk(Tk).catch((function(Fk) {
-          var ik = Xk.hasOwnProperty(Tk) ? Xk[Tk] : 4;
-          if (ik < 1) {
-            var yk = kk(Tk);
-            throw Fk.message = "Loading chunk " + Tk + " failed after 4 retries.\n(" + yk + ")", Fk.request = yk, Ik[Tk] = "cache-bust=" + Date.now(), setTimeout((function() {
-              delete Xk[Tk]
-            }), 0), Fk
+      var mm = __webpack_require__.u,
+        Tm = __webpack_require__.e,
+        fm = {},
+        hm = {};
+      __webpack_require__.u = function(Tm) {
+        return mm(Tm) + (fm.hasOwnProperty(Tm) ? "?" + fm[Tm] : "")
+      }, __webpack_require__.e = function(Am) {
+        return Tm(Am).catch((function(Tm) {
+          var am = hm.hasOwnProperty(Am) ? hm[Am] : 4;
+          if (am < 1) {
+            var xm = mm(Am);
+            throw Tm.message = "Loading chunk " + Am + " failed after 4 retries.\n(" + xm + ")", Tm.request = xm, fm[Am] = "cache-bust=" + Date.now(), setTimeout((function() {
+              delete hm[Am]
+            }), 0), Tm
           }
-          return new Promise((function(kk) {
-            var Fk = 4 - ik + 1;
+          return new Promise((function(mm) {
+            var Tm = 4 - am + 1;
             setTimeout((function() {
-              var Fk = "cache-bust=" + Date.now();
-              Ik[Tk] = Fk, Xk[Tk] = ik - 1, kk(__webpack_require__.e(Tk))
-            }), function(kk) {
-              return 500 * Math.pow(2, kk)
-            }(Fk))
+              var Tm = "cache-bust=" + Date.now();
+              fm[Am] = Tm, hm[Am] = am - 1, mm(__webpack_require__.e(Am))
+            }), function(mm) {
+              return 500 * Math.pow(2, mm)
+            }(Tm))
           }))
         }))
       }
     }
   })();
-  const kk = Math.SQRT1_2,
-    Fk = Math.SQRT1_2 / 2,
-    Ik = Math.sqrt(3) / 2,
-    Xk = 2 * kk,
-    Tk = 2 * Fk + Ik;
+  const mm = Math.SQRT1_2,
+    Tm = Math.SQRT1_2 / 2,
+    fm = Math.sqrt(3) / 2,
+    hm = 2 * mm,
+    Am = 2 * Tm + fm;
 
-  function ik(Fk, Ik) {
-    const Xk = Ik > 0 ? Ik + 1 : 0,
-      ik = .6 * Fk - Ik / kk;
-    return Math.max(0, Math.min(ik, (Fk - 2 * Xk) / Tk))
+  function am(Tm, fm) {
+    const hm = fm > 0 ? fm + 1 : 0,
+      am = .6 * Tm - fm / mm;
+    return Math.max(0, Math.min(am, (Tm - 2 * hm) / Am))
   }
-  const yk = [15, 15, 15],
-    lk = {
+  const xm = [15, 15, 15],
+    wm = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function ak(kk, Fk, Ik, yk) {
+  function Dm(mm, Tm, fm, xm) {
     const {
-      vertices: lk,
-      uvs: ak,
-      indices: qk,
-      shades: Lk
-    } = kk, Zk = function(kk, Fk) {
-      const Ik = ik(kk, Fk),
-        yk = Xk * Ik,
-        lk = Tk * Ik;
+      vertices: wm,
+      uvs: Dm,
+      indices: im,
+      shades: Rm
+    } = mm, Em = function(mm, Tm) {
+      const fm = am(mm, Tm),
+        xm = hm * fm,
+        wm = Am * fm;
       return {
-        left: (kk - yk) / 2,
-        top: (kk - lk) / 2,
-        width: yk,
-        height: lk
+        left: (mm - xm) / 2,
+        top: (mm - wm) / 2,
+        width: xm,
+        height: wm
       }
-    }(Ik, yk), jk = new Float32Array(lk.length);
-    for (let Xk = 0; Xk < lk.length; Xk += 3) jk[Xk] = Zk.left + lk[Xk] * Zk.width, jk[Xk + 1] = Zk.top + lk[Xk + 1] * Zk.height, jk[Xk + 2] = lk[Xk + 2];
-    const ek = new Float32Array(Ik * Ik).fill(-1 / 0),
-      wk = new Uint8ClampedArray(Ik * Ik * 4),
-      Hk = 255 * kk.alphaCutoff;
-    for (let Xk = 0; Xk < qk.length; Xk += 3) {
-      const [kk, Tk, ik] = [qk[Xk], qk[Xk + 1], qk[Xk + 2]], [yk, lk, tk] = [3 * kk, 3 * Tk, 3 * ik], [Zk, Jk, xk, Pk, Kk, Qk] = [jk[yk], jk[yk + 1], jk[lk], jk[lk + 1], jk[tk], jk[tk + 1]], sk = (xk - Zk) * (Qk - Jk) - (Kk - Zk) * (Pk - Jk);
-      if (Math.abs(sk) < 1e-9) continue;
-      const Vk = Lk[Xk / 3],
-        [zk, Sk, vk, Ek, Ok, nk] = [ak[2 * kk], ak[2 * kk + 1], ak[2 * Tk], ak[2 * Tk + 1], ak[2 * ik], ak[2 * ik + 1]],
-        Gk = Math.max(0, Math.floor(Math.min(Zk, xk, Kk))),
-        pk = Math.min(Ik - 1, Math.ceil(Math.max(Zk, xk, Kk))),
-        uk = Math.max(0, Math.floor(Math.min(Jk, Pk, Qk))),
-        bk = Math.min(Ik - 1, Math.ceil(Math.max(Jk, Pk, Qk)));
-      for (let Xk = uk; Xk <= bk; Xk++)
-        for (let kk = Gk; kk <= pk; kk++) {
-          const [Tk, ik] = [kk + .5, Xk + .5], ak = ((Tk - Zk) * (Qk - Jk) - (Kk - Zk) * (ik - Jk)) / sk, qk = ((xk - Zk) * (ik - Jk) - (Tk - Zk) * (Pk - Jk)) / sk, Lk = 1 - ak - qk;
-          if (Lk < 0 || ak < 0 || qk < 0) continue;
-          const Gk = Lk * jk[yk + 2] + ak * jk[lk + 2] + qk * jk[tk + 2],
-            pk = Xk * Ik + kk;
-          if (Gk <= ek[pk]) continue;
-          const uk = Math.max(0, Math.min(Fk.width - 1, Math.floor((Lk * zk + ak * vk + qk * Ok) * Fk.width))),
-            bk = 4 * (Math.max(0, Math.min(Fk.height - 1, Math.floor((Lk * Sk + ak * Ek + qk * nk) * Fk.height))) * Fk.width + uk);
-          Fk.pixels[bk + 3] < Hk || (ek[pk] = Gk, wk[4 * pk] = Fk.pixels[bk] * Vk, wk[4 * pk + 1] = Fk.pixels[bk + 1] * Vk, wk[4 * pk + 2] = Fk.pixels[bk + 2] * Vk, wk[4 * pk + 3] = 255)
+    }(fm, xm), om = new Float32Array(wm.length);
+    for (let hm = 0; hm < wm.length; hm += 3) om[hm] = Em.left + wm[hm] * Em.width, om[hm + 1] = Em.top + wm[hm + 1] * Em.height, om[hm + 2] = wm[hm + 2];
+    const Om = new Float32Array(fm * fm).fill(-1 / 0),
+      Ym = new Uint8ClampedArray(fm * fm * 4),
+      qm = 255 * mm.alphaCutoff;
+    for (let hm = 0; hm < im.length; hm += 3) {
+      const [mm, Am, am] = [im[hm], im[hm + 1], im[hm + 2]], [xm, wm, pm] = [3 * mm, 3 * Am, 3 * am], [Em, jm, Vm, Im, Km, Qm] = [om[xm], om[xm + 1], om[wm], om[wm + 1], om[pm], om[pm + 1]], nm = (Vm - Em) * (Qm - jm) - (Km - Em) * (Im - jm);
+      if (Math.abs(nm) < 1e-9) continue;
+      const Jm = Rm[hm / 3],
+        [cm, zm, Zm, km, bm, Sm] = [Dm[2 * mm], Dm[2 * mm + 1], Dm[2 * Am], Dm[2 * Am + 1], Dm[2 * am], Dm[2 * am + 1]],
+        em = Math.max(0, Math.floor(Math.min(Em, Vm, Km))),
+        Nm = Math.min(fm - 1, Math.ceil(Math.max(Em, Vm, Km))),
+        Gm = Math.max(0, Math.floor(Math.min(jm, Im, Qm))),
+        Xm = Math.min(fm - 1, Math.ceil(Math.max(jm, Im, Qm)));
+      for (let hm = Gm; hm <= Xm; hm++)
+        for (let mm = em; mm <= Nm; mm++) {
+          const [Am, am] = [mm + .5, hm + .5], Dm = ((Am - Em) * (Qm - jm) - (Km - Em) * (am - jm)) / nm, im = ((Vm - Em) * (am - jm) - (Am - Em) * (Im - jm)) / nm, Rm = 1 - Dm - im;
+          if (Rm < 0 || Dm < 0 || im < 0) continue;
+          const em = Rm * om[xm + 2] + Dm * om[wm + 2] + im * om[pm + 2],
+            Nm = hm * fm + mm;
+          if (em <= Om[Nm]) continue;
+          const Gm = Math.max(0, Math.min(Tm.width - 1, Math.floor((Rm * cm + Dm * Zm + im * bm) * Tm.width))),
+            Xm = 4 * (Math.max(0, Math.min(Tm.height - 1, Math.floor((Rm * zm + Dm * km + im * Sm) * Tm.height))) * Tm.width + Gm);
+          Tm.pixels[Xm + 3] < qm || (Om[Nm] = em, Ym[4 * Nm] = Tm.pixels[Xm] * Jm, Ym[4 * Nm + 1] = Tm.pixels[Xm + 1] * Jm, Ym[4 * Nm + 2] = Tm.pixels[Xm + 2] * Jm, Ym[4 * Nm + 3] = 255)
         }
     }
-    return tk(wk, Ik, yk), wk
+    return pm(Ym, fm, xm), Ym
   }
-  let qk = NaN,
-    Lk = new Int32Array(0);
+  let im = NaN,
+    Rm = new Int32Array(0);
 
-  function tk(kk, Fk, Ik) {
-    let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Fk => 0 !== kk[4 * Fk + 3];
-    const Tk = new Uint8Array(Fk * Fk);
-    for (let yk = 0; yk < Fk * Fk; yk++) Tk[yk] = Xk(yk) ? 1 : 0;
-    const ik = (kk, Ik) => kk >= 0 && Ik >= 0 && kk < Fk && Ik < Fk && 0 === Tk[Ik * Fk + kk],
-      lk = new Float32Array(Fk * Fk).fill(1 / 0),
-      ak = function(kk) {
-        if (kk !== qk) {
-          const Fk = Math.ceil(kk + 1),
-            Ik = [];
-          for (let Xk = -Fk; Xk <= Fk; Xk++)
-            for (let Tk = -Fk; Tk <= Fk; Tk++) {
-              const Fk = Tk * Tk + Xk * Xk;
-              Fk > 0 && Fk < (kk + 1) ** 2 && Ik.push(Tk, Xk, Fk)
+  function pm(mm, Tm, fm) {
+    let hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Tm => 0 !== mm[4 * Tm + 3];
+    const Am = new Uint8Array(Tm * Tm);
+    for (let xm = 0; xm < Tm * Tm; xm++) Am[xm] = hm(xm) ? 1 : 0;
+    const am = (mm, fm) => mm >= 0 && fm >= 0 && mm < Tm && fm < Tm && 0 === Am[fm * Tm + mm],
+      wm = new Float32Array(Tm * Tm).fill(1 / 0),
+      Dm = function(mm) {
+        if (mm !== im) {
+          const Tm = Math.ceil(mm + 1),
+            fm = [];
+          for (let hm = -Tm; hm <= Tm; hm++)
+            for (let Am = -Tm; Am <= Tm; Am++) {
+              const Tm = Am * Am + hm * hm;
+              Tm > 0 && Tm < (mm + 1) ** 2 && fm.push(Am, hm, Tm)
             }
-          qk = kk, Lk = Int32Array.from(Ik)
+          im = mm, Rm = Int32Array.from(fm)
         }
-        return Lk
-      }(Ik);
-    for (let yk = 0; yk < Fk; yk++)
-      for (let kk = 0; kk < Fk; kk++) {
-        if (1 === Tk[yk * Fk + kk] && (ik(kk - 1, yk) || ik(kk + 1, yk) || ik(kk, yk - 1) || ik(kk, yk + 1)))
-          for (let Ik = 0; Ik < ak.length; Ik += 3) {
-            const Xk = kk + ak[Ik],
-              Tk = yk + ak[Ik + 1];
-            if (Xk >= 0 && Tk >= 0 && Xk < Fk && Tk < Fk) {
-              const kk = Tk * Fk + Xk;
-              lk[kk] = Math.min(lk[kk], ak[Ik + 2])
+        return Rm
+      }(fm);
+    for (let xm = 0; xm < Tm; xm++)
+      for (let mm = 0; mm < Tm; mm++) {
+        if (1 === Am[xm * Tm + mm] && (am(mm - 1, xm) || am(mm + 1, xm) || am(mm, xm - 1) || am(mm, xm + 1)))
+          for (let fm = 0; fm < Dm.length; fm += 3) {
+            const hm = mm + Dm[fm],
+              Am = xm + Dm[fm + 1];
+            if (hm >= 0 && Am >= 0 && hm < Tm && Am < Tm) {
+              const mm = Am * Tm + hm;
+              wm[mm] = Math.min(wm[mm], Dm[fm + 2])
             }
           }
       }
-    for (let qk = 0; qk < Fk * Fk; qk++) 1 !== Tk[qk] && lk[qk] !== 1 / 0 && (kk.set(yk, 4 * qk), kk[4 * qk + 3] = Math.round(255 * Math.min(1, Ik + 1 - Math.sqrt(lk[qk]))))
+    for (let im = 0; im < Tm * Tm; im++) 1 !== Am[im] && wm[im] !== 1 / 0 && (mm.set(xm, 4 * im), mm[4 * im + 3] = Math.round(255 * Math.min(1, fm + 1 - Math.sqrt(wm[im]))))
   }
-  const Zk = {
+  const Em = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    jk = {
+    om = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    ek = {
+    Om = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const wk = 1e-6;
+  const Ym = 1e-6;
 
-  function Hk(kk, Fk, Ik, Xk) {
+  function qm(mm, Tm, fm, hm) {
     let {
-      origin: Tk,
-      across: ik,
-      down: yk,
-      texture: lk,
-      rect: [ak, qk, Lk, tk],
-      shade: Zk
-    } = Xk;
-    const jk = ik.x * yk.y - ik.y * yk.x;
-    if (Math.abs(jk) < 1e-9) return;
-    const ek = [Tk.x, Tk.x + ik.x, Tk.x + yk.x, Tk.x + ik.x + yk.x],
-      Hk = [Tk.y, Tk.y + ik.y, Tk.y + yk.y, Tk.y + ik.y + yk.y],
-      Jk = Math.max(0, Math.floor(Math.min(...ek))),
-      xk = Math.min(Ik - 1, Math.ceil(Math.max(...ek))),
-      Pk = Math.max(0, Math.floor(Math.min(...Hk))),
-      Kk = Math.min(Ik - 1, Math.ceil(Math.max(...Hk)));
-    for (let Qk = Pk; Qk <= Kk; Qk++)
-      for (let Xk = Jk; Xk <= xk; Xk++) {
-        const ek = Xk + .5 - Tk.x,
-          Hk = Qk + .5 - Tk.y,
-          Jk = (ek * yk.y - Hk * yk.x) / jk,
-          xk = (ik.x * Hk - ik.y * ek) / jk;
-        if (Jk < -wk || Jk > 1 + wk || xk < -wk || xk > 1 + wk) continue;
-        const Pk = Qk * Ik + Xk;
-        Fk[Pk] = 1;
-        const Kk = ak + Math.min(Math.max(Jk, 0), 1) * (Lk - ak),
-          sk = qk + Math.min(Math.max(xk, 0), 1) * (tk - qk),
-          Vk = Math.min(lk.width - 1, Math.floor(Kk * lk.width)),
-          zk = 4 * (Math.min(lk.height - 1, Math.floor(sk * lk.height)) * lk.width + Vk),
-          Sk = lk.pixels[zk + 3] / 255;
-        if (0 === Sk) continue;
-        const vk = 4 * Pk,
-          Ek = kk[vk + 3] / 255 * (1 - Sk),
-          Ok = Sk + Ek;
-        for (let Fk = 0; Fk < 3; Fk++) kk[vk + Fk] = (lk.pixels[zk + Fk] * Zk * Sk + kk[vk + Fk] * Ek) / Ok;
-        kk[vk + 3] = 255 * Ok
+      origin: Am,
+      across: am,
+      down: xm,
+      texture: wm,
+      rect: [Dm, im, Rm, pm],
+      shade: Em
+    } = hm;
+    const om = am.x * xm.y - am.y * xm.x;
+    if (Math.abs(om) < 1e-9) return;
+    const Om = [Am.x, Am.x + am.x, Am.x + xm.x, Am.x + am.x + xm.x],
+      qm = [Am.y, Am.y + am.y, Am.y + xm.y, Am.y + am.y + xm.y],
+      jm = Math.max(0, Math.floor(Math.min(...Om))),
+      Vm = Math.min(fm - 1, Math.ceil(Math.max(...Om))),
+      Im = Math.max(0, Math.floor(Math.min(...qm))),
+      Km = Math.min(fm - 1, Math.ceil(Math.max(...qm)));
+    for (let Qm = Im; Qm <= Km; Qm++)
+      for (let hm = jm; hm <= Vm; hm++) {
+        const Om = hm + .5 - Am.x,
+          qm = Qm + .5 - Am.y,
+          jm = (Om * xm.y - qm * xm.x) / om,
+          Vm = (am.x * qm - am.y * Om) / om;
+        if (jm < -Ym || jm > 1 + Ym || Vm < -Ym || Vm > 1 + Ym) continue;
+        const Im = Qm * fm + hm;
+        Tm[Im] = 1;
+        const Km = Dm + Math.min(Math.max(jm, 0), 1) * (Rm - Dm),
+          nm = im + Math.min(Math.max(Vm, 0), 1) * (pm - im),
+          Jm = Math.min(wm.width - 1, Math.floor(Km * wm.width)),
+          cm = 4 * (Math.min(wm.height - 1, Math.floor(nm * wm.height)) * wm.width + Jm),
+          zm = wm.pixels[cm + 3] / 255;
+        if (0 === zm) continue;
+        const Zm = 4 * Im,
+          km = mm[Zm + 3] / 255 * (1 - zm),
+          bm = zm + km;
+        for (let Tm = 0; Tm < 3; Tm++) mm[Zm + Tm] = (wm.pixels[cm + Tm] * Em * zm + mm[Zm + Tm] * km) / bm;
+        mm[Zm + 3] = 255 * bm
       }
   }
 
-  function Jk(kk, Fk, Ik) {
-    const Xk = kk.get(Fk);
-    if (void 0 === Xk) throw new Error(`no ${Ik} was sent for ${Fk.slice(0,100)}`);
-    return Xk
+  function jm(mm, Tm, fm) {
+    const hm = mm.get(Tm);
+    if (void 0 === hm) throw new Error(`no ${fm} was sent for ${Tm.slice(0,100)}`);
+    return hm
   }
-  const xk = {
-      pixelsOf(kk) {
-        const Fk = new OffscreenCanvas(kk.width, kk.height),
-          Ik = Fk.getContext("2d");
-        if (!Ik) throw new Error("no 2D context");
-        return Ik.drawImage(kk, 0, 0), kk.close(), {
-          width: Fk.width,
-          height: Fk.height,
-          pixels: Ik.getImageData(0, 0, Fk.width, Fk.height).data
+  const Vm = {
+      pixelsOf(mm) {
+        const Tm = new OffscreenCanvas(mm.width, mm.height),
+          fm = Tm.getContext("2d");
+        if (!fm) throw new Error("no 2D context");
+        return fm.drawImage(mm, 0, 0), mm.close(), {
+          width: Tm.width,
+          height: Tm.height,
+          pixels: fm.getImageData(0, 0, Tm.width, Tm.height).data
         }
       },
-      async encode(kk, Fk) {
-        const Ik = new OffscreenCanvas(Fk, Fk),
-          Xk = Ik.getContext("2d");
-        if (!Xk) throw new Error("no 2D context");
-        Xk.putImageData(new ImageData(kk, Fk, Fk), 0, 0);
-        const Tk = await Ik.convertToBlob();
-        return new Promise(((kk, Fk) => {
-          const Ik = new FileReader;
-          Ik.onload = () => {
-            kk(Ik.result)
-          }, Ik.onerror = () => {
-            var kk;
-            Fk(null !== (kk = Ik.error) && void 0 !== kk ? kk : new Error("the icon did not encode"))
-          }, Ik.readAsDataURL(Tk)
+      async encode(mm, Tm) {
+        const fm = new OffscreenCanvas(Tm, Tm),
+          hm = fm.getContext("2d");
+        if (!hm) throw new Error("no 2D context");
+        hm.putImageData(new ImageData(mm, Tm, Tm), 0, 0);
+        const Am = await fm.convertToBlob();
+        return new Promise(((mm, Tm) => {
+          const fm = new FileReader;
+          fm.onload = () => {
+            mm(fm.result)
+          }, fm.onerror = () => {
+            var mm;
+            Tm(null !== (mm = fm.error) && void 0 !== mm ? mm : new Error("the icon did not encode"))
+          }, fm.readAsDataURL(Am)
         }))
       }
     },
-    Pk = globalThis.WorkerGlobalScope;
-  void 0 !== Pk && globalThis instanceof Pk && function(Xk, Tk) {
-    const yk = new Map,
-      qk = new Map,
-      Lk = (kk, Fk, Ik) => {
+    Im = globalThis.WorkerGlobalScope;
+  void 0 !== Im && globalThis instanceof Im && function(hm, Am) {
+    const xm = new Map,
+      im = new Map,
+      Rm = (mm, Tm, fm) => {
         (async () => {
           try {
-            Xk.postMessage({
+            hm.postMessage({
               type: "drawn",
-              id: kk,
-              url: await Tk.encode(Ik(), Fk)
+              id: mm,
+              url: await Am.encode(fm(), Tm)
             })
-          } catch (ik) {
-            Xk.postMessage({
+          } catch (am) {
+            hm.postMessage({
               type: "failed",
-              message: String(ik)
+              message: String(am)
             })
           }
         })()
       };
-    Xk.onmessage = Xk => {
+    hm.onmessage = hm => {
       let {
-        data: wk
-      } = Xk;
-      if ("texture" === wk.type) yk.set(wk.url, Tk.pixelsOf(wk.bitmap));
-      else if ("model" === wk.type) qk.set(wk.name, {
-        geometry: wk.geometry,
-        texture: Tk.pixelsOf(wk.bitmap)
+        data: Ym
+      } = hm;
+      if ("texture" === Ym.type) xm.set(Ym.url, Am.pixelsOf(Ym.bitmap));
+      else if ("model" === Ym.type) im.set(Ym.name, {
+        geometry: Ym.geometry,
+        texture: Am.pixelsOf(Ym.bitmap)
       });
-      else if ("draw" === wk.type) {
+      else if ("draw" === Ym.type) {
         const {
-          id: Xk,
-          top: Tk,
-          left: ak,
-          right: qk,
-          itemType: xk,
-          size: Pk,
-          outlineWidth: Kk
-        } = wk;
-        Lk(Xk, Pk, (() => function(Xk, Tk, yk, ak) {
-          const qk = ik(yk, ak),
-            Lk = qk * kk,
-            Zk = qk * Fk,
-            jk = qk * Ik,
-            ek = Math.max(...Tk.boxes.map((kk => kk[4]))),
-            wk = yk / 2,
-            Jk = Zk + (yk - Zk - Zk - ek * jk) / 2,
-            xk = (kk, Fk, Ik) => ({
-              x: wk + (kk - Ik) * Lk,
-              y: Jk - Zk + (kk + Ik) * Zk + (ek - Fk) * jk
+          id: hm,
+          top: Am,
+          left: Dm,
+          right: im,
+          itemType: Vm,
+          size: Im,
+          outlineWidth: Km
+        } = Ym;
+        Rm(hm, Im, (() => function(hm, Am, xm, Dm) {
+          const im = am(xm, Dm),
+            Rm = im * mm,
+            Em = im * Tm,
+            om = im * fm,
+            Om = Math.max(...Am.boxes.map((mm => mm[4]))),
+            Ym = xm / 2,
+            jm = Em + (xm - Em - Em - Om * om) / 2,
+            Vm = (mm, Tm, fm) => ({
+              x: Ym + (mm - fm) * Rm,
+              y: jm - Em + (mm + fm) * Em + (Om - Tm) * om
             }),
-            Pk = (kk, Fk, Ik, Xk, ik, yk) => ({
-              origin: kk,
+            Im = (mm, Tm, fm, hm, am, xm) => ({
+              origin: mm,
               across: {
-                x: Fk.x - kk.x,
-                y: Fk.y - kk.y
+                x: Tm.x - mm.x,
+                y: Tm.y - mm.y
               },
               down: {
-                x: Ik.x - kk.x,
-                y: Ik.y - kk.y
+                x: fm.x - mm.x,
+                y: fm.y - mm.y
               },
-              texture: Xk,
-              rect: Tk.cropFaces ? ik : [0, 0, 1, 1],
-              shade: yk
+              texture: hm,
+              rect: Am.cropFaces ? am : [0, 0, 1, 1],
+              shade: xm
             }),
-            Kk = new Uint8ClampedArray(yk * yk * 4),
-            Qk = new Uint8Array(yk * yk),
-            sk = lk;
-          for (const [kk, Fk, Ik, ik, lk, tk] of Tk.boxes) {
-            const Tk = Pk(xk(ik, lk, tk), xk(ik, lk, Ik), xk(ik, Fk, tk), Xk.right, [1 - tk, 1 - lk, 1 - Ik, 1 - Fk], sk.right),
-              ak = Pk(xk(kk, lk, tk), xk(ik, lk, tk), xk(kk, Fk, tk), Xk.left, [kk, 1 - lk, ik, 1 - Fk], sk.left),
-              qk = Pk(xk(kk, lk, Ik), xk(ik, lk, Ik), xk(kk, lk, tk), Xk.top, [kk, Ik, ik, tk], sk.top);
-            for (const kk of [Tk, ak, qk]) Hk(Kk, Qk, yk, kk)
+            Km = new Uint8ClampedArray(xm * xm * 4),
+            Qm = new Uint8Array(xm * xm),
+            nm = wm;
+          for (const [mm, Tm, fm, am, wm, pm] of Am.boxes) {
+            const Am = Im(Vm(am, wm, pm), Vm(am, wm, fm), Vm(am, Tm, pm), hm.right, [1 - pm, 1 - wm, 1 - fm, 1 - Tm], nm.right),
+              Dm = Im(Vm(mm, wm, pm), Vm(am, wm, pm), Vm(mm, Tm, pm), hm.left, [mm, 1 - wm, am, 1 - Tm], nm.left),
+              im = Im(Vm(mm, wm, fm), Vm(am, wm, fm), Vm(mm, wm, pm), hm.top, [mm, fm, am, pm], nm.top);
+            for (const mm of [Am, Dm, im]) qm(Km, Qm, xm, mm)
           }
-          return tk(Kk, yk, ak, (kk => 1 === Qk[kk])), Kk
+          return pm(Km, xm, Dm, (mm => 1 === Qm[mm])), Km
         }({
-          top: Jk(yk, Tk, "texture"),
-          left: Jk(yk, ak, "texture"),
-          right: Jk(yk, qk, "texture")
-        }, function(kk) {
-          return "SlabBlock" === kk ? jk : "StairsBlock" === kk ? ek : Zk
-        }(xk), Pk, Kk)))
+          top: jm(xm, Am, "texture"),
+          left: jm(xm, Dm, "texture"),
+          right: jm(xm, im, "texture")
+        }, function(mm) {
+          return "SlabBlock" === mm ? om : "StairsBlock" === mm ? Om : Em
+        }(Vm), Im, Km)))
       } else {
         const {
-          id: kk,
-          name: Fk,
-          size: Ik,
-          outlineWidth: Xk
-        } = wk;
-        Lk(kk, Ik, (() => {
+          id: mm,
+          name: Tm,
+          size: fm,
+          outlineWidth: hm
+        } = Ym;
+        Rm(mm, fm, (() => {
           const {
-            geometry: kk,
-            texture: Tk
-          } = Jk(qk, Fk, "model");
-          return ak(kk, Tk, Ik, Xk)
+            geometry: mm,
+            texture: Am
+          } = jm(im, Tm, "model");
+          return Dm(mm, Am, fm, hm)
         }))
       }
-    }, Xk.postMessage({
+    }, hm.postMessage({
       type: "started"
     })
-  }(globalThis, xk)
+  }(globalThis, Vm)
 })();

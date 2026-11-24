@@ -1,23 +1,23 @@
 export const id = 261;
 export const ids = [261];
 export const modules = {
-  40402: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Tk
+  40498: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => Am
     });
-    var Xk = Ik(40013);
+    var hm = fm(40122);
 
-    function Tk(kk) {
-      return class extends kk {
+    function Am(mm) {
+      return class extends mm {
         constructor() {
           super(...arguments);
-          const kk = new.target;
-          if (!kk[Symbol.metadata]) {
-            const Fk = Object.getPrototypeOf(kk)?.[Symbol.metadata];
-            kk[Symbol.metadata] = Fk ? Object.create(Fk) : {}
+          const mm = new.target;
+          if (!mm[Symbol.metadata]) {
+            const Tm = Object.getPrototypeOf(mm)?.[Symbol.metadata];
+            mm[Symbol.metadata] = Tm ? Object.create(Tm) : {}
           }
-          const Fk = (0, Xk.c)(kk[Symbol.metadata]);
-          Fk._imageProcessingConfiguration || (Fk._imageProcessingConfiguration = {
+          const Tm = (0, hm.e)(mm[Symbol.metadata]);
+          Tm._imageProcessingConfiguration || (Tm._imageProcessingConfiguration = {
             type: 9,
             sourceName: void 0
           })
@@ -25,128 +25,128 @@ export const modules = {
         get imageProcessingConfiguration() {
           return this._imageProcessingConfiguration
         }
-        set imageProcessingConfiguration(kk) {
-          this._attachImageProcessingConfiguration(kk), this._markAllSubMeshesAsImageProcessingDirty && this._markAllSubMeshesAsImageProcessingDirty()
+        set imageProcessingConfiguration(mm) {
+          this._attachImageProcessingConfiguration(mm), this._markAllSubMeshesAsImageProcessingDirty && this._markAllSubMeshesAsImageProcessingDirty()
         }
-        _attachImageProcessingConfiguration(kk) {
-          kk !== this._imageProcessingConfiguration && (this._imageProcessingConfiguration && this._imageProcessingObserver && this._imageProcessingConfiguration.onUpdateParameters.remove(this._imageProcessingObserver), !kk && this.mG ? this._imageProcessingConfiguration = this.mG().imageProcessingConfiguration : kk && (this._imageProcessingConfiguration = kk), this._imageProcessingConfiguration && (this._imageProcessingObserver = this._imageProcessingConfiguration.onUpdateParameters.add((() => {
+        _attachImageProcessingConfiguration(mm) {
+          mm !== this._imageProcessingConfiguration && (this._imageProcessingConfiguration && this._imageProcessingObserver && this._imageProcessingConfiguration.onUpdateParameters.remove(this._imageProcessingObserver), !mm && this.wG ? this._imageProcessingConfiguration = this.wG().imageProcessingConfiguration : mm && (this._imageProcessingConfiguration = mm), this._imageProcessingConfiguration && (this._imageProcessingObserver = this._imageProcessingConfiguration.onUpdateParameters.add((() => {
             this._markAllSubMeshesAsImageProcessingDirty && this._markAllSubMeshesAsImageProcessingDirty()
           }))))
         }
         get cameraColorCurvesEnabled() {
           return this.imageProcessingConfiguration.colorCurvesEnabled
         }
-        set cameraColorCurvesEnabled(kk) {
-          this.imageProcessingConfiguration.colorCurvesEnabled = kk
+        set cameraColorCurvesEnabled(mm) {
+          this.imageProcessingConfiguration.colorCurvesEnabled = mm
         }
         get cameraColorGradingEnabled() {
           return this.imageProcessingConfiguration.colorGradingEnabled
         }
-        set cameraColorGradingEnabled(kk) {
-          this.imageProcessingConfiguration.colorGradingEnabled = kk
+        set cameraColorGradingEnabled(mm) {
+          this.imageProcessingConfiguration.colorGradingEnabled = mm
         }
         get cameraToneMappingEnabled() {
           return this._imageProcessingConfiguration.toneMappingEnabled
         }
-        set cameraToneMappingEnabled(kk) {
-          this._imageProcessingConfiguration.toneMappingEnabled = kk
+        set cameraToneMappingEnabled(mm) {
+          this._imageProcessingConfiguration.toneMappingEnabled = mm
         }
         get cameraExposure() {
           return this._imageProcessingConfiguration.exposure
         }
-        set cameraExposure(kk) {
-          this._imageProcessingConfiguration.exposure = kk
+        set cameraExposure(mm) {
+          this._imageProcessingConfiguration.exposure = mm
         }
         get cameraContrast() {
           return this._imageProcessingConfiguration.contrast
         }
-        set cameraContrast(kk) {
-          this._imageProcessingConfiguration.contrast = kk
+        set cameraContrast(mm) {
+          this._imageProcessingConfiguration.contrast = mm
         }
         get cameraColorGradingTexture() {
           return this._imageProcessingConfiguration.colorGradingTexture
         }
-        set cameraColorGradingTexture(kk) {
-          this._imageProcessingConfiguration.colorGradingTexture = kk
+        set cameraColorGradingTexture(mm) {
+          this._imageProcessingConfiguration.colorGradingTexture = mm
         }
         get cameraColorCurves() {
           return this._imageProcessingConfiguration.colorCurves
         }
-        set cameraColorCurves(kk) {
-          this._imageProcessingConfiguration.colorCurves = kk
+        set cameraColorCurves(mm) {
+          this._imageProcessingConfiguration.colorCurves = mm
         }
       }
     }
   },
-  40288: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => ik,
-      f: () => Tk
+  40371: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => am,
+      e: () => Am
     });
-    var Xk = Ik(40291);
+    var hm = fm(40379);
 
-    function Tk(kk) {
-      return class extends kk {
+    function Am(mm) {
+      return class extends mm {
         constructor() {
           super(...arguments), this.IMAGEPROCESSING = !1, this.WHITEBALANCE = !1, this.VIGNETTE = !1, this.VIGNETTEBLENDMODEMULTIPLY = !1, this.VIGNETTEBLENDMODEOPAQUE = !1, this.TONEMAPPING = 0, this.CONTRAST = !1, this.COLORCURVES = !1, this.COLORGRADING = !1, this.COLORGRADING3D = !1, this.SAMPLER3DGREENDEPTH = !1, this.SAMPLER3DBGRMAP = !1, this.DITHER = !1, this.IMAGEPROCESSINGPOSTPROCESS = !1, this.SKIPFINALCOLORCLAMP = !1, this.EXPOSURE = !1
         }
       }
     }
-    class ik extends Xk.e {
+    class am extends hm.c {
       constructor() {
         super(), this.IMAGEPROCESSING = !1, this.WHITEBALANCE = !1, this.VIGNETTE = !1, this.VIGNETTEBLENDMODEMULTIPLY = !1, this.VIGNETTEBLENDMODEOPAQUE = !1, this.TONEMAPPING = 0, this.CONTRAST = !1, this.COLORCURVES = !1, this.COLORGRADING = !1, this.COLORGRADING3D = !1, this.SAMPLER3DGREENDEPTH = !1, this.SAMPLER3DBGRMAP = !1, this.DITHER = !1, this.IMAGEPROCESSINGPOSTPROCESS = !1, this.EXPOSURE = !1, this.SKIPFINALCOLORCLAMP = !1, this.rebuild()
       }
     }
   },
-  40357: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => tk
+  40453: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => pm
     });
-    var Xk = Ik(40003),
-      Tk = Ik(40295),
-      ik = Ik(40011),
-      yk = Ik(40338),
-      lk = Ik(40291),
-      ak = Ik(40363),
-      qk = Ik(40329);
-    class Lk extends lk.e {
+    var hm = fm(40113),
+      Am = fm(40383),
+      am = fm(40119),
+      xm = fm(40440),
+      wm = fm(40379),
+      Dm = fm(40458),
+      im = fm(40428);
+    class Rm extends wm.c {
       constructor() {
         super(...arguments), this.DETAIL = !1, this.DETAILDIRECTUV = 0, this.DETAIL_NORMALBLENDMETHOD = 0
       }
     }
-    let tk = (() => {
-      var kk, Fk, Ik, lk;
-      let tk, Zk, jk, ek, wk, Hk, Jk = ak.b,
-        xk = [],
-        Pk = [],
-        Kk = [],
-        Qk = [],
-        sk = [],
-        Vk = [],
-        zk = [],
-        Sk = [],
-        vk = [],
-        Ek = [],
-        Ok = [],
-        nk = [];
-      return kk = class extends Jk {
+    let pm = (() => {
+      var mm, Tm, fm, wm;
+      let pm, Em, om, Om, Ym, qm, jm = Dm.e,
+        Vm = [],
+        Im = [],
+        Km = [],
+        Qm = [],
+        nm = [],
+        Jm = [],
+        cm = [],
+        zm = [],
+        Zm = [],
+        km = [],
+        bm = [],
+        Sm = [];
+      return mm = class extends jm {
         get texture() {
-          return (0, Xk.e)(this, Fk, "f")
+          return (0, hm.b)(this, Tm, "f")
         }
-        set texture(kk) {
-          (0, Xk.f)(this, Fk, kk, "f")
+        set texture(mm) {
+          (0, hm.c)(this, Tm, mm, "f")
         }
         get normalBlendMethod() {
-          return (0, Xk.e)(this, Ik, "f")
+          return (0, hm.b)(this, fm, "f")
         }
-        set normalBlendMethod(kk) {
-          (0, Xk.f)(this, Ik, kk, "f")
+        set normalBlendMethod(mm) {
+          (0, hm.c)(this, fm, mm, "f")
         }
         get isEnabled() {
-          return (0, Xk.e)(this, lk, "f")
+          return (0, hm.b)(this, wm, "f")
         }
-        set isEnabled(kk) {
-          (0, Xk.f)(this, lk, kk, "f")
+        set isEnabled(mm) {
+          (0, hm.c)(this, wm, mm, "f")
         }
         _markAllSubMeshesAsTexturesDirty() {
           this._enable(this._isEnabled), this._internalMarkAllSubMeshesAsTexturesDirty()
@@ -154,42 +154,42 @@ export const modules = {
         isCompatible() {
           return !0
         }
-        constructor(kk) {
-          let ik = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          super(kk, "DetailMap", 140, new Lk, ik), this._texture = null, Fk.set(this, (0, Xk.n)(this, xk, void 0)), this.diffuseBlendLevel = ((0, Xk.n)(this, Pk), (0, Xk.n)(this, Kk, 1)), this.roughnessBlendLevel = ((0, Xk.n)(this, Qk), (0, Xk.n)(this, sk, 1)), this.bumpLevel = ((0, Xk.n)(this, Vk), (0, Xk.n)(this, zk, 1)), this._normalBlendMethod = ((0, Xk.n)(this, Sk), Tk.c.MATERIAL_NORMALBLENDMETHOD_WHITEOUT), Ik.set(this, (0, Xk.n)(this, vk, void 0)), this._isEnabled = ((0, Xk.n)(this, Ek), !1), lk.set(this, (0, Xk.n)(this, Ok, !1)), this._internalMarkAllSubMeshesAsTexturesDirty = (0, Xk.n)(this, nk), this._internalMarkAllSubMeshesAsTexturesDirty = kk._dirtyCallbacks[1]
+        constructor(mm) {
+          let am = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          super(mm, "DetailMap", 140, new Rm, am), this._texture = null, Tm.set(this, (0, hm.i)(this, Vm, void 0)), this.diffuseBlendLevel = ((0, hm.i)(this, Im), (0, hm.i)(this, Km, 1)), this.roughnessBlendLevel = ((0, hm.i)(this, Qm), (0, hm.i)(this, nm, 1)), this.bumpLevel = ((0, hm.i)(this, Jm), (0, hm.i)(this, cm, 1)), this._normalBlendMethod = ((0, hm.i)(this, zm), Am.d.MATERIAL_NORMALBLENDMETHOD_WHITEOUT), fm.set(this, (0, hm.i)(this, Zm, void 0)), this._isEnabled = ((0, hm.i)(this, km), !1), wm.set(this, (0, hm.i)(this, bm, !1)), this._internalMarkAllSubMeshesAsTexturesDirty = (0, hm.i)(this, Sm), this._internalMarkAllSubMeshesAsTexturesDirty = mm._dirtyCallbacks[1]
         }
-        isReadyForSubMesh(kk, Fk, Ik) {
-          return !this._isEnabled || !(kk._areTexturesDirty && Fk.texturesEnabled && Ik.getCaps().standardDerivatives && this._texture && yk.d.DetailTextureEnabled && !this._texture.isReady())
+        isReadyForSubMesh(mm, Tm, fm) {
+          return !this._isEnabled || !(mm._areTexturesDirty && Tm.texturesEnabled && fm.getCaps().standardDerivatives && this._texture && xm.d.DetailTextureEnabled && !this._texture.isReady())
         }
-        prepareDefines(kk, Fk) {
+        prepareDefines(mm, Tm) {
           if (this._isEnabled) {
-            kk.DETAIL_NORMALBLENDMETHOD = this._normalBlendMethod;
-            const Ik = Fk.Oe();
-            kk._areTexturesDirty && (Ik.getCaps().standardDerivatives && this._texture && yk.d.DetailTextureEnabled && this._isEnabled ? ((0, qk.P)(this._texture, kk, "DETAIL"), kk.DETAIL_NORMALBLENDMETHOD = this._normalBlendMethod) : kk.DETAIL = !1)
-          } else kk.DETAIL = !1
+            mm.DETAIL_NORMALBLENDMETHOD = this._normalBlendMethod;
+            const fm = Tm.dO();
+            mm._areTexturesDirty && (fm.getCaps().standardDerivatives && this._texture && xm.d.DetailTextureEnabled && this._isEnabled ? ((0, im.$)(this._texture, mm, "DETAIL"), mm.DETAIL_NORMALBLENDMETHOD = this._normalBlendMethod) : mm.DETAIL = !1)
+          } else mm.DETAIL = !1
         }
-        bindForSubMesh(kk, Fk) {
+        bindForSubMesh(mm, Tm) {
           if (!this._isEnabled) return;
-          const Ik = this._material.isFrozen;
-          kk.useUbo && Ik && kk.isSync || this._texture && yk.d.DetailTextureEnabled && (kk.updateFloat4("vDetailInfos", this._texture.coordinatesIndex, this.diffuseBlendLevel, this.bumpLevel, this.roughnessBlendLevel), (0, qk.v)(this._texture, kk, "detail")), Fk.texturesEnabled && this._texture && yk.d.DetailTextureEnabled && kk.setTexture("detailSampler", this._texture)
+          const fm = this._material.isFrozen;
+          mm.useUbo && fm && mm.isSync || this._texture && xm.d.DetailTextureEnabled && (mm.updateFloat4("vDetailInfos", this._texture.coordinatesIndex, this.diffuseBlendLevel, this.bumpLevel, this.roughnessBlendLevel), (0, im.x)(this._texture, mm, "detail")), Tm.texturesEnabled && this._texture && xm.d.DetailTextureEnabled && mm.setTexture("detailSampler", this._texture)
         }
-        hasTexture(kk) {
-          return this._texture === kk
+        hasTexture(mm) {
+          return this._texture === mm
         }
-        getActiveTextures(kk) {
-          this._texture && kk.push(this._texture)
+        getActiveTextures(mm) {
+          this._texture && mm.push(this._texture)
         }
-        getAnimatables(kk) {
-          this._texture && this._texture.animations && this._texture.animations.length > 0 && kk.push(this._texture)
+        getAnimatables(mm) {
+          this._texture && this._texture.animations && this._texture.animations.length > 0 && mm.push(this._texture)
         }
-        dispose(kk) {
-          kk && this._texture?.dispose()
+        dispose(mm) {
+          mm && this._texture?.dispose()
         }
         getClassName() {
           return "DetailMapConfiguration"
         }
-        getSamplers(kk) {
-          kk.push("detailSampler")
+        getSamplers(mm) {
+          mm.push("detailSampler")
         }
         getUniforms() {
           return {
@@ -204,103 +204,103 @@ export const modules = {
             }]
           }
         }
-      }, Fk = new WeakMap, Ik = new WeakMap, lk = new WeakMap, (() => {
-        const Fk = "function" === typeof Symbol && Symbol.metadata ? Object.create(Jk[Symbol.metadata] ?? null) : void 0;
-        tk = [(0, ik.B)("detailTexture"), (0, ik.e)("_markAllSubMeshesAsTexturesDirty")], Zk = [(0, ik.J)()], jk = [(0, ik.J)()], ek = [(0, ik.J)()], wk = [(0, ik.J)(), (0, ik.e)("_markAllSubMeshesAsTexturesDirty")], Hk = [(0, ik.J)(), (0, ik.e)("_markAllSubMeshesAsTexturesDirty")], (0, Xk.j)(kk, null, tk, {
+      }, Tm = new WeakMap, fm = new WeakMap, wm = new WeakMap, (() => {
+        const Tm = "function" === typeof Symbol && Symbol.metadata ? Object.create(jm[Symbol.metadata] ?? null) : void 0;
+        pm = [(0, am.A)("detailTexture"), (0, am.c)("_markAllSubMeshesAsTexturesDirty")], Em = [(0, am.J)()], om = [(0, am.J)()], Om = [(0, am.J)()], Ym = [(0, am.J)(), (0, am.c)("_markAllSubMeshesAsTexturesDirty")], qm = [(0, am.J)(), (0, am.c)("_markAllSubMeshesAsTexturesDirty")], (0, hm.g)(mm, null, pm, {
           kind: "accessor",
           name: "texture",
           static: !1,
           private: !1,
           access: {
-            has: kk => "texture" in kk,
-            get: kk => kk.texture,
-            set: (kk, Fk) => {
-              kk.texture = Fk
+            has: mm => "texture" in mm,
+            get: mm => mm.texture,
+            set: (mm, Tm) => {
+              mm.texture = Tm
             }
           },
-          metadata: Fk
-        }, xk, Pk), (0, Xk.j)(kk, null, wk, {
+          metadata: Tm
+        }, Vm, Im), (0, hm.g)(mm, null, Ym, {
           kind: "accessor",
           name: "normalBlendMethod",
           static: !1,
           private: !1,
           access: {
-            has: kk => "normalBlendMethod" in kk,
-            get: kk => kk.normalBlendMethod,
-            set: (kk, Fk) => {
-              kk.normalBlendMethod = Fk
+            has: mm => "normalBlendMethod" in mm,
+            get: mm => mm.normalBlendMethod,
+            set: (mm, Tm) => {
+              mm.normalBlendMethod = Tm
             }
           },
-          metadata: Fk
-        }, vk, Ek), (0, Xk.j)(kk, null, Hk, {
+          metadata: Tm
+        }, Zm, km), (0, hm.g)(mm, null, qm, {
           kind: "accessor",
           name: "isEnabled",
           static: !1,
           private: !1,
           access: {
-            has: kk => "isEnabled" in kk,
-            get: kk => kk.isEnabled,
-            set: (kk, Fk) => {
-              kk.isEnabled = Fk
+            has: mm => "isEnabled" in mm,
+            get: mm => mm.isEnabled,
+            set: (mm, Tm) => {
+              mm.isEnabled = Tm
             }
           },
-          metadata: Fk
-        }, Ok, nk), (0, Xk.j)(null, null, Zk, {
+          metadata: Tm
+        }, bm, Sm), (0, hm.g)(null, null, Em, {
           kind: "field",
           name: "diffuseBlendLevel",
           static: !1,
           private: !1,
           access: {
-            has: kk => "diffuseBlendLevel" in kk,
-            get: kk => kk.diffuseBlendLevel,
-            set: (kk, Fk) => {
-              kk.diffuseBlendLevel = Fk
+            has: mm => "diffuseBlendLevel" in mm,
+            get: mm => mm.diffuseBlendLevel,
+            set: (mm, Tm) => {
+              mm.diffuseBlendLevel = Tm
             }
           },
-          metadata: Fk
-        }, Kk, Qk), (0, Xk.j)(null, null, jk, {
+          metadata: Tm
+        }, Km, Qm), (0, hm.g)(null, null, om, {
           kind: "field",
           name: "roughnessBlendLevel",
           static: !1,
           private: !1,
           access: {
-            has: kk => "roughnessBlendLevel" in kk,
-            get: kk => kk.roughnessBlendLevel,
-            set: (kk, Fk) => {
-              kk.roughnessBlendLevel = Fk
+            has: mm => "roughnessBlendLevel" in mm,
+            get: mm => mm.roughnessBlendLevel,
+            set: (mm, Tm) => {
+              mm.roughnessBlendLevel = Tm
             }
           },
-          metadata: Fk
-        }, sk, Vk), (0, Xk.j)(null, null, ek, {
+          metadata: Tm
+        }, nm, Jm), (0, hm.g)(null, null, Om, {
           kind: "field",
           name: "bumpLevel",
           static: !1,
           private: !1,
           access: {
-            has: kk => "bumpLevel" in kk,
-            get: kk => kk.bumpLevel,
-            set: (kk, Fk) => {
-              kk.bumpLevel = Fk
+            has: mm => "bumpLevel" in mm,
+            get: mm => mm.bumpLevel,
+            set: (mm, Tm) => {
+              mm.bumpLevel = Tm
             }
           },
-          metadata: Fk
-        }, zk, Sk), Fk && Object.defineProperty(kk, Symbol.metadata, {
+          metadata: Tm
+        }, cm, zm), Tm && Object.defineProperty(mm, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Fk
+          value: Tm
         })
-      })(), kk
+      })(), mm
     })()
   },
-  40291: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Xk
+  40379: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => hm
     });
-    class Xk {
-      constructor(kk) {
-        if (this.VERTEXOUTPUT_INVARIANT = !1, this._keys = [], this._isDirty = !0, this._areLightsDirty = !0, this._areLightsDisposed = !1, this._areAttributesDirty = !0, this._areTexturesDirty = !0, this._areFresnelDirty = !0, this._areMiscDirty = !0, this._arePrePassDirty = !0, this._areImageProcessingDirty = !0, this._normals = !1, this._uvs = !1, this._needNormals = !1, this._needUVs = !1, this._externalProperties = kk, kk)
-          for (const Fk in kk) Object.prototype.hasOwnProperty.call(kk, Fk) && this._setDefaultValue(Fk)
+    class hm {
+      constructor(mm) {
+        if (this.VERTEXOUTPUT_INVARIANT = !1, this._keys = [], this._isDirty = !0, this._areLightsDirty = !0, this._areLightsDisposed = !1, this._areAttributesDirty = !0, this._areTexturesDirty = !0, this._areFresnelDirty = !0, this._areMiscDirty = !0, this._arePrePassDirty = !0, this._areImageProcessingDirty = !0, this._normals = !1, this._uvs = !1, this._needNormals = !1, this._needUVs = !1, this._externalProperties = mm, mm)
+          for (const Tm in mm) Object.prototype.hasOwnProperty.call(mm, Tm) && this._setDefaultValue(Tm)
       }
       get isDirty() {
         return this._isDirty
@@ -318,8 +318,8 @@ export const modules = {
         this._areImageProcessingDirty = !0, this._isDirty = !0
       }
       markAsLightDirty() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this._areLightsDirty = !0, this._areLightsDisposed = this._areLightsDisposed || kk, this._isDirty = !0
+        let mm = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._areLightsDirty = !0, this._areLightsDisposed = this._areLightsDisposed || mm, this._isDirty = !0
       }
       markAsAttributesDirty() {
         this._areAttributesDirty = !0, this._isDirty = !0
@@ -338,192 +338,192 @@ export const modules = {
       }
       rebuild() {
         this._keys.length = 0;
-        for (const kk of Object.keys(this)) "_" !== kk[0] && this._keys.push(kk);
+        for (const mm of Object.keys(this)) "_" !== mm[0] && this._keys.push(mm);
         if (this._externalProperties)
-          for (const kk in this._externalProperties) - 1 === this._keys.indexOf(kk) && this._keys.push(kk)
+          for (const mm in this._externalProperties) - 1 === this._keys.indexOf(mm) && this._keys.push(mm)
       }
-      isEqual(kk) {
-        if (this._keys.length !== kk._keys.length) return !1;
-        for (let Fk = 0; Fk < this._keys.length; Fk++) {
-          const Ik = this._keys[Fk];
-          if (this[Ik] !== kk[Ik]) return !1
+      isEqual(mm) {
+        if (this._keys.length !== mm._keys.length) return !1;
+        for (let Tm = 0; Tm < this._keys.length; Tm++) {
+          const fm = this._keys[Tm];
+          if (this[fm] !== mm[fm]) return !1
         }
         return !0
       }
-      cloneTo(kk) {
-        this._keys.length !== kk._keys.length && (kk._keys = this._keys.slice(0));
-        for (let Fk = 0; Fk < this._keys.length; Fk++) {
-          const Ik = this._keys[Fk];
-          kk[Ik] = this[Ik]
+      cloneTo(mm) {
+        this._keys.length !== mm._keys.length && (mm._keys = this._keys.slice(0));
+        for (let Tm = 0; Tm < this._keys.length; Tm++) {
+          const fm = this._keys[Tm];
+          mm[fm] = this[fm]
         }
       }
       reset() {
-        for (const kk of this._keys) this._setDefaultValue(kk)
+        for (const mm of this._keys) this._setDefaultValue(mm)
       }
-      _setDefaultValue(kk) {
-        const Fk = this._externalProperties?.[kk]?.type ?? typeof this[kk],
-          Ik = this._externalProperties?.[kk]?.default;
-        switch (Fk) {
+      _setDefaultValue(mm) {
+        const Tm = this._externalProperties?.[mm]?.type ?? typeof this[mm],
+          fm = this._externalProperties?.[mm]?.default;
+        switch (Tm) {
           case "number":
-            this[kk] = Ik ?? 0;
+            this[mm] = fm ?? 0;
             break;
           case "string":
-            this[kk] = Ik ?? "";
+            this[mm] = fm ?? "";
             break;
           default:
-            this[kk] = Ik ?? !1
+            this[mm] = fm ?? !1
         }
       }
       toString() {
-        let kk = "";
-        for (let Fk = 0; Fk < this._keys.length; Fk++) {
-          const Ik = this._keys[Fk],
-            Xk = this[Ik];
-          switch (typeof Xk) {
+        let mm = "";
+        for (let Tm = 0; Tm < this._keys.length; Tm++) {
+          const fm = this._keys[Tm],
+            hm = this[fm];
+          switch (typeof hm) {
             case "number":
             case "string":
-              kk += "#define " + Ik + " " + Xk + "\n";
+              mm += "#define " + fm + " " + hm + "\n";
               break;
             default:
-              Xk && (kk += "#define " + Ik + "\n")
+              hm && (mm += "#define " + fm + "\n")
           }
         }
-        return kk
+        return mm
       }
     }
   },
-  40382: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => lk,
-      g: () => yk,
-      j: () => ik
+  40483: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => wm,
+      f: () => xm,
+      j: () => am
     });
-    var Xk, Tk = Ik(37153);
+    var hm, Am = fm(37185);
 
-    function ik(kk, Fk) {
-      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 16777215;
-      const Xk = Fk(kk);
-      if (!Number.isInteger(Xk) || Xk < 0 || Xk > Ik) throw new Error(`Invalid geometry object ID ${Xk} for mesh "${kk.name}". Object IDs must be integers between 0 and 0x${Ik.toString(16).toUpperCase()}.`);
-      return Xk
+    function am(mm, Tm) {
+      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 16777215;
+      const hm = Tm(mm);
+      if (!Number.isInteger(hm) || hm < 0 || hm > fm) throw new Error(`Invalid geometry object ID ${hm} for mesh "${mm.name}". Object IDs must be integers between 0 and 0x${fm.toString(16).toUpperCase()}.`);
+      return hm
     }
 
-    function yk(kk, Fk) {
-      const Ik = Fk(kk);
-      if (!Number.isInteger(Ik) || Ik < 0 || Ik > 255 || 0 !== Ik && 0 === (63 & Ik)) throw new Error(`Invalid geometry mesh-blending tag ${Ik} for mesh "${kk.name}". Tags must be 0 or contain a group ID between 1 and 63.`);
-      return Ik
-    }! function(kk) {
-      kk[kk.Zero = 0] = "Zero", kk[kk.One = 1] = "One", kk[kk.MaxViewZ = 2] = "MaxViewZ", kk[kk.NoClear = 3] = "NoClear"
-    }(Xk || (Xk = {}));
-    class lk {
-      static CreateConfiguration(kk) {
-        return lk._Configurations[kk] = {
+    function xm(mm, Tm) {
+      const fm = Tm(mm);
+      if (!Number.isInteger(fm) || fm < 0 || fm > 255 || 0 !== fm && 0 === (63 & fm)) throw new Error(`Invalid geometry mesh-blending tag ${fm} for mesh "${mm.name}". Tags must be 0 or contain a group ID between 1 and 63.`);
+      return fm
+    }! function(mm) {
+      mm[mm.Zero = 0] = "Zero", mm[mm.One = 1] = "One", mm[mm.MaxViewZ = 2] = "MaxViewZ", mm[mm.NoClear = 3] = "NoClear"
+    }(hm || (hm = {}));
+    class wm {
+      static CreateConfiguration(mm) {
+        return wm._Configurations[mm] = {
           defines: {},
           previousWorldMatrices: {},
-          previousViewProjection: Tk.c.Zero(),
-          currentViewProjection: Tk.c.Zero(),
+          previousViewProjection: Am.e.Zero(),
+          currentViewProjection: Am.e.Zero(),
           previousBones: {},
           lastUpdateFrameId: -1,
           excludedSkinnedMesh: [],
           reverseCulling: !1,
           objectIdIsRedFormat: !1
-        }, lk._Configurations[kk]
+        }, wm._Configurations[mm]
       }
-      static DeleteConfiguration(kk) {
-        delete lk._Configurations[kk]
+      static DeleteConfiguration(mm) {
+        delete wm._Configurations[mm]
       }
-      static GetConfiguration(kk) {
-        return lk._Configurations[kk]
+      static GetConfiguration(mm) {
+        return wm._Configurations[mm]
       }
-      static _PrepareConfiguration(kk, Fk, Ik) {
-        const Xk = lk._Configurations[kk];
-        Xk._attachments = Fk, Xk._colorAttachments = Ik, Xk._mrtCount = Fk.length;
-        let Tk = "#define PREPASS\n";
-        for (const ik of lk.GeometryTextureDescriptions) {
-          const kk = Xk.defines[ik.defineIndex];
-          void 0 !== kk && (Tk += `#define ${ik.define}\n#define ${ik.defineIndex} ${kk}\n`)
+      static _PrepareConfiguration(mm, Tm, fm) {
+        const hm = wm._Configurations[mm];
+        hm._attachments = Tm, hm._colorAttachments = fm, hm._mrtCount = Tm.length;
+        let Am = "#define PREPASS\n";
+        for (const am of wm.GeometryTextureDescriptions) {
+          const mm = hm.defines[am.defineIndex];
+          void 0 !== mm && (Am += `#define ${am.define}\n#define ${am.defineIndex} ${mm}\n`)
         }
-        Xk.objectIdIsRedFormat && (Tk += "#define PREPASS_OBJECT_ID_R8\n"), Xk._defines = Tk + `#define SCENE_MRT_COUNT ${Fk.length}\n`
+        hm.objectIdIsRedFormat && (Am += "#define PREPASS_OBJECT_ID_R8\n"), hm._defines = Am + `#define SCENE_MRT_COUNT ${Tm.length}\n`
       }
-      static _PrepareStringDefines(kk, Fk) {
-        const Ik = lk._Configurations[kk];
-        return !!Ik?._defines && (Fk.push(Ik._defines), !0)
+      static _PrepareStringDefines(mm, Tm) {
+        const fm = wm._Configurations[mm];
+        return !!fm?._defines && (Tm.push(fm._defines), !0)
       }
-      static _BindAttachmentsForEffect(kk, Fk) {
-        const Ik = lk._Configurations[kk.currentRenderPassId];
-        return !Ik?._attachments || (kk.bindAttachments(Fk._multiTarget ? Ik._attachments : Ik._colorAttachments), Fk._multiTarget || void 0 !== Ik.defines.PREPASS_COLOR_INDEX)
+      static _BindAttachmentsForEffect(mm, Tm) {
+        const fm = wm._Configurations[mm.currentRenderPassId];
+        return !fm?._attachments || (mm.bindAttachments(Tm._multiTarget ? fm._attachments : fm._colorAttachments), Tm._multiTarget || void 0 !== fm.defines.PREPASS_COLOR_INDEX)
       }
-      static _RestoreAttachments(kk) {
-        const Fk = lk._Configurations[kk.currentRenderPassId];
-        Fk?._colorAttachments && kk.bindAttachments(Fk._colorAttachments)
+      static _RestoreAttachments(mm) {
+        const Tm = wm._Configurations[mm.currentRenderPassId];
+        Tm?._colorAttachments && mm.bindAttachments(Tm._colorAttachments)
       }
-      static _BindColorAttachments(kk) {
-        const Fk = lk._Configurations[kk.currentRenderPassId];
-        return !Fk?._colorAttachments || (kk.bindAttachments(Fk._colorAttachments), void 0 !== Fk.defines.PREPASS_COLOR_INDEX)
+      static _BindColorAttachments(mm) {
+        const Tm = wm._Configurations[mm.currentRenderPassId];
+        return !Tm?._colorAttachments || (mm.bindAttachments(Tm._colorAttachments), void 0 !== Tm.defines.PREPASS_COLOR_INDEX)
       }
-      static _IsColorAttachmentEnabled(kk) {
-        const Fk = lk._Configurations[kk.currentRenderPassId];
-        return !Fk?._colorAttachments || void 0 !== Fk.defines.PREPASS_COLOR_INDEX
+      static _IsColorAttachmentEnabled(mm) {
+        const Tm = wm._Configurations[mm.currentRenderPassId];
+        return !Tm?._colorAttachments || void 0 !== Tm.defines.PREPASS_COLOR_INDEX
       }
-      static _BindZeroAlphaDiscard(kk, Fk) {
-        const Ik = lk._Configurations[kk.currentRenderPassId];
-        if (!Ik) return;
-        const Xk = kk.getAlphaMode(),
-          Tk = void 0 === Ik.defines.PREPASS_COLOR_INDEX || 2 === Xk || 1 === Xk || 17 === Xk;
-        Fk.setFloat("geometryZeroAlphaDiscard", Tk ? 1 : 0)
+      static _BindZeroAlphaDiscard(mm, Tm) {
+        const fm = wm._Configurations[mm.currentRenderPassId];
+        if (!fm) return;
+        const hm = mm.getAlphaMode(),
+          Am = void 0 === fm.defines.PREPASS_COLOR_INDEX || 2 === hm || 1 === hm || 17 === hm;
+        Tm.setFloat("geometryZeroAlphaDiscard", Am ? 1 : 0)
       }
-      static AddUniformsAndSamplers(kk, Fk) {
-        kk.push("previousWorld", "previousViewProjection", "mPreviousBones", "objectId", "meshBlendTag")
+      static AddUniformsAndSamplers(mm, Tm) {
+        mm.push("previousWorld", "previousViewProjection", "mPreviousBones", "objectId", "meshBlendTag")
       }
-      static MarkAsDirty(kk, Fk) {
-        for (const Ik of Fk)
-          if (Ik.lK)
-            for (const Fk of Ik.lK) Fk._removeDrawWrapper(kk)
+      static MarkAsDirty(mm, Tm) {
+        for (const fm of Tm)
+          if (fm.jK)
+            for (const Tm of fm.jK) Tm._removeDrawWrapper(mm)
       }
-      static PrepareDefines(kk, Fk, Ik) {
-        if (!Ik._arePrePassDirty) return;
-        const Xk = lk._Configurations[kk];
-        if (!Xk) return;
-        Ik.PREPASS = !0;
-        let Tk = 0;
-        for (let ik = 0; ik < lk.GeometryTextureDescriptions.length; ik++) {
-          const kk = lk.GeometryTextureDescriptions[ik],
-            Fk = kk.define,
-            yk = kk.defineIndex,
-            ak = Xk.defines[yk];
-          void 0 !== ak ? (Ik[Fk] = !0, Ik[yk] = ak, Tk++) : (Ik[Fk] = !1, delete Ik[yk])
+      static PrepareDefines(mm, Tm, fm) {
+        if (!fm._arePrePassDirty) return;
+        const hm = wm._Configurations[mm];
+        if (!hm) return;
+        fm.PREPASS = !0;
+        let Am = 0;
+        for (let am = 0; am < wm.GeometryTextureDescriptions.length; am++) {
+          const mm = wm.GeometryTextureDescriptions[am],
+            Tm = mm.define,
+            xm = mm.defineIndex,
+            Dm = hm.defines[xm];
+          void 0 !== Dm ? (fm[Tm] = !0, fm[xm] = Dm, Am++) : (fm[Tm] = !1, delete fm[xm])
         }
-        Ik.PREPASS_OBJECT_ID_R8 = Xk.objectIdIsRedFormat, Ik.SCENE_MRT_COUNT = Xk._mrtCount ?? Tk, Ik.BONES_VELOCITY_ENABLED = Fk.useBones && Fk.computeBonesUsingShaders && Fk.skeleton && !Fk.skeleton.isUsingTextureForMatrices && -1 === Xk.excludedSkinnedMesh.indexOf(Fk)
+        fm.PREPASS_OBJECT_ID_R8 = hm.objectIdIsRedFormat, fm.SCENE_MRT_COUNT = hm._mrtCount ?? Am, fm.BONES_VELOCITY_ENABLED = Tm.useBones && Tm.computeBonesUsingShaders && Tm.skeleton && !Tm.skeleton.isUsingTextureForMatrices && -1 === hm.excludedSkinnedMesh.indexOf(Tm)
       }
-      static Bind(kk, Fk, Ik, Xk, Tk) {
-        const ak = lk._Configurations[kk];
-        if (!ak) return;
-        const qk = Ik.mG(),
-          Lk = qk.Oe();
-        if (ak.reverseCulling && Lk.setStateCullFaceType(qk._mirroredCameraPosition ? Tk.cullBackFaces : !Tk.cullBackFaces), void 0 !== ak.defines.PREPASS_OBJECT_ID_INDEX) {
-          const kk = ak.objectIdIsRedFormat ? 255 : 16777215;
-          let Xk = Ik.uniqueId;
-          if (ak.objectIdProvider) Xk = ik(Ik, ak.objectIdProvider, kk);
-          else if (Xk > kk) throw new Error(`Invalid geometry object ID ${Xk} for mesh "${Ik.name}". Object IDs must be integers between 0 and 0x${kk.toString(16).toUpperCase()}.`);
-          Fk.setFloat("objectId", Xk)
+      static Bind(mm, Tm, fm, hm, Am) {
+        const Dm = wm._Configurations[mm];
+        if (!Dm) return;
+        const im = fm.wG(),
+          Rm = im.dO();
+        if (Dm.reverseCulling && Rm.setStateCullFaceType(im._mirroredCameraPosition ? Am.cullBackFaces : !Am.cullBackFaces), void 0 !== Dm.defines.PREPASS_OBJECT_ID_INDEX) {
+          const mm = Dm.objectIdIsRedFormat ? 255 : 16777215;
+          let hm = fm.uniqueId;
+          if (Dm.objectIdProvider) hm = am(fm, Dm.objectIdProvider, mm);
+          else if (hm > mm) throw new Error(`Invalid geometry object ID ${hm} for mesh "${fm.name}". Object IDs must be integers between 0 and 0x${mm.toString(16).toUpperCase()}.`);
+          Tm.setFloat("objectId", hm)
         }
-        if (void 0 !== ak.defines.PREPASS_MESH_BLEND_TAG_INDEX) {
-          const kk = ak.meshBlendTagProvider ? yk(Ik, ak.meshBlendTagProvider) : Ik.meshBlendingTag;
-          Fk.setInt("meshBlendTag", kk)
+        if (void 0 !== Dm.defines.PREPASS_MESH_BLEND_TAG_INDEX) {
+          const mm = Dm.meshBlendTagProvider ? xm(fm, Dm.meshBlendTagProvider) : fm.meshBlendingTag;
+          Tm.setInt("meshBlendTag", mm)
         }
-        if (void 0 !== ak.defines.PREPASS_VELOCITY_INDEX || void 0 !== ak.defines.PREPASS_VELOCITY_LINEAR_INDEX) {
-          const kk = ak._currentWorldMatrices ?? (ak._currentWorldMatrices = {}),
-            Tk = ak._worldMatrixFrameIds ?? (ak._worldMatrixFrameIds = {});
-          if (kk[Ik.uniqueId] || (kk[Ik.uniqueId] = Xk.clone(), ak.previousWorldMatrices[Ik.uniqueId] = Xk.clone()), Tk[Ik.uniqueId] !== Lk.frameId && (ak.previousWorldMatrices[Ik.uniqueId].kS(kk[Ik.uniqueId]), Tk[Ik.uniqueId] = Lk.frameId), kk[Ik.uniqueId].kS(Xk), -1 === ak.lastUpdateFrameId ? (ak.lastUpdateFrameId = Lk.frameId, ak.previousViewProjection.kS(qk.getTransformMatrix()), ak.currentViewProjection.kS(qk.getTransformMatrix())) : ak.currentViewProjection.updateFlag !== qk.getTransformMatrix().updateFlag ? (ak.lastUpdateFrameId = Lk.frameId, ak.previousViewProjection.kS(ak.currentViewProjection), ak.currentViewProjection.kS(qk.getTransformMatrix())) : ak.lastUpdateFrameId !== Lk.frameId && (ak.lastUpdateFrameId = Lk.frameId, ak.previousViewProjection.kS(ak.currentViewProjection)), Fk.setMatrix("previousWorld", ak.previousWorldMatrices[Ik.uniqueId]), Fk.setMatrix("previousViewProjection", ak.previousViewProjection), Ik.useBones && Ik.computeBonesUsingShaders && Ik.skeleton) {
-            const kk = Ik.skeleton;
-            if (!kk.isUsingTextureForMatrices || -1 === Fk.getUniformIndex("boneTextureInfo")) {
-              const Xk = kk.getTransformMatrices(Ik);
-              Xk && (ak.previousBones[Ik.uniqueId] || (ak.previousBones[Ik.uniqueId] = Xk.slice()), Fk.setMatrices("mPreviousBones", ak.previousBones[Ik.uniqueId]), ak.previousBones[Ik.uniqueId].set(Xk))
+        if (void 0 !== Dm.defines.PREPASS_VELOCITY_INDEX || void 0 !== Dm.defines.PREPASS_VELOCITY_LINEAR_INDEX) {
+          const mm = Dm._currentWorldMatrices ?? (Dm._currentWorldMatrices = {}),
+            Am = Dm._worldMatrixFrameIds ?? (Dm._worldMatrixFrameIds = {});
+          if (mm[fm.uniqueId] || (mm[fm.uniqueId] = hm.clone(), Dm.previousWorldMatrices[fm.uniqueId] = hm.clone()), Am[fm.uniqueId] !== Rm.frameId && (Dm.previousWorldMatrices[fm.uniqueId].ZZ(mm[fm.uniqueId]), Am[fm.uniqueId] = Rm.frameId), mm[fm.uniqueId].ZZ(hm), -1 === Dm.lastUpdateFrameId ? (Dm.lastUpdateFrameId = Rm.frameId, Dm.previousViewProjection.ZZ(im.getTransformMatrix()), Dm.currentViewProjection.ZZ(im.getTransformMatrix())) : Dm.currentViewProjection.updateFlag !== im.getTransformMatrix().updateFlag ? (Dm.lastUpdateFrameId = Rm.frameId, Dm.previousViewProjection.ZZ(Dm.currentViewProjection), Dm.currentViewProjection.ZZ(im.getTransformMatrix())) : Dm.lastUpdateFrameId !== Rm.frameId && (Dm.lastUpdateFrameId = Rm.frameId, Dm.previousViewProjection.ZZ(Dm.currentViewProjection)), Tm.setMatrix("previousWorld", Dm.previousWorldMatrices[fm.uniqueId]), Tm.setMatrix("previousViewProjection", Dm.previousViewProjection), fm.useBones && fm.computeBonesUsingShaders && fm.skeleton) {
+            const mm = fm.skeleton;
+            if (!mm.isUsingTextureForMatrices || -1 === Tm.getUniformIndex("boneTextureInfo")) {
+              const hm = mm.getTransformMatrices(fm);
+              hm && (Dm.previousBones[fm.uniqueId] || (Dm.previousBones[fm.uniqueId] = hm.slice()), Tm.setMatrices("mPreviousBones", Dm.previousBones[fm.uniqueId]), Dm.previousBones[fm.uniqueId].set(hm))
             }
           }
         }
       }
     }
-    lk.GeometryTextureDescriptions = [{
+    wm.GeometryTextureDescriptions = [{
       type: 0,
       name: "IrradianceLegacy",
       clearType: 0,
@@ -625,777 +625,777 @@ export const modules = {
       clearType: 0,
       define: "PREPASS_MESH_BLEND_TAG",
       defineIndex: "PREPASS_MESH_BLEND_TAG_INDEX"
-    }], lk._Configurations = {}
+    }], wm._Configurations = {}
   },
-  40363: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Zk,
-      d: () => ek
+  40458: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => Em,
+      f: () => Om
     });
-    var Xk = Ik(40003),
-      Tk = Ik(40011),
-      ik = Ik(39872),
-      yk = Ik(39837);
-    const lk = new RegExp("^([gimus]+)!");
-    class ak {
-      constructor(kk) {
-        this._plugins = [], this._activePlugins = [], this._activePluginsForExtraEvents = [], this._material = kk, this._scene = kk.mG(), this._engine = this._scene.Oe()
+    var hm = fm(40113),
+      Am = fm(40119),
+      am = fm(4e4),
+      xm = fm(39960);
+    const wm = new RegExp("^([gimus]+)!");
+    class Dm {
+      constructor(mm) {
+        this._plugins = [], this._activePlugins = [], this._activePluginsForExtraEvents = [], this._material = mm, this._scene = mm.wG(), this._engine = this._scene.dO()
       }
-      _addPlugin(kk) {
-        for (let Xk = 0; Xk < this._plugins.length; ++Xk)
-          if (this._plugins[Xk].name === kk.name) return !1;
-        if (this._material._uniformBufferLayoutBuilt && (this._material.resetDrawCache(), this._material._createUniformBuffer()), !kk.isCompatible(this._material.shaderLanguage)) throw `The plugin "${kk.name}" can't be added to the material "${this._material.name}" because the plugin is not compatible with the shader language of the material.`;
-        const Fk = kk.getClassName();
-        ak._MaterialPluginClassToMainDefine[Fk] || (ak._MaterialPluginClassToMainDefine[Fk] = "MATERIALPLUGIN_" + ++ak._MaterialPluginCounter), this._material._callbackPluginEventGeneric = (kk, Fk) => this._handlePluginEvent(kk, Fk), this._plugins.push(kk), this._plugins.sort(((kk, Fk) => kk.priority - Fk.priority)), this._codeInjectionPoints = {};
-        const Ik = {};
-        Ik[ak._MaterialPluginClassToMainDefine[Fk]] = {
+      _addPlugin(mm) {
+        for (let hm = 0; hm < this._plugins.length; ++hm)
+          if (this._plugins[hm].name === mm.name) return !1;
+        if (this._material._uniformBufferLayoutBuilt && (this._material.resetDrawCache(), this._material._createUniformBuffer()), !mm.isCompatible(this._material.shaderLanguage)) throw `The plugin "${mm.name}" can't be added to the material "${this._material.name}" because the plugin is not compatible with the shader language of the material.`;
+        const Tm = mm.getClassName();
+        Dm._MaterialPluginClassToMainDefine[Tm] || (Dm._MaterialPluginClassToMainDefine[Tm] = "MATERIALPLUGIN_" + ++Dm._MaterialPluginCounter), this._material._callbackPluginEventGeneric = (mm, Tm) => this._handlePluginEvent(mm, Tm), this._plugins.push(mm), this._plugins.sort(((mm, Tm) => mm.priority - Tm.priority)), this._codeInjectionPoints = {};
+        const fm = {};
+        fm[Dm._MaterialPluginClassToMainDefine[Tm]] = {
           type: "boolean",
           default: !0
         };
-        for (const Xk of this._plugins) Xk.collectDefines(Ik), this._collectPointNames("vertex", Xk.getCustomCode("vertex", this._material.shaderLanguage)), this._collectPointNames("fragment", Xk.getCustomCode("fragment", this._material.shaderLanguage));
-        return this._defineNamesFromPlugins = Ik, !0
+        for (const hm of this._plugins) hm.collectDefines(fm), this._collectPointNames("vertex", hm.getCustomCode("vertex", this._material.shaderLanguage)), this._collectPointNames("fragment", hm.getCustomCode("fragment", this._material.shaderLanguage));
+        return this._defineNamesFromPlugins = fm, !0
       }
-      _activatePlugin(kk) {
-        -1 === this._activePlugins.indexOf(kk) && (this._activePlugins.push(kk), this._activePlugins.sort(((kk, Fk) => kk.priority - Fk.priority)), this._material._callbackPluginEventIsReadyForSubMesh = this._handlePluginEventIsReadyForSubMesh.bind(this), this._material._callbackPluginEventPrepareDefinesBeforeAttributes = this._handlePluginEventPrepareDefinesBeforeAttributes.bind(this), this._material._callbackPluginEventPrepareDefines = this._handlePluginEventPrepareDefines.bind(this), this._material._callbackPluginEventBindForSubMesh = this._handlePluginEventBindForSubMesh.bind(this), kk.registerForExtraEvents && (this._activePluginsForExtraEvents.push(kk), this._activePluginsForExtraEvents.sort(((kk, Fk) => kk.priority - Fk.priority)), this._material._callbackPluginEventHasRenderTargetTextures = this._handlePluginEventHasRenderTargetTextures.bind(this), this._material._callbackPluginEventFillRenderTargetTextures = this._handlePluginEventFillRenderTargetTextures.bind(this), this._material._callbackPluginEventHardBindForSubMesh = this._handlePluginEventHardBindForSubMesh.bind(this)))
+      _activatePlugin(mm) {
+        -1 === this._activePlugins.indexOf(mm) && (this._activePlugins.push(mm), this._activePlugins.sort(((mm, Tm) => mm.priority - Tm.priority)), this._material._callbackPluginEventIsReadyForSubMesh = this._handlePluginEventIsReadyForSubMesh.bind(this), this._material._callbackPluginEventPrepareDefinesBeforeAttributes = this._handlePluginEventPrepareDefinesBeforeAttributes.bind(this), this._material._callbackPluginEventPrepareDefines = this._handlePluginEventPrepareDefines.bind(this), this._material._callbackPluginEventBindForSubMesh = this._handlePluginEventBindForSubMesh.bind(this), mm.registerForExtraEvents && (this._activePluginsForExtraEvents.push(mm), this._activePluginsForExtraEvents.sort(((mm, Tm) => mm.priority - Tm.priority)), this._material._callbackPluginEventHasRenderTargetTextures = this._handlePluginEventHasRenderTargetTextures.bind(this), this._material._callbackPluginEventFillRenderTargetTextures = this._handlePluginEventFillRenderTargetTextures.bind(this), this._material._callbackPluginEventHardBindForSubMesh = this._handlePluginEventHardBindForSubMesh.bind(this)))
       }
-      getPlugin(kk) {
-        for (let Fk = 0; Fk < this._plugins.length; ++Fk)
-          if (this._plugins[Fk].name === kk) return this._plugins[Fk];
+      getPlugin(mm) {
+        for (let Tm = 0; Tm < this._plugins.length; ++Tm)
+          if (this._plugins[Tm].name === mm) return this._plugins[Tm];
         return null
       }
-      _handlePluginEventIsReadyForSubMesh(kk) {
-        let Fk = !0;
-        for (const Ik of this._activePlugins) Fk = Fk && Ik.isReadyForSubMesh(kk.defines, this._scene, this._engine, kk.subMesh);
-        kk.isReadyForSubMesh = Fk
+      _handlePluginEventIsReadyForSubMesh(mm) {
+        let Tm = !0;
+        for (const fm of this._activePlugins) Tm = Tm && fm.isReadyForSubMesh(mm.defines, this._scene, this._engine, mm.subMesh);
+        mm.isReadyForSubMesh = Tm
       }
-      _handlePluginEventPrepareDefinesBeforeAttributes(kk) {
-        for (const Fk of this._activePlugins) Fk.prepareDefinesBeforeAttributes(kk.defines, this._scene, kk.mesh)
+      _handlePluginEventPrepareDefinesBeforeAttributes(mm) {
+        for (const Tm of this._activePlugins) Tm.prepareDefinesBeforeAttributes(mm.defines, this._scene, mm.mesh)
       }
-      _handlePluginEventPrepareDefines(kk) {
-        for (const Fk of this._activePlugins) Fk.prepareDefines(kk.defines, this._scene, kk.mesh)
+      _handlePluginEventPrepareDefines(mm) {
+        for (const Tm of this._activePlugins) Tm.prepareDefines(mm.defines, this._scene, mm.mesh)
       }
-      _handlePluginEventHardBindForSubMesh(kk) {
-        for (const Fk of this._activePluginsForExtraEvents) Fk.hardBindForSubMesh(this._material._uniformBuffer, this._scene, this._engine, kk.subMesh)
+      _handlePluginEventHardBindForSubMesh(mm) {
+        for (const Tm of this._activePluginsForExtraEvents) Tm.hardBindForSubMesh(this._material._uniformBuffer, this._scene, this._engine, mm.subMesh)
       }
-      _handlePluginEventBindForSubMesh(kk) {
-        for (const Fk of this._activePlugins) Fk.bindForSubMesh(this._material._uniformBuffer, this._scene, this._engine, kk.subMesh)
+      _handlePluginEventBindForSubMesh(mm) {
+        for (const Tm of this._activePlugins) Tm.bindForSubMesh(this._material._uniformBuffer, this._scene, this._engine, mm.subMesh)
       }
-      _handlePluginEventHasRenderTargetTextures(kk) {
-        let Fk = !1;
-        for (const Ik of this._activePluginsForExtraEvents)
-          if (Fk = Ik.hasRenderTargetTextures(), Fk) break;
-        kk.hasRenderTargetTextures = Fk
+      _handlePluginEventHasRenderTargetTextures(mm) {
+        let Tm = !1;
+        for (const fm of this._activePluginsForExtraEvents)
+          if (Tm = fm.hasRenderTargetTextures(), Tm) break;
+        mm.hasRenderTargetTextures = Tm
       }
-      _handlePluginEventFillRenderTargetTextures(kk) {
-        for (const Fk of this._activePluginsForExtraEvents) Fk.fillRenderTargetTextures(kk.renderTargets)
+      _handlePluginEventFillRenderTargetTextures(mm) {
+        for (const Tm of this._activePluginsForExtraEvents) Tm.fillRenderTargetTextures(mm.renderTargets)
       }
-      _handlePluginEvent(kk, Fk) {
-        switch (kk) {
+      _handlePluginEvent(mm, Tm) {
+        switch (mm) {
           case 512: {
-            const kk = Fk;
-            for (const Fk of this._activePlugins) Fk.getActiveTextures(kk.activeTextures);
+            const mm = Tm;
+            for (const Tm of this._activePlugins) Tm.getActiveTextures(mm.activeTextures);
             break
           }
           case 256: {
-            const kk = Fk;
-            for (const Fk of this._activePlugins) Fk.getAnimatables(kk.animatables);
+            const mm = Tm;
+            for (const Tm of this._activePlugins) Tm.getAnimatables(mm.animatables);
             break
           }
           case 1024: {
-            const kk = Fk;
-            let Ik = !1;
-            for (const Fk of this._activePlugins)
-              if (Ik = Fk.hasTexture(kk.texture), Ik) break;
-            kk.hasTexture = Ik;
+            const mm = Tm;
+            let fm = !1;
+            for (const Tm of this._activePlugins)
+              if (fm = Tm.hasTexture(mm.texture), fm) break;
+            mm.hasTexture = fm;
             break
           }
           case 2: {
-            const kk = Fk;
-            for (const Fk of this._plugins) Fk.dispose(kk.forceDisposeTextures);
+            const mm = Tm;
+            for (const Tm of this._plugins) Tm.dispose(mm.forceDisposeTextures);
             break
           }
           case 4:
-            Fk.defineNames = this._defineNamesFromPlugins;
+            Tm.defineNames = this._defineNamesFromPlugins;
             break;
           case 128: {
-            const kk = Fk;
-            for (const Fk of this._activePlugins) kk.fallbackRank = Fk.addFallbacks(kk.defines, kk.fallbacks, kk.fallbackRank), Fk.getAttributes(kk.attributes, this._scene, kk.mesh);
-            this._uniformList.length > 0 && kk.uniforms.push(...this._uniformList), this._samplerList.length > 0 && kk.samplers.push(...this._samplerList), this._uboList.length > 0 && kk.uniformBuffersNames.push(...this._uboList), kk.customCode = this._injectCustomCode(kk, kk.customCode);
+            const mm = Tm;
+            for (const Tm of this._activePlugins) mm.fallbackRank = Tm.addFallbacks(mm.defines, mm.fallbacks, mm.fallbackRank), Tm.getAttributes(mm.attributes, this._scene, mm.mesh);
+            this._uniformList.length > 0 && mm.uniforms.push(...this._uniformList), this._samplerList.length > 0 && mm.samplers.push(...this._samplerList), this._uboList.length > 0 && mm.uniformBuffersNames.push(...this._uboList), mm.customCode = this._injectCustomCode(mm, mm.customCode);
             break
           }
           case 8: {
-            const kk = Fk;
+            const mm = Tm;
             this._uboDeclaration = "", this._vertexDeclaration = "", this._fragmentDeclaration = "", this._uniformList = [], this._samplerList = [], this._uboList = [];
-            const Ik = 1 === this._material.shaderLanguage;
-            for (const Fk of this._plugins) {
-              const Xk = Fk.getUniforms(this._material.shaderLanguage);
-              if (Xk) {
-                if (Xk.ubo)
-                  for (const Fk of Xk.ubo) {
-                    if (Fk.size && Fk.type) {
-                      const Xk = Fk.arraySize ?? 0;
-                      if (kk.ubo.addUniform(Fk.name, Fk.size, Xk), Ik) {
-                        let kk;
-                        switch (Fk.type) {
+            const fm = 1 === this._material.shaderLanguage;
+            for (const Tm of this._plugins) {
+              const hm = Tm.getUniforms(this._material.shaderLanguage);
+              if (hm) {
+                if (hm.ubo)
+                  for (const Tm of hm.ubo) {
+                    if (Tm.size && Tm.type) {
+                      const hm = Tm.arraySize ?? 0;
+                      if (mm.ubo.addUniform(Tm.name, Tm.size, hm), fm) {
+                        let mm;
+                        switch (Tm.type) {
                           case "mat4":
-                            kk = "mat4x4f";
+                            mm = "mat4x4f";
                             break;
                           case "float":
-                            kk = "f32";
+                            mm = "f32";
                             break;
                           default:
-                            kk = `${Fk.type}f`
+                            mm = `${Tm.type}f`
                         }
-                        this._uboDeclaration += Xk > 0 ? `uniform ${Fk.name}: array<${kk}, ${Xk}>;\n` : `uniform ${Fk.name}: ${kk};\n`
-                      } else this._uboDeclaration += `${Fk.type} ${Fk.name}${Xk>0?`[${Xk}]`:""};\n`
+                        this._uboDeclaration += hm > 0 ? `uniform ${Tm.name}: array<${mm}, ${hm}>;\n` : `uniform ${Tm.name}: ${mm};\n`
+                      } else this._uboDeclaration += `${Tm.type} ${Tm.name}${hm>0?`[${hm}]`:""};\n`
                     }
-                    this._uniformList.push(Fk.name)
+                    this._uniformList.push(Tm.name)
                   }
-                Xk.vertex && (this._vertexDeclaration += Xk.vertex + "\n"), Xk.fragment && (this._fragmentDeclaration += Xk.fragment + "\n"), Xk.externalUniforms && this._uniformList.push(...Xk.externalUniforms)
+                hm.vertex && (this._vertexDeclaration += hm.vertex + "\n"), hm.fragment && (this._fragmentDeclaration += hm.fragment + "\n"), hm.externalUniforms && this._uniformList.push(...hm.externalUniforms)
               }
-              Fk.getSamplers(this._samplerList), Fk.getUniformBuffersNames(this._uboList)
+              Tm.getSamplers(this._samplerList), Tm.getUniformBuffersNames(this._uboList)
             }
             break
           }
         }
       }
-      _collectPointNames(kk, Fk) {
-        if (Fk)
-          for (const Ik in Fk) this._codeInjectionPoints[kk] || (this._codeInjectionPoints[kk] = {}), this._codeInjectionPoints[kk][Ik] = !0
+      _collectPointNames(mm, Tm) {
+        if (Tm)
+          for (const fm in Tm) this._codeInjectionPoints[mm] || (this._codeInjectionPoints[mm] = {}), this._codeInjectionPoints[mm][fm] = !0
       }
-      _injectCustomCode(kk, Fk) {
-        return (Ik, Xk) => {
-          Fk && (Xk = Fk(Ik, Xk)), this._uboDeclaration && (Xk = Xk.replace("#define ADDITIONAL_UBO_DECLARATION", this._uboDeclaration)), this._vertexDeclaration && (Xk = Xk.replace("#define ADDITIONAL_VERTEX_DECLARATION", this._vertexDeclaration)), this._fragmentDeclaration && (Xk = Xk.replace("#define ADDITIONAL_FRAGMENT_DECLARATION", this._fragmentDeclaration));
-          const Tk = this._codeInjectionPoints?.[Ik];
-          if (!Tk) return Xk;
-          let ak = null;
-          for (let Fk in Tk) {
-            let Tk = "";
-            for (const Xk of this._activePlugins) {
-              const lk = this._material.shaderLanguage;
-              let qk = Xk.getCustomCode(Ik, lk)?.[Fk];
-              qk && (Xk.resolveIncludes && (null === ak && (ak = {
+      _injectCustomCode(mm, Tm) {
+        return (fm, hm) => {
+          Tm && (hm = Tm(fm, hm)), this._uboDeclaration && (hm = hm.replace("#define ADDITIONAL_UBO_DECLARATION", this._uboDeclaration)), this._vertexDeclaration && (hm = hm.replace("#define ADDITIONAL_VERTEX_DECLARATION", this._vertexDeclaration)), this._fragmentDeclaration && (hm = hm.replace("#define ADDITIONAL_FRAGMENT_DECLARATION", this._fragmentDeclaration));
+          const Am = this._codeInjectionPoints?.[fm];
+          if (!Am) return hm;
+          let Dm = null;
+          for (let Tm in Am) {
+            let Am = "";
+            for (const hm of this._activePlugins) {
+              const wm = this._material.shaderLanguage;
+              let im = hm.getCustomCode(fm, wm)?.[Tm];
+              im && (hm.resolveIncludes && (null === Dm && (Dm = {
                 defines: [],
-                indexParameters: kk.indexParameters,
+                indexParameters: mm.indexParameters,
                 isFragment: !1,
                 shouldUseHighPrecisionShader: this._engine._shouldUseHighPrecisionShader,
                 processor: void 0,
                 supportsUniformBuffers: this._engine.supportsUniformBuffers,
-                shadersRepository: yk.b.GetShadersRepository(lk),
-                includesShadersStore: yk.b.GetIncludesShadersStore(lk),
+                shadersRepository: xm.e.GetShadersRepository(wm),
+                includesShadersStore: xm.e.GetIncludesShadersStore(wm),
                 version: void 0,
                 platformName: this._engine.shaderPlatformName,
                 processingContext: void 0,
                 isNDCHalfZRange: this._engine.isNDCHalfZRange,
-                IXk: this._engine.IXk,
+                fhm: this._engine.fhm,
                 processCodeAfterIncludes: void 0
-              }), ak.isFragment = "fragment" === Ik, (0, ik.g)(qk, ak, (kk => qk = kk))), Tk += qk + "\n")
+              }), Dm.isFragment = "fragment" === fm, (0, am.e)(im, Dm, (mm => im = mm))), Am += im + "\n")
             }
-            if (Tk.length > 0)
-              if ("!" === Fk.charAt(0)) {
-                Fk = Fk.substring(1);
-                let kk = "g";
-                if ("!" === Fk.charAt(0)) kk = "", Fk = Fk.substring(1);
+            if (Am.length > 0)
+              if ("!" === Tm.charAt(0)) {
+                Tm = Tm.substring(1);
+                let mm = "g";
+                if ("!" === Tm.charAt(0)) mm = "", Tm = Tm.substring(1);
                 else {
-                  const Ik = lk.exec(Fk);
-                  Ik && Ik.length >= 2 && (kk = Ik[1], Fk = Fk.substring(kk.length + 1))
+                  const fm = wm.exec(Tm);
+                  fm && fm.length >= 2 && (mm = fm[1], Tm = Tm.substring(mm.length + 1))
                 }
-                kk.indexOf("g") < 0 && (kk += "g");
-                const Ik = new RegExp(Fk, kk);
-                let ik = Ik.exec(Xk);
-                for (; null !== ik;) {
+                mm.indexOf("g") < 0 && (mm += "g");
+                const fm = new RegExp(Tm, mm);
+                let am = fm.exec(hm);
+                for (; null !== am;) {
                   const {
-                    index: kk
-                  } = ik, Fk = qk(Tk, ik);
-                  Xk = Xk.substring(0, kk) + Fk + Xk.substring(kk + ik[0].length), Ik.lastIndex = kk + Fk.length, ik = Ik.exec(Xk)
+                    index: mm
+                  } = am, Tm = im(Am, am);
+                  hm = hm.substring(0, mm) + Tm + hm.substring(mm + am[0].length), fm.lastIndex = mm + Tm.length, am = fm.exec(hm)
                 }
               } else {
-                const kk = "#define " + Fk;
-                Xk = Xk.replace(kk, "\n" + Tk + "\n" + kk)
+                const mm = "#define " + Tm;
+                hm = hm.replace(mm, "\n" + Am + "\n" + mm)
               }
           }
-          return Xk
+          return hm
         }
       }
     }
-    ak._MaterialPluginClassToMainDefine = {}, ak._MaterialPluginCounter = 0;
+    Dm._MaterialPluginClassToMainDefine = {}, Dm._MaterialPluginCounter = 0;
 
-    function qk(kk, Fk) {
-      return kk.replace(/\$(\d+)/g, ((kk, Ik) => {
-        const Xk = Number(Ik);
-        return Xk < Fk.length ? Fk[Xk] : ""
+    function im(mm, Tm) {
+      return mm.replace(/\$(\d+)/g, ((mm, fm) => {
+        const hm = Number(fm);
+        return hm < Tm.length ? Tm[hm] : ""
       }))
     }
-    var Lk = Ik(40021),
-      tk = Ik(37201);
-    let Zk = (() => {
-        var kk;
-        let Fk, Ik, ik, yk, lk = [],
-          qk = [],
-          tk = [],
-          Zk = [],
-          jk = [],
-          ek = [],
-          wk = [],
-          Hk = [];
-        return kk = class {
-          isCompatible(kk) {
-            return 0 === kk
+    var Rm = fm(40129),
+      pm = fm(37224);
+    let Em = (() => {
+        var mm;
+        let Tm, fm, am, xm, wm = [],
+          im = [],
+          pm = [],
+          Em = [],
+          om = [],
+          Om = [],
+          Ym = [],
+          qm = [];
+        return mm = class {
+          isCompatible(mm) {
+            return 0 === mm
           }
-          _enable(kk) {
-            kk && this._pluginManager._activatePlugin(this)
+          _enable(mm) {
+            mm && this._pluginManager._activatePlugin(this)
           }
-          constructor(kk, Fk, Ik, Tk) {
-            let ik = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-              yk = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-              Lk = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-            this.name = (0, Xk.n)(this, lk, void 0), this.priority = ((0, Xk.n)(this, qk), (0, Xk.n)(this, tk, 500)), this.resolveIncludes = ((0, Xk.n)(this, Zk), (0, Xk.n)(this, jk, !1)), this.registerForExtraEvents = ((0, Xk.n)(this, ek), (0, Xk.n)(this, wk, !1)), this.doNotSerialize = ((0, Xk.n)(this, Hk), !1), this._material = kk, this.name = Fk, this.priority = Ik, this.resolveIncludes = Lk, kk.pluginManager || (kk.pluginManager = new ak(kk), kk.hG.add((() => {
-              kk.pluginManager = void 0
-            }))), this._pluginDefineNames = Tk, this._pluginManager = kk.pluginManager, ik && this._pluginManager._addPlugin(this), yk && this._enable(!0), this.markAllDefinesAsDirty = kk._dirtyCallbacks[127]
+          constructor(mm, Tm, fm, Am) {
+            let am = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+              xm = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+              Rm = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+            this.name = (0, hm.i)(this, wm, void 0), this.priority = ((0, hm.i)(this, im), (0, hm.i)(this, pm, 500)), this.resolveIncludes = ((0, hm.i)(this, Em), (0, hm.i)(this, om, !1)), this.registerForExtraEvents = ((0, hm.i)(this, Om), (0, hm.i)(this, Ym, !1)), this.doNotSerialize = ((0, hm.i)(this, qm), !1), this._material = mm, this.name = Tm, this.priority = fm, this.resolveIncludes = Rm, mm.pluginManager || (mm.pluginManager = new Dm(mm), mm.iG.add((() => {
+              mm.pluginManager = void 0
+            }))), this._pluginDefineNames = Am, this._pluginManager = mm.pluginManager, am && this._pluginManager._addPlugin(this), xm && this._enable(!0), this.markAllDefinesAsDirty = mm._dirtyCallbacks[127]
           }
           getClassName() {
             return "MaterialPluginBase"
           }
-          isReadyForSubMesh(kk, Fk, Ik, Xk) {
+          isReadyForSubMesh(mm, Tm, fm, hm) {
             return !0
           }
-          hardBindForSubMesh(kk, Fk, Ik, Xk) {}
-          bindForSubMesh(kk, Fk, Ik, Xk) {}
-          dispose(kk) {}
-          getCustomCode(kk) {
+          hardBindForSubMesh(mm, Tm, fm, hm) {}
+          bindForSubMesh(mm, Tm, fm, hm) {}
+          dispose(mm) {}
+          getCustomCode(mm) {
             return null
           }
-          collectDefines(kk) {
+          collectDefines(mm) {
             if (this._pluginDefineNames)
-              for (const Fk of Object.keys(this._pluginDefineNames)) {
-                if ("_" === Fk[0]) continue;
-                const Ik = typeof this._pluginDefineNames[Fk];
-                kk[Fk] = {
-                  type: "number" === Ik ? "number" : "string" === Ik ? "string" : "boolean" === Ik ? "boolean" : "object",
-                  default: this._pluginDefineNames[Fk]
+              for (const Tm of Object.keys(this._pluginDefineNames)) {
+                if ("_" === Tm[0]) continue;
+                const fm = typeof this._pluginDefineNames[Tm];
+                mm[Tm] = {
+                  type: "number" === fm ? "number" : "string" === fm ? "string" : "boolean" === fm ? "boolean" : "object",
+                  default: this._pluginDefineNames[Tm]
                 }
               }
           }
-          prepareDefinesBeforeAttributes(kk, Fk, Ik) {}
-          prepareDefines(kk, Fk, Ik) {}
-          hasTexture(kk) {
+          prepareDefinesBeforeAttributes(mm, Tm, fm) {}
+          prepareDefines(mm, Tm, fm) {}
+          hasTexture(mm) {
             return !1
           }
           hasRenderTargetTextures() {
             return !1
           }
-          fillRenderTargetTextures(kk) {}
-          getActiveTextures(kk) {}
-          getAnimatables(kk) {}
-          addFallbacks(kk, Fk, Ik) {
-            return Ik
+          fillRenderTargetTextures(mm) {}
+          getActiveTextures(mm) {}
+          getAnimatables(mm) {}
+          addFallbacks(mm, Tm, fm) {
+            return fm
           }
-          getSamplers(kk) {}
-          getAttributes(kk, Fk, Ik) {}
-          getUniformBuffersNames(kk) {}
+          getSamplers(mm) {}
+          getAttributes(mm, Tm, fm) {}
+          getUniformBuffersNames(mm) {}
           getUniforms() {
             return {}
           }
-          copyTo(kk) {
-            Lk.b.Clone((() => kk), this)
+          copyTo(mm) {
+            Rm.d.Clone((() => mm), this)
           }
           serialize() {
-            return Lk.b.Serialize(this)
+            return Rm.d.Serialize(this)
           }
-          parse(kk, Fk, Ik) {
-            Lk.b.Parse((() => this), kk, Fk, Ik)
+          parse(mm, Tm, fm) {
+            Rm.d.Parse((() => this), mm, Tm, fm)
           }
         }, (() => {
-          const ak = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-          Fk = [(0, Tk.J)()], Ik = [(0, Tk.J)()], ik = [(0, Tk.J)()], yk = [(0, Tk.J)()], (0, Xk.j)(null, null, Fk, {
+          const Dm = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+          Tm = [(0, Am.J)()], fm = [(0, Am.J)()], am = [(0, Am.J)()], xm = [(0, Am.J)()], (0, hm.g)(null, null, Tm, {
             kind: "field",
             name: "name",
             static: !1,
             private: !1,
             access: {
-              has: kk => "name" in kk,
-              get: kk => kk.name,
-              set: (kk, Fk) => {
-                kk.name = Fk
+              has: mm => "name" in mm,
+              get: mm => mm.name,
+              set: (mm, Tm) => {
+                mm.name = Tm
               }
             },
-            metadata: ak
-          }, lk, qk), (0, Xk.j)(null, null, Ik, {
+            metadata: Dm
+          }, wm, im), (0, hm.g)(null, null, fm, {
             kind: "field",
             name: "priority",
             static: !1,
             private: !1,
             access: {
-              has: kk => "priority" in kk,
-              get: kk => kk.priority,
-              set: (kk, Fk) => {
-                kk.priority = Fk
+              has: mm => "priority" in mm,
+              get: mm => mm.priority,
+              set: (mm, Tm) => {
+                mm.priority = Tm
               }
             },
-            metadata: ak
-          }, tk, Zk), (0, Xk.j)(null, null, ik, {
+            metadata: Dm
+          }, pm, Em), (0, hm.g)(null, null, am, {
             kind: "field",
             name: "resolveIncludes",
             static: !1,
             private: !1,
             access: {
-              has: kk => "resolveIncludes" in kk,
-              get: kk => kk.resolveIncludes,
-              set: (kk, Fk) => {
-                kk.resolveIncludes = Fk
+              has: mm => "resolveIncludes" in mm,
+              get: mm => mm.resolveIncludes,
+              set: (mm, Tm) => {
+                mm.resolveIncludes = Tm
               }
             },
-            metadata: ak
-          }, jk, ek), (0, Xk.j)(null, null, yk, {
+            metadata: Dm
+          }, om, Om), (0, hm.g)(null, null, xm, {
             kind: "field",
             name: "registerForExtraEvents",
             static: !1,
             private: !1,
             access: {
-              has: kk => "registerForExtraEvents" in kk,
-              get: kk => kk.registerForExtraEvents,
-              set: (kk, Fk) => {
-                kk.registerForExtraEvents = Fk
+              has: mm => "registerForExtraEvents" in mm,
+              get: mm => mm.registerForExtraEvents,
+              set: (mm, Tm) => {
+                mm.registerForExtraEvents = Tm
               }
             },
-            metadata: ak
-          }, wk, Hk), ak && Object.defineProperty(kk, Symbol.metadata, {
+            metadata: Dm
+          }, Ym, qm), Dm && Object.defineProperty(mm, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: ak
+            value: Dm
           })
-        })(), kk
+        })(), mm
       })(),
-      jk = !1;
+      om = !1;
 
-    function ek() {
-      jk || (jk = !0, (0, tk.f)("BABYLON.MaterialPluginBase", Zk))
+    function Om() {
+      om || (om = !0, (0, pm.d)("BABYLON.MaterialPluginBase", Em))
     }
   },
-  40279: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => Xk
+  40369: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => hm
     });
-    class Xk {
+    class hm {
       constructor() {
         this.previousWorldMatrices = {}, this.previousBones = {}
       }
-      static AddUniforms(kk) {
-        kk.push("previousWorld", "previousViewProjection", "mPreviousBones")
+      static AddUniforms(mm) {
+        mm.push("previousWorld", "previousViewProjection", "mPreviousBones")
       }
-      static AddSamplers(kk) {}
-      bindForSubMesh(kk, Fk, Ik, Xk, Tk) {
-        if (Fk.prePassRenderer && Fk.prePassRenderer.enabled && Fk.prePassRenderer.currentRTisSceneRT && (-1 !== Fk.prePassRenderer.getIndex(2) || -1 !== Fk.prePassRenderer.getIndex(11))) {
-          this.previousWorldMatrices[Ik.uniqueId] || (this.previousWorldMatrices[Ik.uniqueId] = Xk.clone()), this.previousViewProjection || (this.previousViewProjection = Fk.getTransformMatrix().clone(), this.currentViewProjection = Fk.getTransformMatrix().clone());
-          const Tk = Fk.Oe();
-          this.currentViewProjection.updateFlag !== Fk.getTransformMatrix().updateFlag ? (this._lastUpdateFrameId = Tk.frameId, this.previousViewProjection.kS(this.currentViewProjection), this.currentViewProjection.kS(Fk.getTransformMatrix())) : this._lastUpdateFrameId !== Tk.frameId && (this._lastUpdateFrameId = Tk.frameId, this.previousViewProjection.kS(this.currentViewProjection)), kk.setMatrix("previousWorld", this.previousWorldMatrices[Ik.uniqueId]), kk.setMatrix("previousViewProjection", this.previousViewProjection), this.previousWorldMatrices[Ik.uniqueId] = Xk.clone()
+      static AddSamplers(mm) {}
+      bindForSubMesh(mm, Tm, fm, hm, Am) {
+        if (Tm.prePassRenderer && Tm.prePassRenderer.enabled && Tm.prePassRenderer.currentRTisSceneRT && (-1 !== Tm.prePassRenderer.getIndex(2) || -1 !== Tm.prePassRenderer.getIndex(11))) {
+          this.previousWorldMatrices[fm.uniqueId] || (this.previousWorldMatrices[fm.uniqueId] = hm.clone()), this.previousViewProjection || (this.previousViewProjection = Tm.getTransformMatrix().clone(), this.currentViewProjection = Tm.getTransformMatrix().clone());
+          const Am = Tm.dO();
+          this.currentViewProjection.updateFlag !== Tm.getTransformMatrix().updateFlag ? (this._lastUpdateFrameId = Am.frameId, this.previousViewProjection.ZZ(this.currentViewProjection), this.currentViewProjection.ZZ(Tm.getTransformMatrix())) : this._lastUpdateFrameId !== Am.frameId && (this._lastUpdateFrameId = Am.frameId, this.previousViewProjection.ZZ(this.currentViewProjection)), mm.setMatrix("previousWorld", this.previousWorldMatrices[fm.uniqueId]), mm.setMatrix("previousViewProjection", this.previousViewProjection), this.previousWorldMatrices[fm.uniqueId] = hm.clone()
         }
       }
     }
   },
-  40393: (kk, Fk, Ik) => {
-    function Xk(kk) {
-      return class extends kk {
+  40493: (mm, Tm, fm) => {
+    function hm(mm) {
+      return class extends mm {
         constructor() {
           super(...arguments), this.PREPASS = !1, this.PREPASS_COLOR = !1, this.PREPASS_COLOR_INDEX = -1, this.PREPASS_IRRADIANCE_LEGACY = !1, this.PREPASS_IRRADIANCE_LEGACY_INDEX = -1, this.PREPASS_IRRADIANCE = !1, this.PREPASS_IRRADIANCE_INDEX = -1, this.PREPASS_ALBEDO = !1, this.PREPASS_ALBEDO_INDEX = -1, this.PREPASS_ALBEDO_SQRT = !1, this.PREPASS_ALBEDO_SQRT_INDEX = -1, this.PREPASS_DEPTH = !1, this.PREPASS_DEPTH_INDEX = -1, this.PREPASS_SCREENSPACE_DEPTH = !1, this.PREPASS_SCREENSPACE_DEPTH_INDEX = -1, this.PREPASS_NORMALIZED_VIEW_DEPTH = !1, this.PREPASS_NORMALIZED_VIEW_DEPTH_INDEX = -1, this.PREPASS_NORMAL = !1, this.PREPASS_NORMAL_INDEX = -1, this.PREPASS_NORMAL_WORLDSPACE = !1, this.PREPASS_WORLD_NORMAL = !1, this.PREPASS_WORLD_NORMAL_INDEX = -1, this.PREPASS_POSITION = !1, this.PREPASS_POSITION_INDEX = -1, this.PREPASS_LOCAL_POSITION = !1, this.PREPASS_LOCAL_POSITION_INDEX = -1, this.PREPASS_VELOCITY = !1, this.PREPASS_VELOCITY_INDEX = -1, this.PREPASS_VELOCITY_LINEAR = !1, this.PREPASS_VELOCITY_LINEAR_INDEX = -1, this.PREPASS_REFLECTIVITY = !1, this.PREPASS_REFLECTIVITY_INDEX = -1, this.PREPASS_OBJECT_ID = !1, this.PREPASS_OBJECT_ID_INDEX = -1, this.PREPASS_OBJECT_ID_R8 = !1, this.PREPASS_MESH_BLEND_TAG = !1, this.PREPASS_MESH_BLEND_TAG_INDEX = -1, this.SCENE_MRT_COUNT = 0
         }
       }
     }
-    Ik.d(Fk, {
-      d: () => Xk
+    fm.d(Tm, {
+      b: () => hm
     })
   },
-  40269: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      StandardMaterial: () => Xk.e
+  40357: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      StandardMaterial: () => hm.h
     });
-    var Xk = Ik(40277);
-    (0, Xk.b)()
+    var hm = fm(40364);
+    (0, hm.d)()
   },
-  40277: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Uk,
-      e: () => bk
+  40364: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => Hm,
+      h: () => Xm
     });
-    var Xk = Ik(40003),
-      Tk = Ik(40011),
-      ik = Ik(40107),
-      yk = Ik(40090),
-      lk = Ik(37331),
-      ak = Ik(40141),
-      qk = Ik(40279),
-      Lk = Ik(40288),
-      tk = Ik(40113),
-      Zk = Ik(40295),
-      jk = Ik(40291),
-      ek = Ik(40345),
-      wk = Ik(40338),
-      Hk = Ik(40349),
-      Jk = Ik(40357),
-      xk = Ik(40333),
-      Pk = Ik(40368),
-      Kk = Ik(40329),
-      Qk = Ik(40021),
-      sk = Ik(40377),
-      Vk = Ik(40382),
-      zk = Ik(40386),
-      Sk = Ik(40393),
-      vk = Ik(40402),
-      Ek = Ik(37201),
-      Ok = Ik(39863);
-    const nk = {
+    var hm = fm(40113),
+      Am = fm(40119),
+      am = fm(40220),
+      xm = fm(40199),
+      wm = fm(37336),
+      Dm = fm(40251),
+      im = fm(40369),
+      Rm = fm(40371),
+      pm = fm(40226),
+      Em = fm(40383),
+      om = fm(40379),
+      Om = fm(40445),
+      Ym = fm(40440),
+      qm = fm(40447),
+      jm = fm(40453),
+      Vm = fm(40432),
+      Im = fm(40465),
+      Km = fm(40428),
+      Qm = fm(40129),
+      nm = fm(40474),
+      Jm = fm(40483),
+      cm = fm(40491),
+      zm = fm(40493),
+      Zm = fm(40498),
+      km = fm(37224),
+      bm = fm(39993);
+    const Sm = {
       effect: null,
       subMesh: null
     };
-    class Gk extends((0, Sk.d)((0, zk.b)(jk.e))) {}
-    class pk extends((0, Lk.f)(Gk)) {
-      constructor(kk) {
-        super(kk), this.DIFFUSE = !1, this.DIFFUSEDIRECTUV = 0, this.BAKED_VERTEX_ANIMATION_TEXTURE = !1, this.AMBIENT = !1, this.AMBIENTDIRECTUV = 0, this.OPACITY = !1, this.OPACITYDIRECTUV = 0, this.OPACITYRGB = !1, this.REFLECTION = !1, this.EMISSIVE = !1, this.EMISSIVEDIRECTUV = 0, this.SPECULAR = !1, this.SPECULARDIRECTUV = 0, this.BUMP = !1, this.BUMPDIRECTUV = 0, this.PARALLAX = !1, this.PARALLAX_RHS = !1, this.PARALLAXOCCLUSION = !1, this.SPECULAROVERALPHA = !1, this.CLIPPLANE = !1, this.CLIPPLANE2 = !1, this.CLIPPLANE3 = !1, this.CLIPPLANE4 = !1, this.CLIPPLANE5 = !1, this.CLIPPLANE6 = !1, this.ALPHATEST = !1, this.DEPTHPREPASS = !1, this.ALPHAFROMDIFFUSE = !1, this.POINTSIZE = !1, this.FOG = !1, this.SPECULARTERM = !1, this.DIFFUSEFRESNEL = !1, this.OPACITYFRESNEL = !1, this.REFLECTIONFRESNEL = !1, this.REFRACTIONFRESNEL = !1, this.EMISSIVEFRESNEL = !1, this.FRESNEL = !1, this.NORMAL = !1, this.TANGENT = !1, this.VERTEXCOLOR = !1, this.VERTEXALPHA = !1, this.NUM_BONE_INFLUENCERS = 0, this.BonesPerMesh = 0, this.BONETEXTURE = !1, this.BONES_VELOCITY_ENABLED = !1, this.INSTANCES = !1, this.THIN_INSTANCES = !1, this.INSTANCESCOLOR = !1, this.GLOSSINESS = !1, this.ROUGHNESS = !1, this.EMISSIVEASILLUMINATION = !1, this.LINKEMISSIVEWITHDIFFUSE = !1, this.REFLECTIONFRESNELFROMSPECULAR = !1, this.LIGHTMAP = !1, this.LIGHTMAPDIRECTUV = 0, this.OBJECTSPACE_NORMALMAP = !1, this.USELIGHTMAPASSHADOWMAP = !1, this.REFLECTIONMAP_3D = !1, this.REFLECTIONMAP_SPHERICAL = !1, this.REFLECTIONMAP_PLANAR = !1, this.REFLECTIONMAP_CUBIC = !1, this.USE_LOCAL_REFLECTIONMAP_CUBIC = !1, this.USE_LOCAL_REFRACTIONMAP_CUBIC = !1, this.REFLECTIONMAP_PROJECTION = !1, this.REFLECTIONMAP_SKYBOX = !1, this.REFLECTIONMAP_EXPLICIT = !1, this.REFLECTIONMAP_EQUIRECTANGULAR = !1, this.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !1, this.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !1, this.REFLECTIONMAP_OPPOSITEZ = !1, this.INVERTCUBICMAP = !1, this.LOGARITHMICDEPTH = !1, this.REFRACTION = !1, this.REFRACTIONMAP_3D = !1, this.REFLECTIONOVERALPHA = !1, this.TWOSIDEDLIGHTING = !1, this.SHADOWFLOAT = !1, this.MORPHTARGETS = !1, this.MORPHTARGETS_POSITION = !1, this.MORPHTARGETS_NORMAL = !1, this.MORPHTARGETS_TANGENT = !1, this.MORPHTARGETS_UV = !1, this.MORPHTARGETS_UV2 = !1, this.MORPHTARGETS_COLOR = !1, this.MORPHTARGETTEXTURE_HASPOSITIONS = !1, this.MORPHTARGETTEXTURE_HASNORMALS = !1, this.MORPHTARGETTEXTURE_HASTANGENTS = !1, this.MORPHTARGETTEXTURE_HASUVS = !1, this.MORPHTARGETTEXTURE_HASUV2S = !1, this.MORPHTARGETTEXTURE_HASCOLORS = !1, this.NUM_MORPH_INFLUENCERS = 0, this.MORPHTARGETS_TEXTURE = !1, this.NONUNIFORMSCALING = !1, this.PREMULTIPLYALPHA = !1, this.ALPHATEST_AFTERALLALPHACOMPUTATIONS = !1, this.ALPHABLEND = !0, this.RGBDLIGHTMAP = !1, this.RGBDREFLECTION = !1, this.RGBDREFRACTION = !1, this.MULTIVIEW = !1, this.ORDER_INDEPENDENT_TRANSPARENCY = !1, this.ORDER_INDEPENDENT_TRANSPARENCY_16BITS = !1, this.CAMERA_ORTHOGRAPHIC = !1, this.CAMERA_PERSPECTIVE = !1, this.AREALIGHTSUPPORTED = !0, this.USE_VERTEX_PULLING = !1, this.VERTEX_PULLING_USE_INDEX_BUFFER = !1, this.VERTEX_PULLING_INDEX_BUFFER_32BITS = !1, this.RIGHT_HANDED = !1, this.CLUSTLIGHT_SLICES = 0, this.CLUSTLIGHT_BATCH = 0, this.IS_REFLECTION_LINEAR = !1, this.IS_REFRACTION_LINEAR = !1, this.DECAL_AFTER_DETAIL = !1, this.TEXTURE_REPETITION_MODE = 0, this.rebuild()
+    class em extends((0, zm.b)((0, cm.e)(om.c))) {}
+    class Nm extends((0, Rm.e)(em)) {
+      constructor(mm) {
+        super(mm), this.DIFFUSE = !1, this.DIFFUSEDIRECTUV = 0, this.BAKED_VERTEX_ANIMATION_TEXTURE = !1, this.AMBIENT = !1, this.AMBIENTDIRECTUV = 0, this.OPACITY = !1, this.OPACITYDIRECTUV = 0, this.OPACITYRGB = !1, this.REFLECTION = !1, this.EMISSIVE = !1, this.EMISSIVEDIRECTUV = 0, this.SPECULAR = !1, this.SPECULARDIRECTUV = 0, this.BUMP = !1, this.BUMPDIRECTUV = 0, this.PARALLAX = !1, this.PARALLAX_RHS = !1, this.PARALLAXOCCLUSION = !1, this.SPECULAROVERALPHA = !1, this.CLIPPLANE = !1, this.CLIPPLANE2 = !1, this.CLIPPLANE3 = !1, this.CLIPPLANE4 = !1, this.CLIPPLANE5 = !1, this.CLIPPLANE6 = !1, this.ALPHATEST = !1, this.DEPTHPREPASS = !1, this.ALPHAFROMDIFFUSE = !1, this.POINTSIZE = !1, this.FOG = !1, this.SPECULARTERM = !1, this.DIFFUSEFRESNEL = !1, this.OPACITYFRESNEL = !1, this.REFLECTIONFRESNEL = !1, this.REFRACTIONFRESNEL = !1, this.EMISSIVEFRESNEL = !1, this.FRESNEL = !1, this.NORMAL = !1, this.TANGENT = !1, this.VERTEXCOLOR = !1, this.VERTEXALPHA = !1, this.NUM_BONE_INFLUENCERS = 0, this.BonesPerMesh = 0, this.BONETEXTURE = !1, this.BONES_VELOCITY_ENABLED = !1, this.INSTANCES = !1, this.THIN_INSTANCES = !1, this.INSTANCESCOLOR = !1, this.GLOSSINESS = !1, this.ROUGHNESS = !1, this.EMISSIVEASILLUMINATION = !1, this.LINKEMISSIVEWITHDIFFUSE = !1, this.REFLECTIONFRESNELFROMSPECULAR = !1, this.LIGHTMAP = !1, this.LIGHTMAPDIRECTUV = 0, this.OBJECTSPACE_NORMALMAP = !1, this.USELIGHTMAPASSHADOWMAP = !1, this.REFLECTIONMAP_3D = !1, this.REFLECTIONMAP_SPHERICAL = !1, this.REFLECTIONMAP_PLANAR = !1, this.REFLECTIONMAP_CUBIC = !1, this.USE_LOCAL_REFLECTIONMAP_CUBIC = !1, this.USE_LOCAL_REFRACTIONMAP_CUBIC = !1, this.REFLECTIONMAP_PROJECTION = !1, this.REFLECTIONMAP_SKYBOX = !1, this.REFLECTIONMAP_EXPLICIT = !1, this.REFLECTIONMAP_EQUIRECTANGULAR = !1, this.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !1, this.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !1, this.REFLECTIONMAP_OPPOSITEZ = !1, this.INVERTCUBICMAP = !1, this.LOGARITHMICDEPTH = !1, this.REFRACTION = !1, this.REFRACTIONMAP_3D = !1, this.REFLECTIONOVERALPHA = !1, this.TWOSIDEDLIGHTING = !1, this.SHADOWFLOAT = !1, this.MORPHTARGETS = !1, this.MORPHTARGETS_POSITION = !1, this.MORPHTARGETS_NORMAL = !1, this.MORPHTARGETS_TANGENT = !1, this.MORPHTARGETS_UV = !1, this.MORPHTARGETS_UV2 = !1, this.MORPHTARGETS_COLOR = !1, this.MORPHTARGETTEXTURE_HASPOSITIONS = !1, this.MORPHTARGETTEXTURE_HASNORMALS = !1, this.MORPHTARGETTEXTURE_HASTANGENTS = !1, this.MORPHTARGETTEXTURE_HASUVS = !1, this.MORPHTARGETTEXTURE_HASUV2S = !1, this.MORPHTARGETTEXTURE_HASCOLORS = !1, this.NUM_MORPH_INFLUENCERS = 0, this.MORPHTARGETS_TEXTURE = !1, this.NONUNIFORMSCALING = !1, this.PREMULTIPLYALPHA = !1, this.ALPHATEST_AFTERALLALPHACOMPUTATIONS = !1, this.ALPHABLEND = !0, this.RGBDLIGHTMAP = !1, this.RGBDREFLECTION = !1, this.RGBDREFRACTION = !1, this.MULTIVIEW = !1, this.ORDER_INDEPENDENT_TRANSPARENCY = !1, this.ORDER_INDEPENDENT_TRANSPARENCY_16BITS = !1, this.CAMERA_ORTHOGRAPHIC = !1, this.CAMERA_PERSPECTIVE = !1, this.AREALIGHTSUPPORTED = !0, this.USE_VERTEX_PULLING = !1, this.VERTEX_PULLING_USE_INDEX_BUFFER = !1, this.VERTEX_PULLING_INDEX_BUFFER_32BITS = !1, this.RIGHT_HANDED = !1, this.CLUSTLIGHT_SLICES = 0, this.CLUSTLIGHT_BATCH = 0, this.IS_REFLECTION_LINEAR = !1, this.IS_REFRACTION_LINEAR = !1, this.DECAL_AFTER_DETAIL = !1, this.TEXTURE_REPETITION_MODE = 0, this.rebuild()
       }
     }
-    class uk extends((0, vk.e)(ek.e)) {}
-    let bk = (() => {
-        var kk, Fk, Lk, jk, zk, Sk, vk, Ek, Ok, Gk, bk, Rk, Uk, Ck, Nk, ck, Wk, fk, Bk, dk, Yk, Ak, gk, mk, hk, rk, Dk, Mk, kF, FF, IF, XF, TF;
-        let iF, yF, lF, aF, qF, LF, tF, ZF, jF, eF, wF, HF, JF, xF, PF, KF, QF, sF, VF, zF, SF, oF, vF, EF, OF, nF, GF, pF, uF, bF, RF, UF, CF, NF, cF, WF, fF, BF, dF, YF, AF, gF, mF, hF, rF, DF, MF, kI, FI, II, XI, TI, iI, yI, lI, aI, qI, LI, tI, ZI, jI, eI, wI, HI, JI, xI, PI, KI, QI, sI, VI, zI, SI, oI = uk,
-          vI = [],
-          EI = [],
-          OI = [],
-          nI = [],
-          GI = [],
-          pI = [],
-          uI = [],
-          bI = [],
-          RI = [],
-          UI = [],
-          CI = [],
-          NI = [],
-          cI = [],
-          WI = [],
-          fI = [],
-          BI = [],
-          dI = [],
-          YI = [],
-          AI = [],
-          gI = [],
-          mI = [],
-          hI = [],
-          rI = [],
-          DI = [],
-          MI = [],
-          kX = [],
-          FX = [],
-          IX = [],
-          XX = [],
-          TX = [],
-          iX = [],
-          yX = [],
-          lX = [],
-          aX = [],
-          qX = [],
-          LX = [],
-          tX = [],
-          ZX = [],
-          jX = [],
-          eX = [],
-          wX = [],
-          HX = [],
-          JX = [],
-          xX = [],
-          PX = [],
-          KX = [],
-          QX = [],
-          sX = [],
-          VX = [],
-          zX = [],
-          SX = [],
-          oX = [],
-          vX = [],
-          EX = [],
-          OX = [],
-          nX = [],
-          GX = [],
-          pX = [],
-          uX = [],
-          bX = [],
-          RX = [],
-          UX = [],
-          CX = [],
-          NX = [],
-          cX = [],
-          WX = [],
-          fX = [],
-          BX = [],
-          dX = [],
-          YX = [],
-          AX = [],
-          gX = [],
-          mX = [],
-          hX = [],
-          rX = [],
-          DX = [],
-          MX = [],
-          kT = [],
-          FT = [],
-          IT = [],
-          XT = [],
-          TT = [],
-          iT = [],
-          yT = [],
-          lT = [],
-          aT = [],
-          qT = [],
-          LT = [],
-          tT = [],
-          ZT = [],
-          jT = [],
-          eT = [],
-          wT = [],
-          HT = [],
-          JT = [],
-          xT = [],
-          PT = [],
-          KT = [],
-          QT = [],
-          sT = [],
-          VT = [],
-          zT = [],
-          ST = [],
-          oT = [],
-          vT = [],
-          ET = [],
-          OT = [],
-          nT = [],
-          GT = [],
-          pT = [],
-          uT = [],
-          bT = [],
-          RT = [],
-          UT = [],
-          CT = [],
-          NT = [],
-          cT = [],
-          WT = [],
-          fT = [],
-          BT = [],
-          dT = [],
-          YT = [],
-          AT = [],
-          gT = [],
-          mT = [],
-          hT = [],
-          rT = [],
-          DT = [],
-          MT = [],
-          ki = [],
-          Fi = [],
-          Ii = [],
-          Xi = [],
-          Ti = [],
-          ii = [],
-          yi = [],
-          li = [],
-          ai = [],
-          qi = [],
-          Li = [],
-          ti = [],
-          Zi = [],
-          ji = [],
-          ei = [],
-          wi = [],
-          Hi = [];
-        return kk = class extends oI {
+    class Gm extends((0, Zm.c)(Om.d)) {}
+    let Xm = (() => {
+        var mm, Tm, Rm, om, cm, zm, Zm, km, bm, em, Xm, Pm, Hm, ym, Cm, rm, sm, lm, Mm, um, Bm, Lm, tm, Um, dm, gm, Wm, Fm, mT, TT, fT, hT, AT;
+        let aT, xT, wT, DT, iT, RT, pT, ET, oT, OT, YT, qT, jT, VT, IT, KT, QT, nT, JT, cT, zT, ZT, kT, bT, ST, eT, NT, GT, XT, PT, HT, yT, CT, rT, sT, lT, MT, uT, BT, LT, vT, tT, UT, dT, gT, WT, FT, mf, Tf, ff, hf, Af, af, xf, wf, Df, Rf, pf, Ef, of, Of, Yf, qf, jf, Vf, If, Kf, Qf, nf, Jf, zf, Zf, kf, bf = Gm,
+          Sf = [],
+          ef = [],
+          Nf = [],
+          Gf = [],
+          Xf = [],
+          Pf = [],
+          Hf = [],
+          yf = [],
+          Cf = [],
+          rf = [],
+          sf = [],
+          lf = [],
+          Mf = [],
+          uf = [],
+          Bf = [],
+          Lf = [],
+          vf = [],
+          tf = [],
+          Uf = [],
+          df = [],
+          gf = [],
+          Wf = [],
+          Ff = [],
+          mh = [],
+          Th = [],
+          fh = [],
+          hh = [],
+          Ah = [],
+          ah = [],
+          xh = [],
+          wh = [],
+          Dh = [],
+          ih = [],
+          Rh = [],
+          ph = [],
+          Eh = [],
+          oh = [],
+          Oh = [],
+          Yh = [],
+          qh = [],
+          jh = [],
+          Vh = [],
+          Ih = [],
+          Kh = [],
+          Qh = [],
+          nh = [],
+          Jh = [],
+          ch = [],
+          zh = [],
+          Zh = [],
+          kh = [],
+          bh = [],
+          Sh = [],
+          eh = [],
+          Nh = [],
+          Gh = [],
+          Xh = [],
+          Ph = [],
+          Hh = [],
+          yh = [],
+          Ch = [],
+          rh = [],
+          sh = [],
+          lh = [],
+          Mh = [],
+          uh = [],
+          Bh = [],
+          Lh = [],
+          vh = [],
+          th = [],
+          Uh = [],
+          dh = [],
+          gh = [],
+          Wh = [],
+          Fh = [],
+          mA = [],
+          TA = [],
+          fA = [],
+          hA = [],
+          AA = [],
+          aA = [],
+          xA = [],
+          wA = [],
+          DA = [],
+          iA = [],
+          RA = [],
+          pA = [],
+          EA = [],
+          oA = [],
+          OA = [],
+          YA = [],
+          qA = [],
+          jA = [],
+          VA = [],
+          IA = [],
+          KA = [],
+          QA = [],
+          nA = [],
+          JA = [],
+          cA = [],
+          zA = [],
+          ZA = [],
+          kA = [],
+          bA = [],
+          SA = [],
+          eA = [],
+          NA = [],
+          GA = [],
+          XA = [],
+          PA = [],
+          HA = [],
+          yA = [],
+          CA = [],
+          rA = [],
+          sA = [],
+          lA = [],
+          MA = [],
+          uA = [],
+          BA = [],
+          LA = [],
+          vA = [],
+          tA = [],
+          UA = [],
+          dA = [],
+          gA = [],
+          WA = [],
+          FA = [],
+          ma = [],
+          Ta = [],
+          fa = [],
+          ha = [],
+          Aa = [],
+          aa = [],
+          xa = [],
+          wa = [],
+          Da = [],
+          ia = [],
+          Ra = [],
+          pa = [],
+          Ea = [],
+          oa = [],
+          Oa = [],
+          Ya = [],
+          qa = [],
+          ja = [],
+          Va = [];
+        return mm = class extends bf {
           get diffuseTexture() {
-            return (0, Xk.e)(this, Fk, "f")
+            return (0, hm.b)(this, Tm, "f")
           }
-          set diffuseTexture(kk) {
-            (0, Xk.f)(this, Fk, kk, "f")
+          set diffuseTexture(mm) {
+            (0, hm.c)(this, Tm, mm, "f")
           }
           get ambientTexture() {
-            return (0, Xk.e)(this, Lk, "f")
+            return (0, hm.b)(this, Rm, "f")
           }
-          set ambientTexture(kk) {
-            (0, Xk.f)(this, Lk, kk, "f")
+          set ambientTexture(mm) {
+            (0, hm.c)(this, Rm, mm, "f")
           }
           get opacityTexture() {
-            return (0, Xk.e)(this, jk, "f")
+            return (0, hm.b)(this, om, "f")
           }
-          set opacityTexture(kk) {
-            (0, Xk.f)(this, jk, kk, "f")
+          set opacityTexture(mm) {
+            (0, hm.c)(this, om, mm, "f")
           }
           get reflectionTexture() {
-            return (0, Xk.e)(this, zk, "f")
+            return (0, hm.b)(this, cm, "f")
           }
-          set reflectionTexture(kk) {
-            (0, Xk.f)(this, zk, kk, "f")
+          set reflectionTexture(mm) {
+            (0, hm.c)(this, cm, mm, "f")
           }
           get emissiveTexture() {
-            return (0, Xk.e)(this, Sk, "f")
+            return (0, hm.b)(this, zm, "f")
           }
-          set emissiveTexture(kk) {
-            (0, Xk.f)(this, Sk, kk, "f")
+          set emissiveTexture(mm) {
+            (0, hm.c)(this, zm, mm, "f")
           }
           get specularTexture() {
-            return (0, Xk.e)(this, vk, "f")
+            return (0, hm.b)(this, Zm, "f")
           }
-          set specularTexture(kk) {
-            (0, Xk.f)(this, vk, kk, "f")
+          set specularTexture(mm) {
+            (0, hm.c)(this, Zm, mm, "f")
           }
           get bumpTexture() {
-            return (0, Xk.e)(this, Ek, "f")
+            return (0, hm.b)(this, km, "f")
           }
-          set bumpTexture(kk) {
-            (0, Xk.f)(this, Ek, kk, "f")
+          set bumpTexture(mm) {
+            (0, hm.c)(this, km, mm, "f")
           }
           get lightmapTexture() {
-            return (0, Xk.e)(this, Ok, "f")
+            return (0, hm.b)(this, bm, "f")
           }
-          set lightmapTexture(kk) {
-            (0, Xk.f)(this, Ok, kk, "f")
+          set lightmapTexture(mm) {
+            (0, hm.c)(this, bm, mm, "f")
           }
           get refractionTexture() {
-            return (0, Xk.e)(this, Gk, "f")
+            return (0, hm.b)(this, em, "f")
           }
-          set refractionTexture(kk) {
-            (0, Xk.f)(this, Gk, kk, "f")
+          set refractionTexture(mm) {
+            (0, hm.c)(this, em, mm, "f")
           }
           get useAlphaFromDiffuseTexture() {
-            return (0, Xk.e)(this, bk, "f")
+            return (0, hm.b)(this, Xm, "f")
           }
-          set useAlphaFromDiffuseTexture(kk) {
-            (0, Xk.f)(this, bk, kk, "f")
+          set useAlphaFromDiffuseTexture(mm) {
+            (0, hm.c)(this, Xm, mm, "f")
           }
           get useEmissiveAsIllumination() {
-            return (0, Xk.e)(this, Rk, "f")
+            return (0, hm.b)(this, Pm, "f")
           }
-          set useEmissiveAsIllumination(kk) {
-            (0, Xk.f)(this, Rk, kk, "f")
+          set useEmissiveAsIllumination(mm) {
+            (0, hm.c)(this, Pm, mm, "f")
           }
           get linkEmissiveWithDiffuse() {
-            return (0, Xk.e)(this, Uk, "f")
+            return (0, hm.b)(this, Hm, "f")
           }
-          set linkEmissiveWithDiffuse(kk) {
-            (0, Xk.f)(this, Uk, kk, "f")
+          set linkEmissiveWithDiffuse(mm) {
+            (0, hm.c)(this, Hm, mm, "f")
           }
           get useSpecularOverAlpha() {
-            return (0, Xk.e)(this, Ck, "f")
+            return (0, hm.b)(this, ym, "f")
           }
-          set useSpecularOverAlpha(kk) {
-            (0, Xk.f)(this, Ck, kk, "f")
+          set useSpecularOverAlpha(mm) {
+            (0, hm.c)(this, ym, mm, "f")
           }
           get useReflectionOverAlpha() {
-            return (0, Xk.e)(this, Nk, "f")
+            return (0, hm.b)(this, Cm, "f")
           }
-          set useReflectionOverAlpha(kk) {
-            (0, Xk.f)(this, Nk, kk, "f")
+          set useReflectionOverAlpha(mm) {
+            (0, hm.c)(this, Cm, mm, "f")
           }
           get disableLighting() {
-            return (0, Xk.e)(this, ck, "f")
+            return (0, hm.b)(this, rm, "f")
           }
-          set disableLighting(kk) {
-            (0, Xk.f)(this, ck, kk, "f")
+          set disableLighting(mm) {
+            (0, hm.c)(this, rm, mm, "f")
           }
           get useObjectSpaceNormalMap() {
-            return (0, Xk.e)(this, Wk, "f")
+            return (0, hm.b)(this, sm, "f")
           }
-          set useObjectSpaceNormalMap(kk) {
-            (0, Xk.f)(this, Wk, kk, "f")
+          set useObjectSpaceNormalMap(mm) {
+            (0, hm.c)(this, sm, mm, "f")
           }
           get useParallax() {
-            return (0, Xk.e)(this, fk, "f")
+            return (0, hm.b)(this, lm, "f")
           }
-          set useParallax(kk) {
-            (0, Xk.f)(this, fk, kk, "f")
+          set useParallax(mm) {
+            (0, hm.c)(this, lm, mm, "f")
           }
           get useParallaxOcclusion() {
-            return (0, Xk.e)(this, Bk, "f")
+            return (0, hm.b)(this, Mm, "f")
           }
-          set useParallaxOcclusion(kk) {
-            (0, Xk.f)(this, Bk, kk, "f")
+          set useParallaxOcclusion(mm) {
+            (0, hm.c)(this, Mm, mm, "f")
           }
           get roughness() {
-            return (0, Xk.e)(this, dk, "f")
+            return (0, hm.b)(this, um, "f")
           }
-          set roughness(kk) {
-            (0, Xk.f)(this, dk, kk, "f")
+          set roughness(mm) {
+            (0, hm.c)(this, um, mm, "f")
           }
           get useLightmapAsShadowmap() {
-            return (0, Xk.e)(this, Yk, "f")
+            return (0, hm.b)(this, Bm, "f")
           }
-          set useLightmapAsShadowmap(kk) {
-            (0, Xk.f)(this, Yk, kk, "f")
+          set useLightmapAsShadowmap(mm) {
+            (0, hm.c)(this, Bm, mm, "f")
           }
           get diffuseFresnelParameters() {
-            return (0, Xk.e)(this, Ak, "f")
+            return (0, hm.b)(this, Lm, "f")
           }
-          set diffuseFresnelParameters(kk) {
-            (0, Xk.f)(this, Ak, kk, "f")
+          set diffuseFresnelParameters(mm) {
+            (0, hm.c)(this, Lm, mm, "f")
           }
           get opacityFresnelParameters() {
-            return (0, Xk.e)(this, gk, "f")
+            return (0, hm.b)(this, tm, "f")
           }
-          set opacityFresnelParameters(kk) {
-            (0, Xk.f)(this, gk, kk, "f")
+          set opacityFresnelParameters(mm) {
+            (0, hm.c)(this, tm, mm, "f")
           }
           get reflectionFresnelParameters() {
-            return (0, Xk.e)(this, mk, "f")
+            return (0, hm.b)(this, Um, "f")
           }
-          set reflectionFresnelParameters(kk) {
-            (0, Xk.f)(this, mk, kk, "f")
+          set reflectionFresnelParameters(mm) {
+            (0, hm.c)(this, Um, mm, "f")
           }
           get refractionFresnelParameters() {
-            return (0, Xk.e)(this, hk, "f")
+            return (0, hm.b)(this, dm, "f")
           }
-          set refractionFresnelParameters(kk) {
-            (0, Xk.f)(this, hk, kk, "f")
+          set refractionFresnelParameters(mm) {
+            (0, hm.c)(this, dm, mm, "f")
           }
           get emissiveFresnelParameters() {
-            return (0, Xk.e)(this, rk, "f")
+            return (0, hm.b)(this, gm, "f")
           }
-          set emissiveFresnelParameters(kk) {
-            (0, Xk.f)(this, rk, kk, "f")
+          set emissiveFresnelParameters(mm) {
+            (0, hm.c)(this, gm, mm, "f")
           }
           get useReflectionFresnelFromSpecular() {
-            return (0, Xk.e)(this, Dk, "f")
+            return (0, hm.b)(this, Wm, "f")
           }
-          set useReflectionFresnelFromSpecular(kk) {
-            (0, Xk.f)(this, Dk, kk, "f")
+          set useReflectionFresnelFromSpecular(mm) {
+            (0, hm.c)(this, Wm, mm, "f")
           }
           get useGlossinessFromSpecularMapAlpha() {
-            return (0, Xk.e)(this, Mk, "f")
+            return (0, hm.b)(this, Fm, "f")
           }
-          set useGlossinessFromSpecularMapAlpha(kk) {
-            (0, Xk.f)(this, Mk, kk, "f")
+          set useGlossinessFromSpecularMapAlpha(mm) {
+            (0, hm.c)(this, Fm, mm, "f")
           }
           get maxSimultaneousLights() {
-            return (0, Xk.e)(this, kF, "f")
+            return (0, hm.b)(this, mT, "f")
           }
-          set maxSimultaneousLights(kk) {
-            (0, Xk.f)(this, kF, kk, "f")
+          set maxSimultaneousLights(mm) {
+            (0, hm.c)(this, mT, mm, "f")
           }
           get invertNormalMapX() {
-            return (0, Xk.e)(this, FF, "f")
+            return (0, hm.b)(this, TT, "f")
           }
-          set invertNormalMapX(kk) {
-            (0, Xk.f)(this, FF, kk, "f")
+          set invertNormalMapX(mm) {
+            (0, hm.c)(this, TT, mm, "f")
           }
           get invertNormalMapY() {
-            return (0, Xk.e)(this, IF, "f")
+            return (0, hm.b)(this, fT, "f")
           }
-          set invertNormalMapY(kk) {
-            (0, Xk.f)(this, IF, kk, "f")
+          set invertNormalMapY(mm) {
+            (0, hm.c)(this, fT, mm, "f")
           }
           get twoSidedLighting() {
-            return (0, Xk.e)(this, XF, "f")
+            return (0, hm.b)(this, hT, "f")
           }
-          set twoSidedLighting(kk) {
-            (0, Xk.f)(this, XF, kk, "f")
+          set twoSidedLighting(mm) {
+            (0, hm.c)(this, hT, mm, "f")
           }
           get applyDecalMapAfterDetailMap() {
-            return (0, Xk.e)(this, TF, "f")
+            return (0, hm.b)(this, AT, "f")
           }
-          set applyDecalMapAfterDetailMap(kk) {
-            (0, Xk.f)(this, TF, kk, "f")
+          set applyDecalMapAfterDetailMap(mm) {
+            (0, hm.c)(this, AT, mm, "f")
           }
           get isPrePassCapable() {
             return !this.disableDepthWrite
@@ -1403,11 +1403,11 @@ export const modules = {
           get canRenderToMRT() {
             return !0
           }
-          constructor(Ik, Tk) {
-            super(Ik, Tk, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] || kk.ForceGLSL), this._diffuseTexture = (0, Xk.n)(this, vI, null), Fk.set(this, ((0, Xk.n)(this, EI), (0, Xk.n)(this, OI, void 0))), this._ambientTexture = ((0, Xk.n)(this, nI), (0, Xk.n)(this, GI, null)), Lk.set(this, ((0, Xk.n)(this, pI), (0, Xk.n)(this, uI, void 0))), this._opacityTexture = ((0, Xk.n)(this, bI), (0, Xk.n)(this, RI, null)), jk.set(this, ((0, Xk.n)(this, UI), (0, Xk.n)(this, CI, void 0))), this._reflectionTexture = ((0, Xk.n)(this, NI), (0, Xk.n)(this, cI, null)), zk.set(this, ((0, Xk.n)(this, WI), (0, Xk.n)(this, fI, void 0))), this._emissiveTexture = ((0, Xk.n)(this, BI), (0, Xk.n)(this, dI, null)), Sk.set(this, ((0, Xk.n)(this, YI), (0, Xk.n)(this, AI, void 0))), this._specularTexture = ((0, Xk.n)(this, gI), (0, Xk.n)(this, mI, null)), vk.set(this, ((0, Xk.n)(this, hI), (0, Xk.n)(this, rI, void 0))), this._bumpTexture = ((0, Xk.n)(this, DI), (0, Xk.n)(this, MI, null)), Ek.set(this, ((0, Xk.n)(this, kX), (0, Xk.n)(this, FX, void 0))), this._lightmapTexture = ((0, Xk.n)(this, IX), (0, Xk.n)(this, XX, null)), Ok.set(this, ((0, Xk.n)(this, TX), (0, Xk.n)(this, iX, void 0))), this._refractionTexture = ((0, Xk.n)(this, yX), (0, Xk.n)(this, lX, null)), Gk.set(this, ((0, Xk.n)(this, aX), (0, Xk.n)(this, qX, void 0))), this.ambientColor = ((0, Xk.n)(this, LX), (0, Xk.n)(this, tX, new lk.e(0, 0, 0))), this.diffuseColor = ((0, Xk.n)(this, ZX), (0, Xk.n)(this, jX, new lk.e(1, 1, 1))), this.specularColor = ((0, Xk.n)(this, eX), (0, Xk.n)(this, wX, new lk.e(1, 1, 1))), this.emissiveColor = ((0, Xk.n)(this, HX), (0, Xk.n)(this, JX, new lk.e(0, 0, 0))), this.specularPower = ((0, Xk.n)(this, xX), (0, Xk.n)(this, PX, 64)), this._useAlphaFromDiffuseTexture = ((0, Xk.n)(this, KX), (0, Xk.n)(this, QX, !1)), bk.set(this, ((0, Xk.n)(this, sX), (0, Xk.n)(this, VX, void 0))), this._useEmissiveAsIllumination = ((0, Xk.n)(this, zX), (0, Xk.n)(this, SX, !1)), Rk.set(this, ((0, Xk.n)(this, oX), (0, Xk.n)(this, vX, void 0))), this._linkEmissiveWithDiffuse = ((0, Xk.n)(this, EX), (0, Xk.n)(this, OX, !1)), Uk.set(this, ((0, Xk.n)(this, nX), (0, Xk.n)(this, GX, void 0))), this._useSpecularOverAlpha = ((0, Xk.n)(this, pX), (0, Xk.n)(this, uX, !1)), Ck.set(this, ((0, Xk.n)(this, bX), (0, Xk.n)(this, RX, void 0))), this._useReflectionOverAlpha = ((0, Xk.n)(this, UX), (0, Xk.n)(this, CX, !1)), Nk.set(this, ((0, Xk.n)(this, NX), (0, Xk.n)(this, cX, void 0))), this._disableLighting = ((0, Xk.n)(this, WX), (0, Xk.n)(this, fX, !1)), ck.set(this, ((0, Xk.n)(this, BX), (0, Xk.n)(this, dX, void 0))), this._useObjectSpaceNormalMap = ((0, Xk.n)(this, YX), (0, Xk.n)(this, AX, !1)), Wk.set(this, ((0, Xk.n)(this, gX), (0, Xk.n)(this, mX, void 0))), this._useParallax = ((0, Xk.n)(this, hX), (0, Xk.n)(this, rX, !1)), fk.set(this, ((0, Xk.n)(this, DX), (0, Xk.n)(this, MX, void 0))), this._useParallaxOcclusion = ((0, Xk.n)(this, kT), (0, Xk.n)(this, FT, !1)), Bk.set(this, ((0, Xk.n)(this, IT), (0, Xk.n)(this, XT, void 0))), this.parallaxScaleBias = ((0, Xk.n)(this, TT), (0, Xk.n)(this, iT, .05)), this._roughness = ((0, Xk.n)(this, yT), (0, Xk.n)(this, lT, 0)), dk.set(this, ((0, Xk.n)(this, aT), (0, Xk.n)(this, qT, void 0))), this.indexOfRefraction = ((0, Xk.n)(this, LT), (0, Xk.n)(this, tT, .98)), this.invertRefractionY = ((0, Xk.n)(this, ZT), (0, Xk.n)(this, jT, !0)), this.alphaCutOff = ((0, Xk.n)(this, eT), (0, Xk.n)(this, wT, .4)), this._useLightmapAsShadowmap = ((0, Xk.n)(this, HT), (0, Xk.n)(this, JT, !1)), Yk.set(this, ((0, Xk.n)(this, xT), (0, Xk.n)(this, PT, void 0))), this._diffuseFresnelParameters = ((0, Xk.n)(this, KT), (0, Xk.n)(this, QT, void 0)), Ak.set(this, ((0, Xk.n)(this, sT), (0, Xk.n)(this, VT, void 0))), this._opacityFresnelParameters = ((0, Xk.n)(this, zT), (0, Xk.n)(this, ST, void 0)), gk.set(this, ((0, Xk.n)(this, oT), (0, Xk.n)(this, vT, void 0))), this._reflectionFresnelParameters = ((0, Xk.n)(this, ET), (0, Xk.n)(this, OT, void 0)), mk.set(this, ((0, Xk.n)(this, nT), (0, Xk.n)(this, GT, void 0))), this._refractionFresnelParameters = ((0, Xk.n)(this, pT), (0, Xk.n)(this, uT, void 0)), hk.set(this, ((0, Xk.n)(this, bT), (0, Xk.n)(this, RT, void 0))), this._emissiveFresnelParameters = ((0, Xk.n)(this, UT), (0, Xk.n)(this, CT, void 0)), rk.set(this, ((0, Xk.n)(this, NT), (0, Xk.n)(this, cT, void 0))), this._useReflectionFresnelFromSpecular = ((0, Xk.n)(this, WT), (0, Xk.n)(this, fT, !1)), Dk.set(this, ((0, Xk.n)(this, BT), (0, Xk.n)(this, dT, void 0))), this._useGlossinessFromSpecularMapAlpha = ((0, Xk.n)(this, YT), (0, Xk.n)(this, AT, !1)), Mk.set(this, ((0, Xk.n)(this, gT), (0, Xk.n)(this, mT, void 0))), this._maxSimultaneousLights = ((0, Xk.n)(this, hT), (0, Xk.n)(this, rT, 4)), kF.set(this, ((0, Xk.n)(this, DT), (0, Xk.n)(this, MT, void 0))), this._invertNormalMapX = ((0, Xk.n)(this, ki), (0, Xk.n)(this, Fi, !1)), FF.set(this, ((0, Xk.n)(this, Ii), (0, Xk.n)(this, Xi, void 0))), this._invertNormalMapY = ((0, Xk.n)(this, Ti), (0, Xk.n)(this, ii, !1)), IF.set(this, ((0, Xk.n)(this, yi), (0, Xk.n)(this, li, void 0))), this._twoSidedLighting = ((0, Xk.n)(this, ai), (0, Xk.n)(this, qi, !1)), XF.set(this, ((0, Xk.n)(this, Li), (0, Xk.n)(this, ti, void 0))), this._applyDecalMapAfterDetailMap = ((0, Xk.n)(this, Zi), (0, Xk.n)(this, ji, !1)), TF.set(this, ((0, Xk.n)(this, ei), (0, Xk.n)(this, wi, void 0))), this._vertexPullingMetadata = ((0, Xk.n)(this, Hi), null), this._renderTargets = new ik.f(16), this._globalAmbientColor = new lk.e(0, 0, 0), this._cacheHasRenderTargetTextures = !1, this.detailMap = new Jk.c(this), this._attachImageProcessingConfiguration(null), this.prePassConfiguration = new qk.c, this.getRenderTargetTextures = () => (this._renderTargets.reset(), kk.ReflectionTextureEnabled && this._reflectionTexture && this._reflectionTexture.isRenderTarget && this._renderTargets.push(this._reflectionTexture), kk.RefractionTextureEnabled && this._refractionTexture && this._refractionTexture.isRenderTarget && this._renderTargets.push(this._refractionTexture), this._eventInfo.renderTargets = this._renderTargets, this._callbackPluginEventFillRenderTargetTextures(this._eventInfo), this._renderTargets)
+          constructor(fm, Am) {
+            super(fm, Am, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] || mm.ForceGLSL), this._diffuseTexture = (0, hm.i)(this, Sf, null), Tm.set(this, ((0, hm.i)(this, ef), (0, hm.i)(this, Nf, void 0))), this._ambientTexture = ((0, hm.i)(this, Gf), (0, hm.i)(this, Xf, null)), Rm.set(this, ((0, hm.i)(this, Pf), (0, hm.i)(this, Hf, void 0))), this._opacityTexture = ((0, hm.i)(this, yf), (0, hm.i)(this, Cf, null)), om.set(this, ((0, hm.i)(this, rf), (0, hm.i)(this, sf, void 0))), this._reflectionTexture = ((0, hm.i)(this, lf), (0, hm.i)(this, Mf, null)), cm.set(this, ((0, hm.i)(this, uf), (0, hm.i)(this, Bf, void 0))), this._emissiveTexture = ((0, hm.i)(this, Lf), (0, hm.i)(this, vf, null)), zm.set(this, ((0, hm.i)(this, tf), (0, hm.i)(this, Uf, void 0))), this._specularTexture = ((0, hm.i)(this, df), (0, hm.i)(this, gf, null)), Zm.set(this, ((0, hm.i)(this, Wf), (0, hm.i)(this, Ff, void 0))), this._bumpTexture = ((0, hm.i)(this, mh), (0, hm.i)(this, Th, null)), km.set(this, ((0, hm.i)(this, fh), (0, hm.i)(this, hh, void 0))), this._lightmapTexture = ((0, hm.i)(this, Ah), (0, hm.i)(this, ah, null)), bm.set(this, ((0, hm.i)(this, xh), (0, hm.i)(this, wh, void 0))), this._refractionTexture = ((0, hm.i)(this, Dh), (0, hm.i)(this, ih, null)), em.set(this, ((0, hm.i)(this, Rh), (0, hm.i)(this, ph, void 0))), this.ambientColor = ((0, hm.i)(this, Eh), (0, hm.i)(this, oh, new wm.b(0, 0, 0))), this.diffuseColor = ((0, hm.i)(this, Oh), (0, hm.i)(this, Yh, new wm.b(1, 1, 1))), this.specularColor = ((0, hm.i)(this, qh), (0, hm.i)(this, jh, new wm.b(1, 1, 1))), this.emissiveColor = ((0, hm.i)(this, Vh), (0, hm.i)(this, Ih, new wm.b(0, 0, 0))), this.specularPower = ((0, hm.i)(this, Kh), (0, hm.i)(this, Qh, 64)), this._useAlphaFromDiffuseTexture = ((0, hm.i)(this, nh), (0, hm.i)(this, Jh, !1)), Xm.set(this, ((0, hm.i)(this, ch), (0, hm.i)(this, zh, void 0))), this._useEmissiveAsIllumination = ((0, hm.i)(this, Zh), (0, hm.i)(this, kh, !1)), Pm.set(this, ((0, hm.i)(this, bh), (0, hm.i)(this, Sh, void 0))), this._linkEmissiveWithDiffuse = ((0, hm.i)(this, eh), (0, hm.i)(this, Nh, !1)), Hm.set(this, ((0, hm.i)(this, Gh), (0, hm.i)(this, Xh, void 0))), this._useSpecularOverAlpha = ((0, hm.i)(this, Ph), (0, hm.i)(this, Hh, !1)), ym.set(this, ((0, hm.i)(this, yh), (0, hm.i)(this, Ch, void 0))), this._useReflectionOverAlpha = ((0, hm.i)(this, rh), (0, hm.i)(this, sh, !1)), Cm.set(this, ((0, hm.i)(this, lh), (0, hm.i)(this, Mh, void 0))), this._disableLighting = ((0, hm.i)(this, uh), (0, hm.i)(this, Bh, !1)), rm.set(this, ((0, hm.i)(this, Lh), (0, hm.i)(this, vh, void 0))), this._useObjectSpaceNormalMap = ((0, hm.i)(this, th), (0, hm.i)(this, Uh, !1)), sm.set(this, ((0, hm.i)(this, dh), (0, hm.i)(this, gh, void 0))), this._useParallax = ((0, hm.i)(this, Wh), (0, hm.i)(this, Fh, !1)), lm.set(this, ((0, hm.i)(this, mA), (0, hm.i)(this, TA, void 0))), this._useParallaxOcclusion = ((0, hm.i)(this, fA), (0, hm.i)(this, hA, !1)), Mm.set(this, ((0, hm.i)(this, AA), (0, hm.i)(this, aA, void 0))), this.parallaxScaleBias = ((0, hm.i)(this, xA), (0, hm.i)(this, wA, .05)), this._roughness = ((0, hm.i)(this, DA), (0, hm.i)(this, iA, 0)), um.set(this, ((0, hm.i)(this, RA), (0, hm.i)(this, pA, void 0))), this.indexOfRefraction = ((0, hm.i)(this, EA), (0, hm.i)(this, oA, .98)), this.invertRefractionY = ((0, hm.i)(this, OA), (0, hm.i)(this, YA, !0)), this.alphaCutOff = ((0, hm.i)(this, qA), (0, hm.i)(this, jA, .4)), this._useLightmapAsShadowmap = ((0, hm.i)(this, VA), (0, hm.i)(this, IA, !1)), Bm.set(this, ((0, hm.i)(this, KA), (0, hm.i)(this, QA, void 0))), this._diffuseFresnelParameters = ((0, hm.i)(this, nA), (0, hm.i)(this, JA, void 0)), Lm.set(this, ((0, hm.i)(this, cA), (0, hm.i)(this, zA, void 0))), this._opacityFresnelParameters = ((0, hm.i)(this, ZA), (0, hm.i)(this, kA, void 0)), tm.set(this, ((0, hm.i)(this, bA), (0, hm.i)(this, SA, void 0))), this._reflectionFresnelParameters = ((0, hm.i)(this, eA), (0, hm.i)(this, NA, void 0)), Um.set(this, ((0, hm.i)(this, GA), (0, hm.i)(this, XA, void 0))), this._refractionFresnelParameters = ((0, hm.i)(this, PA), (0, hm.i)(this, HA, void 0)), dm.set(this, ((0, hm.i)(this, yA), (0, hm.i)(this, CA, void 0))), this._emissiveFresnelParameters = ((0, hm.i)(this, rA), (0, hm.i)(this, sA, void 0)), gm.set(this, ((0, hm.i)(this, lA), (0, hm.i)(this, MA, void 0))), this._useReflectionFresnelFromSpecular = ((0, hm.i)(this, uA), (0, hm.i)(this, BA, !1)), Wm.set(this, ((0, hm.i)(this, LA), (0, hm.i)(this, vA, void 0))), this._useGlossinessFromSpecularMapAlpha = ((0, hm.i)(this, tA), (0, hm.i)(this, UA, !1)), Fm.set(this, ((0, hm.i)(this, dA), (0, hm.i)(this, gA, void 0))), this._maxSimultaneousLights = ((0, hm.i)(this, WA), (0, hm.i)(this, FA, 4)), mT.set(this, ((0, hm.i)(this, ma), (0, hm.i)(this, Ta, void 0))), this._invertNormalMapX = ((0, hm.i)(this, fa), (0, hm.i)(this, ha, !1)), TT.set(this, ((0, hm.i)(this, Aa), (0, hm.i)(this, aa, void 0))), this._invertNormalMapY = ((0, hm.i)(this, xa), (0, hm.i)(this, wa, !1)), fT.set(this, ((0, hm.i)(this, Da), (0, hm.i)(this, ia, void 0))), this._twoSidedLighting = ((0, hm.i)(this, Ra), (0, hm.i)(this, pa, !1)), hT.set(this, ((0, hm.i)(this, Ea), (0, hm.i)(this, oa, void 0))), this._applyDecalMapAfterDetailMap = ((0, hm.i)(this, Oa), (0, hm.i)(this, Ya, !1)), AT.set(this, ((0, hm.i)(this, qa), (0, hm.i)(this, ja, void 0))), this._vertexPullingMetadata = ((0, hm.i)(this, Va), null), this._renderTargets = new am.f(16), this._globalAmbientColor = new wm.b(0, 0, 0), this._cacheHasRenderTargetTextures = !1, this.detailMap = new jm.d(this), this._attachImageProcessingConfiguration(null), this.prePassConfiguration = new im.c, this.getRenderTargetTextures = () => (this._renderTargets.reset(), mm.ReflectionTextureEnabled && this._reflectionTexture && this._reflectionTexture.isRenderTarget && this._renderTargets.push(this._reflectionTexture), mm.RefractionTextureEnabled && this._refractionTexture && this._refractionTexture.isRenderTarget && this._renderTargets.push(this._refractionTexture), this._eventInfo.renderTargets = this._renderTargets, this._callbackPluginEventFillRenderTargetTextures(this._eventInfo), this._renderTargets)
           }
           get hasRenderTargetTextures() {
-            return !!(kk.ReflectionTextureEnabled && this._reflectionTexture && this._reflectionTexture.isRenderTarget) || (!!(kk.RefractionTextureEnabled && this._refractionTexture && this._refractionTexture.isRenderTarget) || this._cacheHasRenderTargetTextures)
+            return !!(mm.ReflectionTextureEnabled && this._reflectionTexture && this._reflectionTexture.isRenderTarget) || (!!(mm.RefractionTextureEnabled && this._refractionTexture && this._refractionTexture.isRenderTarget) || this._cacheHasRenderTargetTextures)
           }
           getClassName() {
             return "StandardMaterial"
@@ -1416,10 +1416,10 @@ export const modules = {
             return this._hasTransparencyMode ? this._transparencyModeIsBlend : !this._disableAlphaBlending && (this.alpha < 1 || null != this._opacityTexture || this._shouldUseAlphaFromDiffuseTexture() || this._opacityFresnelParameters && this._opacityFresnelParameters.isEnabled)
           }
           needAlphaTesting() {
-            return this._hasTransparencyMode ? this._transparencyModeIsTest : this._hasAlphaChannel() && (null == this._transparencyMode || this._transparencyMode === Zk.c.MATERIAL_ALPHATEST)
+            return this._hasTransparencyMode ? this._transparencyModeIsTest : this._hasAlphaChannel() && (null == this._transparencyMode || this._transparencyMode === Em.d.MATERIAL_ALPHATEST)
           }
           _shouldUseAlphaFromDiffuseTexture() {
-            return null != this._diffuseTexture && this._diffuseTexture.hasAlpha && this._useAlphaFromDiffuseTexture && this._transparencyMode !== Zk.c.MATERIAL_OPAQUE
+            return null != this._diffuseTexture && this._diffuseTexture.hasAlpha && this._useAlphaFromDiffuseTexture && this._transparencyMode !== Em.d.MATERIAL_OPAQUE
           }
           _hasAlphaChannel() {
             return null != this._diffuseTexture && this._diffuseTexture.hasAlpha || null != this._opacityTexture
@@ -1427,1308 +1427,1308 @@ export const modules = {
           getAlphaTestTexture() {
             return this._diffuseTexture
           }
-          isReadyForSubMesh(Fk, Ik) {
-            let Xk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          isReadyForSubMesh(Tm, fm) {
+            let hm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             this._uniformBufferLayoutBuilt || this.buildUniformLayout();
-            const Tk = Ik._drawWrapper;
-            if (Tk.effect && this.isFrozen && Tk._wasPreviouslyReady && Tk._wasPreviouslyUsingInstances === Xk) return !0;
-            Ik.materialDefines || (this._callbackPluginEventGeneric(4, this._eventInfo), Ik.materialDefines = new pk(this._eventInfo.defineNames));
-            const ik = this.mG(),
-              yk = Ik.materialDefines;
-            if (this._isReadyForSubMesh(Ik)) return !0;
-            const lk = ik.Oe();
-            if (yk._needNormals = (0, Kk.M)(ik, Fk, yk, !0, this._maxSimultaneousLights, this._disableLighting), !(0, Kk.b)(ik, Fk, this._maxSimultaneousLights, this._disableLighting)) return !1;
-            (0, Kk.T)(ik, yk);
-            const Lk = this.needAlphaBlendingForMesh(Fk) && this.mG().useOrderIndependentTransparency;
-            if ((0, Kk._)(ik, yk, this.canRenderToMRT && !Lk), (0, Kk.W)(ik, yk, Lk), Vk.e.PrepareDefines(lk.currentRenderPassId, Fk, yk), yk._areTexturesDirty) {
-              this._eventInfo.hasRenderTargetTextures = !1, this._callbackPluginEventHasRenderTargetTextures(this._eventInfo), this._cacheHasRenderTargetTextures = this._eventInfo.hasRenderTargetTextures, yk._needUVs = !1;
-              for (let kk = 1; kk <= 6; ++kk) yk["MAINUV" + kk] = !1;
-              if (ik.texturesEnabled) {
-                if (yk.DIFFUSEDIRECTUV = 0, yk.BUMPDIRECTUV = 0, yk.AMBIENTDIRECTUV = 0, yk.OPACITYDIRECTUV = 0, yk.EMISSIVEDIRECTUV = 0, yk.SPECULARDIRECTUV = 0, yk.LIGHTMAPDIRECTUV = 0, this._diffuseTexture && kk.DiffuseTextureEnabled) {
+            const Am = fm._drawWrapper;
+            if (Am.effect && this.isFrozen && Am._wasPreviouslyReady && Am._wasPreviouslyUsingInstances === hm) return !0;
+            fm.materialDefines || (this._callbackPluginEventGeneric(4, this._eventInfo), fm.materialDefines = new Nm(this._eventInfo.defineNames));
+            const am = this.wG(),
+              xm = fm.materialDefines;
+            if (this._isReadyForSubMesh(fm)) return !0;
+            const wm = am.dO();
+            if (xm._needNormals = (0, Km.Z)(am, Tm, xm, !0, this._maxSimultaneousLights, this._disableLighting), !(0, Km.e)(am, Tm, this._maxSimultaneousLights, this._disableLighting)) return !1;
+            (0, Km.fb)(am, xm);
+            const Rm = this.needAlphaBlendingForMesh(Tm) && this.wG().useOrderIndependentTransparency;
+            if ((0, Km.ib)(am, xm, this.canRenderToMRT && !Rm), (0, Km.gb)(am, xm, Rm), Jm.c.PrepareDefines(wm.currentRenderPassId, Tm, xm), xm._areTexturesDirty) {
+              this._eventInfo.hasRenderTargetTextures = !1, this._callbackPluginEventHasRenderTargetTextures(this._eventInfo), this._cacheHasRenderTargetTextures = this._eventInfo.hasRenderTargetTextures, xm._needUVs = !1;
+              for (let mm = 1; mm <= 6; ++mm) xm["MAINUV" + mm] = !1;
+              if (am.texturesEnabled) {
+                if (xm.DIFFUSEDIRECTUV = 0, xm.BUMPDIRECTUV = 0, xm.AMBIENTDIRECTUV = 0, xm.OPACITYDIRECTUV = 0, xm.EMISSIVEDIRECTUV = 0, xm.SPECULARDIRECTUV = 0, xm.LIGHTMAPDIRECTUV = 0, this._diffuseTexture && mm.DiffuseTextureEnabled) {
                   if (!this._diffuseTexture.isReadyOrNotBlocking()) return !1;
-                  (0, Kk.P)(this._diffuseTexture, yk, "DIFFUSE")
-                } else yk.DIFFUSE = !1;
-                if (this._ambientTexture && kk.AmbientTextureEnabled) {
+                  (0, Km.$)(this._diffuseTexture, xm, "DIFFUSE")
+                } else xm.DIFFUSE = !1;
+                if (this._ambientTexture && mm.AmbientTextureEnabled) {
                   if (!this._ambientTexture.isReadyOrNotBlocking()) return !1;
-                  (0, Kk.P)(this._ambientTexture, yk, "AMBIENT")
-                } else yk.AMBIENT = !1;
-                if (this._opacityTexture && kk.OpacityTextureEnabled) {
+                  (0, Km.$)(this._ambientTexture, xm, "AMBIENT")
+                } else xm.AMBIENT = !1;
+                if (this._opacityTexture && mm.OpacityTextureEnabled) {
                   if (!this._opacityTexture.isReadyOrNotBlocking()) return !1;
-                  (0, Kk.P)(this._opacityTexture, yk, "OPACITY"), yk.OPACITYRGB = this._opacityTexture.getAlphaFromRGB
-                } else yk.OPACITY = !1;
-                if (this._reflectionTexture && kk.ReflectionTextureEnabled ? (yk.ROUGHNESS = this._roughness > 0, yk.REFLECTIONOVERALPHA = this._useReflectionOverAlpha) : (yk.ROUGHNESS = !1, yk.REFLECTIONOVERALPHA = !1), !(0, Kk.I)(ik, this._reflectionTexture, yk)) return !1;
-                if (this._emissiveTexture && kk.EmissiveTextureEnabled) {
+                  (0, Km.$)(this._opacityTexture, xm, "OPACITY"), xm.OPACITYRGB = this._opacityTexture.getAlphaFromRGB
+                } else xm.OPACITY = !1;
+                if (this._reflectionTexture && mm.ReflectionTextureEnabled ? (xm.ROUGHNESS = this._roughness > 0, xm.REFLECTIONOVERALPHA = this._useReflectionOverAlpha) : (xm.ROUGHNESS = !1, xm.REFLECTIONOVERALPHA = !1), !(0, Km.V)(am, this._reflectionTexture, xm)) return !1;
+                if (this._emissiveTexture && mm.EmissiveTextureEnabled) {
                   if (!this._emissiveTexture.isReadyOrNotBlocking()) return !1;
-                  (0, Kk.P)(this._emissiveTexture, yk, "EMISSIVE")
-                } else yk.EMISSIVE = !1;
-                if (this._lightmapTexture && kk.LightmapTextureEnabled) {
+                  (0, Km.$)(this._emissiveTexture, xm, "EMISSIVE")
+                } else xm.EMISSIVE = !1;
+                if (this._lightmapTexture && mm.LightmapTextureEnabled) {
                   if (!this._lightmapTexture.isReadyOrNotBlocking()) return !1;
-                  (0, Kk.P)(this._lightmapTexture, yk, "LIGHTMAP"), yk.USELIGHTMAPASSHADOWMAP = this._useLightmapAsShadowmap, yk.RGBDLIGHTMAP = this._lightmapTexture.isRGBD
-                } else yk.LIGHTMAP = !1;
-                if (this._specularTexture && kk.SpecularTextureEnabled) {
+                  (0, Km.$)(this._lightmapTexture, xm, "LIGHTMAP"), xm.USELIGHTMAPASSHADOWMAP = this._useLightmapAsShadowmap, xm.RGBDLIGHTMAP = this._lightmapTexture.isRGBD
+                } else xm.LIGHTMAP = !1;
+                if (this._specularTexture && mm.SpecularTextureEnabled) {
                   if (!this._specularTexture.isReadyOrNotBlocking()) return !1;
-                  (0, Kk.P)(this._specularTexture, yk, "SPECULAR"), yk.GLOSSINESS = this._useGlossinessFromSpecularMapAlpha
-                } else yk.SPECULAR = !1;
-                if (ik.Oe().getCaps().standardDerivatives && this._bumpTexture && kk.BumpTextureEnabled) {
+                  (0, Km.$)(this._specularTexture, xm, "SPECULAR"), xm.GLOSSINESS = this._useGlossinessFromSpecularMapAlpha
+                } else xm.SPECULAR = !1;
+                if (am.dO().getCaps().standardDerivatives && this._bumpTexture && mm.BumpTextureEnabled) {
                   if (!this._bumpTexture.isReady()) return !1;
-                  (0, Kk.P)(this._bumpTexture, yk, "BUMP"), yk.PARALLAX = this._useParallax, yk.PARALLAX_RHS = ik.useRightHandedSystem, yk.PARALLAXOCCLUSION = this._useParallaxOcclusion, yk.OBJECTSPACE_NORMALMAP = this._useObjectSpaceNormalMap
-                } else yk.BUMP = !1, yk.PARALLAX = !1, yk.PARALLAX_RHS = !1, yk.PARALLAXOCCLUSION = !1;
-                if (this._refractionTexture && kk.RefractionTextureEnabled) {
+                  (0, Km.$)(this._bumpTexture, xm, "BUMP"), xm.PARALLAX = this._useParallax, xm.PARALLAX_RHS = am.useRightHandedSystem, xm.PARALLAXOCCLUSION = this._useParallaxOcclusion, xm.OBJECTSPACE_NORMALMAP = this._useObjectSpaceNormalMap
+                } else xm.BUMP = !1, xm.PARALLAX = !1, xm.PARALLAX_RHS = !1, xm.PARALLAXOCCLUSION = !1;
+                if (this._refractionTexture && mm.RefractionTextureEnabled) {
                   if (!this._refractionTexture.isReadyOrNotBlocking()) return !1;
-                  yk._needUVs = !0, yk.REFRACTION = !0, yk.REFRACTIONMAP_3D = this._refractionTexture.isCube, yk.RGBDREFRACTION = this._refractionTexture.isRGBD, yk.USE_LOCAL_REFRACTIONMAP_CUBIC = !!this._refractionTexture.boundingBoxSize
-                } else yk.REFRACTION = !1;
-                yk.TWOSIDEDLIGHTING = !this._backFaceCulling && this._twoSidedLighting
-              } else yk.DIFFUSE = !1, yk.AMBIENT = !1, yk.OPACITY = !1, yk.REFLECTION = !1, yk.EMISSIVE = !1, yk.LIGHTMAP = !1, yk.BUMP = !1, yk.REFRACTION = !1;
-              yk.ALPHAFROMDIFFUSE = this._shouldUseAlphaFromDiffuseTexture(), yk.EMISSIVEASILLUMINATION = this._useEmissiveAsIllumination, yk.LINKEMISSIVEWITHDIFFUSE = this._linkEmissiveWithDiffuse, yk.SPECULAROVERALPHA = this._useSpecularOverAlpha, yk.PREMULTIPLYALPHA = 7 === this.alphaMode || 8 === this.alphaMode, yk.ALPHATEST_AFTERALLALPHACOMPUTATIONS = null !== this.transparencyMode, yk.ALPHABLEND = null === this.transparencyMode || this.needAlphaBlendingForMesh(Fk), yk.TEXTURE_REPETITION_MODE = lk.version > 1 || lk.isWebGPU ? this.textureRepetitionMode : 0
+                  xm._needUVs = !0, xm.REFRACTION = !0, xm.REFRACTIONMAP_3D = this._refractionTexture.isCube, xm.RGBDREFRACTION = this._refractionTexture.isRGBD, xm.USE_LOCAL_REFRACTIONMAP_CUBIC = !!this._refractionTexture.boundingBoxSize
+                } else xm.REFRACTION = !1;
+                xm.TWOSIDEDLIGHTING = !this._backFaceCulling && this._twoSidedLighting
+              } else xm.DIFFUSE = !1, xm.AMBIENT = !1, xm.OPACITY = !1, xm.REFLECTION = !1, xm.EMISSIVE = !1, xm.LIGHTMAP = !1, xm.BUMP = !1, xm.REFRACTION = !1;
+              xm.ALPHAFROMDIFFUSE = this._shouldUseAlphaFromDiffuseTexture(), xm.EMISSIVEASILLUMINATION = this._useEmissiveAsIllumination, xm.LINKEMISSIVEWITHDIFFUSE = this._linkEmissiveWithDiffuse, xm.SPECULAROVERALPHA = this._useSpecularOverAlpha, xm.PREMULTIPLYALPHA = 7 === this.alphaMode || 8 === this.alphaMode, xm.ALPHATEST_AFTERALLALPHACOMPUTATIONS = null !== this.transparencyMode, xm.ALPHABLEND = null === this.transparencyMode || this.needAlphaBlendingForMesh(Tm), xm.TEXTURE_REPETITION_MODE = wm.version > 1 || wm.isWebGPU ? this.textureRepetitionMode : 0
             }
-            if (this._eventInfo.isReadyForSubMesh = !0, this._eventInfo.defines = yk, this._eventInfo.subMesh = Ik, this._callbackPluginEventIsReadyForSubMesh(this._eventInfo), !this._eventInfo.isReadyForSubMesh) return !1;
-            if (yk._areImageProcessingDirty && this._imageProcessingConfiguration) {
+            if (this._eventInfo.isReadyForSubMesh = !0, this._eventInfo.defines = xm, this._eventInfo.subMesh = fm, this._callbackPluginEventIsReadyForSubMesh(this._eventInfo), !this._eventInfo.isReadyForSubMesh) return !1;
+            if (xm._areImageProcessingDirty && this._imageProcessingConfiguration) {
               if (!this._imageProcessingConfiguration.isReady()) return !1;
-              this._imageProcessingConfiguration.prepareDefines(yk), yk.IS_REFLECTION_LINEAR = null != this.reflectionTexture && !this.reflectionTexture.gammaSpace, yk.IS_REFRACTION_LINEAR = null != this.refractionTexture && !this.refractionTexture.gammaSpace
+              this._imageProcessingConfiguration.prepareDefines(xm), xm.IS_REFLECTION_LINEAR = null != this.reflectionTexture && !this.reflectionTexture.gammaSpace, xm.IS_REFRACTION_LINEAR = null != this.refractionTexture && !this.refractionTexture.gammaSpace
             }
-            if (yk._areFresnelDirty && (kk.FresnelEnabled ? (this._diffuseFresnelParameters || this._opacityFresnelParameters || this._emissiveFresnelParameters || this._refractionFresnelParameters || this._reflectionFresnelParameters) && (yk.DIFFUSEFRESNEL = this._diffuseFresnelParameters && this._diffuseFresnelParameters.isEnabled, yk.OPACITYFRESNEL = this._opacityFresnelParameters && this._opacityFresnelParameters.isEnabled, yk.REFLECTIONFRESNEL = this._reflectionFresnelParameters && this._reflectionFresnelParameters.isEnabled, yk.REFLECTIONFRESNELFROMSPECULAR = this._useReflectionFresnelFromSpecular, yk.REFRACTIONFRESNEL = this._refractionFresnelParameters && this._refractionFresnelParameters.isEnabled, yk.EMISSIVEFRESNEL = this._emissiveFresnelParameters && this._emissiveFresnelParameters.isEnabled, yk._needNormals = !0, yk.FRESNEL = !0) : yk.FRESNEL = !1), yk.AREALIGHTUSED || yk.CLUSTLIGHT_BATCH)
-              for (let kk = 0; kk < Fk.lightSources.length; kk++)
-                if (!Fk.lightSources[kk]._isReady()) return !1;
-            (0, Kk.R)(Fk, ik, this._useLogarithmicDepth, this.pointsCloud, this.fogEnabled, this.needAlphaTestingForMesh(Fk), yk, this._applyDecalMapAfterDetailMap, this._useVertexPulling, Ik.getRenderingMesh(), this._isVertexOutputInvariant), (0, Kk.F)(ik, lk, this, yk, Xk, null, Ik.getRenderingMesh().hasThinInstances), this._eventInfo.defines = yk, this._eventInfo.mesh = Fk, this._callbackPluginEventPrepareDefinesBeforeAttributes(this._eventInfo), (0, Kk.E)(Fk, yk, !0, !0, !0), this._callbackPluginEventPrepareDefines(this._eventInfo);
-            let Zk = !1;
-            if (yk.isDirty) {
-              const Xk = yk._areLightsDisposed;
-              yk.markAsProcessed();
-              const Tk = new Hk.c;
-              yk.REFLECTION && Tk.addFallback(0, "REFLECTION"), yk.SPECULAR && Tk.addFallback(0, "SPECULAR"), yk.BUMP && Tk.addFallback(0, "BUMP"), yk.PARALLAX && Tk.addFallback(1, "PARALLAX"), yk.PARALLAX_RHS && Tk.addFallback(1, "PARALLAX_RHS"), yk.PARALLAXOCCLUSION && Tk.addFallback(0, "PARALLAXOCCLUSION"), yk.SPECULAROVERALPHA && Tk.addFallback(0, "SPECULAROVERALPHA"), yk.FOG && Tk.addFallback(1, "FOG"), yk.POINTSIZE && Tk.addFallback(0, "POINTSIZE"), yk.LOGARITHMICDEPTH && Tk.addFallback(0, "LOGARITHMICDEPTH"), (0, Kk.w)(yk, Tk, this._maxSimultaneousLights), yk.SPECULARTERM && Tk.addFallback(0, "SPECULARTERM"), yk.DIFFUSEFRESNEL && Tk.addFallback(1, "DIFFUSEFRESNEL"), yk.OPACITYFRESNEL && Tk.addFallback(2, "OPACITYFRESNEL"), yk.REFLECTIONFRESNEL && Tk.addFallback(3, "REFLECTIONFRESNEL"), yk.EMISSIVEFRESNEL && Tk.addFallback(4, "EMISSIVEFRESNEL"), yk.FRESNEL && Tk.addFallback(4, "FRESNEL"), yk.MULTIVIEW && Tk.addFallback(0, "MULTIVIEW");
-              const Lk = [ak.l.PositionKind];
-              yk.NORMAL && Lk.push(ak.l.NormalKind), yk.TANGENT && Lk.push(ak.l.TangentKind);
-              for (let kk = 1; kk <= 6; ++kk) yk["UV" + kk] && Lk.push(`uv${1===kk?"":kk}`);
-              yk.VERTEXCOLOR && Lk.push(ak.l.ColorKind), (0, Kk.y)(Lk, Fk, yk, Tk), (0, Kk.A)(Lk, yk), (0, Kk.C)(Lk, Fk, yk), (0, Kk.x)(Lk, Fk, yk);
-              let jk = "default";
-              const ek = ["world", "view", "viewProjection", "vEyePosition", "vLightsType", "vAmbientColor", "vDiffuseColor", "vSpecularColor", "vEmissiveColor", "visibility", "vFogInfos", "vFogColor", "pointSize", "vDiffuseInfos", "vAmbientInfos", "vOpacityInfos", "vEmissiveInfos", "vSpecularInfos", "vBumpInfos", "vLightmapInfos", "vRefractionInfos", "mBones", "diffuseMatrix", "ambientMatrix", "opacityMatrix", "emissiveMatrix", "specularMatrix", "bumpMatrix", "normalMatrix", "lightmapMatrix", "refractionMatrix", "diffuseLeftColor", "diffuseRightColor", "opacityParts", "reflectionLeftColor", "reflectionRightColor", "emissiveLeftColor", "emissiveRightColor", "refractionLeftColor", "refractionRightColor", "vRefractionPosition", "vRefractionSize", "logarithmicDepthConstant", "vTangentSpaceParams", "alphaCutOff", "boneTextureInfo", "morphTargetTextureInfo", "morphTargetTextureIndices", "cameraInfo", "vTextureRepetitionHexTilingParams"],
-                wk = ["diffuseSampler", "ambientSampler", "opacitySampler", "reflectionCubeSampler", "reflection2DSampler", "emissiveSampler", "specularSampler", "bumpSampler", "lightmapSampler", "refractionCubeSampler", "refraction2DSampler", "boneSampler", "morphTargets", "oitDepthSampler", "oitFrontColorSampler", "areaLightsLTC1Sampler", "areaLightsLTC2Sampler"];
-              (0, Kk.cb)(ek, wk, !1);
-              const Jk = ["Material", "Scene", "Mesh"],
-                Qk = {
+            if (xm._areFresnelDirty && (mm.FresnelEnabled ? (this._diffuseFresnelParameters || this._opacityFresnelParameters || this._emissiveFresnelParameters || this._refractionFresnelParameters || this._reflectionFresnelParameters) && (xm.DIFFUSEFRESNEL = this._diffuseFresnelParameters && this._diffuseFresnelParameters.isEnabled, xm.OPACITYFRESNEL = this._opacityFresnelParameters && this._opacityFresnelParameters.isEnabled, xm.REFLECTIONFRESNEL = this._reflectionFresnelParameters && this._reflectionFresnelParameters.isEnabled, xm.REFLECTIONFRESNELFROMSPECULAR = this._useReflectionFresnelFromSpecular, xm.REFRACTIONFRESNEL = this._refractionFresnelParameters && this._refractionFresnelParameters.isEnabled, xm.EMISSIVEFRESNEL = this._emissiveFresnelParameters && this._emissiveFresnelParameters.isEnabled, xm._needNormals = !0, xm.FRESNEL = !0) : xm.FRESNEL = !1), xm.AREALIGHTUSED || xm.CLUSTLIGHT_BATCH)
+              for (let mm = 0; mm < Tm.lightSources.length; mm++)
+                if (!Tm.lightSources[mm]._isReady()) return !1;
+            (0, Km.db)(Tm, am, this._useLogarithmicDepth, this.pointsCloud, this.fogEnabled, this.needAlphaTestingForMesh(Tm), xm, this._applyDecalMapAfterDetailMap, this._useVertexPulling, fm.getRenderingMesh(), this._isVertexOutputInvariant), (0, Km.U)(am, wm, this, xm, hm, null, fm.getRenderingMesh().hasThinInstances), this._eventInfo.defines = xm, this._eventInfo.mesh = Tm, this._callbackPluginEventPrepareDefinesBeforeAttributes(this._eventInfo), (0, Km.Q)(Tm, xm, !0, !0, !0), this._callbackPluginEventPrepareDefines(this._eventInfo);
+            let Em = !1;
+            if (xm.isDirty) {
+              const hm = xm._areLightsDisposed;
+              xm.markAsProcessed();
+              const Am = new qm.e;
+              xm.REFLECTION && Am.addFallback(0, "REFLECTION"), xm.SPECULAR && Am.addFallback(0, "SPECULAR"), xm.BUMP && Am.addFallback(0, "BUMP"), xm.PARALLAX && Am.addFallback(1, "PARALLAX"), xm.PARALLAX_RHS && Am.addFallback(1, "PARALLAX_RHS"), xm.PARALLAXOCCLUSION && Am.addFallback(0, "PARALLAXOCCLUSION"), xm.SPECULAROVERALPHA && Am.addFallback(0, "SPECULAROVERALPHA"), xm.FOG && Am.addFallback(1, "FOG"), xm.POINTSIZE && Am.addFallback(0, "POINTSIZE"), xm.LOGARITHMICDEPTH && Am.addFallback(0, "LOGARITHMICDEPTH"), (0, Km.A)(xm, Am, this._maxSimultaneousLights), xm.SPECULARTERM && Am.addFallback(0, "SPECULARTERM"), xm.DIFFUSEFRESNEL && Am.addFallback(1, "DIFFUSEFRESNEL"), xm.OPACITYFRESNEL && Am.addFallback(2, "OPACITYFRESNEL"), xm.REFLECTIONFRESNEL && Am.addFallback(3, "REFLECTIONFRESNEL"), xm.EMISSIVEFRESNEL && Am.addFallback(4, "EMISSIVEFRESNEL"), xm.FRESNEL && Am.addFallback(4, "FRESNEL"), xm.MULTIVIEW && Am.addFallback(0, "MULTIVIEW");
+              const Rm = [Dm.m.PositionKind];
+              xm.NORMAL && Rm.push(Dm.m.NormalKind), xm.TANGENT && Rm.push(Dm.m.TangentKind);
+              for (let mm = 1; mm <= 6; ++mm) xm["UV" + mm] && Rm.push(`uv${1===mm?"":mm}`);
+              xm.VERTEXCOLOR && Rm.push(Dm.m.ColorKind), (0, Km.F)(Rm, Tm, xm, Am), (0, Km.J)(Rm, xm), (0, Km.L)(Rm, Tm, xm), (0, Km.E)(Rm, Tm, xm);
+              let om = "default";
+              const Om = ["world", "view", "viewProjection", "vEyePosition", "vLightsType", "vAmbientColor", "vDiffuseColor", "vSpecularColor", "vEmissiveColor", "visibility", "vFogInfos", "vFogColor", "pointSize", "vDiffuseInfos", "vAmbientInfos", "vOpacityInfos", "vEmissiveInfos", "vSpecularInfos", "vBumpInfos", "vLightmapInfos", "vRefractionInfos", "mBones", "diffuseMatrix", "ambientMatrix", "opacityMatrix", "emissiveMatrix", "specularMatrix", "bumpMatrix", "normalMatrix", "lightmapMatrix", "refractionMatrix", "diffuseLeftColor", "diffuseRightColor", "opacityParts", "reflectionLeftColor", "reflectionRightColor", "emissiveLeftColor", "emissiveRightColor", "refractionLeftColor", "refractionRightColor", "vRefractionPosition", "vRefractionSize", "logarithmicDepthConstant", "vTangentSpaceParams", "alphaCutOff", "boneTextureInfo", "morphTargetTextureInfo", "morphTargetTextureIndices", "cameraInfo", "vTextureRepetitionHexTilingParams"],
+                Ym = ["diffuseSampler", "ambientSampler", "opacitySampler", "reflectionCubeSampler", "reflection2DSampler", "emissiveSampler", "specularSampler", "bumpSampler", "lightmapSampler", "refractionCubeSampler", "refraction2DSampler", "boneSampler", "morphTargets", "oitDepthSampler", "oitFrontColorSampler", "areaLightsLTC1Sampler", "areaLightsLTC2Sampler"];
+              (0, Km.mb)(Om, Ym, !1);
+              const jm = ["Material", "Scene", "Mesh"],
+                Qm = {
                   maxSimultaneousLights: this._maxSimultaneousLights,
-                  maxSimultaneousMorphTargets: yk.NUM_MORPH_INFLUENCERS
+                  maxSimultaneousMorphTargets: xm.NUM_MORPH_INFLUENCERS
                 };
-              if (this._eventInfo.fallbacks = Tk, this._eventInfo.fallbackRank = 0, this._eventInfo.defines = yk, this._eventInfo.uniforms = ek, this._eventInfo.attributes = Lk, this._eventInfo.samplers = wk, this._eventInfo.uniformBuffersNames = Jk, this._eventInfo.customCode = void 0, this._eventInfo.mesh = Fk, this._eventInfo.indexParameters = Qk, this._callbackPluginEventGeneric(128, this._eventInfo), Vk.e.AddUniformsAndSamplers(ek, wk), qk.c.AddUniforms(ek), qk.c.AddSamplers(wk), tk.d && (tk.d.PrepareUniforms(ek, yk), tk.d.PrepareSamplers(wk, yk)), (0, Kk.db)({
-                  uniformsNames: ek,
-                  uniformBuffersNames: Jk,
-                  samplers: wk,
-                  defines: yk,
+              if (this._eventInfo.fallbacks = Am, this._eventInfo.fallbackRank = 0, this._eventInfo.defines = xm, this._eventInfo.uniforms = Om, this._eventInfo.attributes = Rm, this._eventInfo.samplers = Ym, this._eventInfo.uniformBuffersNames = jm, this._eventInfo.customCode = void 0, this._eventInfo.mesh = Tm, this._eventInfo.indexParameters = Qm, this._callbackPluginEventGeneric(128, this._eventInfo), Jm.c.AddUniformsAndSamplers(Om, Ym), im.c.AddUniforms(Om), im.c.AddSamplers(Ym), pm.c && (pm.c.PrepareUniforms(Om, xm), pm.c.PrepareSamplers(Ym, xm)), (0, Km.qb)({
+                  uniformsNames: Om,
+                  uniformBuffersNames: jm,
+                  samplers: Ym,
+                  defines: xm,
                   maxSimultaneousLights: this._maxSimultaneousLights,
                   shaderLanguage: this._shaderLanguage
-                }), (0, xk.d)(ek), this._useVertexPulling) {
-                const kk = Ik.getRenderingMesh(),
-                  Fk = kk?.geometry;
-                Fk && (this._vertexPullingMetadata = (0, Pk.f)(Fk), this._vertexPullingMetadata && this._vertexPullingMetadata.forEach(((kk, Fk) => {
-                  ek.push(`vp_${Fk}_info`)
+                }), (0, Vm.c)(Om), this._useVertexPulling) {
+                const mm = fm.getRenderingMesh(),
+                  Tm = mm?.geometry;
+                Tm && (this._vertexPullingMetadata = (0, Im.f)(Tm), this._vertexPullingMetadata && this._vertexPullingMetadata.forEach(((mm, Tm) => {
+                  Om.push(`vp_${Tm}_info`)
                 })))
               } else this._vertexPullingMetadata = null;
-              const sk = {};
-              this.customShaderNameResolve && (jk = this.customShaderNameResolve(jk, ek, Jk, wk, yk, Lk, sk));
-              const zk = yk.toString(),
-                Sk = Ik.effect,
-                vk = ik.Oe().createEffect(jk, {
-                  attributes: Lk,
-                  uniformsNames: ek,
-                  uniformBuffersNames: Jk,
-                  samplers: wk,
-                  defines: zk,
-                  fallbacks: Tk,
+              const nm = {};
+              this.customShaderNameResolve && (om = this.customShaderNameResolve(om, Om, jm, Ym, xm, Rm, nm));
+              const cm = xm.toString(),
+                zm = fm.effect,
+                Zm = am.dO().createEffect(om, {
+                  attributes: Rm,
+                  uniformsNames: Om,
+                  uniformBuffersNames: jm,
+                  samplers: Ym,
+                  defines: cm,
+                  fallbacks: Am,
                   onCompiled: this.onCompiled,
                   onError: this.onError,
-                  indexParameters: Qk,
-                  processFinalCode: sk.processFinalCode,
+                  indexParameters: Qm,
+                  processFinalCode: nm.processFinalCode,
                   processCodeAfterIncludes: this._eventInfo.customCode,
-                  multiTarget: yk.PREPASS,
+                  multiTarget: xm.PREPASS,
                   shaderLanguage: this._shaderLanguage,
-                  extraInitializationsAsync: kk._ShaderLoader.getLoadCallback(this._shaderLanguage)
-                }, lk);
-              if (this._eventInfo.customCode = void 0, vk)
-                if (this._onEffectCreatedObservable && (nk.effect = vk, nk.subMesh = Ik, this._onEffectCreatedObservable.notifyObservers(nk)), this.allowShaderHotSwapping && Sk && !vk.isReady()) {
-                  if (yk.markAsUnprocessed(), Zk = this.isFrozen, Xk) return yk._areLightsDisposed = !0, !1
-                } else ik.resetCachedMaterial(), Ik.setEffect(vk, yk, this._materialContext)
+                  extraInitializationsAsync: mm._ShaderLoader.getLoadCallback(this._shaderLanguage)
+                }, wm);
+              if (this._eventInfo.customCode = void 0, Zm)
+                if (this._onEffectCreatedObservable && (Sm.effect = Zm, Sm.subMesh = fm, this._onEffectCreatedObservable.notifyObservers(Sm)), this.allowShaderHotSwapping && zm && !Zm.isReady()) {
+                  if (xm.markAsUnprocessed(), Em = this.isFrozen, hm) return xm._areLightsDisposed = !0, !1
+                } else am.resetCachedMaterial(), fm.setEffect(Zm, xm, this._materialContext)
             }
-            return !(!Ik.effect || !Ik.effect.isReady()) && (yk._renderId = ik.getRenderId(), Tk._wasPreviouslyReady = !Zk, Tk._wasPreviouslyUsingInstances = Xk, this._checkScenePerformancePriority(), !0)
+            return !(!fm.effect || !fm.effect.isReady()) && (xm._renderId = am.getRenderId(), Am._wasPreviouslyReady = !Em, Am._wasPreviouslyUsingInstances = hm, this._checkScenePerformancePriority(), !0)
           }
           buildUniformLayout() {
-            const kk = this._uniformBuffer;
-            kk.addUniform("diffuseLeftColor", 4), kk.addUniform("diffuseRightColor", 4), kk.addUniform("opacityParts", 4), kk.addUniform("reflectionLeftColor", 4), kk.addUniform("reflectionRightColor", 4), kk.addUniform("refractionLeftColor", 4), kk.addUniform("refractionRightColor", 4), kk.addUniform("emissiveLeftColor", 4), kk.addUniform("emissiveRightColor", 4), kk.addUniform("vDiffuseInfos", 2), kk.addUniform("vAmbientInfos", 2), kk.addUniform("vOpacityInfos", 2), kk.addUniform("vEmissiveInfos", 2), kk.addUniform("vLightmapInfos", 2), kk.addUniform("vSpecularInfos", 2), kk.addUniform("vBumpInfos", 3), kk.addUniform("diffuseMatrix", 16), kk.addUniform("ambientMatrix", 16), kk.addUniform("opacityMatrix", 16), kk.addUniform("emissiveMatrix", 16), kk.addUniform("lightmapMatrix", 16), kk.addUniform("specularMatrix", 16), kk.addUniform("bumpMatrix", 16), kk.addUniform("vTangentSpaceParams", 2), kk.addUniform("pointSize", 1), kk.addUniform("alphaCutOff", 1), kk.addUniform("refractionMatrix", 16), kk.addUniform("vRefractionInfos", 4), kk.addUniform("vRefractionPosition", 3), kk.addUniform("vRefractionSize", 3), kk.addUniform("vSpecularColor", 4), kk.addUniform("vEmissiveColor", 3), kk.addUniform("vDiffuseColor", 4), kk.addUniform("vAmbientColor", 3), kk.addUniform("cameraInfo", 4), kk.addUniform("vTextureRepetitionHexTilingParams", 4), (0, Kk.$)(kk, !1, !0), super.buildUniformLayout()
+            const mm = this._uniformBuffer;
+            mm.addUniform("diffuseLeftColor", 4), mm.addUniform("diffuseRightColor", 4), mm.addUniform("opacityParts", 4), mm.addUniform("reflectionLeftColor", 4), mm.addUniform("reflectionRightColor", 4), mm.addUniform("refractionLeftColor", 4), mm.addUniform("refractionRightColor", 4), mm.addUniform("emissiveLeftColor", 4), mm.addUniform("emissiveRightColor", 4), mm.addUniform("vDiffuseInfos", 2), mm.addUniform("vAmbientInfos", 2), mm.addUniform("vOpacityInfos", 2), mm.addUniform("vEmissiveInfos", 2), mm.addUniform("vLightmapInfos", 2), mm.addUniform("vSpecularInfos", 2), mm.addUniform("vBumpInfos", 3), mm.addUniform("diffuseMatrix", 16), mm.addUniform("ambientMatrix", 16), mm.addUniform("opacityMatrix", 16), mm.addUniform("emissiveMatrix", 16), mm.addUniform("lightmapMatrix", 16), mm.addUniform("specularMatrix", 16), mm.addUniform("bumpMatrix", 16), mm.addUniform("vTangentSpaceParams", 2), mm.addUniform("pointSize", 1), mm.addUniform("alphaCutOff", 1), mm.addUniform("refractionMatrix", 16), mm.addUniform("vRefractionInfos", 4), mm.addUniform("vRefractionPosition", 3), mm.addUniform("vRefractionSize", 3), mm.addUniform("vSpecularColor", 4), mm.addUniform("vEmissiveColor", 3), mm.addUniform("vDiffuseColor", 4), mm.addUniform("vAmbientColor", 3), mm.addUniform("cameraInfo", 4), mm.addUniform("vTextureRepetitionHexTilingParams", 4), (0, Km.lb)(mm, !1, !0), super.buildUniformLayout()
           }
-          bindForSubMesh(Fk, Ik, Xk) {
-            const Tk = this.mG(),
-              ik = Xk.materialDefines;
-            if (!ik) return;
-            const ak = Xk.effect;
-            if (!ak) return;
-            this._activeEffect = ak, Ik.getMeshUniformBuffer().bindToEffect(ak, "Mesh"), Ik.transferToEffect(Fk), this._uniformBuffer.bindToEffect(ak, "Material"), this.prePassConfiguration.bindForSubMesh(this._activeEffect, Tk, Ik, Fk, this.isFrozen), Vk.e.Bind(Tk.Oe().currentRenderPassId, this._activeEffect, Ik, Fk, this);
-            const qk = Tk.activeCamera;
-            qk ? this._uniformBuffer.updateFloat4("cameraInfo", qk.minZ, qk.maxZ, 0, 0) : this._uniformBuffer.updateFloat4("cameraInfo", 0, 0, 0, 0);
-            const Lk = this.textureRepetitionHexTilingParams;
-            this._uniformBuffer.updateFloat4("vTextureRepetitionHexTilingParams", Lk[0], Lk[1], Lk[2], Lk[3]), this._eventInfo.subMesh = Xk, this._callbackPluginEventHardBindForSubMesh(this._eventInfo), ik.OBJECTSPACE_NORMALMAP && (Fk.toNormalMatrix(this._normalMatrix), this.bindOnlyNormalMatrix(this._normalMatrix));
-            const tk = this._mustRebind(Tk, ak, Xk, Ik.visibility),
-              Zk = Tk.Oe()._features.needToAlwaysBindUniformBuffers;
-            (0, Kk.e)(Ik, ak), this._vertexPullingMetadata && (0, Pk.c)(ak, this._vertexPullingMetadata);
-            const jk = this._uniformBuffer;
-            if (tk) {
-              if (this.bindViewProjection(ak), !jk.useUbo || !this.isFrozen || !jk.isSync || Xk._drawWrapper._forceRebindOnNextCall) {
-                if (kk.FresnelEnabled && ik.FRESNEL) {
-                  if (this.diffuseFresnelParameters && this.diffuseFresnelParameters.isEnabled && (jk.updateColor4("diffuseLeftColor", this.diffuseFresnelParameters.leftColor, this.diffuseFresnelParameters.power), jk.updateColor4("diffuseRightColor", this.diffuseFresnelParameters.rightColor, this.diffuseFresnelParameters.bias)), this.opacityFresnelParameters && this.opacityFresnelParameters.isEnabled) {
-                    const kk = lk.k.Color3[0];
-                    kk.set(this.opacityFresnelParameters.leftColor.toLuminance(), this.opacityFresnelParameters.rightColor.toLuminance(), this.opacityFresnelParameters.bias), jk.updateColor4("opacityParts", kk, this.opacityFresnelParameters.power)
+          bindForSubMesh(Tm, fm, hm) {
+            const Am = this.wG(),
+              am = hm.materialDefines;
+            if (!am) return;
+            const Dm = hm.effect;
+            if (!Dm) return;
+            this._activeEffect = Dm, fm.getMeshUniformBuffer().bindToEffect(Dm, "Mesh"), fm.transferToEffect(Tm), this._uniformBuffer.bindToEffect(Dm, "Material"), this.prePassConfiguration.bindForSubMesh(this._activeEffect, Am, fm, Tm, this.isFrozen), Jm.c.Bind(Am.dO().currentRenderPassId, this._activeEffect, fm, Tm, this);
+            const im = Am.activeCamera;
+            im ? this._uniformBuffer.updateFloat4("cameraInfo", im.minZ, im.maxZ, 0, 0) : this._uniformBuffer.updateFloat4("cameraInfo", 0, 0, 0, 0);
+            const Rm = this.textureRepetitionHexTilingParams;
+            this._uniformBuffer.updateFloat4("vTextureRepetitionHexTilingParams", Rm[0], Rm[1], Rm[2], Rm[3]), this._eventInfo.subMesh = hm, this._callbackPluginEventHardBindForSubMesh(this._eventInfo), am.OBJECTSPACE_NORMALMAP && (Tm.toNormalMatrix(this._normalMatrix), this.bindOnlyNormalMatrix(this._normalMatrix));
+            const pm = this._mustRebind(Am, Dm, hm, fm.visibility),
+              Em = Am.dO()._features.needToAlwaysBindUniformBuffers;
+            (0, Km.f)(fm, Dm), this._vertexPullingMetadata && (0, Im.c)(Dm, this._vertexPullingMetadata);
+            const om = this._uniformBuffer;
+            if (pm) {
+              if (this.bindViewProjection(Dm), !om.useUbo || !this.isFrozen || !om.isSync || hm._drawWrapper._forceRebindOnNextCall) {
+                if (mm.FresnelEnabled && am.FRESNEL) {
+                  if (this.diffuseFresnelParameters && this.diffuseFresnelParameters.isEnabled && (om.updateColor4("diffuseLeftColor", this.diffuseFresnelParameters.leftColor, this.diffuseFresnelParameters.power), om.updateColor4("diffuseRightColor", this.diffuseFresnelParameters.rightColor, this.diffuseFresnelParameters.bias)), this.opacityFresnelParameters && this.opacityFresnelParameters.isEnabled) {
+                    const mm = wm.e.Color3[0];
+                    mm.set(this.opacityFresnelParameters.leftColor.toLuminance(), this.opacityFresnelParameters.rightColor.toLuminance(), this.opacityFresnelParameters.bias), om.updateColor4("opacityParts", mm, this.opacityFresnelParameters.power)
                   }
-                  this.reflectionFresnelParameters && this.reflectionFresnelParameters.isEnabled && (jk.updateColor4("reflectionLeftColor", this.reflectionFresnelParameters.leftColor, this.reflectionFresnelParameters.power), jk.updateColor4("reflectionRightColor", this.reflectionFresnelParameters.rightColor, this.reflectionFresnelParameters.bias)), this.refractionFresnelParameters && this.refractionFresnelParameters.isEnabled && (jk.updateColor4("refractionLeftColor", this.refractionFresnelParameters.leftColor, this.refractionFresnelParameters.power), jk.updateColor4("refractionRightColor", this.refractionFresnelParameters.rightColor, this.refractionFresnelParameters.bias)), this.emissiveFresnelParameters && this.emissiveFresnelParameters.isEnabled && (jk.updateColor4("emissiveLeftColor", this.emissiveFresnelParameters.leftColor, this.emissiveFresnelParameters.power), jk.updateColor4("emissiveRightColor", this.emissiveFresnelParameters.rightColor, this.emissiveFresnelParameters.bias))
+                  this.reflectionFresnelParameters && this.reflectionFresnelParameters.isEnabled && (om.updateColor4("reflectionLeftColor", this.reflectionFresnelParameters.leftColor, this.reflectionFresnelParameters.power), om.updateColor4("reflectionRightColor", this.reflectionFresnelParameters.rightColor, this.reflectionFresnelParameters.bias)), this.refractionFresnelParameters && this.refractionFresnelParameters.isEnabled && (om.updateColor4("refractionLeftColor", this.refractionFresnelParameters.leftColor, this.refractionFresnelParameters.power), om.updateColor4("refractionRightColor", this.refractionFresnelParameters.rightColor, this.refractionFresnelParameters.bias)), this.emissiveFresnelParameters && this.emissiveFresnelParameters.isEnabled && (om.updateColor4("emissiveLeftColor", this.emissiveFresnelParameters.leftColor, this.emissiveFresnelParameters.power), om.updateColor4("emissiveRightColor", this.emissiveFresnelParameters.rightColor, this.emissiveFresnelParameters.bias))
                 }
-                if (ik.ALPHATEST && jk.updateFloat("alphaCutOff", this.alphaCutOff), Tk.texturesEnabled && (this._diffuseTexture && kk.DiffuseTextureEnabled && (jk.updateFloat2("vDiffuseInfos", this._diffuseTexture.coordinatesIndex, this._diffuseTexture.level), (0, Kk.v)(this._diffuseTexture, jk, "diffuse")), this._ambientTexture && kk.AmbientTextureEnabled && (jk.updateFloat2("vAmbientInfos", this._ambientTexture.coordinatesIndex, this._ambientTexture.level), (0, Kk.v)(this._ambientTexture, jk, "ambient")), this._opacityTexture && kk.OpacityTextureEnabled && (jk.updateFloat2("vOpacityInfos", this._opacityTexture.coordinatesIndex, this._opacityTexture.level), (0, Kk.v)(this._opacityTexture, jk, "opacity")), (0, Kk.i)(Tk, ik, jk, lk.e.White(), this._reflectionTexture, !1, !1, !0, !1, !1, !1, this.roughness), this._reflectionTexture && kk.ReflectionTextureEnabled || jk.updateFloat2("vReflectionInfos", 0, this.roughness), this._emissiveTexture && kk.EmissiveTextureEnabled && (jk.updateFloat2("vEmissiveInfos", this._emissiveTexture.coordinatesIndex, this._emissiveTexture.level), (0, Kk.v)(this._emissiveTexture, jk, "emissive")), this._lightmapTexture && kk.LightmapTextureEnabled && (jk.updateFloat2("vLightmapInfos", this._lightmapTexture.coordinatesIndex, this._lightmapTexture.level), (0, Kk.v)(this._lightmapTexture, jk, "lightmap")), this._specularTexture && kk.SpecularTextureEnabled && (jk.updateFloat2("vSpecularInfos", this._specularTexture.coordinatesIndex, this._specularTexture.level), (0, Kk.v)(this._specularTexture, jk, "specular")), this._bumpTexture && Tk.Oe().getCaps().standardDerivatives && kk.BumpTextureEnabled && (jk.updateFloat3("vBumpInfos", this._bumpTexture.coordinatesIndex, 1 / this._bumpTexture.level, this.parallaxScaleBias), (0, Kk.v)(this._bumpTexture, jk, "bump"), Tk._mirroredCameraPosition ? jk.updateFloat2("vTangentSpaceParams", this._invertNormalMapX ? 1 : -1, this._invertNormalMapY ? 1 : -1) : jk.updateFloat2("vTangentSpaceParams", this._invertNormalMapX ? -1 : 1, this._invertNormalMapY ? -1 : 1)), this._refractionTexture && kk.RefractionTextureEnabled)) {
-                  let kk = 1;
-                  if (this._refractionTexture.isCube || (jk.I9("refractionMatrix", this._refractionTexture.getReflectionTextureMatrix()), this._refractionTexture.depth && (kk = this._refractionTexture.depth)), jk.updateFloat4("vRefractionInfos", this._refractionTexture.level, this.indexOfRefraction, kk, this.invertRefractionY ? -1 : 1), this._refractionTexture.boundingBoxSize) {
-                    const kk = this._refractionTexture;
-                    jk.updateVector3("vRefractionPosition", kk.boundingBoxPosition), jk.updateVector3("vRefractionSize", kk.boundingBoxSize)
+                if (am.ALPHATEST && om.updateFloat("alphaCutOff", this.alphaCutOff), Am.texturesEnabled && (this._diffuseTexture && mm.DiffuseTextureEnabled && (om.updateFloat2("vDiffuseInfos", this._diffuseTexture.coordinatesIndex, this._diffuseTexture.level), (0, Km.x)(this._diffuseTexture, om, "diffuse")), this._ambientTexture && mm.AmbientTextureEnabled && (om.updateFloat2("vAmbientInfos", this._ambientTexture.coordinatesIndex, this._ambientTexture.level), (0, Km.x)(this._ambientTexture, om, "ambient")), this._opacityTexture && mm.OpacityTextureEnabled && (om.updateFloat2("vOpacityInfos", this._opacityTexture.coordinatesIndex, this._opacityTexture.level), (0, Km.x)(this._opacityTexture, om, "opacity")), (0, Km.k)(Am, am, om, wm.b.White(), this._reflectionTexture, !1, !1, !0, !1, !1, !1, this.roughness), this._reflectionTexture && mm.ReflectionTextureEnabled || om.updateFloat2("vReflectionInfos", 0, this.roughness), this._emissiveTexture && mm.EmissiveTextureEnabled && (om.updateFloat2("vEmissiveInfos", this._emissiveTexture.coordinatesIndex, this._emissiveTexture.level), (0, Km.x)(this._emissiveTexture, om, "emissive")), this._lightmapTexture && mm.LightmapTextureEnabled && (om.updateFloat2("vLightmapInfos", this._lightmapTexture.coordinatesIndex, this._lightmapTexture.level), (0, Km.x)(this._lightmapTexture, om, "lightmap")), this._specularTexture && mm.SpecularTextureEnabled && (om.updateFloat2("vSpecularInfos", this._specularTexture.coordinatesIndex, this._specularTexture.level), (0, Km.x)(this._specularTexture, om, "specular")), this._bumpTexture && Am.dO().getCaps().standardDerivatives && mm.BumpTextureEnabled && (om.updateFloat3("vBumpInfos", this._bumpTexture.coordinatesIndex, 1 / this._bumpTexture.level, this.parallaxScaleBias), (0, Km.x)(this._bumpTexture, om, "bump"), Am._mirroredCameraPosition ? om.updateFloat2("vTangentSpaceParams", this._invertNormalMapX ? 1 : -1, this._invertNormalMapY ? 1 : -1) : om.updateFloat2("vTangentSpaceParams", this._invertNormalMapX ? -1 : 1, this._invertNormalMapY ? -1 : 1)), this._refractionTexture && mm.RefractionTextureEnabled)) {
+                  let mm = 1;
+                  if (this._refractionTexture.isCube || (om.K9("refractionMatrix", this._refractionTexture.getReflectionTextureMatrix()), this._refractionTexture.depth && (mm = this._refractionTexture.depth)), om.updateFloat4("vRefractionInfos", this._refractionTexture.level, this.indexOfRefraction, mm, this.invertRefractionY ? -1 : 1), this._refractionTexture.boundingBoxSize) {
+                    const mm = this._refractionTexture;
+                    om.updateVector3("vRefractionPosition", mm.boundingBoxPosition), om.updateVector3("vRefractionSize", mm.boundingBoxSize)
                   }
                 }
-                this.pointsCloud && jk.updateFloat("pointSize", this.pointSize), jk.updateColor4("vSpecularColor", this.specularColor, this.specularPower), jk.updateColor3("vEmissiveColor", kk.EmissiveTextureEnabled ? this.emissiveColor : lk.e.BlackReadOnly), jk.updateColor4("vDiffuseColor", this.diffuseColor, this.alpha), Tk.ambientColor.multiplyToRef(this.ambientColor, this._globalAmbientColor), jk.updateColor3("vAmbientColor", this._globalAmbientColor)
+                this.pointsCloud && om.updateFloat("pointSize", this.pointSize), om.updateColor4("vSpecularColor", this.specularColor, this.specularPower), om.updateColor3("vEmissiveColor", mm.EmissiveTextureEnabled ? this.emissiveColor : wm.b.BlackReadOnly), om.updateColor4("vDiffuseColor", this.diffuseColor, this.alpha), Am.ambientColor.multiplyToRef(this.ambientColor, this._globalAmbientColor), om.updateColor3("vAmbientColor", this._globalAmbientColor)
               }
-              Tk.texturesEnabled && (this._diffuseTexture && kk.DiffuseTextureEnabled && ak.setTexture("diffuseSampler", this._diffuseTexture), this._ambientTexture && kk.AmbientTextureEnabled && ak.setTexture("ambientSampler", this._ambientTexture), this._opacityTexture && kk.OpacityTextureEnabled && ak.setTexture("opacitySampler", this._opacityTexture), this._reflectionTexture && kk.ReflectionTextureEnabled && (this._reflectionTexture.isCube ? ak.setTexture("reflectionCubeSampler", this._reflectionTexture) : ak.setTexture("reflection2DSampler", this._reflectionTexture)), this._emissiveTexture && kk.EmissiveTextureEnabled && ak.setTexture("emissiveSampler", this._emissiveTexture), this._lightmapTexture && kk.LightmapTextureEnabled && ak.setTexture("lightmapSampler", this._lightmapTexture), this._specularTexture && kk.SpecularTextureEnabled && ak.setTexture("specularSampler", this._specularTexture), this._bumpTexture && Tk.Oe().getCaps().standardDerivatives && kk.BumpTextureEnabled && ak.setTexture("bumpSampler", this._bumpTexture), this._refractionTexture && kk.RefractionTextureEnabled && (this._refractionTexture.isCube ? ak.setTexture("refractionCubeSampler", this._refractionTexture) : ak.setTexture("refraction2DSampler", this._refractionTexture))), this.mG().useOrderIndependentTransparency && this.needAlphaBlendingForMesh(Ik) && this.mG().depthPeelingRenderer.bind(ak), this._eventInfo.subMesh = Xk, this._callbackPluginEventBindForSubMesh(this._eventInfo), (0, xk.e)(ak, this, Tk), this.bindEyePosition(ak)
-            } else Zk && (this._needToBindSceneUbo = !0);
-            !tk && this.isFrozen && !Zk || !Tk.lightsEnabled || this._disableLighting || (0, Kk.n)(Tk, Ik, ak, ik, this._maxSimultaneousLights), !tk && this.isFrozen || ((Tk.fogEnabled && Ik.applyFog && Tk.fogMode !== yk.f.FOGMODE_NONE || this._reflectionTexture || this._refractionTexture || Ik.receiveShadows || ik.PREPASS || ik.CLUSTLIGHT_BATCH) && this.bindView(ak), (0, Kk.f)(Tk, Ik, ak), ik.NUM_MORPH_INFLUENCERS && (0, Kk.s)(Ik, ak), ik.BAKED_VERTEX_ANIMATION_TEXTURE && Ik.bakedVertexAnimationManager?.bind(ak, ik.INSTANCES), this.useLogarithmicDepth && (0, Kk.p)(ik, ak, Tk), this._imageProcessingConfiguration && !this._imageProcessingConfiguration.applyByPostProcess && this._imageProcessingConfiguration.bind(this._activeEffect)), this._afterBind(Ik, this._activeEffect, Xk), jk.update()
+              Am.texturesEnabled && (this._diffuseTexture && mm.DiffuseTextureEnabled && Dm.setTexture("diffuseSampler", this._diffuseTexture), this._ambientTexture && mm.AmbientTextureEnabled && Dm.setTexture("ambientSampler", this._ambientTexture), this._opacityTexture && mm.OpacityTextureEnabled && Dm.setTexture("opacitySampler", this._opacityTexture), this._reflectionTexture && mm.ReflectionTextureEnabled && (this._reflectionTexture.isCube ? Dm.setTexture("reflectionCubeSampler", this._reflectionTexture) : Dm.setTexture("reflection2DSampler", this._reflectionTexture)), this._emissiveTexture && mm.EmissiveTextureEnabled && Dm.setTexture("emissiveSampler", this._emissiveTexture), this._lightmapTexture && mm.LightmapTextureEnabled && Dm.setTexture("lightmapSampler", this._lightmapTexture), this._specularTexture && mm.SpecularTextureEnabled && Dm.setTexture("specularSampler", this._specularTexture), this._bumpTexture && Am.dO().getCaps().standardDerivatives && mm.BumpTextureEnabled && Dm.setTexture("bumpSampler", this._bumpTexture), this._refractionTexture && mm.RefractionTextureEnabled && (this._refractionTexture.isCube ? Dm.setTexture("refractionCubeSampler", this._refractionTexture) : Dm.setTexture("refraction2DSampler", this._refractionTexture))), this.wG().useOrderIndependentTransparency && this.needAlphaBlendingForMesh(fm) && this.wG().depthPeelingRenderer.bind(Dm), this._eventInfo.subMesh = hm, this._callbackPluginEventBindForSubMesh(this._eventInfo), (0, Vm.d)(Dm, this, Am), this.bindEyePosition(Dm)
+            } else Em && (this._needToBindSceneUbo = !0);
+            !pm && this.isFrozen && !Em || !Am.lightsEnabled || this._disableLighting || (0, Km.p)(Am, fm, Dm, am, this._maxSimultaneousLights), !pm && this.isFrozen || ((Am.fogEnabled && fm.applyFog && Am.fogMode !== xm.f.FOGMODE_NONE || this._reflectionTexture || this._refractionTexture || fm.receiveShadows || am.PREPASS || am.CLUSTLIGHT_BATCH) && this.bindView(Dm), (0, Km.j)(Am, fm, Dm), am.NUM_MORPH_INFLUENCERS && (0, Km.s)(fm, Dm), am.BAKED_VERTEX_ANIMATION_TEXTURE && fm.bakedVertexAnimationManager?.bind(Dm, am.INSTANCES), this.useLogarithmicDepth && (0, Km.r)(am, Dm, Am), this._imageProcessingConfiguration && !this._imageProcessingConfiguration.applyByPostProcess && this._imageProcessingConfiguration.bind(this._activeEffect)), this._afterBind(fm, this._activeEffect, hm), om.update()
           }
-          _canBindRunFollower(Fk, Ik, Xk, Tk, ik) {
-            const yk = Fk.prePassRenderer;
-            return this.isFrozen && this._storeEffectOnSubMeshes && this._uniformBufferLayoutBuilt && !this._needToBindSceneUbo && this.isReadyForSubMesh === kk.prototype.isReadyForSubMesh && this.bindForSubMesh === kk.prototype.bindForSubMesh && this._mustRebind === ek.e.prototype._mustRebind && !(!this.backFaceCulling && this.separateCullingPass) && !(this.pluginManager && 0 !== this.pluginManager._activePluginsForExtraEvents.length) && !this._vertexPullingMetadata && !Ik._features.needToAlwaysBindUniformBuffers && !(yk && yk.enabled && yk.currentRTisSceneRT) && !Vk.e._Configurations[Ik.currentRenderPassId] && !Tk.materialDefines?.OBJECTSPACE_NORMALMAP && !Xk.skeleton && !ik._bonesComputationForcedToCPU
+          _canBindRunFollower(Tm, fm, hm, Am, am) {
+            const xm = Tm.prePassRenderer;
+            return this.isFrozen && this._storeEffectOnSubMeshes && this._uniformBufferLayoutBuilt && !this._needToBindSceneUbo && this.isReadyForSubMesh === mm.prototype.isReadyForSubMesh && this.bindForSubMesh === mm.prototype.bindForSubMesh && this._mustRebind === Om.d.prototype._mustRebind && !(!this.backFaceCulling && this.separateCullingPass) && !(this.pluginManager && 0 !== this.pluginManager._activePluginsForExtraEvents.length) && !this._vertexPullingMetadata && !fm._features.needToAlwaysBindUniformBuffers && !(xm && xm.enabled && xm.currentRTisSceneRT) && !Jm.c._Configurations[fm.currentRenderPassId] && !Am.materialDefines?.OBJECTSPACE_NORMALMAP && !hm.skeleton && !am._bonesComputationForcedToCPU
           }
-          _bindRunFollower(kk, Fk, Ik, Xk) {
-            this._activeEffect = Xk, Fk.getMeshUniformBuffer().bindToEffect(Xk, "Mesh"), Fk.transferToEffect(kk);
-            const Tk = this._uniformBuffer;
-            Tk.bindToEffect(Xk, "Material");
-            const ik = this._scene.activeCamera;
-            ik ? Tk.updateFloat4("cameraInfo", ik.minZ, ik.maxZ, 0, 0) : Tk.updateFloat4("cameraInfo", 0, 0, 0, 0);
-            const yk = this.textureRepetitionHexTilingParams;
-            Tk.updateFloat4("vTextureRepetitionHexTilingParams", yk[0], yk[1], yk[2], yk[3]), this._afterBind(Fk, Xk, Ik), Tk.update()
+          _bindRunFollower(mm, Tm, fm, hm) {
+            this._activeEffect = hm, Tm.getMeshUniformBuffer().bindToEffect(hm, "Mesh"), Tm.transferToEffect(mm);
+            const Am = this._uniformBuffer;
+            Am.bindToEffect(hm, "Material");
+            const am = this._scene.activeCamera;
+            am ? Am.updateFloat4("cameraInfo", am.minZ, am.maxZ, 0, 0) : Am.updateFloat4("cameraInfo", 0, 0, 0, 0);
+            const xm = this.textureRepetitionHexTilingParams;
+            Am.updateFloat4("vTextureRepetitionHexTilingParams", xm[0], xm[1], xm[2], xm[3]), this._afterBind(Tm, hm, fm), Am.update()
           }
           getAnimatables() {
-            const kk = super.getAnimatables();
-            return this._diffuseTexture && this._diffuseTexture.animations && this._diffuseTexture.animations.length > 0 && kk.push(this._diffuseTexture), this._ambientTexture && this._ambientTexture.animations && this._ambientTexture.animations.length > 0 && kk.push(this._ambientTexture), this._opacityTexture && this._opacityTexture.animations && this._opacityTexture.animations.length > 0 && kk.push(this._opacityTexture), this._reflectionTexture && this._reflectionTexture.animations && this._reflectionTexture.animations.length > 0 && kk.push(this._reflectionTexture), this._emissiveTexture && this._emissiveTexture.animations && this._emissiveTexture.animations.length > 0 && kk.push(this._emissiveTexture), this._specularTexture && this._specularTexture.animations && this._specularTexture.animations.length > 0 && kk.push(this._specularTexture), this._bumpTexture && this._bumpTexture.animations && this._bumpTexture.animations.length > 0 && kk.push(this._bumpTexture), this._lightmapTexture && this._lightmapTexture.animations && this._lightmapTexture.animations.length > 0 && kk.push(this._lightmapTexture), this._refractionTexture && this._refractionTexture.animations && this._refractionTexture.animations.length > 0 && kk.push(this._refractionTexture), kk
+            const mm = super.getAnimatables();
+            return this._diffuseTexture && this._diffuseTexture.animations && this._diffuseTexture.animations.length > 0 && mm.push(this._diffuseTexture), this._ambientTexture && this._ambientTexture.animations && this._ambientTexture.animations.length > 0 && mm.push(this._ambientTexture), this._opacityTexture && this._opacityTexture.animations && this._opacityTexture.animations.length > 0 && mm.push(this._opacityTexture), this._reflectionTexture && this._reflectionTexture.animations && this._reflectionTexture.animations.length > 0 && mm.push(this._reflectionTexture), this._emissiveTexture && this._emissiveTexture.animations && this._emissiveTexture.animations.length > 0 && mm.push(this._emissiveTexture), this._specularTexture && this._specularTexture.animations && this._specularTexture.animations.length > 0 && mm.push(this._specularTexture), this._bumpTexture && this._bumpTexture.animations && this._bumpTexture.animations.length > 0 && mm.push(this._bumpTexture), this._lightmapTexture && this._lightmapTexture.animations && this._lightmapTexture.animations.length > 0 && mm.push(this._lightmapTexture), this._refractionTexture && this._refractionTexture.animations && this._refractionTexture.animations.length > 0 && mm.push(this._refractionTexture), mm
           }
           getActiveTextures() {
-            const kk = super.getActiveTextures();
-            return this._diffuseTexture && kk.push(this._diffuseTexture), this._ambientTexture && kk.push(this._ambientTexture), this._opacityTexture && kk.push(this._opacityTexture), this._reflectionTexture && kk.push(this._reflectionTexture), this._emissiveTexture && kk.push(this._emissiveTexture), this._specularTexture && kk.push(this._specularTexture), this._bumpTexture && kk.push(this._bumpTexture), this._lightmapTexture && kk.push(this._lightmapTexture), this._refractionTexture && kk.push(this._refractionTexture), kk
+            const mm = super.getActiveTextures();
+            return this._diffuseTexture && mm.push(this._diffuseTexture), this._ambientTexture && mm.push(this._ambientTexture), this._opacityTexture && mm.push(this._opacityTexture), this._reflectionTexture && mm.push(this._reflectionTexture), this._emissiveTexture && mm.push(this._emissiveTexture), this._specularTexture && mm.push(this._specularTexture), this._bumpTexture && mm.push(this._bumpTexture), this._lightmapTexture && mm.push(this._lightmapTexture), this._refractionTexture && mm.push(this._refractionTexture), mm
           }
-          hasTexture(kk) {
-            return !!super.hasTexture(kk) || (this._diffuseTexture === kk || (this._ambientTexture === kk || (this._opacityTexture === kk || (this._reflectionTexture === kk || (this._emissiveTexture === kk || (this._specularTexture === kk || (this._bumpTexture === kk || (this._lightmapTexture === kk || this._refractionTexture === kk))))))))
+          hasTexture(mm) {
+            return !!super.hasTexture(mm) || (this._diffuseTexture === mm || (this._ambientTexture === mm || (this._opacityTexture === mm || (this._reflectionTexture === mm || (this._emissiveTexture === mm || (this._specularTexture === mm || (this._bumpTexture === mm || (this._lightmapTexture === mm || this._refractionTexture === mm))))))))
           }
-          dispose(kk, Fk) {
-            Fk && (this._diffuseTexture?.dispose(), this._ambientTexture?.dispose(), this._opacityTexture?.dispose(), this._reflectionTexture?.dispose(), this._emissiveTexture?.dispose(), this._specularTexture?.dispose(), this._bumpTexture?.dispose(), this._lightmapTexture?.dispose(), this._refractionTexture?.dispose()), this._imageProcessingConfiguration && this._imageProcessingObserver && this._imageProcessingConfiguration.onUpdateParameters.remove(this._imageProcessingObserver), super.dispose(kk, Fk)
+          dispose(mm, Tm) {
+            Tm && (this._diffuseTexture?.dispose(), this._ambientTexture?.dispose(), this._opacityTexture?.dispose(), this._reflectionTexture?.dispose(), this._emissiveTexture?.dispose(), this._specularTexture?.dispose(), this._bumpTexture?.dispose(), this._lightmapTexture?.dispose(), this._refractionTexture?.dispose()), this._imageProcessingConfiguration && this._imageProcessingObserver && this._imageProcessingConfiguration.onUpdateParameters.remove(this._imageProcessingObserver), super.dispose(mm, Tm)
           }
-          clone(Fk) {
-            let Ik = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-              Xk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-            const Tk = Qk.b.Clone((() => new kk(Fk, this.mG())), this, {
-              cloneTexturesOnlyOnce: Ik
+          clone(Tm) {
+            let fm = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+              hm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+            const Am = Qm.d.Clone((() => new mm(Tm, this.wG())), this, {
+              cloneTexturesOnlyOnce: fm
             });
-            return Tk.name = Fk, Tk.id = Fk, this.stencil.copyTo(Tk.stencil), this._clonePlugins(Tk, Xk), Tk
+            return Am.name = Tm, Am.id = Tm, this.stencil.copyTo(Am.stencil), this._clonePlugins(Am, hm), Am
           }
-          static Parse(Fk, Ik, Xk) {
-            const Tk = Qk.b.Parse((() => new kk(Fk.name, Ik)), Fk, Ik, Xk);
-            return Fk.stencil && Tk.stencil.parse(Fk.stencil, Ik, Xk), Zk.c._ParsePlugins(Fk, Tk, Ik, Xk), Tk
+          static Parse(Tm, fm, hm) {
+            const Am = Qm.d.Parse((() => new mm(Tm.name, fm)), Tm, fm, hm);
+            return Tm.stencil && Am.stencil.parse(Tm.stencil, fm, hm), Em.d._ParsePlugins(Tm, Am, fm, hm), Am
           }
           static get DiffuseTextureEnabled() {
-            return wk.d.DiffuseTextureEnabled
+            return Ym.d.DiffuseTextureEnabled
           }
-          static set DiffuseTextureEnabled(kk) {
-            wk.d.DiffuseTextureEnabled = kk
+          static set DiffuseTextureEnabled(mm) {
+            Ym.d.DiffuseTextureEnabled = mm
           }
           static get DetailTextureEnabled() {
-            return wk.d.DetailTextureEnabled
+            return Ym.d.DetailTextureEnabled
           }
-          static set DetailTextureEnabled(kk) {
-            wk.d.DetailTextureEnabled = kk
+          static set DetailTextureEnabled(mm) {
+            Ym.d.DetailTextureEnabled = mm
           }
           static get AmbientTextureEnabled() {
-            return wk.d.AmbientTextureEnabled
+            return Ym.d.AmbientTextureEnabled
           }
-          static set AmbientTextureEnabled(kk) {
-            wk.d.AmbientTextureEnabled = kk
+          static set AmbientTextureEnabled(mm) {
+            Ym.d.AmbientTextureEnabled = mm
           }
           static get OpacityTextureEnabled() {
-            return wk.d.OpacityTextureEnabled
+            return Ym.d.OpacityTextureEnabled
           }
-          static set OpacityTextureEnabled(kk) {
-            wk.d.OpacityTextureEnabled = kk
+          static set OpacityTextureEnabled(mm) {
+            Ym.d.OpacityTextureEnabled = mm
           }
           static get ReflectionTextureEnabled() {
-            return wk.d.ReflectionTextureEnabled
+            return Ym.d.ReflectionTextureEnabled
           }
-          static set ReflectionTextureEnabled(kk) {
-            wk.d.ReflectionTextureEnabled = kk
+          static set ReflectionTextureEnabled(mm) {
+            Ym.d.ReflectionTextureEnabled = mm
           }
           static get EmissiveTextureEnabled() {
-            return wk.d.EmissiveTextureEnabled
+            return Ym.d.EmissiveTextureEnabled
           }
-          static set EmissiveTextureEnabled(kk) {
-            wk.d.EmissiveTextureEnabled = kk
+          static set EmissiveTextureEnabled(mm) {
+            Ym.d.EmissiveTextureEnabled = mm
           }
           static get SpecularTextureEnabled() {
-            return wk.d.SpecularTextureEnabled
+            return Ym.d.SpecularTextureEnabled
           }
-          static set SpecularTextureEnabled(kk) {
-            wk.d.SpecularTextureEnabled = kk
+          static set SpecularTextureEnabled(mm) {
+            Ym.d.SpecularTextureEnabled = mm
           }
           static get BumpTextureEnabled() {
-            return wk.d.BumpTextureEnabled
+            return Ym.d.BumpTextureEnabled
           }
-          static set BumpTextureEnabled(kk) {
-            wk.d.BumpTextureEnabled = kk
+          static set BumpTextureEnabled(mm) {
+            Ym.d.BumpTextureEnabled = mm
           }
           static get LightmapTextureEnabled() {
-            return wk.d.LightmapTextureEnabled
+            return Ym.d.LightmapTextureEnabled
           }
-          static set LightmapTextureEnabled(kk) {
-            wk.d.LightmapTextureEnabled = kk
+          static set LightmapTextureEnabled(mm) {
+            Ym.d.LightmapTextureEnabled = mm
           }
           static get RefractionTextureEnabled() {
-            return wk.d.RefractionTextureEnabled
+            return Ym.d.RefractionTextureEnabled
           }
-          static set RefractionTextureEnabled(kk) {
-            wk.d.RefractionTextureEnabled = kk
+          static set RefractionTextureEnabled(mm) {
+            Ym.d.RefractionTextureEnabled = mm
           }
           static get ColorGradingTextureEnabled() {
-            return wk.d.ColorGradingTextureEnabled
+            return Ym.d.ColorGradingTextureEnabled
           }
-          static set ColorGradingTextureEnabled(kk) {
-            wk.d.ColorGradingTextureEnabled = kk
+          static set ColorGradingTextureEnabled(mm) {
+            Ym.d.ColorGradingTextureEnabled = mm
           }
           static get FresnelEnabled() {
-            return wk.d.FresnelEnabled
+            return Ym.d.FresnelEnabled
           }
-          static set FresnelEnabled(kk) {
-            wk.d.FresnelEnabled = kk
+          static set FresnelEnabled(mm) {
+            Ym.d.FresnelEnabled = mm
           }
-        }, Fk = new WeakMap, Lk = new WeakMap, jk = new WeakMap, zk = new WeakMap, Sk = new WeakMap, vk = new WeakMap, Ek = new WeakMap, Ok = new WeakMap, Gk = new WeakMap, bk = new WeakMap, Rk = new WeakMap, Uk = new WeakMap, Ck = new WeakMap, Nk = new WeakMap, ck = new WeakMap, Wk = new WeakMap, fk = new WeakMap, Bk = new WeakMap, dk = new WeakMap, Yk = new WeakMap, Ak = new WeakMap, gk = new WeakMap, mk = new WeakMap, hk = new WeakMap, rk = new WeakMap, Dk = new WeakMap, Mk = new WeakMap, kF = new WeakMap, FF = new WeakMap, IF = new WeakMap, XF = new WeakMap, TF = new WeakMap, (() => {
-          const Fk = "function" === typeof Symbol && Symbol.metadata ? Object.create(oI[Symbol.metadata] ?? null) : void 0;
-          iF = [(0, Tk.B)("diffuseTexture")], yF = [(0, Tk.e)("_markAllSubMeshesAsTexturesAndMiscDirty")], lF = [(0, Tk.B)("ambientTexture")], aF = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], qF = [(0, Tk.B)("opacityTexture")], LF = [(0, Tk.e)("_markAllSubMeshesAsTexturesAndMiscDirty")], tF = [(0, Tk.B)("reflectionTexture")], ZF = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], jF = [(0, Tk.B)("emissiveTexture")], eF = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], wF = [(0, Tk.B)("specularTexture")], HF = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], JF = [(0, Tk.B)("bumpTexture")], xF = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], PF = [(0, Tk.B)("lightmapTexture")], KF = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], QF = [(0, Tk.B)("refractionTexture")], sF = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], VF = [(0, Tk.n)("ambient")], zF = [(0, Tk.n)("diffuse")], SF = [(0, Tk.n)("specular")], oF = [(0, Tk.n)("emissive")], vF = [(0, Tk.J)()], EF = [(0, Tk.J)("useAlphaFromDiffuseTexture")], OF = [() => ({
-            init(kk) {
-              return void 0 === kk && "_useAlphaFromDiffuseTexture" in this || (this._useAlphaFromDiffuseTexture = kk), kk
+        }, Tm = new WeakMap, Rm = new WeakMap, om = new WeakMap, cm = new WeakMap, zm = new WeakMap, Zm = new WeakMap, km = new WeakMap, bm = new WeakMap, em = new WeakMap, Xm = new WeakMap, Pm = new WeakMap, Hm = new WeakMap, ym = new WeakMap, Cm = new WeakMap, rm = new WeakMap, sm = new WeakMap, lm = new WeakMap, Mm = new WeakMap, um = new WeakMap, Bm = new WeakMap, Lm = new WeakMap, tm = new WeakMap, Um = new WeakMap, dm = new WeakMap, gm = new WeakMap, Wm = new WeakMap, Fm = new WeakMap, mT = new WeakMap, TT = new WeakMap, fT = new WeakMap, hT = new WeakMap, AT = new WeakMap, (() => {
+          const Tm = "function" === typeof Symbol && Symbol.metadata ? Object.create(bf[Symbol.metadata] ?? null) : void 0;
+          aT = [(0, Am.A)("diffuseTexture")], xT = [(0, Am.c)("_markAllSubMeshesAsTexturesAndMiscDirty")], wT = [(0, Am.A)("ambientTexture")], DT = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], iT = [(0, Am.A)("opacityTexture")], RT = [(0, Am.c)("_markAllSubMeshesAsTexturesAndMiscDirty")], pT = [(0, Am.A)("reflectionTexture")], ET = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], oT = [(0, Am.A)("emissiveTexture")], OT = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], YT = [(0, Am.A)("specularTexture")], qT = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], jT = [(0, Am.A)("bumpTexture")], VT = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], IT = [(0, Am.A)("lightmapTexture")], KT = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], QT = [(0, Am.A)("refractionTexture")], nT = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], JT = [(0, Am.k)("ambient")], cT = [(0, Am.k)("diffuse")], zT = [(0, Am.k)("specular")], ZT = [(0, Am.k)("emissive")], kT = [(0, Am.J)()], bT = [(0, Am.J)("useAlphaFromDiffuseTexture")], ST = [() => ({
+            init(mm) {
+              return void 0 === mm && "_useAlphaFromDiffuseTexture" in this || (this._useAlphaFromDiffuseTexture = mm), mm
             },
             get() {
               return this._useAlphaFromDiffuseTexture
             },
-            set(kk) {
-              this._useAlphaFromDiffuseTexture = kk
+            set(mm) {
+              this._useAlphaFromDiffuseTexture = mm
             }
-          })], nF = [(0, Tk.J)("useEmissiveAsIllumination")], GF = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], pF = [(0, Tk.J)("linkEmissiveWithDiffuse")], uF = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], bF = [(0, Tk.J)("useSpecularOverAlpha")], RF = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], UF = [(0, Tk.J)("useReflectionOverAlpha")], CF = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], NF = [(0, Tk.J)("disableLighting")], cF = [(0, Tk.e)("_markAllSubMeshesAsLightsDirty")], WF = [(0, Tk.J)("useObjectSpaceNormalMap")], fF = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], BF = [(0, Tk.J)("useParallax")], dF = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], YF = [(0, Tk.J)("useParallaxOcclusion")], AF = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], gF = [(0, Tk.J)()], mF = [(0, Tk.J)("roughness")], hF = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], rF = [(0, Tk.J)()], DF = [(0, Tk.J)()], MF = [(0, Tk.J)()], kI = [(0, Tk.J)("useLightmapAsShadowmap")], FI = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], II = [(0, Tk.v)("diffuseFresnelParameters")], XI = [(0, Tk.e)("_markAllSubMeshesAsFresnelDirty")], TI = [(0, Tk.v)("opacityFresnelParameters")], iI = [(0, Tk.e)("_markAllSubMeshesAsFresnelAndMiscDirty")], yI = [(0, Tk.v)("reflectionFresnelParameters")], lI = [(0, Tk.e)("_markAllSubMeshesAsFresnelDirty")], aI = [(0, Tk.v)("refractionFresnelParameters")], qI = [(0, Tk.e)("_markAllSubMeshesAsFresnelDirty")], LI = [(0, Tk.v)("emissiveFresnelParameters")], tI = [(0, Tk.e)("_markAllSubMeshesAsFresnelDirty")], ZI = [(0, Tk.J)("useReflectionFresnelFromSpecular")], jI = [(0, Tk.e)("_markAllSubMeshesAsFresnelDirty")], eI = [(0, Tk.J)("useGlossinessFromSpecularMapAlpha")], wI = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], HI = [(0, Tk.J)("maxSimultaneousLights")], JI = [(0, Tk.e)("_markAllSubMeshesAsLightsDirty")], xI = [(0, Tk.J)("invertNormalMapX")], PI = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], KI = [(0, Tk.J)("invertNormalMapY")], QI = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], sI = [(0, Tk.J)("twoSidedLighting")], VI = [(0, Tk.e)("_markAllSubMeshesAsTexturesDirty")], zI = [(0, Tk.J)("applyDecalMapAfterDetailMap")], SI = [(0, Tk.e)("_markAllSubMeshesAsMiscDirty")], (0, Xk.j)(kk, null, yF, {
+          })], eT = [(0, Am.J)("useEmissiveAsIllumination")], NT = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], GT = [(0, Am.J)("linkEmissiveWithDiffuse")], XT = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], PT = [(0, Am.J)("useSpecularOverAlpha")], HT = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], yT = [(0, Am.J)("useReflectionOverAlpha")], CT = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], rT = [(0, Am.J)("disableLighting")], sT = [(0, Am.c)("_markAllSubMeshesAsLightsDirty")], lT = [(0, Am.J)("useObjectSpaceNormalMap")], MT = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], uT = [(0, Am.J)("useParallax")], BT = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], LT = [(0, Am.J)("useParallaxOcclusion")], vT = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], tT = [(0, Am.J)()], UT = [(0, Am.J)("roughness")], dT = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], gT = [(0, Am.J)()], WT = [(0, Am.J)()], FT = [(0, Am.J)()], mf = [(0, Am.J)("useLightmapAsShadowmap")], Tf = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], ff = [(0, Am.s)("diffuseFresnelParameters")], hf = [(0, Am.c)("_markAllSubMeshesAsFresnelDirty")], Af = [(0, Am.s)("opacityFresnelParameters")], af = [(0, Am.c)("_markAllSubMeshesAsFresnelAndMiscDirty")], xf = [(0, Am.s)("reflectionFresnelParameters")], wf = [(0, Am.c)("_markAllSubMeshesAsFresnelDirty")], Df = [(0, Am.s)("refractionFresnelParameters")], Rf = [(0, Am.c)("_markAllSubMeshesAsFresnelDirty")], pf = [(0, Am.s)("emissiveFresnelParameters")], Ef = [(0, Am.c)("_markAllSubMeshesAsFresnelDirty")], of = [(0, Am.J)("useReflectionFresnelFromSpecular")], Of = [(0, Am.c)("_markAllSubMeshesAsFresnelDirty")], Yf = [(0, Am.J)("useGlossinessFromSpecularMapAlpha")], qf = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], jf = [(0, Am.J)("maxSimultaneousLights")], Vf = [(0, Am.c)("_markAllSubMeshesAsLightsDirty")], If = [(0, Am.J)("invertNormalMapX")], Kf = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], Qf = [(0, Am.J)("invertNormalMapY")], nf = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], Jf = [(0, Am.J)("twoSidedLighting")], zf = [(0, Am.c)("_markAllSubMeshesAsTexturesDirty")], Zf = [(0, Am.J)("applyDecalMapAfterDetailMap")], kf = [(0, Am.c)("_markAllSubMeshesAsMiscDirty")], (0, hm.g)(mm, null, xT, {
             kind: "accessor",
             name: "diffuseTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "diffuseTexture" in kk,
-              get: kk => kk.diffuseTexture,
-              set: (kk, Fk) => {
-                kk.diffuseTexture = Fk
+              has: mm => "diffuseTexture" in mm,
+              get: mm => mm.diffuseTexture,
+              set: (mm, Tm) => {
+                mm.diffuseTexture = Tm
               }
             },
-            metadata: Fk
-          }, OI, nI), (0, Xk.j)(kk, null, aF, {
+            metadata: Tm
+          }, Nf, Gf), (0, hm.g)(mm, null, DT, {
             kind: "accessor",
             name: "ambientTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "ambientTexture" in kk,
-              get: kk => kk.ambientTexture,
-              set: (kk, Fk) => {
-                kk.ambientTexture = Fk
+              has: mm => "ambientTexture" in mm,
+              get: mm => mm.ambientTexture,
+              set: (mm, Tm) => {
+                mm.ambientTexture = Tm
               }
             },
-            metadata: Fk
-          }, uI, bI), (0, Xk.j)(kk, null, LF, {
+            metadata: Tm
+          }, Hf, yf), (0, hm.g)(mm, null, RT, {
             kind: "accessor",
             name: "opacityTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "opacityTexture" in kk,
-              get: kk => kk.opacityTexture,
-              set: (kk, Fk) => {
-                kk.opacityTexture = Fk
+              has: mm => "opacityTexture" in mm,
+              get: mm => mm.opacityTexture,
+              set: (mm, Tm) => {
+                mm.opacityTexture = Tm
               }
             },
-            metadata: Fk
-          }, CI, NI), (0, Xk.j)(kk, null, ZF, {
+            metadata: Tm
+          }, sf, lf), (0, hm.g)(mm, null, ET, {
             kind: "accessor",
             name: "reflectionTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "reflectionTexture" in kk,
-              get: kk => kk.reflectionTexture,
-              set: (kk, Fk) => {
-                kk.reflectionTexture = Fk
+              has: mm => "reflectionTexture" in mm,
+              get: mm => mm.reflectionTexture,
+              set: (mm, Tm) => {
+                mm.reflectionTexture = Tm
               }
             },
-            metadata: Fk
-          }, fI, BI), (0, Xk.j)(kk, null, eF, {
+            metadata: Tm
+          }, Bf, Lf), (0, hm.g)(mm, null, OT, {
             kind: "accessor",
             name: "emissiveTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "emissiveTexture" in kk,
-              get: kk => kk.emissiveTexture,
-              set: (kk, Fk) => {
-                kk.emissiveTexture = Fk
+              has: mm => "emissiveTexture" in mm,
+              get: mm => mm.emissiveTexture,
+              set: (mm, Tm) => {
+                mm.emissiveTexture = Tm
               }
             },
-            metadata: Fk
-          }, AI, gI), (0, Xk.j)(kk, null, HF, {
+            metadata: Tm
+          }, Uf, df), (0, hm.g)(mm, null, qT, {
             kind: "accessor",
             name: "specularTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "specularTexture" in kk,
-              get: kk => kk.specularTexture,
-              set: (kk, Fk) => {
-                kk.specularTexture = Fk
+              has: mm => "specularTexture" in mm,
+              get: mm => mm.specularTexture,
+              set: (mm, Tm) => {
+                mm.specularTexture = Tm
               }
             },
-            metadata: Fk
-          }, rI, DI), (0, Xk.j)(kk, null, xF, {
+            metadata: Tm
+          }, Ff, mh), (0, hm.g)(mm, null, VT, {
             kind: "accessor",
             name: "bumpTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "bumpTexture" in kk,
-              get: kk => kk.bumpTexture,
-              set: (kk, Fk) => {
-                kk.bumpTexture = Fk
+              has: mm => "bumpTexture" in mm,
+              get: mm => mm.bumpTexture,
+              set: (mm, Tm) => {
+                mm.bumpTexture = Tm
               }
             },
-            metadata: Fk
-          }, FX, IX), (0, Xk.j)(kk, null, KF, {
+            metadata: Tm
+          }, hh, Ah), (0, hm.g)(mm, null, KT, {
             kind: "accessor",
             name: "lightmapTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "lightmapTexture" in kk,
-              get: kk => kk.lightmapTexture,
-              set: (kk, Fk) => {
-                kk.lightmapTexture = Fk
+              has: mm => "lightmapTexture" in mm,
+              get: mm => mm.lightmapTexture,
+              set: (mm, Tm) => {
+                mm.lightmapTexture = Tm
               }
             },
-            metadata: Fk
-          }, iX, yX), (0, Xk.j)(kk, null, sF, {
+            metadata: Tm
+          }, wh, Dh), (0, hm.g)(mm, null, nT, {
             kind: "accessor",
             name: "refractionTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "refractionTexture" in kk,
-              get: kk => kk.refractionTexture,
-              set: (kk, Fk) => {
-                kk.refractionTexture = Fk
+              has: mm => "refractionTexture" in mm,
+              get: mm => mm.refractionTexture,
+              set: (mm, Tm) => {
+                mm.refractionTexture = Tm
               }
             },
-            metadata: Fk
-          }, qX, LX), (0, Xk.j)(kk, null, OF, {
+            metadata: Tm
+          }, ph, Eh), (0, hm.g)(mm, null, ST, {
             kind: "accessor",
             name: "useAlphaFromDiffuseTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "useAlphaFromDiffuseTexture" in kk,
-              get: kk => kk.useAlphaFromDiffuseTexture,
-              set: (kk, Fk) => {
-                kk.useAlphaFromDiffuseTexture = Fk
+              has: mm => "useAlphaFromDiffuseTexture" in mm,
+              get: mm => mm.useAlphaFromDiffuseTexture,
+              set: (mm, Tm) => {
+                mm.useAlphaFromDiffuseTexture = Tm
               }
             },
-            metadata: Fk
-          }, VX, zX), (0, Xk.j)(kk, null, GF, {
+            metadata: Tm
+          }, zh, Zh), (0, hm.g)(mm, null, NT, {
             kind: "accessor",
             name: "useEmissiveAsIllumination",
             static: !1,
             private: !1,
             access: {
-              has: kk => "useEmissiveAsIllumination" in kk,
-              get: kk => kk.useEmissiveAsIllumination,
-              set: (kk, Fk) => {
-                kk.useEmissiveAsIllumination = Fk
+              has: mm => "useEmissiveAsIllumination" in mm,
+              get: mm => mm.useEmissiveAsIllumination,
+              set: (mm, Tm) => {
+                mm.useEmissiveAsIllumination = Tm
               }
             },
-            metadata: Fk
-          }, vX, EX), (0, Xk.j)(kk, null, uF, {
+            metadata: Tm
+          }, Sh, eh), (0, hm.g)(mm, null, XT, {
             kind: "accessor",
             name: "linkEmissiveWithDiffuse",
             static: !1,
             private: !1,
             access: {
-              has: kk => "linkEmissiveWithDiffuse" in kk,
-              get: kk => kk.linkEmissiveWithDiffuse,
-              set: (kk, Fk) => {
-                kk.linkEmissiveWithDiffuse = Fk
+              has: mm => "linkEmissiveWithDiffuse" in mm,
+              get: mm => mm.linkEmissiveWithDiffuse,
+              set: (mm, Tm) => {
+                mm.linkEmissiveWithDiffuse = Tm
               }
             },
-            metadata: Fk
-          }, GX, pX), (0, Xk.j)(kk, null, RF, {
+            metadata: Tm
+          }, Xh, Ph), (0, hm.g)(mm, null, HT, {
             kind: "accessor",
             name: "useSpecularOverAlpha",
             static: !1,
             private: !1,
             access: {
-              has: kk => "useSpecularOverAlpha" in kk,
-              get: kk => kk.useSpecularOverAlpha,
-              set: (kk, Fk) => {
-                kk.useSpecularOverAlpha = Fk
+              has: mm => "useSpecularOverAlpha" in mm,
+              get: mm => mm.useSpecularOverAlpha,
+              set: (mm, Tm) => {
+                mm.useSpecularOverAlpha = Tm
               }
             },
-            metadata: Fk
-          }, RX, UX), (0, Xk.j)(kk, null, CF, {
+            metadata: Tm
+          }, Ch, rh), (0, hm.g)(mm, null, CT, {
             kind: "accessor",
             name: "useReflectionOverAlpha",
             static: !1,
             private: !1,
             access: {
-              has: kk => "useReflectionOverAlpha" in kk,
-              get: kk => kk.useReflectionOverAlpha,
-              set: (kk, Fk) => {
-                kk.useReflectionOverAlpha = Fk
+              has: mm => "useReflectionOverAlpha" in mm,
+              get: mm => mm.useReflectionOverAlpha,
+              set: (mm, Tm) => {
+                mm.useReflectionOverAlpha = Tm
               }
             },
-            metadata: Fk
-          }, cX, WX), (0, Xk.j)(kk, null, cF, {
+            metadata: Tm
+          }, Mh, uh), (0, hm.g)(mm, null, sT, {
             kind: "accessor",
             name: "disableLighting",
             static: !1,
             private: !1,
             access: {
-              has: kk => "disableLighting" in kk,
-              get: kk => kk.disableLighting,
-              set: (kk, Fk) => {
-                kk.disableLighting = Fk
+              has: mm => "disableLighting" in mm,
+              get: mm => mm.disableLighting,
+              set: (mm, Tm) => {
+                mm.disableLighting = Tm
               }
             },
-            metadata: Fk
-          }, dX, YX), (0, Xk.j)(kk, null, fF, {
+            metadata: Tm
+          }, vh, th), (0, hm.g)(mm, null, MT, {
             kind: "accessor",
             name: "useObjectSpaceNormalMap",
             static: !1,
             private: !1,
             access: {
-              has: kk => "useObjectSpaceNormalMap" in kk,
-              get: kk => kk.useObjectSpaceNormalMap,
-              set: (kk, Fk) => {
-                kk.useObjectSpaceNormalMap = Fk
+              has: mm => "useObjectSpaceNormalMap" in mm,
+              get: mm => mm.useObjectSpaceNormalMap,
+              set: (mm, Tm) => {
+                mm.useObjectSpaceNormalMap = Tm
               }
             },
-            metadata: Fk
-          }, mX, hX), (0, Xk.j)(kk, null, dF, {
+            metadata: Tm
+          }, gh, Wh), (0, hm.g)(mm, null, BT, {
             kind: "accessor",
             name: "useParallax",
             static: !1,
             private: !1,
             access: {
-              has: kk => "useParallax" in kk,
-              get: kk => kk.useParallax,
-              set: (kk, Fk) => {
-                kk.useParallax = Fk
+              has: mm => "useParallax" in mm,
+              get: mm => mm.useParallax,
+              set: (mm, Tm) => {
+                mm.useParallax = Tm
               }
             },
-            metadata: Fk
-          }, MX, kT), (0, Xk.j)(kk, null, AF, {
+            metadata: Tm
+          }, TA, fA), (0, hm.g)(mm, null, vT, {
             kind: "accessor",
             name: "useParallaxOcclusion",
             static: !1,
             private: !1,
             access: {
-              has: kk => "useParallaxOcclusion" in kk,
-              get: kk => kk.useParallaxOcclusion,
-              set: (kk, Fk) => {
-                kk.useParallaxOcclusion = Fk
+              has: mm => "useParallaxOcclusion" in mm,
+              get: mm => mm.useParallaxOcclusion,
+              set: (mm, Tm) => {
+                mm.useParallaxOcclusion = Tm
               }
             },
-            metadata: Fk
-          }, XT, TT), (0, Xk.j)(kk, null, hF, {
+            metadata: Tm
+          }, aA, xA), (0, hm.g)(mm, null, dT, {
             kind: "accessor",
             name: "roughness",
             static: !1,
             private: !1,
             access: {
-              has: kk => "roughness" in kk,
-              get: kk => kk.roughness,
-              set: (kk, Fk) => {
-                kk.roughness = Fk
+              has: mm => "roughness" in mm,
+              get: mm => mm.roughness,
+              set: (mm, Tm) => {
+                mm.roughness = Tm
               }
             },
-            metadata: Fk
-          }, qT, LT), (0, Xk.j)(kk, null, FI, {
+            metadata: Tm
+          }, pA, EA), (0, hm.g)(mm, null, Tf, {
             kind: "accessor",
             name: "useLightmapAsShadowmap",
             static: !1,
             private: !1,
             access: {
-              has: kk => "useLightmapAsShadowmap" in kk,
-              get: kk => kk.useLightmapAsShadowmap,
-              set: (kk, Fk) => {
-                kk.useLightmapAsShadowmap = Fk
+              has: mm => "useLightmapAsShadowmap" in mm,
+              get: mm => mm.useLightmapAsShadowmap,
+              set: (mm, Tm) => {
+                mm.useLightmapAsShadowmap = Tm
               }
             },
-            metadata: Fk
-          }, PT, KT), (0, Xk.j)(kk, null, XI, {
+            metadata: Tm
+          }, QA, nA), (0, hm.g)(mm, null, hf, {
             kind: "accessor",
             name: "diffuseFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: kk => "diffuseFresnelParameters" in kk,
-              get: kk => kk.diffuseFresnelParameters,
-              set: (kk, Fk) => {
-                kk.diffuseFresnelParameters = Fk
+              has: mm => "diffuseFresnelParameters" in mm,
+              get: mm => mm.diffuseFresnelParameters,
+              set: (mm, Tm) => {
+                mm.diffuseFresnelParameters = Tm
               }
             },
-            metadata: Fk
-          }, VT, zT), (0, Xk.j)(kk, null, iI, {
+            metadata: Tm
+          }, zA, ZA), (0, hm.g)(mm, null, af, {
             kind: "accessor",
             name: "opacityFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: kk => "opacityFresnelParameters" in kk,
-              get: kk => kk.opacityFresnelParameters,
-              set: (kk, Fk) => {
-                kk.opacityFresnelParameters = Fk
+              has: mm => "opacityFresnelParameters" in mm,
+              get: mm => mm.opacityFresnelParameters,
+              set: (mm, Tm) => {
+                mm.opacityFresnelParameters = Tm
               }
             },
-            metadata: Fk
-          }, vT, ET), (0, Xk.j)(kk, null, lI, {
+            metadata: Tm
+          }, SA, eA), (0, hm.g)(mm, null, wf, {
             kind: "accessor",
             name: "reflectionFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: kk => "reflectionFresnelParameters" in kk,
-              get: kk => kk.reflectionFresnelParameters,
-              set: (kk, Fk) => {
-                kk.reflectionFresnelParameters = Fk
+              has: mm => "reflectionFresnelParameters" in mm,
+              get: mm => mm.reflectionFresnelParameters,
+              set: (mm, Tm) => {
+                mm.reflectionFresnelParameters = Tm
               }
             },
-            metadata: Fk
-          }, GT, pT), (0, Xk.j)(kk, null, qI, {
+            metadata: Tm
+          }, XA, PA), (0, hm.g)(mm, null, Rf, {
             kind: "accessor",
             name: "refractionFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: kk => "refractionFresnelParameters" in kk,
-              get: kk => kk.refractionFresnelParameters,
-              set: (kk, Fk) => {
-                kk.refractionFresnelParameters = Fk
+              has: mm => "refractionFresnelParameters" in mm,
+              get: mm => mm.refractionFresnelParameters,
+              set: (mm, Tm) => {
+                mm.refractionFresnelParameters = Tm
               }
             },
-            metadata: Fk
-          }, RT, UT), (0, Xk.j)(kk, null, tI, {
+            metadata: Tm
+          }, CA, rA), (0, hm.g)(mm, null, Ef, {
             kind: "accessor",
             name: "emissiveFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: kk => "emissiveFresnelParameters" in kk,
-              get: kk => kk.emissiveFresnelParameters,
-              set: (kk, Fk) => {
-                kk.emissiveFresnelParameters = Fk
+              has: mm => "emissiveFresnelParameters" in mm,
+              get: mm => mm.emissiveFresnelParameters,
+              set: (mm, Tm) => {
+                mm.emissiveFresnelParameters = Tm
               }
             },
-            metadata: Fk
-          }, cT, WT), (0, Xk.j)(kk, null, jI, {
+            metadata: Tm
+          }, MA, uA), (0, hm.g)(mm, null, Of, {
             kind: "accessor",
             name: "useReflectionFresnelFromSpecular",
             static: !1,
             private: !1,
             access: {
-              has: kk => "useReflectionFresnelFromSpecular" in kk,
-              get: kk => kk.useReflectionFresnelFromSpecular,
-              set: (kk, Fk) => {
-                kk.useReflectionFresnelFromSpecular = Fk
+              has: mm => "useReflectionFresnelFromSpecular" in mm,
+              get: mm => mm.useReflectionFresnelFromSpecular,
+              set: (mm, Tm) => {
+                mm.useReflectionFresnelFromSpecular = Tm
               }
             },
-            metadata: Fk
-          }, dT, YT), (0, Xk.j)(kk, null, wI, {
+            metadata: Tm
+          }, vA, tA), (0, hm.g)(mm, null, qf, {
             kind: "accessor",
             name: "useGlossinessFromSpecularMapAlpha",
             static: !1,
             private: !1,
             access: {
-              has: kk => "useGlossinessFromSpecularMapAlpha" in kk,
-              get: kk => kk.useGlossinessFromSpecularMapAlpha,
-              set: (kk, Fk) => {
-                kk.useGlossinessFromSpecularMapAlpha = Fk
+              has: mm => "useGlossinessFromSpecularMapAlpha" in mm,
+              get: mm => mm.useGlossinessFromSpecularMapAlpha,
+              set: (mm, Tm) => {
+                mm.useGlossinessFromSpecularMapAlpha = Tm
               }
             },
-            metadata: Fk
-          }, mT, hT), (0, Xk.j)(kk, null, JI, {
+            metadata: Tm
+          }, gA, WA), (0, hm.g)(mm, null, Vf, {
             kind: "accessor",
             name: "maxSimultaneousLights",
             static: !1,
             private: !1,
             access: {
-              has: kk => "maxSimultaneousLights" in kk,
-              get: kk => kk.maxSimultaneousLights,
-              set: (kk, Fk) => {
-                kk.maxSimultaneousLights = Fk
+              has: mm => "maxSimultaneousLights" in mm,
+              get: mm => mm.maxSimultaneousLights,
+              set: (mm, Tm) => {
+                mm.maxSimultaneousLights = Tm
               }
             },
-            metadata: Fk
-          }, MT, ki), (0, Xk.j)(kk, null, PI, {
+            metadata: Tm
+          }, Ta, fa), (0, hm.g)(mm, null, Kf, {
             kind: "accessor",
             name: "invertNormalMapX",
             static: !1,
             private: !1,
             access: {
-              has: kk => "invertNormalMapX" in kk,
-              get: kk => kk.invertNormalMapX,
-              set: (kk, Fk) => {
-                kk.invertNormalMapX = Fk
+              has: mm => "invertNormalMapX" in mm,
+              get: mm => mm.invertNormalMapX,
+              set: (mm, Tm) => {
+                mm.invertNormalMapX = Tm
               }
             },
-            metadata: Fk
-          }, Xi, Ti), (0, Xk.j)(kk, null, QI, {
+            metadata: Tm
+          }, aa, xa), (0, hm.g)(mm, null, nf, {
             kind: "accessor",
             name: "invertNormalMapY",
             static: !1,
             private: !1,
             access: {
-              has: kk => "invertNormalMapY" in kk,
-              get: kk => kk.invertNormalMapY,
-              set: (kk, Fk) => {
-                kk.invertNormalMapY = Fk
+              has: mm => "invertNormalMapY" in mm,
+              get: mm => mm.invertNormalMapY,
+              set: (mm, Tm) => {
+                mm.invertNormalMapY = Tm
               }
             },
-            metadata: Fk
-          }, li, ai), (0, Xk.j)(kk, null, VI, {
+            metadata: Tm
+          }, ia, Ra), (0, hm.g)(mm, null, zf, {
             kind: "accessor",
             name: "twoSidedLighting",
             static: !1,
             private: !1,
             access: {
-              has: kk => "twoSidedLighting" in kk,
-              get: kk => kk.twoSidedLighting,
-              set: (kk, Fk) => {
-                kk.twoSidedLighting = Fk
+              has: mm => "twoSidedLighting" in mm,
+              get: mm => mm.twoSidedLighting,
+              set: (mm, Tm) => {
+                mm.twoSidedLighting = Tm
               }
             },
-            metadata: Fk
-          }, ti, Zi), (0, Xk.j)(kk, null, SI, {
+            metadata: Tm
+          }, oa, Oa), (0, hm.g)(mm, null, kf, {
             kind: "accessor",
             name: "applyDecalMapAfterDetailMap",
             static: !1,
             private: !1,
             access: {
-              has: kk => "applyDecalMapAfterDetailMap" in kk,
-              get: kk => kk.applyDecalMapAfterDetailMap,
-              set: (kk, Fk) => {
-                kk.applyDecalMapAfterDetailMap = Fk
+              has: mm => "applyDecalMapAfterDetailMap" in mm,
+              get: mm => mm.applyDecalMapAfterDetailMap,
+              set: (mm, Tm) => {
+                mm.applyDecalMapAfterDetailMap = Tm
               }
             },
-            metadata: Fk
-          }, wi, Hi), (0, Xk.j)(null, null, iF, {
+            metadata: Tm
+          }, ja, Va), (0, hm.g)(null, null, aT, {
             kind: "field",
             name: "_diffuseTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_diffuseTexture" in kk,
-              get: kk => kk._diffuseTexture,
-              set: (kk, Fk) => {
-                kk._diffuseTexture = Fk
+              has: mm => "_diffuseTexture" in mm,
+              get: mm => mm._diffuseTexture,
+              set: (mm, Tm) => {
+                mm._diffuseTexture = Tm
               }
             },
-            metadata: Fk
-          }, vI, EI), (0, Xk.j)(null, null, lF, {
+            metadata: Tm
+          }, Sf, ef), (0, hm.g)(null, null, wT, {
             kind: "field",
             name: "_ambientTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_ambientTexture" in kk,
-              get: kk => kk._ambientTexture,
-              set: (kk, Fk) => {
-                kk._ambientTexture = Fk
+              has: mm => "_ambientTexture" in mm,
+              get: mm => mm._ambientTexture,
+              set: (mm, Tm) => {
+                mm._ambientTexture = Tm
               }
             },
-            metadata: Fk
-          }, GI, pI), (0, Xk.j)(null, null, qF, {
+            metadata: Tm
+          }, Xf, Pf), (0, hm.g)(null, null, iT, {
             kind: "field",
             name: "_opacityTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_opacityTexture" in kk,
-              get: kk => kk._opacityTexture,
-              set: (kk, Fk) => {
-                kk._opacityTexture = Fk
+              has: mm => "_opacityTexture" in mm,
+              get: mm => mm._opacityTexture,
+              set: (mm, Tm) => {
+                mm._opacityTexture = Tm
               }
             },
-            metadata: Fk
-          }, RI, UI), (0, Xk.j)(null, null, tF, {
+            metadata: Tm
+          }, Cf, rf), (0, hm.g)(null, null, pT, {
             kind: "field",
             name: "_reflectionTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_reflectionTexture" in kk,
-              get: kk => kk._reflectionTexture,
-              set: (kk, Fk) => {
-                kk._reflectionTexture = Fk
+              has: mm => "_reflectionTexture" in mm,
+              get: mm => mm._reflectionTexture,
+              set: (mm, Tm) => {
+                mm._reflectionTexture = Tm
               }
             },
-            metadata: Fk
-          }, cI, WI), (0, Xk.j)(null, null, jF, {
+            metadata: Tm
+          }, Mf, uf), (0, hm.g)(null, null, oT, {
             kind: "field",
             name: "_emissiveTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_emissiveTexture" in kk,
-              get: kk => kk._emissiveTexture,
-              set: (kk, Fk) => {
-                kk._emissiveTexture = Fk
+              has: mm => "_emissiveTexture" in mm,
+              get: mm => mm._emissiveTexture,
+              set: (mm, Tm) => {
+                mm._emissiveTexture = Tm
               }
             },
-            metadata: Fk
-          }, dI, YI), (0, Xk.j)(null, null, wF, {
+            metadata: Tm
+          }, vf, tf), (0, hm.g)(null, null, YT, {
             kind: "field",
             name: "_specularTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_specularTexture" in kk,
-              get: kk => kk._specularTexture,
-              set: (kk, Fk) => {
-                kk._specularTexture = Fk
+              has: mm => "_specularTexture" in mm,
+              get: mm => mm._specularTexture,
+              set: (mm, Tm) => {
+                mm._specularTexture = Tm
               }
             },
-            metadata: Fk
-          }, mI, hI), (0, Xk.j)(null, null, JF, {
+            metadata: Tm
+          }, gf, Wf), (0, hm.g)(null, null, jT, {
             kind: "field",
             name: "_bumpTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_bumpTexture" in kk,
-              get: kk => kk._bumpTexture,
-              set: (kk, Fk) => {
-                kk._bumpTexture = Fk
+              has: mm => "_bumpTexture" in mm,
+              get: mm => mm._bumpTexture,
+              set: (mm, Tm) => {
+                mm._bumpTexture = Tm
               }
             },
-            metadata: Fk
-          }, MI, kX), (0, Xk.j)(null, null, PF, {
+            metadata: Tm
+          }, Th, fh), (0, hm.g)(null, null, IT, {
             kind: "field",
             name: "_lightmapTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_lightmapTexture" in kk,
-              get: kk => kk._lightmapTexture,
-              set: (kk, Fk) => {
-                kk._lightmapTexture = Fk
+              has: mm => "_lightmapTexture" in mm,
+              get: mm => mm._lightmapTexture,
+              set: (mm, Tm) => {
+                mm._lightmapTexture = Tm
               }
             },
-            metadata: Fk
-          }, XX, TX), (0, Xk.j)(null, null, QF, {
+            metadata: Tm
+          }, ah, xh), (0, hm.g)(null, null, QT, {
             kind: "field",
             name: "_refractionTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_refractionTexture" in kk,
-              get: kk => kk._refractionTexture,
-              set: (kk, Fk) => {
-                kk._refractionTexture = Fk
+              has: mm => "_refractionTexture" in mm,
+              get: mm => mm._refractionTexture,
+              set: (mm, Tm) => {
+                mm._refractionTexture = Tm
               }
             },
-            metadata: Fk
-          }, lX, aX), (0, Xk.j)(null, null, VF, {
+            metadata: Tm
+          }, ih, Rh), (0, hm.g)(null, null, JT, {
             kind: "field",
             name: "ambientColor",
             static: !1,
             private: !1,
             access: {
-              has: kk => "ambientColor" in kk,
-              get: kk => kk.ambientColor,
-              set: (kk, Fk) => {
-                kk.ambientColor = Fk
+              has: mm => "ambientColor" in mm,
+              get: mm => mm.ambientColor,
+              set: (mm, Tm) => {
+                mm.ambientColor = Tm
               }
             },
-            metadata: Fk
-          }, tX, ZX), (0, Xk.j)(null, null, zF, {
+            metadata: Tm
+          }, oh, Oh), (0, hm.g)(null, null, cT, {
             kind: "field",
             name: "diffuseColor",
             static: !1,
             private: !1,
             access: {
-              has: kk => "diffuseColor" in kk,
-              get: kk => kk.diffuseColor,
-              set: (kk, Fk) => {
-                kk.diffuseColor = Fk
+              has: mm => "diffuseColor" in mm,
+              get: mm => mm.diffuseColor,
+              set: (mm, Tm) => {
+                mm.diffuseColor = Tm
               }
             },
-            metadata: Fk
-          }, jX, eX), (0, Xk.j)(null, null, SF, {
+            metadata: Tm
+          }, Yh, qh), (0, hm.g)(null, null, zT, {
             kind: "field",
             name: "specularColor",
             static: !1,
             private: !1,
             access: {
-              has: kk => "specularColor" in kk,
-              get: kk => kk.specularColor,
-              set: (kk, Fk) => {
-                kk.specularColor = Fk
+              has: mm => "specularColor" in mm,
+              get: mm => mm.specularColor,
+              set: (mm, Tm) => {
+                mm.specularColor = Tm
               }
             },
-            metadata: Fk
-          }, wX, HX), (0, Xk.j)(null, null, oF, {
+            metadata: Tm
+          }, jh, Vh), (0, hm.g)(null, null, ZT, {
             kind: "field",
             name: "emissiveColor",
             static: !1,
             private: !1,
             access: {
-              has: kk => "emissiveColor" in kk,
-              get: kk => kk.emissiveColor,
-              set: (kk, Fk) => {
-                kk.emissiveColor = Fk
+              has: mm => "emissiveColor" in mm,
+              get: mm => mm.emissiveColor,
+              set: (mm, Tm) => {
+                mm.emissiveColor = Tm
               }
             },
-            metadata: Fk
-          }, JX, xX), (0, Xk.j)(null, null, vF, {
+            metadata: Tm
+          }, Ih, Kh), (0, hm.g)(null, null, kT, {
             kind: "field",
             name: "specularPower",
             static: !1,
             private: !1,
             access: {
-              has: kk => "specularPower" in kk,
-              get: kk => kk.specularPower,
-              set: (kk, Fk) => {
-                kk.specularPower = Fk
+              has: mm => "specularPower" in mm,
+              get: mm => mm.specularPower,
+              set: (mm, Tm) => {
+                mm.specularPower = Tm
               }
             },
-            metadata: Fk
-          }, PX, KX), (0, Xk.j)(null, null, EF, {
+            metadata: Tm
+          }, Qh, nh), (0, hm.g)(null, null, bT, {
             kind: "field",
             name: "_useAlphaFromDiffuseTexture",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_useAlphaFromDiffuseTexture" in kk,
-              get: kk => kk._useAlphaFromDiffuseTexture,
-              set: (kk, Fk) => {
-                kk._useAlphaFromDiffuseTexture = Fk
+              has: mm => "_useAlphaFromDiffuseTexture" in mm,
+              get: mm => mm._useAlphaFromDiffuseTexture,
+              set: (mm, Tm) => {
+                mm._useAlphaFromDiffuseTexture = Tm
               }
             },
-            metadata: Fk
-          }, QX, sX), (0, Xk.j)(null, null, nF, {
+            metadata: Tm
+          }, Jh, ch), (0, hm.g)(null, null, eT, {
             kind: "field",
             name: "_useEmissiveAsIllumination",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_useEmissiveAsIllumination" in kk,
-              get: kk => kk._useEmissiveAsIllumination,
-              set: (kk, Fk) => {
-                kk._useEmissiveAsIllumination = Fk
+              has: mm => "_useEmissiveAsIllumination" in mm,
+              get: mm => mm._useEmissiveAsIllumination,
+              set: (mm, Tm) => {
+                mm._useEmissiveAsIllumination = Tm
               }
             },
-            metadata: Fk
-          }, SX, oX), (0, Xk.j)(null, null, pF, {
+            metadata: Tm
+          }, kh, bh), (0, hm.g)(null, null, GT, {
             kind: "field",
             name: "_linkEmissiveWithDiffuse",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_linkEmissiveWithDiffuse" in kk,
-              get: kk => kk._linkEmissiveWithDiffuse,
-              set: (kk, Fk) => {
-                kk._linkEmissiveWithDiffuse = Fk
+              has: mm => "_linkEmissiveWithDiffuse" in mm,
+              get: mm => mm._linkEmissiveWithDiffuse,
+              set: (mm, Tm) => {
+                mm._linkEmissiveWithDiffuse = Tm
               }
             },
-            metadata: Fk
-          }, OX, nX), (0, Xk.j)(null, null, bF, {
+            metadata: Tm
+          }, Nh, Gh), (0, hm.g)(null, null, PT, {
             kind: "field",
             name: "_useSpecularOverAlpha",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_useSpecularOverAlpha" in kk,
-              get: kk => kk._useSpecularOverAlpha,
-              set: (kk, Fk) => {
-                kk._useSpecularOverAlpha = Fk
+              has: mm => "_useSpecularOverAlpha" in mm,
+              get: mm => mm._useSpecularOverAlpha,
+              set: (mm, Tm) => {
+                mm._useSpecularOverAlpha = Tm
               }
             },
-            metadata: Fk
-          }, uX, bX), (0, Xk.j)(null, null, UF, {
+            metadata: Tm
+          }, Hh, yh), (0, hm.g)(null, null, yT, {
             kind: "field",
             name: "_useReflectionOverAlpha",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_useReflectionOverAlpha" in kk,
-              get: kk => kk._useReflectionOverAlpha,
-              set: (kk, Fk) => {
-                kk._useReflectionOverAlpha = Fk
+              has: mm => "_useReflectionOverAlpha" in mm,
+              get: mm => mm._useReflectionOverAlpha,
+              set: (mm, Tm) => {
+                mm._useReflectionOverAlpha = Tm
               }
             },
-            metadata: Fk
-          }, CX, NX), (0, Xk.j)(null, null, NF, {
+            metadata: Tm
+          }, sh, lh), (0, hm.g)(null, null, rT, {
             kind: "field",
             name: "_disableLighting",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_disableLighting" in kk,
-              get: kk => kk._disableLighting,
-              set: (kk, Fk) => {
-                kk._disableLighting = Fk
+              has: mm => "_disableLighting" in mm,
+              get: mm => mm._disableLighting,
+              set: (mm, Tm) => {
+                mm._disableLighting = Tm
               }
             },
-            metadata: Fk
-          }, fX, BX), (0, Xk.j)(null, null, WF, {
+            metadata: Tm
+          }, Bh, Lh), (0, hm.g)(null, null, lT, {
             kind: "field",
             name: "_useObjectSpaceNormalMap",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_useObjectSpaceNormalMap" in kk,
-              get: kk => kk._useObjectSpaceNormalMap,
-              set: (kk, Fk) => {
-                kk._useObjectSpaceNormalMap = Fk
+              has: mm => "_useObjectSpaceNormalMap" in mm,
+              get: mm => mm._useObjectSpaceNormalMap,
+              set: (mm, Tm) => {
+                mm._useObjectSpaceNormalMap = Tm
               }
             },
-            metadata: Fk
-          }, AX, gX), (0, Xk.j)(null, null, BF, {
+            metadata: Tm
+          }, Uh, dh), (0, hm.g)(null, null, uT, {
             kind: "field",
             name: "_useParallax",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_useParallax" in kk,
-              get: kk => kk._useParallax,
-              set: (kk, Fk) => {
-                kk._useParallax = Fk
+              has: mm => "_useParallax" in mm,
+              get: mm => mm._useParallax,
+              set: (mm, Tm) => {
+                mm._useParallax = Tm
               }
             },
-            metadata: Fk
-          }, rX, DX), (0, Xk.j)(null, null, YF, {
+            metadata: Tm
+          }, Fh, mA), (0, hm.g)(null, null, LT, {
             kind: "field",
             name: "_useParallaxOcclusion",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_useParallaxOcclusion" in kk,
-              get: kk => kk._useParallaxOcclusion,
-              set: (kk, Fk) => {
-                kk._useParallaxOcclusion = Fk
+              has: mm => "_useParallaxOcclusion" in mm,
+              get: mm => mm._useParallaxOcclusion,
+              set: (mm, Tm) => {
+                mm._useParallaxOcclusion = Tm
               }
             },
-            metadata: Fk
-          }, FT, IT), (0, Xk.j)(null, null, gF, {
+            metadata: Tm
+          }, hA, AA), (0, hm.g)(null, null, tT, {
             kind: "field",
             name: "parallaxScaleBias",
             static: !1,
             private: !1,
             access: {
-              has: kk => "parallaxScaleBias" in kk,
-              get: kk => kk.parallaxScaleBias,
-              set: (kk, Fk) => {
-                kk.parallaxScaleBias = Fk
+              has: mm => "parallaxScaleBias" in mm,
+              get: mm => mm.parallaxScaleBias,
+              set: (mm, Tm) => {
+                mm.parallaxScaleBias = Tm
               }
             },
-            metadata: Fk
-          }, iT, yT), (0, Xk.j)(null, null, mF, {
+            metadata: Tm
+          }, wA, DA), (0, hm.g)(null, null, UT, {
             kind: "field",
             name: "_roughness",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_roughness" in kk,
-              get: kk => kk._roughness,
-              set: (kk, Fk) => {
-                kk._roughness = Fk
+              has: mm => "_roughness" in mm,
+              get: mm => mm._roughness,
+              set: (mm, Tm) => {
+                mm._roughness = Tm
               }
             },
-            metadata: Fk
-          }, lT, aT), (0, Xk.j)(null, null, rF, {
+            metadata: Tm
+          }, iA, RA), (0, hm.g)(null, null, gT, {
             kind: "field",
             name: "indexOfRefraction",
             static: !1,
             private: !1,
             access: {
-              has: kk => "indexOfRefraction" in kk,
-              get: kk => kk.indexOfRefraction,
-              set: (kk, Fk) => {
-                kk.indexOfRefraction = Fk
+              has: mm => "indexOfRefraction" in mm,
+              get: mm => mm.indexOfRefraction,
+              set: (mm, Tm) => {
+                mm.indexOfRefraction = Tm
               }
             },
-            metadata: Fk
-          }, tT, ZT), (0, Xk.j)(null, null, DF, {
+            metadata: Tm
+          }, oA, OA), (0, hm.g)(null, null, WT, {
             kind: "field",
             name: "invertRefractionY",
             static: !1,
             private: !1,
             access: {
-              has: kk => "invertRefractionY" in kk,
-              get: kk => kk.invertRefractionY,
-              set: (kk, Fk) => {
-                kk.invertRefractionY = Fk
+              has: mm => "invertRefractionY" in mm,
+              get: mm => mm.invertRefractionY,
+              set: (mm, Tm) => {
+                mm.invertRefractionY = Tm
               }
             },
-            metadata: Fk
-          }, jT, eT), (0, Xk.j)(null, null, MF, {
+            metadata: Tm
+          }, YA, qA), (0, hm.g)(null, null, FT, {
             kind: "field",
             name: "alphaCutOff",
             static: !1,
             private: !1,
             access: {
-              has: kk => "alphaCutOff" in kk,
-              get: kk => kk.alphaCutOff,
-              set: (kk, Fk) => {
-                kk.alphaCutOff = Fk
+              has: mm => "alphaCutOff" in mm,
+              get: mm => mm.alphaCutOff,
+              set: (mm, Tm) => {
+                mm.alphaCutOff = Tm
               }
             },
-            metadata: Fk
-          }, wT, HT), (0, Xk.j)(null, null, kI, {
+            metadata: Tm
+          }, jA, VA), (0, hm.g)(null, null, mf, {
             kind: "field",
             name: "_useLightmapAsShadowmap",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_useLightmapAsShadowmap" in kk,
-              get: kk => kk._useLightmapAsShadowmap,
-              set: (kk, Fk) => {
-                kk._useLightmapAsShadowmap = Fk
+              has: mm => "_useLightmapAsShadowmap" in mm,
+              get: mm => mm._useLightmapAsShadowmap,
+              set: (mm, Tm) => {
+                mm._useLightmapAsShadowmap = Tm
               }
             },
-            metadata: Fk
-          }, JT, xT), (0, Xk.j)(null, null, II, {
+            metadata: Tm
+          }, IA, KA), (0, hm.g)(null, null, ff, {
             kind: "field",
             name: "_diffuseFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_diffuseFresnelParameters" in kk,
-              get: kk => kk._diffuseFresnelParameters,
-              set: (kk, Fk) => {
-                kk._diffuseFresnelParameters = Fk
+              has: mm => "_diffuseFresnelParameters" in mm,
+              get: mm => mm._diffuseFresnelParameters,
+              set: (mm, Tm) => {
+                mm._diffuseFresnelParameters = Tm
               }
             },
-            metadata: Fk
-          }, QT, sT), (0, Xk.j)(null, null, TI, {
+            metadata: Tm
+          }, JA, cA), (0, hm.g)(null, null, Af, {
             kind: "field",
             name: "_opacityFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_opacityFresnelParameters" in kk,
-              get: kk => kk._opacityFresnelParameters,
-              set: (kk, Fk) => {
-                kk._opacityFresnelParameters = Fk
+              has: mm => "_opacityFresnelParameters" in mm,
+              get: mm => mm._opacityFresnelParameters,
+              set: (mm, Tm) => {
+                mm._opacityFresnelParameters = Tm
               }
             },
-            metadata: Fk
-          }, ST, oT), (0, Xk.j)(null, null, yI, {
+            metadata: Tm
+          }, kA, bA), (0, hm.g)(null, null, xf, {
             kind: "field",
             name: "_reflectionFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_reflectionFresnelParameters" in kk,
-              get: kk => kk._reflectionFresnelParameters,
-              set: (kk, Fk) => {
-                kk._reflectionFresnelParameters = Fk
+              has: mm => "_reflectionFresnelParameters" in mm,
+              get: mm => mm._reflectionFresnelParameters,
+              set: (mm, Tm) => {
+                mm._reflectionFresnelParameters = Tm
               }
             },
-            metadata: Fk
-          }, OT, nT), (0, Xk.j)(null, null, aI, {
+            metadata: Tm
+          }, NA, GA), (0, hm.g)(null, null, Df, {
             kind: "field",
             name: "_refractionFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_refractionFresnelParameters" in kk,
-              get: kk => kk._refractionFresnelParameters,
-              set: (kk, Fk) => {
-                kk._refractionFresnelParameters = Fk
+              has: mm => "_refractionFresnelParameters" in mm,
+              get: mm => mm._refractionFresnelParameters,
+              set: (mm, Tm) => {
+                mm._refractionFresnelParameters = Tm
               }
             },
-            metadata: Fk
-          }, uT, bT), (0, Xk.j)(null, null, LI, {
+            metadata: Tm
+          }, HA, yA), (0, hm.g)(null, null, pf, {
             kind: "field",
             name: "_emissiveFresnelParameters",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_emissiveFresnelParameters" in kk,
-              get: kk => kk._emissiveFresnelParameters,
-              set: (kk, Fk) => {
-                kk._emissiveFresnelParameters = Fk
+              has: mm => "_emissiveFresnelParameters" in mm,
+              get: mm => mm._emissiveFresnelParameters,
+              set: (mm, Tm) => {
+                mm._emissiveFresnelParameters = Tm
               }
             },
-            metadata: Fk
-          }, CT, NT), (0, Xk.j)(null, null, ZI, {
+            metadata: Tm
+          }, sA, lA), (0, hm.g)(null, null, of, {
             kind: "field",
             name: "_useReflectionFresnelFromSpecular",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_useReflectionFresnelFromSpecular" in kk,
-              get: kk => kk._useReflectionFresnelFromSpecular,
-              set: (kk, Fk) => {
-                kk._useReflectionFresnelFromSpecular = Fk
+              has: mm => "_useReflectionFresnelFromSpecular" in mm,
+              get: mm => mm._useReflectionFresnelFromSpecular,
+              set: (mm, Tm) => {
+                mm._useReflectionFresnelFromSpecular = Tm
               }
             },
-            metadata: Fk
-          }, fT, BT), (0, Xk.j)(null, null, eI, {
+            metadata: Tm
+          }, BA, LA), (0, hm.g)(null, null, Yf, {
             kind: "field",
             name: "_useGlossinessFromSpecularMapAlpha",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_useGlossinessFromSpecularMapAlpha" in kk,
-              get: kk => kk._useGlossinessFromSpecularMapAlpha,
-              set: (kk, Fk) => {
-                kk._useGlossinessFromSpecularMapAlpha = Fk
+              has: mm => "_useGlossinessFromSpecularMapAlpha" in mm,
+              get: mm => mm._useGlossinessFromSpecularMapAlpha,
+              set: (mm, Tm) => {
+                mm._useGlossinessFromSpecularMapAlpha = Tm
               }
             },
-            metadata: Fk
-          }, AT, gT), (0, Xk.j)(null, null, HI, {
+            metadata: Tm
+          }, UA, dA), (0, hm.g)(null, null, jf, {
             kind: "field",
             name: "_maxSimultaneousLights",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_maxSimultaneousLights" in kk,
-              get: kk => kk._maxSimultaneousLights,
-              set: (kk, Fk) => {
-                kk._maxSimultaneousLights = Fk
+              has: mm => "_maxSimultaneousLights" in mm,
+              get: mm => mm._maxSimultaneousLights,
+              set: (mm, Tm) => {
+                mm._maxSimultaneousLights = Tm
               }
             },
-            metadata: Fk
-          }, rT, DT), (0, Xk.j)(null, null, xI, {
+            metadata: Tm
+          }, FA, ma), (0, hm.g)(null, null, If, {
             kind: "field",
             name: "_invertNormalMapX",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_invertNormalMapX" in kk,
-              get: kk => kk._invertNormalMapX,
-              set: (kk, Fk) => {
-                kk._invertNormalMapX = Fk
+              has: mm => "_invertNormalMapX" in mm,
+              get: mm => mm._invertNormalMapX,
+              set: (mm, Tm) => {
+                mm._invertNormalMapX = Tm
               }
             },
-            metadata: Fk
-          }, Fi, Ii), (0, Xk.j)(null, null, KI, {
+            metadata: Tm
+          }, ha, Aa), (0, hm.g)(null, null, Qf, {
             kind: "field",
             name: "_invertNormalMapY",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_invertNormalMapY" in kk,
-              get: kk => kk._invertNormalMapY,
-              set: (kk, Fk) => {
-                kk._invertNormalMapY = Fk
+              has: mm => "_invertNormalMapY" in mm,
+              get: mm => mm._invertNormalMapY,
+              set: (mm, Tm) => {
+                mm._invertNormalMapY = Tm
               }
             },
-            metadata: Fk
-          }, ii, yi), (0, Xk.j)(null, null, sI, {
+            metadata: Tm
+          }, wa, Da), (0, hm.g)(null, null, Jf, {
             kind: "field",
             name: "_twoSidedLighting",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_twoSidedLighting" in kk,
-              get: kk => kk._twoSidedLighting,
-              set: (kk, Fk) => {
-                kk._twoSidedLighting = Fk
+              has: mm => "_twoSidedLighting" in mm,
+              get: mm => mm._twoSidedLighting,
+              set: (mm, Tm) => {
+                mm._twoSidedLighting = Tm
               }
             },
-            metadata: Fk
-          }, qi, Li), (0, Xk.j)(null, null, zI, {
+            metadata: Tm
+          }, pa, Ea), (0, hm.g)(null, null, Zf, {
             kind: "field",
             name: "_applyDecalMapAfterDetailMap",
             static: !1,
             private: !1,
             access: {
-              has: kk => "_applyDecalMapAfterDetailMap" in kk,
-              get: kk => kk._applyDecalMapAfterDetailMap,
-              set: (kk, Fk) => {
-                kk._applyDecalMapAfterDetailMap = Fk
+              has: mm => "_applyDecalMapAfterDetailMap" in mm,
+              get: mm => mm._applyDecalMapAfterDetailMap,
+              set: (mm, Tm) => {
+                mm._applyDecalMapAfterDetailMap = Tm
               }
             },
-            metadata: Fk
-          }, ji, ei), Fk && Object.defineProperty(kk, Symbol.metadata, {
+            metadata: Tm
+          }, Ya, qa), Tm && Object.defineProperty(mm, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Fk
+            value: Tm
           })
-        })(), kk.ForceGLSL = !1, kk._ShaderLoader = new sk.c((() => [Promise.all([Ik.e(317), Ik.e(316)]).then((() => Ik(41867))), Promise.all([Ik.e(322), Ik.e(318), Ik.e(331), Ik.e(321)]).then((() => Ik(42073)))]), (() => [Promise.all([Ik.e(338), Ik.e(333)]).then((() => Ik(42225))), Promise.all([Ik.e(339), Ik.e(349), Ik.e(335)]).then((() => Ik(42415)))])), kk
+        })(), mm.ForceGLSL = !1, mm._ShaderLoader = new nm.e((() => [Promise.all([fm.e(317), fm.e(316)]).then((() => fm(41885))), Promise.all([fm.e(322), fm.e(318), fm.e(331), fm.e(321)]).then((() => fm(42072)))]), (() => [Promise.all([fm.e(338), fm.e(333)]).then((() => fm(42234))), Promise.all([fm.e(339), fm.e(349), fm.e(335)]).then((() => fm(42422)))])), mm
       })(),
-      Rk = !1;
+      Pm = !1;
 
-    function Uk() {
-      Rk || (Rk = !0, (0, tk.e)(), (0, Ek.f)("BABYLON.StandardMaterial", bk), yk.f.DefaultMaterialFactory = kk => new bk("default material", kk))
+    function Hm() {
+      Pm || (Pm = !0, (0, pm.f)(), (0, km.d)("BABYLON.StandardMaterial", Xm), xm.f.DefaultMaterialFactory = mm => new Xm("default material", mm))
     }
-    Object.getOwnPropertyDescriptor(bk.prototype, "decalMap") || Object.defineProperty(bk.prototype, "decalMap", (0, Ok.g)("StandardMaterial", "decalMap"))
+    Object.getOwnPropertyDescriptor(Xm.prototype, "decalMap") || Object.defineProperty(Xm.prototype, "decalMap", (0, bm.e)("StandardMaterial", "decalMap"))
   },
-  40386: (kk, Fk, Ik) => {
-    function Xk(kk) {
-      return class extends kk {
+  40491: (mm, Tm, fm) => {
+    function hm(mm) {
+      return class extends mm {
         constructor() {
           super(...arguments), this.MAINUV1 = !1, this.MAINUV2 = !1, this.MAINUV3 = !1, this.MAINUV4 = !1, this.MAINUV5 = !1, this.MAINUV6 = !1, this.UV1 = !1, this.UV2 = !1, this.UV3 = !1, this.UV4 = !1, this.UV5 = !1, this.UV6 = !1
         }
       }
     }
-    Ik.d(Fk, {
-      b: () => Xk
+    fm.d(Tm, {
+      e: () => hm
     })
   },
-  40377: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => Xk
+  40474: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => hm
     });
-    class Xk {
-      constructor(kk, Fk) {
+    class hm {
+      constructor(mm, Tm) {
         this._webGL = {
-          load: kk,
+          load: mm,
           loaded: !1,
           loadPromise: null
         }, this._webGPU = {
-          load: Fk,
+          load: Tm,
           loaded: !1,
           loadPromise: null
         }
       }
-      getLoadCallback(kk) {
-        const Fk = 1 === kk ? this._webGPU : this._webGL;
-        return Fk.loaded ? void 0 : async () => {
-          await this._loadAsync(Fk)
+      getLoadCallback(mm) {
+        const Tm = 1 === mm ? this._webGPU : this._webGL;
+        return Tm.loaded ? void 0 : async () => {
+          await this._loadAsync(Tm)
         }
       }
-      async _loadAsync(kk) {
-        if (kk.loaded) return;
-        let Fk = kk.loadPromise;
-        const Ik = null === Fk;
-        Ik && (Fk = Promise.all(kk.load()), kk.loadPromise = Fk);
-        let Xk = !1;
+      async _loadAsync(mm) {
+        if (mm.loaded) return;
+        let Tm = mm.loadPromise;
+        const fm = null === Tm;
+        fm && (Tm = Promise.all(mm.load()), mm.loadPromise = Tm);
+        let hm = !1;
         try {
-          await Fk, Xk = !0
+          await Tm, hm = !0
         } finally {
-          Ik && this._completeLoad(kk, Xk)
+          fm && this._completeLoad(mm, hm)
         }
       }
-      _completeLoad(kk, Fk) {
-        kk.loaded = Fk, kk.loadPromise = null
+      _completeLoad(mm, Tm) {
+        mm.loaded = Tm, mm.loadPromise = null
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

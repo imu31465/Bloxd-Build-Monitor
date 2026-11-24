@@ -1,8 +1,8 @@
 export const id = 221;
 export const ids = [221];
 export const modules = {
-  36640: kk => {
-    kk.exports = {
+  36729: mm => {
+    mm.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
       aqua: [0, 255, 255],
@@ -153,363 +153,363 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  36631: (kk, Fk, Ik) => {
-    var Xk = Ik(36640),
-      Tk = Ik(36646),
-      ik = Object.hasOwnProperty,
-      yk = Object.create(null);
-    for (var lk in Xk) ik.call(Xk, lk) && (yk[Xk[lk]] = lk);
-    var ak = kk.exports = {
+  36726: (mm, Tm, fm) => {
+    var hm = fm(36729),
+      Am = fm(36734),
+      am = Object.hasOwnProperty,
+      xm = Object.create(null);
+    for (var wm in hm) am.call(hm, wm) && (xm[hm[wm]] = wm);
+    var Dm = mm.exports = {
       to: {},
       get: {}
     };
 
-    function qk(kk, Fk, Ik) {
-      return Math.min(Math.max(Fk, kk), Ik)
+    function im(mm, Tm, fm) {
+      return Math.min(Math.max(Tm, mm), fm)
     }
 
-    function Lk(kk) {
-      var Fk = Math.round(kk).toString(16).toUpperCase();
-      return Fk.length < 2 ? "0" + Fk : Fk
+    function Rm(mm) {
+      var Tm = Math.round(mm).toString(16).toUpperCase();
+      return Tm.length < 2 ? "0" + Tm : Tm
     }
-    ak.get = function(kk) {
-      var Fk, Ik;
-      switch (kk.substring(0, 3).toLowerCase()) {
+    Dm.get = function(mm) {
+      var Tm, fm;
+      switch (mm.substring(0, 3).toLowerCase()) {
         case "hsl":
-          Fk = ak.get.hsl(kk), Ik = "hsl";
+          Tm = Dm.get.hsl(mm), fm = "hsl";
           break;
         case "hwb":
-          Fk = ak.get.hwb(kk), Ik = "hwb";
+          Tm = Dm.get.hwb(mm), fm = "hwb";
           break;
         default:
-          Fk = ak.get.rgb(kk), Ik = "rgb"
+          Tm = Dm.get.rgb(mm), fm = "rgb"
       }
-      return Fk ? {
-        model: Ik,
-        value: Fk
+      return Tm ? {
+        model: fm,
+        value: Tm
       } : null
-    }, ak.get.rgb = function(kk) {
-      if (!kk) return null;
-      var Fk, Ik, Tk, yk = [0, 0, 0, 1];
-      if (Fk = kk.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
-        for (Tk = Fk[2], Fk = Fk[1], Ik = 0; Ik < 3; Ik++) {
-          var lk = 2 * Ik;
-          yk[Ik] = parseInt(Fk.slice(lk, lk + 2), 16)
+    }, Dm.get.rgb = function(mm) {
+      if (!mm) return null;
+      var Tm, fm, Am, xm = [0, 0, 0, 1];
+      if (Tm = mm.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
+        for (Am = Tm[2], Tm = Tm[1], fm = 0; fm < 3; fm++) {
+          var wm = 2 * fm;
+          xm[fm] = parseInt(Tm.slice(wm, wm + 2), 16)
         }
-        Tk && (yk[3] = parseInt(Tk, 16) / 255)
-      } else if (Fk = kk.match(/^#([a-f0-9]{3,4})$/i)) {
-        for (Tk = (Fk = Fk[1])[3], Ik = 0; Ik < 3; Ik++) yk[Ik] = parseInt(Fk[Ik] + Fk[Ik], 16);
-        Tk && (yk[3] = parseInt(Tk + Tk, 16) / 255)
-      } else if (Fk = kk.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
-        for (Ik = 0; Ik < 3; Ik++) yk[Ik] = parseInt(Fk[Ik + 1], 0);
-        Fk[4] && (Fk[5] ? yk[3] = .01 * parseFloat(Fk[4]) : yk[3] = parseFloat(Fk[4]))
+        Am && (xm[3] = parseInt(Am, 16) / 255)
+      } else if (Tm = mm.match(/^#([a-f0-9]{3,4})$/i)) {
+        for (Am = (Tm = Tm[1])[3], fm = 0; fm < 3; fm++) xm[fm] = parseInt(Tm[fm] + Tm[fm], 16);
+        Am && (xm[3] = parseInt(Am + Am, 16) / 255)
+      } else if (Tm = mm.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
+        for (fm = 0; fm < 3; fm++) xm[fm] = parseInt(Tm[fm + 1], 0);
+        Tm[4] && (Tm[5] ? xm[3] = .01 * parseFloat(Tm[4]) : xm[3] = parseFloat(Tm[4]))
       } else {
-        if (!(Fk = kk.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (Fk = kk.match(/^(\w+)$/)) ? "transparent" === Fk[1] ? [0, 0, 0, 0] : ik.call(Xk, Fk[1]) ? ((yk = Xk[Fk[1]])[3] = 1, yk) : null : null;
-        for (Ik = 0; Ik < 3; Ik++) yk[Ik] = Math.round(2.55 * parseFloat(Fk[Ik + 1]));
-        Fk[4] && (Fk[5] ? yk[3] = .01 * parseFloat(Fk[4]) : yk[3] = parseFloat(Fk[4]))
+        if (!(Tm = mm.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (Tm = mm.match(/^(\w+)$/)) ? "transparent" === Tm[1] ? [0, 0, 0, 0] : am.call(hm, Tm[1]) ? ((xm = hm[Tm[1]])[3] = 1, xm) : null : null;
+        for (fm = 0; fm < 3; fm++) xm[fm] = Math.round(2.55 * parseFloat(Tm[fm + 1]));
+        Tm[4] && (Tm[5] ? xm[3] = .01 * parseFloat(Tm[4]) : xm[3] = parseFloat(Tm[4]))
       }
-      for (Ik = 0; Ik < 3; Ik++) yk[Ik] = qk(yk[Ik], 0, 255);
-      return yk[3] = qk(yk[3], 0, 1), yk
-    }, ak.get.hsl = function(kk) {
-      if (!kk) return null;
-      var Fk = kk.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (Fk) {
-        var Ik = parseFloat(Fk[4]);
-        return [(parseFloat(Fk[1]) % 360 + 360) % 360, qk(parseFloat(Fk[2]), 0, 100), qk(parseFloat(Fk[3]), 0, 100), qk(isNaN(Ik) ? 1 : Ik, 0, 1)]
-      }
-      return null
-    }, ak.get.hwb = function(kk) {
-      if (!kk) return null;
-      var Fk = kk.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (Fk) {
-        var Ik = parseFloat(Fk[4]);
-        return [(parseFloat(Fk[1]) % 360 + 360) % 360, qk(parseFloat(Fk[2]), 0, 100), qk(parseFloat(Fk[3]), 0, 100), qk(isNaN(Ik) ? 1 : Ik, 0, 1)]
+      for (fm = 0; fm < 3; fm++) xm[fm] = im(xm[fm], 0, 255);
+      return xm[3] = im(xm[3], 0, 1), xm
+    }, Dm.get.hsl = function(mm) {
+      if (!mm) return null;
+      var Tm = mm.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (Tm) {
+        var fm = parseFloat(Tm[4]);
+        return [(parseFloat(Tm[1]) % 360 + 360) % 360, im(parseFloat(Tm[2]), 0, 100), im(parseFloat(Tm[3]), 0, 100), im(isNaN(fm) ? 1 : fm, 0, 1)]
       }
       return null
-    }, ak.to.hex = function() {
-      var kk = Tk(arguments);
-      return "#" + Lk(kk[0]) + Lk(kk[1]) + Lk(kk[2]) + (kk[3] < 1 ? Lk(Math.round(255 * kk[3])) : "")
-    }, ak.to.rgb = function() {
-      var kk = Tk(arguments);
-      return kk.length < 4 || 1 === kk[3] ? "rgb(" + Math.round(kk[0]) + ", " + Math.round(kk[1]) + ", " + Math.round(kk[2]) + ")" : "rgba(" + Math.round(kk[0]) + ", " + Math.round(kk[1]) + ", " + Math.round(kk[2]) + ", " + kk[3] + ")"
-    }, ak.to.rgb.percent = function() {
-      var kk = Tk(arguments),
-        Fk = Math.round(kk[0] / 255 * 100),
-        Ik = Math.round(kk[1] / 255 * 100),
-        Xk = Math.round(kk[2] / 255 * 100);
-      return kk.length < 4 || 1 === kk[3] ? "rgb(" + Fk + "%, " + Ik + "%, " + Xk + "%)" : "rgba(" + Fk + "%, " + Ik + "%, " + Xk + "%, " + kk[3] + ")"
-    }, ak.to.hsl = function() {
-      var kk = Tk(arguments);
-      return kk.length < 4 || 1 === kk[3] ? "hsl(" + kk[0] + ", " + kk[1] + "%, " + kk[2] + "%)" : "hsla(" + kk[0] + ", " + kk[1] + "%, " + kk[2] + "%, " + kk[3] + ")"
-    }, ak.to.hwb = function() {
-      var kk = Tk(arguments),
-        Fk = "";
-      return kk.length >= 4 && 1 !== kk[3] && (Fk = ", " + kk[3]), "hwb(" + kk[0] + ", " + kk[1] + "%, " + kk[2] + "%" + Fk + ")"
-    }, ak.to.keyword = function(kk) {
-      return yk[kk.slice(0, 3)]
+    }, Dm.get.hwb = function(mm) {
+      if (!mm) return null;
+      var Tm = mm.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (Tm) {
+        var fm = parseFloat(Tm[4]);
+        return [(parseFloat(Tm[1]) % 360 + 360) % 360, im(parseFloat(Tm[2]), 0, 100), im(parseFloat(Tm[3]), 0, 100), im(isNaN(fm) ? 1 : fm, 0, 1)]
+      }
+      return null
+    }, Dm.to.hex = function() {
+      var mm = Am(arguments);
+      return "#" + Rm(mm[0]) + Rm(mm[1]) + Rm(mm[2]) + (mm[3] < 1 ? Rm(Math.round(255 * mm[3])) : "")
+    }, Dm.to.rgb = function() {
+      var mm = Am(arguments);
+      return mm.length < 4 || 1 === mm[3] ? "rgb(" + Math.round(mm[0]) + ", " + Math.round(mm[1]) + ", " + Math.round(mm[2]) + ")" : "rgba(" + Math.round(mm[0]) + ", " + Math.round(mm[1]) + ", " + Math.round(mm[2]) + ", " + mm[3] + ")"
+    }, Dm.to.rgb.percent = function() {
+      var mm = Am(arguments),
+        Tm = Math.round(mm[0] / 255 * 100),
+        fm = Math.round(mm[1] / 255 * 100),
+        hm = Math.round(mm[2] / 255 * 100);
+      return mm.length < 4 || 1 === mm[3] ? "rgb(" + Tm + "%, " + fm + "%, " + hm + "%)" : "rgba(" + Tm + "%, " + fm + "%, " + hm + "%, " + mm[3] + ")"
+    }, Dm.to.hsl = function() {
+      var mm = Am(arguments);
+      return mm.length < 4 || 1 === mm[3] ? "hsl(" + mm[0] + ", " + mm[1] + "%, " + mm[2] + "%)" : "hsla(" + mm[0] + ", " + mm[1] + "%, " + mm[2] + "%, " + mm[3] + ")"
+    }, Dm.to.hwb = function() {
+      var mm = Am(arguments),
+        Tm = "";
+      return mm.length >= 4 && 1 !== mm[3] && (Tm = ", " + mm[3]), "hwb(" + mm[0] + ", " + mm[1] + "%, " + mm[2] + "%" + Tm + ")"
+    }, Dm.to.keyword = function(mm) {
+      return xm[mm.slice(0, 3)]
     }
   },
-  36624: (kk, Fk, Ik) => {
-    const Xk = Ik(36631),
-      Tk = Ik(36658),
-      ik = ["keyword", "gray", "hex"],
-      yk = {};
-    for (const jk of Object.keys(Tk)) yk[[...Tk[jk].labels].sort().join("")] = jk;
-    const lk = {};
+  36717: (mm, Tm, fm) => {
+    const hm = fm(36726),
+      Am = fm(36742),
+      am = ["keyword", "gray", "hex"],
+      xm = {};
+    for (const om of Object.keys(Am)) xm[[...Am[om].labels].sort().join("")] = om;
+    const wm = {};
 
-    function ak(kk, Fk) {
-      if (!(this instanceof ak)) return new ak(kk, Fk);
-      if (Fk && Fk in ik && (Fk = null), Fk && !(Fk in Tk)) throw new Error("Unknown model: " + Fk);
-      let Ik, qk;
-      if (null == kk) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
-      else if (kk instanceof ak) this.model = kk.model, this.color = [...kk.color], this.valpha = kk.valpha;
-      else if ("string" === typeof kk) {
-        const Fk = Xk.get(kk);
-        if (null === Fk) throw new Error("Unable to parse color from string: " + kk);
-        this.model = Fk.model, qk = Tk[this.model].channels, this.color = Fk.value.slice(0, qk), this.valpha = "number" === typeof Fk.value[qk] ? Fk.value[qk] : 1
-      } else if (kk.length > 0) {
-        this.model = Fk || "rgb", qk = Tk[this.model].channels;
-        const Ik = Array.prototype.slice.call(kk, 0, qk);
-        this.color = Zk(Ik, qk), this.valpha = "number" === typeof kk[qk] ? kk[qk] : 1
-      } else if ("number" === typeof kk) this.model = "rgb", this.color = [kk >> 16 & 255, kk >> 8 & 255, 255 & kk], this.valpha = 1;
+    function Dm(mm, Tm) {
+      if (!(this instanceof Dm)) return new Dm(mm, Tm);
+      if (Tm && Tm in am && (Tm = null), Tm && !(Tm in Am)) throw new Error("Unknown model: " + Tm);
+      let fm, im;
+      if (null == mm) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
+      else if (mm instanceof Dm) this.model = mm.model, this.color = [...mm.color], this.valpha = mm.valpha;
+      else if ("string" === typeof mm) {
+        const Tm = hm.get(mm);
+        if (null === Tm) throw new Error("Unable to parse color from string: " + mm);
+        this.model = Tm.model, im = Am[this.model].channels, this.color = Tm.value.slice(0, im), this.valpha = "number" === typeof Tm.value[im] ? Tm.value[im] : 1
+      } else if (mm.length > 0) {
+        this.model = Tm || "rgb", im = Am[this.model].channels;
+        const fm = Array.prototype.slice.call(mm, 0, im);
+        this.color = Em(fm, im), this.valpha = "number" === typeof mm[im] ? mm[im] : 1
+      } else if ("number" === typeof mm) this.model = "rgb", this.color = [mm >> 16 & 255, mm >> 8 & 255, 255 & mm], this.valpha = 1;
       else {
         this.valpha = 1;
-        const Fk = Object.keys(kk);
-        "alpha" in kk && (Fk.splice(Fk.indexOf("alpha"), 1), this.valpha = "number" === typeof kk.alpha ? kk.alpha : 0);
-        const Xk = Fk.sort().join("");
-        if (!(Xk in yk)) throw new Error("Unable to parse color from object: " + JSON.stringify(kk));
-        this.model = yk[Xk];
+        const Tm = Object.keys(mm);
+        "alpha" in mm && (Tm.splice(Tm.indexOf("alpha"), 1), this.valpha = "number" === typeof mm.alpha ? mm.alpha : 0);
+        const hm = Tm.sort().join("");
+        if (!(hm in xm)) throw new Error("Unable to parse color from object: " + JSON.stringify(mm));
+        this.model = xm[hm];
         const {
-          labels: ik
-        } = Tk[this.model], lk = [];
-        for (Ik = 0; Ik < ik.length; Ik++) lk.push(kk[ik[Ik]]);
-        this.color = Zk(lk)
+          labels: am
+        } = Am[this.model], wm = [];
+        for (fm = 0; fm < am.length; fm++) wm.push(mm[am[fm]]);
+        this.color = Em(wm)
       }
-      if (lk[this.model])
-        for (qk = Tk[this.model].channels, Ik = 0; Ik < qk; Ik++) {
-          const kk = lk[this.model][Ik];
-          kk && (this.color[Ik] = kk(this.color[Ik]))
+      if (wm[this.model])
+        for (im = Am[this.model].channels, fm = 0; fm < im; fm++) {
+          const mm = wm[this.model][fm];
+          mm && (this.color[fm] = mm(this.color[fm]))
         }
       this.valpha = Math.max(0, Math.min(1, this.valpha)), Object.freeze && Object.freeze(this)
     }
-    ak.prototype = {
+    Dm.prototype = {
       toString() {
         return this.string()
       },
       toJSON() {
         return this[this.model]()
       },
-      string(kk) {
-        let Fk = this.model in Xk.to ? this : this.rgb();
-        Fk = Fk.round("number" === typeof kk ? kk : 1);
-        const Ik = 1 === Fk.valpha ? Fk.color : [...Fk.color, this.valpha];
-        return Xk.to[Fk.model](Ik)
+      string(mm) {
+        let Tm = this.model in hm.to ? this : this.rgb();
+        Tm = Tm.round("number" === typeof mm ? mm : 1);
+        const fm = 1 === Tm.valpha ? Tm.color : [...Tm.color, this.valpha];
+        return hm.to[Tm.model](fm)
       },
-      percentString(kk) {
-        const Fk = this.rgb().round("number" === typeof kk ? kk : 1),
-          Ik = 1 === Fk.valpha ? Fk.color : [...Fk.color, this.valpha];
-        return Xk.to.rgb.percent(Ik)
+      percentString(mm) {
+        const Tm = this.rgb().round("number" === typeof mm ? mm : 1),
+          fm = 1 === Tm.valpha ? Tm.color : [...Tm.color, this.valpha];
+        return hm.to.rgb.percent(fm)
       },
       array() {
         return 1 === this.valpha ? [...this.color] : [...this.color, this.valpha]
       },
       object() {
-        const kk = {},
+        const mm = {},
           {
-            channels: Fk
-          } = Tk[this.model],
+            channels: Tm
+          } = Am[this.model],
           {
-            labels: Ik
-          } = Tk[this.model];
-        for (let Xk = 0; Xk < Fk; Xk++) kk[Ik[Xk]] = this.color[Xk];
-        return 1 !== this.valpha && (kk.alpha = this.valpha), kk
+            labels: fm
+          } = Am[this.model];
+        for (let hm = 0; hm < Tm; hm++) mm[fm[hm]] = this.color[hm];
+        return 1 !== this.valpha && (mm.alpha = this.valpha), mm
       },
       unitArray() {
-        const kk = this.rgb().color;
-        return kk[0] /= 255, kk[1] /= 255, kk[2] /= 255, 1 !== this.valpha && kk.push(this.valpha), kk
+        const mm = this.rgb().color;
+        return mm[0] /= 255, mm[1] /= 255, mm[2] /= 255, 1 !== this.valpha && mm.push(this.valpha), mm
       },
       unitObject() {
-        const kk = this.rgb().object();
-        return kk.r /= 255, kk.g /= 255, kk.b /= 255, 1 !== this.valpha && (kk.alpha = this.valpha), kk
+        const mm = this.rgb().object();
+        return mm.r /= 255, mm.g /= 255, mm.b /= 255, 1 !== this.valpha && (mm.alpha = this.valpha), mm
       },
-      round(kk) {
-        return kk = Math.max(kk || 0, 0), new ak([...this.color.map(qk(kk)), this.valpha], this.model)
+      round(mm) {
+        return mm = Math.max(mm || 0, 0), new Dm([...this.color.map(im(mm)), this.valpha], this.model)
       },
-      alpha(kk) {
-        return void 0 !== kk ? new ak([...this.color, Math.max(0, Math.min(1, kk))], this.model) : this.valpha
+      alpha(mm) {
+        return void 0 !== mm ? new Dm([...this.color, Math.max(0, Math.min(1, mm))], this.model) : this.valpha
       },
-      red: Lk("rgb", 0, tk(255)),
-      green: Lk("rgb", 1, tk(255)),
-      blue: Lk("rgb", 2, tk(255)),
-      hue: Lk(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (kk => (kk % 360 + 360) % 360)),
-      saturationl: Lk("hsl", 1, tk(100)),
-      lightness: Lk("hsl", 2, tk(100)),
-      saturationv: Lk("hsv", 1, tk(100)),
-      value: Lk("hsv", 2, tk(100)),
-      chroma: Lk("hcg", 1, tk(100)),
-      gray: Lk("hcg", 2, tk(100)),
-      white: Lk("hwb", 1, tk(100)),
-      wblack: Lk("hwb", 2, tk(100)),
-      cyan: Lk("cmyk", 0, tk(100)),
-      magenta: Lk("cmyk", 1, tk(100)),
-      yellow: Lk("cmyk", 2, tk(100)),
-      black: Lk("cmyk", 3, tk(100)),
-      x: Lk("xyz", 0, tk(95.047)),
-      y: Lk("xyz", 1, tk(100)),
-      z: Lk("xyz", 2, tk(108.833)),
-      l: Lk("lab", 0, tk(100)),
-      a: Lk("lab", 1),
-      b: Lk("lab", 2),
-      keyword(kk) {
-        return void 0 !== kk ? new ak(kk) : Tk[this.model].keyword(this.color)
+      red: Rm("rgb", 0, pm(255)),
+      green: Rm("rgb", 1, pm(255)),
+      blue: Rm("rgb", 2, pm(255)),
+      hue: Rm(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (mm => (mm % 360 + 360) % 360)),
+      saturationl: Rm("hsl", 1, pm(100)),
+      lightness: Rm("hsl", 2, pm(100)),
+      saturationv: Rm("hsv", 1, pm(100)),
+      value: Rm("hsv", 2, pm(100)),
+      chroma: Rm("hcg", 1, pm(100)),
+      gray: Rm("hcg", 2, pm(100)),
+      white: Rm("hwb", 1, pm(100)),
+      wblack: Rm("hwb", 2, pm(100)),
+      cyan: Rm("cmyk", 0, pm(100)),
+      magenta: Rm("cmyk", 1, pm(100)),
+      yellow: Rm("cmyk", 2, pm(100)),
+      black: Rm("cmyk", 3, pm(100)),
+      x: Rm("xyz", 0, pm(95.047)),
+      y: Rm("xyz", 1, pm(100)),
+      z: Rm("xyz", 2, pm(108.833)),
+      l: Rm("lab", 0, pm(100)),
+      a: Rm("lab", 1),
+      b: Rm("lab", 2),
+      keyword(mm) {
+        return void 0 !== mm ? new Dm(mm) : Am[this.model].keyword(this.color)
       },
-      hex(kk) {
-        return void 0 !== kk ? new ak(kk) : Xk.to.hex(this.rgb().round().color)
+      hex(mm) {
+        return void 0 !== mm ? new Dm(mm) : hm.to.hex(this.rgb().round().color)
       },
-      hexa(kk) {
-        if (void 0 !== kk) return new ak(kk);
-        const Fk = this.rgb().round().color;
-        let Ik = Math.round(255 * this.valpha).toString(16).toUpperCase();
-        return 1 === Ik.length && (Ik = "0" + Ik), Xk.to.hex(Fk) + Ik
+      hexa(mm) {
+        if (void 0 !== mm) return new Dm(mm);
+        const Tm = this.rgb().round().color;
+        let fm = Math.round(255 * this.valpha).toString(16).toUpperCase();
+        return 1 === fm.length && (fm = "0" + fm), hm.to.hex(Tm) + fm
       },
       rgbNumber() {
-        const kk = this.rgb().color;
-        return (255 & kk[0]) << 16 | (255 & kk[1]) << 8 | 255 & kk[2]
+        const mm = this.rgb().color;
+        return (255 & mm[0]) << 16 | (255 & mm[1]) << 8 | 255 & mm[2]
       },
       luminosity() {
-        const kk = this.rgb().color,
-          Fk = [];
-        for (const [Ik, Xk] of kk.entries()) {
-          const kk = Xk / 255;
-          Fk[Ik] = kk <= .04045 ? kk / 12.92 : ((kk + .055) / 1.055) ** 2.4
+        const mm = this.rgb().color,
+          Tm = [];
+        for (const [fm, hm] of mm.entries()) {
+          const mm = hm / 255;
+          Tm[fm] = mm <= .04045 ? mm / 12.92 : ((mm + .055) / 1.055) ** 2.4
         }
-        return .2126 * Fk[0] + .7152 * Fk[1] + .0722 * Fk[2]
+        return .2126 * Tm[0] + .7152 * Tm[1] + .0722 * Tm[2]
       },
-      contrast(kk) {
-        const Fk = this.luminosity(),
-          Ik = kk.luminosity();
-        return Fk > Ik ? (Fk + .05) / (Ik + .05) : (Ik + .05) / (Fk + .05)
+      contrast(mm) {
+        const Tm = this.luminosity(),
+          fm = mm.luminosity();
+        return Tm > fm ? (Tm + .05) / (fm + .05) : (fm + .05) / (Tm + .05)
       },
-      level(kk) {
-        const Fk = this.contrast(kk);
-        return Fk >= 7 ? "AAA" : Fk >= 4.5 ? "AA" : ""
+      level(mm) {
+        const Tm = this.contrast(mm);
+        return Tm >= 7 ? "AAA" : Tm >= 4.5 ? "AA" : ""
       },
       isDark() {
-        const kk = this.rgb().color;
-        return (2126 * kk[0] + 7152 * kk[1] + 722 * kk[2]) / 1e4 < 128
+        const mm = this.rgb().color;
+        return (2126 * mm[0] + 7152 * mm[1] + 722 * mm[2]) / 1e4 < 128
       },
       isLight() {
         return !this.isDark()
       },
-      nX() {
-        const kk = this.rgb();
-        for (let Fk = 0; Fk < 3; Fk++) kk.color[Fk] = 255 - kk.color[Fk];
-        return kk
+      GA() {
+        const mm = this.rgb();
+        for (let Tm = 0; Tm < 3; Tm++) mm.color[Tm] = 255 - mm.color[Tm];
+        return mm
       },
-      lighten(kk) {
-        const Fk = this.hsl();
-        return Fk.color[2] += Fk.color[2] * kk, Fk
+      lighten(mm) {
+        const Tm = this.hsl();
+        return Tm.color[2] += Tm.color[2] * mm, Tm
       },
-      darken(kk) {
-        const Fk = this.hsl();
-        return Fk.color[2] -= Fk.color[2] * kk, Fk
+      darken(mm) {
+        const Tm = this.hsl();
+        return Tm.color[2] -= Tm.color[2] * mm, Tm
       },
-      saturate(kk) {
-        const Fk = this.hsl();
-        return Fk.color[1] += Fk.color[1] * kk, Fk
+      saturate(mm) {
+        const Tm = this.hsl();
+        return Tm.color[1] += Tm.color[1] * mm, Tm
       },
-      desaturate(kk) {
-        const Fk = this.hsl();
-        return Fk.color[1] -= Fk.color[1] * kk, Fk
+      desaturate(mm) {
+        const Tm = this.hsl();
+        return Tm.color[1] -= Tm.color[1] * mm, Tm
       },
-      whiten(kk) {
-        const Fk = this.hwb();
-        return Fk.color[1] += Fk.color[1] * kk, Fk
+      whiten(mm) {
+        const Tm = this.hwb();
+        return Tm.color[1] += Tm.color[1] * mm, Tm
       },
-      blacken(kk) {
-        const Fk = this.hwb();
-        return Fk.color[2] += Fk.color[2] * kk, Fk
+      blacken(mm) {
+        const Tm = this.hwb();
+        return Tm.color[2] += Tm.color[2] * mm, Tm
       },
       grayscale() {
-        const kk = this.rgb().color,
-          Fk = .3 * kk[0] + .59 * kk[1] + .11 * kk[2];
-        return ak.rgb(Fk, Fk, Fk)
+        const mm = this.rgb().color,
+          Tm = .3 * mm[0] + .59 * mm[1] + .11 * mm[2];
+        return Dm.rgb(Tm, Tm, Tm)
       },
-      fade(kk) {
-        return this.alpha(this.valpha - this.valpha * kk)
+      fade(mm) {
+        return this.alpha(this.valpha - this.valpha * mm)
       },
-      opaquer(kk) {
-        return this.alpha(this.valpha + this.valpha * kk)
+      opaquer(mm) {
+        return this.alpha(this.valpha + this.valpha * mm)
       },
-      rotate(kk) {
-        const Fk = this.hsl();
-        let Ik = Fk.color[0];
-        return Ik = (Ik + kk) % 360, Ik = Ik < 0 ? 360 + Ik : Ik, Fk.color[0] = Ik, Fk
+      rotate(mm) {
+        const Tm = this.hsl();
+        let fm = Tm.color[0];
+        return fm = (fm + mm) % 360, fm = fm < 0 ? 360 + fm : fm, Tm.color[0] = fm, Tm
       },
-      mix(kk, Fk) {
-        if (!kk || !kk.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof kk);
-        const Ik = kk.rgb(),
-          Xk = this.rgb(),
-          Tk = void 0 === Fk ? .5 : Fk,
-          ik = 2 * Tk - 1,
-          yk = Ik.alpha() - Xk.alpha(),
-          lk = ((ik * yk === -1 ? ik : (ik + yk) / (1 + ik * yk)) + 1) / 2,
-          qk = 1 - lk;
-        return ak.rgb(lk * Ik.red() + qk * Xk.red(), lk * Ik.green() + qk * Xk.green(), lk * Ik.blue() + qk * Xk.blue(), Ik.alpha() * Tk + Xk.alpha() * (1 - Tk))
+      mix(mm, Tm) {
+        if (!mm || !mm.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof mm);
+        const fm = mm.rgb(),
+          hm = this.rgb(),
+          Am = void 0 === Tm ? .5 : Tm,
+          am = 2 * Am - 1,
+          xm = fm.alpha() - hm.alpha(),
+          wm = ((am * xm === -1 ? am : (am + xm) / (1 + am * xm)) + 1) / 2,
+          im = 1 - wm;
+        return Dm.rgb(wm * fm.red() + im * hm.red(), wm * fm.green() + im * hm.green(), wm * fm.blue() + im * hm.blue(), fm.alpha() * Am + hm.alpha() * (1 - Am))
       }
     };
-    for (const jk of Object.keys(Tk)) {
-      if (ik.includes(jk)) continue;
+    for (const om of Object.keys(Am)) {
+      if (am.includes(om)) continue;
       const {
-        channels: kk
-      } = Tk[jk];
-      ak.prototype[jk] = function() {
-        if (this.model === jk) return new ak(this);
-        for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
-        return Fk.length > 0 ? new ak(Fk, jk) : new ak([...(Xk = Tk[this.model][jk].raw(this.color), Array.isArray(Xk) ? Xk : [Xk]), this.valpha], jk);
-        var Xk
-      }, ak[jk] = function() {
-        for (var Fk = arguments.length, Ik = new Array(Fk), Xk = 0; Xk < Fk; Xk++) Ik[Xk] = arguments[Xk];
-        let Tk = Ik[0];
-        return "number" === typeof Tk && (Tk = Zk(Ik, kk)), new ak(Tk, jk)
+        channels: mm
+      } = Am[om];
+      Dm.prototype[om] = function() {
+        if (this.model === om) return new Dm(this);
+        for (var mm = arguments.length, Tm = new Array(mm), fm = 0; fm < mm; fm++) Tm[fm] = arguments[fm];
+        return Tm.length > 0 ? new Dm(Tm, om) : new Dm([...(hm = Am[this.model][om].raw(this.color), Array.isArray(hm) ? hm : [hm]), this.valpha], om);
+        var hm
+      }, Dm[om] = function() {
+        for (var Tm = arguments.length, fm = new Array(Tm), hm = 0; hm < Tm; hm++) fm[hm] = arguments[hm];
+        let Am = fm[0];
+        return "number" === typeof Am && (Am = Em(fm, mm)), new Dm(Am, om)
       }
     }
 
-    function qk(kk) {
-      return function(Fk) {
-        return function(kk, Fk) {
-          return Number(kk.toFixed(Fk))
-        }(Fk, kk)
+    function im(mm) {
+      return function(Tm) {
+        return function(mm, Tm) {
+          return Number(mm.toFixed(Tm))
+        }(Tm, mm)
       }
     }
 
-    function Lk(kk, Fk, Ik) {
-      kk = Array.isArray(kk) ? kk : [kk];
-      for (const Xk of kk)(lk[Xk] || (lk[Xk] = []))[Fk] = Ik;
-      return kk = kk[0],
-        function(Xk) {
-          let Tk;
-          return void 0 !== Xk ? (Ik && (Xk = Ik(Xk)), Tk = this[kk](), Tk.color[Fk] = Xk, Tk) : (Tk = this[kk]().color[Fk], Ik && (Tk = Ik(Tk)), Tk)
+    function Rm(mm, Tm, fm) {
+      mm = Array.isArray(mm) ? mm : [mm];
+      for (const hm of mm)(wm[hm] || (wm[hm] = []))[Tm] = fm;
+      return mm = mm[0],
+        function(hm) {
+          let Am;
+          return void 0 !== hm ? (fm && (hm = fm(hm)), Am = this[mm](), Am.color[Tm] = hm, Am) : (Am = this[mm]().color[Tm], fm && (Am = fm(Am)), Am)
         }
     }
 
-    function tk(kk) {
-      return function(Fk) {
-        return Math.max(0, Math.min(kk, Fk))
+    function pm(mm) {
+      return function(Tm) {
+        return Math.max(0, Math.min(mm, Tm))
       }
     }
 
-    function Zk(kk, Fk) {
-      for (let Ik = 0; Ik < Fk; Ik++) "number" !== typeof kk[Ik] && (kk[Ik] = 0);
-      return kk
+    function Em(mm, Tm) {
+      for (let fm = 0; fm < Tm; fm++) "number" !== typeof mm[fm] && (mm[fm] = 0);
+      return mm
     }
-    kk.exports = ak
+    mm.exports = Dm
   },
-  36662: (kk, Fk, Ik) => {
-    const Xk = Ik(36665),
-      Tk = {};
-    for (const yk of Object.keys(Xk)) Tk[Xk[yk]] = yk;
-    const ik = {
+  36749: (mm, Tm, fm) => {
+    const hm = fm(36751),
+      Am = {};
+    for (const xm of Object.keys(hm)) Am[hm[xm]] = xm;
+    const am = {
       rgb: {
         channels: 3,
         labels: "rgb"
@@ -571,422 +571,422 @@ export const modules = {
         labels: ["gray"]
       }
     };
-    kk.exports = ik;
-    for (const yk of Object.keys(ik)) {
-      if (!("channels" in ik[yk])) throw new Error("missing channels property: " + yk);
-      if (!("labels" in ik[yk])) throw new Error("missing channel labels property: " + yk);
-      if (ik[yk].labels.length !== ik[yk].channels) throw new Error("channel and label counts mismatch: " + yk);
+    mm.exports = am;
+    for (const xm of Object.keys(am)) {
+      if (!("channels" in am[xm])) throw new Error("missing channels property: " + xm);
+      if (!("labels" in am[xm])) throw new Error("missing channel labels property: " + xm);
+      if (am[xm].labels.length !== am[xm].channels) throw new Error("channel and label counts mismatch: " + xm);
       const {
-        channels: kk,
-        labels: Fk
-      } = ik[yk];
-      delete ik[yk].channels, delete ik[yk].labels, Object.defineProperty(ik[yk], "channels", {
-        value: kk
-      }), Object.defineProperty(ik[yk], "labels", {
-        value: Fk
+        channels: mm,
+        labels: Tm
+      } = am[xm];
+      delete am[xm].channels, delete am[xm].labels, Object.defineProperty(am[xm], "channels", {
+        value: mm
+      }), Object.defineProperty(am[xm], "labels", {
+        value: Tm
       })
     }
-    ik.rgb.hsl = function(kk) {
-      const Fk = kk[0] / 255,
-        Ik = kk[1] / 255,
-        Xk = kk[2] / 255,
-        Tk = Math.min(Fk, Ik, Xk),
-        ik = Math.max(Fk, Ik, Xk),
-        yk = ik - Tk;
-      let lk, ak;
-      ik === Tk ? lk = 0 : Fk === ik ? lk = (Ik - Xk) / yk : Ik === ik ? lk = 2 + (Xk - Fk) / yk : Xk === ik && (lk = 4 + (Fk - Ik) / yk), lk = Math.min(60 * lk, 360), lk < 0 && (lk += 360);
-      const qk = (Tk + ik) / 2;
-      return ak = ik === Tk ? 0 : qk <= .5 ? yk / (ik + Tk) : yk / (2 - ik - Tk), [lk, 100 * ak, 100 * qk]
-    }, ik.rgb.hsv = function(kk) {
-      let Fk, Ik, Xk, Tk, ik;
-      const yk = kk[0] / 255,
-        lk = kk[1] / 255,
-        ak = kk[2] / 255,
-        qk = Math.max(yk, lk, ak),
-        Lk = qk - Math.min(yk, lk, ak),
-        tk = function(kk) {
-          return (qk - kk) / 6 / Lk + .5
+    am.rgb.hsl = function(mm) {
+      const Tm = mm[0] / 255,
+        fm = mm[1] / 255,
+        hm = mm[2] / 255,
+        Am = Math.min(Tm, fm, hm),
+        am = Math.max(Tm, fm, hm),
+        xm = am - Am;
+      let wm, Dm;
+      am === Am ? wm = 0 : Tm === am ? wm = (fm - hm) / xm : fm === am ? wm = 2 + (hm - Tm) / xm : hm === am && (wm = 4 + (Tm - fm) / xm), wm = Math.min(60 * wm, 360), wm < 0 && (wm += 360);
+      const im = (Am + am) / 2;
+      return Dm = am === Am ? 0 : im <= .5 ? xm / (am + Am) : xm / (2 - am - Am), [wm, 100 * Dm, 100 * im]
+    }, am.rgb.hsv = function(mm) {
+      let Tm, fm, hm, Am, am;
+      const xm = mm[0] / 255,
+        wm = mm[1] / 255,
+        Dm = mm[2] / 255,
+        im = Math.max(xm, wm, Dm),
+        Rm = im - Math.min(xm, wm, Dm),
+        pm = function(mm) {
+          return (im - mm) / 6 / Rm + .5
         };
-      return 0 === Lk ? (Tk = 0, ik = 0) : (ik = Lk / qk, Fk = tk(yk), Ik = tk(lk), Xk = tk(ak), yk === qk ? Tk = Xk - Ik : lk === qk ? Tk = 1 / 3 + Fk - Xk : ak === qk && (Tk = 2 / 3 + Ik - Fk), Tk < 0 ? Tk += 1 : Tk > 1 && (Tk -= 1)), [360 * Tk, 100 * ik, 100 * qk]
-    }, ik.rgb.hwb = function(kk) {
-      const Fk = kk[0],
-        Ik = kk[1];
-      let Xk = kk[2];
-      const Tk = ik.rgb.hsl(kk)[0],
-        yk = 1 / 255 * Math.min(Fk, Math.min(Ik, Xk));
-      return Xk = 1 - 1 / 255 * Math.max(Fk, Math.max(Ik, Xk)), [Tk, 100 * yk, 100 * Xk]
-    }, ik.rgb.cmyk = function(kk) {
-      const Fk = kk[0] / 255,
-        Ik = kk[1] / 255,
-        Xk = kk[2] / 255,
-        Tk = Math.min(1 - Fk, 1 - Ik, 1 - Xk);
-      return [100 * ((1 - Fk - Tk) / (1 - Tk) || 0), 100 * ((1 - Ik - Tk) / (1 - Tk) || 0), 100 * ((1 - Xk - Tk) / (1 - Tk) || 0), 100 * Tk]
-    }, ik.rgb.keyword = function(kk) {
-      const Fk = Tk[kk];
-      if (Fk) return Fk;
-      let Ik, ik = 1 / 0;
-      for (const Tk of Object.keys(Xk)) {
-        const Fk = Xk[Tk],
-          ak = (lk = Fk, ((yk = kk)[0] - lk[0]) ** 2 + (yk[1] - lk[1]) ** 2 + (yk[2] - lk[2]) ** 2);
-        ak < ik && (ik = ak, Ik = Tk)
+      return 0 === Rm ? (Am = 0, am = 0) : (am = Rm / im, Tm = pm(xm), fm = pm(wm), hm = pm(Dm), xm === im ? Am = hm - fm : wm === im ? Am = 1 / 3 + Tm - hm : Dm === im && (Am = 2 / 3 + fm - Tm), Am < 0 ? Am += 1 : Am > 1 && (Am -= 1)), [360 * Am, 100 * am, 100 * im]
+    }, am.rgb.hwb = function(mm) {
+      const Tm = mm[0],
+        fm = mm[1];
+      let hm = mm[2];
+      const Am = am.rgb.hsl(mm)[0],
+        xm = 1 / 255 * Math.min(Tm, Math.min(fm, hm));
+      return hm = 1 - 1 / 255 * Math.max(Tm, Math.max(fm, hm)), [Am, 100 * xm, 100 * hm]
+    }, am.rgb.cmyk = function(mm) {
+      const Tm = mm[0] / 255,
+        fm = mm[1] / 255,
+        hm = mm[2] / 255,
+        Am = Math.min(1 - Tm, 1 - fm, 1 - hm);
+      return [100 * ((1 - Tm - Am) / (1 - Am) || 0), 100 * ((1 - fm - Am) / (1 - Am) || 0), 100 * ((1 - hm - Am) / (1 - Am) || 0), 100 * Am]
+    }, am.rgb.keyword = function(mm) {
+      const Tm = Am[mm];
+      if (Tm) return Tm;
+      let fm, am = 1 / 0;
+      for (const Am of Object.keys(hm)) {
+        const Tm = hm[Am],
+          Dm = (wm = Tm, ((xm = mm)[0] - wm[0]) ** 2 + (xm[1] - wm[1]) ** 2 + (xm[2] - wm[2]) ** 2);
+        Dm < am && (am = Dm, fm = Am)
       }
-      var yk, lk;
-      return Ik
-    }, ik.keyword.rgb = function(kk) {
-      return Xk[kk]
-    }, ik.rgb.xyz = function(kk) {
-      let Fk = kk[0] / 255,
-        Ik = kk[1] / 255,
-        Xk = kk[2] / 255;
-      Fk = Fk > .04045 ? ((Fk + .055) / 1.055) ** 2.4 : Fk / 12.92, Ik = Ik > .04045 ? ((Ik + .055) / 1.055) ** 2.4 : Ik / 12.92, Xk = Xk > .04045 ? ((Xk + .055) / 1.055) ** 2.4 : Xk / 12.92;
-      return [100 * (.4124 * Fk + .3576 * Ik + .1805 * Xk), 100 * (.2126 * Fk + .7152 * Ik + .0722 * Xk), 100 * (.0193 * Fk + .1192 * Ik + .9505 * Xk)]
-    }, ik.rgb.lab = function(kk) {
-      const Fk = ik.rgb.xyz(kk);
-      let Ik = Fk[0],
-        Xk = Fk[1],
-        Tk = Fk[2];
-      Ik /= 95.047, Xk /= 100, Tk /= 108.883, Ik = Ik > .008856 ? Ik ** (1 / 3) : 7.787 * Ik + 16 / 116, Xk = Xk > .008856 ? Xk ** (1 / 3) : 7.787 * Xk + 16 / 116, Tk = Tk > .008856 ? Tk ** (1 / 3) : 7.787 * Tk + 16 / 116;
-      return [116 * Xk - 16, 500 * (Ik - Xk), 200 * (Xk - Tk)]
-    }, ik.hsl.rgb = function(kk) {
-      const Fk = kk[0] / 360,
-        Ik = kk[1] / 100,
-        Xk = kk[2] / 100;
-      let Tk, ik, yk;
-      if (0 === Ik) return yk = 255 * Xk, [yk, yk, yk];
-      Tk = Xk < .5 ? Xk * (1 + Ik) : Xk + Ik - Xk * Ik;
-      const lk = 2 * Xk - Tk,
-        ak = [0, 0, 0];
-      for (let qk = 0; qk < 3; qk++) ik = Fk + 1 / 3 * -(qk - 1), ik < 0 && ik++, ik > 1 && ik--, yk = 6 * ik < 1 ? lk + 6 * (Tk - lk) * ik : 2 * ik < 1 ? Tk : 3 * ik < 2 ? lk + (Tk - lk) * (2 / 3 - ik) * 6 : lk, ak[qk] = 255 * yk;
-      return ak
-    }, ik.hsl.hsv = function(kk) {
-      const Fk = kk[0];
-      let Ik = kk[1] / 100,
-        Xk = kk[2] / 100,
-        Tk = Ik;
-      const ik = Math.max(Xk, .01);
-      Xk *= 2, Ik *= Xk <= 1 ? Xk : 2 - Xk, Tk *= ik <= 1 ? ik : 2 - ik;
-      return [Fk, 100 * (0 === Xk ? 2 * Tk / (ik + Tk) : 2 * Ik / (Xk + Ik)), 100 * ((Xk + Ik) / 2)]
-    }, ik.hsv.rgb = function(kk) {
-      const Fk = kk[0] / 60,
-        Ik = kk[1] / 100;
-      let Xk = kk[2] / 100;
-      const Tk = Math.floor(Fk) % 6,
-        ik = Fk - Math.floor(Fk),
-        yk = 255 * Xk * (1 - Ik),
-        lk = 255 * Xk * (1 - Ik * ik),
-        ak = 255 * Xk * (1 - Ik * (1 - ik));
-      switch (Xk *= 255, Tk) {
+      var xm, wm;
+      return fm
+    }, am.keyword.rgb = function(mm) {
+      return hm[mm]
+    }, am.rgb.xyz = function(mm) {
+      let Tm = mm[0] / 255,
+        fm = mm[1] / 255,
+        hm = mm[2] / 255;
+      Tm = Tm > .04045 ? ((Tm + .055) / 1.055) ** 2.4 : Tm / 12.92, fm = fm > .04045 ? ((fm + .055) / 1.055) ** 2.4 : fm / 12.92, hm = hm > .04045 ? ((hm + .055) / 1.055) ** 2.4 : hm / 12.92;
+      return [100 * (.4124 * Tm + .3576 * fm + .1805 * hm), 100 * (.2126 * Tm + .7152 * fm + .0722 * hm), 100 * (.0193 * Tm + .1192 * fm + .9505 * hm)]
+    }, am.rgb.lab = function(mm) {
+      const Tm = am.rgb.xyz(mm);
+      let fm = Tm[0],
+        hm = Tm[1],
+        Am = Tm[2];
+      fm /= 95.047, hm /= 100, Am /= 108.883, fm = fm > .008856 ? fm ** (1 / 3) : 7.787 * fm + 16 / 116, hm = hm > .008856 ? hm ** (1 / 3) : 7.787 * hm + 16 / 116, Am = Am > .008856 ? Am ** (1 / 3) : 7.787 * Am + 16 / 116;
+      return [116 * hm - 16, 500 * (fm - hm), 200 * (hm - Am)]
+    }, am.hsl.rgb = function(mm) {
+      const Tm = mm[0] / 360,
+        fm = mm[1] / 100,
+        hm = mm[2] / 100;
+      let Am, am, xm;
+      if (0 === fm) return xm = 255 * hm, [xm, xm, xm];
+      Am = hm < .5 ? hm * (1 + fm) : hm + fm - hm * fm;
+      const wm = 2 * hm - Am,
+        Dm = [0, 0, 0];
+      for (let im = 0; im < 3; im++) am = Tm + 1 / 3 * -(im - 1), am < 0 && am++, am > 1 && am--, xm = 6 * am < 1 ? wm + 6 * (Am - wm) * am : 2 * am < 1 ? Am : 3 * am < 2 ? wm + (Am - wm) * (2 / 3 - am) * 6 : wm, Dm[im] = 255 * xm;
+      return Dm
+    }, am.hsl.hsv = function(mm) {
+      const Tm = mm[0];
+      let fm = mm[1] / 100,
+        hm = mm[2] / 100,
+        Am = fm;
+      const am = Math.max(hm, .01);
+      hm *= 2, fm *= hm <= 1 ? hm : 2 - hm, Am *= am <= 1 ? am : 2 - am;
+      return [Tm, 100 * (0 === hm ? 2 * Am / (am + Am) : 2 * fm / (hm + fm)), 100 * ((hm + fm) / 2)]
+    }, am.hsv.rgb = function(mm) {
+      const Tm = mm[0] / 60,
+        fm = mm[1] / 100;
+      let hm = mm[2] / 100;
+      const Am = Math.floor(Tm) % 6,
+        am = Tm - Math.floor(Tm),
+        xm = 255 * hm * (1 - fm),
+        wm = 255 * hm * (1 - fm * am),
+        Dm = 255 * hm * (1 - fm * (1 - am));
+      switch (hm *= 255, Am) {
         case 0:
-          return [Xk, ak, yk];
+          return [hm, Dm, xm];
         case 1:
-          return [lk, Xk, yk];
+          return [wm, hm, xm];
         case 2:
-          return [yk, Xk, ak];
+          return [xm, hm, Dm];
         case 3:
-          return [yk, lk, Xk];
+          return [xm, wm, hm];
         case 4:
-          return [ak, yk, Xk];
+          return [Dm, xm, hm];
         case 5:
-          return [Xk, yk, lk]
+          return [hm, xm, wm]
       }
-    }, ik.hsv.hsl = function(kk) {
-      const Fk = kk[0],
-        Ik = kk[1] / 100,
-        Xk = kk[2] / 100,
-        Tk = Math.max(Xk, .01);
-      let ik, yk;
-      yk = (2 - Ik) * Xk;
-      const lk = (2 - Ik) * Tk;
-      return ik = Ik * Tk, ik /= lk <= 1 ? lk : 2 - lk, ik = ik || 0, yk /= 2, [Fk, 100 * ik, 100 * yk]
-    }, ik.hwb.rgb = function(kk) {
-      const Fk = kk[0] / 360;
-      let Ik = kk[1] / 100,
-        Xk = kk[2] / 100;
-      const Tk = Ik + Xk;
-      let ik;
-      Tk > 1 && (Ik /= Tk, Xk /= Tk);
-      const yk = Math.floor(6 * Fk),
-        lk = 1 - Xk;
-      ik = 6 * Fk - yk, 0 !== (1 & yk) && (ik = 1 - ik);
-      const ak = Ik + ik * (lk - Ik);
-      let qk, Lk, tk;
-      switch (yk) {
+    }, am.hsv.hsl = function(mm) {
+      const Tm = mm[0],
+        fm = mm[1] / 100,
+        hm = mm[2] / 100,
+        Am = Math.max(hm, .01);
+      let am, xm;
+      xm = (2 - fm) * hm;
+      const wm = (2 - fm) * Am;
+      return am = fm * Am, am /= wm <= 1 ? wm : 2 - wm, am = am || 0, xm /= 2, [Tm, 100 * am, 100 * xm]
+    }, am.hwb.rgb = function(mm) {
+      const Tm = mm[0] / 360;
+      let fm = mm[1] / 100,
+        hm = mm[2] / 100;
+      const Am = fm + hm;
+      let am;
+      Am > 1 && (fm /= Am, hm /= Am);
+      const xm = Math.floor(6 * Tm),
+        wm = 1 - hm;
+      am = 6 * Tm - xm, 0 !== (1 & xm) && (am = 1 - am);
+      const Dm = fm + am * (wm - fm);
+      let im, Rm, pm;
+      switch (xm) {
         default:
         case 6:
         case 0:
-          qk = lk, Lk = ak, tk = Ik;
+          im = wm, Rm = Dm, pm = fm;
           break;
         case 1:
-          qk = ak, Lk = lk, tk = Ik;
+          im = Dm, Rm = wm, pm = fm;
           break;
         case 2:
-          qk = Ik, Lk = lk, tk = ak;
+          im = fm, Rm = wm, pm = Dm;
           break;
         case 3:
-          qk = Ik, Lk = ak, tk = lk;
+          im = fm, Rm = Dm, pm = wm;
           break;
         case 4:
-          qk = ak, Lk = Ik, tk = lk;
+          im = Dm, Rm = fm, pm = wm;
           break;
         case 5:
-          qk = lk, Lk = Ik, tk = ak
+          im = wm, Rm = fm, pm = Dm
       }
-      return [255 * qk, 255 * Lk, 255 * tk]
-    }, ik.cmyk.rgb = function(kk) {
-      const Fk = kk[0] / 100,
-        Ik = kk[1] / 100,
-        Xk = kk[2] / 100,
-        Tk = kk[3] / 100;
-      return [255 * (1 - Math.min(1, Fk * (1 - Tk) + Tk)), 255 * (1 - Math.min(1, Ik * (1 - Tk) + Tk)), 255 * (1 - Math.min(1, Xk * (1 - Tk) + Tk))]
-    }, ik.xyz.rgb = function(kk) {
-      const Fk = kk[0] / 100,
-        Ik = kk[1] / 100,
-        Xk = kk[2] / 100;
-      let Tk, ik, yk;
-      return Tk = 3.2406 * Fk + -1.5372 * Ik + -.4986 * Xk, ik = -.9689 * Fk + 1.8758 * Ik + .0415 * Xk, yk = .0557 * Fk + -.204 * Ik + 1.057 * Xk, Tk = Tk > .0031308 ? 1.055 * Tk ** (1 / 2.4) - .055 : 12.92 * Tk, ik = ik > .0031308 ? 1.055 * ik ** (1 / 2.4) - .055 : 12.92 * ik, yk = yk > .0031308 ? 1.055 * yk ** (1 / 2.4) - .055 : 12.92 * yk, Tk = Math.min(Math.max(0, Tk), 1), ik = Math.min(Math.max(0, ik), 1), yk = Math.min(Math.max(0, yk), 1), [255 * Tk, 255 * ik, 255 * yk]
-    }, ik.xyz.lab = function(kk) {
-      let Fk = kk[0],
-        Ik = kk[1],
-        Xk = kk[2];
-      Fk /= 95.047, Ik /= 100, Xk /= 108.883, Fk = Fk > .008856 ? Fk ** (1 / 3) : 7.787 * Fk + 16 / 116, Ik = Ik > .008856 ? Ik ** (1 / 3) : 7.787 * Ik + 16 / 116, Xk = Xk > .008856 ? Xk ** (1 / 3) : 7.787 * Xk + 16 / 116;
-      return [116 * Ik - 16, 500 * (Fk - Ik), 200 * (Ik - Xk)]
-    }, ik.lab.xyz = function(kk) {
-      let Fk, Ik, Xk;
-      Ik = (kk[0] + 16) / 116, Fk = kk[1] / 500 + Ik, Xk = Ik - kk[2] / 200;
-      const Tk = Ik ** 3,
-        ik = Fk ** 3,
-        yk = Xk ** 3;
-      return Ik = Tk > .008856 ? Tk : (Ik - 16 / 116) / 7.787, Fk = ik > .008856 ? ik : (Fk - 16 / 116) / 7.787, Xk = yk > .008856 ? yk : (Xk - 16 / 116) / 7.787, Fk *= 95.047, Ik *= 100, Xk *= 108.883, [Fk, Ik, Xk]
-    }, ik.lab.lch = function(kk) {
-      const Fk = kk[0],
-        Ik = kk[1],
-        Xk = kk[2];
-      let Tk;
-      Tk = 360 * Math.atan2(Xk, Ik) / 2 / Math.PI, Tk < 0 && (Tk += 360);
-      return [Fk, Math.sqrt(Ik * Ik + Xk * Xk), Tk]
-    }, ik.lch.lab = function(kk) {
-      const Fk = kk[0],
-        Ik = kk[1],
-        Xk = kk[2] / 360 * 2 * Math.PI;
-      return [Fk, Ik * Math.cos(Xk), Ik * Math.sin(Xk)]
-    }, ik.rgb.ansi16 = function(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const [Ik, Xk, Tk] = kk;
-      let yk = null === Fk ? ik.rgb.hsv(kk)[2] : Fk;
-      if (yk = Math.round(yk / 50), 0 === yk) return 30;
-      let lk = 30 + (Math.round(Tk / 255) << 2 | Math.round(Xk / 255) << 1 | Math.round(Ik / 255));
-      return 2 === yk && (lk += 60), lk
-    }, ik.hsv.ansi16 = function(kk) {
-      return ik.rgb.ansi16(ik.hsv.rgb(kk), kk[2])
-    }, ik.rgb.ansi256 = function(kk) {
-      const Fk = kk[0],
-        Ik = kk[1],
-        Xk = kk[2];
-      if (Fk === Ik && Ik === Xk) return Fk < 8 ? 16 : Fk > 248 ? 231 : Math.round((Fk - 8) / 247 * 24) + 232;
-      return 16 + 36 * Math.round(Fk / 255 * 5) + 6 * Math.round(Ik / 255 * 5) + Math.round(Xk / 255 * 5)
-    }, ik.ansi16.rgb = function(kk) {
-      let Fk = kk % 10;
-      if (0 === Fk || 7 === Fk) return kk > 50 && (Fk += 3.5), Fk = Fk / 10.5 * 255, [Fk, Fk, Fk];
-      const Ik = .5 * (1 + ~~(kk > 50));
-      return [(1 & Fk) * Ik * 255, (Fk >> 1 & 1) * Ik * 255, (Fk >> 2 & 1) * Ik * 255]
-    }, ik.ansi256.rgb = function(kk) {
-      if (kk >= 232) {
-        const Fk = 10 * (kk - 232) + 8;
-        return [Fk, Fk, Fk]
+      return [255 * im, 255 * Rm, 255 * pm]
+    }, am.cmyk.rgb = function(mm) {
+      const Tm = mm[0] / 100,
+        fm = mm[1] / 100,
+        hm = mm[2] / 100,
+        Am = mm[3] / 100;
+      return [255 * (1 - Math.min(1, Tm * (1 - Am) + Am)), 255 * (1 - Math.min(1, fm * (1 - Am) + Am)), 255 * (1 - Math.min(1, hm * (1 - Am) + Am))]
+    }, am.xyz.rgb = function(mm) {
+      const Tm = mm[0] / 100,
+        fm = mm[1] / 100,
+        hm = mm[2] / 100;
+      let Am, am, xm;
+      return Am = 3.2406 * Tm + -1.5372 * fm + -.4986 * hm, am = -.9689 * Tm + 1.8758 * fm + .0415 * hm, xm = .0557 * Tm + -.204 * fm + 1.057 * hm, Am = Am > .0031308 ? 1.055 * Am ** (1 / 2.4) - .055 : 12.92 * Am, am = am > .0031308 ? 1.055 * am ** (1 / 2.4) - .055 : 12.92 * am, xm = xm > .0031308 ? 1.055 * xm ** (1 / 2.4) - .055 : 12.92 * xm, Am = Math.min(Math.max(0, Am), 1), am = Math.min(Math.max(0, am), 1), xm = Math.min(Math.max(0, xm), 1), [255 * Am, 255 * am, 255 * xm]
+    }, am.xyz.lab = function(mm) {
+      let Tm = mm[0],
+        fm = mm[1],
+        hm = mm[2];
+      Tm /= 95.047, fm /= 100, hm /= 108.883, Tm = Tm > .008856 ? Tm ** (1 / 3) : 7.787 * Tm + 16 / 116, fm = fm > .008856 ? fm ** (1 / 3) : 7.787 * fm + 16 / 116, hm = hm > .008856 ? hm ** (1 / 3) : 7.787 * hm + 16 / 116;
+      return [116 * fm - 16, 500 * (Tm - fm), 200 * (fm - hm)]
+    }, am.lab.xyz = function(mm) {
+      let Tm, fm, hm;
+      fm = (mm[0] + 16) / 116, Tm = mm[1] / 500 + fm, hm = fm - mm[2] / 200;
+      const Am = fm ** 3,
+        am = Tm ** 3,
+        xm = hm ** 3;
+      return fm = Am > .008856 ? Am : (fm - 16 / 116) / 7.787, Tm = am > .008856 ? am : (Tm - 16 / 116) / 7.787, hm = xm > .008856 ? xm : (hm - 16 / 116) / 7.787, Tm *= 95.047, fm *= 100, hm *= 108.883, [Tm, fm, hm]
+    }, am.lab.lch = function(mm) {
+      const Tm = mm[0],
+        fm = mm[1],
+        hm = mm[2];
+      let Am;
+      Am = 360 * Math.atan2(hm, fm) / 2 / Math.PI, Am < 0 && (Am += 360);
+      return [Tm, Math.sqrt(fm * fm + hm * hm), Am]
+    }, am.lch.lab = function(mm) {
+      const Tm = mm[0],
+        fm = mm[1],
+        hm = mm[2] / 360 * 2 * Math.PI;
+      return [Tm, fm * Math.cos(hm), fm * Math.sin(hm)]
+    }, am.rgb.ansi16 = function(mm) {
+      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const [fm, hm, Am] = mm;
+      let xm = null === Tm ? am.rgb.hsv(mm)[2] : Tm;
+      if (xm = Math.round(xm / 50), 0 === xm) return 30;
+      let wm = 30 + (Math.round(Am / 255) << 2 | Math.round(hm / 255) << 1 | Math.round(fm / 255));
+      return 2 === xm && (wm += 60), wm
+    }, am.hsv.ansi16 = function(mm) {
+      return am.rgb.ansi16(am.hsv.rgb(mm), mm[2])
+    }, am.rgb.ansi256 = function(mm) {
+      const Tm = mm[0],
+        fm = mm[1],
+        hm = mm[2];
+      if (Tm === fm && fm === hm) return Tm < 8 ? 16 : Tm > 248 ? 231 : Math.round((Tm - 8) / 247 * 24) + 232;
+      return 16 + 36 * Math.round(Tm / 255 * 5) + 6 * Math.round(fm / 255 * 5) + Math.round(hm / 255 * 5)
+    }, am.ansi16.rgb = function(mm) {
+      let Tm = mm % 10;
+      if (0 === Tm || 7 === Tm) return mm > 50 && (Tm += 3.5), Tm = Tm / 10.5 * 255, [Tm, Tm, Tm];
+      const fm = .5 * (1 + ~~(mm > 50));
+      return [(1 & Tm) * fm * 255, (Tm >> 1 & 1) * fm * 255, (Tm >> 2 & 1) * fm * 255]
+    }, am.ansi256.rgb = function(mm) {
+      if (mm >= 232) {
+        const Tm = 10 * (mm - 232) + 8;
+        return [Tm, Tm, Tm]
       }
-      let Fk;
-      kk -= 16;
-      return [Math.floor(kk / 36) / 5 * 255, Math.floor((Fk = kk % 36) / 6) / 5 * 255, Fk % 6 / 5 * 255]
-    }, ik.rgb.hex = function(kk) {
-      const Fk = (((255 & Math.round(kk[0])) << 16) + ((255 & Math.round(kk[1])) << 8) + (255 & Math.round(kk[2]))).toString(16).toUpperCase();
-      return "000000".substring(Fk.length) + Fk
-    }, ik.hex.rgb = function(kk) {
-      const Fk = kk.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
-      if (!Fk) return [0, 0, 0];
-      let Ik = Fk[0];
-      3 === Fk[0].length && (Ik = Ik.split("").map((kk => kk + kk)).join(""));
-      const Xk = parseInt(Ik, 16);
-      return [Xk >> 16 & 255, Xk >> 8 & 255, 255 & Xk]
-    }, ik.rgb.hcg = function(kk) {
-      const Fk = kk[0] / 255,
-        Ik = kk[1] / 255,
-        Xk = kk[2] / 255,
-        Tk = Math.max(Math.max(Fk, Ik), Xk),
-        ik = Math.min(Math.min(Fk, Ik), Xk),
-        yk = Tk - ik;
-      let lk, ak;
-      return lk = yk < 1 ? ik / (1 - yk) : 0, ak = yk <= 0 ? 0 : Tk === Fk ? (Ik - Xk) / yk % 6 : Tk === Ik ? 2 + (Xk - Fk) / yk : 4 + (Fk - Ik) / yk, ak /= 6, ak %= 1, [360 * ak, 100 * yk, 100 * lk]
-    }, ik.hsl.hcg = function(kk) {
-      const Fk = kk[1] / 100,
-        Ik = kk[2] / 100,
-        Xk = Ik < .5 ? 2 * Fk * Ik : 2 * Fk * (1 - Ik);
-      let Tk = 0;
-      return Xk < 1 && (Tk = (Ik - .5 * Xk) / (1 - Xk)), [kk[0], 100 * Xk, 100 * Tk]
-    }, ik.hsv.hcg = function(kk) {
-      const Fk = kk[1] / 100,
-        Ik = kk[2] / 100,
-        Xk = Fk * Ik;
-      let Tk = 0;
-      return Xk < 1 && (Tk = (Ik - Xk) / (1 - Xk)), [kk[0], 100 * Xk, 100 * Tk]
-    }, ik.hcg.rgb = function(kk) {
-      const Fk = kk[0] / 360,
-        Ik = kk[1] / 100,
-        Xk = kk[2] / 100;
-      if (0 === Ik) return [255 * Xk, 255 * Xk, 255 * Xk];
-      const Tk = [0, 0, 0],
-        ik = Fk % 1 * 6,
-        yk = ik % 1,
-        lk = 1 - yk;
-      let ak = 0;
-      switch (Math.floor(ik)) {
+      let Tm;
+      mm -= 16;
+      return [Math.floor(mm / 36) / 5 * 255, Math.floor((Tm = mm % 36) / 6) / 5 * 255, Tm % 6 / 5 * 255]
+    }, am.rgb.hex = function(mm) {
+      const Tm = (((255 & Math.round(mm[0])) << 16) + ((255 & Math.round(mm[1])) << 8) + (255 & Math.round(mm[2]))).toString(16).toUpperCase();
+      return "000000".substring(Tm.length) + Tm
+    }, am.hex.rgb = function(mm) {
+      const Tm = mm.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+      if (!Tm) return [0, 0, 0];
+      let fm = Tm[0];
+      3 === Tm[0].length && (fm = fm.split("").map((mm => mm + mm)).join(""));
+      const hm = parseInt(fm, 16);
+      return [hm >> 16 & 255, hm >> 8 & 255, 255 & hm]
+    }, am.rgb.hcg = function(mm) {
+      const Tm = mm[0] / 255,
+        fm = mm[1] / 255,
+        hm = mm[2] / 255,
+        Am = Math.max(Math.max(Tm, fm), hm),
+        am = Math.min(Math.min(Tm, fm), hm),
+        xm = Am - am;
+      let wm, Dm;
+      return wm = xm < 1 ? am / (1 - xm) : 0, Dm = xm <= 0 ? 0 : Am === Tm ? (fm - hm) / xm % 6 : Am === fm ? 2 + (hm - Tm) / xm : 4 + (Tm - fm) / xm, Dm /= 6, Dm %= 1, [360 * Dm, 100 * xm, 100 * wm]
+    }, am.hsl.hcg = function(mm) {
+      const Tm = mm[1] / 100,
+        fm = mm[2] / 100,
+        hm = fm < .5 ? 2 * Tm * fm : 2 * Tm * (1 - fm);
+      let Am = 0;
+      return hm < 1 && (Am = (fm - .5 * hm) / (1 - hm)), [mm[0], 100 * hm, 100 * Am]
+    }, am.hsv.hcg = function(mm) {
+      const Tm = mm[1] / 100,
+        fm = mm[2] / 100,
+        hm = Tm * fm;
+      let Am = 0;
+      return hm < 1 && (Am = (fm - hm) / (1 - hm)), [mm[0], 100 * hm, 100 * Am]
+    }, am.hcg.rgb = function(mm) {
+      const Tm = mm[0] / 360,
+        fm = mm[1] / 100,
+        hm = mm[2] / 100;
+      if (0 === fm) return [255 * hm, 255 * hm, 255 * hm];
+      const Am = [0, 0, 0],
+        am = Tm % 1 * 6,
+        xm = am % 1,
+        wm = 1 - xm;
+      let Dm = 0;
+      switch (Math.floor(am)) {
         case 0:
-          Tk[0] = 1, Tk[1] = yk, Tk[2] = 0;
+          Am[0] = 1, Am[1] = xm, Am[2] = 0;
           break;
         case 1:
-          Tk[0] = lk, Tk[1] = 1, Tk[2] = 0;
+          Am[0] = wm, Am[1] = 1, Am[2] = 0;
           break;
         case 2:
-          Tk[0] = 0, Tk[1] = 1, Tk[2] = yk;
+          Am[0] = 0, Am[1] = 1, Am[2] = xm;
           break;
         case 3:
-          Tk[0] = 0, Tk[1] = lk, Tk[2] = 1;
+          Am[0] = 0, Am[1] = wm, Am[2] = 1;
           break;
         case 4:
-          Tk[0] = yk, Tk[1] = 0, Tk[2] = 1;
+          Am[0] = xm, Am[1] = 0, Am[2] = 1;
           break;
         default:
-          Tk[0] = 1, Tk[1] = 0, Tk[2] = lk
+          Am[0] = 1, Am[1] = 0, Am[2] = wm
       }
-      return ak = (1 - Ik) * Xk, [255 * (Ik * Tk[0] + ak), 255 * (Ik * Tk[1] + ak), 255 * (Ik * Tk[2] + ak)]
-    }, ik.hcg.hsv = function(kk) {
-      const Fk = kk[1] / 100,
-        Ik = Fk + kk[2] / 100 * (1 - Fk);
-      let Xk = 0;
-      return Ik > 0 && (Xk = Fk / Ik), [kk[0], 100 * Xk, 100 * Ik]
-    }, ik.hcg.hsl = function(kk) {
-      const Fk = kk[1] / 100,
-        Ik = kk[2] / 100 * (1 - Fk) + .5 * Fk;
-      let Xk = 0;
-      return Ik > 0 && Ik < .5 ? Xk = Fk / (2 * Ik) : Ik >= .5 && Ik < 1 && (Xk = Fk / (2 * (1 - Ik))), [kk[0], 100 * Xk, 100 * Ik]
-    }, ik.hcg.hwb = function(kk) {
-      const Fk = kk[1] / 100,
-        Ik = Fk + kk[2] / 100 * (1 - Fk);
-      return [kk[0], 100 * (Ik - Fk), 100 * (1 - Ik)]
-    }, ik.hwb.hcg = function(kk) {
-      const Fk = kk[1] / 100,
-        Ik = 1 - kk[2] / 100,
-        Xk = Ik - Fk;
-      let Tk = 0;
-      return Xk < 1 && (Tk = (Ik - Xk) / (1 - Xk)), [kk[0], 100 * Xk, 100 * Tk]
-    }, ik.apple.rgb = function(kk) {
-      return [kk[0] / 65535 * 255, kk[1] / 65535 * 255, kk[2] / 65535 * 255]
-    }, ik.rgb.apple = function(kk) {
-      return [kk[0] / 255 * 65535, kk[1] / 255 * 65535, kk[2] / 255 * 65535]
-    }, ik.gray.rgb = function(kk) {
-      return [kk[0] / 100 * 255, kk[0] / 100 * 255, kk[0] / 100 * 255]
-    }, ik.gray.hsl = function(kk) {
-      return [0, 0, kk[0]]
-    }, ik.gray.hsv = ik.gray.hsl, ik.gray.hwb = function(kk) {
-      return [0, 100, kk[0]]
-    }, ik.gray.cmyk = function(kk) {
-      return [0, 0, 0, kk[0]]
-    }, ik.gray.lab = function(kk) {
-      return [kk[0], 0, 0]
-    }, ik.gray.hex = function(kk) {
-      const Fk = 255 & Math.round(kk[0] / 100 * 255),
-        Ik = ((Fk << 16) + (Fk << 8) + Fk).toString(16).toUpperCase();
-      return "000000".substring(Ik.length) + Ik
-    }, ik.rgb.gray = function(kk) {
-      return [(kk[0] + kk[1] + kk[2]) / 3 / 255 * 100]
+      return Dm = (1 - fm) * hm, [255 * (fm * Am[0] + Dm), 255 * (fm * Am[1] + Dm), 255 * (fm * Am[2] + Dm)]
+    }, am.hcg.hsv = function(mm) {
+      const Tm = mm[1] / 100,
+        fm = Tm + mm[2] / 100 * (1 - Tm);
+      let hm = 0;
+      return fm > 0 && (hm = Tm / fm), [mm[0], 100 * hm, 100 * fm]
+    }, am.hcg.hsl = function(mm) {
+      const Tm = mm[1] / 100,
+        fm = mm[2] / 100 * (1 - Tm) + .5 * Tm;
+      let hm = 0;
+      return fm > 0 && fm < .5 ? hm = Tm / (2 * fm) : fm >= .5 && fm < 1 && (hm = Tm / (2 * (1 - fm))), [mm[0], 100 * hm, 100 * fm]
+    }, am.hcg.hwb = function(mm) {
+      const Tm = mm[1] / 100,
+        fm = Tm + mm[2] / 100 * (1 - Tm);
+      return [mm[0], 100 * (fm - Tm), 100 * (1 - fm)]
+    }, am.hwb.hcg = function(mm) {
+      const Tm = mm[1] / 100,
+        fm = 1 - mm[2] / 100,
+        hm = fm - Tm;
+      let Am = 0;
+      return hm < 1 && (Am = (fm - hm) / (1 - hm)), [mm[0], 100 * hm, 100 * Am]
+    }, am.apple.rgb = function(mm) {
+      return [mm[0] / 65535 * 255, mm[1] / 65535 * 255, mm[2] / 65535 * 255]
+    }, am.rgb.apple = function(mm) {
+      return [mm[0] / 255 * 65535, mm[1] / 255 * 65535, mm[2] / 255 * 65535]
+    }, am.gray.rgb = function(mm) {
+      return [mm[0] / 100 * 255, mm[0] / 100 * 255, mm[0] / 100 * 255]
+    }, am.gray.hsl = function(mm) {
+      return [0, 0, mm[0]]
+    }, am.gray.hsv = am.gray.hsl, am.gray.hwb = function(mm) {
+      return [0, 100, mm[0]]
+    }, am.gray.cmyk = function(mm) {
+      return [0, 0, 0, mm[0]]
+    }, am.gray.lab = function(mm) {
+      return [mm[0], 0, 0]
+    }, am.gray.hex = function(mm) {
+      const Tm = 255 & Math.round(mm[0] / 100 * 255),
+        fm = ((Tm << 16) + (Tm << 8) + Tm).toString(16).toUpperCase();
+      return "000000".substring(fm.length) + fm
+    }, am.rgb.gray = function(mm) {
+      return [(mm[0] + mm[1] + mm[2]) / 3 / 255 * 100]
     }
   },
-  36658: (kk, Fk, Ik) => {
-    const Xk = Ik(36662),
-      Tk = Ik(36669),
-      ik = {};
-    Object.keys(Xk).forEach((kk => {
-      ik[kk] = {}, Object.defineProperty(ik[kk], "channels", {
-        value: Xk[kk].channels
-      }), Object.defineProperty(ik[kk], "labels", {
-        value: Xk[kk].labels
+  36742: (mm, Tm, fm) => {
+    const hm = fm(36749),
+      Am = fm(36759),
+      am = {};
+    Object.keys(hm).forEach((mm => {
+      am[mm] = {}, Object.defineProperty(am[mm], "channels", {
+        value: hm[mm].channels
+      }), Object.defineProperty(am[mm], "labels", {
+        value: hm[mm].labels
       });
-      const Fk = Tk(kk);
-      Object.keys(Fk).forEach((Ik => {
-        const Xk = Fk[Ik];
-        ik[kk][Ik] = function(kk) {
-          const Fk = function() {
-            for (var Fk = arguments.length, Ik = new Array(Fk), Xk = 0; Xk < Fk; Xk++) Ik[Xk] = arguments[Xk];
-            const Tk = Ik[0];
-            if (void 0 === Tk || null === Tk) return Tk;
-            Tk.length > 1 && (Ik = Tk);
-            const ik = kk(Ik);
-            if ("object" === typeof ik)
-              for (let kk = ik.length, yk = 0; yk < kk; yk++) ik[yk] = Math.round(ik[yk]);
-            return ik
+      const Tm = Am(mm);
+      Object.keys(Tm).forEach((fm => {
+        const hm = Tm[fm];
+        am[mm][fm] = function(mm) {
+          const Tm = function() {
+            for (var Tm = arguments.length, fm = new Array(Tm), hm = 0; hm < Tm; hm++) fm[hm] = arguments[hm];
+            const Am = fm[0];
+            if (void 0 === Am || null === Am) return Am;
+            Am.length > 1 && (fm = Am);
+            const am = mm(fm);
+            if ("object" === typeof am)
+              for (let mm = am.length, xm = 0; xm < mm; xm++) am[xm] = Math.round(am[xm]);
+            return am
           };
-          return "conversion" in kk && (Fk.conversion = kk.conversion), Fk
-        }(Xk), ik[kk][Ik].raw = function(kk) {
-          const Fk = function() {
-            for (var Fk = arguments.length, Ik = new Array(Fk), Xk = 0; Xk < Fk; Xk++) Ik[Xk] = arguments[Xk];
-            const Tk = Ik[0];
-            return void 0 === Tk || null === Tk ? Tk : (Tk.length > 1 && (Ik = Tk), kk(Ik))
+          return "conversion" in mm && (Tm.conversion = mm.conversion), Tm
+        }(hm), am[mm][fm].raw = function(mm) {
+          const Tm = function() {
+            for (var Tm = arguments.length, fm = new Array(Tm), hm = 0; hm < Tm; hm++) fm[hm] = arguments[hm];
+            const Am = fm[0];
+            return void 0 === Am || null === Am ? Am : (Am.length > 1 && (fm = Am), mm(fm))
           };
-          return "conversion" in kk && (Fk.conversion = kk.conversion), Fk
-        }(Xk)
+          return "conversion" in mm && (Tm.conversion = mm.conversion), Tm
+        }(hm)
       }))
-    })), kk.exports = ik
+    })), mm.exports = am
   },
-  36669: (kk, Fk, Ik) => {
-    const Xk = Ik(36662);
+  36759: (mm, Tm, fm) => {
+    const hm = fm(36749);
 
-    function Tk(kk) {
-      const Fk = function() {
-          const kk = {},
-            Fk = Object.keys(Xk);
-          for (let Ik = Fk.length, Xk = 0; Xk < Ik; Xk++) kk[Fk[Xk]] = {
+    function Am(mm) {
+      const Tm = function() {
+          const mm = {},
+            Tm = Object.keys(hm);
+          for (let fm = Tm.length, hm = 0; hm < fm; hm++) mm[Tm[hm]] = {
             distance: -1,
             parent: null
           };
-          return kk
+          return mm
         }(),
-        Ik = [kk];
-      for (Fk[kk].distance = 0; Ik.length;) {
-        const kk = Ik.pop(),
-          Tk = Object.keys(Xk[kk]);
-        for (let Xk = Tk.length, ik = 0; ik < Xk; ik++) {
-          const Xk = Tk[ik],
-            yk = Fk[Xk]; - 1 === yk.distance && (yk.distance = Fk[kk].distance + 1, yk.parent = kk, Ik.unshift(Xk))
+        fm = [mm];
+      for (Tm[mm].distance = 0; fm.length;) {
+        const mm = fm.pop(),
+          Am = Object.keys(hm[mm]);
+        for (let hm = Am.length, am = 0; am < hm; am++) {
+          const hm = Am[am],
+            xm = Tm[hm]; - 1 === xm.distance && (xm.distance = Tm[mm].distance + 1, xm.parent = mm, fm.unshift(hm))
         }
       }
-      return Fk
+      return Tm
     }
 
-    function ik(kk, Fk) {
-      return function(Ik) {
-        return Fk(kk(Ik))
+    function am(mm, Tm) {
+      return function(fm) {
+        return Tm(mm(fm))
       }
     }
 
-    function yk(kk, Fk) {
-      const Ik = [Fk[kk].parent, kk];
-      let Tk = Xk[Fk[kk].parent][kk],
-        yk = Fk[kk].parent;
-      for (; Fk[yk].parent;) Ik.unshift(Fk[yk].parent), Tk = ik(Xk[Fk[yk].parent][yk], Tk), yk = Fk[yk].parent;
-      return Tk.conversion = Ik, Tk
+    function xm(mm, Tm) {
+      const fm = [Tm[mm].parent, mm];
+      let Am = hm[Tm[mm].parent][mm],
+        xm = Tm[mm].parent;
+      for (; Tm[xm].parent;) fm.unshift(Tm[xm].parent), Am = am(hm[Tm[xm].parent][xm], Am), xm = Tm[xm].parent;
+      return Am.conversion = fm, Am
     }
-    kk.exports = function(kk) {
-      const Fk = Tk(kk),
-        Ik = {},
-        Xk = Object.keys(Fk);
-      for (let Tk = Xk.length, ik = 0; ik < Tk; ik++) {
-        const kk = Xk[ik];
-        null !== Fk[kk].parent && (Ik[kk] = yk(kk, Fk))
+    mm.exports = function(mm) {
+      const Tm = Am(mm),
+        fm = {},
+        hm = Object.keys(Tm);
+      for (let Am = hm.length, am = 0; am < Am; am++) {
+        const mm = hm[am];
+        null !== Tm[mm].parent && (fm[mm] = xm(mm, Tm))
       }
-      return Ik
+      return fm
     }
   },
-  36665: kk => {
-    kk.exports = {
+  36751: mm => {
+    mm.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
       aqua: [0, 255, 255],
@@ -1137,28 +1137,28 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  36646: (kk, Fk, Ik) => {
-    var Xk = Ik(36655),
-      Tk = Array.prototype.concat,
-      ik = Array.prototype.slice,
-      yk = kk.exports = function(kk) {
-        for (var Fk = [], Ik = 0, yk = kk.length; Ik < yk; Ik++) {
-          var lk = kk[Ik];
-          Xk(lk) ? Fk = Tk.call(Fk, ik.call(lk)) : Fk.push(lk)
+  36734: (mm, Tm, fm) => {
+    var hm = fm(36740),
+      Am = Array.prototype.concat,
+      am = Array.prototype.slice,
+      xm = mm.exports = function(mm) {
+        for (var Tm = [], fm = 0, xm = mm.length; fm < xm; fm++) {
+          var wm = mm[fm];
+          hm(wm) ? Tm = Am.call(Tm, am.call(wm)) : Tm.push(wm)
         }
-        return Fk
+        return Tm
       };
-    yk.wrap = function(kk) {
+    xm.wrap = function(mm) {
       return function() {
-        return kk(yk(arguments))
+        return mm(xm(arguments))
       }
     }
   },
-  36655: kk => {
-    kk.exports = function(kk) {
-      return !(!kk || "string" === typeof kk) && (kk instanceof Array || Array.isArray(kk) || kk.length >= 0 && (kk.splice instanceof Function || Object.getOwnPropertyDescriptor(kk, kk.length - 1) && "String" !== kk.constructor.name))
+  36740: mm => {
+    mm.exports = function(mm) {
+      return !(!mm || "string" === typeof mm) && (mm instanceof Array || Array.isArray(mm) || mm.length >= 0 && (mm.splice instanceof Function || Object.getOwnPropertyDescriptor(mm, mm.length - 1) && "String" !== mm.constructor.name))
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

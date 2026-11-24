@@ -1,83 +1,83 @@
 export const id = 254;
 export const ids = [254];
 export const modules = {
-  40056: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Zk,
-      c: () => tk,
-      d: () => ak,
-      f: () => jk,
-      i: () => qk,
-      k: () => lk,
-      l: () => Lk
+  40180: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => Em,
+      f: () => pm,
+      h: () => Dm,
+      l: () => om,
+      o: () => im,
+      s: () => wm,
+      u: () => Rm
     });
-    var Xk = Ik(38674),
-      Tk = Ik(40064);
+    var hm = fm(38766),
+      Am = fm(40186);
 
-    function ik(kk, Fk, Ik, Xk) {
-      switch (Fk) {
+    function am(mm, Tm, fm, hm) {
+      switch (Tm) {
         case 5120: {
-          let Fk = kk.getInt8(Ik);
-          return Xk && (Fk = Math.max(Fk / 127, -1)), Fk
+          let Tm = mm.getInt8(fm);
+          return hm && (Tm = Math.max(Tm / 127, -1)), Tm
         }
         case 5121: {
-          let Fk = kk.getUint8(Ik);
-          return Xk && (Fk /= 255), Fk
+          let Tm = mm.getUint8(fm);
+          return hm && (Tm /= 255), Tm
         }
         case 5122: {
-          let Fk = kk.getInt16(Ik, !0);
-          return Xk && (Fk = Math.max(Fk / 32767, -1)), Fk
+          let Tm = mm.getInt16(fm, !0);
+          return hm && (Tm = Math.max(Tm / 32767, -1)), Tm
         }
         case 5123: {
-          let Fk = kk.getUint16(Ik, !0);
-          return Xk && (Fk /= 65535), Fk
+          let Tm = mm.getUint16(fm, !0);
+          return hm && (Tm /= 65535), Tm
         }
         case 5131:
-          return (0, Tk.c)(kk.getUint16(Ik, !0));
+          return (0, Am.d)(mm.getUint16(fm, !0));
         case 5124:
-          return kk.getInt32(Ik, !0);
+          return mm.getInt32(fm, !0);
         case 5125:
-          return kk.getUint32(Ik, !0);
+          return mm.getUint32(fm, !0);
         case 5126:
-          return kk.getFloat32(Ik, !0);
+          return mm.getFloat32(fm, !0);
         default:
-          throw new Error(`Invalid component type ${Fk}`)
+          throw new Error(`Invalid component type ${Tm}`)
       }
     }
 
-    function yk(kk, Fk, Ik, Xk, ik) {
-      switch (Fk) {
+    function xm(mm, Tm, fm, hm, am) {
+      switch (Tm) {
         case 5120:
-          Xk && (ik = Math.round(127 * ik)), kk.setInt8(Ik, ik);
+          hm && (am = Math.round(127 * am)), mm.setInt8(fm, am);
           break;
         case 5121:
-          Xk && (ik = Math.round(255 * ik)), kk.setUint8(Ik, ik);
+          hm && (am = Math.round(255 * am)), mm.setUint8(fm, am);
           break;
         case 5122:
-          Xk && (ik = Math.round(32767 * ik)), kk.setInt16(Ik, ik, !0);
+          hm && (am = Math.round(32767 * am)), mm.setInt16(fm, am, !0);
           break;
         case 5123:
-          Xk && (ik = Math.round(65535 * ik)), kk.setUint16(Ik, ik, !0);
+          hm && (am = Math.round(65535 * am)), mm.setUint16(fm, am, !0);
           break;
         case 5131:
-          kk.setUint16(Ik, (0, Tk.i)(ik), !0);
+          mm.setUint16(fm, (0, Am.j)(am), !0);
           break;
         case 5124:
-          kk.setInt32(Ik, ik, !0);
+          mm.setInt32(fm, am, !0);
           break;
         case 5125:
-          kk.setUint32(Ik, ik, !0);
+          mm.setUint32(fm, am, !0);
           break;
         case 5126:
-          kk.setFloat32(Ik, ik, !0);
+          mm.setFloat32(fm, am, !0);
           break;
         default:
-          throw new Error(`Invalid component type ${Fk}`)
+          throw new Error(`Invalid component type ${Tm}`)
       }
     }
 
-    function lk(kk) {
-      switch (kk) {
+    function wm(mm) {
+      switch (mm) {
         case 5120:
         case 5121:
           return 1;
@@ -90,61 +90,61 @@ export const modules = {
         case 5126:
           return 4;
         default:
-          throw new Error(`Invalid type '${kk}'`)
+          throw new Error(`Invalid type '${mm}'`)
       }
     }
 
-    function ak(kk, Fk, Ik, Xk, Tk, ak, qk, Lk) {
-      const tk = new Array(Xk),
-        Zk = new Array(Xk);
-      if (kk instanceof Array) {
-        let Tk = Fk / 4;
-        const ik = Ik / 4;
-        for (let Fk = 0; Fk < ak; Fk += Xk) {
-          for (let Fk = 0; Fk < Xk; Fk++) tk[Fk] = Zk[Fk] = kk[Tk + Fk];
-          Lk(Zk, Fk);
-          for (let Fk = 0; Fk < Xk; Fk++) tk[Fk] !== Zk[Fk] && (kk[Tk + Fk] = Zk[Fk]);
-          Tk += ik
+    function Dm(mm, Tm, fm, hm, Am, Dm, im, Rm) {
+      const pm = new Array(hm),
+        Em = new Array(hm);
+      if (mm instanceof Array) {
+        let Am = Tm / 4;
+        const am = fm / 4;
+        for (let Tm = 0; Tm < Dm; Tm += hm) {
+          for (let Tm = 0; Tm < hm; Tm++) pm[Tm] = Em[Tm] = mm[Am + Tm];
+          Rm(Em, Tm);
+          for (let Tm = 0; Tm < hm; Tm++) pm[Tm] !== Em[Tm] && (mm[Am + Tm] = Em[Tm]);
+          Am += am
         }
       } else {
-        const jk = ArrayBuffer.isView(kk) ? new DataView(kk.buffer, kk.byteOffset, kk.byteLength) : new DataView(kk),
-          ek = lk(Tk);
-        for (let kk = 0; kk < ak; kk += Xk) {
-          for (let kk = 0, Ik = Fk; kk < Xk; kk++, Ik += ek) tk[kk] = Zk[kk] = ik(jk, Tk, Ik, qk);
-          Lk(Zk, kk);
-          for (let kk = 0, Ik = Fk; kk < Xk; kk++, Ik += ek) tk[kk] !== Zk[kk] && yk(jk, Tk, Ik, qk, Zk[kk]);
-          Fk += Ik
+        const om = ArrayBuffer.isView(mm) ? new DataView(mm.buffer, mm.byteOffset, mm.byteLength) : new DataView(mm),
+          Om = wm(Am);
+        for (let mm = 0; mm < Dm; mm += hm) {
+          for (let mm = 0, fm = Tm; mm < hm; mm++, fm += Om) pm[mm] = Em[mm] = am(om, Am, fm, im);
+          Rm(Em, mm);
+          for (let mm = 0, fm = Tm; mm < hm; mm++, fm += Om) pm[mm] !== Em[mm] && xm(om, Am, fm, im, Em[mm]);
+          Tm += fm
         }
       }
     }
 
-    function qk(kk, Fk, Ik, Tk, ik, yk, qk, Lk) {
-      const tk = Fk * lk(Ik),
-        Zk = qk * Fk;
-      if (5126 !== Ik || ik !== tk) {
-        const Xk = new Float32Array(Zk);
-        return ak(kk, Tk, ik, Fk, Ik, Zk, yk, ((kk, Ik) => {
-          for (let Tk = 0; Tk < Fk; Tk++) Xk[Ik + Tk] = kk[Tk]
-        })), Xk
+    function im(mm, Tm, fm, Am, am, xm, im, Rm) {
+      const pm = Tm * wm(fm),
+        Em = im * Tm;
+      if (5126 !== fm || am !== pm) {
+        const hm = new Float32Array(Em);
+        return Dm(mm, Am, am, Tm, fm, Em, xm, ((mm, fm) => {
+          for (let Am = 0; Am < Tm; Am++) hm[fm + Am] = mm[Am]
+        })), hm
       }
-      if (!(kk instanceof Array || kk instanceof Float32Array) || 0 !== Tk || kk.length !== Zk) {
-        if (kk instanceof Array) {
-          const Fk = Tk / 4;
-          return kk.slice(Fk, Fk + Zk)
+      if (!(mm instanceof Array || mm instanceof Float32Array) || 0 !== Am || mm.length !== Em) {
+        if (mm instanceof Array) {
+          const Tm = Am / 4;
+          return mm.slice(Tm, Tm + Em)
         }
-        if (ArrayBuffer.isView(kk)) {
-          const Fk = kk.byteOffset + Tk;
-          return 0 !== (3 & Fk) && (Xk.e.Warn("Float array must be aligned to 4-bytes border"), Lk = !0), Lk ? new Float32Array(kk.buffer.slice(Fk, Fk + Zk * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(kk.buffer, Fk, Zk)
+        if (ArrayBuffer.isView(mm)) {
+          const Tm = mm.byteOffset + Am;
+          return 0 !== (3 & Tm) && (hm.b.Warn("Float array must be aligned to 4-bytes border"), Rm = !0), Rm ? new Float32Array(mm.buffer.slice(Tm, Tm + Em * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(mm.buffer, Tm, Em)
         }
-        return new Float32Array(kk, Tk, Zk)
+        return new Float32Array(mm, Am, Em)
       }
-      return Lk ? kk.slice() : kk
+      return Rm ? mm.slice() : mm
     }
 
-    function Lk(kk, Fk, Ik, Tk, ik, yk, qk) {
-      const Lk = lk(Ik),
-        tk = function(kk) {
-          switch (kk) {
+    function Rm(mm, Tm, fm, Am, am, xm, im) {
+      const Rm = wm(fm),
+        pm = function(mm) {
+          switch (mm) {
             case 5120:
               return Int8Array;
             case 5121:
@@ -161,120 +161,120 @@ export const modules = {
             case 5126:
               return Float32Array;
             default:
-              throw new Error(`Invalid component type '${kk}'`)
+              throw new Error(`Invalid component type '${mm}'`)
           }
-        }(Ik),
-        Zk = yk * Fk;
-      if (Array.isArray(kk)) {
-        if (0 !== (3 & Tk) || 0 !== (3 & ik)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
-        const Xk = Tk / 4,
-          lk = ik / 4;
-        if (Xk + (yk - 1) * lk + Fk > kk.length) throw new Error("Last accessed index is out of bounds.");
-        if (lk < Fk) throw new Error("Data stride cannot be smaller than the component size.");
-        if (lk !== Fk) {
-          const Xk = new tk(Zk);
-          return ak(kk, Tk, ik, Fk, Ik, Zk, !1, ((kk, Ik) => {
-            for (let Tk = 0; Tk < Fk; Tk++) Xk[Ik + Tk] = kk[Tk]
-          })), Xk
+        }(fm),
+        Em = xm * Tm;
+      if (Array.isArray(mm)) {
+        if (0 !== (3 & Am) || 0 !== (3 & am)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
+        const hm = Am / 4,
+          wm = am / 4;
+        if (hm + (xm - 1) * wm + Tm > mm.length) throw new Error("Last accessed index is out of bounds.");
+        if (wm < Tm) throw new Error("Data stride cannot be smaller than the component size.");
+        if (wm !== Tm) {
+          const hm = new pm(Em);
+          return Dm(mm, Am, am, Tm, fm, Em, !1, ((mm, fm) => {
+            for (let Am = 0; Am < Tm; Am++) hm[fm + Am] = mm[Am]
+          })), hm
         }
-        return new tk(kk.slice(Xk, Xk + Zk))
+        return new pm(mm.slice(hm, hm + Em))
       }
-      let jk, ek = Tk;
-      ArrayBuffer.isView(kk) ? (jk = kk.buffer, ek += kk.byteOffset) : jk = kk;
-      if (ek + (yk - 1) * ik + Fk * Lk > jk.byteLength) throw new Error("Last accessed byte is out of bounds.");
-      const wk = Fk * Lk;
-      if (ik < wk) throw new Error("Byte stride cannot be smaller than the component's byte size.");
-      if (ik !== wk) {
-        const kk = new tk(Zk),
-          Ik = new Uint8Array(jk, ek),
-          Xk = new Uint8Array(kk.buffer),
-          Tk = Fk * Lk;
-        for (let Fk = 0, lk = 0, ak = 0; Fk < yk; Fk++, lk += ik, ak += Tk) Xk.set(Ik.subarray(lk, lk + Tk), ak);
-        return kk
+      let om, Om = Am;
+      ArrayBuffer.isView(mm) ? (om = mm.buffer, Om += mm.byteOffset) : om = mm;
+      if (Om + (xm - 1) * am + Tm * Rm > om.byteLength) throw new Error("Last accessed byte is out of bounds.");
+      const Ym = Tm * Rm;
+      if (am < Ym) throw new Error("Byte stride cannot be smaller than the component's byte size.");
+      if (am !== Ym) {
+        const mm = new pm(Em),
+          fm = new Uint8Array(om, Om),
+          hm = new Uint8Array(mm.buffer),
+          Am = Tm * Rm;
+        for (let Tm = 0, wm = 0, Dm = 0; Tm < xm; Tm++, wm += am, Dm += Am) hm.set(fm.subarray(wm, wm + Am), Dm);
+        return mm
       }
-      return 1 !== Lk && 0 !== (ek & Lk - 1) && (Xk.e.Warn("Array must be aligned to border of element size. Data will be copied."), qk = !0), qk ? new tk(jk.slice(ek, ek + Zk * Lk)) : new tk(jk, ek, Zk)
+      return 1 !== Rm && 0 !== (Om & Rm - 1) && (hm.b.Warn("Array must be aligned to border of element size. Data will be copied."), im = !0), im ? new pm(om.slice(Om, Om + Em * Rm)) : new pm(om, Om, Em)
     }
 
-    function tk(kk, Fk, Ik, Tk, ik, yk, qk, Lk) {
-      const tk = Fk * lk(Ik),
-        Zk = qk * Fk;
-      if (Lk.length !== Zk) throw new Error("Output length is not valid");
-      if (5126 === Ik && ik === tk)
-        if (kk instanceof Array) {
-          const Fk = Tk / 4;
-          Lk.set(kk, Fk)
-        } else if (ArrayBuffer.isView(kk)) {
-        const Fk = kk.byteOffset + Tk;
-        if (0 !== (3 & Fk)) return Xk.e.Warn("Float array must be aligned to 4-bytes border"), void Lk.set(new Float32Array(kk.buffer.slice(Fk, Fk + Zk * Float32Array.BYTES_PER_ELEMENT)));
-        const Ik = new Float32Array(kk.buffer, Fk, Zk);
-        Lk.set(Ik)
+    function pm(mm, Tm, fm, Am, am, xm, im, Rm) {
+      const pm = Tm * wm(fm),
+        Em = im * Tm;
+      if (Rm.length !== Em) throw new Error("Output length is not valid");
+      if (5126 === fm && am === pm)
+        if (mm instanceof Array) {
+          const Tm = Am / 4;
+          Rm.set(mm, Tm)
+        } else if (ArrayBuffer.isView(mm)) {
+        const Tm = mm.byteOffset + Am;
+        if (0 !== (3 & Tm)) return hm.b.Warn("Float array must be aligned to 4-bytes border"), void Rm.set(new Float32Array(mm.buffer.slice(Tm, Tm + Em * Float32Array.BYTES_PER_ELEMENT)));
+        const fm = new Float32Array(mm.buffer, Tm, Em);
+        Rm.set(fm)
       } else {
-        const Fk = new Float32Array(kk, Tk, Zk);
-        Lk.set(Fk)
-      } else ak(kk, Tk, ik, Fk, Ik, Zk, yk, ((kk, Ik) => {
-        for (let Xk = 0; Xk < Fk; Xk++) Lk[Ik + Xk] = kk[Xk]
+        const Tm = new Float32Array(mm, Am, Em);
+        Rm.set(Tm)
+      } else Dm(mm, Am, am, Tm, fm, Em, xm, ((mm, fm) => {
+        for (let hm = 0; hm < Tm; hm++) Rm[fm + hm] = mm[hm]
       }))
     }
 
-    function Zk(kk, Fk) {
-      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      if (Array.isArray(kk)) {
-        for (let Tk = 0; Tk < Fk; Tk++)
-          if (kk[Ik + Tk] - Xk > 65535) return !0;
+    function Em(mm, Tm) {
+      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      if (Array.isArray(mm)) {
+        for (let Am = 0; Am < Tm; Am++)
+          if (mm[fm + Am] - hm > 65535) return !0;
         return !1
       }
-      return 4 === kk.BYTES_PER_ELEMENT
+      return 4 === mm.BYTES_PER_ELEMENT
     }
 
-    function jk(kk) {
-      const Fk = kk.buffer;
-      if (Fk instanceof ArrayBuffer) return kk;
-      const Ik = new ArrayBuffer(kk.byteLength);
-      return new Uint8Array(Ik).set(new Uint8Array(Fk, kk.byteOffset, kk.byteLength)), Ik
+    function om(mm) {
+      const Tm = mm.buffer;
+      if (Tm instanceof ArrayBuffer) return mm;
+      const fm = new ArrayBuffer(mm.byteLength);
+      return new Uint8Array(fm).set(new Uint8Array(Tm, mm.byteOffset, mm.byteLength)), fm
     }
   },
-  39872: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => zk,
-      e: () => sk,
-      k: () => Vk,
-      g: () => pk,
-      n: () => uk
+  4e4: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => cm,
+      d: () => nm,
+      i: () => Jm,
+      e: () => Nm,
+      l: () => Gm
     });
-    class Xk {
+    class hm {
       constructor() {
         this.children = []
       }
-      isValid(kk) {
+      isValid(mm) {
         return !0
       }
-      process(kk, Fk, Ik) {
-        let Xk = "";
+      process(mm, Tm, fm) {
+        let hm = "";
         if (this.line) {
-          let Ik = this.line;
-          const Tk = Fk.processor;
-          if (Tk) {
-            Tk.lineProcessor && (Ik = Tk.lineProcessor(Ik, Fk.isFragment, Fk.processingContext));
-            const Xk = Fk.processor?.attributeKeywordName ?? "attribute",
-              ik = Fk.isFragment && Fk.processor?.varyingFragmentKeywordName ? Fk.processor?.varyingFragmentKeywordName : !Fk.isFragment && Fk.processor?.varyingVertexKeywordName ? Fk.processor?.varyingVertexKeywordName : "varying";
-            if (!Fk.isFragment && Tk.attributeProcessor && this.line.startsWith(Xk)) Ik = Tk.attributeProcessor(this.line, kk, Fk.processingContext);
-            else if (Tk.varyingProcessor && (Tk.varyingCheck?.(this.line, Fk.isFragment) || !Tk.varyingCheck && this.line.startsWith(ik))) Ik = Tk.varyingProcessor(this.line, Fk.isFragment, kk, Fk.processingContext);
-            else if (Tk.uniformProcessor && Tk.uniformRegexp && Tk.uniformRegexp.test(this.line)) Fk.lookForClosingBracketForUniformBuffer || (Ik = Tk.uniformProcessor(this.line, Fk.isFragment, kk, Fk.processingContext));
-            else if (Tk.uniformBufferProcessor && Tk.uniformBufferRegexp && Tk.uniformBufferRegexp.test(this.line)) Fk.lookForClosingBracketForUniformBuffer || (Ik = Tk.uniformBufferProcessor(this.line, Fk.isFragment, Fk.processingContext), Fk.lookForClosingBracketForUniformBuffer = !0);
-            else if (Tk.textureProcessor && Tk.textureRegexp && Tk.textureRegexp.test(this.line)) Ik = Tk.textureProcessor(this.line, Fk.isFragment, kk, Fk.processingContext);
-            else if ((Tk.uniformProcessor || Tk.uniformBufferProcessor) && this.line.startsWith("uniform") && !Fk.lookForClosingBracketForUniformBuffer) {
-              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? Tk.uniformProcessor && (Ik = Tk.uniformProcessor(this.line, Fk.isFragment, kk, Fk.processingContext)) : Tk.uniformBufferProcessor && (Ik = Tk.uniformBufferProcessor(this.line, Fk.isFragment, Fk.processingContext), Fk.lookForClosingBracketForUniformBuffer = !0)
+          let fm = this.line;
+          const Am = Tm.processor;
+          if (Am) {
+            Am.lineProcessor && (fm = Am.lineProcessor(fm, Tm.isFragment, Tm.processingContext));
+            const hm = Tm.processor?.attributeKeywordName ?? "attribute",
+              am = Tm.isFragment && Tm.processor?.varyingFragmentKeywordName ? Tm.processor?.varyingFragmentKeywordName : !Tm.isFragment && Tm.processor?.varyingVertexKeywordName ? Tm.processor?.varyingVertexKeywordName : "varying";
+            if (!Tm.isFragment && Am.attributeProcessor && this.line.startsWith(hm)) fm = Am.attributeProcessor(this.line, mm, Tm.processingContext);
+            else if (Am.varyingProcessor && (Am.varyingCheck?.(this.line, Tm.isFragment) || !Am.varyingCheck && this.line.startsWith(am))) fm = Am.varyingProcessor(this.line, Tm.isFragment, mm, Tm.processingContext);
+            else if (Am.uniformProcessor && Am.uniformRegexp && Am.uniformRegexp.test(this.line)) Tm.lookForClosingBracketForUniformBuffer || (fm = Am.uniformProcessor(this.line, Tm.isFragment, mm, Tm.processingContext));
+            else if (Am.uniformBufferProcessor && Am.uniformBufferRegexp && Am.uniformBufferRegexp.test(this.line)) Tm.lookForClosingBracketForUniformBuffer || (fm = Am.uniformBufferProcessor(this.line, Tm.isFragment, Tm.processingContext), Tm.lookForClosingBracketForUniformBuffer = !0);
+            else if (Am.textureProcessor && Am.textureRegexp && Am.textureRegexp.test(this.line)) fm = Am.textureProcessor(this.line, Tm.isFragment, mm, Tm.processingContext);
+            else if ((Am.uniformProcessor || Am.uniformBufferProcessor) && this.line.startsWith("uniform") && !Tm.lookForClosingBracketForUniformBuffer) {
+              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? Am.uniformProcessor && (fm = Am.uniformProcessor(this.line, Tm.isFragment, mm, Tm.processingContext)) : Am.uniformBufferProcessor && (fm = Am.uniformBufferProcessor(this.line, Tm.isFragment, Tm.processingContext), Tm.lookForClosingBracketForUniformBuffer = !0)
             }
-            Fk.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (Fk.lookForClosingBracketForUniformBuffer = !1, Tk.endOfUniformBufferProcessor && (Ik = Tk.endOfUniformBufferProcessor(this.line, Fk.isFragment, Fk.processingContext)))
+            Tm.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (Tm.lookForClosingBracketForUniformBuffer = !1, Am.endOfUniformBufferProcessor && (fm = Am.endOfUniformBufferProcessor(this.line, Tm.isFragment, Tm.processingContext)))
           }
-          Xk += Ik + "\n"
+          hm += fm + "\n"
         }
-        for (const Tk of this.children) Xk += Tk.process(kk, Fk, Ik);
-        return this.additionalDefineKey && (kk[this.additionalDefineKey] = this.additionalDefineValue || "true", Ik[this.additionalDefineKey] = kk[this.additionalDefineKey]), Xk
+        for (const Am of this.children) hm += Am.process(mm, Tm, fm);
+        return this.additionalDefineKey && (mm[this.additionalDefineKey] = this.additionalDefineValue || "true", fm[this.additionalDefineKey] = mm[this.additionalDefineKey]), hm
       }
     }
-    class Tk {
+    class Am {
       constructor() {
         this._lines = []
       }
@@ -284,273 +284,273 @@ export const modules = {
       get canRead() {
         return this.lineIndex < this._lines.length - 1
       }
-      set lines(kk) {
+      set lines(mm) {
         this._lines.length = 0;
-        for (const Fk of kk) {
-          if (!Fk || "\r" === Fk) continue;
-          if ("#" === Fk[0]) {
-            this._lines.push(Fk);
+        for (const Tm of mm) {
+          if (!Tm || "\r" === Tm) continue;
+          if ("#" === Tm[0]) {
+            this._lines.push(Tm);
             continue
           }
-          const kk = Fk.trim();
-          if (!kk) continue;
-          if (kk.startsWith("//")) {
-            this._lines.push(Fk);
+          const mm = Tm.trim();
+          if (!mm) continue;
+          if (mm.startsWith("//")) {
+            this._lines.push(Tm);
             continue
           }
-          const Ik = kk.indexOf(";");
-          if (-1 === Ik) this._lines.push(kk);
-          else if (Ik === kk.length - 1) kk.length > 1 && this._lines.push(kk);
+          const fm = mm.indexOf(";");
+          if (-1 === fm) this._lines.push(mm);
+          else if (fm === mm.length - 1) mm.length > 1 && this._lines.push(mm);
           else {
-            const kk = Fk.split(";");
-            for (let Fk = 0; Fk < kk.length; Fk++) {
-              let Ik = kk[Fk];
-              Ik && (Ik = Ik.trim(), Ik && this._lines.push(Ik + (Fk !== kk.length - 1 ? ";" : "")))
+            const mm = Tm.split(";");
+            for (let Tm = 0; Tm < mm.length; Tm++) {
+              let fm = mm[Tm];
+              fm && (fm = fm.trim(), fm && this._lines.push(fm + (Tm !== mm.length - 1 ? ";" : "")))
             }
           }
         }
       }
     }
-    class ik extends Xk {
-      process(kk, Fk, Ik) {
-        for (let Xk = 0; Xk < this.children.length; Xk++) {
-          const Tk = this.children[Xk];
-          if (Tk.isValid(kk)) return Tk.process(kk, Fk, Ik)
+    class am extends hm {
+      process(mm, Tm, fm) {
+        for (let hm = 0; hm < this.children.length; hm++) {
+          const Am = this.children[hm];
+          if (Am.isValid(mm)) return Am.process(mm, Tm, fm)
         }
         return ""
       }
     }
-    class yk extends Xk {
-      isValid(kk) {
-        return this.testExpression.isTrue(kk)
+    class xm extends hm {
+      isValid(mm) {
+        return this.testExpression.isTrue(mm)
       }
     }
-    class lk {
-      isTrue(kk) {
+    class wm {
+      isTrue(mm) {
         return !0
       }
-      static postfixToInfix(kk) {
-        const Fk = [];
-        for (const Ik of kk)
-          if (void 0 === lk._OperatorPriority[Ik]) Fk.push(Ik);
+      static postfixToInfix(mm) {
+        const Tm = [];
+        for (const fm of mm)
+          if (void 0 === wm._OperatorPriority[fm]) Tm.push(fm);
           else {
-            const kk = Fk[Fk.length - 1],
-              Xk = Fk[Fk.length - 2];
-            Fk.length -= 2, Fk.push(`(${Xk}${Ik}${kk})`)
-          } return Fk[Fk.length - 1]
+            const mm = Tm[Tm.length - 1],
+              hm = Tm[Tm.length - 2];
+            Tm.length -= 2, Tm.push(`(${hm}${fm}${mm})`)
+          } return Tm[Tm.length - 1]
       }
-      static infixToPostfix(kk) {
-        const Fk = lk._InfixToPostfixCache.get(kk);
-        if (Fk) return Fk.accessTime = Date.now(), Fk.result;
-        if (!kk.includes("&&") && !kk.includes("||") && !kk.includes(")") && !kk.includes("(")) return [kk];
-        const Ik = [];
-        let Xk = -1;
-        const Tk = () => {
-            Lk = Lk.trim(), "" !== Lk && (Ik.push(Lk), Lk = "")
+      static infixToPostfix(mm) {
+        const Tm = wm._InfixToPostfixCache.get(mm);
+        if (Tm) return Tm.accessTime = Date.now(), Tm.result;
+        if (!mm.includes("&&") && !mm.includes("||") && !mm.includes(")") && !mm.includes("(")) return [mm];
+        const fm = [];
+        let hm = -1;
+        const Am = () => {
+            Rm = Rm.trim(), "" !== Rm && (fm.push(Rm), Rm = "")
           },
-          ik = kk => {
-            Xk < lk._Stack.length - 1 && (lk._Stack[++Xk] = kk)
+          am = mm => {
+            hm < wm._Stack.length - 1 && (wm._Stack[++hm] = mm)
           },
-          yk = () => lk._Stack[Xk],
-          ak = () => -1 === Xk ? "!!INVALID EXPRESSION!!" : lk._Stack[Xk--];
-        let qk = 0,
-          Lk = "";
-        for (; qk < kk.length;) {
-          const Fk = kk.charAt(qk),
-            tk = qk < kk.length - 1 ? kk.substring(qk, 2 + qk) : "";
-          if ("(" === Fk) Lk = "", ik(Fk);
-          else if (")" === Fk) {
-            for (Tk(); - 1 !== Xk && "(" !== yk();) Ik.push(ak());
-            ak()
-          } else if (lk._OperatorPriority[tk] > 1) {
-            for (Tk(); - 1 !== Xk && lk._OperatorPriority[yk()] >= lk._OperatorPriority[tk];) Ik.push(ak());
-            ik(tk), qk++
-          } else Lk += Fk;
-          qk++
+          xm = () => wm._Stack[hm],
+          Dm = () => -1 === hm ? "!!INVALID EXPRESSION!!" : wm._Stack[hm--];
+        let im = 0,
+          Rm = "";
+        for (; im < mm.length;) {
+          const Tm = mm.charAt(im),
+            pm = im < mm.length - 1 ? mm.substring(im, 2 + im) : "";
+          if ("(" === Tm) Rm = "", am(Tm);
+          else if (")" === Tm) {
+            for (Am(); - 1 !== hm && "(" !== xm();) fm.push(Dm());
+            Dm()
+          } else if (wm._OperatorPriority[pm] > 1) {
+            for (Am(); - 1 !== hm && wm._OperatorPriority[xm()] >= wm._OperatorPriority[pm];) fm.push(Dm());
+            am(pm), im++
+          } else Rm += Tm;
+          im++
         }
-        for (Tk(); - 1 !== Xk;) "(" === yk() ? ak() : Ik.push(ak());
-        return lk._InfixToPostfixCache.size >= lk.InfixToPostfixCacheLimitSize && lk.ClearCache(), lk._InfixToPostfixCache.set(kk, {
-          result: Ik,
+        for (Am(); - 1 !== hm;) "(" === xm() ? Dm() : fm.push(Dm());
+        return wm._InfixToPostfixCache.size >= wm.InfixToPostfixCacheLimitSize && wm.ClearCache(), wm._InfixToPostfixCache.set(mm, {
+          result: fm,
           accessTime: Date.now()
-        }), Ik
+        }), fm
       }
       static ClearCache() {
-        const kk = Array.from(lk._InfixToPostfixCache.entries()).sort(((kk, Fk) => kk[1].accessTime - Fk[1].accessTime));
-        for (let Fk = 0; Fk < lk.InfixToPostfixCacheCleanupSize; Fk++) lk._InfixToPostfixCache.delete(kk[Fk][0])
+        const mm = Array.from(wm._InfixToPostfixCache.entries()).sort(((mm, Tm) => mm[1].accessTime - Tm[1].accessTime));
+        for (let Tm = 0; Tm < wm.InfixToPostfixCacheCleanupSize; Tm++) wm._InfixToPostfixCache.delete(mm[Tm][0])
       }
     }
-    lk.InfixToPostfixCacheLimitSize = 5e4, lk.InfixToPostfixCacheCleanupSize = 25e3, lk._InfixToPostfixCache = new Map, lk._OperatorPriority = {
+    wm.InfixToPostfixCacheLimitSize = 5e4, wm.InfixToPostfixCacheCleanupSize = 25e3, wm._InfixToPostfixCache = new Map, wm._OperatorPriority = {
       ")": 0,
       "(": 1,
       "||": 2,
       "&&": 3
-    }, lk._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
-    class ak extends lk {
-      constructor(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        super(), this.define = kk, this.not = Fk
+    }, wm._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    class Dm extends wm {
+      constructor(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        super(), this.define = mm, this.not = Tm
       }
-      isTrue(kk) {
-        let Fk = void 0 !== kk[this.define];
-        return this.not && (Fk = !Fk), Fk
-      }
-    }
-    class qk extends lk {
-      isTrue(kk) {
-        return this.leftOperand.isTrue(kk) || this.rightOperand.isTrue(kk)
+      isTrue(mm) {
+        let Tm = void 0 !== mm[this.define];
+        return this.not && (Tm = !Tm), Tm
       }
     }
-    class Lk extends lk {
-      isTrue(kk) {
-        return this.leftOperand.isTrue(kk) && this.rightOperand.isTrue(kk)
+    class im extends wm {
+      isTrue(mm) {
+        return this.leftOperand.isTrue(mm) || this.rightOperand.isTrue(mm)
       }
     }
-    class tk extends lk {
-      constructor(kk, Fk, Ik) {
-        super(), this.define = kk, this.operand = Fk, this.testValue = Ik
+    class Rm extends wm {
+      isTrue(mm) {
+        return this.leftOperand.isTrue(mm) && this.rightOperand.isTrue(mm)
+      }
+    }
+    class pm extends wm {
+      constructor(mm, Tm, fm) {
+        super(), this.define = mm, this.operand = Tm, this.testValue = fm
       }
       toString() {
         return `${this.define} ${this.operand} ${this.testValue}`
       }
-      isTrue(kk) {
-        let Fk = !1;
-        const Ik = parseInt(void 0 != kk[this.define] ? kk[this.define] : this.define),
-          Xk = parseInt(void 0 != kk[this.testValue] ? kk[this.testValue] : this.testValue);
-        if (isNaN(Ik) || isNaN(Xk)) return !1;
+      isTrue(mm) {
+        let Tm = !1;
+        const fm = parseInt(void 0 != mm[this.define] ? mm[this.define] : this.define),
+          hm = parseInt(void 0 != mm[this.testValue] ? mm[this.testValue] : this.testValue);
+        if (isNaN(fm) || isNaN(hm)) return !1;
         switch (this.operand) {
           case ">":
-            Fk = Ik > Xk;
+            Tm = fm > hm;
             break;
           case "<":
-            Fk = Ik < Xk;
+            Tm = fm < hm;
             break;
           case "<=":
-            Fk = Ik <= Xk;
+            Tm = fm <= hm;
             break;
           case ">=":
-            Fk = Ik >= Xk;
+            Tm = fm >= hm;
             break;
           case "==":
-            Fk = Ik === Xk;
+            Tm = fm === hm;
             break;
           case "!=":
-            Fk = Ik !== Xk
+            Tm = fm !== hm
         }
-        return Fk
+        return Tm
       }
     }
-    var Zk = Ik(39863),
-      jk = Ik(39860);
-    const ek = /defined\s*?\((.+?)\)/g,
-      wk = /defined\s*?\[(.+?)\]/g,
-      Hk = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
-      Jk = /__decl__/,
-      xk = /light\{X\}.(\w*)/g,
-      Pk = /\{X\}/g,
-      Kk = [],
-      Qk = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
+    var Em = fm(39993),
+      om = fm(39986);
+    const Om = /defined\s*?\((.+?)\)/g,
+      Ym = /defined\s*?\[(.+?)\]/g,
+      qm = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
+      jm = /__decl__/,
+      Vm = /light\{X\}.(\w*)/g,
+      Im = /\{X\}/g,
+      Km = [],
+      Qm = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
 
-    function sk(kk) {
-      kk.processor && kk.processor.initializeShaders && kk.processor.initializeShaders(kk.processingContext)
+    function nm(mm) {
+      mm.processor && mm.processor.initializeShaders && mm.processor.initializeShaders(mm.processingContext)
     }
 
-    function Vk(kk, Fk, Ik, Xk) {
-      Fk.processor?.preProcessShaderCode && (kk = Fk.processor.preProcessShaderCode(kk, Fk.isFragment)), pk(kk, Fk, (kk => {
-        Fk.processCodeAfterIncludes && (kk = Fk.processCodeAfterIncludes(Fk.isFragment ? "fragment" : "vertex", kk, Fk.defines));
-        const Tk = function(kk, Fk, Ik) {
-          let Xk = function(kk, Fk) {
-            if (Fk.processor?.noPrecision) return kk;
-            const Ik = Fk.shouldUseHighPrecisionShader; - 1 === kk.indexOf("precision highp float") ? kk = Ik ? "precision highp float;\n" + kk : "precision mediump float;\n" + kk : Ik || (kk = kk.replace("precision highp float", "precision mediump float"));
-            return kk
-          }(kk, Fk);
-          if (!Fk.processor) return Xk;
-          if (0 === Fk.processor.shaderLanguage && -1 !== Xk.indexOf("#version 3") && (Xk = Xk.replace("#version 300 es", ""), !Fk.processor.parseGLES3)) return Xk;
-          const Tk = Fk.defines,
-            ik = Gk(Fk, Ik);
-          Fk.processor.preProcessor && (Xk = Fk.processor.preProcessor(Xk, Tk, ik, Fk.isFragment, Fk.processingContext));
-          const yk = {};
-          Xk = nk(Xk, ik, Fk, yk), Fk.processor.postProcessor && (Xk = Fk.processor.postProcessor(Xk, Tk, Fk.isFragment, Fk.processingContext, Ik ? {
-            drawBuffersExtensionDisabled: !Ik.getCaps().drawBuffersExtension
-          } : {}, ik, yk));
-          Ik?._features.needShaderCodeInlining && (Xk = Ik.inlineShaderCode(Xk));
-          return Xk
-        }(kk, Fk, Xk);
-        Ik(Tk, kk)
+    function Jm(mm, Tm, fm, hm) {
+      Tm.processor?.preProcessShaderCode && (mm = Tm.processor.preProcessShaderCode(mm, Tm.isFragment)), Nm(mm, Tm, (mm => {
+        Tm.processCodeAfterIncludes && (mm = Tm.processCodeAfterIncludes(Tm.isFragment ? "fragment" : "vertex", mm, Tm.defines));
+        const Am = function(mm, Tm, fm) {
+          let hm = function(mm, Tm) {
+            if (Tm.processor?.noPrecision) return mm;
+            const fm = Tm.shouldUseHighPrecisionShader; - 1 === mm.indexOf("precision highp float") ? mm = fm ? "precision highp float;\n" + mm : "precision mediump float;\n" + mm : fm || (mm = mm.replace("precision highp float", "precision mediump float"));
+            return mm
+          }(mm, Tm);
+          if (!Tm.processor) return hm;
+          if (0 === Tm.processor.shaderLanguage && -1 !== hm.indexOf("#version 3") && (hm = hm.replace("#version 300 es", ""), !Tm.processor.parseGLES3)) return hm;
+          const Am = Tm.defines,
+            am = em(Tm, fm);
+          Tm.processor.preProcessor && (hm = Tm.processor.preProcessor(hm, Am, am, Tm.isFragment, Tm.processingContext));
+          const xm = {};
+          hm = Sm(hm, am, Tm, xm), Tm.processor.postProcessor && (hm = Tm.processor.postProcessor(hm, Am, Tm.isFragment, Tm.processingContext, fm ? {
+            drawBuffersExtensionDisabled: !fm.getCaps().drawBuffersExtension
+          } : {}, am, xm));
+          fm?._features.needShaderCodeInlining && (hm = fm.inlineShaderCode(hm));
+          return hm
+        }(mm, Tm, hm);
+        fm(Am, mm)
       }))
     }
 
-    function zk(kk, Fk, Ik) {
-      return Ik.processor && Ik.processor.finalizeShaders ? Ik.processor.finalizeShaders(kk, Fk, Ik.processingContext) : {
-        vertexCode: kk,
-        fragmentCode: Fk
+    function cm(mm, Tm, fm) {
+      return fm.processor && fm.processor.finalizeShaders ? fm.processor.finalizeShaders(mm, Tm, fm.processingContext) : {
+        vertexCode: mm,
+        fragmentCode: Tm
       }
     }
 
-    function Sk(kk) {
-      const Fk = /defined\((.+)\)/.exec(kk);
-      if (Fk && Fk.length) return new ak(Fk[1].trim(), "!" === kk[0]);
-      const Ik = ["==", "!=", ">=", "<=", "<", ">"];
-      let Xk = "",
-        Tk = 0;
-      for (Xk of Ik)
-        if (Tk = kk.indexOf(Xk), Tk > -1) break;
-      if (-1 === Tk) return new ak(kk);
-      const ik = kk.substring(0, Tk).trim(),
-        yk = kk.substring(Tk + Xk.length).trim();
-      return new tk(ik, Xk, yk)
+    function zm(mm) {
+      const Tm = /defined\((.+)\)/.exec(mm);
+      if (Tm && Tm.length) return new Dm(Tm[1].trim(), "!" === mm[0]);
+      const fm = ["==", "!=", ">=", "<=", "<", ">"];
+      let hm = "",
+        Am = 0;
+      for (hm of fm)
+        if (Am = mm.indexOf(hm), Am > -1) break;
+      if (-1 === Am) return new Dm(mm);
+      const am = mm.substring(0, Am).trim(),
+        xm = mm.substring(Am + hm.length).trim();
+      return new pm(am, hm, xm)
     }
 
-    function vk(kk, Fk) {
-      const Ik = new yk,
-        Xk = kk.substring(0, Fk);
-      let Tk = kk.substring(Fk);
-      return Tk = Tk.substring(0, (Tk.indexOf("//") + 1 || Tk.length + 1) - 1).trim(), Ik.testExpression = "#ifdef" === Xk ? new ak(Tk) : "#ifndef" === Xk ? new ak(Tk, !0) : function(kk) {
-        kk = kk.replace(ek, "defined[$1]");
-        const Fk = lk.infixToPostfix(kk),
-          Ik = [];
-        for (const Tk of Fk)
-          if ("||" !== Tk && "&&" !== Tk) Ik.push(Tk);
-          else if (Ik.length >= 2) {
-          let kk = Ik[Ik.length - 1],
-            Fk = Ik[Ik.length - 2];
-          Ik.length -= 2;
-          const Xk = "&&" == Tk ? new Lk : new qk;
-          "string" === typeof kk && (kk = kk.replace(wk, "defined($1)")), "string" === typeof Fk && (Fk = Fk.replace(wk, "defined($1)")), Xk.leftOperand = "string" === typeof Fk ? Sk(Fk) : Fk, Xk.rightOperand = "string" === typeof kk ? Sk(kk) : kk, Ik.push(Xk)
+    function Zm(mm, Tm) {
+      const fm = new xm,
+        hm = mm.substring(0, Tm);
+      let Am = mm.substring(Tm);
+      return Am = Am.substring(0, (Am.indexOf("//") + 1 || Am.length + 1) - 1).trim(), fm.testExpression = "#ifdef" === hm ? new Dm(Am) : "#ifndef" === hm ? new Dm(Am, !0) : function(mm) {
+        mm = mm.replace(Om, "defined[$1]");
+        const Tm = wm.infixToPostfix(mm),
+          fm = [];
+        for (const Am of Tm)
+          if ("||" !== Am && "&&" !== Am) fm.push(Am);
+          else if (fm.length >= 2) {
+          let mm = fm[fm.length - 1],
+            Tm = fm[fm.length - 2];
+          fm.length -= 2;
+          const hm = "&&" == Am ? new Rm : new im;
+          "string" === typeof mm && (mm = mm.replace(Ym, "defined($1)")), "string" === typeof Tm && (Tm = Tm.replace(Ym, "defined($1)")), hm.leftOperand = "string" === typeof Tm ? zm(Tm) : Tm, hm.rightOperand = "string" === typeof mm ? zm(mm) : mm, fm.push(hm)
         }
-        let Xk = Ik[Ik.length - 1];
-        return "string" === typeof Xk && (Xk = Xk.replace(wk, "defined($1)")), "string" === typeof Xk ? Sk(Xk) : Xk
-      }(Tk), Ik
+        let hm = fm[fm.length - 1];
+        return "string" === typeof hm && (hm = hm.replace(Ym, "defined($1)")), "string" === typeof hm ? zm(hm) : hm
+      }(Am), fm
     }
 
-    function Ek(kk, Fk, Ik, Tk) {
-      let ik;
-      for (; Ok(kk, Ik, Tk);) {
-        ik = kk.currentLine;
-        const yk = ik.substring(0, 5).toLowerCase();
-        if ("#else" === yk) {
-          const Ik = new Xk;
-          return Fk.children.push(Ik), void Ok(kk, Ik, Tk)
+    function km(mm, Tm, fm, Am) {
+      let am;
+      for (; bm(mm, fm, Am);) {
+        am = mm.currentLine;
+        const xm = am.substring(0, 5).toLowerCase();
+        if ("#else" === xm) {
+          const fm = new hm;
+          return Tm.children.push(fm), void bm(mm, fm, Am)
         }
-        if ("#elif" === yk) {
-          const kk = vk(ik, 5);
-          Fk.children.push(kk), Ik = kk
+        if ("#elif" === xm) {
+          const mm = Zm(am, 5);
+          Tm.children.push(mm), fm = mm
         }
       }
     }
 
-    function Ok(kk, Fk, Ik) {
-      for (; kk.canRead;) {
-        kk.lineIndex++;
-        const Tk = kk.currentLine;
-        if (Tk.indexOf("#") >= 0) {
-          const Xk = Qk.exec(Tk);
-          if (Xk && Xk.length) {
-            switch (Xk[0]) {
+    function bm(mm, Tm, fm) {
+      for (; mm.canRead;) {
+        mm.lineIndex++;
+        const Am = mm.currentLine;
+        if (Am.indexOf("#") >= 0) {
+          const hm = Qm.exec(Am);
+          if (hm && hm.length) {
+            switch (hm[0]) {
               case "#ifdef": {
-                const Xk = new ik;
-                Fk.children.push(Xk);
-                const yk = vk(Tk, 6);
-                Xk.children.push(yk), Ek(kk, Xk, yk, Ik);
+                const hm = new am;
+                Tm.children.push(hm);
+                const xm = Zm(Am, 6);
+                hm.children.push(xm), km(mm, hm, xm, fm);
                 break
               }
               case "#else":
@@ -559,155 +559,155 @@ export const modules = {
               case "#endif":
                 return !1;
               case "#ifndef": {
-                const Xk = new ik;
-                Fk.children.push(Xk);
-                const yk = vk(Tk, 7);
-                Xk.children.push(yk), Ek(kk, Xk, yk, Ik);
+                const hm = new am;
+                Tm.children.push(hm);
+                const xm = Zm(Am, 7);
+                hm.children.push(xm), km(mm, hm, xm, fm);
                 break
               }
               case "#if": {
-                const Xk = new ik,
-                  yk = vk(Tk, 3);
-                Fk.children.push(Xk), Xk.children.push(yk), Ek(kk, Xk, yk, Ik);
+                const hm = new am,
+                  xm = Zm(Am, 3);
+                Tm.children.push(hm), hm.children.push(xm), km(mm, hm, xm, fm);
                 break
               }
             }
             continue
           }
         }
-        const yk = new Xk;
-        if (yk.line = Tk, Fk.children.push(yk), "#" === Tk[0] && "d" === Tk[1]) {
-          const kk = Tk.replace(";", "").split(" ");
-          yk.additionalDefineKey = kk[1], 3 === kk.length && (yk.additionalDefineValue = kk[2])
+        const xm = new hm;
+        if (xm.line = Am, Tm.children.push(xm), "#" === Am[0] && "d" === Am[1]) {
+          const mm = Am.replace(";", "").split(" ");
+          xm.additionalDefineKey = mm[1], 3 === mm.length && (xm.additionalDefineValue = mm[2])
         }
       }
       return !1
     }
 
-    function nk(kk, Fk, Ik, ik) {
-      const yk = new Xk,
-        lk = new Tk;
-      return lk.lineIndex = -1, lk.lines = kk.split("\n"), Ok(lk, yk, ik), yk.process(Fk, Ik, ik)
+    function Sm(mm, Tm, fm, am) {
+      const xm = new hm,
+        wm = new Am;
+      return wm.lineIndex = -1, wm.lines = mm.split("\n"), bm(wm, xm, am), xm.process(Tm, fm, am)
     }
 
-    function Gk(kk, Fk) {
-      const Ik = kk.defines,
-        Xk = {};
-      for (const Tk of Ik) {
-        const kk = Tk.replace("#define", "").replace(";", "").trim().split(" ");
-        Xk[kk[0]] = kk.length > 1 ? kk[1] : ""
+    function em(mm, Tm) {
+      const fm = mm.defines,
+        hm = {};
+      for (const Am of fm) {
+        const mm = Am.replace("#define", "").replace(";", "").trim().split(" ");
+        hm[mm[0]] = mm.length > 1 ? mm[1] : ""
       }
-      return 0 === kk.processor?.shaderLanguage && (Xk.GL_ES = "true"), Xk.__VERSION__ = kk.version, Xk[kk.platformName] = "true", (0, jk.i)(Xk, Fk?.isNDCHalfZRange, Fk?.IXk, Fk?.useExactSrgbConversions), Xk
+      return 0 === mm.processor?.shaderLanguage && (hm.GL_ES = "true"), hm.__VERSION__ = mm.version, hm[mm.platformName] = "true", (0, om.i)(hm, Tm?.isNDCHalfZRange, Tm?.fhm, Tm?.useExactSrgbConversions), hm
     }
 
-    function pk(kk, Fk, Ik) {
-      let Xk;
-      for (Kk.length = 0; null !== (Xk = Hk.exec(kk));) Kk.push(Xk);
-      let Tk = [kk],
-        ik = !1;
-      for (const lk of Kk) {
-        let kk = lk[1];
-        if (-1 !== kk.indexOf("__decl__") && (kk = kk.replace(Jk, ""), Fk.supportsUniformBuffers && (kk = kk.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), kk += "Declaration"), !Fk.includesShadersStore[kk]) {
-          const Xk = Fk.shadersRepository + "ShadersInclude/" + kk + ".fx";
-          return void uk.loadFile(Xk, (Xk => {
-            Fk.includesShadersStore[kk] = Xk, pk(Tk.join(""), Fk, Ik)
+    function Nm(mm, Tm, fm) {
+      let hm;
+      for (Km.length = 0; null !== (hm = qm.exec(mm));) Km.push(hm);
+      let Am = [mm],
+        am = !1;
+      for (const wm of Km) {
+        let mm = wm[1];
+        if (-1 !== mm.indexOf("__decl__") && (mm = mm.replace(jm, ""), Tm.supportsUniformBuffers && (mm = mm.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), mm += "Declaration"), !Tm.includesShadersStore[mm]) {
+          const hm = Tm.shadersRepository + "ShadersInclude/" + mm + ".fx";
+          return void Gm.loadFile(hm, (hm => {
+            Tm.includesShadersStore[mm] = hm, Nm(Am.join(""), Tm, fm)
           }))
         } {
-          let Ik = Fk.includesShadersStore[kk];
-          if (lk[2]) {
-            const kk = lk[3].split(",");
-            for (let Fk = 0; Fk < kk.length; Fk += 2) {
-              const Xk = new RegExp(kk[Fk], "g"),
-                Tk = kk[Fk + 1];
-              Ik = Ik.replace(Xk, Tk)
+          let fm = Tm.includesShadersStore[mm];
+          if (wm[2]) {
+            const mm = wm[3].split(",");
+            for (let Tm = 0; Tm < mm.length; Tm += 2) {
+              const hm = new RegExp(mm[Tm], "g"),
+                Am = mm[Tm + 1];
+              fm = fm.replace(hm, Am)
             }
           }
-          if (lk[4]) {
-            const kk = lk[5];
-            if (-1 !== kk.indexOf("..")) {
-              const Xk = kk.split(".."),
-                Tk = parseInt(Xk[0]);
-              let ik = parseInt(Xk[1]),
-                yk = Ik.slice(0);
-              Ik = "", isNaN(ik) && (ik = Fk.indexParameters[Xk[1]]);
-              for (let kk = Tk; kk < ik; kk++) Fk.supportsUniformBuffers || (yk = yk.replace(xk, ((kk, Fk) => Fk + "{X}"))), Ik += yk.replace(Pk, kk.toString()) + "\n"
-            } else Fk.supportsUniformBuffers || (Ik = Ik.replace(xk, ((kk, Fk) => Fk + "{X}"))), Ik = Ik.replace(Pk, kk)
+          if (wm[4]) {
+            const mm = wm[5];
+            if (-1 !== mm.indexOf("..")) {
+              const hm = mm.split(".."),
+                Am = parseInt(hm[0]);
+              let am = parseInt(hm[1]),
+                xm = fm.slice(0);
+              fm = "", isNaN(am) && (am = Tm.indexParameters[hm[1]]);
+              for (let mm = Am; mm < am; mm++) Tm.supportsUniformBuffers || (xm = xm.replace(Vm, ((mm, Tm) => Tm + "{X}"))), fm += xm.replace(Im, mm.toString()) + "\n"
+            } else Tm.supportsUniformBuffers || (fm = fm.replace(Vm, ((mm, Tm) => Tm + "{X}"))), fm = fm.replace(Im, mm)
           }
-          const Xk = [];
-          for (const kk of Tk) {
-            const Fk = kk.split(lk[0]);
-            for (let kk = 0; kk < Fk.length - 1; kk++) Xk.push(Fk[kk]), Xk.push(Ik);
-            Xk.push(Fk[Fk.length - 1])
+          const hm = [];
+          for (const mm of Am) {
+            const Tm = mm.split(wm[0]);
+            for (let mm = 0; mm < Tm.length - 1; mm++) hm.push(Tm[mm]), hm.push(fm);
+            hm.push(Tm[Tm.length - 1])
           }
-          Tk = Xk, ik = ik || Ik.indexOf("#include<") >= 0 || Ik.indexOf("#include <") >= 0
+          Am = hm, am = am || fm.indexOf("#include<") >= 0 || fm.indexOf("#include <") >= 0
         }
       }
-      Kk.length = 0;
-      const yk = Tk.join("");
-      ik ? pk(yk.toString(), Fk, Ik) : Ik(yk)
+      Km.length = 0;
+      const xm = Am.join("");
+      am ? Nm(xm.toString(), Tm, fm) : fm(xm)
     }
-    const uk = {
-      loadFile: (kk, Fk, Ik, Xk, Tk, ik) => {
-        throw (0, Zk.j)("FileTools")
+    const Gm = {
+      loadFile: (mm, Tm, fm, hm, Am, am) => {
+        throw (0, Em.i)("FileTools")
       }
     }
   },
-  39860: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Tk,
-      f: () => ik,
-      i: () => lk,
-      k: () => yk,
-      o: () => ak
+  39986: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => Am,
+      g: () => am,
+      i: () => wm,
+      j: () => xm,
+      l: () => Dm
     });
-    var Xk = Ik(39863);
-    const Tk = {};
+    var hm = fm(39993);
+    const Am = {};
 
-    function ik(kk, Fk) {
-      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (Fk ? Fk + "\n" : "") + kk
+    function am(mm, Tm) {
+      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (Tm ? Tm + "\n" : "") + mm
     }
 
-    function yk(kk, Fk, Ik, ik, yk, lk, ak) {
-      const qk = ak || Tk.loadFile;
-      if (!qk) throw (0, Xk.j)("FileTools");
-      return qk(kk, Fk, Ik, ik, yk, lk)
+    function xm(mm, Tm, fm, am, xm, wm, Dm) {
+      const im = Dm || Am.loadFile;
+      if (!im) throw (0, hm.i)("FileTools");
+      return im(mm, Tm, fm, am, xm, wm)
     }
 
-    function lk(kk, Fk, Ik, Xk) {
-      if (kk) return Fk ? kk.IS_NDC_HALF_ZRANGE = "" : delete kk.IS_NDC_HALF_ZRANGE, Ik ? kk.USE_REVERSE_DEPTHBUFFER = "" : delete kk.USE_REVERSE_DEPTHBUFFER, void(Xk ? kk.USE_EXACT_SRGB_CONVERSIONS = "" : delete kk.USE_EXACT_SRGB_CONVERSIONS);
+    function wm(mm, Tm, fm, hm) {
+      if (mm) return Tm ? mm.IS_NDC_HALF_ZRANGE = "" : delete mm.IS_NDC_HALF_ZRANGE, fm ? mm.USE_REVERSE_DEPTHBUFFER = "" : delete mm.USE_REVERSE_DEPTHBUFFER, void(hm ? mm.USE_EXACT_SRGB_CONVERSIONS = "" : delete mm.USE_EXACT_SRGB_CONVERSIONS);
       {
-        let kk = "";
-        return Fk && (kk += "#define IS_NDC_HALF_ZRANGE"), Ik && (kk && (kk += "\n"), kk += "#define USE_REVERSE_DEPTHBUFFER"), Xk && (kk && (kk += "\n"), kk += "#define USE_EXACT_SRGB_CONVERSIONS"), kk
+        let mm = "";
+        return Tm && (mm += "#define IS_NDC_HALF_ZRANGE"), fm && (mm && (mm += "\n"), mm += "#define USE_REVERSE_DEPTHBUFFER"), hm && (mm && (mm += "\n"), mm += "#define USE_EXACT_SRGB_CONVERSIONS"), mm
       }
     }
 
-    function ak(kk, Fk) {
-      let Ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Xk = arguments.length > 3 ? arguments[3] : void 0;
-      switch (kk) {
+    function Dm(mm, Tm) {
+      let fm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        hm = arguments.length > 3 ? arguments[3] : void 0;
+      switch (mm) {
         case 3: {
-          const kk = new Int8Array(Fk);
-          return Xk && kk.set(new Int8Array(Xk)), kk
+          const mm = new Int8Array(Tm);
+          return hm && mm.set(new Int8Array(hm)), mm
         }
         case 0: {
-          const kk = new Uint8Array(Fk);
-          return Xk && kk.set(new Uint8Array(Xk)), kk
+          const mm = new Uint8Array(Tm);
+          return hm && mm.set(new Uint8Array(hm)), mm
         }
         case 4: {
-          const kk = "number" !== typeof Fk ? new Int16Array(Fk) : new Int16Array(Ik ? Fk / 2 : Fk);
-          return Xk && kk.set(new Int16Array(Xk)), kk
+          const mm = "number" !== typeof Tm ? new Int16Array(Tm) : new Int16Array(fm ? Tm / 2 : Tm);
+          return hm && mm.set(new Int16Array(hm)), mm
         }
         case 5:
         case 8:
         case 9:
         case 10:
         case 2: {
-          const kk = "number" !== typeof Fk ? new Uint16Array(Fk) : new Uint16Array(Ik ? Fk / 2 : Fk);
-          return Xk && kk.set(new Uint16Array(Xk)), kk
+          const mm = "number" !== typeof Tm ? new Uint16Array(Tm) : new Uint16Array(fm ? Tm / 2 : Tm);
+          return hm && mm.set(new Uint16Array(hm)), mm
         }
         case 6: {
-          const kk = "number" !== typeof Fk ? new Int32Array(Fk) : new Int32Array(Ik ? Fk / 4 : Fk);
-          return Xk && kk.set(new Int32Array(Xk)), kk
+          const mm = "number" !== typeof Tm ? new Int32Array(Tm) : new Int32Array(fm ? Tm / 4 : Tm);
+          return hm && mm.set(new Int32Array(hm)), mm
         }
         case 7:
         case 11:
@@ -715,55 +715,55 @@ export const modules = {
         case 13:
         case 14:
         case 15: {
-          const kk = "number" !== typeof Fk ? new Uint32Array(Fk) : new Uint32Array(Ik ? Fk / 4 : Fk);
-          return Xk && kk.set(new Uint32Array(Xk)), kk
+          const mm = "number" !== typeof Tm ? new Uint32Array(Tm) : new Uint32Array(fm ? Tm / 4 : Tm);
+          return hm && mm.set(new Uint32Array(hm)), mm
         }
         case 1: {
-          const kk = "number" !== typeof Fk ? new Float32Array(Fk) : new Float32Array(Ik ? Fk / 4 : Fk);
-          return Xk && kk.set(new Float32Array(Xk)), kk
+          const mm = "number" !== typeof Tm ? new Float32Array(Tm) : new Float32Array(fm ? Tm / 4 : Tm);
+          return hm && mm.set(new Float32Array(hm)), mm
         }
       }
-      const Tk = new Uint8Array(Fk);
-      return Xk && Tk.set(new Uint8Array(Xk)), Tk
+      const Am = new Uint8Array(Tm);
+      return hm && Am.set(new Uint8Array(hm)), Am
     }
   },
-  39863: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => qk,
-      g: () => Lk,
-      h: () => ak,
-      j: () => Tk
+  39993: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => im,
+      e: () => Rm,
+      f: () => Dm,
+      i: () => Am
     });
-    const Xk = {};
+    const hm = {};
 
-    function Tk(kk) {
-      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !Xk[kk]) return Xk[kk] = !0, `${kk} needs to be imported before as it contains a side-effect required by your code.`
+    function Am(mm) {
+      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !hm[mm]) return hm[mm] = !0, `${mm} needs to be imported before as it contains a side-effect required by your code.`
     }
-    const ik = {};
-    let yk = !1,
-      lk = 0;
+    const am = {};
+    let xm = !1,
+      wm = 0;
 
-    function ak(kk, Fk) {
-      let Ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const Xk = function() {
-        if ((Ik || yk) && 0 === lk) {
-          const Ik = `${kk}.${Fk}`;
-          ik[Ik] || (ik[Ik] = !0, console.warn(`[Babylon.js] ${Ik}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
+    function Dm(mm, Tm) {
+      let fm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const hm = function() {
+        if ((fm || xm) && 0 === wm) {
+          const fm = `${mm}.${Tm}`;
+          am[fm] || (am[fm] = !0, console.warn(`[Babylon.js] ${fm}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
         }
       };
-      return Xk.__isSideEffectStub = !0, Xk
+      return hm.__isSideEffectStub = !0, hm
     }
 
-    function qk(kk) {
-      return !!kk && !kk.__isSideEffectStub
+    function im(mm) {
+      return !!mm && !mm.__isSideEffectStub
     }
 
-    function Lk(kk, Fk) {
+    function Rm(mm, Tm) {
       return {
         get() {},
-        set(kk) {
-          Object.defineProperty(this, Fk, {
-            value: kk,
+        set(mm) {
+          Object.defineProperty(this, Tm, {
+            value: mm,
             writable: !0,
             configurable: !0,
             enumerable: !0
@@ -774,41 +774,41 @@ export const modules = {
       }
     }
   },
-  39850: (kk, Fk, Ik) => {
-    function Xk() {
+  39973: (mm, Tm, fm) => {
+    function hm() {
       return "undefined" !== typeof window
     }
 
-    function Tk() {
+    function Am() {
       return "undefined" !== typeof navigator
     }
 
-    function ik() {
+    function am() {
       return "undefined" !== typeof document
     }
 
-    function yk(kk) {
-      let Fk = "",
-        Ik = kk.firstChild;
-      for (; Ik;) 3 === Ik.nodeType && (Fk += Ik.textContent), Ik = Ik.nextSibling;
-      return Fk
+    function xm(mm) {
+      let Tm = "",
+        fm = mm.firstChild;
+      for (; fm;) 3 === fm.nodeType && (Tm += fm.textContent), fm = fm.nextSibling;
+      return Tm
     }
-    Ik.d(Fk, {
-      c: () => yk,
-      d: () => ik,
-      h: () => Tk,
-      j: () => Xk
+    fm.d(Tm, {
+      d: () => xm,
+      h: () => am,
+      l: () => Am,
+      p: () => hm
     })
   },
-  40042: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => Xk,
-      e: () => Tk,
-      f: () => ik
+  40166: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => hm,
+      e: () => Am,
+      h: () => am
     });
-    class Xk extends Error {}
-    Xk._setPrototypeOf = Object.setPrototypeOf || ((kk, Fk) => (kk.__proto__ = Fk, kk));
-    const Tk = {
+    class hm extends Error {}
+    hm._setPrototypeOf = Object.setPrototypeOf || ((mm, Tm) => (mm.__proto__ = Tm, mm));
+    const Am = {
       MeshInvalidPositionsError: 0,
       UnsupportedTextureError: 1e3,
       GLTFLoaderUnexpectedMagicError: 2e3,
@@ -817,339 +817,339 @@ export const modules = {
       RequestFileError: 4001,
       ReadFileError: 4002
     };
-    class ik extends Xk {
-      constructor(kk, Fk, Ik) {
-        super(kk), this.errorCode = Fk, this.innerError = Ik, this.name = "RuntimeError", Xk._setPrototypeOf(this, ik.prototype)
+    class am extends hm {
+      constructor(mm, Tm, fm) {
+        super(mm), this.errorCode = Tm, this.innerError = fm, this.name = "RuntimeError", hm._setPrototypeOf(this, am.prototype)
       }
     }
   },
-  40038: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Gk,
-      h: () => Pk,
-      l: () => vk,
-      o: () => Ok,
-      p: () => zk,
-      t: () => sk,
-      w: () => Vk,
-      x: () => Uk,
-      z: () => Sk,
-      B: () => Kk
+  40154: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => em,
+      g: () => Im,
+      k: () => Zm,
+      o: () => bm,
+      r: () => cm,
+      u: () => nm,
+      x: () => Jm,
+      A: () => Hm,
+      D: () => zm,
+      H: () => Km
     });
-    var Xk = Ik(40040),
-      Tk = Ik(39850),
-      ik = Ik(37187);
-    class yk {}
-    yk.FilesToLoad = {};
-    var lk = Ik(40042),
-      ak = Ik(40048),
-      qk = Ik(37178),
-      Lk = Ik(39860),
-      tk = Ik(39872),
-      Zk = Ik(38674),
-      jk = Ik(39878),
-      ek = Ik(40056);
-    const wk = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
-    class Hk extends lk.f {
-      constructor(kk, Fk) {
-        super(kk, lk.e.LoadFileError), this.name = "LoadFileError", lk.d._setPrototypeOf(this, Hk.prototype), Fk instanceof Xk.b ? this.request = Fk : this.file = Fk
+    var hm = fm(40160),
+      Am = fm(39973),
+      am = fm(37203);
+    class xm {}
+    xm.FilesToLoad = {};
+    var wm = fm(40166),
+      Dm = fm(40173),
+      im = fm(37201),
+      Rm = fm(39986),
+      pm = fm(4e4),
+      Em = fm(38766),
+      om = fm(40008),
+      Om = fm(40180);
+    const Ym = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
+    class qm extends wm.h {
+      constructor(mm, Tm) {
+        super(mm, wm.e.LoadFileError), this.name = "LoadFileError", wm.d._setPrototypeOf(this, qm.prototype), Tm instanceof hm.c ? this.request = Tm : this.file = Tm
       }
     }
-    class Jk extends lk.f {
-      constructor(kk, Fk) {
-        super(kk, lk.e.RequestFileError), this.request = Fk, this.name = "RequestFileError", lk.d._setPrototypeOf(this, Jk.prototype)
+    class jm extends wm.h {
+      constructor(mm, Tm) {
+        super(mm, wm.e.RequestFileError), this.request = Tm, this.name = "RequestFileError", wm.d._setPrototypeOf(this, jm.prototype)
       }
     }
-    class xk extends lk.f {
-      constructor(kk, Fk) {
-        super(kk, lk.e.ReadFileError), this.file = Fk, this.name = "ReadFileError", lk.d._setPrototypeOf(this, xk.prototype)
+    class Vm extends wm.h {
+      constructor(mm, Tm) {
+        super(mm, wm.e.ReadFileError), this.file = Tm, this.name = "ReadFileError", wm.d._setPrototypeOf(this, Vm.prototype)
       }
     }
-    const Pk = {
+    const Im = {
         DefaultRetryStrategy: class {
           static ExponentialBackoff() {
-            let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-              Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
-            return (Ik, Xk, Tk) => 0 !== Xk.status || Tk >= kk || -1 !== Ik.indexOf("file:") ? -1 : Math.pow(2, Tk) * Fk
+            let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
+              Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
+            return (fm, hm, Am) => 0 !== hm.status || Am >= mm || -1 !== fm.indexOf("file:") ? -1 : Math.pow(2, Am) * Tm
           }
         }.ExponentialBackoff(),
         BaseUrl: "",
         CorsBehavior: "anonymous",
-        PreprocessUrl: kk => kk,
+        PreprocessUrl: mm => mm,
         ScriptBaseUrl: "",
-        ScriptPreprocessUrl: kk => kk,
-        CleanUrl: kk => kk = kk.replace(/#/gm, "%23")
+        ScriptPreprocessUrl: mm => mm,
+        CleanUrl: mm => mm = mm.replace(/#/gm, "%23")
       },
-      Kk = (kk, Fk) => {
-        if ((!kk || 0 !== kk.indexOf("data:")) && Pk.CorsBehavior)
-          if ("string" === typeof Pk.CorsBehavior || Pk.CorsBehavior instanceof String) Fk.crossOrigin = Pk.CorsBehavior;
+      Km = (mm, Tm) => {
+        if ((!mm || 0 !== mm.indexOf("data:")) && Im.CorsBehavior)
+          if ("string" === typeof Im.CorsBehavior || Im.CorsBehavior instanceof String) Tm.crossOrigin = Im.CorsBehavior;
           else {
-            const Ik = Pk.CorsBehavior(kk);
-            Ik && (Fk.crossOrigin = Ik)
+            const fm = Im.CorsBehavior(mm);
+            fm && (Tm.crossOrigin = fm)
           }
       },
-      Qk = {
+      Qm = {
         getRequiredSize: null
       },
-      sk = function(kk, Fk, Ik, Tk) {
-        let ik, lk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-          Lk = arguments.length > 5 ? arguments[5] : void 0,
-          tk = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : qk.e.LastCreatedEngine;
-        if ("undefined" === typeof HTMLImageElement && !tk?._features.forceBitmapOverHTMLImageElement) return Ik("LoadImage is only supported in web or BabylonNative environments."), null;
-        if (tk?._features.forceBitmapOverHTMLImageElement && "string" !== typeof kk && "undefined" !== typeof Blob) {
-          let Xk;
-          if (kk instanceof Blob) Xk = kk;
+      nm = function(mm, Tm, fm, Am) {
+        let am, wm = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
+          Rm = arguments.length > 5 ? arguments[5] : void 0,
+          pm = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : im.c.LastCreatedEngine;
+        if ("undefined" === typeof HTMLImageElement && !pm?._features.forceBitmapOverHTMLImageElement) return fm("LoadImage is only supported in web or BabylonNative environments."), null;
+        if (pm?._features.forceBitmapOverHTMLImageElement && "string" !== typeof mm && "undefined" !== typeof Blob) {
+          let hm;
+          if (mm instanceof Blob) hm = mm;
           else {
-            const Fk = kk instanceof ArrayBuffer ? kk : (0, ek.f)(kk);
-            Xk = new Blob([Fk], {
-              type: lk
+            const Tm = mm instanceof ArrayBuffer ? mm : (0, Om.l)(mm);
+            hm = new Blob([Tm], {
+              type: wm
             })
           }
-          return tk.createImageBitmap(Xk, {
+          return pm.createImageBitmap(hm, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...Lk
-          }).then(Fk).catch((Fk => {
-            Ik && Ik("Error while trying to load image: " + kk, Fk)
+            ...Rm
+          }).then(Tm).catch((Tm => {
+            fm && fm("Error while trying to load image: " + mm, Tm)
           })), null
         }
-        let Zk = !1;
-        if (kk instanceof ArrayBuffer || ArrayBuffer.isView(kk))
+        let Em = !1;
+        if (mm instanceof ArrayBuffer || ArrayBuffer.isView(mm))
           if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
-            let Fk;
-            Fk = kk instanceof ArrayBuffer ? kk : (0, ek.f)(kk), ik = URL.createObjectURL(new Blob([Fk], {
-              type: lk
-            })), Zk = !0
-          } else ik = `data:${lk};base64,` + (0, ak.i)(kk);
-        else kk instanceof Blob ? (ik = URL.createObjectURL(kk), Zk = !0) : (ik = Pk.CleanUrl(kk), ik = Pk.PreprocessUrl(ik));
-        const jk = Fk => {
-          if (Ik) {
-            const Xk = ik || kk.toString();
-            Ik(`Error while trying to load image: ${0===Xk.indexOf("http")||Xk.length<=128?Xk:Xk.slice(0,128)+"..."}`, Fk)
+            let Tm;
+            Tm = mm instanceof ArrayBuffer ? mm : (0, Om.l)(mm), am = URL.createObjectURL(new Blob([Tm], {
+              type: wm
+            })), Em = !0
+          } else am = `data:${wm};base64,` + (0, Dm.g)(mm);
+        else mm instanceof Blob ? (am = URL.createObjectURL(mm), Em = !0) : (am = Im.CleanUrl(mm), am = Im.PreprocessUrl(am));
+        const om = Tm => {
+          if (fm) {
+            const hm = am || mm.toString();
+            fm(`Error while trying to load image: ${0===hm.indexOf("http")||hm.length<=128?hm:hm.slice(0,128)+"..."}`, Tm)
           }
         };
-        if (tk?._features.forceBitmapOverHTMLImageElement) return zk(ik, (Xk => {
-          tk.createImageBitmap(new Blob([Xk], {
-            type: lk
+        if (pm?._features.forceBitmapOverHTMLImageElement) return cm(am, (hm => {
+          pm.createImageBitmap(new Blob([hm], {
+            type: wm
           }), {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...Lk
-          }).then((kk => {
-            Fk(kk), Zk && URL.revokeObjectURL(ik)
-          })).catch((Fk => {
-            Ik && Ik("Error while trying to load image: " + kk, Fk)
+            ...Rm
+          }).then((mm => {
+            Tm(mm), Em && URL.revokeObjectURL(am)
+          })).catch((Tm => {
+            fm && fm("Error while trying to load image: " + mm, Tm)
           }))
-        }), void 0, Tk || void 0, !0, ((kk, Fk) => {
-          jk(Fk)
+        }), void 0, Am || void 0, !0, ((mm, Tm) => {
+          om(Tm)
         })), null;
-        const wk = new Image;
-        if (Qk.getRequiredSize) {
-          const Fk = Qk.getRequiredSize(kk);
-          Fk.width && (wk.width = Fk.width), Fk.height && (wk.height = Fk.height)
+        const Ym = new Image;
+        if (Qm.getRequiredSize) {
+          const Tm = Qm.getRequiredSize(mm);
+          Tm.width && (Ym.width = Tm.width), Tm.height && (Ym.height = Tm.height)
         }
-        Kk(ik, wk);
-        const Hk = [],
-          Jk = () => {
-            for (const kk of Hk) kk.target.removeEventListener(kk.name, kk.handler);
-            Hk.length = 0
+        Km(am, Ym);
+        const qm = [],
+          jm = () => {
+            for (const mm of qm) mm.target.removeEventListener(mm.name, mm.handler);
+            qm.length = 0
           };
-        Hk.push({
-          target: wk,
+        qm.push({
+          target: Ym,
           name: "load",
           handler: () => {
-            Jk(), Fk(wk), Zk && wk.src && URL.revokeObjectURL(wk.src)
+            jm(), Tm(Ym), Em && Ym.src && URL.revokeObjectURL(Ym.src)
           }
-        }), Hk.push({
-          target: wk,
+        }), qm.push({
+          target: Ym,
           name: "error",
-          handler: kk => {
-            Jk(), jk(kk), Zk && wk.src && URL.revokeObjectURL(wk.src)
+          handler: mm => {
+            jm(), om(mm), Em && Ym.src && URL.revokeObjectURL(Ym.src)
           }
-        }), Hk.push({
+        }), qm.push({
           target: document,
           name: "securitypolicyviolation",
-          handler: kk => {
-            if (kk.blockedURI !== wk.src || "Mj" === kk.disposition) return;
-            Jk();
-            const Fk = new Error(`CSP violation of policy ${kk.effectiveDirective} ${kk.blockedURI}. Current policy is ${kk.originalPolicy}`);
-            qk.e.UseFallbackTexture = !1, jk(Fk), Zk && wk.src && URL.revokeObjectURL(wk.src), wk.src = ""
+          handler: mm => {
+            if (mm.blockedURI !== Ym.src || "IO" === mm.disposition) return;
+            jm();
+            const Tm = new Error(`CSP violation of policy ${mm.effectiveDirective} ${mm.blockedURI}. Current policy is ${mm.originalPolicy}`);
+            im.c.UseFallbackTexture = !1, om(Tm), Em && Ym.src && URL.revokeObjectURL(Ym.src), Ym.src = ""
           }
         }), (() => {
-          for (const kk of Hk) kk.target.addEventListener(kk.name, kk.handler)
+          for (const mm of qm) mm.target.addEventListener(mm.name, mm.handler)
         })();
-        const xk = "blob:" === ik.substring(0, 5),
-          sk = "data:" === ik.substring(0, 5),
-          Vk = () => {
-            xk || sk || !Xk.b.IsCustomRequestAvailable ? wk.src = ik : zk(ik, ((kk, Fk, Ik) => {
-              const Xk = new Blob([kk], {
-                  type: !lk && Ik ? Ik : lk
+        const Vm = "blob:" === am.substring(0, 5),
+          nm = "data:" === am.substring(0, 5),
+          Jm = () => {
+            Vm || nm || !hm.c.IsCustomRequestAvailable ? Ym.src = am : cm(am, ((mm, Tm, fm) => {
+              const hm = new Blob([mm], {
+                  type: !wm && fm ? fm : wm
                 }),
-                Tk = URL.createObjectURL(Xk);
-              Zk = !0, wk.src = Tk
-            }), void 0, Tk || void 0, !0, ((kk, Fk) => {
-              jk(Fk)
+                Am = URL.createObjectURL(hm);
+              Em = !0, Ym.src = Am
+            }), void 0, Am || void 0, !0, ((mm, Tm) => {
+              om(Tm)
             }))
           },
-          Sk = () => {
-            Tk && Tk.loadImage(ik, wk)
+          zm = () => {
+            Am && Am.loadImage(am, Ym)
           };
-        if (!xk && !sk && Tk && Tk.enableTexturesOffline) Tk.open(Sk, Vk);
+        if (!Vm && !nm && Am && Am.enableTexturesOffline) Am.open(zm, Jm);
         else {
-          if (-1 !== ik.indexOf("file:")) {
-            const kk = decodeURIComponent(ik.substring(5).toLowerCase());
-            if (yk.FilesToLoad[kk] && "undefined" !== typeof URL) {
+          if (-1 !== am.indexOf("file:")) {
+            const mm = decodeURIComponent(am.substring(5).toLowerCase());
+            if (xm.FilesToLoad[mm] && "undefined" !== typeof URL) {
               try {
-                let Fk;
+                let Tm;
                 try {
-                  Fk = URL.createObjectURL(yk.FilesToLoad[kk])
-                } catch (vk) {
-                  Fk = URL.createObjectURL(yk.FilesToLoad[kk])
+                  Tm = URL.createObjectURL(xm.FilesToLoad[mm])
+                } catch (Zm) {
+                  Tm = URL.createObjectURL(xm.FilesToLoad[mm])
                 }
-                wk.src = Fk, Zk = !0
-              } catch (Ek) {
-                wk.src = ""
+                Ym.src = Tm, Em = !0
+              } catch (km) {
+                Ym.src = ""
               }
-              return wk
+              return Ym
             }
           }
-          Vk()
+          Jm()
         }
-        return wk
+        return Ym
       },
-      Vk = (kk, Fk, Ik, Xk, Tk) => {
-        const yk = new FileReader,
-          lk = {
-            onCompleteObservable: new ik.e,
-            abort: () => yk.abort()
+      Jm = (mm, Tm, fm, hm, Am) => {
+        const xm = new FileReader,
+          wm = {
+            onCompleteObservable: new am.c,
+            abort: () => xm.abort()
           };
-        return yk.onloadend = () => lk.onCompleteObservable.notifyObservers(lk), Tk && (yk.onerror = () => {
-          Tk(new xk(`Unable to read ${kk.name}`, kk))
-        }), yk.onload = kk => {
-          Fk(kk.target.result)
-        }, Ik && (yk.onprogress = Ik), Xk ? yk.readAsArrayBuffer(kk) : yk.readAsText(kk), lk
+        return xm.onloadend = () => wm.onCompleteObservable.notifyObservers(wm), Am && (xm.onerror = () => {
+          Am(new Vm(`Unable to read ${mm.name}`, mm))
+        }), xm.onload = mm => {
+          Tm(mm.target.result)
+        }, fm && (xm.onprogress = fm), hm ? xm.readAsArrayBuffer(mm) : xm.readAsText(mm), wm
       },
-      zk = (kk, Fk, Ik, Xk, Tk, ak, qk) => {
-        if (kk.name) return Vk(kk, Fk, Ik, Tk, ak ? kk => {
-          ak(void 0, kk)
+      cm = (mm, Tm, fm, hm, Am, Dm, im) => {
+        if (mm.name) return Jm(mm, Tm, fm, Am, Dm ? mm => {
+          Dm(void 0, mm)
         } : void 0);
-        const Lk = kk;
-        if (-1 !== Lk.indexOf("file:")) {
-          let kk = decodeURIComponent(Lk.substring(5).toLowerCase());
-          0 === kk.indexOf("./") && (kk = kk.substring(2));
-          const Xk = yk.FilesToLoad[kk];
-          if (Xk) return Vk(Xk, Fk, Ik, Tk, ak ? kk => ak(void 0, new Hk(kk.message, kk.file)) : void 0)
+        const Rm = mm;
+        if (-1 !== Rm.indexOf("file:")) {
+          let mm = decodeURIComponent(Rm.substring(5).toLowerCase());
+          0 === mm.indexOf("./") && (mm = mm.substring(2));
+          const hm = xm.FilesToLoad[mm];
+          if (hm) return Jm(hm, Tm, fm, Am, Dm ? mm => Dm(void 0, new qm(mm.message, mm.file)) : void 0)
         }
         const {
-          match: tk,
-          type: ek
-        } = nk(Lk);
-        if (tk) {
-          const kk = {
-            onCompleteObservable: new ik.e,
+          match: pm,
+          type: Om
+        } = Sm(Rm);
+        if (pm) {
+          const mm = {
+            onCompleteObservable: new am.c,
             abort: () => () => {}
           };
           try {
-            const kk = Tk ? Gk(Lk) : pk(Lk);
-            Fk(kk, void 0, ek)
-          } catch (lk) {
-            ak ? ak(void 0, lk) : Zk.e.Error(lk.message || "Failed to parse the Data URL")
+            const mm = Am ? em(Rm) : Nm(Rm);
+            Tm(mm, void 0, Om)
+          } catch (wm) {
+            Dm ? Dm(void 0, wm) : Em.b.Error(wm.message || "Failed to parse the Data URL")
           }
-          return jk.d.SetImmediate((() => {
-            kk.onCompleteObservable.notifyObservers(kk)
-          })), kk
+          return om.c.SetImmediate((() => {
+            mm.onCompleteObservable.notifyObservers(mm)
+          })), mm
         }
-        return Sk(Lk, ((kk, Ik) => {
-          Fk(kk, Ik?.responseURL, Ik?.getResponseHeader("content-type"))
-        }), Ik, Xk, Tk, ak ? kk => {
-          ak(kk.request, new Hk(kk.message, kk.request))
-        } : void 0, qk)
+        return zm(Rm, ((mm, fm) => {
+          Tm(mm, fm?.responseURL, fm?.getResponseHeader("content-type"))
+        }), fm, hm, Am, Dm ? mm => {
+          Dm(mm.request, new qm(mm.message, mm.request))
+        } : void 0, im)
       },
-      Sk = (kk, Fk, Ik, yk, lk, ak, Lk) => {
-        null !== yk && (yk ?? (yk = qk.e.LastCreatedScene?.offlineProvider)), kk = Pk.CleanUrl(kk), kk = Pk.PreprocessUrl(kk);
-        const tk = Pk.BaseUrl + kk;
-        let jk = !1;
-        const ek = {
-            onCompleteObservable: new ik.e,
-            abort: () => jk = !0
+      zm = (mm, Tm, fm, xm, wm, Dm, Rm) => {
+        null !== xm && (xm ?? (xm = im.c.LastCreatedScene?.offlineProvider)), mm = Im.CleanUrl(mm), mm = Im.PreprocessUrl(mm);
+        const pm = Im.BaseUrl + mm;
+        let om = !1;
+        const Om = {
+            onCompleteObservable: new am.c,
+            abort: () => om = !0
           },
-          wk = () => {
-            let kk, ik = new Xk.b,
-              yk = null;
-            const qk = () => {
-              ik && (Ik && ik.removeEventListener("progress", Ik), kk && ik.removeEventListener("readystatechange", kk), ik.removeEventListener("loadend", wk))
+          Ym = () => {
+            let mm, am = new hm.c,
+              xm = null;
+            const im = () => {
+              am && (fm && am.removeEventListener("progress", fm), mm && am.removeEventListener("readystatechange", mm), am.removeEventListener("loadend", Ym))
             };
-            let wk = () => {
-              qk(), ek.onCompleteObservable.notifyObservers(ek), ek.onCompleteObservable.clear(), Ik = void 0, kk = null, wk = null, ak = void 0, Lk = void 0, Fk = void 0
+            let Ym = () => {
+              im(), Om.onCompleteObservable.notifyObservers(Om), Om.onCompleteObservable.clear(), fm = void 0, mm = null, Ym = null, Dm = void 0, Rm = void 0, Tm = void 0
             };
-            ek.abort = () => {
-              jk = !0, wk && wk(), ik && ik.readyState !== (XMLHttpRequest.DONE || 4) && ik.abort(), null !== yk && (clearTimeout(yk), yk = null), ik = null
+            Om.abort = () => {
+              om = !0, Ym && Ym(), am && am.readyState !== (XMLHttpRequest.DONE || 4) && am.abort(), null !== xm && (clearTimeout(xm), xm = null), am = null
             };
-            const Hk = kk => {
-                const Fk = kk.message || "Unknown error";
-                ak && ik ? ak(new Jk(Fk, ik)) : Zk.e.Error(Fk)
+            const qm = mm => {
+                const Tm = mm.message || "Unknown error";
+                Dm && am ? Dm(new jm(Tm, am)) : Em.b.Error(Tm)
               },
-              xk = Zk => {
-                if (ik) {
-                  if (ik.open("GET", tk), Lk) try {
-                    Lk(ik)
-                  } catch (ek) {
-                    return void Hk(ek)
+              Vm = Em => {
+                if (am) {
+                  if (am.open("GET", pm), Rm) try {
+                    Rm(am)
+                  } catch (Om) {
+                    return void qm(Om)
                   }
-                  lk && (ik.responseType = "arraybuffer"), Ik && ik.addEventListener("progress", Ik), wk && ik.addEventListener("loadend", wk), kk = () => {
-                    if (!jk && ik && ik.readyState === (XMLHttpRequest.DONE || 4)) {
-                      if (kk && ik.removeEventListener("readystatechange", kk), ik.status >= 200 && ik.status < 300 || 0 === ik.status && (!(0, Tk.j)() || Ek())) {
-                        const kk = lk ? ik.response : ik.responseText;
-                        if (null !== kk) {
+                  wm && (am.responseType = "arraybuffer"), fm && am.addEventListener("progress", fm), Ym && am.addEventListener("loadend", Ym), mm = () => {
+                    if (!om && am && am.readyState === (XMLHttpRequest.DONE || 4)) {
+                      if (mm && am.removeEventListener("readystatechange", mm), am.status >= 200 && am.status < 300 || 0 === am.status && (!(0, Am.p)() || km())) {
+                        const mm = wm ? am.response : am.responseText;
+                        if (null !== mm) {
                           try {
-                            Fk && Fk(kk, ik)
-                          } catch (ek) {
-                            Hk(ek)
+                            Tm && Tm(mm, am)
+                          } catch (Om) {
+                            qm(Om)
                           }
                           return
                         }
                       }
-                      const Ik = Pk.DefaultRetryStrategy;
-                      if (Ik) {
-                        const kk = Ik(tk, ik, Zk);
-                        if (-1 !== kk) return qk(), ik = new Xk.b, void(yk = setTimeout((() => xk(Zk + 1)), kk))
+                      const fm = Im.DefaultRetryStrategy;
+                      if (fm) {
+                        const mm = fm(pm, am, Em);
+                        if (-1 !== mm) return im(), am = new hm.c, void(xm = setTimeout((() => Vm(Em + 1)), mm))
                       }
-                      const Lk = new Jk("Error status: " + ik.status + " " + ik.statusText + " - Unable to load " + tk, ik);
-                      ak && ak(Lk)
+                      const Rm = new jm("Error status: " + am.status + " " + am.statusText + " - Unable to load " + pm, am);
+                      Dm && Dm(Rm)
                     }
-                  }, ik.addEventListener("readystatechange", kk), ik.send()
+                  }, am.addEventListener("readystatechange", mm), am.send()
                 }
               };
-            xk(0)
+            Vm(0)
           };
-        if (yk && yk.enableSceneOffline && !kk.startsWith("blob:")) {
-          const Xk = kk => {
-              kk && kk.status > 400 ? ak && ak(kk) : wk()
+        if (xm && xm.enableSceneOffline && !mm.startsWith("blob:")) {
+          const hm = mm => {
+              mm && mm.status > 400 ? Dm && Dm(mm) : Ym()
             },
-            Tk = () => {
-              yk && yk.loadFile(Pk.BaseUrl + kk, (kk => {
-                !jk && Fk && Fk(kk), ek.onCompleteObservable.notifyObservers(ek)
-              }), Ik ? kk => {
-                !jk && Ik && Ik(kk)
-              } : void 0, Xk, lk)
+            Am = () => {
+              xm && xm.loadFile(Im.BaseUrl + mm, (mm => {
+                !om && Tm && Tm(mm), Om.onCompleteObservable.notifyObservers(Om)
+              }), fm ? mm => {
+                !om && fm && fm(mm)
+              } : void 0, hm, wm)
             };
-          yk.open(Tk, Xk)
-        } else wk();
-        return ek
+          xm.open(Am, hm)
+        } else Ym();
+        return Om
       },
-      vk = kk => {
+      Zm = mm => {
         const {
-          match: Fk,
-          type: Ik
-        } = nk(kk);
-        if (Fk) return Ik || void 0;
-        const Xk = kk.lastIndexOf(".");
-        switch (kk.substring(Xk + 1).toLowerCase()) {
+          match: Tm,
+          type: fm
+        } = Sm(mm);
+        if (Tm) return fm || void 0;
+        const hm = mm.lastIndexOf(".");
+        switch (mm.substring(hm + 1).toLowerCase()) {
           case "glb":
             return "model/gltf-binary";
           case "bin":
             return "application/octet-stream";
-          case "vG":
+          case "FN":
             return "model/gltf+json";
           case "jpg":
           case "jpeg":
@@ -1168,275 +1168,275 @@ export const modules = {
             return
         }
       },
-      Ek = () => "undefined" !== typeof location && "file:" === location.protocol,
-      Ok = kk => wk.test(kk),
-      nk = kk => {
-        const Fk = wk.exec(kk);
-        if (null === Fk || 0 === Fk.length) return {
+      km = () => "undefined" !== typeof location && "file:" === location.protocol,
+      bm = mm => Ym.test(mm),
+      Sm = mm => {
+        const Tm = Ym.exec(mm);
+        if (null === Tm || 0 === Tm.length) return {
           match: !1,
           type: ""
         };
         return {
           match: !0,
-          type: Fk[0].replace("data:", "").replace(";base64,", "")
+          type: Tm[0].replace("data:", "").replace(";base64,", "")
         }
       };
 
-    function Gk(kk) {
-      return (0, ak.d)(kk.split(",")[1])
+    function em(mm) {
+      return (0, Dm.b)(mm.split(",")[1])
     }
-    const pk = kk => (0, ak.h)(kk.split(",")[1]);
-    let uk;
-    const bk = (kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak, qk) => {
-      uk = {
-        DecodeBase64UrlToBinary: kk,
-        DecodeBase64UrlToString: Fk,
-        DefaultRetryStrategy: Ik.DefaultRetryStrategy,
-        BaseUrl: Ik.BaseUrl,
-        CorsBehavior: Ik.CorsBehavior,
-        PreprocessUrl: Ik.PreprocessUrl,
-        IsBase64DataUrl: Xk,
-        IsFileURL: Tk,
-        LoadFile: ik,
-        LoadImage: yk,
-        ReadFile: lk,
-        RequestFile: ak,
-        SetCorsBehavior: qk
-      }, Object.defineProperty(uk, "DefaultRetryStrategy", {
+    const Nm = mm => (0, Dm.f)(mm.split(",")[1]);
+    let Gm;
+    const Xm = (mm, Tm, fm, hm, Am, am, xm, wm, Dm, im) => {
+      Gm = {
+        DecodeBase64UrlToBinary: mm,
+        DecodeBase64UrlToString: Tm,
+        DefaultRetryStrategy: fm.DefaultRetryStrategy,
+        BaseUrl: fm.BaseUrl,
+        CorsBehavior: fm.CorsBehavior,
+        PreprocessUrl: fm.PreprocessUrl,
+        IsBase64DataUrl: hm,
+        IsFileURL: Am,
+        LoadFile: am,
+        LoadImage: xm,
+        ReadFile: wm,
+        RequestFile: Dm,
+        SetCorsBehavior: im
+      }, Object.defineProperty(Gm, "DefaultRetryStrategy", {
         get: function() {
-          return Ik.DefaultRetryStrategy
+          return fm.DefaultRetryStrategy
         },
-        set: function(kk) {
-          Ik.DefaultRetryStrategy = kk
+        set: function(mm) {
+          fm.DefaultRetryStrategy = mm
         }
-      }), Object.defineProperty(uk, "BaseUrl", {
+      }), Object.defineProperty(Gm, "BaseUrl", {
         get: function() {
-          return Ik.BaseUrl
+          return fm.BaseUrl
         },
-        set: function(kk) {
-          Ik.BaseUrl = kk
+        set: function(mm) {
+          fm.BaseUrl = mm
         }
-      }), Object.defineProperty(uk, "PreprocessUrl", {
+      }), Object.defineProperty(Gm, "PreprocessUrl", {
         get: function() {
-          return Ik.PreprocessUrl
+          return fm.PreprocessUrl
         },
-        set: function(kk) {
-          Ik.PreprocessUrl = kk
+        set: function(mm) {
+          fm.PreprocessUrl = mm
         }
-      }), Object.defineProperty(uk, "CorsBehavior", {
+      }), Object.defineProperty(Gm, "CorsBehavior", {
         get: function() {
-          return Ik.CorsBehavior
+          return fm.CorsBehavior
         },
-        set: function(kk) {
-          Ik.CorsBehavior = kk
+        set: function(mm) {
+          fm.CorsBehavior = mm
         }
       })
     };
-    let Rk = !1;
+    let Pm = !1;
 
-    function Uk() {
-      Rk || (Rk = !0, bk(Gk, pk, Pk, Ok, Ek, zk, sk, Vk, Sk, Kk), Lk.e.loadFile = zk, Lk.e.loadImage = sk, tk.n.loadFile = zk)
+    function Hm() {
+      Pm || (Pm = !0, Xm(em, Nm, Im, bm, km, cm, nm, Jm, zm, Km), Rm.c.loadFile = cm, Rm.c.loadImage = nm, pm.l.loadFile = cm)
     }
   },
-  40064: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => lk,
-      f: () => ik,
-      i: () => yk
+  40186: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => wm,
+      h: () => am,
+      j: () => xm
     });
-    let Xk = null;
+    let hm = null;
 
-    function Tk() {
-      if (Xk) return Xk;
-      const kk = new ArrayBuffer(4),
-        Fk = new Float32Array(kk),
-        Ik = new Uint32Array(kk),
-        Tk = new Uint32Array(512),
-        ik = new Uint32Array(512);
-      for (let Xk = 0; Xk < 256; ++Xk) {
-        const kk = Xk - 127;
-        kk < -24 ? (Tk[Xk] = 0, Tk[256 | Xk] = 32768, ik[Xk] = 24, ik[256 | Xk] = 24) : kk < -14 ? (Tk[Xk] = 1024 >> -kk - 14, Tk[256 | Xk] = 1024 >> -kk - 14 | 32768, ik[Xk] = -kk - 1, ik[256 | Xk] = -kk - 1) : kk <= 15 ? (Tk[Xk] = kk + 15 << 10, Tk[256 | Xk] = kk + 15 << 10 | 32768, ik[Xk] = 13, ik[256 | Xk] = 13) : kk < 128 ? (Tk[Xk] = 31744, Tk[256 | Xk] = 64512, ik[Xk] = 24, ik[256 | Xk] = 24) : (Tk[Xk] = 31744, Tk[256 | Xk] = 64512, ik[Xk] = 13, ik[256 | Xk] = 13)
+    function Am() {
+      if (hm) return hm;
+      const mm = new ArrayBuffer(4),
+        Tm = new Float32Array(mm),
+        fm = new Uint32Array(mm),
+        Am = new Uint32Array(512),
+        am = new Uint32Array(512);
+      for (let hm = 0; hm < 256; ++hm) {
+        const mm = hm - 127;
+        mm < -24 ? (Am[hm] = 0, Am[256 | hm] = 32768, am[hm] = 24, am[256 | hm] = 24) : mm < -14 ? (Am[hm] = 1024 >> -mm - 14, Am[256 | hm] = 1024 >> -mm - 14 | 32768, am[hm] = -mm - 1, am[256 | hm] = -mm - 1) : mm <= 15 ? (Am[hm] = mm + 15 << 10, Am[256 | hm] = mm + 15 << 10 | 32768, am[hm] = 13, am[256 | hm] = 13) : mm < 128 ? (Am[hm] = 31744, Am[256 | hm] = 64512, am[hm] = 24, am[256 | hm] = 24) : (Am[hm] = 31744, Am[256 | hm] = 64512, am[hm] = 13, am[256 | hm] = 13)
       }
-      const yk = new Uint32Array(2048),
-        lk = new Uint32Array(64),
-        ak = new Uint32Array(64);
-      for (let Xk = 1; Xk < 1024; ++Xk) {
-        let kk = Xk << 13,
-          Fk = 0;
-        for (; 0 === (8388608 & kk);) kk <<= 1, Fk -= 8388608;
-        kk &= -8388609, Fk += 947912704, yk[Xk] = kk | Fk
+      const xm = new Uint32Array(2048),
+        wm = new Uint32Array(64),
+        Dm = new Uint32Array(64);
+      for (let hm = 1; hm < 1024; ++hm) {
+        let mm = hm << 13,
+          Tm = 0;
+        for (; 0 === (8388608 & mm);) mm <<= 1, Tm -= 8388608;
+        mm &= -8388609, Tm += 947912704, xm[hm] = mm | Tm
       }
-      for (let Xk = 1024; Xk < 2048; ++Xk) yk[Xk] = 939524096 + (Xk - 1024 << 13);
-      for (let Xk = 1; Xk < 31; ++Xk) lk[Xk] = Xk << 23;
-      lk[31] = 1199570944, lk[32] = 2147483648;
-      for (let Xk = 33; Xk < 63; ++Xk) lk[Xk] = 2147483648 + (Xk - 32 << 23);
-      lk[63] = 3347054592;
-      for (let Xk = 1; Xk < 64; ++Xk) 32 !== Xk && (ak[Xk] = 1024);
-      return Xk = {
-        floatView: Fk,
-        uint32View: Ik,
-        baseTable: Tk,
-        shiftTable: ik,
-        mantissaTable: yk,
-        exponentTable: lk,
-        offsetTable: ak
-      }, Xk
+      for (let hm = 1024; hm < 2048; ++hm) xm[hm] = 939524096 + (hm - 1024 << 13);
+      for (let hm = 1; hm < 31; ++hm) wm[hm] = hm << 23;
+      wm[31] = 1199570944, wm[32] = 2147483648;
+      for (let hm = 33; hm < 63; ++hm) wm[hm] = 2147483648 + (hm - 32 << 23);
+      wm[63] = 3347054592;
+      for (let hm = 1; hm < 64; ++hm) 32 !== hm && (Dm[hm] = 1024);
+      return hm = {
+        floatView: Tm,
+        uint32View: fm,
+        baseTable: Am,
+        shiftTable: am,
+        mantissaTable: xm,
+        exponentTable: wm,
+        offsetTable: Dm
+      }, hm
     }
-    const ik = 65504;
+    const am = 65504;
 
-    function yk(kk) {
-      const Fk = Tk();
-      Fk.floatView[0] = kk;
-      const Ik = Fk.uint32View[0],
-        Xk = Ik >> 23 & 511;
-      return Fk.baseTable[Xk] + ((8388607 & Ik) >> Fk.shiftTable[Xk])
+    function xm(mm) {
+      const Tm = Am();
+      Tm.floatView[0] = mm;
+      const fm = Tm.uint32View[0],
+        hm = fm >> 23 & 511;
+      return Tm.baseTable[hm] + ((8388607 & fm) >> Tm.shiftTable[hm])
     }
 
-    function lk(kk) {
-      const Fk = Tk();
-      return Fk.uint32View[0] = Fk.mantissaTable[Fk.offsetTable[kk >> 10] + (1023 & kk)] + Fk.exponentTable[kk >> 10], Fk.floatView[0]
+    function wm(mm) {
+      const Tm = Am();
+      return Tm.uint32View[0] = Tm.mantissaTable[Tm.offsetTable[mm >> 10] + (1023 & mm)] + Tm.exponentTable[mm >> 10], Tm.floatView[0]
     }
   },
-  40048: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => ik,
-      h: () => Tk,
-      i: () => Xk
+  40173: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => am,
+      f: () => Am,
+      g: () => hm
     });
-    const Xk = kk => {
-        const Fk = ArrayBuffer.isView(kk) ? new Uint8Array(kk.buffer, kk.byteOffset, kk.byteLength) : new Uint8Array(kk);
-        return "function" === typeof Fk.toBase64 ? Fk.toBase64() : function(kk) {
-          const Fk = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-          let Ik, Xk, Tk, ik, yk, lk, ak, qk = "",
-            Lk = 0;
-          for (; Lk < kk.length;) Ik = kk[Lk++], Xk = Lk < kk.length ? kk[Lk++] : Number.NaN, Tk = Lk < kk.length ? kk[Lk++] : Number.NaN, ik = Ik >> 2, yk = (3 & Ik) << 4 | Xk >> 4, lk = (15 & Xk) << 2 | Tk >> 6, ak = 63 & Tk, isNaN(Xk) ? lk = ak = 64 : isNaN(Tk) && (ak = 64), qk += Fk.charAt(ik) + Fk.charAt(yk) + Fk.charAt(lk) + Fk.charAt(ak);
-          return qk
-        }(Fk)
+    const hm = mm => {
+        const Tm = ArrayBuffer.isView(mm) ? new Uint8Array(mm.buffer, mm.byteOffset, mm.byteLength) : new Uint8Array(mm);
+        return "function" === typeof Tm.toBase64 ? Tm.toBase64() : function(mm) {
+          const Tm = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+          let fm, hm, Am, am, xm, wm, Dm, im = "",
+            Rm = 0;
+          for (; Rm < mm.length;) fm = mm[Rm++], hm = Rm < mm.length ? mm[Rm++] : Number.NaN, Am = Rm < mm.length ? mm[Rm++] : Number.NaN, am = fm >> 2, xm = (3 & fm) << 4 | hm >> 4, wm = (15 & hm) << 2 | Am >> 6, Dm = 63 & Am, isNaN(hm) ? wm = Dm = 64 : isNaN(Am) && (Dm = 64), im += Tm.charAt(am) + Tm.charAt(xm) + Tm.charAt(wm) + Tm.charAt(Dm);
+          return im
+        }(Tm)
       },
-      Tk = kk => atob(kk),
-      ik = kk => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(kk).buffer : function(kk) {
-        const Fk = Tk(kk),
-          Ik = Fk.length,
-          Xk = new Uint8Array(new ArrayBuffer(Ik));
-        for (let Tk = 0; Tk < Ik; Tk++) Xk[Tk] = Fk.charCodeAt(Tk);
-        return Xk.buffer
-      }(kk)
+      Am = mm => atob(mm),
+      am = mm => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(mm).buffer : function(mm) {
+        const Tm = Am(mm),
+          fm = Tm.length,
+          hm = new Uint8Array(new ArrayBuffer(fm));
+        for (let Am = 0; Am < fm; Am++) hm[Am] = Tm.charCodeAt(Am);
+        return hm.buffer
+      }(mm)
   },
-  39878: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => Tk,
-      h: () => yk
+  40008: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => Am,
+      f: () => xm
     });
-    let Xk = [];
-    class Tk {
-      static SetImmediate(kk) {
-        0 === Xk.length && setTimeout((() => {
-          const kk = Xk;
-          Xk = [];
-          for (const Fk of kk) Fk()
-        }), 1), Xk.push(kk)
+    let hm = [];
+    class Am {
+      static SetImmediate(mm) {
+        0 === hm.length && setTimeout((() => {
+          const mm = hm;
+          hm = [];
+          for (const Tm of mm) Tm()
+        }), 1), hm.push(mm)
       }
     }
 
-    function ik(kk, Fk, Ik) {
+    function am(mm, Tm, fm) {
       try {
-        if (kk()) return Fk(), !0
-      } catch (Xk) {
-        return Ik?.(Xk), !0
+        if (mm()) return Tm(), !0
+      } catch (hm) {
+        return fm?.(hm), !0
       }
       return !1
     }
-    const yk = function(kk, Fk, Ik) {
-      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
-        Tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
-        yk = arguments.length > 6 ? arguments[6] : void 0;
-      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && ik(kk, Fk, Ik)) return null;
-      const lk = setInterval((() => {
-        ik(kk, Fk, Ik) ? clearInterval(lk) : (Tk -= Xk, Tk < 0 && (clearInterval(lk), Ik?.(new Error("Operation timed out after maximum retries. " + (yk || "")), !0)))
-      }), Xk);
-      return () => clearInterval(lk)
+    const xm = function(mm, Tm, fm) {
+      let hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
+        Am = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
+        xm = arguments.length > 6 ? arguments[6] : void 0;
+      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && am(mm, Tm, fm)) return null;
+      const wm = setInterval((() => {
+        am(mm, Tm, fm) ? clearInterval(wm) : (Am -= hm, Am < 0 && (clearInterval(wm), fm?.(new Error("Operation timed out after maximum retries. " + (xm || "")), !0)))
+      }), hm);
+      return () => clearInterval(wm)
     }
   },
-  40040: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Xk
+  40160: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => hm
     });
-    class Xk {
+    class hm {
       constructor() {
         this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
       }
       static get IsCustomRequestAvailable() {
-        return Object.keys(Xk.CustomRequestHeaders).length > 0 || Xk.CustomRequestModifiers.length > 0
+        return Object.keys(hm.CustomRequestHeaders).length > 0 || hm.CustomRequestModifiers.length > 0
       }
-      static _CleanUrl(kk) {
-        return kk = (kk = kk.replace("file:http:", "http:")).replace("file:https:", "https:")
+      static _CleanUrl(mm) {
+        return mm = (mm = mm.replace("file:http:", "http:")).replace("file:https:", "https:")
       }
-      static _ShouldSkipRequestModifications(kk) {
-        return Xk.SkipRequestModificationForBabylonCDN && (kk.includes("preview.babylonjs.com") || kk.includes("cdn.babylonjs.com"))
+      static _ShouldSkipRequestModifications(mm) {
+        return hm.SkipRequestModificationForBabylonCDN && (mm.includes("preview.babylonjs.com") || mm.includes("cdn.babylonjs.com"))
       }
-      static _CollectCustomizations(kk) {
-        const Fk = {
+      static _CollectCustomizations(mm) {
+        const Tm = {
           ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
         };
-        if (Xk._ShouldSkipRequestModifications(kk)) return {
-          url: kk,
-          headers: Fk
+        if (hm._ShouldSkipRequestModifications(mm)) return {
+          url: mm,
+          headers: Tm
         };
-        for (const Tk in Xk.CustomRequestHeaders) {
-          const kk = Xk.CustomRequestHeaders[Tk];
-          kk && (Fk[Tk] = kk)
+        for (const Am in hm.CustomRequestHeaders) {
+          const mm = hm.CustomRequestHeaders[Am];
+          mm && (Tm[Am] = mm)
         }
-        const Ik = {
-          setRequestHeader: (kk, Ik) => {
-            Fk[kk] = Ik
+        const fm = {
+          setRequestHeader: (mm, fm) => {
+            Tm[mm] = fm
           }
         };
-        for (const Tk of Xk.CustomRequestModifiers) {
-          if (Xk._ShouldSkipRequestModifications(kk)) break;
-          const Fk = Tk(Ik, kk);
-          "string" === typeof Fk && (kk = Fk)
+        for (const Am of hm.CustomRequestModifiers) {
+          if (hm._ShouldSkipRequestModifications(mm)) break;
+          const Tm = Am(fm, mm);
+          "string" === typeof Tm && (mm = Tm)
         }
         return {
-          url: kk,
-          headers: Fk
+          url: mm,
+          headers: Tm
         }
       }
-      static async FetchAsync(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const Ik = Fk.method ?? "GET";
+      static async FetchAsync(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const fm = Tm.method ?? "GET";
         if ("undefined" !== typeof fetch) {
           const {
-            url: Tk,
-            headers: ik
-          } = Xk._CollectCustomizations(Xk._CleanUrl(kk), Fk.headers ?? {});
-          return await fetch(Tk, {
-            method: Ik,
-            headers: ik,
-            body: Fk.body ?? void 0
+            url: Am,
+            headers: am
+          } = hm._CollectCustomizations(hm._CleanUrl(mm), Tm.headers ?? {});
+          return await fetch(Am, {
+            method: fm,
+            headers: am,
+            body: Tm.body ?? void 0
           })
         }
-        return await new Promise(((Tk, ik) => {
-          const yk = new Xk;
-          yk.responseType = "arraybuffer", yk.addEventListener("readystatechange", (() => {
-            if (4 === yk.readyState)
-              if (yk.status >= 200 && yk.status < 300) {
-                const kk = "undefined" !== typeof Headers ? new Headers : void 0,
-                  Fk = yk.getResponseHeader("Content-Type");
-                Fk && kk && kk.set("Content-Type", Fk), "undefined" !== typeof Response ? Tk(new Response(yk.response, {
-                  status: yk.status,
-                  statusText: yk.statusText,
-                  headers: kk
-                })) : Tk({
+        return await new Promise(((Am, am) => {
+          const xm = new hm;
+          xm.responseType = "arraybuffer", xm.addEventListener("readystatechange", (() => {
+            if (4 === xm.readyState)
+              if (xm.status >= 200 && xm.status < 300) {
+                const mm = "undefined" !== typeof Headers ? new Headers : void 0,
+                  Tm = xm.getResponseHeader("Content-Type");
+                Tm && mm && mm.set("Content-Type", Tm), "undefined" !== typeof Response ? Am(new Response(xm.response, {
+                  status: xm.status,
+                  statusText: xm.statusText,
+                  headers: mm
+                })) : Am({
                   ok: !0,
-                  status: yk.status,
-                  statusText: yk.statusText,
+                  status: xm.status,
+                  statusText: xm.statusText,
                   headers: {
-                    get: kk => yk.getResponseHeader(kk)
+                    get: mm => xm.getResponseHeader(mm)
                   },
-                  arrayBuffer: async () => await Promise.resolve(yk.response)
+                  arrayBuffer: async () => await Promise.resolve(xm.response)
                 })
-              } else ik(new Error(`HTTP ${yk.status} loading '${yk.requestURL}': ${yk.statusText}`))
-          })), yk.open(Ik, kk, Fk.headers), yk.send(Fk.body ?? null)
+              } else am(new Error(`HTTP ${xm.status} loading '${xm.requestURL}': ${xm.statusText}`))
+          })), xm.open(fm, mm, Tm.headers), xm.send(Tm.body ?? null)
         }))
       }
       get requestURL() {
@@ -1445,8 +1445,8 @@ export const modules = {
       get onprogress() {
         return this._xhr.onprogress
       }
-      set onprogress(kk) {
-        this._xhr.onprogress = kk
+      set onprogress(mm) {
+        this._xhr.onprogress = mm
       }
       get readyState() {
         return this._xhr.readyState
@@ -1469,44 +1469,44 @@ export const modules = {
       get responseType() {
         return this._xhr.responseType
       }
-      set responseType(kk) {
-        this._xhr.responseType = kk
+      set responseType(mm) {
+        this._xhr.responseType = mm
       }
       get timeout() {
         return this._xhr.timeout
       }
-      set timeout(kk) {
-        this._xhr.timeout = kk
+      set timeout(mm) {
+        this._xhr.timeout = mm
       }
-      addEventListener(kk, Fk, Ik) {
-        this._xhr.addEventListener(kk, Fk, Ik)
+      addEventListener(mm, Tm, fm) {
+        this._xhr.addEventListener(mm, Tm, fm)
       }
-      removeEventListener(kk, Fk, Ik) {
-        this._xhr.removeEventListener(kk, Fk, Ik)
+      removeEventListener(mm, Tm, fm) {
+        this._xhr.removeEventListener(mm, Tm, fm)
       }
       abort() {
         this._xhr.abort()
       }
-      send(kk) {
-        this._xhr.send(kk)
+      send(mm) {
+        this._xhr.send(mm)
       }
-      open(kk, Fk, Ik) {
+      open(mm, Tm, fm) {
         const {
-          url: Tk,
-          headers: ik
-        } = Xk._CollectCustomizations(Fk, Ik);
-        this._requestURL = Xk._CleanUrl(Tk), this._xhr.open(kk, this._requestURL, !0);
-        for (const Xk in ik) this._xhr.setRequestHeader(Xk, ik[Xk])
+          url: Am,
+          headers: am
+        } = hm._CollectCustomizations(Tm, fm);
+        this._requestURL = hm._CleanUrl(Am), this._xhr.open(mm, this._requestURL, !0);
+        for (const hm in am) this._xhr.setRequestHeader(hm, am[hm])
       }
-      setRequestHeader(kk, Fk) {
-        this._xhr.setRequestHeader(kk, Fk)
+      setRequestHeader(mm, Tm) {
+        this._xhr.setRequestHeader(mm, Tm)
       }
-      getResponseHeader(kk) {
-        return this._xhr.getResponseHeader(kk)
+      getResponseHeader(mm) {
+        return this._xhr.getResponseHeader(mm)
       }
     }
-    Xk.CustomRequestHeaders = {}, Xk.CustomRequestModifiers = new Array, Xk.SkipRequestModificationForBabylonCDN = !0
+    hm.CustomRequestHeaders = {}, hm.CustomRequestModifiers = new Array, hm.SkipRequestModificationForBabylonCDN = !0
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

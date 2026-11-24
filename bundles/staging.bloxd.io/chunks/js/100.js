@@ -1,26 +1,26 @@
 export const id = 100;
 export const ids = [100];
 export const modules = {
-  4891: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      default: () => Kk
+  4830: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      default: () => Km
     });
-    var Xk = Ik(1485),
-      Tk = Ik(58),
-      ik = Ik(1179),
-      yk = Ik(1118),
-      lk = Ik(1103),
-      ak = Ik(2008),
-      qk = Ik(1475),
-      Lk = Ik(1318),
-      tk = Ik(1101),
-      Zk = Ik(25),
-      jk = Ik(1406),
-      ek = Ik(1066),
-      wk = Ik(2503),
-      Hk = Ik(1504),
-      Jk = Ik(1096);
-    const xk = [{
+    var hm = fm(1537),
+      Am = fm(59),
+      am = fm(1208),
+      xm = fm(1160),
+      wm = fm(1152),
+      Dm = fm(2060),
+      im = fm(1519),
+      Rm = fm(1345),
+      pm = fm(1148),
+      Em = fm(23),
+      om = fm(1454),
+      Om = fm(1089),
+      Ym = fm(2565),
+      qm = fm(1548),
+      jm = fm(1135);
+    const Vm = [{
         id: "myGames",
         icon: "joystick",
         title: "studio:myGames"
@@ -33,79 +33,79 @@ export const modules = {
         icon: "file-lines",
         title: "general:docs"
       }],
-      Pk = {
+      Im = {
         myGames: "/studio",
         leaderboard: "/studio/leaderboard",
         docs: "/studio/docs"
       };
 
-    function Kk() {
+    function Km() {
       const {
-        t: kk
-      } = (0, ik.y)(), Fk = (0, qk.useNavigatePreserveSearch)(), Ik = (0, Xk.q)(), {
-        isUserContextUpdating: Kk
-      } = (0, yk.d)(), Qk = (0, ak.e)(), sk = (0, lk.h)(), Vk = (zk = Ik.pathname).startsWith(Hk.o) ? null : zk.startsWith(Pk.docs) ? "docs" : zk.startsWith(Pk.leaderboard) ? "leaderboard" : "myGames";
-      var zk;
-      const Sk = function(kk) {
-        if (!kk.startsWith(Hk.o)) return {
+        t: mm
+      } = (0, am.A)(), Tm = (0, im.useNavigatePreserveSearch)(), fm = (0, hm.w)(), {
+        isUserContextUpdating: Km
+      } = (0, xm.e)(), Qm = (0, Dm.d)(), nm = (0, wm.j)(), Jm = (cm = fm.pathname).startsWith(qm.s) ? null : cm.startsWith(Im.docs) ? "docs" : cm.startsWith(Im.leaderboard) ? "leaderboard" : "myGames";
+      var cm;
+      const zm = function(mm) {
+        if (!mm.startsWith(qm.s)) return {
           title: "studio:leaveStudio",
           icon: "left-from-bracket",
           to: "/"
         };
-        const Fk = (0, qk.getPreviousLocation)();
+        const Tm = (0, im.getPreviousLocation)();
         return {
           title: "general:back",
           icon: "arrow-left",
-          to: null !== Fk && Fk.startsWith(Pk.myGames) ? -1 : Pk.myGames
+          to: null !== Tm && Tm.startsWith(Im.myGames) ? -1 : Im.myGames
         }
-      }(Ik.pathname);
-      return (0, Tk.useEffect)((() => {
-        Zk.d.set({
+      }(fm.pathname);
+      return (0, Am.useEffect)((() => {
+        Em.c.set({
           gameState: "studio",
           openEverythingMenuName: null
         })
-      }), []), (0, Jk.jsxs)("div", {
+      }), []), (0, jm.jsxs)("div", {
         className: "StudioLayout AnimFadeIn",
-        children: [Qk && (0, Jk.jsx)("aside", {
+        children: [Qm && (0, jm.jsx)("aside", {
           className: "StudioLayoutLeft",
-          children: (0, Jk.jsx)(wk.d, {})
-        }), (0, Jk.jsxs)("div", {
+          children: (0, jm.jsx)(Ym.c, {})
+        }), (0, jm.jsxs)("div", {
           className: "StudioLayoutRight",
-          children: [(0, Jk.jsxs)("div", {
+          children: [(0, jm.jsxs)("div", {
             className: "StudioTop",
-            children: [(0, Jk.jsx)(tk.d, {
+            children: [(0, jm.jsx)(pm.d, {
               show: !0,
-              socialBarIsDocked: Qk
-            }), (0, Jk.jsxs)("nav", {
+              socialBarIsDocked: Qm
+            }), (0, jm.jsxs)("nav", {
               className: "StudioNav",
-              children: [(0, Jk.jsx)(jk.c, {
-                icon: Sk.icon,
+              children: [(0, jm.jsx)(om.d, {
+                icon: zm.icon,
                 onClick: () => {
-                  Fk(Sk.to)
+                  Tm(zm.to)
                 },
-                children: kk(Sk.title)
-              }), (0, Jk.jsx)("div", {
+                children: mm(zm.title)
+              }), (0, jm.jsx)("div", {
                 className: "StudioNavTabs",
-                children: xk.map((Ik => (0, Jk.jsxs)(jk.Q, {
-                  active: Vk === Ik.id,
-                  href: Pk[Ik.id],
+                children: Vm.map((fm => (0, jm.jsxs)(om.V, {
+                  active: Jm === fm.id,
+                  href: Im[fm.id],
                   onClick: () => {
-                    Fk(Pk[Ik.id])
+                    Tm(Im[fm.id])
                   },
-                  children: [(0, Jk.jsx)(ek.e, {
-                    name: Ik.icon
-                  }), !sk && kk(Ik.title)]
-                }, Ik.id)))
+                  children: [(0, jm.jsx)(Om.c, {
+                    name: fm.icon
+                  }), !nm && mm(fm.title)]
+                }, fm.id)))
               })]
             })]
-          }), (0, Jk.jsxs)("main", {
+          }), (0, jm.jsxs)("main", {
             className: "StudioBottom",
-            children: [Kk && (0, Jk.jsx)("div", {
+            children: [Km && (0, jm.jsx)("div", {
               className: "StudioCentredMessage",
-              children: (0, Jk.jsx)(Lk.c, {})
-            }), !Kk && (0, Jk.jsx)("div", {
+              children: (0, jm.jsx)(Rm.c, {})
+            }), !Km && (0, jm.jsx)("div", {
               className: "StudioContent",
-              children: (0, Jk.jsx)(Xk.f, {})
+              children: (0, jm.jsx)(hm.i, {})
             })]
           })]
         })]
@@ -114,4 +114,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

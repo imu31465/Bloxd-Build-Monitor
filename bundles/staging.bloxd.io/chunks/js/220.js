@@ -1,80 +1,80 @@
 export const id = 220;
 export const ids = [220];
 export const modules = {
-  41084: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      LobbyManageView: () => VF
+  41134: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      LobbyManageView: () => JT
     });
-    var Xk = Ik(58),
-      Tk = Ik(1432),
-      ik = Ik(37056),
-      yk = Ik(2363),
-      lk = Ik(2366),
-      ak = Ik(2349),
-      qk = Ik(36558);
+    var hm = fm(59),
+      Am = fm(1476),
+      am = fm(37110),
+      xm = fm(2409),
+      wm = fm(2418),
+      Dm = fm(2391),
+      im = fm(36649);
 
-    function Lk() {
-      const [kk, Fk] = (0, Xk.useState)(new Map);
+    function Rm() {
+      const [mm, Tm] = (0, hm.useState)(new Map);
       return {
-        get: Fk => kk.get(Fk),
-        hold: (0, Xk.useCallback)(((kk, Ik, Xk) => {
-          Fk((Fk => new Map(Fk).set(kk, Ik))), Xk.then((() => {
-            Fk((Fk => {
-              const Ik = new Map(Fk);
-              return Ik.delete(kk), Ik
+        get: Tm => mm.get(Tm),
+        hold: (0, hm.useCallback)(((mm, fm, hm) => {
+          Tm((Tm => new Map(Tm).set(mm, fm))), hm.then((() => {
+            Tm((Tm => {
+              const fm = new Map(Tm);
+              return fm.delete(mm), fm
             }))
           }))
         }), [])
       }
     }
-    var tk = Ik(1055),
-      Zk = Ik.n(tk),
-      jk = Ik(1179),
-      ek = Ik(1066),
-      wk = Ik(1318),
-      Hk = Ik(2582),
-      Jk = Ik(5016),
-      xk = Ik(3378);
-    var Pk = Ik(1907),
-      Kk = Ik(1406);
+    var pm = fm(1080),
+      Em = fm.n(pm),
+      om = fm(1208),
+      Om = fm(1089),
+      Ym = fm(1345),
+      qm = fm(2650),
+      jm = fm(4970),
+      Vm = fm(3443);
+    var Im = fm(1946),
+      Km = fm(1454);
 
-    function Qk(kk, Fk, Ik) {
-      const Xk = kk.filter((kk => kk.name !== Fk)),
-        Tk = Xk.filter((kk => "none" === kk.role)).sort(((kk, Fk) => Fk.at - kk.at)),
-        ik = Xk.filter((kk => "none" !== kk.role)).sort(((kk, Fk) => Ik.indexOf(kk.role) - Ik.indexOf(Fk.role) || Fk.at - kk.at));
-      return [...kk.some((kk => kk.name === Fk)) && null !== Fk ? [Fk] : [], ...[...Tk, ...ik].map((kk => kk.name))]
+    function Qm(mm, Tm, fm) {
+      const hm = mm.filter((mm => mm.name !== Tm)),
+        Am = hm.filter((mm => "none" === mm.role)).sort(((mm, Tm) => Tm.at - mm.at)),
+        am = hm.filter((mm => "none" !== mm.role)).sort(((mm, Tm) => fm.indexOf(mm.role) - fm.indexOf(Tm.role) || Tm.at - mm.at));
+      return [...mm.some((mm => mm.name === Tm)) && null !== Tm ? [Tm] : [], ...[...Am, ...am].map((mm => mm.name))]
     }
 
-    function sk(kk, Fk) {
-      const Ik = kk.banned.map((kk => kk.name)),
-        Xk = new Set(Ik);
+    function nm(mm, Tm) {
+      const fm = mm.banned.map((mm => mm.name)),
+        hm = new Set(fm);
       return {
-        here: Qk(kk.here, Fk, kk.roles.map((kk => kk.role))),
-        away: kk.away.filter((kk => !Xk.has(kk.name))).map((kk => kk.name)),
-        banned: Ik
+        here: Qm(mm.here, Tm, mm.roles.map((mm => mm.role))),
+        away: mm.away.filter((mm => !hm.has(mm.name))).map((mm => mm.name)),
+        banned: fm
       }
     }
 
-    function Vk(kk, Fk) {
-      const Ik = kk.here.find((kk => kk.name === Fk));
-      if (Ik) return {
+    function Jm(mm, Tm) {
+      const fm = mm.here.find((mm => mm.name === Tm));
+      if (fm) return {
         section: "here",
-        player: Ik
+        player: fm
       };
-      const Xk = kk.banned.find((kk => kk.name === Fk));
-      if (Xk) return {
+      const hm = mm.banned.find((mm => mm.name === Tm));
+      if (hm) return {
         section: "banned",
-        bannedAt: Xk.at
+        bannedAt: hm.at
       };
-      const Tk = kk.away.find((kk => kk.name === Fk));
-      return Tk ? {
+      const Am = mm.away.find((mm => mm.name === Tm));
+      return Am ? {
         section: "away",
-        player: Tk
+        player: Am
       } : {
         section: "gone"
       }
     }
-    const zk = {
+    const cm = {
       gamemode: !1,
       roles: [],
       fixedRole: null,
@@ -82,357 +82,357 @@ export const modules = {
       ban: !1,
       unban: !1
     };
-    var Sk = Ik(2578),
-      vk = Ik(36548),
-      Ek = Ik(36727),
-      Ok = Ik(3065),
-      nk = Ik(337);
+    var zm = fm(2644),
+      Zm = fm(36635),
+      km = fm(36813),
+      bm = fm(3127),
+      Sm = fm(354);
 
-    function Gk(kk, Fk, Ik) {
-      return Fk.map((Fk => {
-        if ("string" === typeof Fk) return Fk;
-        const Xk = "str" in Fk ? Fk.str : Fk;
-        return "string" === typeof Xk ? Xk : "entityName" in Xk ? Xk.entityName : "translationKey" in Xk ? kk(Xk.translationKey, (0, jk.m)(Xk.params, Ik)) : ""
+    function em(mm, Tm, fm) {
+      return Tm.map((Tm => {
+        if ("string" === typeof Tm) return Tm;
+        const hm = "str" in Tm ? Tm.str : Tm;
+        return "string" === typeof hm ? hm : "entityName" in hm ? hm.entityName : "translationKey" in hm ? mm(hm.translationKey, (0, om.r)(hm.params, fm)) : ""
       })).join("")
     }
 
-    function pk(kk, Fk, Ik, Xk, Tk) {
-      return Tk - Xk < 6e4 ? kk(`${Ik}JustNow`) : kk(Ik, {
-        time: (0, nk.gb)((0, jk.l)(Fk, Ik), Xk, Tk)
+    function Nm(mm, Tm, fm, hm, Am) {
+      return Am - hm < 6e4 ? mm(`${fm}JustNow`) : mm(fm, {
+        time: (0, Sm.cb)((0, om.n)(Tm, fm), hm, Am)
       })
     }
-    var uk = Ik(1849),
-      bk = Ik(1617),
-      Rk = Ik(1096);
+    var Gm = fm(1884),
+      Xm = fm(1676),
+      Pm = fm(1135);
 
-    function Uk(kk) {
+    function Hm(mm) {
       let {
-        status: Fk
-      } = kk;
-      return (0, Rk.jsx)("span", {
-        className: Zk()("LobbyManageStatus", {
-          LobbyManageStatusRefused: !Fk.ok
+        status: Tm
+      } = mm;
+      return (0, Pm.jsx)("span", {
+        className: Em()("LobbyManageStatus", {
+          LobbyManageStatusRefused: !Tm.ok
         }),
-        children: (0, Rk.jsx)(uk.c, {
-          text: Fk.text
+        children: (0, Pm.jsx)(Gm.b, {
+          text: Tm.text
         })
       })
     }
 
-    function Ck(kk) {
+    function ym(mm) {
       let {
-        names: Fk,
-        cap: Ik,
-        filterFrom: Tk,
-        moreLabel: ik,
-        reveal: yk = null,
-        renderRow: lk
-      } = kk;
+        names: Tm,
+        cap: fm,
+        filterFrom: Am,
+        moreLabel: am,
+        reveal: xm = null,
+        renderRow: wm
+      } = mm;
       const {
-        t: ak
-      } = (0, jk.y)(), [qk, Lk] = (0, Xk.useState)(!1), [tk, Zk] = (0, Xk.useState)(""), wk = qk || null !== yk && Fk.indexOf(yk) >= Ik, Jk = (wk || Fk.length <= Ik) && null !== Tk && Fk.length > Tk, xk = tk.trim().toLowerCase();
-      let Pk = wk ? Fk : Fk.slice(0, Ik);
-      return Jk && "" !== xk && (Pk = Pk.filter((kk => kk.toLowerCase().includes(xk)))), (0, Rk.jsxs)(Rk.Fragment, {
-        children: [Jk && (0, Rk.jsx)(bk.c, {
+        t: Dm
+      } = (0, om.A)(), [im, Rm] = (0, hm.useState)(!1), [pm, Em] = (0, hm.useState)(""), Ym = im || null !== xm && Tm.indexOf(xm) >= fm, jm = (Ym || Tm.length <= fm) && null !== Am && Tm.length > Am, Vm = pm.trim().toLowerCase();
+      let Im = Ym ? Tm : Tm.slice(0, fm);
+      return jm && "" !== Vm && (Im = Im.filter((mm => mm.toLowerCase().includes(Vm)))), (0, Pm.jsxs)(Pm.Fragment, {
+        children: [jm && (0, Pm.jsx)(Xm.e, {
           className: "LobbyManageFilter",
-          placeholderText: ak("lobbyManage:findName"),
-          ariaLabel: ak("lobbyManage:findName"),
-          onValueChange: kk => {
-            Zk(kk)
+          placeholderText: Dm("lobbyManage:findName"),
+          ariaLabel: Dm("lobbyManage:findName"),
+          onValueChange: mm => {
+            Em(mm)
           }
-        }), Pk.length > 0 && (0, Rk.jsx)("div", {
+        }), Im.length > 0 && (0, Pm.jsx)("div", {
           className: "PlayerRows",
-          children: Pk.map(((kk, Fk) => lk(kk, Pk.length - Fk)))
-        }), !wk && Fk.length > Ik && (0, Rk.jsx)("div", {
+          children: Im.map(((mm, Tm) => wm(mm, Im.length - Tm)))
+        }), !Ym && Tm.length > fm && (0, Pm.jsx)("div", {
           className: "LobbyManageMore",
-          children: (0, Rk.jsx)(Hk.b, {
-            label: (0, Rk.jsxs)(Rk.Fragment, {
-              children: [ik, " ", (0, Rk.jsx)(ek.e, {
+          children: (0, Pm.jsx)(qm.e, {
+            label: (0, Pm.jsxs)(Pm.Fragment, {
+              children: [am, " ", (0, Pm.jsx)(Om.c, {
                 name: "angle-down"
               })]
             }),
             onClick: () => {
-              Lk(!0)
+              Rm(!0)
             }
           })
         })]
       })
     }
 
-    function Nk(kk) {
+    function Cm(mm) {
       let {
-        value: Fk,
-        placeholder: Ik,
-        ariaLabel: Tk,
-        maxLength: ik,
-        wide: yk = !1,
-        onSave: lk
-      } = kk;
-      const ak = (0, Xk.useRef)(null),
-        [qk, Lk] = (0, Xk.useState)(0),
-        tk = (0, Xk.useRef)(!0),
-        jk = (0, Xk.useRef)(null),
-        ek = (0, Xk.useRef)({
-          value: Fk,
-          onSave: lk
+        value: Tm,
+        placeholder: fm,
+        ariaLabel: Am,
+        maxLength: am,
+        wide: xm = !1,
+        onSave: wm
+      } = mm;
+      const Dm = (0, hm.useRef)(null),
+        [im, Rm] = (0, hm.useState)(0),
+        pm = (0, hm.useRef)(!0),
+        om = (0, hm.useRef)(null),
+        Om = (0, hm.useRef)({
+          value: Tm,
+          onSave: wm
         });
-      ek.current = {
-        value: Fk,
-        onSave: lk
+      Om.current = {
+        value: Tm,
+        onSave: wm
       };
-      const wk = () => {
-        const kk = jk.current;
-        jk.current = null, null !== kk && kk !== ek.current.value && ek.current.onSave(kk).then((() => {
-          tk.current && Lk((kk => kk + 1))
+      const Ym = () => {
+        const mm = om.current;
+        om.current = null, null !== mm && mm !== Om.current.value && Om.current.onSave(mm).then((() => {
+          pm.current && Rm((mm => mm + 1))
         }))
       };
-      return (0, Xk.useEffect)((() => {
-        null === jk.current && ak.current && (ak.current.value = Fk)
-      }), [Fk, qk]), (0, Xk.useEffect)((() => () => {
-        tk.current = !1, wk()
-      }), []), (0, Rk.jsx)("div", {
-        className: Zk()("LobbyManageRuleInput", {
-          LobbyManageRuleInputWide: yk
+      return (0, hm.useEffect)((() => {
+        null === om.current && Dm.current && (Dm.current.value = Tm)
+      }), [Tm, im]), (0, hm.useEffect)((() => () => {
+        pm.current = !1, Ym()
+      }), []), (0, Pm.jsx)("div", {
+        className: Em()("LobbyManageRuleInput", {
+          LobbyManageRuleInputWide: xm
         }),
-        onBlur: wk,
-        children: (0, Rk.jsx)(bk.c, {
-          domRef: ak,
-          defaultValue: Fk,
-          placeholderText: Ik,
-          ariaLabel: Tk,
-          maxLength: ik,
-          onValueChange: kk => {
-            jk.current = kk
+        onBlur: Ym,
+        children: (0, Pm.jsx)(Xm.e, {
+          domRef: Dm,
+          defaultValue: Tm,
+          placeholderText: fm,
+          ariaLabel: Am,
+          maxLength: am,
+          onValueChange: mm => {
+            om.current = mm
           },
-          onEnter: wk
+          onEnter: Ym
         })
       })
     }
-    const ck = ["mod", "coOwner"],
-      Wk = {
+    const rm = ["mod", "coOwner"],
+      sm = {
         coOwner: "lobbyManage:roleCanCoOwner",
         mod: "lobbyManage:roleCanMod",
         coder: "lobbyManage:roleCanCoder",
         builder: "lobbyManage:roleCanBuilder"
       };
 
-    function fk(kk) {
-      var Fk, Ik, ik;
+    function lm(mm) {
+      var Tm, fm, am;
       let {
-        name: yk,
-        place: lk,
-        openedIn: ak,
-        isYou: qk,
-        manage: tk,
-        hiddenNames: Zk,
-        zIndex: wk
-      } = kk;
+        name: xm,
+        place: wm,
+        openedIn: Dm,
+        isYou: im,
+        manage: pm,
+        hiddenNames: Em,
+        zIndex: Ym
+      } = mm;
       const {
-        t: Hk,
-        selectedLanguage: Jk
-      } = (0, jk.y)(), [xk, Pk] = (0, Xk.useState)(null), {
-        state: Qk
-      } = tk, sk = `player:${yk}`, Vk = function(kk, Fk) {
-        if ("banned" === kk.section) return {
-          ...zk,
+        t: qm,
+        selectedLanguage: jm
+      } = (0, om.A)(), [Vm, Im] = (0, hm.useState)(null), {
+        state: Qm
+      } = pm, nm = `player:${xm}`, Jm = function(mm, Tm) {
+        if ("banned" === mm.section) return {
+          ...cm,
           unban: !0
         };
-        if ("gone" === kk.section) return zk;
+        if ("gone" === mm.section) return cm;
         const {
-          player: Ik
-        } = kk, Xk = "here" === kk.section, Tk = Xk || "none" !== Ik.role ? Ik.can.roles : [];
+          player: fm
+        } = mm, hm = "here" === mm.section, Am = hm || "none" !== fm.role ? fm.can.roles : [];
         return {
-          gamemode: Xk && Fk && null !== Ik.gamemode && Ik.can.gamemode,
-          roles: Tk,
-          fixedRole: 0 === Tk.length && "none" !== Ik.role ? Ik.role : null,
-          kick: Xk && Ik.can.kick,
-          ban: Ik.can.ban,
+          gamemode: hm && Tm && null !== fm.gamemode && fm.can.gamemode,
+          roles: Am,
+          fixedRole: 0 === Am.length && "none" !== fm.role ? fm.role : null,
+          kick: hm && fm.can.kick,
+          ban: fm.can.ban,
           unban: !1
         }
-      }(lk, null !== Qk.gamemodes), nk = tk.statusOf(sk), uk = tk.isPending(sk), bk = Lk(), Ck = Date.now(), Nk = kk => {
-        var Fk, Ik;
-        return null !== (Fk = null === (Ik = (kk => Qk.roles.find((Fk => Fk.role === kk)))(kk)) || void 0 === Ik ? void 0 : Ik.label) && void 0 !== Fk ? Fk : kk
-      }, fk = kk => {
-        const Fk = Wk[kk];
-        return void 0 === Fk ? void 0 : Hk(Fk)
-      }, Bk = "here" === lk.section || "away" === lk.section ? lk.player : null, dk = "here" === lk.section ? lk.player.id : null, {
-        playerSocialPreview: Yk,
-        isFriend: Ak
-      } = null === dk ? {
-        playerSocialPreview: (0, Ek.j)(yk, null),
+      }(wm, null !== Qm.gamemodes), Sm = pm.statusOf(nm), Gm = pm.isPending(nm), Xm = Rm(), ym = Date.now(), Cm = mm => {
+        var Tm, fm;
+        return null !== (Tm = null === (fm = (mm => Qm.roles.find((Tm => Tm.role === mm)))(mm)) || void 0 === fm ? void 0 : fm.label) && void 0 !== Tm ? Tm : mm
+      }, lm = mm => {
+        const Tm = sm[mm];
+        return void 0 === Tm ? void 0 : qm(Tm)
+      }, Mm = "here" === wm.section || "away" === wm.section ? wm.player : null, um = "here" === wm.section ? wm.player.id : null, {
+        playerSocialPreview: Bm,
+        isFriend: Lm
+      } = null === um ? {
+        playerSocialPreview: (0, km.h)(xm, null),
         isFriend: !1
-      } : (0, vk.e)(dk, yk), gk = function() {
-        tk.send(...arguments)
-      }, mk = (kk, Fk) => {
-        bk.hold("role", kk, tk.send({
+      } : (0, Zm.d)(um, xm), tm = function() {
+        pm.send(...arguments)
+      }, Um = (mm, Tm) => {
+        Xm.hold("role", mm, pm.send({
           type: "setRole",
-          name: yk,
-          role: kk
-        }, sk, Fk))
+          name: xm,
+          role: mm
+        }, nm, Tm))
       };
-      let hk = null;
-      if ("ban" === (null === xk || void 0 === xk ? void 0 : xk.kind)) hk = Hk("lobbyManageEntry:banConfirm", {
-        playerName: yk
+      let dm = null;
+      if ("ban" === (null === Vm || void 0 === Vm ? void 0 : Vm.kind)) dm = qm("lobbyManageEntry:banConfirm", {
+        playerName: xm
       });
-      else if ("role" === (null === xk || void 0 === xk ? void 0 : xk.kind)) {
-        var rk;
-        hk = `${Hk("lobbyManage:roleConfirm",{playerName:yk,role:Nk(xk.role)})} ${null!==(rk=fk(xk.role))&&void 0!==rk?rk:""}`
-      } else if (nk) hk = (0, Rk.jsx)(Uk, {
-        status: nk
+      else if ("role" === (null === Vm || void 0 === Vm ? void 0 : Vm.kind)) {
+        var gm;
+        dm = `${qm("lobbyManage:roleConfirm",{playerName:xm,role:Cm(Vm.role)})} ${null!==(gm=lm(Vm.role))&&void 0!==gm?gm:""}`
+      } else if (Sm) dm = (0, Pm.jsx)(Hm, {
+        status: Sm
       });
-      else if (qk) hk = Hk("lobbyManage:you");
-      else if ("here" === lk.section) "none" === lk.player.role && Ck - lk.player.at < 6e5 && (hk = pk(Hk, Jk.code, "lobbyManage:joinedAgo", lk.player.at, Ck));
-      else if ("away" === lk.section) {
-        if (lk.player.at > 0) {
-          const kk = "kicked" === lk.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
-          hk = pk(Hk, Jk.code, kk, lk.player.at, Ck)
+      else if (im) dm = qm("lobbyManage:you");
+      else if ("here" === wm.section) "none" === wm.player.role && ym - wm.player.at < 6e5 && (dm = Nm(qm, jm.code, "lobbyManage:joinedAgo", wm.player.at, ym));
+      else if ("away" === wm.section) {
+        if (wm.player.at > 0) {
+          const mm = "kicked" === wm.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
+          dm = Nm(qm, jm.code, mm, wm.player.at, ym)
         }
-      } else "banned" === lk.section ? null !== lk.bannedAt && (hk = pk(Hk, Jk.code, "lobbyManage:bannedAgo", lk.bannedAt, Ck)) : "banned" === ak && (hk = Hk("lobbyManageEntry:unbanned"));
-      return (0, Rk.jsx)("div", {
+      } else "banned" === wm.section ? null !== wm.bannedAt && (dm = Nm(qm, jm.code, "lobbyManage:bannedAgo", wm.bannedAt, ym)) : "banned" === Dm && (dm = qm("lobbyManageEntry:unbanned"));
+      return (0, Pm.jsx)("div", {
         className: "LobbyManagePlayerRow",
-        "data-lobby-manage-row": yk,
-        children: (0, Rk.jsxs)(Sk.e, {
-          playerSocialPreview: Yk,
-          isFriend: Ak,
-          status: hk,
-          opensProfileCard: !qk && (0, vk.i)(!0, yk, Zk),
-          zIndex: wk,
-          children: [null !== xk && (0, Rk.jsxs)("div", {
+        "data-lobby-manage-row": xm,
+        children: (0, Pm.jsxs)(zm.c, {
+          playerSocialPreview: Bm,
+          isFriend: Lm,
+          status: dm,
+          opensProfileCard: !im && (0, Zm.f)(!0, xm, Em),
+          zIndex: Ym,
+          children: [null !== Vm && (0, Pm.jsxs)("div", {
             className: "LobbyManageButtons",
-            children: ["ban" === xk.kind && (0, Rk.jsxs)(Kk.G, {
+            children: ["ban" === Vm.kind && (0, Pm.jsxs)(Km.O, {
               className: "LobbyManageIconButton SmallTextLight",
               analyticsClick: {
                 id: "lobby_manage.ban",
                 value: "row"
               },
               onClick: () => {
-                Pk(null), gk({
+                Im(null), tm({
                   type: "ban",
-                  name: yk
-                }, sk)
+                  name: xm
+                }, nm)
               },
-              children: [(0, Rk.jsx)(ek.e, {
+              children: [(0, Pm.jsx)(Om.c, {
                 name: "gavel"
-              }), (0, Rk.jsx)("span", {
+              }), (0, Pm.jsx)("span", {
                 className: "LobbyManageButtonLabel",
-                children: Hk("lobbyManageEntry:ban")
+                children: qm("lobbyManageEntry:ban")
               })]
-            }), "role" === xk.kind && (0, Rk.jsx)(Kk.d, {
+            }), "role" === Vm.kind && (0, Pm.jsx)(Km.e, {
               className: "LobbyManageIconButton SmallTextLight",
               analyticsClick: {
                 id: "lobby_manage.set_role",
-                value: xk.role
+                value: Vm.role
               },
               onClick: () => {
-                Pk(null), mk(xk.role)
+                Im(null), Um(Vm.role)
               },
-              children: Hk("lobbyManage:makeRole", {
-                role: Nk(xk.role)
+              children: qm("lobbyManage:makeRole", {
+                role: Cm(Vm.role)
               })
-            }), (0, Rk.jsx)(Kk.g, {
+            }), (0, Pm.jsx)(Km.g, {
               className: "LobbyManageIconButton SmallTextLight",
               onClick: () => {
-                Pk(null)
+                Im(null)
               },
-              children: Hk("general:cancel")
+              children: qm("general:cancel")
             })]
-          }), null === xk && (0, Rk.jsxs)(Rk.Fragment, {
-            children: [(0, Rk.jsxs)("div", {
+          }), null === Vm && (0, Pm.jsxs)(Pm.Fragment, {
+            children: [(0, Pm.jsxs)("div", {
               className: "LobbyManageChoices",
-              children: [Vk.gamemode && null !== Bk && (0, Rk.jsx)(Ok.e, {
-                options: (null !== (Fk = Qk.gamemodes) && void 0 !== Fk ? Fk : []).map((kk => ({
-                  value: kk.value,
-                  label: Gk(Hk, kk.label, Zk)
+              children: [Jm.gamemode && null !== Mm && (0, Pm.jsx)(bm.d, {
+                options: (null !== (Tm = Qm.gamemodes) && void 0 !== Tm ? Tm : []).map((mm => ({
+                  value: mm.value,
+                  label: em(qm, mm.label, Em)
                 }))),
-                value: null !== (Ik = bk.get("gamemode")) && void 0 !== Ik ? Ik : Bk.gamemode,
-                disabled: uk,
-                onChange: kk => {
-                  (0, Tk.reportAnalyticsClick)({
+                value: null !== (fm = Xm.get("gamemode")) && void 0 !== fm ? fm : Mm.gamemode,
+                disabled: Gm,
+                onChange: mm => {
+                  (0, Am.reportAnalyticsClick)({
                     id: "lobby_manage.set_gamemode",
-                    value: kk.value
-                  }), bk.hold("gamemode", kk.value, tk.send({
+                    value: mm.value
+                  }), Xm.hold("gamemode", mm.value, pm.send({
                     type: "setGamemode",
-                    name: yk,
-                    gamemode: kk.value
-                  }, sk))
+                    name: xm,
+                    gamemode: mm.value
+                  }, nm))
                 }
-              }), Vk.roles.length > 0 && null !== Bk && (0, Rk.jsx)(Ok.e, {
-                options: [...Qk.roles].reverse().filter((kk => Vk.roles.includes(kk.role))).map((kk => ({
-                  value: kk.role,
-                  label: kk.label
+              }), Jm.roles.length > 0 && null !== Mm && (0, Pm.jsx)(bm.d, {
+                options: [...Qm.roles].reverse().filter((mm => Jm.roles.includes(mm.role))).map((mm => ({
+                  value: mm.role,
+                  label: mm.label
                 }))),
-                value: null !== (ik = bk.get("role")) && void 0 !== ik ? ik : Bk.role,
-                disabled: uk,
-                onChange: kk => {
-                  var Fk;
-                  (Fk = kk.value) !== (null === Bk || void 0 === Bk ? void 0 : Bk.role) && (ck.includes(Fk) ? Pk({
+                value: null !== (am = Xm.get("role")) && void 0 !== am ? am : Mm.role,
+                disabled: Gm,
+                onChange: mm => {
+                  var Tm;
+                  (Tm = mm.value) !== (null === Mm || void 0 === Mm ? void 0 : Mm.role) && (rm.includes(Tm) ? Im({
                     kind: "role",
-                    role: Fk
-                  }) : ((0, Tk.reportAnalyticsClick)({
+                    role: Tm
+                  }) : ((0, Am.reportAnalyticsClick)({
                     id: "lobby_manage.set_role",
-                    value: Fk
-                  }), mk(Fk, fk(Fk))))
+                    value: Tm
+                  }), Um(Tm, lm(Tm))))
                 }
-              }), null !== Vk.fixedRole && (0, Rk.jsx)("div", {
+              }), null !== Jm.fixedRole && (0, Pm.jsx)("div", {
                 className: "LobbyManageChoiceFixed",
-                children: Nk(Vk.fixedRole)
+                children: Cm(Jm.fixedRole)
               })]
-            }), (0, Rk.jsxs)("div", {
+            }), (0, Pm.jsxs)("div", {
               className: "LobbyManageButtons",
-              children: [Vk.kick && (0, Rk.jsxs)(Kk.g, {
+              children: [Jm.kick && (0, Pm.jsxs)(Km.g, {
                 className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${Hk("lobbyManageEntry:kick")} ${yk}`,
-                disabled: uk,
+                ariaLabel: `${qm("lobbyManageEntry:kick")} ${xm}`,
+                disabled: Gm,
                 analyticsClick: {
                   id: "lobby_manage.kick",
                   value: "row"
                 },
                 onClick: () => {
-                  gk({
+                  tm({
                     type: "kick",
-                    name: yk
-                  }, sk)
+                    name: xm
+                  }, nm)
                 },
-                children: [(0, Rk.jsx)(ek.e, {
+                children: [(0, Pm.jsx)(Om.c, {
                   name: "person-falling-burst"
-                }), (0, Rk.jsx)("span", {
+                }), (0, Pm.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: Hk("lobbyManageEntry:kick")
+                  children: qm("lobbyManageEntry:kick")
                 })]
-              }), Vk.ban && (0, Rk.jsxs)(Kk.J, {
+              }), Jm.ban && (0, Pm.jsxs)(Km.P, {
                 className: "LobbyManageOutlineButton SmallTextLight",
-                ariaLabel: `${Hk("lobbyManageEntry:ban")} ${yk}`,
-                disabled: uk,
+                ariaLabel: `${qm("lobbyManageEntry:ban")} ${xm}`,
+                disabled: Gm,
                 padDestructive: !0,
                 onClick: () => {
-                  Pk({
+                  Im({
                     kind: "ban"
                   })
                 },
-                children: [(0, Rk.jsx)(ek.e, {
+                children: [(0, Pm.jsx)(Om.c, {
                   name: "gavel"
-                }), (0, Rk.jsx)("span", {
+                }), (0, Pm.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: Hk("lobbyManageEntry:ban")
+                  children: qm("lobbyManageEntry:ban")
                 })]
-              }), Vk.unban && (0, Rk.jsxs)(Kk.g, {
+              }), Jm.unban && (0, Pm.jsxs)(Km.g, {
                 className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${Hk("lobbyManageEntry:unban")} ${yk}`,
-                disabled: uk,
+                ariaLabel: `${qm("lobbyManageEntry:unban")} ${xm}`,
+                disabled: Gm,
                 analyticsClick: {
                   id: "lobby_manage.unban"
                 },
                 onClick: () => {
-                  gk({
+                  tm({
                     type: "unban",
-                    name: yk
-                  }, sk)
+                    name: xm
+                  }, nm)
                 },
-                children: [(0, Rk.jsx)(ek.e, {
+                children: [(0, Pm.jsx)(Om.c, {
                   name: "user-unlock"
-                }), (0, Rk.jsx)("span", {
+                }), (0, Pm.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: Hk("lobbyManageEntry:unban")
+                  children: qm("lobbyManageEntry:unban")
                 })]
               })]
             })]
@@ -441,783 +441,783 @@ export const modules = {
       })
     }
 
-    function Bk(kk) {
-      var Fk, Ik, Tk, ik;
+    function Mm(mm) {
+      var Tm, fm, Am, am;
       let {
-        manage: yk,
-        focusRequest: lk,
-        onFocused: ak
-      } = kk;
+        manage: xm,
+        focusRequest: wm,
+        onFocused: Dm
+      } = mm;
       const {
-        t: qk
-      } = (0, jk.y)(), Lk = (0, Pk.k)("players"), tk = (0, Pk.k)("hiddenPlayerNames"), Zk = (0, Xk.useRef)(null), {
-        state: wk
-      } = yk, Jk = null === Lk.localId ? null : null !== (Fk = null === (Ik = Lk.byId[Lk.localId]) || void 0 === Ik ? void 0 : Ik.name) && void 0 !== Fk ? Fk : null, [xk] = (0, Xk.useState)((() => sk(wk, Jk))), Qk = function(kk, Fk, Ik) {
-        const Xk = new Set([...kk.here, ...kk.away, ...kk.banned]),
-          Tk = sk(Fk, Ik),
-          ik = Fk => {
-            const Ik = Tk[Fk].filter((kk => !Xk.has(kk)));
-            for (const kk of Ik) Xk.add(kk);
-            return [...kk[Fk], ...Ik]
+        t: im
+      } = (0, om.A)(), Rm = (0, Im.k)("players"), pm = (0, Im.k)("hiddenPlayerNames"), Em = (0, hm.useRef)(null), {
+        state: Ym
+      } = xm, jm = null === Rm.localId ? null : null !== (Tm = null === (fm = Rm.byId[Rm.localId]) || void 0 === fm ? void 0 : fm.name) && void 0 !== Tm ? Tm : null, [Vm] = (0, hm.useState)((() => nm(Ym, jm))), Qm = function(mm, Tm, fm) {
+        const hm = new Set([...mm.here, ...mm.away, ...mm.banned]),
+          Am = nm(Tm, fm),
+          am = Tm => {
+            const fm = Am[Tm].filter((mm => !hm.has(mm)));
+            for (const mm of fm) hm.add(mm);
+            return [...mm[Tm], ...fm]
           };
         return {
-          here: ik("here"),
-          away: ik("away"),
-          banned: ik("banned")
+          here: am("here"),
+          away: am("away"),
+          banned: am("banned")
         }
-      }(xk, wk, Jk), [zk, Sk] = (0, Xk.useState)(!1), vk = function(kk, Fk) {
-        return kk.here.filter((kk => kk.name !== Fk && "none" === kk.role && kk.can.kick)).length
-      }(wk, Jk), Ek = yk.statusOf("kickAll");
-      (0, Xk.useEffect)((() => {
-        var kk, Fk;
-        if (null === lk) return;
-        const Ik = null === (kk = Zk.current) || void 0 === kk ? void 0 : kk.querySelector(`[data-lobby-manage-row="${CSS.escape(lk.name)}"]`);
-        null === Ik || void 0 === Ik || Ik.scrollIntoView({
+      }(Vm, Ym, jm), [cm, zm] = (0, hm.useState)(!1), Zm = function(mm, Tm) {
+        return mm.here.filter((mm => mm.name !== Tm && "none" === mm.role && mm.can.kick)).length
+      }(Ym, jm), km = xm.statusOf("kickAll");
+      (0, hm.useEffect)((() => {
+        var mm, Tm;
+        if (null === wm) return;
+        const fm = null === (mm = Em.current) || void 0 === mm ? void 0 : mm.querySelector(`[data-lobby-manage-row="${CSS.escape(wm.name)}"]`);
+        null === fm || void 0 === fm || fm.scrollIntoView({
           block: "center"
-        }), null === Ik || void 0 === Ik || null === (Fk = Ik.querySelector(".ProfilePreview")) || void 0 === Fk || Fk.focus({
+        }), null === fm || void 0 === fm || null === (Tm = fm.querySelector(".ProfilePreview")) || void 0 === Tm || Tm.focus({
           preventScroll: !0
-        }), ak(lk.seq)
-      }), [null === lk || void 0 === lk ? void 0 : lk.seq]);
-      const Ok = kk => (Fk, Ik) => (0, Rk.jsx)(fk, {
-        name: Fk,
-        place: Vk(wk, Fk),
-        openedIn: kk,
-        isYou: Fk === Jk,
-        manage: yk,
-        hiddenNames: tk,
-        zIndex: Ik
-      }, Fk);
-      return (0, Rk.jsxs)("div", {
-        ref: Zk,
+        }), Dm(wm.seq)
+      }), [null === wm || void 0 === wm ? void 0 : wm.seq]);
+      const bm = mm => (Tm, fm) => (0, Pm.jsx)(lm, {
+        name: Tm,
+        place: Jm(Ym, Tm),
+        openedIn: mm,
+        isYou: Tm === jm,
+        manage: xm,
+        hiddenNames: pm,
+        zIndex: fm
+      }, Tm);
+      return (0, Pm.jsxs)("div", {
+        ref: Em,
         className: "LobbyManagePage",
-        children: [Qk.here.length > 0 && (0, Rk.jsxs)("div", {
+        children: [Qm.here.length > 0 && (0, Pm.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, Rk.jsxs)("div", {
+          children: [(0, Pm.jsxs)("div", {
             className: "LobbyManageBoxHeading",
-            children: [(0, Rk.jsx)(Hk.b, {
-              label: qk("lobbyManage:here"),
-              meta: wk.here.length
-            }), vk >= 2 && !zk && (0, Rk.jsxs)(Kk.J, {
+            children: [(0, Pm.jsx)(qm.e, {
+              label: im("lobbyManage:here"),
+              meta: Ym.here.length
+            }), Zm >= 2 && !cm && (0, Pm.jsxs)(Km.P, {
               className: "LobbyManageTitleAction SmallTextLight",
               padDestructive: !0,
-              disabled: yk.isPending("kickAll"),
+              disabled: xm.isPending("kickAll"),
               onClick: () => {
-                Sk(!0)
+                zm(!0)
               },
-              children: [(0, Rk.jsx)(ek.e, {
+              children: [(0, Pm.jsx)(Om.c, {
                 name: "person-falling-burst"
-              }), " ", qk("lobbyManage:kickAll")]
+              }), " ", im("lobbyManage:kickAll")]
             })]
-          }), zk && vk >= 2 && (0, Rk.jsxs)("div", {
+          }), cm && Zm >= 2 && (0, Pm.jsxs)("div", {
             className: "LobbyManageConfirm",
-            children: [(0, Rk.jsx)("span", {
+            children: [(0, Pm.jsx)("span", {
               className: "LobbyManageConfirmText",
-              children: qk("lobbyManage:kickAllConfirm", {
-                count: vk
+              children: im("lobbyManage:kickAllConfirm", {
+                count: Zm
               })
-            }), (0, Rk.jsxs)("div", {
+            }), (0, Pm.jsxs)("div", {
               className: "LobbyManageButtons",
-              children: [(0, Rk.jsx)(Kk.G, {
+              children: [(0, Pm.jsx)(Km.O, {
                 className: "LobbyManageIconButton SmallTextLight",
                 analyticsClick: {
                   id: "lobby_manage.kick_all"
                 },
                 onClick: () => {
-                  Sk(!1), yk.send({
+                  zm(!1), xm.send({
                     type: "kickAll"
                   }, "kickAll")
                 },
-                children: qk("lobbyManage:kickAll")
-              }), (0, Rk.jsx)(Kk.g, {
+                children: im("lobbyManage:kickAll")
+              }), (0, Pm.jsx)(Km.g, {
                 className: "LobbyManageIconButton SmallTextLight",
                 onClick: () => {
-                  Sk(!1)
+                  zm(!1)
                 },
-                children: qk("general:cancel")
+                children: im("general:cancel")
               })]
             })]
-          }), Ek && (0, Rk.jsx)("div", {
+          }), km && (0, Pm.jsx)("div", {
             className: "LobbyManageBoxStatus",
-            children: (0, Rk.jsx)(Uk, {
-              status: Ek
+            children: (0, Pm.jsx)(Hm, {
+              status: km
             })
-          }), (0, Rk.jsx)(Ck, {
-            names: Qk.here,
-            cap: Qk.here.length,
+          }), (0, Pm.jsx)(ym, {
+            names: Qm.here,
+            cap: Qm.here.length,
             filterFrom: 20,
             moreLabel: "",
-            renderRow: Ok("here")
+            renderRow: bm("here")
           })]
-        }), Qk.away.length > 0 && (0, Rk.jsxs)("div", {
+        }), Qm.away.length > 0 && (0, Pm.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, Rk.jsx)(Hk.b, {
-            label: qk("lobbyManage:notHere"),
-            meta: Qk.away.length
-          }), (0, Rk.jsx)(Ck, {
-            names: Qk.away,
+          children: [(0, Pm.jsx)(qm.e, {
+            label: im("lobbyManage:notHere"),
+            meta: Qm.away.length
+          }), (0, Pm.jsx)(ym, {
+            names: Qm.away,
             cap: 5,
             filterFrom: null,
-            moreLabel: qk("lobbyManage:allCount", {
-              count: Qk.away.length
+            moreLabel: im("lobbyManage:allCount", {
+              count: Qm.away.length
             }),
-            reveal: null !== (Tk = null === lk || void 0 === lk ? void 0 : lk.name) && void 0 !== Tk ? Tk : null,
-            renderRow: Ok("away")
+            reveal: null !== (Am = null === wm || void 0 === wm ? void 0 : wm.name) && void 0 !== Am ? Am : null,
+            renderRow: bm("away")
           })]
-        }), Qk.banned.length > 0 && (0, Rk.jsxs)("div", {
+        }), Qm.banned.length > 0 && (0, Pm.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, Rk.jsx)(Hk.b, {
-            label: qk("lobbyManage:banned"),
-            meta: Qk.banned.length
-          }), (0, Rk.jsx)(Ck, {
-            names: Qk.banned,
+          children: [(0, Pm.jsx)(qm.e, {
+            label: im("lobbyManage:banned"),
+            meta: Qm.banned.length
+          }), (0, Pm.jsx)(ym, {
+            names: Qm.banned,
             cap: 5,
             filterFrom: 20,
-            moreLabel: qk("lobbyManage:allCount", {
-              count: Qk.banned.length
+            moreLabel: im("lobbyManage:allCount", {
+              count: Qm.banned.length
             }),
-            reveal: null !== (ik = null === lk || void 0 === lk ? void 0 : lk.name) && void 0 !== ik ? ik : null,
-            renderRow: Ok("banned")
+            reveal: null !== (am = null === wm || void 0 === wm ? void 0 : wm.name) && void 0 !== am ? am : null,
+            renderRow: bm("banned")
           })]
         })]
       })
     }
-    var dk = Ik(4612),
-      Yk = Ik(1585),
-      Ak = Ik(36707),
-      gk = Ik(36721),
-      mk = Ik(36712),
-      hk = Ik(36710),
-      rk = Ik(36750),
-      Dk = Ik(36733),
-      Mk = Ik(36742);
+    var um = fm(4564),
+      Bm = fm(1643),
+      Lm = fm(36788),
+      tm = fm(36810),
+      Um = fm(36801),
+      dm = fm(36793),
+      gm = fm(36831),
+      Wm = fm(36818),
+      Fm = fm(36823);
 
-    function kF(kk) {
-      const Fk = new Set;
-      for (const Ik of kk) Fk.add(Ik.toLowerCase());
-      return Fk
+    function mT(mm) {
+      const Tm = new Set;
+      for (const fm of mm) Tm.add(fm.toLowerCase());
+      return Tm
     }
 
-    function FF(kk) {
-      var Fk, Ik;
+    function TT(mm) {
+      var Tm, fm;
       let {
-        state: Tk,
-        lobbyName: ik,
-        listed: yk,
-        isListed: lk,
-        VJ: ak,
-        mJ: qk,
-        statusOf: Lk
-      } = kk;
+        state: Am,
+        lobbyName: am,
+        listed: xm,
+        isListed: wm,
+        HV: Dm,
+        pI: im,
+        statusOf: Rm
+      } = mm;
       const {
-        t: tk,
-        selectedLanguage: Zk
-      } = (0, jk.y)(), ek = (0, Yk.j)(), wk = (0, Pk.k)("players"), Jk = null === wk.localId ? null : null !== (Fk = null === (Ik = wk.byId[wk.localId]) || void 0 === Ik ? void 0 : Ik.name) && void 0 !== Fk ? Fk : null, xk = (0, Xk.useMemo)((() => (0, hk.i)(ek.friends, ik, Tk.here.map((kk => kk.name)))), [ek.friends, ik, Tk.here]), Kk = new Map(xk.map((kk => [kk.friend.name.toLowerCase(), kk]))), Qk = function(kk) {
+        t: pm,
+        selectedLanguage: Em
+      } = (0, om.A)(), Om = (0, Bm.i)(), Ym = (0, Im.k)("players"), jm = null === Ym.localId ? null : null !== (Tm = null === (fm = Ym.byId[Ym.localId]) || void 0 === fm ? void 0 : fm.name) && void 0 !== Tm ? Tm : null, Vm = (0, hm.useMemo)((() => (0, dm.f)(Om.friends, am, Am.here.map((mm => mm.name)))), [Om.friends, am, Am.here]), Km = new Map(Vm.map((mm => [mm.friend.name.toLowerCase(), mm]))), Qm = function(mm) {
         let {
-          refused: Fk,
-          listed: Ik,
-          here: Xk,
-          friends: Tk,
-          excluded: ik
-        } = kk;
-        const yk = kF(ik),
-          lk = kk => kk.filter((kk => {
-            const Fk = kk.toLowerCase();
-            return !yk.has(Fk) && (yk.add(Fk), !0)
+          refused: Tm,
+          listed: fm,
+          here: hm,
+          friends: Am,
+          excluded: am
+        } = mm;
+        const xm = mT(am),
+          wm = mm => mm.filter((mm => {
+            const Tm = mm.toLowerCase();
+            return !xm.has(Tm) && (xm.add(Tm), !0)
           }));
         return {
           added: [],
-          refused: lk(Fk),
-          listed: lk(Ik),
-          suggested: lk([...Xk, ...Tk])
+          refused: wm(Tm),
+          listed: wm(fm),
+          suggested: wm([...hm, ...Am])
         }
       }({
-        refused: Tk.refused.map((kk => kk.name)),
-        listed: yk,
-        here: Tk.here.map((kk => kk.name)),
-        friends: xk.flatMap((kk => "here" === kk.place ? [] : [kk.friend.name])),
-        excluded: [...null === Jk ? [] : [Jk], ...[...Tk.here, ...Tk.away].flatMap((kk => "none" === kk.role || (0, hk.m)(yk, kk.name) ? [] : [kk.name]))]
-      }), [sk] = (0, Xk.useState)(Qk), [Vk, zk] = (0, Xk.useState)([]), Sk = function(kk, Fk, Ik) {
-        const Xk = kF(Ik),
-          Tk = kF([...Ik, ...kk.refused, ...kk.listed, ...kk.suggested]),
-          ik = Ik => [...kk[Ik].filter((kk => !Xk.has(kk.toLowerCase()))), ...Fk[Ik].filter((kk => {
-            const Fk = kk.toLowerCase();
-            return !Tk.has(Fk) && (Tk.add(Fk), !0)
+        refused: Am.refused.map((mm => mm.name)),
+        listed: xm,
+        here: Am.here.map((mm => mm.name)),
+        friends: Vm.flatMap((mm => "here" === mm.place ? [] : [mm.friend.name])),
+        excluded: [...null === jm ? [] : [jm], ...[...Am.here, ...Am.away].flatMap((mm => "none" === mm.role || (0, dm.g)(xm, mm.name) ? [] : [mm.name]))]
+      }), [nm] = (0, hm.useState)(Qm), [Jm, cm] = (0, hm.useState)([]), zm = function(mm, Tm, fm) {
+        const hm = mT(fm),
+          Am = mT([...fm, ...mm.refused, ...mm.listed, ...mm.suggested]),
+          am = fm => [...mm[fm].filter((mm => !hm.has(mm.toLowerCase()))), ...Tm[fm].filter((mm => {
+            const Tm = mm.toLowerCase();
+            return !Am.has(Tm) && (Am.add(Tm), !0)
           }))];
         return {
-          added: [...Ik],
-          refused: ik("refused"),
-          listed: ik("listed"),
-          suggested: ik("suggested")
+          added: [...fm],
+          refused: am("refused"),
+          listed: am("listed"),
+          suggested: am("suggested")
         }
-      }(sk, Qk, Vk), Ok = (kk, Fk) => {
-        var Ik, Xk;
-        const ik = kk.toLowerCase(),
-          yk = Kk.get(ik),
-          qk = Tk.here.find((kk => kk.name.toLowerCase() === ik)),
-          jk = Tk.refused.find((kk => kk.name.toLowerCase() === ik)),
-          ek = null !== (Ik = null === Lk || void 0 === Lk ? void 0 : Lk(kk)) && void 0 !== Ik ? Ik : null;
-        let wk = null;
-        ek ? wk = (0, Rk.jsx)(Uk, {
-          status: ek
-        }) : jk ? wk = pk(tk, Zk.code, "lobbyManage:triedToJoinAgo", jk.at, Date.now()) : yk && qk ? wk = tk("lobbyManage:friendHere") : yk ? wk = "online" === yk.place ? tk("lobbyManage:friendOnline") : tk("lobbyManage:friend") : qk && (wk = tk("lobbyManage:hereStatus"));
-        let Hk = null !== (Xk = null === yk || void 0 === yk ? void 0 : yk.friend) && void 0 !== Xk ? Xk : (0, Ek.j)(kk, null);
-        return !yk && null !== qk && void 0 !== qk && qk.id && (Hk = (0, vk.e)(qk.id, qk.name).playerSocialPreview), (0, Rk.jsx)(Dk.c, {
-          playerSocialPreview: Hk,
-          isFriend: void 0 !== yk,
+      }(nm, Qm, Jm), bm = (mm, Tm) => {
+        var fm, hm;
+        const am = mm.toLowerCase(),
+          xm = Km.get(am),
+          im = Am.here.find((mm => mm.name.toLowerCase() === am)),
+          om = Am.refused.find((mm => mm.name.toLowerCase() === am)),
+          Om = null !== (fm = null === Rm || void 0 === Rm ? void 0 : Rm(mm)) && void 0 !== fm ? fm : null;
+        let Ym = null;
+        Om ? Ym = (0, Pm.jsx)(Hm, {
+          status: Om
+        }) : om ? Ym = Nm(pm, Em.code, "lobbyManage:triedToJoinAgo", om.at, Date.now()) : xm && im ? Ym = pm("lobbyManage:friendHere") : xm ? Ym = "online" === xm.place ? pm("lobbyManage:friendOnline") : pm("lobbyManage:friend") : im && (Ym = pm("lobbyManage:hereStatus"));
+        let qm = null !== (hm = null === xm || void 0 === xm ? void 0 : xm.friend) && void 0 !== hm ? hm : (0, km.h)(mm, null);
+        return !xm && null !== im && void 0 !== im && im.id && (qm = (0, Zm.d)(im.id, im.name).playerSocialPreview), (0, Pm.jsx)(Wm.b, {
+          playerSocialPreview: qm,
+          isFriend: void 0 !== xm,
           hideFriendBadge: !0,
-          status: wk,
-          zIndex: Fk,
-          Dt: {
-            on: lk(kk),
-            onChange: Fk => {
-              ak(kk, Fk)
+          status: Ym,
+          zIndex: Tm,
+          DE: {
+            on: wm(mm),
+            onChange: Tm => {
+              Dm(mm, Tm)
             }
           }
-        }, ik)
-      }, nk = [...Sk.added, ...Sk.refused];
-      return (0, Rk.jsxs)("div", {
+        }, am)
+      }, Sm = [...zm.added, ...zm.refused];
+      return (0, Pm.jsxs)("div", {
         className: "LobbyManageBox",
-        children: [(0, Rk.jsx)(Hk.b, {
-          label: tk("worldSocial:whitelist"),
-          meta: yk.length
-        }), (0, Rk.jsx)(Mk.b, {
-          label: tk("lobbyManage:add"),
+        children: [(0, Pm.jsx)(qm.e, {
+          label: pm("worldSocial:whitelist"),
+          meta: xm.length
+        }), (0, Pm.jsx)(Fm.c, {
+          label: pm("lobbyManage:add"),
           icon: "user-check",
-          placeholder: tk("socialBar:enterPlayerName"),
-          onSubmit: async kk => {
-            const Fk = await qk(kk);
-            return Fk.ok && zk((Fk => [kk, ...Fk])), Fk
+          placeholder: pm("socialBar:enterPlayerName"),
+          onSubmit: async mm => {
+            const Tm = await im(mm);
+            return Tm.ok && cm((Tm => [mm, ...Tm])), Tm
           }
-        }), nk.length > 0 && (0, Rk.jsx)("div", {
+        }), Sm.length > 0 && (0, Pm.jsx)("div", {
           className: "PlayerRows",
-          children: nk.map(((kk, Fk) => Ok(kk, nk.length - Fk)))
-        }), (0, Rk.jsx)(Ck, {
-          names: Sk.listed,
+          children: Sm.map(((mm, Tm) => bm(mm, Sm.length - Tm)))
+        }), (0, Pm.jsx)(ym, {
+          names: zm.listed,
           cap: 8,
           filterFrom: 8,
-          moreLabel: tk("lobbyManage:allOnWhitelist", {
-            count: Sk.listed.length
+          moreLabel: pm("lobbyManage:allOnWhitelist", {
+            count: zm.listed.length
           }),
-          renderRow: Ok
-        }), (0, Rk.jsx)(Ck, {
-          names: Sk.suggested,
+          renderRow: bm
+        }), (0, Pm.jsx)(ym, {
+          names: zm.suggested,
           cap: 8,
           filterFrom: null,
-          moreLabel: tk("lobbyManage:allCount", {
-            count: Sk.suggested.length
+          moreLabel: pm("lobbyManage:allCount", {
+            count: zm.suggested.length
           }),
-          renderRow: Ok
+          renderRow: bm
         })]
       })
     }
 
-    function IF(kk) {
+    function fT(mm) {
       let {
-        manage: Fk,
-        listing: Ik
-      } = kk;
+        manage: Tm,
+        listing: fm
+      } = mm;
       const {
-        t: Xk
-      } = (0, jk.y)(), ik = (kk, Ik) => ((0, Tk.reportAnalyticsClick)({
+        t: hm
+      } = (0, om.A)(), am = (mm, fm) => ((0, Am.reportAnalyticsClick)({
         id: "lobby_manage.set_listing",
-        value: kk
-      }), Fk.send({
+        value: mm
+      }), Tm.send({
         type: "setListing",
-        field: kk,
-        value: Ik
-      }, `listing:${kk}`)), yk = kk => {
-        const Ik = Fk.statusOf(`listing:${kk}`);
-        return Ik && !Ik.ok && (0, Rk.jsx)("div", {
+        field: mm,
+        value: fm
+      }, `listing:${mm}`)), xm = mm => {
+        const fm = Tm.statusOf(`listing:${mm}`);
+        return fm && !fm.ok && (0, Pm.jsx)("div", {
           className: "LobbyManageFieldError",
-          children: (0, Rk.jsx)(Uk, {
-            status: Ik
+          children: (0, Pm.jsx)(Hm, {
+            status: fm
           })
         })
       };
-      return (0, Rk.jsxs)("div", {
+      return (0, Pm.jsxs)("div", {
         className: "LobbyManageBox LobbyManageListing",
-        children: [(0, Rk.jsx)(Hk.b, {
-          label: Xk("lobbyManage:inWorldsList")
-        }), (0, Rk.jsxs)("div", {
+        children: [(0, Pm.jsx)(qm.e, {
+          label: hm("lobbyManage:inWorldsList")
+        }), (0, Pm.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, Rk.jsx)("div", {
+          children: [(0, Pm.jsx)("div", {
             className: "SliderText",
-            children: Xk("lobbyManage:description")
-          }), (0, Rk.jsx)(Nk, {
-            value: Ik.description,
-            ariaLabel: Xk("lobbyManage:description"),
+            children: hm("lobbyManage:description")
+          }), (0, Pm.jsx)(Cm, {
+            value: fm.description,
+            ariaLabel: hm("lobbyManage:description"),
             wide: !0,
-            onSave: kk => ik("description", kk)
+            onSave: mm => am("description", mm)
           })]
-        }), yk("description"), (0, Rk.jsxs)("div", {
+        }), xm("description"), (0, Pm.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, Rk.jsx)("div", {
+          children: [(0, Pm.jsx)("div", {
             className: "SliderText",
-            children: Xk("lobbyManage:emojis")
-          }), (0, Rk.jsx)(Nk, {
-            value: Ik.emojis,
-            ariaLabel: Xk("lobbyManage:emojis"),
-            onSave: kk => ik("emojis", kk)
+            children: hm("lobbyManage:emojis")
+          }), (0, Pm.jsx)(Cm, {
+            value: fm.emojis,
+            ariaLabel: hm("lobbyManage:emojis"),
+            onSave: mm => am("emojis", mm)
           })]
-        }), yk("emojis"), (0, Rk.jsxs)("div", {
+        }), xm("emojis"), (0, Pm.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, Rk.jsx)("div", {
+          children: [(0, Pm.jsx)("div", {
             className: "SliderText",
-            children: Xk("lobbyManage:colour")
-          }), (0, Rk.jsx)(XF, {
-            value: Ik.colour,
-            ariaLabel: Xk("lobbyManage:colour"),
-            onSave: kk => {
-              ik("colour", kk)
+            children: hm("lobbyManage:colour")
+          }), (0, Pm.jsx)(hT, {
+            value: fm.colour,
+            ariaLabel: hm("lobbyManage:colour"),
+            onSave: mm => {
+              am("colour", mm)
             }
           })]
-        }), yk("colour")]
+        }), xm("colour")]
       })
     }
 
-    function XF(kk) {
+    function hT(mm) {
       let {
-        value: Fk,
-        ariaLabel: Ik,
-        onSave: Tk
-      } = kk;
-      const ik = (0, Xk.useRef)(null),
-        yk = (0, Xk.useRef)({
-          value: Fk,
-          onSave: Tk
+        value: Tm,
+        ariaLabel: fm,
+        onSave: Am
+      } = mm;
+      const am = (0, hm.useRef)(null),
+        xm = (0, hm.useRef)({
+          value: Tm,
+          onSave: Am
         });
-      yk.current = {
-        value: Fk,
-        onSave: Tk
+      xm.current = {
+        value: Tm,
+        onSave: Am
       };
-      const lk = (0, Xk.useRef)(null),
-        ak = (0, Xk.useRef)(!1),
-        qk = kk => {
-          ak.current && kk.value !== yk.current.value && kk.value !== lk.current && (lk.current = kk.value, yk.current.onSave(kk.value))
+      const wm = (0, hm.useRef)(null),
+        Dm = (0, hm.useRef)(!1),
+        im = mm => {
+          Dm.current && mm.value !== xm.current.value && mm.value !== wm.current && (wm.current = mm.value, xm.current.onSave(mm.value))
         };
-      return (0, Xk.useEffect)((() => {
-        ik.current && document.activeElement !== ik.current && (ik.current.value = Fk)
-      }), [Fk]), (0, Xk.useEffect)((() => {
-        const kk = ik.current,
-          Fk = () => {
-            qk(kk)
+      return (0, hm.useEffect)((() => {
+        am.current && document.activeElement !== am.current && (am.current.value = Tm)
+      }), [Tm]), (0, hm.useEffect)((() => {
+        const mm = am.current,
+          Tm = () => {
+            im(mm)
           };
-        return kk.addEventListener("change", Fk), () => {
-          kk.removeEventListener("change", Fk), qk(kk)
+        return mm.addEventListener("change", Tm), () => {
+          mm.removeEventListener("change", Tm), im(mm)
         }
-      }), []), (0, Rk.jsx)("input", {
-        ref: ik,
+      }), []), (0, Pm.jsx)("input", {
+        ref: am,
         type: "color",
         className: "LobbyManageColour",
-        defaultValue: Fk,
-        "aria-label": Ik,
+        defaultValue: Tm,
+        "aria-label": fm,
         onInput: () => {
-          ak.current = !0
+          Dm.current = !0
         },
-        onBlur: kk => {
-          qk(kk.currentTarget)
+        onBlur: mm => {
+          im(mm.currentTarget)
         }
       })
     }
 
-    function TF(kk) {
+    function AT(mm) {
       let {
-        manage: Fk
-      } = kk;
+        manage: Tm
+      } = mm;
       const {
-        lobbyName: Ik,
-        shownLobbyName: Xk
-      } = (0, Pk.k)("connectedGame");
-      return Fk.state.you.canSetVisibility && null !== Ik ? (0, Rk.jsx)(yF, {
-        manage: Fk,
-        lobbyName: Ik,
-        worldCode: null !== Xk && void 0 !== Xk ? Xk : Ik
-      }, Ik) : (0, Rk.jsx)(lF, {
-        manage: Fk,
-        lobbyName: null !== Ik && void 0 !== Ik ? Ik : ""
+        lobbyName: fm,
+        shownLobbyName: hm
+      } = (0, Im.k)("connectedGame");
+      return Tm.state.you.canSetVisibility && null !== fm ? (0, Pm.jsx)(xT, {
+        manage: Tm,
+        lobbyName: fm,
+        worldCode: null !== hm && void 0 !== hm ? hm : fm
+      }, fm) : (0, Pm.jsx)(wT, {
+        manage: Tm,
+        lobbyName: null !== fm && void 0 !== fm ? fm : ""
       })
     }
 
-    function iF(kk) {
-      return kk.map((kk => kk.toLowerCase())).sort().join(",")
+    function aT(mm) {
+      return mm.map((mm => mm.toLowerCase())).sort().join(",")
     }
 
-    function yF(kk) {
-      var Fk;
+    function xT(mm) {
+      var Tm;
       let {
-        manage: Ik,
-        lobbyName: ik,
-        worldCode: yk
-      } = kk;
+        manage: fm,
+        lobbyName: am,
+        worldCode: xm
+      } = mm;
       const {
-        t: lk
-      } = (0, jk.y)(), {
-        settings: ak,
-        loading: qk,
-        change: Lk,
-        retry: tk,
-        refresh: Zk
-      } = (0, Ak.g)(ik), ek = (0, Yk.j)(), {
-        state: Jk
-      } = Ik, xk = (0, Xk.useRef)(ak);
-      xk.current = ak;
-      const Pk = iF(null !== (Fk = Jk.whitelist) && void 0 !== Fk ? Fk : []),
-        Qk = null !== Jk.whitelist;
-      (0, Xk.useEffect)((() => {
-        const kk = xk.current;
-        null !== kk && (kk.visibility !== Jk.visibility || Qk && iF(kk.whitelist) !== Pk) && Zk()
-      }), [Jk.visibility, Pk, Qk, Zk]);
-      const sk = async (kk, Fk) => {
-        let Ik = null;
-        return await Lk(kk, Fk, {
+        t: wm
+      } = (0, om.A)(), {
+        settings: Dm,
+        loading: im,
+        change: Rm,
+        retry: pm,
+        refresh: Em
+      } = (0, Lm.j)(am), Om = (0, Bm.i)(), {
+        state: jm
+      } = fm, Vm = (0, hm.useRef)(Dm);
+      Vm.current = Dm;
+      const Im = aT(null !== (Tm = jm.whitelist) && void 0 !== Tm ? Tm : []),
+        Qm = null !== jm.whitelist;
+      (0, hm.useEffect)((() => {
+        const mm = Vm.current;
+        null !== mm && (mm.visibility !== jm.visibility || Qm && aT(mm.whitelist) !== Im) && Em()
+      }), [jm.visibility, Im, Qm, Em]);
+      const nm = async (mm, Tm) => {
+        let fm = null;
+        return await Rm(mm, Tm, {
           quiet: !0,
-          onAnswer: kk => {
-            Ik = kk
+          onAnswer: mm => {
+            fm = mm
           }
-        }), Ik
-      }, Vk = (kk, Fk) => {
-        null !== Fk && "error" in Fk && Ik.showStatus(kk, {
+        }), fm
+      }, Jm = (mm, Tm) => {
+        null !== Tm && "error" in Tm && fm.showStatus(mm, {
           ok: !1,
-          text: [lk(Fk.error)]
+          text: [wm(Tm.error)]
         })
-      }, zk = async kk => {
-        if (null === ak || kk === ak.visibility) return;
-        (0, Tk.reportAnalyticsClick)({
+      }, cm = async mm => {
+        if (null === Dm || mm === Dm.visibility) return;
+        (0, Am.reportAnalyticsClick)({
           id: "lobby_manage.set_mode",
-          value: kk
+          value: mm
         });
-        const Fk = "whitelist" === kk ? (0, hk.f)((0, hk.i)(ek.friends, ik, Jk.here.map((kk => kk.name))), (0, rk.e)(ik), ak.whitelist) : [],
-          Ik = await sk({
-            setVisibility: kk
-          }, (Fk => ({
-            ...Fk,
-            visibility: kk
+        const Tm = "whitelist" === mm ? (0, dm.e)((0, dm.f)(Om.friends, am, jm.here.map((mm => mm.name))), (0, gm.c)(am), Dm.whitelist) : [],
+          fm = await nm({
+            setVisibility: mm
+          }, (Tm => ({
+            ...Tm,
+            visibility: mm
           })));
-        Vk("mode", Ik), null === Ik || "error" in Ik || await (async kk => {
-          for (const Fk of (0, hk.q)(kk, dk.w))
-            if (!await Lk({
-                whitelistAdd: Fk
-              }, (kk => (0, hk.s)(kk, Fk, !0)))) return !1;
+        Jm("mode", fm), null === fm || "error" in fm || await (async mm => {
+          for (const Tm of (0, dm.k)(mm, um.z))
+            if (!await Rm({
+                whitelistAdd: Tm
+              }, (mm => (0, dm.p)(mm, Tm, !0)))) return !1;
           return !0
-        })(Fk)
-      }, Sk = (0, Xk.useMemo)((() => {
-        var kk;
-        if (null === ak) return [];
-        const Fk = null !== (kk = Jk.whitelist) && void 0 !== kk ? kk : [];
-        return [...Fk.filter((kk => (0, hk.m)(ak.whitelist, kk))), ...ak.whitelist.filter((kk => !(0, hk.m)(Fk, kk)))]
-      }), [ak, Jk.whitelist]), vk = Ik.statusOf("mode");
-      return (0, Rk.jsxs)("div", {
+        })(Tm)
+      }, zm = (0, hm.useMemo)((() => {
+        var mm;
+        if (null === Dm) return [];
+        const Tm = null !== (mm = jm.whitelist) && void 0 !== mm ? mm : [];
+        return [...Tm.filter((mm => (0, dm.g)(Dm.whitelist, mm))), ...Dm.whitelist.filter((mm => !(0, dm.g)(Tm, mm)))]
+      }), [Dm, jm.whitelist]), Zm = fm.statusOf("mode");
+      return (0, Pm.jsxs)("div", {
         className: "LobbyManagePage",
-        children: [(0, Rk.jsxs)("div", {
+        children: [(0, Pm.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, Rk.jsx)(Hk.b, {
-            label: lk("worldSocial:whoCanJoin")
-          }), null === ak && qk && (0, Rk.jsx)("div", {
+          children: [(0, Pm.jsx)(qm.e, {
+            label: wm("worldSocial:whoCanJoin")
+          }), null === Dm && im && (0, Pm.jsx)("div", {
             className: "LobbyManageLoading",
-            children: (0, Rk.jsx)(wk.c, {})
-          }), null === ak && !qk && (0, Rk.jsx)(Kk.g, {
+            children: (0, Pm.jsx)(Ym.c, {})
+          }), null === Dm && !im && (0, Pm.jsx)(Km.g, {
             className: "SmallTextLight",
-            onClick: tk,
-            children: lk("worldSocial:loadFailed")
-          }), null !== ak && (0, Rk.jsx)(gk.d, {
-            visibility: ak.visibility,
-            onPick: kk => {
-              zk(kk)
+            onClick: pm,
+            children: wm("worldSocial:loadFailed")
+          }), null !== Dm && (0, Pm.jsx)(tm.e, {
+            visibility: Dm.visibility,
+            onPick: mm => {
+              cm(mm)
             }
-          }), vk && (0, Rk.jsx)("div", {
+          }), Zm && (0, Pm.jsx)("div", {
             className: "LobbyManageFieldError",
-            children: (0, Rk.jsx)(Uk, {
-              status: vk
+            children: (0, Pm.jsx)(Hm, {
+              status: Zm
             })
-          }), null !== ak && "private" !== ak.visibility && (0, Rk.jsx)(mk.c, {
-            worldCode: yk,
+          }), null !== Dm && "private" !== Dm.visibility && (0, Pm.jsx)(Um.c, {
+            worldCode: xm,
             message: null
           })]
-        }), "whitelist" === (null === ak || void 0 === ak ? void 0 : ak.visibility) && (0, Rk.jsx)(FF, {
-          state: Jk,
-          lobbyName: ik,
-          listed: Sk,
-          isListed: kk => (0, hk.m)(ak.whitelist, kk),
-          VJ: (kk, Fk) => {
-            (0, Tk.reportAnalyticsClick)(Fk ? {
+        }), "whitelist" === (null === Dm || void 0 === Dm ? void 0 : Dm.visibility) && (0, Pm.jsx)(TT, {
+          state: jm,
+          lobbyName: am,
+          listed: zm,
+          isListed: mm => (0, dm.g)(Dm.whitelist, mm),
+          HV: (mm, Tm) => {
+            (0, Am.reportAnalyticsClick)(Tm ? {
               id: "lobby_manage.whitelist_add",
-              value: "Dt"
+              value: "DE"
             } : {
               id: "lobby_manage.whitelist_remove"
-            }), sk(Fk ? {
-              whitelistAdd: [kk]
+            }), nm(Tm ? {
+              whitelistAdd: [mm]
             } : {
-              whitelistRemove: kk
-            }, (Ik => (0, hk.s)(Ik, [kk], Fk))).then((Fk => {
-              Vk(`whitelist:${kk.toLowerCase()}`, Fk)
+              whitelistRemove: mm
+            }, (fm => (0, dm.p)(fm, [mm], Tm))).then((Tm => {
+              Jm(`whitelist:${mm.toLowerCase()}`, Tm)
             }))
           },
-          mJ: async kk => {
-            (0, Tk.reportAnalyticsClick)({
+          pI: async mm => {
+            (0, Am.reportAnalyticsClick)({
               id: "lobby_manage.whitelist_add",
               value: "field"
             });
-            const Fk = await sk({
-              whitelistAdd: [kk]
-            }, (Fk => (0, hk.s)(Fk, [kk], !0)));
-            return null === Fk ? {
+            const Tm = await nm({
+              whitelistAdd: [mm]
+            }, (Tm => (0, dm.p)(Tm, [mm], !0)));
+            return null === Tm ? {
               ok: !1,
-              error: lk("worldSocial:changeFailed")
-            } : "error" in Fk ? {
+              error: wm("worldSocial:changeFailed")
+            } : "error" in Tm ? {
               ok: !1,
-              error: lk(Fk.error)
-            } : (0, hk.m)(Fk.notFound, kk) ? {
+              error: wm(Tm.error)
+            } : (0, dm.g)(Tm.notFound, mm) ? {
               ok: !1,
-              error: lk("lobbyManage:noPlayerCalled", {
-                playerName: kk
+              error: wm("lobbyManage:noPlayerCalled", {
+                playerName: mm
               })
             } : {
               ok: !0
             }
           },
-          statusOf: kk => Ik.statusOf(`whitelist:${kk.toLowerCase()}`)
-        }), "public" === (null === ak || void 0 === ak ? void 0 : ak.visibility) && null !== Jk.listing && (0, Rk.jsx)(IF, {
-          manage: Ik,
-          listing: Jk.listing
+          statusOf: mm => fm.statusOf(`whitelist:${mm.toLowerCase()}`)
+        }), "public" === (null === Dm || void 0 === Dm ? void 0 : Dm.visibility) && null !== jm.listing && (0, Pm.jsx)(fT, {
+          manage: fm,
+          listing: jm.listing
         })]
       })
     }
 
-    function lF(kk) {
-      var Fk;
+    function wT(mm) {
+      var Tm;
       let {
-        manage: Ik,
-        lobbyName: Xk
-      } = kk;
+        manage: fm,
+        lobbyName: hm
+      } = mm;
       const {
-        t: ik
-      } = (0, jk.y)(), {
-        state: yk
-      } = Ik, lk = Lk(), ak = null !== (Fk = yk.whitelist) && void 0 !== Fk ? Fk : [];
-      return (0, Rk.jsxs)("div", {
+        t: am
+      } = (0, om.A)(), {
+        state: xm
+      } = fm, wm = Rm(), Dm = null !== (Tm = xm.whitelist) && void 0 !== Tm ? Tm : [];
+      return (0, Pm.jsxs)("div", {
         className: "LobbyManagePage",
-        children: [(0, Rk.jsxs)("div", {
+        children: [(0, Pm.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, Rk.jsx)(Hk.b, {
-            label: ik("worldSocial:whoCanJoin")
-          }), (0, Rk.jsx)("div", {
+          children: [(0, Pm.jsx)(qm.e, {
+            label: am("worldSocial:whoCanJoin")
+          }), (0, Pm.jsx)("div", {
             className: "LobbyManageModeText",
-            children: ik(`worldSocial:${yk.visibility}`)
+            children: am(`worldSocial:${xm.visibility}`)
           })]
-        }), "whitelist" === yk.visibility && yk.you.canEditWhitelist && (0, Rk.jsx)(FF, {
-          state: yk,
-          lobbyName: Xk,
-          listed: ak,
-          isListed: kk => {
-            var Fk;
-            return null !== (Fk = lk.get(kk.toLowerCase())) && void 0 !== Fk ? Fk : (0, hk.m)(ak, kk)
+        }), "whitelist" === xm.visibility && xm.you.canEditWhitelist && (0, Pm.jsx)(TT, {
+          state: xm,
+          lobbyName: hm,
+          listed: Dm,
+          isListed: mm => {
+            var Tm;
+            return null !== (Tm = wm.get(mm.toLowerCase())) && void 0 !== Tm ? Tm : (0, dm.g)(Dm, mm)
           },
-          VJ: (kk, Fk) => {
-            (0, Tk.reportAnalyticsClick)(Fk ? {
+          HV: (mm, Tm) => {
+            (0, Am.reportAnalyticsClick)(Tm ? {
               id: "lobby_manage.whitelist_add",
-              value: "Dt"
+              value: "DE"
             } : {
               id: "lobby_manage.whitelist_remove"
             });
-            const Xk = kk.toLowerCase();
-            lk.hold(Xk, Fk, Ik.send(Fk ? {
+            const hm = mm.toLowerCase();
+            wm.hold(hm, Tm, fm.send(Tm ? {
               type: "whitelistAdd",
-              names: [kk]
+              names: [mm]
             } : {
               type: "whitelistRemove",
-              name: kk
-            }, `whitelist:${Xk}`))
+              name: mm
+            }, `whitelist:${hm}`))
           },
-          mJ: async kk => {
-            (0, Tk.reportAnalyticsClick)({
+          pI: async mm => {
+            (0, Am.reportAnalyticsClick)({
               id: "lobby_manage.whitelist_add",
               value: "field"
             });
-            const Fk = await Ik.send({
+            const Tm = await fm.send({
               type: "whitelistAdd",
-              names: [kk]
+              names: [mm]
             }, "whitelist-field");
-            return Fk.ok ? {
+            return Tm.ok ? {
               ok: !0
             } : {
               ok: !1,
-              error: (0, Rk.jsx)(uk.c, {
-                text: Fk.message
+              error: (0, Pm.jsx)(Gm.b, {
+                text: Tm.message
               })
             }
           },
-          statusOf: kk => Ik.statusOf(`whitelist:${kk.toLowerCase()}`)
-        }), "public" === yk.visibility && null !== yk.listing && (0, Rk.jsx)(IF, {
-          manage: Ik,
-          listing: yk.listing
+          statusOf: mm => fm.statusOf(`whitelist:${mm.toLowerCase()}`)
+        }), "public" === xm.visibility && null !== xm.listing && (0, Pm.jsx)(fT, {
+          manage: fm,
+          listing: xm.listing
         })]
       })
     }
-    var aF = Ik(4983),
-      qF = Ik(1333);
-    const LF = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
-    const tF = (0, Xk.memo)((function(kk) {
-      var Fk;
+    var DT = fm(4954),
+      iT = fm(1362);
+    const RT = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
+    const pT = (0, hm.memo)((function(mm) {
+      var Tm;
       let {
-        rule: Ik,
-        value: Xk,
-        status: Tk,
-        pending: ik,
-        hiddenNames: yk,
-        xV: lk,
-        onAction: ak
-      } = kk;
+        rule: fm,
+        value: hm,
+        status: Am,
+        pending: am,
+        hiddenNames: xm,
+        GJ: wm,
+        onAction: Dm
+      } = mm;
       const {
-        t: qk
-      } = (0, jk.y)(), Lk = kk => lk(Ik, kk), tk = (kk, Fk) => {
-        ak(Ik, kk, Fk)
-      }, Zk = Gk(qk, Ik.label, yk), ek = Ik.info ? Gk(qk, Ik.info, yk) : void 0, wk = Ik.placeholder ? Gk(qk, Ik.placeholder, yk) : void 0, Hk = (null !== (Fk = Ik.options) && void 0 !== Fk ? Fk : []).map((kk => ({
-        value: kk.value,
-        label: Gk(qk, kk.label, yk)
-      }))), Jk = Math.max(0, ...Hk.map((kk => function(kk) {
-        let Fk = 0;
-        for (const Ik of kk) Fk += LF.test(Ik) ? 2 : 1;
-        return Fk
-      }(kk.label)))), xk = Tk && (0, Rk.jsx)("div", {
+        t: im
+      } = (0, om.A)(), Rm = mm => wm(fm, mm), pm = (mm, Tm) => {
+        Dm(fm, mm, Tm)
+      }, Em = em(im, fm.label, xm), Om = fm.info ? em(im, fm.info, xm) : void 0, Ym = fm.placeholder ? em(im, fm.placeholder, xm) : void 0, qm = (null !== (Tm = fm.options) && void 0 !== Tm ? Tm : []).map((mm => ({
+        value: mm.value,
+        label: em(im, mm.label, xm)
+      }))), jm = Math.max(0, ...qm.map((mm => function(mm) {
+        let Tm = 0;
+        for (const fm of mm) Tm += RT.test(fm) ? 2 : 1;
+        return Tm
+      }(mm.label)))), Vm = Am && (0, Pm.jsx)("div", {
         className: "LobbyManageRuleStatus",
-        children: (0, Rk.jsx)(Uk, {
-          status: Tk
+        children: (0, Pm.jsx)(Hm, {
+          status: Am
         })
-      }), Pk = (0, Rk.jsxs)("div", {
+      }), Im = (0, Pm.jsxs)("div", {
         className: "SliderText",
-        children: [Zk, void 0 !== ek && (0, Rk.jsx)(qF.c, {
+        children: [Em, void 0 !== Om && (0, Pm.jsx)(iT.e, {
           className: "SettingsTextInputCircleInfo",
-          hoverInfo: ek
+          hoverInfo: Om
         })]
       });
-      return "toggle" === Ik.kind ? (0, Rk.jsxs)(Rk.Fragment, {
-        children: [(0, Rk.jsx)(aF.e, {
-          label: Zk,
-          checked: !0 === Xk,
-          circleInfoText: ek,
-          disabled: ik,
-          onClick: Lk
-        }), xk]
-      }) : "choice" === Ik.kind && Hk.length <= 3 ? (0, Rk.jsxs)(Rk.Fragment, {
-        children: [(0, Rk.jsx)(aF.h, {
-          label: Zk,
-          options: Hk,
-          value: String(Xk),
-          circleInfoText: ek,
-          onChange: Lk
-        }), xk]
-      }) : (0, Rk.jsxs)("div", {
+      return "toggle" === fm.kind ? (0, Pm.jsxs)(Pm.Fragment, {
+        children: [(0, Pm.jsx)(DT.e, {
+          label: Em,
+          checked: !0 === hm,
+          circleInfoText: Om,
+          disabled: am,
+          onClick: Rm
+        }), Vm]
+      }) : "choice" === fm.kind && qm.length <= 3 ? (0, Pm.jsxs)(Pm.Fragment, {
+        children: [(0, Pm.jsx)(DT.i, {
+          label: Em,
+          options: qm,
+          value: String(hm),
+          circleInfoText: Om,
+          onChange: Rm
+        }), Vm]
+      }) : (0, Pm.jsxs)("div", {
         className: "SettingBox LobbyManageRuleRow",
-        children: [Pk, "choice" === Ik.kind && (0, Rk.jsx)("span", {
+        children: [Im, "choice" === fm.kind && (0, Pm.jsx)("span", {
           className: "LobbyManageRuleChoice",
           style: {
-            "--lobby-choice-chars": Jk
+            "--lobby-choice-chars": jm
           },
-          children: (0, Rk.jsx)(Ok.e, {
-            options: Hk,
-            value: String(Xk),
-            disabled: ik,
-            onChange: kk => {
-              Lk(kk.value)
+          children: (0, Pm.jsx)(bm.d, {
+            options: qm,
+            value: String(hm),
+            disabled: am,
+            onChange: mm => {
+              Rm(mm.value)
             }
           })
-        }), ("number" === Ik.kind || "text" === Ik.kind) && (0, Rk.jsx)(Nk, {
-          value: null === Xk ? "" : String(Xk),
-          placeholder: wk,
-          ariaLabel: Zk,
-          onSave: kk => {
-            const Fk = kk.trim(),
-              Xk = Number(Fk);
-            return Lk("number" === Ik.kind && "" !== Fk && Number.isFinite(Xk) ? Xk : Fk)
+        }), ("number" === fm.kind || "text" === fm.kind) && (0, Pm.jsx)(Cm, {
+          value: null === hm ? "" : String(hm),
+          placeholder: Ym,
+          ariaLabel: Em,
+          onSave: mm => {
+            const Tm = mm.trim(),
+              hm = Number(Tm);
+            return Rm("number" === fm.kind && "" !== Tm && Number.isFinite(hm) ? hm : Tm)
           }
-        }), "action" === Ik.kind && (0, Rk.jsxs)("div", {
+        }), "action" === fm.kind && (0, Pm.jsxs)("div", {
           className: "LobbyManageRuleInput",
-          children: [Hk.length > 3 && (0, Rk.jsx)(Ok.e, {
-            options: Hk,
+          children: [qm.length > 3 && (0, Pm.jsx)(bm.d, {
+            options: qm,
             value: {
               value: "",
-              label: null !== wk && void 0 !== wk ? wk : Zk
+              label: null !== Ym && void 0 !== Ym ? Ym : Em
             },
-            disabled: ik,
-            onChange: kk => {
-              tk(kk.value)
+            disabled: am,
+            onChange: mm => {
+              pm(mm.value)
             }
-          }), Hk.length > 0 && Hk.length <= 3 && Hk.map((kk => (0, Rk.jsx)(Kk.g, {
+          }), qm.length > 0 && qm.length <= 3 && qm.map((mm => (0, Pm.jsx)(Km.g, {
             className: "SmallTextLight",
-            disabled: ik,
+            disabled: am,
             onClick: () => {
-              tk(kk.value)
+              pm(mm.value)
             },
-            children: kk.label
-          }, kk.value))), 0 === Hk.length && (0, Rk.jsx)(Kk.g, {
+            children: mm.label
+          }, mm.value))), 0 === qm.length && (0, Pm.jsx)(Km.g, {
             className: "SmallTextLight",
-            disabled: ik,
+            disabled: am,
             onClick: () => {
-              tk()
+              pm()
             },
-            children: null !== wk && void 0 !== wk ? wk : Zk
+            children: null !== Ym && void 0 !== Ym ? Ym : Em
           })]
-        }), "names" === Ik.kind && (0, Rk.jsx)(ZF, {
-          names: Array.isArray(Xk) ? Xk : [],
-          pending: ik,
-          onAction: tk
-        }), xk]
+        }), "names" === fm.kind && (0, Pm.jsx)(ET, {
+          names: Array.isArray(hm) ? hm : [],
+          pending: am,
+          onAction: pm
+        }), Vm]
       })
     }));
 
-    function ZF(kk) {
+    function ET(mm) {
       let {
-        names: Fk,
-        pending: Ik,
-        onAction: Tk
-      } = kk;
+        names: Tm,
+        pending: fm,
+        onAction: Am
+      } = mm;
       const {
-        t: ik
-      } = (0, jk.y)(), yk = (0, Xk.useRef)(null), [lk, ak] = (0, Xk.useState)(""), qk = () => {
-        const kk = lk.trim();
-        "" !== kk && (Tk(kk, "add"), yk.current && (yk.current.value = ""), ak(""))
+        t: am
+      } = (0, om.A)(), xm = (0, hm.useRef)(null), [wm, Dm] = (0, hm.useState)(""), im = () => {
+        const mm = wm.trim();
+        "" !== mm && (Am(mm, "add"), xm.current && (xm.current.value = ""), Dm(""))
       };
-      return (0, Rk.jsxs)("div", {
+      return (0, Pm.jsxs)("div", {
         className: "LobbyManageNames",
-        children: [Fk.map((kk => (0, Rk.jsxs)("div", {
+        children: [Tm.map((mm => (0, Pm.jsxs)("div", {
           className: "LobbyManageName",
-          children: [(0, Rk.jsx)("span", {
+          children: [(0, Pm.jsx)("span", {
             className: "LobbyManageNameText",
-            children: kk
-          }), (0, Rk.jsx)(Kk.g, {
+            children: mm
+          }), (0, Pm.jsx)(Km.g, {
             className: "LobbyManageIconButton SmallTextLight",
-            ariaLabel: ik("lobbyManage:removeName", {
-              name: kk
+            ariaLabel: am("lobbyManage:removeName", {
+              name: mm
             }),
-            disabled: Ik,
+            disabled: fm,
             onClick: () => {
-              Tk(kk, "remove")
+              Am(mm, "remove")
             },
-            children: (0, Rk.jsx)(ek.e, {
+            children: (0, Pm.jsx)(Om.c, {
               name: "xmark"
             })
           })]
-        }, kk))), (0, Rk.jsxs)("div", {
+        }, mm))), (0, Pm.jsxs)("div", {
           className: "LobbyManageRuleInput",
-          children: [(0, Rk.jsx)(bk.c, {
-            domRef: yk,
-            placeholderText: ik("lobbyManage:namePlaceholder"),
-            ariaLabel: ik("lobbyManage:namePlaceholder"),
+          children: [(0, Pm.jsx)(Xm.e, {
+            domRef: xm,
+            placeholderText: am("lobbyManage:namePlaceholder"),
+            ariaLabel: am("lobbyManage:namePlaceholder"),
             maxLength: 32,
-            onValueChange: kk => {
-              ak(kk)
+            onValueChange: mm => {
+              Dm(mm)
             },
-            onEnter: qk
-          }), (0, Rk.jsx)(Kk.g, {
+            onEnter: im
+          }), (0, Pm.jsx)(Km.g, {
             className: "SmallTextLight",
-            disabled: Ik || "" === lk.trim(),
-            onClick: qk,
-            children: ik("lobbyManage:addHere")
+            disabled: fm || "" === wm.trim(),
+            onClick: im,
+            children: am("lobbyManage:addHere")
           })]
         })]
       })
     }
-    const jF = [{
+    const oT = [{
       group: "gameplay",
       title: "lobbyManage:gameplay"
     }, {
@@ -1225,125 +1225,125 @@ export const modules = {
       title: "lobbyManage:world"
     }];
 
-    function eF(kk, Fk) {
-      return jF.map((Ik => {
+    function OT(mm, Tm) {
+      return oT.map((fm => {
         let {
-          group: Xk,
-          title: Tk
-        } = Ik;
-        const ik = kk.filter((kk => kk.group === Xk && void 0 === kk.parent)).map((Ik => {
-          const Xk = !0 === Fk(Ik) ? kk.filter((kk => kk.parent === Ik.key)) : [];
+          group: hm,
+          title: Am
+        } = fm;
+        const am = mm.filter((mm => mm.group === hm && void 0 === mm.parent)).map((fm => {
+          const hm = !0 === Tm(fm) ? mm.filter((mm => mm.parent === fm.key)) : [];
           return {
-            rule: Ik,
-            children: Xk
+            rule: fm,
+            children: hm
           }
         }));
         return {
-          group: Xk,
-          title: Tk,
-          items: ik
+          group: hm,
+          title: Am,
+          items: am
         }
       }))
     }
 
-    function wF(kk) {
-      return kk.flatMap((kk => {
+    function YT(mm) {
+      return mm.flatMap((mm => {
         let {
-          items: Fk
-        } = kk;
-        return Fk.flatMap((kk => {
+          items: Tm
+        } = mm;
+        return Tm.flatMap((mm => {
           let {
-            rule: Fk,
-            children: Ik
-          } = kk;
-          return [Fk, ...Ik]
+            rule: Tm,
+            children: fm
+          } = mm;
+          return [Tm, ...fm]
         }))
       }))
     }
 
-    function HF(kk) {
+    function qT(mm) {
       let {
-        manage: Fk,
-        rowsShown: Ik
-      } = kk;
+        manage: Tm,
+        rowsShown: fm
+      } = mm;
       const {
-        t: ik
-      } = (0, jk.y)(), yk = (0, Pk.k)("hiddenPlayerNames"), {
-        rules: lk
-      } = Fk.state, ak = Lk(), qk = kk => {
-        const Fk = ak.get(kk.key);
-        return void 0 === Fk ? kk.value : Fk
-      }, tk = eF(lk, qk), [Zk] = (0, Xk.useState)((() => wF(tk).map((kk => kk.key)))), ek = Ik === 1 / 0 ? null : new Set(Zk.slice(0, Ik)), wk = kk => null === ek || ek.has(kk.key), {
-        hold: Jk
-      } = ak, xk = (0, Xk.useCallback)(((kk, Ik) => {
-        (0, Tk.reportAnalyticsClick)({
+        t: am
+      } = (0, om.A)(), xm = (0, Im.k)("hiddenPlayerNames"), {
+        rules: wm
+      } = Tm.state, Dm = Rm(), im = mm => {
+        const Tm = Dm.get(mm.key);
+        return void 0 === Tm ? mm.value : Tm
+      }, pm = OT(wm, im), [Em] = (0, hm.useState)((() => YT(pm).map((mm => mm.key)))), Om = fm === 1 / 0 ? null : new Set(Em.slice(0, fm)), Ym = mm => null === Om || Om.has(mm.key), {
+        hold: jm
+      } = Dm, Vm = (0, hm.useCallback)(((mm, fm) => {
+        (0, Am.reportAnalyticsClick)({
           id: "lobby_manage.set_rule",
-          value: kk.key
+          value: mm.key
         });
-        const Xk = Fk.send({
+        const hm = Tm.send({
           type: "setRule",
-          key: kk.key,
-          value: Ik
-        }, `rule:${kk.key}`);
-        return Jk(kk.key, Ik, Xk), Xk
-      }), [Fk, Jk]), Kk = (0, Xk.useCallback)(((kk, Ik, Xk) => {
-        (0, Tk.reportAnalyticsClick)({
+          key: mm.key,
+          value: fm
+        }, `rule:${mm.key}`);
+        return jm(mm.key, fm, hm), hm
+      }), [Tm, jm]), Km = (0, hm.useCallback)(((mm, fm, hm) => {
+        (0, Am.reportAnalyticsClick)({
           id: "lobby_manage.set_rule",
-          value: kk.key
-        }), Fk.send({
+          value: mm.key
+        }), Tm.send({
           type: "ruleAction",
-          key: kk.key,
-          ...void 0 === Ik ? {} : {
-            arg: Ik
+          key: mm.key,
+          ...void 0 === fm ? {} : {
+            arg: fm
           },
-          ...void 0 === Xk ? {} : {
-            op: Xk
+          ...void 0 === hm ? {} : {
+            op: hm
           }
-        }, `rule:${kk.key}`, void 0 === Xk ? ik("lobbyManage:setJustNow") : void 0)
-      }), [Fk, ik]), Qk = kk => {
-        const Ik = `rule:${kk.key}`;
-        return (0, Rk.jsx)(tF, {
-          rule: kk,
-          value: qk(kk),
-          status: Fk.statusOf(Ik),
-          pending: Fk.isPending(Ik),
-          hiddenNames: yk,
-          xV: xk,
-          onAction: Kk
-        }, kk.key)
+        }, `rule:${mm.key}`, void 0 === hm ? am("lobbyManage:setJustNow") : void 0)
+      }), [Tm, am]), Qm = mm => {
+        const fm = `rule:${mm.key}`;
+        return (0, Pm.jsx)(pT, {
+          rule: mm,
+          value: im(mm),
+          status: Tm.statusOf(fm),
+          pending: Tm.isPending(fm),
+          hiddenNames: xm,
+          GJ: Vm,
+          onAction: Km
+        }, mm.key)
       };
-      return (0, Rk.jsx)("div", {
+      return (0, Pm.jsx)("div", {
         className: "LobbyManagePage LobbyManageRules",
-        children: tk.map((kk => {
+        children: pm.map((mm => {
           let {
-            group: Fk,
-            title: Ik,
-            items: Tk
-          } = kk;
-          const yk = Tk.filter((kk => {
+            group: Tm,
+            title: fm,
+            items: Am
+          } = mm;
+          const xm = Am.filter((mm => {
             let {
-              rule: Fk
-            } = kk;
-            return wk(Fk)
+              rule: Tm
+            } = mm;
+            return Ym(Tm)
           }));
-          return 0 === yk.length ? null : (0, Rk.jsxs)(Xk.Fragment, {
-            children: [(0, Rk.jsx)(Hk.b, {
-              label: ik(Ik)
-            }), yk.map((kk => {
+          return 0 === xm.length ? null : (0, Pm.jsxs)(hm.Fragment, {
+            children: [(0, Pm.jsx)(qm.e, {
+              label: am(fm)
+            }), xm.map((mm => {
               let {
-                rule: Fk,
-                children: Ik
-              } = kk;
-              return 0 === Ik.length ? Qk(Fk) : (0, Rk.jsxs)("div", {
+                rule: Tm,
+                children: fm
+              } = mm;
+              return 0 === fm.length ? Qm(Tm) : (0, Pm.jsxs)("div", {
                 className: "SettingBoxGroup",
-                children: [Qk(Fk), Ik.filter(wk).map(Qk)]
-              }, Fk.key)
+                children: [Qm(Tm), fm.filter(Ym).map(Qm)]
+              }, Tm.key)
             }))]
-          }, Fk)
+          }, Tm)
         }))
       })
     }
-    const JF = {
+    const jT = {
         players: {
           icon: "user-group",
           title: "lobbyManage:players"
@@ -1361,590 +1361,590 @@ export const modules = {
           title: "lobbyManage:leaderboard"
         }
       },
-      xF = 5,
-      PF = (0, Xk.memo)((function(kk) {
+      VT = 5,
+      IT = (0, hm.memo)((function(mm) {
         let {
-          page: Fk,
-          manage: Ik,
-          leaderboard: Tk,
-          focusRequest: ik,
-          onFocused: yk,
-          ruleRowsShown: lk
-        } = kk;
-        return "leaderboard" === Fk ? (0, Rk.jsx)(Xk.Suspense, {
-          fallback: (0, Rk.jsx)("div", {
+          page: Tm,
+          manage: fm,
+          leaderboard: Am,
+          focusRequest: am,
+          onFocused: xm,
+          ruleRowsShown: wm
+        } = mm;
+        return "leaderboard" === Tm ? (0, Pm.jsx)(hm.Suspense, {
+          fallback: (0, Pm.jsx)("div", {
             className: "LobbyManageLoading",
-            children: (0, Rk.jsx)(wk.c, {})
+            children: (0, Pm.jsx)(Ym.c, {})
           }),
-          children: Tk
-        }) : "joining" === Fk ? (0, Rk.jsx)(TF, {
-          manage: Ik
-        }) : "rules" === Fk ? (0, Rk.jsx)(HF, {
-          manage: Ik,
-          rowsShown: lk
-        }) : (0, Rk.jsx)(Bk, {
-          manage: Ik,
-          focusRequest: ik,
-          onFocused: yk
+          children: Am
+        }) : "joining" === Tm ? (0, Pm.jsx)(AT, {
+          manage: fm
+        }) : "rules" === Tm ? (0, Pm.jsx)(qT, {
+          manage: fm,
+          rowsShown: wm
+        }) : (0, Pm.jsx)(Mm, {
+          manage: fm,
+          focusRequest: am,
+          onFocused: xm
         })
       }));
 
-    function KF(kk) {
+    function KT(mm) {
       let {
-        page: Fk
-      } = kk;
+        page: Tm
+      } = mm;
       const {
-        t: Ik
-      } = (0, jk.y)(), Xk = JF[Fk];
-      return (0, Rk.jsxs)(Rk.Fragment, {
-        children: [(0, Rk.jsx)(ek.e, {
-          name: Xk.icon
-        }), " ", (0, Rk.jsx)("span", {
+        t: fm
+      } = (0, om.A)(), hm = jT[Tm];
+      return (0, Pm.jsxs)(Pm.Fragment, {
+        children: [(0, Pm.jsx)(Om.c, {
+          name: hm.icon
+        }), " ", (0, Pm.jsx)("span", {
           className: "LobbyManagePageTitle",
-          children: Ik(Xk.title)
+          children: fm(hm.title)
         })]
       })
     }
 
-    function QF(kk) {
-      var Fk;
+    function QT(mm) {
+      var Tm;
       const {
-        t: Ik
-      } = (0, jk.y)(), {
-        pages: ik,
-        landing: yk
-      } = kk, ak = (0, Xk.useRef)(null), qk = (0, Xk.useRef)(null), Lk = (0, Xk.useRef)(null), tk = (0, Xk.useRef)(new Map), [ek, wk] = (0, Xk.useState)(null), Pk = (0, Xk.useRef)(ek), Kk = (0, Xk.useRef)(0), [Qk, sk] = (0, Xk.useState)(ik[0]), Vk = null !== ek && void 0 !== ek ? ek : ik.includes(Qk) ? Qk : ik[0], [zk] = (0, Xk.useState)(null !== (Fk = null === yk || void 0 === yk ? void 0 : yk.page) && void 0 !== Fk ? Fk : null), Sk = null !== zk && ik.includes(zk) ? [zk, ...ik.filter((kk => kk !== zk))] : ik, [vk] = (0, Xk.useState)((() => {
-        const Fk = wF(eF(kk.manage.state.rules, (kk => kk.value)));
-        return Math.max(1, Math.ceil(Fk.length / xF))
-      })), Ek = Sk.flatMap((kk => "rules" === kk ? Array(vk).fill(kk) : [kk])), Ok = function(kk, Fk) {
-        const [Ik, Tk] = (0, Xk.useState)(kk), ik = Ik >= Fk;
-        return ik && Ik !== 1 / 0 && Tk(1 / 0), (0, Xk.useLayoutEffect)((() => {
-          if (ik) return;
-          let kk = !0;
-          return (0, xk.e)().then((() => {
-            kk && Tk((kk => kk + 1))
+        t: fm
+      } = (0, om.A)(), {
+        pages: am,
+        landing: xm
+      } = mm, Dm = (0, hm.useRef)(null), im = (0, hm.useRef)(null), Rm = (0, hm.useRef)(null), pm = (0, hm.useRef)(new Map), [Om, Ym] = (0, hm.useState)(null), Im = (0, hm.useRef)(Om), Km = (0, hm.useRef)(0), [Qm, nm] = (0, hm.useState)(am[0]), Jm = null !== Om && void 0 !== Om ? Om : am.includes(Qm) ? Qm : am[0], [cm] = (0, hm.useState)(null !== (Tm = null === xm || void 0 === xm ? void 0 : xm.page) && void 0 !== Tm ? Tm : null), zm = null !== cm && am.includes(cm) ? [cm, ...am.filter((mm => mm !== cm))] : am, [Zm] = (0, hm.useState)((() => {
+        const Tm = YT(OT(mm.manage.state.rules, (mm => mm.value)));
+        return Math.max(1, Math.ceil(Tm.length / VT))
+      })), km = zm.flatMap((mm => "rules" === mm ? Array(Zm).fill(mm) : [mm])), bm = function(mm, Tm) {
+        const [fm, Am] = (0, hm.useState)(mm), am = fm >= Tm;
+        return am && fm !== 1 / 0 && Am(1 / 0), (0, hm.useLayoutEffect)((() => {
+          if (am) return;
+          let mm = !0;
+          return (0, Vm.d)().then((() => {
+            mm && Am((mm => mm + 1))
           })), () => {
-            kk = !1
+            mm = !1
           }
-        }), [Ik, ik]), ik ? 1 / 0 : Ik
-      }(1, Ek.length), nk = Ek.slice(0, Ok), Gk = new Set(nk), pk = Ok < Ek.length, uk = pk ? nk.filter((kk => "rules" === kk)).length * xF : 1 / 0, bk = (0, Xk.useRef)(kk.focusRequest);
-      bk.current = kk.focusRequest;
-      const Uk = kk => {
-          Pk.current = kk, wk(kk)
+        }), [fm, am]), am ? 1 / 0 : fm
+      }(1, km.length), Sm = km.slice(0, bm), em = new Set(Sm), Nm = bm < km.length, Gm = Nm ? Sm.filter((mm => "rules" === mm)).length * VT : 1 / 0, Xm = (0, hm.useRef)(mm.focusRequest);
+      Xm.current = mm.focusRequest;
+      const Hm = mm => {
+          Im.current = mm, Ym(mm)
         },
-        Ck = () => {
-          var kk, Fk;
-          ak.current.style.scrollPaddingTop = `${null!==(kk=null===(Fk=Lk.current)||void 0===Fk?void 0:Fk.offsetHeight)&&void 0!==kk?kk:0}px`
+        ym = () => {
+          var mm, Tm;
+          Dm.current.style.scrollPaddingTop = `${null!==(mm=null===(Tm=Rm.current)||void 0===Tm?void 0:Tm.offsetHeight)&&void 0!==mm?mm:0}px`
         },
-        Nk = kk => {
-          const Fk = ak.current,
-            Ik = tk.current.get(kk);
-          if (void 0 === Ik) return;
-          const Xk = document.activeElement,
-            Tk = bk.current,
-            ik = null === Tk ? null : Ik.querySelector(`[data-lobby-manage-row="${CSS.escape(Tk.name)}"]`);
-          Ck(), Xk instanceof HTMLElement && null !== ik && void 0 !== ik && ik.contains(Xk) ? Xk.scrollIntoView({
+        Cm = mm => {
+          const Tm = Dm.current,
+            fm = pm.current.get(mm);
+          if (void 0 === fm) return;
+          const hm = document.activeElement,
+            Am = Xm.current,
+            am = null === Am ? null : fm.querySelector(`[data-lobby-manage-row="${CSS.escape(Am.name)}"]`);
+          ym(), hm instanceof HTMLElement && null !== am && void 0 !== am && am.contains(hm) ? hm.scrollIntoView({
             block: "center"
-          }) : null === Ik.previousElementSibling ? Fk.scrollTop = 0 : Ik.scrollIntoView({
+          }) : null === fm.previousElementSibling ? Tm.scrollTop = 0 : fm.scrollIntoView({
             block: "start"
-          }), Kk.current = Fk.scrollTop
+          }), Km.current = Tm.scrollTop
         },
-        ck = kk => {
-          (0, Tk.reportAnalyticsClick)({
+        rm = mm => {
+          (0, Am.reportAnalyticsClick)({
             id: "lobby_manage.page",
-            value: kk
-          }), Uk(kk), Nk(kk)
+            value: mm
+          }), Hm(mm), Cm(mm)
         },
-        Wk = () => {
-          var kk, Fk;
-          const Ik = ak.current,
-            Xk = Ik.getBoundingClientRect().top + (null !== (kk = null === (Fk = Lk.current) || void 0 === Fk ? void 0 : Fk.offsetHeight) && void 0 !== kk ? kk : 0),
-            Tk = ik.map((kk => {
-              var Fk, Ik;
-              return (null !== (Fk = null === (Ik = tk.current.get(kk)) || void 0 === Ik ? void 0 : Ik.getBoundingClientRect().top) && void 0 !== Fk ? Fk : 1 / 0) - Xk
+        sm = () => {
+          var mm, Tm;
+          const fm = Dm.current,
+            hm = fm.getBoundingClientRect().top + (null !== (mm = null === (Tm = Rm.current) || void 0 === Tm ? void 0 : Tm.offsetHeight) && void 0 !== mm ? mm : 0),
+            Am = am.map((mm => {
+              var Tm, fm;
+              return (null !== (Tm = null === (fm = pm.current.get(mm)) || void 0 === fm ? void 0 : fm.getBoundingClientRect().top) && void 0 !== Tm ? Tm : 1 / 0) - hm
             })),
-            yk = !pk && Ik.scrollTop + Ik.clientHeight >= Ik.scrollHeight - 1;
-          sk(ik[(0, lk.h)(Tk, yk)])
+            xm = !Nm && fm.scrollTop + fm.clientHeight >= fm.scrollHeight - 1;
+          nm(am[(0, wm.h)(Am, xm)])
         },
-        fk = () => {
-          null !== Pk.current && (Uk(null), Wk())
+        lm = () => {
+          null !== Im.current && (Hm(null), sm())
         };
-      (0, Xk.useLayoutEffect)((() => {
-        null !== yk && ik.includes(yk.page) && ck(yk.page)
-      }), [null === yk || void 0 === yk ? void 0 : yk.seq]), (0, Xk.useLayoutEffect)((() => {
-        null === Pk.current || ik.includes(Pk.current) || fk()
+      (0, hm.useLayoutEffect)((() => {
+        null !== xm && am.includes(xm.page) && rm(xm.page)
+      }), [null === xm || void 0 === xm ? void 0 : xm.seq]), (0, hm.useLayoutEffect)((() => {
+        null === Im.current || am.includes(Im.current) || lm()
       }));
       const {
-        onFocused: Bk
-      } = kk, dk = (0, Xk.useCallback)((kk => {
-        null !== Pk.current && Nk(Pk.current), Bk(kk)
-      }), [Bk]);
-      (0, Xk.useLayoutEffect)((() => {
-        const kk = Pk.current;
-        null !== kk && (!pk || ik.indexOf(Ek[Ok - 1]) < ik.indexOf(kk)) && Nk(kk)
-      }), [Ok]), (0, Xk.useEffect)((() => {
-        const kk = new ResizeObserver((() => {
-          null !== Pk.current ? Nk(Pk.current) : Ck()
+        onFocused: Mm
+      } = mm, um = (0, hm.useCallback)((mm => {
+        null !== Im.current && Cm(Im.current), Mm(mm)
+      }), [Mm]);
+      (0, hm.useLayoutEffect)((() => {
+        const mm = Im.current;
+        null !== mm && (!Nm || am.indexOf(km[bm - 1]) < am.indexOf(mm)) && Cm(mm)
+      }), [bm]), (0, hm.useEffect)((() => {
+        const mm = new ResizeObserver((() => {
+          null !== Im.current ? Cm(Im.current) : ym()
         }));
-        return kk.observe(ak.current), kk.observe(qk.current), () => {
-          kk.disconnect()
+        return mm.observe(Dm.current), mm.observe(im.current), () => {
+          mm.disconnect()
         }
-      }), []), (0, Xk.useLayoutEffect)((() => {
-        const kk = Lk.current,
-          Fk = null === kk || void 0 === kk ? void 0 : kk.querySelector(".SegmentedToggleOptionSelected");
-        Fk && (kk.scrollLeft = Math.min(Fk.offsetLeft, Math.max(kk.scrollLeft, Fk.offsetLeft + Fk.offsetWidth - kk.clientWidth)))
-      }), [Vk]);
-      return (0, Rk.jsxs)("div", {
-        ref: ak,
+      }), []), (0, hm.useLayoutEffect)((() => {
+        const mm = Rm.current,
+          Tm = null === mm || void 0 === mm ? void 0 : mm.querySelector(".SegmentedToggleOptionSelected");
+        Tm && (mm.scrollLeft = Math.min(Tm.offsetLeft, Math.max(mm.scrollLeft, Tm.offsetLeft + Tm.offsetWidth - mm.clientWidth)))
+      }), [Jm]);
+      return (0, Pm.jsxs)("div", {
+        ref: Dm,
         className: "MenuBody LobbyManageBody",
         onScroll: () => {
-          null === Pk.current ? Wk() : Math.abs(ak.current.scrollTop - Kk.current) > 1 && fk()
+          null === Im.current ? sm() : Math.abs(Dm.current.scrollTop - Km.current) > 1 && lm()
         },
-        onClick: kk => {
-          var Fk;
-          null !== (Fk = Lk.current) && void 0 !== Fk && Fk.contains(kk.target) || fk()
+        onClick: mm => {
+          var Tm;
+          null !== (Tm = Rm.current) && void 0 !== Tm && Tm.contains(mm.target) || lm()
         },
-        onFocus: kk => {
-          var Fk;
-          const Ik = null === Pk.current ? null : tk.current.get(Pk.current);
-          !Ik || Ik.contains(kk.target) || null !== (Fk = Lk.current) && void 0 !== Fk && Fk.contains(kk.target) || fk()
+        onFocus: mm => {
+          var Tm;
+          const fm = null === Im.current ? null : pm.current.get(Im.current);
+          !fm || fm.contains(mm.target) || null !== (Tm = Rm.current) && void 0 !== Tm && Tm.contains(mm.target) || lm()
         },
-        children: [ik.length > 1 && (0, Rk.jsx)("div", {
-          ref: Lk,
+        children: [am.length > 1 && (0, Pm.jsx)("div", {
+          ref: Rm,
           className: "LobbyManageChips",
-          children: (0, Rk.jsx)(Jk.b, {
-            options: ik.map((kk => ({
-              value: kk,
-              label: (0, Rk.jsx)(KF, {
-                page: kk
+          children: (0, Pm.jsx)(jm.b, {
+            options: am.map((mm => ({
+              value: mm,
+              label: (0, Pm.jsx)(KT, {
+                page: mm
               }),
-              ariaLabel: Ik(JF[kk].title)
+              ariaLabel: fm(jT[mm].title)
             }))),
-            value: Vk,
+            value: Jm,
             padTabs: "2",
-            ariaLabel: Ik("lobbyManageEntry:manageLobby"),
+            ariaLabel: fm("lobbyManageEntry:manageLobby"),
             reselectable: !0,
-            onChange: ck
+            onChange: rm
           })
-        }), (0, Rk.jsx)("div", {
-          ref: qk,
-          className: Zk()("LobbyManageInner", {
-            Staging: pk
+        }), (0, Pm.jsx)("div", {
+          ref: im,
+          className: Em()("LobbyManageInner", {
+            Staging: Nm
           }),
-          children: ik.filter((kk => Gk.has(kk))).map((Fk => {
-            const Ik = Fk === ek;
-            return (0, Rk.jsxs)("section", {
-              ref: kk => {
-                kk ? tk.current.set(Fk, kk) : tk.current.delete(Fk)
+          children: am.filter((mm => em.has(mm))).map((Tm => {
+            const fm = Tm === Om;
+            return (0, Pm.jsxs)("section", {
+              ref: mm => {
+                mm ? pm.current.set(Tm, mm) : pm.current.delete(Tm)
               },
               className: "LobbyManageSection",
-              "data-pad-initial-area": Ik || void 0,
-              children: [ik.length > 1 && (0, Rk.jsx)("div", {
+              "data-pad-initial-area": fm || void 0,
+              children: [am.length > 1 && (0, Pm.jsx)("div", {
                 className: "LobbyManageSectionHeading",
-                "data-pad-focusable": Ik || void 0,
-                "data-pad-unavailable": Ik || void 0,
-                children: (0, Rk.jsx)(Hk.b, {
-                  label: (0, Rk.jsx)(KF, {
-                    page: Fk
+                "data-pad-focusable": fm || void 0,
+                "data-pad-unavailable": fm || void 0,
+                children: (0, Pm.jsx)(qm.e, {
+                  label: (0, Pm.jsx)(KT, {
+                    page: Tm
                   })
                 })
-              }), (0, Rk.jsx)(PF, {
-                page: Fk,
-                manage: kk.manage,
-                leaderboard: kk.leaderboard,
-                focusRequest: kk.focusRequest,
-                onFocused: dk,
-                ruleRowsShown: "rules" === Fk ? uk : 1 / 0
+              }), (0, Pm.jsx)(IT, {
+                page: Tm,
+                manage: mm.manage,
+                leaderboard: mm.leaderboard,
+                focusRequest: mm.focusRequest,
+                onFocused: um,
+                ruleRowsShown: "rules" === Tm ? Gm : 1 / 0
               })]
-            }, Fk)
+            }, Tm)
           }))
         })]
       })
     }
 
-    function sF(kk) {
-      return void 0 === (null === kk || void 0 === kk ? void 0 : kk.page) ? null : {
-        page: kk.page,
-        seq: kk.seq
+    function nT(mm) {
+      return void 0 === (null === mm || void 0 === mm ? void 0 : mm.page) ? null : {
+        page: mm.page,
+        seq: mm.seq
       }
     }
 
-    function VF(kk) {
+    function JT(mm) {
       let {
-        leaderboard: Fk
-      } = kk;
-      const Ik = function() {
-          const kk = (0, ak.j)("lobbyManage"),
-            [Fk, Ik] = (0, Xk.useReducer)((kk => kk + 1), 0),
-            [Tk] = (0, Xk.useState)((() => new qk.b(Ik)));
-          return (0, Xk.useEffect)((() => {
-            const kk = Tk.nextDeadline();
-            if (null === kk) return;
-            const Fk = setTimeout((() => {
-              Tk.expire(Date.now()), Ik()
-            }), Math.max(0, kk - Date.now()));
+        leaderboard: Tm
+      } = mm;
+      const fm = function() {
+          const mm = (0, Dm.g)("lobbyManage"),
+            [Tm, fm] = (0, hm.useReducer)((mm => mm + 1), 0),
+            [Am] = (0, hm.useState)((() => new im.e(fm)));
+          return (0, hm.useEffect)((() => {
+            const mm = Am.nextDeadline();
+            if (null === mm) return;
+            const Tm = setTimeout((() => {
+              Am.expire(Date.now()), fm()
+            }), Math.max(0, mm - Date.now()));
             return () => {
-              clearTimeout(Fk)
+              clearTimeout(Tm)
             }
-          })), (0, Xk.useMemo)((() => null === kk ? null : {
-            state: kk,
-            send: (kk, Fk, Xk) => {
-              const ik = Tk.send(kk, Fk, null !== Xk && void 0 !== Xk ? Xk : null);
-              return Ik(), ik
+          })), (0, hm.useMemo)((() => null === mm ? null : {
+            state: mm,
+            send: (mm, Tm, hm) => {
+              const am = Am.send(mm, Tm, null !== hm && void 0 !== hm ? hm : null);
+              return fm(), am
             },
-            statusOf: kk => Tk.statusOf(kk, Date.now()),
-            showStatus: (kk, Fk) => {
-              Tk.show(kk, Fk)
+            statusOf: mm => Am.statusOf(mm, Date.now()),
+            showStatus: (mm, Tm) => {
+              Am.show(mm, Tm)
             },
-            isPending: kk => Tk.isPending(kk)
-          }), [kk, Fk, Tk])
+            isPending: mm => Am.isPending(mm)
+          }), [mm, Tm, Am])
         }(),
-        Lk = (0, lk.l)((0, ik.e)()),
-        tk = (0, yk.l)(),
-        [Zk, jk] = (0, Xk.useState)((() => sF(tk))),
-        [ek, wk] = (0, Xk.useState)(null);
-      return (0, Xk.useEffect)((() => {
-        null === tk && (0, Tk.reportAnalyticsClick)({
+        Rm = (0, wm.l)((0, am.e)()),
+        pm = (0, xm.o)(),
+        [Em, om] = (0, hm.useState)((() => nT(pm))),
+        [Om, Ym] = (0, hm.useState)(null);
+      return (0, hm.useEffect)((() => {
+        null === pm && (0, Am.reportAnalyticsClick)({
           id: "lobby_manage.open",
           value: "menu_tab"
         })
-      }), []), (0, Xk.useEffect)((() => {
-        null !== tk && (jk((kk => (null === kk || void 0 === kk ? void 0 : kk.seq) === tk.seq ? kk : sF(tk))), void 0 !== tk.focusName && "players" === tk.page ? wk({
-          name: tk.focusName,
-          seq: tk.seq
-        }) : (0, yk.j)(tk.seq))
-      }), [null === tk || void 0 === tk ? void 0 : tk.seq]), null === Ik ? null : (0, Rk.jsx)("div", {
+      }), []), (0, hm.useEffect)((() => {
+        null !== pm && (om((mm => (null === mm || void 0 === mm ? void 0 : mm.seq) === pm.seq ? mm : nT(pm))), void 0 !== pm.focusName && "players" === pm.page ? Ym({
+          name: pm.focusName,
+          seq: pm.seq
+        }) : (0, xm.k)(pm.seq))
+      }), [null === pm || void 0 === pm ? void 0 : pm.seq]), null === fm ? null : (0, Pm.jsx)("div", {
         className: "LobbyManage Menu",
-        children: (0, Rk.jsx)(QF, {
-          pages: (0, lk.d)(Ik.state, Lk),
-          manage: Ik,
-          leaderboard: Fk,
-          focusRequest: ek,
-          onFocused: yk.j,
-          landing: Zk
+        children: (0, Pm.jsx)(QT, {
+          pages: (0, wm.d)(fm.state, Rm),
+          manage: fm,
+          leaderboard: Tm,
+          focusRequest: Om,
+          onFocused: xm.k,
+          landing: Em
         })
       })
     }
   },
-  36558: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Lk,
-      f: () => ak
+  36649: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => Rm,
+      h: () => Dm
     });
-    var Xk = Ik(1432),
-      Tk = Ik(1894),
-      ik = Ik(1875);
-    const yk = 1e4;
-    let lk = 0;
+    var hm = fm(1476),
+      Am = fm(1928),
+      am = fm(1905);
+    const xm = 1e4;
+    let wm = 0;
 
-    function ak(kk) {
-      const Fk = ++lk;
-      return new Promise((Ik => {
-        const lk = Fk => {
-            ak(), clearTimeout(qk), !1 === (null === Fk || void 0 === Fk ? void 0 : Fk.ok) && (0, Xk.reportAnalyticsClick)({
+    function Dm(mm) {
+      const Tm = ++wm;
+      return new Promise((fm => {
+        const wm = Tm => {
+            Dm(), clearTimeout(im), !1 === (null === Tm || void 0 === Tm ? void 0 : Tm.ok) && (0, hm.reportAnalyticsClick)({
               id: "lobby_manage.refused",
-              value: kk.type
-            }), Ik(Fk)
+              value: mm.type
+            }), fm(Tm)
           },
-          ak = Tk.e.subscribe("lobbyManage", (kk => {
-            const Ik = function(kk, Fk) {
-              var Ik;
-              return null !== (Ik = null === kk || void 0 === kk ? void 0 : kk.results.find((kk => kk.requestId === Fk))) && void 0 !== Ik ? Ik : null
-            }(kk, Fk);
-            null !== Ik && lk(Ik)
+          Dm = Am.b.subscribe("lobbyManage", (mm => {
+            const fm = function(mm, Tm) {
+              var fm;
+              return null !== (fm = null === mm || void 0 === mm ? void 0 : mm.results.find((mm => mm.requestId === Tm))) && void 0 !== fm ? fm : null
+            }(mm, Tm);
+            null !== fm && wm(fm)
           })),
-          qk = setTimeout((() => {
-            lk(null)
-          }), yk);
-        ik.gameBridge.send("lobbyManage", {
-          ...kk,
-          requestId: Fk
+          im = setTimeout((() => {
+            wm(null)
+          }), xm);
+        am.gameBridge.send("lobbyManage", {
+          ...mm,
+          requestId: Tm
         })
       }))
     }
-    const qk = [{
+    const im = [{
       translationKey: "lobbyManageEntry:noAnswer"
     }];
-    class Lk {
-      constructor(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ak;
-        this.onChange = kk, this.sendAction = Fk, this.pending = new Map, this.statuses = new Map
+    class Rm {
+      constructor(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Dm;
+        this.onChange = mm, this.sendAction = Tm, this.pending = new Map, this.statuses = new Map
       }
-      send(kk, Fk, Ik) {
-        var Xk;
-        return this.statuses.delete(Fk), this.pending.set(Fk, (null !== (Xk = this.pending.get(Fk)) && void 0 !== Xk ? Xk : 0) + 1), this.sendAction(kk).then((kk => {
-          var Xk;
-          const Tk = null !== kk && void 0 !== kk ? kk : {
+      send(mm, Tm, fm) {
+        var hm;
+        return this.statuses.delete(Tm), this.pending.set(Tm, (null !== (hm = this.pending.get(Tm)) && void 0 !== hm ? hm : 0) + 1), this.sendAction(mm).then((mm => {
+          var hm;
+          const Am = null !== mm && void 0 !== mm ? mm : {
               requestId: -1,
               ok: !1,
-              message: qk
+              message: im
             },
-            ik = (null !== (Xk = this.pending.get(Fk)) && void 0 !== Xk ? Xk : 1) - 1;
-          ik > 0 ? this.pending.set(Fk, ik) : this.pending.delete(Fk);
-          const yk = !Tk.ok || Tk.message.length > 0 ? Tk.message : null === Ik ? null : [Ik];
-          return null !== yk && this.statuses.set(Fk, {
-            ok: Tk.ok,
-            text: yk,
+            am = (null !== (hm = this.pending.get(Tm)) && void 0 !== hm ? hm : 1) - 1;
+          am > 0 ? this.pending.set(Tm, am) : this.pending.delete(Tm);
+          const xm = !Am.ok || Am.message.length > 0 ? Am.message : null === fm ? null : [fm];
+          return null !== xm && this.statuses.set(Tm, {
+            ok: Am.ok,
+            text: xm,
             until: Date.now() + 4e3
-          }), this.onChange(), Tk
+          }), this.onChange(), Am
         }))
       }
-      show(kk, Fk) {
-        this.statuses.set(kk, {
-          ...Fk,
+      show(mm, Tm) {
+        this.statuses.set(mm, {
+          ...Tm,
           until: Date.now() + 4e3
         }), this.onChange()
       }
-      expire(kk) {
-        for (const [Fk, Ik] of this.statuses) Ik.until <= kk && this.statuses.delete(Fk)
+      expire(mm) {
+        for (const [Tm, fm] of this.statuses) fm.until <= mm && this.statuses.delete(Tm)
       }
       nextDeadline() {
-        let kk = null;
-        for (const Ik of this.statuses.values()) {
-          var Fk;
-          kk = Math.min(null !== (Fk = kk) && void 0 !== Fk ? Fk : 1 / 0, Ik.until)
+        let mm = null;
+        for (const fm of this.statuses.values()) {
+          var Tm;
+          mm = Math.min(null !== (Tm = mm) && void 0 !== Tm ? Tm : 1 / 0, fm.until)
         }
-        return kk
+        return mm
       }
-      statusOf(kk, Fk) {
-        const Ik = this.statuses.get(kk);
-        return !Ik || Ik.until <= Fk ? null : {
-          ok: Ik.ok,
-          text: Ik.text
+      statusOf(mm, Tm) {
+        const fm = this.statuses.get(mm);
+        return !fm || fm.until <= Tm ? null : {
+          ok: fm.ok,
+          text: fm.text
         }
       }
-      isPending(kk) {
-        return this.pending.has(kk)
+      isPending(mm) {
+        return this.pending.has(mm)
       }
     }
   },
-  36548: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => qk,
-      i: () => ak
+  36635: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => im,
+      f: () => Dm
     });
-    var Xk = Ik(612),
-      Tk = Ik(1875),
-      ik = Ik(1585),
-      yk = Ik(95),
-      lk = Ik(1248);
+    var hm = fm(641),
+      Am = fm(1905),
+      am = fm(1643),
+      xm = fm(105),
+      wm = fm(1268);
 
-    function ak(kk, Fk, Ik) {
-      return yk.featureFlags.useSocialFeatures && kk && null === (0, lk.c)(Fk, Ik)
+    function Dm(mm, Tm, fm) {
+      return xm.featureFlags.useSocialFeatures && mm && null === (0, wm.c)(Tm, fm)
     }
 
-    function qk(kk, Fk) {
-      var Ik, yk;
-      const lk = ik.c.getSocialState().friends.find((kk => kk.name.toLowerCase() === Fk.toLowerCase())),
-        ak = Tk.gameBridge.latest("players").byId[kk],
-        qk = void 0 !== ak && ak.name === Fk,
-        Lk = qk && null !== (Ik = ak.cosmetics) && void 0 !== Ik ? Ik : void 0,
-        tk = lk && Lk ? {
-          ...lk,
-          cosmetics: Lk
-        } : lk;
+    function im(mm, Tm) {
+      var fm, xm;
+      const wm = am.e.getSocialState().friends.find((mm => mm.name.toLowerCase() === Tm.toLowerCase())),
+        Dm = Am.gameBridge.latest("players").byId[mm],
+        im = void 0 !== Dm && Dm.name === Tm,
+        Rm = im && null !== (fm = Dm.cosmetics) && void 0 !== fm ? fm : void 0,
+        pm = wm && Rm ? {
+          ...wm,
+          cosmetics: Rm
+        } : wm;
       return {
-        playerSocialPreview: null !== tk && void 0 !== tk ? tk : {
+        playerSocialPreview: null !== pm && void 0 !== pm ? pm : {
           isError: !1,
-          name: Fk,
-          ranks: qk ? [...ak.ranks] : [],
-          cosmetics: null !== Lk && void 0 !== Lk ? Lk : {},
-          nameColour: null !== (yk = null === Lk || void 0 === Lk ? void 0 : Lk.nameColour) && void 0 !== yk ? yk : Xk.c,
+          name: Tm,
+          ranks: im ? [...Dm.ranks] : [],
+          cosmetics: null !== Rm && void 0 !== Rm ? Rm : {},
+          nameColour: null !== (xm = null === Rm || void 0 === Rm ? void 0 : Rm.nameColour) && void 0 !== xm ? xm : hm.b,
           location: {
             status: "inGame"
           }
         },
-        isFriend: void 0 !== lk
+        isFriend: void 0 !== wm
       }
     }
   },
-  36742: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => tk
+  36823: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => pm
     });
-    var Xk = Ik(58),
-      Tk = Ik(1055),
-      ik = Ik.n(Tk),
-      yk = Ik(1617),
-      lk = Ik(1406),
-      ak = Ik(1318),
-      qk = Ik(1066),
-      Lk = Ik(1096);
+    var hm = fm(59),
+      Am = fm(1080),
+      am = fm.n(Am),
+      xm = fm(1676),
+      wm = fm(1454),
+      Dm = fm(1345),
+      im = fm(1089),
+      Rm = fm(1135);
 
-    function tk(kk) {
+    function pm(mm) {
       let {
-        label: Fk,
-        icon: Ik,
-        placeholder: Tk,
-        onSubmit: tk
-      } = kk;
-      const Zk = (0, Xk.useRef)(null),
-        [jk, ek] = (0, Xk.useState)(""),
-        [wk, Hk] = (0, Xk.useState)("Enter"),
-        [Jk, xk] = (0, Xk.useState)(null);
-      (0, Xk.useEffect)((() => {
-        if ("Success" !== wk && "Error" !== wk) return;
-        const kk = setTimeout((() => {
-          "Success" === wk && Zk.current && (Zk.current.value = "", ek("")), Hk("Enter")
-        }), "Success" === wk ? 1e3 : 4e3);
+        label: Tm,
+        icon: fm,
+        placeholder: Am,
+        onSubmit: pm
+      } = mm;
+      const Em = (0, hm.useRef)(null),
+        [om, Om] = (0, hm.useState)(""),
+        [Ym, qm] = (0, hm.useState)("Enter"),
+        [jm, Vm] = (0, hm.useState)(null);
+      (0, hm.useEffect)((() => {
+        if ("Success" !== Ym && "Error" !== Ym) return;
+        const mm = setTimeout((() => {
+          "Success" === Ym && Em.current && (Em.current.value = "", Om("")), qm("Enter")
+        }), "Success" === Ym ? 1e3 : 4e3);
         return () => {
-          clearTimeout(kk)
+          clearTimeout(mm)
         }
-      }), [wk]);
-      const Pk = () => {
-        const kk = jk.trim();
-        "" !== kk && "Enter" === wk && (Hk("Loading"), tk(kk).then((kk => {
-          Zk.current && ("error" in kk ? null === kk.error ? Hk("Enter") : (xk(kk.error), Hk("Error")) : Hk("Success"))
+      }), [Ym]);
+      const Im = () => {
+        const mm = om.trim();
+        "" !== mm && "Enter" === Ym && (qm("Loading"), pm(mm).then((mm => {
+          Em.current && ("error" in mm ? null === mm.error ? qm("Enter") : (Vm(mm.error), qm("Error")) : qm("Success"))
         })))
       };
-      return (0, Lk.jsxs)("div", {
+      return (0, Rm.jsxs)("div", {
         className: "PlayerNameField",
-        onKeyDown: kk => {
-          kk.target === Zk.current && "Escape" !== kk.key && kk.stopPropagation()
+        onKeyDown: mm => {
+          mm.target === Em.current && "Escape" !== mm.key && mm.stopPropagation()
         },
-        children: [(0, Lk.jsxs)("div", {
-          className: ik()("AddFriendBodyOverlay", `AddFriendBodyOverlay${wk}`),
-          children: ["Loading" === wk && (0, Lk.jsx)(ak.c, {}), "Success" === wk && (0, Lk.jsx)(qk.e, {
+        children: [(0, Rm.jsxs)("div", {
+          className: am()("AddFriendBodyOverlay", `AddFriendBodyOverlay${Ym}`),
+          children: ["Loading" === Ym && (0, Rm.jsx)(Dm.c, {}), "Success" === Ym && (0, Rm.jsx)(im.c, {
             name: "check"
-          }), "Error" === wk && Jk]
-        }), (0, Lk.jsxs)("div", {
+          }), "Error" === Ym && jm]
+        }), (0, Rm.jsxs)("div", {
           className: "PlayerSearch",
-          children: [(0, Lk.jsx)(yk.c, {
+          children: [(0, Rm.jsx)(xm.e, {
             className: "PlayerSearchInput",
-            domRef: Zk,
+            domRef: Em,
             maxLength: 32,
-            placeholderText: Tk,
-            ariaLabel: Tk,
+            placeholderText: Am,
+            ariaLabel: Am,
             stopPropagation: !1,
-            onValueChange: kk => {
-              ek(kk)
+            onValueChange: mm => {
+              Om(mm)
             },
-            onEnter: Pk
-          }), (0, Lk.jsxs)(lk.d, {
+            onEnter: Im
+          }), (0, Rm.jsxs)(wm.e, {
             className: "PlayerSearchInputButton SmallTextLight",
-            disabled: "Enter" !== wk || "" === jk.trim(),
-            onClick: Pk,
-            children: [(0, Lk.jsx)(qk.e, {
-              name: Ik
-            }), " ", Fk]
+            disabled: "Enter" !== Ym || "" === om.trim(),
+            onClick: Im,
+            children: [(0, Rm.jsx)(im.c, {
+              name: fm
+            }), " ", Tm]
           })]
         })]
       })
     }
   },
-  36721: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => tk
+  36810: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => pm
     });
-    var Xk = Ik(58),
-      Tk = Ik(1055),
-      ik = Ik.n(Tk),
-      yk = Ik(1179),
-      lk = Ik(1066),
-      ak = Ik(1096);
-    const qk = {
+    var hm = fm(59),
+      Am = fm(1080),
+      am = fm.n(Am),
+      xm = fm(1208),
+      wm = fm(1089),
+      Dm = fm(1135);
+    const im = {
         unlisted: "link",
         public: "globe",
         whitelist: "user-check",
         private: "lock"
       },
-      Lk = ["unlisted", "public", "whitelist", "private"];
+      Rm = ["unlisted", "public", "whitelist", "private"];
 
-    function tk(kk) {
+    function pm(mm) {
       let {
-        visibility: Fk,
-        onPick: Ik
-      } = kk;
+        visibility: Tm,
+        onPick: fm
+      } = mm;
       const {
-        t: Tk
-      } = (0, yk.y)(), tk = (0, Xk.useRef)([]);
-      return (0, ak.jsx)("div", {
+        t: Am
+      } = (0, xm.A)(), pm = (0, hm.useRef)([]);
+      return (0, Dm.jsx)("div", {
         className: "WorldSocialTiles",
         role: "group",
-        "aria-label": Tk("worldSocial:whoCanJoin"),
-        children: Lk.map(((kk, Xk) => {
-          const yk = kk === Fk;
-          return (0, ak.jsxs)("button", {
-            ref: kk => {
-              tk.current[Xk] = kk
+        "aria-label": Am("worldSocial:whoCanJoin"),
+        children: Rm.map(((mm, hm) => {
+          const xm = mm === Tm;
+          return (0, Dm.jsxs)("button", {
+            ref: mm => {
+              pm.current[hm] = mm
             },
             type: "button",
-            className: ik()("WorldSocialTile", {
-              WorldSocialTileSelected: yk
+            className: am()("WorldSocialTile", {
+              WorldSocialTileSelected: xm
             }),
-            "aria-pressed": yk,
-            tabIndex: yk ? 0 : -1,
-            onKeyDown: kk => {
-              ((kk, Fk) => {
-                const Ik = "ArrowRight" === kk.key || "ArrowDown" === kk.key ? 1 : "ArrowLeft" === kk.key || "ArrowUp" === kk.key ? -1 : 0;
-                var Xk;
-                0 !== Ik && (kk.preventDefault(), null === (Xk = tk.current[(Fk + Ik + Lk.length) % Lk.length]) || void 0 === Xk || Xk.focus())
-              })(kk, Xk)
+            "aria-pressed": xm,
+            tabIndex: xm ? 0 : -1,
+            onKeyDown: mm => {
+              ((mm, Tm) => {
+                const fm = "ArrowRight" === mm.key || "ArrowDown" === mm.key ? 1 : "ArrowLeft" === mm.key || "ArrowUp" === mm.key ? -1 : 0;
+                var hm;
+                0 !== fm && (mm.preventDefault(), null === (hm = pm.current[(Tm + fm + Rm.length) % Rm.length]) || void 0 === hm || hm.focus())
+              })(mm, hm)
             },
             onClick: () => {
-              Ik(kk)
+              fm(mm)
             },
-            children: [(0, ak.jsx)("span", {
+            children: [(0, Dm.jsx)("span", {
               className: "WorldSocialTileIcon",
-              children: (0, ak.jsx)(lk.e, {
-                name: qk[kk]
+              children: (0, Dm.jsx)(wm.c, {
+                name: im[mm]
               })
-            }), (0, ak.jsxs)("span", {
+            }), (0, Dm.jsxs)("span", {
               className: "WorldSocialTileText",
-              children: [(0, ak.jsx)("span", {
+              children: [(0, Dm.jsx)("span", {
                 className: "WorldSocialTileTitle",
-                children: Tk(`worldSocial:${kk}`)
-              }), (0, ak.jsx)("span", {
+                children: Am(`worldSocial:${mm}`)
+              }), (0, Dm.jsx)("span", {
                 className: "WorldSocialTileDescription",
-                children: Tk(`worldSocial:${kk}Description`)
+                children: Am(`worldSocial:${mm}Description`)
               })]
             })]
-          }, kk)
+          }, mm)
         }))
       })
     }
   },
-  36733: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => lk
+  36818: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => wm
     });
-    var Xk = Ik(1179),
-      Tk = Ik(2578),
-      ik = Ik(4338),
-      yk = Ik(1096);
+    var hm = fm(1208),
+      Am = fm(2644),
+      am = fm(4304),
+      xm = fm(1135);
 
-    function lk(kk) {
+    function wm(mm) {
       let {
-        Dt: Fk,
-        children: Ik,
-        ...lk
-      } = kk;
+        DE: Tm,
+        children: fm,
+        ...wm
+      } = mm;
       const {
-        t: ak
-      } = (0, Xk.y)();
-      return (0, yk.jsx)("div", {
+        t: Dm
+      } = (0, hm.A)();
+      return (0, xm.jsx)("div", {
         className: "WhitelistTickRow",
         onClick: () => {
-          Fk.onChange(!Fk.on)
+          Tm.onChange(!Tm.on)
         },
-        children: (0, yk.jsx)(Tk.e, {
-          ...lk,
+        children: (0, xm.jsx)(Am.c, {
+          ...wm,
           opensProfileCard: !1,
-          children: (0, yk.jsxs)("div", {
+          children: (0, xm.jsxs)("div", {
             className: "WhitelistTickRowActions",
-            onClick: kk => {
-              kk.stopPropagation()
+            onClick: mm => {
+              mm.stopPropagation()
             },
-            children: [Ik, (0, yk.jsx)("label", {
+            children: [fm, (0, xm.jsx)("label", {
               className: "WhitelistTickRowTick",
-              children: (0, yk.jsx)(ik.d, {
-                checked: Fk.on,
+              children: (0, xm.jsx)(am.b, {
+                checked: Tm.on,
                 disabled: !1,
-                ariaLabel: ak("worldSocial:letJoin", {
-                  playerName: lk.playerSocialPreview.name
+                ariaLabel: Dm("worldSocial:letJoin", {
+                  playerName: wm.playerSocialPreview.name
                 }),
-                onChange: kk => {
-                  Fk.onChange(kk.target.checked)
+                onChange: mm => {
+                  Tm.onChange(mm.target.checked)
                 }
               })
             })]
@@ -1953,395 +1953,395 @@ export const modules = {
       })
     }
   },
-  36712: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => ek
+  36801: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => Om
     });
-    var Xk = Ik(58),
-      Tk = Ik(1179),
-      ik = Ik(1800),
-      yk = Ik(95),
-      lk = Ik(25),
-      ak = Ik(1432),
-      qk = Ik(2602),
-      Lk = Ik(34058),
-      tk = Ik(1406),
-      Zk = Ik(1066),
-      jk = Ik(1096);
+    var hm = fm(59),
+      Am = fm(1208),
+      am = fm(1842),
+      xm = fm(105),
+      wm = fm(23),
+      Dm = fm(1476),
+      im = fm(2670),
+      Rm = fm(34180),
+      pm = fm(1454),
+      Em = fm(1089),
+      om = fm(1135);
 
-    function ek(kk) {
+    function Om(mm) {
       let {
-        worldCode: Fk,
-        message: Ik
-      } = kk;
+        worldCode: Tm,
+        message: fm
+      } = mm;
       const {
-        t: ek
-      } = (0, Tk.y)(), {
-        isTouchScreen: wk
-      } = (0, lk.j)(["isTouchScreen"]), Hk = yk.featureFlags.canUseInviteLinks, Jk = (0, Lk.d)(Hk && null === Ik), [xk, Pk] = (0, qk.g)(), Kk = (0, Xk.useRef)(null);
-      if (null !== Ik) return (0, jk.jsxs)("div", {
+        t: Om
+      } = (0, Am.A)(), {
+        isTouchScreen: Ym
+      } = (0, wm.m)(["isTouchScreen"]), qm = xm.featureFlags.canUseInviteLinks, jm = (0, Rm.f)(qm && null === fm), [Vm, Im] = (0, im.h)(), Km = (0, hm.useRef)(null);
+      if (null !== fm) return (0, om.jsxs)("div", {
         className: "WorldSocialLinkRow WorldSocialLinkRowMessage",
-        children: [(0, jk.jsx)(Zk.e, {
+        children: [(0, om.jsx)(Em.c, {
           name: "lock"
-        }), (0, jk.jsx)("span", {
-          children: Ik
+        }), (0, om.jsx)("span", {
+          children: fm
         })]
       });
-      const Qk = Hk ? Jk : Fk,
-        sk = wk && Hk && (0, qk.b)();
-      return (0, jk.jsxs)("div", {
+      const Qm = qm ? jm : Tm,
+        nm = Ym && qm && (0, im.c)();
+      return (0, om.jsxs)("div", {
         className: "WorldSocialLinkRow",
-        children: [!Hk && (0, jk.jsx)("span", {
+        children: [!qm && (0, om.jsx)("span", {
           className: "WorldSocialCodeLabel",
-          children: ek("worldSocial:worldCode")
-        }), (0, jk.jsx)("input", {
-          ref: Kk,
+          children: Om("worldSocial:worldCode")
+        }), (0, om.jsx)("input", {
+          ref: Km,
           className: "WorldSocialLink",
           readOnly: !0,
-          value: null !== Qk && void 0 !== Qk ? Qk : "",
-          "aria-label": ek(Hk ? "worldSocial:worldLink" : "worldSocial:worldCode"),
-          onFocus: kk => {
-            kk.currentTarget.select()
+          value: null !== Qm && void 0 !== Qm ? Qm : "",
+          "aria-label": Om(qm ? "worldSocial:worldLink" : "worldSocial:worldCode"),
+          onFocus: mm => {
+            mm.currentTarget.select()
           }
-        }), (0, jk.jsxs)(tk.d, {
+        }), (0, om.jsxs)(pm.e, {
           className: "WorldSocialCopy",
-          disabled: null === Qk,
+          disabled: null === Qm,
           onClick: () => {
-            null !== Qk && (0, qk.e)(Qk, {
-              useShareSheet: sk,
-              onOutcome: kk => {
-                if ((0, ak.reportAnalyticsClick)({
+            null !== Qm && (0, im.d)(Qm, {
+              useShareSheet: nm,
+              onOutcome: mm => {
+                if ((0, Dm.reportAnalyticsClick)({
                     id: "world_social.copy_link",
-                    value: "copied" !== kk || Hk ? kk : "code"
-                  }), "copied" === kk) Pk();
-                else if ("failed" === kk) {
-                  var Fk;
-                  null === (Fk = Kk.current) || void 0 === Fk || Fk.focus(), ik.e.showMessage({
+                    value: "copied" !== mm || qm ? mm : "code"
+                  }), "copied" === mm) Im();
+                else if ("failed" === mm) {
+                  var Tm;
+                  null === (Tm = Km.current) || void 0 === Tm || Tm.focus(), am.d.showMessage({
                     translationKey: "partyBar:copyFailed"
                   })
                 }
               }
             })
           },
-          children: [(0, jk.jsx)(Zk.e, {
-            name: xk ? "check" : sk ? "up-from-bracket" : "copy"
-          }), " ", ek(xk ? "general:copied" : sk ? "worldSocial:share" : "general:copy")]
+          children: [(0, om.jsx)(Em.c, {
+            name: Vm ? "check" : nm ? "up-from-bracket" : "copy"
+          }), " ", Om(Vm ? "general:copied" : nm ? "worldSocial:share" : "general:copy")]
         })]
       })
     }
   },
-  36727: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => jk,
-      i: () => Zk,
-      j: () => tk
+  36813: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => om,
+      d: () => Em,
+      h: () => pm
     });
-    var Xk = Ik(612),
-      Tk = Ik(1179),
-      ik = Ik(1585),
-      yk = Ik(2578),
-      lk = Ik(2525),
-      ak = Ik(1406),
-      qk = Ik(36733),
-      Lk = Ik(1096);
+    var hm = fm(641),
+      Am = fm(1208),
+      am = fm(1643),
+      xm = fm(2644),
+      wm = fm(2588),
+      Dm = fm(1454),
+      im = fm(36818),
+      Rm = fm(1135);
 
-    function tk(kk, Fk) {
-      var Ik;
+    function pm(mm, Tm) {
+      var fm;
       return {
         isError: !1,
-        name: kk,
+        name: mm,
         ranks: [...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : []],
-        cosmetics: null !== Fk && void 0 !== Fk ? Fk : {},
-        nameColour: null !== (Ik = null === Fk || void 0 === Fk ? void 0 : Fk.nameColour) && void 0 !== Ik ? Ik : Xk.c,
+        cosmetics: null !== Tm && void 0 !== Tm ? Tm : {},
+        nameColour: null !== (fm = null === Tm || void 0 === Tm ? void 0 : Tm.nameColour) && void 0 !== fm ? fm : hm.b,
         location: {
           status: "offline"
         }
       }
     }
 
-    function Zk(kk) {
+    function Em(mm) {
       let {
-        player: Fk,
-        isFriend: Ik = !1,
-        status: Xk,
-        showLocation: ak = void 0 === Xk,
-        Dt: tk,
-        onSendFriendRequest: Zk,
-        actions: jk,
-        zIndex: ek
-      } = kk;
+        player: Tm,
+        isFriend: fm = !1,
+        status: hm,
+        showLocation: Dm = void 0 === hm,
+        DE: pm,
+        onSendFriendRequest: Em,
+        actions: om,
+        zIndex: Om
+      } = mm;
       const {
-        t: wk
-      } = (0, Tk.y)();
-      let Hk = Xk;
-      null !== tk && void 0 !== tk && tk.on && (Hk = (0, Lk.jsxs)(Lk.Fragment, {
-        children: [null !== Xk && void 0 !== Xk ? Xk : (0, Lk.jsx)(lk.c, {
-          socialPreview: Fk
-        }), (0, Lk.jsxs)("span", {
+        t: Ym
+      } = (0, Am.A)();
+      let qm = hm;
+      null !== pm && void 0 !== pm && pm.on && (qm = (0, Rm.jsxs)(Rm.Fragment, {
+        children: [null !== hm && void 0 !== hm ? hm : (0, Rm.jsx)(wm.d, {
+          socialPreview: Tm
+        }), (0, Rm.jsxs)("span", {
           className: "WorldSocialCanJoin",
-          children: [" \xb7 ", wk("worldSocial:canJoin")]
+          children: [" \xb7 ", Ym("worldSocial:canJoin")]
         })]
       }));
-      const Jk = {
-        playerSocialPreview: Fk,
-        isFriend: Ik,
+      const jm = {
+        playerSocialPreview: Tm,
+        isFriend: fm,
         hideFriendBadge: !0,
-        onFriendRemoved: Ik ? kk => {
-          ik.c.removeFriendFromState(kk)
+        onFriendRemoved: fm ? mm => {
+          am.e.removeFriendFromState(mm)
         } : void 0,
-        status: Hk,
-        showLocation: ak,
-        onSendFriendRequest: Zk,
-        zIndex: ek
+        status: qm,
+        showLocation: Dm,
+        onSendFriendRequest: Em,
+        zIndex: Om
       };
-      return tk ? (0, Lk.jsx)(qk.c, {
-        ...Jk,
-        Dt: tk,
-        children: jk
-      }) : (0, Lk.jsx)(yk.e, {
-        ...Jk,
+      return pm ? (0, Rm.jsx)(im.b, {
+        ...jm,
+        DE: pm,
+        children: om
+      }) : (0, Rm.jsx)(xm.c, {
+        ...jm,
         opensProfileCard: !1,
-        children: jk || void 0
+        children: om || void 0
       })
     }
 
-    function jk(kk) {
+    function om(mm) {
       let {
-        row: Fk,
-        Dt: Ik,
-        canInvite: Xk,
-        invited: ik,
-        onInvite: yk,
-        zIndex: lk
-      } = kk;
+        row: Tm,
+        DE: fm,
+        canInvite: hm,
+        invited: am,
+        onInvite: xm,
+        zIndex: wm
+      } = mm;
       const {
-        t: qk
-      } = (0, Tk.y)(), tk = "online" === Fk.place ? ak.d : ak.g;
-      return (0, Lk.jsx)(Zk, {
-        player: Fk.friend,
+        t: im
+      } = (0, Am.A)(), pm = "online" === Tm.place ? Dm.e : Dm.g;
+      return (0, Rm.jsx)(Em, {
+        player: Tm.friend,
         isFriend: !0,
-        status: "here" === Fk.place ? qk("worldSocial:inThisWorld") : void 0,
+        status: "here" === Tm.place ? im("worldSocial:inThisWorld") : void 0,
         showLocation: !0,
-        Dt: Ik,
-        zIndex: lk,
-        actions: Xk && (0, Lk.jsx)(tk, {
+        DE: fm,
+        zIndex: wm,
+        actions: hm && (0, Rm.jsx)(pm, {
           className: "WorldSocialInvite SmallTextLight",
-          disabled: ik,
-          onClick: yk,
-          ariaLabel: `${qk("worldSocial:invite")} ${Fk.friend.name}`,
-          children: qk(ik ? "worldSocial:invited" : "worldSocial:invite")
+          disabled: am,
+          onClick: xm,
+          ariaLabel: `${im("worldSocial:invite")} ${Tm.friend.name}`,
+          children: im(am ? "worldSocial:invited" : "worldSocial:invite")
         })
       })
     }
   },
-  36707: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => ak,
-      f: () => yk,
-      g: () => qk
+  36788: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => Dm,
+      g: () => xm,
+      j: () => im
     });
-    var Xk = Ik(58),
-      Tk = Ik(4584),
-      ik = Ik(1800);
+    var hm = fm(59),
+      Am = fm(4523),
+      am = fm(1842);
 
-    function yk(kk) {
-      const Fk = {
-        lobbyName: kk,
+    function xm(mm) {
+      const Tm = {
+        lobbyName: mm,
         answer: null,
-        response: Tk.c.getSocialSettings(kk)
+        response: Am.b.getSocialSettings(mm)
       };
-      return Fk.response.then((kk => {
-        Fk.answer = kk
-      })), Fk
+      return Tm.response.then((mm => {
+        Tm.answer = mm
+      })), Tm
     }
-    const lk = new Map;
+    const wm = new Map;
 
-    function ak(kk) {
-      lk.set(kk.lobbyName, kk)
+    function Dm(mm) {
+      wm.set(mm.lobbyName, mm)
     }
 
-    function qk(kk) {
-      const [Fk] = (0, Xk.useState)((() => function(kk) {
-        var Fk;
-        const Ik = null !== (Fk = lk.get(kk)) && void 0 !== Fk ? Fk : null;
-        return null !== Ik && void 0 !== Ik && Ik.answer && "error" in Ik.answer ? null : Ik
-      }(kk))), [Ik, yk] = (0, Xk.useState)((() => null !== Fk && void 0 !== Fk && Fk.answer && "settings" in Fk.answer ? Fk.answer.settings : null)), [ak, qk] = (0, Xk.useState)(!0), [Lk, tk] = (0, Xk.useState)(null !== Ik), Zk = (0, Xk.useRef)(Ik);
-      Zk.current = Ik;
-      const jk = (0, Xk.useRef)(0),
-        ek = (0, Xk.useRef)(0),
-        wk = (0, Xk.useRef)(!1),
-        Hk = (0, Xk.useRef)(!0),
-        Jk = (0, Xk.useCallback)((async Fk => {
-          const Ik = ++jk.current,
-            Xk = await (null !== Fk && void 0 !== Fk ? Fk : Tk.c.getSocialSettings(kk));
-          Hk.current && Ik === jk.current && (tk(!0), qk(!1), "error" in Xk || yk(Xk.settings))
-        }), [kk]),
-        xk = (0, Xk.useCallback)((() => {
-          qk(!0), Jk()
-        }), [Jk]),
-        Pk = (0, Xk.useCallback)((() => {
-          ek.current > 0 ? wk.current = !0 : Jk()
-        }), [Jk]);
-      (0, Xk.useEffect)((() => (Hk.current = !0, lk.delete(kk), qk(!0), Jk(null === Fk || void 0 === Fk ? void 0 : Fk.response), () => {
-        Hk.current = !1
-      })), [Jk, kk, Fk]);
-      const Kk = kk => {
-        jk.current++, qk(!1), Zk.current = kk, yk(kk)
+    function im(mm) {
+      const [Tm] = (0, hm.useState)((() => function(mm) {
+        var Tm;
+        const fm = null !== (Tm = wm.get(mm)) && void 0 !== Tm ? Tm : null;
+        return null !== fm && void 0 !== fm && fm.answer && "error" in fm.answer ? null : fm
+      }(mm))), [fm, xm] = (0, hm.useState)((() => null !== Tm && void 0 !== Tm && Tm.answer && "settings" in Tm.answer ? Tm.answer.settings : null)), [Dm, im] = (0, hm.useState)(!0), [Rm, pm] = (0, hm.useState)(null !== fm), Em = (0, hm.useRef)(fm);
+      Em.current = fm;
+      const om = (0, hm.useRef)(0),
+        Om = (0, hm.useRef)(0),
+        Ym = (0, hm.useRef)(!1),
+        qm = (0, hm.useRef)(!0),
+        jm = (0, hm.useCallback)((async Tm => {
+          const fm = ++om.current,
+            hm = await (null !== Tm && void 0 !== Tm ? Tm : Am.b.getSocialSettings(mm));
+          qm.current && fm === om.current && (pm(!0), im(!1), "error" in hm || xm(hm.settings))
+        }), [mm]),
+        Vm = (0, hm.useCallback)((() => {
+          im(!0), jm()
+        }), [jm]),
+        Im = (0, hm.useCallback)((() => {
+          Om.current > 0 ? Ym.current = !0 : jm()
+        }), [jm]);
+      (0, hm.useEffect)((() => (qm.current = !0, wm.delete(mm), im(!0), jm(null === Tm || void 0 === Tm ? void 0 : Tm.response), () => {
+        qm.current = !1
+      })), [jm, mm, Tm]);
+      const Km = mm => {
+        om.current++, im(!1), Em.current = mm, xm(mm)
       };
       return {
-        settings: Ik,
-        loading: ak,
-        answered: Lk,
-        retry: xk,
-        refresh: Pk,
-        change: async function(Fk, Ik) {
+        settings: fm,
+        loading: Dm,
+        answered: Rm,
+        retry: Vm,
+        refresh: Im,
+        change: async function(Tm, fm) {
           let {
-            quiet: Xk = !1,
-            onAnswer: yk
+            quiet: hm = !1,
+            onAnswer: xm
           } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-          const lk = Zk.current;
-          if (null === lk) return !1;
-          Kk(Ik(lk)), ek.current > 0 && (wk.current = !0), ek.current++;
-          const ak = await Tk.c.setSocialSettings(kk, Fk);
-          ek.current--;
-          const qk = !("error" in ak);
-          if (!Hk.current) return qk;
-          if (null === yk || void 0 === yk || yk(ak), Xk);
-          else if ("error" in ak) ik.e.showMessage({
-            translationKey: ak.error
+          const wm = Em.current;
+          if (null === wm) return !1;
+          Km(fm(wm)), Om.current > 0 && (Ym.current = !0), Om.current++;
+          const Dm = await Am.b.setSocialSettings(mm, Tm);
+          Om.current--;
+          const im = !("error" in Dm);
+          if (!qm.current) return im;
+          if (null === xm || void 0 === xm || xm(Dm), hm);
+          else if ("error" in Dm) am.d.showMessage({
+            translationKey: Dm.error
           });
           else
-            for (const kk of ak.notFound) ik.e.showMessage({
+            for (const mm of Dm.notFound) am.d.showMessage({
               translationKey: "worldSocial:notFound",
               params: {
-                playerName: kk
+                playerName: mm
               }
             });
-          if (ek.current > 0) return qk;
-          const Lk = wk.current;
-          return wk.current = !1, !Lk && "settings" in ak ? Kk(ak.settings) : (Lk || Kk(lk), Jk()), qk
+          if (Om.current > 0) return im;
+          const Rm = Ym.current;
+          return Ym.current = !1, !Rm && "settings" in Dm ? Km(Dm.settings) : (Rm || Km(wm), jm()), im
         }
       }
     }
   },
-  36750: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => yk,
-      f: () => ik
+  36831: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => xm,
+      g: () => am
     });
-    var Xk = Ik(149);
-    const Tk = new Map;
+    var hm = fm(168);
+    const Am = new Map;
 
-    function ik(kk, Fk) {
-      var Ik;
-      const Xk = null !== (Ik = Tk.get(kk)) && void 0 !== Ik ? Ik : new Map;
-      Xk.set(Fk, Date.now()), Tk.set(kk, Xk)
+    function am(mm, Tm) {
+      var fm;
+      const hm = null !== (fm = Am.get(mm)) && void 0 !== fm ? fm : new Map;
+      hm.set(Tm, Date.now()), Am.set(mm, hm)
     }
 
-    function yk(kk) {
-      const Fk = Tk.get(kk);
-      if (!Fk) return [];
-      const Ik = Date.now();
-      for (const [Tk, ik] of Fk) Ik - ik >= Xk.k && Fk.delete(Tk);
-      return [...Fk.keys()]
+    function xm(mm) {
+      const Tm = Am.get(mm);
+      if (!Tm) return [];
+      const fm = Date.now();
+      for (const [Am, am] of Tm) fm - am >= hm.n && Tm.delete(Am);
+      return [...Tm.keys()]
     }
   },
-  36710: (kk, Fk, Ik) => {
-    function Xk(kk, Fk) {
-      const Ik = Fk.toLowerCase();
-      for (const Xk of kk)
-        if (Xk.toLowerCase() === Ik) return !0;
+  36793: (mm, Tm, fm) => {
+    function hm(mm, Tm) {
+      const fm = Tm.toLowerCase();
+      for (const hm of mm)
+        if (hm.toLowerCase() === fm) return !0;
       return !1
     }
 
-    function Tk(kk, Fk, Ik) {
-      const Tk = [],
-        ik = [],
-        yk = [];
-      for (const lk of kk) !lk.isError && lk.name && ("inGame" === lk.location.status && lk.location.inLobbyName === Fk || Xk(Ik, lk.name) ? ik.push({
-        friend: lk,
+    function Am(mm, Tm, fm) {
+      const Am = [],
+        am = [],
+        xm = [];
+      for (const wm of mm) !wm.isError && wm.name && ("inGame" === wm.location.status && wm.location.inLobbyName === Tm || hm(fm, wm.name) ? am.push({
+        friend: wm,
         place: "here"
-      }) : "offline" === lk.location.status ? yk.push({
-        friend: lk,
+      }) : "offline" === wm.location.status ? xm.push({
+        friend: wm,
         place: "offline"
-      }) : Tk.push({
-        friend: lk,
+      }) : Am.push({
+        friend: wm,
         place: "online"
       }));
-      return [...Tk, ...ik, ...yk]
+      return [...Am, ...am, ...xm]
     }
 
-    function ik(kk, Fk, Ik) {
-      const Tk = [],
-        ik = kk.flatMap((kk => "here" === kk.place ? [kk.friend.name] : []));
-      for (const yk of [...ik, ...Fk]) Xk(Tk, yk) || Xk(Ik, yk) || Tk.push(yk);
-      return Tk
+    function am(mm, Tm, fm) {
+      const Am = [],
+        am = mm.flatMap((mm => "here" === mm.place ? [mm.friend.name] : []));
+      for (const xm of [...am, ...Tm]) hm(Am, xm) || hm(fm, xm) || Am.push(xm);
+      return Am
     }
 
-    function yk(kk, Fk) {
-      return null === kk || void 0 === kk || !kk.canManage || Xk(kk.whitelist, Fk) ? "none" : "whitelist" === kk.visibility ? "required" : "quiet"
+    function xm(mm, Tm) {
+      return null === mm || void 0 === mm || !mm.canManage || hm(mm.whitelist, Tm) ? "none" : "whitelist" === mm.visibility ? "required" : "quiet"
     }
 
-    function lk(kk) {
-      if (null === kk) return !0;
+    function wm(mm) {
+      if (null === mm) return !0;
       const {
-        visibility: Fk
-      } = kk;
-      return "public" === Fk || "unlisted" === Fk || "whitelist" === Fk && kk.canManage
+        visibility: Tm
+      } = mm;
+      return "public" === Tm || "unlisted" === Tm || "whitelist" === Tm && mm.canManage
     }
 
-    function ak(kk, Fk, Ik) {
-      if (Ik) {
-        const Ik = Fk.filter((Fk => !Xk(kk.whitelist, Fk)));
+    function Dm(mm, Tm, fm) {
+      if (fm) {
+        const fm = Tm.filter((Tm => !hm(mm.whitelist, Tm)));
         return {
-          ...kk,
-          whitelist: [...kk.whitelist, ...Ik]
+          ...mm,
+          whitelist: [...mm.whitelist, ...fm]
         }
       }
       return {
-        ...kk,
-        whitelist: kk.whitelist.filter((kk => !Xk(Fk, kk)))
+        ...mm,
+        whitelist: mm.whitelist.filter((mm => !hm(Tm, mm)))
       }
     }
 
-    function qk(kk, Fk) {
-      const Ik = [];
-      for (let Xk = 0; Xk < kk.length; Xk += Fk) Ik.push(kk.slice(Xk, Xk + Fk));
-      return Ik
+    function im(mm, Tm) {
+      const fm = [];
+      for (let hm = 0; hm < mm.length; hm += Tm) fm.push(mm.slice(hm, hm + Tm));
+      return fm
     }
-    Ik.d(Fk, {
-      e: () => lk,
-      f: () => ik,
-      i: () => Tk,
-      m: () => Xk,
-      q: () => qk,
-      r: () => yk,
-      s: () => ak
+    fm.d(Tm, {
+      d: () => wm,
+      e: () => am,
+      f: () => Am,
+      g: () => hm,
+      k: () => im,
+      m: () => xm,
+      p: () => Dm
     })
   },
-  37056: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => ik
+  37110: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => am
     });
-    var Xk = Ik(58),
-      Tk = Ik(2349);
+    var hm = fm(59),
+      Am = fm(2391);
 
-    function ik() {
-      const kk = (0, Tk.j)("lobbyLeaderboardInfo");
-      return (0, Xk.useMemo)((() => function(kk) {
-        if (null === kk) return null;
-        const Fk = Object.entries(kk),
-          Ik = Fk.filter((kk => {
-            let [, Fk] = kk;
-            return void 0 !== Fk
+    function am() {
+      const mm = (0, Am.g)("lobbyLeaderboardInfo");
+      return (0, hm.useMemo)((() => function(mm) {
+        if (null === mm) return null;
+        const Tm = Object.entries(mm),
+          fm = Tm.filter((mm => {
+            let [, Tm] = mm;
+            return void 0 !== Tm
           }));
-        if (Ik.length === Fk.length) return kk;
-        const Xk = Object.fromEntries(Ik),
-          Tk = Object.keys(kk).filter((kk => !Object.hasOwn(Xk, kk)));
-        return console.warn(`lobbyLeaderboardInfo left out its undefined columns: ${Tk.join(", ")}`), Xk
-      }(kk)), [kk])
+        if (fm.length === Tm.length) return mm;
+        const hm = Object.fromEntries(fm),
+          Am = Object.keys(mm).filter((mm => !Object.hasOwn(hm, mm)));
+        return console.warn(`lobbyLeaderboardInfo left out its undefined columns: ${Am.join(", ")}`), hm
+      }(mm)), [mm])
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

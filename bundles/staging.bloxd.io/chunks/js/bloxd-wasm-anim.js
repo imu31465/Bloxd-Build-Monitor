@@ -1,271 +1,271 @@
 export const id = 5;
 export const ids = [5];
 export const modules = {
-  42662: (kk, Fk, Ik) => {
-    kk.exports = Ik.p + "static/media/bloxd_wasm_anim_bg.657167461c9fa04b7c6b.wasm"
+  42688: (mm, Tm, fm) => {
+    mm.exports = fm.p + "static/media/bloxd_wasm_anim_bg.c22fda982f3d0ea7fdf0.wasm"
   },
-  42653: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      BloxdAnimWasmError: () => Rk,
-      compileAnimationPackInWasm: () => ck
+  42683: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      BloxdAnimWasmError: () => Pm,
+      compileAnimationPackInWasm: () => rm
     });
-    var Xk = {};
+    var hm = {};
 
-    function Tk(kk, Fk, Ik, Xk, Tk, ik) {
-      const yk = xk(kk, Ek.wmCG),
-        lk = Ok,
-        ak = xk(Fk, Ek.wmCG),
-        qk = Ok,
-        Lk = xk(Ik, Ek.wmCG),
-        tk = Ok,
-        Zk = xk(Xk, Ek.wmCG),
-        ek = Ok,
-        wk = xk(Tk, Ek.wmCG),
-        Hk = Ok;
-      var Pk = Jk(ik) ? 0 : function(kk, Fk) {
-          const Ik = Fk(1 * kk.length, 1) >>> 0;
-          return jk().set(kk, Ik / 1), Ok = kk.length, Ik
-        }(ik, Ek.wmCG),
-        Qk = Ok;
-      const sk = Ek.W2L2(yk, lk, ak, qk, Lk, tk, Zk, ek, wk, Hk, Pk, Qk);
-      if (sk[3]) throw Kk(sk[2]);
-      var Vk, zk, Sk = (Vk = sk[0], zk = sk[1], Vk >>>= 0, jk().subarray(Vk / 1, Vk / 1 + zk)).slice();
-      return Ek.KMFJ(sk[0], 1 * sk[1], 1), Sk
+    function Am(mm, Tm, fm, hm, Am, am) {
+      const xm = Vm(mm, km.o3qu),
+        wm = bm,
+        Dm = Vm(Tm, km.o3qu),
+        im = bm,
+        Rm = Vm(fm, km.o3qu),
+        pm = bm,
+        Em = Vm(hm, km.o3qu),
+        Om = bm,
+        Ym = Vm(Am, km.o3qu),
+        qm = bm;
+      var Im = jm(am) ? 0 : function(mm, Tm) {
+          const fm = Tm(1 * mm.length, 1) >>> 0;
+          return om().set(mm, fm / 1), bm = mm.length, fm
+        }(am, km.o3qu),
+        Qm = bm;
+      const nm = km.LsxH(xm, wm, Dm, im, Rm, pm, Em, Om, Ym, qm, Im, Qm);
+      if (nm[3]) throw Km(nm[2]);
+      var Jm, cm, zm = (Jm = nm[0], cm = nm[1], Jm >>>= 0, om().subarray(Jm / 1, Jm / 1 + cm)).slice();
+      return km.Vv2C(nm[0], 1 * nm[1], 1), zm
     }
 
-    function ik(kk, Fk) {
-      const Ik = Pk(kk, Ek.wmCG, Ek.To7b),
-        Xk = Ok,
-        Tk = Ek.S5cX(Ik, Xk, Fk);
-      if (Tk[1]) throw Kk(Tk[0])
+    function am(mm, Tm) {
+      const fm = Im(mm, km.o3qu, km.GYkl),
+        hm = bm,
+        Am = km.sxKc(fm, hm, Tm);
+      if (Am[1]) throw Km(Am[0])
     }
 
-    function yk() {
-      Ek.s3eN()
+    function xm() {
+      km.GJzE()
     }
 
-    function lk() {
+    function wm() {
       return {
         __proto__: null,
-        Cz2w: {
+        w3FG: {
           __proto__: null,
-          DV5d: function(kk, Fk) {
-            return ak(Error(tk(kk, Fk)))
+          skOo: function(mm, Tm) {
+            return Dm(Error(pm(mm, Tm)))
           },
-          VJho: function(kk, Fk) {
-            const Ik = ek(Fk),
-              Xk = "string" === typeof Ik ? Ik : void 0;
-            var Tk = Jk(Xk) ? 0 : Pk(Xk, Ek.wmCG, Ek.To7b),
-              ik = Ok;
-            Lk().setInt32(kk + 4, ik, !0), Lk().setInt32(kk + 0, Tk, !0)
+          q9qt: function(mm, Tm) {
+            const fm = Om(Tm),
+              hm = "string" === typeof fm ? fm : void 0;
+            var Am = jm(hm) ? 0 : Im(hm, km.o3qu, km.GYkl),
+              am = bm;
+            Rm().setInt32(mm + 4, am, !0), Rm().setInt32(mm + 0, Am, !0)
           },
-          LZ7M: function(kk, Fk) {
-            throw new Error(tk(kk, Fk))
+          vFqX: function(mm, Tm) {
+            throw new Error(pm(mm, Tm))
           },
-          ZMcJ: function(kk, Fk) {
-            console.error(tk(kk, Fk))
+          eUtd: function(mm, Tm) {
+            console.error(pm(mm, Tm))
           },
-          kcXe: function(kk) {
-            Kk(kk)
+          nEhu: function(mm) {
+            Km(mm)
           }
         }
       }
     }
 
-    function ak(kk) {
-      Hk === wk.length && wk.push(wk.length + 1);
-      const Fk = Hk;
-      return Hk = wk[Fk], wk[Fk] = kk, Fk
+    function Dm(mm) {
+      qm === Ym.length && Ym.push(Ym.length + 1);
+      const Tm = qm;
+      return qm = Ym[Tm], Ym[Tm] = mm, Tm
     }
-    Ik.r(Xk), Ik.d(Xk, {
-      pyk: () => Tk,
-      yt: () => ik,
-      default: () => pk,
-      initSync: () => Gk,
-      lt: () => yk
+    fm.r(hm), fm.d(hm, {
+      rxm: () => Am,
+      Vp: () => am,
+      default: () => Nm,
+      initSync: () => em,
+      Ip: () => xm
     });
-    let qk = null;
+    let im = null;
 
-    function Lk() {
-      return null !== qk && qk.buffer === Ek.memory.buffer || (qk = new DataView(Ek.memory.buffer)), qk
+    function Rm() {
+      return null !== im && im.buffer === km.memory.buffer || (im = new DataView(km.memory.buffer)), im
     }
 
-    function tk(kk, Fk) {
-      return function(kk, Fk) {
-        Vk += Fk, Vk >= sk && (Qk = new TextDecoder("utf-8", {
+    function pm(mm, Tm) {
+      return function(mm, Tm) {
+        Jm += Tm, Jm >= nm && (Qm = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), Qk.decode(), Vk = Fk);
-        return Qk.decode(jk().subarray(kk, kk + Fk))
-      }(kk >>> 0, Fk)
+        }), Qm.decode(), Jm = Tm);
+        return Qm.decode(om().subarray(mm, mm + Tm))
+      }(mm >>> 0, Tm)
     }
-    let Zk = null;
+    let Em = null;
 
-    function jk() {
-      return null !== Zk && 0 !== Zk.byteLength || (Zk = new Uint8Array(Ek.memory.buffer)), Zk
-    }
-
-    function ek(kk) {
-      return wk[kk]
-    }
-    let wk = new Array(1024).fill(void 0);
-    wk.push(void 0, null, !0, !1);
-    let Hk = wk.length;
-
-    function Jk(kk) {
-      return void 0 === kk || null === kk
+    function om() {
+      return null !== Em && 0 !== Em.byteLength || (Em = new Uint8Array(km.memory.buffer)), Em
     }
 
-    function xk(kk, Fk) {
-      const Ik = Fk(4 * kk.length, 4) >>> 0,
-        Xk = Lk();
-      for (let Tk = 0; Tk < kk.length; Tk++) Xk.setUint32(Ik + 4 * Tk, ak(kk[Tk]), !0);
-      return Ok = kk.length, Ik
+    function Om(mm) {
+      return Ym[mm]
+    }
+    let Ym = new Array(1024).fill(void 0);
+    Ym.push(void 0, null, !0, !1);
+    let qm = Ym.length;
+
+    function jm(mm) {
+      return void 0 === mm || null === mm
     }
 
-    function Pk(kk, Fk, Ik) {
-      if (void 0 === Ik) {
-        const Ik = zk.encode(kk),
-          Xk = Fk(Ik.length, 1) >>> 0;
-        return jk().subarray(Xk, Xk + Ik.length).set(Ik), Ok = Ik.length, Xk
+    function Vm(mm, Tm) {
+      const fm = Tm(4 * mm.length, 4) >>> 0,
+        hm = Rm();
+      for (let Am = 0; Am < mm.length; Am++) hm.setUint32(fm + 4 * Am, Dm(mm[Am]), !0);
+      return bm = mm.length, fm
+    }
+
+    function Im(mm, Tm, fm) {
+      if (void 0 === fm) {
+        const fm = cm.encode(mm),
+          hm = Tm(fm.length, 1) >>> 0;
+        return om().subarray(hm, hm + fm.length).set(fm), bm = fm.length, hm
       }
-      let Xk = kk.length,
-        Tk = Fk(Xk, 1) >>> 0;
-      const ik = jk();
-      let yk = 0;
-      for (; yk < Xk; yk++) {
-        const Fk = kk.charCodeAt(yk);
-        if (Fk > 127) break;
-        ik[Tk + yk] = Fk
+      let hm = mm.length,
+        Am = Tm(hm, 1) >>> 0;
+      const am = om();
+      let xm = 0;
+      for (; xm < hm; xm++) {
+        const Tm = mm.charCodeAt(xm);
+        if (Tm > 127) break;
+        am[Am + xm] = Tm
       }
-      if (yk !== Xk) {
-        0 !== yk && (kk = kk.slice(yk)), Tk = Ik(Tk, Xk, Xk = yk + 3 * kk.length, 1) >>> 0;
-        const Fk = jk().subarray(Tk + yk, Tk + Xk);
-        yk += zk.encodeInto(kk, Fk).written, Tk = Ik(Tk, Xk, yk, 1) >>> 0
+      if (xm !== hm) {
+        0 !== xm && (mm = mm.slice(xm)), Am = fm(Am, hm, hm = xm + 3 * mm.length, 1) >>> 0;
+        const Tm = om().subarray(Am + xm, Am + hm);
+        xm += cm.encodeInto(mm, Tm).written, Am = fm(Am, hm, xm, 1) >>> 0
       }
-      return Ok = yk, Tk
+      return bm = xm, Am
     }
 
-    function Kk(kk) {
-      const Fk = ek(kk);
-      return function(kk) {
-        kk < 1028 || (wk[kk] = Hk, Hk = kk)
-      }(kk), Fk
+    function Km(mm) {
+      const Tm = Om(mm);
+      return function(mm) {
+        mm < 1028 || (Ym[mm] = qm, qm = mm)
+      }(mm), Tm
     }
-    let Qk = new TextDecoder("utf-8", {
+    let Qm = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    Qk.decode();
-    const sk = 2146435072;
-    let Vk = 0;
-    const zk = new TextEncoder;
-    "encodeInto" in zk || (zk.encodeInto = function(kk, Fk) {
-      const Ik = zk.encode(kk);
-      return Fk.set(Ik), {
-        read: kk.length,
-        written: Ik.length
+    Qm.decode();
+    const nm = 2146435072;
+    let Jm = 0;
+    const cm = new TextEncoder;
+    "encodeInto" in cm || (cm.encodeInto = function(mm, Tm) {
+      const fm = cm.encode(mm);
+      return Tm.set(fm), {
+        read: mm.length,
+        written: fm.length
       }
     });
-    let Sk, vk, Ek, Ok = 0;
+    let zm, Zm, km, bm = 0;
 
-    function nk(kk, Fk) {
-      return vk = kk, Ek = kk.exports, Sk = Fk, qk = null, Zk = null, Ek.euF5(), Ek
+    function Sm(mm, Tm) {
+      return Zm = mm, km = mm.exports, zm = Tm, im = null, Em = null, km.O94G(), km
     }
 
-    function Gk(kk) {
-      if (void 0 !== Ek) return Ek;
-      void 0 !== kk && (Object.getPrototypeOf(kk) === Object.prototype ? ({
-        module: kk
-      } = kk) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const Fk = lk();
-      kk instanceof WebAssembly.Module || (kk = new WebAssembly.Module(kk));
-      return nk(new WebAssembly.Instance(kk, Fk), kk)
+    function em(mm) {
+      if (void 0 !== km) return km;
+      void 0 !== mm && (Object.getPrototypeOf(mm) === Object.prototype ? ({
+        module: mm
+      } = mm) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const Tm = wm();
+      mm instanceof WebAssembly.Module || (mm = new WebAssembly.Module(mm));
+      return Sm(new WebAssembly.Instance(mm, Tm), mm)
     }
-    async function pk(kk) {
-      if (void 0 !== Ek) return Ek;
-      void 0 !== kk && (Object.getPrototypeOf(kk) === Object.prototype ? ({
-        module_or_path: kk
-      } = kk) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const Fk = lk();
-      ("string" === typeof kk || "function" === typeof Request && kk instanceof Request || "function" === typeof URL && kk instanceof URL) && (kk = fetch(kk));
+    async function Nm(mm) {
+      if (void 0 !== km) return km;
+      void 0 !== mm && (Object.getPrototypeOf(mm) === Object.prototype ? ({
+        module_or_path: mm
+      } = mm) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const Tm = wm();
+      ("string" === typeof mm || "function" === typeof Request && mm instanceof Request || "function" === typeof URL && mm instanceof URL) && (mm = fetch(mm));
       const {
-        instance: Ik,
-        module: Xk
-      } = await async function(kk, Fk) {
-        if ("function" === typeof Response && kk instanceof Response) {
-          if (!kk.ok) throw new Error(`failed to fetch Wasm: ${kk.status} ${kk.statusText} fetching '${kk.url}'`);
+        instance: fm,
+        module: hm
+      } = await async function(mm, Tm) {
+        if ("function" === typeof Response && mm instanceof Response) {
+          if (!mm.ok) throw new Error(`failed to fetch Wasm: ${mm.status} ${mm.statusText} fetching '${mm.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(kk, Fk)
-          } catch (Ik) {
-            if (! function(kk) {
-                switch (kk) {
+            return await WebAssembly.instantiateStreaming(mm, Tm)
+          } catch (fm) {
+            if (! function(mm) {
+                switch (mm) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(kk.type) || "application/wasm" === kk.headers.get("Content-Type")) throw Ik;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", Ik)
+              }(mm.type) || "application/wasm" === mm.headers.get("Content-Type")) throw fm;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", fm)
           }
-          const Xk = await kk.arrayBuffer();
-          return await WebAssembly.instantiate(Xk, Fk)
+          const hm = await mm.arrayBuffer();
+          return await WebAssembly.instantiate(hm, Tm)
         } {
-          const Ik = await WebAssembly.instantiate(kk, Fk);
-          return Ik instanceof WebAssembly.Instance ? {
-            instance: Ik,
-            module: kk
-          } : Ik
+          const fm = await WebAssembly.instantiate(mm, Tm);
+          return fm instanceof WebAssembly.Instance ? {
+            instance: fm,
+            module: mm
+          } : fm
         }
-      }(await kk, Fk);
-      return nk(Ik, Xk)
+      }(await mm, Tm);
+      return Sm(fm, hm)
     }
-    var uk = Ik(2803),
-      bk = Ik(6599);
-    class Rk extends Error {
+    var Gm = fm(2876),
+      Xm = fm(6571);
+    class Pm extends Error {
       stage;
-      constructor(kk, Fk) {
-        super((0, uk.C)(kk, Fk), {
-          cause: Fk
-        }), this.name = "BloxdAnimWasmError", this.stage = kk
+      constructor(mm, Tm) {
+        super((0, Gm.C)(mm, Tm), {
+          cause: Tm
+        }), this.name = "BloxdAnimWasmError", this.stage = mm
       }
     }
-    let Uk = null,
-      Ck = null;
+    let Hm = null,
+      ym = null;
 
-    function Nk() {
-      if (Ck) throw Ck
+    function Cm() {
+      if (ym) throw ym
     }
-    async function ck(kk, Fk, Tk) {
-      Nk();
-      const ik = await (Uk ??= (async () => {
-        let kk;
+    async function rm(mm, Tm, Am) {
+      Cm();
+      const am = await (Hm ??= (async () => {
+        let mm;
         try {
-          kk = await (0, uk.G)(new Ik.U(Ik(42662)), (0, bk.c)("bloxd_wasm_anim"))
-        } catch (Fk) {
-          throw new Rk((0, uk.M)(Fk), Fk)
+          mm = await (0, Gm.G)(new fm.U(fm(42688)), (0, Xm.c)("bloxd_wasm_anim"))
+        } catch (Tm) {
+          throw new Pm((0, Gm.M)(Tm), Tm)
         }
         try {
-          await pk({
-            module_or_path: kk
+          await Nm({
+            module_or_path: mm
           })
-        } catch (Fk) {
-          throw new Rk("instantiate", Fk)
+        } catch (Tm) {
+          throw new Pm("instantiate", Tm)
         }
-        return Xk
-      })(), Uk.catch((() => {
-        Uk = null
-      })), Uk);
-      Nk();
+        return hm
+      })(), Hm.catch((() => {
+        Hm = null
+      })), Hm);
+      Cm();
       try {
-        return ik.pyk(Object.entries(kk).flat(), [...Fk.mobTypes], [...Fk.vehicleTypes], [...Fk.mobAiStates], [...Fk.playerPoses], "builtIns" in Tk ? Tk.builtIns : void 0)
-      } catch (yk) {
-        const kk = new Rk("call", yk);
-        throw yk instanceof WebAssembly.RuntimeError && (Ck = kk), kk
+        return am.rxm(Object.entries(mm).flat(), [...Tm.mobTypes], [...Tm.vehicleTypes], [...Tm.mobAiStates], [...Tm.playerPoses], "builtIns" in Am ? Am.builtIns : void 0)
+      } catch (xm) {
+        const mm = new Pm("call", xm);
+        throw xm instanceof WebAssembly.RuntimeError && (ym = mm), mm
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

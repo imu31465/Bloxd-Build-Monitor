@@ -1,12 +1,12 @@
 export const id = 233;
 export const ids = [233];
 export const modules = {
-  37178: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Tk
+  37201: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => Am
     });
-    var Xk = Ik(37187);
-    class Tk {
+    var hm = fm(37203);
+    class Am {
       static get LastCreatedEngine() {
         return 0 === this.Instances.length ? null : this.Instances[this.Instances.length - 1]
       }
@@ -14,120 +14,120 @@ export const modules = {
         return this._LastCreatedScene
       }
     }
-    Tk.Instances = [], Tk.OnEnginesDisposedObservable = new Xk.e, Tk._LastCreatedScene = null, Tk.UseFallbackTexture = !0, Tk.FallbackTexture = ""
+    Am.Instances = [], Am.OnEnginesDisposedObservable = new hm.c, Am._LastCreatedScene = null, Am.UseFallbackTexture = !0, Am.FallbackTexture = ""
   },
-  38666: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => ik
+  38764: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => am
     });
-    var Xk = Ik(38674);
-    const Tk = (kk, Fk, Ik) => kk ? kk.getClassName && "Mesh" === kk.getClassName() ? null : !kk.getClassName || "SubMesh" !== kk.getClassName() && "PhysicsBody" !== kk.getClassName() ? kk.clone ? kk.clone() : Array.isArray(kk) ? kk.slice() : Ik && "object" === typeof kk ? {
-      ...kk
-    } : null : kk.clone(Fk) : null;
-    class ik {
-      static DeepCopy(kk, Fk, Ik, ik) {
-        let yk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const lk = function(kk) {
-          const Fk = [];
+    var hm = fm(38766);
+    const Am = (mm, Tm, fm) => mm ? mm.getClassName && "Mesh" === mm.getClassName() ? null : !mm.getClassName || "SubMesh" !== mm.getClassName() && "PhysicsBody" !== mm.getClassName() ? mm.clone ? mm.clone() : Array.isArray(mm) ? mm.slice() : fm && "object" === typeof mm ? {
+      ...mm
+    } : null : mm.clone(Tm) : null;
+    class am {
+      static DeepCopy(mm, Tm, fm, am) {
+        let xm = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const wm = function(mm) {
+          const Tm = [];
           do {
-            const Ik = Object.getOwnPropertyNames(kk);
-            for (const kk of Ik) - 1 === Fk.indexOf(kk) && Fk.push(kk)
-          } while (kk = Object.getPrototypeOf(kk));
-          return Fk
-        }(kk);
-        for (const qk of lk) {
-          if ("_" === qk[0] && (!ik || -1 === ik.indexOf(qk))) continue;
-          if (qk.endsWith("Observable")) continue;
-          if (Ik && -1 !== Ik.indexOf(qk)) continue;
-          const lk = kk[qk],
-            Lk = typeof lk;
-          if ("function" !== Lk) try {
-            if ("object" === Lk)
-              if (lk instanceof Uint8Array) Fk[qk] = Uint8Array.from(lk);
-              else if (lk instanceof Array) {
-              if (Fk[qk] = [], lk.length > 0)
-                if ("object" == typeof lk[0])
-                  for (let kk = 0; kk < lk.length; kk++) {
-                    const Ik = Tk(lk[kk], Fk, yk); - 1 === Fk[qk].indexOf(Ik) && Fk[qk].push(Ik)
-                  } else Fk[qk] = lk.slice(0)
-            } else Fk[qk] = Tk(lk, Fk, yk);
-            else Fk[qk] = lk
-          } catch (ak) {
-            Xk.e.Warn(ak.message)
+            const fm = Object.getOwnPropertyNames(mm);
+            for (const mm of fm) - 1 === Tm.indexOf(mm) && Tm.push(mm)
+          } while (mm = Object.getPrototypeOf(mm));
+          return Tm
+        }(mm);
+        for (const im of wm) {
+          if ("_" === im[0] && (!am || -1 === am.indexOf(im))) continue;
+          if (im.endsWith("Observable")) continue;
+          if (fm && -1 !== fm.indexOf(im)) continue;
+          const wm = mm[im],
+            Rm = typeof wm;
+          if ("function" !== Rm) try {
+            if ("object" === Rm)
+              if (wm instanceof Uint8Array) Tm[im] = Uint8Array.from(wm);
+              else if (wm instanceof Array) {
+              if (Tm[im] = [], wm.length > 0)
+                if ("object" == typeof wm[0])
+                  for (let mm = 0; mm < wm.length; mm++) {
+                    const fm = Am(wm[mm], Tm, xm); - 1 === Tm[im].indexOf(fm) && Tm[im].push(fm)
+                  } else Tm[im] = wm.slice(0)
+            } else Tm[im] = Am(wm, Tm, xm);
+            else Tm[im] = wm
+          } catch (Dm) {
+            hm.b.Warn(Dm.message)
           }
         }
       }
     }
   },
-  37902: (kk, Fk, Ik) => {
-    function Xk() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (kk => {
-        const Fk = 16 * Math.random() | 0;
-        return ("x" === kk ? Fk : 3 & Fk | 8).toString(16)
+  37970: (mm, Tm, fm) => {
+    function hm() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (mm => {
+        const Tm = 16 * Math.random() | 0;
+        return ("x" === mm ? Tm : 3 & Tm | 8).toString(16)
       }))
     }
-    Ik.d(Fk, {
-      e: () => Xk
+    fm.d(Tm, {
+      c: () => hm
     })
   },
-  38674: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Xk
+  38766: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => hm
     });
-    class Xk {
-      static _CheckLimit(kk, Fk) {
-        let Ik = Xk._LogLimitOutputs[kk];
-        return Ik ? Ik.current++ : (Ik = {
-          limit: Fk,
+    class hm {
+      static _CheckLimit(mm, Tm) {
+        let fm = hm._LogLimitOutputs[mm];
+        return fm ? fm.current++ : (fm = {
+          limit: Tm,
           current: 1
-        }, Xk._LogLimitOutputs[kk] = Ik), Ik.current <= Ik.limit
+        }, hm._LogLimitOutputs[mm] = fm), fm.current <= fm.limit
       }
-      static _GenerateLimitMessage(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const Ik = Xk._LogLimitOutputs[kk];
-        if (!Ik || !Xk.MessageLimitReached) return;
-        const Tk = this._Levels[Fk];
-        Ik.current === Ik.limit && Xk[Tk.name](Xk.MessageLimitReached.replace(/%LIMIT%/g, "" + Ik.limit).replace(/%TYPE%/g, Tk.name ?? ""))
+      static _GenerateLimitMessage(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const fm = hm._LogLimitOutputs[mm];
+        if (!fm || !hm.MessageLimitReached) return;
+        const Am = this._Levels[Tm];
+        fm.current === fm.limit && hm[Am.name](hm.MessageLimitReached.replace(/%LIMIT%/g, "" + fm.limit).replace(/%TYPE%/g, Am.name ?? ""))
       }
-      static _AddLogEntry(kk) {
-        Xk._LogCache = kk + Xk._LogCache, Xk.OnNewCacheEntry && Xk.OnNewCacheEntry(kk)
+      static _AddLogEntry(mm) {
+        hm._LogCache = mm + hm._LogCache, hm.OnNewCacheEntry && hm.OnNewCacheEntry(mm)
       }
-      static _FormatMessage(kk) {
-        const Fk = kk => kk < 10 ? "0" + kk : "" + kk,
-          Ik = new Date;
-        return "[" + Fk(Ik.getHours()) + ":" + Fk(Ik.getMinutes()) + ":" + Fk(Ik.getSeconds()) + "]: " + kk
+      static _FormatMessage(mm) {
+        const Tm = mm => mm < 10 ? "0" + mm : "" + mm,
+          fm = new Date;
+        return "[" + Tm(fm.getHours()) + ":" + Tm(fm.getMinutes()) + ":" + Tm(fm.getSeconds()) + "]: " + mm
       }
-      static _LogDisabled(kk, Fk) {}
+      static _LogDisabled(mm, Tm) {}
       static _LogEnabled() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Fk = arguments.length > 1 ? arguments[1] : void 0,
-          Ik = arguments.length > 2 ? arguments[2] : void 0;
-        const Tk = Array.isArray(Fk) ? Fk[0] : Fk;
-        if (void 0 !== Ik && !Xk._CheckLimit(Tk, Ik)) return;
-        const ik = Xk._FormatMessage(Tk),
-          yk = this._Levels[kk],
-          lk = Array.isArray(Fk) ? Fk.slice(1) : [];
-        yk.logFunc && yk.logFunc("BJS - " + ik, ...lk);
-        const ak = `<div style='color:${yk.color}'>${ik}</div><br>`;
-        Xk._AddLogEntry(ak), Xk._GenerateLimitMessage(Tk, kk)
+        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Tm = arguments.length > 1 ? arguments[1] : void 0,
+          fm = arguments.length > 2 ? arguments[2] : void 0;
+        const Am = Array.isArray(Tm) ? Tm[0] : Tm;
+        if (void 0 !== fm && !hm._CheckLimit(Am, fm)) return;
+        const am = hm._FormatMessage(Am),
+          xm = this._Levels[mm],
+          wm = Array.isArray(Tm) ? Tm.slice(1) : [];
+        xm.logFunc && xm.logFunc("BJS - " + am, ...wm);
+        const Dm = `<div style='color:${xm.color}'>${am}</div><br>`;
+        hm._AddLogEntry(Dm), hm._GenerateLimitMessage(Am, mm)
       }
       static get LogCache() {
-        return Xk._LogCache
+        return hm._LogCache
       }
       static ClearLogCache() {
-        Xk._LogCache = "", Xk._LogLimitOutputs = {}, Xk.errorsCount = 0
+        hm._LogCache = "", hm._LogLimitOutputs = {}, hm.errorsCount = 0
       }
-      static set LogLevels(kk) {
-        Xk.Log = Xk._LogDisabled, Xk.Warn = Xk._LogDisabled, Xk.Error = Xk._LogDisabled;
-        const Fk = [Xk.MessageLogLevel, Xk.WarningLogLevel, Xk.ErrorLogLevel];
-        for (const Ik of Fk)
-          if ((kk & Ik) === Ik) {
-            const kk = this._Levels[Ik];
-            Xk[kk.name] = Xk._LogEnabled.bind(Xk, Ik)
+      static set LogLevels(mm) {
+        hm.Log = hm._LogDisabled, hm.Warn = hm._LogDisabled, hm.Error = hm._LogDisabled;
+        const Tm = [hm.MessageLogLevel, hm.WarningLogLevel, hm.ErrorLogLevel];
+        for (const fm of Tm)
+          if ((mm & fm) === fm) {
+            const mm = this._Levels[fm];
+            hm[mm.name] = hm._LogEnabled.bind(hm, fm)
           }
       }
     }
-    Xk.NoneLogLevel = 0, Xk.MessageLogLevel = 1, Xk.WarningLogLevel = 2, Xk.ErrorLogLevel = 4, Xk.AllLogLevel = 7, Xk.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Xk._LogCache = "", Xk._LogLimitOutputs = {}, Xk._Levels = [{}, {
+    hm.NoneLogLevel = 0, hm.MessageLogLevel = 1, hm.WarningLogLevel = 2, hm.ErrorLogLevel = 4, hm.AllLogLevel = 7, hm.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", hm._LogCache = "", hm._LogLimitOutputs = {}, hm._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -139,126 +139,126 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Xk.errorsCount = 0, Xk.Log = Xk._LogEnabled.bind(Xk, Xk.MessageLogLevel), Xk.Warn = Xk._LogEnabled.bind(Xk, Xk.WarningLogLevel), Xk.Error = Xk._LogEnabled.bind(Xk, Xk.ErrorLogLevel)
+    }], hm.errorsCount = 0, hm.Log = hm._LogEnabled.bind(hm, hm.MessageLogLevel), hm.Warn = hm._LogEnabled.bind(hm, hm.WarningLogLevel), hm.Error = hm._LogEnabled.bind(hm, hm.ErrorLogLevel)
   },
-  37187: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => yk
+  37203: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => xm
     });
-    const Xk = "undefined" !== typeof WeakRef;
-    class Tk {
-      constructor(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Ik = arguments.length > 2 ? arguments[2] : void 0,
-          Xk = arguments.length > 3 ? arguments[3] : void 0;
-        this.initialize(kk, Fk, Ik, Xk)
+    const hm = "undefined" !== typeof WeakRef;
+    class Am {
+      constructor(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          fm = arguments.length > 2 ? arguments[2] : void 0,
+          hm = arguments.length > 3 ? arguments[3] : void 0;
+        this.initialize(mm, Tm, fm, hm)
       }
-      initialize(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Ik = arguments.length > 2 ? arguments[2] : void 0,
-          Xk = arguments.length > 3 ? arguments[3] : void 0;
-        return this.mask = kk, this.skipNextObservers = Fk, this.target = Ik, this.currentTarget = Xk, this
+      initialize(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          fm = arguments.length > 2 ? arguments[2] : void 0,
+          hm = arguments.length > 3 ? arguments[3] : void 0;
+        return this.mask = mm, this.skipNextObservers = Tm, this.target = fm, this.currentTarget = hm, this
       }
     }
-    class ik {
-      constructor(kk, Fk) {
-        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.callback = kk, this.mask = Fk, this.scope = Ik, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
+    class am {
+      constructor(mm, Tm) {
+        let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.callback = mm, this.mask = Tm, this.scope = fm, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
       }
       remove() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this._remove && this._remove(kk)
+        let mm = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._remove && this._remove(mm)
       }
     }
-    class yk {
-      static FromPromise(kk, Fk) {
-        const Ik = new yk;
-        return kk.then((kk => {
-          Ik.notifyObservers(kk)
-        })).catch((kk => {
-          if (!Fk) throw kk;
-          Fk.notifyObservers(kk)
-        })), Ik
+    class xm {
+      static FromPromise(mm, Tm) {
+        const fm = new xm;
+        return mm.then((mm => {
+          fm.notifyObservers(mm)
+        })).catch((mm => {
+          if (!Tm) throw mm;
+          Tm.notifyObservers(mm)
+        })), fm
       }
       get observers() {
         return this._observers
       }
-      constructor(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this.notifyIfTriggered = Fk, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new Tk(0), kk && (this._onObserverAdded = kk)
+      constructor(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.notifyIfTriggered = Tm, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new Am(0), mm && (this._onObserverAdded = mm)
       }
-      add(kk) {
-        let Fk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Ik = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (!kk) return null;
-        const Tk = new ik(kk, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
-        Tk.unregisterOnNextCall = Ik, Fk ? this._observers.unshift(Tk) : this._observers.push(Tk), this._onObserverAdded && this._onObserverAdded(Tk), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(Tk, this._lastNotifiedValue);
-        const yk = Xk ? new WeakRef(this) : {
+      add(mm) {
+        let Tm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          fm = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (!mm) return null;
+        const Am = new am(mm, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
+        Am.unregisterOnNextCall = fm, Tm ? this._observers.unshift(Am) : this._observers.push(Am), this._onObserverAdded && this._onObserverAdded(Am), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(Am, this._lastNotifiedValue);
+        const xm = hm ? new WeakRef(this) : {
           deref: () => this
         };
-        return Tk._remove = function() {
-          let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          const Fk = yk.deref();
-          Fk && (kk ? Fk.remove(Tk) : Fk._remove(Tk))
-        }, Tk
+        return Am._remove = function() {
+          let mm = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          const Tm = xm.deref();
+          Tm && (mm ? Tm.remove(Am) : Tm._remove(Am))
+        }, Am
       }
-      addOnce(kk) {
-        return this.add(kk, void 0, void 0, void 0, !0)
+      addOnce(mm) {
+        return this.add(mm, void 0, void 0, void 0, !0)
       }
-      remove(kk) {
-        if (!kk) return !1;
-        kk._remove = null;
-        return -1 !== this._observers.indexOf(kk) && (this._deferUnregister(kk), !0)
+      remove(mm) {
+        if (!mm) return !1;
+        mm._remove = null;
+        return -1 !== this._observers.indexOf(mm) && (this._deferUnregister(mm), !0)
       }
-      removeCallback(kk, Fk) {
-        for (let Ik = 0; Ik < this._observers.length; Ik++) {
-          const Xk = this._observers[Ik];
-          if (!Xk._willBeUnregistered && (Xk.callback === kk && (!Fk || Fk === Xk.scope))) return this._deferUnregister(Xk), !0
+      removeCallback(mm, Tm) {
+        for (let fm = 0; fm < this._observers.length; fm++) {
+          const hm = this._observers[fm];
+          if (!hm._willBeUnregistered && (hm.callback === mm && (!Tm || Tm === hm.scope))) return this._deferUnregister(hm), !0
         }
         return !1
       }
-      _deferUnregister(kk) {
-        kk._willBeUnregistered || (this._numObserversMarkedAsDeleted++, kk.unregisterOnNextCall = !1, kk._willBeUnregistered = !0, setTimeout((() => {
-          this._remove(kk)
+      _deferUnregister(mm) {
+        mm._willBeUnregistered || (this._numObserversMarkedAsDeleted++, mm.unregisterOnNextCall = !1, mm._willBeUnregistered = !0, setTimeout((() => {
+          this._remove(mm)
         }), 0))
       }
-      _remove(kk) {
-        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!kk) return !1;
-        const Ik = this._observers.indexOf(kk);
-        return -1 !== Ik && (Fk && this._numObserversMarkedAsDeleted--, this._observers.splice(Ik, 1), !0)
+      _remove(mm) {
+        let Tm = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!mm) return !1;
+        const fm = this._observers.indexOf(mm);
+        return -1 !== fm && (Tm && this._numObserversMarkedAsDeleted--, this._observers.splice(fm, 1), !0)
       }
-      makeObserverTopPriority(kk) {
-        this._remove(kk, !1), this._observers.unshift(kk)
+      makeObserverTopPriority(mm) {
+        this._remove(mm, !1), this._observers.unshift(mm)
       }
-      makeObserverBottomPriority(kk) {
-        this._remove(kk, !1), this._observers.push(kk)
+      makeObserverBottomPriority(mm) {
+        this._remove(mm, !1), this._observers.push(mm)
       }
-      notifyObservers(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          Ik = arguments.length > 2 ? arguments[2] : void 0,
-          Xk = arguments.length > 3 ? arguments[3] : void 0,
-          Tk = arguments.length > 4 ? arguments[4] : void 0;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = kk), !this._observers.length) return !0;
-        const ik = this._eventState;
-        ik.mask = Fk, ik.target = Ik, ik.currentTarget = Xk, ik.skipNextObservers = !1, ik.lastReturnValue = kk, ik.userInfo = Tk;
-        for (const yk of this._observers)
-          if (!yk._willBeUnregistered && (yk.mask & Fk && (yk.unregisterOnNextCall && this._deferUnregister(yk), yk.scope ? ik.lastReturnValue = yk.callback.apply(yk.scope, [kk, ik]) : ik.lastReturnValue = yk.callback(kk, ik)), ik.skipNextObservers)) return !1;
+      notifyObservers(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          fm = arguments.length > 2 ? arguments[2] : void 0,
+          hm = arguments.length > 3 ? arguments[3] : void 0,
+          Am = arguments.length > 4 ? arguments[4] : void 0;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = mm), !this._observers.length) return !0;
+        const am = this._eventState;
+        am.mask = Tm, am.target = fm, am.currentTarget = hm, am.skipNextObservers = !1, am.lastReturnValue = mm, am.userInfo = Am;
+        for (const xm of this._observers)
+          if (!xm._willBeUnregistered && (xm.mask & Tm && (xm.unregisterOnNextCall && this._deferUnregister(xm), xm.scope ? am.lastReturnValue = xm.callback.apply(xm.scope, [mm, am]) : am.lastReturnValue = xm.callback(mm, am)), am.skipNextObservers)) return !1;
         return !0
       }
-      notifyObserver(kk, Fk) {
-        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = Fk), kk._willBeUnregistered) return;
-        const Xk = this._eventState;
-        Xk.mask = Ik, Xk.skipNextObservers = !1, kk.unregisterOnNextCall && this._deferUnregister(kk), kk.callback(Fk, Xk)
+      notifyObserver(mm, Tm) {
+        let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = Tm), mm._willBeUnregistered) return;
+        const hm = this._eventState;
+        hm.mask = fm, hm.skipNextObservers = !1, mm.unregisterOnNextCall && this._deferUnregister(mm), mm.callback(Tm, hm)
       }
       hasObservers() {
         return this._observers.length - this._numObserversMarkedAsDeleted > 0
       }
       clear() {
         for (; this._observers.length;) {
-          const kk = this._observers.pop();
-          kk && (kk._remove = null)
+          const mm = this._observers.pop();
+          mm && (mm._remove = null)
         }
         this._onObserverAdded = null, this._numObserversMarkedAsDeleted = 0, this.cleanLastNotifiedState()
       }
@@ -266,42 +266,42 @@ export const modules = {
         this._hasNotified = !1, this._lastNotifiedValue = void 0
       }
       clone() {
-        const kk = new yk;
-        return kk._observers = this._observers.slice(0), kk
+        const mm = new xm;
+        return mm._observers = this._observers.slice(0), mm
       }
       hasSpecificMask() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
-        for (const Fk of this._observers)
-          if (Fk.mask & kk || Fk.mask === kk) return !0;
+        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
+        for (const Tm of this._observers)
+          if (Tm.mask & mm || Tm.mask === mm) return !0;
         return !1
       }
     }
   },
-  61268: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      AsyncLoop: () => Xk.b,
-      RegisterTools: () => Xk.e,
-      Tools: () => Xk.h,
-      className: () => Xk.k
+  61310: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      AsyncLoop: () => hm.d,
+      RegisterTools: () => hm.e,
+      Tools: () => hm.h,
+      className: () => hm.k
     });
-    var Xk = Ik(40097);
-    (0, Xk.e)()
+    var hm = fm(40203);
+    (0, hm.e)()
   },
-  37201: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => ik,
-      f: () => Tk
+  37224: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => am,
+      d: () => Am
     });
-    const Xk = {};
+    const hm = {};
 
-    function Tk(kk, Fk) {
-      Xk[kk] = Fk
+    function Am(mm, Tm) {
+      hm[mm] = Tm
     }
 
-    function ik(kk) {
-      return Xk[kk]
+    function am(mm) {
+      return hm[mm]
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

@@ -1,62 +1,62 @@
 export const id = 358;
 export const ids = [358];
 export const modules = {
-  61356: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      applyLightFoOffset: () => yk,
-      getFloatingOriginOffset: () => Tk,
-      lightFoVersion: () => ik,
-      wrapRenderableForFO: () => lk
+  61416: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      applyLightFoOffset: () => xm,
+      getFloatingOriginOffset: () => Am,
+      lightFoVersion: () => am,
+      wrapRenderableForFO: () => wm
     });
-    var Xk = Ik(41729);
+    var hm = fm(41745);
 
-    function Tk(kk) {
-      const Fk = kk.camera;
-      if (!Fk) return {
+    function Am(mm) {
+      const Tm = mm.camera;
+      if (!Tm) return {
         x: 0,
         y: 0,
         z: 0
       };
-      const Ik = Fk.worldMatrix;
+      const fm = Tm.worldMatrix;
       return {
-        x: Ik[12],
-        y: Ik[13],
-        z: Ik[14]
+        x: fm[12],
+        y: fm[13],
+        z: fm[14]
       }
     }
 
-    function ik(kk) {
-      return kk.camera ? kk.camera.worldMatrixVersion : 0
+    function am(mm) {
+      return mm.camera ? mm.camera.worldMatrixVersion : 0
     }
 
-    function yk(kk, Fk) {
-      const Ik = Fk.camera?.worldMatrix;
-      if (!Ik) return;
-      const Tk = Ik[12],
-        ik = Ik[13],
-        yk = Ik[14];
-      let lk = 0;
-      for (const ak of Fk.lights) {
-        if (lk >= Xk.b) break;
-        if (!ak._writeLightUbo) continue;
-        const Fk = 4 + 16 * lk,
-          Ik = kk[Fk + 3];
-        if (0 === Ik || 2 === Ik) {
-          const Ik = ak.worldMatrix;
-          kk[Fk] = Ik[12] - Tk, kk[Fk + 1] = Ik[13] - ik, kk[Fk + 2] = Ik[14] - yk
+    function xm(mm, Tm) {
+      const fm = Tm.camera?.worldMatrix;
+      if (!fm) return;
+      const Am = fm[12],
+        am = fm[13],
+        xm = fm[14];
+      let wm = 0;
+      for (const Dm of Tm.lights) {
+        if (wm >= hm.e) break;
+        if (!Dm._writeLightUbo) continue;
+        const Tm = 4 + 16 * wm,
+          fm = mm[Tm + 3];
+        if (0 === fm || 2 === fm) {
+          const fm = Dm.worldMatrix;
+          mm[Tm] = fm[12] - Am, mm[Tm + 1] = fm[13] - am, mm[Tm + 2] = fm[14] - xm
         }
-        lk++
+        wm++
       }
     }
 
-    function lk(kk, Fk, Ik) {
-      let Xk = -1;
+    function wm(mm, Tm, fm) {
+      let hm = -1;
       return () => {
-        const Tk = Fk.camera ? Fk.camera.worldMatrixVersion : -1;
-        Tk !== Xk && (Ik(), Xk = Tk), kk()
+        const Am = Tm.camera ? Tm.camera.worldMatrixVersion : -1;
+        Am !== hm && (fm(), hm = Am), mm()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

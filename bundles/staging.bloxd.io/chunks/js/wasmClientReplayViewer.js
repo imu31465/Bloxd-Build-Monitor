@@ -1,74 +1,74 @@
 export const id = 60;
 export const ids = [60];
 export const modules = {
-  37026: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => tk,
-      e: () => Zk
+  37087: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => pm,
+      i: () => Em
     });
-    var Xk = Ik(628),
-      Tk = Ik(41),
-      ik = Ik(36985);
-    const yk = "replayFileKeptForReload",
-      lk = "replayFileKeptForReloadAt",
-      ak = "replayFileKeptForReloadTab",
-      qk = 3e5,
-      Lk = 5e3;
-    async function tk(kk, Fk) {
-      const Ik = Date.now(),
-        ik = {
-          at: Ik,
-          bytes: kk,
-          source: Fk
+    var hm = fm(653),
+      Am = fm(37),
+      am = fm(37048);
+    const xm = "replayFileKeptForReload",
+      wm = "replayFileKeptForReloadAt",
+      Dm = "replayFileKeptForReloadTab",
+      im = 3e5,
+      Rm = 5e3;
+    async function pm(mm, Tm) {
+      const fm = Date.now(),
+        am = {
+          at: fm,
+          bytes: mm,
+          source: Tm
         },
-        qk = await Promise.race([(async () => await Tk.g.setItem(lk, Ik) && Tk.g.setItem(yk, ik))(), (0, Xk.U)(Lk).then((() => !1))]);
-      qk || console.warn("The replay file couldn't be kept across the reload into a newer build: the reloaded page asks for it again");
-      const tk = {
-        at: Ik,
-        Gj: qk
+        im = await Promise.race([(async () => await Am.e.setItem(wm, fm) && Am.e.setItem(xm, am))(), (0, hm.L)(Rm).then((() => !1))]);
+      im || console.warn("The replay file couldn't be kept across the reload into a newer build: the reloaded page asks for it again");
+      const pm = {
+        at: fm,
+        mO: im
       };
-      Tk.m.setItem(ak, tk)
+      Am.k.setItem(Dm, pm)
     }
-    async function Zk() {
-      var kk;
-      const Fk = Tk.m.getItem(ak);
-      null !== Fk && Tk.m.removeItem(ak);
-      const Ik = Date.now(),
-        Xk = await Tk.g.getItem(lk),
-        Lk = null !== Fk && Ik - Fk.at <= qk,
-        tk = null !== Fk && Xk === Fk.at;
-      let Zk = null;
-      if (null !== Xk && (tk || ("number" !== typeof Xk || Ik - Xk > qk)) && (Zk = Lk && tk && Fk.Gj ? await Tk.g.getItem(yk) : null, await Promise.all([Tk.g.removeItem(lk), Tk.g.removeItem(yk)])), !Lk) return null;
-      if ((null === (kk = Zk) || void 0 === kk ? void 0 : kk.at) !== Fk.at) throw new Error(ik.b.replayNotKept.text);
+    async function Em() {
+      var mm;
+      const Tm = Am.k.getItem(Dm);
+      null !== Tm && Am.k.removeItem(Dm);
+      const fm = Date.now(),
+        hm = await Am.e.getItem(wm),
+        Rm = null !== Tm && fm - Tm.at <= im,
+        pm = null !== Tm && hm === Tm.at;
+      let Em = null;
+      if (null !== hm && (pm || ("number" !== typeof hm || fm - hm > im)) && (Em = Rm && pm && Tm.mO ? await Am.e.getItem(xm) : null, await Promise.all([Am.e.removeItem(wm), Am.e.removeItem(xm)])), !Rm) return null;
+      if ((null === (mm = Em) || void 0 === mm ? void 0 : mm.at) !== Tm.at) throw new Error(am.e.replayNotKept.text);
       return {
-        bytes: Zk.bytes,
-        source: Zk.source
+        bytes: Em.bytes,
+        source: Em.source
       }
     }
   },
-  37021: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Xk,
-      f: () => ik,
-      g: () => Tk
+  37084: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => hm,
+      c: () => am,
+      g: () => Am
     });
-    const Xk = [9];
+    const hm = [9];
 
-    function Tk(kk) {
-      return Xk.includes(kk)
+    function Am(mm) {
+      return hm.includes(mm)
     }
 
-    function ik(kk) {
-      return null !== kk && kk >= 3 && kk < Xk[0]
+    function am(mm) {
+      return null !== mm && mm >= 3 && mm < hm[0]
     }
   },
-  37034: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Xk,
-      i: () => Tk
+  37099: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => hm,
+      h: () => Am
     });
-    const Xk = "data-replay-ui-active",
-      Tk = [{
+    const hm = "data-replay-ui-active",
+      Am = [{
         group: "middleTextTop",
         dataAttr: "data-replay-hide-middle-text-top",
         label: "Middle text top"
@@ -118,66 +118,66 @@ export const modules = {
         label: "Everything else"
       }]
   },
-  37042: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => qk,
-      f: () => tk,
-      j: () => Lk
+  37101: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => im,
+      d: () => pm,
+      f: () => Rm
     });
-    var Xk = Ik(25),
-      Tk = Ik(34),
-      ik = Ik(37034);
+    var hm = fm(23),
+      Am = fm(31),
+      am = fm(37099);
 
-    function yk() {
-      const kk = {};
+    function xm() {
+      const mm = {};
       for (const {
-          group: Fk
+          group: Tm
         }
-        of ik.i) kk[Fk] = !0;
-      return kk
+        of am.h) mm[Tm] = !0;
+      return mm
     }
-    let lk = yk();
+    let wm = xm();
 
-    function ak() {
-      Tk.g.GL("replayViewer|uiVisibilityChanged")
-    }
-
-    function qk() {
-      return lk
+    function Dm() {
+      Am.j.gp("replayViewer|uiVisibilityChanged")
     }
 
-    function Lk(kk, Fk) {
-      lk[kk] !== Fk && (lk = {
-        ...lk,
-        [kk]: Fk
-      }, "nametag" === kk && Xk.d.set({
-        areNametagsHidden: !Fk
-      }), ak())
+    function im() {
+      return wm
     }
 
-    function tk() {
-      lk = yk(), Xk.d.set({
+    function Rm(mm, Tm) {
+      wm[mm] !== Tm && (wm = {
+        ...wm,
+        [mm]: Tm
+      }, "nametag" === mm && hm.c.set({
+        areNametagsHidden: !Tm
+      }), Dm())
+    }
+
+    function pm() {
+      wm = xm(), hm.c.set({
         areNametagsHidden: !1
-      }), ak()
+      }), Dm()
     }
   },
-  60609: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      HOLD_TIMEOUT_MS: () => qk,
-      ReplayViewer: () => tk
+  60682: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      HOLD_TIMEOUT_MS: () => im,
+      ReplayViewer: () => pm
     });
-    var Xk = Ik(36985),
-      Tk = Ik(37026),
-      ik = Ik(37021),
-      yk = Ik(37042),
-      lk = Ik(4797),
-      ak = Ik(42586);
-    const qk = 1e4,
-      Lk = new Set(["ke"]);
-    class tk {
-      constructor(kk) {
-        var Fk;
-        this.deps = kk, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (Fk = kk.now) && void 0 !== Fk ? Fk : () => performance.now()
+    var hm = fm(37048),
+      Am = fm(37087),
+      am = fm(37084),
+      xm = fm(37101),
+      wm = fm(4732),
+      Dm = fm(42628);
+    const im = 1e4,
+      Rm = new Set(["KO"]);
+    class pm {
+      constructor(mm) {
+        var Tm;
+        this.deps = mm, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (Tm = mm.now) && void 0 !== Tm ? Tm : () => performance.now()
       }
       get inPlayback() {
         return this.playback
@@ -186,123 +186,123 @@ export const modules = {
         return this.lastView
       }
       get isOpen() {
-        return null !== this.lastView && this.lastView.state !== lk.kd.None
+        return null !== this.lastView && this.lastView.state !== wm.ld.None
       }
       get keyframes() {
         return this.deps.client.keyframes()
       }
-      get eq() {
+      get ni() {
         return [...this.holds.keys()]
       }
       get savePending() {
         return null !== this.pendingSave
       }
       get saveRefusal() {
-        return this.cropping ? Xk.b.cropBusy.text : null
+        return this.cropping ? hm.e.cropBusy.text : null
       }
       get cropping() {
         return this.cropAsked || this.cropRunning
       }
-      async open(kk, Fk) {
-        var Ik, ik, yk, ak;
+      async open(mm, Tm) {
+        var fm, am, xm, Dm;
         const {
-          client: qk
+          client: im
         } = this.deps;
         if (!this.playback) {
-          if (!qk.setPlayback(!0)) throw new Error(Xk.b.cantOpen.text);
+          if (!im.setPlayback(!0)) throw new Error(hm.e.cantOpen.text);
           this.playback = !0
         }
         this.hold("opening"), this.loadingOpens++;
-        const Lk = this.epoch;
-        let tk;
+        const Rm = this.epoch;
+        let pm;
         try {
-          tk = await qk.open(kk, (() => (0, Tk.c)(kk, Fk)))
+          pm = await im.open(mm, (() => (0, Am.e)(mm, Tm)))
         } finally {
           this.loadingOpens--
         }
-        if (Lk !== this.epoch && "reloading" !== tk) throw new Error(Xk.b.coreStopped.text);
-        if ("opening" !== tk) {
+        if (Rm !== this.epoch && "reloading" !== pm) throw new Error(hm.e.coreStopped.text);
+        if ("opening" !== pm) {
           this.opening || 0 !== this.loadingOpens || this.release("opening");
-          const kk = function(kk) {
-            switch (kk) {
+          const mm = function(mm) {
+            switch (mm) {
               case "reloading":
                 return null;
               case "stopped":
-              case lk.ad.ModuleTrap:
-                return Xk.b.coreStopped;
-              case lk.ad.ModuleLoad:
-                return Xk.b.viewerLoadFailed;
-              case lk.ad.TooLarge:
-                return Xk.b.cantOpen
+              case wm.bd.ModuleTrap:
+                return hm.e.coreStopped;
+              case wm.bd.ModuleLoad:
+                return hm.e.viewerLoadFailed;
+              case wm.bd.TooLarge:
+                return hm.e.cantOpen
             }
-          }(tk);
-          if (null === kk) return;
-          throw new Error(kk.text)
+          }(pm);
+          if (null === mm) return;
+          throw new Error(mm.text)
         }
-        return this.rejectSave(new Error(Xk.b.saveClosed.text)), this.fileName = null !== (Ik = null !== (ik = Fk.fileName) && void 0 !== ik ? ik : null === (yk = Fk.fileHandle) || void 0 === yk ? void 0 : yk.name) && void 0 !== Ik ? Ik : null, this.fileHandle = null !== (ak = Fk.fileHandle) && void 0 !== ak ? ak : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((kk, Fk) => {
+        return this.rejectSave(new Error(hm.e.saveClosed.text)), this.fileName = null !== (fm = null !== (am = Tm.fileName) && void 0 !== am ? am : null === (xm = Tm.fileHandle) || void 0 === xm ? void 0 : xm.name) && void 0 !== fm ? fm : null, this.fileHandle = null !== (Dm = Tm.fileHandle) && void 0 !== Dm ? Dm : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((mm, Tm) => {
           this.pendingOpen = {
-            resolve: kk,
-            reject: Fk
+            resolve: mm,
+            reject: Tm
           }
         }))
       }
       play() {
-        this.holds.has("ke") || this.deps.client.play()
+        this.holds.has("KO") || this.deps.client.play()
       }
       pause() {
         this.deps.client.pause()
       }
       holdForShaderPackFailure() {
-        this.isOpen && this.pause(), this.hold("ke")
+        this.isOpen && this.pause(), this.hold("KO")
       }
-      seek(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const Ik = this.lastView;
-        null !== Ik && (Fk || kk < Ik.Dt) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(kk, Fk)
+      seek(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const fm = this.lastView;
+        null !== fm && (Tm || mm < fm.DE) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(mm, Tm)
       }
-      setSpeed(kk) {
-        this.deps.client.setSpeed(kk)
+      setSpeed(mm) {
+        this.deps.client.setSpeed(mm)
       }
-      setCameraMode(kk) {
-        this.deps.client.setCameraMode(kk)
+      setCameraMode(mm) {
+        this.deps.client.setCameraMode(mm)
       }
       cycleCameraMode() {
-        const kk = this.lastView;
-        null !== kk && kk.state !== lk.kd.None && this.setCameraMode(ak.d[(ak.d.indexOf(kk.cameraMode) + 1) % ak.d.length])
+        const mm = this.lastView;
+        null !== mm && mm.state !== wm.ld.None && this.setCameraMode(Dm.b[(Dm.b.indexOf(mm.cameraMode) + 1) % Dm.b.length])
       }
       addKeyframe() {
         this.edited(this.deps.client.addKeyframe())
       }
-      setKeyframe(kk) {
-        this.edited(this.deps.client.setKeyframe(kk))
+      setKeyframe(mm) {
+        this.edited(this.deps.client.setKeyframe(mm))
       }
-      moveKeyframe(kk, Fk) {
-        this.edited(this.deps.client.moveKeyframe(kk, Fk))
+      moveKeyframe(mm, Tm) {
+        this.edited(this.deps.client.moveKeyframe(mm, Tm))
       }
-      deleteKeyframes(kk, Fk) {
-        this.edited(this.deps.client.deleteKeyframes(kk, Fk))
+      deleteKeyframes(mm, Tm) {
+        this.edited(this.deps.client.deleteKeyframes(mm, Tm))
       }
-      setMark(kk) {
-        this.edited(this.deps.client.setMark(kk))
+      setMark(mm) {
+        this.edited(this.deps.client.setMark(mm))
       }
-      crop(kk, Fk) {
-        return !(Fk <= kk) && (null !== this.pendingSave ? (this.deps.notify(Xk.b.saveBusy), !1) : !!this.deps.client.crop(kk, Fk) && (this.cropAsked = !0, this.hold("crop"), !0))
+      crop(mm, Tm) {
+        return !(Tm <= mm) && (null !== this.pendingSave ? (this.deps.notify(hm.e.saveBusy), !1) : !!this.deps.client.crop(mm, Tm) && (this.cropAsked = !0, this.hold("crop"), !0))
       }
       save() {
-        return null !== this.pendingSave ? Promise.reject(new Error(Xk.b.saveBusy.text)) : new Promise(((kk, Fk) => {
-          const Ik = {
-            resolve: kk,
-            reject: Fk
+        return null !== this.pendingSave ? Promise.reject(new Error(hm.e.saveBusy.text)) : new Promise(((mm, Tm) => {
+          const fm = {
+            resolve: mm,
+            reject: Tm
           };
-          this.pendingSave = Ik, this.editsAtSave = this.edits, this.deps.client.save((0, ak.h)()).then((kk => {
-            this.pendingSave === Ik && this.saveStarted(kk)
-          }), (kk => {
-            this.pendingSave === Ik && this.rejectSave(kk instanceof Error ? kk : new Error(String(kk)))
+          this.pendingSave = fm, this.editsAtSave = this.edits, this.deps.client.save((0, Dm.c)()).then((mm => {
+            this.pendingSave === fm && this.saveStarted(mm)
+          }), (mm => {
+            this.pendingSave === fm && this.rejectSave(mm instanceof Error ? mm : new Error(String(mm)))
           }))
         }))
       }
-      saveStarted(kk) {
-        switch (kk) {
+      saveStarted(mm) {
+        switch (mm) {
           case "sealing":
             return;
           case "busy":
@@ -313,40 +313,40 @@ export const modules = {
             return void this.saveFailed(!1)
         }
       }
-      markSaved(kk, Fk) {
-        var Ik, Xk;
-        this.fileHandle = kk, this.fileName = null !== (Ik = null !== (Xk = null === kk || void 0 === kk ? void 0 : kk.name) && void 0 !== Xk ? Xk : Fk) && void 0 !== Ik ? Ik : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
+      markSaved(mm, Tm) {
+        var fm, hm;
+        this.fileHandle = mm, this.fileName = null !== (fm = null !== (hm = null === mm || void 0 === mm ? void 0 : mm.name) && void 0 !== hm ? hm : Tm) && void 0 !== fm ? fm : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
       }
       end() {
-        this.epoch++, this.resetInFlight(), this.releaseAll(), this.settleOpen(new Error(Xk.b.coreStopped.text)), this.rejectSave(new Error(Xk.b.saveClosed.text)), this.lastView = null, this.deps.onChange()
+        this.epoch++, this.resetInFlight(), this.releaseAll(), this.settleOpen(new Error(hm.e.coreStopped.text)), this.rejectSave(new Error(hm.e.saveClosed.text)), this.lastView = null, this.deps.onChange()
       }
       afterFrame() {
-        var kk, Fk, Ik;
-        const Xk = this.deps.client.view(),
-          Tk = Xk !== this.lastView;
-        this.lastView = Xk, this.opening && null !== Xk && Xk.state !== lk.kd.None && Xk.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, yk.f)()), this.cropAsked ? (this.cropAsked = !1, null !== Xk && Xk.state === lk.kd.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== Xk && Xk.state !== lk.kd.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
-        const ik = 0 === this.settleFrames && 0 === (null !== (kk = null === (Fk = (Ik = this.deps).meshPending) || void 0 === Fk ? void 0 : Fk.call(Ik)) && void 0 !== kk ? kk : 0);
-        this.holds.has("opening") && !this.opening && 0 === this.loadingOpens && ik && this.release("opening"), this.holds.has("seek") && ik && this.release("seek"), this.holds.has("crop") && !this.cropRunning && ik && this.release("crop");
-        const ak = this.now();
-        for (const [yk, lk] of this.holds) !Lk.has(yk) && ak - lk >= qk && this.release(yk);
-        this.saveRefused && !this.cropping && this.saveFailed(!1), Tk && this.deps.onChange()
+        var mm, Tm, fm;
+        const hm = this.deps.client.view(),
+          Am = hm !== this.lastView;
+        this.lastView = hm, this.opening && null !== hm && hm.state !== wm.ld.None && hm.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, xm.d)()), this.cropAsked ? (this.cropAsked = !1, null !== hm && hm.state === wm.ld.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== hm && hm.state !== wm.ld.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
+        const am = 0 === this.settleFrames && 0 === (null !== (mm = null === (Tm = (fm = this.deps).meshPending) || void 0 === Tm ? void 0 : Tm.call(fm)) && void 0 !== mm ? mm : 0);
+        this.holds.has("opening") && !this.opening && 0 === this.loadingOpens && am && this.release("opening"), this.holds.has("seek") && am && this.release("seek"), this.holds.has("crop") && !this.cropRunning && am && this.release("crop");
+        const Dm = this.now();
+        for (const [xm, wm] of this.holds) !Rm.has(xm) && Dm - wm >= im && this.release(xm);
+        this.saveRefused && !this.cropping && this.saveFailed(!1), Am && this.deps.onChange()
       }
       cropped() {
-        (0, yk.f)(), this.id++, this.unsavedChanges = !0, this.suggestSaveAs = null !== this.fileHandle || null !== this.fileName, this.settleFrames = 2
+        (0, xm.d)(), this.id++, this.unsavedChanges = !0, this.suggestSaveAs = null !== this.fileHandle || null !== this.fileName, this.settleFrames = 2
       }
-      onFailed(kk) {
-        switch (kk.reason) {
-          case lk.ad.TooLarge:
+      onFailed(mm) {
+        switch (mm.reason) {
+          case wm.bd.TooLarge:
             break;
-          case lk.ad.Open:
-          case lk.ad.NothingStaged: {
+          case wm.bd.Open:
+          case wm.bd.NothingStaged: {
             this.opening = !1, this.release("opening");
-            const Fk = (0, ik.f)(kk.version) ? Xk.b.replayTooOld : Xk.b.cantOpen;
-            null === this.pendingOpen && this.deps.notify(Fk), this.settleOpen(new Error(Fk.text));
+            const Tm = (0, am.c)(mm.version) ? hm.e.replayTooOld : hm.e.cantOpen;
+            null === this.pendingOpen && this.deps.notify(Tm), this.settleOpen(new Error(Tm.text));
             break
           }
-          case lk.ad.Crop:
-            if (kk.code === lk._c.Busy) {
+          case wm.bd.Crop:
+            if (mm.code === wm._c.Busy) {
               this.cropBusy();
               break
             }
@@ -354,54 +354,54 @@ export const modules = {
               this.saveFailed(!1);
               break
             }
-            this.cropAsked = !1, this.cropRunning = !1, this.release("crop"), this.deps.notify(Xk.b.cropFailed);
+            this.cropAsked = !1, this.cropRunning = !1, this.release("crop"), this.deps.notify(hm.e.cropFailed);
             break;
-          case lk.ad.ModuleTrap:
-          case lk.ad.ModuleLoad:
-          case lk.ad.Port:
-            this.moduleEnded(kk.reason === lk.ad.ModuleTrap ? Xk.b.coreStopped : Xk.b.cantOpen);
+          case wm.bd.ModuleTrap:
+          case wm.bd.ModuleLoad:
+          case wm.bd.Port:
+            this.moduleEnded(mm.reason === wm.bd.ModuleTrap ? hm.e.coreStopped : hm.e.cantOpen);
             break;
-          case lk.ad.NotLive:
+          case wm.bd.NotLive:
             console.warn("[bloxd-wasm-client] the core refused a recorder command in playback");
             break;
           default:
-            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${kk.reason})`), this.seekAsked = !1, this.release("seek")
+            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${mm.reason})`), this.seekAsked = !1, this.release("seek")
         }
         this.deps.onChange()
       }
-      moduleEnded(kk) {
-        this.resetInFlight(), this.release("opening"), this.release("seek"), this.release("crop"), null === this.pendingOpen && this.deps.notify(kk), this.settleOpen(new Error(kk.text))
+      moduleEnded(mm) {
+        this.resetInFlight(), this.release("opening"), this.release("seek"), this.release("crop"), null === this.pendingOpen && this.deps.notify(mm), this.settleOpen(new Error(mm.text))
       }
-      saveDone(kk) {
-        const Fk = this.pendingSave;
-        this.pendingSave = null, this.saveRefused = !1, null === Fk || void 0 === Fk || Fk.resolve(kk)
+      saveDone(mm) {
+        const Tm = this.pendingSave;
+        this.pendingSave = null, this.saveRefused = !1, null === Tm || void 0 === Tm || Tm.resolve(mm)
       }
-      saveFailed(kk) {
-        this.rejectSave(new Error(kk ? Xk.b.saveBusy.text : "The replay couldn't be saved"))
+      saveFailed(mm) {
+        this.rejectSave(new Error(mm ? hm.e.saveBusy.text : "The replay couldn't be saved"))
       }
-      edited(kk) {
-        kk && !this.cropping && (this.edits++, this.unsavedChanges = !0, this.deps.onChange())
+      edited(mm) {
+        mm && !this.cropping && (this.edits++, this.unsavedChanges = !0, this.deps.onChange())
       }
       cropBusy() {
-        null !== this.pendingSave && this.saveRefused ? this.rejectSave(new Error(Xk.b.cropBusy.text)) : this.deps.notify(Xk.b.cropBusy)
+        null !== this.pendingSave && this.saveRefused ? this.rejectSave(new Error(hm.e.cropBusy.text)) : this.deps.notify(hm.e.cropBusy)
       }
       resetInFlight() {
         this.opening = !1, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0
       }
-      settleOpen(kk) {
-        const Fk = this.pendingOpen;
-        this.pendingOpen = null, null === kk ? null === Fk || void 0 === Fk || Fk.resolve() : null === Fk || void 0 === Fk || Fk.reject(kk)
+      settleOpen(mm) {
+        const Tm = this.pendingOpen;
+        this.pendingOpen = null, null === mm ? null === Tm || void 0 === Tm || Tm.resolve() : null === Tm || void 0 === Tm || Tm.reject(mm)
       }
-      rejectSave(kk) {
-        const Fk = this.pendingSave;
-        this.pendingSave = null, this.saveRefused = !1, null === Fk || void 0 === Fk || Fk.reject(kk)
+      rejectSave(mm) {
+        const Tm = this.pendingSave;
+        this.pendingSave = null, this.saveRefused = !1, null === Tm || void 0 === Tm || Tm.reject(mm)
       }
-      hold(kk) {
-        const Fk = 0 === this.holds.size;
-        this.holds.set(kk, this.now()), Fk && this.deps.setHoldDraws(!0)
+      hold(mm) {
+        const Tm = 0 === this.holds.size;
+        this.holds.set(mm, this.now()), Tm && this.deps.setHoldDraws(!0)
       }
-      release(kk) {
-        this.holds.delete(kk) && 0 === this.holds.size && this.deps.setHoldDraws(!1)
+      release(mm) {
+        this.holds.delete(mm) && 0 === this.holds.size && this.deps.setHoldDraws(!1)
       }
       releaseAll() {
         this.holds.size > 0 && (this.holds.clear(), this.deps.setHoldDraws(!1))
@@ -410,4 +410,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

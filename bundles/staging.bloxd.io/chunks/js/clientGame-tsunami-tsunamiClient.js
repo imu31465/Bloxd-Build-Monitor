@@ -1,116 +1,116 @@
 export const id = 26;
 export const ids = [26];
 export const modules = {
-  39547: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      default: () => lk
+  39675: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      default: () => wm
     });
-    var Xk = Ik(34202);
-    const Tk = 1e3 / 3;
+    var hm = fm(34315);
+    const Am = 1e3 / 3;
 
-    function ik(kk, Fk, Ik) {
-      if ("parenthetical-seconds" === Fk) return ` (${kk}s)`;
-      const Xk = `${Math.floor(kk/60)}:${(kk%60).toString().padStart(2,"0")}`;
-      return Ik ? `${Ik}${Xk}` : Xk
+    function am(mm, Tm, fm) {
+      if ("parenthetical-seconds" === Tm) return ` (${mm}s)`;
+      const hm = `${Math.floor(mm/60)}:${(mm%60).toString().padStart(2,"0")}`;
+      return fm ? `${fm}${hm}` : hm
     }
 
-    function yk(kk, Fk, Ik, Tk, ik) {
-      var yk;
-      const lk = {
-        ...Tk.baseNametag
+    function xm(mm, Tm, fm, Am, am) {
+      var xm;
+      const wm = {
+        ...Am.baseNametag
       };
-      lk.content = [...null !== (yk = Tk.baseNametag.content) && void 0 !== yk ? yk : [], {
+      wm.content = [...null !== (xm = Am.baseNametag.content) && void 0 !== xm ? xm : [], {
         str: " "
       }, {
         icon: "Gold Coin"
       }, {
-        str: `: ${(0,Xk.c)(ik)}`
-      }], kk.setOtherEntitySetting(Fk, Ik, "nameTagInfo", lk)
+        str: `: ${(0,hm.c)(am)}`
+      }], mm.setOtherEntitySetting(Tm, fm, "nameTagInfo", wm)
     }
-    const lk = function(kk, Fk, Ik, Xk) {
-      let lk, {
-        localPlayerId: ak
-      } = Xk;
-      const qk = new Map,
-        Lk = new Map;
-      let tk = 0,
-        Zk = 0;
+    const wm = function(mm, Tm, fm, hm) {
+      let wm, {
+        localPlayerId: Dm
+      } = hm;
+      const im = new Map,
+        Rm = new Map;
+      let pm = 0,
+        Em = 0;
       return {
-        onCreate: kk => {
-          lk = kk
+        onCreate: mm => {
+          wm = mm
         },
-        Dt: kk => {
-          const Fk = Date.now();
-          for (const [Xk, Tk] of qk) {
-            const kk = Math.floor((Fk - Tk.startTime) / 1e3),
-              yk = Math.max(0, Tk.remainingSeconds - kk);
-            if (yk === Tk.lastRenderedSecond) continue;
-            Tk.lastRenderedSecond = yk;
-            const Lk = {
-                str: ik(yk, Tk.format, Tk.prefix),
-                style: Tk.style
+        DE: mm => {
+          const Tm = Date.now();
+          for (const [hm, Am] of im) {
+            const mm = Math.floor((Tm - Am.startTime) / 1e3),
+              xm = Math.max(0, Am.remainingSeconds - mm);
+            if (xm === Am.lastRenderedSecond) continue;
+            Am.lastRenderedSecond = xm;
+            const Rm = {
+                str: am(xm, Am.format, Am.prefix),
+                style: Am.style
               },
-              tk = {
-                ...Tk.baseNametag
+              pm = {
+                ...Am.baseNametag
               };
-            var Ik;
-            if ("content" === Tk.location) tk.content = [...null !== (Ik = Tk.baseNametag.content) && void 0 !== Ik ? Ik : [], Lk];
-            else tk.subtitle = [Lk];
-            lk.setOtherEntitySetting(ak, Xk, "nameTagInfo", tk), yk <= 0 && qk.delete(Xk)
+            var fm;
+            if ("content" === Am.location) pm.content = [...null !== (fm = Am.baseNametag.content) && void 0 !== fm ? fm : [], Rm];
+            else pm.subtitle = [Rm];
+            wm.setOtherEntitySetting(Dm, hm, "nameTagInfo", pm), xm <= 0 && im.delete(hm)
           }
-          if (Lk.size > 0 && Fk - tk >= Tk) {
-            tk = Fk, Zk = (Zk + 1) % 3;
-            let kk = 0;
-            for (const [Ik, Xk] of Lk) {
-              if (kk++ % 3 !== Zk) continue;
-              const Tk = Math.floor((Fk - Xk.startTime) / 1e3);
-              if (Tk === Xk.lastRenderedSecond) continue;
-              Xk.lastRenderedSecond = Tk;
-              const ik = Xk.accumulatedIncome + Xk.incomePerSecond * BigInt(Tk);
-              yk(lk, ak, Ik, Xk, ik)
+          if (Rm.size > 0 && Tm - pm >= Am) {
+            pm = Tm, Em = (Em + 1) % 3;
+            let mm = 0;
+            for (const [fm, hm] of Rm) {
+              if (mm++ % 3 !== Em) continue;
+              const Am = Math.floor((Tm - hm.startTime) / 1e3);
+              if (Am === hm.lastRenderedSecond) continue;
+              hm.lastRenderedSecond = Am;
+              const am = hm.accumulatedIncome + hm.incomePerSecond * BigInt(Am);
+              xm(wm, Dm, fm, hm, am)
             }
           }
         },
-        onReceivedMessageFromServer: (kk, Fk) => {
-          if ("startCountdown" === kk) qk.set(Fk.eId, {
-            baseNametag: Fk.baseNametag,
-            remainingSeconds: Fk.remainingSeconds,
+        onReceivedMessageFromServer: (mm, Tm) => {
+          if ("startCountdown" === mm) im.set(Tm.eId, {
+            baseNametag: Tm.baseNametag,
+            remainingSeconds: Tm.remainingSeconds,
             startTime: Date.now(),
-            format: Fk.format,
-            location: Fk.location,
-            prefix: Fk.prefix,
-            style: Fk.style,
+            format: Tm.format,
+            location: Tm.location,
+            prefix: Tm.prefix,
+            style: Tm.style,
             lastRenderedSecond: -1
           });
-          else if ("stopCountdown" === kk) qk.delete(Fk.eId);
-          else if ("startIncomeTicking" === kk) {
-            const kk = {
-              baseNametag: Fk.baseNametag,
-              accumulatedIncome: BigInt(Fk.accumulatedIncome),
-              incomePerSecond: BigInt(Fk.incomePerSecond),
+          else if ("stopCountdown" === mm) im.delete(Tm.eId);
+          else if ("startIncomeTicking" === mm) {
+            const mm = {
+              baseNametag: Tm.baseNametag,
+              accumulatedIncome: BigInt(Tm.accumulatedIncome),
+              incomePerSecond: BigInt(Tm.incomePerSecond),
               startTime: Date.now(),
               lastRenderedSecond: -1
             };
-            Lk.set(Fk.eId, kk), yk(lk, ak, Fk.eId, kk, kk.accumulatedIncome)
-          } else "stopIncomeTicking" === kk && Lk.delete(Fk.eId) && lk.setOtherEntitySetting(ak, Fk.eId, "nameTagInfo", {
+            Rm.set(Tm.eId, mm), xm(wm, Dm, Tm.eId, mm, mm.accumulatedIncome)
+          } else "stopIncomeTicking" === mm && Rm.delete(Tm.eId) && wm.setOtherEntitySetting(Dm, Tm.eId, "nameTagInfo", {
             content: []
           })
         },
-        onPlayerAltAction: (kk, Fk, Ik, Xk, Tk, ik) => {
-          if (ik && "Mesh" === lk.getEntityType(ik)) {
-            const Fk = lk.getEntityName(ik);
-            "Upgrades" === Fk ? lk.openShop(kk, !1, "Upgrades") : "Items" === Fk ? lk.openShop(kk, !1, "Items") : "Prestige" === Fk ? lk.openShop(kk, !1, "Prestige") : "Collections" === Fk ? lk.openShop(kk, !1, "Collections") : "Base Skins" === Fk ? lk.openShop(kk, !1, "Base Skins") : "Gauntlet" === Fk ? lk.openShop(kk, !1, "Gauntlet") : "Diamond Shop" === Fk && lk.openShop(kk, !1, "Diamond Shop")
+        onPlayerAltAction: (mm, Tm, fm, hm, Am, am) => {
+          if (am && "Mesh" === wm.getEntityType(am)) {
+            const Tm = wm.getEntityName(am);
+            "Upgrades" === Tm ? wm.openShop(mm, !1, "Upgrades") : "Items" === Tm ? wm.openShop(mm, !1, "Items") : "Prestige" === Tm ? wm.openShop(mm, !1, "Prestige") : "Collections" === Tm ? wm.openShop(mm, !1, "Collections") : "Base Skins" === Tm ? wm.openShop(mm, !1, "Base Skins") : "Gauntlet" === Tm ? wm.openShop(mm, !1, "Gauntlet") : "Diamond Shop" === Tm && wm.openShop(mm, !1, "Diamond Shop")
           }
         }
       }
     }
   },
-  34202: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => Tk,
-      d: () => yk
+  34315: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => Am,
+      f: () => xm
     });
-    const Xk = [{
+    const hm = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -292,67 +292,67 @@ export const modules = {
       suffix: "K"
     }];
 
-    function Tk(kk) {
-      let Fk, Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof kk) {
-        if (!Number.isFinite(kk)) return "0";
-        if (Math.abs(kk) < 100) {
-          const Fk = kk < 0 ? "-" : "",
-            Ik = Math.abs(kk);
-          return Ik >= 10 ? `${Fk}${Ik.toFixed(1).replace(/\.0$/,"")}` : `${Fk}${Ik.toFixed(2).replace(/\.?0+$/,"")}`
+    function Am(mm) {
+      let Tm, fm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof mm) {
+        if (!Number.isFinite(mm)) return "0";
+        if (Math.abs(mm) < 100) {
+          const Tm = mm < 0 ? "-" : "",
+            fm = Math.abs(mm);
+          return fm >= 10 ? `${Tm}${fm.toFixed(1).replace(/\.0$/,"")}` : `${Tm}${fm.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        Fk = BigInt(Math.floor(kk))
-      } else Fk = kk;
-      const Tk = Fk < 0n ? -Fk : Fk,
-        ik = Fk < 0n ? "-" : "",
-        yk = Tk.toString();
-      if (yk.length <= Ik) return `${ik}${yk}`;
-      const lk = 3 * Math.floor((yk.length - 1) / 3);
-      if (lk < 3) return `${ik}${yk}`;
-      if (lk > 3 * Xk.length) {
-        const kk = yk[0],
-          Fk = yk.slice(1, 3).replace(/0+$/, "");
-        return `${ik}${Fk?`${kk}.${Fk}`:kk}e${yk.length-1}`
+        Tm = BigInt(Math.floor(mm))
+      } else Tm = mm;
+      const Am = Tm < 0n ? -Tm : Tm,
+        am = Tm < 0n ? "-" : "",
+        xm = Am.toString();
+      if (xm.length <= fm) return `${am}${xm}`;
+      const wm = 3 * Math.floor((xm.length - 1) / 3);
+      if (wm < 3) return `${am}${xm}`;
+      if (wm > 3 * hm.length) {
+        const mm = xm[0],
+          Tm = xm.slice(1, 3).replace(/0+$/, "");
+        return `${am}${Tm?`${mm}.${Tm}`:mm}e${xm.length-1}`
       }
       const {
-        threshold: ak,
-        suffix: qk
-      } = Xk[Xk.length - lk / 3], Lk = Tk / ak, tk = Number(1000n * (Tk % ak) / ak), Zk = Number(Lk) + tk / 1e3;
-      let jk;
-      return jk = Zk >= 100 ? Math.floor(Zk).toString() : Zk >= 10 ? Zk.toFixed(1).replace(/\.0$/, "") : Zk.toFixed(2).replace(/\.?0+$/, ""), `${ik}${jk}${qk}`
+        threshold: Dm,
+        suffix: im
+      } = hm[hm.length - wm / 3], Rm = Am / Dm, pm = Number(1000n * (Am % Dm) / Dm), Em = Number(Rm) + pm / 1e3;
+      let om;
+      return om = Em >= 100 ? Math.floor(Em).toString() : Em >= 10 ? Em.toFixed(1).replace(/\.0$/, "") : Em.toFixed(2).replace(/\.?0+$/, ""), `${am}${om}${im}`
     }
-    const ik = Xk.map((kk => {
+    const am = hm.map((mm => {
       let {
-        threshold: Fk,
-        suffix: Ik
-      } = kk;
+        threshold: Tm,
+        suffix: fm
+      } = mm;
       return {
-        threshold: Number(Fk),
-        suffix: Ik
+        threshold: Number(Tm),
+        suffix: fm
       }
-    })).filter((kk => {
+    })).filter((mm => {
       let {
-        threshold: Fk
-      } = kk;
-      return Number.isFinite(Fk)
+        threshold: Tm
+      } = mm;
+      return Number.isFinite(Tm)
     }));
 
-    function yk(kk) {
-      const Fk = Math.abs(kk),
-        Ik = kk < 0 ? "-" : "";
+    function xm(mm) {
+      const Tm = Math.abs(mm),
+        fm = mm < 0 ? "-" : "";
       for (const {
-          threshold: Xk,
-          suffix: Tk
+          threshold: hm,
+          suffix: Am
         }
-        of ik)
-        if (Fk >= Xk) {
-          const kk = Fk / Xk;
-          if (kk >= 1e3) return `${Ik}${Fk.toExponential(2).replace("e+","e")}`;
-          let ik;
-          return ik = kk >= 100 ? Math.floor(kk).toString() : kk >= 10 ? kk.toFixed(1).replace(/\.0$/, "") : kk.toFixed(2).replace(/\.?0+$/, ""), `${Ik}${ik}${Tk}`
-        } return `${Ik}${Fk}`
+        of am)
+        if (Tm >= hm) {
+          const mm = Tm / hm;
+          if (mm >= 1e3) return `${fm}${Tm.toExponential(2).replace("e+","e")}`;
+          let am;
+          return am = mm >= 100 ? Math.floor(mm).toString() : mm >= 10 ? mm.toFixed(1).replace(/\.0$/, "") : mm.toFixed(2).replace(/\.?0+$/, ""), `${fm}${am}${Am}`
+        } return `${fm}${Tm}`
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

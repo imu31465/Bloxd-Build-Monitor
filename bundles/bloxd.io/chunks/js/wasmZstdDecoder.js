@@ -1,473 +1,473 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var kk = __webpack_require__.u,
-        Fk = __webpack_require__.e,
-        Ik = {},
-        Xk = {};
-      __webpack_require__.u = function(Fk) {
-        return kk(Fk) + (Ik.hasOwnProperty(Fk) ? "?" + Ik[Fk] : "")
-      }, __webpack_require__.e = function(Tk) {
-        return Fk(Tk).catch((function(Fk) {
-          var ik = Xk.hasOwnProperty(Tk) ? Xk[Tk] : 4;
-          if (ik < 1) {
-            var yk = kk(Tk);
-            throw Fk.message = "Loading chunk " + Tk + " failed after 4 retries.\n(" + yk + ")", Fk.request = yk, Ik[Tk] = "cache-bust=" + Date.now(), setTimeout((function() {
-              delete Xk[Tk]
-            }), 0), Fk
+      var mm = __webpack_require__.u,
+        Tm = __webpack_require__.e,
+        fm = {},
+        hm = {};
+      __webpack_require__.u = function(Tm) {
+        return mm(Tm) + (fm.hasOwnProperty(Tm) ? "?" + fm[Tm] : "")
+      }, __webpack_require__.e = function(Am) {
+        return Tm(Am).catch((function(Tm) {
+          var am = hm.hasOwnProperty(Am) ? hm[Am] : 4;
+          if (am < 1) {
+            var xm = mm(Am);
+            throw Tm.message = "Loading chunk " + Am + " failed after 4 retries.\n(" + xm + ")", Tm.request = xm, fm[Am] = "cache-bust=" + Date.now(), setTimeout((function() {
+              delete hm[Am]
+            }), 0), Tm
           }
-          return new Promise((function(kk) {
-            var Fk = 4 - ik + 1;
+          return new Promise((function(mm) {
+            var Tm = 4 - am + 1;
             setTimeout((function() {
-              var Fk = "cache-bust=" + Date.now();
-              Ik[Tk] = Fk, Xk[Tk] = ik - 1, kk(__webpack_require__.e(Tk))
-            }), function(kk) {
-              return 500 * Math.pow(2, kk)
-            }(Fk))
+              var Tm = "cache-bust=" + Date.now();
+              fm[Am] = Tm, hm[Am] = am - 1, mm(__webpack_require__.e(Am))
+            }), function(mm) {
+              return 500 * Math.pow(2, mm)
+            }(Tm))
           }))
         }))
       }
     }
   })();
 
-  function kk(kk) {
-    return kk instanceof Error ? kk.message : String(kk)
+  function mm(mm) {
+    return mm instanceof Error ? mm.message : String(mm)
   }
-  const Fk = ArrayBuffer,
-    Ik = Uint8Array,
-    Xk = Uint16Array,
-    Tk = Int16Array,
-    ik = Int32Array,
-    yk = (kk, Fk, Xk) => {
-      if (Ik.prototype.slice) return Ik.prototype.slice.call(kk, Fk, Xk);
-      (null == Fk || Fk < 0) && (Fk = 0), (null == Xk || Xk > kk.length) && (Xk = kk.length);
-      const Tk = new Ik(Xk - Fk);
-      return Tk.set(kk.subarray(Fk, Xk)), Tk
+  const Tm = ArrayBuffer,
+    fm = Uint8Array,
+    hm = Uint16Array,
+    Am = Int16Array,
+    am = Int32Array,
+    xm = (mm, Tm, hm) => {
+      if (fm.prototype.slice) return fm.prototype.slice.call(mm, Tm, hm);
+      (null == Tm || Tm < 0) && (Tm = 0), (null == hm || hm > mm.length) && (hm = mm.length);
+      const Am = new fm(hm - Tm);
+      return Am.set(mm.subarray(Tm, hm)), Am
     },
-    lk = (kk, Fk, Xk, Tk) => {
-      if (Ik.prototype.fill) return Ik.prototype.fill.call(kk, Fk, Xk, Tk);
-      for ((null == Xk || Xk < 0) && (Xk = 0), (null == Tk || Tk > kk.length) && (Tk = kk.length); Xk < Tk; ++Xk) kk[Xk] = Fk;
-      return kk
+    wm = (mm, Tm, hm, Am) => {
+      if (fm.prototype.fill) return fm.prototype.fill.call(mm, Tm, hm, Am);
+      for ((null == hm || hm < 0) && (hm = 0), (null == Am || Am > mm.length) && (Am = mm.length); hm < Am; ++hm) mm[hm] = Tm;
+      return mm
     },
-    ak = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-    qk = (kk, Fk, Ik) => {
-      const Xk = new Error(Fk || ak[kk]);
-      if (Xk.code = kk, Error.captureStackTrace && Error.captureStackTrace(Xk, qk), !Ik) throw Xk;
-      return Xk
+    Dm = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+    im = (mm, Tm, fm) => {
+      const hm = new Error(Tm || Dm[mm]);
+      if (hm.code = mm, Error.captureStackTrace && Error.captureStackTrace(hm, im), !fm) throw hm;
+      return hm
     },
-    Lk = (kk, Fk, Ik) => {
-      let Xk = 0,
-        Tk = 0;
-      for (; Xk < Ik; ++Xk) Tk |= kk[Fk++] << (Xk << 3);
-      return Tk
+    Rm = (mm, Tm, fm) => {
+      let hm = 0,
+        Am = 0;
+      for (; hm < fm; ++hm) Am |= mm[Tm++] << (hm << 3);
+      return Am
     },
-    tk = (kk, Fk) => {
-      const Xk = kk[0] | kk[1] << 8 | kk[2] << 16;
-      if (3126568 == Xk && 253 == kk[3]) {
-        const Xk = kk[4],
-          Tk = Xk >> 5 & 1,
-          yk = Xk >> 2 & 1,
-          lk = 3 & Xk,
-          ak = Xk >> 6;
-        8 & Xk && qk(0);
-        let tk = 6 - Tk;
-        const Zk = 3 == lk ? 4 : lk,
-          jk = Lk(kk, tk, Zk);
-        tk += Zk;
-        const ek = ak ? 1 << ak : Tk,
-          wk = Lk(kk, tk, ek) + (1 == ak && 256);
-        let Hk = wk;
-        if (!Tk) {
-          const Fk = 1 << 10 + (kk[5] >> 3);
-          Hk = Fk + (Fk >> 3) * (7 & kk[5])
+    pm = (mm, Tm) => {
+      const hm = mm[0] | mm[1] << 8 | mm[2] << 16;
+      if (3126568 == hm && 253 == mm[3]) {
+        const hm = mm[4],
+          Am = hm >> 5 & 1,
+          xm = hm >> 2 & 1,
+          wm = 3 & hm,
+          Dm = hm >> 6;
+        8 & hm && im(0);
+        let pm = 6 - Am;
+        const Em = 3 == wm ? 4 : wm,
+          om = Rm(mm, pm, Em);
+        pm += Em;
+        const Om = Dm ? 1 << Dm : Am,
+          Ym = Rm(mm, pm, Om) + (1 == Dm && 256);
+        let qm = Ym;
+        if (!Am) {
+          const Tm = 1 << 10 + (mm[5] >> 3);
+          qm = Tm + (Tm >> 3) * (7 & mm[5])
         }
-        Hk > 2145386496 && qk(1);
-        const Jk = new Ik((1 == Fk ? wk || Hk : Fk ? 0 : Hk) + 12);
-        return Jk[0] = 1, Jk[4] = 4, Jk[8] = 8, {
-          b: tk + ek,
+        qm > 2145386496 && im(1);
+        const jm = new fm((1 == Tm ? Ym || qm : Tm ? 0 : qm) + 12);
+        return jm[0] = 1, jm[4] = 4, jm[8] = 8, {
+          b: pm + Om,
           y: 0,
           l: 0,
-          d: jk,
-          w: Fk && 1 != Fk ? Fk : Jk.subarray(12),
-          e: Hk,
-          o: new ik(Jk.buffer, 0, 3),
-          u: wk,
-          c: yk,
-          m: Math.min(131072, Hk)
+          d: om,
+          w: Tm && 1 != Tm ? Tm : jm.subarray(12),
+          e: qm,
+          o: new am(jm.buffer, 0, 3),
+          u: Ym,
+          c: xm,
+          m: Math.min(131072, qm)
         }
       }
-      if (25481893 == (Xk >> 4 | kk[3] << 20)) return 8 + (((Tk = kk)[yk = 4] | Tk[yk + 1] << 8 | Tk[yk + 2] << 16 | Tk[yk + 3] << 24) >>> 0);
-      var Tk, yk;
-      qk(0)
+      if (25481893 == (hm >> 4 | mm[3] << 20)) return 8 + (((Am = mm)[xm = 4] | Am[xm + 1] << 8 | Am[xm + 2] << 16 | Am[xm + 3] << 24) >>> 0);
+      var Am, xm;
+      im(0)
     },
-    Zk = kk => {
-      let Fk = 0;
-      for (; 1 << Fk <= kk; ++Fk);
-      return Fk - 1
+    Em = mm => {
+      let Tm = 0;
+      for (; 1 << Tm <= mm; ++Tm);
+      return Tm - 1
     },
-    jk = (kk, ik, yk) => {
-      let lk = 4 + (ik << 3);
-      const ak = 5 + (15 & kk[ik]);
-      ak > yk && qk(3);
-      const Lk = 1 << ak;
-      let tk = Lk,
-        jk = -1,
-        ek = -1,
-        wk = -1,
-        Hk = Lk;
-      const Jk = new Fk(512 + (Lk << 2)),
-        xk = new Tk(Jk, 0, 256),
-        Pk = new Xk(Jk, 0, 256),
-        Kk = new Xk(Jk, 512, Lk),
-        Qk = 512 + (Lk << 1),
-        sk = new Ik(Jk, Qk, Lk),
-        Vk = new Ik(Jk, Qk + Lk);
-      for (; jk < 255 && tk > 0;) {
-        const Fk = Zk(tk + 1),
-          Ik = lk >> 3,
-          Xk = (1 << Fk + 1) - 1;
-        let Tk = (kk[Ik] | kk[Ik + 1] << 8 | kk[Ik + 2] << 16) >> (7 & lk) & Xk;
-        const ik = (1 << Fk) - 1,
-          yk = Xk - tk - 1,
-          ak = Tk & ik;
-        if (ak < yk ? (lk += Fk, Tk = ak) : (lk += Fk + 1, Tk > ik && (Tk -= yk)), xk[++jk] = --Tk, -1 == Tk ? (tk += Tk, sk[--Hk] = jk) : tk -= Tk, !Tk)
+    om = (mm, am, xm) => {
+      let wm = 4 + (am << 3);
+      const Dm = 5 + (15 & mm[am]);
+      Dm > xm && im(3);
+      const Rm = 1 << Dm;
+      let pm = Rm,
+        om = -1,
+        Om = -1,
+        Ym = -1,
+        qm = Rm;
+      const jm = new Tm(512 + (Rm << 2)),
+        Vm = new Am(jm, 0, 256),
+        Im = new hm(jm, 0, 256),
+        Km = new hm(jm, 512, Rm),
+        Qm = 512 + (Rm << 1),
+        nm = new fm(jm, Qm, Rm),
+        Jm = new fm(jm, Qm + Rm);
+      for (; om < 255 && pm > 0;) {
+        const Tm = Em(pm + 1),
+          fm = wm >> 3,
+          hm = (1 << Tm + 1) - 1;
+        let Am = (mm[fm] | mm[fm + 1] << 8 | mm[fm + 2] << 16) >> (7 & wm) & hm;
+        const am = (1 << Tm) - 1,
+          xm = hm - pm - 1,
+          Dm = Am & am;
+        if (Dm < xm ? (wm += Tm, Am = Dm) : (wm += Tm + 1, Am > am && (Am -= xm)), Vm[++om] = --Am, -1 == Am ? (pm += Am, nm[--qm] = om) : pm -= Am, !Am)
           do {
-            const Fk = lk >> 3;
-            ek = (kk[Fk] | kk[Fk + 1] << 8) >> (7 & lk) & 3, lk += 2, jk += ek
-          } while (3 == ek)
-      }(jk > 255 || tk) && qk(0);
-      let zk = 0;
-      const Sk = (Lk >> 1) + (Lk >> 3) + 3,
-        vk = Lk - 1;
-      for (let Fk = 0; Fk <= jk; ++Fk) {
-        const kk = xk[Fk];
-        if (kk < 1) Pk[Fk] = -kk;
+            const Tm = wm >> 3;
+            Om = (mm[Tm] | mm[Tm + 1] << 8) >> (7 & wm) & 3, wm += 2, om += Om
+          } while (3 == Om)
+      }(om > 255 || pm) && im(0);
+      let cm = 0;
+      const zm = (Rm >> 1) + (Rm >> 3) + 3,
+        Zm = Rm - 1;
+      for (let Tm = 0; Tm <= om; ++Tm) {
+        const mm = Vm[Tm];
+        if (mm < 1) Im[Tm] = -mm;
         else
-          for (wk = 0; wk < kk; ++wk) {
-            sk[zk] = Fk;
+          for (Ym = 0; Ym < mm; ++Ym) {
+            nm[cm] = Tm;
             do {
-              zk = zk + Sk & vk
-            } while (zk >= Hk)
+              cm = cm + zm & Zm
+            } while (cm >= qm)
           }
       }
-      for (zk && qk(0), wk = 0; wk < Lk; ++wk) {
-        const kk = Pk[sk[wk]]++,
-          Fk = Vk[wk] = ak - Zk(kk);
-        Kk[wk] = (kk << Fk) - Lk
+      for (cm && im(0), Ym = 0; Ym < Rm; ++Ym) {
+        const mm = Im[nm[Ym]]++,
+          Tm = Jm[Ym] = Dm - Em(mm);
+        Km[Ym] = (mm << Tm) - Rm
       }
-      return [lk + 7 >> 3, {
-        b: ak,
-        s: sk,
-        n: Vk,
-        t: Kk
+      return [wm + 7 >> 3, {
+        b: Dm,
+        s: nm,
+        n: Jm,
+        t: Km
       }]
     },
-    ek = jk(new Ik([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-    wk = jk(new Ik([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-    Hk = jk(new Ik([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-    Jk = (kk, Fk) => {
-      const Ik = kk.length,
-        Xk = new ik(Ik);
-      for (let Tk = 0; Tk < Ik; ++Tk) Xk[Tk] = Fk, Fk += 1 << kk[Tk];
-      return Xk
+    Om = om(new fm([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+    Ym = om(new fm([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+    qm = om(new fm([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+    jm = (mm, Tm) => {
+      const fm = mm.length,
+        hm = new am(fm);
+      for (let Am = 0; Am < fm; ++Am) hm[Am] = Tm, Tm += 1 << mm[Am];
+      return hm
     },
-    xk = new Ik(new ik([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-    Pk = Jk(xk, 0),
-    Kk = new Ik(new ik([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-    Qk = Jk(Kk, 3),
-    sk = (kk, Fk, Ik) => {
-      const Xk = kk.length,
-        Tk = Fk.length,
-        ik = kk[Xk - 1],
-        yk = (1 << Ik.b) - 1,
-        lk = -Ik.b;
-      ik || qk(0);
-      let ak = 0,
-        Lk = Ik.b,
-        tk = (Xk << 3) - 8 + Zk(ik) - Lk,
-        jk = -1;
-      for (; tk > lk && jk < Tk;) {
-        const Xk = tk >> 3;
-        ak = (ak << Lk | (kk[Xk] | kk[Xk + 1] << 8 | kk[Xk + 2] << 16) >> (7 & tk)) & yk, Fk[++jk] = Ik.s[ak], tk -= Lk = Ik.n[ak]
+    Vm = new fm(new am([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+    Im = jm(Vm, 0),
+    Km = new fm(new am([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+    Qm = jm(Km, 3),
+    nm = (mm, Tm, fm) => {
+      const hm = mm.length,
+        Am = Tm.length,
+        am = mm[hm - 1],
+        xm = (1 << fm.b) - 1,
+        wm = -fm.b;
+      am || im(0);
+      let Dm = 0,
+        Rm = fm.b,
+        pm = (hm << 3) - 8 + Em(am) - Rm,
+        om = -1;
+      for (; pm > wm && om < Am;) {
+        const hm = pm >> 3;
+        Dm = (Dm << Rm | (mm[hm] | mm[hm + 1] << 8 | mm[hm + 2] << 16) >> (7 & pm)) & xm, Tm[++om] = fm.s[Dm], pm -= Rm = fm.n[Dm]
       }
-      tk == lk && jk + 1 == Tk || qk(0)
+      pm == wm && om + 1 == Am || im(0)
     },
-    Vk = (kk, Fk, Ik) => {
-      let Xk = 6;
-      const Tk = Fk.length + 3 >> 2,
-        ik = Tk << 1,
-        yk = Tk + ik;
-      sk(kk.subarray(Xk, Xk += kk[0] | kk[1] << 8), Fk.subarray(0, Tk), Ik), sk(kk.subarray(Xk, Xk += kk[2] | kk[3] << 8), Fk.subarray(Tk, ik), Ik), sk(kk.subarray(Xk, Xk += kk[4] | kk[5] << 8), Fk.subarray(ik, yk), Ik), sk(kk.subarray(Xk), Fk.subarray(yk), Ik)
+    Jm = (mm, Tm, fm) => {
+      let hm = 6;
+      const Am = Tm.length + 3 >> 2,
+        am = Am << 1,
+        xm = Am + am;
+      nm(mm.subarray(hm, hm += mm[0] | mm[1] << 8), Tm.subarray(0, Am), fm), nm(mm.subarray(hm, hm += mm[2] | mm[3] << 8), Tm.subarray(Am, am), fm), nm(mm.subarray(hm, hm += mm[4] | mm[5] << 8), Tm.subarray(am, xm), fm), nm(mm.subarray(hm), Tm.subarray(xm), fm)
     },
-    zk = (kk, Fk, Tk) => {
-      let ik = Fk.b;
-      const ak = kk[ik],
-        Lk = ak >> 1 & 3;
-      Fk.l = 1 & ak;
-      const tk = ak >> 3 | kk[ik + 1] << 5 | kk[ik + 2] << 13,
-        Jk = (ik += 3) + tk;
-      if (1 == Lk) {
-        if (ik >= kk.length) return;
-        return Fk.b = ik + 1, Tk ? (lk(Tk, kk[ik], Fk.y, Fk.y += tk), Tk) : lk(new Ik(tk), kk[ik])
+    cm = (mm, Tm, Am) => {
+      let am = Tm.b;
+      const Dm = mm[am],
+        Rm = Dm >> 1 & 3;
+      Tm.l = 1 & Dm;
+      const pm = Dm >> 3 | mm[am + 1] << 5 | mm[am + 2] << 13,
+        jm = (am += 3) + pm;
+      if (1 == Rm) {
+        if (am >= mm.length) return;
+        return Tm.b = am + 1, Am ? (wm(Am, mm[am], Tm.y, Tm.y += pm), Am) : wm(new fm(pm), mm[am])
       }
-      if (!(Jk > kk.length)) {
-        if (0 == Lk) return Fk.b = Jk, Tk ? (Tk.set(kk.subarray(ik, Jk), Fk.y), Fk.y += tk, Tk) : yk(kk, ik, Jk);
-        if (2 == Lk) {
-          const ak = kk[ik],
-            Lk = 3 & ak,
-            tk = ak >> 2 & 3;
-          let zk = ak >> 4,
-            Sk = 0,
-            vk = 0;
-          Lk < 2 ? 1 & tk ? zk |= kk[++ik] << 4 | (2 & tk && kk[++ik] << 12) : zk = ak >> 3 : (vk = tk, tk < 2 ? (zk |= (63 & kk[++ik]) << 4, Sk = kk[ik] >> 6 | kk[++ik] << 2) : 2 == tk ? (zk |= kk[++ik] << 4 | (3 & kk[++ik]) << 12, Sk = kk[ik] >> 2 | kk[++ik] << 6) : (zk |= kk[++ik] << 4 | (63 & kk[++ik]) << 12, Sk = kk[ik] >> 6 | kk[++ik] << 2 | kk[++ik] << 10)), ++ik;
-          let Ek = Tk ? Tk.subarray(Fk.y, Fk.y + Fk.m) : new Ik(Fk.m),
-            Ok = Ek.length - zk;
-          if (Ok < 0 && qk(0), 0 == Lk) Ek.set(kk.subarray(ik, ik += zk), Ok);
-          else if (1 == Lk) lk(Ek, kk[ik++], Ok);
+      if (!(jm > mm.length)) {
+        if (0 == Rm) return Tm.b = jm, Am ? (Am.set(mm.subarray(am, jm), Tm.y), Tm.y += pm, Am) : xm(mm, am, jm);
+        if (2 == Rm) {
+          const Dm = mm[am],
+            Rm = 3 & Dm,
+            pm = Dm >> 2 & 3;
+          let cm = Dm >> 4,
+            zm = 0,
+            Zm = 0;
+          Rm < 2 ? 1 & pm ? cm |= mm[++am] << 4 | (2 & pm && mm[++am] << 12) : cm = Dm >> 3 : (Zm = pm, pm < 2 ? (cm |= (63 & mm[++am]) << 4, zm = mm[am] >> 6 | mm[++am] << 2) : 2 == pm ? (cm |= mm[++am] << 4 | (3 & mm[++am]) << 12, zm = mm[am] >> 2 | mm[++am] << 6) : (cm |= mm[++am] << 4 | (63 & mm[++am]) << 12, zm = mm[am] >> 6 | mm[++am] << 2 | mm[++am] << 10)), ++am;
+          let km = Am ? Am.subarray(Tm.y, Tm.y + Tm.m) : new fm(Tm.m),
+            bm = km.length - cm;
+          if (bm < 0 && im(0), 0 == Rm) km.set(mm.subarray(am, am += cm), bm);
+          else if (1 == Rm) wm(km, mm[am++], bm);
           else {
-            let Tk = Fk.h;
-            if (2 == Lk) {
-              const yk = ((kk, Fk) => {
-                let Tk = 0,
-                  ik = -1;
-                const yk = new Ik(292),
-                  ak = kk[Fk],
-                  Lk = yk.subarray(0, 256),
-                  tk = yk.subarray(256, 268),
-                  ek = new Xk(yk.buffer, 268);
-                if (ak < 128) {
-                  const [Ik, Xk] = jk(kk, Fk + 1, 6), Tk = Ik << 3, yk = kk[Fk += ak];
-                  yk || qk(0);
-                  let lk = 0,
-                    tk = 0,
-                    ek = Xk.b,
-                    wk = ek,
-                    Hk = (++Fk << 3) - 8 + Zk(yk);
-                  for (; ik > 254 && qk(0), Hk -= ek, !(Hk < Tk);) {
-                    let Fk = Hk >> 3;
-                    if (lk += (kk[Fk] | kk[Fk + 1] << 8) >> (7 & Hk) & (1 << ek) - 1, Lk[++ik] = Xk.s[lk], Hk -= wk, Hk < Tk) break;
-                    Fk = Hk >> 3, tk += (kk[Fk] | kk[Fk + 1] << 8) >> (7 & Hk) & (1 << wk) - 1, Lk[++ik] = Xk.s[tk], ek = Xk.n[lk], lk = Xk.t[lk], wk = Xk.n[tk], tk = Xk.t[tk]
-                  }++ik > 255 && qk(0)
+            let Am = Tm.h;
+            if (2 == Rm) {
+              const xm = ((mm, Tm) => {
+                let Am = 0,
+                  am = -1;
+                const xm = new fm(292),
+                  Dm = mm[Tm],
+                  Rm = xm.subarray(0, 256),
+                  pm = xm.subarray(256, 268),
+                  Om = new hm(xm.buffer, 268);
+                if (Dm < 128) {
+                  const [fm, hm] = om(mm, Tm + 1, 6), Am = fm << 3, xm = mm[Tm += Dm];
+                  xm || im(0);
+                  let wm = 0,
+                    pm = 0,
+                    Om = hm.b,
+                    Ym = Om,
+                    qm = (++Tm << 3) - 8 + Em(xm);
+                  for (; am > 254 && im(0), qm -= Om, !(qm < Am);) {
+                    let Tm = qm >> 3;
+                    if (wm += (mm[Tm] | mm[Tm + 1] << 8) >> (7 & qm) & (1 << Om) - 1, Rm[++am] = hm.s[wm], qm -= Ym, qm < Am) break;
+                    Tm = qm >> 3, pm += (mm[Tm] | mm[Tm + 1] << 8) >> (7 & qm) & (1 << Ym) - 1, Rm[++am] = hm.s[pm], Om = hm.n[wm], wm = hm.t[wm], Ym = hm.n[pm], pm = hm.t[pm]
+                  }++am > 255 && im(0)
                 } else {
-                  for (ik = ak - 127; Tk < ik; Tk += 2) {
-                    const Ik = kk[++Fk];
-                    Lk[Tk] = Ik >> 4, Lk[Tk + 1] = 15 & Ik
-                  }++Fk
+                  for (am = Dm - 127; Am < am; Am += 2) {
+                    const fm = mm[++Tm];
+                    Rm[Am] = fm >> 4, Rm[Am + 1] = 15 & fm
+                  }++Tm
                 }
-                let wk = 0;
-                for (Tk = 0; Tk < ik; ++Tk) {
-                  const kk = Lk[Tk];
-                  kk > 11 && qk(0), wk += kk && 1 << kk - 1
+                let Ym = 0;
+                for (Am = 0; Am < am; ++Am) {
+                  const mm = Rm[Am];
+                  mm > 11 && im(0), Ym += mm && 1 << mm - 1
                 }
-                const Hk = Zk(wk) + 1,
-                  Jk = 1 << Hk,
-                  xk = Jk - wk;
-                for (xk & xk - 1 && qk(0), Lk[ik++] = Zk(xk) + 1, Tk = 0; Tk < ik; ++Tk) {
-                  const kk = Lk[Tk];
-                  ++tk[Lk[Tk] = kk && Hk + 1 - kk]
+                const qm = Em(Ym) + 1,
+                  jm = 1 << qm,
+                  Vm = jm - Ym;
+                for (Vm & Vm - 1 && im(0), Rm[am++] = Em(Vm) + 1, Am = 0; Am < am; ++Am) {
+                  const mm = Rm[Am];
+                  ++pm[Rm[Am] = mm && qm + 1 - mm]
                 }
-                const Pk = new Ik(Jk << 1),
-                  Kk = Pk.subarray(0, Jk),
-                  Qk = Pk.subarray(Jk);
-                for (ek[Hk] = 0, Tk = Hk; Tk > 0; --Tk) {
-                  const kk = ek[Tk];
-                  lk(Qk, Tk, kk, ek[Tk - 1] = kk + tk[Tk] * (1 << Hk - Tk))
+                const Im = new fm(jm << 1),
+                  Km = Im.subarray(0, jm),
+                  Qm = Im.subarray(jm);
+                for (Om[qm] = 0, Am = qm; Am > 0; --Am) {
+                  const mm = Om[Am];
+                  wm(Qm, Am, mm, Om[Am - 1] = mm + pm[Am] * (1 << qm - Am))
                 }
-                for (ek[0] != Jk && qk(0), Tk = 0; Tk < ik; ++Tk) {
-                  const kk = Lk[Tk];
-                  if (kk) {
-                    const Fk = ek[kk];
-                    lk(Kk, Tk, Fk, ek[kk] = Fk + (1 << Hk - kk))
+                for (Om[0] != jm && im(0), Am = 0; Am < am; ++Am) {
+                  const mm = Rm[Am];
+                  if (mm) {
+                    const Tm = Om[mm];
+                    wm(Km, Am, Tm, Om[mm] = Tm + (1 << qm - mm))
                   }
                 }
-                return [Fk, {
-                  n: Qk,
-                  b: Hk,
-                  s: Kk
+                return [Tm, {
+                  n: Qm,
+                  b: qm,
+                  s: Km
                 }]
-              })(kk, ik);
-              Sk += ik - (ik = yk[0]), Fk.h = Tk = yk[1]
-            } else Tk || qk(0);
-            (vk ? Vk : sk)(kk.subarray(ik, ik += Sk), Ek.subarray(Ok), Tk)
+              })(mm, am);
+              zm += am - (am = xm[0]), Tm.h = Am = xm[1]
+            } else Am || im(0);
+            (Zm ? Jm : nm)(mm.subarray(am, am += zm), km.subarray(bm), Am)
           }
-          let nk = kk[ik++];
-          if (nk) {
-            255 == nk ? nk = 32512 + (kk[ik++] | kk[ik++] << 8) : nk > 127 && (nk = nk - 128 << 8 | kk[ik++]);
-            const lk = kk[ik++];
-            3 & lk && qk(0);
-            const ak = [wk, Hk, ek];
-            for (let Tk = 2; Tk > -1; --Tk) {
-              const yk = lk >> 2 + (Tk << 1) & 3;
-              if (1 == yk) {
-                const Fk = new Ik([0, 0, kk[ik++]]);
-                ak[Tk] = {
-                  s: Fk.subarray(2, 3),
-                  n: Fk.subarray(0, 1),
-                  t: new Xk(Fk.buffer, 0, 1),
+          let Sm = mm[am++];
+          if (Sm) {
+            255 == Sm ? Sm = 32512 + (mm[am++] | mm[am++] << 8) : Sm > 127 && (Sm = Sm - 128 << 8 | mm[am++]);
+            const wm = mm[am++];
+            3 & wm && im(0);
+            const Dm = [Ym, qm, Om];
+            for (let Am = 2; Am > -1; --Am) {
+              const xm = wm >> 2 + (Am << 1) & 3;
+              if (1 == xm) {
+                const Tm = new fm([0, 0, mm[am++]]);
+                Dm[Am] = {
+                  s: Tm.subarray(2, 3),
+                  n: Tm.subarray(0, 1),
+                  t: new hm(Tm.buffer, 0, 1),
                   b: 0
                 }
-              } else 2 == yk ? [ik, ak[Tk]] = jk(kk, ik, 9 - (1 & Tk)) : 3 == yk && (Fk.t || qk(0), ak[Tk] = Fk.t[Tk])
+              } else 2 == xm ? [am, Dm[Am]] = om(mm, am, 9 - (1 & Am)) : 3 == xm && (Tm.t || im(0), Dm[Am] = Tm.t[Am])
             }
-            const [Lk, tk, sk] = Fk.t = ak, Vk = kk[Jk - 1];
-            Vk || qk(0);
-            let zk = (Jk << 3) - 8 + Zk(Vk) - sk.b,
-              Sk = zk >> 3,
-              vk = 0,
-              Gk = (kk[Sk] | kk[Sk + 1] << 8) >> (7 & zk) & (1 << sk.b) - 1;
-            Sk = (zk -= tk.b) >> 3;
-            let pk = (kk[Sk] | kk[Sk + 1] << 8) >> (7 & zk) & (1 << tk.b) - 1;
-            Sk = (zk -= Lk.b) >> 3;
-            let uk = (kk[Sk] | kk[Sk + 1] << 8) >> (7 & zk) & (1 << Lk.b) - 1;
-            for (++nk; --nk;) {
-              const Ik = sk.s[Gk],
-                Xk = sk.n[Gk],
-                Tk = Lk.s[uk],
-                ik = Lk.n[uk],
-                yk = tk.s[pk],
-                lk = tk.n[pk];
-              Sk = (zk -= yk) >> 3;
-              const ak = 1 << yk;
-              let Zk = ak + ((kk[Sk] | kk[Sk + 1] << 8 | kk[Sk + 2] << 16 | kk[Sk + 3] << 24) >>> (7 & zk) & ak - 1);
-              Sk = (zk -= Kk[Tk]) >> 3;
-              let jk = Qk[Tk] + ((kk[Sk] | kk[Sk + 1] << 8 | kk[Sk + 2] << 16) >> (7 & zk) & (1 << Kk[Tk]) - 1);
-              Sk = (zk -= xk[Ik]) >> 3;
-              const ek = Pk[Ik] + ((kk[Sk] | kk[Sk + 1] << 8 | kk[Sk + 2] << 16) >> (7 & zk) & (1 << xk[Ik]) - 1);
-              if ((zk < 0 || Ok + ek > Ek.length || vk + ek + jk > Ek.length) && qk(0), Sk = (zk -= Xk) >> 3, Gk = sk.t[Gk] + ((kk[Sk] | kk[Sk + 1] << 8) >> (7 & zk) & (1 << Xk) - 1), Sk = (zk -= ik) >> 3, uk = Lk.t[uk] + ((kk[Sk] | kk[Sk + 1] << 8) >> (7 & zk) & (1 << ik) - 1), Sk = (zk -= lk) >> 3, pk = tk.t[pk] + ((kk[Sk] | kk[Sk + 1] << 8) >> (7 & zk) & (1 << lk) - 1), Zk > 3) Fk.o[2] = Fk.o[1], Fk.o[1] = Fk.o[0], Fk.o[0] = Zk -= 3;
+            const [Rm, pm, nm] = Tm.t = Dm, Jm = mm[jm - 1];
+            Jm || im(0);
+            let cm = (jm << 3) - 8 + Em(Jm) - nm.b,
+              zm = cm >> 3,
+              Zm = 0,
+              em = (mm[zm] | mm[zm + 1] << 8) >> (7 & cm) & (1 << nm.b) - 1;
+            zm = (cm -= pm.b) >> 3;
+            let Nm = (mm[zm] | mm[zm + 1] << 8) >> (7 & cm) & (1 << pm.b) - 1;
+            zm = (cm -= Rm.b) >> 3;
+            let Gm = (mm[zm] | mm[zm + 1] << 8) >> (7 & cm) & (1 << Rm.b) - 1;
+            for (++Sm; --Sm;) {
+              const fm = nm.s[em],
+                hm = nm.n[em],
+                Am = Rm.s[Gm],
+                am = Rm.n[Gm],
+                xm = pm.s[Nm],
+                wm = pm.n[Nm];
+              zm = (cm -= xm) >> 3;
+              const Dm = 1 << xm;
+              let Em = Dm + ((mm[zm] | mm[zm + 1] << 8 | mm[zm + 2] << 16 | mm[zm + 3] << 24) >>> (7 & cm) & Dm - 1);
+              zm = (cm -= Km[Am]) >> 3;
+              let om = Qm[Am] + ((mm[zm] | mm[zm + 1] << 8 | mm[zm + 2] << 16) >> (7 & cm) & (1 << Km[Am]) - 1);
+              zm = (cm -= Vm[fm]) >> 3;
+              const Om = Im[fm] + ((mm[zm] | mm[zm + 1] << 8 | mm[zm + 2] << 16) >> (7 & cm) & (1 << Vm[fm]) - 1);
+              if ((cm < 0 || bm + Om > km.length || Zm + Om + om > km.length) && im(0), zm = (cm -= hm) >> 3, em = nm.t[em] + ((mm[zm] | mm[zm + 1] << 8) >> (7 & cm) & (1 << hm) - 1), zm = (cm -= am) >> 3, Gm = Rm.t[Gm] + ((mm[zm] | mm[zm + 1] << 8) >> (7 & cm) & (1 << am) - 1), zm = (cm -= wm) >> 3, Nm = pm.t[Nm] + ((mm[zm] | mm[zm + 1] << 8) >> (7 & cm) & (1 << wm) - 1), Em > 3) Tm.o[2] = Tm.o[1], Tm.o[1] = Tm.o[0], Tm.o[0] = Em -= 3;
               else {
-                const kk = Zk - (0 != ek);
-                kk ? (Zk = 3 == kk ? Fk.o[0] - 1 : Fk.o[kk], kk > 1 && (Fk.o[2] = Fk.o[1]), Fk.o[1] = Fk.o[0], Fk.o[0] = Zk) : Zk = Fk.o[0]
+                const mm = Em - (0 != Om);
+                mm ? (Em = 3 == mm ? Tm.o[0] - 1 : Tm.o[mm], mm > 1 && (Tm.o[2] = Tm.o[1]), Tm.o[1] = Tm.o[0], Tm.o[0] = Em) : Em = Tm.o[0]
               }
-              for (let kk = 0; kk < ek; ++kk) Ek[vk + kk] = Ek[Ok + kk];
-              vk += ek, Ok += ek;
-              let wk = vk - Zk;
-              if (wk < 0) {
-                let kk = -wk;
-                const Ik = Fk.e + wk;
-                Ik < 0 && qk(4), kk > jk && (kk = jk);
-                for (let Xk = 0; Xk < kk; ++Xk) Ek[vk + Xk] = Fk.w[Ik + Xk];
-                vk += kk, jk -= kk, wk = 0
+              for (let mm = 0; mm < Om; ++mm) km[Zm + mm] = km[bm + mm];
+              Zm += Om, bm += Om;
+              let Ym = Zm - Em;
+              if (Ym < 0) {
+                let mm = -Ym;
+                const fm = Tm.e + Ym;
+                fm < 0 && im(4), mm > om && (mm = om);
+                for (let hm = 0; hm < mm; ++hm) km[Zm + hm] = Tm.w[fm + hm];
+                Zm += mm, om -= mm, Ym = 0
               }
-              for (let kk = 0; kk < jk; ++kk) Ek[vk + kk] = Ek[wk + kk];
-              vk += jk
+              for (let mm = 0; mm < om; ++mm) km[Zm + mm] = km[Ym + mm];
+              Zm += om
             }
-            if (vk != Ok)
-              for (; Ok < Ek.length;) Ek[vk++] = Ek[Ok++];
-            else vk = Ek.length;
-            Tk ? Fk.y += vk : Ek = yk(Ek, 0, vk)
-          } else if (Tk) {
-            if (Fk.y += zk, Ok)
-              for (let kk = 0; kk < zk; ++kk) Ek[kk] = Ek[Ok + kk]
-          } else Ok && (Ek = yk(Ek, Ok));
-          return Fk.b = Jk, Ek
+            if (Zm != bm)
+              for (; bm < km.length;) km[Zm++] = km[bm++];
+            else Zm = km.length;
+            Am ? Tm.y += Zm : km = xm(km, 0, Zm)
+          } else if (Am) {
+            if (Tm.y += cm, bm)
+              for (let mm = 0; mm < cm; ++mm) km[mm] = km[bm + mm]
+          } else bm && (km = xm(km, bm));
+          return Tm.b = jm, km
         }
-        qk(2)
+        im(2)
       }
     };
-  class Sk {
+  class zm {
     output = null;
     decoded = 0;
     done = !1;
     st = null;
     parts = [];
-    eq = 0;
+    ni = 0;
     needed = 18;
     size;
-    constructor(kk) {
-      this.size = kk
+    constructor(mm) {
+      this.size = mm
     }
-    push(kk) {
+    push(mm) {
       if (this.done) return;
-      if (this.parts.push(kk), this.eq += kk.length, this.eq < this.needed) return;
-      const Fk = ((kk, Fk) => {
-        if (1 == kk.length) return kk[0];
-        const Xk = new Ik(Fk);
-        for (let Ik = 0, Tk = 0; Ik < kk.length; ++Ik) {
-          const Fk = kk[Ik];
-          Xk.set(Fk, Tk), Tk += Fk.length
+      if (this.parts.push(mm), this.ni += mm.length, this.ni < this.needed) return;
+      const Tm = ((mm, Tm) => {
+        if (1 == mm.length) return mm[0];
+        const hm = new fm(Tm);
+        for (let fm = 0, Am = 0; fm < mm.length; ++fm) {
+          const Tm = mm[fm];
+          hm.set(Tm, Am), Am += Tm.length
         }
-        return Xk
-      })(this.parts, this.eq);
-      let Xk = this.st;
-      if (!Xk) {
-        const kk = tk(Fk, new Ik(0));
-        "number" != typeof kk && kk.u === this.size || qk(0, `not a zstd frame of ${this.size} bytes`), Xk = this.st = tk(Fk, 1), Xk.e = 0, this.output = Xk.w
+        return hm
+      })(this.parts, this.ni);
+      let hm = this.st;
+      if (!hm) {
+        const mm = pm(Tm, new fm(0));
+        "number" != typeof mm && mm.u === this.size || im(0, `not a zstd frame of ${this.size} bytes`), hm = this.st = pm(Tm, 1), hm.e = 0, this.output = hm.w
       }
       for (;;) {
-        const kk = Fk.length - Xk.b;
-        if (kk < 3) {
+        const mm = Tm.length - hm.b;
+        if (mm < 3) {
           this.needed = 3;
           break
         }
-        const Ik = Fk[Xk.b],
-          Tk = Ik >> 1 & 3;
-        3 == Tk && qk(2);
-        const ik = Ik >> 3 | Fk[Xk.b + 1] << 5 | Fk[Xk.b + 2] << 13;
-        ik > Xk.m && qk(0), 0 == Tk && Xk.y + ik > Xk.u && qk(0);
-        const yk = 1 == Tk ? 4 : 3 + ik;
-        if (kk < yk) {
-          this.needed = yk;
+        const fm = Tm[hm.b],
+          Am = fm >> 1 & 3;
+        3 == Am && im(2);
+        const am = fm >> 3 | Tm[hm.b + 1] << 5 | Tm[hm.b + 2] << 13;
+        am > hm.m && im(0), 0 == Am && hm.y + am > hm.u && im(0);
+        const xm = 1 == Am ? 4 : 3 + am;
+        if (mm < xm) {
+          this.needed = xm;
           break
         }
-        if (zk(Fk, Xk, Xk.w) || qk(5), Xk.e = Xk.y, (Xk.y > Xk.u || Xk.l && Xk.y != Xk.u) && qk(0), Xk.l) {
+        if (cm(Tm, hm, hm.w) || im(5), hm.e = hm.y, (hm.y > hm.u || hm.l && hm.y != hm.u) && im(0), hm.l) {
           this.done = !0;
           break
         }
       }
-      this.decoded = Xk.y;
-      const Tk = Fk.subarray(Xk.b);
-      this.parts = Tk.length ? [Tk] : [], this.eq = Tk.length, Xk.b = 0
+      this.decoded = hm.y;
+      const Am = Tm.subarray(hm.b);
+      this.parts = Am.length ? [Am] : [], this.ni = Am.length, hm.b = 0
     }
   }
-  class vk {
+  class Zm {
     post;
     href = "";
-    Xe = null;
+    JO = null;
     given = 0;
     stopped = !1;
-    constructor(kk) {
-      this.post = kk
+    constructor(mm) {
+      this.post = mm
     }
-    take(Fk) {
+    take(Tm) {
       if (!this.stopped) try {
-        this.answer(Fk)
-      } catch (Ik) {
-        this.stop(Ik instanceof RangeError ? `out of memory decoding ${this.href}: ${kk(Ik)}` : `${this.href} did not decode: ${kk(Ik)}`)
+        this.answer(Tm)
+      } catch (fm) {
+        this.stop(fm instanceof RangeError ? `out of memory decoding ${this.href}: ${mm(fm)}` : `${this.href} did not decode: ${mm(fm)}`)
       }
     }
-    answer(kk) {
-      if (null === this.Xe) {
-        const [Fk, Ik] = kk;
-        return this.href = Fk, void(this.Xe = new Sk(Ik))
+    answer(mm) {
+      if (null === this.JO) {
+        const [Tm, fm] = mm;
+        return this.href = Tm, void(this.JO = new zm(fm))
       }
-      if (null === kk) return void this.stop(`${this.href} ended before its module did`);
-      const Fk = this.Xe;
-      Fk.push(kk);
+      if (null === mm) return void this.stop(`${this.href} ended before its module did`);
+      const Tm = this.JO;
+      Tm.push(mm);
       const {
-        output: Ik,
-        decoded: Xk
-      } = Fk;
-      if (null !== Ik && Xk > this.given) {
-        const kk = Ik.slice(this.given, Xk).buffer;
-        this.given = Xk, this.post(kk, [kk])
+        output: fm,
+        decoded: hm
+      } = Tm;
+      if (null !== fm && hm > this.given) {
+        const mm = fm.slice(this.given, hm).buffer;
+        this.given = hm, this.post(mm, [mm])
       }
-      Fk.done && this.stop(!0)
+      Tm.done && this.stop(!0)
     }
-    stop(kk) {
-      this.stopped = !0, this.post(kk)
+    stop(mm) {
+      this.stopped = !0, this.post(mm)
     }
   }
-  const Ek = globalThis.WorkerGlobalScope;
-  if (void 0 !== Ek && globalThis instanceof Ek) {
-    const kk = globalThis,
-      Fk = new vk((function(Fk) {
-        let Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        kk.postMessage(Fk, Ik)
+  const km = globalThis.WorkerGlobalScope;
+  if (void 0 !== km && globalThis instanceof km) {
+    const mm = globalThis,
+      Tm = new Zm((function(Tm) {
+        let fm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        mm.postMessage(Tm, fm)
       }));
-    kk.addEventListener("message", (kk => {
+    mm.addEventListener("message", (mm => {
       let {
-        data: Ik
-      } = kk;
-      Fk.take(Ik)
+        data: fm
+      } = mm;
+      Tm.take(fm)
     }))
   }
 })();

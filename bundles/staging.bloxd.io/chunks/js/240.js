@@ -1,15 +1,15 @@
 export const id = 240;
 export const ids = [240];
 export const modules = {
-  37811: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => tk,
-      d: () => yk
+  37858: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => pm,
+      f: () => xm
     });
-    var Xk = Ik(9210),
-      Tk = Ik(9183),
-      ik = Ik(337);
-    const yk = {
+    var hm = fm(9159),
+      Am = fm(9141),
+      am = fm(354);
+    const xm = {
       "Maple Door": {
         positions: [{
           block: "Maple Door",
@@ -2948,52 +2948,52 @@ export const modules = {
           z: 0
         }]
       },
-      ...lk("White"),
-      ...lk("Orange"),
-      ...lk("Magenta"),
-      ...lk("Light Blue"),
-      ...lk("Yellow"),
-      ...lk("Lime"),
-      ...lk("Pink"),
-      ...lk("Gray"),
-      ...lk("Light Gray"),
-      ...lk("Cyan"),
-      ...lk("Purple"),
-      ...lk("Blue"),
-      ...lk("Brown"),
-      ...lk("Green"),
-      ...lk("Red"),
-      ...lk("Black"),
-      ...lk("Draugr"),
-      ...lk("Skull"),
-      ...lk("Rainbow"),
-      ...ak("Sheep"),
-      ...ak("Cow"),
-      ...ak("Pig"),
-      ...ak("Horse"),
-      ...ak("Camel"),
-      ...ak("Wolf"),
-      ...ak("Deer"),
-      ...ak("Wildcat"),
-      ...qk("Radar"),
-      ...qk("Inactive Radar"),
-      ...qk("Active Radar"),
-      ...Lk("Magenta"),
-      ...Lk("Light Gray"),
-      ...Lk("Red"),
-      ...Lk("White"),
-      ...Lk("Orange"),
-      ...Lk("Light Blue"),
-      ...Lk("Yellow"),
-      ...Lk("Lime"),
-      ...Lk("Pink"),
-      ...Lk("Gray"),
-      ...Lk("Cyan"),
-      ...Lk("Purple"),
-      ...Lk("Blue"),
-      ...Lk("Brown"),
-      ...Lk("Green"),
-      ...Lk("Black"),
+      ...wm("White"),
+      ...wm("Orange"),
+      ...wm("Magenta"),
+      ...wm("Light Blue"),
+      ...wm("Yellow"),
+      ...wm("Lime"),
+      ...wm("Pink"),
+      ...wm("Gray"),
+      ...wm("Light Gray"),
+      ...wm("Cyan"),
+      ...wm("Purple"),
+      ...wm("Blue"),
+      ...wm("Brown"),
+      ...wm("Green"),
+      ...wm("Red"),
+      ...wm("Black"),
+      ...wm("Draugr"),
+      ...wm("Skull"),
+      ...wm("Rainbow"),
+      ...Dm("Sheep"),
+      ...Dm("Cow"),
+      ...Dm("Pig"),
+      ...Dm("Horse"),
+      ...Dm("Camel"),
+      ...Dm("Wolf"),
+      ...Dm("Deer"),
+      ...Dm("Wildcat"),
+      ...im("Radar"),
+      ...im("Inactive Radar"),
+      ...im("Active Radar"),
+      ...Rm("Magenta"),
+      ...Rm("Light Gray"),
+      ...Rm("Red"),
+      ...Rm("White"),
+      ...Rm("Orange"),
+      ...Rm("Light Blue"),
+      ...Rm("Yellow"),
+      ...Rm("Lime"),
+      ...Rm("Pink"),
+      ...Rm("Gray"),
+      ...Rm("Cyan"),
+      ...Rm("Purple"),
+      ...Rm("Blue"),
+      ...Rm("Brown"),
+      ...Rm("Green"),
+      ...Rm("Black"),
       "Auto Miner": {
         positions: [{
           block: "Auto Miner",
@@ -3107,11 +3107,11 @@ export const modules = {
         }]
       },
       ... function() {
-        const kk = "Lunite Auto Miner";
+        const mm = "Lunite Auto Miner";
         return {
-          [kk]: {
+          [mm]: {
             positions: [{
-              block: kk,
+              block: mm,
               x: 0,
               y: 0,
               z: 0
@@ -3137,9 +3137,9 @@ export const modules = {
               z: -2
             }]
           },
-          [`${kk}|meta|rot2`]: {
+          [`${mm}|meta|rot2`]: {
             positions: [{
-              block: `${kk}|meta|rot2`,
+              block: `${mm}|meta|rot2`,
               x: 0,
               y: 0,
               z: 0
@@ -3165,9 +3165,9 @@ export const modules = {
               z: 0
             }]
           },
-          [`${kk}|meta|rot3`]: {
+          [`${mm}|meta|rot3`]: {
             positions: [{
-              block: `${kk}|meta|rot3`,
+              block: `${mm}|meta|rot3`,
               x: 0,
               y: 0,
               z: 0
@@ -3193,9 +3193,9 @@ export const modules = {
               z: 2
             }]
           },
-          [`${kk}|meta|rot4`]: {
+          [`${mm}|meta|rot4`]: {
             positions: [{
-              block: `${kk}|meta|rot4`,
+              block: `${mm}|meta|rot4`,
               x: 0,
               y: 0,
               z: 0
@@ -3224,74 +3224,74 @@ export const modules = {
         }
       }(),
       ... function() {
-        const kk = {
-            1: kk => ({
+        const mm = {
+            1: mm => ({
               x: 0,
-              z: kk
+              z: mm
             }),
-            2: kk => ({
-              x: kk,
+            2: mm => ({
+              x: mm,
               z: 0
             }),
-            3: kk => ({
+            3: mm => ({
               x: 0,
-              z: -kk
+              z: -mm
             }),
-            4: kk => ({
-              x: -kk,
+            4: mm => ({
+              x: -mm,
               z: 0
             })
           },
-          Fk = {};
-        for (let Ik = 1; Ik <= 4; Ik++) {
-          const Tk = 1 === Ik ? "" : `|meta|rot${Ik}`;
-          Fk[`${Xk.b[0].block}${Tk}`] = {
-            positions: Xk.b.map((Fk => {
+          Tm = {};
+        for (let fm = 1; fm <= 4; fm++) {
+          const Am = 1 === fm ? "" : `|meta|rot${fm}`;
+          Tm[`${hm.b[0].block}${Am}`] = {
+            positions: hm.b.map((Tm => {
               let {
-                block: Xk,
-                y: ik,
-                z: yk
-              } = Fk;
+                block: hm,
+                y: am,
+                z: xm
+              } = Tm;
               return {
-                block: `${Xk}${Tk}`,
-                y: ik,
-                ...kk[Ik](yk)
+                block: `${hm}${Am}`,
+                y: am,
+                ...mm[fm](xm)
               }
             }))
           }
         }
-        return Fk
+        return Tm
       }(),
       ... function() {
-        const kk = {};
-        for (let Fk = 1; Fk <= Xk.k; Fk++) {
-          const Ik = (0, Xk.ic)(Fk),
-            Tk = Xk.n[Fk - 1],
-            ik = [{
-              block: Ik,
+        const mm = {};
+        for (let Tm = 1; Tm <= hm.l; Tm++) {
+          const fm = (0, hm.dc)(Tm),
+            Am = hm.p[Tm - 1],
+            am = [{
+              block: fm,
               x: 0,
               y: 0,
               z: 0
             }];
-          for (const kk of Xk.f)
-            for (let Fk = 1; Fk <= Tk; Fk++) {
-              if ("southwest" === kk && 1 === Fk) continue;
+          for (const mm of hm.h)
+            for (let Tm = 1; Tm <= Am; Tm++) {
+              if ("southwest" === mm && 1 === Tm) continue;
               const {
-                x: Ik,
-                z: Tk
-              } = Xk.j[kk];
-              ik.push({
-                block: (0, Xk.gc)(kk, Fk),
-                x: Ik,
-                y: Fk - 1,
-                z: Tk
+                x: fm,
+                z: Am
+              } = hm.i[mm];
+              am.push({
+                block: (0, hm.ac)(mm, Tm),
+                x: fm,
+                y: Tm - 1,
+                z: Am
               })
             }
-          kk[Ik] = {
-            positions: ik
+          mm[fm] = {
+            positions: am
           }
         }
-        return kk
+        return mm
       }(),
       "Solar Panel": {
         positions: [{
@@ -3405,159 +3405,159 @@ export const modules = {
       }
     };
 
-    function lk(kk) {
+    function wm(mm) {
       return {
-        [`${kk} Banner`]: {
+        [`${mm} Banner`]: {
           positions: [{
-            block: `${kk} Banner`,
+            block: `${mm} Banner`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot1|bot`,
+            block: `_${mm} Banner Flag|meta|rot1|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot2|bot`]: {
+        [`${mm} Banner|meta|rot2|bot`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot2|bot`,
+            block: `${mm} Banner|meta|rot2|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot2|bot`,
+            block: `_${mm} Banner Flag|meta|rot2|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot3|bot`]: {
+        [`${mm} Banner|meta|rot3|bot`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot3|bot`,
+            block: `${mm} Banner|meta|rot3|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot3|bot`,
+            block: `_${mm} Banner Flag|meta|rot3|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot4|bot`]: {
+        [`${mm} Banner|meta|rot4|bot`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot4|bot`,
+            block: `${mm} Banner|meta|rot4|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot4|bot`,
+            block: `_${mm} Banner Flag|meta|rot4|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot1|side`]: {
+        [`${mm} Banner|meta|rot1|side`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot1|side`,
+            block: `${mm} Banner|meta|rot1|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot1|side`,
+            block: `_${mm} Banner Flag|meta|rot1|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot2|side`]: {
+        [`${mm} Banner|meta|rot2|side`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot2|side`,
+            block: `${mm} Banner|meta|rot2|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot2|side`,
+            block: `_${mm} Banner Flag|meta|rot2|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot3|side`]: {
+        [`${mm} Banner|meta|rot3|side`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot3|side`,
+            block: `${mm} Banner|meta|rot3|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot3|side`,
+            block: `_${mm} Banner Flag|meta|rot3|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot4|side`]: {
+        [`${mm} Banner|meta|rot4|side`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot4|side`,
+            block: `${mm} Banner|meta|rot4|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot4|side`,
+            block: `_${mm} Banner Flag|meta|rot4|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot1|top`]: {
+        [`${mm} Banner|meta|rot1|top`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot1|top`,
+            block: `${mm} Banner|meta|rot1|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag`,
+            block: `_${mm} Banner Flag`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot2|top`]: {
+        [`${mm} Banner|meta|rot2|top`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot2|top`,
+            block: `${mm} Banner|meta|rot2|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot2|top`,
+            block: `_${mm} Banner Flag|meta|rot2|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot3|top`]: {
+        [`${mm} Banner|meta|rot3|top`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot3|top`,
+            block: `${mm} Banner|meta|rot3|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot3|top`,
+            block: `_${mm} Banner Flag|meta|rot3|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${kk} Banner|meta|rot4|top`]: {
+        [`${mm} Banner|meta|rot4|top`]: {
           positions: [{
-            block: `${kk} Banner|meta|rot4|top`,
+            block: `${mm} Banner|meta|rot4|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${kk} Banner Flag|meta|rot4|top`,
+            block: `_${mm} Banner Flag|meta|rot4|top`,
             x: 0,
             y: -1,
             z: 0
@@ -3566,96 +3566,96 @@ export const modules = {
       }
     }
 
-    function ak(kk) {
-      const Fk = (0, ik.hc)(kk);
+    function Dm(mm) {
+      const Tm = (0, am.Tb)(mm);
       return {
-        [Fk]: {
+        [Tm]: {
           positions: [{
-            block: Fk,
+            block: Tm,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Fk} Top Left`,
+            block: `_${Tm} Top Left`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Fk} Top Right`,
+            block: `_${Tm} Top Right`,
             x: -1,
             y: 1,
             z: 0
           }, {
-            block: `_${Fk} Bottom Right`,
+            block: `_${Tm} Bottom Right`,
             x: -1,
             y: 0,
             z: 0
           }]
         },
-        [`${Fk}|meta|rot2`]: {
+        [`${Tm}|meta|rot2`]: {
           positions: [{
-            block: `${Fk}|meta|rot2`,
+            block: `${Tm}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Fk} Top Left|meta|rot2`,
+            block: `_${Tm} Top Left|meta|rot2`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Fk} Top Right|meta|rot2`,
+            block: `_${Tm} Top Right|meta|rot2`,
             x: 0,
             y: 1,
             z: 1
           }, {
-            block: `_${Fk} Bottom Right|meta|rot2`,
+            block: `_${Tm} Bottom Right|meta|rot2`,
             x: 0,
             y: 0,
             z: 1
           }]
         },
-        [`${Fk}|meta|rot3`]: {
+        [`${Tm}|meta|rot3`]: {
           positions: [{
-            block: `${Fk}|meta|rot3`,
+            block: `${Tm}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Fk} Top Left|meta|rot3`,
+            block: `_${Tm} Top Left|meta|rot3`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Fk} Top Right|meta|rot3`,
+            block: `_${Tm} Top Right|meta|rot3`,
             x: 1,
             y: 1,
             z: 0
           }, {
-            block: `_${Fk} Bottom Right|meta|rot3`,
+            block: `_${Tm} Bottom Right|meta|rot3`,
             x: 1,
             y: 0,
             z: 0
           }]
         },
-        [`${Fk}|meta|rot4`]: {
+        [`${Tm}|meta|rot4`]: {
           positions: [{
-            block: `${Fk}|meta|rot4`,
+            block: `${Tm}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Fk} Top Left|meta|rot4`,
+            block: `_${Tm} Top Left|meta|rot4`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Fk} Top Right|meta|rot4`,
+            block: `_${Tm} Top Right|meta|rot4`,
             x: 0,
             y: 1,
             z: -1
           }, {
-            block: `_${Fk} Bottom Right|meta|rot4`,
+            block: `_${Tm} Bottom Right|meta|rot4`,
             x: 0,
             y: 0,
             z: -1
@@ -3664,77 +3664,77 @@ export const modules = {
       }
     }
 
-    function qk(kk) {
-      const Fk = `_${kk} Back`,
-        Ik = `_${kk} Dish`;
+    function im(mm) {
+      const Tm = `_${mm} Back`,
+        fm = `_${mm} Dish`;
       return {
-        [kk]: {
+        [mm]: {
           positions: [{
-            block: kk,
+            block: mm,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: Fk,
+            block: Tm,
             x: 0,
             y: 0,
             z: -1
           }, {
-            block: Ik,
+            block: fm,
             x: 0,
             y: 1,
             z: -1
           }]
         },
-        [`${kk}|meta|rot2`]: {
+        [`${mm}|meta|rot2`]: {
           positions: [{
-            block: `${kk}|meta|rot2`,
+            block: `${mm}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${Fk}|meta|rot2`,
+            block: `${Tm}|meta|rot2`,
             x: -1,
             y: 0,
             z: 0
           }, {
-            block: `${Ik}|meta|rot2`,
+            block: `${fm}|meta|rot2`,
             x: -1,
             y: 1,
             z: 0
           }]
         },
-        [`${kk}|meta|rot3`]: {
+        [`${mm}|meta|rot3`]: {
           positions: [{
-            block: `${kk}|meta|rot3`,
+            block: `${mm}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${Fk}|meta|rot3`,
+            block: `${Tm}|meta|rot3`,
             x: 0,
             y: 0,
             z: 1
           }, {
-            block: `${Ik}|meta|rot3`,
+            block: `${fm}|meta|rot3`,
             x: 0,
             y: 1,
             z: 1
           }]
         },
-        [`${kk}|meta|rot4`]: {
+        [`${mm}|meta|rot4`]: {
           positions: [{
-            block: `${kk}|meta|rot4`,
+            block: `${mm}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${Fk}|meta|rot4`,
+            block: `${Tm}|meta|rot4`,
             x: 1,
             y: 0,
             z: 0
           }, {
-            block: `${Ik}|meta|rot4`,
+            block: `${fm}|meta|rot4`,
             x: 1,
             y: 1,
             z: 0
@@ -3743,22 +3743,22 @@ export const modules = {
       }
     }
 
-    function Lk(kk) {
-      const Fk = `Small ${kk} Pod`;
+    function Rm(mm) {
+      const Tm = `Small ${mm} Pod`;
       return {
-        [Fk]: {
+        [Tm]: {
           positions: [{
-            block: Fk,
+            block: Tm,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_Small ${kk} Pod Mid`,
+            block: `_Small ${mm} Pod Mid`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_Small ${kk} Pod Top`,
+            block: `_Small ${mm} Pod Top`,
             x: 0,
             y: 2,
             z: 0
@@ -3766,280 +3766,280 @@ export const modules = {
         }
       }
     }
-    for (const Zk in yk) {
-      for (const kk of yk[Zk].positions)
-        if (kk.id = Tk.g[kk.block].id, Zk === kk.block && (0 !== kk.x || 0 !== kk.y || 0 !== kk.z)) throw new Error(`Multiblock "${Zk}" has main block "${kk.block}" at non-origin position (${kk.x}, ${kk.y}, ${kk.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
-      yk[Tk.g[Zk].id] = yk[Zk]
+    for (const Em in xm) {
+      for (const mm of xm[Em].positions)
+        if (mm.id = Am.i[mm.block].id, Em === mm.block && (0 !== mm.x || 0 !== mm.y || 0 !== mm.z)) throw new Error(`Multiblock "${Em}" has main block "${mm.block}" at non-origin position (${mm.x}, ${mm.y}, ${mm.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
+      xm[Am.i[Em].id] = xm[Em]
     }
-    const tk = {};
-    for (const Zk in yk)
+    const pm = {};
+    for (const Em in xm)
       for (const {
-          block: kk,
-          x: Fk,
-          y: Ik,
-          z: Xk
+          block: mm,
+          x: Tm,
+          y: fm,
+          z: hm
         }
-        of yk[Zk].positions) {
-        const ik = {
-          mainMultiblock: Zk,
-          compX: Fk,
-          compY: Ik,
-          compZ: Xk
+        of xm[Em].positions) {
+        const am = {
+          mainMultiblock: Em,
+          compX: Tm,
+          compY: fm,
+          compZ: hm
         };
-        tk[kk] = ik, tk[Tk.g[kk].id] = ik
+        pm[mm] = am, pm[Am.i[mm].id] = am
       }
   },
-  38209: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => ak,
-      f: () => lk
+  38308: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => Dm,
+      d: () => wm
     });
-    var Xk = Ik(9183),
-      Tk = Ik(9241),
-      ik = Ik(9244);
-    const yk = Tk.m.map((kk => {
+    var hm = fm(9141),
+      Am = fm(9193),
+      am = fm(9199);
+    const xm = Am.q.map((mm => {
       let {
-        dx: Fk,
-        dz: Ik
-      } = kk;
-      return [Fk, 0, Ik]
+        dx: Tm,
+        dz: fm
+      } = mm;
+      return [Tm, 0, fm]
     }));
 
-    function lk(kk) {
-      const Fk = Xk.g[kk];
-      return !!Fk && kk !== Xk.d && !Fk.model && !Fk.qj && !1 !== Fk.solid && !Fk.Re
+    function wm(mm) {
+      const Tm = hm.i[mm];
+      return !!Tm && mm !== hm.b && !Tm.model && !Tm.Qo && !1 !== Tm.solid && !Tm.AO
     }
-    class ak {
-      constructor(kk) {
-        this.model = kk, this.reshapeOffsets = [...yk, [0, -1, 0]]
+    class Dm {
+      constructor(mm) {
+        this.model = mm, this.reshapeOffsets = [...xm, [0, -1, 0]]
       }
-      handles(kk) {
-        const Fk = Xk.g[kk];
-        return (null === Fk || void 0 === Fk ? void 0 : Fk.model) === this.model && void 0 !== Fk.attachedTop
+      handles(mm) {
+        const Tm = hm.i[mm];
+        return (null === Tm || void 0 === Tm ? void 0 : Tm.model) === this.model && void 0 !== Tm.attachedTop
       }
-      affects(kk) {
-        return this.handles(kk) || lk(kk) || (0, ik.s)(Xk.g[kk])
+      affects(mm) {
+        return this.handles(mm) || wm(mm) || (0, am.z)(hm.i[mm])
       }
-      shape(kk, Fk, Ik, yk, ak) {
-        let qk = this.handles(kk(Fk, Ik + 1, yk)) ? Tk.f : 0;
-        return Tk.m.forEach(((ak, Lk) => {
+      shape(mm, Tm, fm, xm, Dm) {
+        let im = this.handles(mm(Tm, fm + 1, xm)) ? Am.i : 0;
+        return Am.q.forEach(((Dm, Rm) => {
           let {
-            dx: tk,
-            dz: Zk
-          } = ak;
-          const jk = kk(Fk + tk, Ik, yk + Zk);
-          (this.handles(jk) || lk(jk) || function(kk, Fk) {
-            const Ik = Xk.g[kk];
-            return (0, ik.s)(Ik) && (0, ik.n)(Ik.meta.rot) === (0 !== Tk.m[Fk].dx)
-          }(jk, Lk)) && (qk |= 1 << Lk)
-        })), (0, Xk.j)((0, Tk.i)(Xk.g[ak].meta.rootName, qk))
+            dx: pm,
+            dz: Em
+          } = Dm;
+          const om = mm(Tm + pm, fm, xm + Em);
+          (this.handles(om) || wm(om) || function(mm, Tm) {
+            const fm = hm.i[mm];
+            return (0, am.z)(fm) && (0, am.t)(fm.meta.rot) === (0 !== Am.q[Tm].dx)
+          }(om, Rm)) && (im |= 1 << Rm)
+        })), (0, hm.k)((0, Am.k)(hm.i[Dm].meta.rootName, im))
       }
     }
   },
-  38e3: (kk, Fk, Ik) => {
-    function Xk(kk, Fk) {
-      var Ik;
-      Fk || (Fk = {});
-      const Xk = null !== (Ik = Fk.customAttributes) && void 0 !== Ik ? Ik : {};
-      var Tk, ik, yk;
-      "Gun" === (null === kk || void 0 === kk ? void 0 : kk.type) && (Xk.shotsLeft = null !== (Tk = null !== (ik = Xk.shotsLeft) && void 0 !== ik ? ik : null === (yk = Xk.gunStats) || void 0 === yk ? void 0 : yk.clipSize) && void 0 !== Tk ? Tk : kk.clipSize);
-      if (Xk.enchantmentTier && (Xk.enchantmentTier = Xk.enchantmentTier.toString()), Xk.enchantments)
-        for (const tk in Xk.enchantments) {
-          const kk = Xk.enchantments[tk];
-          if ("number" !== typeof kk) {
-            const Fk = parseInt(kk);
-            isNaN(Fk) || Fk < 0 ? Xk.enchantments[tk] = void 0 : Xk.enchantments[tk] = Fk > 1e9 ? 1e9 : Fk
+  38058: (mm, Tm, fm) => {
+    function hm(mm, Tm) {
+      var fm;
+      Tm || (Tm = {});
+      const hm = null !== (fm = Tm.customAttributes) && void 0 !== fm ? fm : {};
+      var Am, am, xm;
+      "Gun" === (null === mm || void 0 === mm ? void 0 : mm.type) && (hm.shotsLeft = null !== (Am = null !== (am = hm.shotsLeft) && void 0 !== am ? am : null === (xm = hm.gunStats) || void 0 === xm ? void 0 : xm.clipSize) && void 0 !== Am ? Am : mm.clipSize);
+      if (hm.enchantmentTier && (hm.enchantmentTier = hm.enchantmentTier.toString()), hm.enchantments)
+        for (const pm in hm.enchantments) {
+          const mm = hm.enchantments[pm];
+          if ("number" !== typeof mm) {
+            const Tm = parseInt(mm);
+            isNaN(Tm) || Tm < 0 ? hm.enchantments[pm] = void 0 : hm.enchantments[pm] = Tm > 1e9 ? 1e9 : Tm
           }
         }
-      if (Xk.enchantmentData)
-        for (const tk in Xk.enchantmentData) {
-          const kk = Xk.enchantmentData[tk];
-          if (!kk) continue;
-          if ("object" !== typeof kk) {
-            Xk.enchantmentData[tk] = void 0;
+      if (hm.enchantmentData)
+        for (const pm in hm.enchantmentData) {
+          const mm = hm.enchantmentData[pm];
+          if (!mm) continue;
+          if ("object" !== typeof mm) {
+            hm.enchantmentData[pm] = void 0;
             continue
           }
-          const Fk = kk.icon,
-            Ik = kk.description;
-          var lk, ak, qk, Lk;
-          if ("string" !== typeof Fk) Xk.enchantmentData[tk].icon = null !== (lk = null === Fk || void 0 === Fk || null === (ak = Fk.toString) || void 0 === ak ? void 0 : ak.call(Fk)) && void 0 !== lk ? lk : void 0;
-          if ("string" !== typeof Ik) Xk.enchantmentData[tk].description = null !== (qk = null === Ik || void 0 === Ik || null === (Lk = Ik.toString) || void 0 === Lk ? void 0 : Lk.call(Ik)) && void 0 !== qk ? qk : void 0
+          const Tm = mm.icon,
+            fm = mm.description;
+          var wm, Dm, im, Rm;
+          if ("string" !== typeof Tm) hm.enchantmentData[pm].icon = null !== (wm = null === Tm || void 0 === Tm || null === (Dm = Tm.toString) || void 0 === Dm ? void 0 : Dm.call(Tm)) && void 0 !== wm ? wm : void 0;
+          if ("string" !== typeof fm) hm.enchantmentData[pm].description = null !== (im = null === fm || void 0 === fm || null === (Rm = fm.toString) || void 0 === Rm ? void 0 : Rm.call(fm)) && void 0 !== im ? im : void 0
         }
-      return Fk.customAttributes = Xk, Fk
+      return Tm.customAttributes = hm, Tm
     }
-    Ik.d(Fk, {
-      b: () => Xk
+    fm.d(Tm, {
+      c: () => hm
     })
   },
-  38204: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Vk,
-      d: () => Jk,
-      e: () => ak,
-      g: () => tk,
-      j: () => zk
+  38306: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => Jm,
+      g: () => jm,
+      k: () => Dm,
+      l: () => pm,
+      p: () => cm
     });
-    var Xk = Ik(9183),
-      Tk = Ik(9223),
-      ik = Ik(38209);
-    const yk = (0, Xk.j)("Noticeboard"),
-      lk = (0, Xk.j)("Standing Noticeboard|meta|rot4|lrud");
+    var hm = fm(9141),
+      Am = fm(9167),
+      am = fm(38308);
+    const xm = (0, hm.k)("Noticeboard"),
+      wm = (0, hm.k)("Standing Noticeboard|meta|rot4|lrud");
 
-    function ak(kk) {
-      return yk <= kk && kk <= lk
+    function Dm(mm) {
+      return xm <= mm && mm <= wm
     }
-    const qk = new Uint8Array(lk - yk + 1);
-    for (let Sk = yk; Sk <= lk; Sk++) qk[Sk - yk] = (0, Tk.r)(Xk.g[Sk].meta.metaStr);
-    const Lk = 64,
-      tk = Lk * Lk,
-      [Zk, jk, ek, wk] = [0, 1, 2, 3];
+    const im = new Uint8Array(wm - xm + 1);
+    for (let zm = xm; zm <= wm; zm++) im[zm - xm] = (0, Am.p)(hm.i[zm].meta.metaStr);
+    const Rm = 64,
+      pm = Rm * Rm,
+      [Em, om, Om, Ym] = [0, 1, 2, 3];
 
-    function Hk(kk) {
-      var Fk, Ik;
-      return "string" === typeof(null === kk || void 0 === kk || null === (Fk = kk.persisted) || void 0 === Fk || null === (Ik = Fk.shared) || void 0 === Ik ? void 0 : Ik.text)
-    }
-
-    function Jk(kk) {
-      return Hk(kk) && "" !== kk.persisted.shared.text.trim()
+    function qm(mm) {
+      var Tm, fm;
+      return "string" === typeof(null === mm || void 0 === mm || null === (Tm = mm.persisted) || void 0 === Tm || null === (fm = Tm.shared) || void 0 === fm ? void 0 : fm.text)
     }
 
-    function xk(kk, Fk) {
-      let [Ik, , Xk] = Fk;
-      const [ik, , yk] = Tk.z[kk][jk];
-      return Ik * ik + Xk * yk
+    function jm(mm) {
+      return qm(mm) && "" !== mm.persisted.shared.text.trim()
     }
 
-    function Pk(kk, Fk, Ik) {
-      return Ik[1] - Fk[1] || xk(kk, Fk) - xk(kk, Ik)
+    function Vm(mm, Tm) {
+      let [fm, , hm] = Tm;
+      const [am, , xm] = Am.t[mm][om];
+      return fm * am + hm * xm
     }
 
-    function Kk(kk, Fk, Ik, ik, lk) {
-      var ak;
-      let Lk = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : kk(Fk[0], Fk[1], Fk[2]);
-      if (!(qk[Lk - yk] & 1 << Ik)) return null;
-      const [tk, Zk, jk] = Tk.z[lk][Ik], ek = [Fk[0] + tk, Fk[1] + Zk, Fk[2] + jk], wk = kk(ek[0], ek[1], ek[2]), Hk = null === (ak = Xk.g[wk]) || void 0 === ak ? void 0 : ak.meta;
-      return (null === Hk || void 0 === Hk ? void 0 : Hk.rootId) === ik && Hk.rot === lk && qk[wk - yk] & 1 << (1 ^ Ik) ? ek : null
+    function Im(mm, Tm, fm) {
+      return fm[1] - Tm[1] || Vm(mm, Tm) - Vm(mm, fm)
     }
 
-    function Qk(kk, Fk, Ik, ik) {
-      const yk = kk(Fk, Ik, ik);
-      if (!ak(yk)) return null;
+    function Km(mm, Tm, fm, am, wm) {
+      var Dm;
+      let Rm = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : mm(Tm[0], Tm[1], Tm[2]);
+      if (!(im[Rm - xm] & 1 << fm)) return null;
+      const [pm, Em, om] = Am.t[wm][fm], Om = [Tm[0] + pm, Tm[1] + Em, Tm[2] + om], Ym = mm(Om[0], Om[1], Om[2]), qm = null === (Dm = hm.i[Ym]) || void 0 === Dm ? void 0 : Dm.meta;
+      return (null === qm || void 0 === qm ? void 0 : qm.rootId) === am && qm.rot === wm && im[Ym - xm] & 1 << (1 ^ fm) ? Om : null
+    }
+
+    function Qm(mm, Tm, fm, am) {
+      const xm = mm(Tm, fm, am);
+      if (!Dm(xm)) return null;
       const {
-        rootId: lk,
-        rot: qk
-      } = Xk.g[yk].meta, tk = (Fk, Ik) => {
-        let Xk = Fk,
-          Tk = 1;
-        for (let ik = Kk(kk, Xk, Ik, lk, qk); ik && Tk < Lk; ik = Kk(kk, Xk, Ik, lk, qk)) Xk = ik, Tk++;
+        rootId: wm,
+        rot: im
+      } = hm.i[xm].meta, pm = (Tm, fm) => {
+        let hm = Tm,
+          Am = 1;
+        for (let am = Km(mm, hm, fm, wm, im); am && Am < Rm; am = Km(mm, hm, fm, wm, im)) hm = am, Am++;
         return {
-          end: Xk,
-          cells: Tk
+          end: hm,
+          cells: Am
         }
-      }, Hk = tk(tk([Fk, Ik, ik], Zk).end, ek).end, Jk = tk(Hk, jk).cells, [xk, , Pk] = Tk.z[qk][jk];
-      let Qk = 1;
-      kk: for (; Qk < Lk; Qk++)
-        for (let Fk = 0; Fk < Jk; Fk++)
-          if (!Kk(kk, [Hk[0] + xk * Fk, Hk[1] - Qk + 1, Hk[2] + Pk * Fk], wk, lk, qk)) break kk;
+      }, qm = pm(pm([Tm, fm, am], Em).end, Om).end, jm = pm(qm, om).cells, [Vm, , Im] = Am.t[im][om];
+      let Qm = 1;
+      mm: for (; Qm < Rm; Qm++)
+        for (let Tm = 0; Tm < jm; Tm++)
+          if (!Km(mm, [qm[0] + Vm * Tm, qm[1] - Qm + 1, qm[2] + Im * Tm], Ym, wm, im)) break mm;
       return {
-        anchor: Hk,
-        rootId: lk,
-        rot: qk,
-        width: Jk,
-        height: Qk
+        anchor: qm,
+        rootId: wm,
+        rot: im,
+        width: jm,
+        height: Qm
       }
     }
 
-    function sk(kk, Fk) {
-      for (const Ik of function(kk) {
+    function nm(mm, Tm) {
+      for (const fm of function(mm) {
           let {
-            anchor: Fk,
-            rot: Ik,
-            width: Xk,
-            height: ik
-          } = kk;
-          const [yk, , lk] = Tk.z[Ik][jk], ak = [];
-          for (let Tk = 0; Tk < ik; Tk++)
-            for (let kk = 0; kk < Xk; kk++) ak.push([Fk[0] + yk * kk, Fk[1] - Tk, Fk[2] + lk * kk]);
-          return ak
-        }(kk))
-        if (Hk(Fk(Ik[0], Ik[1], Ik[2]))) return Ik;
+            anchor: Tm,
+            rot: fm,
+            width: hm,
+            height: am
+          } = mm;
+          const [xm, , wm] = Am.t[fm][om], Dm = [];
+          for (let Am = 0; Am < am; Am++)
+            for (let mm = 0; mm < hm; mm++) Dm.push([Tm[0] + xm * mm, Tm[1] - Am, Tm[2] + wm * mm]);
+          return Dm
+        }(mm))
+        if (qm(Tm(fm[0], fm[1], fm[2]))) return fm;
       return null
     }
 
-    function Vk(kk, Fk, Ik, Tk, ik) {
-      const yk = kk(Ik, Tk, ik);
-      if (!ak(yk)) return null;
+    function Jm(mm, Tm, fm, Am, am) {
+      const xm = mm(fm, Am, am);
+      if (!Dm(xm)) return null;
       const {
-        rootId: lk,
-        rot: qk
-      } = Xk.g[yk].meta, Lk = [
-        [Ik, Tk, ik]
-      ], Zk = new Set([Lk[0].join()]);
-      let jk = Lk[0],
-        ek = null;
-      for (let Xk = 0; Xk < Lk.length; Xk++) {
-        const Ik = Lk[Xk];
-        if (Pk(qk, Ik, jk) < 0 && (jk = Ik), Hk(Fk(Ik[0], Ik[1], Ik[2]))) {
-          const Fk = Qk(kk, Ik[0], Ik[1], Ik[2]);
-          (!ek || Pk(qk, Fk.anchor, ek.anchor) < 0) && (ek = Fk)
+        rootId: wm,
+        rot: im
+      } = hm.i[xm].meta, Rm = [
+        [fm, Am, am]
+      ], Em = new Set([Rm[0].join()]);
+      let om = Rm[0],
+        Om = null;
+      for (let hm = 0; hm < Rm.length; hm++) {
+        const fm = Rm[hm];
+        if (Im(im, fm, om) < 0 && (om = fm), qm(Tm(fm[0], fm[1], fm[2]))) {
+          const Tm = Qm(mm, fm[0], fm[1], fm[2]);
+          (!Om || Im(im, Tm.anchor, Om.anchor) < 0) && (Om = Tm)
         }
-        for (let Fk = 0; Fk < 4 && Lk.length < tk; Fk++) {
-          const Xk = Kk(kk, Ik, Fk, lk, qk);
-          Xk && !Zk.has(Xk.join()) && (Zk.add(Xk.join()), Lk.push(Xk))
+        for (let Tm = 0; Tm < 4 && Rm.length < pm; Tm++) {
+          const hm = Km(mm, fm, Tm, wm, im);
+          hm && !Em.has(hm.join()) && (Em.add(hm.join()), Rm.push(hm))
         }
       }
-      return ek ??= Qk(kk, jk[0], jk[1], jk[2]), {
-        cells: Lk,
-        topLeft: jk,
-        rect: ek,
-        textCell: sk(ek, Fk)
+      return Om ??= Qm(mm, om[0], om[1], om[2]), {
+        cells: Rm,
+        topLeft: om,
+        rect: Om,
+        textCell: nm(Om, Tm)
       }
     }
 
-    function zk(kk, Fk, Ik, yk, lk) {
-      if (null !== Ik && ak(Ik)) {
+    function cm(mm, Tm, fm, xm, wm) {
+      if (null !== fm && Dm(fm)) {
         const {
-          rootName: kk,
-          rot: Fk
-        } = Xk.g[Ik].meta;
-        if (Tk.z[Fk].some((kk => {
-            let [Fk, Ik, Xk] = kk;
-            return Fk === yk[0] && Ik === yk[1] && Xk === yk[2]
+          rootName: mm,
+          rot: Tm
+        } = hm.i[fm].meta;
+        if (Am.t[Tm].some((mm => {
+            let [Tm, fm, hm] = mm;
+            return Tm === xm[0] && fm === xm[1] && hm === xm[2]
           }))) return {
-          root: kk,
-          rot: Fk
+          root: mm,
+          rot: Tm
         }
       }
-      const [qk, Lk] = Tk.m[lk], tk = kk(Fk[0] - qk, Fk[1], Fk[2] - Lk);
+      const [im, Rm] = Am.m[wm], pm = mm(Tm[0] - im, Tm[1], Tm[2] - Rm);
       return {
-        root: (0, ik.f)(tk) ? Tk.F : Tk.C,
-        rot: lk
+        root: (0, am.d)(pm) ? Am.y : Am.v,
+        rot: wm
       }
     }
   },
-  38213: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => ik,
-      i: () => yk,
-      k: () => Tk,
-      l: () => lk
+  38311: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => am,
+      e: () => xm,
+      h: () => Am,
+      j: () => wm
     });
-    var Xk = Ik(346);
-    const Tk = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...Ik(621).s.map((kk => `${kk} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...Xk.k, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
-      ik = ["Obby RPG"];
+    var hm = fm(359);
+    const Am = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...fm(649).u.map((mm => `${mm} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...hm.f, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
+      am = ["Obby RPG"];
 
-    function yk(kk) {
-      const Fk = kk.indexOf("|");
-      return -1 === Fk ? {
-        item: kk,
+    function xm(mm) {
+      const Tm = mm.indexOf("|");
+      return -1 === Tm ? {
+        item: mm,
         clientPredictedThrower: null
       } : {
-        item: kk.slice(0, Fk),
-        clientPredictedThrower: kk.slice(Fk + 1)
+        item: mm.slice(0, Tm),
+        clientPredictedThrower: mm.slice(Tm + 1)
       }
     }
-    const lk = [...Tk, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
+    const wm = [...Am, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

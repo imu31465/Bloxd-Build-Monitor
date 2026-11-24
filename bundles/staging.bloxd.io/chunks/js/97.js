@@ -1,341 +1,341 @@
 export const id = 97;
 export const ids = [97];
 export const modules = {
-  4874: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      default: () => dk
+  4814: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      default: () => um
     });
-    var Xk = Ik(58),
-      Tk = Ik(1485),
-      ik = Ik(337),
-      yk = Ik(1223),
-      lk = Ik(1560),
-      ak = Ik(1253),
-      qk = Ik(1511),
-      Lk = Ik(1453),
-      tk = Ik(2595);
-    const Zk = {
+    var hm = fm(59),
+      Am = fm(1537),
+      am = fm(354),
+      xm = fm(1243),
+      wm = fm(1617),
+      Dm = fm(1270),
+      im = fm(1555),
+      Rm = fm(1494),
+      pm = fm(2661);
+    const Em = {
       retries: 2,
       minTimeout: 2e3
     };
-    var jk = Ik(1103),
-      ek = Ik(1556),
-      wk = Ik(1118),
-      Hk = Ik(1849),
-      Jk = Ik(1179),
-      xk = Ik(1217),
-      Pk = Ik(3414),
-      Kk = Ik(1318),
-      Qk = Ik(1406),
-      sk = Ik(1475),
-      Vk = Ik(2538),
-      zk = Ik(2552),
-      Sk = Ik(4877),
-      vk = Ik(2089),
-      Ek = Ik(1055),
-      Ok = Ik.n(Ek),
-      nk = Ik(1066),
-      Gk = Ik(4884),
-      pk = Ik(25),
-      uk = Ik(1875),
-      bk = Ik(3588),
-      Rk = Ik(1950),
-      Uk = Ik(3539),
-      Ck = Ik(95),
-      Nk = Ik(4543),
-      ck = Ik(1096);
-    const Wk = [Sk];
+    var om = fm(1152),
+      Om = fm(1609),
+      Ym = fm(1160),
+      qm = fm(1884),
+      jm = fm(1208),
+      Vm = fm(1235),
+      Im = fm(3471),
+      Km = fm(1345),
+      Qm = fm(1454),
+      nm = fm(1519),
+      Jm = fm(2608),
+      cm = fm(2619),
+      zm = fm(4823),
+      Zm = fm(2137),
+      km = fm(1080),
+      bm = fm.n(km),
+      Sm = fm(1089),
+      em = fm(4825),
+      Nm = fm(23),
+      Gm = fm(1905),
+      Xm = fm(3621),
+      Pm = fm(1997),
+      Hm = fm(3587),
+      ym = fm(105),
+      Cm = fm(4495),
+      rm = fm(1135);
+    const sm = [zm];
 
-    function fk(kk) {
+    function lm(mm) {
       let {
-        icon: Fk,
-        label: Ik,
-        value: Xk
-      } = kk;
-      return (0, ck.jsxs)("div", {
+        icon: Tm,
+        label: fm,
+        value: hm
+      } = mm;
+      return (0, rm.jsxs)("div", {
         className: "PlayerProfileStat",
-        children: [(0, ck.jsx)(nk.e, {
-          name: Fk,
+        children: [(0, rm.jsx)(Sm.c, {
+          name: Tm,
           className: "PlayerProfileStatIcon"
-        }), (0, ck.jsxs)("div", {
+        }), (0, rm.jsxs)("div", {
           className: "PlayerProfileStatText",
-          children: [(0, ck.jsx)("div", {
+          children: [(0, rm.jsx)("div", {
             className: "PlayerProfileStatLabel SmallTextLight",
-            children: Ik
-          }), (0, ck.jsx)("div", {
+            children: fm
+          }), (0, rm.jsx)("div", {
             className: "PlayerProfileStatValue",
-            children: Xk
+            children: hm
           })]
         })]
       })
     }
 
-    function Bk(kk) {
+    function Mm(mm) {
       let {
-        profile: Fk
-      } = kk;
+        profile: Tm
+      } = mm;
       const {
-        t: Ik,
-        selectedLanguage: Xk
-      } = (0, Jk.y)();
-      let Tk = Ik("homePage:profileUnknown");
-      if (Fk.lastOnline) {
-        const kk = (0, Jk.l)(Xk.code, "homePage:profileTimeAgo");
-        Tk = Ik("homePage:profileTimeAgo", {
-          time: (0, ik.gb)(kk, Fk.lastOnline, Date.now())
+        t: fm,
+        selectedLanguage: hm
+      } = (0, jm.A)();
+      let Am = fm("homePage:profileUnknown");
+      if (Tm.lastOnline) {
+        const mm = (0, jm.n)(hm.code, "homePage:profileTimeAgo");
+        Am = fm("homePage:profileTimeAgo", {
+          time: (0, am.cb)(mm, Tm.lastOnline, Date.now())
         })
       }
-      let yk = Ik("homePage:profileUnknown");
-      return Fk.accountCreatedAt && (yk = new Date(Fk.accountCreatedAt).toLocaleDateString(void 0, {
+      let xm = fm("homePage:profileUnknown");
+      return Tm.accountCreatedAt && (xm = new Date(Tm.accountCreatedAt).toLocaleDateString(void 0, {
         year: "numeric",
         month: "short",
         day: "numeric"
-      })), (0, ck.jsxs)("div", {
+      })), (0, rm.jsxs)("div", {
         className: "PlayerProfileStats",
-        children: [(0, ck.jsx)(fk, {
+        children: [(0, rm.jsx)(lm, {
           icon: "hourglass",
-          label: Ik("homePage:profileTimePlayed"),
-          value: (0, bk.c)(Fk.totalPlayMinutes)
-        }), (0, ck.jsx)(fk, {
+          label: fm("homePage:profileTimePlayed"),
+          value: (0, Xm.e)(Tm.totalPlayMinutes)
+        }), (0, rm.jsx)(lm, {
           icon: "wifi",
-          label: Ik("homePage:profileLastOnline"),
-          value: Tk
-        }), (0, ck.jsx)(fk, {
+          label: fm("homePage:profileLastOnline"),
+          value: Am
+        }), (0, rm.jsx)(lm, {
           icon: "calendar",
-          label: Ik("homePage:profileJoined"),
-          value: yk
+          label: fm("homePage:profileJoined"),
+          value: xm
         })]
       })
     }
 
-    function dk() {
+    function um() {
       const {
-        t: kk
-      } = (0, Jk.y)(), Fk = (0, sk.useNavigatePreserveSearch)(), Ik = (0, jk.h)(), {
-        playerName: Sk,
-        playerUrlName: Ek
-      } = (0, Tk.A)(), bk = (0, Tk.q)(), fk = (0, yk.f)(bk.pathname), dk = fk && ("urlId" in fk ? `urlId:${fk.urlId}` : `name:${fk.lowerCaseName}`), Yk = (0, Xk.useRef)(dk);
-      Yk.current = dk;
+        t: mm
+      } = (0, jm.A)(), Tm = (0, nm.useNavigatePreserveSearch)(), fm = (0, om.j)(), {
+        playerName: zm,
+        playerUrlName: km
+      } = (0, Am.G)(), Xm = (0, Am.w)(), lm = (0, xm.e)(Xm.pathname), um = lm && ("urlId" in lm ? `urlId:${lm.urlId}` : `name:${lm.lowerCaseName}`), Bm = (0, hm.useRef)(um);
+      Bm.current = um;
       const {
-        userContext: Ak,
-        isUserContextUpdating: gk
-      } = (0, wk.d)(), mk = (0, Xk.useRef)(null), hk = (0, Xk.useRef)(null), rk = (0, Xk.useRef)(null), Dk = (0, Xk.useRef)(!1), Mk = (0, Xk.useRef)((0, ik.lc)(Wk)), [kF, FF] = (0, Xk.useState)((() => {
-        const kk = fk && zk.c.peek(Ak, fk);
-        return kk ? {
+        userContext: Lm,
+        isUserContextUpdating: tm
+      } = (0, Ym.e)(), Um = (0, hm.useRef)(null), dm = (0, hm.useRef)(null), gm = (0, hm.useRef)(null), Wm = (0, hm.useRef)(!1), Fm = (0, hm.useRef)((0, am.Yb)(sm)), [mT, TT] = (0, hm.useState)((() => {
+        const mm = lm && cm.c.peek(Lm, lm);
+        return mm ? {
           status: "loaded",
-          profile: kk,
-          playerKey: dk
+          profile: mm,
+          playerKey: um
         } : {
           status: "loading"
         }
-      })), [IF, XF] = (0, Xk.useState)(0);
-      (0, Xk.useEffect)(Vk.e, []), (0, Xk.useEffect)((() => {
-        uk.gameBridge.send("leaveGame", {
+      })), [fT, hT] = (0, hm.useState)(0);
+      (0, hm.useEffect)(Jm.f, []), (0, hm.useEffect)((() => {
+        Gm.gameBridge.send("leaveGame", {
           reloadPath: null
-        }), pk.d.set({
+        }), Nm.c.set({
           gameState: "landingPage",
           openEverythingMenuName: null,
           openInGameMenuName: null
         })
-      }), [bk.key]);
-      const TF = () => {
-        const kk = (0, sk.getPreviousLocation)();
-        null === kk || kk.startsWith("/play") ? (0, sk.navigateToHomePage)() : Fk(-1)
+      }), [Xm.key]);
+      const AT = () => {
+        const mm = (0, nm.getPreviousLocation)();
+        null === mm || mm.startsWith("/play") ? (0, nm.navigateToHomePage)() : Tm(-1)
       };
-      (0, Nk.b)(TF), (0, Xk.useEffect)((() => {
-        var kk;
-        if (gk) return;
-        if (!fk) return void FF({
+      (0, Cm.c)(AT), (0, hm.useEffect)((() => {
+        var mm;
+        if (tm) return;
+        if (!lm) return void TT({
           status: "notFound",
-          playerKey: dk
+          playerKey: um
         });
-        const Fk = "urlId" in fk && (null === (kk = hk.current) || void 0 === kk ? void 0 : kk.urlId) === fk.urlId && rk.current === Ak;
-        if (Fk && Dk.current) return;
-        const Ik = Fk ? null : zk.c.peek(Ak, fk);
-        let Xk = !1;
-        const Tk = kk => "loaded" === kk.status && (kk.playerKey === dk || "urlId" in fk && kk.profile.urlId === fk.urlId);
-        return Ik ? (rk.current = Ak, Dk.current = !1, FF({
+        const Tm = "urlId" in lm && (null === (mm = dm.current) || void 0 === mm ? void 0 : mm.urlId) === lm.urlId && gm.current === Lm;
+        if (Tm && Wm.current) return;
+        const fm = Tm ? null : cm.c.peek(Lm, lm);
+        let hm = !1;
+        const Am = mm => "loaded" === mm.status && (mm.playerKey === um || "urlId" in lm && mm.profile.urlId === lm.urlId);
+        return fm ? (gm.current = Lm, Wm.current = !1, TT({
           status: "loaded",
-          profile: Ik,
-          playerKey: dk
-        }), zk.c.invalidate(fk)) : FF((kk => Tk(kk) ? kk : {
+          profile: fm,
+          playerKey: um
+        }), cm.c.invalidate(lm)) : TT((mm => Am(mm) ? mm : {
           status: "loading"
-        })), async function(kk, Fk) {
-          if ("lowerCaseName" in Fk && Fk.lowerCaseName.length > ak.j) return {
+        })), async function(mm, Tm) {
+          if ("lowerCaseName" in Tm && Tm.lowerCaseName.length > Dm.j) return {
             status: "notFound"
           };
           try {
             return {
               status: "loaded",
-              profile: await Lk.e.getPlayerProfile(kk, Fk, Zk)
+              profile: await Rm.d.getPlayerProfile(mm, Tm, Em)
             }
-          } catch (Ik) {
-            return (0, tk.c)(Ik) ? {
+          } catch (fm) {
+            return (0, pm.d)(fm) ? {
               status: "notFound"
-            } : (console.error("Failed to load user profile", Ik), {
+            } : (console.error("Failed to load user profile", fm), {
               status: "failed"
             })
           }
-        }(Ak, fk).then((kk => {
-          Xk || ("loaded" === kk.status && (rk.current = Ak, Dk.current = !0), FF((Fk => "failed" === kk.status && Tk(Fk) ? Fk : {
-            ...kk,
-            playerKey: dk
+        }(Lm, lm).then((mm => {
+          hm || ("loaded" === mm.status && (gm.current = Lm, Wm.current = !0), TT((Tm => "failed" === mm.status && Am(Tm) ? Tm : {
+            ...mm,
+            playerKey: um
           })))
         })), () => {
-          Xk = !0
+          hm = !0
         }
-      }), [gk, dk, Ak, IF]);
-      const iF = "loading" === kF.status || kF.playerKey === dk || "loaded" === kF.status && !!fk && "urlId" in fk && kF.profile.urlId === fk.urlId ? kF : {
+      }), [tm, um, Lm, fT]);
+      const aT = "loading" === mT.status || mT.playerKey === um || "loaded" === mT.status && !!lm && "urlId" in lm && mT.profile.urlId === lm.urlId ? mT : {
           status: "loading"
         },
-        yF = "loaded" === iF.status ? iF.profile : null,
-        lF = "loading" === iF.status ? null : function(kk) {
-          if ("loaded" === kk.status) {
+        xT = "loaded" === aT.status ? aT.profile : null,
+        wT = "loading" === aT.status ? null : function(mm) {
+          if ("loaded" === mm.status) {
             const {
-              profile: Fk
-            } = kk;
-            return (0, qk.X)({
-              urlId: Fk.urlId,
-              name: Fk.player.name,
-              ranks: Fk.player.ranks,
-              socialLinks: Fk.socialLinks
+              profile: Tm
+            } = mm;
+            return (0, im.P)({
+              urlId: Tm.urlId,
+              name: Tm.player.name,
+              ranks: Tm.player.ranks,
+              socialLinks: Tm.socialLinks
             })
           }
-          return "notFound" === kk.status ? (0, qk.eb)() : null
-        }(iF),
-        aF = null !== yF && void 0 !== yF && yF.urlId ? (0, yk.i)({
-          urlId: yF.urlId,
-          name: yF.player.name
+          return "notFound" === mm.status ? (0, im.V)() : null
+        }(aT),
+        DT = null !== xT && void 0 !== xT && xT.urlId ? (0, xm.i)({
+          urlId: xT.urlId,
+          name: xT.player.name
         }) : null;
-      (0, ek.e)(aF);
-      const qF = null !== yF && void 0 !== yF && yF.player.cosmetics.profileEffect ? vk.d[yF.player.cosmetics.profileEffect] : void 0,
-        LF = null !== yF && !gk && Ak.getPlayerName().toLowerCase() === yF.player.name.toLowerCase(),
-        tF = (0, Rk.e)(null === yF || void 0 === yF ? void 0 : yF.player.name),
-        ZF = LF && Ak.playerHasRank("youtuber");
-      hk.current = yF;
-      const jF = (0, Xk.useCallback)((() => {
-          fk && (zk.c.invalidate(fk), zk.c.get(Ak, fk).then((kk => {
-            Yk.current === dk && (Dk.current = !0, FF({
+      (0, Om.d)(DT);
+      const iT = null !== xT && void 0 !== xT && xT.player.cosmetics.profileEffect ? Zm.f[xT.player.cosmetics.profileEffect] : void 0,
+        RT = null !== xT && !tm && Lm.getPlayerName().toLowerCase() === xT.player.name.toLowerCase(),
+        pT = (0, Pm.d)(null === xT || void 0 === xT ? void 0 : xT.player.name),
+        ET = RT && Lm.playerHasRank("youtuber");
+      dm.current = xT;
+      const oT = (0, hm.useCallback)((() => {
+          lm && (cm.c.invalidate(lm), cm.c.get(Lm, lm).then((mm => {
+            Bm.current === um && (Wm.current = !0, TT({
               status: "loaded",
-              profile: kk,
-              playerKey: dk
+              profile: mm,
+              playerKey: um
             }))
-          })).catch((kk => {
-            console.error("Failed to refresh user profile", kk)
+          })).catch((mm => {
+            console.error("Failed to refresh user profile", mm)
           })))
-        }), [dk, Ak]),
-        eF = (0, Xk.useCallback)((() => {
-          var kk;
-          const Fk = hk.current;
-          return !(!Fk || null === (kk = mk.current) || void 0 === kk || !kk.isReady()) && (mk.current.setAllCosmetics(Fk.player.cosmetics), !0)
+        }), [um, Lm]),
+        OT = (0, hm.useCallback)((() => {
+          var mm;
+          const Tm = dm.current;
+          return !(!Tm || null === (mm = Um.current) || void 0 === mm || !mm.isReady()) && (Um.current.setAllCosmetics(Tm.player.cosmetics), !0)
         }), []);
-      return (0, Xk.useEffect)((() => {
-        if (!yF) return;
-        let kk, Fk = !1;
-        const Ik = () => {
-          Fk || eF() || (kk = setTimeout(Ik, 100))
+      return (0, hm.useEffect)((() => {
+        if (!xT) return;
+        let mm, Tm = !1;
+        const fm = () => {
+          Tm || OT() || (mm = setTimeout(fm, 100))
         };
-        return Ik(), () => {
-          Fk = !0, clearTimeout(kk)
+        return fm(), () => {
+          Tm = !0, clearTimeout(mm)
         }
-      }), [yF, eF]), (0, ck.jsxs)("div", {
-        className: Ok()("PlayerProfile", {
-          PlayerProfilePortrait: Ik
+      }), [xT, OT]), (0, rm.jsxs)("div", {
+        className: bm()("PlayerProfile", {
+          PlayerProfilePortrait: fm
         }),
-        children: [lF && (0, ck.jsx)(lk.d, {
-          meta: lF
-        }), (0, ck.jsxs)("div", {
+        children: [wT && (0, rm.jsx)(wm.c, {
+          meta: wT
+        }), (0, rm.jsxs)("div", {
           className: "PlayerProfileBackgroundContainer",
-          children: [qF && (0, ck.jsx)(qF, {}), !qF && (0, ck.jsx)("div", {
+          children: [iT && (0, rm.jsx)(iT, {}), !iT && (0, rm.jsx)("div", {
             className: "PlayerProfileBackground",
             style: {
-              backgroundImage: `url(${Mk.current})`
+              backgroundImage: `url(${Fm.current})`
             }
           })]
-        }), (0, ck.jsxs)("div", {
+        }), (0, rm.jsxs)("div", {
           className: "PlayerProfileHeader",
-          children: [(0, ck.jsx)(Qk.c, {
-            onClick: TF,
-            children: kk("general:back")
-          }), yF && !gk && !LF && Ck.featureFlags.useSocialFeatures && (0, ck.jsx)("div", {
+          children: [(0, rm.jsx)(Qm.d, {
+            onClick: AT,
+            children: mm("general:back")
+          }), xT && !tm && !RT && ym.featureFlags.useSocialFeatures && (0, rm.jsx)("div", {
             className: "PlayerProfileExclusionActions",
-            children: (0, ck.jsx)(Uk.c, {
-              playerName: yF.player.name,
+            children: (0, rm.jsx)(Hm.b, {
+              playerName: xT.player.name,
               className: "SmallTextLight"
             })
           })]
-        }), "loading" === iF.status && (0, ck.jsx)("div", {
+        }), "loading" === aT.status && (0, rm.jsx)("div", {
           className: "PlayerProfileCentredMessage",
-          children: (0, ck.jsx)(Kk.c, {})
-        }), ("notFound" === iF.status || "failed" === iF.status) && (0, ck.jsxs)("div", {
+          children: (0, rm.jsx)(Km.c, {})
+        }), ("notFound" === aT.status || "failed" === aT.status) && (0, rm.jsxs)("div", {
           className: "PlayerProfileCentredMessage PlayerProfileError",
-          children: [(0, ck.jsx)(nk.e, {
+          children: [(0, rm.jsx)(Sm.c, {
             name: "face-dizzy"
-          }), (0, ck.jsx)("div", {
+          }), (0, rm.jsx)("div", {
             className: "PlayerProfileErrorText",
-            children: "notFound" === iF.status ? kk("socialBar:playerNotFound", {
-              playerName: null !== Ek && void 0 !== Ek ? Ek : Sk
-            }) : kk("playerProfile:loadFailed")
-          }), "failed" === iF.status && (0, ck.jsx)(Qk.d, {
+            children: "notFound" === aT.status ? mm("socialBar:playerNotFound", {
+              playerName: null !== km && void 0 !== km ? km : zm
+            }) : mm("playerProfile:loadFailed")
+          }), "failed" === aT.status && (0, rm.jsx)(Qm.e, {
             onClick: () => {
-              XF((kk => kk + 1))
+              hT((mm => mm + 1))
             },
-            children: kk("general:tryAgain")
+            children: mm("general:tryAgain")
           })]
-        }), yF && (0, ck.jsxs)("div", {
+        }), xT && (0, rm.jsxs)("div", {
           className: "PlayerProfileContent",
-          children: [(0, ck.jsxs)("div", {
+          children: [(0, rm.jsxs)("div", {
             className: "PlayerProfileLeft",
-            children: [(0, ck.jsx)("div", {
+            children: [(0, rm.jsx)("div", {
               className: "PlayerProfileName FullyFancyText",
-              children: (0, ck.jsx)(Hk.c, {
-                text: (0, xk.y)(yF.player.ranks, yF.player.name, yF.player.nameColour),
-                friendBadgeFor: tF ? yF.player.name : void 0
+              children: (0, rm.jsx)(qm.b, {
+                text: (0, Vm.t)(xT.player.ranks, xT.player.name, xT.player.nameColour),
+                friendBadgeFor: pT ? xT.player.name : void 0
               })
-            }), (0, ck.jsx)("div", {
+            }), (0, rm.jsx)("div", {
               className: "PlayerProfileModel",
-              children: (0, ck.jsx)(Xk.Suspense, {
-                fallback: (0, ck.jsx)("div", {
+              children: (0, rm.jsx)(hm.Suspense, {
+                fallback: (0, rm.jsx)("div", {
                   className: "PlayerProfileModelLoading",
-                  children: (0, ck.jsx)(Kk.c, {})
+                  children: (0, rm.jsx)(Km.c, {})
                 }),
-                children: (0, ck.jsx)(Vk.c, {
-                  ref: mk,
+                children: (0, rm.jsx)(Jm.d, {
+                  ref: Um,
                   onReady: () => {
-                    eF()
+                    OT()
                   }
                 })
               })
             })]
-          }), (0, ck.jsxs)("div", {
+          }), (0, rm.jsxs)("div", {
             className: "PlayerProfileRight",
-            children: [(0, ck.jsx)(Bk, {
-              profile: yF
-            }), (yF.socialLinks.length > 0 || ZF) && (0, ck.jsx)(Gk.e, {
-              socialLinks: yF.socialLinks,
-              editable: ZF,
-              userContext: Ak,
-              onLinksUpdated: jF
-            }), (0, ck.jsxs)("div", {
+            children: [(0, rm.jsx)(Mm, {
+              profile: xT
+            }), (xT.socialLinks.length > 0 || ET) && (0, rm.jsx)(em.b, {
+              socialLinks: xT.socialLinks,
+              editable: ET,
+              userContext: Lm,
+              onLinksUpdated: oT
+            }), (0, rm.jsxs)("div", {
               className: "PlayerProfileGames",
-              children: [(0, ck.jsx)("div", {
+              children: [(0, rm.jsx)("div", {
                 className: "PlayerProfileGamesTitle SmallTextBold",
-                children: kk("homePage:profileReleasedGames")
-              }), 0 === yF.releasedGames.length && (0, ck.jsx)("div", {
+                children: mm("homePage:profileReleasedGames")
+              }), 0 === xT.releasedGames.length && (0, rm.jsx)("div", {
                 className: "PlayerProfileNoGames",
-                children: kk("homePage:profileNoReleasedGames")
-              }), yF.releasedGames.length > 0 && (0, ck.jsx)("div", {
+                children: mm("homePage:profileNoReleasedGames")
+              }), xT.releasedGames.length > 0 && (0, rm.jsx)("div", {
                 className: "PlayerProfileGamesGrid",
-                children: yF.releasedGames.map((kk => (0, ck.jsx)(Pk.c, {
+                children: xT.releasedGames.map((mm => (0, rm.jsx)(Im.f, {
                   source: {
                     type: "preview",
-                    preview: kk
+                    preview: mm
                   },
                   gameWidth: "100%",
                   useLongRatio: !0,
                   hideFavourites: !0,
                   entrySource: "other"
-                }, kk.schematicId)))
+                }, mm.schematicId)))
               })]
             })]
           })]
@@ -343,21 +343,21 @@ export const modules = {
       })
     }
   },
-  4884: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Hk
+  4825: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => qm
     });
-    var Xk = Ik(1055),
-      Tk = Ik.n(Xk),
-      ik = Ik(4619),
-      yk = Ik(1179),
-      lk = Ik(1066),
-      ak = Ik(1406),
-      qk = Ik(1453),
-      Lk = Ik(1324),
-      tk = Ik(2424),
-      Zk = Ik(1096);
-    const jk = {
+    var hm = fm(1080),
+      Am = fm.n(hm),
+      am = fm(4575),
+      xm = fm(1208),
+      wm = fm(1089),
+      Dm = fm(1454),
+      im = fm(1494),
+      Rm = fm(1354),
+      pm = fm(2487),
+      Em = fm(1135);
+    const om = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -385,163 +385,163 @@ export const modules = {
       }
     };
 
-    function ek(kk) {
+    function Om(mm) {
       let {
-        platform: Fk
-      } = kk;
-      const Ik = "youtube" === Fk;
-      return (0, Zk.jsxs)("span", {
-        className: Tk()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: Ik
+        platform: Tm
+      } = mm;
+      const fm = "youtube" === Tm;
+      return (0, Em.jsxs)("span", {
+        className: Am()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: fm
         }),
-        children: [Ik && (0, Zk.jsx)(tk.b, {
+        children: [fm && (0, Em.jsx)(pm.d, {
           variant: "white"
-        }), !Ik && (0, Zk.jsx)(lk.e, {
-          name: jk[Fk].icon,
+        }), !fm && (0, Em.jsx)(wm.c, {
+          name: om[Tm].icon,
           kit: "brands"
         })]
       })
     }
 
-    function wk(kk) {
+    function Ym(mm) {
       let {
-        platform: Fk,
-        link: Ik,
-        editable: Xk,
-        userContext: Tk,
-        onLinksUpdated: tk
-      } = kk;
+        platform: Tm,
+        link: fm,
+        editable: hm,
+        userContext: Am,
+        onLinksUpdated: pm
+      } = mm;
       const {
-        t: wk
-      } = (0, yk.y)(), Hk = jk[Fk];
-      if (!Ik && !Xk) return null;
+        t: Ym
+      } = (0, xm.A)(), qm = om[Tm];
+      if (!fm && !hm) return null;
 
-      function Jk() {
-        var kk;
-        if (!Tk || !tk) return;
-        Lk.NotificationProvider.showInputPopup({
+      function jm() {
+        var mm;
+        if (!Am || !pm) return;
+        Rm.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: Hk.name
+              platform: qm.name
             }
           },
-          prefixText: ik.u[Fk],
+          prefixText: am.v[Tm],
           placeholderText: "playBloxd",
-          initialValue: null !== (kk = null === Ik || void 0 === Ik ? void 0 : Ik.handle) && void 0 !== kk ? kk : "",
+          initialValue: null !== (mm = null === fm || void 0 === fm ? void 0 : fm.handle) && void 0 !== mm ? mm : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: Ik ? "general:remove" : void 0
-        }).getResult().then((async kk => {
-          if ("notificationTornDown" !== kk && null !== kk) try {
-            "submit" === kk.type ? await qk.e.setSocialLink(Tk, Fk, kk.value) : await qk.e.clearSocialLink(Tk, Fk), tk()
-          } catch (Ik) {
-            console.error("Failed to update social link", Ik), Lk.NotificationProvider.showAlertPopup({
-              title: Ik.errorMessageForUser,
+          secondaryButtonText: fm ? "general:remove" : void 0
+        }).getResult().then((async mm => {
+          if ("notificationTornDown" !== mm && null !== mm) try {
+            "submit" === mm.type ? await im.d.setSocialLink(Am, Tm, mm.value) : await im.d.clearSocialLink(Am, Tm), pm()
+          } catch (fm) {
+            console.error("Failed to update social link", fm), Rm.NotificationProvider.showAlertPopup({
+              title: fm.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (Ik) {
-        const kk = `@${Ik.handle}`;
-        return (0, Zk.jsxs)("a", {
+      if (fm) {
+        const mm = `@${fm.handle}`;
+        return (0, Em.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: Hk.color
+            background: qm.color
           },
-          href: Ik.profileUrl,
+          href: fm.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, Zk.jsxs)("div", {
+          children: [(0, Em.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, Zk.jsx)(ek, {
-              platform: Fk
-            }), (0, Zk.jsx)("span", {
+            children: [(0, Em.jsx)(Om, {
+              platform: Tm
+            }), (0, Em.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, Zk.jsx)("span", {
+              children: (0, Em.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: kk
+                children: mm
               })
             })]
-          }), Xk && (0, Zk.jsx)("button", {
+          }), hm && (0, Em.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, ak.Y)({
+            ...(0, Dm.Z)({
               stopPropagation: !0
             }),
-            onClick: kk => {
-              kk.stopPropagation(), kk.preventDefault(), Jk()
+            onClick: mm => {
+              mm.stopPropagation(), mm.preventDefault(), jm()
             },
-            children: (0, Zk.jsx)(lk.e, {
+            children: (0, Em.jsx)(wm.c, {
               name: "pen-to-square"
             })
-          }), !Xk && (0, Zk.jsx)("span", {
+          }), !hm && (0, Em.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, Zk.jsx)(lk.e, {
+            children: (0, Em.jsx)(wm.c, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, Zk.jsxs)("button", {
+      return (0, Em.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: Hk.color
+          background: qm.color
         },
-        ...(0, ak.Y)(),
+        ...(0, Dm.Z)(),
         onClick: () => {
-          Jk()
+          jm()
         },
-        children: [(0, Zk.jsx)(ek, {
-          platform: Fk
-        }), (0, Zk.jsxs)("span", {
+        children: [(0, Em.jsx)(Om, {
+          platform: Tm
+        }), (0, Em.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, Zk.jsx)("span", {
+          children: [(0, Em.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: Hk.name
-          }), (0, Zk.jsx)("span", {
+            children: qm.name
+          }), (0, Em.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: wk("homePage:profileSocialLinkAdd")
+            children: Ym("homePage:profileSocialLinkAdd")
           })]
-        }), (0, Zk.jsx)("span", {
+        }), (0, Em.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, Zk.jsx)(lk.e, {
+          children: (0, Em.jsx)(wm.c, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function Hk(kk) {
+    function qm(mm) {
       let {
-        socialLinks: Fk,
-        editable: Ik = !1,
-        userContext: Xk,
-        onLinksUpdated: Tk
-      } = kk;
-      if (!Ik && 0 === Fk.length) return null;
-      const yk = new Map(Fk.map((kk => [kk.platform, kk]))),
-        lk = Ik ? ik.t : Fk.map((kk => kk.platform));
-      return (0, Zk.jsx)("div", {
+        socialLinks: Tm,
+        editable: fm = !1,
+        userContext: hm,
+        onLinksUpdated: Am
+      } = mm;
+      if (!fm && 0 === Tm.length) return null;
+      const xm = new Map(Tm.map((mm => [mm.platform, mm]))),
+        wm = fm ? am.r : Tm.map((mm => mm.platform));
+      return (0, Em.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, Zk.jsx)("div", {
+        children: (0, Em.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: lk.map((kk => (0, Zk.jsx)(wk, {
-            platform: kk,
-            link: yk.get(kk),
-            editable: Ik,
-            userContext: Xk,
-            onLinksUpdated: Tk
-          }, kk)))
+          children: wm.map((mm => (0, Em.jsx)(Ym, {
+            platform: mm,
+            link: xm.get(mm),
+            editable: fm,
+            userContext: hm,
+            onLinksUpdated: Am
+          }, mm)))
         })
       })
     }
   },
-  4877: kk => {
-    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
+  4823: mm => {
+    mm.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

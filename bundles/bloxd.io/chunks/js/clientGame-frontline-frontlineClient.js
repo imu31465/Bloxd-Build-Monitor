@@ -1,128 +1,128 @@
 export const id = 17;
 export const ids = [17];
 export const modules = {
-  36597: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => jk,
-      f: () => ek,
-      g: () => Zk,
-      j: () => tk
+  36681: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => om,
+      e: () => Om,
+      f: () => Em,
+      i: () => pm
     });
-    var Xk = Ik(34164),
-      Tk = Ik(36600),
-      ik = Ik(36607),
-      yk = Ik(8691),
-      lk = Ik(1402),
-      ak = Ik(58),
-      qk = Ik(74),
-      Lk = Ik(1096);
+    var hm = fm(34283),
+      Am = fm(36686),
+      am = fm(36689),
+      xm = fm(8654),
+      wm = fm(1449),
+      Dm = fm(59),
+      im = fm(77),
+      Rm = fm(1135);
 
-    function tk() {
-      var kk;
-      return (0, lk.f)(Tk.c, (0, Tk.m)()), (0, Lk.jsx)(Lk.Fragment, {
-        children: null === (kk = (0, Tk.m)()) || void 0 === kk ? void 0 : kk.content
+    function pm() {
+      var mm;
+      return (0, wm.i)(Am.e, (0, Am.p)()), (0, Rm.jsx)(Rm.Fragment, {
+        children: null === (mm = (0, Am.p)()) || void 0 === mm ? void 0 : mm.content
       })
     }
 
-    function Zk(kk) {
-      var Fk;
+    function Em(mm) {
+      var Tm;
       let {
-        show: Ik
-      } = kk;
-      (0, lk.f)(Tk.c, (0, Tk.m)());
-      const qk = null === (Fk = (0, Tk.m)()) || void 0 === Fk ? void 0 : Fk.menu;
-      return (0, ak.useEffect)((() => {
-        var kk;
-        Ik || (null === qk || void 0 === qk || null === (kk = qk.onClose) || void 0 === kk || kk.call(qk), (0, ik.r)())
-      }), [Ik, qk]), (0, ak.useEffect)((() => Ik ? (0, yk.f)(ik.y, ik.i) : void 0), [Ik]), (0, Lk.jsx)(Xk.e, {
-        showing: Ik,
+        show: fm
+      } = mm;
+      (0, wm.i)(Am.e, (0, Am.p)());
+      const im = null === (Tm = (0, Am.p)()) || void 0 === Tm ? void 0 : Tm.menu;
+      return (0, Dm.useEffect)((() => {
+        var mm;
+        fm || (null === im || void 0 === im || null === (mm = im.onClose) || void 0 === mm || mm.call(im), (0, am.m)())
+      }), [fm, im]), (0, Dm.useEffect)((() => fm ? (0, xm.h)(am.u, am.d) : void 0), [fm]), (0, Rm.jsx)(hm.c, {
+        showing: fm,
         globallyUniqueKey: "clientGameMenu",
-        children: null === qk || void 0 === qk ? void 0 : qk.content
+        children: null === im || void 0 === im ? void 0 : im.content
       })
     }
 
-    function jk(kk) {
+    function om(mm) {
       let {
-        placement: Fk = "bottom"
-      } = kk;
-      return (0, Lk.jsx)("div", {
-        id: `clientGameHud-${Fk}`,
+        placement: Tm = "bottom"
+      } = mm;
+      return (0, Rm.jsx)("div", {
+        id: `clientGameHud-${Tm}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function ek(kk) {
+    function Om(mm) {
       let {
-        children: Fk,
-        placement: Ik = "bottom"
-      } = kk;
-      const [Xk, Tk] = (0, ak.useState)(null);
-      return (0, ak.useEffect)((() => {
-        Tk(document.getElementById(`clientGameHud-${Ik}`))
-      }), [Ik]), Xk ? (0, qk.createPortal)(Fk, Xk) : null
+        children: Tm,
+        placement: fm = "bottom"
+      } = mm;
+      const [hm, Am] = (0, Dm.useState)(null);
+      return (0, Dm.useEffect)((() => {
+        Am(document.getElementById(`clientGameHud-${fm}`))
+      }), [fm]), hm ? (0, im.createPortal)(Tm, hm) : null
     }
   },
-  34164: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => ik
+  34283: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => am
     });
-    var Xk = Ik(4525),
-      Tk = Ik(4529);
+    var hm = fm(4477),
+      Am = fm(4481);
 
-    function ik(kk) {
+    function am(mm) {
       let {
-        children: Fk,
-        showing: Ik,
-        globallyUniqueKey: ik,
-        alwaysMountChildren: yk = !1,
-        doGameplayStartStopOnShow: lk = !0,
-        keepsMovement: ak = !1
-      } = kk;
-      return (0, Tk.e)(!0, Ik, ik, ak), (0, Xk.b)(lk, Ik), Ik || yk ? Fk : null
+        children: Tm,
+        showing: fm,
+        globallyUniqueKey: am,
+        alwaysMountChildren: xm = !1,
+        doGameplayStartStopOnShow: wm = !0,
+        keepsMovement: Dm = !1
+      } = mm;
+      return (0, Am.d)(!0, fm, am, Dm), (0, hm.c)(wm, fm), fm || xm ? Tm : null
     }
   },
-  36691: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => ik,
-      g: () => yk,
-      k: () => lk,
-      m: () => ak
+  36777: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => am,
+      c: () => xm,
+      e: () => wm,
+      h: () => Dm
     });
-    var Xk = Ik(58),
-      Tk = Ik(3042);
-    const ik = 8,
-      yk = "InGameHeaderContainer",
-      lk = "TopRightElements";
+    var hm = fm(59),
+      Am = fm(3112);
+    const am = 8,
+      xm = "InGameHeaderContainer",
+      wm = "TopRightElements";
 
-    function ak(kk) {
-      const [Fk] = (0, Tk.c)(), [Ik, ak] = (0, Xk.useState)(!1);
-      return (0, Xk.useLayoutEffect)((() => {
-        if (!kk) return;
-        const Fk = document.querySelector(`.${yk}`),
-          Ik = document.querySelector(`.${lk}`),
-          Xk = () => {
-            const Xk = kk.getBoundingClientRect(),
-              Tk = Fk ? Fk.getBoundingClientRect().right : 0,
-              yk = Ik ? Ik.getBoundingClientRect().left : window.innerWidth,
-              lk = Xk.left < Tk + ik,
-              qk = Xk.right > yk - ik;
-            ak(lk || qk)
+    function Dm(mm) {
+      const [Tm] = (0, Am.c)(), [fm, Dm] = (0, hm.useState)(!1);
+      return (0, hm.useLayoutEffect)((() => {
+        if (!mm) return;
+        const Tm = document.querySelector(`.${xm}`),
+          fm = document.querySelector(`.${wm}`),
+          hm = () => {
+            const hm = mm.getBoundingClientRect(),
+              Am = Tm ? Tm.getBoundingClientRect().right : 0,
+              xm = fm ? fm.getBoundingClientRect().left : window.innerWidth,
+              wm = hm.left < Am + am,
+              im = hm.right > xm - am;
+            Dm(wm || im)
           };
-        Xk();
-        const Tk = new ResizeObserver(Xk);
-        return Tk.observe(kk), Fk && Tk.observe(Fk), Ik && Tk.observe(Ik), () => {
-          Tk.disconnect()
+        hm();
+        const Am = new ResizeObserver(hm);
+        return Am.observe(mm), Tm && Am.observe(Tm), fm && Am.observe(fm), () => {
+          Am.disconnect()
         }
-      }), [kk, Fk]), Ik
+      }), [mm, Tm]), fm
     }
   },
-  36682: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Tk
+  36775: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => Am
     });
-    const Xk = [{
+    const hm = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -139,214 +139,214 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function Tk(kk, Fk, Ik) {
-      const Tk = Math.abs(kk - Fk),
-        ik = Date.now() - Ik;
-      for (const yk of Xk)
-        if (kk < yk.maxDist) return Tk >= yk.hardUpdateDist || ik > yk.timeBetweenSoftChecks && Tk >= yk.softUpdateDist;
+    function Am(mm, Tm, fm) {
+      const Am = Math.abs(mm - Tm),
+        am = Date.now() - fm;
+      for (const xm of hm)
+        if (mm < xm.maxDist) return Am >= xm.hardUpdateDist || am > xm.timeBetweenSoftChecks && Am >= xm.softUpdateDist;
       return !1
     }
   },
-  8691: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => ik,
-      f: () => Tk
+  8654: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => am,
+      h: () => Am
     });
-    let Xk = null;
-    const Tk = function(kk) {
-        const Fk = {
-          cycle: kk,
+    let hm = null;
+    const Am = function(mm) {
+        const Tm = {
+          cycle: mm,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Xk = Fk, () => {
-          Xk === Fk && (Xk = null)
+        return hm = Tm, () => {
+          hm === Tm && (hm = null)
         }
       },
-      ik = () => {
-        var kk;
-        return null !== (kk = Xk) && void 0 !== kk && kk.canCycle() ? Xk.cycle : null
+      am = () => {
+        var mm;
+        return null !== (mm = hm) && void 0 !== mm && mm.canCycle() ? hm.cycle : null
       }
   },
-  38534: (kk, Fk, Ik) => {
-    function Xk(kk, Fk, Ik) {
-      var Xk;
+  38628: (mm, Tm, fm) => {
+    function hm(mm, Tm, fm) {
+      var hm;
       const {
-        width: Tk,
-        height: ik
-      } = Ik, yk = null !== (Xk = kk.text) && void 0 !== Xk ? Xk : kk, lk = (yk.x / 100 - .5) * Tk, ak = (yk.y / 100 - .5) * ik, qk = Tk / 2 - Fk.x;
-      if (null !== kk.text && Math.abs(lk) <= qk && ak >= Fk.top - ik / 2 && ak <= ik / 2 - Fk.bottom) return {
-        x: yk.x,
-        y: yk.y
+        width: Am,
+        height: am
+      } = fm, xm = null !== (hm = mm.text) && void 0 !== hm ? hm : mm, wm = (xm.x / 100 - .5) * Am, Dm = (xm.y / 100 - .5) * am, im = Am / 2 - Tm.x;
+      if (null !== mm.text && Math.abs(wm) <= im && Dm >= Tm.top - am / 2 && Dm <= am / 2 - Tm.bottom) return {
+        x: xm.x,
+        y: xm.y
       };
-      const Lk = Math.min(0 === lk ? 1 / 0 : qk / Math.abs(lk), ak > 0 ? (ik / 2 - Fk.bottom) / ak : ak < 0 ? (Fk.top - ik / 2) / ak : 1 / 0);
-      return !Number.isFinite(Lk) || Lk < 0 ? {
+      const Rm = Math.min(0 === wm ? 1 / 0 : im / Math.abs(wm), Dm > 0 ? (am / 2 - Tm.bottom) / Dm : Dm < 0 ? (Tm.top - am / 2) / Dm : 1 / 0);
+      return !Number.isFinite(Rm) || Rm < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + lk * Lk / Tk * 100,
-        y: 50 + ak * Lk / ik * 100
+        x: 50 + wm * Rm / Am * 100,
+        y: 50 + Dm * Rm / am * 100
       }
     }
-    Ik.d(Fk, {
-      c: () => Xk
+    fm.d(Tm, {
+      d: () => hm
     })
   },
-  36607: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      C: () => xk,
-      e: () => ik,
-      i: () => wk,
-      k: () => Hk,
-      o: () => lk,
-      q: () => Zk,
-      r: () => Jk,
-      v: () => tk,
-      x: () => Pk,
-      y: () => ek
+  36689: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => am,
+      d: () => Ym,
+      e: () => qm,
+      h: () => wm,
+      i: () => Em,
+      m: () => jm,
+      p: () => pm,
+      r: () => Im,
+      u: () => Om,
+      v: () => Vm
     });
-    var Xk = Ik(25),
-      Tk = Ik(34);
-    const ik = "clientGameInventoryButtonsChanged",
-      yk = new Map;
+    var hm = fm(23),
+      Am = fm(31);
+    const am = "clientGameInventoryButtonsChanged",
+      xm = new Map;
 
-    function lk() {
-      return [...yk.values()].sort(((kk, Fk) => {
-        var Ik, Xk;
-        return (null !== (Ik = kk.order) && void 0 !== Ik ? Ik : 0) - (null !== (Xk = Fk.order) && void 0 !== Xk ? Xk : 0)
+    function wm() {
+      return [...xm.values()].sort(((mm, Tm) => {
+        var fm, hm;
+        return (null !== (fm = mm.order) && void 0 !== fm ? fm : 0) - (null !== (hm = Tm.order) && void 0 !== hm ? hm : 0)
       }))
     }
-    let ak = null;
+    let Dm = null;
 
-    function qk(kk) {
-      ak = kk
+    function im(mm) {
+      Dm = mm
     }
-    let Lk = !1;
+    let Rm = !1;
 
-    function tk(kk) {
-      Lk = !0;
+    function pm(mm) {
+      Rm = !0;
       try {
-        kk.onClick()
+        mm.onClick()
       } finally {
-        Lk = !1
+        Rm = !1
       }
-      kk.panel && "clientGame" === Xk.d.get("openInGameMenuName") && qk(kk.id)
+      mm.panel && "clientGame" === hm.c.get("openInGameMenuName") && im(mm.id)
     }
 
-    function Zk() {
-      return Lk
+    function Em() {
+      return Rm
     }
 
-    function jk() {
-      return lk().filter((kk => kk.panel && !kk.disabled))
+    function om() {
+      return wm().filter((mm => mm.panel && !mm.disabled))
     }
 
-    function ek(kk) {
-      const Fk = jk(),
-        Ik = Fk.findIndex((kk => kk.id === ak));
-      return !(Ik < 0 || Fk.length < 2) && (tk(Fk[(Ik + kk + Fk.length) % Fk.length]), !0)
+    function Om(mm) {
+      const Tm = om(),
+        fm = Tm.findIndex((mm => mm.id === Dm));
+      return !(fm < 0 || Tm.length < 2) && (pm(Tm[(fm + mm + Tm.length) % Tm.length]), !0)
     }
 
-    function wk() {
-      return null !== ak && jk().length > 1
+    function Ym() {
+      return null !== Dm && om().length > 1
     }
 
-    function Hk() {
-      qk(null)
+    function qm() {
+      im(null)
     }
 
-    function Jk() {
-      "inventory" !== Xk.d.get("openInGameMenuName") && qk(null)
+    function jm() {
+      "inventory" !== hm.c.get("openInGameMenuName") && im(null)
     }
 
-    function xk() {
-      const kk = ak;
-      return qk(null), kk
+    function Vm() {
+      const mm = Dm;
+      return im(null), mm
     }
 
-    function Pk(kk) {
-      return yk.set(kk.id, kk), Tk.g.GL(ik, lk(), !0), () => {
-        yk.get(kk.id) === kk && (yk.delete(kk.id), Tk.g.GL(ik, lk()))
+    function Im(mm) {
+      return xm.set(mm.id, mm), Am.j.gp(am, wm(), !0), () => {
+        xm.get(mm.id) === mm && (xm.delete(mm.id), Am.j.gp(am, wm()))
       }
     }
   },
-  36600: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => lk,
-      e: () => Hk,
-      f: () => Jk,
-      j: () => Zk,
-      m: () => qk,
-      p: () => wk,
-      r: () => jk,
-      v: () => Lk
+  36686: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => wm,
+      h: () => qm,
+      j: () => jm,
+      m: () => Em,
+      p: () => im,
+      s: () => Ym,
+      u: () => om,
+      w: () => Rm
     });
-    var Xk = Ik(25),
-      Tk = Ik(34),
-      ik = Ik(1270),
-      yk = Ik(36607);
-    const lk = "clientGameUiChanged";
-    let ak = null;
+    var hm = fm(23),
+      Am = fm(31),
+      am = fm(1286),
+      xm = fm(36689);
+    const wm = "clientGameUiChanged";
+    let Dm = null;
 
-    function qk() {
-      return ak
+    function im() {
+      return Dm
     }
 
-    function Lk(kk, Fk) {
-      const Ik = {
-        content: kk,
-        menu: Fk
+    function Rm(mm, Tm) {
+      const fm = {
+        content: mm,
+        menu: Tm
       };
-      return ak = Ik, Tk.g.GL(lk, ak, !0), () => {
-        ak === Ik && (ak = null, ek = !1, Hk(), Tk.g.GL(lk, null))
+      return Dm = fm, Am.j.gp(wm, Dm, !0), () => {
+        Dm === fm && (Dm = null, Om = !1, qm(), Am.j.gp(wm, null))
       }
     }
-    let tk = null;
+    let pm = null;
 
-    function Zk() {
-      return tk
+    function Em() {
+      return pm
     }
 
-    function jk(kk) {
-      return tk = kk, () => {
-        tk === kk && (tk = null)
+    function om(mm) {
+      return pm = mm, () => {
+        pm === mm && (pm = null)
       }
     }
-    let ek = !1;
+    let Om = !1;
 
-    function wk() {
-      const kk = Xk.d.get("openInGameMenuName");
-      "clientGame" !== kk && (ek = "inventory" === kk), (0, yk.q)() || (0, yk.k)(), (0, ik.m)(ik.c), Xk.d.set({
+    function Ym() {
+      const mm = hm.c.get("openInGameMenuName");
+      "clientGame" !== mm && (Om = "inventory" === mm), (0, xm.i)() || (0, xm.e)(), (0, am.p)(am.c), hm.c.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function Hk() {
-      xk(!1)
+    function qm() {
+      Vm(!1)
     }
 
-    function Jk() {
-      xk(ek)
+    function jm() {
+      Vm(Om)
     }
 
-    function xk(kk) {
-      "clientGame" === Xk.d.get("openInGameMenuName") && Xk.d.set({
-        openInGameMenuName: kk ? "inventory" : null
-      }), kk || (0, yk.k)(), ek = !1
+    function Vm(mm) {
+      "clientGame" === hm.c.get("openInGameMenuName") && hm.c.set({
+        openInGameMenuName: mm ? "inventory" : null
+      }), mm || (0, xm.e)(), Om = !1
     }
   },
-  39445: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      default: () => JF
+  39564: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      default: () => jT
     });
-    const Xk = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
-    var Tk = Ik(58),
-      ik = Ik(36600),
-      yk = Ik(37079),
-      lk = Ik(36618),
-      ak = Ik(1665),
-      qk = Ik(34);
-    const Lk = {
+    const hm = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
+    var Am = fm(59),
+      am = fm(36686),
+      xm = fm(37131),
+      wm = fm(36705),
+      Dm = fm(1713),
+      im = fm(31);
+    const Rm = {
       M1911: "pistol",
       Deagle: "pistol",
       "Block-19": "pistol",
@@ -372,284 +372,284 @@ export const modules = {
       "Splash Instant Healing Potion": "throwable",
       Snowdash: "throwable"
     };
-    const tk = 32;
+    const pm = 32;
 
-    function Zk(kk, Fk, Ik, Xk) {
+    function Em(mm, Tm, fm, hm) {
       return {
         tag: "line",
         attrs: {
-          x1: kk,
-          y1: Fk,
-          x2: Ik,
-          y2: Xk,
+          x1: mm,
+          y1: Tm,
+          x2: fm,
+          y2: hm,
           "stroke-width": arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2
         }
       }
     }
 
-    function jk(kk) {
+    function om(mm) {
       return {
         tag: "circle",
         attrs: {
-          cx: tk,
-          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tk,
-          r: kk,
+          cx: pm,
+          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pm,
+          r: mm,
           class: "Fill"
         }
       }
     }
 
-    function ek(kk, Fk) {
+    function Om(mm, Tm) {
       return {
         tag: "path",
         attrs: {
-          d: kk,
-          "stroke-width": Fk
+          d: mm,
+          "stroke-width": Tm
         }
       }
     }
 
-    function wk(kk, Fk, Ik) {
+    function Ym(mm, Tm, fm) {
       return {
         tag: "circle",
         attrs: {
-          cx: tk,
-          cy: tk,
-          r: kk,
-          "stroke-width": Fk,
-          class: Ik
+          cx: pm,
+          cy: pm,
+          r: mm,
+          "stroke-width": Tm,
+          class: fm
         }
       }
     }
 
-    function Hk(kk, Fk, Ik) {
+    function qm(mm, Tm, fm) {
       return {
         tag: "text",
         attrs: {
-          x: kk,
-          y: Fk,
+          x: mm,
+          y: Tm,
           class: "Fill Label"
         },
-        text: Ik
+        text: fm
       }
     }
-    const Jk = {
-      pistol: kk => [Zk(tk, tk - kk - 5, tk, tk - kk), Zk(tk - kk - 5, tk, tk - kk, tk), Zk(tk + kk, tk, tk + kk + 5, tk), jk(1.4)],
-      rifle: kk => [Zk(tk, tk - kk - 8, tk, tk - kk), Zk(tk, tk + kk, tk, tk + kk + 8), Zk(tk - kk - 8, tk, tk - kk, tk), Zk(tk + kk, tk, tk + kk + 8, tk), jk(1)],
-      smg: kk => {
-        const Fk = Math.PI / 2,
-          Ik = [];
-        for (let yk = 0; yk < 4; yk++) Ik.push((Tk = yk * Fk + .35, ik = (yk + 1) * Fk - .35, ek(`M${tk+(Xk=6+kk)*Math.cos(Tk)} ${tk+Xk*Math.sin(Tk)} A${Xk} ${Xk} 0 0 1 ${tk+Xk*Math.cos(ik)} ${tk+Xk*Math.sin(ik)}`, 2)));
-        var Xk, Tk, ik;
-        return [...Ik, jk(1.4)]
+    const jm = {
+      pistol: mm => [Em(pm, pm - mm - 5, pm, pm - mm), Em(pm - mm - 5, pm, pm - mm, pm), Em(pm + mm, pm, pm + mm + 5, pm), om(1.4)],
+      rifle: mm => [Em(pm, pm - mm - 8, pm, pm - mm), Em(pm, pm + mm, pm, pm + mm + 8), Em(pm - mm - 8, pm, pm - mm, pm), Em(pm + mm, pm, pm + mm + 8, pm), om(1)],
+      smg: mm => {
+        const Tm = Math.PI / 2,
+          fm = [];
+        for (let xm = 0; xm < 4; xm++) fm.push((Am = xm * Tm + .35, am = (xm + 1) * Tm - .35, Om(`M${pm+(hm=6+mm)*Math.cos(Am)} ${pm+hm*Math.sin(Am)} A${hm} ${hm} 0 0 1 ${pm+hm*Math.cos(am)} ${pm+hm*Math.sin(am)}`, 2)));
+        var hm, Am, am;
+        return [...fm, om(1.4)]
       },
-      shotgun: kk => [wk(kk, 3, "Ring Outline"), wk(kk, 1.5, "Ring")],
-      marksman: kk => [ek(`M${26-kk/2} ${39+kk/2} L32 33 L${38+kk/2} ${39+kk/2}`, 2), Zk(14 - kk, tk, 24 - kk, tk, 1.5), Zk(40 + kk, tk, 50 + kk, tk, 1.5), Zk(14 - kk, 30, 14 - kk, 34, 1.5), Zk(50 + kk, 30, 50 + kk, 34, 1.5)],
-      machineGun: kk => {
-        const Fk = 10 + kk,
-          Ik = [];
-        for (const [Xk, Tk] of [
+      shotgun: mm => [Ym(mm, 3, "Ring Outline"), Ym(mm, 1.5, "Ring")],
+      marksman: mm => [Om(`M${26-mm/2} ${39+mm/2} L32 33 L${38+mm/2} ${39+mm/2}`, 2), Em(14 - mm, pm, 24 - mm, pm, 1.5), Em(40 + mm, pm, 50 + mm, pm, 1.5), Em(14 - mm, 30, 14 - mm, 34, 1.5), Em(50 + mm, 30, 50 + mm, 34, 1.5)],
+      machineGun: mm => {
+        const Tm = 10 + mm,
+          fm = [];
+        for (const [hm, Am] of [
             [-1, -1],
             [1, -1],
             [-1, 1],
             [1, 1]
-          ]) Ik.push(ek(`M${tk+Xk*Fk} ${tk+Tk*(Fk-5)} L${tk+Xk*Fk} ${tk+Tk*Fk} L${tk+Xk*(Fk-5)} ${tk+Tk*Fk}`, 2));
-        return [...Ik, Zk(tk, 28, tk, 36, 1.5), Zk(28, tk, 36, tk, 1.5)]
+          ]) fm.push(Om(`M${pm+hm*Tm} ${pm+Am*(Tm-5)} L${pm+hm*Tm} ${pm+Am*Tm} L${pm+hm*(Tm-5)} ${pm+Am*Tm}`, 2));
+        return [...fm, Em(pm, 28, pm, 36, 1.5), Em(28, pm, 36, pm, 1.5)]
       },
-      launcher: () => [Zk(14, 30, 50, 30, 1.5), Zk(tk, 24, tk, 52, 1.5), Zk(28, 38, 36, 38, 1.5), Zk(29, 44, 35, 44, 1.5), Zk(30, 50, 34, 50, 1.5), Hk(38, 40, "100"), Hk(37, 46, "200"), jk(1.4, 30)],
-      melee: () => [ek("M32 26 L38 32 L32 38 L26 32 Z", 1.5), jk(1.2)],
-      throwable: () => [jk(1.6)]
+      launcher: () => [Em(14, 30, 50, 30, 1.5), Em(pm, 24, pm, 52, 1.5), Em(28, 38, 36, 38, 1.5), Em(29, 44, 35, 44, 1.5), Em(30, 50, 34, 50, 1.5), qm(38, 40, "100"), qm(37, 46, "200"), om(1.4, 30)],
+      melee: () => [Om("M32 26 L38 32 L32 38 L26 32 Z", 1.5), om(1.2)],
+      throwable: () => [om(1.6)]
     };
 
-    function xk(kk) {
+    function Vm(mm) {
       let {
-        tag: Fk,
-        attrs: Ik,
-        text: Xk
-      } = kk, Tk = `<${Fk}`;
-      for (const [ik, yk] of Object.entries(Ik)) Tk += ` ${ik}="${yk}"`;
-      return void 0 === Xk ? `${Tk}/>` : `${Tk}>${Xk}</${Fk}>`
+        tag: Tm,
+        attrs: fm,
+        text: hm
+      } = mm, Am = `<${Tm}`;
+      for (const [am, xm] of Object.entries(fm)) Am += ` ${am}="${xm}"`;
+      return void 0 === hm ? `${Am}/>` : `${Am}>${hm}</${Tm}>`
     }
-    class Pk {
-      constructor(kk, Fk) {
-        this.api = kk, this.localPlayerId = Fk, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = kk => {
-          this.element = kk, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, kk && !this.enabled && (kk.style.display = "none")
+    class Im {
+      constructor(mm, Tm) {
+        this.api = mm, this.localPlayerId = Tm, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = mm => {
+          this.element = mm, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, mm && !this.enabled && (mm.style.display = "none")
         }, this.measure = () => {
-          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, ak.getRemInPx)()))
-        }, this.tokens = [qk.g.subscribe("aimingOverlay", (kk => {
-          this.sniperOverlay = "sniper" === kk
-        })), qk.g.subscribe("mouseState", (kk => {
+          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, Dm.getRemInPx)()))
+        }, this.tokens = [im.j.subscribe("aimingOverlay", (mm => {
+          this.sniperOverlay = "sniper" === mm
+        })), im.j.subscribe("mouseState", (mm => {
           let {
-            isDown: Fk
-          } = kk;
-          this.mouseDown = Fk
+            isDown: Tm
+          } = mm;
+          this.mouseDown = Tm
         }))], window.addEventListener("resize", this.measure), this.measure()
       }
-      Av(kk) {
-        kk !== this.enabled && (this.enabled = kk, this.drawnVisible = null, kk || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
+      Dk(mm) {
+        mm !== this.enabled && (this.enabled = mm, this.drawnVisible = null, mm || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
       }
-      frame(kk, Fk) {
-        var Ik, Xk;
+      frame(mm, Tm) {
+        var fm, hm;
         if (!this.enabled) return;
         const {
-          api: Tk
-        } = this, ik = Tk.isAlive(this.localPlayerId) && null !== (Ik = null === (Xk = Tk.BFk(this.localPlayerId)) || void 0 === Xk ? void 0 : Xk.name) && void 0 !== Ik ? Ik : null, yk = (lk = ik) && Lk[lk] || null;
-        var lk;
-        if (this.setOwnsCrosshair(null !== yk), !this.element) return;
-        const ak = Tk.getHeldGunInaccuracy(),
-          qk = null !== ak,
-          tk = null !== yk && !this.sniperOverlay && Tk.isCrosshairShown();
-        if (tk !== this.drawnVisible && (this.drawnVisible = tk, this.element.style.display = tk ? "block" : "none"), !tk) return;
-        const Zk = qk ? function(kk) {
-            return "launcher" === kk || "melee" === kk || "throwable" === kk ? "none" : "shotgun" === kk ? "cone" : "offset"
-          }(yk) : "none",
-          jk = null !== ak && void 0 !== ak ? ak : 0;
-        "cone" === Zk ? this.drawCone(yk, this.coneRadiusVh(jk, Fk) * this.gapPerVh, kk) : (this.coneDrawn = !1, this.draw(yk, "none" === Zk ? 2 : this.offsetGap(jk)));
-        const ek = !qk && this.mouseDown;
-        ek !== this.drawnPressed && (this.drawnPressed = ek, this.element.classList.toggle("Pressed", ek))
+          api: Am
+        } = this, am = Am.isAlive(this.localPlayerId) && null !== (fm = null === (hm = Am.MTm(this.localPlayerId)) || void 0 === hm ? void 0 : hm.name) && void 0 !== fm ? fm : null, xm = (wm = am) && Rm[wm] || null;
+        var wm;
+        if (this.setOwnsCrosshair(null !== xm), !this.element) return;
+        const Dm = Am.getHeldGunInaccuracy(),
+          im = null !== Dm,
+          pm = null !== xm && !this.sniperOverlay && Am.isCrosshairShown();
+        if (pm !== this.drawnVisible && (this.drawnVisible = pm, this.element.style.display = pm ? "block" : "none"), !pm) return;
+        const Em = im ? function(mm) {
+            return "launcher" === mm || "melee" === mm || "throwable" === mm ? "none" : "shotgun" === mm ? "cone" : "offset"
+          }(xm) : "none",
+          om = null !== Dm && void 0 !== Dm ? Dm : 0;
+        "cone" === Em ? this.drawCone(xm, this.coneRadiusVh(om, Tm) * this.gapPerVh, mm) : (this.coneDrawn = !1, this.draw(xm, "none" === Em ? 2 : this.offsetGap(om)));
+        const Om = !im && this.mouseDown;
+        Om !== this.drawnPressed && (this.drawnPressed = Om, this.element.classList.toggle("Pressed", Om))
       }
       dispose() {
-        for (const kk of this.tokens) qk.g.unsubscribe(kk);
+        for (const mm of this.tokens) im.j.unsubscribe(mm);
         window.removeEventListener("resize", this.measure), this.setOwnsCrosshair(!1)
       }
-      draw(kk, Fk) {
-        var Ik, Xk;
-        kk !== this.drawnFamily ? (this.drawnFamily = kk, this.drawnGap = Fk, this.element.innerHTML = function(kk, Fk) {
-          return `<svg viewBox="0 0 64 64">${Jk[kk](Fk).map(xk).join("")}</svg>`
-        }(kk, Fk), this.shapes = Array.from(null !== (Ik = null === (Xk = this.element.firstElementChild) || void 0 === Xk ? void 0 : Xk.children) && void 0 !== Ik ? Ik : [])) : Fk !== this.drawnGap && (this.drawnGap = Fk, function(kk, Fk, Ik) {
-          const Xk = Jk[Fk](Ik);
-          for (let Tk = 0; Tk < Xk.length; Tk++)
-            for (const [Fk, Ik] of Object.entries(Xk[Tk].attrs)) {
-              const Xk = String(Ik);
-              kk[Tk].getAttribute(Fk) !== Xk && kk[Tk].setAttribute(Fk, Xk)
+      draw(mm, Tm) {
+        var fm, hm;
+        mm !== this.drawnFamily ? (this.drawnFamily = mm, this.drawnGap = Tm, this.element.innerHTML = function(mm, Tm) {
+          return `<svg viewBox="0 0 64 64">${jm[mm](Tm).map(Vm).join("")}</svg>`
+        }(mm, Tm), this.shapes = Array.from(null !== (fm = null === (hm = this.element.firstElementChild) || void 0 === hm ? void 0 : hm.children) && void 0 !== fm ? fm : [])) : Tm !== this.drawnGap && (this.drawnGap = Tm, function(mm, Tm, fm) {
+          const hm = jm[Tm](fm);
+          for (let Am = 0; Am < hm.length; Am++)
+            for (const [Tm, fm] of Object.entries(hm[Am].attrs)) {
+              const hm = String(fm);
+              mm[Am].getAttribute(Tm) !== hm && mm[Am].setAttribute(Tm, hm)
             }
-        }(this.shapes, kk, Fk))
+        }(this.shapes, mm, Tm))
       }
-      drawCone(kk, Fk, Ik) {
-        kk === this.drawnFamily && this.coneDrawn ? this.shownRadius += (Fk - this.shownRadius) * (1 - Math.exp(-Ik / 80)) : this.shownRadius = Fk, this.coneDrawn = !0, this.draw(kk, Math.round(4 * this.shownRadius) / 4)
+      drawCone(mm, Tm, fm) {
+        mm === this.drawnFamily && this.coneDrawn ? this.shownRadius += (Tm - this.shownRadius) * (1 - Math.exp(-fm / 80)) : this.shownRadius = Tm, this.coneDrawn = !0, this.draw(mm, Math.round(4 * this.shownRadius) / 4)
       }
-      coneRadiusVh(kk, Fk) {
-        if (!(Fk > 0)) return 1;
-        const Ik = kk * yk.e / 2;
-        return Math.max(50 * Math.tan(Ik) / Fk, 1)
+      coneRadiusVh(mm, Tm) {
+        if (!(Tm > 0)) return 1;
+        const fm = mm * xm.j / 2;
+        return Math.max(50 * Math.tan(fm) / Tm, 1)
       }
-      offsetGap(kk) {
-        const Fk = 2 + ((0, lk.h)(kk) - 1) * this.gapPerVh;
-        return Math.min(24, Math.round(2 * Fk) / 2)
+      offsetGap(mm) {
+        const Tm = 2 + ((0, wm.g)(mm) - 1) * this.gapPerVh;
+        return Math.min(24, Math.round(2 * Tm) / 2)
       }
-      setOwnsCrosshair(kk) {
-        kk !== this.ownsCrosshair && (this.ownsCrosshair = kk, document.body.classList.toggle("FrontlineCustomCrosshair", kk))
+      setOwnsCrosshair(mm) {
+        mm !== this.ownsCrosshair && (this.ownsCrosshair = mm, document.body.classList.toggle("FrontlineCustomCrosshair", mm))
       }
     }
-    const Kk = "FrontlineCustomDamage",
-      Qk = .45,
-      sk = .2;
-    class Vk {
-      constructor(kk, Fk) {
-        this.api = kk, this.localPlayerId = Fk, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+    const Km = "FrontlineCustomDamage",
+      Qm = .45,
+      nm = .2;
+    class Jm {
+      constructor(mm, Tm) {
+        this.api = mm, this.localPlayerId = Tm, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.Ri = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = kk => {
-          var Fk, Ik;
-          this.clearHits(), this.root = kk, this.lowLayer = null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.querySelector(".FrontlineDamageLow")) && void 0 !== Fk ? Fk : null, this.arcLayer = null !== (Ik = null === kk || void 0 === kk ? void 0 : kk.querySelector(".FrontlineDamageArcs")) && void 0 !== Ik ? Ik : null, this.showRoot(), this.drawLow()
-        }, this.token = qk.g.subscribe("damagedByOtherPlayer", (kk => {
+        }, this.maxHealth = null, this.Ma = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = mm => {
+          var Tm, fm;
+          this.clearHits(), this.root = mm, this.lowLayer = null !== (Tm = null === mm || void 0 === mm ? void 0 : mm.querySelector(".FrontlineDamageLow")) && void 0 !== Tm ? Tm : null, this.arcLayer = null !== (fm = null === mm || void 0 === mm ? void 0 : mm.querySelector(".FrontlineDamageArcs")) && void 0 !== fm ? fm : null, this.showRoot(), this.drawLow()
+        }, this.token = im.j.subscribe("damagedByOtherPlayer", (mm => {
           let {
-            direction: Fk,
-            ui: Ik
-          } = kk;
-          this.onHurt(Fk, Ik)
-        })), this.syncHealth(), document.body.classList.add(Kk)
+            direction: Tm,
+            sa: fm
+          } = mm;
+          this.onHurt(Tm, fm)
+        })), this.syncHealth(), document.body.classList.add(Km)
       }
-      Av(kk) {
-        kk !== this.enabled && (this.enabled = kk, document.body.classList.toggle(Kk, kk), kk || this.clearHits(), this.showRoot())
+      Dk(mm) {
+        mm !== this.enabled && (this.enabled = mm, document.body.classList.toggle(Km, mm), mm || this.clearHits(), this.showRoot())
       }
-      frame(kk) {
-        this.syncHealth(), this.cameraHeading = kk;
-        for (const Fk of this.arcs) this.drawArcAngle(Fk)
+      frame(mm) {
+        this.syncHealth(), this.cameraHeading = mm;
+        for (const Tm of this.arcs) this.drawArcAngle(Tm)
       }
       dispose() {
-        qk.g.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(Kk)
+        im.j.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(Km)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const kk = this.api.getClientOption(this.localPlayerId, "_health"),
-          Fk = this.api.getClientOption(this.localPlayerId, "_shield"),
-          Ik = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(kk, this.readHealth) && Object.is(Fk, this.readShield) && Object.is(Ik, this.readMaxHealth)) return;
-        if (this.readHealth = kk, this.readShield = Fk, this.readMaxHealth = Ik, null === kk || void 0 === kk || !Ik) return this.lastHealthPool = null, this.maxHealth = null, this.Ri = 1, this.dead = !1, void this.drawLow();
-        const Xk = kk + (null !== Fk && void 0 !== Fk ? Fk : 0);
-        if (null !== this.lastHealthPool && Xk < this.lastHealthPool) {
-          const kk = performance.now(),
-            Fk = (this.lastHealthPool - Xk) / Ik;
-          this.lastDrop = kk - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + Fk,
+        const mm = this.api.getClientOption(this.localPlayerId, "_health"),
+          Tm = this.api.getClientOption(this.localPlayerId, "_shield"),
+          fm = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(mm, this.readHealth) && Object.is(Tm, this.readShield) && Object.is(fm, this.readMaxHealth)) return;
+        if (this.readHealth = mm, this.readShield = Tm, this.readMaxHealth = fm, null === mm || void 0 === mm || !fm) return this.lastHealthPool = null, this.maxHealth = null, this.Ma = 1, this.dead = !1, void this.drawLow();
+        const hm = mm + (null !== Tm && void 0 !== Tm ? Tm : 0);
+        if (null !== this.lastHealthPool && hm < this.lastHealthPool) {
+          const mm = performance.now(),
+            Tm = (this.lastHealthPool - hm) / fm;
+          this.lastDrop = mm - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + Tm,
             at: this.lastDrop.at
           } : {
-            frac: Fk,
-            at: kk
+            frac: Tm,
+            at: mm
           }
         }
-        this.dead = kk <= 0, this.dead && this.clearHits(), this.lastHealthPool = Xk, this.maxHealth = Ik, this.Ri = kk > 0 ? kk / Ik : 1, this.drawLow()
+        this.dead = mm <= 0, this.dead && this.clearHits(), this.lastHealthPool = hm, this.maxHealth = fm, this.Ma = mm > 0 ? mm / fm : 1, this.drawLow()
       }
-      onHurt(kk, Fk) {
+      onHurt(mm, Tm) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const Ik = Math.min(1, this.takeDamageFrac(Fk) / .3);
-        null !== kk && this.showArc(kk, Ik), this.flashEdge(null === kk ? null : kk - this.cameraHeading, .4 + .6 * Ik)
+        const fm = Math.min(1, this.takeDamageFrac(Tm) / .3);
+        null !== mm && this.showArc(mm, fm), this.flashEdge(null === mm ? null : mm - this.cameraHeading, .4 + .6 * fm)
       }
-      takeDamageFrac(kk) {
-        if (void 0 !== kk && this.maxHealth) return kk / this.maxHealth;
+      takeDamageFrac(mm) {
+        if (void 0 !== mm && this.maxHealth) return mm / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: Fk
+          frac: Tm
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, Fk
+        }, Tm
       }
       drawLow() {
         if (!this.lowLayer) return;
-        const kk = Sk((Qk - this.Ri) / .25),
-          Fk = Sk((sk - this.Ri) / .15000000000000002),
-          Ik = this.Ri < Qk;
-        this.lowLayer.classList.toggle("Active", Ik), this.lowLayer.classList.toggle("Critical", this.Ri < sk), this.lowLayer.style.opacity = String(Ik ? .55 + .3 * kk + .15 * Fk : 0)
+        const mm = zm((Qm - this.Ma) / .25),
+          Tm = zm((nm - this.Ma) / .15000000000000002),
+          fm = this.Ma < Qm;
+        this.lowLayer.classList.toggle("Active", fm), this.lowLayer.classList.toggle("Critical", this.Ma < nm), this.lowLayer.style.opacity = String(fm ? .55 + .3 * mm + .15 * Tm : 0)
       }
-      showArc(kk, Fk) {
-        var Ik, Xk;
+      showArc(mm, Tm) {
+        var fm, hm;
         if (!this.arcLayer) return;
-        let Tk = this.arcs.find((Fk => zk(Fk.direction, kk) < .6));
-        if (!Tk) {
-          const Fk = document.createElement("div");
-          Fk.className = "FrontlineDamageArc", Fk.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(Fk), Tk = {
-            element: Fk,
-            direction: kk,
+        let Am = this.arcs.find((Tm => cm(Tm.direction, mm) < .6));
+        if (!Am) {
+          const Tm = document.createElement("div");
+          Tm.className = "FrontlineDamageArc", Tm.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(Tm), Am = {
+            element: Tm,
+            direction: mm,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(Tk)
+          }, this.arcs.push(Am)
         }
-        Tk.direction = kk, this.drawArcAngle(Tk);
-        const ik = Tk.fade ? Number(getComputedStyle(Tk.element).opacity) : 0;
-        null === (Ik = Tk.fade) || void 0 === Ik || Ik.cancel(), null === (Xk = Tk.pop) || void 0 === Xk || Xk.cancel(), Tk.element.style.opacity = "1";
-        const yk = Tk.element.animate([{
-          opacity: ik
+        Am.direction = mm, this.drawArcAngle(Am);
+        const am = Am.fade ? Number(getComputedStyle(Am.element).opacity) : 0;
+        null === (fm = Am.fade) || void 0 === fm || fm.cancel(), null === (hm = Am.pop) || void 0 === hm || hm.cancel(), Am.element.style.opacity = "1";
+        const xm = Am.element.animate([{
+          opacity: am
         }, {
           opacity: 1
         }], 144);
-        Tk.fade = yk, Tk.pop = Tk.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * Fk
+        Am.fade = xm, Am.pop = Am.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * Tm
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const lk = Tk;
-        yk.onfinish = () => {
-          if (lk.fade !== yk) return;
-          const kk = lk.element.animate([{
+        const wm = Am;
+        xm.onfinish = () => {
+          if (wm.fade !== xm) return;
+          const mm = wm.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -659,128 +659,128 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          kk.startTime = yk.startTime, lk.fade = kk, kk.onfinish = () => {
-            lk.fade === kk && (lk.element.remove(), vk(this.arcs, lk))
+          mm.startTime = xm.startTime, wm.fade = mm, mm.onfinish = () => {
+            wm.fade === mm && (wm.element.remove(), Zm(this.arcs, wm))
           }
         }
       }
-      drawArcAngle(kk) {
-        const Fk = kk.direction - this.cameraHeading;
-        (null === kk.drawnAngle || Math.abs(Fk - kk.drawnAngle) > .005) && (kk.drawnAngle = Fk, kk.element.style.rotate = `${Fk}rad`)
+      drawArcAngle(mm) {
+        const Tm = mm.direction - this.cameraHeading;
+        (null === mm.drawnAngle || Math.abs(Tm - mm.drawnAngle) > .005) && (mm.drawnAngle = Tm, mm.element.style.rotate = `${Tm}rad`)
       }
-      flashEdge(kk, Fk) {
-        var Ik, Xk, Tk;
+      flashEdge(mm, Tm) {
+        var fm, hm, Am;
         if (!this.root) return;
-        let ik = this.flashes.find((Fk => null === Fk.angle || null === kk ? Fk.angle === kk : zk(Fk.angle, kk) < .5));
-        if (!ik) {
-          const Fk = document.createElement("div");
-          Fk.className = "FrontlineDamageFlash";
-          const Ik = Fk.appendChild(document.createElement("div"));
-          Ik.className = "FrontlineDamageFlashGlow", this.root.insertBefore(Fk, this.arcLayer), ik = {
-            element: Fk,
-            glow: Ik,
-            angle: kk,
+        let am = this.flashes.find((Tm => null === Tm.angle || null === mm ? Tm.angle === mm : cm(Tm.angle, mm) < .5));
+        if (!am) {
+          const Tm = document.createElement("div");
+          Tm.className = "FrontlineDamageFlash";
+          const fm = Tm.appendChild(document.createElement("div"));
+          fm.className = "FrontlineDamageFlashGlow", this.root.insertBefore(Tm, this.arcLayer), am = {
+            element: Tm,
+            glow: fm,
+            angle: mm,
             level: 0,
             animation: null
-          }, this.flashes.push(ik)
+          }, this.flashes.push(am)
         }
-        const yk = null === (Ik = ik.animation) || void 0 === Ik || null === (Xk = Ik.effect) || void 0 === Xk ? void 0 : Xk.getComputedTiming().progress,
-          lk = null === yk || void 0 === yk ? 0 : ik.level * (1 - yk);
-        ik.level = Math.min(1, Math.max(Fk, lk + .6 * Fk)), ik.angle = kk;
+        const xm = null === (fm = am.animation) || void 0 === fm || null === (hm = fm.effect) || void 0 === hm ? void 0 : hm.getComputedTiming().progress,
+          wm = null === xm || void 0 === xm ? 0 : am.level * (1 - xm);
+        am.level = Math.min(1, Math.max(Tm, wm + .6 * Tm)), am.angle = mm;
         const {
-          x: ak,
-          y: qk,
-          rx: Lk,
-          ry: tk
-        } = function(kk, Fk) {
-          const Ik = window.innerWidth,
-            Xk = window.innerHeight;
-          if (null === kk) return {
-            x: Ik / 2,
-            y: Xk / 2,
+          x: Dm,
+          y: im,
+          rx: Rm,
+          ry: pm
+        } = function(mm, Tm) {
+          const fm = window.innerWidth,
+            hm = window.innerHeight;
+          if (null === mm) return {
+            x: fm / 2,
+            y: hm / 2,
             rx: 0,
             ry: 0
           };
-          const Tk = Math.sin(kk),
-            ik = -Math.cos(kk),
-            yk = Ik / 2 / Math.max(1e-6, Math.abs(Tk)),
-            lk = Xk / 2 / Math.max(1e-6, Math.abs(ik)),
-            ak = Math.min(yk, lk),
-            qk = Math.round(Ik / 2 + Tk * ak),
-            Lk = Math.round(Xk / 2 + ik * ak),
-            tk = Xk / 100 * (.85 + .25 * Fk),
-            Zk = yk <= lk,
-            jk = Math.round((Zk ? 30 : 74) * tk),
-            ek = Math.round((Zk ? 58 : 26) * tk);
+          const Am = Math.sin(mm),
+            am = -Math.cos(mm),
+            xm = fm / 2 / Math.max(1e-6, Math.abs(Am)),
+            wm = hm / 2 / Math.max(1e-6, Math.abs(am)),
+            Dm = Math.min(xm, wm),
+            im = Math.round(fm / 2 + Am * Dm),
+            Rm = Math.round(hm / 2 + am * Dm),
+            pm = hm / 100 * (.85 + .25 * Tm),
+            Em = xm <= wm,
+            om = Math.round((Em ? 30 : 74) * pm),
+            Om = Math.round((Em ? 58 : 26) * pm);
           return {
-            x: qk,
-            y: Lk,
-            rx: jk,
-            ry: ek
+            x: im,
+            y: Rm,
+            rx: om,
+            ry: Om
           }
-        }(kk, ik.level), {
-          style: Zk
-        } = ik.glow;
-        ik.glow.classList.toggle("Everywhere", null === kk), Zk.setProperty("--glowX", `${ak}px`), Zk.setProperty("--glowY", `${qk}px`), Zk.setProperty("--glowRx", `${Lk}px`), Zk.setProperty("--glowRy", `${tk}px`), ik.element.style.transformOrigin = `${ak}px ${qk}px`, null === (Tk = ik.animation) || void 0 === Tk || Tk.cancel();
-        const jk = ik.element.animate([{
+        }(mm, am.level), {
+          style: Em
+        } = am.glow;
+        am.glow.classList.toggle("Everywhere", null === mm), Em.setProperty("--glowX", `${Dm}px`), Em.setProperty("--glowY", `${im}px`), Em.setProperty("--glowRx", `${Rm}px`), Em.setProperty("--glowRy", `${pm}px`), am.element.style.transformOrigin = `${Dm}px ${im}px`, null === (Am = am.animation) || void 0 === Am || Am.cancel();
+        const om = am.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: ik.level,
+          opacity: am.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * ik.level,
+          opacity: .8 * am.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * ik.level
+          duration: 520 + 180 * am.level
         });
-        ik.animation = jk;
-        const ek = ik;
-        jk.onfinish = () => {
-          ek.animation === jk && (ek.element.remove(), vk(this.flashes, ek))
+        am.animation = om;
+        const Om = am;
+        om.onfinish = () => {
+          Om.animation === om && (Om.element.remove(), Zm(this.flashes, Om))
         }
       }
       clearHits() {
-        for (const Xk of this.arcs) {
-          var kk, Fk;
-          null === (kk = Xk.fade) || void 0 === kk || kk.cancel(), Xk.fade = null, null === (Fk = Xk.pop) || void 0 === Fk || Fk.cancel(), Xk.element.remove()
+        for (const hm of this.arcs) {
+          var mm, Tm;
+          null === (mm = hm.fade) || void 0 === mm || mm.cancel(), hm.fade = null, null === (Tm = hm.pop) || void 0 === Tm || Tm.cancel(), hm.element.remove()
         }
         this.arcs.length = 0;
-        for (const Xk of this.flashes) {
-          var Ik;
-          null === (Ik = Xk.animation) || void 0 === Ik || Ik.cancel(), Xk.element.remove()
+        for (const hm of this.flashes) {
+          var fm;
+          null === (fm = hm.animation) || void 0 === fm || fm.cancel(), hm.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function zk(kk, Fk) {
-      return Math.abs(Math.atan2(Math.sin(kk - Fk), Math.cos(kk - Fk)))
+    function cm(mm, Tm) {
+      return Math.abs(Math.atan2(Math.sin(mm - Tm), Math.cos(mm - Tm)))
     }
 
-    function Sk(kk) {
-      return Math.max(0, Math.min(1, kk))
+    function zm(mm) {
+      return Math.max(0, Math.min(1, mm))
     }
 
-    function vk(kk, Fk) {
-      const Ik = kk.indexOf(Fk); - 1 !== Ik && kk.splice(Ik, 1)
+    function Zm(mm, Tm) {
+      const fm = mm.indexOf(Tm); - 1 !== fm && mm.splice(fm, 1)
     }
-    var Ek = Ik(1055),
-      Ok = Ik.n(Ek),
-      nk = Ik(36597),
-      Gk = Ik(36691),
-      pk = Ik(1179),
-      uk = Ik(1402);
-    const bk = "frontlineHudChanged",
-      Rk = "frontlineScoreboardChanged";
-    class Uk {
+    var km = fm(1080),
+      bm = fm.n(km),
+      Sm = fm(36681),
+      em = fm(36777),
+      Nm = fm(1208),
+      Gm = fm(1449);
+    const Xm = "frontlineHudChanged",
+      Pm = "frontlineScoreboardChanged";
+    class Hm {
       constructor() {
         this.wire = ["none"], this.scoreboard = {
           wire: ["none"],
@@ -793,101 +793,101 @@ export const modules = {
       getScoreboard() {
         return this.scoreboard
       }
-      Pe(kk) {
-        this.wire = kk, qk.g.GL(bk, kk, !0)
+      rO(mm) {
+        this.wire = mm, im.j.gp(Xm, mm, !0)
       }
-      receiveScoreboard(kk) {
-        let Fk = "scoreboard" === kk[0] ? performance.now() + kk[5] : 0;
-        const Ik = this.scoreboard.endsAt;
-        0 !== Fk && 0 !== Ik && Math.abs(Fk - Ik) < 1e3 && (Fk = Ik), this.scoreboard = {
-          wire: kk,
-          endsAt: Fk
-        }, qk.g.GL(Rk, this.scoreboard, !0)
+      receiveScoreboard(mm) {
+        let Tm = "scoreboard" === mm[0] ? performance.now() + mm[5] : 0;
+        const fm = this.scoreboard.endsAt;
+        0 !== Tm && 0 !== fm && Math.abs(Tm - fm) < 1e3 && (Tm = fm), this.scoreboard = {
+          wire: mm,
+          endsAt: Tm
+        }, im.j.gp(Pm, this.scoreboard, !0)
       }
     }
-    var Ck = Ik(1096);
-    const Nk = {
+    var ym = fm(1135);
+    const Cm = {
       Red: "frontlineHud:teamRed",
       Blue: "frontlineHud:teamBlue"
     };
 
-    function ck(kk) {
-      const [Fk, Ik] = (0, Tk.useState)((() => (kk - performance.now()) / 1e3));
-      return (0, Tk.useEffect)((() => {
-        if (0 === kk) return;
-        const Fk = () => {
-          Ik((kk - performance.now()) / 1e3)
+    function rm(mm) {
+      const [Tm, fm] = (0, Am.useState)((() => (mm - performance.now()) / 1e3));
+      return (0, Am.useEffect)((() => {
+        if (0 === mm) return;
+        const Tm = () => {
+          fm((mm - performance.now()) / 1e3)
         };
-        Fk();
-        const Xk = window.setInterval(Fk, 250);
+        Tm();
+        const hm = window.setInterval(Tm, 250);
         return () => {
-          window.clearInterval(Xk)
+          window.clearInterval(hm)
         }
-      }), [kk]), Fk
+      }), [mm]), Tm
     }
 
-    function Wk(kk) {
+    function sm(mm) {
       let {
-        className: Fk,
-        point: Ik
-      } = kk;
-      const [Xk, Tk, ik, yk, lk, ak] = Ik;
-      return (0, Ck.jsxs)("div", {
-        className: Ok()(Fk, `Owner-${Tk||"None"}`, `Leader-${yk||"None"}`, {
-          Contested: lk,
-          Here: ak
+        className: Tm,
+        point: fm
+      } = mm;
+      const [hm, Am, am, xm, wm, Dm] = fm;
+      return (0, ym.jsxs)("div", {
+        className: bm()(Tm, `Owner-${Am||"None"}`, `Leader-${xm||"None"}`, {
+          Contested: wm,
+          Here: Dm
         }),
-        children: [(0, Ck.jsx)("span", {
+        children: [(0, ym.jsx)("span", {
           className: "FrontlinePointLetter",
-          children: Xk
-        }), (0, Ck.jsx)("i", {
+          children: hm
+        }), (0, ym.jsx)("i", {
           className: "FrontlinePointFill",
           style: {
-            width: `${ik}%`
+            width: `${am}%`
           }
         })]
       })
     }
-    const fk = (0, Tk.memo)((function(kk) {
+    const lm = (0, Am.memo)((function(mm) {
         let {
-          points: Fk,
-          markers: Ik
-        } = kk;
+          points: Tm,
+          markers: fm
+        } = mm;
         const {
-          t: Xk
-        } = (0, pk.y)();
-        return Fk ? (0, Ck.jsx)("div", {
+          t: hm
+        } = (0, Nm.A)();
+        return Tm ? (0, ym.jsx)("div", {
           className: "FrontlinePointMarkers",
-          children: Fk.map((kk => {
-            const [Fk, , , , , , , Tk] = kk;
-            return (0, Ck.jsxs)("div", {
-              ref: Ik.bindMarker(Fk),
+          children: Tm.map((mm => {
+            const [Tm, , , , , , , Am] = mm;
+            return (0, ym.jsxs)("div", {
+              ref: fm.bindMarker(Tm),
               className: "FrontlinePointMarker",
-              children: [(0, Ck.jsx)(Wk, {
+              children: [(0, ym.jsx)(sm, {
                 className: "FrontlinePointMarkerTile",
-                point: kk
-              }), (0, Ck.jsxs)("div", {
+                point: mm
+              }), (0, ym.jsxs)("div", {
                 className: "FrontlinePointMarkerLabels",
-                children: [Tk && (0, Ck.jsx)("span", {
-                  className: Ok()("FrontlinePointMarkerHomeTurf", `Team-${Tk}`),
-                  children: Xk("frontlineHud:homeTurf", {
-                    team: Xk(Nk[Tk])
+                children: [Am && (0, ym.jsx)("span", {
+                  className: bm()("FrontlinePointMarkerHomeTurf", `Team-${Am}`),
+                  children: hm("frontlineHud:homeTurf", {
+                    team: hm(Cm[Am])
                   })
-                }), (0, Ck.jsx)("span", {
+                }), (0, ym.jsx)("span", {
                   className: "FrontlinePointMarkerDistance"
                 })]
               })]
-            }, Fk)
+            }, Tm)
           }))
         }) : null
       })),
-      Bk = {
+      Mm = {
         capturing: "frontlineHud:capturing",
         contesting: "frontlineHud:contesting",
         defending: "frontlineHud:defending",
         captured: "frontlineHud:captured"
       },
-      dk = {
+      um = {
         captured: "frontlineHud:capturedTag",
         lost: "frontlineHud:lostTag",
         milestone: "frontlineHud:milestoneTag",
@@ -895,321 +895,321 @@ export const modules = {
         reinforcements: "frontlineHud:reinforcementsTag"
       };
 
-    function Yk(kk) {
+    function Bm(mm) {
       let {
-        hud: Fk,
-        crosshair: Ik,
-        damage: Xk,
-        markers: Tk
-      } = kk;
-      const ik = (0, uk.f)(bk, Fk.getWire()),
-        yk = (0, uk.f)(Rk, Fk.getScoreboard());
-      return (0, Ck.jsxs)(Ck.Fragment, {
-        children: [(0, Ck.jsx)(Ak, {
-          damage: Xk
-        }), (0, Ck.jsx)(fk, {
-          points: "scoreboard" === yk.wire[0] ? yk.wire[6] : null,
-          markers: Tk
-        }), (0, Ck.jsx)(mk, {
-          view: yk
-        }), (0, Ck.jsx)("div", {
+        hud: Tm,
+        crosshair: fm,
+        damage: hm,
+        markers: Am
+      } = mm;
+      const am = (0, Gm.i)(Xm, Tm.getWire()),
+        xm = (0, Gm.i)(Pm, Tm.getScoreboard());
+      return (0, ym.jsxs)(ym.Fragment, {
+        children: [(0, ym.jsx)(Lm, {
+          damage: hm
+        }), (0, ym.jsx)(lm, {
+          points: "scoreboard" === xm.wire[0] ? xm.wire[6] : null,
+          markers: Am
+        }), (0, ym.jsx)(Um, {
+          view: xm
+        }), (0, ym.jsx)("div", {
           className: "FrontlineReticle",
-          ref: Ik.bindElement
-        }), (0, Ck.jsx)(nk.f, {
-          children: (0, Ck.jsx)(gk, {
-            wire: ik
+          ref: fm.bindElement
+        }), (0, ym.jsx)(Sm.e, {
+          children: (0, ym.jsx)(tm, {
+            wire: am
           })
         })]
       })
     }
-    const Ak = (0, Tk.memo)((function(kk) {
+    const Lm = (0, Am.memo)((function(mm) {
         let {
-          damage: Fk
-        } = kk;
-        return (0, Ck.jsxs)("div", {
+          damage: Tm
+        } = mm;
+        return (0, ym.jsxs)("div", {
           className: "FrontlineDamage",
-          ref: Fk.bindElement,
-          children: [(0, Ck.jsx)("div", {
+          ref: Tm.bindElement,
+          children: [(0, ym.jsx)("div", {
             className: "FrontlineDamageLow",
-            children: (0, Ck.jsx)("div", {
+            children: (0, ym.jsx)("div", {
               className: "FrontlineDamageShade"
             })
-          }), (0, Ck.jsx)("div", {
+          }), (0, ym.jsx)("div", {
             className: "FrontlineDamageArcs"
           })]
         })
       })),
-      gk = (0, Tk.memo)((function(kk) {
+      tm = (0, Am.memo)((function(mm) {
         let {
-          wire: Fk
-        } = kk;
+          wire: Tm
+        } = mm;
         const {
-          t: Ik
-        } = (0, pk.y)();
-        if ("capture" === Fk[0]) {
-          const [, kk, Xk, Tk, ik, yk, lk] = Fk, ak = Math.round(Tk / 100 * 24);
-          return (0, Ck.jsxs)("div", {
-            className: Ok()("FrontlinePlate", `Status-${Xk}`, `Leader-${ik||"None"}`),
-            children: [(0, Ck.jsx)(Mk, {}), (0, Ck.jsxs)("div", {
+          t: fm
+        } = (0, Nm.A)();
+        if ("capture" === Tm[0]) {
+          const [, mm, hm, Am, am, xm, wm] = Tm, Dm = Math.round(Am / 100 * 24);
+          return (0, ym.jsxs)("div", {
+            className: bm()("FrontlinePlate", `Status-${hm}`, `Leader-${am||"None"}`),
+            children: [(0, ym.jsx)(Fm, {}), (0, ym.jsxs)("div", {
               className: "FrontlinePlateRow",
-              children: [(0, Ck.jsx)("span", {
+              children: [(0, ym.jsx)("span", {
                 className: "FrontlineObjective",
-                children: kk
-              }), (0, Ck.jsxs)("div", {
+                children: mm
+              }), (0, ym.jsxs)("div", {
                 className: "FrontlinePlateMiddle",
-                children: [(0, Ck.jsx)("div", {
+                children: [(0, ym.jsx)("div", {
                   className: "FrontlinePlateMeta",
-                  children: Ik("frontlineHud:objective", {
-                    point: kk,
-                    friendly: yk,
-                    enemy: lk
+                  children: fm("frontlineHud:objective", {
+                    point: mm,
+                    friendly: xm,
+                    enemy: wm
                   })
-                }), (0, Ck.jsx)("div", {
+                }), (0, ym.jsx)("div", {
                   className: "FrontlinePlateStatus",
-                  children: Ik(Bk[Xk])
+                  children: fm(Mm[hm])
                 })]
-              }), (0, Ck.jsxs)("span", {
+              }), (0, ym.jsxs)("span", {
                 className: "FrontlinePercent",
-                children: [String(Tk).padStart(3, "0"), (0, Ck.jsx)("small", {
+                children: [String(Am).padStart(3, "0"), (0, ym.jsx)("small", {
                   children: "%"
                 })]
               })]
-            }), (0, Ck.jsx)(rk, {
+            }), (0, ym.jsx)(gm, {
               segments: 24,
-              lit: ak
+              lit: Dm
             })]
           })
         }
-        if ("alert" === Fk[0]) {
-          const [, kk, Xk, Tk] = Fk;
-          return (0, Ck.jsxs)("div", {
-            className: Ok()("FrontlinePlate", "FrontlineAlert", `Tone-${Tk}`),
-            children: [(0, Ck.jsx)(Mk, {}), (0, Ck.jsx)("div", {
+        if ("alert" === Tm[0]) {
+          const [, mm, hm, Am] = Tm;
+          return (0, ym.jsxs)("div", {
+            className: bm()("FrontlinePlate", "FrontlineAlert", `Tone-${Am}`),
+            children: [(0, ym.jsx)(Fm, {}), (0, ym.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: Ik(dk[kk])
-            }), (0, Ck.jsx)("div", {
+              children: fm(um[mm])
+            }), (0, ym.jsx)("div", {
               className: "FrontlinePlateStatus",
-              children: Xk
+              children: hm
             })]
           })
         }
         return null
       })),
-      mk = (0, Tk.memo)((function(kk) {
+      Um = (0, Am.memo)((function(mm) {
         let {
-          view: Fk
-        } = kk;
+          view: Tm
+        } = mm;
         const {
-          t: Ik
-        } = (0, pk.y)(), Xk = (0, Tk.useRef)(null), ik = function(kk, Fk) {
-          const [Ik, Xk] = (0, Tk.useState)(!1);
-          return (0, Tk.useLayoutEffect)((() => {
-            const Fk = kk.current;
-            if (!Fk) return;
-            const Ik = document.querySelector(`.${Gk.g}`),
-              Tk = document.querySelector(`.${Gk.k}`),
-              ik = () => {
-                var kk;
-                const ik = Fk.querySelector(".FrontlineTeamTrack"),
-                  yk = (0, ak.getRemInPx)(),
-                  lk = Fk.getBoundingClientRect().width - 2 * (null !== (kk = null === ik || void 0 === ik ? void 0 : ik.getBoundingClientRect().width) && void 0 !== kk ? kk : 0),
-                  qk = window.innerWidth / 2,
-                  Lk = Ik ? Ik.getBoundingClientRect().right : 0,
-                  tk = Tk ? Tk.getBoundingClientRect().left : window.innerWidth,
-                  Zk = Math.min(qk - Lk, tk - qk) - Gk.d - lk / 2,
-                  jk = Zk < 6 * yk,
-                  ek = jk ? (window.innerWidth - lk) / 2 - Gk.d : Zk;
-                Fk.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(ek,14*yk)))}px`), Xk(jk)
+          t: fm
+        } = (0, Nm.A)(), hm = (0, Am.useRef)(null), am = function(mm, Tm) {
+          const [fm, hm] = (0, Am.useState)(!1);
+          return (0, Am.useLayoutEffect)((() => {
+            const Tm = mm.current;
+            if (!Tm) return;
+            const fm = document.querySelector(`.${em.c}`),
+              Am = document.querySelector(`.${em.e}`),
+              am = () => {
+                var mm;
+                const am = Tm.querySelector(".FrontlineTeamTrack"),
+                  xm = (0, Dm.getRemInPx)(),
+                  wm = Tm.getBoundingClientRect().width - 2 * (null !== (mm = null === am || void 0 === am ? void 0 : am.getBoundingClientRect().width) && void 0 !== mm ? mm : 0),
+                  im = window.innerWidth / 2,
+                  Rm = fm ? fm.getBoundingClientRect().right : 0,
+                  pm = Am ? Am.getBoundingClientRect().left : window.innerWidth,
+                  Em = Math.min(im - Rm, pm - im) - em.b - wm / 2,
+                  om = Em < 6 * xm,
+                  Om = om ? (window.innerWidth - wm) / 2 - em.b : Em;
+                Tm.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(Om,14*xm)))}px`), hm(om)
               };
-            ik();
-            const yk = new ResizeObserver(ik);
-            for (const kk of [Fk, Ik, Tk]) kk && yk.observe(kk);
-            return window.addEventListener("resize", ik), () => {
-              yk.disconnect(), window.removeEventListener("resize", ik)
+            am();
+            const xm = new ResizeObserver(am);
+            for (const mm of [Tm, fm, Am]) mm && xm.observe(mm);
+            return window.addEventListener("resize", am), () => {
+              xm.disconnect(), window.removeEventListener("resize", am)
             }
-          }), [kk, Fk]), Ik
-        }(Xk, "scoreboard" === Fk.wire[0]);
-        if ("scoreboard" !== Fk.wire[0]) return null;
-        const [, yk, lk, qk, Lk, , tk] = Fk.wire, Zk = "Red" === yk ? "Blue" : "Red";
-        return (0, Ck.jsxs)("div", {
-          className: Ok()("FrontlineScoreboardContainer", {
-            Below: ik
+          }), [mm, Tm]), fm
+        }(hm, "scoreboard" === Tm.wire[0]);
+        if ("scoreboard" !== Tm.wire[0]) return null;
+        const [, xm, wm, im, Rm, , pm] = Tm.wire, Em = "Red" === xm ? "Blue" : "Red";
+        return (0, ym.jsxs)("div", {
+          className: bm()("FrontlineScoreboardContainer", {
+            Below: am
           }),
-          children: [(0, Ck.jsxs)("div", {
-            ref: Xk,
+          children: [(0, ym.jsxs)("div", {
+            ref: hm,
             className: "FrontlineScoreboard",
-            children: [(0, Ck.jsx)(Mk, {}), (0, Ck.jsx)(hk, {
-              team: yk,
-              tickets: lk,
-              goal: Lk,
+            children: [(0, ym.jsx)(Fm, {}), (0, ym.jsx)(dm, {
+              team: xm,
+              tickets: wm,
+              goal: Rm,
               side: "Friendly"
-            }), (0, Ck.jsx)("div", {
+            }), (0, ym.jsx)("div", {
               className: "FrontlinePoints",
-              children: tk.map((kk => (0, Ck.jsx)(Wk, {
+              children: pm.map((mm => (0, ym.jsx)(sm, {
                 className: "FrontlinePoint",
-                point: kk
-              }, kk[0])))
-            }), (0, Ck.jsx)(hk, {
-              team: Zk,
-              tickets: qk,
-              goal: Lk,
+                point: mm
+              }, mm[0])))
+            }), (0, ym.jsx)(dm, {
+              team: Em,
+              tickets: im,
+              goal: Rm,
               side: "Enemy"
             })]
-          }), (0, Ck.jsxs)("div", {
+          }), (0, ym.jsxs)("div", {
             className: "FrontlineClockTab",
-            children: [(0, Ck.jsx)(Dk, {
-              endsAt: Fk.endsAt
-            }), (0, Ck.jsx)("div", {
+            children: [(0, ym.jsx)(Wm, {
+              endsAt: Tm.endsAt
+            }), (0, ym.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: Ik("frontlineHud:ticketGoal", {
-                goal: Lk
+              children: fm("frontlineHud:ticketGoal", {
+                goal: Rm
               })
             })]
           })]
         })
       }));
 
-    function hk(kk) {
+    function dm(mm) {
       let {
-        team: Fk,
-        tickets: Ik,
-        goal: Xk,
-        side: Tk
-      } = kk;
+        team: Tm,
+        tickets: fm,
+        goal: hm,
+        side: Am
+      } = mm;
       const {
-        t: ik
-      } = (0, pk.y)(), yk = String(Ik).padStart(3, "0"), lk = yk.search(/[1-9]/), ak = -1 === lk ? yk : yk.slice(0, lk), qk = Math.min(20, Math.floor(Ik / Xk * 20));
-      return (0, Ck.jsxs)("div", {
-        className: Ok()("FrontlineTeamScore", Tk, `Team-${Fk}`),
-        children: [(0, Ck.jsxs)("div", {
+        t: am
+      } = (0, Nm.A)(), xm = String(fm).padStart(3, "0"), wm = xm.search(/[1-9]/), Dm = -1 === wm ? xm : xm.slice(0, wm), im = Math.min(20, Math.floor(fm / hm * 20));
+      return (0, ym.jsxs)("div", {
+        className: bm()("FrontlineTeamScore", Am, `Team-${Tm}`),
+        children: [(0, ym.jsxs)("div", {
           className: "FrontlineTickets",
-          children: [(0, Ck.jsx)("span", {
+          children: [(0, ym.jsx)("span", {
             className: "Lead",
-            children: ak
-          }), -1 !== lk && yk.slice(lk)]
-        }), (0, Ck.jsxs)("div", {
+            children: Dm
+          }), -1 !== wm && xm.slice(wm)]
+        }), (0, ym.jsxs)("div", {
           className: "FrontlineTeamTrack",
-          children: [(0, Ck.jsx)("div", {
+          children: [(0, ym.jsx)("div", {
             className: "FrontlinePlateMeta",
-            children: ik(Nk[Fk])
-          }), (0, Ck.jsx)(rk, {
+            children: am(Cm[Tm])
+          }), (0, ym.jsx)(gm, {
             segments: 20,
-            lit: qk
+            lit: im
           })]
         })]
       })
     }
 
-    function rk(kk) {
+    function gm(mm) {
       let {
-        segments: Fk,
-        lit: Ik
-      } = kk;
-      return (0, Ck.jsx)("div", {
+        segments: Tm,
+        lit: fm
+      } = mm;
+      return (0, ym.jsx)("div", {
         className: "FrontlineBar",
         children: Array.from({
-          length: Fk
-        }, ((kk, Fk) => (0, Ck.jsx)("i", {
-          className: Ok()({
-            Lit: Fk < Ik
+          length: Tm
+        }, ((mm, Tm) => (0, ym.jsx)("i", {
+          className: bm()({
+            Lit: Tm < fm
           })
-        }, Fk)))
+        }, Tm)))
       })
     }
 
-    function Dk(kk) {
+    function Wm(mm) {
       let {
-        endsAt: Fk
-      } = kk;
-      const Ik = Math.max(0, Math.ceil(ck(Fk)));
-      return (0, Ck.jsxs)("div", {
-        className: Ok()("FrontlineClock", {
-          Urgent: Ik <= 60
+        endsAt: Tm
+      } = mm;
+      const fm = Math.max(0, Math.ceil(rm(Tm)));
+      return (0, ym.jsxs)("div", {
+        className: bm()("FrontlineClock", {
+          Urgent: fm <= 60
         }),
-        children: [Math.floor(Ik / 60), ":", String(Ik % 60).padStart(2, "0")]
+        children: [Math.floor(fm / 60), ":", String(fm % 60).padStart(2, "0")]
       })
     }
 
-    function Mk() {
-      return (0, Ck.jsxs)(Ck.Fragment, {
-        children: [(0, Ck.jsx)("i", {
+    function Fm() {
+      return (0, ym.jsxs)(ym.Fragment, {
+        children: [(0, ym.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, Ck.jsx)("i", {
+        }), (0, ym.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
         })]
       })
     }
-    var kF = Ik(36682),
-      FF = Ik(1241),
-      IF = Ik(38490),
-      XF = Ik(38534);
-    class TF {
-      constructor(kk) {
-        var Fk;
-        this.hud = kk, this.markers = new Map, this.refs = new Map, this.viewport = {
+    var mT = fm(36775),
+      TT = fm(1259),
+      fT = fm(38588),
+      hT = fm(38628);
+    class AT {
+      constructor(mm) {
+        var Tm;
+        this.hud = mm, this.markers = new Map, this.refs = new Map, this.viewport = {
           width: window.innerWidth,
           height: window.innerHeight
-        }, this.render = null, this.ee = !1, this.PJ = () => {
+        }, this.render = null, this.PO = !1, this.zV = () => {
           this.viewport = {
             width: window.innerWidth,
             height: window.innerHeight
           }
-        }, window.addEventListener("resize", this.PJ), null === (Fk = window.visualViewport) || void 0 === Fk || Fk.addEventListener("resize", this.PJ)
+        }, window.addEventListener("resize", this.zV), null === (Tm = window.visualViewport) || void 0 === Tm || Tm.addEventListener("resize", this.zV)
       }
-      bindMarker(kk) {
-        let Fk = this.refs.get(kk);
-        return Fk || (Fk = Fk => {
-          var Ik;
-          null === (Ik = this.markers.get(kk)) || void 0 === Ik || Ik.stopObserving(), this.markers.delete(kk), Fk && !this.ee && this.markers.set(kk, this.mount(Fk))
-        }, this.refs.set(kk, Fk)), Fk
+      bindMarker(mm) {
+        let Tm = this.refs.get(mm);
+        return Tm || (Tm = Tm => {
+          var fm;
+          null === (fm = this.markers.get(mm)) || void 0 === fm || fm.stopObserving(), this.markers.delete(mm), Tm && !this.PO && this.markers.set(mm, this.mount(Tm))
+        }, this.refs.set(mm, Tm)), Tm
       }
-      frame(kk, Fk) {
-        this.render = kk;
-        const Ik = this.hud.getScoreboard().wire;
-        if ("scoreboard" === Ik[0] && 0 !== this.markers.size)
-          for (const [Xk, , , , , , Tk] of Ik[6]) {
-            const kk = this.markers.get(Xk);
-            kk && Tk && (kk.target ??= [0, 0, 0], kk.target[0] = Tk[0], kk.target[1] = Tk[1] + 2.5, kk.target[2] = Tk[2], this.place(kk), this.eX(kk, Fk && Math.hypot(Tk[0] - Fk[0], Tk[1] - Fk[1], Tk[2] - Fk[2])))
+      frame(mm, Tm) {
+        this.render = mm;
+        const fm = this.hud.getScoreboard().wire;
+        if ("scoreboard" === fm[0] && 0 !== this.markers.size)
+          for (const [hm, , , , , , Am] of fm[6]) {
+            const mm = this.markers.get(hm);
+            mm && Am && (mm.target ??= [0, 0, 0], mm.target[0] = Am[0], mm.target[1] = Am[1] + 2.5, mm.target[2] = Am[2], this.place(mm), this.Ih(mm, Tm && Math.hypot(Am[0] - Tm[0], Am[1] - Tm[1], Am[2] - Tm[2])))
           }
       }
       dispose() {
-        var kk;
-        this.ee = !0, window.removeEventListener("resize", this.PJ), null === (kk = window.visualViewport) || void 0 === kk || kk.removeEventListener("resize", this.PJ);
-        for (const Fk of this.markers.values()) Fk.stopObserving();
+        var mm;
+        this.PO = !0, window.removeEventListener("resize", this.zV), null === (mm = window.visualViewport) || void 0 === mm || mm.removeEventListener("resize", this.zV);
+        for (const Tm of this.markers.values()) Tm.stopObserving();
         this.markers.clear(), this.refs.clear(), this.render = null
       }
-      place(kk) {
+      place(mm) {
         const {
-          render: Fk,
-          viewport: Ik
+          render: Tm,
+          viewport: fm
         } = this;
-        if (!Fk || !kk.target) return;
-        const Xk = (50 - Fk.screenBandPct.y) / 100 * Ik.height,
-          Tk = {
-            x: kk.halfSize.width + 8,
-            top: kk.halfSize.height + 8,
-            bottom: kk.halfSize.height + kk.labelsBelow + Xk
+        if (!Tm || !mm.target) return;
+        const hm = (50 - Tm.screenBandPct.y) / 100 * fm.height,
+          Am = {
+            x: mm.halfSize.width + 8,
+            top: mm.halfSize.height + 8,
+            bottom: mm.halfSize.height + mm.labelsBelow + hm
           },
-          ik = Fk.projectWorldPosToViewport(kk.target),
-          yk = null !== ik && void 0 !== ik ? ik : Fk.projectWorldPosToScreenPos(kk.target),
-          lk = (0, XF.c)({
-            x: yk.x,
-            y: yk.y,
-            text: ik
-          }, Tk, Ik);
-        (0, IF.b)(kk.root, Math.round(100 * lk.x) / 100, Math.round(100 * lk.y) / 100)
+          am = Tm.projectWorldPosToViewport(mm.target),
+          xm = null !== am && void 0 !== am ? am : Tm.projectWorldPosToScreenPos(mm.target),
+          wm = (0, hT.d)({
+            x: xm.x,
+            y: xm.y,
+            text: am
+          }, Am, fm);
+        (0, fT.d)(mm.root, Math.round(100 * wm.x) / 100, Math.round(100 * wm.y) / 100)
       }
-      eX(kk, Fk) {
-        if (null === Fk) return void(null !== kk.metres && (kk.metres = null, kk.distance.textContent = ""));
-        const Ik = Date.now();
-        (null === kk.metres || (0, kF.b)(Fk, kk.metres, kk.metresShownAt)) && (kk.metres = Math.round(Fk), kk.metresShownAt = Ik, kk.distance.textContent = (0, pk.w)(FF.d.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
-          distance: String(kk.metres)
+      Ih(mm, Tm) {
+        if (null === Tm) return void(null !== mm.metres && (mm.metres = null, mm.distance.textContent = ""));
+        const fm = Date.now();
+        (null === mm.metres || (0, mT.b)(Tm, mm.metres, mm.metresShownAt)) && (mm.metres = Math.round(Tm), mm.metresShownAt = fm, mm.distance.textContent = (0, Nm.w)(TT.e.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
+          distance: String(mm.metres)
         }))
       }
-      mount(kk) {
-        const Fk = {
-            root: kk,
-            distance: kk.querySelector(".FrontlinePointMarkerDistance"),
+      mount(mm) {
+        const Tm = {
+            root: mm,
+            distance: mm.querySelector(".FrontlinePointMarkerDistance"),
             halfSize: {
               width: 0,
               height: 0
@@ -1220,26 +1220,26 @@ export const modules = {
             metresShownAt: 0,
             stopObserving: () => {}
           },
-          Ik = kk.querySelector(".FrontlinePointMarkerLabels"),
-          Xk = new ResizeObserver((() => {
-            Fk.halfSize = {
-              width: Math.max(kk.offsetWidth, Ik.offsetWidth) / 2,
-              height: kk.offsetHeight / 2
-            }, Fk.labelsBelow = Ik.offsetTop + Ik.offsetHeight - kk.offsetHeight, this.place(Fk)
+          fm = mm.querySelector(".FrontlinePointMarkerLabels"),
+          hm = new ResizeObserver((() => {
+            Tm.halfSize = {
+              width: Math.max(mm.offsetWidth, fm.offsetWidth) / 2,
+              height: mm.offsetHeight / 2
+            }, Tm.labelsBelow = fm.offsetTop + fm.offsetHeight - mm.offsetHeight, this.place(Tm)
           }));
-        return Xk.observe(kk, {
+        return hm.observe(mm, {
           box: "border-box"
-        }), Xk.observe(Ik, {
+        }), hm.observe(fm, {
           box: "border-box"
-        }), Fk.stopObserving = () => {
-          Xk.disconnect()
-        }, Fk
+        }), Tm.stopObserving = () => {
+          hm.disconnect()
+        }, Tm
       }
     }
-    var iF = Ik(6449),
-      yF = Ik(2546);
-    const lF = "frontlineRoundEndChanged";
-    class aF {
+    var aT = fm(6429),
+      xT = fm(2616);
+    const wT = "frontlineRoundEndChanged";
+    class DT {
       constructor() {
         this.view = {
           wire: ["none"],
@@ -1250,245 +1250,245 @@ export const modules = {
       getView() {
         return this.view
       }
-      Pe(kk) {
-        const Fk = "roundEnd" === kk[0] ? performance.now() + kk[5] : 0;
+      rO(mm) {
+        const Tm = "roundEnd" === mm[0] ? performance.now() + mm[5] : 0;
         this.view = {
-          wire: kk,
+          wire: mm,
           key: this.view.key + 1,
-          endsAt: Fk
-        }, qk.g.GL(lF, this.view, !0)
+          endsAt: Tm
+        }, im.j.gp(wT, this.view, !0)
       }
     }
-    const qF = (0, Tk.lazy)((() => (0, yF.e)(Ik.e(199).then((() => Ik(41748))), (kk => kk.FrontlineMvpLineup)))),
-      LF = [4800, 4e3, 3200],
-      tF = [1, 0, 2],
-      ZF = {
+    const iT = (0, Am.lazy)((() => (0, xT.c)(fm.e(199).then((() => fm(41775))), (mm => mm.FrontlineMvpLineup)))),
+      RT = [4800, 4e3, 3200],
+      pT = [1, 0, 2],
+      ET = {
         victory: "frontlineRoundEnd:victory",
         defeat: "frontlineRoundEnd:defeat",
         draw: "frontlineRoundEnd:draw"
       },
-      jF = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
+      oT = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
 
-    function eF(kk) {
+    function OT(mm) {
       let {
-        controller: Fk
-      } = kk;
-      const Ik = (0, uk.f)(lF, Fk.getView()),
-        Xk = ck(Ik.endsAt);
-      return "roundEnd" !== Ik.wire[0] || 1e3 * Xk < -2e3 ? null : (0, Ck.jsx)(wF, {
-        wire: Ik.wire,
-        secondsLeft: Math.max(0, Math.ceil(Xk))
-      }, Ik.key)
+        controller: Tm
+      } = mm;
+      const fm = (0, Gm.i)(wT, Tm.getView()),
+        hm = rm(fm.endsAt);
+      return "roundEnd" !== fm.wire[0] || 1e3 * hm < -2e3 ? null : (0, ym.jsx)(YT, {
+        wire: fm.wire,
+        secondsLeft: Math.max(0, Math.ceil(hm))
+      }, fm.key)
     }
-    const wF = (0, Tk.memo)((function(kk) {
+    const YT = (0, Am.memo)((function(mm) {
       let {
-        wire: Fk,
-        secondsLeft: Ik
-      } = kk;
+        wire: Tm,
+        secondsLeft: fm
+      } = mm;
       const {
-        t: ik
-      } = (0, pk.y)(), [, yk, lk, ak, qk, , Lk, tk] = Fk, Zk = (0, Tk.useMemo)((() => tF.filter((kk => kk < tk.length))), [tk]), jk = (0, Tk.useMemo)((() => Zk.map((kk => {
-        const [, , , , , Fk, Ik] = tk[kk];
+        t: am
+      } = (0, Nm.A)(), [, xm, wm, Dm, im, , Rm, pm] = Tm, Em = (0, Am.useMemo)((() => pT.filter((mm => mm < pm.length))), [pm]), om = (0, Am.useMemo)((() => Em.map((mm => {
+        const [, , , , , Tm, fm] = pm[mm];
         return {
-          cosmetics: Xk.map(((kk, Ik) => [kk, Fk[Ik]])),
-          size: 0 === kk ? 1.15 : .85,
+          cosmetics: hm.map(((mm, fm) => [mm, Tm[fm]])),
+          size: 0 === mm ? 1.15 : .85,
           heldGun: {
-            name: Ik,
-            aimed: 0 === kk
+            name: fm,
+            aimed: 0 === mm
           },
-          showAfterMs: LF[kk]
+          showAfterMs: RT[mm]
         }
-      }))), [tk, Zk]);
-      return (0, Ck.jsxs)("div", {
-        className: Ok()("FrontlineRoundEnd", `Result-${yk}`),
+      }))), [pm, Em]);
+      return (0, ym.jsxs)("div", {
+        className: bm()("FrontlineRoundEnd", `Result-${xm}`),
         style: {
           "--titleRiseMs": "2600ms"
         },
-        children: [(0, Ck.jsx)("div", {
+        children: [(0, ym.jsx)("div", {
           className: "FrontlineRoundEndVeil"
-        }), (0, Ck.jsxs)("div", {
+        }), (0, ym.jsxs)("div", {
           className: "FrontlineRoundEndTitle",
-          children: [(0, Ck.jsxs)("div", {
+          children: [(0, ym.jsxs)("div", {
             className: "FrontlineRoundEndResult",
-            children: [(0, Ck.jsx)("i", {
+            children: [(0, ym.jsx)("i", {
               className: "FrontlineBracket TopLeft"
-            }), (0, Ck.jsx)("i", {
+            }), (0, ym.jsx)("i", {
               className: "FrontlineBracket BottomRight"
-            }), (ek = ik(ZF[yk]), /\p{Script=Arabic}/u.test(ek) ? [ek] : (0, iF.c)(ek)).map(((kk, Fk) => (0, Ck.jsx)("span", {
+            }), (Om = am(ET[xm]), /\p{Script=Arabic}/u.test(Om) ? [Om] : (0, aT.b)(Om)).map(((mm, Tm) => (0, ym.jsx)("span", {
               style: {
-                "--letter": Fk
+                "--letter": Tm
               },
-              children: kk
-            }, Fk)))]
-          }), (0, Ck.jsxs)("div", {
+              children: mm
+            }, Tm)))]
+          }), (0, ym.jsxs)("div", {
             className: "FrontlineRoundEndScore",
-            children: [lk && "victory" === yk && (0, Ck.jsx)("span", {
+            children: [wm && "victory" === xm && (0, ym.jsx)("span", {
               className: "FrontlineRoundEndComeback",
-              children: ik("frontlineRoundEnd:comeback")
-            }), (0, Ck.jsxs)("span", {
+              children: am("frontlineRoundEnd:comeback")
+            }), (0, ym.jsxs)("span", {
               className: "FrontlineRoundEndTickets",
-              children: [(0, Ck.jsx)("b", {
+              children: [(0, ym.jsx)("b", {
                 className: "Friendly",
-                children: ak
-              }), " \u2013 ", (0, Ck.jsx)("b", {
+                children: Dm
+              }), " \u2013 ", (0, ym.jsx)("b", {
                 className: "Enemy",
-                children: qk
+                children: im
               })]
             })]
           })]
-        }), Zk.length > 0 && (0, Ck.jsxs)("div", {
+        }), Em.length > 0 && (0, ym.jsxs)("div", {
           className: "FrontlineRoundEndMvps",
           style: {
-            "--columns": Zk.length
+            "--columns": Em.length
           },
-          children: [(0, Ck.jsx)(Tk.Suspense, {
+          children: [(0, ym.jsx)(Am.Suspense, {
             fallback: null,
-            children: (0, Ck.jsx)(qF, {
+            children: (0, ym.jsx)(iT, {
               className: "FrontlineRoundEndLineup",
-              players: jk
+              players: om
             })
-          }), Zk.map((kk => (0, Ck.jsx)(HF, {
-            mvp: tk[kk],
-            place: kk
-          }, kk)))]
-        }), (0, Ck.jsx)("div", {
+          }), Em.map((mm => (0, ym.jsx)(qT, {
+            mvp: pm[mm],
+            place: mm
+          }, mm)))]
+        }), (0, ym.jsx)("div", {
           className: "FrontlineRoundEndNext",
-          children: ik("frontlineRoundEnd:nextFront", {
-            map: Lk,
-            seconds: String(Ik)
+          children: am("frontlineRoundEnd:nextFront", {
+            map: Rm,
+            seconds: String(fm)
           })
         })]
       });
-      var ek
+      var Om
     }));
 
-    function HF(kk) {
+    function qT(mm) {
       let {
-        mvp: Fk,
-        place: Ik
-      } = kk;
+        mvp: Tm,
+        place: fm
+      } = mm;
       const {
-        t: Xk
-      } = (0, pk.y)(), [Tk, ik, yk, lk, ak] = Fk, [qk, Lk] = Xk(function(kk, Fk) {
-        return 1 === Fk && "damage" !== kk ? `frontlineRoundEnd:${kk}One` : `frontlineRoundEnd:${kk}`
-      }(yk, lk), {
+        t: hm
+      } = (0, Nm.A)(), [Am, am, xm, wm, Dm] = Tm, [im, Rm] = hm(function(mm, Tm) {
+        return 1 === Tm && "damage" !== mm ? `frontlineRoundEnd:${mm}One` : `frontlineRoundEnd:${mm}`
+      }(xm, wm), {
         name: "\0",
-        count: lk.toLocaleString()
+        count: wm.toLocaleString()
       }).split("\0");
-      return (0, Ck.jsxs)("div", {
-        className: Ok()("FrontlineMvpCard", `Place-${Ik+1}`, `Team-${ik}`),
+      return (0, ym.jsxs)("div", {
+        className: bm()("FrontlineMvpCard", `Place-${fm+1}`, `Team-${am}`),
         style: {
-          "--revealMs": `${LF[Ik]}ms`
+          "--revealMs": `${RT[fm]}ms`
         },
-        children: [(0, Ck.jsx)("i", {
+        children: [(0, ym.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, Ck.jsx)("i", {
+        }), (0, ym.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
-        }), (0, Ck.jsx)("div", {
+        }), (0, ym.jsx)("div", {
           className: "FrontlineMvpPlace",
-          children: Xk(jF[Ik])
-        }), (0, Ck.jsxs)("div", {
+          children: hm(oT[fm])
+        }), (0, ym.jsxs)("div", {
           className: "FrontlineMvpLine",
-          children: [qk, (0, Ck.jsx)("span", {
+          children: [im, (0, ym.jsx)("span", {
             className: "FrontlineMvpName",
-            children: Tk
-          }), Lk]
-        }), (0, Ck.jsx)("div", {
+            children: Am
+          }), Rm]
+        }), (0, ym.jsx)("div", {
           className: "FrontlineMvpKit",
-          children: ak
+          children: Dm
         })]
       })
     }
-    const JF = function(kk, Fk, Ik, Xk) {
+    const jT = function(mm, Tm, fm, hm) {
       let {
-        localPlayerId: yk
-      } = Xk;
-      const lk = new Uk,
-        ak = new aF;
-      let qk = null,
-        Lk = null,
-        tk = null,
-        Zk = null,
-        jk = null,
-        ek = [!1, !1];
-      const wk = () => {
-        var kk, Fk;
-        const [Ik, Xk] = ek;
-        null === (kk = Lk) || void 0 === kk || kk.Av(!Ik), null === (Fk = tk) || void 0 === Fk || Fk.Av(!Xk)
+        localPlayerId: xm
+      } = hm;
+      const wm = new Hm,
+        Dm = new DT;
+      let im = null,
+        Rm = null,
+        pm = null,
+        Em = null,
+        om = null,
+        Om = [!1, !1];
+      const Ym = () => {
+        var mm, Tm;
+        const [fm, hm] = Om;
+        null === (mm = Rm) || void 0 === mm || mm.Dk(!fm), null === (Tm = pm) || void 0 === Tm || Tm.Dk(!hm)
       };
       return {
-        onCreate: kk => {
-          qk = kk, Lk = new Pk(kk, yk), tk = new Vk(kk, yk), Zk = new TF(lk), wk(), jk = (0, ik.v)((0, Tk.createElement)(Tk.Fragment, null, (0, Tk.createElement)(Yk, {
-            hud: lk,
-            crosshair: Lk,
-            damage: tk,
-            markers: Zk
-          }), (0, Tk.createElement)(eF, {
-            controller: ak
+        onCreate: mm => {
+          im = mm, Rm = new Im(mm, xm), pm = new Jm(mm, xm), Em = new AT(wm), Ym(), om = (0, am.w)((0, Am.createElement)(Am.Fragment, null, (0, Am.createElement)(Bm, {
+            hud: wm,
+            crosshair: Rm,
+            damage: pm,
+            markers: Em
+          }), (0, Am.createElement)(OT, {
+            controller: Dm
           })))
         },
         onClose: () => {
-          var kk, Fk, Ik, Xk;
-          null === (kk = jk) || void 0 === kk || kk(), null === (Fk = Lk) || void 0 === Fk || Fk.dispose(), Lk = null, null === (Ik = tk) || void 0 === Ik || Ik.dispose(), tk = null, null === (Xk = Zk) || void 0 === Xk || Xk.dispose(), Zk = null, qk = null
+          var mm, Tm, fm, hm;
+          null === (mm = om) || void 0 === mm || mm(), null === (Tm = Rm) || void 0 === Tm || Tm.dispose(), Rm = null, null === (fm = pm) || void 0 === fm || fm.dispose(), pm = null, null === (hm = Em) || void 0 === hm || hm.dispose(), Em = null, im = null
         },
-        onAfterRender: (kk, Fk) => {
-          var Ik, Xk, Tk, ik;
-          null === (Ik = Lk) || void 0 === Ik || Ik.frame(kk, Fk.tanHalfFovY), null === (Xk = tk) || void 0 === Xk || Xk.frame(Fk.cameraHeading), null === (Tk = Zk) || void 0 === Tk || Tk.frame(Fk, null !== (ik = qk) && void 0 !== ik && ik.checkValid(yk) ? qk.OJ(yk) : null)
+        onAfterRender: (mm, Tm) => {
+          var fm, hm, Am, am;
+          null === (fm = Rm) || void 0 === fm || fm.frame(mm, Tm.tanHalfFovY), null === (hm = pm) || void 0 === hm || hm.frame(Tm.cameraHeading), null === (Am = Em) || void 0 === Am || Am.frame(Tm, null !== (am = im) && void 0 !== am && am.checkValid(xm) ? im.rV(xm) : null)
         },
-        onReceivedMessageFromServer: (kk, Fk) => {
-          "frontlineHud" === kk ? lk.Pe(Fk) : "frontlineScoreboard" === kk ? lk.receiveScoreboard(Fk) : "frontlineRoundEnd" === kk ? ak.Pe(Fk) : "frontlinePrefs" === kk && (ek = Fk, wk())
+        onReceivedMessageFromServer: (mm, Tm) => {
+          "frontlineHud" === mm ? wm.rO(Tm) : "frontlineScoreboard" === mm ? wm.receiveScoreboard(Tm) : "frontlineRoundEnd" === mm ? Dm.rO(Tm) : "frontlinePrefs" === mm && (Om = Tm, Ym())
         }
       }
     }
   },
-  6449: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => Tk
+  6429: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => Am
     });
-    const Xk = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
+    const hm = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
       granularity: "grapheme"
     }) : null;
 
-    function Tk(kk) {
-      return null === Xk ? Array.from(kk) : Array.from(Xk.segment(kk), (kk => {
+    function Am(mm) {
+      return null === hm ? Array.from(mm) : Array.from(hm.segment(mm), (mm => {
         let {
-          segment: Fk
-        } = kk;
-        return Fk
+          segment: Tm
+        } = mm;
+        return Tm
       }))
     }
   },
-  38490: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => yk,
-      c: () => ik
+  38588: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => xm,
+      e: () => am
     });
-    const Xk = new WeakMap;
+    const hm = new WeakMap;
 
-    function Tk(kk) {
-      let Fk = Xk.get(kk);
-      return Fk || (Fk = {
-        hidden: kk.hidden,
+    function Am(mm) {
+      let Tm = hm.get(mm);
+      return Tm || (Tm = {
+        hidden: mm.hidden,
         x: NaN,
         y: NaN
-      }, Xk.set(kk, Fk)), Fk
+      }, hm.set(mm, Tm)), Tm
     }
 
-    function ik(kk, Fk) {
-      const Ik = Tk(kk);
-      Ik.hidden !== Fk && (Ik.hidden = Fk, kk.hidden = Fk)
+    function am(mm, Tm) {
+      const fm = Am(mm);
+      fm.hidden !== Tm && (fm.hidden = Tm, mm.hidden = Tm)
     }
 
-    function yk(kk, Fk, Ik) {
-      const Xk = Tk(kk);
-      Xk.x === Fk && Xk.y === Ik || (Xk.x = Fk, Xk.y = Ik, kk.style.translate = `${Fk}vw ${Ik}vh`)
+    function xm(mm, Tm, fm) {
+      const hm = Am(mm);
+      hm.x === Tm && hm.y === fm || (hm.x = Tm, hm.y = fm, mm.style.translate = `${Tm}vw ${fm}vh`)
     }
   },
-  37118: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Xk
+  37164: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => hm
     });
-    const Xk = {
+    const hm = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -1650,4 +1650,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

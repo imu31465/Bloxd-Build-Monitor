@@ -1,68 +1,68 @@
 export const id = 351;
 export const ids = [351];
 export const modules = {
-  42554: (kk, Fk, Ik) => {
-    function Xk(kk) {
-      return Math.floor(kk / 8)
+  42584: (mm, Tm, fm) => {
+    function hm(mm) {
+      return Math.floor(mm / 8)
     }
 
-    function Tk(kk) {
-      return 1 << kk % 8
+    function Am(mm) {
+      return 1 << mm % 8
     }
-    Ik.d(Fk, {
-      OptimizeIndices: () => yk
+    fm.d(Tm, {
+      OptimizeIndices: () => xm
     });
-    class ik {
-      constructor(kk) {
-        this.size = kk, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+    class am {
+      constructor(mm) {
+        this.size = mm, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
-      get(kk) {
-        if (kk >= this.size) throw new RangeError("Bit index out of range");
-        const Fk = Xk(kk),
-          Ik = Tk(kk);
-        return 0 !== (this._byteArray[Fk] & Ik)
+      get(mm) {
+        if (mm >= this.size) throw new RangeError("Bit index out of range");
+        const Tm = hm(mm),
+          fm = Am(mm);
+        return 0 !== (this._byteArray[Tm] & fm)
       }
-      set(kk, Fk) {
-        if (kk >= this.size) throw new RangeError("Bit index out of range");
-        const Ik = Xk(kk),
-          ik = Tk(kk);
-        Fk ? this._byteArray[Ik] |= ik : this._byteArray[Ik] &= ~ik
+      set(mm, Tm) {
+        if (mm >= this.size) throw new RangeError("Bit index out of range");
+        const fm = hm(mm),
+          am = Am(mm);
+        Tm ? this._byteArray[fm] |= am : this._byteArray[fm] &= ~am
       }
     }
 
-    function yk(kk) {
-      const Fk = [],
-        Ik = kk.length / 3;
-      for (let ik = 0; ik < Ik; ik++) Fk.push([kk[3 * ik], kk[3 * ik + 1], kk[3 * ik + 2]]);
-      const Xk = new Map;
-      for (let ik = 0; ik < Fk.length; ik++) {
-        const kk = Fk[ik];
-        for (const Fk of kk) {
-          let kk = Xk.get(Fk);
-          kk || Xk.set(Fk, kk = []), kk.push(ik)
+    function xm(mm) {
+      const Tm = [],
+        fm = mm.length / 3;
+      for (let am = 0; am < fm; am++) Tm.push([mm[3 * am], mm[3 * am + 1], mm[3 * am + 2]]);
+      const hm = new Map;
+      for (let am = 0; am < Tm.length; am++) {
+        const mm = Tm[am];
+        for (const Tm of mm) {
+          let mm = hm.get(Tm);
+          mm || hm.set(Tm, mm = []), mm.push(am)
         }
       }
-      const Tk = new ik(Ik),
-        yk = [],
-        lk = kk => {
-          const Ik = [kk];
-          for (; Ik.length > 0;) {
-            const kk = Ik.pop();
-            if (!Tk.get(kk)) {
-              Tk.set(kk, !0), yk.push(Fk[kk]);
-              for (const ik of Fk[kk]) {
-                const kk = Xk.get(ik);
-                if (!kk) return;
-                for (const Fk of kk) Tk.get(Fk) || Ik.push(Fk)
+      const Am = new am(fm),
+        xm = [],
+        wm = mm => {
+          const fm = [mm];
+          for (; fm.length > 0;) {
+            const mm = fm.pop();
+            if (!Am.get(mm)) {
+              Am.set(mm, !0), xm.push(Tm[mm]);
+              for (const am of Tm[mm]) {
+                const mm = hm.get(am);
+                if (!mm) return;
+                for (const Tm of mm) Am.get(Tm) || fm.push(Tm)
               }
             }
           }
         };
-      for (let ik = 0; ik < Ik; ik++) Tk.get(ik) || lk(ik);
-      let ak = 0;
-      for (const ik of yk) kk[ak++] = ik[0], kk[ak++] = ik[1], kk[ak++] = ik[2]
+      for (let am = 0; am < fm; am++) Am.get(am) || wm(am);
+      let Dm = 0;
+      for (const am of xm) mm[Dm++] = am[0], mm[Dm++] = am[1], mm[Dm++] = am[2]
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

@@ -1,99 +1,99 @@
 export const id = 79;
 export const ids = [79];
 export const modules = {
-  4722: kk => {
-    function Fk(kk) {
-      return kk instanceof Map ? kk.clear = kk.delete = kk.set = function() {
+  4661: mm => {
+    function Tm(mm) {
+      return mm instanceof Map ? mm.clear = mm.delete = mm.set = function() {
         throw new Error("map is read-only")
-      } : kk instanceof Set && (kk.add = kk.clear = kk.delete = function() {
+      } : mm instanceof Set && (mm.add = mm.clear = mm.delete = function() {
         throw new Error("set is read-only")
-      }), Object.freeze(kk), Object.getOwnPropertyNames(kk).forEach((Ik => {
-        const Xk = kk[Ik],
-          Tk = typeof Xk;
-        "object" !== Tk && "function" !== Tk || Object.isFrozen(Xk) || Fk(Xk)
-      })), kk
+      }), Object.freeze(mm), Object.getOwnPropertyNames(mm).forEach((fm => {
+        const hm = mm[fm],
+          Am = typeof hm;
+        "object" !== Am && "function" !== Am || Object.isFrozen(hm) || Tm(hm)
+      })), mm
     }
-    class Ik {
-      constructor(kk) {
-        void 0 === kk.data && (kk.data = {}), this.data = kk.data, this.isMatchIgnored = !1
+    class fm {
+      constructor(mm) {
+        void 0 === mm.data && (mm.data = {}), this.data = mm.data, this.isMatchIgnored = !1
       }
       ignoreMatch() {
         this.isMatchIgnored = !0
       }
     }
 
-    function Xk(kk) {
-      return kk.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
+    function hm(mm) {
+      return mm.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
     }
 
-    function Tk(kk) {
-      const Fk = Object.create(null);
-      for (const ik in kk) Fk[ik] = kk[ik];
-      for (var Ik = arguments.length, Xk = new Array(Ik > 1 ? Ik - 1 : 0), Tk = 1; Tk < Ik; Tk++) Xk[Tk - 1] = arguments[Tk];
-      return Xk.forEach((function(kk) {
-        for (const Ik in kk) Fk[Ik] = kk[Ik]
-      })), Fk
+    function Am(mm) {
+      const Tm = Object.create(null);
+      for (const am in mm) Tm[am] = mm[am];
+      for (var fm = arguments.length, hm = new Array(fm > 1 ? fm - 1 : 0), Am = 1; Am < fm; Am++) hm[Am - 1] = arguments[Am];
+      return hm.forEach((function(mm) {
+        for (const fm in mm) Tm[fm] = mm[fm]
+      })), Tm
     }
-    const ik = kk => !!kk.scope;
-    class yk {
-      constructor(kk, Fk) {
-        this.buffer = "", this.classPrefix = Fk.classPrefix, kk.walk(this)
+    const am = mm => !!mm.scope;
+    class xm {
+      constructor(mm, Tm) {
+        this.buffer = "", this.classPrefix = Tm.classPrefix, mm.walk(this)
       }
-      addText(kk) {
-        this.buffer += Xk(kk)
+      addText(mm) {
+        this.buffer += hm(mm)
       }
-      openNode(kk) {
-        if (!ik(kk)) return;
-        const Fk = ((kk, Fk) => {
+      openNode(mm) {
+        if (!am(mm)) return;
+        const Tm = ((mm, Tm) => {
           let {
-            prefix: Ik
-          } = Fk;
-          if (kk.startsWith("language:")) return kk.replace("language:", "language-");
-          if (kk.includes(".")) {
-            const Fk = kk.split(".");
-            return [`${Ik}${Fk.shift()}`, ...Fk.map(((kk, Fk) => `${kk}${"_".repeat(Fk+1)}`))].join(" ")
+            prefix: fm
+          } = Tm;
+          if (mm.startsWith("language:")) return mm.replace("language:", "language-");
+          if (mm.includes(".")) {
+            const Tm = mm.split(".");
+            return [`${fm}${Tm.shift()}`, ...Tm.map(((mm, Tm) => `${mm}${"_".repeat(Tm+1)}`))].join(" ")
           }
-          return `${Ik}${kk}`
-        })(kk.scope, {
+          return `${fm}${mm}`
+        })(mm.scope, {
           prefix: this.classPrefix
         });
-        this.span(Fk)
+        this.span(Tm)
       }
-      closeNode(kk) {
-        ik(kk) && (this.buffer += "</span>")
+      closeNode(mm) {
+        am(mm) && (this.buffer += "</span>")
       }
       value() {
         return this.buffer
       }
-      span(kk) {
-        this.buffer += `<span class="${kk}">`
+      span(mm) {
+        this.buffer += `<span class="${mm}">`
       }
     }
-    const lk = function() {
-      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const Fk = {
+    const wm = function() {
+      let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const Tm = {
         children: []
       };
-      return Object.assign(Fk, kk), Fk
+      return Object.assign(Tm, mm), Tm
     };
-    class ak {
+    class Dm {
       constructor() {
-        this.vJ = lk(), this.stack = [this.vJ]
+        this.yV = wm(), this.stack = [this.yV]
       }
       get top() {
         return this.stack[this.stack.length - 1]
       }
       get root() {
-        return this.vJ
+        return this.yV
       }
-      add(kk) {
-        this.top.children.push(kk)
+      add(mm) {
+        this.top.children.push(mm)
       }
-      openNode(kk) {
-        const Fk = lk({
-          scope: kk
+      openNode(mm) {
+        const Tm = wm({
+          scope: mm
         });
-        this.add(Fk), this.stack.push(Fk)
+        this.add(Tm), this.stack.push(Tm)
       }
       closeNode() {
         if (this.stack.length > 1) return this.stack.pop()
@@ -102,391 +102,391 @@ export const modules = {
         for (; this.closeNode(););
       }
       toJSON() {
-        return JSON.stringify(this.vJ, null, 4)
+        return JSON.stringify(this.yV, null, 4)
       }
-      walk(kk) {
-        return this.constructor._walk(kk, this.vJ)
+      walk(mm) {
+        return this.constructor._walk(mm, this.yV)
       }
-      static _walk(kk, Fk) {
-        return "string" === typeof Fk ? kk.addText(Fk) : Fk.children && (kk.openNode(Fk), Fk.children.forEach((Fk => this._walk(kk, Fk))), kk.closeNode(Fk)), kk
+      static _walk(mm, Tm) {
+        return "string" === typeof Tm ? mm.addText(Tm) : Tm.children && (mm.openNode(Tm), Tm.children.forEach((Tm => this._walk(mm, Tm))), mm.closeNode(Tm)), mm
       }
-      static _collapse(kk) {
-        "string" !== typeof kk && kk.children && (kk.children.every((kk => "string" === typeof kk)) ? kk.children = [kk.children.join("")] : kk.children.forEach((kk => {
-          ak._collapse(kk)
+      static _collapse(mm) {
+        "string" !== typeof mm && mm.children && (mm.children.every((mm => "string" === typeof mm)) ? mm.children = [mm.children.join("")] : mm.children.forEach((mm => {
+          Dm._collapse(mm)
         })))
       }
     }
-    class qk extends ak {
-      constructor(kk) {
-        super(), this.options = kk
+    class im extends Dm {
+      constructor(mm) {
+        super(), this.options = mm
       }
-      addText(kk) {
-        "" !== kk && this.add(kk)
+      addText(mm) {
+        "" !== mm && this.add(mm)
       }
-      startScope(kk) {
-        this.openNode(kk)
+      startScope(mm) {
+        this.openNode(mm)
       }
       endScope() {
         this.closeNode()
       }
-      __addSublanguage(kk, Fk) {
-        const Ik = kk.root;
-        Fk && (Ik.scope = `language:${Fk}`), this.add(Ik)
+      __addSublanguage(mm, Tm) {
+        const fm = mm.root;
+        Tm && (fm.scope = `language:${Tm}`), this.add(fm)
       }
       toHTML() {
-        return new yk(this, this.options).value()
+        return new xm(this, this.options).value()
       }
       finalize() {
         return this.closeAllNodes(), !0
       }
     }
 
-    function Lk(kk) {
-      return kk ? "string" === typeof kk ? kk : kk.source : null
+    function Rm(mm) {
+      return mm ? "string" === typeof mm ? mm : mm.source : null
     }
 
-    function tk(kk) {
-      return ek("(?=", kk, ")")
+    function pm(mm) {
+      return Om("(?=", mm, ")")
     }
 
-    function Zk(kk) {
-      return ek("(?:", kk, ")*")
+    function Em(mm) {
+      return Om("(?:", mm, ")*")
     }
 
-    function jk(kk) {
-      return ek("(?:", kk, ")?")
+    function om(mm) {
+      return Om("(?:", mm, ")?")
     }
 
-    function ek() {
-      for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
-      return Fk.map((kk => Lk(kk))).join("")
+    function Om() {
+      for (var mm = arguments.length, Tm = new Array(mm), fm = 0; fm < mm; fm++) Tm[fm] = arguments[fm];
+      return Tm.map((mm => Rm(mm))).join("")
     }
 
-    function wk() {
-      for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
-      const Xk = function(kk) {
-        const Fk = kk[kk.length - 1];
-        return "object" === typeof Fk && Fk.constructor === Object ? (kk.splice(kk.length - 1, 1), Fk) : {}
-      }(Fk);
-      return "(" + (Xk.capture ? "" : "?:") + Fk.map((kk => Lk(kk))).join("|") + ")"
+    function Ym() {
+      for (var mm = arguments.length, Tm = new Array(mm), fm = 0; fm < mm; fm++) Tm[fm] = arguments[fm];
+      const hm = function(mm) {
+        const Tm = mm[mm.length - 1];
+        return "object" === typeof Tm && Tm.constructor === Object ? (mm.splice(mm.length - 1, 1), Tm) : {}
+      }(Tm);
+      return "(" + (hm.capture ? "" : "?:") + Tm.map((mm => Rm(mm))).join("|") + ")"
     }
 
-    function Hk(kk) {
-      return new RegExp(kk.toString() + "|").exec("").length - 1
+    function qm(mm) {
+      return new RegExp(mm.toString() + "|").exec("").length - 1
     }
-    const Jk = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
+    const jm = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
 
-    function xk(kk, Fk) {
+    function Vm(mm, Tm) {
       let {
-        joinWith: Ik
-      } = Fk, Xk = 0;
-      return kk.map((kk => {
-        Xk += 1;
-        const Fk = Xk;
-        let Ik = Lk(kk),
-          Tk = "";
-        for (; Ik.length > 0;) {
-          const kk = Jk.exec(Ik);
-          if (!kk) {
-            Tk += Ik;
+        joinWith: fm
+      } = Tm, hm = 0;
+      return mm.map((mm => {
+        hm += 1;
+        const Tm = hm;
+        let fm = Rm(mm),
+          Am = "";
+        for (; fm.length > 0;) {
+          const mm = jm.exec(fm);
+          if (!mm) {
+            Am += fm;
             break
           }
-          Tk += Ik.substring(0, kk.index), Ik = Ik.substring(kk.index + kk[0].length), "\\" === kk[0][0] && kk[1] ? Tk += "\\" + String(Number(kk[1]) + Fk) : (Tk += kk[0], "(" === kk[0] && Xk++)
+          Am += fm.substring(0, mm.index), fm = fm.substring(mm.index + mm[0].length), "\\" === mm[0][0] && mm[1] ? Am += "\\" + String(Number(mm[1]) + Tm) : (Am += mm[0], "(" === mm[0] && hm++)
         }
-        return Tk
-      })).map((kk => `(${kk})`)).join(Ik)
+        return Am
+      })).map((mm => `(${mm})`)).join(fm)
     }
-    const Pk = "[a-zA-Z]\\w*",
-      Kk = "[a-zA-Z_]\\w*",
-      Qk = "\\b\\d+(\\.\\d+)?",
-      sk = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
-      Vk = "\\b(0b[01]+)",
-      zk = {
-        Hj: "\\\\[\\s\\S]",
+    const Im = "[a-zA-Z]\\w*",
+      Km = "[a-zA-Z_]\\w*",
+      Qm = "\\b\\d+(\\.\\d+)?",
+      nm = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
+      Jm = "\\b(0b[01]+)",
+      cm = {
+        Go: "\\\\[\\s\\S]",
         relevance: 0
       },
-      Sk = {
+      zm = {
         scope: "string",
-        Hj: "'",
+        Go: "'",
         end: "'",
         illegal: "\\n",
-        contains: [zk]
+        contains: [cm]
       },
-      vk = {
+      Zm = {
         scope: "string",
-        Hj: '"',
+        Go: '"',
         end: '"',
         illegal: "\\n",
-        contains: [zk]
+        contains: [cm]
       },
-      Ek = function(kk, Fk) {
-        const Ik = Tk({
+      km = function(mm, Tm) {
+        const fm = Am({
           scope: "comment",
-          Hj: kk,
-          end: Fk,
+          Go: mm,
+          end: Tm,
           contains: []
         }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {});
-        Ik.contains.push({
+        fm.contains.push({
           scope: "doctag",
-          Hj: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
+          Go: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
           end: /(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):/,
           excludeBegin: !0,
           relevance: 0
         });
-        const Xk = wk("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
-        return Ik.contains.push({
-          Hj: ek(/[ ]+/, "(", Xk, /[.]?[:]?([.][ ]|[ ])/, "){3}")
-        }), Ik
+        const hm = Ym("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
+        return fm.contains.push({
+          Go: Om(/[ ]+/, "(", hm, /[.]?[:]?([.][ ]|[ ])/, "){3}")
+        }), fm
       },
-      Ok = Ek("//", "$"),
-      nk = Ek("/\\*", "\\*/"),
-      Gk = Ek("#", "$"),
-      pk = {
+      bm = km("//", "$"),
+      Sm = km("/\\*", "\\*/"),
+      em = km("#", "$"),
+      Nm = {
         scope: "number",
-        Hj: Qk,
+        Go: Qm,
         relevance: 0
       },
-      uk = {
+      Gm = {
         scope: "number",
-        Hj: sk,
+        Go: nm,
         relevance: 0
       },
-      bk = {
+      Xm = {
         scope: "number",
-        Hj: Vk,
+        Go: Jm,
         relevance: 0
       },
-      Rk = {
+      Pm = {
         scope: "regexp",
-        Hj: /\/(?=[^/\n]*\/)/,
+        Go: /\/(?=[^/\n]*\/)/,
         end: /\/[gimuy]*/,
-        contains: [zk, {
-          Hj: /\[/,
+        contains: [cm, {
+          Go: /\[/,
           end: /\]/,
           relevance: 0,
-          contains: [zk]
+          contains: [cm]
         }]
       },
-      Uk = {
+      Hm = {
         scope: "title",
-        Hj: Pk,
+        Go: Im,
         relevance: 0
       },
-      Ck = {
+      ym = {
         scope: "title",
-        Hj: Kk,
+        Go: Km,
         relevance: 0
       },
-      Nk = {
-        Hj: "\\.\\s*" + Kk,
+      Cm = {
+        Go: "\\.\\s*" + Km,
         relevance: 0
       };
-    var ck = Object.freeze({
+    var rm = Object.freeze({
       __proto__: null,
-      APOS_STRING_MODE: Sk,
-      BACKSLASH_ESCAPE: zk,
-      BINARY_NUMBER_MODE: bk,
-      BINARY_NUMBER_RE: Vk,
-      COMMENT: Ek,
-      C_BLOCK_COMMENT_MODE: nk,
-      C_LINE_COMMENT_MODE: Ok,
-      C_NUMBER_MODE: uk,
-      C_NUMBER_RE: sk,
-      END_SAME_AS_BEGIN: function(kk) {
-        return Object.assign(kk, {
-          "on:begin": (kk, Fk) => {
-            Fk.data._beginMatch = kk[1]
+      APOS_STRING_MODE: zm,
+      BACKSLASH_ESCAPE: cm,
+      BINARY_NUMBER_MODE: Xm,
+      BINARY_NUMBER_RE: Jm,
+      COMMENT: km,
+      C_BLOCK_COMMENT_MODE: Sm,
+      C_LINE_COMMENT_MODE: bm,
+      C_NUMBER_MODE: Gm,
+      C_NUMBER_RE: nm,
+      END_SAME_AS_BEGIN: function(mm) {
+        return Object.assign(mm, {
+          "on:begin": (mm, Tm) => {
+            Tm.data._beginMatch = mm[1]
           },
-          "on:end": (kk, Fk) => {
-            Fk.data._beginMatch !== kk[1] && Fk.ignoreMatch()
+          "on:end": (mm, Tm) => {
+            Tm.data._beginMatch !== mm[1] && Tm.ignoreMatch()
           }
         })
       },
-      HASH_COMMENT_MODE: Gk,
-      IDENT_RE: Pk,
+      HASH_COMMENT_MODE: em,
+      IDENT_RE: Im,
       MATCH_NOTHING_RE: /\b\B/,
-      METHOD_GUARD: Nk,
-      NUMBER_MODE: pk,
-      NUMBER_RE: Qk,
+      METHOD_GUARD: Cm,
+      NUMBER_MODE: Nm,
+      NUMBER_RE: Qm,
       PHRASAL_WORDS_MODE: {
-        Hj: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
+        Go: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
       },
-      QUOTE_STRING_MODE: vk,
-      REGEXP_MODE: Rk,
+      QUOTE_STRING_MODE: Zm,
+      REGEXP_MODE: Pm,
       RE_STARTERS_RE: "!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~",
       SHEBANG: function() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        const Fk = /^#![ ]*\//;
-        return kk.binary && (kk.Hj = ek(Fk, /.*\b/, kk.binary, /\b.*/)), Tk({
+        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        const Tm = /^#![ ]*\//;
+        return mm.binary && (mm.Go = Om(Tm, /.*\b/, mm.binary, /\b.*/)), Am({
           scope: "meta",
-          Hj: Fk,
+          Go: Tm,
           end: /$/,
           relevance: 0,
-          "on:begin": (kk, Fk) => {
-            0 !== kk.index && Fk.ignoreMatch()
+          "on:begin": (mm, Tm) => {
+            0 !== mm.index && Tm.ignoreMatch()
           }
-        }, kk)
+        }, mm)
       },
-      TITLE_MODE: Uk,
-      UNDERSCORE_IDENT_RE: Kk,
-      UNDERSCORE_TITLE_MODE: Ck
+      TITLE_MODE: Hm,
+      UNDERSCORE_IDENT_RE: Km,
+      UNDERSCORE_TITLE_MODE: ym
     });
 
-    function Wk(kk, Fk) {
-      "." === kk.input[kk.index - 1] && Fk.ignoreMatch()
+    function sm(mm, Tm) {
+      "." === mm.input[mm.index - 1] && Tm.ignoreMatch()
     }
 
-    function fk(kk, Fk) {
-      void 0 !== kk.className && (kk.scope = kk.className, delete kk.className)
+    function lm(mm, Tm) {
+      void 0 !== mm.className && (mm.scope = mm.className, delete mm.className)
     }
 
-    function Bk(kk, Fk) {
-      Fk && kk.beginKeywords && (kk.Hj = "\\b(" + kk.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", kk.__beforeBegin = Wk, kk.keywords = kk.keywords || kk.beginKeywords, delete kk.beginKeywords, void 0 === kk.relevance && (kk.relevance = 0))
+    function Mm(mm, Tm) {
+      Tm && mm.beginKeywords && (mm.Go = "\\b(" + mm.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", mm.__beforeBegin = sm, mm.keywords = mm.keywords || mm.beginKeywords, delete mm.beginKeywords, void 0 === mm.relevance && (mm.relevance = 0))
     }
 
-    function dk(kk, Fk) {
-      Array.isArray(kk.illegal) && (kk.illegal = wk(...kk.illegal))
+    function um(mm, Tm) {
+      Array.isArray(mm.illegal) && (mm.illegal = Ym(...mm.illegal))
     }
 
-    function Yk(kk, Fk) {
-      if (kk.match) {
-        if (kk.Hj || kk.end) throw new Error("begin & end are not supported with match");
-        kk.Hj = kk.match, delete kk.match
+    function Bm(mm, Tm) {
+      if (mm.match) {
+        if (mm.Go || mm.end) throw new Error("begin & end are not supported with match");
+        mm.Go = mm.match, delete mm.match
       }
     }
 
-    function Ak(kk, Fk) {
-      void 0 === kk.relevance && (kk.relevance = 1)
+    function Lm(mm, Tm) {
+      void 0 === mm.relevance && (mm.relevance = 1)
     }
-    const gk = (kk, Fk) => {
-        if (!kk.beforeMatch) return;
-        if (kk.starts) throw new Error("beforeMatch cannot be used with starts");
-        const Ik = Object.assign({}, kk);
-        Object.keys(kk).forEach((Fk => {
-          delete kk[Fk]
-        })), kk.keywords = Ik.keywords, kk.Hj = ek(Ik.beforeMatch, tk(Ik.Hj)), kk.starts = {
+    const tm = (mm, Tm) => {
+        if (!mm.beforeMatch) return;
+        if (mm.starts) throw new Error("beforeMatch cannot be used with starts");
+        const fm = Object.assign({}, mm);
+        Object.keys(mm).forEach((Tm => {
+          delete mm[Tm]
+        })), mm.keywords = fm.keywords, mm.Go = Om(fm.beforeMatch, pm(fm.Go)), mm.starts = {
           relevance: 0,
-          contains: [Object.assign(Ik, {
+          contains: [Object.assign(fm, {
             endsParent: !0
           })]
-        }, kk.relevance = 0, delete Ik.beforeMatch
+        }, mm.relevance = 0, delete fm.beforeMatch
       },
-      mk = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
+      Um = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
 
-    function hk(kk, Fk) {
-      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
-      const Xk = Object.create(null);
-      return "string" === typeof kk ? Tk(Ik, kk.split(" ")) : Array.isArray(kk) ? Tk(Ik, kk) : Object.keys(kk).forEach((function(Ik) {
-        Object.assign(Xk, hk(kk[Ik], Fk, Ik))
-      })), Xk;
+    function dm(mm, Tm) {
+      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
+      const hm = Object.create(null);
+      return "string" === typeof mm ? Am(fm, mm.split(" ")) : Array.isArray(mm) ? Am(fm, mm) : Object.keys(mm).forEach((function(fm) {
+        Object.assign(hm, dm(mm[fm], Tm, fm))
+      })), hm;
 
-      function Tk(kk, Ik) {
-        Fk && (Ik = Ik.map((kk => kk.toLowerCase()))), Ik.forEach((function(Fk) {
-          const Ik = Fk.split("|");
-          Xk[Ik[0]] = [kk, rk(Ik[0], Ik[1])]
+      function Am(mm, fm) {
+        Tm && (fm = fm.map((mm => mm.toLowerCase()))), fm.forEach((function(Tm) {
+          const fm = Tm.split("|");
+          hm[fm[0]] = [mm, gm(fm[0], fm[1])]
         }))
       }
     }
 
-    function rk(kk, Fk) {
-      return Fk ? Number(Fk) : function(kk) {
-        return mk.includes(kk.toLowerCase())
-      }(kk) ? 0 : 1
+    function gm(mm, Tm) {
+      return Tm ? Number(Tm) : function(mm) {
+        return Um.includes(mm.toLowerCase())
+      }(mm) ? 0 : 1
     }
-    const Dk = {},
-      Mk = kk => {
-        console.error(kk)
+    const Wm = {},
+      Fm = mm => {
+        console.error(mm)
       },
-      kF = function(kk) {
-        for (var Fk = arguments.length, Ik = new Array(Fk > 1 ? Fk - 1 : 0), Xk = 1; Xk < Fk; Xk++) Ik[Xk - 1] = arguments[Xk];
-        console.log(`WARN: ${kk}`, ...Ik)
+      mT = function(mm) {
+        for (var Tm = arguments.length, fm = new Array(Tm > 1 ? Tm - 1 : 0), hm = 1; hm < Tm; hm++) fm[hm - 1] = arguments[hm];
+        console.log(`WARN: ${mm}`, ...fm)
       },
-      FF = (kk, Fk) => {
-        Dk[`${kk}/${Fk}`] || (console.log(`Deprecated as of ${kk}. ${Fk}`), Dk[`${kk}/${Fk}`] = !0)
+      TT = (mm, Tm) => {
+        Wm[`${mm}/${Tm}`] || (console.log(`Deprecated as of ${mm}. ${Tm}`), Wm[`${mm}/${Tm}`] = !0)
       },
-      IF = new Error;
+      fT = new Error;
 
-    function XF(kk, Fk, Ik) {
+    function hT(mm, Tm, fm) {
       let {
-        key: Xk
-      } = Ik, Tk = 0;
-      const ik = kk[Xk],
-        yk = {},
-        lk = {};
-      for (let ak = 1; ak <= Fk.length; ak++) lk[ak + Tk] = ik[ak], yk[ak + Tk] = !0, Tk += Hk(Fk[ak - 1]);
-      kk[Xk] = lk, kk[Xk]._emit = yk, kk[Xk]._multi = !0
+        key: hm
+      } = fm, Am = 0;
+      const am = mm[hm],
+        xm = {},
+        wm = {};
+      for (let Dm = 1; Dm <= Tm.length; Dm++) wm[Dm + Am] = am[Dm], xm[Dm + Am] = !0, Am += qm(Tm[Dm - 1]);
+      mm[hm] = wm, mm[hm]._emit = xm, mm[hm]._multi = !0
     }
 
-    function TF(kk) {
-      ! function(kk) {
-        kk.scope && "object" === typeof kk.scope && null !== kk.scope && (kk.beginScope = kk.scope, delete kk.scope)
-      }(kk), "string" === typeof kk.beginScope && (kk.beginScope = {
-          _wrap: kk.beginScope
-        }), "string" === typeof kk.endScope && (kk.endScope = {
-          _wrap: kk.endScope
+    function AT(mm) {
+      ! function(mm) {
+        mm.scope && "object" === typeof mm.scope && null !== mm.scope && (mm.beginScope = mm.scope, delete mm.scope)
+      }(mm), "string" === typeof mm.beginScope && (mm.beginScope = {
+          _wrap: mm.beginScope
+        }), "string" === typeof mm.endScope && (mm.endScope = {
+          _wrap: mm.endScope
         }),
-        function(kk) {
-          if (Array.isArray(kk.Hj)) {
-            if (kk.skip || kk.excludeBegin || kk.returnBegin) throw Mk("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), IF;
-            if ("object" !== typeof kk.beginScope || null === kk.beginScope) throw Mk("beginScope must be object"), IF;
-            XF(kk, kk.Hj, {
+        function(mm) {
+          if (Array.isArray(mm.Go)) {
+            if (mm.skip || mm.excludeBegin || mm.returnBegin) throw Fm("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), fT;
+            if ("object" !== typeof mm.beginScope || null === mm.beginScope) throw Fm("beginScope must be object"), fT;
+            hT(mm, mm.Go, {
               key: "beginScope"
-            }), kk.Hj = xk(kk.Hj, {
+            }), mm.Go = Vm(mm.Go, {
               joinWith: ""
             })
           }
-        }(kk),
-        function(kk) {
-          if (Array.isArray(kk.end)) {
-            if (kk.skip || kk.excludeEnd || kk.returnEnd) throw Mk("skip, excludeEnd, returnEnd not compatible with endScope: {}"), IF;
-            if ("object" !== typeof kk.endScope || null === kk.endScope) throw Mk("endScope must be object"), IF;
-            XF(kk, kk.end, {
+        }(mm),
+        function(mm) {
+          if (Array.isArray(mm.end)) {
+            if (mm.skip || mm.excludeEnd || mm.returnEnd) throw Fm("skip, excludeEnd, returnEnd not compatible with endScope: {}"), fT;
+            if ("object" !== typeof mm.endScope || null === mm.endScope) throw Fm("endScope must be object"), fT;
+            hT(mm, mm.end, {
               key: "endScope"
-            }), kk.end = xk(kk.end, {
+            }), mm.end = Vm(mm.end, {
               joinWith: ""
             })
           }
-        }(kk)
+        }(mm)
     }
 
-    function iF(kk) {
-      function Fk(Fk, Ik) {
-        return new RegExp(Lk(Fk), "m" + (kk.case_insensitive ? "i" : "") + (kk.unicodeRegex ? "u" : "") + (Ik ? "g" : ""))
+    function aT(mm) {
+      function Tm(Tm, fm) {
+        return new RegExp(Rm(Tm), "m" + (mm.case_insensitive ? "i" : "") + (mm.unicodeRegex ? "u" : "") + (fm ? "g" : ""))
       }
-      class Ik {
+      class fm {
         constructor() {
           this.matchIndexes = {}, this.regexes = [], this.matchAt = 1, this.position = 0
         }
-        addRule(kk, Fk) {
-          Fk.position = this.position++, this.matchIndexes[this.matchAt] = Fk, this.regexes.push([Fk, kk]), this.matchAt += Hk(kk) + 1
+        addRule(mm, Tm) {
+          Tm.position = this.position++, this.matchIndexes[this.matchAt] = Tm, this.regexes.push([Tm, mm]), this.matchAt += qm(mm) + 1
         }
         compile() {
           0 === this.regexes.length && (this.exec = () => null);
-          const kk = this.regexes.map((kk => kk[1]));
-          this.matcherRe = Fk(xk(kk, {
+          const mm = this.regexes.map((mm => mm[1]));
+          this.matcherRe = Tm(Vm(mm, {
             joinWith: "|"
           }), !0), this.lastIndex = 0
         }
-        exec(kk) {
+        exec(mm) {
           this.matcherRe.lastIndex = this.lastIndex;
-          const Fk = this.matcherRe.exec(kk);
-          if (!Fk) return null;
-          const Ik = Fk.findIndex(((kk, Fk) => Fk > 0 && void 0 !== kk)),
-            Xk = this.matchIndexes[Ik];
-          return Fk.splice(0, Ik), Object.assign(Fk, Xk)
+          const Tm = this.matcherRe.exec(mm);
+          if (!Tm) return null;
+          const fm = Tm.findIndex(((mm, Tm) => Tm > 0 && void 0 !== mm)),
+            hm = this.matchIndexes[fm];
+          return Tm.splice(0, fm), Object.assign(Tm, hm)
         }
       }
-      class Xk {
+      class hm {
         constructor() {
           this.rules = [], this.multiRegexes = [], this.count = 0, this.lastIndex = 0, this.regexIndex = 0
         }
-        getMatcher(kk) {
-          if (this.multiRegexes[kk]) return this.multiRegexes[kk];
-          const Fk = new Ik;
-          return this.rules.slice(kk).forEach((kk => {
-            let [Ik, Xk] = kk;
-            return Fk.addRule(Ik, Xk)
-          })), Fk.compile(), this.multiRegexes[kk] = Fk, Fk
+        getMatcher(mm) {
+          if (this.multiRegexes[mm]) return this.multiRegexes[mm];
+          const Tm = new fm;
+          return this.rules.slice(mm).forEach((mm => {
+            let [fm, hm] = mm;
+            return Tm.addRule(fm, hm)
+          })), Tm.compile(), this.multiRegexes[mm] = Tm, Tm
         }
         resumingScanAtSamePosition() {
           return 0 !== this.regexIndex
@@ -494,81 +494,81 @@ export const modules = {
         considerAll() {
           this.regexIndex = 0
         }
-        addRule(kk, Fk) {
-          this.rules.push([kk, Fk]), "Hj" === Fk.type && this.count++
+        addRule(mm, Tm) {
+          this.rules.push([mm, Tm]), "Go" === Tm.type && this.count++
         }
-        exec(kk) {
-          const Fk = this.getMatcher(this.regexIndex);
-          Fk.lastIndex = this.lastIndex;
-          let Ik = Fk.exec(kk);
+        exec(mm) {
+          const Tm = this.getMatcher(this.regexIndex);
+          Tm.lastIndex = this.lastIndex;
+          let fm = Tm.exec(mm);
           if (this.resumingScanAtSamePosition())
-            if (Ik && Ik.index === this.lastIndex);
+            if (fm && fm.index === this.lastIndex);
             else {
-              const Fk = this.getMatcher(0);
-              Fk.lastIndex = this.lastIndex + 1, Ik = Fk.exec(kk)
-            } return Ik && (this.regexIndex += Ik.position + 1, this.regexIndex === this.count && this.considerAll()), Ik
+              const Tm = this.getMatcher(0);
+              Tm.lastIndex = this.lastIndex + 1, fm = Tm.exec(mm)
+            } return fm && (this.regexIndex += fm.position + 1, this.regexIndex === this.count && this.considerAll()), fm
         }
       }
-      if (kk.compilerExtensions || (kk.compilerExtensions = []), kk.contains && kk.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
-      return kk.classNameAliases = Tk(kk.classNameAliases || {}),
-        function Ik(ik, yk) {
-          const lk = ik;
-          if (ik.isCompiled) return lk;
-          [fk, Yk, TF, gk].forEach((kk => kk(ik, yk))), kk.compilerExtensions.forEach((kk => kk(ik, yk))), ik.__beforeBegin = null, [Bk, dk, Ak].forEach((kk => kk(ik, yk))), ik.isCompiled = !0;
-          let ak = null;
-          return "object" === typeof ik.keywords && ik.keywords.$pattern && (ik.keywords = Object.assign({}, ik.keywords), ak = ik.keywords.$pattern, delete ik.keywords.$pattern), ak = ak || /\w+/, ik.keywords && (ik.keywords = hk(ik.keywords, kk.case_insensitive)), lk.keywordPatternRe = Fk(ak, !0), yk && (ik.Hj || (ik.Hj = /\B|\b/), lk.beginRe = Fk(lk.Hj), ik.end || ik.endsWithParent || (ik.end = /\B|\b/), ik.end && (lk.endRe = Fk(lk.end)), lk.terminatorEnd = Lk(lk.end) || "", ik.endsWithParent && yk.terminatorEnd && (lk.terminatorEnd += (ik.end ? "|" : "") + yk.terminatorEnd)), ik.illegal && (lk.illegalRe = Fk(ik.illegal)), ik.contains || (ik.contains = []), ik.contains = [].concat(...ik.contains.map((function(kk) {
-            return function(kk) {
-              kk.variants && !kk.cachedVariants && (kk.cachedVariants = kk.variants.map((function(Fk) {
-                return Tk(kk, {
+      if (mm.compilerExtensions || (mm.compilerExtensions = []), mm.contains && mm.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
+      return mm.classNameAliases = Am(mm.classNameAliases || {}),
+        function fm(am, xm) {
+          const wm = am;
+          if (am.isCompiled) return wm;
+          [lm, Bm, AT, tm].forEach((mm => mm(am, xm))), mm.compilerExtensions.forEach((mm => mm(am, xm))), am.__beforeBegin = null, [Mm, um, Lm].forEach((mm => mm(am, xm))), am.isCompiled = !0;
+          let Dm = null;
+          return "object" === typeof am.keywords && am.keywords.$pattern && (am.keywords = Object.assign({}, am.keywords), Dm = am.keywords.$pattern, delete am.keywords.$pattern), Dm = Dm || /\w+/, am.keywords && (am.keywords = dm(am.keywords, mm.case_insensitive)), wm.keywordPatternRe = Tm(Dm, !0), xm && (am.Go || (am.Go = /\B|\b/), wm.beginRe = Tm(wm.Go), am.end || am.endsWithParent || (am.end = /\B|\b/), am.end && (wm.endRe = Tm(wm.end)), wm.terminatorEnd = Rm(wm.end) || "", am.endsWithParent && xm.terminatorEnd && (wm.terminatorEnd += (am.end ? "|" : "") + xm.terminatorEnd)), am.illegal && (wm.illegalRe = Tm(am.illegal)), am.contains || (am.contains = []), am.contains = [].concat(...am.contains.map((function(mm) {
+            return function(mm) {
+              mm.variants && !mm.cachedVariants && (mm.cachedVariants = mm.variants.map((function(Tm) {
+                return Am(mm, {
                   variants: null
-                }, Fk)
+                }, Tm)
               })));
-              if (kk.cachedVariants) return kk.cachedVariants;
-              if (yF(kk)) return Tk(kk, {
-                starts: kk.starts ? Tk(kk.starts) : null
+              if (mm.cachedVariants) return mm.cachedVariants;
+              if (xT(mm)) return Am(mm, {
+                starts: mm.starts ? Am(mm.starts) : null
               });
-              if (Object.isFrozen(kk)) return Tk(kk);
-              return kk
-            }("self" === kk ? ik : kk)
-          }))), ik.contains.forEach((function(kk) {
-            Ik(kk, lk)
-          })), ik.starts && Ik(ik.starts, yk), lk.matcher = function(kk) {
-            const Fk = new Xk;
-            return kk.contains.forEach((kk => Fk.addRule(kk.Hj, {
-              rule: kk,
-              type: "Hj"
-            }))), kk.terminatorEnd && Fk.addRule(kk.terminatorEnd, {
+              if (Object.isFrozen(mm)) return Am(mm);
+              return mm
+            }("self" === mm ? am : mm)
+          }))), am.contains.forEach((function(mm) {
+            fm(mm, wm)
+          })), am.starts && fm(am.starts, xm), wm.matcher = function(mm) {
+            const Tm = new hm;
+            return mm.contains.forEach((mm => Tm.addRule(mm.Go, {
+              rule: mm,
+              type: "Go"
+            }))), mm.terminatorEnd && Tm.addRule(mm.terminatorEnd, {
               type: "end"
-            }), kk.illegal && Fk.addRule(kk.illegal, {
+            }), mm.illegal && Tm.addRule(mm.illegal, {
               type: "illegal"
-            }), Fk
-          }(lk), lk
-        }(kk)
+            }), Tm
+          }(wm), wm
+        }(mm)
     }
 
-    function yF(kk) {
-      return !!kk && (kk.endsWithParent || yF(kk.starts))
+    function xT(mm) {
+      return !!mm && (mm.endsWithParent || xT(mm.starts))
     }
-    class lF extends Error {
-      constructor(kk, Fk) {
-        super(kk), this.name = "HTMLInjectionError", this.html = Fk
+    class wT extends Error {
+      constructor(mm, Tm) {
+        super(mm), this.name = "HTMLInjectionError", this.html = Tm
       }
     }
-    const aF = Xk,
-      qF = Tk,
-      LF = Symbol("nomatch"),
-      tF = function(kk) {
-        const Xk = Object.create(null),
-          Tk = Object.create(null),
-          ik = [];
-        let yk = !0;
-        const lk = "Could not find the language '{}', did you forget to load/include a language module?",
-          ak = {
+    const DT = hm,
+      iT = Am,
+      RT = Symbol("nomatch"),
+      pT = function(mm) {
+        const hm = Object.create(null),
+          Am = Object.create(null),
+          am = [];
+        let xm = !0;
+        const wm = "Could not find the language '{}', did you forget to load/include a language module?",
+          Dm = {
             disableAutodetect: !0,
             name: "Plain text",
             contains: []
           };
-        let Lk = {
+        let Rm = {
           ignoreUnescapedHTML: !1,
           throwUnescapedHTML: !1,
           noHighlightRe: /^(no-?highlight)$/i,
@@ -576,575 +576,575 @@ export const modules = {
           classPrefix: "hljs-",
           cssSelector: "pre code",
           languages: null,
-          __emitter: qk
+          __emitter: im
         };
 
-        function Hk(kk) {
-          return Lk.noHighlightRe.test(kk)
+        function qm(mm) {
+          return Rm.noHighlightRe.test(mm)
         }
 
-        function Jk(kk, Fk, Ik) {
-          let Xk = "",
-            Tk = "";
-          "object" === typeof Fk ? (Xk = kk, Ik = Fk.ignoreIllegals, Tk = Fk.language) : (FF("10.7.0", "highlight(lang, code, ...args) has been deprecated."), FF("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), Tk = kk, Xk = Fk), void 0 === Ik && (Ik = !0);
-          const ik = {
-            code: Xk,
-            language: Tk
+        function jm(mm, Tm, fm) {
+          let hm = "",
+            Am = "";
+          "object" === typeof Tm ? (hm = mm, fm = Tm.ignoreIllegals, Am = Tm.language) : (TT("10.7.0", "highlight(lang, code, ...args) has been deprecated."), TT("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), Am = mm, hm = Tm), void 0 === fm && (fm = !0);
+          const am = {
+            code: hm,
+            language: Am
           };
-          vk("before:highlight", ik);
-          const yk = ik.result ? ik.result : xk(ik.language, ik.code, Ik);
-          return yk.code = ik.code, vk("after:highlight", yk), yk
+          Zm("before:highlight", am);
+          const xm = am.result ? am.result : Vm(am.language, am.code, fm);
+          return xm.code = am.code, Zm("after:highlight", xm), xm
         }
 
-        function xk(kk, Fk, Tk, ik) {
-          const ak = Object.create(null);
+        function Vm(mm, Tm, Am, am) {
+          const Dm = Object.create(null);
 
-          function qk() {
-            if (!vk.keywords) return void Ok.addText(nk);
-            let kk = 0;
-            vk.keywordPatternRe.lastIndex = 0;
-            let Fk = vk.keywordPatternRe.exec(nk),
-              Ik = "";
-            for (; Fk;) {
-              Ik += nk.substring(kk, Fk.index);
-              const Tk = sk.case_insensitive ? Fk[0].toLowerCase() : Fk[0],
-                ik = (Xk = Tk, vk.keywords[Xk]);
-              if (ik) {
-                const [kk, Xk] = ik;
-                if (Ok.addText(Ik), Ik = "", ak[Tk] = (ak[Tk] || 0) + 1, ak[Tk] <= 7 && (Gk += Xk), kk.startsWith("_")) Ik += Fk[0];
+          function im() {
+            if (!Zm.keywords) return void bm.addText(Sm);
+            let mm = 0;
+            Zm.keywordPatternRe.lastIndex = 0;
+            let Tm = Zm.keywordPatternRe.exec(Sm),
+              fm = "";
+            for (; Tm;) {
+              fm += Sm.substring(mm, Tm.index);
+              const Am = nm.case_insensitive ? Tm[0].toLowerCase() : Tm[0],
+                am = (hm = Am, Zm.keywords[hm]);
+              if (am) {
+                const [mm, hm] = am;
+                if (bm.addText(fm), fm = "", Dm[Am] = (Dm[Am] || 0) + 1, Dm[Am] <= 7 && (em += hm), mm.startsWith("_")) fm += Tm[0];
                 else {
-                  const Ik = sk.classNameAliases[kk] || kk;
-                  Zk(Fk[0], Ik)
+                  const fm = nm.classNameAliases[mm] || mm;
+                  Em(Tm[0], fm)
                 }
-              } else Ik += Fk[0];
-              kk = vk.keywordPatternRe.lastIndex, Fk = vk.keywordPatternRe.exec(nk)
+              } else fm += Tm[0];
+              mm = Zm.keywordPatternRe.lastIndex, Tm = Zm.keywordPatternRe.exec(Sm)
             }
-            var Xk;
-            Ik += nk.substring(kk), Ok.addText(Ik)
+            var hm;
+            fm += Sm.substring(mm), bm.addText(fm)
           }
 
-          function tk() {
-            null != vk.subLanguage ? function() {
-              if ("" === nk) return;
-              let kk = null;
-              if ("string" === typeof vk.subLanguage) {
-                if (!Xk[vk.subLanguage]) return void Ok.addText(nk);
-                kk = xk(vk.subLanguage, nk, !0, Ek[vk.subLanguage]), Ek[vk.subLanguage] = kk._top
-              } else kk = Pk(nk, vk.subLanguage.length ? vk.subLanguage : null);
-              vk.relevance > 0 && (Gk += kk.relevance), Ok.__addSublanguage(kk._emitter, kk.language)
-            }() : qk(), nk = ""
+          function pm() {
+            null != Zm.subLanguage ? function() {
+              if ("" === Sm) return;
+              let mm = null;
+              if ("string" === typeof Zm.subLanguage) {
+                if (!hm[Zm.subLanguage]) return void bm.addText(Sm);
+                mm = Vm(Zm.subLanguage, Sm, !0, km[Zm.subLanguage]), km[Zm.subLanguage] = mm._top
+              } else mm = Im(Sm, Zm.subLanguage.length ? Zm.subLanguage : null);
+              Zm.relevance > 0 && (em += mm.relevance), bm.__addSublanguage(mm._emitter, mm.language)
+            }() : im(), Sm = ""
           }
 
-          function Zk(kk, Fk) {
-            "" !== kk && (Ok.startScope(Fk), Ok.addText(kk), Ok.endScope())
+          function Em(mm, Tm) {
+            "" !== mm && (bm.startScope(Tm), bm.addText(mm), bm.endScope())
           }
 
-          function jk(kk, Fk) {
-            let Ik = 1;
-            const Xk = Fk.length - 1;
-            for (; Ik <= Xk;) {
-              if (!kk._emit[Ik]) {
-                Ik++;
+          function om(mm, Tm) {
+            let fm = 1;
+            const hm = Tm.length - 1;
+            for (; fm <= hm;) {
+              if (!mm._emit[fm]) {
+                fm++;
                 continue
               }
-              const Xk = sk.classNameAliases[kk[Ik]] || kk[Ik],
-                Tk = Fk[Ik];
-              Xk ? Zk(Tk, Xk) : (nk = Tk, qk(), nk = ""), Ik++
+              const hm = nm.classNameAliases[mm[fm]] || mm[fm],
+                Am = Tm[fm];
+              hm ? Em(Am, hm) : (Sm = Am, im(), Sm = ""), fm++
             }
           }
 
-          function ek(kk, Fk) {
-            return kk.scope && "string" === typeof kk.scope && Ok.openNode(sk.classNameAliases[kk.scope] || kk.scope), kk.beginScope && (kk.beginScope._wrap ? (Zk(nk, sk.classNameAliases[kk.beginScope._wrap] || kk.beginScope._wrap), nk = "") : kk.beginScope._multi && (jk(kk.beginScope, Fk), nk = "")), vk = Object.create(kk, {
+          function Om(mm, Tm) {
+            return mm.scope && "string" === typeof mm.scope && bm.openNode(nm.classNameAliases[mm.scope] || mm.scope), mm.beginScope && (mm.beginScope._wrap ? (Em(Sm, nm.classNameAliases[mm.beginScope._wrap] || mm.beginScope._wrap), Sm = "") : mm.beginScope._multi && (om(mm.beginScope, Tm), Sm = "")), Zm = Object.create(mm, {
               parent: {
-                value: vk
+                value: Zm
               }
-            }), vk
+            }), Zm
           }
 
-          function wk(kk, Fk, Xk) {
-            let Tk = function(kk, Fk) {
-              const Ik = kk && kk.exec(Fk);
-              return Ik && 0 === Ik.index
-            }(kk.endRe, Xk);
-            if (Tk) {
-              if (kk["on:end"]) {
-                const Xk = new Ik(kk);
-                kk["on:end"](Fk, Xk), Xk.isMatchIgnored && (Tk = !1)
+          function Ym(mm, Tm, hm) {
+            let Am = function(mm, Tm) {
+              const fm = mm && mm.exec(Tm);
+              return fm && 0 === fm.index
+            }(mm.endRe, hm);
+            if (Am) {
+              if (mm["on:end"]) {
+                const hm = new fm(mm);
+                mm["on:end"](Tm, hm), hm.isMatchIgnored && (Am = !1)
               }
-              if (Tk) {
-                for (; kk.endsParent && kk.parent;) kk = kk.parent;
-                return kk
+              if (Am) {
+                for (; mm.endsParent && mm.parent;) mm = mm.parent;
+                return mm
               }
             }
-            if (kk.endsWithParent) return wk(kk.parent, Fk, Xk)
+            if (mm.endsWithParent) return Ym(mm.parent, Tm, hm)
           }
 
-          function Hk(kk) {
-            return 0 === vk.matcher.regexIndex ? (nk += kk[0], 1) : (bk = !0, 0)
+          function qm(mm) {
+            return 0 === Zm.matcher.regexIndex ? (Sm += mm[0], 1) : (Xm = !0, 0)
           }
 
-          function Jk(kk) {
-            const Ik = kk[0],
-              Xk = Fk.substring(kk.index),
-              Tk = wk(vk, kk, Xk);
-            if (!Tk) return LF;
-            const ik = vk;
-            vk.endScope && vk.endScope._wrap ? (tk(), Zk(Ik, vk.endScope._wrap)) : vk.endScope && vk.endScope._multi ? (tk(), jk(vk.endScope, kk)) : ik.skip ? nk += Ik : (ik.returnEnd || ik.excludeEnd || (nk += Ik), tk(), ik.excludeEnd && (nk = Ik));
+          function jm(mm) {
+            const fm = mm[0],
+              hm = Tm.substring(mm.index),
+              Am = Ym(Zm, mm, hm);
+            if (!Am) return RT;
+            const am = Zm;
+            Zm.endScope && Zm.endScope._wrap ? (pm(), Em(fm, Zm.endScope._wrap)) : Zm.endScope && Zm.endScope._multi ? (pm(), om(Zm.endScope, mm)) : am.skip ? Sm += fm : (am.returnEnd || am.excludeEnd || (Sm += fm), pm(), am.excludeEnd && (Sm = fm));
             do {
-              vk.scope && Ok.closeNode(), vk.skip || vk.subLanguage || (Gk += vk.relevance), vk = vk.parent
-            } while (vk !== Tk.parent);
-            return Tk.starts && ek(Tk.starts, kk), ik.returnEnd ? 0 : Ik.length
+              Zm.scope && bm.closeNode(), Zm.skip || Zm.subLanguage || (em += Zm.relevance), Zm = Zm.parent
+            } while (Zm !== Am.parent);
+            return Am.starts && Om(Am.starts, mm), am.returnEnd ? 0 : fm.length
           }
-          let Kk = {};
+          let Km = {};
 
-          function Qk(Xk, ik) {
-            const lk = ik && ik[0];
-            if (nk += Xk, null == lk) return tk(), 0;
-            if ("Hj" === Kk.type && "end" === ik.type && Kk.index === ik.index && "" === lk) {
-              if (nk += Fk.slice(ik.index, ik.index + 1), !yk) {
-                const Fk = new Error(`0 width match regex (${kk})`);
-                throw Fk.languageName = kk, Fk.badRule = Kk.rule, Fk
+          function Qm(hm, am) {
+            const wm = am && am[0];
+            if (Sm += hm, null == wm) return pm(), 0;
+            if ("Go" === Km.type && "end" === am.type && Km.index === am.index && "" === wm) {
+              if (Sm += Tm.slice(am.index, am.index + 1), !xm) {
+                const Tm = new Error(`0 width match regex (${mm})`);
+                throw Tm.languageName = mm, Tm.badRule = Km.rule, Tm
               }
               return 1
             }
-            if (Kk = ik, "Hj" === ik.type) return function(kk) {
-              const Fk = kk[0],
-                Xk = kk.rule,
-                Tk = new Ik(Xk),
-                ik = [Xk.__beforeBegin, Xk["on:begin"]];
-              for (const Ik of ik)
-                if (Ik && (Ik(kk, Tk), Tk.isMatchIgnored)) return Hk(Fk);
-              return Xk.skip ? nk += Fk : (Xk.excludeBegin && (nk += Fk), tk(), Xk.returnBegin || Xk.excludeBegin || (nk = Fk)), ek(Xk, kk), Xk.returnBegin ? 0 : Fk.length
-            }(ik);
-            if ("illegal" === ik.type && !Tk) {
-              const kk = new Error('Illegal lexeme "' + lk + '" for mode "' + (vk.scope || "<unnamed>") + '"');
-              throw kk.mode = vk, kk
+            if (Km = am, "Go" === am.type) return function(mm) {
+              const Tm = mm[0],
+                hm = mm.rule,
+                Am = new fm(hm),
+                am = [hm.__beforeBegin, hm["on:begin"]];
+              for (const fm of am)
+                if (fm && (fm(mm, Am), Am.isMatchIgnored)) return qm(Tm);
+              return hm.skip ? Sm += Tm : (hm.excludeBegin && (Sm += Tm), pm(), hm.returnBegin || hm.excludeBegin || (Sm = Tm)), Om(hm, mm), hm.returnBegin ? 0 : Tm.length
+            }(am);
+            if ("illegal" === am.type && !Am) {
+              const mm = new Error('Illegal lexeme "' + wm + '" for mode "' + (Zm.scope || "<unnamed>") + '"');
+              throw mm.mode = Zm, mm
             }
-            if ("end" === ik.type) {
-              const kk = Jk(ik);
-              if (kk !== LF) return kk
+            if ("end" === am.type) {
+              const mm = jm(am);
+              if (mm !== RT) return mm
             }
-            if ("illegal" === ik.type && "" === lk) return nk += "\n", 1;
-            if (uk > 1e5 && uk > 3 * ik.index) {
+            if ("illegal" === am.type && "" === wm) return Sm += "\n", 1;
+            if (Gm > 1e5 && Gm > 3 * am.index) {
               throw new Error("potential infinite loop, way more iterations than matches")
             }
-            return nk += lk, lk.length
+            return Sm += wm, wm.length
           }
-          const sk = Vk(kk);
-          if (!sk) throw Mk(lk.replace("{}", kk)), new Error('Unknown language: "' + kk + '"');
-          const zk = iF(sk);
-          let Sk = "",
-            vk = ik || zk;
-          const Ek = {},
-            Ok = new Lk.__emitter(Lk);
+          const nm = Jm(mm);
+          if (!nm) throw Fm(wm.replace("{}", mm)), new Error('Unknown language: "' + mm + '"');
+          const cm = aT(nm);
+          let zm = "",
+            Zm = am || cm;
+          const km = {},
+            bm = new Rm.__emitter(Rm);
           ! function() {
-            const kk = [];
-            for (let Fk = vk; Fk !== sk; Fk = Fk.parent) Fk.scope && kk.unshift(Fk.scope);
-            kk.forEach((kk => Ok.openNode(kk)))
+            const mm = [];
+            for (let Tm = Zm; Tm !== nm; Tm = Tm.parent) Tm.scope && mm.unshift(Tm.scope);
+            mm.forEach((mm => bm.openNode(mm)))
           }();
-          let nk = "",
-            Gk = 0,
-            pk = 0,
-            uk = 0,
-            bk = !1;
+          let Sm = "",
+            em = 0,
+            Nm = 0,
+            Gm = 0,
+            Xm = !1;
           try {
-            if (sk.__emitTokens) sk.__emitTokens(Fk, Ok);
+            if (nm.__emitTokens) nm.__emitTokens(Tm, bm);
             else {
-              for (vk.matcher.considerAll();;) {
-                uk++, bk ? bk = !1 : vk.matcher.considerAll(), vk.matcher.lastIndex = pk;
-                const kk = vk.matcher.exec(Fk);
-                if (!kk) break;
-                const Ik = Qk(Fk.substring(pk, kk.index), kk);
-                pk = kk.index + Ik
+              for (Zm.matcher.considerAll();;) {
+                Gm++, Xm ? Xm = !1 : Zm.matcher.considerAll(), Zm.matcher.lastIndex = Nm;
+                const mm = Zm.matcher.exec(Tm);
+                if (!mm) break;
+                const fm = Qm(Tm.substring(Nm, mm.index), mm);
+                Nm = mm.index + fm
               }
-              Qk(Fk.substring(pk))
+              Qm(Tm.substring(Nm))
             }
-            return Ok.finalize(), Sk = Ok.toHTML(), {
-              language: kk,
-              value: Sk,
-              relevance: Gk,
+            return bm.finalize(), zm = bm.toHTML(), {
+              language: mm,
+              value: zm,
+              relevance: em,
               illegal: !1,
-              _emitter: Ok,
-              _top: vk
+              _emitter: bm,
+              _top: Zm
             }
-          } catch (Rk) {
-            if (Rk.message && Rk.message.includes("Illegal")) return {
-              language: kk,
-              value: aF(Fk),
+          } catch (Pm) {
+            if (Pm.message && Pm.message.includes("Illegal")) return {
+              language: mm,
+              value: DT(Tm),
               illegal: !0,
               relevance: 0,
               _illegalBy: {
-                message: Rk.message,
-                index: pk,
-                context: Fk.slice(pk - 100, pk + 100),
-                mode: Rk.mode,
-                resultSoFar: Sk
+                message: Pm.message,
+                index: Nm,
+                context: Tm.slice(Nm - 100, Nm + 100),
+                mode: Pm.mode,
+                resultSoFar: zm
               },
-              _emitter: Ok
+              _emitter: bm
             };
-            if (yk) return {
-              language: kk,
-              value: aF(Fk),
+            if (xm) return {
+              language: mm,
+              value: DT(Tm),
               illegal: !1,
               relevance: 0,
-              errorRaised: Rk,
-              _emitter: Ok,
-              _top: vk
+              errorRaised: Pm,
+              _emitter: bm,
+              _top: Zm
             };
-            throw Rk
+            throw Pm
           }
         }
 
-        function Pk(kk, Fk) {
-          Fk = Fk || Lk.languages || Object.keys(Xk);
-          const Ik = function(kk) {
-              const Fk = {
-                value: aF(kk),
+        function Im(mm, Tm) {
+          Tm = Tm || Rm.languages || Object.keys(hm);
+          const fm = function(mm) {
+              const Tm = {
+                value: DT(mm),
                 illegal: !1,
                 relevance: 0,
-                _top: ak,
-                _emitter: new Lk.__emitter(Lk)
+                _top: Dm,
+                _emitter: new Rm.__emitter(Rm)
               };
-              return Fk._emitter.addText(kk), Fk
-            }(kk),
-            Tk = Fk.filter(Vk).filter(Sk).map((Fk => xk(Fk, kk, !1)));
-          Tk.unshift(Ik);
-          const ik = Tk.sort(((kk, Fk) => {
-              if (kk.relevance !== Fk.relevance) return Fk.relevance - kk.relevance;
-              if (kk.language && Fk.language) {
-                if (Vk(kk.language).supersetOf === Fk.language) return 1;
-                if (Vk(Fk.language).supersetOf === kk.language) return -1
+              return Tm._emitter.addText(mm), Tm
+            }(mm),
+            Am = Tm.filter(Jm).filter(zm).map((Tm => Vm(Tm, mm, !1)));
+          Am.unshift(fm);
+          const am = Am.sort(((mm, Tm) => {
+              if (mm.relevance !== Tm.relevance) return Tm.relevance - mm.relevance;
+              if (mm.language && Tm.language) {
+                if (Jm(mm.language).supersetOf === Tm.language) return 1;
+                if (Jm(Tm.language).supersetOf === mm.language) return -1
               }
               return 0
             })),
-            [yk, lk] = ik,
-            qk = yk;
-          return qk.secondBest = lk, qk
+            [xm, wm] = am,
+            im = xm;
+          return im.secondBest = wm, im
         }
 
-        function Kk(kk) {
-          let Fk = null;
-          const Ik = function(kk) {
-            let Fk = kk.className + " ";
-            Fk += kk.parentNode ? kk.parentNode.className : "";
-            const Ik = Lk.languageDetectRe.exec(Fk);
-            if (Ik) {
-              const Fk = Vk(Ik[1]);
-              return Fk || (kF(lk.replace("{}", Ik[1])), kF("Falling back to no-highlight mode for this block.", kk)), Fk ? Ik[1] : "no-highlight"
+        function Km(mm) {
+          let Tm = null;
+          const fm = function(mm) {
+            let Tm = mm.className + " ";
+            Tm += mm.parentNode ? mm.parentNode.className : "";
+            const fm = Rm.languageDetectRe.exec(Tm);
+            if (fm) {
+              const Tm = Jm(fm[1]);
+              return Tm || (mT(wm.replace("{}", fm[1])), mT("Falling back to no-highlight mode for this block.", mm)), Tm ? fm[1] : "no-highlight"
             }
-            return Fk.split(/\s+/).find((kk => Hk(kk) || Vk(kk)))
-          }(kk);
-          if (Hk(Ik)) return;
-          if (vk("before:highlightElement", {
-              el: kk,
-              language: Ik
-            }), kk.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", kk);
-          if (kk.children.length > 0 && (Lk.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(kk)), Lk.throwUnescapedHTML)) {
-            throw new lF("One of your code blocks includes unescaped HTML.", kk.innerHTML)
+            return Tm.split(/\s+/).find((mm => qm(mm) || Jm(mm)))
+          }(mm);
+          if (qm(fm)) return;
+          if (Zm("before:highlightElement", {
+              el: mm,
+              language: fm
+            }), mm.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", mm);
+          if (mm.children.length > 0 && (Rm.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(mm)), Rm.throwUnescapedHTML)) {
+            throw new wT("One of your code blocks includes unescaped HTML.", mm.innerHTML)
           }
-          Fk = kk;
-          const Xk = Fk.textContent,
-            ik = Ik ? Jk(Xk, {
-              language: Ik,
+          Tm = mm;
+          const hm = Tm.textContent,
+            am = fm ? jm(hm, {
+              language: fm,
               ignoreIllegals: !0
-            }) : Pk(Xk);
-          kk.innerHTML = ik.value, kk.dataset.highlighted = "yes",
-            function(kk, Fk, Ik) {
-              const Xk = Fk && Tk[Fk] || Ik;
-              kk.classList.add("hljs"), kk.classList.add(`language-${Xk}`)
-            }(kk, Ik, ik.language), kk.result = {
-              language: ik.language,
-              re: ik.relevance,
-              relevance: ik.relevance
-            }, ik.secondBest && (kk.secondBest = {
-              language: ik.secondBest.language,
-              relevance: ik.secondBest.relevance
-            }), vk("after:highlightElement", {
-              el: kk,
-              result: ik,
-              text: Xk
+            }) : Im(hm);
+          mm.innerHTML = am.value, mm.dataset.highlighted = "yes",
+            function(mm, Tm, fm) {
+              const hm = Tm && Am[Tm] || fm;
+              mm.classList.add("hljs"), mm.classList.add(`language-${hm}`)
+            }(mm, fm, am.language), mm.result = {
+              language: am.language,
+              re: am.relevance,
+              relevance: am.relevance
+            }, am.secondBest && (mm.secondBest = {
+              language: am.secondBest.language,
+              relevance: am.secondBest.relevance
+            }), Zm("after:highlightElement", {
+              el: mm,
+              result: am,
+              text: hm
             })
         }
-        let Qk = !1;
+        let Qm = !1;
 
-        function sk() {
-          if ("loading" === document.readyState) return Qk || window.addEventListener("DOMContentLoaded", (function() {
-            sk()
-          }), !1), void(Qk = !0);
-          document.querySelectorAll(Lk.cssSelector).forEach(Kk)
+        function nm() {
+          if ("loading" === document.readyState) return Qm || window.addEventListener("DOMContentLoaded", (function() {
+            nm()
+          }), !1), void(Qm = !0);
+          document.querySelectorAll(Rm.cssSelector).forEach(Km)
         }
 
-        function Vk(kk) {
-          return kk = (kk || "").toLowerCase(), Xk[kk] || Xk[Tk[kk]]
+        function Jm(mm) {
+          return mm = (mm || "").toLowerCase(), hm[mm] || hm[Am[mm]]
         }
 
-        function zk(kk, Fk) {
+        function cm(mm, Tm) {
           let {
-            languageName: Ik
-          } = Fk;
-          "string" === typeof kk && (kk = [kk]), kk.forEach((kk => {
-            Tk[kk.toLowerCase()] = Ik
+            languageName: fm
+          } = Tm;
+          "string" === typeof mm && (mm = [mm]), mm.forEach((mm => {
+            Am[mm.toLowerCase()] = fm
           }))
         }
 
-        function Sk(kk) {
-          const Fk = Vk(kk);
-          return Fk && !Fk.disableAutodetect
+        function zm(mm) {
+          const Tm = Jm(mm);
+          return Tm && !Tm.disableAutodetect
         }
 
-        function vk(kk, Fk) {
-          const Ik = kk;
-          ik.forEach((function(kk) {
-            kk[Ik] && kk[Ik](Fk)
+        function Zm(mm, Tm) {
+          const fm = mm;
+          am.forEach((function(mm) {
+            mm[fm] && mm[fm](Tm)
           }))
         }
-        Object.assign(kk, {
-          highlight: Jk,
-          highlightAuto: Pk,
-          highlightAll: sk,
-          highlightElement: Kk,
-          highlightBlock: function(kk) {
-            return FF("10.7.0", "highlightBlock will be removed entirely in v12.0"), FF("10.7.0", "Please use highlightElement now."), Kk(kk)
+        Object.assign(mm, {
+          highlight: jm,
+          highlightAuto: Im,
+          highlightAll: nm,
+          highlightElement: Km,
+          highlightBlock: function(mm) {
+            return TT("10.7.0", "highlightBlock will be removed entirely in v12.0"), TT("10.7.0", "Please use highlightElement now."), Km(mm)
           },
-          configure: function(kk) {
-            Lk = qF(Lk, kk)
+          configure: function(mm) {
+            Rm = iT(Rm, mm)
           },
           initHighlighting: () => {
-            sk(), FF("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
+            nm(), TT("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
           },
           initHighlightingOnLoad: function() {
-            sk(), FF("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
+            nm(), TT("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
           },
-          registerLanguage: function(Fk, Ik) {
-            let Tk = null;
+          registerLanguage: function(Tm, fm) {
+            let Am = null;
             try {
-              Tk = Ik(kk)
-            } catch (ik) {
-              if (Mk("Language definition for '{}' could not be registered.".replace("{}", Fk)), !yk) throw ik;
-              Mk(ik), Tk = ak
+              Am = fm(mm)
+            } catch (am) {
+              if (Fm("Language definition for '{}' could not be registered.".replace("{}", Tm)), !xm) throw am;
+              Fm(am), Am = Dm
             }
-            Tk.name || (Tk.name = Fk), Xk[Fk] = Tk, Tk.rawDefinition = Ik.bind(null, kk), Tk.aliases && zk(Tk.aliases, {
-              languageName: Fk
+            Am.name || (Am.name = Tm), hm[Tm] = Am, Am.rawDefinition = fm.bind(null, mm), Am.aliases && cm(Am.aliases, {
+              languageName: Tm
             })
           },
-          unregisterLanguage: function(kk) {
-            delete Xk[kk];
-            for (const Fk of Object.keys(Tk)) Tk[Fk] === kk && delete Tk[Fk]
+          unregisterLanguage: function(mm) {
+            delete hm[mm];
+            for (const Tm of Object.keys(Am)) Am[Tm] === mm && delete Am[Tm]
           },
           listLanguages: function() {
-            return Object.keys(Xk)
+            return Object.keys(hm)
           },
-          getLanguage: Vk,
-          registerAliases: zk,
-          autoDetection: Sk,
-          inherit: qF,
-          addPlugin: function(kk) {
-            ! function(kk) {
-              kk["before:highlightBlock"] && !kk["before:highlightElement"] && (kk["before:highlightElement"] = Fk => {
-                kk["before:highlightBlock"](Object.assign({
-                  block: Fk.el
-                }, Fk))
-              }), kk["after:highlightBlock"] && !kk["after:highlightElement"] && (kk["after:highlightElement"] = Fk => {
-                kk["after:highlightBlock"](Object.assign({
-                  block: Fk.el
-                }, Fk))
+          getLanguage: Jm,
+          registerAliases: cm,
+          autoDetection: zm,
+          inherit: iT,
+          addPlugin: function(mm) {
+            ! function(mm) {
+              mm["before:highlightBlock"] && !mm["before:highlightElement"] && (mm["before:highlightElement"] = Tm => {
+                mm["before:highlightBlock"](Object.assign({
+                  block: Tm.el
+                }, Tm))
+              }), mm["after:highlightBlock"] && !mm["after:highlightElement"] && (mm["after:highlightElement"] = Tm => {
+                mm["after:highlightBlock"](Object.assign({
+                  block: Tm.el
+                }, Tm))
               })
-            }(kk), ik.push(kk)
+            }(mm), am.push(mm)
           },
-          removePlugin: function(kk) {
-            const Fk = ik.indexOf(kk); - 1 !== Fk && ik.splice(Fk, 1)
+          removePlugin: function(mm) {
+            const Tm = am.indexOf(mm); - 1 !== Tm && am.splice(Tm, 1)
           }
-        }), kk.debugMode = function() {
-          yk = !1
-        }, kk.safeMode = function() {
-          yk = !0
-        }, kk.versionString = "11.11.1", kk.regex = {
-          concat: ek,
-          lookahead: tk,
-          either: wk,
-          optional: jk,
-          anyNumberOfTimes: Zk
+        }), mm.debugMode = function() {
+          xm = !1
+        }, mm.safeMode = function() {
+          xm = !0
+        }, mm.versionString = "11.11.1", mm.regex = {
+          concat: Om,
+          lookahead: pm,
+          either: Ym,
+          optional: om,
+          anyNumberOfTimes: Em
         };
-        for (const Ik in ck) "object" === typeof ck[Ik] && Fk(ck[Ik]);
-        return Object.assign(kk, ck), kk
+        for (const fm in rm) "object" === typeof rm[fm] && Tm(rm[fm]);
+        return Object.assign(mm, rm), mm
       },
-      ZF = tF({});
-    ZF.newInstance = () => tF({}), kk.exports = ZF, ZF.HighlightJS = ZF, ZF.default = ZF
+      ET = pT({});
+    ET.newInstance = () => pT({}), mm.exports = ET, ET.HighlightJS = ET, ET.default = ET
   },
-  4714: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => Xk
+  4656: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => hm
     });
-    const Xk = Ik(4722)
+    const hm = fm(4661)
   },
-  4729: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => tk
+  4663: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => pm
     });
-    const Xk = "[A-Za-z$_][0-9A-Za-z$_]*",
-      Tk = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      ik = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      yk = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      lk = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      ak = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      qk = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      Lk = [].concat(ak, yk, lk);
+    const hm = "[A-Za-z$_][0-9A-Za-z$_]*",
+      Am = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      am = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      xm = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      wm = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      Dm = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      im = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      Rm = [].concat(Dm, xm, wm);
 
-    function tk(kk) {
-      const Fk = kk.regex,
-        Ik = Xk,
-        tk = "<>",
-        Zk = "</>",
-        jk = {
-          Hj: /<[A-Za-z0-9\\._:-]+/,
+    function pm(mm) {
+      const Tm = mm.regex,
+        fm = hm,
+        pm = "<>",
+        Em = "</>",
+        om = {
+          Go: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (kk, Fk) => {
-            const Ik = kk[0].length + kk.index,
-              Xk = kk.input[Ik];
-            if ("<" === Xk || "," === Xk) return void Fk.ignoreMatch();
-            let Tk;
-            ">" === Xk && (((kk, Fk) => {
+          isTrulyOpeningTag: (mm, Tm) => {
+            const fm = mm[0].length + mm.index,
+              hm = mm.input[fm];
+            if ("<" === hm || "," === hm) return void Tm.ignoreMatch();
+            let Am;
+            ">" === hm && (((mm, Tm) => {
               let {
-                after: Ik
-              } = Fk;
-              const Xk = "</" + kk[0].slice(1);
-              return -1 !== kk.input.indexOf(Xk, Ik)
-            })(kk, {
-              after: Ik
-            }) || Fk.ignoreMatch());
-            const ik = kk.input.substring(Ik);
-            ((Tk = ik.match(/^\s*=/)) || (Tk = ik.match(/^\s+extends\s+/)) && 0 === Tk.index) && Fk.ignoreMatch()
+                after: fm
+              } = Tm;
+              const hm = "</" + mm[0].slice(1);
+              return -1 !== mm.input.indexOf(hm, fm)
+            })(mm, {
+              after: fm
+            }) || Tm.ignoreMatch());
+            const am = mm.input.substring(fm);
+            ((Am = am.match(/^\s*=/)) || (Am = am.match(/^\s+extends\s+/)) && 0 === Am.index) && Tm.ignoreMatch()
           }
         },
-        ek = {
-          $pattern: Xk,
-          keyword: Tk,
-          literal: ik,
-          built_in: Lk,
-          "variable.language": qk
+        Om = {
+          $pattern: hm,
+          keyword: Am,
+          literal: am,
+          built_in: Rm,
+          "variable.language": im
         },
-        wk = "[0-9](_?[0-9])*",
-        Hk = `\\.(${wk})`,
-        Jk = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        xk = {
+        Ym = "[0-9](_?[0-9])*",
+        qm = `\\.(${Ym})`,
+        jm = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        Vm = {
           className: "number",
           variants: [{
-            Hj: `(\\b(${Jk})((${Hk})|\\.)?|(${Hk}))[eE][+-]?(${wk})\\b`
+            Go: `(\\b(${jm})((${qm})|\\.)?|(${qm}))[eE][+-]?(${Ym})\\b`
           }, {
-            Hj: `\\b(${Jk})\\b((${Hk})\\b|\\.)?|(${Hk})\\b`
+            Go: `\\b(${jm})\\b((${qm})\\b|\\.)?|(${qm})\\b`
           }, {
-            Hj: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            Go: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            Hj: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            Go: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            Hj: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            Go: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            Hj: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            Go: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            Hj: "\\b0[0-7]+n?\\b"
+            Go: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        Pk = {
+        Im = {
           className: "subst",
-          Hj: "\\$\\{",
+          Go: "\\$\\{",
           end: "\\}",
-          keywords: ek,
+          keywords: Om,
           contains: []
         },
-        Kk = {
-          Hj: ".?html`",
+        Km = {
+          Go: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [kk.BACKSLASH_ESCAPE, Pk],
+            contains: [mm.BACKSLASH_ESCAPE, Im],
             subLanguage: "xml"
           }
         },
-        Qk = {
-          Hj: ".?css`",
+        Qm = {
+          Go: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [kk.BACKSLASH_ESCAPE, Pk],
+            contains: [mm.BACKSLASH_ESCAPE, Im],
             subLanguage: "css"
           }
         },
-        sk = {
-          Hj: ".?gql`",
+        nm = {
+          Go: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [kk.BACKSLASH_ESCAPE, Pk],
+            contains: [mm.BACKSLASH_ESCAPE, Im],
             subLanguage: "graphql"
           }
         },
-        Vk = {
+        Jm = {
           className: "string",
-          Hj: "`",
+          Go: "`",
           end: "`",
-          contains: [kk.BACKSLASH_ESCAPE, Pk]
+          contains: [mm.BACKSLASH_ESCAPE, Im]
         },
-        zk = {
+        cm = {
           className: "comment",
-          variants: [kk.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [mm.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              Hj: "(?=@[A-Za-z]+)",
+              Go: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                Hj: "@[A-Za-z]+"
+                Go: "@[A-Za-z]+"
               }, {
                 className: "type",
-                Hj: "\\{",
+                Go: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                Hj: Ik + "(?=\\s*(-)|$)",
+                Go: fm + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                Hj: /(?=[^\n])\s/,
+                Go: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), kk.C_BLOCK_COMMENT_MODE, kk.C_LINE_COMMENT_MODE]
+          }), mm.C_BLOCK_COMMENT_MODE, mm.C_LINE_COMMENT_MODE]
         },
-        Sk = [kk.APOS_STRING_MODE, kk.QUOTE_STRING_MODE, Kk, Qk, sk, Vk, {
+        zm = [mm.APOS_STRING_MODE, mm.QUOTE_STRING_MODE, Km, Qm, nm, Jm, {
           match: /\$\d+/
-        }, xk];
-      Pk.contains = Sk.concat({
-        Hj: /\{/,
+        }, Vm];
+      Im.contains = zm.concat({
+        Go: /\{/,
         end: /\}/,
-        keywords: ek,
-        contains: ["self"].concat(Sk)
+        keywords: Om,
+        contains: ["self"].concat(zm)
       });
-      const vk = [].concat(zk, Pk.contains),
-        Ek = vk.concat([{
-          Hj: /(\s*)\(/,
+      const Zm = [].concat(cm, Im.contains),
+        km = Zm.concat([{
+          Go: /(\s*)\(/,
           end: /\)/,
-          keywords: ek,
-          contains: ["self"].concat(vk)
+          keywords: Om,
+          contains: ["self"].concat(Zm)
         }]),
-        Ok = {
+        bm = {
           className: "params",
-          Hj: /(\s*)\(/,
+          Go: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: ek,
-          contains: Ek
+          keywords: Om,
+          contains: km
         },
-        nk = {
+        Sm = {
           variants: [{
-            match: [/class/, /\s+/, Ik, /\s+/, /extends/, /\s+/, Fk.concat(Ik, "(", Fk.concat(/\./, Ik), ")*")],
+            match: [/class/, /\s+/, fm, /\s+/, /extends/, /\s+/, Tm.concat(fm, "(", Tm.concat(/\./, fm), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1152,24 +1152,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, Ik],
+            match: [/class/, /\s+/, fm],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        Gk = {
+        em = {
           relevance: 0,
-          match: Fk.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: Tm.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...yk, ...lk]
+            _: [...xm, ...wm]
           }
         },
-        pk = {
+        Nm = {
           variants: [{
-            match: [/function/, /\s+/, Ik, /(?=\s*\()/]
+            match: [/function/, /\s+/, fm, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1178,53 +1178,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [Ok],
+          contains: [bm],
           illegal: /%/
         };
-      const uk = {
-        match: Fk.concat(/\b/, (bk = [...ak, "super", "import"].map((kk => `${kk}\\s*\\(`)), Fk.concat("(?!", bk.join("|"), ")")), Ik, Fk.lookahead(/\s*\(/)),
+      const Gm = {
+        match: Tm.concat(/\b/, (Xm = [...Dm, "super", "import"].map((mm => `${mm}\\s*\\(`)), Tm.concat("(?!", Xm.join("|"), ")")), fm, Tm.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var bk;
-      const Rk = {
-          Hj: Fk.concat(/\./, Fk.lookahead(Fk.concat(Ik, /(?![0-9A-Za-z$_(])/))),
-          end: Ik,
+      var Xm;
+      const Pm = {
+          Go: Tm.concat(/\./, Tm.lookahead(Tm.concat(fm, /(?![0-9A-Za-z$_(])/))),
+          end: fm,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        Uk = {
-          match: [/get|set/, /\s+/, Ik, /(?=\()/],
+        Hm = {
+          match: [/get|set/, /\s+/, fm, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            Hj: /\(\)/
-          }, Ok]
+            Go: /\(\)/
+          }, bm]
         },
-        Ck = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + kk.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        Nk = {
-          match: [/const|var|let/, /\s+/, Ik, /\s*/, /=\s*/, /(async\s*)?/, Fk.lookahead(Ck)],
+        ym = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + mm.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        Cm = {
+          match: [/const|var|let/, /\s+/, fm, /\s*/, /=\s*/, /(async\s*)?/, Tm.lookahead(ym)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [Ok]
+          contains: [bm]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: ek,
+        keywords: Om,
         exports: {
-          PARAMS_CONTAINS: Ek,
-          CLASS_REFERENCE: Gk
+          PARAMS_CONTAINS: km,
+          CLASS_REFERENCE: em
         },
         illegal: /#(?![$_A-z])/,
-        contains: [kk.SHEBANG({
+        contains: [mm.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1232,265 +1232,265 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          Hj: /^\s*['"]use (strict|asm)['"]/
-        }, kk.APOS_STRING_MODE, kk.QUOTE_STRING_MODE, Kk, Qk, sk, Vk, zk, {
+          Go: /^\s*['"]use (strict|asm)['"]/
+        }, mm.APOS_STRING_MODE, mm.QUOTE_STRING_MODE, Km, Qm, nm, Jm, cm, {
           match: /\$\d+/
-        }, xk, Gk, {
+        }, Vm, em, {
           scope: "attr",
-          match: Ik + Fk.lookahead(":"),
+          match: fm + Tm.lookahead(":"),
           relevance: 0
-        }, Nk, {
-          Hj: "(" + kk.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, Cm, {
+          Go: "(" + mm.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [zk, kk.REGEXP_MODE, {
+          contains: [cm, mm.REGEXP_MODE, {
             className: "function",
-            Hj: Ck,
+            Go: ym,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                Hj: kk.UNDERSCORE_IDENT_RE,
+                Go: mm.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                Hj: /\(\s*\)/,
+                Go: /\(\s*\)/,
                 skip: !0
               }, {
-                Hj: /(\s*)\(/,
+                Go: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: ek,
-                contains: Ek
+                keywords: Om,
+                contains: km
               }]
             }]
           }, {
-            Hj: /,/,
+            Go: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              Hj: tk,
-              end: Zk
+              Go: pm,
+              end: Em
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              Hj: jk.Hj,
-              "on:begin": jk.isTrulyOpeningTag,
-              end: jk.end
+              Go: om.Go,
+              "on:begin": om.isTrulyOpeningTag,
+              end: om.end
             }],
             subLanguage: "xml",
             contains: [{
-              Hj: jk.Hj,
-              end: jk.end,
+              Go: om.Go,
+              end: om.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, pk, {
+        }, Nm, {
           beginKeywords: "while if switch catch for"
         }, {
-          Hj: "\\b(?!function)" + kk.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          Go: "\\b(?!function)" + mm.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [Ok, kk.inherit(kk.TITLE_MODE, {
-            Hj: Ik,
+          contains: [bm, mm.inherit(mm.TITLE_MODE, {
+            Go: fm,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, Rk, {
-          match: "\\$" + Ik,
+        }, Pm, {
+          match: "\\$" + fm,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [Ok]
-        }, uk, {
+          contains: [bm]
+        }, Gm, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, nk, Uk, {
+        }, Sm, Hm, {
           match: /\$[(.]/
         }]
       }
     }
   },
-  4731: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => Zk
+  4665: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => Em
     });
-    const Xk = "[A-Za-z$_][0-9A-Za-z$_]*",
-      Tk = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      ik = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      yk = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      lk = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      ak = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      qk = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      Lk = [].concat(ak, yk, lk);
+    const hm = "[A-Za-z$_][0-9A-Za-z$_]*",
+      Am = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      am = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      xm = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      wm = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      Dm = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      im = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      Rm = [].concat(Dm, xm, wm);
 
-    function tk(kk) {
-      const Fk = kk.regex,
-        Ik = Xk,
-        tk = "<>",
-        Zk = "</>",
-        jk = {
-          Hj: /<[A-Za-z0-9\\._:-]+/,
+    function pm(mm) {
+      const Tm = mm.regex,
+        fm = hm,
+        pm = "<>",
+        Em = "</>",
+        om = {
+          Go: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (kk, Fk) => {
-            const Ik = kk[0].length + kk.index,
-              Xk = kk.input[Ik];
-            if ("<" === Xk || "," === Xk) return void Fk.ignoreMatch();
-            let Tk;
-            ">" === Xk && (((kk, Fk) => {
+          isTrulyOpeningTag: (mm, Tm) => {
+            const fm = mm[0].length + mm.index,
+              hm = mm.input[fm];
+            if ("<" === hm || "," === hm) return void Tm.ignoreMatch();
+            let Am;
+            ">" === hm && (((mm, Tm) => {
               let {
-                after: Ik
-              } = Fk;
-              const Xk = "</" + kk[0].slice(1);
-              return -1 !== kk.input.indexOf(Xk, Ik)
-            })(kk, {
-              after: Ik
-            }) || Fk.ignoreMatch());
-            const ik = kk.input.substring(Ik);
-            ((Tk = ik.match(/^\s*=/)) || (Tk = ik.match(/^\s+extends\s+/)) && 0 === Tk.index) && Fk.ignoreMatch()
+                after: fm
+              } = Tm;
+              const hm = "</" + mm[0].slice(1);
+              return -1 !== mm.input.indexOf(hm, fm)
+            })(mm, {
+              after: fm
+            }) || Tm.ignoreMatch());
+            const am = mm.input.substring(fm);
+            ((Am = am.match(/^\s*=/)) || (Am = am.match(/^\s+extends\s+/)) && 0 === Am.index) && Tm.ignoreMatch()
           }
         },
-        ek = {
-          $pattern: Xk,
-          keyword: Tk,
-          literal: ik,
-          built_in: Lk,
-          "variable.language": qk
+        Om = {
+          $pattern: hm,
+          keyword: Am,
+          literal: am,
+          built_in: Rm,
+          "variable.language": im
         },
-        wk = "[0-9](_?[0-9])*",
-        Hk = `\\.(${wk})`,
-        Jk = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        xk = {
+        Ym = "[0-9](_?[0-9])*",
+        qm = `\\.(${Ym})`,
+        jm = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        Vm = {
           className: "number",
           variants: [{
-            Hj: `(\\b(${Jk})((${Hk})|\\.)?|(${Hk}))[eE][+-]?(${wk})\\b`
+            Go: `(\\b(${jm})((${qm})|\\.)?|(${qm}))[eE][+-]?(${Ym})\\b`
           }, {
-            Hj: `\\b(${Jk})\\b((${Hk})\\b|\\.)?|(${Hk})\\b`
+            Go: `\\b(${jm})\\b((${qm})\\b|\\.)?|(${qm})\\b`
           }, {
-            Hj: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            Go: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            Hj: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            Go: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            Hj: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            Go: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            Hj: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            Go: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            Hj: "\\b0[0-7]+n?\\b"
+            Go: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        Pk = {
+        Im = {
           className: "subst",
-          Hj: "\\$\\{",
+          Go: "\\$\\{",
           end: "\\}",
-          keywords: ek,
+          keywords: Om,
           contains: []
         },
-        Kk = {
-          Hj: ".?html`",
+        Km = {
+          Go: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [kk.BACKSLASH_ESCAPE, Pk],
+            contains: [mm.BACKSLASH_ESCAPE, Im],
             subLanguage: "xml"
           }
         },
-        Qk = {
-          Hj: ".?css`",
+        Qm = {
+          Go: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [kk.BACKSLASH_ESCAPE, Pk],
+            contains: [mm.BACKSLASH_ESCAPE, Im],
             subLanguage: "css"
           }
         },
-        sk = {
-          Hj: ".?gql`",
+        nm = {
+          Go: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [kk.BACKSLASH_ESCAPE, Pk],
+            contains: [mm.BACKSLASH_ESCAPE, Im],
             subLanguage: "graphql"
           }
         },
-        Vk = {
+        Jm = {
           className: "string",
-          Hj: "`",
+          Go: "`",
           end: "`",
-          contains: [kk.BACKSLASH_ESCAPE, Pk]
+          contains: [mm.BACKSLASH_ESCAPE, Im]
         },
-        zk = {
+        cm = {
           className: "comment",
-          variants: [kk.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [mm.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              Hj: "(?=@[A-Za-z]+)",
+              Go: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                Hj: "@[A-Za-z]+"
+                Go: "@[A-Za-z]+"
               }, {
                 className: "type",
-                Hj: "\\{",
+                Go: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                Hj: Ik + "(?=\\s*(-)|$)",
+                Go: fm + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                Hj: /(?=[^\n])\s/,
+                Go: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), kk.C_BLOCK_COMMENT_MODE, kk.C_LINE_COMMENT_MODE]
+          }), mm.C_BLOCK_COMMENT_MODE, mm.C_LINE_COMMENT_MODE]
         },
-        Sk = [kk.APOS_STRING_MODE, kk.QUOTE_STRING_MODE, Kk, Qk, sk, Vk, {
+        zm = [mm.APOS_STRING_MODE, mm.QUOTE_STRING_MODE, Km, Qm, nm, Jm, {
           match: /\$\d+/
-        }, xk];
-      Pk.contains = Sk.concat({
-        Hj: /\{/,
+        }, Vm];
+      Im.contains = zm.concat({
+        Go: /\{/,
         end: /\}/,
-        keywords: ek,
-        contains: ["self"].concat(Sk)
+        keywords: Om,
+        contains: ["self"].concat(zm)
       });
-      const vk = [].concat(zk, Pk.contains),
-        Ek = vk.concat([{
-          Hj: /(\s*)\(/,
+      const Zm = [].concat(cm, Im.contains),
+        km = Zm.concat([{
+          Go: /(\s*)\(/,
           end: /\)/,
-          keywords: ek,
-          contains: ["self"].concat(vk)
+          keywords: Om,
+          contains: ["self"].concat(Zm)
         }]),
-        Ok = {
+        bm = {
           className: "params",
-          Hj: /(\s*)\(/,
+          Go: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: ek,
-          contains: Ek
+          keywords: Om,
+          contains: km
         },
-        nk = {
+        Sm = {
           variants: [{
-            match: [/class/, /\s+/, Ik, /\s+/, /extends/, /\s+/, Fk.concat(Ik, "(", Fk.concat(/\./, Ik), ")*")],
+            match: [/class/, /\s+/, fm, /\s+/, /extends/, /\s+/, Tm.concat(fm, "(", Tm.concat(/\./, fm), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1498,24 +1498,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, Ik],
+            match: [/class/, /\s+/, fm],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        Gk = {
+        em = {
           relevance: 0,
-          match: Fk.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: Tm.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...yk, ...lk]
+            _: [...xm, ...wm]
           }
         },
-        pk = {
+        Nm = {
           variants: [{
-            match: [/function/, /\s+/, Ik, /(?=\s*\()/]
+            match: [/function/, /\s+/, fm, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1524,53 +1524,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [Ok],
+          contains: [bm],
           illegal: /%/
         };
-      const uk = {
-        match: Fk.concat(/\b/, (bk = [...ak, "super", "import"].map((kk => `${kk}\\s*\\(`)), Fk.concat("(?!", bk.join("|"), ")")), Ik, Fk.lookahead(/\s*\(/)),
+      const Gm = {
+        match: Tm.concat(/\b/, (Xm = [...Dm, "super", "import"].map((mm => `${mm}\\s*\\(`)), Tm.concat("(?!", Xm.join("|"), ")")), fm, Tm.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var bk;
-      const Rk = {
-          Hj: Fk.concat(/\./, Fk.lookahead(Fk.concat(Ik, /(?![0-9A-Za-z$_(])/))),
-          end: Ik,
+      var Xm;
+      const Pm = {
+          Go: Tm.concat(/\./, Tm.lookahead(Tm.concat(fm, /(?![0-9A-Za-z$_(])/))),
+          end: fm,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        Uk = {
-          match: [/get|set/, /\s+/, Ik, /(?=\()/],
+        Hm = {
+          match: [/get|set/, /\s+/, fm, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            Hj: /\(\)/
-          }, Ok]
+            Go: /\(\)/
+          }, bm]
         },
-        Ck = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + kk.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        Nk = {
-          match: [/const|var|let/, /\s+/, Ik, /\s*/, /=\s*/, /(async\s*)?/, Fk.lookahead(Ck)],
+        ym = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + mm.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        Cm = {
+          match: [/const|var|let/, /\s+/, fm, /\s*/, /=\s*/, /(async\s*)?/, Tm.lookahead(ym)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [Ok]
+          contains: [bm]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: ek,
+        keywords: Om,
         exports: {
-          PARAMS_CONTAINS: Ek,
-          CLASS_REFERENCE: Gk
+          PARAMS_CONTAINS: km,
+          CLASS_REFERENCE: em
         },
         illegal: /#(?![$_A-z])/,
-        contains: [kk.SHEBANG({
+        contains: [mm.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1578,151 +1578,151 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          Hj: /^\s*['"]use (strict|asm)['"]/
-        }, kk.APOS_STRING_MODE, kk.QUOTE_STRING_MODE, Kk, Qk, sk, Vk, zk, {
+          Go: /^\s*['"]use (strict|asm)['"]/
+        }, mm.APOS_STRING_MODE, mm.QUOTE_STRING_MODE, Km, Qm, nm, Jm, cm, {
           match: /\$\d+/
-        }, xk, Gk, {
+        }, Vm, em, {
           scope: "attr",
-          match: Ik + Fk.lookahead(":"),
+          match: fm + Tm.lookahead(":"),
           relevance: 0
-        }, Nk, {
-          Hj: "(" + kk.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, Cm, {
+          Go: "(" + mm.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [zk, kk.REGEXP_MODE, {
+          contains: [cm, mm.REGEXP_MODE, {
             className: "function",
-            Hj: Ck,
+            Go: ym,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                Hj: kk.UNDERSCORE_IDENT_RE,
+                Go: mm.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                Hj: /\(\s*\)/,
+                Go: /\(\s*\)/,
                 skip: !0
               }, {
-                Hj: /(\s*)\(/,
+                Go: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: ek,
-                contains: Ek
+                keywords: Om,
+                contains: km
               }]
             }]
           }, {
-            Hj: /,/,
+            Go: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              Hj: tk,
-              end: Zk
+              Go: pm,
+              end: Em
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              Hj: jk.Hj,
-              "on:begin": jk.isTrulyOpeningTag,
-              end: jk.end
+              Go: om.Go,
+              "on:begin": om.isTrulyOpeningTag,
+              end: om.end
             }],
             subLanguage: "xml",
             contains: [{
-              Hj: jk.Hj,
-              end: jk.end,
+              Go: om.Go,
+              end: om.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, pk, {
+        }, Nm, {
           beginKeywords: "while if switch catch for"
         }, {
-          Hj: "\\b(?!function)" + kk.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          Go: "\\b(?!function)" + mm.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [Ok, kk.inherit(kk.TITLE_MODE, {
-            Hj: Ik,
+          contains: [bm, mm.inherit(mm.TITLE_MODE, {
+            Go: fm,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, Rk, {
-          match: "\\$" + Ik,
+        }, Pm, {
+          match: "\\$" + fm,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [Ok]
-        }, uk, {
+          contains: [bm]
+        }, Gm, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, nk, Uk, {
+        }, Sm, Hm, {
           match: /\$[(.]/
         }]
       }
     }
 
-    function Zk(kk) {
-      const Fk = kk.regex,
-        Ik = tk(kk),
-        yk = Xk,
-        lk = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
-        ak = {
-          Hj: [/namespace/, /\s+/, kk.IDENT_RE],
+    function Em(mm) {
+      const Tm = mm.regex,
+        fm = pm(mm),
+        xm = hm,
+        wm = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
+        Dm = {
+          Go: [/namespace/, /\s+/, mm.IDENT_RE],
           beginScope: {
             1: "keyword",
             3: "title.class"
           }
         },
-        Zk = {
+        Em = {
           beginKeywords: "interface",
           end: /\{/,
           excludeEnd: !0,
           keywords: {
             keyword: "interface extends",
-            built_in: lk
+            built_in: wm
           },
-          contains: [Ik.exports.CLASS_REFERENCE]
+          contains: [fm.exports.CLASS_REFERENCE]
         },
-        jk = {
-          $pattern: Xk,
-          keyword: Tk.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
-          literal: ik,
-          built_in: Lk.concat(lk),
-          "variable.language": qk
+        om = {
+          $pattern: hm,
+          keyword: Am.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
+          literal: am,
+          built_in: Rm.concat(wm),
+          "variable.language": im
         },
-        ek = {
+        Om = {
           className: "meta",
-          Hj: "@" + yk
+          Go: "@" + xm
         },
-        wk = (kk, Fk, Ik) => {
-          const Xk = kk.contains.findIndex((kk => kk.label === Fk));
-          if (-1 === Xk) throw new Error("can not find mode to replace");
-          kk.contains.splice(Xk, 1, Ik)
+        Ym = (mm, Tm, fm) => {
+          const hm = mm.contains.findIndex((mm => mm.label === Tm));
+          if (-1 === hm) throw new Error("can not find mode to replace");
+          mm.contains.splice(hm, 1, fm)
         };
-      Object.assign(Ik.keywords, jk), Ik.exports.PARAMS_CONTAINS.push(ek);
-      const Hk = Ik.contains.find((kk => "attr" === kk.scope)),
-        Jk = Object.assign({}, Hk, {
-          match: Fk.concat(yk, Fk.lookahead(/\s*\?:/))
+      Object.assign(fm.keywords, om), fm.exports.PARAMS_CONTAINS.push(Om);
+      const qm = fm.contains.find((mm => "attr" === mm.scope)),
+        jm = Object.assign({}, qm, {
+          match: Tm.concat(xm, Tm.lookahead(/\s*\?:/))
         });
-      Ik.exports.PARAMS_CONTAINS.push([Ik.exports.CLASS_REFERENCE, Hk, Jk]), Ik.contains = Ik.contains.concat([ek, ak, Zk, Jk]), wk(Ik, "shebang", kk.SHEBANG()), wk(Ik, "use_strict", {
+      fm.exports.PARAMS_CONTAINS.push([fm.exports.CLASS_REFERENCE, qm, jm]), fm.contains = fm.contains.concat([Om, Dm, Em, jm]), Ym(fm, "shebang", mm.SHEBANG()), Ym(fm, "use_strict", {
         className: "meta",
         relevance: 10,
-        Hj: /^\s*['"]use strict['"]/
+        Go: /^\s*['"]use strict['"]/
       });
-      return Ik.contains.find((kk => "func.def" === kk.label)).relevance = 0, Object.assign(Ik, {
+      return fm.contains.find((mm => "func.def" === mm.label)).relevance = 0, Object.assign(fm, {
         name: "TypeScript",
         aliases: ["ts", "tsx", "mts", "cts"]
-      }), Ik
+      }), fm
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

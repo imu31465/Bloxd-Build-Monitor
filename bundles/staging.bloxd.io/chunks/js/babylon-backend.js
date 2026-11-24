@@ -1,100 +1,100 @@
 export const id = 0;
 export const ids = [0];
 export const modules = {
-  41123: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      CapeMaterialPlugin: () => Kk,
-      HueTintMaterialPlugin: () => Qk,
-      LifeformMaterialPlugin: () => sk,
-      OverlayMaterialPlugin: () => Vk
+  41176: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      CapeMaterialPlugin: () => Km,
+      HueTintMaterialPlugin: () => Qm,
+      LifeformMaterialPlugin: () => nm,
+      OverlayMaterialPlugin: () => Jm
     });
-    var Xk = Ik(41132),
-      Tk = Ik(38010);
-    class ik extends((0, Xk.g)(Tk.d)) {}(0, Xk.h)(Tk.d, ik);
-    var yk = Ik(37236);
-    class lk extends((0, Xk.g)(yk.f)) {}(0, Xk.h)(yk.f, lk);
-    var ak = Ik(37835);
-    class qk extends((0, Xk.g)(ak.e)) {}(0, Xk.h)(ak.e, qk);
-    var Lk = Ik(37461),
-      tk = Ik(40269),
-      Zk = Ik(37457);
-    class jk extends((0, Xk.g)(Zk.e)) {
-      constructor(kk, Fk, Ik) {
-        super(kk, Fk, Ik), (0, Lk.h)(kk)
+    var hm = fm(41178),
+      Am = fm(38070);
+    class am extends((0, hm.h)(Am.b)) {}(0, hm.j)(Am.b, am);
+    var xm = fm(37250);
+    class wm extends((0, hm.h)(xm.d)) {}(0, hm.j)(xm.d, wm);
+    var Dm = fm(37905);
+    class im extends((0, hm.h)(Dm.f)) {}(0, hm.j)(Dm.f, im);
+    var Rm = fm(37488),
+      pm = fm(40357),
+      Em = fm(37479);
+    class om extends((0, hm.h)(Em.i)) {
+      constructor(mm, Tm, fm) {
+        super(mm, Tm, fm), (0, Rm.e)(mm)
       }
-      dispose(kk) {
-        (0, Lk.l)(this._material), super.dispose(kk)
+      dispose(mm) {
+        (0, Rm.i)(this._material), super.dispose(mm)
       }
-    }(0, Xk.h)(Zk.e, jk), (0, Zk.f)({
-      disableUnusedSpecularTerm: Xk.d,
-      isLightingDisabled: kk => kk instanceof tk.StandardMaterial && kk.disableLighting
+    }(0, hm.j)(Em.i, om), (0, Em.k)({
+      disableUnusedSpecularTerm: hm.d,
+      isLightingDisabled: mm => mm instanceof pm.StandardMaterial && mm.disableLighting
     });
-    var ek = Ik(38684);
-    class wk extends((0, Xk.g)(ek.d)) {}(0, Xk.h)(ek.d, wk);
-    var Hk = Ik(38791),
-      Jk = Ik(37340),
-      xk = Ik(38126),
-      Pk = Ik(37286);
-    class Kk extends((0, Xk.g)(Hk.d)) {}(0, Xk.h)(Hk.d, Kk);
-    class Qk extends((0, Xk.g)(Jk.d)) {}(0, Xk.h)(Jk.d, Qk);
-    class sk extends((0, Xk.g)(xk.m)) {}(0, Xk.h)(xk.m, sk);
-    class Vk extends((0, Xk.g)(Pk.d)) {}(0, Xk.h)(Pk.d, Vk)
+    var Om = fm(38781);
+    class Ym extends((0, hm.h)(Om.d)) {}(0, hm.j)(Om.d, Ym);
+    var qm = fm(38890),
+      jm = fm(37341),
+      Vm = fm(38196),
+      Im = fm(37294);
+    class Km extends((0, hm.h)(qm.d)) {}(0, hm.j)(qm.d, Km);
+    class Qm extends((0, hm.h)(jm.b)) {}(0, hm.j)(jm.b, Qm);
+    class nm extends((0, hm.h)(Vm.n)) {}(0, hm.j)(Vm.n, nm);
+    class Jm extends((0, hm.h)(Im.b)) {}(0, hm.j)(Im.b, Jm)
   },
-  41559: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      addBabylonLights: () => sF,
-      default: () => SF
+  41596: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      addBabylonLights: () => nT,
+      default: () => zT
     });
-    var Xk = Ik(41561),
-      Tk = (Ik(39980), Ik(41117), Ik(40498), Ik(41573)),
-      ik = Ik(37327),
-      yk = Ik(37144),
-      lk = Ik(41586),
-      ak = Ik(41591),
-      qk = Ik(37277),
-      Lk = (Ik(41132), Ik(41601)),
-      tk = Ik(41599),
-      Zk = Ik(38714),
-      jk = Ik(41604),
-      ek = Ik(39837),
-      wk = Ik(38700);
-    const Hk = "gpuParticles",
-      Jk = wk.t,
-      xk = kk => kk / 4,
-      Pk = kk => `gpuParticleSystem[${kk>>2}].${"xyzw"[3&kk]}`,
-      Kk = `\nprecision highp float;\nprecision highp int;\nprecision highp usampler2D;\n\n#define MAX_STOPS ${wk.c}\n#define COLOR_POSITIONS ${xk(Jk.colorPositions)}\n#define COLOR1 ${xk(Jk.color1)}\n#define COLOR2 ${xk(Jk.color2)}\n#define VELOCITY ${xk(Jk.TH)}\n#define REMAP ${xk(Jk.remap)}\n#define RECORDS_PER_ROW ${wk.l}\n\nuniform mat4 gpuParticleView;\nuniform mat4 gpuParticleProjection;\nuniform vec4 gpuParticleSystem[${wk.p/4}];\n// The records' frame offset and the system's clock; the slot drawn first (the oldest) and the slots in use.\nuniform vec4 gpuParticleFrame;\nuniform vec2 gpuParticleRange;\nuniform usampler2D gpuParticleRecords;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvec3 gravity() { return vec3(${Pk(Jk.gravity)}, ${Pk(Jk.gravity+1)}, ${Pk(Jk.gravity+2)}); }\nint colorCount() { return int(${Pk(Jk.colorCount)}); }\nvec4 colorDead() { return gpuParticleSystem[${xk(Jk.colorDead)}]; }\nint velocityCount() { return int(${Pk(Jk.velocityCount)}); }\nint remapCount() { return int(${Pk(Jk.remapCount)}); }\n\nuint hash(uint v) {\n\tuint state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tuint top = state >> 28u;\n\tuint bits0 = state >> 4u;\n\tuint bits1 = (top & 1u) != 0u ? bits0 >> 1u : bits0;\n\tuint bits2 = (top & 2u) != 0u ? bits1 >> 2u : bits1;\n\tuint bits3 = (top & 4u) != 0u ? bits2 >> 4u : bits2;\n\tuint word = (((top & 8u) != 0u ? bits3 >> 8u : bits3) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfloat random(uint seed, int stop) {\n\treturn float(hash(seed ^ (uint(stop) * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfloat colourPosition(int i) {\n\treturn gpuParticleSystem[COLOR_POSITIONS + i / 4][i % 4];\n}\n\nvec4 stopColour(int i, uint seed) {\n\treturn mix(gpuParticleSystem[COLOR1 + i], gpuParticleSystem[COLOR2 + i], random(seed, i));\n}\n\nfloat velocityFactor(int i, uint seed) {\n\tvec4 stop = gpuParticleSystem[VELOCITY + i];\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\nvec4 colourAt(vec4 colour0, float age, float ratio, uint seed) {\n\tint n = colorCount();\n\tvec4 colour;\n\tif (n == 0) {\n\t\tcolour = mix(colour0, colorDead(), ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0, seed);\n\t} else if (ratio < colourPosition(0)) {\n\t\tcolour = stopColour(min(1, n - 1), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1, seed);\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tfloat a = colourPosition(i);\n\t\t\tfloat b = colourPosition(i + 1);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tfloat scale = b > a ? (ratio - a) / (b - a) : 0.0;\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\nvec3 travel(float alpha, float beta, vec3 d, vec3 g, float s0, float s1) {\n\tfloat ds = s1 - s0;\n\tfloat ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tfloat ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\nvec3 displacement(vec3 d, float age, float life, uint seed) {\n\tvec3 g = gravity();\n\tint n = velocityCount();\n\tif (n == 0) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvec3 total = vec3(0.0);\n\tfloat beforeFirst = min(age, gpuParticleSystem[VELOCITY].x * life);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1, n - 1), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (int i = 0; i + 1 < n; i++) {\n\t\tfloat a = gpuParticleSystem[VELOCITY + i].x * life;\n\t\tfloat b = gpuParticleSystem[VELOCITY + i + 1].x * life;\n\t\tfloat lo = max(a, 0.0);\n\t\tfloat hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tfloat fa = velocityFactor(i, seed);\n\t\t\tfloat beta = (velocityFactor(i + 1, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tfloat afterLast = max(gpuParticleSystem[VELOCITY + n - 1].x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\nvec4 remapAt(float age, float ratio) {\n\tint n = remapCount();\n\tif (n == 0 || age == 0.0) {\n\t\treturn vec4(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvec2 stop = gpuParticleSystem[REMAP + n - 1].yz;\n\tif (ratio < gpuParticleSystem[REMAP].x) {\n\t\tstop = gpuParticleSystem[REMAP].yz;\n\t} else {\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tvec4 a = gpuParticleSystem[REMAP + i];\n\t\t\tvec4 b = gpuParticleSystem[REMAP + i + 1];\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, b.x > a.x ? (ratio - a.x) / (b.x - a.x) : 0.0);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\nvoid main(void) {\n\t// No division by a variable: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 is suspected of dividing by a uniform wrongly\n\tint count = int(gpuParticleRange.y);\n\tint unwrapped = int(gpuParticleRange.x) + gl_InstanceID;\n\t// One wrap, as start < count and the draw's instances are count (gpuParticleRing.ts)\n\tint slot = unwrapped >= count ? unwrapped - count : unwrapped;\n\tivec2 at = ivec2((slot % RECORDS_PER_ROW) * 4, slot / RECORDS_PER_ROW);\n\tvec4 spawn = uintBitsToFloat(texelFetch(gpuParticleRecords, at, 0));\n\tvec4 velocity = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(1, 0), 0));\n\tuvec4 sizeSeed = texelFetch(gpuParticleRecords, at + ivec2(2, 0), 0);\n\tvec4 colour0 = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(3, 0), 0));\n\tfloat age = gpuParticleFrame.w - spawn.w;\n\tfloat life = velocity.w;\n\t// The strip's corners: (0, 0), (1, 0), (0, 1), (1, 1).\n\tvec2 corner = vec2(float(gl_VertexID & 1), float(gl_VertexID >> 1));\n\tvUV = corner;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tgl_Position = vec4(0.0, 0.0, 2.0, 1.0);\n\t\tvColor = vec4(0.0);\n\t\tvRemap = vec4(0.0, 1.0, 0.0, 1.0);\n\t\treturn;\n\t}\n\tfloat ratio = age / life;\n\tuint seed = sizeSeed.y;\n\tvec3 centre = gpuParticleFrame.xyz + spawn.xyz + displacement(velocity.xyz, age, life, seed);\n\t// particles.vertex's billboard: the corner offset in view space.\n\tvec3 viewPos = (gpuParticleView * vec4(centre, 1.0)).xyz + vec3((corner - 0.5) * uintBitsToFloat(sizeSeed.x), 0.0);\n\tgl_Position = gpuParticleProjection * vec4(viewPos, 1.0);\n\tvColor = colourAt(colour0, age, ratio, seed);\n\tvRemap = remapAt(age, ratio);\n}\n`;
-    ek.b.ShadersStore[`${Hk}VertexShader`] = Kk, ek.b.ShadersStore[`${Hk}PixelShader`] = "\nprecision highp float;\n\nuniform sampler2D gpuParticleTexture;\nuniform sampler2D gpuParticleRampTexture;\nuniform float gpuParticleRamp;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvoid main(void) {\n\tvec4 textureColour = texture2D(gpuParticleTexture, vUV);\n\tvec4 colour = textureColour * vColor;\n\tif (gpuParticleRamp != 0.0) {\n\t\tfloat alpha = colour.a;\n\t\tfloat index = clamp((alpha - vRemap.x) / vRemap.y, 0.0, 1.0);\n\t\tvec4 rampColour = texture2D(gpuParticleRampTexture, vec2(1.0 - index, 0.0));\n\t\tcolour = vec4(colour.rgb * rampColour.rgb, clamp((alpha * rampColour.a - vRemap.z) / vRemap.w, 0.0, 1.0));\n\t}\n#ifdef MULTIPLY_PASS\n\t// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\n\tfloat sourceAlpha = vColor.a * textureColour.a;\n\tcolour.rgb = colour.rgb * sourceAlpha + vec3(1.0 - sourceAlpha);\n#endif\n\tgl_FragColor = colour;\n}\n";
-    const Qk = ["gpuParticleView", "gpuParticleProjection", "gpuParticleSystem", "gpuParticleFrame", "gpuParticleRange", "gpuParticleRamp"],
-      sk = ["gpuParticleTexture", "gpuParticleRampTexture", "gpuParticleRecords"];
-    var Vk = Ik(38691),
-      zk = Ik(41612);
-    class Sk extends Vk.c {
-      constructor(kk, Fk, Ik, Xk) {
-        super(kk, Fk, Ik), this.renderer = Ik, this.Yw = Xk, this.id = void 0, this.renderingGroupId = 0, this.layerMask = 268435455, this.records = void 0, this.uniforms = new Float32Array(wk.p), this.uniformBits = new Uint32Array(this.uniforms.buffer), this.ramp = null, this.rampTexels = (0, zk.e)(), this.engine = void 0, this.animatedFrame = -1, this.uploadSlots = (kk, Fk) => {
+    var hm = fm(41599),
+      Am = (fm(40096), fm(41173), fm(40590), fm(41609)),
+      am = fm(37330),
+      xm = fm(37181),
+      wm = fm(41620),
+      Dm = fm(41626),
+      im = fm(37290),
+      Rm = (fm(41178), fm(41636)),
+      pm = fm(41634),
+      Em = fm(38809),
+      om = fm(41638),
+      Om = fm(39960),
+      Ym = fm(38795);
+    const qm = "gpuParticles",
+      jm = Ym.u,
+      Vm = mm => mm / 4,
+      Im = mm => `gpuParticleSystem[${mm>>2}].${"xyzw"[3&mm]}`,
+      Km = `\nprecision highp float;\nprecision highp int;\nprecision highp usampler2D;\n\n#define MAX_STOPS ${Ym.d}\n#define COLOR_POSITIONS ${Vm(jm.colorPositions)}\n#define COLOR1 ${Vm(jm.color1)}\n#define COLOR2 ${Vm(jm.color2)}\n#define VELOCITY ${Vm(jm.qq)}\n#define REMAP ${Vm(jm.remap)}\n#define RECORDS_PER_ROW ${Ym.m}\n\nuniform mat4 gpuParticleView;\nuniform mat4 gpuParticleProjection;\nuniform vec4 gpuParticleSystem[${Ym.o/4}];\n// The records' frame offset and the system's clock; the slot drawn first (the oldest) and the slots in use.\nuniform vec4 gpuParticleFrame;\nuniform vec2 gpuParticleRange;\nuniform usampler2D gpuParticleRecords;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvec3 gravity() { return vec3(${Im(jm.gravity)}, ${Im(jm.gravity+1)}, ${Im(jm.gravity+2)}); }\nint colorCount() { return int(${Im(jm.colorCount)}); }\nvec4 colorDead() { return gpuParticleSystem[${Vm(jm.colorDead)}]; }\nint velocityCount() { return int(${Im(jm.velocityCount)}); }\nint remapCount() { return int(${Im(jm.remapCount)}); }\n\nuint hash(uint v) {\n\tuint state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tuint top = state >> 28u;\n\tuint bits0 = state >> 4u;\n\tuint bits1 = (top & 1u) != 0u ? bits0 >> 1u : bits0;\n\tuint bits2 = (top & 2u) != 0u ? bits1 >> 2u : bits1;\n\tuint bits3 = (top & 4u) != 0u ? bits2 >> 4u : bits2;\n\tuint word = (((top & 8u) != 0u ? bits3 >> 8u : bits3) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfloat random(uint seed, int stop) {\n\treturn float(hash(seed ^ (uint(stop) * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfloat colourPosition(int i) {\n\treturn gpuParticleSystem[COLOR_POSITIONS + i / 4][i % 4];\n}\n\nvec4 stopColour(int i, uint seed) {\n\treturn mix(gpuParticleSystem[COLOR1 + i], gpuParticleSystem[COLOR2 + i], random(seed, i));\n}\n\nfloat velocityFactor(int i, uint seed) {\n\tvec4 stop = gpuParticleSystem[VELOCITY + i];\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\nvec4 colourAt(vec4 colour0, float age, float ratio, uint seed) {\n\tint n = colorCount();\n\tvec4 colour;\n\tif (n == 0) {\n\t\tcolour = mix(colour0, colorDead(), ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0, seed);\n\t} else if (ratio < colourPosition(0)) {\n\t\tcolour = stopColour(min(1, n - 1), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1, seed);\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tfloat a = colourPosition(i);\n\t\t\tfloat b = colourPosition(i + 1);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tfloat scale = b > a ? (ratio - a) / (b - a) : 0.0;\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\nvec3 travel(float alpha, float beta, vec3 d, vec3 g, float s0, float s1) {\n\tfloat ds = s1 - s0;\n\tfloat ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tfloat ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\nvec3 displacement(vec3 d, float age, float life, uint seed) {\n\tvec3 g = gravity();\n\tint n = velocityCount();\n\tif (n == 0) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvec3 total = vec3(0.0);\n\tfloat beforeFirst = min(age, gpuParticleSystem[VELOCITY].x * life);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1, n - 1), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (int i = 0; i + 1 < n; i++) {\n\t\tfloat a = gpuParticleSystem[VELOCITY + i].x * life;\n\t\tfloat b = gpuParticleSystem[VELOCITY + i + 1].x * life;\n\t\tfloat lo = max(a, 0.0);\n\t\tfloat hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tfloat fa = velocityFactor(i, seed);\n\t\t\tfloat beta = (velocityFactor(i + 1, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tfloat afterLast = max(gpuParticleSystem[VELOCITY + n - 1].x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\nvec4 remapAt(float age, float ratio) {\n\tint n = remapCount();\n\tif (n == 0 || age == 0.0) {\n\t\treturn vec4(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvec2 stop = gpuParticleSystem[REMAP + n - 1].yz;\n\tif (ratio < gpuParticleSystem[REMAP].x) {\n\t\tstop = gpuParticleSystem[REMAP].yz;\n\t} else {\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tvec4 a = gpuParticleSystem[REMAP + i];\n\t\t\tvec4 b = gpuParticleSystem[REMAP + i + 1];\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, b.x > a.x ? (ratio - a.x) / (b.x - a.x) : 0.0);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\nvoid main(void) {\n\t// No division by a variable: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 is suspected of dividing by a uniform wrongly\n\tint count = int(gpuParticleRange.y);\n\tint unwrapped = int(gpuParticleRange.x) + gl_InstanceID;\n\t// One wrap, as start < count and the draw's instances are count (gpuParticleRing.ts)\n\tint slot = unwrapped >= count ? unwrapped - count : unwrapped;\n\tivec2 at = ivec2((slot % RECORDS_PER_ROW) * 4, slot / RECORDS_PER_ROW);\n\tvec4 spawn = uintBitsToFloat(texelFetch(gpuParticleRecords, at, 0));\n\tvec4 velocity = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(1, 0), 0));\n\tuvec4 sizeSeed = texelFetch(gpuParticleRecords, at + ivec2(2, 0), 0);\n\tvec4 colour0 = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(3, 0), 0));\n\tfloat age = gpuParticleFrame.w - spawn.w;\n\tfloat life = velocity.w;\n\t// The strip's corners: (0, 0), (1, 0), (0, 1), (1, 1).\n\tvec2 corner = vec2(float(gl_VertexID & 1), float(gl_VertexID >> 1));\n\tvUV = corner;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tgl_Position = vec4(0.0, 0.0, 2.0, 1.0);\n\t\tvColor = vec4(0.0);\n\t\tvRemap = vec4(0.0, 1.0, 0.0, 1.0);\n\t\treturn;\n\t}\n\tfloat ratio = age / life;\n\tuint seed = sizeSeed.y;\n\tvec3 centre = gpuParticleFrame.xyz + spawn.xyz + displacement(velocity.xyz, age, life, seed);\n\t// particles.vertex's billboard: the corner offset in view space.\n\tvec3 viewPos = (gpuParticleView * vec4(centre, 1.0)).xyz + vec3((corner - 0.5) * uintBitsToFloat(sizeSeed.x), 0.0);\n\tgl_Position = gpuParticleProjection * vec4(viewPos, 1.0);\n\tvColor = colourAt(colour0, age, ratio, seed);\n\tvRemap = remapAt(age, ratio);\n}\n`;
+    Om.e.ShadersStore[`${qm}VertexShader`] = Km, Om.e.ShadersStore[`${qm}PixelShader`] = "\nprecision highp float;\n\nuniform sampler2D gpuParticleTexture;\nuniform sampler2D gpuParticleRampTexture;\nuniform float gpuParticleRamp;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvoid main(void) {\n\tvec4 textureColour = texture2D(gpuParticleTexture, vUV);\n\tvec4 colour = textureColour * vColor;\n\tif (gpuParticleRamp != 0.0) {\n\t\tfloat alpha = colour.a;\n\t\tfloat index = clamp((alpha - vRemap.x) / vRemap.y, 0.0, 1.0);\n\t\tvec4 rampColour = texture2D(gpuParticleRampTexture, vec2(1.0 - index, 0.0));\n\t\tcolour = vec4(colour.rgb * rampColour.rgb, clamp((alpha * rampColour.a - vRemap.z) / vRemap.w, 0.0, 1.0));\n\t}\n#ifdef MULTIPLY_PASS\n\t// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\n\tfloat sourceAlpha = vColor.a * textureColour.a;\n\tcolour.rgb = colour.rgb * sourceAlpha + vec3(1.0 - sourceAlpha);\n#endif\n\tgl_FragColor = colour;\n}\n";
+    const Qm = ["gpuParticleView", "gpuParticleProjection", "gpuParticleSystem", "gpuParticleFrame", "gpuParticleRange", "gpuParticleRamp"],
+      nm = ["gpuParticleTexture", "gpuParticleRampTexture", "gpuParticleRecords"];
+    var Jm = fm(38790),
+      cm = fm(41643);
+    class zm extends Jm.c {
+      constructor(mm, Tm, fm, hm) {
+        super(mm, Tm, fm), this.renderer = fm, this.Aq = hm, this.id = void 0, this.renderingGroupId = 0, this.layerMask = 268435455, this.records = void 0, this.uniforms = new Float32Array(Ym.o), this.uniformBits = new Uint32Array(this.uniforms.buffer), this.ramp = null, this.rampTexels = (0, cm.g)(), this.engine = void 0, this.animatedFrame = -1, this.uploadSlots = (mm, Tm) => {
           const {
-            engine: Ik
-          } = this, Xk = Ik._gl;
-          Ik._bindTextureDirectly(Xk.TEXTURE_2D, this.records, !0), Ik._unpackFlipY(!1);
-          const Tk = this.ring.recordBits;
-          for (let ik = kk; ik < Fk;) {
-            const kk = Math.floor(ik / wk.l),
-              Ik = Math.min(Fk, (kk + 1) * wk.l);
-            Xk.texSubImage2D(Xk.TEXTURE_2D, 0, ik % wk.l * 4, kk, 4 * (Ik - ik), 1, Xk.RGBA_INTEGER, Xk.UNSIGNED_INT, Tk, ik * wk.f), ik = Ik
+            engine: fm
+          } = this, hm = fm._gl;
+          fm._bindTextureDirectly(hm.TEXTURE_2D, this.records, !0), fm._unpackFlipY(!1);
+          const Am = this.ring.recordBits;
+          for (let am = mm; am < Tm;) {
+            const mm = Math.floor(am / Ym.m),
+              fm = Math.min(Tm, (mm + 1) * Ym.m);
+            hm.texSubImage2D(hm.TEXTURE_2D, 0, am % Ym.m * 4, mm, 4 * (fm - am), 1, hm.RGBA_INTEGER, hm.UNSIGNED_INT, Am, am * Ym.g), am = fm
           }
-          Ik._bindTextureDirectly(Xk.TEXTURE_2D, null)
-        }, this.id = kk;
-        const Tk = Xk.Oe();
-        this.engine = Tk;
-        const ik = Math.max(1, Fk),
-          yk = Math.min(ik, wk.l);
-        this.records = Tk.createRawTexture(null, 4 * yk, Math.ceil(ik / yk), Lk.d.TEXTUREFORMAT_RGBA_INTEGER, !1, !1, Lk.d.TEXTURE_NEAREST_SAMPLINGMODE, null, Lk.d.TEXTURETYPE_UNSIGNED_INTEGER)
+          fm._bindTextureDirectly(hm.TEXTURE_2D, null)
+        }, this.id = mm;
+        const Am = hm.dO();
+        this.engine = Am;
+        const am = Math.max(1, Tm),
+          xm = Math.min(am, Ym.m);
+        this.records = Am.createRawTexture(null, 4 * xm, Math.ceil(am / xm), Rm.b.TEXTUREFORMAT_RGBA_INTEGER, !1, !1, Rm.b.TEXTURE_NEAREST_SAMPLINGMODE, null, Rm.b.TEXTURETYPE_UNSIGNED_INTEGER)
       }
       animate() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.Yw.getAnimationRatio() || 1;
-        const Fk = this.Yw.getFrameId();
-        if (Fk === this.animatedFrame) return !1;
-        const Ik = super.animate(kk);
-        return Ik && (this.animatedFrame = Fk, this.ring.takeUploads(this.uploadSlots)), Ik
+        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.Aq.getAnimationRatio() || 1;
+        const Tm = this.Aq.getFrameId();
+        if (Tm === this.animatedFrame) return !1;
+        const fm = super.animate(mm);
+        return fm && (this.animatedFrame = Tm, this.ring.takeUploads(this.uploadSlots)), fm
       }
       render() {
         return this.renderer.render(this)
@@ -103,741 +103,741 @@ export const modules = {
       clone() {
         return null
       }
-      prepareDraw(kk) {
-        (0, zk.h)(this, this.uniforms, this.uniformBits, kk);
-        for (const Ik of wk.r) this.uniforms[Ik] = this.uniformBits[Ik];
-        var Fk;
-        (0, zk.i)(this, this.rampTexels) && (0 === this.rampTexels.key.length ? (null === (Fk = this.ramp) || void 0 === Fk || Fk.dispose(), this.ramp = null) : this.ramp ? this.ramp.update(this.rampTexels.texels) : this.ramp = tk.b.CreateRGBATexture(this.rampTexels.texels, wk.j, 1, this.Yw, !1, !1, Lk.d.TEXTURE_NEAREST_SAMPLINGMODE))
+      prepareDraw(mm) {
+        (0, cm.j)(this, this.uniforms, this.uniformBits, mm);
+        for (const fm of Ym.q) this.uniforms[fm] = this.uniformBits[fm];
+        var Tm;
+        (0, cm.m)(this, this.rampTexels) && (0 === this.rampTexels.key.length ? (null === (Tm = this.ramp) || void 0 === Tm || Tm.dispose(), this.ramp = null) : this.ramp ? this.ramp.update(this.rampTexels.texels) : this.ramp = pm.b.CreateRGBATexture(this.rampTexels.texels, Ym.l, 1, this.Aq, !1, !1, Rm.b.TEXTURE_NEAREST_SAMPLINGMODE))
       }
       releaseGl() {
-        var kk;
-        this.records.dispose(), null === (kk = this.ramp) || void 0 === kk || kk.dispose(), this.ramp = null
+        var mm;
+        this.records.dispose(), null === (mm = this.ramp) || void 0 === mm || mm.dispose(), this.ramp = null
       }
     }
-    const vk = "the context was lost before the programs linked";
-    class Ek {
-      constructor(kk, Fk) {
-        this.Yw = kk, this.reportFailure = Fk, this.failed = !1, this.engine = void 0, this.effect = void 0, this.multiplyEffect = void 0, this.whiteRamp = void 0, this.vertexBuffers = {}, this.frame = new Float32Array(4), this.warnOnce = (0, jk.d)(), this.engine = kk.Oe(), this.effect = this.createEffect(""), this.multiplyEffect = this.createEffect("#define MULTIPLY_PASS"), this.whiteRamp = tk.b.CreateRGBATexture(new Uint8Array([255, 255, 255, 255]), 1, 1, kk, !1, !1, Lk.d.TEXTURE_NEAREST_SAMPLINGMODE), this.awaitLink(this.effect), this.awaitLink(this.multiplyEffect)
+    const Zm = "the context was lost before the programs linked";
+    class km {
+      constructor(mm, Tm) {
+        this.Aq = mm, this.reportFailure = Tm, this.failed = !1, this.engine = void 0, this.effect = void 0, this.multiplyEffect = void 0, this.whiteRamp = void 0, this.vertexBuffers = {}, this.frame = new Float32Array(4), this.warnOnce = (0, om.c)(), this.engine = mm.dO(), this.effect = this.createEffect(""), this.multiplyEffect = this.createEffect("#define MULTIPLY_PASS"), this.whiteRamp = pm.b.CreateRGBATexture(new Uint8Array([255, 255, 255, 255]), 1, 1, mm, !1, !1, Rm.b.TEXTURE_NEAREST_SAMPLINGMODE), this.awaitLink(this.effect), this.awaitLink(this.multiplyEffect)
       }
-      kR(kk, Fk) {
-        const Ik = wk.l * this.engine.getCaps().maxTextureSize;
-        Fk > Ik && this.warnOnce(`capacity:${kk}`, `particle system ${kk} holds ${Ik} particles, not ${Fk}: its records texture's limit`);
-        const Xk = new Sk(kk, Math.min(Fk, Ik), this, this.Yw);
-        return this.Yw.addParticleSystem(Xk), Xk
+      yX(mm, Tm) {
+        const fm = Ym.m * this.engine.getCaps().maxTextureSize;
+        Tm > fm && this.warnOnce(`capacity:${mm}`, `particle system ${mm} holds ${fm} particles, not ${Tm}: its records texture's limit`);
+        const hm = new zm(mm, Math.min(Tm, fm), this, this.Aq);
+        return this.Aq.addParticleSystem(hm), hm
       }
-      canDraw(kk) {
-        var Fk, Ik;
-        if (this.failed || null === (Fk = kk.texture) || void 0 === Fk || null === (Ik = Fk.mirror) || void 0 === Ik || !Ik.isReady()) return !1;
-        for (const Xk of (0, Zk.l)(kk.blendMode))
-          if (!this.effectFor(Xk).isReady()) return !1;
+      canDraw(mm) {
+        var Tm, fm;
+        if (this.failed || null === (Tm = mm.texture) || void 0 === Tm || null === (fm = Tm.mirror) || void 0 === fm || !fm.isReady()) return !1;
+        for (const hm of (0, Em.j)(mm.blendMode))
+          if (!this.effectFor(hm).isReady()) return !1;
         return !0
       }
-      disposeStopped(kk) {
-        this.Yw._toBeDisposed.push(kk)
+      disposeStopped(mm) {
+        this.Aq._toBeDisposed.push(mm)
       }
-      remove(kk) {
-        this.Yw.removeParticleSystem(kk), kk.releaseGl()
+      remove(mm) {
+        this.Aq.removeParticleSystem(mm), mm.releaseGl()
       }
-      render(kk) {
-        var Fk;
-        if (!kk.isReady() || !kk.hasLiveParticles()) return 0;
+      render(mm) {
+        var Tm;
+        if (!mm.isReady() || !mm.hasLiveParticles()) return 0;
         const {
-          engine: Ik,
-          Yw: Xk,
-          frame: Tk
+          engine: fm,
+          Aq: hm,
+          frame: Am
         } = this;
-        kk.prepareDraw(this.warnOnce), kk.drawOffset(Tk, 0), Tk[3] = kk.drawTime();
-        const ik = kk.ring.drawStart(),
-          yk = kk.ring.drawCount(),
-          lk = null !== (Fk = kk.ramp) && void 0 !== Fk ? Fk : this.whiteRamp;
-        Ik.setState(!1);
-        for (const ak of (0, Zk.l)(kk.blendMode)) {
-          const Fk = this.effectFor(ak);
-          Ik.enableEffect(Fk), Fk.setTexture("gpuParticleTexture", kk.texture.mirror), Fk.setTexture("gpuParticleRampTexture", lk), Fk._bindTexture("gpuParticleRecords", kk.records), Fk.setMatrix("gpuParticleView", Xk.getViewMatrix()), Fk.setMatrix("gpuParticleProjection", Xk.getProjectionMatrix()), Fk.setFloatArray4("gpuParticleSystem", kk.uniforms), Fk.setFloat4("gpuParticleFrame", Tk[0], Tk[1], Tk[2], Tk[3]), Fk.setFloat2("gpuParticleRange", ik, yk), Fk.setFloat("gpuParticleRamp", kk.uniforms[wk.t.ramp]), Ik.bindBuffers(this.vertexBuffers, null, Fk), Ik.setAlphaMode((0, Zk.h)(ak)), Ik.drawArraysType(Lk.d.MATERIAL_TriangleStripDrawMode, 0, 4, yk), Fk._bindTexture("gpuParticleRecords", null)
+        mm.prepareDraw(this.warnOnce), mm.drawOffset(Am, 0), Am[3] = mm.drawTime();
+        const am = mm.ring.drawStart(),
+          xm = mm.ring.drawCount(),
+          wm = null !== (Tm = mm.ramp) && void 0 !== Tm ? Tm : this.whiteRamp;
+        fm.setState(!1);
+        for (const Dm of (0, Em.j)(mm.blendMode)) {
+          const Tm = this.effectFor(Dm);
+          fm.enableEffect(Tm), Tm.setTexture("gpuParticleTexture", mm.texture.mirror), Tm.setTexture("gpuParticleRampTexture", wm), Tm._bindTexture("gpuParticleRecords", mm.records), Tm.setMatrix("gpuParticleView", hm.getViewMatrix()), Tm.setMatrix("gpuParticleProjection", hm.getProjectionMatrix()), Tm.setFloatArray4("gpuParticleSystem", mm.uniforms), Tm.setFloat4("gpuParticleFrame", Am[0], Am[1], Am[2], Am[3]), Tm.setFloat2("gpuParticleRange", am, xm), Tm.setFloat("gpuParticleRamp", mm.uniforms[Ym.u.ramp]), fm.bindBuffers(this.vertexBuffers, null, Tm), fm.setAlphaMode((0, Em.h)(Dm)), fm.drawArraysType(Rm.b.MATERIAL_TriangleStripDrawMode, 0, 4, xm), Tm._bindTexture("gpuParticleRecords", null)
         }
-        return Ik.setAlphaMode(Lk.d.ALPHA_DISABLE), yk
+        return fm.setAlphaMode(Rm.b.ALPHA_DISABLE), xm
       }
-      awaitLink(kk) {
-        const Fk = kk.getPipelineContext(),
-          Ik = this.gl();
-        !this.failed && Ik && (!Fk || Fk.isParallelCompiled && !Fk.program ? this.warnOnce("asyncProgram", "GPU particles: Babylon made a particle program asynchronously, so a failed link shows only after the first systems are made") : Fk.isParallelCompiled && Fk.program && (Ik.getProgramParameter(Fk.program, Ik.LINK_STATUS) || this.fail(function(kk, Fk, Ik) {
-          if (kk.isContextLost()) return vk;
-          for (const [Xk, Tk] of [
-              ["VERTEX SHADER", Fk.vertexShader],
-              ["FRAGMENT SHADER", Fk.fragmentShader]
+      awaitLink(mm) {
+        const Tm = mm.getPipelineContext(),
+          fm = this.gl();
+        !this.failed && fm && (!Tm || Tm.isParallelCompiled && !Tm.program ? this.warnOnce("asyncProgram", "GPU particles: Babylon made a particle program asynchronously, so a failed link shows only after the first systems are made") : Tm.isParallelCompiled && Tm.program && (fm.getProgramParameter(Tm.program, fm.LINK_STATUS) || this.fail(function(mm, Tm, fm) {
+          if (mm.isContextLost()) return Zm;
+          for (const [hm, Am] of [
+              ["VERTEX SHADER", Tm.vertexShader],
+              ["FRAGMENT SHADER", Tm.fragmentShader]
             ]) {
-            const Fk = Tk && !kk.getShaderParameter(Tk, kk.COMPILE_STATUS) ? kk.getShaderInfoLog(Tk) : null;
-            if (Fk) return `${Xk} ${Fk}`
+            const Tm = Am && !mm.getShaderParameter(Am, mm.COMPILE_STATUS) ? mm.getShaderInfoLog(Am) : null;
+            if (Tm) return `${hm} ${Tm}`
           }
-          return kk.getProgramInfoLog(Ik) || "a program did not link"
-        }(Ik, Fk, Fk.program))))
+          return mm.getProgramInfoLog(fm) || "a program did not link"
+        }(fm, Tm, Tm.program))))
       }
       gl() {
         return this.engine._gl
       }
-      effectFor(kk) {
-        return kk === Zk.b ? this.multiplyEffect : this.effect
+      effectFor(mm) {
+        return mm === Em.c ? this.multiplyEffect : this.effect
       }
-      createEffect(kk) {
-        return this.engine.createEffect(Hk, [], Qk, sk, kk, void 0, void 0, ((kk, Fk) => {
-          var Ik;
-          this.fail(null !== (Ik = this.gl()) && void 0 !== Ik && Ik.isContextLost() ? vk : function(kk) {
-            const Fk = kk.split("\n    at ")[0];
-            return /^\S*@\S*:\d+:\d+/.test(Fk) ? "a program failed, its log not in this browser's stack" : Fk.replace(/^Error: /, "")
-          }(Fk))
+      createEffect(mm) {
+        return this.engine.createEffect(qm, [], Qm, nm, mm, void 0, void 0, ((mm, Tm) => {
+          var fm;
+          this.fail(null !== (fm = this.gl()) && void 0 !== fm && fm.isContextLost() ? Zm : function(mm) {
+            const Tm = mm.split("\n    at ")[0];
+            return /^\S*@\S*:\d+:\d+/.test(Tm) ? "a program failed, its log not in this browser's stack" : Tm.replace(/^Error: /, "")
+          }(Tm))
         }))
       }
-      fail(kk) {
+      fail(mm) {
         if (!this.failed) {
-          this.failed = !0, console.warn(`GPU particles cannot compile here, so new particle systems are Babylon's: ${kk}`), this.reportFailure(kk);
-          for (const kk of this.Yw.jK.slice()) kk instanceof Sk && kk.disposeOnStop && kk.dispose()
+          this.failed = !0, console.warn(`GPU particles cannot compile here, so new particle systems are Babylon's: ${mm}`), this.reportFailure(mm);
+          for (const mm of this.Aq.VK.slice()) mm instanceof zm && mm.disposeOnStop && mm.dispose()
         }
       }
     }
-    var Ok = Ik(39806);
-    class nk extends Ok.c {
+    var bm = fm(39930);
+    class Sm extends bm.d {
       createEffect() {
-        const kk = super.createEffect(...arguments);
-        return pk(kk), Gk.has(kk) || (Gk.add(kk), kk.onCompileObservable.add((() => {
-          pk(kk)
-        }))), kk
+        const mm = super.createEffect(...arguments);
+        return Nm(mm), em.has(mm) || (em.add(mm), mm.onCompileObservable.add((() => {
+          Nm(mm)
+        }))), mm
       }
     }
-    const Gk = new WeakSet;
+    const em = new WeakSet;
 
-    function pk(kk) {
-      kk._vertexSourceCodeBeforeMigration = "", kk._fragmentSourceCodeBeforeMigration = ""
+    function Nm(mm) {
+      mm._vertexSourceCodeBeforeMigration = "", mm._fragmentSourceCodeBeforeMigration = ""
     }
-    var uk = Ik(40201),
-      bk = Ik(41114),
-      Rk = Ik(39947),
-      Uk = Ik(40161),
-      Ck = Ik(40157),
-      Nk = Ik(40082),
-      ck = Ik(41170),
-      Wk = Ik(37643),
-      fk = Ik(41615),
-      Bk = Ik(41620),
-      dk = Ik(41629),
-      Yk = Ik(40107),
-      Ak = Ik(2786),
-      gk = Ik(37533),
-      mk = Ik(40312),
-      hk = Ik(37610),
-      rk = Ik(37556);
+    var Gm = fm(40309),
+      Xm = fm(41166),
+      Pm = fm(40068),
+      Hm = fm(40272),
+      ym = fm(40264),
+      Cm = fm(40196),
+      rm = fm(41218),
+      sm = fm(37680),
+      lm = fm(41645),
+      Mm = fm(41652),
+      um = fm(41661),
+      Bm = fm(40220),
+      Lm = fm(2858),
+      tm = fm(37554),
+      Um = fm(40408),
+      dm = fm(37644),
+      gm = fm(37581);
 
-    function Dk(kk) {
-      if (kk.visibility < 1 || !kk.isVisible || !kk.isEnabled() || kk.metadata[rk.f] || !kk.isReady()) return !0;
-      const Fk = kk.lK;
-      if (!Fk || 0 === Fk.length) return !0;
-      for (let Ik = 0; Ik < Fk.length; Ik++) {
-        const Xk = Fk[Ik],
-          Tk = Xk.Ue();
-        if (!Tk || !Tk.isReadyForSubMesh(kk, Xk, !1)) return !0
+    function Wm(mm) {
+      if (mm.visibility < 1 || !mm.isVisible || !mm.isEnabled() || mm.metadata[gm.d] || !mm.isReady()) return !0;
+      const Tm = mm.jK;
+      if (!Tm || 0 === Tm.length) return !0;
+      for (let fm = 0; fm < Tm.length; fm++) {
+        const hm = Tm[fm],
+          Am = hm.TY();
+        if (!Am || !Am.isReadyForSubMesh(mm, hm, !1)) return !0
       }
       return !1
     }
-    class Mk {
-      constructor(kk, Fk) {
-        this.qZ = kk, this.culled = 0, this.armed = !1, this.vis = null, this.eye = [0, 0, 0], this.passable = new Set, this.meshes = [], this.cellSlots = new Int32Array(256), this.count = 0, Fk.onBeforeActiveMeshesEvaluationObservable.add((() => {
+    class Fm {
+      constructor(mm, Tm) {
+        this.IE = mm, this.culled = 0, this.armed = !1, this.vis = null, this.eye = [0, 0, 0], this.passable = new Set, this.meshes = [], this.cellSlots = new Int32Array(256), this.count = 0, Tm.onBeforeActiveMeshesEvaluationObservable.add((() => {
           this.armed = !0
         }))
       }
-      Hj(kk) {
-        var Fk;
-        const Ik = this.armed;
-        if (this.armed = !1, this.vis = null, !Ik) return !1;
+      Go(mm) {
+        var Tm;
+        const fm = this.armed;
+        if (this.armed = !1, this.vis = null, !fm) return !1;
         this.culled = 0;
         const {
-          qZ: Xk
-        } = this, Tk = null === (Fk = Xk.Bx) || void 0 === Fk ? void 0 : Fk.visibility;
-        if (!Tk || !kk || Xk.Xw.Tw) return !1;
-        if (!(Xk.XZ.jXk[0] >= hk.h)) return !1;
-        const ik = kk.getProjectionMatrix().m;
-        if (0 !== ik[15]) return !1;
-        const yk = Xk.SZ,
-          lk = kk.globalPosition,
-          ak = this.eye;
-        return ak[0] = lk.x + yk[0], ak[1] = lk.y + yk[1], ak[2] = lk.z + yk[2], !!Tk.eyeClear(ak[0], ak[1], ak[2], kk.minZ, ik, Xk.XZ) && (this.vis = Tk, this.passable.clear(), this.count = 0, !0)
+          IE: hm
+        } = this, Am = null === (Tm = hm.MI) || void 0 === Tm ? void 0 : Tm.visibility;
+        if (!Am || !mm || hm.qY.jY) return !1;
+        if (!(hm.oE.Ohm[0] >= dm.h)) return !1;
+        const am = mm.getProjectionMatrix().m;
+        if (0 !== am[15]) return !1;
+        const xm = hm.HE,
+          wm = mm.globalPosition,
+          Dm = this.eye;
+        return Dm[0] = wm.x + xm[0], Dm[1] = wm.y + xm[1], Dm[2] = wm.z + xm[2], !!Am.eyeClear(Dm[0], Dm[1], Dm[2], mm.minZ, am, hm.oE) && (this.vis = Am, this.passable.clear(), this.count = 0, !0)
       }
-      see(kk, Fk) {
-        const Ik = this.count++;
-        if (Ik === this.cellSlots.length) {
-          const kk = new Int32Array(2 * Ik);
-          kk.set(this.cellSlots), this.cellSlots = kk
+      see(mm, Tm) {
+        const fm = this.count++;
+        if (fm === this.cellSlots.length) {
+          const mm = new Int32Array(2 * fm);
+          mm.set(this.cellSlots), this.cellSlots = mm
         }
-        this.cellSlots[Ik] = Fk, this.meshes[Ik] = kk
+        this.cellSlots[fm] = Tm, this.meshes[fm] = mm
       }
-      seeThrough(kk) {
-        this.passable.add(kk)
+      seeThrough(mm) {
+        this.passable.add(mm)
       }
-      finish(kk, Fk) {
+      finish(mm, Tm) {
         const {
-          vis: Ik,
-          eye: Xk,
-          meshes: Tk,
-          count: ik,
-          cellSlots: yk
+          vis: fm,
+          eye: hm,
+          meshes: Am,
+          count: am,
+          cellSlots: xm
         } = this, {
-          XZ: lk
-        } = this.qZ, [ak, qk] = lk.jXk, Lk = null !== Ik && Ik.update(Xk[0], Xk[1], Xk[2], lk.xkk, ak, qk, this.passable);
-        let tk = 0;
-        for (let Zk = 0; Zk < ik; Zk++) {
-          const Xk = Tk[Zk];
-          if (Lk) {
-            const kk = 3 * yk[Zk];
-            if (kk >= 0 && !Ik.isDrawn(Fk[kk], Fk[kk + 1], Fk[kk + 2])) {
-              tk++;
+          oE: wm
+        } = this.IE, [Dm, im] = wm.Ohm, Rm = null !== fm && fm.update(hm[0], hm[1], hm[2], wm.qmm, Dm, im, this.passable);
+        let pm = 0;
+        for (let Em = 0; Em < am; Em++) {
+          const hm = Am[Em];
+          if (Rm) {
+            const mm = 3 * xm[Em];
+            if (mm >= 0 && !fm.isDrawn(Tm[mm], Tm[mm + 1], Tm[mm + 2])) {
+              pm++;
               continue
             }
           }
-          Yk.f.prototype.push.call(kk, Xk)
+          Bm.f.prototype.push.call(mm, hm)
         }
-        Tk.fill(null, 0, ik), this.count = 0, this.vis = null, this.culled = tk
+        Am.fill(null, 0, am), this.count = 0, this.vis = null, this.culled = pm
       }
     }
-    var kF = Ik(37592),
-      FF = Ik(37543),
-      IF = Ik(40295),
-      XF = Ik(41632),
-      TF = Ik(40297),
-      iF = Ik(40218);
-    let yF = 1;
-    const lF = new WeakSet;
+    var mT = fm(37630),
+      TT = fm(37568),
+      fT = fm(40383),
+      hT = fm(41664),
+      AT = fm(40391),
+      aT = fm(40326);
+    let xT = 1;
+    const wT = new WeakSet;
 
-    function aF() {
-      return yF
+    function DT() {
+      return xT
     }
 
-    function qF() {
-      yF = yF >= 1073741823 ? 1 : yF + 1
+    function iT() {
+      xT = xT >= 1073741823 ? 1 : xT + 1
     }
 
-    function LF(kk) {
-      const Fk = kk.metadata;
-      if (!Fk || !0 !== Fk[gk.t]) return;
-      const Ik = Fk[gk.x],
-        Xk = null === Ik || void 0 === Ik ? void 0 : Ik._noaStamps;
-      if (!Ik || !Xk) return;
-      const Tk = Ik.entries.indexOf(kk);
-      Tk >= 0 && (Xk[Tk] = 0)
+    function RT(mm) {
+      const Tm = mm.metadata;
+      if (!Tm || !0 !== Tm[tm.q]) return;
+      const fm = Tm[tm.w],
+        hm = null === fm || void 0 === fm ? void 0 : fm._noaStamps;
+      if (!fm || !hm) return;
+      const Am = fm.entries.indexOf(mm);
+      Am >= 0 && (hm[Am] = 0)
     }
 
-    function tF(kk) {
-      const Fk = kk.lK;
-      for (let Ik = 0; Ik < Fk.length; Ik++) {
-        const kk = Fk[Ik].Ue();
-        if (kk && !kk.isFrozen) return !1
+    function pT(mm) {
+      const Tm = mm.jK;
+      for (let fm = 0; fm < Tm.length; fm++) {
+        const mm = Tm[fm].TY();
+        if (mm && !mm.isFrozen) return !1
       }
-      for (let Ik = 0; Ik < Fk.length; Ik++) {
-        const kk = Fk[Ik].Ue();
-        kk && lF.add(kk)
+      for (let fm = 0; fm < Tm.length; fm++) {
+        const mm = Tm[fm].TY();
+        mm && wT.add(mm)
       }
       return !0
     }
-    let ZF = !1;
-    const jF = new WeakSet;
+    let ET = !1;
+    const oT = new WeakSet;
 
-    function eF(kk, Fk) {
-      const Ik = kk[Fk];
-      if ("function" !== typeof Ik) throw new Error(`terrainDrawState: Babylon has no ${Fk} to hook`);
-      return Ik
+    function OT(mm, Tm) {
+      const fm = mm[Tm];
+      if ("function" !== typeof fm) throw new Error(`terrainDrawState: Babylon has no ${Tm} to hook`);
+      return fm
     }
 
-    function wF(kk, Fk, Ik, Xk, Tk) {
-      const ik = Ik.XZ.xkk,
-        yk = new Map;
-      let lk = 0;
-      const ak = new Mk(Ik, kk),
-        qk = new kF.c(ik, kk.Oe());
-      ! function(kk) {
-        if (jF.has(kk) || (jF.add(kk), kk.onContextLostObservable.add(qF), kk.Ee.add(qF)), ZF) return;
-        ZF = !0;
-        const Fk = XF.c.prototype,
-          Ik = eF(Fk, "_markSubMeshesAsDirty");
-        Object.assign(Fk, {
-          _markSubMeshesAsDirty(kk) {
-            Ik.call(this, kk), LF(this)
+    function YT(mm, Tm, fm, hm, Am) {
+      const am = fm.oE.qmm,
+        xm = new Map;
+      let wm = 0;
+      const Dm = new Fm(fm, mm),
+        im = new mT.e(am, mm.dO());
+      ! function(mm) {
+        if (oT.has(mm) || (oT.add(mm), mm.onContextLostObservable.add(iT), mm.UO.add(iT)), ET) return;
+        ET = !0;
+        const Tm = hT.c.prototype,
+          fm = OT(Tm, "_markSubMeshesAsDirty");
+        Object.assign(Tm, {
+          _markSubMeshesAsDirty(mm) {
+            fm.call(this, mm), RT(this)
           }
         });
-        const Xk = eF(iF.b.prototype, "_syncParentEnabledState");
-        Object.assign(iF.b.prototype, {
+        const hm = OT(aT.c.prototype, "_syncParentEnabledState");
+        Object.assign(aT.c.prototype, {
           _syncParentEnabledState() {
-            Xk.call(this), LF(this)
+            hm.call(this), RT(this)
           }
         });
-        const Tk = eF(TF.b.prototype, "resetDrawCache");
-        TF.b.prototype.resetDrawCache = function(kk, Fk) {
-          Tk.call(this, kk, Fk), LF(this.getMesh())
+        const Am = OT(AT.e.prototype, "resetDrawCache");
+        AT.e.prototype.resetDrawCache = function(mm, Tm) {
+          Am.call(this, mm, Tm), RT(this.getMesh())
         };
-        const ik = IF.c.prototype,
-          yk = eF(ik, "markDirty");
-        ik.markDirty = function(kk) {
-          yk.call(this, kk), lF.has(this) && qF()
+        const am = fT.d.prototype,
+          xm = OT(am, "markDirty");
+        am.markDirty = function(mm) {
+          xm.call(this, mm), wT.has(this) && iT()
         };
-        const lk = eF(ik, "_markAllSubMeshesAsDirty");
-        Object.assign(ik, {
-          _markAllSubMeshesAsDirty(kk) {
-            lk.call(this, kk), lF.has(this) && qF()
+        const wm = OT(am, "_markAllSubMeshesAsDirty");
+        Object.assign(am, {
+          _markAllSubMeshesAsDirty(mm) {
+            wm.call(this, mm), wT.has(this) && iT()
           }
         })
-      }(kk.Oe());
-      let Lk = new Float64Array(384),
-        tk = new Int32Array(64),
-        Zk = new Uint8Array(64),
-        jk = new Float64Array(64),
-        ek = new Int32Array(192),
-        wk = 0;
-      const Hk = [],
-        Jk = new Float64Array(24),
-        xk = () => {
-          const kk = Hk.pop();
-          return void 0 !== kk ? (tk[kk] = 0, kk) : (wk === tk.length && (Lk = HF(Lk, new Float64Array(2 * Lk.length)), tk = HF(tk, new Int32Array(2 * tk.length)), Zk = HF(Zk, new Uint8Array(2 * Zk.length)), jk = HF(jk, new Float64Array(2 * jk.length)), ek = HF(ek, new Int32Array(2 * ek.length))), wk++)
+      }(mm.dO());
+      let Rm = new Float64Array(384),
+        pm = new Int32Array(64),
+        Em = new Uint8Array(64),
+        om = new Float64Array(64),
+        Om = new Int32Array(192),
+        Ym = 0;
+      const qm = [],
+        jm = new Float64Array(24),
+        Vm = () => {
+          const mm = qm.pop();
+          return void 0 !== mm ? (pm[mm] = 0, mm) : (Ym === pm.length && (Rm = qT(Rm, new Float64Array(2 * Rm.length)), pm = qT(pm, new Int32Array(2 * pm.length)), Em = qT(Em, new Uint8Array(2 * Em.length)), om = qT(om, new Float64Array(2 * om.length)), Om = qT(Om, new Int32Array(2 * Om.length))), Ym++)
         },
-        Pk = kk => {
-          const Fk = 6 * kk._noaSlot,
-            Ik = kk.KXk[0],
-            Xk = kk.KXk[1];
-          Lk[Fk] = Ik.x, Lk[Fk + 1] = Ik.y, Lk[Fk + 2] = Ik.z, Lk[Fk + 3] = Xk.x, Lk[Fk + 4] = Xk.y, Lk[Fk + 5] = Xk.z
+        Im = mm => {
+          const Tm = 6 * mm._noaSlot,
+            fm = mm.Qhm[0],
+            hm = mm.Qhm[1];
+          Rm[Tm] = fm.x, Rm[Tm + 1] = fm.y, Rm[Tm + 2] = fm.z, Rm[Tm + 3] = hm.x, Rm[Tm + 4] = hm.y, Rm[Tm + 5] = hm.z
         },
-        Kk = (kk, Fk, Ik) => {
-          if (!Ik) return ak.see(kk, -1), !1;
-          const Xk = Dk(kk);
-          return Xk && ak.seeThrough(jk[Fk]), ak.see(kk, Fk), !Xk
+        Km = (mm, Tm, fm) => {
+          if (!fm) return Dm.see(mm, -1), !1;
+          const hm = Wm(mm);
+          return hm && Dm.seeThrough(om[Tm]), Dm.see(mm, Tm), !hm
         };
-      let Qk = -1;
-      return kk.getActiveMeshCandidates = () => {
-        const Ik = kk.frustumPlanes,
-          Xk = Fk._selectionContent;
-        Xk.reset(), (Ik => {
-          const Xk = kk.frustumPlanes;
-          lk = lk + 1 | 0 || 1;
-          const Tk = Fk.blocks,
-            ik = ak.Hj(kk.activeCamera),
-            yk = ik && !0;
-          if (yk) {
-            const Fk = kk.Oe().currentRenderPassId;
-            Fk !== Qk && (Qk = Fk, qF())
+      let Qm = -1;
+      return mm.getActiveMeshCandidates = () => {
+        const fm = mm.frustumPlanes,
+          hm = Tm._selectionContent;
+        hm.reset(), (fm => {
+          const hm = mm.frustumPlanes;
+          wm = wm + 1 | 0 || 1;
+          const Am = Tm.blocks,
+            am = Dm.Go(mm.activeCamera),
+            xm = am && !0;
+          if (xm) {
+            const Tm = mm.dO().currentRenderPassId;
+            Tm !== Qm && (Qm = Tm, iT())
           }
-          const qk = aF(),
-            jk = yk && !1;
-          Tk.length > 0 && function(kk, Fk) {
-            for (let Ik = 0; Ik < 6; Ik++) {
-              const Xk = kk[Ik],
-                Tk = Xk.normal;
-              Fk[4 * Ik] = Tk.x, Fk[4 * Ik + 1] = Tk.y, Fk[4 * Ik + 2] = Tk.z, Fk[4 * Ik + 3] = Xk.d
+          const im = DT(),
+            om = xm && !1;
+          Am.length > 0 && function(mm, Tm) {
+            for (let fm = 0; fm < 6; fm++) {
+              const hm = mm[fm],
+                Am = hm.normal;
+              Tm[4 * fm] = Am.x, Tm[4 * fm + 1] = Am.y, Tm[4 * fm + 2] = Am.z, Tm[4 * fm + 3] = hm.d
             }
-          }(Xk, Jk);
-          const wk = Lk,
-            Hk = tk,
-            xk = Zk;
-          for (let kk = 0; kk < Tk.length; kk++) {
-            const Fk = Tk[kk];
-            if (!mk.d.IsInFrustum(Fk.KXk, Xk)) continue;
-            const Lk = Fk.entries;
+          }(hm, jm);
+          const Ym = Rm,
+            qm = pm,
+            Vm = Em;
+          for (let mm = 0; mm < Am.length; mm++) {
+            const Tm = Am[mm];
+            if (!Um.c.IsInFrustum(Tm.Qhm, hm)) continue;
+            const Rm = Tm.entries;
             {
-              const kk = Fk._noaSlots,
-                Xk = Fk._noaStamps,
-                Tk = Fk._noaTerrain;
-              for (let Fk = 0; Fk < Lk.length; Fk++) {
-                const tk = kk[Fk];
-                if (Hk[tk] !== lk && (Hk[tk] = lk, xk[tk] = JF(wk, 6 * tk, Jk) ? 1 : 0), 0 === xk[tk]) continue;
-                const Zk = Lk[Fk];
-                if (yk && Xk[Fk] === qk) jk && 1 === Tk[Fk] && Dk(Zk) && 0, ak.see(Zk, 1 === Tk[Fk] ? tk : -1);
-                else if (yk) {
-                  Xk[Fk] = qk;
-                  const kk = !0 === Zk.metadata[FF.m];
-                  Tk[Fk] = kk ? 1 : 0;
-                  const Ik = Kk(Zk, tk, kk);
-                  !kk || Ik && tF(Zk) || (Xk[Fk] = 0)
-                } else ik ? Kk(Zk, tk, !0 === Zk.metadata[FF.m]) : Yk.f.prototype.push.call(Ik, Zk)
+              const mm = Tm._noaSlots,
+                hm = Tm._noaStamps,
+                Am = Tm._noaTerrain;
+              for (let Tm = 0; Tm < Rm.length; Tm++) {
+                const pm = mm[Tm];
+                if (qm[pm] !== wm && (qm[pm] = wm, Vm[pm] = jT(Ym, 6 * pm, jm) ? 1 : 0), 0 === Vm[pm]) continue;
+                const Em = Rm[Tm];
+                if (xm && hm[Tm] === im) om && 1 === Am[Tm] && Wm(Em) && 0, Dm.see(Em, 1 === Am[Tm] ? pm : -1);
+                else if (xm) {
+                  hm[Tm] = im;
+                  const mm = !0 === Em.metadata[TT.l];
+                  Am[Tm] = mm ? 1 : 0;
+                  const fm = Km(Em, pm, mm);
+                  !mm || fm && pT(Em) || (hm[Tm] = 0)
+                } else am ? Km(Em, pm, !0 === Em.metadata[TT.l]) : Bm.f.prototype.push.call(fm, Em)
               }
               continue
             }
           }
-          ik && ak.finish(Ik, ek)
-        })(Xk), qk.apply(Xk, kk.activeCamera);
-        const ik = Fk.PXk;
-        for (let kk = 0; kk < ik.length; kk++) {
-          const Fk = ik[kk];
-          Fk.isEnabled() && Yk.f.prototype.push.call(Xk, Fk)
+          am && Dm.finish(fm, Om)
+        })(hm), im.apply(hm, mm.activeCamera);
+        const am = Tm.Khm;
+        for (let mm = 0; mm < am.length; mm++) {
+          const Tm = am[mm];
+          Tm.isEnabled() && Bm.f.prototype.push.call(hm, Tm)
         }
-        return Tk(Xk, Ik), Xk
+        return Am(hm, fm), hm
       }, {
-        QXk: () => ak.culled,
-        lXk: (kk, Fk) => {
-          const Tk = Math.floor(Fk[0] / ik),
-            lk = Math.floor(Fk[1] / ik),
-            ak = Math.floor(Fk[2] / ik),
-            qk = `${Tk}|${lk}|${ak}`;
-          let Lk = yk.get(qk);
-          if (!Lk) {
-            const kk = [0, 0, 0];
-            Ik.ZFk([Tk * ik - 1, lk * ik - 1, ak * ik - 1], null, kk), Lk = Object.assign(Xk(kk, ik + 2), {
-              sXk: qk,
-              VXk: 0,
+        nhm: () => Dm.culled,
+        whm: (mm, Tm) => {
+          const Am = Math.floor(Tm[0] / am),
+            wm = Math.floor(Tm[1] / am),
+            Dm = Math.floor(Tm[2] / am),
+            im = `${Am}|${wm}|${Dm}`;
+          let Rm = xm.get(im);
+          if (!Rm) {
+            const mm = [0, 0, 0];
+            fm.pTm([Am * am - 1, wm * am - 1, Dm * am - 1], null, mm), Rm = Object.assign(hm(mm, am + 2), {
+              Jhm: im,
+              chm: 0,
               _selectionId: 0,
               _inFrustum: !1,
-              _noaSlot: xk()
-            }), Pk(Lk), jk[Lk._noaSlot] = (0, Ak.l)(Tk, lk, ak), ek[3 * Lk._noaSlot] = Tk, ek[3 * Lk._noaSlot + 1] = lk, ek[3 * Lk._noaSlot + 2] = ak, yk.set(qk, Lk)
+              _noaSlot: Vm()
+            }), Im(Rm), om[Rm._noaSlot] = (0, Lm.g)(Am, wm, Dm), Om[3 * Rm._noaSlot] = Am, Om[3 * Rm._noaSlot + 1] = wm, Om[3 * Rm._noaSlot + 2] = Dm, xm.set(im, Rm)
           }
-          Lk.VXk++, kk.metadata[gk.z] = Lk
+          Rm.chm++, mm.metadata[tm.y] = Rm
         },
-        zp: kk => {
-          const Fk = kk.metadata[gk.z];
-          Fk && (Fk.VXk--, Fk.VXk <= 0 && (yk.delete(Fk.sXk), Hk.push(Fk._noaSlot)), kk.metadata[gk.z] = null)
+        yG: mm => {
+          const Tm = mm.metadata[tm.y];
+          Tm && (Tm.chm--, Tm.chm <= 0 && (xm.delete(Tm.Jhm), qm.push(Tm._noaSlot)), mm.metadata[tm.y] = null)
         },
-        xXk: (kk, Fk) => {
-          const Ik = kk,
-            Xk = Fk.metadata[gk.z];
-          (Ik._noaSlots ??= []).push(Xk._noaSlot), (Ik._noaStamps ??= []).push(0), (Ik._noaTerrain ??= []).push(0), Ik.entries.push(Fk)
+        Ihm: (mm, Tm) => {
+          const fm = mm,
+            hm = Tm.metadata[tm.y];
+          (fm._noaSlots ??= []).push(hm._noaSlot), (fm._noaStamps ??= []).push(0), (fm._noaTerrain ??= []).push(0), fm.entries.push(Tm)
         },
-        removeEntry: (kk, Fk) => {
-          const Ik = kk,
-            Xk = Ik.entries,
-            Tk = Xk.indexOf(Fk);
-          if (Tk < 0) return;
-          const ik = Ik._noaSlots,
-            yk = Ik._noaStamps,
-            lk = Ik._noaTerrain,
-            ak = Xk.length - 1;
-          Xk[Tk] = Xk[ak], ik[Tk] = ik[ak], yk[Tk] = yk[ak], lk[Tk] = lk[ak], Xk.pop(), ik.pop(), yk.pop(), lk.pop()
+        removeEntry: (mm, Tm) => {
+          const fm = mm,
+            hm = fm.entries,
+            Am = hm.indexOf(Tm);
+          if (Am < 0) return;
+          const am = fm._noaSlots,
+            xm = fm._noaStamps,
+            wm = fm._noaTerrain,
+            Dm = hm.length - 1;
+          hm[Am] = hm[Dm], am[Am] = am[Dm], xm[Am] = xm[Dm], wm[Am] = wm[Dm], hm.pop(), am.pop(), xm.pop(), wm.pop()
         },
-        y5: kk => {
-          for (const Fk of yk.values()) {
-            Fk.ZXk.zXk(kk), Fk.tXk.zXk(kk);
-            for (const Ik of Fk.KXk) Ik.zXk(kk);
-            Pk(Fk)
+        Q8: mm => {
+          for (const Tm of xm.values()) {
+            Tm.ohm.zhm(mm), Tm.Ehm.zhm(mm);
+            for (const fm of Tm.Qhm) fm.zhm(mm);
+            Im(Tm)
           }
         }
       }
     }
 
-    function HF(kk, Fk) {
-      return Fk.set(kk), Fk
+    function qT(mm, Tm) {
+      return Tm.set(mm), Tm
     }
 
-    function JF(kk, Fk, Ik) {
-      const Xk = kk[Fk],
-        Tk = kk[Fk + 1],
-        ik = kk[Fk + 2],
-        yk = kk[Fk + 3],
-        lk = kk[Fk + 4],
-        ak = kk[Fk + 5];
-      for (let qk = 0; qk < 24; qk += 4) {
-        const kk = Ik[qk],
-          Fk = Ik[qk + 1],
-          Lk = Ik[qk + 2];
-        if (!(kk * (kk >= 0 ? yk : Xk) + Fk * (Fk >= 0 ? lk : Tk) + Lk * (Lk >= 0 ? ak : ik) + Ik[qk + 3] >= 0)) return !1
+    function jT(mm, Tm, fm) {
+      const hm = mm[Tm],
+        Am = mm[Tm + 1],
+        am = mm[Tm + 2],
+        xm = mm[Tm + 3],
+        wm = mm[Tm + 4],
+        Dm = mm[Tm + 5];
+      for (let im = 0; im < 24; im += 4) {
+        const mm = fm[im],
+          Tm = fm[im + 1],
+          Rm = fm[im + 2];
+        if (!(mm * (mm >= 0 ? xm : hm) + Tm * (Tm >= 0 ? wm : Am) + Rm * (Rm >= 0 ? Dm : am) + fm[im + 3] >= 0)) return !1
       }
       return !0
     }
-    var xF = Ik(37788);
-    class PF {
-      constructor(kk, Fk) {
-        var Ik = kk.Yw;
-        Ik.AIk(new dk.e(Ik));
-        var Xk = new fk.e(ak);
-        Ik.oXk = Xk, Xk.blocks = [];
-        var Tk, ik = {},
-          lk = [];
-        this.textPlanes = lk, this.QXk = () => Tk.QXk(), this.y5 = kk => {
-          Lk(Xk, kk), Tk.y5(kk)
-        }, this.lXk = (Fk, Ik, yk) => {
-          if (!Fk.metadata) throw new Error("Mesh should have mesh.metadata property");
-          if (!Fk.metadata[gk.x] && !Fk.metadata[gk.r]) {
-            if (!Ik) {
-              var ak = Xk.PXk;
-              if (Fk.metadata[gk.D] && !Fk.parent) {
-                ak = lk;
-                var Lk = Fk.vR().EXk;
-                Fk.metadata[gk.E] = Lk.center.length() + Lk.radius, Fk.ne = !0
+    var VT = fm(37827);
+    class IT {
+      constructor(mm, Tm) {
+        var fm = mm.Aq;
+        fm.vfm(new um.b(fm));
+        var hm = new lm.e(Dm);
+        fm.khm = hm, hm.blocks = [];
+        var Am, am = {},
+          wm = [];
+        this.textPlanes = wm, this.nhm = () => Am.nhm(), this.Q8 = mm => {
+          Rm(hm, mm), Am.Q8(mm)
+        }, this.whm = (Tm, fm, xm) => {
+          if (!Tm.metadata) throw new Error("Mesh should have mesh.metadata property");
+          if (!Tm.metadata[tm.w] && !Tm.metadata[tm.n]) {
+            if (!fm) {
+              var Dm = hm.Khm;
+              if (Tm.metadata[tm.D] && !Tm.parent) {
+                Dm = wm;
+                var Rm = Tm.DH().Shm;
+                Tm.metadata[tm.G] = Rm.center.length() + Rm.radius, Tm.gO = !0
               }
-              return ak.push(Fk), Fk.metadata[gk.l] = ak, void(Fk.metadata[gk.r] = !0)
+              return Dm.push(Tm), Tm.metadata[tm.i] = Dm, void(Tm.metadata[tm.n] = !0)
             }
-            var Zk = Math.floor(yk[0] / qk),
-              jk = Math.floor(yk[1] / qk),
-              ek = Math.floor(yk[2] / qk),
-              wk = Zk + "|" + jk + "|" + ek,
-              Hk = ik[wk];
-            if (!Hk) {
-              var Jk = [Zk * qk, jk * qk, ek * qk],
-                xk = [0, 0, 0];
-              kk.qZ.ZFk(Jk, null, xk), Hk = tk(xk, qk), Xk.blocks.push(Hk), ik[wk] = Hk, Hk.sXk = wk
+            var Em = Math.floor(xm[0] / im),
+              om = Math.floor(xm[1] / im),
+              Om = Math.floor(xm[2] / im),
+              Ym = Em + "|" + om + "|" + Om,
+              qm = am[Ym];
+            if (!qm) {
+              var jm = [Em * im, om * im, Om * im],
+                Vm = [0, 0, 0];
+              mm.IE.pTm(jm, null, Vm), qm = pm(Vm, im), hm.blocks.push(qm), am[Ym] = qm, qm.Jhm = Ym
             }
-            Tk.lXk(Fk, yk), Tk.xXk(Hk, Fk), Hk.VXk = (Hk.VXk || 0) + 1, Fk.metadata[gk.x] = Hk, Fk.metadata[gk.t] = !0, Fk.ne = !0
+            Am.whm(Tm, xm), Am.Ihm(qm, Tm), qm.chm = (qm.chm || 0) + 1, Tm.metadata[tm.w] = qm, Tm.metadata[tm.q] = !0, Tm.gO = !0
           }
-        }, this.zp = kk => {
-          if (kk.metadata) {
-            kk.metadata[gk.r] && ((0, Ak.t)(kk.metadata[gk.l], kk), kk.metadata[gk.r] = !1), kk.metadata[gk.l] === lk && (kk.ne = !1), kk.metadata[gk.l] = void 0, kk.metadata[gk.E] = void 0;
-            var Fk = kk.metadata[gk.x];
-            Fk && Fk.entries && (kk.metadata[gk.t] && Tk.removeEntry(Fk, kk), Fk.VXk--, Fk.VXk <= 0 && (delete ik[Fk.sXk], (0, Ak.t)(Xk.blocks, Fk))), Tk.zp(kk), kk.metadata[gk.x] = null, kk.metadata[gk.t] = !1
+        }, this.yG = mm => {
+          if (mm.metadata) {
+            mm.metadata[tm.n] && ((0, Lm.k)(mm.metadata[tm.i], mm), mm.metadata[tm.n] = !1), mm.metadata[tm.i] === wm && (mm.gO = !1), mm.metadata[tm.i] = void 0, mm.metadata[tm.G] = void 0;
+            var Tm = mm.metadata[tm.w];
+            Tm && Tm.entries && (mm.metadata[tm.q] && Am.removeEntry(Tm, mm), Tm.chm--, Tm.chm <= 0 && (delete am[Tm.Jhm], (0, Lm.k)(hm.blocks, Tm))), Am.yG(mm), mm.metadata[tm.w] = null, mm.metadata[tm.q] = !1
           }
-        }, this.K3 = function(kk) {
-          let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (kk.metadata[gk.x]) {
-            if (kk.metadata[gk.t] === Fk) return;
-            var Ik = kk.metadata[gk.x];
-            Ik && Ik.entries && (Fk ? Tk.xXk(Ik, kk) : Tk.removeEntry(Ik, kk)), kk.metadata[gk.t] = Fk
+        }, this.K4 = function(mm) {
+          let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (mm.metadata[tm.w]) {
+            if (mm.metadata[tm.q] === Tm) return;
+            var fm = mm.metadata[tm.w];
+            fm && fm.entries && (Tm ? Am.Ihm(fm, mm) : Am.removeEntry(fm, mm)), mm.metadata[tm.q] = Tm
           } else {
-            if (kk.metadata[gk.r] === Fk) return;
-            var ik = kk.metadata[gk.l] || Xk.PXk;
-            Fk ? ik.push(kk) : (0, Ak.t)(ik, kk), kk.metadata[gk.r] = Fk
+            if (mm.metadata[tm.n] === Tm) return;
+            var am = mm.metadata[tm.i] || hm.Khm;
+            Tm ? am.push(mm) : (0, Lm.k)(am, mm), mm.metadata[tm.n] = Tm
           }
         };
-        var ak = () => {},
-          qk = Fk * kk.qZ.XZ.xkk,
-          Lk = (kk, Fk) => {
-            kk.blocks.forEach((kk => {
-              kk.ZXk.zXk(Fk), kk.tXk.zXk(Fk), kk.KXk.forEach((kk => kk.zXk(Fk))), kk.blocks && Lk(kk, Fk)
+        var Dm = () => {},
+          im = Tm * mm.IE.oE.qmm,
+          Rm = (mm, Tm) => {
+            mm.blocks.forEach((mm => {
+              mm.ohm.zhm(Tm), mm.Ehm.zhm(Tm), mm.Qhm.forEach((mm => mm.zhm(Tm))), mm.blocks && Rm(mm, Tm)
             }))
           },
-          tk = (kk, Fk) => {
-            var Ik = new yk.Ge(kk[0], kk[1], kk[2]),
-              Xk = new yk.Ge(kk[0] + Fk, kk[1] + Fk, kk[2] + Fk);
-            return new Bk.b(Ik, Xk, void 0, void 0, void 0, ak)
+          pm = (mm, Tm) => {
+            var fm = new xm.WO(mm[0], mm[1], mm[2]),
+              hm = new xm.WO(mm[0] + Tm, mm[1] + Tm, mm[2] + Tm);
+            return new Mm.e(fm, hm, void 0, void 0, void 0, Dm)
           };
-        Tk = wF(Ik, Xk, kk.qZ, tk, ((kk, Fk) => {
-          for (var Ik = 0; Ik < lk.length; Ik++) {
-            var Xk = lk[Ik];
-            Xk.isEnabled(!1) && ((0, xF.c)(Xk, Fk) && Yk.f.prototype.push.call(kk, Xk))
+        Am = YT(fm, hm, mm.IE, pm, ((mm, Tm) => {
+          for (var fm = 0; fm < wm.length; fm++) {
+            var hm = wm[fm];
+            hm.isEnabled(!1) && ((0, VT.c)(hm, Tm) && Bm.f.prototype.push.call(mm, hm))
           }
         }))
       }
     }
 
-    function KF(kk) {
+    function KT(mm) {
       const {
-        holderPosition: Fk,
-        holderRotation: Ik,
-        KD: Xk,
-        fov: Tk,
-        near: ik,
-        far: yk
-      } = kk.model.PD, lk = kk.RXk;
-      lk.position.t5(Fk[0], Fk[1], Fk[2]), lk.rotation.t5(Ik[0], Ik[1], Ik[2]);
-      const ak = kk.camera;
-      ak.position.t5(Xk[0], Xk[1], Xk[2]), ak.fov = Tk, ak.minZ = ik, ak.maxZ = yk
+        holderPosition: Tm,
+        holderRotation: fm,
+        zW: hm,
+        fov: Am,
+        near: am,
+        far: xm
+      } = mm.model.cW, wm = mm.yhm;
+      wm.position.Z8(Tm[0], Tm[1], Tm[2]), wm.rotation.Z8(fm[0], fm[1], fm[2]);
+      const Dm = mm.camera;
+      Dm.position.Z8(hm[0], hm[1], hm[2]), Dm.fov = Am, Dm.minZ = am, Dm.maxZ = xm
     }
 
-    function QF(kk) {
-      const Fk = kk.Oe(),
-        Ik = Fk,
-        Xk = Ik._gl;
-      if (!Xk || Ik.tw < 2 || Fk.IXk || Xk.getParameter(Xk.DEPTH_BITS) < 24) return !1;
-      const Tk = kk._renderingManager,
-        ik = Tk.getRenderingGroup(-1),
-        yk = Tk.getRenderingGroup(0),
-        lk = Uk.d.prototype.render;
-      return ik.render = function(kk, Fk, Ik, Xk, Tk, ik, ak, qk, Lk) {
-        (kk || yk._empty) && lk.call(this, kk, Fk, Ik, Xk, Tk, ik, ak, qk, Lk)
-      }, yk.render = function(kk, Ik, Tk, yk) {
-        let ak = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          qk = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          tk = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-          Zk = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          jk = arguments.length > 8 ? arguments[8] : void 0;
-        kk ? lk.call(this, kk, Ik, Tk, yk, ak, qk, tk, Zk, jk) : (Fk.setAlphaMode(Lk.d.ALPHA_DISABLE), lk.call(this, null, !1, !1, yk, ak, qk, tk, !1), ik._empty || (Xk.depthRange(1, 1), lk.call(ik, null, Ik, Tk, yk, ak, qk, tk, Zk, jk), Xk.depthRange(0, 1)), lk.call(this, null, Ik, Tk, yk, !1, !1, !1, Zk, jk))
+    function QT(mm) {
+      const Tm = mm.dO(),
+        fm = Tm,
+        hm = fm._gl;
+      if (!hm || fm.zY < 2 || Tm.fhm || hm.getParameter(hm.DEPTH_BITS) < 24) return !1;
+      const Am = mm._renderingManager,
+        am = Am.getRenderingGroup(-1),
+        xm = Am.getRenderingGroup(0),
+        wm = Hm.e.prototype.render;
+      return am.render = function(mm, Tm, fm, hm, Am, am, Dm, im, Rm) {
+        (mm || xm._empty) && wm.call(this, mm, Tm, fm, hm, Am, am, Dm, im, Rm)
+      }, xm.render = function(mm, fm, Am, xm) {
+        let Dm = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          im = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          pm = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+          Em = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
+          om = arguments.length > 8 ? arguments[8] : void 0;
+        mm ? wm.call(this, mm, fm, Am, xm, Dm, im, pm, Em, om) : (Tm.setAlphaMode(Rm.b.ALPHA_DISABLE), wm.call(this, null, !1, !1, xm, Dm, im, pm, !1), am._empty || (hm.depthRange(1, 1), wm.call(am, null, fm, Am, xm, Dm, im, pm, Em, om), hm.depthRange(0, 1)), wm.call(this, null, fm, Am, xm, !1, !1, !1, Em, om))
       }, !0
     }
 
-    function sF(kk, Fk) {
-      return [Fk, Wk.d].map(((Fk, Ik) => {
-        const Xk = new Tk.e("light", yk.Ge.FromArray(Fk), kk);
-        return Xk.diffuse = ik.Color3.FromArray([1, 1, 1]), Xk.specular = ik.Color3.FromArray([1, 1, 1]), Xk.intensity = Wk.c[Ik], Xk
+    function nT(mm, Tm) {
+      return [Tm, sm.g].map(((Tm, fm) => {
+        const hm = new Am.e("light", xm.WO.FromArray(Tm), mm);
+        return hm.diffuse = am.Color3.FromArray([1, 1, 1]), hm.specular = am.Color3.FromArray([1, 1, 1]), hm.intensity = sm.e[fm], hm
       }))
     }
-    class VF extends ak.e {
+    class JT extends Dm.b {
       constructor() {
         super(...arguments), this.heldTexture = null
       }
       get texture() {
         return this.heldTexture
       }
-      set texture(kk) {
-        var Fk;
-        this.heldTexture = kk, this.particleTexture = null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.mirror) && void 0 !== Fk ? Fk : null
+      set texture(mm) {
+        var Tm;
+        this.heldTexture = mm, this.particleTexture = null !== (Tm = null === mm || void 0 === mm ? void 0 : mm.mirror) && void 0 !== Tm ? Tm : null
       }
       isEmitting() {
         return this.isStarted() && !this._stopped
       }
       dispose() {
-        let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        kk && (this.particleTexture = null, (0, qk.A)(this.heldTexture), this.heldTexture = null), super.dispose(kk, Fk, Ik)
+        let mm = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+          Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          fm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        mm && (this.particleTexture = null, (0, im.z)(this.heldTexture), this.heldTexture = null), super.dispose(mm, Tm, fm)
       }
     }
-    const zF = Xk.c.Zero();
-    const SF = {
-      QIk: function(kk, Fk) {
-        return new nk(kk, Fk.JIk, {
-          preserveDrawingBuffer: Fk.preserveDrawingBuffer,
+    const cT = hm.c.Zero();
+    const zT = {
+      Qfm: function(mm, Tm) {
+        return new Sm(mm, Tm.jfm, {
+          preserveDrawingBuffer: Tm.preserveDrawingBuffer,
           powerPreference: "high-performance",
           alpha: !1,
           stencil: !1
         })
       },
-      NXk: function(kk, Fk) {
-        ! function(kk, Fk, Ik) {
-          const Xk = new Nk.c(kk.engine);
-          kk.Yw = Xk, Xk.detachControl(), Xk.autoClear = !1, Ck.e.MIN_RENDERINGGROUPS = -1;
-          for (let ik = Ck.e.MIN_RENDERINGGROUPS; ik <= 1; ik++) Xk.setRenderingOrder(ik, Uk.d.PainterSortCompare, Uk.d.PainterSortCompare, Uk.d.PainterSortCompare);
-          Xk.setRenderingAutoClearDepthStencil(0, !1), Rk.e.Enabled = !1, kk.pXk = new PF(kk, Math.round(Fk.uXk)), kk.RXk = new bk.b("camHolder", Xk), kk.camera = new uk.e("camera", new yk.Ge(0, 0, 0), Xk), kk.camera.parent = kk.RXk, KF(kk), (0, Wk.e)(kk, ((kk, Fk, Ik) => (0, ck.k)(Fk, Ik, kk.Yw))), Xk.clearColor = ik.b.FromArray(Fk.clearColor), Xk.ambientColor = ik.Color3.FromArray(Fk.ambientColor);
-          const Tk = Ik(Xk, Fk.CXk);
-          Xk.onNewLightAddedObservable.add((kk => {
-            Tk.some((Fk => Fk === kk)) || console.error(`Light "${kk.name}" was added to the scene after startup; terrain, block models and Lite will ignore it. Add it in addNoaLights (renderingCamera.ts) and addBabylonLights (babylonBackend.ts).`)
-          })), Xk.skipPointerMovePicking = !0
-        }(kk, Fk, sF), QF(kk.Yw)
+      shm: function(mm, Tm) {
+        ! function(mm, Tm, fm) {
+          const hm = new Cm.c(mm.engine);
+          mm.Aq = hm, hm.detachControl(), hm.autoClear = !1, ym.b.MIN_RENDERINGGROUPS = -1;
+          for (let am = ym.b.MIN_RENDERINGGROUPS; am <= 1; am++) hm.setRenderingOrder(am, Hm.e.PainterSortCompare, Hm.e.PainterSortCompare, Hm.e.PainterSortCompare);
+          hm.setRenderingAutoClearDepthStencil(0, !1), Pm.d.Enabled = !1, mm.Xhm = new IT(mm, Math.round(Tm.Phm)), mm.yhm = new Xm.c("camHolder", hm), mm.camera = new Gm.b("camera", new xm.WO(0, 0, 0), hm), mm.camera.parent = mm.yhm, KT(mm), (0, sm.h)(mm, ((mm, Tm, fm) => (0, rm.h)(Tm, fm, mm.Aq))), hm.clearColor = am.e.FromArray(Tm.clearColor), hm.ambientColor = am.Color3.FromArray(Tm.ambientColor);
+          const Am = fm(hm, Tm.rhm);
+          hm.onNewLightAddedObservable.add((mm => {
+            Am.some((Tm => Tm === mm)) || console.error(`Light "${mm.name}" was added to the scene after startup; terrain, block models and Lite will ignore it. Add it in addNoaLights (renderingCamera.ts) and addBabylonLights (babylonBackend.ts).`)
+          })), hm.skipPointerMovePicking = !0
+        }(mm, Tm, nT), QT(mm.Aq)
       },
-      bXk: KF,
-      setBabylonFog: function(kk, Fk, Ik, Xk) {
-        const Tk = kk.Yw;
-        Tk.fogMode = 3, Tk.fogStart = Fk, Tk.fogEnd = Ik, Tk.fogColor.set(Xk[0], Xk[1], Xk[2])
+      Hhm: KT,
+      setBabylonFog: function(mm, Tm, fm, hm) {
+        const Am = mm.Aq;
+        Am.fogMode = 3, Am.fogStart = Tm, Am.fogEnd = fm, Am.fogColor.set(hm[0], hm[1], hm[2])
       },
-      WXk: function(kk, Fk, Ik) {
-        return kk.engine.tw >= 2 && (kk.fXk || (kk.fXk = new Ek(kk.Yw, kk.BXk)), !kk.fXk.failed) ? kk.fXk.kR(Fk, Ik) : new VF(Fk, Ik, kk.Yw)
+      Mhm: function(mm, Tm, fm) {
+        return mm.engine.zY >= 2 && (mm.Bhm || (mm.Bhm = new km(mm.Aq, mm.Lhm)), !mm.Bhm.failed) ? mm.Bhm.yX(Tm, fm) : new JT(Tm, fm, mm.Aq)
       },
-      YXk: function(kk, Fk) {
-        kk.Yw.jK.forEach((Ik => {
-          if (Ik instanceof Sk) return void Ik.y5(Fk, kk.qZ.SZ);
-          const Xk = Ik;
-          if (Xk.emitter.getConnectedParticleSystems)
-            for (const kk of Xk._particles) kk.position.set(kk.position.x - Fk[0], kk.position.y - Fk[1], kk.position.z - Fk[2]);
+      thm: function(mm, Tm) {
+        mm.Aq.VK.forEach((fm => {
+          if (fm instanceof zm) return void fm.Q8(Tm, mm.IE.HE);
+          const hm = fm;
+          if (hm.emitter.getConnectedParticleSystems)
+            for (const mm of hm._particles) mm.position.set(mm.position.x - Tm[0], mm.position.y - Tm[1], mm.position.z - Tm[2]);
           else {
-            if (!Xk.worldOffset) throw new Error("Particle system has no world offset");
-            Xk.worldOffset.x = -kk.qZ.SZ[0], Xk.worldOffset.y = -kk.qZ.SZ[1], Xk.worldOffset.z = -kk.qZ.SZ[2]
+            if (!hm.worldOffset) throw new Error("Particle system has no world offset");
+            hm.worldOffset.x = -mm.IE.HE[0], hm.worldOffset.y = -mm.IE.HE[1], hm.worldOffset.z = -mm.IE.HE[2]
           }
         }))
       },
-      linesFromArrays: function(kk, Fk, Ik) {
-        const Xk = new lk.d(Fk, kk.Yw, null, void 0, void 0, !1);
-        return (0, ck.g)(Fk, Ik, kk.Yw, Xk), Xk
+      linesFromArrays: function(mm, Tm, fm) {
+        const hm = new wm.c(Tm, mm.Aq, null, void 0, void 0, !1);
+        return (0, rm.f)(Tm, fm, mm.Aq, hm), hm
       },
-      Aw: LF,
-      dXk: function(kk, Fk) {
-        return zF.origin.kS(Fk.origin), zF.direction.kS(Fk.direction), zF.length = Fk.length, zF.epsilon = Fk.epsilon, zF.dXk(kk, !1, void 0, !1, void 0, !0).pickedPoint
+      aq: RT,
+      vhm: function(mm, Tm) {
+        return cT.origin.ZZ(Tm.origin), cT.direction.ZZ(Tm.direction), cT.length = Tm.length, cT.epsilon = Tm.epsilon, cT.vhm(mm, !1, void 0, !1, void 0, !0).pickedPoint
       }
     }
   },
-  41132: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => fk,
-      g: () => xk,
-      h: () => mk
+  41178: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => lm,
+      h: () => Vm,
+      j: () => Um
     });
-    var Xk = Ik(40269),
-      Tk = Ik(41139),
-      ik = Ik(41178),
-      yk = Ik(41147),
-      lk = Ik(37815),
-      ak = Ik(37821),
-      qk = Ik(37823),
-      Lk = Ik(37829),
-      tk = Ik(37270),
-      Zk = Ik(37277),
-      jk = Ik(41149),
-      ek = Ik(37255),
-      wk = Ik(37259),
-      Hk = Ik(37249);
+    var hm = fm(40357),
+      Am = fm(41186),
+      am = fm(41220),
+      xm = fm(41194),
+      wm = fm(37872),
+      Dm = fm(37880),
+      im = fm(37888),
+      Rm = fm(37894),
+      pm = fm(37286),
+      Em = fm(37290),
+      om = fm(41198),
+      Om = fm(37274),
+      Ym = fm(37276),
+      qm = fm(37260);
 
-    function Jk(kk, Fk) {
-      return Object.assign((function(kk, Ik, Xk, Tk) {
-        return Fk(this.featureState, kk, Ik, Xk, Tk)
+    function jm(mm, Tm) {
+      return Object.assign((function(mm, fm, hm, Am) {
+        return Tm(this.featureState, mm, fm, hm, Am)
       }), {
-        Ie: kk
+        nO: mm
       })
     }
 
-    function xk(kk) {
-      const Fk = class extends jk.d {
-          constructor(Fk, Ik) {
-            const Xk = (0, wk.X)(Fk),
-              Tk = Xk && (0, wk.B)(Xk, kk.name);
-            for (var ik = arguments.length, yk = new Array(ik > 2 ? ik - 2 : 0), lk = 2; lk < ik; lk++) yk[lk - 2] = arguments[lk];
-            super(Fk, kk.name, kk.priority, Tk ? Tk.defines : kk.defines(...yk), !1), this.featureState = void 0, this.featureState = Ik, this._pluginManager._addPlugin(this), this._enable(!0), (0, wk.D)(this._material, kk, this.featureState, this._pluginDefineNames)
+    function Vm(mm) {
+      const Tm = class extends om.e {
+          constructor(Tm, fm) {
+            const hm = (0, Ym.cb)(Tm),
+              Am = hm && (0, Ym.y)(hm, mm.name);
+            for (var am = arguments.length, xm = new Array(am > 2 ? am - 2 : 0), wm = 2; wm < am; wm++) xm[wm - 2] = arguments[wm];
+            super(Tm, mm.name, mm.priority, Am ? Am.defines : mm.defines(...xm), !1), this.featureState = void 0, this.featureState = fm, this._pluginManager._addPlugin(this), this._enable(!0), (0, Ym.A)(this._material, mm, this.featureState, this._pluginDefineNames)
           }
           getClassName() {
-            return kk.className
+            return mm.className
           }
-          isCompatible(kk) {
-            return kk === Hk.e.GLSL || kk === Hk.e.WGSL
+          isCompatible(mm) {
+            return mm === qm.b.GLSL || mm === qm.b.WGSL
           }
         },
-        Ik = (0, ek.i)(kk);
-      for (const [Xk, Tk] of Object.entries(ek.e)) {
-        const ik = kk[Xk];
-        if (ik) {
-          const kk = Ik[Xk];
-          Object.defineProperty(Fk.prototype, Tk, {
-            value: Jk(ik, kk),
+        fm = (0, Om.i)(mm);
+      for (const [hm, Am] of Object.entries(Om.d)) {
+        const am = mm[hm];
+        if (am) {
+          const mm = fm[hm];
+          Object.defineProperty(Tm.prototype, Am, {
+            value: jm(am, mm),
             writable: !0,
             configurable: !0
           })
         }
       }
-      return Fk
+      return Tm
     }
-    class Pk extends(xk(lk.b)) {}
-    var Kk = Ik(39806),
-      Qk = Ik(41155);
-    const sk = new WeakMap;
+    class Im extends(Vm(wm.e)) {}
+    var Km = fm(39930),
+      Qm = fm(41201);
+    const nm = new WeakMap;
 
-    function Vk(kk, Fk, Ik) {
-      let Xk = sk.get(Ik);
-      Xk || (Xk = new Map, sk.set(Ik, Xk));
+    function Jm(mm, Tm, fm) {
+      let hm = nm.get(fm);
+      hm || (hm = new Map, nm.set(fm, hm));
       const {
-        url: Tk
-      } = kk;
-      let ik = Xk.get(Tk);
-      return ik || (ik = async function(kk, Fk, Ik) {
-        var Xk;
+        url: Am
+      } = mm;
+      let am = hm.get(Am);
+      return am || (am = async function(mm, Tm, fm) {
+        var hm;
         const {
-          width: Tk,
-          height: ik
-        } = kk.getSize(), lk = Math.round(ik / Tk), ak = kk.getInternalTexture(), qk = Fk && Fk.byteLength === Tk * Tk * lk * 4 ? Fk : null !== (Xk = zk.get(ak)) && void 0 !== Xk ? Xk : kk._readPixelsSync(), Lk = new Qk.c(qk, Tk, Tk, lk, Kk.c.TEXTUREFORMAT_RGBA, Ik, !0, !1, yk.c.NEAREST_NEAREST_MIPLINEAR);
-        zk.has(ak) || (! function(kk, Fk) {
-          const Ik = Fk.createRawTexture(new Uint8Array(4), 1, 1, Kk.c.TEXTUREFORMAT_RGBA, !1, !1, yk.c.NEAREST_SAMPLINGMODE);
-          kk._hardwareTexture.release(), Fk.unbindAllTextures(), Ik._swapAndDie(kk, !1)
-        }(ak, Ik.Oe()), zk.set(ak, qk));
-        return Lk
-      }(kk, Fk, Ik), Xk.set(Tk, ik), ik.catch((() => {
-        Xk.delete(Tk)
-      }))), ik
+          width: Am,
+          height: am
+        } = mm.getSize(), wm = Math.round(am / Am), Dm = mm.getInternalTexture(), im = Tm && Tm.byteLength === Am * Am * wm * 4 ? Tm : null !== (hm = cm.get(Dm)) && void 0 !== hm ? hm : mm._readPixelsSync(), Rm = new Qm.c(im, Am, Am, wm, Km.d.TEXTUREFORMAT_RGBA, fm, !0, !1, xm.c.NEAREST_NEAREST_MIPLINEAR);
+        cm.has(Dm) || (! function(mm, Tm) {
+          const fm = Tm.createRawTexture(new Uint8Array(4), 1, 1, Km.d.TEXTUREFORMAT_RGBA, !1, !1, xm.c.NEAREST_SAMPLINGMODE);
+          mm._hardwareTexture.release(), Tm.unbindAllTextures(), fm._swapAndDie(mm, !1)
+        }(Dm, fm.dO()), cm.set(Dm, im));
+        return Rm
+      }(mm, Tm, fm), hm.set(Am, am), am.catch((() => {
+        hm.delete(Am)
+      }))), am
     }
-    const zk = new WeakMap;
-    var Sk = Ik(37832);
-    class vk extends(xk(ak.l)) {
-      constructor(kk, Fk) {
-        super(kk, Fk), Fk.textures.forEach(((kk, Fk) => {
-          kk.mirror.onLoadObservable.add((kk => {
-            this.setTextureArrayData(kk, Fk).catch((kk => {
-              console.error(`Failed to build texture array for atlas ${Fk}`, kk)
+    const cm = new WeakMap;
+    var zm = fm(37903);
+    class Zm extends(Vm(Dm.j)) {
+      constructor(mm, Tm) {
+        super(mm, Tm), Tm.textures.forEach(((mm, Tm) => {
+          mm.mirror.onLoadObservable.add((mm => {
+            this.setTextureArrayData(mm, Tm).catch((mm => {
+              console.error(`Failed to build texture array for atlas ${Tm}`, mm)
             }))
           }))
-        })), (0, Sk.h)(Fk, kk.shaderLanguage)
+        })), (0, zm.h)(Tm, mm.shaderLanguage)
       }
-      async setTextureArrayData(kk, Fk) {
-        var Ik, Xk;
-        const Tk = this.featureState,
+      async setTextureArrayData(mm, Tm) {
+        var fm, hm;
+        const Am = this.featureState,
           {
-            width: ik,
-            height: yk
-          } = kk.getSize(),
-          lk = Tk.useWebGL2 ? await Vk(kk, null !== (Ik = null === (Xk = Tk.sources.pixels) || void 0 === Xk ? void 0 : Xk[Fk]) && void 0 !== Ik ? Ik : null, this._material.mG()) : null;
-        (0, Sk.e)(this._material, Tk, Fk, lk, ik, Math.round(yk / ik), this._material.shaderLanguage)
+            width: am,
+            height: xm
+          } = mm.getSize(),
+          wm = Am.useWebGL2 ? await Jm(mm, null !== (fm = null === (hm = Am.sources.pixels) || void 0 === hm ? void 0 : hm[Tm]) && void 0 !== fm ? fm : null, this._material.wG()) : null;
+        (0, zm.c)(this._material, Am, Tm, wm, am, Math.round(xm / am), this._material.shaderLanguage)
       }
     }
-    var Ek = Ik(41158),
-      Ok = Ik(40308),
-      nk = Ik(37144),
-      Gk = Ik(41165),
-      pk = Ik(40427),
-      uk = Ik(40297),
-      bk = Ik(41114),
-      Rk = Ik(37623),
-      Uk = Ik(41170);
-    class Ck extends Ek.c {
+    var km = fm(41203),
+      bm = fm(40404),
+      Sm = fm(37181),
+      em = fm(41212),
+      Nm = fm(40527),
+      Gm = fm(40391),
+      Xm = fm(41166),
+      Pm = fm(37661),
+      Hm = fm(41218);
+    class ym extends km.e {
       getData() {
         return null
       }
@@ -846,416 +846,416 @@ export const modules = {
         super._rebuild()
       }
     }
-    const Nk = {
-      Mesh: Gk.c,
-      TransformNode: bk.b,
-      je: Ek.c,
-      VertexBuffer: Ek.g,
-      BoundingInfo: Ok.d,
-      Ge: nk.Ge,
-      ArenaBuffer: Ck,
-      SubMesh: uk.b,
-      VertexData: pk.c,
-      MirroredGeometry: Uk.c,
-      meshFromArrays: Uk.g,
-      plainMeshFromArrays: Uk.k
+    const Cm = {
+      Mesh: em.c,
+      TransformNode: Xm.c,
+      XO: km.e,
+      VertexBuffer: km.g,
+      BoundingInfo: bm.b,
+      WO: Sm.WO,
+      ArenaBuffer: ym,
+      SubMesh: Gm.e,
+      VertexData: Nm.c,
+      MirroredGeometry: Hm.d,
+      meshFromArrays: Hm.f,
+      plainMeshFromArrays: Hm.h
     };
-    (0, Rk.f)(Nk);
-    var ck = Ik(37461);
-    class Wk extends(xk(Lk.e)) {
-      constructor(kk, Fk) {
-        if (super(kk, Fk), kk instanceof Xk.StandardMaterial && Fk.dirLightCount > 0) {
-          const Fk = kk,
-            Ik = Fk._blockDirtyMechanism;
-          Fk._blockDirtyMechanism = !0, kk.disableLighting = !0, Fk._blockDirtyMechanism = Ik;
-          const Xk = (0, wk.X)(kk);
-          Xk && (Xk.disableLighting = !0, (0, wk.W)(Xk))
-        }(0, ck.h)(kk)
+    (0, Pm.f)(Cm);
+    var rm = fm(37488);
+    class sm extends(Vm(Rm.g)) {
+      constructor(mm, Tm) {
+        if (super(mm, Tm), mm instanceof hm.StandardMaterial && Tm.dirLightCount > 0) {
+          const Tm = mm,
+            fm = Tm._blockDirtyMechanism;
+          Tm._blockDirtyMechanism = !0, mm.disableLighting = !0, Tm._blockDirtyMechanism = fm;
+          const hm = (0, Ym.cb)(mm);
+          hm && (hm.disableLighting = !0, (0, Ym.$)(hm))
+        }(0, rm.e)(mm)
       }
-      dispose(kk) {
-        (0, ck.l)(this._material), super.dispose(kk)
+      dispose(mm) {
+        (0, rm.i)(this._material), super.dispose(mm)
       }
     }
 
-    function fk(kk, Fk) {
-      if (!(Fk instanceof Xk.StandardMaterial) || Fk.specularTexture) return;
+    function lm(mm, Tm) {
+      if (!(Tm instanceof hm.StandardMaterial) || Tm.specularTexture) return;
       const {
-        r: Ik,
-        g: Tk,
-        b: ik
-      } = Fk.specularColor;
-      0 === Ik && 0 === Tk && 0 === ik && (kk.SPECULARTERM = !1)
-    }(0, Lk.c)({
-      disableUnusedSpecularTerm: fk
+        r: fm,
+        g: Am,
+        b: am
+      } = Tm.specularColor;
+      0 === fm && 0 === Am && 0 === am && (mm.SPECULARTERM = !1)
+    }(0, Rm.d)({
+      disableUnusedSpecularTerm: lm
     });
-    var Bk = Ik(37365),
-      dk = Ik(37633);
-    const Yk = new RegExp(`^#define ${qk.d}\\s*$`, "m");
-    class Ak extends(xk(qk.h)) {
-      constructor(kk, Fk) {
-        super(kk, Fk), this.ee = !1, Fk.ditherOnlyWhileFading && (dk.e.add(kk), this.prewarmDitherTwins(kk))
+    var Mm = fm(37357),
+      um = fm(37671);
+    const Bm = new RegExp(`^#define ${im.c}\\s*$`, "m");
+    class Lm extends(Vm(im.j)) {
+      constructor(mm, Tm) {
+        super(mm, Tm), this.PO = !1, Tm.ditherOnlyWhileFading && (um.e.add(mm), this.prewarmDitherTwins(mm))
       }
-      prewarmDitherTwins(kk) {
-        const Fk = new WeakSet;
-        kk.onEffectCreatedObservable.add((Ik => {
+      prewarmDitherTwins(mm) {
+        const Tm = new WeakSet;
+        mm.onEffectCreatedObservable.add((fm => {
           let {
-            effect: Xk,
-            subMesh: Tk
-          } = Ik;
-          if (this.featureState.prewarmingDither || Fk.has(Xk)) return;
-          Fk.add(Xk);
-          const ik = null === Tk || void 0 === Tk ? void 0 : Tk.getMesh();
-          ik && !Yk.test(Xk.defines) && kk.mG().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(ik) || Fk.delete(Xk)
+            effect: hm,
+            subMesh: Am
+          } = fm;
+          if (this.featureState.prewarmingDither || Tm.has(hm)) return;
+          Tm.add(hm);
+          const am = null === Am || void 0 === Am ? void 0 : Am.getMesh();
+          am && !Bm.test(hm.defines) && mm.wG().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(am) || Tm.delete(hm)
           }))
         }))
       }
-      prewarmDither(kk) {
-        if (this.ee || kk.Hs()) return !1;
-        const Fk = new uk.b(0, 0, 0, 0, 0, kk, void 0, !1, !1);
+      prewarmDither(mm) {
+        if (this.PO || mm.aJ()) return !1;
+        const Tm = new Gm.e(0, 0, 0, 0, 0, mm, void 0, !1, !1);
         this.featureState.prewarmingDither = !0;
         try {
-          this._material.isReadyForSubMesh(kk, Fk)
+          this._material.isReadyForSubMesh(mm, Tm)
         } finally {
           this.featureState.prewarmingDither = !1
         }
-        return null !== Fk.effect
+        return null !== Tm.effect
       }
-      dispose(kk) {
-        this.ee = !0, super.dispose(kk)
+      dispose(mm) {
+        this.PO = !0, super.dispose(mm)
       }
     }
-    const gk = new Map;
+    const tm = new Map;
 
-    function mk(kk, Fk) {
-      gk.set(kk, Fk)
+    function Um(mm, Tm) {
+      tm.set(mm, Tm)
     }
-    mk(lk.b, Pk), mk(ak.l, vk), mk(qk.h, Ak), mk(Lk.e, Wk), (0, tk.d)({
-      create: (kk, Fk) => {
-        const Ik = new Xk.StandardMaterial(kk.name, Fk);
-        return (0, Bk.q)(kk, Ik), Ik.detailMap._pluginDefineNames
+    Um(wm.e, Im), Um(Dm.j, Zm), Um(im.j, Lm), Um(Rm.g, sm), (0, pm.d)({
+      create: (mm, Tm) => {
+        const fm = new hm.StandardMaterial(mm.name, Tm);
+        return (0, Mm.s)(mm, fm), fm.detailMap._pluginDefineNames
       },
-      write: (kk, Fk, Ik) => {
-        (0, Bk.X)(kk.mirror, Fk, Ik)
+      write: (mm, Tm, fm) => {
+        (0, Mm.W)(mm.mirror, Tm, fm)
       },
-      addFeature: (kk, Fk, Ik) => {
-        const Xk = gk.get(Fk.feature);
-        if (!Xk) throw new Error(`${Fk.feature.name} has no plugin class (registerPluginClass)`);
-        new Xk(kk.mirror, Fk.state, ...Ik)
+      addFeature: (mm, Tm, fm) => {
+        const hm = tm.get(Tm.feature);
+        if (!hm) throw new Error(`${Tm.feature.name} has no plugin class (registerPluginClass)`);
+        new hm(mm.mirror, Tm.state, ...fm)
       },
-      texture: (kk, Fk, Ik) => {
+      texture: (mm, Tm, fm) => {
         let {
-          url: Xk,
-          noMipmap: Tk,
-          invertY: ik,
-          samplingMode: lk,
-          data: ak,
-          sets: qk
-        } = Ik;
-        if (!ak) {
-          const Ik = new yk.c(Xk, Fk, Tk, ik, lk);
-          return Object.assign(Ik, qk), void(0, Zk.H)(kk, Ik)
+          url: hm,
+          noMipmap: Am,
+          invertY: am,
+          samplingMode: wm,
+          data: Dm,
+          sets: im
+        } = fm;
+        if (!Dm) {
+          const fm = new xm.c(hm, Tm, Am, am, wm);
+          return Object.assign(fm, im), void(0, Em.H)(mm, fm)
         }
-        const Lk = {},
-          tk = new Promise(((kk, Fk) => {
-            Lk.onLoad = kk, Lk.onError = (kk, Ik) => {
-              Fk(new Error(`${ak.context}: ${(null===Ik||void 0===Ik?void 0:Ik.message)||kk||"Failed to load texture"}`))
+        const Rm = {},
+          pm = new Promise(((mm, Tm) => {
+            Rm.onLoad = mm, Rm.onError = (mm, fm) => {
+              Tm(new Error(`${Dm.context}: ${(null===fm||void 0===fm?void 0:fm.message)||mm||"Failed to load texture"}`))
             }
           })),
           {
-            mimeType: jk,
-            bytes: ek,
-            label: wk
-          } = ak,
-          Hk = {
-            noMipmap: Tk,
+            mimeType: om,
+            bytes: Om,
+            label: Ym
+          } = Dm,
+          qm = {
+            noMipmap: Am,
             invertY: !1,
-            samplingMode: lk,
-            ...Lk,
-            mimeType: jk,
+            samplingMode: wm,
+            ...Rm,
+            mimeType: om,
             loaderOptions: void 0,
             useSRGBBuffer: !1
           },
-          Jk = new yk.c(null, Fk, Hk);
-        Bk.r.set(Jk, tk), Object.assign(Jk, qk), Jk.updateURL(Xk, ek);
-        const xk = Jk.getInternalTexture();
-        xk && (xk.label = wk), kk.uvSet = Jk.coordinatesIndex, kk.matrix.set((0, Bk.P)(Jk)), (0, Zk.H)(kk, Jk)
+          jm = new xm.c(null, Tm, qm);
+        Mm.w.set(jm, pm), Object.assign(jm, im), jm.updateURL(hm, Om);
+        const Vm = jm.getInternalTexture();
+        Vm && (Vm.label = Ym), mm.uvSet = jm.coordinatesIndex, mm.matrix.set((0, Mm.P)(jm)), (0, Em.H)(mm, jm)
       },
-      cube: (kk, Fk, Ik) => {
+      cube: (mm, Tm, fm) => {
         let {
-          rootUrl: Xk,
-          files: ik,
-          noMipmap: lk,
-          luminance: ak
-        } = Ik;
+          rootUrl: hm,
+          files: am,
+          noMipmap: wm,
+          luminance: Dm
+        } = fm;
         const {
-          samplingMode: qk
-        } = kk.sampler, Lk = qk === (0, Zk.z)(lk) ? null : () => {
-          (0, Bk.O)(tk, qk)
-        }, tk = new Tk.c(Xk, Fk, null, lk, ik, Lk, null, (0, Zk.x)(ak));
-        tk.coordinatesMode = yk.c.SKYBOX_MODE, (0, Zk.H)(kk, tk)
+          samplingMode: im
+        } = mm.sampler, Rm = im === (0, Em.y)(wm) ? null : () => {
+          (0, Mm.L)(pm, im)
+        }, pm = new Am.b(hm, Tm, null, wm, am, Rm, null, (0, Em.w)(Dm));
+        pm.coordinatesMode = xm.c.SKYBOX_MODE, (0, Em.H)(mm, pm)
       },
-      canvas: (kk, Fk, Ik) => {
+      canvas: (mm, Tm, fm) => {
         let {
-          width: Xk,
-          height: Tk,
-          mipmaps: lk,
-          samplingMode: ak,
-          hasAlpha: qk = !1,
-          wrap: Lk = yk.c.CLAMP_ADDRESSMODE
-        } = Ik;
-        const tk = new ik.d(Fk, {
-          width: Xk,
-          height: Tk
-        }, kk, lk, ak);
-        tk.hasAlpha = qk, tk.wrapU = Lk, tk.wrapV = Lk;
-        const Zk = (0, Bk.B)(tk);
-        return (0, Bk.E)(Zk, tk), Zk
+          width: hm,
+          height: Am,
+          mipmaps: wm,
+          samplingMode: Dm,
+          hasAlpha: im = !1,
+          wrap: Rm = xm.c.CLAMP_ADDRESSMODE
+        } = fm;
+        const pm = new am.b(Tm, {
+          width: hm,
+          height: Am
+        }, mm, wm, Dm);
+        pm.hasAlpha = im, pm.wrapU = Rm, pm.wrapV = Rm;
+        const Em = (0, Mm.B)(pm);
+        return (0, Mm.F)(Em, pm), Em
       }
     })
   },
-  41170: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => Lk,
-      g: () => tk,
-      k: () => Zk
+  41218: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => Rm,
+      f: () => pm,
+      h: () => Em
     });
-    var Xk = Ik(41158),
-      Tk = Ik(40056),
-      ik = Ik(40308),
-      yk = Ik(40429),
-      lk = Ik(41165),
-      ak = Ik(40427),
-      qk = Ik(37519);
-    class Lk extends yk.d {
+    var hm = fm(41203),
+      Am = fm(40180),
+      am = fm(40404),
+      xm = fm(40529),
+      wm = fm(41212),
+      Dm = fm(40527),
+      im = fm(37545);
+    class Rm extends xm.d {
       constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (kk, Fk) => {
-          this.releaseUnlessInstanced(Fk)
+        super(...arguments), this.model = null, this.onGeometryUpdated = (mm, Tm) => {
+          this.releaseUnlessInstanced(Tm)
         }, this.onLinked = null
       }
-      link(kk) {
-        var Fk;
-        (0, qk.o)(kk), this.model = kk, null === (Fk = this.onLinked) || void 0 === Fk || Fk.call(this, kk)
+      link(mm) {
+        var Tm;
+        (0, im.i)(mm), this.model = mm, null === (Tm = this.onLinked) || void 0 === Tm || Tm.call(this, mm)
       }
       relink() {
         this.release();
-        const kk = [];
-        for (const Tk of Object.values(this._vertexBuffers))
-          if (!Tk.getIsInstanced()) {
+        const mm = [];
+        for (const Am of Object.values(this._vertexBuffers))
+          if (!Am.getIsInstanced()) {
             const {
-              byteOffset: Fk,
-              byteStride: Ik,
-              type: Xk,
-              normalized: ik
-            } = Tk;
-            kk.push({
-              kind: Tk.getKind(),
-              data: Tk.getData(),
-              offset: Fk,
-              stride: Ik,
-              components: Tk.getSize(),
-              glType: Xk,
-              isNormalized: ik
+              byteOffset: Tm,
+              byteStride: fm,
+              type: hm,
+              normalized: am
+            } = Am;
+            mm.push({
+              kind: Am.getKind(),
+              data: Am.getData(),
+              offset: Tm,
+              stride: fm,
+              components: Am.getSize(),
+              glType: hm,
+              isNormalized: am
             })
-          } const Fk = this._indices.length ? this._indices : null,
+          } const Tm = this._indices.length ? this._indices : null,
           {
-            minimum: Ik,
-            maximum: Xk
+            minimum: fm,
+            maximum: hm
           } = this.extend;
-        this.link(new qk.h(kk, Fk, this.getTotalVertices(), new Float64Array(Ik.iXk()), new Float64Array(Xk.iXk())))
+        this.link(new im.e(mm, Tm, this.getTotalVertices(), new Float64Array(fm.ahm()), new Float64Array(hm.ahm())))
       }
-      copy(kk) {
-        if (!this.model) return super.copy(kk);
-        const Fk = new Lk(kk, this.mG()),
-          Ik = this.yXk(void 0, !0);
-        Ik && Fk.setIndices(Ik);
-        let yk = !1;
-        for (const ik in this._vertexBuffers) {
-          const kk = this._vertexBuffers[ik],
-            Ik = kk.getData();
-          if (!Ik) continue;
-          const lk = kk.getSize(),
+      copy(mm) {
+        if (!this.model) return super.copy(mm);
+        const Tm = new Rm(mm, this.wG()),
+          fm = this.xhm(void 0, !0);
+        fm && Tm.setIndices(fm);
+        let xm = !1;
+        for (const am in this._vertexBuffers) {
+          const mm = this._vertexBuffers[am],
+            fm = mm.getData();
+          if (!fm) continue;
+          const wm = mm.getSize(),
             {
-              type: ak,
-              byteOffset: qk,
-              byteStride: Lk,
-              normalized: tk
-            } = kk;
-          yk ||= kk.isUpdatable();
-          const Zk = kk.getIsInstanced() ? (Ik instanceof Array ? 4 * Ik.length : Ik.byteLength) / Lk : this.getTotalVertices(),
-            jk = (0, Tk.l)(Ik, lk, ak, qk, Lk, Zk, !0),
-            ek = {
-              updatable: kk.isUpdatable(),
-              stride: lk,
-              type: ak,
-              normalized: tk,
+              type: Dm,
+              byteOffset: im,
+              byteStride: Rm,
+              normalized: pm
+            } = mm;
+          xm ||= mm.isUpdatable();
+          const Em = mm.getIsInstanced() ? (fm instanceof Array ? 4 * fm.length : fm.byteLength) / Rm : this.getTotalVertices(),
+            om = (0, Am.u)(fm, wm, Dm, im, Rm, Em, !0),
+            Om = {
+              updatable: mm.isUpdatable(),
+              stride: wm,
+              type: Dm,
+              normalized: pm,
               takeBufferOwnership: !0,
-              instanced: kk.getIsInstanced()
+              instanced: mm.getIsInstanced()
             };
-          Fk.setVerticesBuffer(new Xk.g(this.Oe(), jk, ik, ek), Zk)
+          Tm.setVerticesBuffer(new hm.g(this.dO(), om, am, Om), Em)
         }
-        return Fk._updatable = yk, Fk._boundingInfo = new ik.d(this.extend.minimum, this.extend.maximum), Fk.relink(), Fk
+        return Tm._updatable = xm, Tm._boundingInfo = new am.b(this.extend.minimum, this.extend.maximum), Tm.relink(), Tm
       }
-      static mergeMeshes(kk, Fk, Ik, Xk, Tk, ik) {
-        const ak = kk[0].mG(),
-          qk = new lk.c(kk[0].name + "_merged", ak),
-          tk = new Lk(yk.d.RandomId(), ak, void 0, !1, qk);
+      static mergeMeshes(mm, Tm, fm, hm, Am, am) {
+        const Dm = mm[0].wG(),
+          im = new wm.c(mm[0].name + "_merged", Dm),
+          pm = new Rm(xm.d.RandomId(), Dm, void 0, !1, im);
         try {
-          if (!lk.c.MergeMeshes(kk, Fk, Ik, qk, Tk, ik)) return qk.dispose(), null
-        } catch (Zk) {
-          throw qk.dispose(), Zk
+          if (!wm.c.MergeMeshes(mm, Tm, fm, im, Am, am)) return im.dispose(), null
+        } catch (Em) {
+          throw im.dispose(), Em
         }
-        return tk.relink(), qk
+        return pm.relink(), im
       }
-      removeVerticesData(kk) {
-        this.releaseUnlessInstanced(kk), super.removeVerticesData(kk)
+      removeVerticesData(mm) {
+        this.releaseUnlessInstanced(mm), super.removeVerticesData(mm)
       }
       dispose() {
         this.release(), super.dispose()
       }
-      releaseUnlessInstanced(kk) {
-        var Fk;
-        kk && null !== (Fk = this.getVertexBuffer(kk)) && void 0 !== Fk && Fk.getIsInstanced() || this.release()
+      releaseUnlessInstanced(mm) {
+        var Tm;
+        mm && null !== (Tm = this.getVertexBuffer(mm)) && void 0 !== Tm && Tm.getIsInstanced() || this.release()
       }
       release() {
-        this.model && ((0, qk.u)(this.model), this.model = null)
+        this.model && ((0, im.m)(this.model), this.model = null)
       }
     }
 
-    function tk(kk, Fk, Ik) {
-      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new lk.c(kk, Ik);
-      const Tk = (0, qk.l)(Fk),
+    function pm(mm, Tm, fm) {
+      let hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new wm.c(mm, fm);
+      const Am = (0, im.g)(Tm),
         {
-          positions: ik,
-          normals: tk,
-          uvs: Zk,
-          indices: jk,
-          named: ek = {}
-        } = Fk,
-        wk = new ak.c;
-      wk.positions = ik, wk.normals = null !== tk && void 0 !== tk ? tk : null, wk.uvs = null !== Zk && void 0 !== Zk ? Zk : null, wk.indices = jk;
-      const Hk = new Lk(yk.d.RandomId(), Ik, wk, !1, Xk);
+          positions: am,
+          normals: pm,
+          uvs: Em,
+          indices: om,
+          named: Om = {}
+        } = Tm,
+        Ym = new Dm.c;
+      Ym.positions = am, Ym.normals = null !== pm && void 0 !== pm ? pm : null, Ym.uvs = null !== Em && void 0 !== Em ? Em : null, Ym.indices = om;
+      const qm = new Rm(xm.d.RandomId(), fm, Ym, !1, hm);
       for (const {
-          kind: yk,
-          components: lk
+          kind: xm,
+          components: wm
         }
-        of Tk.vertexAttributes) yk in ek && Xk.setVerticesData(yk, ek[yk], !1, lk);
-      return Hk.link(Tk), Xk
+        of Am.vertexAttributes) xm in Om && hm.setVerticesData(xm, Om[xm], !1, wm);
+      return qm.link(Am), hm
     }
 
-    function Zk(kk, Fk, Ik) {
-      let Xk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const Tk = new lk.c(kk, Ik),
+    function Em(mm, Tm, fm) {
+      let hm = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const Am = new wm.c(mm, fm),
         {
-          positions: ik,
-          normals: yk,
-          uvs: qk,
-          indices: Lk
-        } = Fk;
-      return Object.assign(new ak.c, {
-        positions: ik,
-        normals: yk,
-        uvs: qk,
-        indices: Lk
-      }).applyToMesh(Tk, Xk), Tk
+          positions: am,
+          normals: xm,
+          uvs: im,
+          indices: Rm
+        } = Tm;
+      return Object.assign(new Dm.c, {
+        positions: am,
+        normals: xm,
+        uvs: im,
+        indices: Rm
+      }).applyToMesh(Am, hm), Am
     }
   },
-  41612: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => Hk,
-      e: () => lk,
-      h: () => yk,
-      i: () => qk
+  41643: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => qm,
+      g: () => wm,
+      j: () => xm,
+      m: () => im
     });
-    var Xk = Ik(37327),
-      Tk = Ik(38706),
-      ik = Ik(38700);
+    var hm = fm(37330),
+      Am = fm(38802),
+      am = fm(38795);
 
-    function yk(kk, Fk, Ik, Xk) {
-      const Tk = ik.t;
-      Fk.fill(0), kk.gravity.toArray(Fk, Tk.gravity), kk.colorDead.toArray(Fk, Tk.colorDead), Ik[Tk.ramp] = kk.useRampGradients ? 1 : 0;
-      const yk = kk.getColorGradients(),
-        lk = Zk(kk, yk, "colour", Xk);
-      Ik[Tk.colorCount] = lk;
-      for (let ik = 0; ik < lk; ik++) {
-        var ak;
-        const kk = yk[jk(yk, ik)];
-        Fk[Tk.colorPositions + ik] = kk.gradient, kk.color1.toArray(Fk, Tk.color1 + 4 * ik), (null !== (ak = kk.color2) && void 0 !== ak ? ak : kk.color1).toArray(Fk, Tk.color2 + 4 * ik)
+    function xm(mm, Tm, fm, hm) {
+      const Am = am.u;
+      Tm.fill(0), mm.gravity.toArray(Tm, Am.gravity), mm.colorDead.toArray(Tm, Am.colorDead), fm[Am.ramp] = mm.useRampGradients ? 1 : 0;
+      const xm = mm.getColorGradients(),
+        wm = Em(mm, xm, "colour", hm);
+      fm[Am.colorCount] = wm;
+      for (let am = 0; am < wm; am++) {
+        var Dm;
+        const mm = xm[om(xm, am)];
+        Tm[Am.colorPositions + am] = mm.gradient, mm.color1.toArray(Tm, Am.color1 + 4 * am), (null !== (Dm = mm.color2) && void 0 !== Dm ? Dm : mm.color1).toArray(Tm, Am.color2 + 4 * am)
       }
-      const qk = kk.getVelocityGradients(),
-        Lk = Zk(kk, qk, "TH", Xk);
-      Ik[Tk.velocityCount] = Lk;
-      for (let ik = 0; ik < Lk; ik++) xk(Fk, Tk.TH + 4 * ik, qk[jk(qk, ik)]);
-      const tk = kk.useRampGradients ? kk.getColorRemapGradients() : null,
-        ek = Zk(kk, tk, "colour remap", Xk);
-      Ik[Tk.remapCount] = ek;
-      for (let ik = 0; ik < ek; ik++) xk(Fk, Tk.remap + 4 * ik, tk[jk(tk, ik)])
+      const im = mm.getVelocityGradients(),
+        Rm = Em(mm, im, "qq", hm);
+      fm[Am.velocityCount] = Rm;
+      for (let am = 0; am < Rm; am++) Vm(Tm, Am.qq + 4 * am, im[om(im, am)]);
+      const pm = mm.useRampGradients ? mm.getColorRemapGradients() : null,
+        Om = Em(mm, pm, "colour remap", hm);
+      fm[Am.remapCount] = Om;
+      for (let am = 0; am < Om; am++) Vm(Tm, Am.remap + 4 * am, pm[om(pm, am)])
     }
 
-    function lk() {
+    function wm() {
       return {
         key: [],
-        texels: new Uint8Array(4 * ik.j)
+        texels: new Uint8Array(4 * am.l)
       }
     }
-    const ak = [];
+    const Dm = [];
 
-    function qk(kk, Fk) {
-      return Lk(kk, ak), !Jk(ak, Fk.key) && (Fk.key.length = 0, Fk.key.push(...ak), Fk.key.length > 0 && function(kk, Fk) {
-        for (let Ik = 0; Ik < ik.j; Ik++) Tk.e.GetCurrentGradient(Ik / ik.j, kk, ((kk, Fk, Ik) => {
-          Xk.Color3.LerpToRef(kk.color, Fk.color, Ik, tk)
-        })), Fk[4 * Ik] = 255 * tk.r, Fk[4 * Ik + 1] = 255 * tk.g, Fk[4 * Ik + 2] = 255 * tk.b, Fk[4 * Ik + 3] = 255
-      }(kk.getRampGradients(), Fk.texels), !0)
+    function im(mm, Tm) {
+      return Rm(mm, Dm), !jm(Dm, Tm.key) && (Tm.key.length = 0, Tm.key.push(...Dm), Tm.key.length > 0 && function(mm, Tm) {
+        for (let fm = 0; fm < am.l; fm++) Am.j.GetCurrentGradient(fm / am.l, mm, ((mm, Tm, fm) => {
+          hm.Color3.LerpToRef(mm.color, Tm.color, fm, pm)
+        })), Tm[4 * fm] = 255 * pm.r, Tm[4 * fm + 1] = 255 * pm.g, Tm[4 * fm + 2] = 255 * pm.b, Tm[4 * fm + 3] = 255
+      }(mm.getRampGradients(), Tm.texels), !0)
     }
 
-    function Lk(kk, Fk) {
-      Fk.length = 0;
-      const Ik = kk.useRampGradients ? kk.getRampGradients() : null;
-      if (null !== Ik && void 0 !== Ik && Ik.length) {
-        Fk.push(Ik.length);
-        for (const kk of Ik) Fk.push(kk.gradient, kk.color.r, kk.color.g, kk.color.b)
+    function Rm(mm, Tm) {
+      Tm.length = 0;
+      const fm = mm.useRampGradients ? mm.getRampGradients() : null;
+      if (null !== fm && void 0 !== fm && fm.length) {
+        Tm.push(fm.length);
+        for (const mm of fm) Tm.push(mm.gradient, mm.color.r, mm.color.g, mm.color.b)
       }
     }
-    const tk = new Xk.Color3;
+    const pm = new hm.Color3;
 
-    function Zk(kk, Fk, Ik, Xk) {
-      return Fk ? Fk.length > ik.c ? (Xk(`particleStops:${Ik}`, `GPU particles use the first 2 and last ${ik.c-2} of more than ${ik.c} ${Ik} gradient stops (${kk.name})`), ik.c) : Fk.length : 0
+    function Em(mm, Tm, fm, hm) {
+      return Tm ? Tm.length > am.d ? (hm(`particleStops:${fm}`, `GPU particles use the first 2 and last ${am.d-2} of more than ${am.d} ${fm} gradient stops (${mm.name})`), am.d) : Tm.length : 0
     }
 
-    function jk(kk, Fk) {
-      return Fk < 2 || kk.length <= ik.c ? Fk : kk.length - ik.c + Fk
+    function om(mm, Tm) {
+      return Tm < 2 || mm.length <= am.d ? Tm : mm.length - am.d + Tm
     }
-    const ek = new Float32Array(ik.p),
-      wk = new Uint32Array(ek.buffer);
+    const Om = new Float32Array(am.o),
+      Ym = new Uint32Array(Om.buffer);
 
-    function Hk(kk, Fk, Ik) {
-      return yk(kk, ek, wk, Ik), Fk && Jk(wk, Fk) ? null : wk.slice()
+    function qm(mm, Tm, fm) {
+      return xm(mm, Om, Ym, fm), Tm && jm(Ym, Tm) ? null : Ym.slice()
     }
 
-    function Jk(kk, Fk) {
-      if (kk.length !== Fk.length) return !1;
-      for (let Ik = 0; Ik < kk.length; Ik++)
-        if (kk[Ik] !== Fk[Ik]) return !1;
+    function jm(mm, Tm) {
+      if (mm.length !== Tm.length) return !1;
+      for (let fm = 0; fm < mm.length; fm++)
+        if (mm[fm] !== Tm[fm]) return !1;
       return !0
     }
 
-    function xk(kk, Fk, Ik) {
-      var Xk;
-      kk[Fk] = Ik.gradient, kk[Fk + 1] = Ik.factor1, kk[Fk + 2] = null !== (Xk = Ik.factor2) && void 0 !== Xk ? Xk : Ik.factor1
+    function Vm(mm, Tm, fm) {
+      var hm;
+      mm[Tm] = fm.gradient, mm[Tm + 1] = fm.factor1, mm[Tm + 2] = null !== (hm = fm.factor2) && void 0 !== hm ? hm : fm.factor1
     }
   },
-  41604: (kk, Fk, Ik) => {
-    function Xk() {
-      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      const Fk = new Set;
-      return (Ik, Xk) => {
-        Fk.has(Ik) || (Fk.add(Ik), console.warn(kk + Xk))
+  41638: (mm, Tm, fm) => {
+    function hm() {
+      let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      const Tm = new Set;
+      return (fm, hm) => {
+        Tm.has(fm) || (Tm.add(fm), console.warn(mm + hm))
       }
     }
-    Ik.d(Fk, {
-      d: () => Xk
+    fm.d(Tm, {
+      c: () => hm
     })
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

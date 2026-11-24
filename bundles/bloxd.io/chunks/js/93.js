@@ -1,126 +1,126 @@
 export const id = 93;
 export const ids = [93];
 export const modules = {
-  4857: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      Howl: () => Tk.Howl,
-      Howler: () => Tk.Howler,
-      musicOutput: () => Hk,
-      readyAudioContext: () => Jk
+  4800: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      Howl: () => Am.Howl,
+      Howler: () => Am.Howler,
+      musicOutput: () => qm,
+      readyAudioContext: () => jm
     });
-    var Xk, Tk = Ik(4863),
-      ik = Ik(3378),
-      yk = Ik(4636);
-    const lk = Tk.Howler;
+    var hm, Am = fm(4806),
+      am = fm(3443),
+      xm = fm(4588);
+    const wm = Am.Howler;
 
-    function ak() {
-      var kk, Fk;
-      if (lk.ctx || !lk.usingWebAudio || "undefined" === typeof AudioContext || !(0, yk.h)()) return;
-      const Ik = navigator.audioSession;
-      let Xk;
-      "auto" === (null === Ik || void 0 === Ik ? void 0 : Ik.type) && (Ik.type = "ambient");
+    function Dm() {
+      var mm, Tm;
+      if (wm.ctx || !wm.usingWebAudio || "undefined" === typeof AudioContext || !(0, xm.k)()) return;
+      const fm = navigator.audioSession;
+      let hm;
+      "auto" === (null === fm || void 0 === fm ? void 0 : fm.type) && (fm.type = "ambient");
       try {
-        Xk = new AudioContext({
+        hm = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const Tk = Xk.createGain();
-      Tk.gain.setValueAtTime(lk._muted ? 0 : null !== (kk = lk._volume) && void 0 !== kk ? kk : 1, Xk.currentTime), Tk.connect(Xk.destination), lk.ctx = Xk, lk.masterGain = Tk, null === (Fk = lk._setup) || void 0 === Fk || Fk.call(lk)
+      const Am = hm.createGain();
+      Am.gain.setValueAtTime(wm._muted ? 0 : null !== (mm = wm._volume) && void 0 !== mm ? mm : 1, hm.currentTime), Am.connect(hm.destination), wm.ctx = hm, wm.masterGain = Am, null === (Tm = wm._setup) || void 0 === Tm || Tm.call(wm)
     }
-    lk._mobileUnloaded = !0;
-    const qk = lk.volume.bind(Tk.Howler);
-    lk.volume = function() {
-      return ak(), qk(...arguments)
+    wm._mobileUnloaded = !0;
+    const im = wm.volume.bind(Am.Howler);
+    wm.volume = function() {
+      return Dm(), im(...arguments)
     };
-    const Lk = lk.mute.bind(Tk.Howler);
-    lk.mute = kk => (ak(), Lk(kk));
-    const tk = Tk.Howl.prototype,
-      Zk = tk.init;
+    const Rm = wm.mute.bind(Am.Howler);
+    wm.mute = mm => (Dm(), Rm(mm));
+    const pm = Am.Howl.prototype,
+      Em = pm.init;
 
-    function jk() {
-      for (; lk._html5AudioPool.length < lk.html5PoolSize;) {
-        const kk = new Audio;
-        kk._unlocked = !0, lk._releaseHtml5Audio(kk)
+    function om() {
+      for (; wm._html5AudioPool.length < wm.html5PoolSize;) {
+        const mm = new Audio;
+        mm._unlocked = !0, wm._releaseHtml5Audio(mm)
       }
-      for (const Fk of lk._howls)
-        if (!Fk._webAudio)
-          for (const Ik of Fk._getSoundIds()) {
-            var kk;
-            const Xk = null === (kk = Fk._soundById(Ik)) || void 0 === kk ? void 0 : kk._node;
-            Xk && !Xk._unlocked && (Xk._unlocked = !0, Xk.load())
+      for (const Tm of wm._howls)
+        if (!Tm._webAudio)
+          for (const fm of Tm._getSoundIds()) {
+            var mm;
+            const hm = null === (mm = Tm._soundById(fm)) || void 0 === mm ? void 0 : mm._node;
+            hm && !hm._unlocked && (hm._unlocked = !0, hm.load())
           }
     }
-    tk.init = function(kk) {
-      return ak(), Zk.call(this, kk)
-    }, (0, yk.h)() && (lk._unlockAudio = () => {
-      const kk = lk.ctx;
-      if (lk._audioUnlocked || !kk) return;
-      lk.autoUnlock = !1;
-      const Fk = kk.createBuffer(1, 1, 22050);
-      lk._scratchBuffer = Fk;
-      const Ik = new AbortController;
-      let Xk = "afterPaint";
-      const Tk = () => {
-          var Xk;
-          if (lk._audioUnlocked) return;
-          null === (Xk = lk._autoResume) || void 0 === Xk || Xk.call(lk);
-          const Tk = kk.createBufferSource();
-          Tk.buffer = Fk, Tk.connect(kk.destination), Tk.start(0), kk.resume().catch((() => {})), Tk.onended = () => {
-            Tk.disconnect(0), lk._audioUnlocked = !0, Ik.abort();
-            for (const kk of lk._howls) kk._emit("unlock")
+    pm.init = function(mm) {
+      return Dm(), Em.call(this, mm)
+    }, (0, xm.k)() && (wm._unlockAudio = () => {
+      const mm = wm.ctx;
+      if (wm._audioUnlocked || !mm) return;
+      wm.autoUnlock = !1;
+      const Tm = mm.createBuffer(1, 1, 22050);
+      wm._scratchBuffer = Tm;
+      const fm = new AbortController;
+      let hm = "afterPaint";
+      const Am = () => {
+          var hm;
+          if (wm._audioUnlocked) return;
+          null === (hm = wm._autoResume) || void 0 === hm || hm.call(wm);
+          const Am = mm.createBufferSource();
+          Am.buffer = Tm, Am.connect(mm.destination), Am.start(0), mm.resume().catch((() => {})), Am.onended = () => {
+            Am.disconnect(0), wm._audioUnlocked = !0, fm.abort();
+            for (const mm of wm._howls) mm._emit("unlock")
           }
         },
-        ak = () => {
-          jk(), Tk()
+        Dm = () => {
+          om(), Am()
         },
-        qk = Fk => {
-          if (jk(), "inTap" === Xk) {
-            if ("running" === kk.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), Tk()
-          } else "afterPaint" === Xk && (Xk = "queued", (0, ik.b)(Fk.timeStamp, (() => {
-            Xk = "inTap", Tk()
+        im = Tm => {
+          if (om(), "inTap" === hm) {
+            if ("running" === mm.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), Am()
+          } else "afterPaint" === hm && (hm = "queued", (0, am.c)(Tm.timeStamp, (() => {
+            hm = "inTap", Am()
           })))
         };
-      for (const ik of ["touchstart", "touchend"]) document.addEventListener(ik, ak, {
+      for (const am of ["touchstart", "touchend"]) document.addEventListener(am, Dm, {
         capture: !0,
-        signal: Ik.signal
+        signal: fm.signal
       });
-      for (const ik of yk.b) document.addEventListener(ik, qk, {
+      for (const am of xm.c) document.addEventListener(am, im, {
         capture: !0,
-        signal: Ik.signal
+        signal: fm.signal
       })
     });
-    let ek = 0;
-    const wk = null === (Xk = lk._autoSuspend) || void 0 === Xk ? void 0 : Xk.bind(Tk.Howler);
+    let Om = 0;
+    const Ym = null === (hm = wm._autoSuspend) || void 0 === hm ? void 0 : hm.bind(Am.Howler);
 
-    function Hk() {
-      Jk();
+    function qm() {
+      jm();
       const {
-        ctx: kk,
-        masterGain: Fk
-      } = lk;
-      return kk && Fk ? {
-        ctx: kk,
-        destination: Fk,
-        holdAwake: kk => {
-          var Fk, Ik;
-          (ek += kk ? 1 : -1, kk) ? null === (Fk = lk._autoResume) || void 0 === Fk || Fk.call(lk): null === (Ik = lk._autoSuspend) || void 0 === Ik || Ik.call(lk)
+        ctx: mm,
+        masterGain: Tm
+      } = wm;
+      return mm && Tm ? {
+        ctx: mm,
+        destination: Tm,
+        holdAwake: mm => {
+          var Tm, fm;
+          (Om += mm ? 1 : -1, mm) ? null === (Tm = wm._autoResume) || void 0 === Tm || Tm.call(wm): null === (fm = wm._autoSuspend) || void 0 === fm || fm.call(wm)
         },
         wake: () => {
-          var Fk;
-          "running" !== kk.state && (null === (Fk = lk._autoResume) || void 0 === Fk || Fk.call(lk), kk.resume().catch((() => {})))
+          var Tm;
+          "running" !== mm.state && (null === (Tm = wm._autoResume) || void 0 === Tm || Tm.call(wm), mm.resume().catch((() => {})))
         }
       } : null
     }
 
-    function Jk() {
-      var kk;
-      (lk.volume(), lk.ctx && lk.autoUnlock) && (null === (kk = lk._unlockAudio) || void 0 === kk || kk.call(lk))
+    function jm() {
+      var mm;
+      (wm.volume(), wm.ctx && wm.autoUnlock) && (null === (mm = wm._unlockAudio) || void 0 === mm || mm.call(wm))
     }
-    wk && (lk._autoSuspend = () => ek > 0 ? Tk.Howler : wk())
+    Ym && (wm._autoSuspend = () => Om > 0 ? Am.Howler : Ym())
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

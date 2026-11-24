@@ -1,77 +1,77 @@
 export const id = 66;
 export const ids = [60, 66, 93];
 export const modules = {
-  37026: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => tk,
-      e: () => Zk
+  37087: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => pm,
+      i: () => Em
     });
-    var Xk = Ik(628),
-      Tk = Ik(41),
-      ik = Ik(36985);
-    const yk = "replayFileKeptForReload",
-      lk = "replayFileKeptForReloadAt",
-      ak = "replayFileKeptForReloadTab",
-      qk = 3e5,
-      Lk = 5e3;
-    async function tk(kk, Fk) {
-      const Ik = Date.now(),
-        ik = {
-          at: Ik,
-          bytes: kk,
-          source: Fk
+    var hm = fm(653),
+      Am = fm(37),
+      am = fm(37048);
+    const xm = "replayFileKeptForReload",
+      wm = "replayFileKeptForReloadAt",
+      Dm = "replayFileKeptForReloadTab",
+      im = 3e5,
+      Rm = 5e3;
+    async function pm(mm, Tm) {
+      const fm = Date.now(),
+        am = {
+          at: fm,
+          bytes: mm,
+          source: Tm
         },
-        qk = await Promise.race([(async () => await Tk.g.setItem(lk, Ik) && Tk.g.setItem(yk, ik))(), (0, Xk.U)(Lk).then((() => !1))]);
-      qk || console.warn("The replay file couldn't be kept across the reload into a newer build: the reloaded page asks for it again");
-      const tk = {
-        at: Ik,
-        Gj: qk
+        im = await Promise.race([(async () => await Am.e.setItem(wm, fm) && Am.e.setItem(xm, am))(), (0, hm.L)(Rm).then((() => !1))]);
+      im || console.warn("The replay file couldn't be kept across the reload into a newer build: the reloaded page asks for it again");
+      const pm = {
+        at: fm,
+        mO: im
       };
-      Tk.m.setItem(ak, tk)
+      Am.k.setItem(Dm, pm)
     }
-    async function Zk() {
-      var kk;
-      const Fk = Tk.m.getItem(ak);
-      null !== Fk && Tk.m.removeItem(ak);
-      const Ik = Date.now(),
-        Xk = await Tk.g.getItem(lk),
-        Lk = null !== Fk && Ik - Fk.at <= qk,
-        tk = null !== Fk && Xk === Fk.at;
-      let Zk = null;
-      if (null !== Xk && (tk || ("number" !== typeof Xk || Ik - Xk > qk)) && (Zk = Lk && tk && Fk.Gj ? await Tk.g.getItem(yk) : null, await Promise.all([Tk.g.removeItem(lk), Tk.g.removeItem(yk)])), !Lk) return null;
-      if ((null === (kk = Zk) || void 0 === kk ? void 0 : kk.at) !== Fk.at) throw new Error(ik.b.replayNotKept.text);
+    async function Em() {
+      var mm;
+      const Tm = Am.k.getItem(Dm);
+      null !== Tm && Am.k.removeItem(Dm);
+      const fm = Date.now(),
+        hm = await Am.e.getItem(wm),
+        Rm = null !== Tm && fm - Tm.at <= im,
+        pm = null !== Tm && hm === Tm.at;
+      let Em = null;
+      if (null !== hm && (pm || ("number" !== typeof hm || fm - hm > im)) && (Em = Rm && pm && Tm.mO ? await Am.e.getItem(xm) : null, await Promise.all([Am.e.removeItem(wm), Am.e.removeItem(xm)])), !Rm) return null;
+      if ((null === (mm = Em) || void 0 === mm ? void 0 : mm.at) !== Tm.at) throw new Error(am.e.replayNotKept.text);
       return {
-        bytes: Zk.bytes,
-        source: Zk.source
+        bytes: Em.bytes,
+        source: Em.source
       }
     }
   },
-  37021: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Xk,
-      f: () => ik,
-      g: () => Tk
+  37084: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => hm,
+      c: () => am,
+      g: () => Am
     });
-    const Xk = [9];
+    const hm = [9];
 
-    function Tk(kk) {
-      return Xk.includes(kk)
+    function Am(mm) {
+      return hm.includes(mm)
     }
 
-    function ik(kk) {
-      return null !== kk && kk >= 3 && kk < Xk[0]
+    function am(mm) {
+      return null !== mm && mm >= 3 && mm < hm[0]
     }
   },
-  36985: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => yk,
-      e: () => qk,
-      i: () => ak
+  37048: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => xm,
+      i: () => im,
+      m: () => Dm
     });
-    var Xk = Ik(34);
-    const Tk = 1500,
-      ik = 1e3,
-      yk = {
+    var hm = fm(31);
+    const Am = 1500,
+      am = 1e3,
+      xm = {
         recordingStarted: {
           text: "Started recording",
           type: "Success"
@@ -162,29 +162,29 @@ export const modules = {
           type: "Error"
         }
       },
-      lk = new Set(Object.values(yk).filter((kk => "Error" === kk.type)).map((kk => kk.text)));
+      wm = new Set(Object.values(xm).filter((mm => "Error" === mm.type)).map((mm => mm.text)));
 
-    function ak(kk) {
-      return kk instanceof Error && lk.has(kk.message) ? kk.message : void 0
+    function Dm(mm) {
+      return mm instanceof Error && wm.has(mm.message) ? mm.message : void 0
     }
 
-    function qk(kk) {
-      var Fk;
-      const Ik = null !== (Fk = kk.timeoutMs) && void 0 !== Fk ? Fk : "Error" === kk.type ? Tk : ik;
-      Xk.g.GL("showBottomMessage", {
-        message: kk.text,
-        timeoutLength: Ik,
-        type: kk.type
+    function im(mm) {
+      var Tm;
+      const fm = null !== (Tm = mm.timeoutMs) && void 0 !== Tm ? Tm : "Error" === mm.type ? Am : am;
+      hm.j.gp("showBottomMessage", {
+        message: mm.text,
+        timeoutLength: fm,
+        type: mm.type
       })
     }
   },
-  37034: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Xk,
-      i: () => Tk
+  37099: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => hm,
+      h: () => Am
     });
-    const Xk = "data-replay-ui-active",
-      Tk = [{
+    const hm = "data-replay-ui-active",
+      Am = [{
         group: "middleTextTop",
         dataAttr: "data-replay-hide-middle-text-top",
         label: "Middle text top"
@@ -234,78 +234,78 @@ export const modules = {
         label: "Everything else"
       }]
   },
-  37042: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => qk,
-      f: () => tk,
-      j: () => Lk
+  37101: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => im,
+      d: () => pm,
+      f: () => Rm
     });
-    var Xk = Ik(25),
-      Tk = Ik(34),
-      ik = Ik(37034);
+    var hm = fm(23),
+      Am = fm(31),
+      am = fm(37099);
 
-    function yk() {
-      const kk = {};
+    function xm() {
+      const mm = {};
       for (const {
-          group: Fk
+          group: Tm
         }
-        of ik.i) kk[Fk] = !0;
-      return kk
+        of am.h) mm[Tm] = !0;
+      return mm
     }
-    let lk = yk();
+    let wm = xm();
 
-    function ak() {
-      Tk.g.GL("replayViewer|uiVisibilityChanged")
-    }
-
-    function qk() {
-      return lk
+    function Dm() {
+      Am.j.gp("replayViewer|uiVisibilityChanged")
     }
 
-    function Lk(kk, Fk) {
-      lk[kk] !== Fk && (lk = {
-        ...lk,
-        [kk]: Fk
-      }, "nametag" === kk && Xk.d.set({
-        areNametagsHidden: !Fk
-      }), ak())
+    function im() {
+      return wm
     }
 
-    function tk() {
-      lk = yk(), Xk.d.set({
+    function Rm(mm, Tm) {
+      wm[mm] !== Tm && (wm = {
+        ...wm,
+        [mm]: Tm
+      }, "nametag" === mm && hm.c.set({
+        areNametagsHidden: !Tm
+      }), Dm())
+    }
+
+    function pm() {
+      wm = xm(), hm.c.set({
         areNametagsHidden: !1
-      }), ak()
+      }), Dm()
     }
   },
-  39257: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => nk
+  39377: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => Sm
     });
-    var Xk = Ik(1682),
-      Tk = Ik(1324),
-      ik = Ik(58),
-      yk = Ik(1055),
-      lk = Ik.n(yk),
-      ak = Ik(1406),
-      qk = Ik(95);
-    const Lk = ["video/webm;codecs=vp9,opus", "video/webm;codecs=vp8,opus", "video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm"],
-      tk = ["video/mp4;codecs=avc1,mp4a.40.2", "video/mp4;codecs=avc1.42E01E,mp4a.40.2", "video/mp4;codecs=avc1", "video/mp4"];
+    var hm = fm(1730),
+      Am = fm(1354),
+      am = fm(59),
+      xm = fm(1080),
+      wm = fm.n(xm),
+      Dm = fm(1454),
+      im = fm(105);
+    const Rm = ["video/webm;codecs=vp9,opus", "video/webm;codecs=vp8,opus", "video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm"],
+      pm = ["video/mp4;codecs=avc1,mp4a.40.2", "video/mp4;codecs=avc1.42E01E,mp4a.40.2", "video/mp4;codecs=avc1", "video/mp4"];
 
-    function Zk(kk) {
-      return "webm" === kk ? Lk : tk
+    function Em(mm) {
+      return "webm" === mm ? Rm : pm
     }
 
-    function jk(kk) {
-      for (const Fk of kk)
-        if ("undefined" !== typeof MediaRecorder && MediaRecorder.isTypeSupported(Fk)) return Fk;
+    function om(mm) {
+      for (const Tm of mm)
+        if ("undefined" !== typeof MediaRecorder && MediaRecorder.isTypeSupported(Tm)) return Tm;
       return null
     }
 
-    function ek(kk) {
-      return null !== jk(Zk(kk))
+    function Om(mm) {
+      return null !== om(Em(mm))
     }
-    var wk = Ik(1096);
-    const Hk = [{
+    var Ym = fm(1135);
+    const qm = [{
       id: "webm",
       label: "WebM",
       description: "Usually less screen tearing, but may not play in all media players."
@@ -315,177 +315,177 @@ export const modules = {
       description: "Works in more players, but may show graphical glitches on some devices."
     }];
 
-    function Jk() {
-      return ek("webm") ? "webm" : ek("mp4") ? "mp4" : "webm"
+    function jm() {
+      return Om("webm") ? "webm" : Om("mp4") ? "mp4" : "webm"
     }
 
-    function xk(kk) {
+    function Vm(mm) {
       let {
-        cards: Fk
-      } = kk;
-      return (0, wk.jsx)("div", {
+        cards: Tm
+      } = mm;
+      return (0, Ym.jsx)("div", {
         className: "ReplayVideoExportOptionCards",
-        children: Fk.map((kk => (0, wk.jsxs)("div", {
+        children: Tm.map((mm => (0, Ym.jsxs)("div", {
           className: "ReplayVideoExportOptionColumn",
-          children: [(0, wk.jsx)("div", {
-            className: lk()("ReplayVideoExportOptionCard", {
-              Selected: kk.selected,
-              Disabled: kk.disabled
+          children: [(0, Ym.jsx)("div", {
+            className: wm()("ReplayVideoExportOptionCard", {
+              Selected: mm.selected,
+              Disabled: mm.disabled
             }),
             onClick: () => {
-              kk.disabled || kk.onSelect()
+              mm.disabled || mm.onSelect()
             },
-            children: (0, wk.jsxs)("div", {
+            children: (0, Ym.jsxs)("div", {
               className: "ReplayVideoExportOptionCardBody",
-              children: [(0, wk.jsx)("div", {
+              children: [(0, Ym.jsx)("div", {
                 className: "ReplayVideoExportOptionCardLabel",
-                children: kk.label
-              }), (0, wk.jsx)("div", {
+                children: mm.label
+              }), (0, Ym.jsx)("div", {
                 className: "ReplayVideoExportOptionCardDescription",
-                children: kk.description
+                children: mm.description
               })]
             })
-          }), kk.disabled && kk.disabledReason && (0, wk.jsx)("div", {
+          }), mm.disabled && mm.disabledReason && (0, Ym.jsx)("div", {
             className: "ReplayVideoExportOptionError SmallTextLight",
-            children: kk.disabledReason
+            children: mm.disabledReason
           })]
-        }, kk.id)))
+        }, mm.id)))
       })
     }
-    const Pk = (0, ik.memo)((function(kk) {
+    const Im = (0, am.memo)((function(mm) {
       let {
-        hasPlaybackMark: Fk,
-        canIncludeUi: Ik,
-        includeUiDisabledReason: Xk,
-        selectionRef: Tk,
-        closePopup: yk
-      } = kk;
-      const lk = ek("webm") || ek("mp4"),
-        [Lk, tk] = (0, ik.useState)(Jk),
-        [Zk, jk] = (0, ik.useState)(Ik),
-        Pk = lk && ek(Lk);
-      if (!lk) {
-        const kk = (0, qk.isMobile)() ? "screen recording" : "OBS";
-        return (0, wk.jsxs)("div", {
+        hasPlaybackMark: Tm,
+        canIncludeUi: fm,
+        includeUiDisabledReason: hm,
+        selectionRef: Am,
+        closePopup: xm
+      } = mm;
+      const wm = Om("webm") || Om("mp4"),
+        [Rm, pm] = (0, am.useState)(jm),
+        [Em, om] = (0, am.useState)(fm),
+        Im = wm && Om(Rm);
+      if (!wm) {
+        const mm = (0, im.isMobile)() ? "screen recording" : "OBS";
+        return (0, Ym.jsxs)("div", {
           className: "PromptPopupNotification ReplayVideoExportOptionsPopup",
-          children: [(0, wk.jsx)("div", {
+          children: [(0, Ym.jsx)("div", {
             className: "PromptPopupNotificationTitle SmallTextBold",
             children: "Can't export video"
-          }), (0, wk.jsx)("div", {
+          }), (0, Ym.jsx)("div", {
             className: "PromptPopupNotificationSubtitle SmallTextLight",
-            children: `Your device does not support exporting. Try recording with an external software like ${kk}.`
-          }), (0, wk.jsx)("div", {
+            children: `Your device does not support exporting. Try recording with an external software like ${mm}.`
+          }), (0, Ym.jsx)("div", {
             className: "PromptPopupNotificationBody",
-            children: (0, wk.jsx)(ak.G, {
+            children: (0, Ym.jsx)(Dm.O, {
               className: "PromptPopupNotificationBodyButton",
               onClick: () => {
-                Tk.options = null, yk()
+                Am.options = null, xm()
               },
               children: "Close"
             })
           })]
         })
       }
-      const Kk = Fk ? "This will only play the range you've set.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes." : "This will play the whole recording from the start.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes.",
-        Qk = [{
+      const Km = Tm ? "This will only play the range you've set.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes." : "This will play the whole recording from the start.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes.",
+        Qm = [{
           id: "withoutUi",
           label: "Without UI",
           description: "Usually cleaner and sharper.",
-          selected: !Zk,
+          selected: !Em,
           disabled: !1,
           disabledReason: null,
           onSelect: () => {
-            jk(!1)
+            om(!1)
           }
         }, {
           id: "withUi",
           label: "With UI",
           description: "Includes HUD elements. May look worse on some devices.",
-          selected: Zk,
-          disabled: !Ik,
-          disabledReason: Xk,
+          selected: Em,
+          disabled: !fm,
+          disabledReason: hm,
           onSelect: () => {
-            jk(!0)
+            om(!0)
           }
         }],
-        sk = Hk.map((kk => {
-          const Fk = ek(kk.id);
+        nm = qm.map((mm => {
+          const Tm = Om(mm.id);
           return {
-            id: kk.id,
-            label: kk.label,
-            description: kk.description,
-            selected: Lk === kk.id,
-            disabled: !Fk,
+            id: mm.id,
+            label: mm.label,
+            description: mm.description,
+            selected: Rm === mm.id,
+            disabled: !Tm,
             disabledReason: "Your device doesn't support this format",
             onSelect: () => {
-              tk(kk.id)
+              pm(mm.id)
             }
           }
         }));
-      return (0, wk.jsxs)("div", {
+      return (0, Ym.jsxs)("div", {
         className: "PromptPopupNotification ReplayVideoExportOptionsPopup",
-        children: [(0, wk.jsx)("div", {
+        children: [(0, Ym.jsx)("div", {
           className: "PromptPopupNotificationTitle SmallTextBold",
           children: "Export video?"
-        }), (0, wk.jsx)("div", {
+        }), (0, Ym.jsx)("div", {
           className: "PromptPopupNotificationSubtitle SmallTextLight",
-          children: Kk
-        }), (0, wk.jsxs)("div", {
+          children: Km
+        }), (0, Ym.jsxs)("div", {
           className: "ReplayVideoExportOptionsSection",
-          children: [(0, wk.jsx)("div", {
+          children: [(0, Ym.jsx)("div", {
             className: "ReplayVideoExportOptionsSectionLabel SmallTextBold",
             children: "UI"
-          }), (0, wk.jsx)(xk, {
-            cards: Qk
+          }), (0, Ym.jsx)(Vm, {
+            cards: Qm
           })]
-        }), (0, wk.jsxs)("div", {
+        }), (0, Ym.jsxs)("div", {
           className: "ReplayVideoExportOptionsSection",
-          children: [(0, wk.jsx)("div", {
+          children: [(0, Ym.jsx)("div", {
             className: "ReplayVideoExportOptionsSectionLabel SmallTextBold",
             children: "Format"
-          }), (0, wk.jsx)(xk, {
-            cards: sk
+          }), (0, Ym.jsx)(Vm, {
+            cards: nm
           })]
-        }), (0, wk.jsxs)("div", {
+        }), (0, Ym.jsxs)("div", {
           className: "PromptPopupNotificationBody",
-          children: [(0, wk.jsx)(ak.m, {
+          children: [(0, Ym.jsx)(Dm.m, {
             className: "PromptPopupNotificationBodyButton PromptPopupNotificationBodyPrimaryButton",
-            disabled: !Pk,
+            disabled: !Im,
             onClick: () => {
-              Tk.options = {
-                format: Lk,
-                includeUi: Ik && Zk
-              }, yk()
+              Am.options = {
+                format: Rm,
+                includeUi: fm && Em
+              }, xm()
             },
             children: "Export"
-          }), (0, wk.jsx)(ak.G, {
+          }), (0, Ym.jsx)(Dm.O, {
             className: "PromptPopupNotificationBodyButton",
             onClick: () => {
-              Tk.options = null, yk()
+              Am.options = null, xm()
             },
             children: "Cancel"
           })]
         })]
       })
     }));
-    var Kk = Ik(4857),
-      Qk = Ik(37034),
-      sk = Ik(37042);
-    let Vk = null;
+    var Km = fm(4800),
+      Qm = fm(37099),
+      nm = fm(37101);
+    let Jm = null;
 
-    function zk() {
+    function cm() {
       return function() {
-        const kk = (0, sk.b)();
+        const mm = (0, nm.c)();
         for (const {
-            group: Fk,
-            dataAttr: Ik
+            group: Tm,
+            dataAttr: fm
           }
-          of Qk.i)
-          if (Ik && kk[Fk]) return !0;
+          of Qm.h)
+          if (fm && mm[Tm]) return !0;
         return !1
       }() ? function() {
-        var kk;
-        return "function" === typeof(null === (kk = navigator.mediaDevices) || void 0 === kk ? void 0 : kk.getDisplayMedia)
+        var mm;
+        return "function" === typeof(null === (mm = navigator.mediaDevices) || void 0 === mm ? void 0 : mm.getDisplayMedia)
       }() ? {
         canIncludeUi: !0,
         includeUiDisabledReason: null
@@ -497,344 +497,344 @@ export const modules = {
         includeUiDisabledReason: "No UI to include"
       }
     }
-    async function Sk(kk, Fk, Ik) {
-      return kk ? async function() {
-        const kk = await navigator.mediaDevices.getDisplayMedia({
+    async function zm(mm, Tm, fm) {
+      return mm ? async function() {
+        const mm = await navigator.mediaDevices.getDisplayMedia({
           video: !0,
           audio: !1,
           preferCurrentTab: !0,
           selfBrowserSurface: "include"
         });
-        for (const Fk of kk.getAudioTracks()) Fk.stop(), kk.removeTrack(Fk);
-        return kk
-      }(): Fk().captureStream(Math.max(1, Math.round(Ik)))
+        for (const Tm of mm.getAudioTracks()) Tm.stop(), mm.removeTrack(Tm);
+        return mm
+      }(): Tm().captureStream(Math.max(1, Math.round(fm)))
     }
-    var vk = Ik(39087);
-    let Ek = !1;
+    var Zm = fm(39209);
+    let km = !1;
 
-    function Ok(kk) {
-      kk.holdInput(!1), (0, vk.f)(!1)
+    function bm(mm) {
+      mm.holdInput(!1), (0, Zm.d)(!1)
     }
-    async function nk(kk) {
-      var Fk, Ik;
-      if ((0, vk.b)() || Ek) return;
-      const ik = kk();
-      if (!ik) return;
-      Ek = !0;
-      let yk = null;
-      const lk = ik.playbackMarkInTick,
+    async function Sm(mm) {
+      var Tm, fm;
+      if ((0, Zm.b)() || km) return;
+      const am = mm();
+      if (!am) return;
+      km = !0;
+      let xm = null;
+      const wm = am.playbackMarkInTick,
         {
-          canIncludeUi: ak,
-          includeUiDisabledReason: qk
-        } = zk();
+          canIncludeUi: Dm,
+          includeUiDisabledReason: im
+        } = cm();
       try {
-        yk = await async function(kk) {
+        xm = await async function(mm) {
           let {
-            hasPlaybackMark: Fk,
-            canIncludeUi: Ik,
-            includeUiDisabledReason: Xk
-          } = kk;
-          const ik = {
+            hasPlaybackMark: Tm,
+            canIncludeUi: fm,
+            includeUiDisabledReason: hm
+          } = mm;
+          const am = {
               options: null
             },
-            yk = Tk.NotificationProvider.showCustomPopup({
-              body: kk => (0, wk.jsx)(Pk, {
-                hasPlaybackMark: Fk,
-                canIncludeUi: Ik,
-                includeUiDisabledReason: Xk,
-                selectionRef: ik,
-                closePopup: kk
+            xm = Am.NotificationProvider.showCustomPopup({
+              body: mm => (0, Ym.jsx)(Im, {
+                hasPlaybackMark: Tm,
+                canIncludeUi: fm,
+                includeUiDisabledReason: hm,
+                selectionRef: am,
+                closePopup: mm
               }),
               disableExitButton: !0,
               disablePressBackgroundToClose: !0,
               unlockPointerKey: "replayVideoExportOptions"
             });
-          return "notificationTornDown" === await yk.getResult() ? null : ik.options
+          return "notificationTornDown" === await xm.getResult() ? null : am.options
         }({
-          hasPlaybackMark: null !== lk,
-          canIncludeUi: ak,
-          includeUiDisabledReason: qk
+          hasPlaybackMark: null !== wm,
+          canIncludeUi: Dm,
+          includeUiDisabledReason: im
         })
       } finally {
-        Ek = !1
+        km = !1
       }
-      if (!yk) return;
-      const Lk = null !== (Fk = null === (Ik = ik.startFailure) || void 0 === Ik ? void 0 : Ik.call(ik)) && void 0 !== Fk ? Fk : null;
-      if (null !== Lk) return void Tk.NotificationProvider.showAlertPopup({
+      if (!xm) return;
+      const Rm = null !== (Tm = null === (fm = am.startFailure) || void 0 === fm ? void 0 : fm.call(am)) && void 0 !== Tm ? Tm : null;
+      if (null !== Rm) return void Am.NotificationProvider.showAlertPopup({
         title: "Video export failed",
-        subtitle: Lk
+        subtitle: Rm
       });
-      if (! function(kk) {
-          return !(0, vk.b)() && ((0, vk.f)(!0), kk.holdInput(!0), !0)
-        }(ik)) return;
-      let tk = null;
+      if (! function(mm) {
+          return !(0, Zm.b)() && ((0, Zm.d)(!0), mm.holdInput(!0), !0)
+        }(am)) return;
+      let pm = null;
       try {
-        tk = await Sk(yk.includeUi, (() => ik.canvas()), ik.WG)
-      } catch (Gk) {
-        return console.error("Failed to create video stream for export", Gk), Ok(ik), void Tk.NotificationProvider.showAlertPopup({
+        pm = await zm(xm.includeUi, (() => am.canvas()), am.aG)
+      } catch (em) {
+        return console.error("Failed to create video stream for export", em), bm(am), void Am.NotificationProvider.showAlertPopup({
           title: "Video export failed",
-          subtitle: Gk instanceof Error ? Gk.message : "Could not start capture."
+          subtitle: em instanceof Error ? em.message : "Could not start capture."
         })
       }
-      let ek = null;
-      const Hk = [];
-      let Jk = null,
-        xk = null;
+      let Om = null;
+      const qm = [];
+      let jm = null,
+        Vm = null;
       try {
-        var Qk, sk, nk;
-        ek = ik.playbackSpeed(), ik.closeViewer(), ik.setPlaybackSpeed(1), ik.pause(), ik.seekToTick(null !== lk && void 0 !== lk ? lk : 0);
-        const kk = await async function() {
-          const kk = Kk.Howler.masterGain;
-          if (!Kk.Howler.ctx || !kk) return null;
-          await Kk.Howler.ctx.resume();
-          const Fk = Kk.Howler.ctx.createMediaStreamDestination();
-          kk.connect(Fk), Vk = Fk;
-          const [Ik] = Fk.stream.getAudioTracks();
-          return null !== Ik && void 0 !== Ik ? Ik : null
+        var Qm, nm, Sm;
+        Om = am.playbackSpeed(), am.closeViewer(), am.setPlaybackSpeed(1), am.pause(), am.seekToTick(null !== wm && void 0 !== wm ? wm : 0);
+        const mm = await async function() {
+          const mm = Km.Howler.masterGain;
+          if (!Km.Howler.ctx || !mm) return null;
+          await Km.Howler.ctx.resume();
+          const Tm = Km.Howler.ctx.createMediaStreamDestination();
+          mm.connect(Tm), Jm = Tm;
+          const [fm] = Tm.stream.getAudioTracks();
+          return null !== fm && void 0 !== fm ? fm : null
         }();
-        xk = new MediaStream;
-        for (const Xk of tk.getVideoTracks()) xk.addTrack(Xk);
-        kk && xk.addTrack(kk);
-        const Fk = function(kk) {
-          const Fk = jk(Zk(kk));
-          if (!Fk) throw new Error(`No MediaRecorder mime type available for ${kk}`);
-          return Fk
-        }(yk.format);
-        Jk = new MediaRecorder(xk, {
-          mimeType: Fk,
+        Vm = new MediaStream;
+        for (const hm of pm.getVideoTracks()) Vm.addTrack(hm);
+        mm && Vm.addTrack(mm);
+        const Tm = function(mm) {
+          const Tm = om(Em(mm));
+          if (!Tm) throw new Error(`No MediaRecorder mime type available for ${mm}`);
+          return Tm
+        }(xm.format);
+        jm = new MediaRecorder(Vm, {
+          mimeType: Tm,
           videoBitsPerSecond: 8e6
-        }), Jk.ondataavailable = kk => {
-          kk.data.size > 0 && Hk.push(kk.data)
+        }), jm.ondataavailable = mm => {
+          mm.data.size > 0 && qm.push(mm.data)
         };
-        const Ik = new Promise((kk => {
-          Jk.onstop = () => {
-            kk()
+        const fm = new Promise((mm => {
+          jm.onstop = () => {
+            mm()
           }
         }));
-        await (null === (Qk = ik.seekSettled) || void 0 === Qk ? void 0 : Qk.call(ik));
-        const [ak] = tk.getVideoTracks();
-        Jk.start(250), ik.play();
-        const qk = await
-        function(kk, Fk, Ik) {
-          return new Promise((Xk => {
-            let Tk = !1;
-            const ik = kk => {
-                Tk || (Tk = !0, lk(), Fk.removeEventListener("ended", yk), Xk(kk))
+        await (null === (Qm = am.seekSettled) || void 0 === Qm ? void 0 : Qm.call(am));
+        const [Dm] = pm.getVideoTracks();
+        jm.start(250), am.play();
+        const im = await
+        function(mm, Tm, fm) {
+          return new Promise((hm => {
+            let Am = !1;
+            const am = mm => {
+                Am || (Am = !0, wm(), Tm.removeEventListener("ended", xm), hm(mm))
               },
-              yk = () => {
-                ik("captureLost")
+              xm = () => {
+                am("captureLost")
               },
-              lk = kk.watchPlayback((() => {
-                kk.isPlaying() || ik("completed")
+              wm = mm.watchPlayback((() => {
+                mm.isPlaying() || am("completed")
               }));
-            Fk.addEventListener("ended", yk), Ik.onerror = () => {
-              ik("recorderError")
-            }, "ended" !== Fk.readyState ? kk.isPlaying() || ik("completed") : ik("captureLost")
+            Tm.addEventListener("ended", xm), fm.onerror = () => {
+              am("recorderError")
+            }, "ended" !== Tm.readyState ? mm.isPlaying() || am("completed") : am("captureLost")
           }))
-        }(ik, ak, Jk);
-        if (ik.pause(), "inactive" !== Jk.state && Jk.stop(), await Ik, "captureLost" === qk) return void Tk.NotificationProvider.showAlertPopup({
+        }(am, Dm, jm);
+        if (am.pause(), "inactive" !== jm.state && jm.stop(), await fm, "captureLost" === im) return void Am.NotificationProvider.showAlertPopup({
           title: "Video export stopped",
           subtitle: "Screen sharing ended before the replay finished. Nothing was saved."
         });
-        if ("recorderError" === qk) return void Tk.NotificationProvider.showAlertPopup({
+        if ("recorderError" === im) return void Am.NotificationProvider.showAlertPopup({
           title: "Video export failed",
           subtitle: "The recorder encountered an error. Nothing was saved."
         });
-        const Lk = null !== (sk = null === (nk = ik.playbackFailure) || void 0 === nk ? void 0 : nk.call(ik)) && void 0 !== sk ? sk : null;
-        if (null !== Lk) return void Tk.NotificationProvider.showAlertPopup({
+        const Rm = null !== (nm = null === (Sm = am.playbackFailure) || void 0 === Sm ? void 0 : Sm.call(am)) && void 0 !== nm ? nm : null;
+        if (null !== Rm) return void Am.NotificationProvider.showAlertPopup({
           title: "Video export failed",
-          subtitle: `${Lk} Nothing was saved.`
+          subtitle: `${Rm} Nothing was saved.`
         });
-        const wk = new Blob(Hk, {
-          type: Fk
+        const Ym = new Blob(qm, {
+          type: Tm
         });
-        wk.size > 0 ? (0, Xk.c)(wk, function(kk, Fk) {
-          const Ik = function(kk) {
-            return "mp4" === kk ? "mp4" : "webm"
-          }(Fk);
-          if (kk) return `${kk.replace(/\.bloxdreplay$/i,"")}.${Ik}`;
-          return `bloxd-replay-${Date.now()}.${Ik}`
-        }(ik.fileName(), yk.format)) : Tk.NotificationProvider.showAlertPopup({
+        Ym.size > 0 ? (0, hm.c)(Ym, function(mm, Tm) {
+          const fm = function(mm) {
+            return "mp4" === mm ? "mp4" : "webm"
+          }(Tm);
+          if (mm) return `${mm.replace(/\.bloxdreplay$/i,"")}.${fm}`;
+          return `bloxd-replay-${Date.now()}.${fm}`
+        }(am.fileName(), xm.format)) : Am.NotificationProvider.showAlertPopup({
           title: "Video export failed",
           subtitle: "No video data was captured. Try again."
         })
-      } catch (Gk) {
-        console.error("Replay video export failed", Gk), Tk.NotificationProvider.showAlertPopup({
+      } catch (em) {
+        console.error("Replay video export failed", em), Am.NotificationProvider.showAlertPopup({
           title: "Video export failed",
-          subtitle: Gk instanceof Error ? Gk.message : "Something went wrong while exporting."
+          subtitle: em instanceof Error ? em.message : "Something went wrong while exporting."
         })
       } finally {
-        if (Jk && "inactive" !== Jk.state) try {
-          Jk.stop()
-        } catch (Gk) {
-          console.error("Failed to stop MediaRecorder", Gk)
+        if (jm && "inactive" !== jm.state) try {
+          jm.stop()
+        } catch (em) {
+          console.error("Failed to stop MediaRecorder", em)
         }! function() {
-          const kk = Kk.Howler.masterGain;
-          if (Vk && kk) {
+          const mm = Km.Howler.masterGain;
+          if (Jm && mm) {
             try {
-              kk.disconnect(Vk)
-            } catch (Gk) {
-              console.error("Failed to disconnect Howler export tee", Gk)
+              mm.disconnect(Jm)
+            } catch (em) {
+              console.error("Failed to disconnect Howler export tee", em)
             }
-            Vk = null
-          } else Vk = null
+            Jm = null
+          } else Jm = null
         }();
-        for (const kk of tk.getTracks()) kk.stop();
-        if (xk)
-          for (const kk of xk.getTracks()) kk.stop();
-        null !== ek && ik.setPlaybackSpeed(ek), ik.pause(), Ok(ik), ik.reopenViewer()
+        for (const mm of pm.getTracks()) mm.stop();
+        if (Vm)
+          for (const mm of Vm.getTracks()) mm.stop();
+        null !== Om && am.setPlaybackSpeed(Om), am.pause(), bm(am), am.reopenViewer()
       }
     }
   },
-  4857: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      Howl: () => Tk.Howl,
-      Howler: () => Tk.Howler,
-      musicOutput: () => Hk,
-      readyAudioContext: () => Jk
+  4800: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      Howl: () => Am.Howl,
+      Howler: () => Am.Howler,
+      musicOutput: () => qm,
+      readyAudioContext: () => jm
     });
-    var Xk, Tk = Ik(4863),
-      ik = Ik(3378),
-      yk = Ik(4636);
-    const lk = Tk.Howler;
+    var hm, Am = fm(4806),
+      am = fm(3443),
+      xm = fm(4588);
+    const wm = Am.Howler;
 
-    function ak() {
-      var kk, Fk;
-      if (lk.ctx || !lk.usingWebAudio || "undefined" === typeof AudioContext || !(0, yk.h)()) return;
-      const Ik = navigator.audioSession;
-      let Xk;
-      "auto" === (null === Ik || void 0 === Ik ? void 0 : Ik.type) && (Ik.type = "ambient");
+    function Dm() {
+      var mm, Tm;
+      if (wm.ctx || !wm.usingWebAudio || "undefined" === typeof AudioContext || !(0, xm.k)()) return;
+      const fm = navigator.audioSession;
+      let hm;
+      "auto" === (null === fm || void 0 === fm ? void 0 : fm.type) && (fm.type = "ambient");
       try {
-        Xk = new AudioContext({
+        hm = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const Tk = Xk.createGain();
-      Tk.gain.setValueAtTime(lk._muted ? 0 : null !== (kk = lk._volume) && void 0 !== kk ? kk : 1, Xk.currentTime), Tk.connect(Xk.destination), lk.ctx = Xk, lk.masterGain = Tk, null === (Fk = lk._setup) || void 0 === Fk || Fk.call(lk)
+      const Am = hm.createGain();
+      Am.gain.setValueAtTime(wm._muted ? 0 : null !== (mm = wm._volume) && void 0 !== mm ? mm : 1, hm.currentTime), Am.connect(hm.destination), wm.ctx = hm, wm.masterGain = Am, null === (Tm = wm._setup) || void 0 === Tm || Tm.call(wm)
     }
-    lk._mobileUnloaded = !0;
-    const qk = lk.volume.bind(Tk.Howler);
-    lk.volume = function() {
-      return ak(), qk(...arguments)
+    wm._mobileUnloaded = !0;
+    const im = wm.volume.bind(Am.Howler);
+    wm.volume = function() {
+      return Dm(), im(...arguments)
     };
-    const Lk = lk.mute.bind(Tk.Howler);
-    lk.mute = kk => (ak(), Lk(kk));
-    const tk = Tk.Howl.prototype,
-      Zk = tk.init;
+    const Rm = wm.mute.bind(Am.Howler);
+    wm.mute = mm => (Dm(), Rm(mm));
+    const pm = Am.Howl.prototype,
+      Em = pm.init;
 
-    function jk() {
-      for (; lk._html5AudioPool.length < lk.html5PoolSize;) {
-        const kk = new Audio;
-        kk._unlocked = !0, lk._releaseHtml5Audio(kk)
+    function om() {
+      for (; wm._html5AudioPool.length < wm.html5PoolSize;) {
+        const mm = new Audio;
+        mm._unlocked = !0, wm._releaseHtml5Audio(mm)
       }
-      for (const Fk of lk._howls)
-        if (!Fk._webAudio)
-          for (const Ik of Fk._getSoundIds()) {
-            var kk;
-            const Xk = null === (kk = Fk._soundById(Ik)) || void 0 === kk ? void 0 : kk._node;
-            Xk && !Xk._unlocked && (Xk._unlocked = !0, Xk.load())
+      for (const Tm of wm._howls)
+        if (!Tm._webAudio)
+          for (const fm of Tm._getSoundIds()) {
+            var mm;
+            const hm = null === (mm = Tm._soundById(fm)) || void 0 === mm ? void 0 : mm._node;
+            hm && !hm._unlocked && (hm._unlocked = !0, hm.load())
           }
     }
-    tk.init = function(kk) {
-      return ak(), Zk.call(this, kk)
-    }, (0, yk.h)() && (lk._unlockAudio = () => {
-      const kk = lk.ctx;
-      if (lk._audioUnlocked || !kk) return;
-      lk.autoUnlock = !1;
-      const Fk = kk.createBuffer(1, 1, 22050);
-      lk._scratchBuffer = Fk;
-      const Ik = new AbortController;
-      let Xk = "afterPaint";
-      const Tk = () => {
-          var Xk;
-          if (lk._audioUnlocked) return;
-          null === (Xk = lk._autoResume) || void 0 === Xk || Xk.call(lk);
-          const Tk = kk.createBufferSource();
-          Tk.buffer = Fk, Tk.connect(kk.destination), Tk.start(0), kk.resume().catch((() => {})), Tk.onended = () => {
-            Tk.disconnect(0), lk._audioUnlocked = !0, Ik.abort();
-            for (const kk of lk._howls) kk._emit("unlock")
+    pm.init = function(mm) {
+      return Dm(), Em.call(this, mm)
+    }, (0, xm.k)() && (wm._unlockAudio = () => {
+      const mm = wm.ctx;
+      if (wm._audioUnlocked || !mm) return;
+      wm.autoUnlock = !1;
+      const Tm = mm.createBuffer(1, 1, 22050);
+      wm._scratchBuffer = Tm;
+      const fm = new AbortController;
+      let hm = "afterPaint";
+      const Am = () => {
+          var hm;
+          if (wm._audioUnlocked) return;
+          null === (hm = wm._autoResume) || void 0 === hm || hm.call(wm);
+          const Am = mm.createBufferSource();
+          Am.buffer = Tm, Am.connect(mm.destination), Am.start(0), mm.resume().catch((() => {})), Am.onended = () => {
+            Am.disconnect(0), wm._audioUnlocked = !0, fm.abort();
+            for (const mm of wm._howls) mm._emit("unlock")
           }
         },
-        ak = () => {
-          jk(), Tk()
+        Dm = () => {
+          om(), Am()
         },
-        qk = Fk => {
-          if (jk(), "inTap" === Xk) {
-            if ("running" === kk.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), Tk()
-          } else "afterPaint" === Xk && (Xk = "queued", (0, ik.b)(Fk.timeStamp, (() => {
-            Xk = "inTap", Tk()
+        im = Tm => {
+          if (om(), "inTap" === hm) {
+            if ("running" === mm.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), Am()
+          } else "afterPaint" === hm && (hm = "queued", (0, am.c)(Tm.timeStamp, (() => {
+            hm = "inTap", Am()
           })))
         };
-      for (const ik of ["touchstart", "touchend"]) document.addEventListener(ik, ak, {
+      for (const am of ["touchstart", "touchend"]) document.addEventListener(am, Dm, {
         capture: !0,
-        signal: Ik.signal
+        signal: fm.signal
       });
-      for (const ik of yk.b) document.addEventListener(ik, qk, {
+      for (const am of xm.c) document.addEventListener(am, im, {
         capture: !0,
-        signal: Ik.signal
+        signal: fm.signal
       })
     });
-    let ek = 0;
-    const wk = null === (Xk = lk._autoSuspend) || void 0 === Xk ? void 0 : Xk.bind(Tk.Howler);
+    let Om = 0;
+    const Ym = null === (hm = wm._autoSuspend) || void 0 === hm ? void 0 : hm.bind(Am.Howler);
 
-    function Hk() {
-      Jk();
+    function qm() {
+      jm();
       const {
-        ctx: kk,
-        masterGain: Fk
-      } = lk;
-      return kk && Fk ? {
-        ctx: kk,
-        destination: Fk,
-        holdAwake: kk => {
-          var Fk, Ik;
-          (ek += kk ? 1 : -1, kk) ? null === (Fk = lk._autoResume) || void 0 === Fk || Fk.call(lk): null === (Ik = lk._autoSuspend) || void 0 === Ik || Ik.call(lk)
+        ctx: mm,
+        masterGain: Tm
+      } = wm;
+      return mm && Tm ? {
+        ctx: mm,
+        destination: Tm,
+        holdAwake: mm => {
+          var Tm, fm;
+          (Om += mm ? 1 : -1, mm) ? null === (Tm = wm._autoResume) || void 0 === Tm || Tm.call(wm): null === (fm = wm._autoSuspend) || void 0 === fm || fm.call(wm)
         },
         wake: () => {
-          var Fk;
-          "running" !== kk.state && (null === (Fk = lk._autoResume) || void 0 === Fk || Fk.call(lk), kk.resume().catch((() => {})))
+          var Tm;
+          "running" !== mm.state && (null === (Tm = wm._autoResume) || void 0 === Tm || Tm.call(wm), mm.resume().catch((() => {})))
         }
       } : null
     }
 
-    function Jk() {
-      var kk;
-      (lk.volume(), lk.ctx && lk.autoUnlock) && (null === (kk = lk._unlockAudio) || void 0 === kk || kk.call(lk))
+    function jm() {
+      var mm;
+      (wm.volume(), wm.ctx && wm.autoUnlock) && (null === (mm = wm._unlockAudio) || void 0 === mm || mm.call(wm))
     }
-    wk && (lk._autoSuspend = () => ek > 0 ? Tk.Howler : wk())
+    Ym && (wm._autoSuspend = () => Om > 0 ? Am.Howler : Ym())
   },
-  42586: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => Xk,
-      h: () => Tk
+  42628: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => hm,
+      c: () => Am
     });
-    const Xk = ["recording", "freecam", "keyframe"];
+    const hm = ["recording", "freecam", "keyframe"];
 
-    function Tk() {
-      const kk = crypto.getRandomValues(new Uint32Array(2));
-      return BigInt(kk[1]) << 32n | BigInt(kk[0])
+    function Am() {
+      const mm = crypto.getRandomValues(new Uint32Array(2));
+      return BigInt(mm[1]) << 32n | BigInt(mm[0])
     }
   },
-  60609: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      HOLD_TIMEOUT_MS: () => qk,
-      ReplayViewer: () => tk
+  60682: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      HOLD_TIMEOUT_MS: () => im,
+      ReplayViewer: () => pm
     });
-    var Xk = Ik(36985),
-      Tk = Ik(37026),
-      ik = Ik(37021),
-      yk = Ik(37042),
-      lk = Ik(4797),
-      ak = Ik(42586);
-    const qk = 1e4,
-      Lk = new Set(["ke"]);
-    class tk {
-      constructor(kk) {
-        var Fk;
-        this.deps = kk, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (Fk = kk.now) && void 0 !== Fk ? Fk : () => performance.now()
+    var hm = fm(37048),
+      Am = fm(37087),
+      am = fm(37084),
+      xm = fm(37101),
+      wm = fm(4732),
+      Dm = fm(42628);
+    const im = 1e4,
+      Rm = new Set(["KO"]);
+    class pm {
+      constructor(mm) {
+        var Tm;
+        this.deps = mm, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (Tm = mm.now) && void 0 !== Tm ? Tm : () => performance.now()
       }
       get inPlayback() {
         return this.playback
@@ -843,123 +843,123 @@ export const modules = {
         return this.lastView
       }
       get isOpen() {
-        return null !== this.lastView && this.lastView.state !== lk.kd.None
+        return null !== this.lastView && this.lastView.state !== wm.ld.None
       }
       get keyframes() {
         return this.deps.client.keyframes()
       }
-      get eq() {
+      get ni() {
         return [...this.holds.keys()]
       }
       get savePending() {
         return null !== this.pendingSave
       }
       get saveRefusal() {
-        return this.cropping ? Xk.b.cropBusy.text : null
+        return this.cropping ? hm.e.cropBusy.text : null
       }
       get cropping() {
         return this.cropAsked || this.cropRunning
       }
-      async open(kk, Fk) {
-        var Ik, ik, yk, ak;
+      async open(mm, Tm) {
+        var fm, am, xm, Dm;
         const {
-          client: qk
+          client: im
         } = this.deps;
         if (!this.playback) {
-          if (!qk.setPlayback(!0)) throw new Error(Xk.b.cantOpen.text);
+          if (!im.setPlayback(!0)) throw new Error(hm.e.cantOpen.text);
           this.playback = !0
         }
         this.hold("opening"), this.loadingOpens++;
-        const Lk = this.epoch;
-        let tk;
+        const Rm = this.epoch;
+        let pm;
         try {
-          tk = await qk.open(kk, (() => (0, Tk.c)(kk, Fk)))
+          pm = await im.open(mm, (() => (0, Am.e)(mm, Tm)))
         } finally {
           this.loadingOpens--
         }
-        if (Lk !== this.epoch && "reloading" !== tk) throw new Error(Xk.b.coreStopped.text);
-        if ("opening" !== tk) {
+        if (Rm !== this.epoch && "reloading" !== pm) throw new Error(hm.e.coreStopped.text);
+        if ("opening" !== pm) {
           this.opening || 0 !== this.loadingOpens || this.release("opening");
-          const kk = function(kk) {
-            switch (kk) {
+          const mm = function(mm) {
+            switch (mm) {
               case "reloading":
                 return null;
               case "stopped":
-              case lk.ad.ModuleTrap:
-                return Xk.b.coreStopped;
-              case lk.ad.ModuleLoad:
-                return Xk.b.viewerLoadFailed;
-              case lk.ad.TooLarge:
-                return Xk.b.cantOpen
+              case wm.bd.ModuleTrap:
+                return hm.e.coreStopped;
+              case wm.bd.ModuleLoad:
+                return hm.e.viewerLoadFailed;
+              case wm.bd.TooLarge:
+                return hm.e.cantOpen
             }
-          }(tk);
-          if (null === kk) return;
-          throw new Error(kk.text)
+          }(pm);
+          if (null === mm) return;
+          throw new Error(mm.text)
         }
-        return this.rejectSave(new Error(Xk.b.saveClosed.text)), this.fileName = null !== (Ik = null !== (ik = Fk.fileName) && void 0 !== ik ? ik : null === (yk = Fk.fileHandle) || void 0 === yk ? void 0 : yk.name) && void 0 !== Ik ? Ik : null, this.fileHandle = null !== (ak = Fk.fileHandle) && void 0 !== ak ? ak : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((kk, Fk) => {
+        return this.rejectSave(new Error(hm.e.saveClosed.text)), this.fileName = null !== (fm = null !== (am = Tm.fileName) && void 0 !== am ? am : null === (xm = Tm.fileHandle) || void 0 === xm ? void 0 : xm.name) && void 0 !== fm ? fm : null, this.fileHandle = null !== (Dm = Tm.fileHandle) && void 0 !== Dm ? Dm : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((mm, Tm) => {
           this.pendingOpen = {
-            resolve: kk,
-            reject: Fk
+            resolve: mm,
+            reject: Tm
           }
         }))
       }
       play() {
-        this.holds.has("ke") || this.deps.client.play()
+        this.holds.has("KO") || this.deps.client.play()
       }
       pause() {
         this.deps.client.pause()
       }
       holdForShaderPackFailure() {
-        this.isOpen && this.pause(), this.hold("ke")
+        this.isOpen && this.pause(), this.hold("KO")
       }
-      seek(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const Ik = this.lastView;
-        null !== Ik && (Fk || kk < Ik.Dt) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(kk, Fk)
+      seek(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const fm = this.lastView;
+        null !== fm && (Tm || mm < fm.DE) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(mm, Tm)
       }
-      setSpeed(kk) {
-        this.deps.client.setSpeed(kk)
+      setSpeed(mm) {
+        this.deps.client.setSpeed(mm)
       }
-      setCameraMode(kk) {
-        this.deps.client.setCameraMode(kk)
+      setCameraMode(mm) {
+        this.deps.client.setCameraMode(mm)
       }
       cycleCameraMode() {
-        const kk = this.lastView;
-        null !== kk && kk.state !== lk.kd.None && this.setCameraMode(ak.d[(ak.d.indexOf(kk.cameraMode) + 1) % ak.d.length])
+        const mm = this.lastView;
+        null !== mm && mm.state !== wm.ld.None && this.setCameraMode(Dm.b[(Dm.b.indexOf(mm.cameraMode) + 1) % Dm.b.length])
       }
       addKeyframe() {
         this.edited(this.deps.client.addKeyframe())
       }
-      setKeyframe(kk) {
-        this.edited(this.deps.client.setKeyframe(kk))
+      setKeyframe(mm) {
+        this.edited(this.deps.client.setKeyframe(mm))
       }
-      moveKeyframe(kk, Fk) {
-        this.edited(this.deps.client.moveKeyframe(kk, Fk))
+      moveKeyframe(mm, Tm) {
+        this.edited(this.deps.client.moveKeyframe(mm, Tm))
       }
-      deleteKeyframes(kk, Fk) {
-        this.edited(this.deps.client.deleteKeyframes(kk, Fk))
+      deleteKeyframes(mm, Tm) {
+        this.edited(this.deps.client.deleteKeyframes(mm, Tm))
       }
-      setMark(kk) {
-        this.edited(this.deps.client.setMark(kk))
+      setMark(mm) {
+        this.edited(this.deps.client.setMark(mm))
       }
-      crop(kk, Fk) {
-        return !(Fk <= kk) && (null !== this.pendingSave ? (this.deps.notify(Xk.b.saveBusy), !1) : !!this.deps.client.crop(kk, Fk) && (this.cropAsked = !0, this.hold("crop"), !0))
+      crop(mm, Tm) {
+        return !(Tm <= mm) && (null !== this.pendingSave ? (this.deps.notify(hm.e.saveBusy), !1) : !!this.deps.client.crop(mm, Tm) && (this.cropAsked = !0, this.hold("crop"), !0))
       }
       save() {
-        return null !== this.pendingSave ? Promise.reject(new Error(Xk.b.saveBusy.text)) : new Promise(((kk, Fk) => {
-          const Ik = {
-            resolve: kk,
-            reject: Fk
+        return null !== this.pendingSave ? Promise.reject(new Error(hm.e.saveBusy.text)) : new Promise(((mm, Tm) => {
+          const fm = {
+            resolve: mm,
+            reject: Tm
           };
-          this.pendingSave = Ik, this.editsAtSave = this.edits, this.deps.client.save((0, ak.h)()).then((kk => {
-            this.pendingSave === Ik && this.saveStarted(kk)
-          }), (kk => {
-            this.pendingSave === Ik && this.rejectSave(kk instanceof Error ? kk : new Error(String(kk)))
+          this.pendingSave = fm, this.editsAtSave = this.edits, this.deps.client.save((0, Dm.c)()).then((mm => {
+            this.pendingSave === fm && this.saveStarted(mm)
+          }), (mm => {
+            this.pendingSave === fm && this.rejectSave(mm instanceof Error ? mm : new Error(String(mm)))
           }))
         }))
       }
-      saveStarted(kk) {
-        switch (kk) {
+      saveStarted(mm) {
+        switch (mm) {
           case "sealing":
             return;
           case "busy":
@@ -970,40 +970,40 @@ export const modules = {
             return void this.saveFailed(!1)
         }
       }
-      markSaved(kk, Fk) {
-        var Ik, Xk;
-        this.fileHandle = kk, this.fileName = null !== (Ik = null !== (Xk = null === kk || void 0 === kk ? void 0 : kk.name) && void 0 !== Xk ? Xk : Fk) && void 0 !== Ik ? Ik : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
+      markSaved(mm, Tm) {
+        var fm, hm;
+        this.fileHandle = mm, this.fileName = null !== (fm = null !== (hm = null === mm || void 0 === mm ? void 0 : mm.name) && void 0 !== hm ? hm : Tm) && void 0 !== fm ? fm : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
       }
       end() {
-        this.epoch++, this.resetInFlight(), this.releaseAll(), this.settleOpen(new Error(Xk.b.coreStopped.text)), this.rejectSave(new Error(Xk.b.saveClosed.text)), this.lastView = null, this.deps.onChange()
+        this.epoch++, this.resetInFlight(), this.releaseAll(), this.settleOpen(new Error(hm.e.coreStopped.text)), this.rejectSave(new Error(hm.e.saveClosed.text)), this.lastView = null, this.deps.onChange()
       }
       afterFrame() {
-        var kk, Fk, Ik;
-        const Xk = this.deps.client.view(),
-          Tk = Xk !== this.lastView;
-        this.lastView = Xk, this.opening && null !== Xk && Xk.state !== lk.kd.None && Xk.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, yk.f)()), this.cropAsked ? (this.cropAsked = !1, null !== Xk && Xk.state === lk.kd.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== Xk && Xk.state !== lk.kd.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
-        const ik = 0 === this.settleFrames && 0 === (null !== (kk = null === (Fk = (Ik = this.deps).meshPending) || void 0 === Fk ? void 0 : Fk.call(Ik)) && void 0 !== kk ? kk : 0);
-        this.holds.has("opening") && !this.opening && 0 === this.loadingOpens && ik && this.release("opening"), this.holds.has("seek") && ik && this.release("seek"), this.holds.has("crop") && !this.cropRunning && ik && this.release("crop");
-        const ak = this.now();
-        for (const [yk, lk] of this.holds) !Lk.has(yk) && ak - lk >= qk && this.release(yk);
-        this.saveRefused && !this.cropping && this.saveFailed(!1), Tk && this.deps.onChange()
+        var mm, Tm, fm;
+        const hm = this.deps.client.view(),
+          Am = hm !== this.lastView;
+        this.lastView = hm, this.opening && null !== hm && hm.state !== wm.ld.None && hm.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, xm.d)()), this.cropAsked ? (this.cropAsked = !1, null !== hm && hm.state === wm.ld.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== hm && hm.state !== wm.ld.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
+        const am = 0 === this.settleFrames && 0 === (null !== (mm = null === (Tm = (fm = this.deps).meshPending) || void 0 === Tm ? void 0 : Tm.call(fm)) && void 0 !== mm ? mm : 0);
+        this.holds.has("opening") && !this.opening && 0 === this.loadingOpens && am && this.release("opening"), this.holds.has("seek") && am && this.release("seek"), this.holds.has("crop") && !this.cropRunning && am && this.release("crop");
+        const Dm = this.now();
+        for (const [xm, wm] of this.holds) !Rm.has(xm) && Dm - wm >= im && this.release(xm);
+        this.saveRefused && !this.cropping && this.saveFailed(!1), Am && this.deps.onChange()
       }
       cropped() {
-        (0, yk.f)(), this.id++, this.unsavedChanges = !0, this.suggestSaveAs = null !== this.fileHandle || null !== this.fileName, this.settleFrames = 2
+        (0, xm.d)(), this.id++, this.unsavedChanges = !0, this.suggestSaveAs = null !== this.fileHandle || null !== this.fileName, this.settleFrames = 2
       }
-      onFailed(kk) {
-        switch (kk.reason) {
-          case lk.ad.TooLarge:
+      onFailed(mm) {
+        switch (mm.reason) {
+          case wm.bd.TooLarge:
             break;
-          case lk.ad.Open:
-          case lk.ad.NothingStaged: {
+          case wm.bd.Open:
+          case wm.bd.NothingStaged: {
             this.opening = !1, this.release("opening");
-            const Fk = (0, ik.f)(kk.version) ? Xk.b.replayTooOld : Xk.b.cantOpen;
-            null === this.pendingOpen && this.deps.notify(Fk), this.settleOpen(new Error(Fk.text));
+            const Tm = (0, am.c)(mm.version) ? hm.e.replayTooOld : hm.e.cantOpen;
+            null === this.pendingOpen && this.deps.notify(Tm), this.settleOpen(new Error(Tm.text));
             break
           }
-          case lk.ad.Crop:
-            if (kk.code === lk._c.Busy) {
+          case wm.bd.Crop:
+            if (mm.code === wm._c.Busy) {
               this.cropBusy();
               break
             }
@@ -1011,166 +1011,166 @@ export const modules = {
               this.saveFailed(!1);
               break
             }
-            this.cropAsked = !1, this.cropRunning = !1, this.release("crop"), this.deps.notify(Xk.b.cropFailed);
+            this.cropAsked = !1, this.cropRunning = !1, this.release("crop"), this.deps.notify(hm.e.cropFailed);
             break;
-          case lk.ad.ModuleTrap:
-          case lk.ad.ModuleLoad:
-          case lk.ad.Port:
-            this.moduleEnded(kk.reason === lk.ad.ModuleTrap ? Xk.b.coreStopped : Xk.b.cantOpen);
+          case wm.bd.ModuleTrap:
+          case wm.bd.ModuleLoad:
+          case wm.bd.Port:
+            this.moduleEnded(mm.reason === wm.bd.ModuleTrap ? hm.e.coreStopped : hm.e.cantOpen);
             break;
-          case lk.ad.NotLive:
+          case wm.bd.NotLive:
             console.warn("[bloxd-wasm-client] the core refused a recorder command in playback");
             break;
           default:
-            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${kk.reason})`), this.seekAsked = !1, this.release("seek")
+            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${mm.reason})`), this.seekAsked = !1, this.release("seek")
         }
         this.deps.onChange()
       }
-      moduleEnded(kk) {
-        this.resetInFlight(), this.release("opening"), this.release("seek"), this.release("crop"), null === this.pendingOpen && this.deps.notify(kk), this.settleOpen(new Error(kk.text))
+      moduleEnded(mm) {
+        this.resetInFlight(), this.release("opening"), this.release("seek"), this.release("crop"), null === this.pendingOpen && this.deps.notify(mm), this.settleOpen(new Error(mm.text))
       }
-      saveDone(kk) {
-        const Fk = this.pendingSave;
-        this.pendingSave = null, this.saveRefused = !1, null === Fk || void 0 === Fk || Fk.resolve(kk)
+      saveDone(mm) {
+        const Tm = this.pendingSave;
+        this.pendingSave = null, this.saveRefused = !1, null === Tm || void 0 === Tm || Tm.resolve(mm)
       }
-      saveFailed(kk) {
-        this.rejectSave(new Error(kk ? Xk.b.saveBusy.text : "The replay couldn't be saved"))
+      saveFailed(mm) {
+        this.rejectSave(new Error(mm ? hm.e.saveBusy.text : "The replay couldn't be saved"))
       }
-      edited(kk) {
-        kk && !this.cropping && (this.edits++, this.unsavedChanges = !0, this.deps.onChange())
+      edited(mm) {
+        mm && !this.cropping && (this.edits++, this.unsavedChanges = !0, this.deps.onChange())
       }
       cropBusy() {
-        null !== this.pendingSave && this.saveRefused ? this.rejectSave(new Error(Xk.b.cropBusy.text)) : this.deps.notify(Xk.b.cropBusy)
+        null !== this.pendingSave && this.saveRefused ? this.rejectSave(new Error(hm.e.cropBusy.text)) : this.deps.notify(hm.e.cropBusy)
       }
       resetInFlight() {
         this.opening = !1, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0
       }
-      settleOpen(kk) {
-        const Fk = this.pendingOpen;
-        this.pendingOpen = null, null === kk ? null === Fk || void 0 === Fk || Fk.resolve() : null === Fk || void 0 === Fk || Fk.reject(kk)
+      settleOpen(mm) {
+        const Tm = this.pendingOpen;
+        this.pendingOpen = null, null === mm ? null === Tm || void 0 === Tm || Tm.resolve() : null === Tm || void 0 === Tm || Tm.reject(mm)
       }
-      rejectSave(kk) {
-        const Fk = this.pendingSave;
-        this.pendingSave = null, this.saveRefused = !1, null === Fk || void 0 === Fk || Fk.reject(kk)
+      rejectSave(mm) {
+        const Tm = this.pendingSave;
+        this.pendingSave = null, this.saveRefused = !1, null === Tm || void 0 === Tm || Tm.reject(mm)
       }
-      hold(kk) {
-        const Fk = 0 === this.holds.size;
-        this.holds.set(kk, this.now()), Fk && this.deps.setHoldDraws(!0)
+      hold(mm) {
+        const Tm = 0 === this.holds.size;
+        this.holds.set(mm, this.now()), Tm && this.deps.setHoldDraws(!0)
       }
-      release(kk) {
-        this.holds.delete(kk) && 0 === this.holds.size && this.deps.setHoldDraws(!1)
+      release(mm) {
+        this.holds.delete(mm) && 0 === this.holds.size && this.deps.setHoldDraws(!1)
       }
       releaseAll() {
         this.holds.size > 0 && (this.holds.clear(), this.deps.setHoldDraws(!1))
       }
     }
   },
-  60606: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      MESH_TAIL_MS: () => qk,
-      PLAY_START_TIMEOUT_MS: () => lk,
-      startWasmReplayVideoExport: () => tk
+  60677: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      MESH_TAIL_MS: () => im,
+      PLAY_START_TIMEOUT_MS: () => wm,
+      startWasmReplayVideoExport: () => pm
     });
-    var Xk = Ik(39257),
-      Tk = Ik(60609),
-      ik = Ik(4797),
-      yk = Ik(2341);
-    const lk = Tk.HOLD_TIMEOUT_MS + 5e3,
-      ak = 50,
-      qk = 200;
+    var hm = fm(39377),
+      Am = fm(60682),
+      am = fm(4732),
+      xm = fm(2379);
+    const wm = Am.HOLD_TIMEOUT_MS + 5e3,
+      Dm = 50,
+      im = 200;
 
-    function Lk(kk) {
-      var Fk;
-      return (null === (Fk = kk.view) || void 0 === Fk ? void 0 : Fk.state) === ik.kd.Cropping || kk.eq.includes("crop")
+    function Rm(mm) {
+      var Tm;
+      return (null === (Tm = mm.view) || void 0 === Tm ? void 0 : Tm.state) === am.ld.Cropping || mm.ni.includes("crop")
     }
 
-    function tk(kk) {
-      return (0, Xk.e)((() => function(kk) {
-        var Fk, Ik, Xk, Tk, tk, Zk;
-        const jk = kk.viewer(),
-          ek = null !== (Fk = null === jk || void 0 === jk ? void 0 : jk.view) && void 0 !== Fk ? Fk : null,
-          wk = kk.canvas();
-        if (!jk || !ek || ek.state === ik.kd.None || 0 === ek.totalTicks || !wk || Lk(jk)) return null;
-        const Hk = null !== (Ik = kk.now) && void 0 !== Ik ? Ik : () => performance.now(),
-          Jk = jk.id,
-          xk = () => {
-            const Fk = kk.viewer();
-            return Fk === jk && Fk.id === Jk && Fk.isOpen ? Fk : null
+    function pm(mm) {
+      return (0, hm.c)((() => function(mm) {
+        var Tm, fm, hm, Am, pm, Em;
+        const om = mm.viewer(),
+          Om = null !== (Tm = null === om || void 0 === om ? void 0 : om.view) && void 0 !== Tm ? Tm : null,
+          Ym = mm.canvas();
+        if (!om || !Om || Om.state === am.ld.None || 0 === Om.totalTicks || !Ym || Rm(om)) return null;
+        const qm = null !== (fm = mm.now) && void 0 !== fm ? fm : () => performance.now(),
+          jm = om.id,
+          Vm = () => {
+            const Tm = mm.viewer();
+            return Tm === om && Tm.id === jm && Tm.isOpen ? Tm : null
           },
-          Pk = Math.min(null !== (Xk = null === (Tk = ek.mark) || void 0 === Tk ? void 0 : Tk.outTick) && void 0 !== Xk ? Xk : 1 / 0, ek.totalTicks - 1);
-        let Kk = null,
-          Qk = !1;
-        const sk = () => {
-          var kk, Fk;
-          return (null === (kk = xk()) || void 0 === kk || null === (Fk = kk.view) || void 0 === Fk ? void 0 : Fk.state) === ik.kd.Playing
+          Im = Math.min(null !== (hm = null === (Am = Om.mark) || void 0 === Am ? void 0 : Am.outTick) && void 0 !== hm ? hm : 1 / 0, Om.totalTicks - 1);
+        let Km = null,
+          Qm = !1;
+        const nm = () => {
+          var mm, Tm;
+          return (null === (mm = Vm()) || void 0 === mm || null === (Tm = mm.view) || void 0 === Tm ? void 0 : Tm.state) === am.ld.Playing
         };
         return {
-          WG: ik.zd,
-          playbackMarkInTick: null !== (tk = null === (Zk = ek.mark) || void 0 === Zk ? void 0 : Zk.inTick) && void 0 !== tk ? tk : null,
+          aG: am.Bd,
+          playbackMarkInTick: null !== (pm = null === (Em = Om.mark) || void 0 === Em ? void 0 : Em.inTick) && void 0 !== pm ? pm : null,
           startFailure: () => {
-            const kk = xk();
-            return null === kk ? "Another replay opened. Export it again from there." : Lk(kk) ? "Wait for the crop to finish, then export again." : null
+            const mm = Vm();
+            return null === mm ? "Another replay opened. Export it again from there." : Rm(mm) ? "Wait for the crop to finish, then export again." : null
           },
           fileName: () => {
-            var kk, Fk;
-            return null !== (kk = null === (Fk = xk()) || void 0 === Fk ? void 0 : Fk.fileName) && void 0 !== kk ? kk : null
+            var mm, Tm;
+            return null !== (mm = null === (Tm = Vm()) || void 0 === Tm ? void 0 : Tm.fileName) && void 0 !== mm ? mm : null
           },
           playbackSpeed: () => {
-            var kk, Fk, Ik;
-            return null !== (kk = null === (Fk = xk()) || void 0 === Fk || null === (Ik = Fk.view) || void 0 === Ik ? void 0 : Ik.speed) && void 0 !== kk ? kk : 1
+            var mm, Tm, fm;
+            return null !== (mm = null === (Tm = Vm()) || void 0 === Tm || null === (fm = Tm.view) || void 0 === fm ? void 0 : fm.speed) && void 0 !== mm ? mm : 1
           },
-          setPlaybackSpeed: kk => {
-            var Fk;
-            null === (Fk = xk()) || void 0 === Fk || Fk.setSpeed(kk)
+          setPlaybackSpeed: mm => {
+            var Tm;
+            null === (Tm = Vm()) || void 0 === Tm || Tm.setSpeed(mm)
           },
           play: () => {
-            var kk;
-            Qk = !1, Kk = Hk(), null === (kk = xk()) || void 0 === kk || kk.play()
+            var mm;
+            Qm = !1, Km = qm(), null === (mm = Vm()) || void 0 === mm || mm.play()
           },
           pause: () => {
-            var kk;
-            null === (kk = xk()) || void 0 === kk || kk.pause()
+            var mm;
+            null === (mm = Vm()) || void 0 === mm || mm.pause()
           },
-          seekToTick: kk => {
-            var Fk;
-            null === (Fk = xk()) || void 0 === Fk || Fk.seek(kk, !0)
+          seekToTick: mm => {
+            var Tm;
+            null === (Tm = Vm()) || void 0 === Tm || Tm.seek(mm, !0)
           },
-          seekSettled: () => new Promise((kk => {
-            const Fk = setInterval((() => {
-              const Ik = xk();
-              null === Ik ? (clearInterval(Fk), kk()) : Ik.eq.includes("seek") || (clearInterval(Fk), setTimeout(kk, qk))
-            }), ak)
+          seekSettled: () => new Promise((mm => {
+            const Tm = setInterval((() => {
+              const fm = Vm();
+              null === fm ? (clearInterval(Tm), mm()) : fm.ni.includes("seek") || (clearInterval(Tm), setTimeout(mm, im))
+            }), Dm)
           })),
           isPlaying: () => {
-            var kk, Fk, Ik;
-            return null !== Kk && null !== xk() && (!!sk() || !Qk && (null !== (kk = null === (Fk = xk()) || void 0 === Fk || null === (Ik = Fk.view) || void 0 === Ik ? void 0 : Ik.Dt) && void 0 !== kk ? kk : 0) < Pk && Hk() - Kk < lk)
+            var mm, Tm, fm;
+            return null !== Km && null !== Vm() && (!!nm() || !Qm && (null !== (mm = null === (Tm = Vm()) || void 0 === Tm || null === (fm = Tm.view) || void 0 === fm ? void 0 : fm.DE) && void 0 !== mm ? mm : 0) < Im && qm() - Km < wm)
           },
-          watchPlayback: Fk => {
-            const Ik = kk.watchViewer((() => {
-                Qk ||= null !== Kk && sk(), Fk()
+          watchPlayback: Tm => {
+            const fm = mm.watchViewer((() => {
+                Qm ||= null !== Km && nm(), Tm()
               })),
-              Xk = setTimeout(Fk, lk + 1);
+              hm = setTimeout(Tm, wm + 1);
             return () => {
-              clearTimeout(Xk), Ik()
+              clearTimeout(hm), fm()
             }
           },
           playbackFailure: () => {
-            var kk, Fk;
-            const Ik = xk();
-            return null === Ik ? "The replay closed before the video finished." : (null !== (kk = null === (Fk = Ik.view) || void 0 === Fk ? void 0 : Fk.Dt) && void 0 !== kk ? kk : 0) >= Pk ? null : Qk ? "The replay stopped before the video finished." : "The replay didn't start playing."
+            var mm, Tm;
+            const fm = Vm();
+            return null === fm ? "The replay closed before the video finished." : (null !== (mm = null === (Tm = fm.view) || void 0 === Tm ? void 0 : Tm.DE) && void 0 !== mm ? mm : 0) >= Im ? null : Qm ? "The replay stopped before the video finished." : "The replay didn't start playing."
           },
-          canvas: () => wk,
+          canvas: () => Ym,
           closeViewer: () => {
-            kk.requestViewer("close")
+            mm.requestViewer("close")
           },
           reopenViewer: () => {
-            kk.requestViewer("open")
+            mm.requestViewer("open")
           },
-          holdInput: yk.e
+          holdInput: xm.f
         }
-      }(kk)))
+      }(mm)))
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

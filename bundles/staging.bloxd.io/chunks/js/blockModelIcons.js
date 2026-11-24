@@ -1,92 +1,92 @@
 export const id = 4;
 export const ids = [4];
 export const modules = {
-  36401: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      getBlockModelIconUrl: () => Zk,
-      hasBlockModelIcon: () => qk
+  36490: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      getBlockModelIconUrl: () => Em,
+      hasBlockModelIcon: () => im
     });
-    var Xk = Ik(36388),
-      Tk = Ik(36386);
-    const ik = Ik(36409),
-      yk = new Map(ik.keys().filter((kk => kk.startsWith("./"))).map((kk => [kk.slice(2, -5), kk]))),
-      lk = new Map,
-      ak = new Map;
+    var hm = fm(36484),
+      Am = fm(36481);
+    const am = fm(36495),
+      xm = new Map(am.keys().filter((mm => mm.startsWith("./"))).map((mm => [mm.slice(2, -5), mm]))),
+      wm = new Map,
+      Dm = new Map;
 
-    function qk(kk) {
-      return yk.has(kk)
+    function im(mm) {
+      return xm.has(mm)
     }
 
-    function Lk(kk) {
-      return ik(yk.get(kk))
+    function Rm(mm) {
+      return am(xm.get(mm))
     }
-    async function tk(kk, Fk, Ik) {
+    async function pm(mm, Tm, fm) {
       const {
-        data: Xk,
-        texture: ik
+        data: hm,
+        texture: am
       } = await
-      function(kk) {
-        let Fk = lk.get(kk);
-        return Fk || (Fk = Lk(kk).then((async kk => {
-          const Fk = new Image;
-          Fk.src = kk.texture, await Fk.decode();
-          const Ik = document.createElement("canvas");
-          Ik.width = Fk.width, Ik.height = Fk.height;
-          const Xk = Ik.getContext("2d");
-          return Xk.drawImage(Fk, 0, 0), {
-            data: kk,
+      function(mm) {
+        let Tm = wm.get(mm);
+        return Tm || (Tm = Rm(mm).then((async mm => {
+          const Tm = new Image;
+          Tm.src = mm.texture, await Tm.decode();
+          const fm = document.createElement("canvas");
+          fm.width = Tm.width, fm.height = Tm.height;
+          const hm = fm.getContext("2d");
+          return hm.drawImage(Tm, 0, 0), {
+            data: mm,
             texture: {
-              width: Fk.width,
-              height: Fk.height,
-              pixels: Xk.getImageData(0, 0, Fk.width, Fk.height).data
+              width: Tm.width,
+              height: Tm.height,
+              pixels: hm.getImageData(0, 0, Tm.width, Tm.height).data
             }
           }
-        })), Fk.catch((() => {
-          lk.delete(kk)
-        })), lk.set(kk, Fk)), Fk
-      }(kk), yk = document.createElement("canvas");
-      return yk.width = Fk, yk.height = Fk, yk.getContext("2d").putImageData(new ImageData((0, Tk.o)(Xk, ik, Fk, Ik), Fk, Fk), 0, 0), yk.toDataURL()
+        })), Tm.catch((() => {
+          wm.delete(mm)
+        })), wm.set(mm, Tm)), Tm
+      }(mm), xm = document.createElement("canvas");
+      return xm.width = Tm, xm.height = Tm, xm.getContext("2d").putImageData(new ImageData((0, Am.k)(hm, am, Tm, fm), Tm, Tm), 0, 0), xm.toDataURL()
     }
 
-    function Zk(kk, Fk, Ik) {
-      const Tk = `${Fk}|${Ik}|${kk}`;
-      let ik = ak.get(Tk);
-      return ik || (ik = (0, Xk.e)(kk, (() => Lk(kk)), Fk, Ik).then((Xk => null !== Xk && void 0 !== Xk ? Xk : tk(kk, Fk, Ik))), ik.catch((() => {
-        ak.delete(Tk)
-      })), ak.set(Tk, ik)), ik
+    function Em(mm, Tm, fm) {
+      const Am = `${Tm}|${fm}|${mm}`;
+      let am = Dm.get(Am);
+      return am || (am = (0, hm.e)(mm, (() => Rm(mm)), Tm, fm).then((hm => null !== hm && void 0 !== hm ? hm : pm(mm, Tm, fm))), am.catch((() => {
+        Dm.delete(Am)
+      })), Dm.set(Am, am)), am
     }
   },
-  36409: (kk, Fk, Ik) => {
-    var Xk = {
-      "./Artisan Bench.json": [41193, 275],
-      "./Aspen Item Pedestal.json": [41201, 276],
-      "./Cedar Item Pedestal.json": [41208, 277],
-      "./Cherry Item Pedestal.json": [41211, 278],
-      "./Furnace.json": [41213, 279],
-      "./Jungle Item Pedestal.json": [41216, 280],
-      "./Mango Item Pedestal.json": [41221, 281],
-      "./Palm Item Pedestal.json": [41223, 282],
-      "./Pear Item Pedestal.json": [41230, 283],
-      "./Pine Item Pedestal.json": [41232, 284],
-      "./Plum Item Pedestal.json": [41238, 285],
-      "./Potion Table.json": [41241, 286],
-      "./Salvaging Table.json": [41250, 287],
-      "./Showcase.json": [41253, 288],
-      "./Spectral Item Pedestal.json": [41256, 289],
-      "./Workbench.json": [41264, 290]
+  36495: (mm, Tm, fm) => {
+    var hm = {
+      "./Artisan Bench.json": [41228, 275],
+      "./Aspen Item Pedestal.json": [41232, 276],
+      "./Cedar Item Pedestal.json": [41236, 277],
+      "./Cherry Item Pedestal.json": [41245, 278],
+      "./Furnace.json": [41254, 279],
+      "./Jungle Item Pedestal.json": [41259, 280],
+      "./Mango Item Pedestal.json": [41263, 281],
+      "./Palm Item Pedestal.json": [41266, 282],
+      "./Pear Item Pedestal.json": [41268, 283],
+      "./Pine Item Pedestal.json": [41271, 284],
+      "./Plum Item Pedestal.json": [41273, 285],
+      "./Potion Table.json": [41282, 286],
+      "./Salvaging Table.json": [41291, 287],
+      "./Showcase.json": [41298, 288],
+      "./Spectral Item Pedestal.json": [41305, 289],
+      "./Workbench.json": [41312, 290]
     };
 
-    function Tk(kk) {
-      if (!Ik.o(Xk, kk)) return Promise.resolve().then((() => {
-        var Fk = new Error("Cannot find module '" + kk + "'");
-        throw Fk.code = "MODULE_NOT_FOUND", Fk
+    function Am(mm) {
+      if (!fm.o(hm, mm)) return Promise.resolve().then((() => {
+        var Tm = new Error("Cannot find module '" + mm + "'");
+        throw Tm.code = "MODULE_NOT_FOUND", Tm
       }));
-      var Fk = Xk[kk],
-        Tk = Fk[0];
-      return Ik.e(Fk[1]).then((() => Ik(Tk)))
+      var Tm = hm[mm],
+        Am = Tm[0];
+      return fm.e(Tm[1]).then((() => fm(Am)))
     }
-    Tk.keys = () => Object.keys(Xk), Tk.id = 36409, kk.exports = Tk
+    Am.keys = () => Object.keys(hm), Am.id = 36495, mm.exports = Am
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

@@ -1,77 +1,77 @@
 export const id = 191;
 export const ids = [191];
 export const modules = {
-  39134: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => Xk
+  39261: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => hm
     });
-    class Xk {
-      constructor(kk, Fk) {
-        this.read = kk, this.apply = Fk, this.release = null
+    class hm {
+      constructor(mm, Tm) {
+        this.read = mm, this.apply = Tm, this.release = null
       }
-      turn(kk, Fk) {
-        const Ik = null === this.release ? this.read() : this.release.transitionMs;
+      turn(mm, Tm) {
+        const fm = null === this.release ? this.read() : this.release.transitionMs;
         this.stop(!1), this.apply({
-          forcedCameraDirectionTransitionMs: Fk,
-          forcedCameraDirection: [kk[0], kk[1], kk[2]]
+          forcedCameraDirectionTransitionMs: Tm,
+          forcedCameraDirection: [mm[0], mm[1], mm[2]]
         }), this.release = {
           timer: setTimeout((() => {
             this.stop(!0)
-          }), Fk + 100),
-          transitionMs: Ik
+          }), Tm + 100),
+          transitionMs: fm
         }
       }
       dispose() {
         this.stop(!0)
       }
-      stop(kk) {
-        null !== this.release && (clearTimeout(this.release.timer), kk && this.apply({
+      stop(mm) {
+        null !== this.release && (clearTimeout(this.release.timer), mm && this.apply({
           forcedCameraDirection: null,
           forcedCameraDirectionTransitionMs: this.release.transitionMs
         }), this.release = null)
       }
     }
   },
-  38632: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => ik,
-      g: () => Tk
+  38743: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => am,
+      f: () => Am
     });
-    const Xk = new Map;
+    const hm = new Map;
 
-    function Tk(kk, Fk) {
-      Xk.set(kk, Fk)
+    function Am(mm, Tm) {
+      hm.set(mm, Tm)
     }
 
-    function ik(kk) {
-      return kk ? Xk.get(kk) : void 0
+    function am(mm) {
+      return mm ? hm.get(mm) : void 0
     }
   },
-  39603: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => Tk
+  39724: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => Am
     });
-    var Xk = Ik(38204);
+    var hm = fm(38306);
 
-    function Tk(kk, Fk, Ik) {
-      var Tk, ik, yk, lk, ak, qk, Lk;
-      const tk = (0, Xk.b)(kk, Fk, Ik[0], Ik[1], Ik[2]),
-        Zk = tk ? null !== (Tk = tk.textCell) && void 0 !== Tk ? Tk : tk.rect.anchor : Ik,
-        jk = Fk(Zk[0], Zk[1], Zk[2]);
+    function Am(mm, Tm, fm) {
+      var Am, am, xm, wm, Dm, im, Rm;
+      const pm = (0, hm.c)(mm, Tm, fm[0], fm[1], fm[2]),
+        Em = pm ? null !== (Am = pm.textCell) && void 0 !== Am ? Am : pm.rect.anchor : fm,
+        om = Tm(Em[0], Em[1], Em[2]);
       return {
-        pos: [Ik[0], Ik[1], Ik[2]],
-        noticeboardSpan: tk && {
-          width: tk.rect.width,
-          height: tk.rect.height
+        pos: [fm[0], fm[1], fm[2]],
+        noticeboardSpan: pm && {
+          width: pm.rect.width,
+          height: pm.rect.height
         },
-        text: null !== (ik = null === jk || void 0 === jk || null === (yk = jk.persisted) || void 0 === yk || null === (lk = yk.shared) || void 0 === lk ? void 0 : lk.text) && void 0 !== ik ? ik : "",
-        textSize: null !== (ak = null === jk || void 0 === jk || null === (qk = jk.persisted) || void 0 === qk || null === (Lk = qk.shared) || void 0 === Lk ? void 0 : Lk.textSize) && void 0 !== ak ? ak : null
+        text: null !== (am = null === om || void 0 === om || null === (xm = om.persisted) || void 0 === xm || null === (wm = xm.shared) || void 0 === wm ? void 0 : wm.text) && void 0 !== am ? am : "",
+        textSize: null !== (Dm = null === om || void 0 === om || null === (im = om.persisted) || void 0 === im || null === (Rm = im.shared) || void 0 === Rm ? void 0 : Rm.textSize) && void 0 !== Dm ? Dm : null
       }
     }
   },
-  38501: (kk, Fk, Ik) => {
-    function Xk(kk) {
-      switch (kk.kind) {
+  38606: (mm, Tm, fm) => {
+    function hm(mm) {
+      switch (mm.kind) {
         case void 0:
         case "flatEmissive":
           return !1;
@@ -80,452 +80,452 @@ export const modules = {
           return !0
       }
     }
-    Ik.d(Fk, {
-      d: () => Tk,
-      e: () => ik,
-      g: () => Xk
+    fm.d(Tm, {
+      b: () => Am,
+      d: () => am,
+      h: () => hm
     });
-    const Tk = 4,
-      ik = 3
+    const Am = 4,
+      am = 3
   },
-  39162: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Tk,
-      i: () => ik
+  39278: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => Am,
+      f: () => am
     });
-    var Xk = Ik(337);
-    const Tk = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
-    class ik {
-      constructor(kk) {
-        this.importGame = kk, this.loads = new Map, this.loaded = new Map
+    var hm = fm(354);
+    const Am = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
+    class am {
+      constructor(mm) {
+        this.importGame = mm, this.loads = new Map, this.loaded = new Map
       }
-      load(kk) {
-        const Fk = (0, Xk.dc)(kk);
-        if (!Tk.has(Fk)) return Promise.resolve(void 0);
-        let Ik = this.loads.get(Fk);
-        return Ik || (Ik = this.importGame(Fk).then((kk => {
-          const Ik = kk.default;
-          if ("function" !== typeof Ik) throw new Error(`${Fk}'s client code has no default-exported factory`);
-          return this.loaded.set(Fk, Ik), Ik
-        })).catch((kk => {
-          throw this.loads.delete(Fk), kk
-        })), this.loads.set(Fk, Ik)), Ik
+      load(mm) {
+        const Tm = (0, hm.Pb)(mm);
+        if (!Am.has(Tm)) return Promise.resolve(void 0);
+        let fm = this.loads.get(Tm);
+        return fm || (fm = this.importGame(Tm).then((mm => {
+          const fm = mm.default;
+          if ("function" !== typeof fm) throw new Error(`${Tm}'s client code has no default-exported factory`);
+          return this.loaded.set(Tm, fm), fm
+        })).catch((mm => {
+          throw this.loads.delete(Tm), mm
+        })), this.loads.set(Tm, fm)), fm
       }
-      loadedFactory(kk) {
-        const Fk = (0, Xk.dc)(kk);
-        if (!Tk.has(Fk)) return;
-        const Ik = this.loaded.get(Fk);
-        if (!Ik) throw new Error(`${Fk}'s client code started before it loaded`);
-        return Ik
+      loadedFactory(mm) {
+        const Tm = (0, hm.Pb)(mm);
+        if (!Am.has(Tm)) return;
+        const fm = this.loaded.get(Tm);
+        if (!fm) throw new Error(`${Tm}'s client code started before it loaded`);
+        return fm
       }
     }
   },
-  39610: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => yk
+  39732: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => xm
     });
-    var Xk = Ik(9278),
-      Tk = Ik(34193),
-      ik = Ik(3229);
+    var hm = fm(9240),
+      Am = fm(34308),
+      am = fm(3301);
 
-    function yk(kk) {
-      if (kk === Xk.c) return 0;
-      const Fk = (0, ik.e)(kk);
-      if (void 0 !== Fk && Fk <= Tk.MAX_BLOCK_ID) return Fk;
-      const Ik = (0, ik.e)(kk.split("|")[0]);
-      if (void 0 !== Ik && Ik <= Tk.MAX_BLOCK_ID && (0, Tk.rootMetaDescOf)(Ik) === kk) return Ik;
-      throw new Error(`Invalid block name. You sent ${kk}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
+    function xm(mm) {
+      if (mm === hm.c) return 0;
+      const Tm = (0, am.c)(mm);
+      if (void 0 !== Tm && Tm <= Am.MAX_BLOCK_ID) return Tm;
+      const fm = (0, am.c)(mm.split("|")[0]);
+      if (void 0 !== fm && fm <= Am.MAX_BLOCK_ID && (0, Am.rootMetaDescOf)(fm) === mm) return fm;
+      throw new Error(`Invalid block name. You sent ${mm}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
     }
   },
-  39221: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => Tk
+  39340: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => Am
     });
-    var Xk = Ik(25);
-    class Tk {
-      constructor(kk) {
-        this.screen = kk, this.hidesHud = !1
+    var hm = fm(23);
+    class Am {
+      constructor(mm) {
+        this.screen = mm, this.hidesHud = !1
       }
-      show(kk, Fk) {
-        this.screen.setFade(kk.colour, kk.alpha), this.screen.setLetterbox(!0 === Fk.letterbox, kk.alpha < 1), this.setHudHidden(!0 === Fk.hideHud)
+      show(mm, Tm) {
+        this.screen.setFade(mm.colour, mm.alpha), this.screen.setLetterbox(!0 === Tm.letterbox, mm.alpha < 1), this.setHudHidden(!0 === Tm.hideHud)
       }
       clear() {
         this.screen.clear(), this.setHudHidden(!1)
       }
-      setHudHidden(kk) {
-        this.hidesHud !== kk && (this.hidesHud = kk, Xk.d.set({
-          isUiHiddenByCamera: kk
+      setHudHidden(mm) {
+        this.hidesHud !== mm && (this.hidesHud = mm, hm.c.set({
+          isUiHiddenByCamera: mm
         }))
       }
     }
   },
-  39183: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      C: () => lk,
-      F: () => Lk,
-      d: () => Xk,
-      h: () => Zk,
-      k: () => tk,
-      l: () => yk,
-      n: () => ek,
-      r: () => ak,
-      u: () => wk,
-      y: () => qk
+  39297: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => hm,
+      d: () => Em,
+      g: () => pm,
+      k: () => xm,
+      n: () => Om,
+      o: () => Dm,
+      r: () => Ym,
+      t: () => im,
+      u: () => wm,
+      x: () => Rm
     });
-    const Xk = Math.PI / 2 - .001,
-      Tk = 2 * Math.PI,
-      ik = 1e-9;
+    const hm = Math.PI / 2 - .001,
+      Am = 2 * Math.PI,
+      am = 1e-9;
 
-    function yk(kk, Fk) {
-      Fk.heading = kk.heading, Fk.pitch = kk.pitch
+    function xm(mm, Tm) {
+      Tm.heading = mm.heading, Tm.pitch = mm.pitch
     }
 
-    function lk(kk, Fk) {
-      const Ik = Fk - kk;
-      return Ik - Tk * Math.floor((Ik + Math.PI) / Tk)
+    function wm(mm, Tm) {
+      const fm = Tm - mm;
+      return fm - Am * Math.floor((fm + Math.PI) / Am)
     }
 
-    function ak(kk, Fk, Ik) {
-      return kk + lk(kk, Fk) * Ik
+    function Dm(mm, Tm, fm) {
+      return mm + wm(mm, Tm) * fm
     }
 
-    function qk(kk) {
-      if (!Number.isFinite(kk)) return kk;
-      const Fk = kk - Tk * Math.floor(kk / Tk);
-      return Fk < Tk ? Fk : 0
+    function im(mm) {
+      if (!Number.isFinite(mm)) return mm;
+      const Tm = mm - Am * Math.floor(mm / Am);
+      return Tm < Am ? Tm : 0
     }
 
-    function Lk(kk, Fk) {
-      return kk + lk(kk, Fk)
+    function Rm(mm, Tm) {
+      return mm + wm(mm, Tm)
     }
 
-    function tk(kk) {
-      return Math.max(-Xk, Math.min(Xk, kk))
+    function pm(mm) {
+      return Math.max(-hm, Math.min(hm, mm))
     }
 
-    function Zk(kk, Fk, Ik) {
-      const Xk = Math.cos(Fk);
-      return Ik[0] = Xk * Math.sin(kk), Ik[1] = -Math.sin(Fk), Ik[2] = Xk * Math.cos(kk), Ik
+    function Em(mm, Tm, fm) {
+      const hm = Math.cos(Tm);
+      return fm[0] = hm * Math.sin(mm), fm[1] = -Math.sin(Tm), fm[2] = hm * Math.cos(mm), fm
     }
 
-    function jk(kk, Fk, Ik, Xk) {
-      const Tk = Math.sqrt(kk * kk + Ik * Ik);
-      return Tk < ik && Math.abs(Fk) < ik || (Tk >= ik && (Xk.heading = Math.atan2(kk, Ik)), Xk.pitch = tk(Math.atan2(-Fk, Tk) + 0)), Xk
+    function om(mm, Tm, fm, hm) {
+      const Am = Math.sqrt(mm * mm + fm * fm);
+      return Am < am && Math.abs(Tm) < am || (Am >= am && (hm.heading = Math.atan2(mm, fm)), hm.pitch = pm(Math.atan2(-Tm, Am) + 0)), hm
     }
 
-    function ek(kk, Fk) {
-      return jk(kk[0], kk[1], kk[2], Fk)
+    function Om(mm, Tm) {
+      return om(mm[0], mm[1], mm[2], Tm)
     }
 
-    function wk(kk, Fk, Ik) {
-      return jk(Fk[0] - kk[0], Fk[1] - kk[1], Fk[2] - kk[2], Ik)
+    function Ym(mm, Tm, fm) {
+      return om(Tm[0] - mm[0], Tm[1] - mm[1], Tm[2] - mm[2], fm)
     }
   },
-  39217: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => ik,
-      e: () => Tk
+  39335: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => am,
+      g: () => Am
     });
-    var Xk = Ik(39183);
+    var hm = fm(39297);
 
-    function Tk(kk) {
-      var Fk;
-      const Ik = "default" === kk.mode ? "movement" : null !== (Fk = kk.playerFacing) && void 0 !== Fk ? Fk : "movement";
-      return "cursor" === Ik ? {
-        facing: Ik,
+    function Am(mm) {
+      var Tm;
+      const fm = "default" === mm.mode ? "movement" : null !== (Tm = mm.playerFacing) && void 0 !== Tm ? Tm : "movement";
+      return "cursor" === fm ? {
+        facing: fm,
         mouseTurns: null
       } : {
-        facing: Ik,
-        mouseTurns: "default" !== kk.mode && void 0 !== kk.playerLook ? "look" : "view"
+        facing: fm,
+        mouseTurns: "default" !== mm.mode && void 0 !== mm.playerLook ? "look" : "view"
       }
     }
 
-    function ik(kk, Fk, Ik, Tk, ik, yk) {
-      return yk.JG = 0, yk.xG = 0, yk.pointedAt = void 0, void 0 !== Tk ? ik ? (yk.pointedAt = Tk, kk) : (0, Xk.y)(Tk.heading) : ik ? (yk.JG = Fk, yk.xG = Ik, kk) : (0, Xk.y)(kk + Fk)
+    function am(mm, Tm, fm, Am, am, xm) {
+      return xm.XN = 0, xm.yN = 0, xm.pointedAt = void 0, void 0 !== Am ? am ? (xm.pointedAt = Am, mm) : (0, hm.t)(Am.heading) : am ? (xm.XN = Tm, xm.yN = fm, mm) : (0, hm.t)(mm + Tm)
     }
   },
-  39196: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Bk
+  39314: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => Mm
     });
-    var Xk = Ik(39201),
-      Tk = Ik(39183),
-      ik = Ik(37029);
+    var hm = fm(39323),
+      Am = fm(39297),
+      am = fm(37093);
 
-    function yk(kk, Fk, Ik, Xk) {
-      if (!(Xk > 0)) return Fk;
-      const Tk = Fk > kk ? Math.min(Fk, kk + Ik / Xk) : Math.max(Fk, kk - Ik / Xk);
-      return Math.abs(Fk - Tk) < 1e-9 ? Fk : Tk
+    function xm(mm, Tm, fm, hm) {
+      if (!(hm > 0)) return Tm;
+      const Am = Tm > mm ? Math.min(Tm, mm + fm / hm) : Math.max(Tm, mm - fm / hm);
+      return Math.abs(Tm - Am) < 1e-9 ? Tm : Am
     }
-    class lk {
+    class wm {
       constructor() {
         this.phase = null, this.outMs = 0, this.holdMs = 0, this.inMs = 0, this.heldMs = 0, this.sinceTurnMs = 1 / 0, this.clearMs = 1 / 0, this.waiting = null, this.screen = {
-          colour: Xk.f,
+          colour: hm.i,
           alpha: 0
         }
       }
       getScreen() {
         return this.screen
       }
-      fadeOut(kk) {
-        !this.isGoingOut() && this.sinceTurnMs < Xk.k.minFadeTurnMs ? this.waiting = {
+      fadeOut(mm) {
+        !this.isGoingOut() && this.sinceTurnMs < hm.k.minFadeTurnMs ? this.waiting = {
           turn: "out",
-          transition: kk
-        } : (this.waiting = null, this.startOut(kk))
+          transition: mm
+        } : (this.waiting = null, this.startOut(mm))
       }
-      fadeIn(kk) {
-        this.isGoingOut() ? this.sinceTurnMs < Xk.k.minFadeTurnMs ? this.waiting = {
+      fadeIn(mm) {
+        this.isGoingOut() ? this.sinceTurnMs < hm.k.minFadeTurnMs ? this.waiting = {
           turn: "in",
-          minMs: kk
-        } : (this.waiting = null, this.startIn(kk)) : this.waiting = null
+          minMs: mm
+        } : (this.waiting = null, this.startIn(mm)) : this.waiting = null
       }
-      advance(kk) {
-        const Fk = this.waiting;
-        if (null === Fk) return this.step(kk);
-        const Ik = Xk.k.minFadeTurnMs - this.sinceTurnMs;
-        if (Ik > kk) return this.step(kk);
-        const Tk = this.step(Ik);
-        return this.waiting = null, "out" === Fk.turn ? this.startOut(Fk.transition) : this.startIn(Fk.minMs), this.step(kk - Ik) || Tk
+      advance(mm) {
+        const Tm = this.waiting;
+        if (null === Tm) return this.step(mm);
+        const fm = hm.k.minFadeTurnMs - this.sinceTurnMs;
+        if (fm > mm) return this.step(mm);
+        const Am = this.step(fm);
+        return this.waiting = null, "out" === Tm.turn ? this.startOut(Tm.transition) : this.startIn(Tm.minMs), this.step(mm - fm) || Am
       }
       isGoingOut() {
         return "out" === this.phase || "hold" === this.phase
       }
-      startOut(kk) {
-        ("in" === this.phase || null === this.phase && this.clearMs < Xk.k.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = kk.colour), this.outMs = kk.outMs, this.holdMs = kk.holdMs, this.inMs = kk.inMs
+      startOut(mm) {
+        ("in" === this.phase || null === this.phase && this.clearMs < hm.k.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = mm.colour), this.outMs = mm.outMs, this.holdMs = mm.holdMs, this.inMs = mm.inMs
       }
-      startIn(kk) {
-        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(kk, this.inMs)
+      startIn(mm) {
+        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(mm, this.inMs)
       }
-      step(kk) {
-        const Fk = this.screen;
-        this.sinceTurnMs += kk, null === this.phase && (this.clearMs += kk);
-        let Ik = !1,
-          Tk = kk;
+      step(mm) {
+        const Tm = this.screen;
+        this.sinceTurnMs += mm, null === this.phase && (this.clearMs += mm);
+        let fm = !1,
+          Am = mm;
         if ("out" === this.phase) {
-          const Xk = (1 - Fk.alpha) * this.outMs;
-          if (Fk.alpha = yk(Fk.alpha, 1, kk, this.outMs), Fk.alpha < 1) return !1;
-          this.phase = "hold", this.heldMs = 0, Tk = Math.max(0, kk - Xk), Ik = !0
+          const hm = (1 - Tm.alpha) * this.outMs;
+          if (Tm.alpha = xm(Tm.alpha, 1, mm, this.outMs), Tm.alpha < 1) return !1;
+          this.phase = "hold", this.heldMs = 0, Am = Math.max(0, mm - hm), fm = !0
         }
-        let ik = kk;
+        let am = mm;
         if ("hold" === this.phase) {
-          this.heldMs += Tk;
-          const kk = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - Xk.k.minFadeTurnMs);
-          if (kk < 0 || Ik) return Ik;
-          this.phase = "in", this.sinceTurnMs = kk, ik = kk
+          this.heldMs += Am;
+          const mm = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - hm.k.minFadeTurnMs);
+          if (mm < 0 || fm) return fm;
+          this.phase = "in", this.sinceTurnMs = mm, am = mm
         }
-        return "in" === this.phase && (Fk.alpha = yk(Fk.alpha, 0, ik, this.inMs), Fk.alpha <= 0 && (this.phase = null, this.clearMs = 0)), Ik
+        return "in" === this.phase && (Tm.alpha = xm(Tm.alpha, 0, am, this.inMs), Tm.alpha <= 0 && (this.phase = null, this.clearMs = 0)), fm
       }
     }
-    var ak = Ik(39180),
-      qk = Ik(39209),
-      Lk = Ik(1844),
-      tk = Ik(36571);
+    var Dm = fm(39288),
+      im = fm(39327),
+      Rm = fm(1877),
+      pm = fm(36660);
 
-    function Zk(kk, Fk) {
-      for (let Ik = 0; Ik < Fk.length; Ik++) Fk[Ik] = kk[Ik]
+    function Em(mm, Tm) {
+      for (let fm = 0; fm < Tm.length; fm++) Tm[fm] = mm[fm]
     }
 
-    function jk(kk, Fk) {
-      var Ik;
-      return null !== (Ik = kk.fov) && void 0 !== Ik ? Ik : Fk.getDefaultFov()
+    function om(mm, Tm) {
+      var fm;
+      return null !== (fm = mm.fov) && void 0 !== fm ? fm : Tm.getDefaultFov()
     }
 
-    function ek(kk, Fk, Ik, Xk, Tk) {
-      const ik = 2 / Xk,
-        yk = Math.exp(-ik * Tk);
-      for (let lk = 0; lk < kk.length; lk++) {
-        const Xk = kk[lk] - Ik[lk],
-          ak = (Fk[lk] + ik * Xk) * Tk;
-        kk[lk] = Ik[lk] + (Xk + ak) * yk, Fk[lk] = (Fk[lk] - ik * ak) * yk
+    function Om(mm, Tm, fm, hm, Am) {
+      const am = 2 / hm,
+        xm = Math.exp(-am * Am);
+      for (let wm = 0; wm < mm.length; wm++) {
+        const hm = mm[wm] - fm[wm],
+          Dm = (Tm[wm] + am * hm) * Am;
+        mm[wm] = fm[wm] + (hm + Dm) * xm, Tm[wm] = (Tm[wm] - am * Dm) * xm
       }
     }
-    class wk {
-      constructor(kk, Fk, Ik, Xk) {
-        var ik, yk, lk, ak, qk;
-        this.settings = kk, this.XZ = Fk, this.targets = Ik, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.TH = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
+    class Ym {
+      constructor(mm, Tm, fm, hm) {
+        var am, xm, wm, Dm, im;
+        this.settings = mm, this.oE = Tm, this.targets = fm, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.qq = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
           heading: 0,
           pitch: 0
         }, this.points = [], this.forward = [0, 0, 0], this.base = {
-          heading: (0, Tk.y)((0, Lk.k)(null !== (ik = kk.viewHeading) && void 0 !== ik ? ik : 0)),
-          pitch: (0, Tk.k)((0, Lk.k)(null !== (yk = kk.viewElevation) && void 0 !== yk ? yk : 45))
-        }, this.closestDistance = null !== (lk = kk.closestDistance) && void 0 !== lk ? lk : Math.min(6, null !== (ak = kk.furthestDistance) && void 0 !== ak ? ak : 1 / 0), this.furthestDistance = null !== (qk = kk.furthestDistance) && void 0 !== qk ? qk : Math.max(64, this.closestDistance);
-        const tk = (0, Tk.h)(this.base.heading, this.base.pitch, this.forward),
-          Zk = Xk.position,
-          jk = this.closestDistance;
-        this.goal = [Zk[0] + tk[0] * jk, Zk[1] + tk[1] * jk, Zk[2] + tk[2] * jk, jk, this.base.heading, this.base.pitch]
+          heading: (0, Am.t)((0, Rm.j)(null !== (am = mm.viewHeading) && void 0 !== am ? am : 0)),
+          pitch: (0, Am.g)((0, Rm.j)(null !== (xm = mm.viewElevation) && void 0 !== xm ? xm : 45))
+        }, this.closestDistance = null !== (wm = mm.closestDistance) && void 0 !== wm ? wm : Math.min(6, null !== (Dm = mm.furthestDistance) && void 0 !== Dm ? Dm : 1 / 0), this.furthestDistance = null !== (im = mm.furthestDistance) && void 0 !== im ? im : Math.max(64, this.closestDistance);
+        const pm = (0, Am.d)(this.base.heading, this.base.pitch, this.forward),
+          Em = hm.position,
+          om = this.closestDistance;
+        this.goal = [Em[0] + pm[0] * om, Em[1] + pm[1] * om, Em[2] + pm[2] * om, om, this.base.heading, this.base.pitch]
       }
-      update(kk, Fk, Ik) {
-        var Xk, ik;
-        this.placeGoal(null !== (Xk = this.settings.fov) && void 0 !== Xk ? Xk : this.XZ.getBaseFov()), this.goal[4] = (0, Tk.F)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
-        const yk = null !== (ik = this.settings.smoothMs) && void 0 !== ik ? ik : 400;
-        !this.started || yk < 1 ? (Zk(this.goal, this.smoothed), this.TH.fill(0), this.started = !0) : ek(this.smoothed, this.TH, this.goal, yk, kk), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, Tk.k)(this.smoothed[5]), Fk.apply(this.angles, Ik);
-        const lk = (0, Tk.h)(Ik.heading, Ik.pitch, this.forward);
-        for (let Tk = 0; Tk < 3; Tk++) Ik.position[Tk] = this.smoothed[Tk] - lk[Tk] * this.smoothed[3];
-        Ik.fov = jk(this.settings, this.XZ)
+      update(mm, Tm, fm) {
+        var hm, am;
+        this.placeGoal(null !== (hm = this.settings.fov) && void 0 !== hm ? hm : this.oE.getBaseFov()), this.goal[4] = (0, Am.x)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
+        const xm = null !== (am = this.settings.smoothMs) && void 0 !== am ? am : 400;
+        !this.started || xm < 1 ? (Em(this.goal, this.smoothed), this.qq.fill(0), this.started = !0) : Om(this.smoothed, this.qq, this.goal, xm, mm), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, Am.g)(this.smoothed[5]), Tm.apply(this.angles, fm);
+        const wm = (0, Am.d)(fm.heading, fm.pitch, this.forward);
+        for (let Am = 0; Am < 3; Am++) fm.position[Am] = this.smoothed[Am] - wm[Am] * this.smoothed[3];
+        fm.fov = om(this.settings, this.oE)
       }
-      continueFrom(kk) {
-        kk instanceof wk && (Zk(kk.goal, this.goal), Zk(kk.smoothed, this.smoothed), Zk(kk.TH, this.TH), this.framedTargets = kk.framedTargets, this.started = kk.started)
+      continueFrom(mm) {
+        mm instanceof Ym && (Em(mm.goal, this.goal), Em(mm.smoothed, this.smoothed), Em(mm.qq, this.qq), this.framedTargets = mm.framedTargets, this.started = mm.started)
       }
       reset() {
-        this.TH.fill(0), this.started = !1
+        this.qq.fill(0), this.started = !1
       }
-      placeGoal(kk) {
-        var Fk;
-        let Ik = 0;
-        for (const Lk of this.settings.targets) {
-          const kk = this.targets.currentAimPoint(Lk);
-          kk && (0, ak.f)(kk, this.pointAt(Ik++))
+      placeGoal(mm) {
+        var Tm;
+        let fm = 0;
+        for (const Rm of this.settings.targets) {
+          const mm = this.targets.currentAimPoint(Rm);
+          mm && (0, Dm.j)(mm, this.pointAt(fm++))
         }
-        if (Ik > 0) this.framedTargets = !0;
+        if (fm > 0) this.framedTargets = !0;
         else if (!this.framedTargets) {
-          const kk = this.targets.aimPoint(this.XZ.localPlayerId);
-          kk && (0, ak.f)(kk, this.pointAt(Ik++))
+          const mm = this.targets.aimPoint(this.oE.localPlayerId);
+          mm && (0, Dm.j)(mm, this.pointAt(fm++))
         }
-        const Xk = this.goal;
-        if (0 === Ik) return void(Xk[3] = this.withinDistances(Xk[3]));
-        for (let ak = 0; ak < 3; ak++) {
-          let kk = 1 / 0,
-            Fk = -1 / 0;
-          for (let Xk = 0; Xk < Ik; Xk++) kk = Math.min(kk, this.points[Xk][ak]), Fk = Math.max(Fk, this.points[Xk][ak]);
-          Xk[ak] = (kk + Fk) / 2
+        const hm = this.goal;
+        if (0 === fm) return void(hm[3] = this.withinDistances(hm[3]));
+        for (let Dm = 0; Dm < 3; Dm++) {
+          let mm = 1 / 0,
+            Tm = -1 / 0;
+          for (let hm = 0; hm < fm; hm++) mm = Math.min(mm, this.points[hm][Dm]), Tm = Math.max(Tm, this.points[hm][Dm]);
+          hm[Dm] = (mm + Tm) / 2
         }
-        let Tk = 0;
-        for (let ak = 0; ak < Ik; ak++) {
-          const kk = this.points[ak];
-          Tk = Math.max(Tk, Math.hypot(kk[0] - Xk[0], kk[1] - Xk[1], kk[2] - Xk[2]))
+        let Am = 0;
+        for (let Dm = 0; Dm < fm; Dm++) {
+          const mm = this.points[Dm];
+          Am = Math.max(Am, Math.hypot(mm[0] - hm[0], mm[1] - hm[1], mm[2] - hm[2]))
         }
-        const ik = Math.tan((0, Lk.k)(kk) / 2),
-          yk = Math.atan(ik * (!0 === this.settings.letterbox ? tk.h : 1)),
-          lk = Math.atan(ik * this.XZ.getAspectRatio()),
-          qk = (Tk + (null !== (Fk = this.settings.padding) && void 0 !== Fk ? Fk : 2)) / Math.sin(Math.min(yk, lk));
-        Xk[3] = this.withinDistances(qk)
+        const am = Math.tan((0, Rm.j)(mm) / 2),
+          xm = Math.atan(am * (!0 === this.settings.letterbox ? pm.f : 1)),
+          wm = Math.atan(am * this.oE.getAspectRatio()),
+          im = (Am + (null !== (Tm = this.settings.padding) && void 0 !== Tm ? Tm : 2)) / Math.sin(Math.min(xm, wm));
+        hm[3] = this.withinDistances(im)
       }
-      withinDistances(kk) {
-        return Math.min(this.furthestDistance, Math.max(this.closestDistance, kk))
+      withinDistances(mm) {
+        return Math.min(this.furthestDistance, Math.max(this.closestDistance, mm))
       }
-      pointAt(kk) {
-        return kk === this.points.length && this.points.push([0, 0, 0]), this.points[kk]
+      pointAt(mm) {
+        return mm === this.points.length && this.points.push([0, 0, 0]), this.points[mm]
       }
     }
-    class Hk {
-      constructor(kk) {
-        this.limits = kk, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
+    class qm {
+      constructor(mm) {
+        this.limits = mm, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
       }
-      continueFrom(kk) {
-        this.limits && (this.yawOffset = kk.yawOffset, this.pitchOffset = kk.pitchOffset, this.idleMs = kk.idleMs)
+      continueFrom(mm) {
+        this.limits && (this.yawOffset = mm.yawOffset, this.pitchOffset = mm.pitchOffset, this.idleMs = mm.idleMs)
       }
-      update(kk, Fk) {
-        const Ik = this.limits;
-        if (!Ik) return;
-        const Xk = Number.isFinite(Fk.JG) ? Fk.JG : 0,
-          Tk = Number.isFinite(Fk.xG) ? Fk.xG : 0;
-        if (Fk.pointedAt) this.idleMs = 0, this.pointedAt = {
-          heading: Fk.pointedAt.heading,
-          pitch: Fk.pointedAt.pitch
+      update(mm, Tm) {
+        const fm = this.limits;
+        if (!fm) return;
+        const hm = Number.isFinite(Tm.XN) ? Tm.XN : 0,
+          Am = Number.isFinite(Tm.yN) ? Tm.yN : 0;
+        if (Tm.pointedAt) this.idleMs = 0, this.pointedAt = {
+          heading: Tm.pointedAt.heading,
+          pitch: Tm.pointedAt.pitch
         };
-        else if (0 !== Xk || 0 !== Tk) this.idleMs = 0, this.yawOffset += Xk, this.pitchOffset += Tk;
+        else if (0 !== hm || 0 !== Am) this.idleMs = 0, this.yawOffset += hm, this.pitchOffset += Am;
         else {
-          const Fk = Math.max(0, this.idleMs + kk - 200) - Math.max(0, this.idleMs - 200);
-          if (this.idleMs += kk, void 0 !== Ik.returnMs && Fk > 0) {
-            const kk = Ik.returnMs > 0 ? Math.exp(-3 * Fk / Ik.returnMs) : 0;
-            this.yawOffset *= kk, this.pitchOffset *= kk
+          const Tm = Math.max(0, this.idleMs + mm - 200) - Math.max(0, this.idleMs - 200);
+          if (this.idleMs += mm, void 0 !== fm.returnMs && Tm > 0) {
+            const mm = fm.returnMs > 0 ? Math.exp(-3 * Tm / fm.returnMs) : 0;
+            this.yawOffset *= mm, this.pitchOffset *= mm
           }
         }
-        this.clampOffsets(Ik)
+        this.clampOffsets(fm)
       }
-      clampOffsets(kk) {
-        if (kk.maxYaw >= 180) this.yawOffset = (0, Tk.C)(0, this.yawOffset);
+      clampOffsets(mm) {
+        if (mm.maxYaw >= 180) this.yawOffset = (0, Am.u)(0, this.yawOffset);
         else {
-          const Fk = (0, Lk.k)(kk.maxYaw);
-          this.yawOffset = Math.max(-Fk, Math.min(Fk, this.yawOffset))
+          const Tm = (0, Rm.j)(mm.maxYaw);
+          this.yawOffset = Math.max(-Tm, Math.min(Tm, this.yawOffset))
         }
-        const Fk = (0, Lk.k)(kk.maxPitch);
-        this.pitchOffset = Math.max(-Fk, Math.min(Fk, this.pitchOffset))
+        const Tm = (0, Rm.j)(mm.maxPitch);
+        this.pitchOffset = Math.max(-Tm, Math.min(Tm, this.pitchOffset))
       }
-      apply(kk, Fk) {
-        this.pointedAt && this.limits && (this.yawOffset = (0, Tk.C)(kk.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - kk.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
-        const Ik = (0, Tk.k)(kk.pitch + this.pitchOffset);
-        this.pitchOffset = Ik - kk.pitch, Fk.heading = (0, Tk.y)(kk.heading + this.yawOffset), Fk.pitch = Ik
+      apply(mm, Tm) {
+        this.pointedAt && this.limits && (this.yawOffset = (0, Am.u)(mm.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - mm.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
+        const fm = (0, Am.g)(mm.pitch + this.pitchOffset);
+        this.pitchOffset = fm - mm.pitch, Tm.heading = (0, Am.t)(mm.heading + this.yawOffset), Tm.pitch = fm
       }
-      unapply(kk, Fk) {
-        Fk.heading = (0, Tk.y)(kk.heading - this.yawOffset), Fk.pitch = (0, Tk.k)(kk.pitch - this.pitchOffset)
+      unapply(mm, Tm) {
+        Tm.heading = (0, Am.t)(mm.heading - this.yawOffset), Tm.pitch = (0, Am.g)(mm.pitch - this.pitchOffset)
       }
     }
-    const Jk = 1e-6;
+    const jm = 1e-6;
 
-    function xk(kk) {
-      return Math.sqrt(kk[0] * kk[0] + kk[1] * kk[1] + kk[2] * kk[2])
+    function Vm(mm) {
+      return Math.sqrt(mm[0] * mm[0] + mm[1] * mm[1] + mm[2] * mm[2])
     }
 
-    function Pk(kk, Fk, Ik, Xk, Tk) {
-      const ik = Tk * Tk,
-        yk = ik * Tk;
-      return (2 * yk - 3 * ik + 1) * kk + (yk - 2 * ik + Tk) * Fk + (-2 * yk + 3 * ik) * Ik + (yk - ik) * Xk
+    function Im(mm, Tm, fm, hm, Am) {
+      const am = Am * Am,
+        xm = am * Am;
+      return (2 * xm - 3 * am + 1) * mm + (xm - 2 * am + Am) * Tm + (-2 * xm + 3 * am) * fm + (xm - am) * hm
     }
 
-    function Kk(kk, Fk, Ik, Xk, Tk) {
-      const ik = Tk * Tk;
-      return (6 * ik - 6 * Tk) * kk + (3 * ik - 4 * Tk + 1) * Fk + (-6 * ik + 6 * Tk) * Ik + (3 * ik - 2 * Tk) * Xk
+    function Km(mm, Tm, fm, hm, Am) {
+      const am = Am * Am;
+      return (6 * am - 6 * Am) * mm + (3 * am - 4 * Am + 1) * Tm + (-6 * am + 6 * Am) * fm + (3 * am - 2 * Am) * hm
     }
 
-    function Qk(kk, Fk) {
-      const Ik = Fk[0] - kk[0],
-        Xk = Fk[1] - kk[1],
-        Tk = Fk[2] - kk[2];
-      return Math.sqrt(Ik * Ik + Xk * Xk + Tk * Tk)
+    function Qm(mm, Tm) {
+      const fm = Tm[0] - mm[0],
+        hm = Tm[1] - mm[1],
+        Am = Tm[2] - mm[2];
+      return Math.sqrt(fm * fm + hm * hm + Am * Am)
     }
 
-    function sk(kk, Fk, Ik, Xk, Tk, ik) {
-      for (let yk = 0; yk < 3; yk++) ik[yk] = Tk ? kk[yk] * Xk : Ik[yk] - Fk[yk];
-      return Tk && function(kk, Fk) {
-        const Ik = xk(kk);
-        if (Ik > Fk) {
-          const Xk = Fk / Ik;
-          kk[0] *= Xk, kk[1] *= Xk, kk[2] *= Xk
+    function nm(mm, Tm, fm, hm, Am, am) {
+      for (let xm = 0; xm < 3; xm++) am[xm] = Am ? mm[xm] * hm : fm[xm] - Tm[xm];
+      return Am && function(mm, Tm) {
+        const fm = Vm(mm);
+        if (fm > Tm) {
+          const hm = Tm / fm;
+          mm[0] *= hm, mm[1] *= hm, mm[2] *= hm
         }
-      }(ik, 3 * Qk(Fk, Ik)), ik
+      }(am, 3 * Qm(Tm, fm)), am
     }
 
-    function Vk(kk, Fk, Ik, Xk) {
-      for (let Tk = 0; Tk < 3; Tk++) Xk[Tk] = 6 * (Fk[Tk] - kk[Tk]) - 2 * Ik[Tk];
-      if (xk(Xk) < Jk)
-        for (let Tk = 0; Tk < 3; Tk++) Xk[Tk] = Fk[Tk] - kk[Tk];
-      return Xk
+    function Jm(mm, Tm, fm, hm) {
+      for (let Am = 0; Am < 3; Am++) hm[Am] = 6 * (Tm[Am] - mm[Am]) - 2 * fm[Am];
+      if (Vm(hm) < jm)
+        for (let Am = 0; Am < 3; Am++) hm[Am] = Tm[Am] - mm[Am];
+      return hm
     }
 
-    function zk(kk, Fk) {
-      return [2 * Fk[0] - kk[0], 2 * Fk[1] - kk[1], 2 * Fk[2] - kk[2]]
+    function cm(mm, Tm) {
+      return [2 * Tm[0] - mm[0], 2 * Tm[1] - mm[1], 2 * Tm[2] - mm[2]]
     }
 
-    function Sk(kk, Fk, Ik, Xk, Tk, ik, yk) {
-      if (!ik && !yk) return 0;
-      const lk = ik ? kk : 2 * Fk - Ik,
-        ak = yk ? Ik : 2 * Fk - kk,
-        qk = ik ? Xk : Tk,
-        Lk = yk ? Tk : Xk,
-        tk = (Fk - lk) / qk,
-        Zk = (ak - Fk) / Lk;
-      if (tk * Zk <= 0) return 0;
-      const jk = (ak - lk) / (qk + Lk),
-        ek = 3 * Math.min(Math.abs(tk), Math.abs(Zk));
-      return Math.max(-ek, Math.min(ek, jk))
+    function zm(mm, Tm, fm, hm, Am, am, xm) {
+      if (!am && !xm) return 0;
+      const wm = am ? mm : 2 * Tm - fm,
+        Dm = xm ? fm : 2 * Tm - mm,
+        im = am ? hm : Am,
+        Rm = xm ? Am : hm,
+        pm = (Tm - wm) / im,
+        Em = (Dm - Tm) / Rm;
+      if (pm * Em <= 0) return 0;
+      const om = (Dm - wm) / (im + Rm),
+        Om = 3 * Math.min(Math.abs(pm), Math.abs(Em));
+      return Math.max(-Om, Math.min(Om, om))
     }
 
-    function vk(kk, Fk, Ik, Xk, Tk, ik, yk) {
+    function Zm(mm, Tm, fm, hm, Am, am, xm) {
       const {
-        u: lk,
-        segmentMs: ak
-      } = kk;
-      if (!kk.curved) return Ik + (Xk - Ik) * lk;
-      return Pk(Ik, Sk(Fk, Ik, Xk, kk.beforeMs, ak, ik, !0) * ak, Xk, Sk(Ik, Xk, Tk, ak, kk.afterMs, !0, yk) * ak, lk)
+        u: wm,
+        segmentMs: Dm
+      } = mm;
+      if (!mm.curved) return fm + (hm - fm) * wm;
+      return Im(fm, zm(Tm, fm, hm, mm.beforeMs, Dm, am, !0) * Dm, hm, zm(fm, hm, Am, Dm, mm.afterMs, !0, xm) * Dm, wm)
     }
 
-    function Ek(kk) {
-      return Math.abs(kk.pitch) >= Tk.d
+    function km(mm) {
+      return Math.abs(mm.pitch) >= Am.b
     }
-    class Ok {
-      constructor(kk, Fk, Ik, Xk, Tk) {
-        this.nodes = kk, this.prevNodes = Ik, this.nextNodes = Xk, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
+    class bm {
+      constructor(mm, Tm, fm, hm, Am) {
+        this.nodes = mm, this.prevNodes = fm, this.nextNodes = hm, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
           heading: 0,
           pitch: 0
         }, this.fromAngles = {
@@ -540,84 +540,84 @@ export const modules = {
         }, this.borrowedAngles = {
           heading: 0,
           pitch: 0
-        }, this.tangents = kk.map(((kk, Ik) => this.nodeTangent(Fk, Tk, Ik)))
+        }, this.tangents = mm.map(((mm, fm) => this.nodeTangent(Tm, Am, fm)))
       }
-      sample(kk, Fk, Ik) {
+      sample(mm, Tm, fm) {
         const {
-          index: Xk,
-          toIndex: ik,
-          segmentMs: yk,
-          curved: lk
-        } = kk, ak = this.fromAngles, qk = this.toAngles, Lk = this.nodeAngles(Xk, Ik.position, Fk, ak), tk = this.nodeAngles(ik, Ik.position, Fk, qk);
-        if (yk > 0 && "aim" !== Lk && "aim" !== tk && this.liveTangent(kk, ak)) return Ik.heading = (0, Tk.y)(ak.heading), void(Ik.pitch = ak.pitch);
-        if ("none" === Lk && "none" === tk) return;
-        !lk && yk > 0 && ("tangent" === Lk && this.liveTangent(kk, ak), "tangent" === tk && this.liveTangent(kk, qk)), "none" === Lk ? (0, Tk.l)(qk, ak) : "none" === tk && (0, Tk.l)(ak, qk);
-        const Zk = lk && kk.beforeIndex >= 0 && "none" !== this.nodeAngles(kk.beforeIndex, Ik.position, Fk, this.beforeAngles),
-          jk = lk && kk.afterIndex >= 0 && "none" !== this.nodeAngles(kk.afterIndex, Ik.position, Fk, this.afterAngles),
-          ek = (0, Tk.F)(ak.heading, qk.heading),
-          wk = vk(kk, Zk ? (0, Tk.F)(ak.heading, this.beforeAngles.heading) : 0, ak.heading, ek, jk ? (0, Tk.F)(ek, this.afterAngles.heading) : 0, Zk, jk);
-        Ik.heading = (0, Tk.y)(wk), Ik.pitch = (0, Tk.k)(vk(kk, this.beforeAngles.pitch, ak.pitch, qk.pitch, this.afterAngles.pitch, Zk, jk))
+          index: hm,
+          toIndex: am,
+          segmentMs: xm,
+          curved: wm
+        } = mm, Dm = this.fromAngles, im = this.toAngles, Rm = this.nodeAngles(hm, fm.position, Tm, Dm), pm = this.nodeAngles(am, fm.position, Tm, im);
+        if (xm > 0 && "aim" !== Rm && "aim" !== pm && this.liveTangent(mm, Dm)) return fm.heading = (0, Am.t)(Dm.heading), void(fm.pitch = Dm.pitch);
+        if ("none" === Rm && "none" === pm) return;
+        !wm && xm > 0 && ("tangent" === Rm && this.liveTangent(mm, Dm), "tangent" === pm && this.liveTangent(mm, im)), "none" === Rm ? (0, Am.k)(im, Dm) : "none" === pm && (0, Am.k)(Dm, im);
+        const Em = wm && mm.beforeIndex >= 0 && "none" !== this.nodeAngles(mm.beforeIndex, fm.position, Tm, this.beforeAngles),
+          om = wm && mm.afterIndex >= 0 && "none" !== this.nodeAngles(mm.afterIndex, fm.position, Tm, this.afterAngles),
+          Om = (0, Am.x)(Dm.heading, im.heading),
+          Ym = Zm(mm, Em ? (0, Am.x)(Dm.heading, this.beforeAngles.heading) : 0, Dm.heading, Om, om ? (0, Am.x)(Om, this.afterAngles.heading) : 0, Em, om);
+        fm.heading = (0, Am.t)(Ym), fm.pitch = (0, Am.g)(Zm(mm, this.beforeAngles.pitch, Dm.pitch, im.pitch, this.afterAngles.pitch, Em, om))
       }
-      nodeAngles(kk, Fk, Ik, Xk) {
-        const Tk = this.rawNodeAngles(kk, Fk, Ik, Xk);
-        return "none" !== Tk && Ek(Xk) && !this.borrowHeading(this.prevNodes[kk], Fk, Ik, Xk) && this.borrowHeading(this.nextNodes[kk], Fk, Ik, Xk), Tk
+      nodeAngles(mm, Tm, fm, hm) {
+        const Am = this.rawNodeAngles(mm, Tm, fm, hm);
+        return "none" !== Am && km(hm) && !this.borrowHeading(this.prevNodes[mm], Tm, fm, hm) && this.borrowHeading(this.nextNodes[mm], Tm, fm, hm), Am
       }
-      borrowHeading(kk, Fk, Ik, Xk) {
-        const Tk = this.borrowedAngles;
-        return !(kk < 0 || "none" === this.rawNodeAngles(kk, Fk, Ik, Tk) || Ek(Tk)) && (Xk.heading = Tk.heading, !0)
+      borrowHeading(mm, Tm, fm, hm) {
+        const Am = this.borrowedAngles;
+        return !(mm < 0 || "none" === this.rawNodeAngles(mm, Tm, fm, Am) || km(Am)) && (hm.heading = Am.heading, !0)
       }
-      rawNodeAngles(kk, Fk, Ik, Xk) {
-        const ik = this.nodes[kk].keyframe;
-        if (ik.lookDirection) return (0, Tk.n)(ik.lookDirection, Xk), "aim";
-        if (void 0 !== ik.lookAt) {
-          const kk = Ik(ik.lookAt);
-          if (kk) return (0, Tk.u)(Fk, kk, Xk), "aim"
+      rawNodeAngles(mm, Tm, fm, hm) {
+        const am = this.nodes[mm].keyframe;
+        if (am.lookDirection) return (0, Am.n)(am.lookDirection, hm), "aim";
+        if (void 0 !== am.lookAt) {
+          const mm = fm(am.lookAt);
+          if (mm) return (0, Am.r)(Tm, mm, hm), "aim"
         }
-        const yk = this.tangents[kk];
-        return yk ? ((0, Tk.l)(yk, Xk), "tangent") : "none"
+        const xm = this.tangents[mm];
+        return xm ? ((0, Am.k)(xm, hm), "tangent") : "none"
       }
-      liveTangent(kk, Fk) {
-        const Ik = this.nodes[kk.index].position,
-          Xk = this.nodes[kk.toIndex].position,
-          ik = this.derivative;
-        for (let Tk = 0; Tk < 3; Tk++) ik[Tk] = Kk(Ik[Tk], kk.fromTangent[Tk], Xk[Tk], kk.toTangent[Tk], kk.u);
-        return xk(ik) > 1e-9 ? ((0, Tk.n)(ik, Fk), !0) : !(Qk(Ik, Xk) < Jk) && ((0, Tk.n)(Vk(Ik, Xk, kk.u < .5 ? kk.toTangent : kk.fromTangent, ik), Fk), !0)
+      liveTangent(mm, Tm) {
+        const fm = this.nodes[mm.index].position,
+          hm = this.nodes[mm.toIndex].position,
+          am = this.derivative;
+        for (let Am = 0; Am < 3; Am++) am[Am] = Km(fm[Am], mm.fromTangent[Am], hm[Am], mm.toTangent[Am], mm.u);
+        return Vm(am) > 1e-9 ? ((0, Am.n)(am, Tm), !0) : !(Qm(fm, hm) < jm) && ((0, Am.n)(Jm(fm, hm, mm.u < .5 ? mm.toTangent : mm.fromTangent, am), Tm), !0)
       }
-      nodeTangent(kk, Fk, Ik) {
-        var Xk;
-        const ik = kk[Ik];
-        if (xk(ik) > 1e-9) return (0, Tk.n)(ik, {
+      nodeTangent(mm, Tm, fm) {
+        var hm;
+        const am = mm[fm];
+        if (Vm(am) > 1e-9) return (0, Am.n)(am, {
           heading: 0,
           pitch: 0
         });
-        const yk = null !== (Xk = this.restDirectionTo(Ik, Ik + 1, kk, Fk)) && void 0 !== Xk ? Xk : this.restDirectionTo(Ik, Ik - 1, kk, Fk);
-        return yk ? (0, Tk.n)(yk, {
+        const xm = null !== (hm = this.restDirectionTo(fm, fm + 1, mm, Tm)) && void 0 !== hm ? hm : this.restDirectionTo(fm, fm - 1, mm, Tm);
+        return xm ? (0, Am.n)(xm, {
           heading: 0,
           pitch: 0
         }) : null
       }
-      restDirectionTo(kk, Fk, Ik, Xk) {
-        const Tk = this.nodes[kk],
-          ik = this.nodes[Fk];
-        if (!ik || Qk(Tk.position, ik.position) < Jk) return null;
-        const [yk, lk] = Fk > kk ? [Tk, ik] : [ik, Tk], ak = sk(Ik[Fk], yk.position, lk.position, lk.timeMs - yk.timeMs, Xk, [0, 0, 0]);
-        return Vk(yk.position, lk.position, ak, [0, 0, 0])
+      restDirectionTo(mm, Tm, fm, hm) {
+        const Am = this.nodes[mm],
+          am = this.nodes[Tm];
+        if (!am || Qm(Am.position, am.position) < jm) return null;
+        const [xm, wm] = Tm > mm ? [Am, am] : [am, Am], Dm = nm(fm[Tm], xm.position, wm.position, wm.timeMs - xm.timeMs, hm, [0, 0, 0]);
+        return Jm(xm.position, wm.position, Dm, [0, 0, 0])
       }
     }
 
-    function nk(kk, Fk) {
-      const Ik = kk.lookDirection || Fk.lookDirection ? function(kk, Fk) {
-        if (!kk || !Fk) return kk === Fk;
-        const Ik = xk(kk),
-          Xk = xk(Fk);
-        return Math.hypot(kk[0] / Ik - Fk[0] / Xk, kk[1] / Ik - Fk[1] / Xk, kk[2] / Ik - Fk[2] / Xk) < Jk
-      }(kk.lookDirection, Fk.lookDirection) : (Xk = kk.lookAt, Tk = Fk.lookAt, "object" !== typeof Xk || "object" !== typeof Tk ? Xk === Tk : Qk(Xk, Tk) < Jk);
-      var Xk, Tk;
-      return Qk(kk.position, Fk.position) < Jk && kk.fov === Fk.fov && Ik
+    function Sm(mm, Tm) {
+      const fm = mm.lookDirection || Tm.lookDirection ? function(mm, Tm) {
+        if (!mm || !Tm) return mm === Tm;
+        const fm = Vm(mm),
+          hm = Vm(Tm);
+        return Math.hypot(mm[0] / fm - Tm[0] / hm, mm[1] / fm - Tm[1] / hm, mm[2] / fm - Tm[2] / hm) < jm
+      }(mm.lookDirection, Tm.lookDirection) : (hm = mm.lookAt, Am = Tm.lookAt, "object" !== typeof hm || "object" !== typeof Am ? hm === Am : Qm(hm, Am) < jm);
+      var hm, Am;
+      return Qm(mm.position, Tm.position) < jm && mm.fov === Tm.fov && fm
     }
-    class Gk {
-      constructor(kk, Fk, Ik) {
-        if (this.smooth = Fk, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
+    class em {
+      constructor(mm, Tm, fm) {
+        if (this.smooth = Tm, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
             index: 0,
             toIndex: 0,
             u: 0,
@@ -629,306 +629,306 @@ export const modules = {
             afterMs: 0,
             fromTangent: [0, 0, 0],
             toTangent: [0, 0, 0]
-          }, 0 === kk.length) throw new Error("A camera path needs at least one keyframe");
-        for (let ik = 1; ik < kk.length; ik++)
-          if (!(kk[ik].timeMs > kk[ik - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
-        this.nodes = kk.map((kk => {
-          var Fk;
+          }, 0 === mm.length) throw new Error("A camera path needs at least one keyframe");
+        for (let am = 1; am < mm.length; am++)
+          if (!(mm[am].timeMs > mm[am - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
+        this.nodes = mm.map((mm => {
+          var Tm;
           return {
-            timeMs: kk.timeMs,
-            position: [...kk.position],
-            keyframe: kk,
-            easing: (0, ik.r)(null !== (Fk = kk.easing) && void 0 !== Fk ? Fk : "linear")
+            timeMs: mm.timeMs,
+            position: [...mm.position],
+            keyframe: mm,
+            easing: (0, am.t)(null !== (Tm = mm.easing) && void 0 !== Tm ? Tm : "linear")
           }
         }));
-        const Xk = this.nodes[0],
-          Tk = this.nodes[this.nodes.length - 1],
-          yk = Ik && this.nodes.length > 1;
-        yk && !nk(Xk.keyframe, Tk.keyframe) && this.nodes.push({
-          ...Xk,
-          timeMs: Tk.timeMs + (Tk.timeMs - Xk.timeMs) / (this.nodes.length - 1)
-        }), this.loopMs = yk ? this.nodes[this.nodes.length - 1].timeMs - Xk.timeMs : 0, this.prevNodes = this.nodes.map(((kk, Fk) => this.neighbour(Fk, -1))), this.nextNodes = this.nodes.map(((kk, Fk) => this.neighbour(Fk, 1))), this.prevGaps = this.prevNodes.map(((kk, Fk) => kk >= 0 ? this.gapMs(Fk, -1) : 0)), this.nextGaps = this.nextNodes.map(((kk, Fk) => kk >= 0 ? this.gapMs(Fk, 1) : 0)), this.velocities = this.nodes.map(((kk, Fk) => {
-          const Ik = this.prevNodes[Fk],
-            Xk = this.nextNodes[Fk];
-          return function(kk, Fk, Ik, Xk, Tk, ik) {
-            if (ik[0] = 0, ik[1] = 0, ik[2] = 0, !kk && !Ik) return ik;
-            const yk = null !== kk && void 0 !== kk ? kk : zk(null !== Ik && void 0 !== Ik ? Ik : Fk, Fk),
-              lk = null !== Ik && void 0 !== Ik ? Ik : zk(null !== kk && void 0 !== kk ? kk : Fk, Fk),
-              ak = kk ? Xk : Tk,
-              qk = Ik ? Tk : Xk,
-              Lk = Qk(yk, Fk),
-              tk = Qk(Fk, lk);
-            if (Lk < Jk || tk < Jk) return ik;
-            const Zk = Math.sqrt(Lk),
-              jk = Math.sqrt(tk),
-              ek = (Zk + jk) / (ak + qk);
-            for (let wk = 0; wk < 3; wk++) {
-              const kk = (Fk[wk] - yk[wk]) / Zk - (lk[wk] - yk[wk]) / (Zk + jk) + (lk[wk] - Fk[wk]) / jk;
-              ik[wk] = kk * ek
+        const hm = this.nodes[0],
+          Am = this.nodes[this.nodes.length - 1],
+          xm = fm && this.nodes.length > 1;
+        xm && !Sm(hm.keyframe, Am.keyframe) && this.nodes.push({
+          ...hm,
+          timeMs: Am.timeMs + (Am.timeMs - hm.timeMs) / (this.nodes.length - 1)
+        }), this.loopMs = xm ? this.nodes[this.nodes.length - 1].timeMs - hm.timeMs : 0, this.prevNodes = this.nodes.map(((mm, Tm) => this.neighbour(Tm, -1))), this.nextNodes = this.nodes.map(((mm, Tm) => this.neighbour(Tm, 1))), this.prevGaps = this.prevNodes.map(((mm, Tm) => mm >= 0 ? this.gapMs(Tm, -1) : 0)), this.nextGaps = this.nextNodes.map(((mm, Tm) => mm >= 0 ? this.gapMs(Tm, 1) : 0)), this.velocities = this.nodes.map(((mm, Tm) => {
+          const fm = this.prevNodes[Tm],
+            hm = this.nextNodes[Tm];
+          return function(mm, Tm, fm, hm, Am, am) {
+            if (am[0] = 0, am[1] = 0, am[2] = 0, !mm && !fm) return am;
+            const xm = null !== mm && void 0 !== mm ? mm : cm(null !== fm && void 0 !== fm ? fm : Tm, Tm),
+              wm = null !== fm && void 0 !== fm ? fm : cm(null !== mm && void 0 !== mm ? mm : Tm, Tm),
+              Dm = mm ? hm : Am,
+              im = fm ? Am : hm,
+              Rm = Qm(xm, Tm),
+              pm = Qm(Tm, wm);
+            if (Rm < jm || pm < jm) return am;
+            const Em = Math.sqrt(Rm),
+              om = Math.sqrt(pm),
+              Om = (Em + om) / (Dm + im);
+            for (let Ym = 0; Ym < 3; Ym++) {
+              const mm = (Tm[Ym] - xm[Ym]) / Em - (wm[Ym] - xm[Ym]) / (Em + om) + (wm[Ym] - Tm[Ym]) / om;
+              am[Ym] = mm * Om
             }
-            return ik
-          }(Ik >= 0 ? this.nodes[Ik].position : null, kk.position, Xk >= 0 ? this.nodes[Xk].position : null, this.prevGaps[Fk], this.nextGaps[Fk], [0, 0, 0])
-        })), this.aim = new Ok(this.nodes, this.velocities, this.prevNodes, this.nextNodes, Fk)
+            return am
+          }(fm >= 0 ? this.nodes[fm].position : null, mm.position, hm >= 0 ? this.nodes[hm].position : null, this.prevGaps[Tm], this.nextGaps[Tm], [0, 0, 0])
+        })), this.aim = new bm(this.nodes, this.velocities, this.prevNodes, this.nextNodes, Tm)
       }
-      sample(kk, Fk, Ik, Xk) {
-        const Tk = this.findSegment(this.pathTime(kk));
-        this.samplePosition(Tk, Xk.position), this.aim.sample(Tk, Fk, Xk);
+      sample(mm, Tm, fm, hm) {
+        const Am = this.findSegment(this.pathTime(mm));
+        this.samplePosition(Am, hm.position), this.aim.sample(Am, Tm, hm);
         const {
-          beforeIndex: ik,
-          afterIndex: yk
-        } = Tk;
-        Xk.fov = vk(Tk, ik >= 0 ? this.fovAt(ik, Ik) : 0, this.fovAt(Tk.index, Ik), this.fovAt(Tk.toIndex, Ik), yk >= 0 ? this.fovAt(yk, Ik) : 0, ik >= 0, yk >= 0)
+          beforeIndex: am,
+          afterIndex: xm
+        } = Am;
+        hm.fov = Zm(Am, am >= 0 ? this.fovAt(am, fm) : 0, this.fovAt(Am.index, fm), this.fovAt(Am.toIndex, fm), xm >= 0 ? this.fovAt(xm, fm) : 0, am >= 0, xm >= 0)
       }
-      pathTime(kk) {
-        const Fk = this.nodes[0].timeMs;
-        if (this.loopMs <= 0 || kk <= Fk) return kk;
-        const Ik = kk - Fk;
-        return Fk + Ik - this.loopMs * Math.floor(Ik / this.loopMs)
+      pathTime(mm) {
+        const Tm = this.nodes[0].timeMs;
+        if (this.loopMs <= 0 || mm <= Tm) return mm;
+        const fm = mm - Tm;
+        return Tm + fm - this.loopMs * Math.floor(fm / this.loopMs)
       }
-      findSegment(kk) {
-        const Fk = this.nodes,
-          Ik = this.segment;
-        let Xk = Ik.index;
-        for (kk < Fk[Xk].timeMs && (Xk = 0); Xk < Fk.length - 2 && Fk[Xk + 1].timeMs <= kk;) Xk++;
-        const Tk = Math.min(Xk + 1, Fk.length - 1),
-          yk = Fk[Tk].timeMs - Fk[Xk].timeMs;
-        return Ik.index = Xk, Ik.toIndex = Tk, Ik.segmentMs = yk, Ik.u = yk > 0 ? (0, ik.o)((kk - Fk[Xk].timeMs) / yk, Fk[Xk].easing) : 1, Ik.curved = this.smooth && yk > 0, Ik.beforeIndex = this.prevNodes[Xk], Ik.afterIndex = this.nextNodes[Tk], Ik.beforeMs = this.prevGaps[Xk], Ik.afterMs = this.nextGaps[Tk], Ik
+      findSegment(mm) {
+        const Tm = this.nodes,
+          fm = this.segment;
+        let hm = fm.index;
+        for (mm < Tm[hm].timeMs && (hm = 0); hm < Tm.length - 2 && Tm[hm + 1].timeMs <= mm;) hm++;
+        const Am = Math.min(hm + 1, Tm.length - 1),
+          xm = Tm[Am].timeMs - Tm[hm].timeMs;
+        return fm.index = hm, fm.toIndex = Am, fm.segmentMs = xm, fm.u = xm > 0 ? (0, am.p)((mm - Tm[hm].timeMs) / xm, Tm[hm].easing) : 1, fm.curved = this.smooth && xm > 0, fm.beforeIndex = this.prevNodes[hm], fm.afterIndex = this.nextNodes[Am], fm.beforeMs = this.prevGaps[hm], fm.afterMs = this.nextGaps[Am], fm
       }
-      samplePosition(kk, Fk) {
+      samplePosition(mm, Tm) {
         const {
-          fromTangent: Ik,
-          toTangent: Xk,
-          curved: Tk
-        } = kk, ik = this.nodes[kk.index].position, yk = this.nodes[kk.toIndex].position;
-        sk(this.velocities[kk.index], ik, yk, kk.segmentMs, Tk, Ik), sk(this.velocities[kk.toIndex], ik, yk, kk.segmentMs, Tk, Xk);
-        const lk = kk.u;
-        for (let ak = 0; ak < 3; ak++) Fk[ak] = Tk ? Pk(ik[ak], Ik[ak], yk[ak], Xk[ak], lk) : ik[ak] + (yk[ak] - ik[ak]) * lk
+          fromTangent: fm,
+          toTangent: hm,
+          curved: Am
+        } = mm, am = this.nodes[mm.index].position, xm = this.nodes[mm.toIndex].position;
+        nm(this.velocities[mm.index], am, xm, mm.segmentMs, Am, fm), nm(this.velocities[mm.toIndex], am, xm, mm.segmentMs, Am, hm);
+        const wm = mm.u;
+        for (let Dm = 0; Dm < 3; Dm++) Tm[Dm] = Am ? Im(am[Dm], fm[Dm], xm[Dm], hm[Dm], wm) : am[Dm] + (xm[Dm] - am[Dm]) * wm
       }
-      fovAt(kk, Fk) {
-        var Ik;
-        return null !== (Ik = this.nodes[kk].keyframe.fov) && void 0 !== Ik ? Ik : Fk
+      fovAt(mm, Tm) {
+        var fm;
+        return null !== (fm = this.nodes[mm].keyframe.fov) && void 0 !== fm ? fm : Tm
       }
-      neighbour(kk, Fk) {
-        const Ik = this.nodes.length - 1,
-          Xk = kk + Fk;
-        return Xk >= 0 && Xk <= Ik ? Xk : this.loopMs <= 0 || Ik < 2 ? -1 : Xk < 0 ? Ik - 1 : 1
+      neighbour(mm, Tm) {
+        const fm = this.nodes.length - 1,
+          hm = mm + Tm;
+        return hm >= 0 && hm <= fm ? hm : this.loopMs <= 0 || fm < 2 ? -1 : hm < 0 ? fm - 1 : 1
       }
-      gapMs(kk, Fk) {
-        const Ik = this.nodes.length - 1;
-        if (1 === Fk) {
-          const Fk = kk === Ik ? 0 : kk;
-          return this.nodes[Fk + 1].timeMs - this.nodes[Fk].timeMs
+      gapMs(mm, Tm) {
+        const fm = this.nodes.length - 1;
+        if (1 === Tm) {
+          const Tm = mm === fm ? 0 : mm;
+          return this.nodes[Tm + 1].timeMs - this.nodes[Tm].timeMs
         }
-        const Xk = 0 === kk ? Ik : kk;
-        return this.nodes[Xk].timeMs - this.nodes[Xk - 1].timeMs
+        const hm = 0 === mm ? fm : mm;
+        return this.nodes[hm].timeMs - this.nodes[hm - 1].timeMs
       }
     }
-    class pk {
-      constructor(kk) {
-        this.XZ = kk, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = Fk => kk.getEntityPosition(Fk), this.readAimPoint = Fk => kk.getEntityAimPoint(Fk)
+    class Nm {
+      constructor(mm) {
+        this.oE = mm, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = Tm => mm.getEntityPosition(Tm), this.readAimPoint = Tm => mm.getEntityAimPoint(Tm)
       }
-      aimPoint(kk) {
-        return "string" !== typeof kk ? (0, ak.o)(kk, 3) ? kk : null : this.resolve(kk, this.readAimPoint, this.lastAimPoints)
+      aimPoint(mm) {
+        return "string" !== typeof mm ? (0, Dm.p)(mm, 3) ? mm : null : this.resolve(mm, this.readAimPoint, this.lastAimPoints)
       }
-      currentAimPoint(kk) {
-        const Fk = "string" === typeof kk ? this.XZ.getEntityAimPoint(kk) : kk;
-        return Fk && (0, ak.o)(Fk, 3) ? Fk : null
+      currentAimPoint(mm) {
+        const Tm = "string" === typeof mm ? this.oE.getEntityAimPoint(mm) : mm;
+        return Tm && (0, Dm.p)(Tm, 3) ? Tm : null
       }
-      feetPosition(kk) {
-        return this.resolve(kk, this.readFeet, this.lastFeet)
+      feetPosition(mm) {
+        return this.resolve(mm, this.readFeet, this.lastFeet)
       }
-      heading(kk) {
-        const Fk = this.XZ.getEntityHeading(kk);
-        if (null !== Fk && Number.isFinite(Fk)) return this.lastHeadings.set(kk, Fk), Fk;
-        const Ik = this.lastHeadings.get(kk);
-        return void 0 !== Ik ? Ik : kk === this.XZ.localPlayerId ? 0 : this.heading(this.XZ.localPlayerId)
+      heading(mm) {
+        const Tm = this.oE.getEntityHeading(mm);
+        if (null !== Tm && Number.isFinite(Tm)) return this.lastHeadings.set(mm, Tm), Tm;
+        const fm = this.lastHeadings.get(mm);
+        return void 0 !== fm ? fm : mm === this.oE.localPlayerId ? 0 : this.heading(this.oE.localPlayerId)
       }
-      resolve(kk, Fk, Ik) {
-        const Xk = Fk(kk);
-        let Tk = Ik.get(kk);
-        return Xk && (0, ak.o)(Xk, 3) ? (Tk || (Tk = [0, 0, 0], Ik.set(kk, Tk)), Tk[0] = Xk[0], Tk[1] = Xk[1], Tk[2] = Xk[2], Tk) : Tk || (kk === this.XZ.localPlayerId ? null : this.resolve(this.XZ.localPlayerId, Fk, Ik))
+      resolve(mm, Tm, fm) {
+        const hm = Tm(mm);
+        let Am = fm.get(mm);
+        return hm && (0, Dm.p)(hm, 3) ? (Am || (Am = [0, 0, 0], fm.set(mm, Am)), Am[0] = hm[0], Am[1] = hm[1], Am[2] = hm[2], Am) : Am || (mm === this.oE.localPlayerId ? null : this.resolve(this.oE.localPlayerId, Tm, fm))
       }
     }
 
-    function uk(kk) {
+    function Gm(mm) {
       return {
-        heading: kk.heading,
-        pitch: kk.pitch
+        heading: mm.heading,
+        pitch: mm.pitch
       }
     }
 
-    function bk(kk, Fk) {
-      Number.isFinite(kk.heading) && Number.isFinite(kk.pitch) || (0, Tk.l)(Fk, kk)
+    function Xm(mm, Tm) {
+      Number.isFinite(mm.heading) && Number.isFinite(mm.pitch) || (0, Am.k)(Tm, mm)
     }
 
-    function Rk(kk, Fk, Ik, Xk, ik) {
-      if (Fk) return void(0, Tk.n)(Fk, ik);
-      const yk = Xk.aimPoint(Ik);
-      yk && (0, Tk.u)(kk, yk, ik)
+    function Pm(mm, Tm, fm, hm, am) {
+      if (Tm) return void(0, Am.n)(Tm, am);
+      const xm = hm.aimPoint(fm);
+      xm && (0, Am.r)(mm, xm, am)
     }
-    class Uk {
-      constructor(kk, Fk, Ik, Xk) {
-        this.settings = kk, this.XZ = Fk, this.targets = Ik, this.base = void 0, this.base = uk(Xk)
+    class Hm {
+      constructor(mm, Tm, fm, hm) {
+        this.settings = mm, this.oE = Tm, this.targets = fm, this.base = void 0, this.base = Gm(hm)
       }
-      update(kk, Fk, Ik) {
-        var Xk;
-        const Tk = this.settings;
-        (0, ak.f)(Tk.position, Ik.position), Rk(Tk.position, Tk.lookDirection, null !== (Xk = Tk.lookAt) && void 0 !== Xk ? Xk : this.XZ.localPlayerId, this.targets, this.base), Fk.apply(this.base, Ik), Ik.fov = jk(Tk, this.XZ)
+      update(mm, Tm, fm) {
+        var hm;
+        const Am = this.settings;
+        (0, Dm.j)(Am.position, fm.position), Pm(Am.position, Am.lookDirection, null !== (hm = Am.lookAt) && void 0 !== hm ? hm : this.oE.localPlayerId, this.targets, this.base), Tm.apply(this.base, fm), fm.fov = om(Am, this.oE)
       }
-      continueFrom(kk) {
-        kk instanceof Uk && (0, Tk.l)(kk.base, this.base)
+      continueFrom(mm) {
+        mm instanceof Hm && (0, Am.k)(mm.base, this.base)
       }
-      reset(kk) {
-        bk(this.base, kk)
+      reset(mm) {
+        Xm(this.base, mm)
       }
     }
-    class Ck {
-      constructor(kk, Fk, Ik, Xk) {
-        this.settings = kk, this.XZ = Fk, this.targets = Ik, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.TH = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = uk(Xk), this.goal = [...Xk.position]
+    class ym {
+      constructor(mm, Tm, fm, hm) {
+        this.settings = mm, this.oE = Tm, this.targets = fm, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.qq = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = Gm(hm), this.goal = [...hm.position]
       }
-      update(kk, Fk, Ik) {
-        var Xk, Tk, ik;
-        const yk = this.settings,
-          lk = null !== (Xk = yk.target) && void 0 !== Xk ? Xk : this.XZ.localPlayerId,
-          qk = this.targets.feetPosition(lk);
-        let Lk = !1;
-        qk && (Lk = this.foundFeet && Qk(this.lastFeet, qk) > 32 + .1 * kk, (0, ak.f)(qk, this.lastFeet), this.foundFeet = !0, this.placeGoal(qk, lk));
-        const tk = null !== (Tk = yk.smoothMs) && void 0 !== Tk ? Tk : 0;
-        !this.started || tk < 1 || Lk ? ((0, ak.f)(this.goal, this.smoothed), this.TH.fill(0), this.started = !0) : ek(this.smoothed, this.TH, this.goal, tk, kk), Lk && (this.distance = -1), (0, ak.f)(this.smoothed, Ik.position);
-        const Zk = !0 === yk.avoidTerrain ? this.pullIn(lk, kk, Ik) : 1;
-        let wk = this.goal;
-        if ("target" === yk.offsetSpace) wk = Ik.position;
-        else if (Zk < 1) {
-          wk = this.aimOrigin;
-          for (let kk = 0; kk < 3; kk++) wk[kk] = Ik.position[kk] + (this.goal[kk] - this.smoothed[kk]) * Zk
+      update(mm, Tm, fm) {
+        var hm, Am, am;
+        const xm = this.settings,
+          wm = null !== (hm = xm.target) && void 0 !== hm ? hm : this.oE.localPlayerId,
+          im = this.targets.feetPosition(wm);
+        let Rm = !1;
+        im && (Rm = this.foundFeet && Qm(this.lastFeet, im) > 32 + .1 * mm, (0, Dm.j)(im, this.lastFeet), this.foundFeet = !0, this.placeGoal(im, wm));
+        const pm = null !== (Am = xm.smoothMs) && void 0 !== Am ? Am : 0;
+        !this.started || pm < 1 || Rm ? ((0, Dm.j)(this.goal, this.smoothed), this.qq.fill(0), this.started = !0) : Om(this.smoothed, this.qq, this.goal, pm, mm), Rm && (this.distance = -1), (0, Dm.j)(this.smoothed, fm.position);
+        const Em = !0 === xm.avoidTerrain ? this.pullIn(wm, mm, fm) : 1;
+        let Ym = this.goal;
+        if ("target" === xm.offsetSpace) Ym = fm.position;
+        else if (Em < 1) {
+          Ym = this.aimOrigin;
+          for (let mm = 0; mm < 3; mm++) Ym[mm] = fm.position[mm] + (this.goal[mm] - this.smoothed[mm]) * Em
         }
-        Rk(wk, yk.lookDirection, null !== (ik = yk.lookAt) && void 0 !== ik ? ik : lk, this.targets, this.base), Fk.apply(this.base, Ik), Ik.fov = jk(yk, this.XZ)
+        Pm(Ym, xm.lookDirection, null !== (am = xm.lookAt) && void 0 !== am ? am : wm, this.targets, this.base), Tm.apply(this.base, fm), fm.fov = om(xm, this.oE)
       }
-      continueFrom(kk) {
-        kk instanceof Ck && (0, Xk.u)(kk.settings.target, this.settings.target) && ((0, Tk.l)(kk.base, this.base), (0, ak.f)(kk.goal, this.goal), (0, ak.f)(kk.lastFeet, this.lastFeet), this.foundFeet = kk.foundFeet, (0, ak.f)(kk.smoothed, this.smoothed), (0, ak.f)(kk.TH, this.TH), this.started = kk.started, !0 === kk.settings.avoidTerrain && (this.distance = kk.distance))
+      continueFrom(mm) {
+        mm instanceof ym && (0, hm.p)(mm.settings.target, this.settings.target) && ((0, Am.k)(mm.base, this.base), (0, Dm.j)(mm.goal, this.goal), (0, Dm.j)(mm.lastFeet, this.lastFeet), this.foundFeet = mm.foundFeet, (0, Dm.j)(mm.smoothed, this.smoothed), (0, Dm.j)(mm.qq, this.qq), this.started = mm.started, !0 === mm.settings.avoidTerrain && (this.distance = mm.distance))
       }
-      reset(kk) {
-        bk(this.base, kk), this.TH.fill(0), this.started = !1, this.distance = -1
+      reset(mm) {
+        Xm(this.base, mm), this.qq.fill(0), this.started = !1, this.distance = -1
       }
-      pullIn(kk, Fk, Ik) {
-        const Xk = this.targets.aimPoint(kk);
-        if (!Xk) return 1;
-        const Tk = Ik.position,
-          ik = Qk(Xk, Tk);
-        if (!(ik > 0)) return 1;
-        const yk = this.toCamera;
-        for (let ak = 0; ak < 3; ak++) yk[ak] = (Tk[ak] - Xk[ak]) / ik;
-        const lk = function(kk, Fk, Ik) {
-          return kk < 0 || Fk < kk ? Fk : Fk + (kk - Fk) * Math.exp(-Ik / 150)
-        }(this.distance, function(kk, Fk, Ik, Xk) {
-          const Tk = kk.raycastTerrain(Fk, Ik, Xk);
-          return null !== Tk && Number.isFinite(Tk) ? Math.min(Xk, Math.max(0, Tk - .2)) : Xk
-        }(this.XZ, Xk, yk, ik), Fk);
-        if (ik - lk < .001) return this.distance = -1, 1;
-        this.distance = lk;
-        for (let ak = 0; ak < 3; ak++) Tk[ak] = Xk[ak] + yk[ak] * lk;
-        return lk / ik
+      pullIn(mm, Tm, fm) {
+        const hm = this.targets.aimPoint(mm);
+        if (!hm) return 1;
+        const Am = fm.position,
+          am = Qm(hm, Am);
+        if (!(am > 0)) return 1;
+        const xm = this.toCamera;
+        for (let Dm = 0; Dm < 3; Dm++) xm[Dm] = (Am[Dm] - hm[Dm]) / am;
+        const wm = function(mm, Tm, fm) {
+          return mm < 0 || Tm < mm ? Tm : Tm + (mm - Tm) * Math.exp(-fm / 150)
+        }(this.distance, function(mm, Tm, fm, hm) {
+          const Am = mm.raycastTerrain(Tm, fm, hm);
+          return null !== Am && Number.isFinite(Am) ? Math.min(hm, Math.max(0, Am - .2)) : hm
+        }(this.oE, hm, xm, am), Tm);
+        if (am - wm < .001) return this.distance = -1, 1;
+        this.distance = wm;
+        for (let Dm = 0; Dm < 3; Dm++) Am[Dm] = hm[Dm] + xm[Dm] * wm;
+        return wm / am
       }
-      placeGoal(kk, Fk) {
-        const Ik = this.settings.offset;
-        let Xk = Ik[0],
-          Tk = Ik[2];
+      placeGoal(mm, Tm) {
+        const fm = this.settings.offset;
+        let hm = fm[0],
+          Am = fm[2];
         if ("target" === this.settings.offsetSpace) {
-          const kk = this.targets.heading(Fk),
-            ik = Math.cos(kk),
-            yk = Math.sin(kk);
-          Xk = Ik[0] * ik + Ik[2] * yk, Tk = -Ik[0] * yk + Ik[2] * ik
+          const mm = this.targets.heading(Tm),
+            am = Math.cos(mm),
+            xm = Math.sin(mm);
+          hm = fm[0] * am + fm[2] * xm, Am = -fm[0] * xm + fm[2] * am
         }
-        this.goal[0] = kk[0] + Xk, this.goal[1] = kk[1] + Ik[1], this.goal[2] = kk[2] + Tk
+        this.goal[0] = mm[0] + hm, this.goal[1] = mm[1] + fm[1], this.goal[2] = mm[2] + Am
       }
     }
-    class Nk {
-      constructor(kk, Fk, Ik, Xk) {
-        var Tk, ik;
-        this.settings = kk, this.XZ = Fk, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = kk.keyframes.length > 0 ? new Gk(kk.keyframes, null === (Tk = kk.smooth) || void 0 === Tk || Tk, null !== (ik = kk.loop) && void 0 !== ik && ik) : null, this.base = (0, ak.e)(Xk, (0, ak.j)()), this.resolveTarget = kk => Ik.aimPoint(kk)
+    class Cm {
+      constructor(mm, Tm, fm, hm) {
+        var Am, am;
+        this.settings = mm, this.oE = Tm, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = mm.keyframes.length > 0 ? new em(mm.keyframes, null === (Am = mm.smooth) || void 0 === Am || Am, null !== (am = mm.loop) && void 0 !== am && am) : null, this.base = (0, Dm.h)(hm, (0, Dm.k)()), this.resolveTarget = mm => fm.aimPoint(mm)
       }
-      update(kk, Fk, Ik) {
-        this.elapsedMs += kk;
-        const Xk = jk(this.settings, this.XZ);
-        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, Xk, this.base) : this.base.fov = Xk, (0, ak.f)(this.base.position, Ik.position), Ik.fov = this.base.fov, Fk.apply(this.base, Ik)
+      update(mm, Tm, fm) {
+        this.elapsedMs += mm;
+        const hm = om(this.settings, this.oE);
+        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, hm, this.base) : this.base.fov = hm, (0, Dm.j)(this.base.position, fm.position), fm.fov = this.base.fov, Tm.apply(this.base, fm)
       }
-      continueFrom(kk) {
-        kk instanceof Nk && (0, Xk.u)(kk.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = kk.elapsedMs, (0, ak.e)(kk.base, this.base))
+      continueFrom(mm) {
+        mm instanceof Cm && (0, hm.p)(mm.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = mm.elapsedMs, (0, Dm.h)(mm.base, this.base))
       }
-      reset(kk) {
-        bk(this.base, kk), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
+      reset(mm) {
+        Xm(this.base, mm), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
       }
     }
 
-    function ck(kk, Fk) {
-      return (0, Xk.y)(kk, Fk)
+    function rm(mm, Tm) {
+      return (0, hm.t)(mm, Tm)
     }
-    class Wk {
-      constructor(kk, Fk, Ik) {
-        var Xk;
-        this.settings = kk, this.XZ = Fk, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
-        const Tk = null !== Ik && Ik.settings.mode === kk.mode,
-          ik = Tk ? Ik.pose : Fk.getDefaultPose();
-        this.pose = (0, ak.e)(ik, (0, ak.j)()), this.lastGoodPose = (0, ak.e)(Tk ? Ik.lastGoodPose : ik, (0, ak.j)()), this.look = new Hk(kk.playerLook), this.targets = null !== (Xk = null === Ik || void 0 === Ik ? void 0 : Ik.targets) && void 0 !== Xk ? Xk : new pk(Fk);
-        const yk = (0, ak.e)(ik, (0, ak.j)());
-        Tk && Ik.look.unapply(yk, yk), this.mode = function(kk, Fk, Ik, Xk) {
-          switch (kk.mode) {
+    class sm {
+      constructor(mm, Tm, fm) {
+        var hm;
+        this.settings = mm, this.oE = Tm, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
+        const Am = null !== fm && fm.settings.mode === mm.mode,
+          am = Am ? fm.pose : Tm.getDefaultPose();
+        this.pose = (0, Dm.h)(am, (0, Dm.k)()), this.lastGoodPose = (0, Dm.h)(Am ? fm.lastGoodPose : am, (0, Dm.k)()), this.look = new qm(mm.playerLook), this.targets = null !== (hm = null === fm || void 0 === fm ? void 0 : fm.targets) && void 0 !== hm ? hm : new Nm(Tm);
+        const xm = (0, Dm.h)(am, (0, Dm.k)());
+        Am && fm.look.unapply(xm, xm), this.mode = function(mm, Tm, fm, hm) {
+          switch (mm.mode) {
             case "fixed":
-              return new Uk(kk, Fk, Ik, Xk);
+              return new Hm(mm, Tm, fm, hm);
             case "follow":
-              return new Ck(kk, Fk, Ik, Xk);
+              return new ym(mm, Tm, fm, hm);
             case "path":
-              return new Nk(kk, Fk, Ik, Xk);
+              return new Cm(mm, Tm, fm, hm);
             case "frame":
-              return new wk(kk, Fk, Ik, Xk)
+              return new Ym(mm, Tm, fm, hm)
           }
-        }(kk, Fk, this.targets, yk), Tk && (this.look.continueFrom(Ik.look), this.mode.continueFrom(Ik.mode))
+        }(mm, Tm, this.targets, xm), Am && (this.look.continueFrom(fm.look), this.mode.continueFrom(fm.mode))
       }
-      update(kk, Fk) {
-        return this.look.update(kk, Fk), this.mode.update(kk, this.look, this.pose), (0, ak.k)(this.pose) ? (0, ak.e)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, ak.e)(this.lastGoodPose, this.pose), this.mode.reset((0, ak.k)(this.lastGoodPose) ? this.lastGoodPose : this.XZ.getDefaultPose())), this.pose
+      update(mm, Tm) {
+        return this.look.update(mm, Tm), this.mode.update(mm, this.look, this.pose), (0, Dm.m)(this.pose) ? (0, Dm.h)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, Dm.h)(this.lastGoodPose, this.pose), this.mode.reset((0, Dm.m)(this.lastGoodPose) ? this.lastGoodPose : this.oE.getDefaultPose())), this.pose
       }
     }
 
-    function fk(kk) {
-      return [0, 0, kk[2], kk[3]]
+    function lm(mm) {
+      return [0, 0, mm[2], mm[3]]
     }
-    class Bk {
-      constructor(kk) {
-        this.XZ = kk, this.settings = {
+    class Mm {
+      constructor(mm) {
+        this.oE = mm, this.settings = {
           mode: "default"
-        }, this.pending = null, this.fade = new lk, this.shot = null, this.blend = null, this.mixed = (0, ak.j)(), this.output = (0, ak.j)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
+        }, this.pending = null, this.fade = new wm, this.shot = null, this.blend = null, this.mixed = (0, Dm.k)(), this.output = (0, Dm.k)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
           length: 3
         }, (() => [0, 0, 0]))
       }
-      setSettings(kk) {
-        const Fk = (0, qk.c)(kk);
-        if ((0, Xk.u)(Fk, this.pending ? this.pending.settings : this.settings)) return;
-        const Ik = ck(this.settings, Fk);
-        if (void 0 !== Fk.transition && !Ik) return this.pending = {
-          settings: Fk,
-          shot: "default" === Fk.mode ? null : new Wk(Fk, this.XZ, null)
-        }, void this.fade.fadeOut(Fk.transition);
-        const Tk = null !== this.pending;
-        this.pending = null, !Tk && Ik || this.fade.fadeIn(Xk.k.minTransitionFadeMs), this.show(Fk, !1)
+      setSettings(mm) {
+        const Tm = (0, im.d)(mm);
+        if ((0, hm.p)(Tm, this.pending ? this.pending.settings : this.settings)) return;
+        const fm = rm(this.settings, Tm);
+        if (void 0 !== Tm.transition && !fm) return this.pending = {
+          settings: Tm,
+          shot: "default" === Tm.mode ? null : new sm(Tm, this.oE, null)
+        }, void this.fade.fadeOut(Tm.transition);
+        const Am = null !== this.pending;
+        this.pending = null, !Am && fm || this.fade.fadeIn(hm.k.minTransitionFadeMs), this.show(Tm, !1)
       }
-      show(kk, Fk) {
-        var Ik, Tk;
-        if ((0, Xk.u)(kk, this.settings)) return;
-        const yk = !Fk && ck(this.settings, kk);
-        this.settings = kk;
-        const lk = null !== this.blend && this.blend.elapsedMs > 0,
-          qk = (0, ak.e)(this.hasOutput ? this.output : this.XZ.getDefaultPose(), (0, ak.j)());
-        if (this.shot = "default" === kk.mode ? null : new Wk(kk, this.XZ, Fk ? null : this.shot), yk) return;
-        const Lk = Fk || !this.shot && !this.hasOutput ? 0 : null !== (Ik = kk.blendInMs) && void 0 !== Ik ? Ik : 0;
-        if (Lk <= 0) return void(this.blend = null);
-        const tk = (0, ik.r)(null !== (Tk = kk.blendEasing) && void 0 !== Tk ? Tk : "easeInOut");
+      show(mm, Tm) {
+        var fm, Am;
+        if ((0, hm.p)(mm, this.settings)) return;
+        const xm = !Tm && rm(this.settings, mm);
+        this.settings = mm;
+        const wm = null !== this.blend && this.blend.elapsedMs > 0,
+          im = (0, Dm.h)(this.hasOutput ? this.output : this.oE.getDefaultPose(), (0, Dm.k)());
+        if (this.shot = "default" === mm.mode ? null : new sm(mm, this.oE, Tm ? null : this.shot), xm) return;
+        const Rm = Tm || !this.shot && !this.hasOutput ? 0 : null !== (fm = mm.blendInMs) && void 0 !== fm ? fm : 0;
+        if (Rm <= 0) return void(this.blend = null);
+        const pm = (0, am.t)(null !== (Am = mm.blendEasing) && void 0 !== Am ? Am : "easeInOut");
         this.blend = {
-          from: qk,
+          from: im,
           fromScripted: this.hasOutput,
           headingDelta: NaN,
           elapsedMs: 0,
-          durationMs: Lk,
-          easing: lk ? fk(tk) : tk
+          durationMs: Rm,
+          easing: wm ? lm(pm) : pm
         }
       }
       getSettings() {
@@ -943,66 +943,66 @@ export const modules = {
       isActive() {
         return null !== this.shot || null !== this.blend
       }
-      update(kk, Fk) {
-        const Ik = Number.isFinite(kk) && kk > 0 ? kk : 0;
-        if (this.fade.advance(Ik) && null !== this.pending) {
+      update(mm, Tm) {
+        const fm = Number.isFinite(mm) && mm > 0 ? mm : 0;
+        if (this.fade.advance(fm) && null !== this.pending) {
           const {
-            settings: kk
+            settings: mm
           } = this.pending;
-          this.pending = null, this.show(kk, !0)
+          this.pending = null, this.show(mm, !0)
         }
         this.loadingPositions.length = 0;
-        const Xk = this.pending;
-        if (null !== Xk && void 0 !== Xk && Xk.shot) {
-          const kk = "path" === Xk.settings.mode ? 0 : Ik;
-          this.noteLoadingPosition(Xk.shot.update(kk, ak.d).position)
+        const hm = this.pending;
+        if (null !== hm && void 0 !== hm && hm.shot) {
+          const mm = "path" === hm.settings.mode ? 0 : fm;
+          this.noteLoadingPosition(hm.shot.update(mm, Dm.e).position)
         }
         if (!this.isActive()) return this.hasOutput = !1, null;
-        const yk = this.shot ? this.shot.update(Ik, Fk) : this.XZ.getDefaultPose();
-        this.shot && this.noteLoadingPosition(yk.position);
-        const lk = this.blend;
-        if (!lk) return this.writeOutput(yk);
-        lk.elapsedMs += Ik;
-        const qk = Math.min(1, lk.elapsedMs / lk.durationMs);
-        if (lk.headingDelta = Number.isFinite(lk.headingDelta) ? (0, Tk.F)(lk.headingDelta, yk.heading - lk.from.heading) : (0, Tk.C)(lk.from.heading, yk.heading), (0, ak.s)(lk.from, yk, lk.headingDelta, (0, ik.o)(qk, lk.easing), this.mixed), qk >= 1) {
+        const xm = this.shot ? this.shot.update(fm, Tm) : this.oE.getDefaultPose();
+        this.shot && this.noteLoadingPosition(xm.position);
+        const wm = this.blend;
+        if (!wm) return this.writeOutput(xm);
+        wm.elapsedMs += fm;
+        const im = Math.min(1, wm.elapsedMs / wm.durationMs);
+        if (wm.headingDelta = Number.isFinite(wm.headingDelta) ? (0, Am.x)(wm.headingDelta, xm.heading - wm.from.heading) : (0, Am.u)(wm.from.heading, xm.heading), (0, Dm.t)(wm.from, xm, wm.headingDelta, (0, am.p)(im, wm.easing), this.mixed), im >= 1) {
           if (this.blend = null, !this.shot) return this.hasOutput = !1, null
-        } else lk.fromScripted && this.noteLoadingPosition(lk.from.position);
+        } else wm.fromScripted && this.noteLoadingPosition(wm.from.position);
         return this.writeOutput(this.mixed)
       }
-      noteLoadingPosition(kk) {
-        if (kk.every(Number.isFinite)) {
-          const Fk = this.loadingPositions;
-          Fk.push((0, ak.f)(kk, this.loadingSlots[Fk.length]))
+      noteLoadingPosition(mm) {
+        if (mm.every(Number.isFinite)) {
+          const Tm = this.loadingPositions;
+          Tm.push((0, Dm.j)(mm, this.loadingSlots[Tm.length]))
         }
       }
-      writeOutput(kk) {
-        const Fk = this.output;
-        (0, ak.k)(kk) ? (0, ak.e)(kk, Fk) : this.hasOutput || (0, ak.e)(this.XZ.getDefaultPose(), Fk), Fk.pitch = (0, Tk.k)(Fk.pitch);
-        const Ik = this.XZ.getDefaultFov(),
-          ik = Number.isFinite(Ik) && Ik > 0 && Ik < 180,
-          yk = ik ? Math.min(Xk.k.minFov, Ik) : Xk.k.minFov,
-          lk = ik ? Math.max(Xk.k.maxFov, Ik) : Xk.k.maxFov;
-        return Fk.fov = Number.isFinite(Fk.fov) ? Math.min(lk, Math.max(yk, Fk.fov)) : lk, this.hasOutput = !0, Fk
+      writeOutput(mm) {
+        const Tm = this.output;
+        (0, Dm.m)(mm) ? (0, Dm.h)(mm, Tm) : this.hasOutput || (0, Dm.h)(this.oE.getDefaultPose(), Tm), Tm.pitch = (0, Am.g)(Tm.pitch);
+        const fm = this.oE.getDefaultFov(),
+          am = Number.isFinite(fm) && fm > 0 && fm < 180,
+          xm = am ? Math.min(hm.k.minFov, fm) : hm.k.minFov,
+          wm = am ? Math.max(hm.k.maxFov, fm) : hm.k.maxFov;
+        return Tm.fov = Number.isFinite(Tm.fov) ? Math.min(wm, Math.max(xm, Tm.fov)) : wm, this.hasOutput = !0, Tm
       }
     }
   },
-  39180: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => Tk,
-      e: () => lk,
-      f: () => yk,
-      j: () => ik,
-      k: () => qk,
-      o: () => ak,
-      s: () => Lk
+  39288: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => Am,
+      h: () => wm,
+      j: () => xm,
+      k: () => am,
+      m: () => im,
+      p: () => Dm,
+      t: () => Rm
     });
-    var Xk = Ik(39183);
-    const Tk = {
-      JG: 0,
-      xG: 0
+    var hm = fm(39297);
+    const Am = {
+      XN: 0,
+      yN: 0
     };
 
-    function ik() {
+    function am() {
       return {
         position: [0, 0, 0],
         heading: 0,
@@ -1011,196 +1011,196 @@ export const modules = {
       }
     }
 
-    function yk(kk, Fk) {
-      return Fk[0] = kk[0], Fk[1] = kk[1], Fk[2] = kk[2], Fk
+    function xm(mm, Tm) {
+      return Tm[0] = mm[0], Tm[1] = mm[1], Tm[2] = mm[2], Tm
     }
 
-    function lk(kk, Fk) {
-      return yk(kk.position, Fk.position), Fk.heading = kk.heading, Fk.pitch = kk.pitch, Fk.fov = kk.fov, Fk
+    function wm(mm, Tm) {
+      return xm(mm.position, Tm.position), Tm.heading = mm.heading, Tm.pitch = mm.pitch, Tm.fov = mm.fov, Tm
     }
 
-    function ak(kk, Fk) {
-      return Array.isArray(kk) && kk.length === Fk && kk.every(Number.isFinite)
+    function Dm(mm, Tm) {
+      return Array.isArray(mm) && mm.length === Tm && mm.every(Number.isFinite)
     }
 
-    function qk(kk) {
-      return ak(kk.position, 3) && Number.isFinite(kk.heading) && Number.isFinite(kk.pitch) && Number.isFinite(kk.fov)
+    function im(mm) {
+      return Dm(mm.position, 3) && Number.isFinite(mm.heading) && Number.isFinite(mm.pitch) && Number.isFinite(mm.fov)
     }
 
-    function Lk(kk, Fk, Ik, Tk, ik) {
-      for (let Xk = 0; Xk < 3; Xk++) ik.position[Xk] = kk.position[Xk] + (Fk.position[Xk] - kk.position[Xk]) * Tk;
-      return ik.heading = (0, Xk.y)(kk.heading + Ik * Tk), ik.pitch = kk.pitch + (Fk.pitch - kk.pitch) * Tk, ik.fov = kk.fov + (Fk.fov - kk.fov) * Tk, ik
+    function Rm(mm, Tm, fm, Am, am) {
+      for (let hm = 0; hm < 3; hm++) am.position[hm] = mm.position[hm] + (Tm.position[hm] - mm.position[hm]) * Am;
+      return am.heading = (0, hm.t)(mm.heading + fm * Am), am.pitch = mm.pitch + (Tm.pitch - mm.pitch) * Am, am.fov = mm.fov + (Tm.fov - mm.fov) * Am, am
     }
   },
-  39209: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => Vk,
-      g: () => Zk
+  39327: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => Jm,
+      e: () => Em
     });
-    var Xk = Ik(39201),
-      Tk = Ik(39180);
-    const ik = Xk.j,
-      yk = Xk.m;
+    var hm = fm(39323),
+      Am = fm(39288);
+    const am = hm.j,
+      xm = hm.n;
 
-    function lk(kk, Fk, Ik, Xk) {
-      return Number.isFinite(kk) ? Math.min(Ik, Math.max(Fk, kk)) : Xk
+    function wm(mm, Tm, fm, hm) {
+      return Number.isFinite(mm) ? Math.min(fm, Math.max(Tm, mm)) : hm
     }
 
-    function ak(kk, Fk, Ik) {
-      return void 0 !== kk && Number.isFinite(kk) ? Math.min(Ik, Math.max(Fk, kk)) : void 0
+    function Dm(mm, Tm, fm) {
+      return void 0 !== mm && Number.isFinite(mm) ? Math.min(fm, Math.max(Tm, mm)) : void 0
     }
 
-    function qk(kk) {
-      const Fk = Xk.k.maxCoordinate;
-      return [Math.min(Fk, Math.max(-Fk, kk[0])), Math.min(Fk, Math.max(-Fk, kk[1])), Math.min(Fk, Math.max(-Fk, kk[2]))]
+    function im(mm) {
+      const Tm = hm.k.maxCoordinate;
+      return [Math.min(Tm, Math.max(-Tm, mm[0])), Math.min(Tm, Math.max(-Tm, mm[1])), Math.min(Tm, Math.max(-Tm, mm[2]))]
     }
 
-    function Lk(kk) {
-      return "string" === typeof kk ? kk : (0, Tk.o)(kk, 3) ? qk(kk) : void 0
+    function Rm(mm) {
+      return "string" === typeof mm ? mm : (0, Am.p)(mm, 3) ? im(mm) : void 0
     }
-    const tk = new RegExp(Xk.q);
+    const pm = new RegExp(hm.o);
 
-    function Zk(kk) {
-      return "string" === typeof kk && tk.test(kk)
+    function Em(mm) {
+      return "string" === typeof mm && pm.test(mm)
     }
 
-    function jk(kk) {
-      const Fk = [];
-      if (!Array.isArray(kk)) return Fk;
-      for (const Ik of kk.slice(0, Xk.k.maxFrameTargets)) {
-        const kk = Lk(Ik);
-        void 0 === kk || "string" === typeof kk && !Zk(kk) || Fk.push(kk)
+    function om(mm) {
+      const Tm = [];
+      if (!Array.isArray(mm)) return Tm;
+      for (const fm of mm.slice(0, hm.k.maxFrameTargets)) {
+        const mm = Rm(fm);
+        void 0 === mm || "string" === typeof mm && !Em(mm) || Tm.push(mm)
       }
-      return Fk
+      return Tm
     }
 
-    function ek(kk) {
-      if (!(0, Tk.o)(kk, 3)) return;
-      const Fk = Math.max(Math.abs(kk[0]), Math.abs(kk[1]), Math.abs(kk[2])),
-        Ik = Math.hypot(kk[0] / Fk, kk[1] / Fk, kk[2] / Fk);
-      return 0 === Fk || Fk * Ik < Xk.k.minDirectionLength ? void 0 : [kk[0] / Fk / Ik, kk[1] / Fk / Ik, kk[2] / Fk / Ik]
+    function Om(mm) {
+      if (!(0, Am.p)(mm, 3)) return;
+      const Tm = Math.max(Math.abs(mm[0]), Math.abs(mm[1]), Math.abs(mm[2])),
+        fm = Math.hypot(mm[0] / Tm, mm[1] / Tm, mm[2] / Tm);
+      return 0 === Tm || Tm * fm < hm.k.minDirectionLength ? void 0 : [mm[0] / Tm / fm, mm[1] / Tm / fm, mm[2] / Tm / fm]
     }
 
-    function wk(kk) {
-      if (void 0 !== kk) return "string" === typeof kk ? ik.includes(kk) ? kk : void 0 : (0, Tk.o)(kk, 4) ? [lk(kk[0], 0, 1, 0), lk(kk[1], Xk.k.minEasingY, Xk.k.maxEasingY, 0), lk(kk[2], 0, 1, 1), lk(kk[3], Xk.k.minEasingY, Xk.k.maxEasingY, 1)] : "linear"
+    function Ym(mm) {
+      if (void 0 !== mm) return "string" === typeof mm ? am.includes(mm) ? mm : void 0 : (0, Am.p)(mm, 4) ? [wm(mm[0], 0, 1, 0), wm(mm[1], hm.k.minEasingY, hm.k.maxEasingY, 0), wm(mm[2], 0, 1, 1), wm(mm[3], hm.k.minEasingY, hm.k.maxEasingY, 1)] : "linear"
     }
 
-    function Hk(kk) {
-      if (kk) return {
-        maxYaw: lk(kk.maxYaw, 0, Xk.k.maxPlayerLook, 0),
-        maxPitch: lk(kk.maxPitch, 0, Xk.k.maxPlayerLook, 0),
-        returnMs: ak(kk.returnMs, 0, Xk.k.maxReturnMs)
+    function qm(mm) {
+      if (mm) return {
+        maxYaw: wm(mm.maxYaw, 0, hm.k.maxPlayerLook, 0),
+        maxPitch: wm(mm.maxPitch, 0, hm.k.maxPlayerLook, 0),
+        returnMs: Dm(mm.returnMs, 0, hm.k.maxReturnMs)
       }
     }
-    const Jk = new RegExp(Xk.e);
+    const jm = new RegExp(hm.e);
 
-    function xk(kk) {
-      var Fk;
-      if ("object" !== typeof kk || null === kk) return;
-      const Ik = Xk.k.maxTransitionMs,
-        Tk = Xk.k.minTransitionFadeMs;
+    function Vm(mm) {
+      var Tm;
+      if ("object" !== typeof mm || null === mm) return;
+      const fm = hm.k.maxTransitionMs,
+        Am = hm.k.minTransitionFadeMs;
       return {
-        colour: "string" === typeof kk.colour && Jk.test(kk.colour) ? kk.colour : Xk.f,
-        outMs: lk(kk.outMs, Tk, Ik, Tk),
-        holdMs: lk(null !== (Fk = kk.holdMs) && void 0 !== Fk ? Fk : 0, 0, Ik, 0),
-        inMs: lk(kk.inMs, Tk, Ik, Tk)
+        colour: "string" === typeof mm.colour && jm.test(mm.colour) ? mm.colour : hm.i,
+        outMs: wm(mm.outMs, Am, fm, Am),
+        holdMs: wm(null !== (Tm = mm.holdMs) && void 0 !== Tm ? Tm : 0, 0, fm, 0),
+        inMs: wm(mm.inMs, Am, fm, Am)
       }
     }
 
-    function Pk(kk) {
-      return !0 === kk || void 0
+    function Im(mm) {
+      return !0 === mm || void 0
     }
 
-    function Kk(kk) {
-      if ("object" !== typeof kk || null === kk) return !1;
-      const Fk = kk.lookAt;
-      return Number.isFinite(kk.timeMs) && (0, Tk.o)(kk.position, 3) && (void 0 === Fk || "string" === typeof Fk || (0, Tk.o)(Fk, 3))
+    function Km(mm) {
+      if ("object" !== typeof mm || null === mm) return !1;
+      const Tm = mm.lookAt;
+      return Number.isFinite(mm.timeMs) && (0, Am.p)(mm.position, 3) && (void 0 === Tm || "string" === typeof Tm || (0, Am.p)(Tm, 3))
     }
 
-    function Qk(kk) {
+    function Qm(mm) {
       return {
-        ...kk,
-        timeMs: lk(kk.timeMs, 0, Xk.k.maxPathMs, 0),
-        position: qk(kk.position),
-        lookAt: Lk(kk.lookAt),
-        lookDirection: ek(kk.lookDirection),
-        fov: ak(kk.fov, Xk.k.minFov, Xk.k.maxFov),
-        easing: wk(kk.easing)
+        ...mm,
+        timeMs: wm(mm.timeMs, 0, hm.k.maxPathMs, 0),
+        position: im(mm.position),
+        lookAt: Rm(mm.lookAt),
+        lookDirection: Om(mm.lookDirection),
+        fov: Dm(mm.fov, hm.k.minFov, hm.k.maxFov),
+        easing: Ym(mm.easing)
       }
     }
 
-    function sk(kk) {
-      const Fk = [];
-      if (!Array.isArray(kk)) return Fk;
-      for (const Ik of kk.slice(0, Xk.k.maxKeyframes)) {
-        if (!Kk(Ik)) continue;
-        const kk = Qk(Ik);
-        (0 === Fk.length || kk.timeMs > Fk[Fk.length - 1].timeMs) && Fk.push(kk)
+    function nm(mm) {
+      const Tm = [];
+      if (!Array.isArray(mm)) return Tm;
+      for (const fm of mm.slice(0, hm.k.maxKeyframes)) {
+        if (!Km(fm)) continue;
+        const mm = Qm(fm);
+        (0 === Tm.length || mm.timeMs > Tm[Tm.length - 1].timeMs) && Tm.push(mm)
       }
-      return Fk
+      return Tm
     }
 
-    function Vk(kk) {
-      if ("object" !== typeof kk || null === kk) return {
+    function Jm(mm) {
+      if ("object" !== typeof mm || null === mm) return {
         mode: "default"
       };
-      const Fk = {
-          blendInMs: ak(kk.blendInMs, 0, Xk.k.maxBlendInMs),
-          blendEasing: wk(kk.blendEasing),
-          transition: xk(kk.transition),
-          letterbox: Pk(kk.letterbox),
-          hideHud: Pk(kk.hideHud)
+      const Tm = {
+          blendInMs: Dm(mm.blendInMs, 0, hm.k.maxBlendInMs),
+          blendEasing: Ym(mm.blendEasing),
+          transition: Vm(mm.transition),
+          letterbox: Im(mm.letterbox),
+          hideHud: Im(mm.hideHud)
         },
-        Ik = {
+        fm = {
           mode: "default",
-          ...Fk
+          ...Tm
         };
-      if ("default" === kk.mode || "fixed" === kk.mode && !(0, Tk.o)(kk.position, 3)) return Ik;
-      const ik = {
-        ...Fk,
-        fov: ak(kk.fov, Xk.k.minFov, Xk.k.maxFov),
-        playerFacing: (tk = kk.playerFacing, yk.includes(tk) ? tk : void 0),
-        playerLook: Hk(kk.playerLook)
+      if ("default" === mm.mode || "fixed" === mm.mode && !(0, Am.p)(mm.position, 3)) return fm;
+      const am = {
+        ...Tm,
+        fov: Dm(mm.fov, hm.k.minFov, hm.k.maxFov),
+        playerFacing: (pm = mm.playerFacing, xm.includes(pm) ? pm : void 0),
+        playerLook: qm(mm.playerLook)
       };
-      var tk, Zk;
-      switch (kk.mode) {
+      var pm, Em;
+      switch (mm.mode) {
         case "fixed":
           return {
-            ...kk, ...ik, position: qk(kk.position), lookAt: Lk(kk.lookAt), lookDirection: ek(kk.lookDirection)
+            ...mm, ...am, position: im(mm.position), lookAt: Rm(mm.lookAt), lookDirection: Om(mm.lookDirection)
           };
         case "follow":
           return {
-            ...kk, ...ik, target: "string" === typeof kk.target ? kk.target : void 0, lookAt: Lk(kk.lookAt), offset: (Zk = kk.offset, Array.isArray(Zk) ? [lk(Zk[0], -Xk.k.maxOffset, Xk.k.maxOffset, 0), lk(Zk[1], -Xk.k.maxOffset, Xk.k.maxOffset, 0), lk(Zk[2], -Xk.k.maxOffset, Xk.k.maxOffset, 0)] : [0, 0, 0]), lookDirection: ek(kk.lookDirection), smoothMs: ak(kk.smoothMs, 0, Xk.k.maxSmoothMs)
+            ...mm, ...am, target: "string" === typeof mm.target ? mm.target : void 0, lookAt: Rm(mm.lookAt), offset: (Em = mm.offset, Array.isArray(Em) ? [wm(Em[0], -hm.k.maxOffset, hm.k.maxOffset, 0), wm(Em[1], -hm.k.maxOffset, hm.k.maxOffset, 0), wm(Em[2], -hm.k.maxOffset, hm.k.maxOffset, 0)] : [0, 0, 0]), lookDirection: Om(mm.lookDirection), smoothMs: Dm(mm.smoothMs, 0, hm.k.maxSmoothMs)
           };
         case "path":
           return {
-            ...kk, ...ik, keyframes: sk(kk.keyframes)
+            ...mm, ...am, keyframes: nm(mm.keyframes)
           };
         case "frame":
           return {
-            ...kk, ...ik, targets: jk(kk.targets), viewHeading: ak(kk.viewHeading, -Xk.k.maxFrameHeading, Xk.k.maxFrameHeading), viewElevation: ak(kk.viewElevation, 0, Xk.k.maxFrameElevation), padding: ak(kk.padding, 0, Xk.k.maxFrameDistance), closestDistance: ak(kk.closestDistance, 0, Xk.k.maxFrameDistance), furthestDistance: ak(kk.furthestDistance, 0, Xk.k.maxFrameDistance), smoothMs: ak(kk.smoothMs, 0, Xk.k.maxSmoothMs)
+            ...mm, ...am, targets: om(mm.targets), viewHeading: Dm(mm.viewHeading, -hm.k.maxFrameHeading, hm.k.maxFrameHeading), viewElevation: Dm(mm.viewElevation, 0, hm.k.maxFrameElevation), padding: Dm(mm.padding, 0, hm.k.maxFrameDistance), closestDistance: Dm(mm.closestDistance, 0, hm.k.maxFrameDistance), furthestDistance: Dm(mm.furthestDistance, 0, hm.k.maxFrameDistance), smoothMs: Dm(mm.smoothMs, 0, hm.k.maxSmoothMs)
           };
         default:
-          return Ik
+          return fm
       }
     }
   },
-  38649: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => lk
+  38750: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => wm
     });
-    var Xk = Ik(1217);
+    var hm = fm(1235);
 
-    function Tk(kk) {
-      const Fk = /(\d*\.?\d+)px/.exec(kk);
-      return Fk ? Number(Fk[1]) : null
+    function Am(mm) {
+      const Tm = /(\d*\.?\d+)px/.exec(mm);
+      return Tm ? Number(Tm[1]) : null
     }
 
-    function ik(kk) {
-      return kk.split(/[\s,]+/).pop()
+    function am(mm) {
+      return mm.split(/[\s,]+/).pop()
     }
-    let yk = !1;
-    const lk = {
+    let xm = !1;
+    const wm = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -1211,385 +1211,385 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(kk, Fk, Xk, lk, ak, qk) {
-        if (ak <= 0 || qk <= 0 || this.fontSize <= 0) return {
+      drawText: function(mm, Tm, hm, wm, Dm, im) {
+        if (Dm <= 0 || im <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: Lk,
-          fontVariant: tk,
-          fontWeight: Zk,
-          fontSize: jk,
-          font: ek
-        } = this, wk = [Lk, tk, Zk, `${jk}px`, ek].filter(Boolean).join(" "), Hk = [
-          [Zk, `${jk}px`, ik(ek)].filter(Boolean).join(" "), `${jk}px sans-serif`
-        ], Jk = kk.font, xk = function(kk, Fk, Ik) {
-          for (const Xk of Fk) {
-            kk.font = Xk;
-            const Fk = Tk(kk.font),
-              yk = ik(Xk);
-            if (null !== Fk && Math.abs(Fk - Ik) <= .5 && kk.font.toLowerCase().includes(yk.toLowerCase())) return Xk
+          fontStyle: Rm,
+          fontVariant: pm,
+          fontWeight: Em,
+          fontSize: om,
+          font: Om
+        } = this, Ym = [Rm, pm, Em, `${om}px`, Om].filter(Boolean).join(" "), qm = [
+          [Em, `${om}px`, am(Om)].filter(Boolean).join(" "), `${om}px sans-serif`
+        ], jm = mm.font, Vm = function(mm, Tm, fm) {
+          for (const hm of Tm) {
+            mm.font = hm;
+            const Tm = Am(mm.font),
+              xm = am(hm);
+            if (null !== Tm && Math.abs(Tm - fm) <= .5 && mm.font.toLowerCase().includes(xm.toLowerCase())) return hm
           }
           return null
-        }(kk, [wk, ...Hk], jk);
-        xk !== wk && function(kk, Fk, Xk) {
-          yk || (yk = !0, Promise.resolve().then((() => Ik(1076))).then((Ik => {
+        }(mm, [Ym, ...qm], om);
+        Vm !== Ym && function(mm, Tm, hm) {
+          xm || (xm = !0, Promise.resolve().then((() => fm(1103))).then((fm => {
             let {
-              ow: Tk
-            } = Ik;
-            Tk(new Error("A canvas didn't take canvasTxt's font"), {
-              font: kk,
-              Gj: Fk,
-              drawnWith: null !== Xk && void 0 !== Xk ? Xk : "the kept font, scaled"
+              lY: Am
+            } = fm;
+            Am(new Error("A canvas didn't take canvasTxt's font"), {
+              font: mm,
+              mO: Tm,
+              drawnWith: null !== hm && void 0 !== hm ? hm : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(wk, Jk, xk);
-        const Pk = Tk(kk.font);
-        if (null === xk && null !== Pk && Pk > 0) {
-          const Ik = jk / Pk;
-          kk.save();
+        }(Ym, jm, Vm);
+        const Im = Am(mm.font);
+        if (null === Vm && null !== Im && Im > 0) {
+          const fm = om / Im;
+          mm.save();
           try {
-            return kk.scale(Ik, Ik), {
-              height: this.drawLines(kk, Fk, Xk / Ik, lk / Ik, ak / Ik, qk / Ik, Pk).height * Ik
+            return mm.scale(fm, fm), {
+              height: this.drawLines(mm, Tm, hm / fm, wm / fm, Dm / fm, im / fm, Im).height * fm
             }
           } finally {
-            kk.restore()
+            mm.restore()
           }
         }
-        return this.drawLines(kk, Fk, Xk, lk, ak, qk, jk)
+        return this.drawLines(mm, Tm, hm, wm, Dm, im, om)
       },
-      drawLines: function(kk, Fk, Ik, Tk, ik, yk, lk) {
-        const ak = Ik + ik,
-          qk = Tk + yk;
-        let Lk, tk = Tk + yk / 2 + lk / 2;
-        "right" === this.align ? (Lk = ak, kk.textAlign = "right") : "left" === this.align ? (Lk = Ik, kk.textAlign = "left") : (Lk = Ik + ik / 2, kk.textAlign = "center");
-        for (const Xk of Fk) {
-          kk.measureText(Xk).width >= ik && (Fk = Fk.replace(Xk, ""))
+      drawLines: function(mm, Tm, fm, Am, am, xm, wm) {
+        const Dm = fm + am,
+          im = Am + xm;
+        let Rm, pm = Am + xm / 2 + wm / 2;
+        "right" === this.align ? (Rm = Dm, mm.textAlign = "right") : "left" === this.align ? (Rm = fm, mm.textAlign = "left") : (Rm = fm + am / 2, mm.textAlign = "center");
+        for (const hm of Tm) {
+          mm.measureText(hm).width >= am && (Tm = Tm.replace(hm, ""))
         }
-        Fk = (0, Xk.S)(Fk);
-        const Zk = [],
-          jk = Fk.split("\n"),
-          ek = this.justify ? kk.measureText("\u200a").width : 0;
-        jk.forEach((Fk => {
-          let Ik = kk.measureText(Fk).width;
-          if (Ik <= ik) Zk.push(Fk);
+        Tm = (0, hm.M)(Tm);
+        const Em = [],
+          om = Tm.split("\n"),
+          Om = this.justify ? mm.measureText("\u200a").width : 0;
+        om.forEach((Tm => {
+          let fm = mm.measureText(Tm).width;
+          if (fm <= am) Em.push(Tm);
           else {
-            let Xk = Fk;
-            const Tk = ik;
-            let yk, lk, ak;
-            for (Ik = kk.measureText(Xk).width; Ik > Tk;) {
-              for (yk = 0, lk = 0, ak = ""; lk < Tk;) yk++, ak = Xk.substr(0, yk), lk = kk.measureText(ak).width;
-              yk--, ak = ak.substr(0, yk);
-              const Fk = yk;
-              if (" " !== Xk.substr(yk, 1)) {
+            let hm = Tm;
+            const Am = am;
+            let xm, wm, Dm;
+            for (fm = mm.measureText(hm).width; fm > Am;) {
+              for (xm = 0, wm = 0, Dm = ""; wm < Am;) xm++, Dm = hm.substr(0, xm), wm = mm.measureText(Dm).width;
+              xm--, Dm = Dm.substr(0, xm);
+              const Tm = xm;
+              if (" " !== hm.substr(xm, 1)) {
                 for (;
-                  " " !== Xk.substr(yk, 1) && 0 !== yk;) yk--;
-                0 === yk && (yk = Fk), ak = Xk.substr(0, yk)
+                  " " !== hm.substr(xm, 1) && 0 !== xm;) xm--;
+                0 === xm && (xm = Tm), Dm = hm.substr(0, xm)
               }
-              ak = this.justify ? this.justifyLine(kk, ak, ek, "\u200a", ik) : ak, Xk = Xk.substr(yk), Ik = kk.measureText(Xk).width, Zk.push(ak)
+              Dm = this.justify ? this.justifyLine(mm, Dm, Om, "\u200a", am) : Dm, hm = hm.substr(xm), fm = mm.measureText(hm).width, Em.push(Dm)
             }
-            Ik > 0 && Zk.push(Xk)
+            fm > 0 && Em.push(hm)
           }
         }));
-        const wk = this.lineHeight ? this.lineHeight : this.getTextHeight(kk, Fk),
-          Hk = wk * (Zk.length - 1),
-          Jk = Hk / 2;
-        let xk = Tk;
-        "top" === this.vAlign ? tk = Tk + lk : "bottom" === this.vAlign ? (tk = qk - Hk, xk = qk) : (xk = Tk + yk / 2, tk -= Jk), Zk.forEach((Fk => {
-          Fk = Fk.trim(), kk.fillText(Fk, Lk, tk), tk += wk
-        })), this.debug && (kk.lineWidth = 3, kk.strokeStyle = "#00909e", kk.strokeRect(Ik, Tk, ik, yk), kk.lineWidth = 2, kk.strokeStyle = "#f6d743", kk.beginPath(), kk.moveTo(Lk, Tk), kk.lineTo(Lk, qk), kk.stroke(), kk.strokeStyle = "#ff6363", kk.beginPath(), kk.moveTo(Ik, xk), kk.lineTo(ak, xk), kk.stroke());
+        const Ym = this.lineHeight ? this.lineHeight : this.getTextHeight(mm, Tm),
+          qm = Ym * (Em.length - 1),
+          jm = qm / 2;
+        let Vm = Am;
+        "top" === this.vAlign ? pm = Am + wm : "bottom" === this.vAlign ? (pm = im - qm, Vm = im) : (Vm = Am + xm / 2, pm -= jm), Em.forEach((Tm => {
+          Tm = Tm.trim(), mm.fillText(Tm, Rm, pm), pm += Ym
+        })), this.debug && (mm.lineWidth = 3, mm.strokeStyle = "#00909e", mm.strokeRect(fm, Am, am, xm), mm.lineWidth = 2, mm.strokeStyle = "#f6d743", mm.beginPath(), mm.moveTo(Rm, Am), mm.lineTo(Rm, im), mm.stroke(), mm.strokeStyle = "#ff6363", mm.beginPath(), mm.moveTo(fm, Vm), mm.lineTo(Dm, Vm), mm.stroke());
         return {
-          height: Hk + wk
+          height: qm + Ym
         }
       },
-      getTextHeight: function(kk, Fk) {
-        const Ik = kk.textBaseline;
-        kk.textBaseline = "bottom";
+      getTextHeight: function(mm, Tm) {
+        const fm = mm.textBaseline;
+        mm.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: Xk
-        } = kk.measureText(Fk);
-        return kk.textBaseline = Ik, Xk
+          actualBoundingBoxAscent: hm
+        } = mm.measureText(Tm);
+        return mm.textBaseline = fm, hm
       },
-      justifyLine: function(kk, Fk, Ik, Xk, Tk) {
-        const ik = Fk.trim(),
-          yk = kk.measureText(ik).width,
-          lk = ik.split(/\s+/).length - 1,
-          ak = Math.floor((Tk - yk) / Ik);
-        if (lk <= 0 || ak <= 0) return ik;
-        const qk = Math.floor(ak / lk);
-        let Lk = ak - lk * qk,
-          tk = [];
-        for (let Zk = 0; Zk < qk; Zk++) tk.push(Xk);
-        tk = tk.join("");
-        return ik.replace(/\s+/g, (kk => {
-          const Fk = Lk > 0 ? tk + Xk : tk;
-          return Lk--, kk + Fk
+      justifyLine: function(mm, Tm, fm, hm, Am) {
+        const am = Tm.trim(),
+          xm = mm.measureText(am).width,
+          wm = am.split(/\s+/).length - 1,
+          Dm = Math.floor((Am - xm) / fm);
+        if (wm <= 0 || Dm <= 0) return am;
+        const im = Math.floor(Dm / wm);
+        let Rm = Dm - wm * im,
+          pm = [];
+        for (let Em = 0; Em < im; Em++) pm.push(hm);
+        pm = pm.join("");
+        return am.replace(/\s+/g, (mm => {
+          const Tm = Rm > 0 ? pm + hm : pm;
+          return Rm--, mm + Tm
         }))
       }
     }
   },
-  39129: (kk, Fk, Ik) => {
-    function Xk(kk, Fk) {
-      return Fk.set(kk), Fk
+  39252: (mm, Tm, fm) => {
+    function hm(mm, Tm) {
+      return Tm.set(mm), Tm
     }
-    Ik.d(Fk, {
-      c: () => Xk
+    fm.d(Tm, {
+      b: () => hm
     })
   },
-  38656: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => wk,
-      d: () => ek,
-      h: () => Zk,
-      k: () => Lk,
-      n: () => tk
+  38756: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => Ym,
+      g: () => Om,
+      j: () => Em,
+      l: () => Rm,
+      p: () => pm
     });
-    var Xk = Ik(4210),
-      Tk = Ik(337);
-    const ik = 1024,
-      yk = 1536,
-      lk = 2 * Xk.i + 1,
-      ak = new Intl.NumberFormat("en", {
+    var hm = fm(4171),
+      Am = fm(354);
+    const am = 1024,
+      xm = 1536,
+      wm = 2 * hm.n + 1,
+      Dm = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      qk = 1.5;
+      im = 1.5;
 
-    function Lk(kk, Fk, Ik) {
-      if ("string" !== typeof kk) return Fk;
+    function Rm(mm, Tm, fm) {
+      if ("string" !== typeof mm) return Tm;
       try {
-        const Ik = JSON.parse(kk);
-        return Ik && "object" === typeof Ik ? Ik : Fk
-      } catch (Xk) {
-        return void 0 !== Ik && console.error(`Couldn't parse ${Ik}`, Xk), Fk
+        const fm = JSON.parse(mm);
+        return fm && "object" === typeof fm ? fm : Tm
+      } catch (hm) {
+        return void 0 !== fm && console.error(`Couldn't parse ${fm}`, hm), Tm
       }
     }
 
-    function tk(kk) {
-      return Lk(kk, null, "a leaderboard's rows")
+    function pm(mm) {
+      return Rm(mm, null, "a leaderboard's rows")
     }
 
-    function Zk(kk, Fk) {
-      var Ik, Xk;
-      return null !== Fk && void 0 !== Fk ? Fk : {
-        status: null !== (Ik = kk.status) && void 0 !== Ik ? Ik : "loading",
-        entries: null !== (Xk = kk.entries) && void 0 !== Xk ? Xk : []
+    function Em(mm, Tm) {
+      var fm, hm;
+      return null !== Tm && void 0 !== Tm ? Tm : {
+        status: null !== (fm = mm.status) && void 0 !== fm ? fm : "loading",
+        entries: null !== (hm = mm.entries) && void 0 !== hm ? hm : []
       }
     }
 
-    function jk(kk, Fk) {
-      return "number" === typeof kk && Number.isFinite(kk) && kk > 0 ? kk : Fk
+    function om(mm, Tm) {
+      return "number" === typeof mm && Number.isFinite(mm) && mm > 0 ? mm : Tm
     }
 
-    function ek(kk, Fk) {
-      const Ik = jk(kk.size, 1);
-      let Xk = jk(kk.width, jk(2.5 * Ik, 2.5)),
-        Tk = jk(kk.height, jk(3.75 * Ik, 3.75));
-      Number.isFinite(ik * Tk / Xk) && Number.isFinite(yk * Xk / Tk) || (Xk = 2.5, Tk = 3.75);
-      const lk = Tk / Xk,
-        ak = Math.max(1, Math.min(ik, Fk / lk));
+    function Om(mm, Tm) {
+      const fm = om(mm.size, 1);
+      let hm = om(mm.width, om(2.5 * fm, 2.5)),
+        Am = om(mm.height, om(3.75 * fm, 3.75));
+      Number.isFinite(am * Am / hm) && Number.isFinite(xm * hm / Am) || (hm = 2.5, Am = 3.75);
+      const wm = Am / hm,
+        Dm = Math.max(1, Math.min(am, Tm / wm));
       return {
-        width: Xk,
-        height: Tk,
-        layoutWidth: Math.max(ik, yk / lk),
-        layoutHeight: Math.max(yk, ik * lk),
-        pixelWidth: Math.round(ak),
-        pixelHeight: Math.round(Math.max(1, Math.min(Fk, ak * lk)))
+        width: hm,
+        height: Am,
+        layoutWidth: Math.max(am, xm / wm),
+        layoutHeight: Math.max(xm, am * wm),
+        pixelWidth: Math.round(Dm),
+        pixelHeight: Math.round(Math.max(1, Math.min(Tm, Dm * wm)))
       }
     }
 
-    function wk(kk, Fk, Ik, yk, Lk, tk) {
-      kk.setTransform(1, 0, 0, 1, 0, 0), kk.fillStyle = Tk.J.defaultNameTagBackground, kk.fillRect(0, 0, Fk, Ik), kk.scale(Fk / yk.layoutWidth, Ik / yk.layoutHeight), kk.translate((yk.layoutWidth - ik) / 2, 0),
-        function(kk, Fk, Ik, ik) {
-          var yk, Lk, tk, Zk;
+    function Ym(mm, Tm, fm, xm, Rm, pm) {
+      mm.setTransform(1, 0, 0, 1, 0, 0), mm.fillStyle = Am.J.defaultNameTagBackground, mm.fillRect(0, 0, Tm, fm), mm.scale(Tm / xm.layoutWidth, fm / xm.layoutHeight), mm.translate((xm.layoutWidth - am) / 2, 0),
+        function(mm, Tm, fm, am) {
+          var xm, Rm, pm, Em;
           const {
-            top: jk,
-            around: ek,
-            showPlayerText: wk,
-            localPlayerDbId: xk
-          } = Ik, {
-            whiteUiText: Pk,
-            grayUiText: Kk,
-            yellowUiText: Qk
-          } = Tk.J;
-          kk.textBaseline = "middle";
-          const sk = function(Fk, Ik, Xk, Tk, ik, yk) {
-              let lk = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              kk.font = `bold ${Tk}px 'Jetbrains Mono', monospace`, kk.fillStyle = ik, kk.textAlign = lk;
-              let ak = Fk.replace(/[\r\n\t]/g, " ");
-              if (kk.measureText(ak).width > yk) {
-                for (; ak.length > 0 && kk.measureText(`${ak}\u2026`).width > yk;) ak = ak.slice(0, -1);
-                ak += "\u2026"
+            top: om,
+            around: Om,
+            showPlayerText: Ym,
+            localPlayerDbId: Vm
+          } = fm, {
+            whiteUiText: Im,
+            grayUiText: Km,
+            yellowUiText: Qm
+          } = Am.J;
+          mm.textBaseline = "middle";
+          const nm = function(Tm, fm, hm, Am, am, xm) {
+              let wm = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              mm.font = `bold ${Am}px 'Jetbrains Mono', monospace`, mm.fillStyle = am, mm.textAlign = wm;
+              let Dm = Tm.replace(/[\r\n\t]/g, " ");
+              if (mm.measureText(Dm).width > xm) {
+                for (; Dm.length > 0 && mm.measureText(`${Dm}\u2026`).width > xm;) Dm = Dm.slice(0, -1);
+                Dm += "\u2026"
               }
-              kk.fillText(ak, Ik, Xk)
+              mm.fillText(Dm, fm, hm)
             },
-            Vk = Fk => {
-              kk.fillStyle = Pk, kk.globalAlpha = .15, kk.fillRect(24, Fk, 976, 2), kk.globalAlpha = 1
+            Jm = Tm => {
+              mm.fillStyle = Im, mm.globalAlpha = .15, mm.fillRect(24, Tm, 976, 2), mm.globalAlpha = 1
             },
-            zk = null === xk ? null : (0, Tk.yc)(xk),
-            Sk = kk => null !== zk && kk.playerHash === zk,
-            vk = Hk(jk.entries, Xk.k),
-            Ek = "ready" === jk.status && vk.length > 0,
-            Ok = null === ek ? [] : Hk(ek.entries, lk),
-            nk = vk.some(Sk),
-            Gk = null === ek ? null : function(kk) {
-              const Fk = kk;
-              if (!Fk || !Number.isFinite(Fk.rank) || !Number.isFinite(Fk.tied) || !Number.isFinite(Fk.total)) return null;
-              return Fk
-            }(ek.standing),
-            pk = Ok.find(Sk),
-            uk = vk.find(Sk),
-            bk = null === Gk || void 0 === pk ? null : {
-              value: pk.value,
-              rank: Gk.rank
+            cm = null === Vm ? null : (0, Am.jc)(Vm),
+            zm = mm => null !== cm && mm.playerHash === cm,
+            Zm = qm(om.entries, hm.r),
+            km = "ready" === om.status && Zm.length > 0,
+            bm = null === Om ? [] : qm(Om.entries, wm),
+            Sm = Zm.some(zm),
+            em = null === Om ? null : function(mm) {
+              const Tm = mm;
+              if (!Tm || !Number.isFinite(Tm.rank) || !Number.isFinite(Tm.tied) || !Number.isFinite(Tm.total)) return null;
+              return Tm
+            }(Om.standing),
+            Nm = bm.find(zm),
+            Gm = Zm.find(zm),
+            Xm = null === em || void 0 === Nm ? null : {
+              value: Nm.value,
+              rank: em.rank
             },
-            Rk = Jk(vk, void 0 === uk || uk.value === (null === bk || void 0 === bk ? void 0 : bk.value) ? bk : null),
-            Uk = Jk(Ok, bk),
-            Ck = (kk, Fk) => {
-              const Ik = kk.findIndex(Sk);
-              return Ik >= 0 ? Fk[Ik] : null
+            Pm = jm(Zm, void 0 === Gm || Gm.value === (null === Xm || void 0 === Xm ? void 0 : Xm.value) ? Xm : null),
+            Hm = jm(bm, Xm),
+            ym = (mm, Tm) => {
+              const fm = mm.findIndex(zm);
+              return fm >= 0 ? Tm[fm] : null
             },
-            Nk = null !== (yk = null !== (Lk = null === Gk || void 0 === Gk ? void 0 : Gk.rank) && void 0 !== Lk ? Lk : Ck(Ok, Uk)) && void 0 !== yk ? yk : Ck(vk, Rk);
-          kk.font = "bold 34px 'Jetbrains Mono', monospace";
-          const ck = [...Ek ? Rk : [], ...nk ? [] : Uk],
-            Wk = Math.min(280, Math.max(0, ...ck.map((Fk => kk.measureText(ak.format(Fk)).width)))),
-            fk = Wk <= 80,
-            Bk = fk ? 80 : 32 + Wk,
-            dk = fk ? 148 : Bk + 28,
-            Yk = 660 - dk;
-          sk(`TOP ${Xk.k}  /  ALL TIME`, 24, 52, 28, Kk, 976), sk(wk ? String(null !== (tk = Fk.title) && void 0 !== tk ? tk : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, Pk, 976), sk("RANK", 32, 174, 28, Kk, dk - 40), sk("PLAYER", dk, 174, 28, Kk, Yk), sk(wk ? String(null !== (Zk = Fk.scoreLabel) && void 0 !== Zk ? Zk : "Score").slice(0, 24) : "Score", 992, 174, 28, Kk, 304, "right"), Vk(202);
-          const Ak = (ik - 232) / (Xk.k + qk + lk),
-            gk = 208 + Xk.k * Ak,
-            mk = gk + qk * Ak,
-            hk = (Fk, Ik, Xk, Tk) => {
-              const ik = Sk(Fk);
-              kk.fillStyle = ik ? Qk : Pk, kk.globalAlpha = ik ? .15 : Tk ? .035 : 0, kk.fillRect(24, Xk - Ak / 2 + 1, 976, Ak - 2), kk.globalAlpha = 1;
-              const yk = ik ? Qk : Pk;
-              sk(ak.format(Ik), Bk, Xk, 34, yk, fk ? 80 : Wk, fk ? "center" : "right"), sk(wk ? String(Fk.name).slice(0, 64) : "Player", dk, Xk, 34, yk, Yk);
-              const lk = ak.format(Fk.value);
-              sk(kk.measureText(lk).width > 304 ? Fk.value.toExponential(6) : lk, 992, Xk, 34, yk, 304, "right")
+            Cm = null !== (xm = null !== (Rm = null === em || void 0 === em ? void 0 : em.rank) && void 0 !== Rm ? Rm : ym(bm, Hm)) && void 0 !== xm ? xm : ym(Zm, Pm);
+          mm.font = "bold 34px 'Jetbrains Mono', monospace";
+          const rm = [...km ? Pm : [], ...Sm ? [] : Hm],
+            sm = Math.min(280, Math.max(0, ...rm.map((Tm => mm.measureText(Dm.format(Tm)).width)))),
+            lm = sm <= 80,
+            Mm = lm ? 80 : 32 + sm,
+            um = lm ? 148 : Mm + 28,
+            Bm = 660 - um;
+          nm(`TOP ${hm.r}  /  ALL TIME`, 24, 52, 28, Km, 976), nm(Ym ? String(null !== (pm = Tm.title) && void 0 !== pm ? pm : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, Im, 976), nm("RANK", 32, 174, 28, Km, um - 40), nm("PLAYER", um, 174, 28, Km, Bm), nm(Ym ? String(null !== (Em = Tm.scoreLabel) && void 0 !== Em ? Em : "Score").slice(0, 24) : "Score", 992, 174, 28, Km, 304, "right"), Jm(202);
+          const Lm = (am - 232) / (hm.r + im + wm),
+            tm = 208 + hm.r * Lm,
+            Um = tm + im * Lm,
+            dm = (Tm, fm, hm, Am) => {
+              const am = zm(Tm);
+              mm.fillStyle = am ? Qm : Im, mm.globalAlpha = am ? .15 : Am ? .035 : 0, mm.fillRect(24, hm - Lm / 2 + 1, 976, Lm - 2), mm.globalAlpha = 1;
+              const xm = am ? Qm : Im;
+              nm(Dm.format(fm), Mm, hm, 34, xm, lm ? 80 : sm, lm ? "center" : "right"), nm(Ym ? String(Tm.name).slice(0, 64) : "Player", um, hm, 34, xm, Bm);
+              const wm = Dm.format(Tm.value);
+              nm(mm.measureText(wm).width > 304 ? Tm.value.toExponential(6) : wm, 992, hm, 34, xm, 304, "right")
             };
-          if (Ek)
-            for (const [Xk, Tk] of vk.entries()) hk(Tk, Rk[Xk], 208 + (Xk + .5) * Ak, Xk % 2 === 0);
+          if (km)
+            for (const [hm, Am] of Zm.entries()) dm(Am, Pm[hm], 208 + (hm + .5) * Lm, hm % 2 === 0);
           else {
-            const kk = "error" === jk.status,
-              Fk = kk ? "Couldn't load leaderboard" : "ready" === jk.status ? "No scores yet" : "Loading leaderboard\u2026",
-              Ik = kk ? "Trying again shortly" : "ready" === jk.status ? "Be the first on the board!" : "Fetching the top players",
-              Xk = (208 + gk) / 2;
-            sk(Fk, 512, Xk - 28, 40, kk ? Tk.J.redUiText : Pk, 960, "center"), sk(Ik, 512, Xk + 27, 30, Kk, 960, "center")
+            const mm = "error" === om.status,
+              Tm = mm ? "Couldn't load leaderboard" : "ready" === om.status ? "No scores yet" : "Loading leaderboard\u2026",
+              fm = mm ? "Trying again shortly" : "ready" === om.status ? "Be the first on the board!" : "Fetching the top players",
+              hm = (208 + tm) / 2;
+            nm(Tm, 512, hm - 28, 40, mm ? Am.J.redUiText : Im, 960, "center"), nm(fm, 512, hm + 27, 30, Km, 960, "center")
           }
-          const rk = gk + qk * Ak / 2;
-          if (null === Nk) Vk(rk);
+          const gm = tm + im * Lm / 2;
+          if (null === Cm) Jm(gm);
           else {
-            const Fk = null === Gk ? 0 : Gk.tied - 1,
-              Ik = `YOUR RANK #${ak.format(Nk)}${null===Gk?"":` of ${ak.format(Gk.total)}`}`;
-            kk.font = "bold 36px 'Jetbrains Mono', monospace";
-            const Xk = Math.max(20, Math.min(36, Math.floor(34560 / kk.measureText(Ik).width)));
-            sk(Ik, 512, rk - (Fk > 0 ? 15 : 0), Xk, Qk, 960, "center"), Fk > 0 && sk(`Tied with ${ak.format(Fk)} other${1===Fk?"":"s"}`, 512, rk + 24, 24, Kk, 960, "center")
+            const Tm = null === em ? 0 : em.tied - 1,
+              fm = `YOUR RANK #${Dm.format(Cm)}${null===em?"":` of ${Dm.format(em.total)}`}`;
+            mm.font = "bold 36px 'Jetbrains Mono', monospace";
+            const hm = Math.max(20, Math.min(36, Math.floor(34560 / mm.measureText(fm).width)));
+            nm(fm, 512, gm - (Tm > 0 ? 15 : 0), hm, Qm, 960, "center"), Tm > 0 && nm(`Tied with ${Dm.format(Tm)} other${1===Tm?"":"s"}`, 512, gm + 24, 24, Km, 960, "center")
           }
-          if (null === ek) return;
-          const Dk = mk + lk * Ak / 2;
-          if (nk) sk(`You're in the top ${Xk.k}!`, 512, Dk, 40, Qk, 960, "center");
-          else if (0 === Ok.length) sk("You're not on this board yet", 512, Dk, 34, Kk, 960, "center");
+          if (null === Om) return;
+          const Wm = Um + wm * Lm / 2;
+          if (Sm) nm(`You're in the top ${hm.r}!`, 512, Wm, 40, Qm, 960, "center");
+          else if (0 === bm.length) nm("You're not on this board yet", 512, Wm, 34, Km, 960, "center");
           else
-            for (const [Xk, Tk] of Ok.entries()) hk(Tk, Uk[Xk], mk + (Xk + .5) * Ak, Xk % 2 === 0)
-        }(kk, Lk, tk, yk.layoutHeight)
+            for (const [hm, Am] of bm.entries()) dm(Am, Hm[hm], Um + (hm + .5) * Lm, hm % 2 === 0)
+        }(mm, Rm, pm, xm.layoutHeight)
     }
 
-    function Hk(kk, Fk) {
-      return Array.isArray(kk) ? kk.slice(0, Fk).filter((kk => kk && Number.isFinite(kk.rank) && Number.isFinite(kk.value))) : []
+    function qm(mm, Tm) {
+      return Array.isArray(mm) ? mm.slice(0, Tm).filter((mm => mm && Number.isFinite(mm.rank) && Number.isFinite(mm.value))) : []
     }
 
-    function Jk(kk, Fk) {
-      const Ik = [];
-      let Xk = !1;
-      return kk.forEach(((Tk, ik) => {
-        if (null !== Fk && Tk.value === Fk.value) return void Ik.push(Fk.rank);
-        const yk = ik > 0 && Tk.value === kk[ik - 1].value;
-        yk || (Xk = 0 === ik && 1 !== Tk.rank), Ik.push(yk && !Xk ? Ik[ik - 1] : Tk.rank)
-      })), Ik
+    function jm(mm, Tm) {
+      const fm = [];
+      let hm = !1;
+      return mm.forEach(((Am, am) => {
+        if (null !== Tm && Am.value === Tm.value) return void fm.push(Tm.rank);
+        const xm = am > 0 && Am.value === mm[am - 1].value;
+        xm || (hm = 0 === am && 1 !== Am.rank), fm.push(xm && !hm ? fm[am - 1] : Am.rank)
+      })), fm
     }
   },
-  38868: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => Tk,
-      g: () => ik
+  38972: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => Am,
+      g: () => am
     });
-    const Xk = 32;
+    const hm = 32;
 
-    function Tk(kk) {
-      return Array.from(kk).length
+    function Am(mm) {
+      return Array.from(mm).length
     }
 
-    function ik(kk) {
-      const Fk = [""];
-      let Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        Tk = "";
-      const ik = () => {
-        Fk.push(""), Ik = 0, Tk = ""
+    function am(mm) {
+      const Tm = [""];
+      let fm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        Am = "";
+      const am = () => {
+        Tm.push(""), fm = 0, Am = ""
       };
-      for (const yk of kk.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(yk)) ik();
-        else if (/^\s+$/.test(yk)) Tk += yk;
-      else if (yk.length > 0) {
-        const kk = Array.from(yk);
-        Ik > 0 && Ik + Tk.length + kk.length > Xk && ik(), Fk[Fk.length - 1] += Tk, Ik += Tk.length, Tk = "";
-        for (const Tk of kk) Ik >= Xk && ik(), Fk[Fk.length - 1] += Tk, Ik++
+      for (const xm of mm.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(xm)) am();
+        else if (/^\s+$/.test(xm)) Am += xm;
+      else if (xm.length > 0) {
+        const mm = Array.from(xm);
+        fm > 0 && fm + Am.length + mm.length > hm && am(), Tm[Tm.length - 1] += Am, fm += Am.length, Am = "";
+        for (const Am of mm) fm >= hm && am(), Tm[Tm.length - 1] += Am, fm++
       }
-      return Fk[Fk.length - 1] += Tk, Fk
+      return Tm[Tm.length - 1] += Am, Tm
     }
   },
-  39121: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => yk
+  39249: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => xm
     });
-    var Xk = Ik(36624),
-      Tk = Ik.n(Xk);
-    const ik = [1, 1, 1];
+    var hm = fm(36717),
+      Am = fm.n(hm);
+    const am = [1, 1, 1];
 
-    function yk(kk) {
-      if (!kk) return [...ik];
+    function xm(mm) {
+      if (!mm) return [...am];
       try {
-        const [Fk, Ik, Xk] = Tk()(kk).rgb().array();
-        return [Fk / 255, Ik / 255, Xk / 255]
-      } catch (Fk) {
-        return console.warn(`Invalid groundArrowPath colour "${kk}":`, Fk), [...ik]
+        const [Tm, fm, hm] = Am()(mm).rgb().array();
+        return [Tm / 255, fm / 255, hm / 255]
+      } catch (Tm) {
+        return console.warn(`Invalid groundArrowPath colour "${mm}":`, Tm), [...am]
       }
     }
   },
-  39230: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => lk,
-      f: () => qk,
-      j: () => ak
+  39345: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => wm,
+      f: () => im,
+      j: () => Dm
     });
-    var Xk = Ik(293),
-      Tk = Ik(2830);
-    const ik = /\/textures\/skyBoxes\/(space_blue|space_lightblue|space_red_2|space_white)\/(_[np][xyz]\.jpg)$/,
-      yk = 512;
+    var hm = fm(313),
+      Am = fm(2898);
+    const am = /\/textures\/skyBoxes\/(space_blue|space_lightblue|space_red_2|space_white)\/(_[np][xyz]\.jpg)$/,
+      xm = 512;
 
-    function lk(kk) {
-      var Fk;
-      const Ik = Math.min(screen.width, screen.height) * (null !== (Fk = (0, Xk.b)()) && void 0 !== Fk ? Fk : (0, Tk.m)());
-      return Math.max(window.innerHeight * (0, Tk.m)(), Ik) / (0, Tk.n)(kk)
+    function wm(mm) {
+      var Tm;
+      const fm = Math.min(screen.width, screen.height) * (null !== (Tm = (0, hm.c)()) && void 0 !== Tm ? Tm : (0, Am.r)());
+      return Math.max(window.innerHeight * (0, Am.r)(), fm) / (0, Am.v)(mm)
     }
 
-    function ak(kk, Fk, Ik) {
-      return Fk / (2 * Math.tan(Ik / 2)) > yk ? kk : qk(kk)
+    function Dm(mm, Tm, fm) {
+      return Tm / (2 * Math.tan(fm / 2)) > xm ? mm : im(mm)
     }
 
-    function qk(kk) {
-      return kk.map((kk => kk.replace(ik, "/textures/skyBoxes/$1/1024/$2")))
+    function im(mm) {
+      return mm.map((mm => mm.replace(am, "/textures/skyBoxes/$1/1024/$2")))
     }
   },
-  34008: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => ik,
-      h: () => lk,
-      l: () => yk,
-      n: () => Tk,
-      q: () => Xk
+  34122: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => am,
+      i: () => wm,
+      m: () => xm,
+      p: () => Am,
+      t: () => hm
     });
-    const Xk = {
+    const hm = {
         default: {
           type: "earth",
           vertexTint: [137, 207, 240]
@@ -1676,41 +1676,41 @@ export const modules = {
           pz: "/textures/skyBoxes/space_white/_pz.jpg"
         }
       },
-      Tk = "/textures/dayNight/sun.png",
-      ik = "/textures/dayNight/moon.png",
-      yk = "/textures/dayNight/stars",
-      lk = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
+      Am = "/textures/dayNight/sun.png",
+      am = "/textures/dayNight/moon.png",
+      xm = "/textures/dayNight/stars",
+      wm = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
   },
-  39201: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Lk,
-      f: () => tk,
-      j: () => Xk,
-      k: () => ak,
-      m: () => Tk,
-      q: () => qk,
-      u: () => lk,
-      y: () => yk
+  39323: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => Rm,
+      i: () => pm,
+      j: () => hm,
+      k: () => Dm,
+      n: () => Am,
+      o: () => im,
+      p: () => wm,
+      t: () => xm
     });
-    const Xk = ["linear", "easeIn", "easeOut", "easeInOut"],
-      Tk = ["movement", "camera", "cursor"],
-      ik = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
+    const hm = ["linear", "easeIn", "easeOut", "easeInOut"],
+      Am = ["movement", "camera", "cursor"],
+      am = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
 
-    function yk(kk, Fk) {
-      return lk(kk, Fk, ik)
+    function xm(mm, Tm) {
+      return wm(mm, Tm, am)
     }
 
-    function lk(kk, Fk) {
-      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      if (kk === Fk || Number.isNaN(kk) && Number.isNaN(Fk)) return !0;
-      if ("object" !== typeof kk || "object" !== typeof Fk || null === kk || null === Fk || Array.isArray(kk) !== Array.isArray(Fk)) return !1;
-      const Xk = kk,
-        Tk = Fk;
-      for (const ik of new Set([...Object.keys(Xk), ...Object.keys(Tk)]))
-        if (!Ik.includes(ik) && !lk(Xk[ik], Tk[ik])) return !1;
+    function wm(mm, Tm) {
+      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      if (mm === Tm || Number.isNaN(mm) && Number.isNaN(Tm)) return !0;
+      if ("object" !== typeof mm || "object" !== typeof Tm || null === mm || null === Tm || Array.isArray(mm) !== Array.isArray(Tm)) return !1;
+      const hm = mm,
+        Am = Tm;
+      for (const am of new Set([...Object.keys(hm), ...Object.keys(Am)]))
+        if (!fm.includes(am) && !wm(hm[am], Am[am])) return !1;
       return !0
     }
-    const ak = {
+    const Dm = {
         maxBlendInMs: 1e4,
         minFov: 10,
         maxFov: 120,
@@ -1732,10 +1732,10 @@ export const modules = {
         minEasingY: -1,
         maxEasingY: 2
       },
-      qk = "^-[1-9][0-9]*$",
-      Lk = "^#[0-9a-fA-F]{6}$",
-      tk = "#000000"
+      im = "^-[1-9][0-9]*$",
+      Rm = "^#[0-9a-fA-F]{6}$",
+      pm = "#000000"
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

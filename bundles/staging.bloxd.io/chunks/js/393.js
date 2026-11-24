@@ -1,197 +1,197 @@
 export const id = 393;
 export const ids = [393];
 export const modules = {
-  61874: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      rebuildScenePbrPipelines: () => lk,
-      rebuildSceneRenderables: () => ak
+  62008: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      rebuildScenePbrPipelines: () => wm,
+      rebuildSceneRenderables: () => Dm
     });
-    var Xk = Ik(41723),
-      Tk = (kk, Fk) => kk.order - Fk.order,
-      ik = 8,
-      yk = kk => ak(kk);
-    async function lk(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      await qk(kk, "pbr", Fk)
+    var hm = fm(41743),
+      Am = (mm, Tm) => mm.order - Tm.order,
+      am = 8,
+      xm = mm => Dm(mm);
+    async function wm(mm) {
+      let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      await im(mm, "pbr", Tm)
     }
-    async function ak(kk) {
-      await qk(kk, void 0, !1)
+    async function Dm(mm) {
+      await im(mm, void 0, !1)
     }
-    async function qk(kk, Fk, lk) {
-      const ak = kk;
-      if (!ak._built && !lk) return;
-      const qk = ak._lightListVersion ?? 0,
-        Lk = ak.surface.engine,
-        tk = kk => {
-          ak._z ? kk.forEach((kk => kk())) : (0, Xk.b)(Lk, (() => kk.forEach((kk => kk()))))
+    async function im(mm, Tm, wm) {
+      const Dm = mm;
+      if (!Dm._built && !wm) return;
+      const im = Dm._lightListVersion ?? 0,
+        Rm = Dm.surface.engine,
+        pm = mm => {
+          Dm._z ? mm.forEach((mm => mm())) : (0, hm.c)(Rm, (() => mm.forEach((mm => mm()))))
         };
-      let Zk = !1,
-        jk = !1,
-        ek = !1,
-        wk = !1;
+      let Em = !1,
+        om = !1,
+        Om = !1,
+        Ym = !1;
       try {
-        for (let kk = 1;; kk++) {
-          if (void 0 !== Fk) {
-            await Hk();
+        for (let mm = 1;; mm++) {
+          if (void 0 !== Tm) {
+            await qm();
             break
           }
-          if (xk(ak), await Hk(), !Jk(ak)) break;
-          if (kk >= ik) {
-            ak._rebuildHook = yk, wk = !0, jk = !0;
+          if (Vm(Dm), await qm(), !jm(Dm)) break;
+          if (mm >= am) {
+            Dm._rebuildHook = xm, Ym = !0, om = !0;
             break
           }
         }
-        ek = !0
+        Om = !0
       } finally {
-        if (Zk && (ak._renderables.sort(Tk), ak._renderableVersion++, ak._materialEpoch++, ak._built && ak._frameGraph.build()), void 0 === Fk && ek && !jk && (ak._lightListVersion ?? 0) === qk) {
-          const kk = ak._pendingTopologyRetirements?.splice(0);
-          kk?.length && tk(kk), wk || (ak._rebuildHook = void 0)
+        if (Em && (Dm._renderables.sort(Am), Dm._renderableVersion++, Dm._materialEpoch++, Dm._built && Dm._frameGraph.build()), void 0 === Tm && Om && !om && (Dm._lightListVersion ?? 0) === im) {
+          const mm = Dm._pendingTopologyRetirements?.splice(0);
+          mm?.length && pm(mm), Ym || (Dm._rebuildHook = void 0)
         }
       }
-      async function Hk() {
-        for (const [kk, Xk] of ak._groups) {
-          if (void 0 !== Fk && kk._materialFamily !== Fk) continue;
-          if (0 === Xk.length) {
-            (Xk.o || Xk.r) && (Pk(kk, Xk), Zk = !0);
+      async function qm() {
+        for (const [mm, hm] of Dm._groups) {
+          if (void 0 !== Tm && mm._materialFamily !== Tm) continue;
+          if (0 === hm.length) {
+            (hm.o || hm.r) && (Im(mm, hm), Em = !0);
             continue
           }
-          const Tk = ak._runtimeBuilds;
-          await (Tk?.wait(Xk));
-          let ik = !1;
-          const lk = async () => {
-            const Fk = ak._runtimeBuilds,
-              Ik = [...Xk].filter((Fk => ak.meshes.includes(Fk) && Fk.material?._buildGroup === kk));
-            if (0 === Ik.length) return void Pk(kk, Xk);
-            const yk = !!Xk.r,
-              lk = ak._disposables.length,
-              qk = new Map,
-              Lk = new Map(Ik.map((kk => [kk, kk.material])));
-            for (const kk of Ik) {
-              const Ik = ak._meshDisposables.get(kk);
-              Ik && (qk.set(kk, Ik), ak._meshDisposables.delete(kk), Fk?.holdPendingDisposers(kk, Ik))
+          const Am = Dm._runtimeBuilds;
+          await (Am?.wait(hm));
+          let am = !1;
+          const wm = async () => {
+            const Tm = Dm._runtimeBuilds,
+              fm = [...hm].filter((Tm => Dm.meshes.includes(Tm) && Tm.material?._buildGroup === mm));
+            if (0 === fm.length) return void Im(mm, hm);
+            const xm = !!hm.r,
+              wm = Dm._disposables.length,
+              im = new Map,
+              Rm = new Map(fm.map((mm => [mm, mm.material])));
+            for (const mm of fm) {
+              const fm = Dm._meshDisposables.get(mm);
+              fm && (im.set(mm, fm), Dm._meshDisposables.delete(mm), Tm?.holdPendingDisposers(mm, fm))
             }
-            let Zk, jk;
-            ak._p = kk => (jk = kk, !0);
+            let Em, om;
+            Dm._p = mm => (om = mm, !0);
             try {
-              Zk = await kk(ak, Ik)
-            } catch (sk) {
-              jk?.[1]();
-              for (const Tk of Ik) {
-                const Ik = qk.get(Tk),
-                  ik = ak._meshDisposables.get(Tk);
-                if (ik && ik !== Ik)
-                  for (const kk of ik) kk();
-                const yk = ak.meshes.includes(Tk) && Tk.material === Lk.get(Tk) && Tk.material?._buildGroup === kk && Xk.includes(Tk);
-                Ik && yk ? ak._meshDisposables.set(Tk, Ik) : (ak._meshDisposables.delete(Tk), Ik && tk(Ik)), Ik && Fk?.releasePendingDisposers(Tk, Ik)
+              Em = await mm(Dm, fm)
+            } catch (nm) {
+              om?.[1]();
+              for (const Am of fm) {
+                const fm = im.get(Am),
+                  am = Dm._meshDisposables.get(Am);
+                if (am && am !== fm)
+                  for (const mm of am) mm();
+                const xm = Dm.meshes.includes(Am) && Am.material === Rm.get(Am) && Am.material?._buildGroup === mm && hm.includes(Am);
+                fm && xm ? Dm._meshDisposables.set(Am, fm) : (Dm._meshDisposables.delete(Am), fm && pm(fm)), fm && Tm?.releasePendingDisposers(Am, fm)
               }
-              throw sk
+              throw nm
             } finally {
-              delete ak._p
+              delete Dm._p
             }
-            if (ak._z || Tk?._d()) {
-              jk?.[1]();
-              for (const Fk of Ik) {
-                const kk = ak._meshDisposables.get(Fk),
-                  Ik = qk.get(Fk);
-                if (kk && kk !== Ik)
-                  for (const Fk of kk) Fk();
-                ak._meshDisposables.delete(Fk)
+            if (Dm._z || Am?._d()) {
+              om?.[1]();
+              for (const Tm of fm) {
+                const mm = Dm._meshDisposables.get(Tm),
+                  fm = im.get(Tm);
+                if (mm && mm !== fm)
+                  for (const Tm of mm) Tm();
+                Dm._meshDisposables.delete(Tm)
               }
-              for (const Fk of ak._disposables.splice(0)) Fk();
-              const kk = [...qk.values()].flat();
-              tk(kk);
-              for (const [Ik, Xk] of qk) Fk?.releasePendingDisposers(Ik, Xk);
+              for (const Tm of Dm._disposables.splice(0)) Tm();
+              const mm = [...im.values()].flat();
+              pm(mm);
+              for (const [fm, hm] of im) Tm?.releasePendingDisposers(fm, hm);
               return
             }
-            jk?.[0](), kk._rebuildSingle = Zk.rebuildSingle, Xk.r = ak._runtimeBuilds?.base(kk, Zk.rebuildSingle) ?? Zk.rebuildSingle, "pbr" === kk._materialFamily && Zk._G && (Xk._w = null), yk && Kk(ak, lk);
-            const ek = new Set(Ik.filter((Fk => ak.meshes.includes(Fk) && Fk.material === Lk.get(Fk) && Fk.material?._buildGroup === kk && Xk.includes(Fk))));
-            if (ek.size !== Ik.length && Zk.renderables.some((kk => !kk.mesh))) {
-              for (const kk of Ik) {
-                const Ik = ak._meshDisposables.get(kk),
-                  Xk = qk.get(kk);
-                if (Ik && Ik !== Xk)
-                  for (const kk of Ik) kk();
-                Xk && ak.meshes.includes(kk) ? ak._meshDisposables.set(kk, Xk) : (ak._meshDisposables.delete(kk), Xk && tk(Xk)), Xk && Fk?.releasePendingDisposers(kk, Xk)
+            om?.[0](), mm._rebuildSingle = Em.rebuildSingle, hm.r = Dm._runtimeBuilds?.base(mm, Em.rebuildSingle) ?? Em.rebuildSingle, "pbr" === mm._materialFamily && Em._G && (hm._w = null), xm && Km(Dm, wm);
+            const Om = new Set(fm.filter((Tm => Dm.meshes.includes(Tm) && Tm.material === Rm.get(Tm) && Tm.material?._buildGroup === mm && hm.includes(Tm))));
+            if (Om.size !== fm.length && Em.renderables.some((mm => !mm.mesh))) {
+              for (const mm of fm) {
+                const fm = Dm._meshDisposables.get(mm),
+                  hm = im.get(mm);
+                if (fm && fm !== hm)
+                  for (const mm of fm) mm();
+                hm && Dm.meshes.includes(mm) ? Dm._meshDisposables.set(mm, hm) : (Dm._meshDisposables.delete(mm), hm && pm(hm)), hm && Tm?.releasePendingDisposers(mm, hm)
               }
-              return void(ik = !0)
+              return void(am = !0)
             }
-            const wk = new Set;
-            for (const kk of Ik)
-              if (ek.has(kk)) wk.add(kk.material), ak._runtimeBuilds?.reset(kk);
+            const Ym = new Set;
+            for (const mm of fm)
+              if (Om.has(mm)) Ym.add(mm.material), Dm._runtimeBuilds?.reset(mm);
               else {
-                const Ik = qk.get(kk),
-                  Xk = ak._meshDisposables.get(kk);
-                if (Xk && Xk !== Ik)
-                  for (const kk of Xk) kk();
-                Ik && ak.meshes.includes(kk) ? (ak._meshDisposables.set(kk, Ik), qk.delete(kk), Fk?.releasePendingDisposers(kk, Ik)) : ak._meshDisposables.delete(kk)
-              } for (const kk of wk) kk._csmGen = (kk._csmGen ?? 0) + 1;
-            const Hk = Xk.o,
-              Jk = Hk?.length ? new Set(Hk) : null;
-            for (let kk = ak._renderables.length - 1; kk >= 0; kk--) {
-              const Fk = ak._renderables[kk];
-              (ek.has(Fk.mesh) || Jk?.has(Fk)) && ak._renderables.splice(kk, 1)
+                const fm = im.get(mm),
+                  hm = Dm._meshDisposables.get(mm);
+                if (hm && hm !== fm)
+                  for (const mm of hm) mm();
+                fm && Dm.meshes.includes(mm) ? (Dm._meshDisposables.set(mm, fm), im.delete(mm), Tm?.releasePendingDisposers(mm, fm)) : Dm._meshDisposables.delete(mm)
+              } for (const mm of Ym) mm._csmGen = (mm._csmGen ?? 0) + 1;
+            const qm = hm.o,
+              jm = qm?.length ? new Set(qm) : null;
+            for (let mm = Dm._renderables.length - 1; mm >= 0; mm--) {
+              const Tm = Dm._renderables[mm];
+              (Om.has(Tm.mesh) || jm?.has(Tm)) && Dm._renderables.splice(mm, 1)
             }
-            const xk = Zk.renderables.filter((kk => !kk.mesh || ek.has(kk.mesh)));
-            ak._renderables.push(...xk), Xk.o = xk;
-            const Qk = [...qk.values()].flat();
-            tk(Qk);
-            for (const [kk, Xk] of qk) Fk?.releasePendingDisposers(kk, Xk)
+            const Vm = Em.renderables.filter((mm => !mm.mesh || Om.has(mm.mesh)));
+            Dm._renderables.push(...Vm), hm.o = Vm;
+            const Qm = [...im.values()].flat();
+            pm(Qm);
+            for (const [mm, hm] of im) Tm?.releasePendingDisposers(mm, hm)
           }, {
-            X: qk
-          } = await Promise.resolve().then((() => Ik(61371))), Lk = 3;
-          for (let Fk = 1;; Fk++) {
-            if (ik = !1, await qk(ak, kk, lk), ak._z || Tk?._d()) return void(jk = !0);
-            if (!ik) break;
-            if (Fk >= Lk) {
-              Pk(kk, Xk), ak._rebuildHook = yk, wk = !0, jk = !0;
+            X: im
+          } = await Promise.resolve().then((() => fm(61450))), Rm = 3;
+          for (let Tm = 1;; Tm++) {
+            if (am = !1, await im(Dm, mm, wm), Dm._z || Am?._d()) return void(om = !0);
+            if (!am) break;
+            if (Tm >= Rm) {
+              Im(mm, hm), Dm._rebuildHook = xm, Ym = !0, om = !0;
               break
             }
           }
-          ik ? Zk = !0 : Zk = !0
+          am ? Em = !0 : Em = !0
         }
       }
 
-      function Jk(kk) {
-        for (const Fk of kk.meshes) {
-          const Ik = Fk.material?._buildGroup;
-          if (Ik && !kk._groups.get(Ik)?.includes(Fk)) return !0
+      function jm(mm) {
+        for (const Tm of mm.meshes) {
+          const fm = Tm.material?._buildGroup;
+          if (fm && !mm._groups.get(fm)?.includes(Tm)) return !0
         }
         return !1
       }
 
-      function xk(kk) {
-        const Fk = new Map;
-        for (const Ik of kk.meshes) {
-          const kk = Ik.material?._buildGroup;
-          if (!kk) continue;
-          const Xk = Fk.get(kk);
-          Xk ? Xk.push(Ik) : Fk.set(kk, [Ik])
+      function Vm(mm) {
+        const Tm = new Map;
+        for (const fm of mm.meshes) {
+          const mm = fm.material?._buildGroup;
+          if (!mm) continue;
+          const hm = Tm.get(mm);
+          hm ? hm.push(fm) : Tm.set(mm, [fm])
         }
-        for (const [Ik, Xk] of kk._groups) {
-          const kk = Fk.get(Ik) ?? [];
-          (Xk.length !== kk.length || kk.some(((kk, Fk) => Xk[Fk] !== kk))) && (Xk.length = 0, Xk.push(...kk)), Fk.delete(Ik)
+        for (const [fm, hm] of mm._groups) {
+          const mm = Tm.get(fm) ?? [];
+          (hm.length !== mm.length || mm.some(((mm, Tm) => hm[Tm] !== mm))) && (hm.length = 0, hm.push(...mm)), Tm.delete(fm)
         }
-        for (const [Ik, Xk] of Fk) {
-          const Fk = Xk;
-          kk._groups.set(Ik, Fk)
+        for (const [fm, hm] of Tm) {
+          const Tm = hm;
+          mm._groups.set(fm, Tm)
         }
       }
 
-      function Pk(kk, Fk) {
-        const Ik = Fk.o;
-        if (Ik?.length) {
-          const kk = new Set(Ik);
-          for (let Fk = ak._renderables.length - 1; Fk >= 0; Fk--) kk.has(ak._renderables[Fk]) && ak._renderables.splice(Fk, 1)
+      function Im(mm, Tm) {
+        const fm = Tm.o;
+        if (fm?.length) {
+          const mm = new Set(fm);
+          for (let Tm = Dm._renderables.length - 1; Tm >= 0; Tm--) mm.has(Dm._renderables[Tm]) && Dm._renderables.splice(Tm, 1)
         }
-        Fk.o = void 0, Fk.r = void 0, ak._runtimeBuilds?.dropBase(kk), ak._rebuildHook = yk, wk = !0
+        Tm.o = void 0, Tm.r = void 0, Dm._runtimeBuilds?.dropBase(mm), Dm._rebuildHook = xm, Ym = !0
       }
 
-      function Kk(kk, Fk) {
-        const Ik = new Set(kk._disposables.slice(0, Fk));
-        for (let Xk = kk._disposables.length - 1; Xk >= Fk; Xk--) Ik.has(kk._disposables[Xk]) && kk._disposables.splice(Xk, 1)
+      function Km(mm, Tm) {
+        const fm = new Set(mm._disposables.slice(0, Tm));
+        for (let hm = mm._disposables.length - 1; hm >= Tm; hm--) fm.has(mm._disposables[hm]) && mm._disposables.splice(hm, 1)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

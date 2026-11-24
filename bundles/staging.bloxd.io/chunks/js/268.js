@@ -1,114 +1,114 @@
-/*! For license information please see 31kiid.268.5d936b1f.chunk.js.LICENSE.txt */
+/*! For license information please see mpd96o.268.ae2f4eb5.chunk.js.LICENSE.txt */
 export const id = 268;
 export const ids = [268];
 export const modules = {
-    40536: (kk, Fk, Ik) => {
-        Ik.r(Fk), Ik.d(Fk, {
-          ActionCodeOperation: () => Zk,
-          ActionCodeURL: () => DF,
-          AuthCredential: () => NF,
-          AuthErrorCodes: () => Jk,
-          EmailAuthCredential: () => AF,
-          EmailAuthProvider: () => kI,
-          FacebookAuthProvider: () => TI,
-          FactorId: () => ak,
-          GithubAuthProvider: () => yI,
-          GoogleAuthProvider: () => iI,
-          OAuthCredential: () => mF,
-          OAuthProvider: () => XI,
-          OperationType: () => tk,
-          PhoneAuthCredential: () => rF,
-          PhoneAuthProvider: () => IT,
-          PhoneMultiFactorGenerator: () => Fi,
-          ProviderId: () => qk,
-          RecaptchaVerifier: () => mX,
-          SAMLAuthProvider: () => aI,
-          SignInMethod: () => Lk,
-          TotpMultiFactorGenerator: () => Ii,
-          TotpSecret: () => Ti,
-          TwitterAuthProvider: () => qI,
-          applyActionCode: () => pI,
-          beforeAuthStateChanged: () => iX,
-          browserLocalPersistence: () => KX,
-          browserPopupRedirectResolver: () => DT,
-          browserSessionPersistence: () => sX,
-          checkActionCode: () => uI,
-          confirmPasswordReset: () => GI,
-          connectAuthEmulator: () => RF,
-          createUserWithEmailAndPassword: () => RI,
-          debugErrorMap: () => ek,
-          deleteUser: () => LX,
-          fetchSignInMethodsForEmail: () => WI,
-          getAdditionalUserInfo: () => FX,
-          getAuth: () => Zi,
-          getIdToken: () => Ak,
-          getIdTokenResult: () => gk,
-          getMultiFactorResolver: () => jX,
-          getRedirectResult: () => zT,
-          inMemoryPersistence: () => aF,
-          indexedDBLocalPersistence: () => CX,
-          initializeAuth: () => bF,
-          initializeRecaptchaConfig: () => XX,
-          isSignInWithEmailLink: () => NI,
-          linkWithCredential: () => VI,
-          linkWithPhoneNumber: () => DX,
-          linkWithPopup: () => ZT,
-          linkWithRedirect: () => VT,
-          multiFactor: () => HX,
-          onAuthStateChanged: () => yX,
-          onIdTokenChanged: () => TX,
-          parseActionCodeURL: () => MF,
-          prodErrorMap: () => wk,
-          reauthenticateWithCredential: () => zI,
-          reauthenticateWithPhoneNumber: () => MX,
-          reauthenticateWithPopup: () => tT,
-          reauthenticateWithRedirect: () => sT,
-          reload: () => FF,
-          sendEmailVerification: () => fI,
-          sendPasswordResetEmail: () => nI,
-          sendSignInLinkToEmail: () => CI,
-          setPersistence: () => IX,
-          signInAnonymously: () => jI,
-          signInWithCredential: () => sI,
-          signInWithCustomToken: () => SI,
-          signInWithEmailAndPassword: () => UI,
-          signInWithEmailLink: () => cI,
-          signInWithPhoneNumber: () => rX,
-          signInWithPopup: () => LT,
-          signInWithRedirect: () => QT,
-          signOut: () => qX,
-          unlink: () => JI,
-          updateCurrentUser: () => aX,
-          updateEmail: () => YI,
-          updatePassword: () => AI,
-          updatePhoneNumber: () => FT,
-          updateProfile: () => dI,
-          useDeviceLanguage: () => lX,
-          verifyBeforeUpdateEmail: () => BI,
-          verifyPasswordResetCode: () => bI
+    40628: (mm, Tm, fm) => {
+        fm.r(Tm), fm.d(Tm, {
+          ActionCodeOperation: () => Em,
+          ActionCodeURL: () => WT,
+          AuthCredential: () => rT,
+          AuthErrorCodes: () => jm,
+          EmailAuthCredential: () => vT,
+          EmailAuthProvider: () => mf,
+          FacebookAuthProvider: () => Af,
+          FactorId: () => Dm,
+          GithubAuthProvider: () => xf,
+          GoogleAuthProvider: () => af,
+          OAuthCredential: () => UT,
+          OAuthProvider: () => hf,
+          OperationType: () => pm,
+          PhoneAuthCredential: () => gT,
+          PhoneAuthProvider: () => AA,
+          PhoneMultiFactorGenerator: () => ha,
+          ProviderId: () => im,
+          RecaptchaVerifier: () => gh,
+          SAMLAuthProvider: () => Df,
+          SignInMethod: () => Rm,
+          TotpMultiFactorGenerator: () => Aa,
+          TotpSecret: () => xa,
+          TwitterAuthProvider: () => Rf,
+          applyActionCode: () => Pf,
+          beforeAuthStateChanged: () => wh,
+          browserLocalPersistence: () => nh,
+          browserPopupRedirectResolver: () => ma,
+          browserSessionPersistence: () => ch,
+          checkActionCode: () => Hf,
+          confirmPasswordReset: () => Xf,
+          connectAuthEmulator: () => HT,
+          createUserWithEmailAndPassword: () => Cf,
+          debugErrorMap: () => Om,
+          deleteUser: () => Eh,
+          fetchSignInMethodsForEmail: () => uf,
+          getAdditionalUserInfo: () => hh,
+          getAuth: () => Oa,
+          getIdToken: () => Lm,
+          getIdTokenResult: () => tm,
+          getMultiFactorResolver: () => Yh,
+          getRedirectResult: () => ZA,
+          inMemoryPersistence: () => DT,
+          indexedDBLocalPersistence: () => sh,
+          initializeAuth: () => PT,
+          initializeRecaptchaConfig: () => ah,
+          isSignInWithEmailLink: () => lf,
+          linkWithCredential: () => zf,
+          linkWithPhoneNumber: () => mA,
+          linkWithPopup: () => OA,
+          linkWithRedirect: () => zA,
+          multiFactor: () => Vh,
+          onAuthStateChanged: () => Dh,
+          onIdTokenChanged: () => xh,
+          parseActionCodeURL: () => FT,
+          prodErrorMap: () => Ym,
+          reauthenticateWithCredential: () => Zf,
+          reauthenticateWithPhoneNumber: () => TA,
+          reauthenticateWithPopup: () => oA,
+          reauthenticateWithRedirect: () => cA,
+          reload: () => TT,
+          sendEmailVerification: () => Bf,
+          sendPasswordResetEmail: () => Gf,
+          sendSignInLinkToEmail: () => sf,
+          setPersistence: () => Ah,
+          signInAnonymously: () => Of,
+          signInWithCredential: () => Jf,
+          signInWithCustomToken: () => kf,
+          signInWithEmailAndPassword: () => rf,
+          signInWithEmailLink: () => Mf,
+          signInWithPhoneNumber: () => Fh,
+          signInWithPopup: () => EA,
+          signInWithRedirect: () => JA,
+          signOut: () => ph,
+          unlink: () => Vf,
+          updateCurrentUser: () => Rh,
+          updateEmail: () => tf,
+          updatePassword: () => Uf,
+          updatePhoneNumber: () => hA,
+          updateProfile: () => vf,
+          useDeviceLanguage: () => ih,
+          verifyBeforeUpdateEmail: () => Lf,
+          verifyPasswordResetCode: () => yf
         });
-        var Xk = Ik(40522),
-          Tk = Ik(40512);
+        var hm = fm(40614),
+          Am = fm(40606);
 
-        function ik(kk, Fk) {
-          var Ik = {};
-          for (var Xk in kk) Object.prototype.hasOwnProperty.call(kk, Xk) && Fk.indexOf(Xk) < 0 && (Ik[Xk] = kk[Xk]);
-          if (null != kk && "function" === typeof Object.getOwnPropertySymbols) {
-            var Tk = 0;
-            for (Xk = Object.getOwnPropertySymbols(kk); Tk < Xk.length; Tk++) Fk.indexOf(Xk[Tk]) < 0 && Object.prototype.propertyIsEnumerable.call(kk, Xk[Tk]) && (Ik[Xk[Tk]] = kk[Xk[Tk]])
+        function am(mm, Tm) {
+          var fm = {};
+          for (var hm in mm) Object.prototype.hasOwnProperty.call(mm, hm) && Tm.indexOf(hm) < 0 && (fm[hm] = mm[hm]);
+          if (null != mm && "function" === typeof Object.getOwnPropertySymbols) {
+            var Am = 0;
+            for (hm = Object.getOwnPropertySymbols(mm); Am < hm.length; Am++) Tm.indexOf(hm[Am]) < 0 && Object.prototype.propertyIsEnumerable.call(mm, hm[Am]) && (fm[hm[Am]] = mm[hm[Am]])
           }
-          return Ik
+          return fm
         }
         Object.create;
         Object.create;
         "function" === typeof SuppressedError && SuppressedError;
-        var yk = Ik(40527),
-          lk = Ik(40519);
-        const ak = {
+        var xm = fm(40618),
+          wm = fm(40610);
+        const Dm = {
             PHONE: "phone",
             TOTP: "totp"
           },
-          qk = {
+          im = {
             FACEBOOK: "facebook.com",
             GITHUB: "github.com",
             GOOGLE: "google.com",
@@ -116,7 +116,7 @@ export const modules = {
             PHONE: "phone",
             TWITTER: "twitter.com"
           },
-          Lk = {
+          Rm = {
             EMAIL_LINK: "emailLink",
             EMAIL_PASSWORD: "password",
             FACEBOOK: "facebook.com",
@@ -125,12 +125,12 @@ export const modules = {
             PHONE: "phone",
             TWITTER: "twitter.com"
           },
-          tk = {
+          pm = {
             LINK: "link",
             REAUTHENTICATE: "reauthenticate",
             SIGN_IN: "signIn"
           },
-          Zk = {
+          Em = {
             EMAIL_SIGNIN: "EMAIL_SIGNIN",
             PASSWORD_RESET: "PASSWORD_RESET",
             RECOVER_EMAIL: "RECOVER_EMAIL",
@@ -139,12 +139,12 @@ export const modules = {
             VERIFY_EMAIL: "VERIFY_EMAIL"
           };
 
-        function jk() {
+        function om() {
           return {
             "dependent-sdk-initialized-before-auth": "Another Firebase SDK was initialized and is trying to use Auth before Auth is initialized. Please be sure to call `initializeAuth` or `getAuth` before starting any other Firebase SDK."
           }
         }
-        const ek = function() {
+        const Om = function() {
             return {
               "admin-restricted-operation": "This operation is restricted to administrators only.",
               "argument-error": "",
@@ -253,11 +253,11 @@ export const modules = {
               "invalid-recaptcha-version": "The reCAPTCHA version is invalid when sending request to the backend."
             }
           },
-          wk = jk,
-          Hk = new Xk.g("auth", "Firebase", {
+          Ym = om,
+          qm = new hm.e("auth", "Firebase", {
             "dependent-sdk-initialized-before-auth": "Another Firebase SDK was initialized and is trying to use Auth before Auth is initialized. Please be sure to call `initializeAuth` or `getAuth` before starting any other Firebase SDK."
           }),
-          Jk = {
+          jm = {
             ADMIN_ONLY_OPERATION: "auth/admin-restricted-operation",
             ARGUMENT_ERROR: "auth/argument-error",
             APP_NOT_AUTHORIZED: "auth/app-not-authorized",
@@ -362,108 +362,108 @@ export const modules = {
             INVALID_RECAPTCHA_VERSION: "auth/invalid-recaptcha-version",
             INVALID_REQ_TYPE: "auth/invalid-req-type"
           },
-          xk = new yk.h("@firebase/auth");
+          Vm = new xm.g("@firebase/auth");
 
-        function Pk(kk) {
-          if (xk.logLevel <= yk.d.ERROR) {
-            for (var Fk = arguments.length, Ik = new Array(Fk > 1 ? Fk - 1 : 0), Xk = 1; Xk < Fk; Xk++) Ik[Xk - 1] = arguments[Xk];
-            xk.error(`Auth (${Tk.i}): ${kk}`, ...Ik)
+        function Im(mm) {
+          if (Vm.logLevel <= xm.d.ERROR) {
+            for (var Tm = arguments.length, fm = new Array(Tm > 1 ? Tm - 1 : 0), hm = 1; hm < Tm; hm++) fm[hm - 1] = arguments[hm];
+            Vm.error(`Auth (${Am.d}): ${mm}`, ...fm)
           }
         }
 
-        function Kk(kk) {
-          for (var Fk = arguments.length, Ik = new Array(Fk > 1 ? Fk - 1 : 0), Xk = 1; Xk < Fk; Xk++) Ik[Xk - 1] = arguments[Xk];
-          throw zk(kk, ...Ik)
+        function Km(mm) {
+          for (var Tm = arguments.length, fm = new Array(Tm > 1 ? Tm - 1 : 0), hm = 1; hm < Tm; hm++) fm[hm - 1] = arguments[hm];
+          throw cm(mm, ...fm)
         }
 
-        function Qk(kk) {
-          for (var Fk = arguments.length, Ik = new Array(Fk > 1 ? Fk - 1 : 0), Xk = 1; Xk < Fk; Xk++) Ik[Xk - 1] = arguments[Xk];
-          return zk(kk, ...Ik)
+        function Qm(mm) {
+          for (var Tm = arguments.length, fm = new Array(Tm > 1 ? Tm - 1 : 0), hm = 1; hm < Tm; hm++) fm[hm - 1] = arguments[hm];
+          return cm(mm, ...fm)
         }
 
-        function sk(kk, Fk, Ik) {
-          const Tk = Object.assign(Object.assign({}, wk()), {
-            [Fk]: Ik
+        function nm(mm, Tm, fm) {
+          const Am = Object.assign(Object.assign({}, Ym()), {
+            [Tm]: fm
           });
-          return new Xk.g("auth", "Firebase", Tk).create(Fk, {
-            appName: kk.name
+          return new hm.e("auth", "Firebase", Am).create(Tm, {
+            appName: mm.name
           })
         }
 
-        function Vk(kk, Fk, Ik) {
-          if (!(Fk instanceof Ik)) throw Ik.name !== Fk.constructor.name && Kk(kk, "argument-error"), sk(kk, "argument-error", `Type of ${Fk.constructor.name} does not match expected instance.Did you pass a reference from a different Auth SDK?`)
+        function Jm(mm, Tm, fm) {
+          if (!(Tm instanceof fm)) throw fm.name !== Tm.constructor.name && Km(mm, "argument-error"), nm(mm, "argument-error", `Type of ${Tm.constructor.name} does not match expected instance.Did you pass a reference from a different Auth SDK?`)
         }
 
-        function zk(kk) {
-          for (var Fk = arguments.length, Ik = new Array(Fk > 1 ? Fk - 1 : 0), Xk = 1; Xk < Fk; Xk++) Ik[Xk - 1] = arguments[Xk];
-          if ("string" !== typeof kk) {
-            const Fk = Ik[0],
-              Xk = [...Ik.slice(1)];
-            return Xk[0] && (Xk[0].appName = kk.name), kk._errorFactory.create(Fk, ...Xk)
+        function cm(mm) {
+          for (var Tm = arguments.length, fm = new Array(Tm > 1 ? Tm - 1 : 0), hm = 1; hm < Tm; hm++) fm[hm - 1] = arguments[hm];
+          if ("string" !== typeof mm) {
+            const Tm = fm[0],
+              hm = [...fm.slice(1)];
+            return hm[0] && (hm[0].appName = mm.name), mm._errorFactory.create(Tm, ...hm)
           }
-          return Hk.create(kk, ...Ik)
+          return qm.create(mm, ...fm)
         }
 
-        function Sk(kk, Fk) {
-          if (!kk) {
-            for (var Ik = arguments.length, Xk = new Array(Ik > 2 ? Ik - 2 : 0), Tk = 2; Tk < Ik; Tk++) Xk[Tk - 2] = arguments[Tk];
-            throw zk(Fk, ...Xk)
+        function zm(mm, Tm) {
+          if (!mm) {
+            for (var fm = arguments.length, hm = new Array(fm > 2 ? fm - 2 : 0), Am = 2; Am < fm; Am++) hm[Am - 2] = arguments[Am];
+            throw cm(Tm, ...hm)
           }
         }
 
-        function vk(kk) {
-          const Fk = "INTERNAL ASSERTION FAILED: " + kk;
-          throw Pk(Fk), new Error(Fk)
+        function Zm(mm) {
+          const Tm = "INTERNAL ASSERTION FAILED: " + mm;
+          throw Im(Tm), new Error(Tm)
         }
 
-        function Ek(kk, Fk) {
-          kk || vk(Fk)
+        function km(mm, Tm) {
+          mm || Zm(Tm)
         }
 
-        function Ok() {
-          var kk;
-          return "undefined" !== typeof self && (null === (kk = self.location) || void 0 === kk ? void 0 : kk.href) || ""
+        function bm() {
+          var mm;
+          return "undefined" !== typeof self && (null === (mm = self.location) || void 0 === mm ? void 0 : mm.href) || ""
         }
 
-        function nk() {
-          return "http:" === Gk() || "https:" === Gk()
+        function Sm() {
+          return "http:" === em() || "https:" === em()
         }
 
-        function Gk() {
-          var kk;
-          return "undefined" !== typeof self && (null === (kk = self.location) || void 0 === kk ? void 0 : kk.protocol) || null
+        function em() {
+          var mm;
+          return "undefined" !== typeof self && (null === (mm = self.location) || void 0 === mm ? void 0 : mm.protocol) || null
         }
-        class pk {
-          constructor(kk, Fk) {
-            this.shortDelay = kk, this.longDelay = Fk, Ek(Fk > kk, "Short delay should be less than long delay!"), this.isMobile = (0, Xk.Y)() || (0, Xk.ab)()
+        class Nm {
+          constructor(mm, Tm) {
+            this.shortDelay = mm, this.longDelay = Tm, km(Tm > mm, "Short delay should be less than long delay!"), this.isMobile = (0, hm.V)() || (0, hm.X)()
           }
           get() {
-            return "undefined" !== typeof navigator && navigator && "onLine" in navigator && "boolean" === typeof navigator.onLine && (nk() || (0, Xk.R)() || "connection" in navigator) && !navigator.onLine ? Math.min(5e3, this.shortDelay) : this.isMobile ? this.longDelay : this.shortDelay
+            return "undefined" !== typeof navigator && navigator && "onLine" in navigator && "boolean" === typeof navigator.onLine && (Sm() || (0, hm.P)() || "connection" in navigator) && !navigator.onLine ? Math.min(5e3, this.shortDelay) : this.isMobile ? this.longDelay : this.shortDelay
           }
         }
 
-        function uk(kk, Fk) {
-          Ek(kk.emulator, "Emulator should always be set here");
+        function Gm(mm, Tm) {
+          km(mm.emulator, "Emulator should always be set here");
           const {
-            url: Ik
-          } = kk.emulator;
-          return Fk ? `${Ik}${Fk.startsWith("/")?Fk.slice(1):Fk}` : Ik
+            url: fm
+          } = mm.emulator;
+          return Tm ? `${fm}${Tm.startsWith("/")?Tm.slice(1):Tm}` : fm
         }
-        class bk {
-          static initialize(kk, Fk, Ik) {
-            this.fetchImpl = kk, Fk && (this.headersImpl = Fk), Ik && (this.responseImpl = Ik)
+        class Xm {
+          static initialize(mm, Tm, fm) {
+            this.fetchImpl = mm, Tm && (this.headersImpl = Tm), fm && (this.responseImpl = fm)
           }
           static fetch() {
-            return this.fetchImpl ? this.fetchImpl : "undefined" !== typeof self && "fetch" in self ? self.fetch : void vk("Could not find fetch implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.fetchImpl ? this.fetchImpl : "undefined" !== typeof self && "fetch" in self ? self.fetch : void Zm("Could not find fetch implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
           static headers() {
-            return this.headersImpl ? this.headersImpl : "undefined" !== typeof self && "Headers" in self ? self.Headers : void vk("Could not find Headers implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.headersImpl ? this.headersImpl : "undefined" !== typeof self && "Headers" in self ? self.Headers : void Zm("Could not find Headers implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
           static response() {
-            return this.responseImpl ? this.responseImpl : "undefined" !== typeof self && "Response" in self ? self.Response : void vk("Could not find Response implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.responseImpl ? this.responseImpl : "undefined" !== typeof self && "Response" in self ? self.Response : void Zm("Could not find Response implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
         }
-        const Rk = {
+        const Pm = {
             CREDENTIAL_MISMATCH: "custom-token-mismatch",
             MISSING_CUSTOM_TOKEN: "internal-error",
             INVALID_IDENTIFIER: "invalid-email",
@@ -511,74 +511,74 @@ export const modules = {
             INVALID_RECAPTCHA_VERSION: "invalid-recaptcha-version",
             INVALID_REQ_TYPE: "invalid-req-type"
           },
-          Uk = new pk(3e4, 6e4);
+          Hm = new Nm(3e4, 6e4);
 
-        function Ck(kk, Fk) {
-          return kk.tenantId && !Fk.tenantId ? Object.assign(Object.assign({}, Fk), {
-            tenantId: kk.tenantId
-          }) : Fk
+        function ym(mm, Tm) {
+          return mm.tenantId && !Tm.tenantId ? Object.assign(Object.assign({}, Tm), {
+            tenantId: mm.tenantId
+          }) : Tm
         }
-        async function Nk(kk, Fk, Ik, Tk) {
-          return ck(kk, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, (async () => {
-            let ik = {},
-              yk = {};
-            Tk && ("GET" === Fk ? yk = Tk : ik = {
-              body: JSON.stringify(Tk)
+        async function Cm(mm, Tm, fm, Am) {
+          return rm(mm, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, (async () => {
+            let am = {},
+              xm = {};
+            Am && ("GET" === Tm ? xm = Am : am = {
+              body: JSON.stringify(Am)
             });
-            const lk = (0, Xk.eb)(Object.assign({
-                key: kk.config.apiKey
-              }, yk)).slice(1),
-              ak = await kk._getAdditionalHeaders();
-            return ak["Content-Type"] = "application/json", kk.languageCode && (ak["X-Firebase-Locale"] = kk.languageCode), bk.fetch()(fk(kk, kk.config.apiHost, Ik, lk), Object.assign({
-              method: Fk,
-              headers: ak,
+            const wm = (0, hm.ab)(Object.assign({
+                key: mm.config.apiKey
+              }, xm)).slice(1),
+              Dm = await mm._getAdditionalHeaders();
+            return Dm["Content-Type"] = "application/json", mm.languageCode && (Dm["X-Firebase-Locale"] = mm.languageCode), Xm.fetch()(lm(mm, mm.config.apiHost, fm, wm), Object.assign({
+              method: Tm,
+              headers: Dm,
               referrerPolicy: "no-referrer"
-            }, ik))
+            }, am))
           }))
         }
-        async function ck(kk, Fk, Ik) {
-          kk._canInitEmulator = !1;
-          const Tk = Object.assign(Object.assign({}, Rk), Fk);
+        async function rm(mm, Tm, fm) {
+          mm._canInitEmulator = !1;
+          const Am = Object.assign(Object.assign({}, Pm), Tm);
           try {
-            const Fk = new Bk(kk),
-              Xk = await Promise.race([Ik(), Fk.promise]);
-            Fk.clearNetworkTimeout();
-            const ik = await Xk.json();
-            if ("needConfirmation" in ik) throw dk(kk, "account-exists-with-different-credential", ik);
-            if (Xk.ok && !("errorMessage" in ik)) return ik;
+            const Tm = new Mm(mm),
+              hm = await Promise.race([fm(), Tm.promise]);
+            Tm.clearNetworkTimeout();
+            const am = await hm.json();
+            if ("needConfirmation" in am) throw um(mm, "account-exists-with-different-credential", am);
+            if (hm.ok && !("errorMessage" in am)) return am;
             {
-              const Fk = Xk.ok ? ik.errorMessage : ik.error.message,
-                [Ik, yk] = Fk.split(" : ");
-              if ("FEDERATED_USER_ID_ALREADY_LINKED" === Ik) throw dk(kk, "credential-already-in-use", ik);
-              if ("EMAIL_EXISTS" === Ik) throw dk(kk, "email-already-in-use", ik);
-              if ("USER_DISABLED" === Ik) throw dk(kk, "user-disabled", ik);
-              const lk = Tk[Ik] || Ik.toLowerCase().replace(/[_\s]+/g, "-");
-              if (yk) throw sk(kk, lk, yk);
-              Kk(kk, lk)
+              const Tm = hm.ok ? am.errorMessage : am.error.message,
+                [fm, xm] = Tm.split(" : ");
+              if ("FEDERATED_USER_ID_ALREADY_LINKED" === fm) throw um(mm, "credential-already-in-use", am);
+              if ("EMAIL_EXISTS" === fm) throw um(mm, "email-already-in-use", am);
+              if ("USER_DISABLED" === fm) throw um(mm, "user-disabled", am);
+              const wm = Am[fm] || fm.toLowerCase().replace(/[_\s]+/g, "-");
+              if (xm) throw nm(mm, wm, xm);
+              Km(mm, wm)
             }
-          } catch (ik) {
-            if (ik instanceof Xk.h) throw ik;
-            Kk(kk, "network-request-failed", {
-              message: String(ik)
+          } catch (am) {
+            if (am instanceof hm.h) throw am;
+            Km(mm, "network-request-failed", {
+              message: String(am)
             })
           }
         }
-        async function Wk(kk, Fk, Ik, Xk) {
-          let Tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-          const ik = await Nk(kk, Fk, Ik, Xk, Tk);
-          return "mfaPendingCredential" in ik && Kk(kk, "multi-factor-auth-required", {
-            _serverResponse: ik
-          }), ik
+        async function sm(mm, Tm, fm, hm) {
+          let Am = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+          const am = await Cm(mm, Tm, fm, hm, Am);
+          return "mfaPendingCredential" in am && Km(mm, "multi-factor-auth-required", {
+            _serverResponse: am
+          }), am
         }
 
-        function fk(kk, Fk, Ik, Xk) {
-          const Tk = `${Fk}${Ik}?${Xk}`;
-          return kk.config.emulator ? uk(kk.config, Tk) : `${kk.config.apiScheme}://${Tk}`
+        function lm(mm, Tm, fm, hm) {
+          const Am = `${Tm}${fm}?${hm}`;
+          return mm.config.emulator ? Gm(mm.config, Am) : `${mm.config.apiScheme}://${Am}`
         }
-        class Bk {
-          constructor(kk) {
-            this.auth = kk, this.timer = null, this.promise = new Promise(((kk, Fk) => {
-              this.timer = setTimeout((() => Fk(Qk(this.auth, "network-request-failed"))), Uk.get())
+        class Mm {
+          constructor(mm) {
+            this.auth = mm, this.timer = null, this.promise = new Promise(((mm, Tm) => {
+              this.timer = setTimeout((() => Tm(Qm(this.auth, "network-request-failed"))), Hm.get())
             }))
           }
           clearNetworkTimeout() {
@@ -586,75 +586,75 @@ export const modules = {
           }
         }
 
-        function dk(kk, Fk, Ik) {
-          const Xk = {
-            appName: kk.name
+        function um(mm, Tm, fm) {
+          const hm = {
+            appName: mm.name
           };
-          Ik.email && (Xk.email = Ik.email), Ik.phoneNumber && (Xk.phoneNumber = Ik.phoneNumber);
-          const Tk = Qk(kk, Fk, Xk);
-          return Tk.customData._tokenResponse = Ik, Tk
+          fm.email && (hm.email = fm.email), fm.phoneNumber && (hm.phoneNumber = fm.phoneNumber);
+          const Am = Qm(mm, Tm, hm);
+          return Am.customData._tokenResponse = fm, Am
         }
 
-        function Yk(kk) {
-          if (kk) try {
-            const Fk = new Date(Number(kk));
-            if (!isNaN(Fk.getTime())) return Fk.toUTCString()
-          } catch (Fk) {}
+        function Bm(mm) {
+          if (mm) try {
+            const Tm = new Date(Number(mm));
+            if (!isNaN(Tm.getTime())) return Tm.toUTCString()
+          } catch (Tm) {}
         }
 
-        function Ak(kk) {
-          let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return (0, Xk.L)(kk).getIdToken(Fk)
+        function Lm(mm) {
+          let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return (0, hm.J)(mm).getIdToken(Tm)
         }
-        async function gk(kk) {
-          let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          const Ik = (0, Xk.L)(kk),
-            Tk = await Ik.getIdToken(Fk),
-            ik = hk(Tk);
-          Sk(ik && ik.exp && ik.auth_time && ik.iat, Ik.auth, "internal-error");
-          const yk = "object" === typeof ik.firebase ? ik.firebase : void 0,
-            lk = null === yk || void 0 === yk ? void 0 : yk.sign_in_provider;
+        async function tm(mm) {
+          let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          const fm = (0, hm.J)(mm),
+            Am = await fm.getIdToken(Tm),
+            am = dm(Am);
+          zm(am && am.exp && am.auth_time && am.iat, fm.auth, "internal-error");
+          const xm = "object" === typeof am.firebase ? am.firebase : void 0,
+            wm = null === xm || void 0 === xm ? void 0 : xm.sign_in_provider;
           return {
-            claims: ik,
-            token: Tk,
-            authTime: Yk(mk(ik.auth_time)),
-            issuedAtTime: Yk(mk(ik.iat)),
-            expirationTime: Yk(mk(ik.exp)),
-            signInProvider: lk || null,
-            signInSecondFactor: (null === yk || void 0 === yk ? void 0 : yk.sign_in_second_factor) || null
+            claims: am,
+            token: Am,
+            authTime: Bm(Um(am.auth_time)),
+            issuedAtTime: Bm(Um(am.iat)),
+            expirationTime: Bm(Um(am.exp)),
+            signInProvider: wm || null,
+            signInSecondFactor: (null === xm || void 0 === xm ? void 0 : xm.sign_in_second_factor) || null
           }
         }
 
-        function mk(kk) {
-          return 1e3 * Number(kk)
+        function Um(mm) {
+          return 1e3 * Number(mm)
         }
 
-        function hk(kk) {
-          const [Fk, Ik, Tk] = kk.split(".");
-          if (void 0 === Fk || void 0 === Ik || void 0 === Tk) return Pk("JWT malformed, contained fewer than 3 sections"), null;
+        function dm(mm) {
+          const [Tm, fm, Am] = mm.split(".");
+          if (void 0 === Tm || void 0 === fm || void 0 === Am) return Im("JWT malformed, contained fewer than 3 sections"), null;
           try {
-            const kk = (0, Xk.m)(Ik);
-            return kk ? JSON.parse(kk) : (Pk("Failed to decode base64 JWT payload"), null)
-          } catch (ik) {
-            return Pk("Caught error parsing JWT payload as JSON", null === ik || void 0 === ik ? void 0 : ik.toString()), null
+            const mm = (0, hm.m)(fm);
+            return mm ? JSON.parse(mm) : (Im("Failed to decode base64 JWT payload"), null)
+          } catch (am) {
+            return Im("Caught error parsing JWT payload as JSON", null === am || void 0 === am ? void 0 : am.toString()), null
           }
         }
-        async function rk(kk, Fk) {
-          if (arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) return Fk;
+        async function gm(mm, Tm) {
+          if (arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) return Tm;
           try {
-            return await Fk
-          } catch (Ik) {
-            throw Ik instanceof Xk.h && function(kk) {
+            return await Tm
+          } catch (fm) {
+            throw fm instanceof hm.h && function(mm) {
               let {
-                code: Fk
-              } = kk;
-              return "auth/user-disabled" === Fk || "auth/user-token-expired" === Fk
-            }(Ik) && kk.auth.currentUser === kk && await kk.auth.signOut(), Ik
+                code: Tm
+              } = mm;
+              return "auth/user-disabled" === Tm || "auth/user-token-expired" === Tm
+            }(fm) && mm.auth.currentUser === mm && await mm.auth.signOut(), fm
           }
         }
-        class Dk {
-          constructor(kk) {
-            this.user = kk, this.isRunning = !1, this.timerId = null, this.errorBackoff = 3e4
+        class Wm {
+          constructor(mm) {
+            this.user = mm, this.isRunning = !1, this.timerId = null, this.errorBackoff = 3e4
           }
           _start() {
             this.isRunning || (this.isRunning = !0, this.schedule())
@@ -662,43 +662,43 @@ export const modules = {
           _stop() {
             this.isRunning && (this.isRunning = !1, null !== this.timerId && clearTimeout(this.timerId))
           }
-          getInterval(kk) {
-            var Fk;
-            if (kk) {
-              const kk = this.errorBackoff;
-              return this.errorBackoff = Math.min(2 * this.errorBackoff, 96e4), kk
+          getInterval(mm) {
+            var Tm;
+            if (mm) {
+              const mm = this.errorBackoff;
+              return this.errorBackoff = Math.min(2 * this.errorBackoff, 96e4), mm
             } {
               this.errorBackoff = 3e4;
-              const kk = (null !== (Fk = this.user.stsTokenManager.expirationTime) && void 0 !== Fk ? Fk : 0) - Date.now() - 3e5;
-              return Math.max(0, kk)
+              const mm = (null !== (Tm = this.user.stsTokenManager.expirationTime) && void 0 !== Tm ? Tm : 0) - Date.now() - 3e5;
+              return Math.max(0, mm)
             }
           }
           schedule() {
-            let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            let mm = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
             if (!this.isRunning) return;
-            const Fk = this.getInterval(kk);
+            const Tm = this.getInterval(mm);
             this.timerId = setTimeout((async () => {
               await this.iteration()
-            }), Fk)
+            }), Tm)
           }
           async iteration() {
             try {
               await this.user.getIdToken(!0)
-            } catch (kk) {
-              return void("auth/network-request-failed" === (null === kk || void 0 === kk ? void 0 : kk.code) && this.schedule(!0))
+            } catch (mm) {
+              return void("auth/network-request-failed" === (null === mm || void 0 === mm ? void 0 : mm.code) && this.schedule(!0))
             }
             this.schedule()
           }
         }
-        class Mk {
-          constructor(kk, Fk) {
-            this.createdAt = kk, this.lastLoginAt = Fk, this._initializeTime()
+        class Fm {
+          constructor(mm, Tm) {
+            this.createdAt = mm, this.lastLoginAt = Tm, this._initializeTime()
           }
           _initializeTime() {
-            this.lastSignInTime = Yk(this.lastLoginAt), this.creationTime = Yk(this.createdAt)
+            this.lastSignInTime = Bm(this.lastLoginAt), this.creationTime = Bm(this.createdAt)
           }
-          _copy(kk) {
-            this.createdAt = kk.createdAt, this.lastLoginAt = kk.lastLoginAt, this._initializeTime()
+          _copy(mm) {
+            this.createdAt = mm.createdAt, this.lastLoginAt = mm.lastLoginAt, this._initializeTime()
           }
           toJSON() {
             return {
@@ -707,123 +707,123 @@ export const modules = {
             }
           }
         }
-        async function kF(kk) {
-          var Fk;
-          const Ik = kk.auth,
-            Xk = await kk.getIdToken(),
-            Tk = await rk(kk, async function(kk, Fk) {
-              return Nk(kk, "POST", "/v1/accounts:lookup", Fk)
-            }(Ik, {
-              idToken: Xk
+        async function mT(mm) {
+          var Tm;
+          const fm = mm.auth,
+            hm = await mm.getIdToken(),
+            Am = await gm(mm, async function(mm, Tm) {
+              return Cm(mm, "POST", "/v1/accounts:lookup", Tm)
+            }(fm, {
+              idToken: hm
             }));
-          Sk(null === Tk || void 0 === Tk ? void 0 : Tk.users.length, Ik, "internal-error");
-          const yk = Tk.users[0];
-          kk._notifyReloadListener(yk);
-          const lk = (null === (Fk = yk.providerUserInfo) || void 0 === Fk ? void 0 : Fk.length) ? yk.providerUserInfo.map((kk => {
+          zm(null === Am || void 0 === Am ? void 0 : Am.users.length, fm, "internal-error");
+          const xm = Am.users[0];
+          mm._notifyReloadListener(xm);
+          const wm = (null === (Tm = xm.providerUserInfo) || void 0 === Tm ? void 0 : Tm.length) ? xm.providerUserInfo.map((mm => {
             var {
-              providerId: Fk
-            } = kk, Ik = ik(kk, ["providerId"]);
+              providerId: Tm
+            } = mm, fm = am(mm, ["providerId"]);
             return {
-              providerId: Fk,
-              uid: Ik.rawId || "",
-              displayName: Ik.displayName || null,
-              email: Ik.email || null,
-              phoneNumber: Ik.phoneNumber || null,
-              photoURL: Ik.photoUrl || null
+              providerId: Tm,
+              uid: fm.rawId || "",
+              displayName: fm.displayName || null,
+              email: fm.email || null,
+              phoneNumber: fm.phoneNumber || null,
+              photoURL: fm.photoUrl || null
             }
           })) : [];
-          const ak = (qk = kk.providerData, Lk = lk, [...qk.filter((kk => !Lk.some((Fk => Fk.providerId === kk.providerId)))), ...Lk]);
-          var qk, Lk;
-          const tk = kk.isAnonymous,
-            Zk = !(kk.email && yk.passwordHash) && !(null === ak || void 0 === ak ? void 0 : ak.length),
-            jk = !!tk && Zk,
-            ek = {
-              uid: yk.localId,
-              displayName: yk.displayName || null,
-              photoURL: yk.photoUrl || null,
-              email: yk.email || null,
-              emailVerified: yk.emailVerified || !1,
-              phoneNumber: yk.phoneNumber || null,
-              tenantId: yk.tenantId || null,
-              providerData: ak,
-              metadata: new Mk(yk.createdAt, yk.lastLoginAt),
-              isAnonymous: jk
+          const Dm = (im = mm.providerData, Rm = wm, [...im.filter((mm => !Rm.some((Tm => Tm.providerId === mm.providerId)))), ...Rm]);
+          var im, Rm;
+          const pm = mm.isAnonymous,
+            Em = !(mm.email && xm.passwordHash) && !(null === Dm || void 0 === Dm ? void 0 : Dm.length),
+            om = !!pm && Em,
+            Om = {
+              uid: xm.localId,
+              displayName: xm.displayName || null,
+              photoURL: xm.photoUrl || null,
+              email: xm.email || null,
+              emailVerified: xm.emailVerified || !1,
+              phoneNumber: xm.phoneNumber || null,
+              tenantId: xm.tenantId || null,
+              providerData: Dm,
+              metadata: new Fm(xm.createdAt, xm.lastLoginAt),
+              isAnonymous: om
             };
-          Object.assign(kk, ek)
+          Object.assign(mm, Om)
         }
-        async function FF(kk) {
-          const Fk = (0, Xk.L)(kk);
-          await kF(Fk), await Fk.auth._persistUserIfCurrent(Fk), Fk.auth._notifyListenersIfCurrent(Fk)
+        async function TT(mm) {
+          const Tm = (0, hm.J)(mm);
+          await mT(Tm), await Tm.auth._persistUserIfCurrent(Tm), Tm.auth._notifyListenersIfCurrent(Tm)
         }
-        class IF {
+        class fT {
           constructor() {
             this.refreshToken = null, this.accessToken = null, this.expirationTime = null
           }
           get isExpired() {
             return !this.expirationTime || Date.now() > this.expirationTime - 3e4
           }
-          updateFromServerResponse(kk) {
-            Sk(kk.idToken, "internal-error"), Sk("undefined" !== typeof kk.idToken, "internal-error"), Sk("undefined" !== typeof kk.refreshToken, "internal-error");
-            const Fk = "expiresIn" in kk && "undefined" !== typeof kk.expiresIn ? Number(kk.expiresIn) : function(kk) {
-              const Fk = hk(kk);
-              return Sk(Fk, "internal-error"), Sk("undefined" !== typeof Fk.exp, "internal-error"), Sk("undefined" !== typeof Fk.iat, "internal-error"), Number(Fk.exp) - Number(Fk.iat)
-            }(kk.idToken);
-            this.updateTokensAndExpiration(kk.idToken, kk.refreshToken, Fk)
+          updateFromServerResponse(mm) {
+            zm(mm.idToken, "internal-error"), zm("undefined" !== typeof mm.idToken, "internal-error"), zm("undefined" !== typeof mm.refreshToken, "internal-error");
+            const Tm = "expiresIn" in mm && "undefined" !== typeof mm.expiresIn ? Number(mm.expiresIn) : function(mm) {
+              const Tm = dm(mm);
+              return zm(Tm, "internal-error"), zm("undefined" !== typeof Tm.exp, "internal-error"), zm("undefined" !== typeof Tm.iat, "internal-error"), Number(Tm.exp) - Number(Tm.iat)
+            }(mm.idToken);
+            this.updateTokensAndExpiration(mm.idToken, mm.refreshToken, Tm)
           }
-          async getToken(kk) {
-            let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            return Sk(!this.accessToken || this.refreshToken, kk, "user-token-expired"), Fk || !this.accessToken || this.isExpired ? this.refreshToken ? (await this.refresh(kk, this.refreshToken), this.accessToken) : null : this.accessToken
+          async getToken(mm) {
+            let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            return zm(!this.accessToken || this.refreshToken, mm, "user-token-expired"), Tm || !this.accessToken || this.isExpired ? this.refreshToken ? (await this.refresh(mm, this.refreshToken), this.accessToken) : null : this.accessToken
           }
           clearRefreshToken() {
             this.refreshToken = null
           }
-          async refresh(kk, Fk) {
+          async refresh(mm, Tm) {
             const {
-              accessToken: Ik,
-              refreshToken: Tk,
-              expiresIn: ik
-            } = await async function(kk, Fk) {
-              const Ik = await ck(kk, {}, (async () => {
-                const Ik = (0, Xk.eb)({
+              accessToken: fm,
+              refreshToken: Am,
+              expiresIn: am
+            } = await async function(mm, Tm) {
+              const fm = await rm(mm, {}, (async () => {
+                const fm = (0, hm.ab)({
                     grant_type: "refresh_token",
-                    refresh_token: Fk
+                    refresh_token: Tm
                   }).slice(1),
                   {
-                    tokenApiHost: Tk,
-                    apiKey: ik
-                  } = kk.config,
-                  yk = fk(kk, Tk, "/v1/token", `key=${ik}`),
-                  lk = await kk._getAdditionalHeaders();
-                return lk["Content-Type"] = "application/x-www-form-urlencoded", bk.fetch()(yk, {
+                    tokenApiHost: Am,
+                    apiKey: am
+                  } = mm.config,
+                  xm = lm(mm, Am, "/v1/token", `key=${am}`),
+                  wm = await mm._getAdditionalHeaders();
+                return wm["Content-Type"] = "application/x-www-form-urlencoded", Xm.fetch()(xm, {
                   method: "POST",
-                  headers: lk,
-                  body: Ik
+                  headers: wm,
+                  body: fm
                 })
               }));
               return {
-                accessToken: Ik.access_token,
-                expiresIn: Ik.expires_in,
-                refreshToken: Ik.refresh_token
+                accessToken: fm.access_token,
+                expiresIn: fm.expires_in,
+                refreshToken: fm.refresh_token
               }
-            }(kk, Fk);
-            this.updateTokensAndExpiration(Ik, Tk, Number(ik))
+            }(mm, Tm);
+            this.updateTokensAndExpiration(fm, Am, Number(am))
           }
-          updateTokensAndExpiration(kk, Fk, Ik) {
-            this.refreshToken = Fk || null, this.accessToken = kk || null, this.expirationTime = Date.now() + 1e3 * Ik
+          updateTokensAndExpiration(mm, Tm, fm) {
+            this.refreshToken = Tm || null, this.accessToken = mm || null, this.expirationTime = Date.now() + 1e3 * fm
           }
-          static fromJSON(kk, Fk) {
+          static fromJSON(mm, Tm) {
             const {
-              refreshToken: Ik,
-              accessToken: Xk,
-              expirationTime: Tk
-            } = Fk, ik = new IF;
-            return Ik && (Sk("string" === typeof Ik, "internal-error", {
-              appName: kk
-            }), ik.refreshToken = Ik), Xk && (Sk("string" === typeof Xk, "internal-error", {
-              appName: kk
-            }), ik.accessToken = Xk), Tk && (Sk("number" === typeof Tk, "internal-error", {
-              appName: kk
-            }), ik.expirationTime = Tk), ik
+              refreshToken: fm,
+              accessToken: hm,
+              expirationTime: Am
+            } = Tm, am = new fT;
+            return fm && (zm("string" === typeof fm, "internal-error", {
+              appName: mm
+            }), am.refreshToken = fm), hm && (zm("string" === typeof hm, "internal-error", {
+              appName: mm
+            }), am.accessToken = hm), Am && (zm("number" === typeof Am, "internal-error", {
+              appName: mm
+            }), am.expirationTime = Am), am
           }
           toJSON() {
             return {
@@ -832,56 +832,56 @@ export const modules = {
               expirationTime: this.expirationTime
             }
           }
-          _assign(kk) {
-            this.accessToken = kk.accessToken, this.refreshToken = kk.refreshToken, this.expirationTime = kk.expirationTime
+          _assign(mm) {
+            this.accessToken = mm.accessToken, this.refreshToken = mm.refreshToken, this.expirationTime = mm.expirationTime
           }
           _clone() {
-            return Object.assign(new IF, this.toJSON())
+            return Object.assign(new fT, this.toJSON())
           }
           _performRefresh() {
-            return vk("not implemented")
+            return Zm("not implemented")
           }
         }
 
-        function XF(kk, Fk) {
-          Sk("string" === typeof kk || "undefined" === typeof kk, "internal-error", {
-            appName: Fk
+        function hT(mm, Tm) {
+          zm("string" === typeof mm || "undefined" === typeof mm, "internal-error", {
+            appName: Tm
           })
         }
-        class TF {
-          constructor(kk) {
+        class AT {
+          constructor(mm) {
             var {
-              uid: Fk,
-              auth: Ik,
-              stsTokenManager: Xk
-            } = kk, Tk = ik(kk, ["uid", "auth", "stsTokenManager"]);
-            this.providerId = "firebase", this.proactiveRefresh = new Dk(this), this.reloadUserInfo = null, this.reloadListener = null, this.uid = Fk, this.auth = Ik, this.stsTokenManager = Xk, this.accessToken = Xk.accessToken, this.displayName = Tk.displayName || null, this.email = Tk.email || null, this.emailVerified = Tk.emailVerified || !1, this.phoneNumber = Tk.phoneNumber || null, this.photoURL = Tk.photoURL || null, this.isAnonymous = Tk.isAnonymous || !1, this.tenantId = Tk.tenantId || null, this.providerData = Tk.providerData ? [...Tk.providerData] : [], this.metadata = new Mk(Tk.createdAt || void 0, Tk.lastLoginAt || void 0)
+              uid: Tm,
+              auth: fm,
+              stsTokenManager: hm
+            } = mm, Am = am(mm, ["uid", "auth", "stsTokenManager"]);
+            this.providerId = "firebase", this.proactiveRefresh = new Wm(this), this.reloadUserInfo = null, this.reloadListener = null, this.uid = Tm, this.auth = fm, this.stsTokenManager = hm, this.accessToken = hm.accessToken, this.displayName = Am.displayName || null, this.email = Am.email || null, this.emailVerified = Am.emailVerified || !1, this.phoneNumber = Am.phoneNumber || null, this.photoURL = Am.photoURL || null, this.isAnonymous = Am.isAnonymous || !1, this.tenantId = Am.tenantId || null, this.providerData = Am.providerData ? [...Am.providerData] : [], this.metadata = new Fm(Am.createdAt || void 0, Am.lastLoginAt || void 0)
           }
-          async getIdToken(kk) {
-            const Fk = await rk(this, this.stsTokenManager.getToken(this.auth, kk));
-            return Sk(Fk, this.auth, "internal-error"), this.accessToken !== Fk && (this.accessToken = Fk, await this.auth._persistUserIfCurrent(this), this.auth._notifyListenersIfCurrent(this)), Fk
+          async getIdToken(mm) {
+            const Tm = await gm(this, this.stsTokenManager.getToken(this.auth, mm));
+            return zm(Tm, this.auth, "internal-error"), this.accessToken !== Tm && (this.accessToken = Tm, await this.auth._persistUserIfCurrent(this), this.auth._notifyListenersIfCurrent(this)), Tm
           }
-          getIdTokenResult(kk) {
-            return gk(this, kk)
+          getIdTokenResult(mm) {
+            return tm(this, mm)
           }
           reload() {
-            return FF(this)
+            return TT(this)
           }
-          _assign(kk) {
-            this !== kk && (Sk(this.uid === kk.uid, this.auth, "internal-error"), this.displayName = kk.displayName, this.photoURL = kk.photoURL, this.email = kk.email, this.emailVerified = kk.emailVerified, this.phoneNumber = kk.phoneNumber, this.isAnonymous = kk.isAnonymous, this.tenantId = kk.tenantId, this.providerData = kk.providerData.map((kk => Object.assign({}, kk))), this.metadata._copy(kk.metadata), this.stsTokenManager._assign(kk.stsTokenManager))
+          _assign(mm) {
+            this !== mm && (zm(this.uid === mm.uid, this.auth, "internal-error"), this.displayName = mm.displayName, this.photoURL = mm.photoURL, this.email = mm.email, this.emailVerified = mm.emailVerified, this.phoneNumber = mm.phoneNumber, this.isAnonymous = mm.isAnonymous, this.tenantId = mm.tenantId, this.providerData = mm.providerData.map((mm => Object.assign({}, mm))), this.metadata._copy(mm.metadata), this.stsTokenManager._assign(mm.stsTokenManager))
           }
-          _clone(kk) {
-            const Fk = new TF(Object.assign(Object.assign({}, this), {
-              auth: kk,
+          _clone(mm) {
+            const Tm = new AT(Object.assign(Object.assign({}, this), {
+              auth: mm,
               stsTokenManager: this.stsTokenManager._clone()
             }));
-            return Fk.metadata._copy(this.metadata), Fk
+            return Tm.metadata._copy(this.metadata), Tm
           }
-          _onReload(kk) {
-            Sk(!this.reloadListener, this.auth, "internal-error"), this.reloadListener = kk, this.reloadUserInfo && (this._notifyReloadListener(this.reloadUserInfo), this.reloadUserInfo = null)
+          _onReload(mm) {
+            zm(!this.reloadListener, this.auth, "internal-error"), this.reloadListener = mm, this.reloadUserInfo && (this._notifyReloadListener(this.reloadUserInfo), this.reloadUserInfo = null)
           }
-          _notifyReloadListener(kk) {
-            this.reloadListener ? this.reloadListener(kk) : this.reloadUserInfo = kk
+          _notifyReloadListener(mm) {
+            this.reloadListener ? this.reloadListener(mm) : this.reloadUserInfo = mm
           }
           _startProactiveRefresh() {
             this.proactiveRefresh._start()
@@ -889,17 +889,17 @@ export const modules = {
           _stopProactiveRefresh() {
             this.proactiveRefresh._stop()
           }
-          async _updateTokensIfNecessary(kk) {
-            let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              Ik = !1;
-            kk.idToken && kk.idToken !== this.stsTokenManager.accessToken && (this.stsTokenManager.updateFromServerResponse(kk), Ik = !0), Fk && await kF(this), await this.auth._persistUserIfCurrent(this), Ik && this.auth._notifyListenersIfCurrent(this)
+          async _updateTokensIfNecessary(mm) {
+            let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              fm = !1;
+            mm.idToken && mm.idToken !== this.stsTokenManager.accessToken && (this.stsTokenManager.updateFromServerResponse(mm), fm = !0), Tm && await mT(this), await this.auth._persistUserIfCurrent(this), fm && this.auth._notifyListenersIfCurrent(this)
           }
           async delete() {
-            const kk = await this.getIdToken();
-            return await rk(this, async function(kk, Fk) {
-              return Nk(kk, "POST", "/v1/accounts:delete", Fk)
+            const mm = await this.getIdToken();
+            return await gm(this, async function(mm, Tm) {
+              return Cm(mm, "POST", "/v1/accounts:delete", Tm)
             }(this.auth, {
-              idToken: kk
+              idToken: mm
             })), this.stsTokenManager.clearRefreshToken(), this.auth.signOut()
           }
           toJSON() {
@@ -912,7 +912,7 @@ export const modules = {
               photoURL: this.photoURL || void 0,
               phoneNumber: this.phoneNumber || void 0,
               tenantId: this.tenantId || void 0,
-              providerData: this.providerData.map((kk => Object.assign({}, kk))),
+              providerData: this.providerData.map((mm => Object.assign({}, mm))),
               stsTokenManager: this.stsTokenManager.toJSON(),
               _redirectEventId: this._redirectEventId
             }, this.metadata.toJSON()), {
@@ -923,103 +923,103 @@ export const modules = {
           get refreshToken() {
             return this.stsTokenManager.refreshToken || ""
           }
-          static _fromJSON(kk, Fk) {
-            var Ik, Xk, Tk, ik, yk, lk, ak, qk;
-            const Lk = null !== (Ik = Fk.displayName) && void 0 !== Ik ? Ik : void 0,
-              tk = null !== (Xk = Fk.email) && void 0 !== Xk ? Xk : void 0,
-              Zk = null !== (Tk = Fk.phoneNumber) && void 0 !== Tk ? Tk : void 0,
-              jk = null !== (ik = Fk.photoURL) && void 0 !== ik ? ik : void 0,
-              ek = null !== (yk = Fk.tenantId) && void 0 !== yk ? yk : void 0,
-              wk = null !== (lk = Fk._redirectEventId) && void 0 !== lk ? lk : void 0,
-              Hk = null !== (ak = Fk.createdAt) && void 0 !== ak ? ak : void 0,
-              Jk = null !== (qk = Fk.lastLoginAt) && void 0 !== qk ? qk : void 0,
+          static _fromJSON(mm, Tm) {
+            var fm, hm, Am, am, xm, wm, Dm, im;
+            const Rm = null !== (fm = Tm.displayName) && void 0 !== fm ? fm : void 0,
+              pm = null !== (hm = Tm.email) && void 0 !== hm ? hm : void 0,
+              Em = null !== (Am = Tm.phoneNumber) && void 0 !== Am ? Am : void 0,
+              om = null !== (am = Tm.photoURL) && void 0 !== am ? am : void 0,
+              Om = null !== (xm = Tm.tenantId) && void 0 !== xm ? xm : void 0,
+              Ym = null !== (wm = Tm._redirectEventId) && void 0 !== wm ? wm : void 0,
+              qm = null !== (Dm = Tm.createdAt) && void 0 !== Dm ? Dm : void 0,
+              jm = null !== (im = Tm.lastLoginAt) && void 0 !== im ? im : void 0,
               {
-                uid: xk,
-                emailVerified: Pk,
-                isAnonymous: Kk,
-                providerData: Qk,
-                stsTokenManager: sk
-              } = Fk;
-            Sk(xk && sk, kk, "internal-error");
-            const Vk = IF.fromJSON(this.name, sk);
-            Sk("string" === typeof xk, kk, "internal-error"), XF(Lk, kk.name), XF(tk, kk.name), Sk("boolean" === typeof Pk, kk, "internal-error"), Sk("boolean" === typeof Kk, kk, "internal-error"), XF(Zk, kk.name), XF(jk, kk.name), XF(ek, kk.name), XF(wk, kk.name), XF(Hk, kk.name), XF(Jk, kk.name);
-            const zk = new TF({
-              uid: xk,
-              auth: kk,
-              email: tk,
-              emailVerified: Pk,
-              displayName: Lk,
-              isAnonymous: Kk,
-              photoURL: jk,
-              phoneNumber: Zk,
-              tenantId: ek,
-              stsTokenManager: Vk,
-              createdAt: Hk,
-              lastLoginAt: Jk
+                uid: Vm,
+                emailVerified: Im,
+                isAnonymous: Km,
+                providerData: Qm,
+                stsTokenManager: nm
+              } = Tm;
+            zm(Vm && nm, mm, "internal-error");
+            const Jm = fT.fromJSON(this.name, nm);
+            zm("string" === typeof Vm, mm, "internal-error"), hT(Rm, mm.name), hT(pm, mm.name), zm("boolean" === typeof Im, mm, "internal-error"), zm("boolean" === typeof Km, mm, "internal-error"), hT(Em, mm.name), hT(om, mm.name), hT(Om, mm.name), hT(Ym, mm.name), hT(qm, mm.name), hT(jm, mm.name);
+            const cm = new AT({
+              uid: Vm,
+              auth: mm,
+              email: pm,
+              emailVerified: Im,
+              displayName: Rm,
+              isAnonymous: Km,
+              photoURL: om,
+              phoneNumber: Em,
+              tenantId: Om,
+              stsTokenManager: Jm,
+              createdAt: qm,
+              lastLoginAt: jm
             });
-            return Qk && Array.isArray(Qk) && (zk.providerData = Qk.map((kk => Object.assign({}, kk)))), wk && (zk._redirectEventId = wk), zk
+            return Qm && Array.isArray(Qm) && (cm.providerData = Qm.map((mm => Object.assign({}, mm)))), Ym && (cm._redirectEventId = Ym), cm
           }
-          static async _fromIdTokenResponse(kk, Fk) {
-            let Ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-            const Xk = new IF;
-            Xk.updateFromServerResponse(Fk);
-            const Tk = new TF({
-              uid: Fk.localId,
-              auth: kk,
-              stsTokenManager: Xk,
-              isAnonymous: Ik
+          static async _fromIdTokenResponse(mm, Tm) {
+            let fm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+            const hm = new fT;
+            hm.updateFromServerResponse(Tm);
+            const Am = new AT({
+              uid: Tm.localId,
+              auth: mm,
+              stsTokenManager: hm,
+              isAnonymous: fm
             });
-            return await kF(Tk), Tk
+            return await mT(Am), Am
           }
         }
-        const iF = new Map;
+        const aT = new Map;
 
-        function yF(kk) {
-          Ek(kk instanceof Function, "Expected a class definition");
-          let Fk = iF.get(kk);
-          return Fk ? (Ek(Fk instanceof kk, "Instance stored in cache mismatched with class"), Fk) : (Fk = new kk, iF.set(kk, Fk), Fk)
+        function xT(mm) {
+          km(mm instanceof Function, "Expected a class definition");
+          let Tm = aT.get(mm);
+          return Tm ? (km(Tm instanceof mm, "Instance stored in cache mismatched with class"), Tm) : (Tm = new mm, aT.set(mm, Tm), Tm)
         }
-        class lF {
+        class wT {
           constructor() {
             this.type = "NONE", this.storage = {}
           }
           async _isAvailable() {
             return !0
           }
-          async _set(kk, Fk) {
-            this.storage[kk] = Fk
+          async _set(mm, Tm) {
+            this.storage[mm] = Tm
           }
-          async _get(kk) {
-            const Fk = this.storage[kk];
-            return void 0 === Fk ? null : Fk
+          async _get(mm) {
+            const Tm = this.storage[mm];
+            return void 0 === Tm ? null : Tm
           }
-          async _remove(kk) {
-            delete this.storage[kk]
+          async _remove(mm) {
+            delete this.storage[mm]
           }
-          _addListener(kk, Fk) {}
-          _removeListener(kk, Fk) {}
+          _addListener(mm, Tm) {}
+          _removeListener(mm, Tm) {}
         }
-        lF.type = "NONE";
-        const aF = lF;
+        wT.type = "NONE";
+        const DT = wT;
 
-        function qF(kk, Fk, Ik) {
-          return `firebase:${kk}:${Fk}:${Ik}`
+        function iT(mm, Tm, fm) {
+          return `firebase:${mm}:${Tm}:${fm}`
         }
-        class LF {
-          constructor(kk, Fk, Ik) {
-            this.persistence = kk, this.auth = Fk, this.userKey = Ik;
+        class RT {
+          constructor(mm, Tm, fm) {
+            this.persistence = mm, this.auth = Tm, this.userKey = fm;
             const {
-              config: Xk,
-              name: Tk
+              config: hm,
+              name: Am
             } = this.auth;
-            this.fullUserKey = qF(this.userKey, Xk.apiKey, Tk), this.fullPersistenceKey = qF("persistence", Xk.apiKey, Tk), this.boundEventHandler = Fk._onStorageEvent.bind(Fk), this.persistence._addListener(this.fullUserKey, this.boundEventHandler)
+            this.fullUserKey = iT(this.userKey, hm.apiKey, Am), this.fullPersistenceKey = iT("persistence", hm.apiKey, Am), this.boundEventHandler = Tm._onStorageEvent.bind(Tm), this.persistence._addListener(this.fullUserKey, this.boundEventHandler)
           }
-          setCurrentUser(kk) {
-            return this.persistence._set(this.fullUserKey, kk.toJSON())
+          setCurrentUser(mm) {
+            return this.persistence._set(this.fullUserKey, mm.toJSON())
           }
           async getCurrentUser() {
-            const kk = await this.persistence._get(this.fullUserKey);
-            return kk ? TF._fromJSON(this.auth, kk) : null
+            const mm = await this.persistence._get(this.fullUserKey);
+            return mm ? AT._fromJSON(this.auth, mm) : null
           }
           removeCurrentUser() {
             return this.persistence._remove(this.fullUserKey)
@@ -1027,364 +1027,364 @@ export const modules = {
           savePersistenceForRedirect() {
             return this.persistence._set(this.fullPersistenceKey, this.persistence.type)
           }
-          async setPersistence(kk) {
-            if (this.persistence === kk) return;
-            const Fk = await this.getCurrentUser();
-            return await this.removeCurrentUser(), this.persistence = kk, Fk ? this.setCurrentUser(Fk) : void 0
+          async setPersistence(mm) {
+            if (this.persistence === mm) return;
+            const Tm = await this.getCurrentUser();
+            return await this.removeCurrentUser(), this.persistence = mm, Tm ? this.setCurrentUser(Tm) : void 0
           }
           delete() {
             this.persistence._removeListener(this.fullUserKey, this.boundEventHandler)
           }
-          static async create(kk, Fk) {
-            let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "authUser";
-            if (!Fk.length) return new LF(yF(aF), kk, Ik);
-            const Xk = (await Promise.all(Fk.map((async kk => {
-              if (await kk._isAvailable()) return kk
-            })))).filter((kk => kk));
-            let Tk = Xk[0] || yF(aF);
-            const ik = qF(Ik, kk.config.apiKey, kk.name);
-            let yk = null;
-            for (const qk of Fk) try {
-              const Fk = await qk._get(ik);
-              if (Fk) {
-                const Ik = TF._fromJSON(kk, Fk);
-                qk !== Tk && (yk = Ik), Tk = qk;
+          static async create(mm, Tm) {
+            let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "authUser";
+            if (!Tm.length) return new RT(xT(DT), mm, fm);
+            const hm = (await Promise.all(Tm.map((async mm => {
+              if (await mm._isAvailable()) return mm
+            })))).filter((mm => mm));
+            let Am = hm[0] || xT(DT);
+            const am = iT(fm, mm.config.apiKey, mm.name);
+            let xm = null;
+            for (const im of Tm) try {
+              const Tm = await im._get(am);
+              if (Tm) {
+                const fm = AT._fromJSON(mm, Tm);
+                im !== Am && (xm = fm), Am = im;
                 break
               }
-            } catch (ak) {}
-            const lk = Xk.filter((kk => kk._shouldAllowMigration));
-            return Tk._shouldAllowMigration && lk.length ? (Tk = lk[0], yk && await Tk._set(ik, yk.toJSON()), await Promise.all(Fk.map((async kk => {
-              if (kk !== Tk) try {
-                await kk._remove(ik)
-              } catch (ak) {}
-            }))), new LF(Tk, kk, Ik)) : new LF(Tk, kk, Ik)
+            } catch (Dm) {}
+            const wm = hm.filter((mm => mm._shouldAllowMigration));
+            return Am._shouldAllowMigration && wm.length ? (Am = wm[0], xm && await Am._set(am, xm.toJSON()), await Promise.all(Tm.map((async mm => {
+              if (mm !== Am) try {
+                await mm._remove(am)
+              } catch (Dm) {}
+            }))), new RT(Am, mm, fm)) : new RT(Am, mm, fm)
           }
         }
 
-        function tF(kk) {
-          const Fk = kk.toLowerCase();
-          if (Fk.includes("opera/") || Fk.includes("opr/") || Fk.includes("opios/")) return "Opera";
-          if (wF(Fk)) return "IEMobile";
-          if (Fk.includes("msie") || Fk.includes("trident/")) return "IE";
-          if (Fk.includes("edge/")) return "Edge";
-          if (ZF(Fk)) return "Firefox";
-          if (Fk.includes("silk/")) return "Silk";
-          if (JF(Fk)) return "Blackberry";
-          if (xF(Fk)) return "Webos";
-          if (jF(Fk)) return "Safari";
-          if ((Fk.includes("chrome/") || eF(Fk)) && !Fk.includes("edge/")) return "Chrome";
-          if (HF(Fk)) return "Android";
+        function pT(mm) {
+          const Tm = mm.toLowerCase();
+          if (Tm.includes("opera/") || Tm.includes("opr/") || Tm.includes("opios/")) return "Opera";
+          if (YT(Tm)) return "IEMobile";
+          if (Tm.includes("msie") || Tm.includes("trident/")) return "IE";
+          if (Tm.includes("edge/")) return "Edge";
+          if (ET(Tm)) return "Firefox";
+          if (Tm.includes("silk/")) return "Silk";
+          if (jT(Tm)) return "Blackberry";
+          if (VT(Tm)) return "Webos";
+          if (oT(Tm)) return "Safari";
+          if ((Tm.includes("chrome/") || OT(Tm)) && !Tm.includes("edge/")) return "Chrome";
+          if (qT(Tm)) return "Android";
           {
-            const Fk = /([a-zA-Z\d\.]+)\/[a-zA-Z\d\.]*$/,
-              Ik = kk.match(Fk);
-            if (2 === (null === Ik || void 0 === Ik ? void 0 : Ik.length)) return Ik[1]
+            const Tm = /([a-zA-Z\d\.]+)\/[a-zA-Z\d\.]*$/,
+              fm = mm.match(Tm);
+            if (2 === (null === fm || void 0 === fm ? void 0 : fm.length)) return fm[1]
           }
           return "Other"
         }
 
-        function ZF() {
-          let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Xk.O)();
-          return /firefox\//i.test(kk)
+        function ET() {
+          let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)();
+          return /firefox\//i.test(mm)
         }
 
-        function jF() {
-          const kk = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Xk.O)()).toLowerCase();
-          return kk.includes("safari/") && !kk.includes("chrome/") && !kk.includes("crios/") && !kk.includes("android")
+        function oT() {
+          const mm = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)()).toLowerCase();
+          return mm.includes("safari/") && !mm.includes("chrome/") && !mm.includes("crios/") && !mm.includes("android")
         }
 
-        function eF() {
-          let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Xk.O)();
-          return /crios\//i.test(kk)
+        function OT() {
+          let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)();
+          return /crios\//i.test(mm)
         }
 
-        function wF() {
-          let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Xk.O)();
-          return /iemobile/i.test(kk)
+        function YT() {
+          let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)();
+          return /iemobile/i.test(mm)
         }
 
-        function HF() {
-          let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Xk.O)();
-          return /android/i.test(kk)
+        function qT() {
+          let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)();
+          return /android/i.test(mm)
         }
 
-        function JF() {
-          let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Xk.O)();
-          return /blackberry/i.test(kk)
+        function jT() {
+          let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)();
+          return /blackberry/i.test(mm)
         }
 
-        function xF() {
-          let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Xk.O)();
-          return /webos/i.test(kk)
+        function VT() {
+          let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)();
+          return /webos/i.test(mm)
         }
 
-        function PF() {
-          let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Xk.O)();
-          return /iphone|ipad|ipod/i.test(kk) || /macintosh/i.test(kk) && /mobile/i.test(kk)
+        function IT() {
+          let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)();
+          return /iphone|ipad|ipod/i.test(mm) || /macintosh/i.test(mm) && /mobile/i.test(mm)
         }
 
-        function KF() {
-          let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Xk.O)();
-          return PF(kk) || HF(kk) || xF(kk) || JF(kk) || /windows phone/i.test(kk) || wF(kk)
+        function KT() {
+          let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)();
+          return IT(mm) || qT(mm) || VT(mm) || jT(mm) || /windows phone/i.test(mm) || YT(mm)
         }
 
-        function QF(kk) {
-          let Fk, Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-          switch (kk) {
+        function QT(mm) {
+          let Tm, fm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+          switch (mm) {
             case "Browser":
-              Fk = tF((0, Xk.O)());
+              Tm = pT((0, hm.N)());
               break;
             case "Worker":
-              Fk = `${tF((0,Xk.O)())}-${kk}`;
+              Tm = `${pT((0,hm.N)())}-${mm}`;
               break;
             default:
-              Fk = kk
+              Tm = mm
           }
-          const ik = Ik.length ? Ik.join(",") : "FirebaseCore-web";
-          return `${Fk}/JsCore/${Tk.i}/${ik}`
+          const am = fm.length ? fm.join(",") : "FirebaseCore-web";
+          return `${Tm}/JsCore/${Am.d}/${am}`
         }
-        async function sF(kk, Fk) {
-          return Nk(kk, "GET", "/v2/recaptchaConfig", Ck(kk, Fk))
-        }
-
-        function VF(kk) {
-          return void 0 !== kk && void 0 !== kk.getResponse
+        async function nT(mm, Tm) {
+          return Cm(mm, "GET", "/v2/recaptchaConfig", ym(mm, Tm))
         }
 
-        function zF(kk) {
-          return void 0 !== kk && void 0 !== kk.enterprise
+        function JT(mm) {
+          return void 0 !== mm && void 0 !== mm.getResponse
         }
-        class SF {
-          constructor(kk) {
-            if (this.siteKey = "", this.emailPasswordEnabled = !1, void 0 === kk.recaptchaKey) throw new Error("recaptchaKey undefined");
-            this.siteKey = kk.recaptchaKey.split("/")[3], this.emailPasswordEnabled = kk.recaptchaEnforcementState.some((kk => "EMAIL_PASSWORD_PROVIDER" === kk.provider && "OFF" !== kk.enforcementState))
+
+        function cT(mm) {
+          return void 0 !== mm && void 0 !== mm.enterprise
+        }
+        class zT {
+          constructor(mm) {
+            if (this.siteKey = "", this.emailPasswordEnabled = !1, void 0 === mm.recaptchaKey) throw new Error("recaptchaKey undefined");
+            this.siteKey = mm.recaptchaKey.split("/")[3], this.emailPasswordEnabled = mm.recaptchaEnforcementState.some((mm => "EMAIL_PASSWORD_PROVIDER" === mm.provider && "OFF" !== mm.enforcementState))
           }
         }
 
-        function oF(kk) {
-          return new Promise(((Fk, Ik) => {
-            const Xk = document.createElement("script");
-            Xk.setAttribute("src", kk), Xk.onload = Fk, Xk.onerror = kk => {
-                const Fk = Qk("internal-error");
-                Fk.customData = kk, Ik(Fk)
-              }, Xk.type = "text/javascript", Xk.charset = "UTF-8",
+        function ZT(mm) {
+          return new Promise(((Tm, fm) => {
+            const hm = document.createElement("script");
+            hm.setAttribute("src", mm), hm.onload = Tm, hm.onerror = mm => {
+                const Tm = Qm("internal-error");
+                Tm.customData = mm, fm(Tm)
+              }, hm.type = "text/javascript", hm.charset = "UTF-8",
               function() {
-                var kk, Fk;
-                return null !== (Fk = null === (kk = document.getElementsByTagName("head")) || void 0 === kk ? void 0 : kk[0]) && void 0 !== Fk ? Fk : document
-              }().appendChild(Xk)
+                var mm, Tm;
+                return null !== (Tm = null === (mm = document.getElementsByTagName("head")) || void 0 === mm ? void 0 : mm[0]) && void 0 !== Tm ? Tm : document
+              }().appendChild(hm)
           }))
         }
 
-        function vF(kk) {
-          return `__${kk}${Math.floor(1e6*Math.random())}`
+        function kT(mm) {
+          return `__${mm}${Math.floor(1e6*Math.random())}`
         }
-        class EF {
-          constructor(kk) {
-            this.type = "recaptcha-enterprise", this.auth = pF(kk)
+        class bT {
+          constructor(mm) {
+            this.type = "recaptcha-enterprise", this.auth = GT(mm)
           }
           async verify() {
-            let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "verify",
-              Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "verify",
+              Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
 
-            function Ik(Fk, Ik, Xk) {
-              const Tk = window.grecaptcha;
-              zF(Tk) ? Tk.enterprise.ready((() => {
-                Tk.enterprise.execute(Fk, {
-                  action: kk
-                }).then((kk => {
-                  Ik(kk)
+            function fm(Tm, fm, hm) {
+              const Am = window.grecaptcha;
+              cT(Am) ? Am.enterprise.ready((() => {
+                Am.enterprise.execute(Tm, {
+                  action: mm
+                }).then((mm => {
+                  fm(mm)
                 })).catch((() => {
-                  Ik("NO_RECAPTCHA")
+                  fm("NO_RECAPTCHA")
                 }))
-              })) : Xk(Error("No reCAPTCHA enterprise script loaded."))
+              })) : hm(Error("No reCAPTCHA enterprise script loaded."))
             }
-            return new Promise(((kk, Xk) => {
-              (async function(kk) {
-                if (!Fk) {
-                  if (null == kk.tenantId && null != kk._agentRecaptchaConfig) return kk._agentRecaptchaConfig.siteKey;
-                  if (null != kk.tenantId && void 0 !== kk._tenantRecaptchaConfigs[kk.tenantId]) return kk._tenantRecaptchaConfigs[kk.tenantId].siteKey
+            return new Promise(((mm, hm) => {
+              (async function(mm) {
+                if (!Tm) {
+                  if (null == mm.tenantId && null != mm._agentRecaptchaConfig) return mm._agentRecaptchaConfig.siteKey;
+                  if (null != mm.tenantId && void 0 !== mm._tenantRecaptchaConfigs[mm.tenantId]) return mm._tenantRecaptchaConfigs[mm.tenantId].siteKey
                 }
-                return new Promise((async (Fk, Ik) => {
-                  sF(kk, {
+                return new Promise((async (Tm, fm) => {
+                  nT(mm, {
                     clientType: "CLIENT_TYPE_WEB",
                     version: "RECAPTCHA_ENTERPRISE"
-                  }).then((Xk => {
-                    if (void 0 !== Xk.recaptchaKey) {
-                      const Ik = new SF(Xk);
-                      return null == kk.tenantId ? kk._agentRecaptchaConfig = Ik : kk._tenantRecaptchaConfigs[kk.tenantId] = Ik, Fk(Ik.siteKey)
+                  }).then((hm => {
+                    if (void 0 !== hm.recaptchaKey) {
+                      const fm = new zT(hm);
+                      return null == mm.tenantId ? mm._agentRecaptchaConfig = fm : mm._tenantRecaptchaConfigs[mm.tenantId] = fm, Tm(fm.siteKey)
                     }
-                    Ik(new Error("recaptcha Enterprise site key undefined"))
-                  })).catch((kk => {
-                    Ik(kk)
+                    fm(new Error("recaptcha Enterprise site key undefined"))
+                  })).catch((mm => {
+                    fm(mm)
                   }))
                 }))
-              })(this.auth).then((Tk => {
-                if (!Fk && zF(window.grecaptcha)) Ik(Tk, kk, Xk);
+              })(this.auth).then((Am => {
+                if (!Tm && cT(window.grecaptcha)) fm(Am, mm, hm);
                 else {
-                  if ("undefined" === typeof window) return void Xk(new Error("RecaptchaVerifier is only supported in browser"));
-                  oF("https://www.google.com/recaptcha/enterprise.js?render=" + Tk).then((() => {
-                    Ik(Tk, kk, Xk)
-                  })).catch((kk => {
-                    Xk(kk)
+                  if ("undefined" === typeof window) return void hm(new Error("RecaptchaVerifier is only supported in browser"));
+                  ZT("https://www.google.com/recaptcha/enterprise.js?render=" + Am).then((() => {
+                    fm(Am, mm, hm)
+                  })).catch((mm => {
+                    hm(mm)
                   }))
                 }
-              })).catch((kk => {
-                Xk(kk)
+              })).catch((mm => {
+                hm(mm)
               }))
             }))
           }
         }
-        async function OF(kk, Fk, Ik) {
-          let Xk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-          const Tk = new EF(kk);
-          let ik;
+        async function ST(mm, Tm, fm) {
+          let hm = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+          const Am = new bT(mm);
+          let am;
           try {
-            ik = await Tk.verify(Ik)
-          } catch (lk) {
-            ik = await Tk.verify(Ik, !0)
+            am = await Am.verify(fm)
+          } catch (wm) {
+            am = await Am.verify(fm, !0)
           }
-          const yk = Object.assign({}, Fk);
-          return Xk ? Object.assign(yk, {
-            captchaResp: ik
-          }) : Object.assign(yk, {
-            captchaResponse: ik
-          }), Object.assign(yk, {
+          const xm = Object.assign({}, Tm);
+          return hm ? Object.assign(xm, {
+            captchaResp: am
+          }) : Object.assign(xm, {
+            captchaResponse: am
+          }), Object.assign(xm, {
             clientType: "CLIENT_TYPE_WEB"
-          }), Object.assign(yk, {
+          }), Object.assign(xm, {
             recaptchaVersion: "RECAPTCHA_ENTERPRISE"
-          }), yk
+          }), xm
         }
-        class nF {
-          constructor(kk) {
-            this.auth = kk, this.queue = []
+        class eT {
+          constructor(mm) {
+            this.auth = mm, this.queue = []
           }
-          pushCallback(kk, Fk) {
-            const Ik = Fk => new Promise(((Ik, Xk) => {
+          pushCallback(mm, Tm) {
+            const fm = Tm => new Promise(((fm, hm) => {
               try {
-                Ik(kk(Fk))
-              } catch (Tk) {
-                Xk(Tk)
+                fm(mm(Tm))
+              } catch (Am) {
+                hm(Am)
               }
             }));
-            Ik.onAbort = Fk, this.queue.push(Ik);
-            const Xk = this.queue.length - 1;
+            fm.onAbort = Tm, this.queue.push(fm);
+            const hm = this.queue.length - 1;
             return () => {
-              this.queue[Xk] = () => Promise.resolve()
+              this.queue[hm] = () => Promise.resolve()
             }
           }
-          async runMiddleware(kk) {
-            if (this.auth.currentUser === kk) return;
-            const Fk = [];
+          async runMiddleware(mm) {
+            if (this.auth.currentUser === mm) return;
+            const Tm = [];
             try {
-              for (const Ik of this.queue) await Ik(kk), Ik.onAbort && Fk.push(Ik.onAbort)
-            } catch (Ik) {
-              Fk.reverse();
-              for (const kk of Fk) try {
-                kk()
-              } catch (Xk) {}
+              for (const fm of this.queue) await fm(mm), fm.onAbort && Tm.push(fm.onAbort)
+            } catch (fm) {
+              Tm.reverse();
+              for (const mm of Tm) try {
+                mm()
+              } catch (hm) {}
               throw this.auth._errorFactory.create("login-blocked", {
-                originalMessage: null === Ik || void 0 === Ik ? void 0 : Ik.message
+                originalMessage: null === fm || void 0 === fm ? void 0 : fm.message
               })
             }
           }
         }
-        class GF {
-          constructor(kk, Fk, Ik, Xk) {
-            this.app = kk, this.heartbeatServiceProvider = Fk, this.appCheckServiceProvider = Ik, this.config = Xk, this.currentUser = null, this.emulatorConfig = null, this.operations = Promise.resolve(), this.authStateSubscription = new uF(this), this.idTokenSubscription = new uF(this), this.beforeStateQueue = new nF(this), this.redirectUser = null, this.isProactiveRefreshEnabled = !1, this._canInitEmulator = !0, this._isInitialized = !1, this._deleted = !1, this._initializationPromise = null, this._popupRedirectResolver = null, this._errorFactory = Hk, this._agentRecaptchaConfig = null, this._tenantRecaptchaConfigs = {}, this.lastNotifiedUid = void 0, this.languageCode = null, this.tenantId = null, this.settings = {
+        class NT {
+          constructor(mm, Tm, fm, hm) {
+            this.app = mm, this.heartbeatServiceProvider = Tm, this.appCheckServiceProvider = fm, this.config = hm, this.currentUser = null, this.emulatorConfig = null, this.operations = Promise.resolve(), this.authStateSubscription = new XT(this), this.idTokenSubscription = new XT(this), this.beforeStateQueue = new eT(this), this.redirectUser = null, this.isProactiveRefreshEnabled = !1, this._canInitEmulator = !0, this._isInitialized = !1, this._deleted = !1, this._initializationPromise = null, this._popupRedirectResolver = null, this._errorFactory = qm, this._agentRecaptchaConfig = null, this._tenantRecaptchaConfigs = {}, this.lastNotifiedUid = void 0, this.languageCode = null, this.tenantId = null, this.settings = {
               appVerificationDisabledForTesting: !1
-            }, this.frameworks = [], this.name = kk.name, this.clientVersion = Xk.sdkClientVersion
+            }, this.frameworks = [], this.name = mm.name, this.clientVersion = hm.sdkClientVersion
           }
-          _initializeWithPersistence(kk, Fk) {
-            return Fk && (this._popupRedirectResolver = yF(Fk)), this._initializationPromise = this.queue((async () => {
-              var Ik, Xk;
-              if (!this._deleted && (this.persistenceManager = await LF.create(this, kk), !this._deleted)) {
-                if (null === (Ik = this._popupRedirectResolver) || void 0 === Ik ? void 0 : Ik._shouldInitProactively) try {
+          _initializeWithPersistence(mm, Tm) {
+            return Tm && (this._popupRedirectResolver = xT(Tm)), this._initializationPromise = this.queue((async () => {
+              var fm, hm;
+              if (!this._deleted && (this.persistenceManager = await RT.create(this, mm), !this._deleted)) {
+                if (null === (fm = this._popupRedirectResolver) || void 0 === fm ? void 0 : fm._shouldInitProactively) try {
                   await this._popupRedirectResolver._initialize(this)
-                } catch (Tk) {}
-                await this.initializeCurrentUser(Fk), this.lastNotifiedUid = (null === (Xk = this.currentUser) || void 0 === Xk ? void 0 : Xk.uid) || null, this._deleted || (this._isInitialized = !0)
+                } catch (Am) {}
+                await this.initializeCurrentUser(Tm), this.lastNotifiedUid = (null === (hm = this.currentUser) || void 0 === hm ? void 0 : hm.uid) || null, this._deleted || (this._isInitialized = !0)
               }
             })), this._initializationPromise
           }
           async _onStorageEvent() {
             if (this._deleted) return;
-            const kk = await this.assertedPersistence.getCurrentUser();
-            return this.currentUser || kk ? this.currentUser && kk && this.currentUser.uid === kk.uid ? (this._currentUser._assign(kk), void await this.currentUser.getIdToken()) : void await this._updateCurrentUser(kk, !0) : void 0
+            const mm = await this.assertedPersistence.getCurrentUser();
+            return this.currentUser || mm ? this.currentUser && mm && this.currentUser.uid === mm.uid ? (this._currentUser._assign(mm), void await this.currentUser.getIdToken()) : void await this._updateCurrentUser(mm, !0) : void 0
           }
-          async initializeCurrentUser(kk) {
-            var Fk;
-            const Ik = await this.assertedPersistence.getCurrentUser();
-            let Xk = Ik,
-              Tk = !1;
-            if (kk && this.config.authDomain) {
+          async initializeCurrentUser(mm) {
+            var Tm;
+            const fm = await this.assertedPersistence.getCurrentUser();
+            let hm = fm,
+              Am = !1;
+            if (mm && this.config.authDomain) {
               await this.getOrInitRedirectPersistenceManager();
-              const Ik = null === (Fk = this.redirectUser) || void 0 === Fk ? void 0 : Fk._redirectEventId,
-                ik = null === Xk || void 0 === Xk ? void 0 : Xk._redirectEventId,
-                yk = await this.tryRedirectSignIn(kk);
-              Ik && Ik !== ik || !(null === yk || void 0 === yk ? void 0 : yk.user) || (Xk = yk.user, Tk = !0)
+              const fm = null === (Tm = this.redirectUser) || void 0 === Tm ? void 0 : Tm._redirectEventId,
+                am = null === hm || void 0 === hm ? void 0 : hm._redirectEventId,
+                xm = await this.tryRedirectSignIn(mm);
+              fm && fm !== am || !(null === xm || void 0 === xm ? void 0 : xm.user) || (hm = xm.user, Am = !0)
             }
-            if (!Xk) return this.directlySetCurrentUser(null);
-            if (!Xk._redirectEventId) {
-              if (Tk) try {
-                await this.beforeStateQueue.runMiddleware(Xk)
-              } catch (ik) {
-                Xk = Ik, this._popupRedirectResolver._overrideRedirectResult(this, (() => Promise.reject(ik)))
+            if (!hm) return this.directlySetCurrentUser(null);
+            if (!hm._redirectEventId) {
+              if (Am) try {
+                await this.beforeStateQueue.runMiddleware(hm)
+              } catch (am) {
+                hm = fm, this._popupRedirectResolver._overrideRedirectResult(this, (() => Promise.reject(am)))
               }
-              return Xk ? this.reloadAndSetCurrentUserOrClear(Xk) : this.directlySetCurrentUser(null)
+              return hm ? this.reloadAndSetCurrentUserOrClear(hm) : this.directlySetCurrentUser(null)
             }
-            return Sk(this._popupRedirectResolver, this, "argument-error"), await this.getOrInitRedirectPersistenceManager(), this.redirectUser && this.redirectUser._redirectEventId === Xk._redirectEventId ? this.directlySetCurrentUser(Xk) : this.reloadAndSetCurrentUserOrClear(Xk)
+            return zm(this._popupRedirectResolver, this, "argument-error"), await this.getOrInitRedirectPersistenceManager(), this.redirectUser && this.redirectUser._redirectEventId === hm._redirectEventId ? this.directlySetCurrentUser(hm) : this.reloadAndSetCurrentUserOrClear(hm)
           }
-          async tryRedirectSignIn(kk) {
-            let Fk = null;
+          async tryRedirectSignIn(mm) {
+            let Tm = null;
             try {
-              Fk = await this._popupRedirectResolver._completeRedirectFn(this, kk, !0)
-            } catch (Ik) {
+              Tm = await this._popupRedirectResolver._completeRedirectFn(this, mm, !0)
+            } catch (fm) {
               await this._setRedirectUser(null)
             }
-            return Fk
+            return Tm
           }
-          async reloadAndSetCurrentUserOrClear(kk) {
+          async reloadAndSetCurrentUserOrClear(mm) {
             try {
-              await kF(kk)
-            } catch (Fk) {
-              if ("auth/network-request-failed" !== (null === Fk || void 0 === Fk ? void 0 : Fk.code)) return this.directlySetCurrentUser(null)
+              await mT(mm)
+            } catch (Tm) {
+              if ("auth/network-request-failed" !== (null === Tm || void 0 === Tm ? void 0 : Tm.code)) return this.directlySetCurrentUser(null)
             }
-            return this.directlySetCurrentUser(kk)
+            return this.directlySetCurrentUser(mm)
           }
           useDeviceLanguage() {
             this.languageCode = function() {
               if ("undefined" === typeof navigator) return null;
-              const kk = navigator;
-              return kk.languages && kk.languages[0] || kk.language || null
+              const mm = navigator;
+              return mm.languages && mm.languages[0] || mm.language || null
             }()
           }
           async _delete() {
             this._deleted = !0
           }
-          async updateCurrentUser(kk) {
-            const Fk = kk ? (0, Xk.L)(kk) : null;
-            return Fk && Sk(Fk.auth.config.apiKey === this.config.apiKey, this, "invalid-user-token"), this._updateCurrentUser(Fk && Fk._clone(this))
+          async updateCurrentUser(mm) {
+            const Tm = mm ? (0, hm.J)(mm) : null;
+            return Tm && zm(Tm.auth.config.apiKey === this.config.apiKey, this, "invalid-user-token"), this._updateCurrentUser(Tm && Tm._clone(this))
           }
-          async _updateCurrentUser(kk) {
-            let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (!this._deleted) return kk && Sk(this.tenantId === kk.tenantId, this, "tenant-id-mismatch"), Fk || await this.beforeStateQueue.runMiddleware(kk), this.queue((async () => {
-              await this.directlySetCurrentUser(kk), this.notifyAuthListeners()
+          async _updateCurrentUser(mm) {
+            let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (!this._deleted) return mm && zm(this.tenantId === mm.tenantId, this, "tenant-id-mismatch"), Tm || await this.beforeStateQueue.runMiddleware(mm), this.queue((async () => {
+              await this.directlySetCurrentUser(mm), this.notifyAuthListeners()
             }))
           }
           async signOut() {
             return await this.beforeStateQueue.runMiddleware(null), (this.redirectPersistenceManager || this._popupRedirectResolver) && await this._setRedirectUser(null), this._updateCurrentUser(null, !0)
           }
-          setPersistence(kk) {
+          setPersistence(mm) {
             return this.queue((async () => {
-              await this.assertedPersistence.setPersistence(yF(kk))
+              await this.assertedPersistence.setPersistence(xT(mm))
             }))
           }
           async initializeRecaptchaConfig() {
-            const kk = await sF(this, {
+            const mm = await nT(this, {
                 clientType: "CLIENT_TYPE_WEB",
                 version: "RECAPTCHA_ENTERPRISE"
               }),
-              Fk = new SF(kk);
-            if (null == this.tenantId ? this._agentRecaptchaConfig = Fk : this._tenantRecaptchaConfigs[this.tenantId] = Fk, Fk.emailPasswordEnabled) {
-              new EF(this).verify()
+              Tm = new zT(mm);
+            if (null == this.tenantId ? this._agentRecaptchaConfig = Tm : this._tenantRecaptchaConfigs[this.tenantId] = Tm, Tm.emailPasswordEnabled) {
+              new bT(this).verify()
             }
           }
           _getRecaptchaConfig() {
@@ -1393,47 +1393,47 @@ export const modules = {
           _getPersistence() {
             return this.assertedPersistence.persistence.type
           }
-          _updateErrorMap(kk) {
-            this._errorFactory = new Xk.g("auth", "Firebase", kk())
+          _updateErrorMap(mm) {
+            this._errorFactory = new hm.e("auth", "Firebase", mm())
           }
-          onAuthStateChanged(kk, Fk, Ik) {
-            return this.registerStateListener(this.authStateSubscription, kk, Fk, Ik)
+          onAuthStateChanged(mm, Tm, fm) {
+            return this.registerStateListener(this.authStateSubscription, mm, Tm, fm)
           }
-          beforeAuthStateChanged(kk, Fk) {
-            return this.beforeStateQueue.pushCallback(kk, Fk)
+          beforeAuthStateChanged(mm, Tm) {
+            return this.beforeStateQueue.pushCallback(mm, Tm)
           }
-          onIdTokenChanged(kk, Fk, Ik) {
-            return this.registerStateListener(this.idTokenSubscription, kk, Fk, Ik)
+          onIdTokenChanged(mm, Tm, fm) {
+            return this.registerStateListener(this.idTokenSubscription, mm, Tm, fm)
           }
           toJSON() {
-            var kk;
+            var mm;
             return {
               apiKey: this.config.apiKey,
               authDomain: this.config.authDomain,
               appName: this.name,
-              currentUser: null === (kk = this._currentUser) || void 0 === kk ? void 0 : kk.toJSON()
+              currentUser: null === (mm = this._currentUser) || void 0 === mm ? void 0 : mm.toJSON()
             }
           }
-          async _setRedirectUser(kk, Fk) {
-            const Ik = await this.getOrInitRedirectPersistenceManager(Fk);
-            return null === kk ? Ik.removeCurrentUser() : Ik.setCurrentUser(kk)
+          async _setRedirectUser(mm, Tm) {
+            const fm = await this.getOrInitRedirectPersistenceManager(Tm);
+            return null === mm ? fm.removeCurrentUser() : fm.setCurrentUser(mm)
           }
-          async getOrInitRedirectPersistenceManager(kk) {
+          async getOrInitRedirectPersistenceManager(mm) {
             if (!this.redirectPersistenceManager) {
-              const Fk = kk && yF(kk) || this._popupRedirectResolver;
-              Sk(Fk, this, "argument-error"), this.redirectPersistenceManager = await LF.create(this, [yF(Fk._redirectPersistence)], "redirectUser"), this.redirectUser = await this.redirectPersistenceManager.getCurrentUser()
+              const Tm = mm && xT(mm) || this._popupRedirectResolver;
+              zm(Tm, this, "argument-error"), this.redirectPersistenceManager = await RT.create(this, [xT(Tm._redirectPersistence)], "redirectUser"), this.redirectUser = await this.redirectPersistenceManager.getCurrentUser()
             }
             return this.redirectPersistenceManager
           }
-          async _redirectUserForId(kk) {
-            var Fk, Ik;
-            return this._isInitialized && await this.queue((async () => {})), (null === (Fk = this._currentUser) || void 0 === Fk ? void 0 : Fk._redirectEventId) === kk ? this._currentUser : (null === (Ik = this.redirectUser) || void 0 === Ik ? void 0 : Ik._redirectEventId) === kk ? this.redirectUser : null
+          async _redirectUserForId(mm) {
+            var Tm, fm;
+            return this._isInitialized && await this.queue((async () => {})), (null === (Tm = this._currentUser) || void 0 === Tm ? void 0 : Tm._redirectEventId) === mm ? this._currentUser : (null === (fm = this.redirectUser) || void 0 === fm ? void 0 : fm._redirectEventId) === mm ? this.redirectUser : null
           }
-          async _persistUserIfCurrent(kk) {
-            if (kk === this.currentUser) return this.queue((async () => this.directlySetCurrentUser(kk)))
+          async _persistUserIfCurrent(mm) {
+            if (mm === this.currentUser) return this.queue((async () => this.directlySetCurrentUser(mm)))
           }
-          _notifyListenersIfCurrent(kk) {
-            kk === this.currentUser && this.notifyAuthListeners()
+          _notifyListenersIfCurrent(mm) {
+            mm === this.currentUser && this.notifyAuthListeners()
           }
           _key() {
             return `${this.config.authDomain}:${this.config.apiKey}:${this.name}`
@@ -1448,192 +1448,192 @@ export const modules = {
             return this.currentUser
           }
           notifyAuthListeners() {
-            var kk, Fk;
+            var mm, Tm;
             if (!this._isInitialized) return;
             this.idTokenSubscription.next(this.currentUser);
-            const Ik = null !== (Fk = null === (kk = this.currentUser) || void 0 === kk ? void 0 : kk.uid) && void 0 !== Fk ? Fk : null;
-            this.lastNotifiedUid !== Ik && (this.lastNotifiedUid = Ik, this.authStateSubscription.next(this.currentUser))
+            const fm = null !== (Tm = null === (mm = this.currentUser) || void 0 === mm ? void 0 : mm.uid) && void 0 !== Tm ? Tm : null;
+            this.lastNotifiedUid !== fm && (this.lastNotifiedUid = fm, this.authStateSubscription.next(this.currentUser))
           }
-          registerStateListener(kk, Fk, Ik, Xk) {
+          registerStateListener(mm, Tm, fm, hm) {
             if (this._deleted) return () => {};
-            const Tk = "function" === typeof Fk ? Fk : Fk.next.bind(Fk),
-              ik = this._isInitialized ? Promise.resolve() : this._initializationPromise;
-            return Sk(ik, this, "internal-error"), ik.then((() => Tk(this.currentUser))), "function" === typeof Fk ? kk.addObserver(Fk, Ik, Xk) : kk.addObserver(Fk)
+            const Am = "function" === typeof Tm ? Tm : Tm.next.bind(Tm),
+              am = this._isInitialized ? Promise.resolve() : this._initializationPromise;
+            return zm(am, this, "internal-error"), am.then((() => Am(this.currentUser))), "function" === typeof Tm ? mm.addObserver(Tm, fm, hm) : mm.addObserver(Tm)
           }
-          async directlySetCurrentUser(kk) {
-            this.currentUser && this.currentUser !== kk && this._currentUser._stopProactiveRefresh(), kk && this.isProactiveRefreshEnabled && kk._startProactiveRefresh(), this.currentUser = kk, kk ? await this.assertedPersistence.setCurrentUser(kk) : await this.assertedPersistence.removeCurrentUser()
+          async directlySetCurrentUser(mm) {
+            this.currentUser && this.currentUser !== mm && this._currentUser._stopProactiveRefresh(), mm && this.isProactiveRefreshEnabled && mm._startProactiveRefresh(), this.currentUser = mm, mm ? await this.assertedPersistence.setCurrentUser(mm) : await this.assertedPersistence.removeCurrentUser()
           }
-          queue(kk) {
-            return this.operations = this.operations.then(kk, kk), this.operations
+          queue(mm) {
+            return this.operations = this.operations.then(mm, mm), this.operations
           }
           get assertedPersistence() {
-            return Sk(this.persistenceManager, this, "internal-error"), this.persistenceManager
+            return zm(this.persistenceManager, this, "internal-error"), this.persistenceManager
           }
-          _logFramework(kk) {
-            kk && !this.frameworks.includes(kk) && (this.frameworks.push(kk), this.frameworks.sort(), this.clientVersion = QF(this.config.clientPlatform, this._getFrameworks()))
+          _logFramework(mm) {
+            mm && !this.frameworks.includes(mm) && (this.frameworks.push(mm), this.frameworks.sort(), this.clientVersion = QT(this.config.clientPlatform, this._getFrameworks()))
           }
           _getFrameworks() {
             return this.frameworks
           }
           async _getAdditionalHeaders() {
-            var kk;
-            const Fk = {
+            var mm;
+            const Tm = {
               "X-Client-Version": this.clientVersion
             };
-            this.app.options.appId && (Fk["X-Firebase-gmpid"] = this.app.options.appId);
-            const Ik = await (null === (kk = this.heartbeatServiceProvider.getImmediate({
+            this.app.options.appId && (Tm["X-Firebase-gmpid"] = this.app.options.appId);
+            const fm = await (null === (mm = this.heartbeatServiceProvider.getImmediate({
               optional: !0
-            })) || void 0 === kk ? void 0 : kk.getHeartbeatsHeader());
-            Ik && (Fk["X-Firebase-Client"] = Ik);
-            const Xk = await this._getAppCheckToken();
-            return Xk && (Fk["X-Firebase-AppCheck"] = Xk), Fk
+            })) || void 0 === mm ? void 0 : mm.getHeartbeatsHeader());
+            fm && (Tm["X-Firebase-Client"] = fm);
+            const hm = await this._getAppCheckToken();
+            return hm && (Tm["X-Firebase-AppCheck"] = hm), Tm
           }
           async _getAppCheckToken() {
-            var kk;
-            const Fk = await (null === (kk = this.appCheckServiceProvider.getImmediate({
+            var mm;
+            const Tm = await (null === (mm = this.appCheckServiceProvider.getImmediate({
               optional: !0
-            })) || void 0 === kk ? void 0 : kk.getToken());
-            return (null === Fk || void 0 === Fk ? void 0 : Fk.error) && function(kk) {
-              if (xk.logLevel <= yk.d.WARN) {
-                for (var Fk = arguments.length, Ik = new Array(Fk > 1 ? Fk - 1 : 0), Xk = 1; Xk < Fk; Xk++) Ik[Xk - 1] = arguments[Xk];
-                xk.warn(`Auth (${Tk.i}): ${kk}`, ...Ik)
+            })) || void 0 === mm ? void 0 : mm.getToken());
+            return (null === Tm || void 0 === Tm ? void 0 : Tm.error) && function(mm) {
+              if (Vm.logLevel <= xm.d.WARN) {
+                for (var Tm = arguments.length, fm = new Array(Tm > 1 ? Tm - 1 : 0), hm = 1; hm < Tm; hm++) fm[hm - 1] = arguments[hm];
+                Vm.warn(`Auth (${Am.d}): ${mm}`, ...fm)
               }
-            }(`Error while retrieving App Check token: ${Fk.error}`), null === Fk || void 0 === Fk ? void 0 : Fk.token
+            }(`Error while retrieving App Check token: ${Tm.error}`), null === Tm || void 0 === Tm ? void 0 : Tm.token
           }
         }
 
-        function pF(kk) {
-          return (0, Xk.L)(kk)
+        function GT(mm) {
+          return (0, hm.J)(mm)
         }
-        class uF {
-          constructor(kk) {
-            this.auth = kk, this.observer = null, this.addObserver = (0, Xk.u)((kk => this.observer = kk))
+        class XT {
+          constructor(mm) {
+            this.auth = mm, this.observer = null, this.addObserver = (0, hm.t)((mm => this.observer = mm))
           }
           get next() {
-            return Sk(this.observer, this.auth, "internal-error"), this.observer.next.bind(this.observer)
+            return zm(this.observer, this.auth, "internal-error"), this.observer.next.bind(this.observer)
           }
         }
 
-        function bF(kk, Fk) {
-          const Ik = (0, Tk.A)(kk, "auth");
-          if (Ik.isInitialized()) {
-            const kk = Ik.getImmediate(),
-              Tk = Ik.getOptions();
-            if ((0, Xk.y)(Tk, null !== Fk && void 0 !== Fk ? Fk : {})) return kk;
-            Kk(kk, "already-initialized")
+        function PT(mm, Tm) {
+          const fm = (0, Am.z)(mm, "auth");
+          if (fm.isInitialized()) {
+            const mm = fm.getImmediate(),
+              Am = fm.getOptions();
+            if ((0, hm.w)(Am, null !== Tm && void 0 !== Tm ? Tm : {})) return mm;
+            Km(mm, "already-initialized")
           }
-          return Ik.initialize({
-            options: Fk
+          return fm.initialize({
+            options: Tm
           })
         }
 
-        function RF(kk, Fk, Ik) {
-          const Xk = pF(kk);
-          Sk(Xk._canInitEmulator, Xk, "emulator-config-failed"), Sk(/^https?:\/\//.test(Fk), Xk, "invalid-emulator-scheme");
-          const Tk = !!(null === Ik || void 0 === Ik ? void 0 : Ik.disableWarnings),
-            ik = UF(Fk),
+        function HT(mm, Tm, fm) {
+          const hm = GT(mm);
+          zm(hm._canInitEmulator, hm, "emulator-config-failed"), zm(/^https?:\/\//.test(Tm), hm, "invalid-emulator-scheme");
+          const Am = !!(null === fm || void 0 === fm ? void 0 : fm.disableWarnings),
+            am = yT(Tm),
             {
-              host: yk,
-              port: lk
-            } = function(kk) {
-              const Fk = UF(kk),
-                Ik = /(\/\/)?([^?#/]+)/.exec(kk.substr(Fk.length));
-              if (!Ik) return {
+              host: xm,
+              port: wm
+            } = function(mm) {
+              const Tm = yT(mm),
+                fm = /(\/\/)?([^?#/]+)/.exec(mm.substr(Tm.length));
+              if (!fm) return {
                 host: "",
                 port: null
               };
-              const Xk = Ik[2].split("@").pop() || "",
-                Tk = /^(\[[^\]]+\])(:|$)/.exec(Xk);
-              if (Tk) {
-                const kk = Tk[1];
+              const hm = fm[2].split("@").pop() || "",
+                Am = /^(\[[^\]]+\])(:|$)/.exec(hm);
+              if (Am) {
+                const mm = Am[1];
                 return {
-                  host: kk,
-                  port: CF(Xk.substr(kk.length + 1))
+                  host: mm,
+                  port: CT(hm.substr(mm.length + 1))
                 }
               } {
-                const [kk, Fk] = Xk.split(":");
+                const [mm, Tm] = hm.split(":");
                 return {
-                  host: kk,
-                  port: CF(Fk)
+                  host: mm,
+                  port: CT(Tm)
                 }
               }
-            }(Fk),
-            ak = null === lk ? "" : `:${lk}`;
-          Xk.config.emulator = {
-            url: `${ik}//${yk}${ak}/`
-          }, Xk.settings.appVerificationDisabledForTesting = !0, Xk.emulatorConfig = Object.freeze({
-            host: yk,
-            port: lk,
-            protocol: ik.replace(":", ""),
+            }(Tm),
+            Dm = null === wm ? "" : `:${wm}`;
+          hm.config.emulator = {
+            url: `${am}//${xm}${Dm}/`
+          }, hm.settings.appVerificationDisabledForTesting = !0, hm.emulatorConfig = Object.freeze({
+            host: xm,
+            port: wm,
+            protocol: am.replace(":", ""),
             options: Object.freeze({
-              disableWarnings: Tk
+              disableWarnings: Am
             })
-          }), Tk || function() {
-            function kk() {
-              const kk = document.createElement("p"),
-                Fk = kk.style;
-              kk.innerText = "Running in emulator mode. Do not use with production credentials.", Fk.position = "fixed", Fk.width = "100%", Fk.backgroundColor = "#ffffff", Fk.border = ".1em solid #000000", Fk.color = "#b50000", Fk.bottom = "0px", Fk.left = "0px", Fk.margin = "0px", Fk.zIndex = "10000", Fk.textAlign = "center", kk.classList.add("firebase-emulator-warning"), document.body.appendChild(kk)
+          }), Am || function() {
+            function mm() {
+              const mm = document.createElement("p"),
+                Tm = mm.style;
+              mm.innerText = "Running in emulator mode. Do not use with production credentials.", Tm.position = "fixed", Tm.width = "100%", Tm.backgroundColor = "#ffffff", Tm.border = ".1em solid #000000", Tm.color = "#b50000", Tm.bottom = "0px", Tm.left = "0px", Tm.margin = "0px", Tm.zIndex = "10000", Tm.textAlign = "center", mm.classList.add("firebase-emulator-warning"), document.body.appendChild(mm)
             }
             "undefined" !== typeof console && "function" === typeof console.info && console.info("WARNING: You are using the Auth Emulator, which is intended for local testing only.  Do not use with production credentials.");
-            "undefined" !== typeof window && "undefined" !== typeof document && ("loading" === document.readyState ? window.addEventListener("DOMContentLoaded", kk) : kk())
+            "undefined" !== typeof window && "undefined" !== typeof document && ("loading" === document.readyState ? window.addEventListener("DOMContentLoaded", mm) : mm())
           }()
         }
 
-        function UF(kk) {
-          const Fk = kk.indexOf(":");
-          return Fk < 0 ? "" : kk.substr(0, Fk + 1)
+        function yT(mm) {
+          const Tm = mm.indexOf(":");
+          return Tm < 0 ? "" : mm.substr(0, Tm + 1)
         }
 
-        function CF(kk) {
-          if (!kk) return null;
-          const Fk = Number(kk);
-          return isNaN(Fk) ? null : Fk
+        function CT(mm) {
+          if (!mm) return null;
+          const Tm = Number(mm);
+          return isNaN(Tm) ? null : Tm
         }
-        class NF {
-          constructor(kk, Fk) {
-            this.providerId = kk, this.signInMethod = Fk
+        class rT {
+          constructor(mm, Tm) {
+            this.providerId = mm, this.signInMethod = Tm
           }
           toJSON() {
-            return vk("not implemented")
+            return Zm("not implemented")
           }
-          _getIdTokenResponse(kk) {
-            return vk("not implemented")
+          _getIdTokenResponse(mm) {
+            return Zm("not implemented")
           }
-          _linkToIdToken(kk, Fk) {
-            return vk("not implemented")
+          _linkToIdToken(mm, Tm) {
+            return Zm("not implemented")
           }
-          _getReauthenticationResolver(kk) {
-            return vk("not implemented")
+          _getReauthenticationResolver(mm) {
+            return Zm("not implemented")
           }
         }
-        async function cF(kk, Fk) {
-          return Nk(kk, "POST", "/v1/accounts:resetPassword", Ck(kk, Fk))
+        async function sT(mm, Tm) {
+          return Cm(mm, "POST", "/v1/accounts:resetPassword", ym(mm, Tm))
         }
-        async function WF(kk, Fk) {
-          return Nk(kk, "POST", "/v1/accounts:update", Fk)
+        async function lT(mm, Tm) {
+          return Cm(mm, "POST", "/v1/accounts:update", Tm)
         }
-        async function fF(kk, Fk) {
-          return Wk(kk, "POST", "/v1/accounts:signInWithPassword", Ck(kk, Fk))
+        async function MT(mm, Tm) {
+          return sm(mm, "POST", "/v1/accounts:signInWithPassword", ym(mm, Tm))
         }
-        async function BF(kk, Fk) {
-          return Nk(kk, "POST", "/v1/accounts:sendOobCode", Ck(kk, Fk))
+        async function uT(mm, Tm) {
+          return Cm(mm, "POST", "/v1/accounts:sendOobCode", ym(mm, Tm))
         }
-        async function dF(kk, Fk) {
-          return BF(kk, Fk)
+        async function BT(mm, Tm) {
+          return uT(mm, Tm)
         }
-        async function YF(kk, Fk) {
-          return BF(kk, Fk)
+        async function LT(mm, Tm) {
+          return uT(mm, Tm)
         }
-        class AF extends NF {
-          constructor(kk, Fk, Ik) {
-            let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-            super("password", Ik), this._email = kk, this._password = Fk, this._tenantId = Xk
+        class vT extends rT {
+          constructor(mm, Tm, fm) {
+            let hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+            super("password", fm), this._email = mm, this._password = Tm, this._tenantId = hm
           }
-          static _fromEmailAndPassword(kk, Fk) {
-            return new AF(kk, Fk, "password")
+          static _fromEmailAndPassword(mm, Tm) {
+            return new vT(mm, Tm, "password")
           }
-          static _fromEmailAndCode(kk, Fk) {
-            return new AF(kk, Fk, "emailLink", arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
+          static _fromEmailAndCode(mm, Tm) {
+            return new vT(mm, Tm, "emailLink", arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
           }
           toJSON() {
             return {
@@ -1643,82 +1643,82 @@ export const modules = {
               tenantId: this._tenantId
             }
           }
-          static fromJSON(kk) {
-            const Fk = "string" === typeof kk ? JSON.parse(kk) : kk;
-            if ((null === Fk || void 0 === Fk ? void 0 : Fk.email) && (null === Fk || void 0 === Fk ? void 0 : Fk.password)) {
-              if ("password" === Fk.signInMethod) return this._fromEmailAndPassword(Fk.email, Fk.password);
-              if ("emailLink" === Fk.signInMethod) return this._fromEmailAndCode(Fk.email, Fk.password, Fk.tenantId)
+          static fromJSON(mm) {
+            const Tm = "string" === typeof mm ? JSON.parse(mm) : mm;
+            if ((null === Tm || void 0 === Tm ? void 0 : Tm.email) && (null === Tm || void 0 === Tm ? void 0 : Tm.password)) {
+              if ("password" === Tm.signInMethod) return this._fromEmailAndPassword(Tm.email, Tm.password);
+              if ("emailLink" === Tm.signInMethod) return this._fromEmailAndCode(Tm.email, Tm.password, Tm.tenantId)
             }
             return null
           }
-          async _getIdTokenResponse(kk) {
-            var Fk;
+          async _getIdTokenResponse(mm) {
+            var Tm;
             switch (this.signInMethod) {
               case "password":
-                const Ik = {
+                const fm = {
                   returnSecureToken: !0,
                   email: this._email,
                   password: this._password,
                   clientType: "CLIENT_TYPE_WEB"
                 };
-                if (null === (Fk = kk._getRecaptchaConfig()) || void 0 === Fk ? void 0 : Fk.emailPasswordEnabled) {
-                  const Fk = await OF(kk, Ik, "signInWithPassword");
-                  return fF(kk, Fk)
+                if (null === (Tm = mm._getRecaptchaConfig()) || void 0 === Tm ? void 0 : Tm.emailPasswordEnabled) {
+                  const Tm = await ST(mm, fm, "signInWithPassword");
+                  return MT(mm, Tm)
                 }
-                return fF(kk, Ik).catch((async Fk => {
-                  if ("auth/missing-recaptcha-token" === Fk.code) {
+                return MT(mm, fm).catch((async Tm => {
+                  if ("auth/missing-recaptcha-token" === Tm.code) {
                     console.log("Sign-in with email address and password is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-in flow.");
-                    const Fk = await OF(kk, Ik, "signInWithPassword");
-                    return fF(kk, Fk)
+                    const Tm = await ST(mm, fm, "signInWithPassword");
+                    return MT(mm, Tm)
                   }
-                  return Promise.reject(Fk)
+                  return Promise.reject(Tm)
                 }));
               case "emailLink":
-                return async function(kk, Fk) {
-                  return Wk(kk, "POST", "/v1/accounts:signInWithEmailLink", Ck(kk, Fk))
-                }(kk, {
+                return async function(mm, Tm) {
+                  return sm(mm, "POST", "/v1/accounts:signInWithEmailLink", ym(mm, Tm))
+                }(mm, {
                   email: this._email,
                   oobCode: this._password
                 });
               default:
-                Kk(kk, "internal-error")
+                Km(mm, "internal-error")
             }
           }
-          async _linkToIdToken(kk, Fk) {
+          async _linkToIdToken(mm, Tm) {
             switch (this.signInMethod) {
               case "password":
-                return WF(kk, {
-                  idToken: Fk,
+                return lT(mm, {
+                  idToken: Tm,
                   returnSecureToken: !0,
                   email: this._email,
                   password: this._password
                 });
               case "emailLink":
-                return async function(kk, Fk) {
-                  return Wk(kk, "POST", "/v1/accounts:signInWithEmailLink", Ck(kk, Fk))
-                }(kk, {
-                  idToken: Fk,
+                return async function(mm, Tm) {
+                  return sm(mm, "POST", "/v1/accounts:signInWithEmailLink", ym(mm, Tm))
+                }(mm, {
+                  idToken: Tm,
                   email: this._email,
                   oobCode: this._password
                 });
               default:
-                Kk(kk, "internal-error")
+                Km(mm, "internal-error")
             }
           }
-          _getReauthenticationResolver(kk) {
-            return this._getIdTokenResponse(kk)
+          _getReauthenticationResolver(mm) {
+            return this._getIdTokenResponse(mm)
           }
         }
-        async function gF(kk, Fk) {
-          return Wk(kk, "POST", "/v1/accounts:signInWithIdp", Ck(kk, Fk))
+        async function tT(mm, Tm) {
+          return sm(mm, "POST", "/v1/accounts:signInWithIdp", ym(mm, Tm))
         }
-        class mF extends NF {
+        class UT extends rT {
           constructor() {
             super(...arguments), this.pendingToken = null
           }
-          static _fromParams(kk) {
-            const Fk = new mF(kk.providerId, kk.signInMethod);
-            return kk.idToken || kk.accessToken ? (kk.idToken && (Fk.idToken = kk.idToken), kk.accessToken && (Fk.accessToken = kk.accessToken), kk.nonce && !kk.pendingToken && (Fk.nonce = kk.nonce), kk.pendingToken && (Fk.pendingToken = kk.pendingToken)) : kk.oauthToken && kk.oauthTokenSecret ? (Fk.accessToken = kk.oauthToken, Fk.secret = kk.oauthTokenSecret) : Kk("argument-error"), Fk
+          static _fromParams(mm) {
+            const Tm = new UT(mm.providerId, mm.signInMethod);
+            return mm.idToken || mm.accessToken ? (mm.idToken && (Tm.idToken = mm.idToken), mm.accessToken && (Tm.accessToken = mm.accessToken), mm.nonce && !mm.pendingToken && (Tm.nonce = mm.nonce), mm.pendingToken && (Tm.pendingToken = mm.pendingToken)) : mm.oauthToken && mm.oauthTokenSecret ? (Tm.accessToken = mm.oauthToken, Tm.secret = mm.oauthTokenSecret) : Km("argument-error"), Tm
           }
           toJSON() {
             return {
@@ -1731,126 +1731,126 @@ export const modules = {
               signInMethod: this.signInMethod
             }
           }
-          static fromJSON(kk) {
-            const Fk = "string" === typeof kk ? JSON.parse(kk) : kk,
+          static fromJSON(mm) {
+            const Tm = "string" === typeof mm ? JSON.parse(mm) : mm,
               {
-                providerId: Ik,
-                signInMethod: Xk
-              } = Fk,
-              Tk = ik(Fk, ["providerId", "signInMethod"]);
-            if (!Ik || !Xk) return null;
-            const yk = new mF(Ik, Xk);
-            return yk.idToken = Tk.idToken || void 0, yk.accessToken = Tk.accessToken || void 0, yk.secret = Tk.secret, yk.nonce = Tk.nonce, yk.pendingToken = Tk.pendingToken || null, yk
+                providerId: fm,
+                signInMethod: hm
+              } = Tm,
+              Am = am(Tm, ["providerId", "signInMethod"]);
+            if (!fm || !hm) return null;
+            const xm = new UT(fm, hm);
+            return xm.idToken = Am.idToken || void 0, xm.accessToken = Am.accessToken || void 0, xm.secret = Am.secret, xm.nonce = Am.nonce, xm.pendingToken = Am.pendingToken || null, xm
           }
-          _getIdTokenResponse(kk) {
-            return gF(kk, this.buildRequest())
+          _getIdTokenResponse(mm) {
+            return tT(mm, this.buildRequest())
           }
-          _linkToIdToken(kk, Fk) {
-            const Ik = this.buildRequest();
-            return Ik.idToken = Fk, gF(kk, Ik)
+          _linkToIdToken(mm, Tm) {
+            const fm = this.buildRequest();
+            return fm.idToken = Tm, tT(mm, fm)
           }
-          _getReauthenticationResolver(kk) {
-            const Fk = this.buildRequest();
-            return Fk.autoCreate = !1, gF(kk, Fk)
+          _getReauthenticationResolver(mm) {
+            const Tm = this.buildRequest();
+            return Tm.autoCreate = !1, tT(mm, Tm)
           }
           buildRequest() {
-            const kk = {
+            const mm = {
               requestUri: "http://localhost",
               returnSecureToken: !0
             };
-            if (this.pendingToken) kk.pendingToken = this.pendingToken;
+            if (this.pendingToken) mm.pendingToken = this.pendingToken;
             else {
-              const Fk = {};
-              this.idToken && (Fk.id_token = this.idToken), this.accessToken && (Fk.access_token = this.accessToken), this.secret && (Fk.oauth_token_secret = this.secret), Fk.providerId = this.providerId, this.nonce && !this.pendingToken && (Fk.nonce = this.nonce), kk.postBody = (0, Xk.eb)(Fk)
+              const Tm = {};
+              this.idToken && (Tm.id_token = this.idToken), this.accessToken && (Tm.access_token = this.accessToken), this.secret && (Tm.oauth_token_secret = this.secret), Tm.providerId = this.providerId, this.nonce && !this.pendingToken && (Tm.nonce = this.nonce), mm.postBody = (0, hm.ab)(Tm)
             }
-            return kk
+            return mm
           }
         }
-        const hF = {
+        const dT = {
           USER_NOT_FOUND: "user-not-found"
         };
-        class rF extends NF {
-          constructor(kk) {
-            super("phone", "phone"), this.params = kk
+        class gT extends rT {
+          constructor(mm) {
+            super("phone", "phone"), this.params = mm
           }
-          static _fromVerification(kk, Fk) {
-            return new rF({
-              verificationId: kk,
-              verificationCode: Fk
+          static _fromVerification(mm, Tm) {
+            return new gT({
+              verificationId: mm,
+              verificationCode: Tm
             })
           }
-          static _fromTokenResponse(kk, Fk) {
-            return new rF({
-              phoneNumber: kk,
-              temporaryProof: Fk
+          static _fromTokenResponse(mm, Tm) {
+            return new gT({
+              phoneNumber: mm,
+              temporaryProof: Tm
             })
           }
-          _getIdTokenResponse(kk) {
-            return async function(kk, Fk) {
-              return Wk(kk, "POST", "/v1/accounts:signInWithPhoneNumber", Ck(kk, Fk))
-            }(kk, this._makeVerificationRequest())
+          _getIdTokenResponse(mm) {
+            return async function(mm, Tm) {
+              return sm(mm, "POST", "/v1/accounts:signInWithPhoneNumber", ym(mm, Tm))
+            }(mm, this._makeVerificationRequest())
           }
-          _linkToIdToken(kk, Fk) {
-            return async function(kk, Fk) {
-              const Ik = await Wk(kk, "POST", "/v1/accounts:signInWithPhoneNumber", Ck(kk, Fk));
-              if (Ik.temporaryProof) throw dk(kk, "account-exists-with-different-credential", Ik);
-              return Ik
-            }(kk, Object.assign({
-              idToken: Fk
+          _linkToIdToken(mm, Tm) {
+            return async function(mm, Tm) {
+              const fm = await sm(mm, "POST", "/v1/accounts:signInWithPhoneNumber", ym(mm, Tm));
+              if (fm.temporaryProof) throw um(mm, "account-exists-with-different-credential", fm);
+              return fm
+            }(mm, Object.assign({
+              idToken: Tm
             }, this._makeVerificationRequest()))
           }
-          _getReauthenticationResolver(kk) {
-            return async function(kk, Fk) {
-              return Wk(kk, "POST", "/v1/accounts:signInWithPhoneNumber", Ck(kk, Object.assign(Object.assign({}, Fk), {
+          _getReauthenticationResolver(mm) {
+            return async function(mm, Tm) {
+              return sm(mm, "POST", "/v1/accounts:signInWithPhoneNumber", ym(mm, Object.assign(Object.assign({}, Tm), {
                 operation: "REAUTH"
-              })), hF)
-            }(kk, this._makeVerificationRequest())
+              })), dT)
+            }(mm, this._makeVerificationRequest())
           }
           _makeVerificationRequest() {
             const {
-              temporaryProof: kk,
-              phoneNumber: Fk,
-              verificationId: Ik,
-              verificationCode: Xk
+              temporaryProof: mm,
+              phoneNumber: Tm,
+              verificationId: fm,
+              verificationCode: hm
             } = this.params;
-            return kk && Fk ? {
-              temporaryProof: kk,
-              phoneNumber: Fk
+            return mm && Tm ? {
+              temporaryProof: mm,
+              phoneNumber: Tm
             } : {
-              sessionInfo: Ik,
-              code: Xk
+              sessionInfo: fm,
+              code: hm
             }
           }
           toJSON() {
-            const kk = {
+            const mm = {
               providerId: this.providerId
             };
-            return this.params.phoneNumber && (kk.phoneNumber = this.params.phoneNumber), this.params.temporaryProof && (kk.temporaryProof = this.params.temporaryProof), this.params.verificationCode && (kk.verificationCode = this.params.verificationCode), this.params.verificationId && (kk.verificationId = this.params.verificationId), kk
+            return this.params.phoneNumber && (mm.phoneNumber = this.params.phoneNumber), this.params.temporaryProof && (mm.temporaryProof = this.params.temporaryProof), this.params.verificationCode && (mm.verificationCode = this.params.verificationCode), this.params.verificationId && (mm.verificationId = this.params.verificationId), mm
           }
-          static fromJSON(kk) {
-            "string" === typeof kk && (kk = JSON.parse(kk));
+          static fromJSON(mm) {
+            "string" === typeof mm && (mm = JSON.parse(mm));
             const {
-              verificationId: Fk,
-              verificationCode: Ik,
-              phoneNumber: Xk,
-              temporaryProof: Tk
-            } = kk;
-            return Ik || Fk || Xk || Tk ? new rF({
-              verificationId: Fk,
-              verificationCode: Ik,
-              phoneNumber: Xk,
-              temporaryProof: Tk
+              verificationId: Tm,
+              verificationCode: fm,
+              phoneNumber: hm,
+              temporaryProof: Am
+            } = mm;
+            return fm || Tm || hm || Am ? new gT({
+              verificationId: Tm,
+              verificationCode: fm,
+              phoneNumber: hm,
+              temporaryProof: Am
             }) : null
           }
         }
-        class DF {
-          constructor(kk) {
-            var Fk, Ik, Tk, ik, yk, lk;
-            const ak = (0, Xk.cb)((0, Xk.z)(kk)),
-              qk = null !== (Fk = ak.apiKey) && void 0 !== Fk ? Fk : null,
-              Lk = null !== (Ik = ak.oobCode) && void 0 !== Ik ? Ik : null,
-              tk = function(kk) {
-                switch (kk) {
+        class WT {
+          constructor(mm) {
+            var Tm, fm, Am, am, xm, wm;
+            const Dm = (0, hm._)((0, hm.z)(mm)),
+              im = null !== (Tm = Dm.apiKey) && void 0 !== Tm ? Tm : null,
+              Rm = null !== (fm = Dm.oobCode) && void 0 !== fm ? fm : null,
+              pm = function(mm) {
+                switch (mm) {
                   case "recoverEmail":
                     return "RECOVER_EMAIL";
                   case "resetPassword":
@@ -1866,226 +1866,226 @@ export const modules = {
                   default:
                     return null
                 }
-              }(null !== (Tk = ak.mode) && void 0 !== Tk ? Tk : null);
-            Sk(qk && Lk && tk, "argument-error"), this.apiKey = qk, this.operation = tk, this.code = Lk, this.continueUrl = null !== (ik = ak.continueUrl) && void 0 !== ik ? ik : null, this.languageCode = null !== (yk = ak.languageCode) && void 0 !== yk ? yk : null, this.tenantId = null !== (lk = ak.tenantId) && void 0 !== lk ? lk : null
+              }(null !== (Am = Dm.mode) && void 0 !== Am ? Am : null);
+            zm(im && Rm && pm, "argument-error"), this.apiKey = im, this.operation = pm, this.code = Rm, this.continueUrl = null !== (am = Dm.continueUrl) && void 0 !== am ? am : null, this.languageCode = null !== (xm = Dm.languageCode) && void 0 !== xm ? xm : null, this.tenantId = null !== (wm = Dm.tenantId) && void 0 !== wm ? wm : null
           }
-          static parseLink(kk) {
-            const Fk = function(kk) {
-              const Fk = (0, Xk.cb)((0, Xk.z)(kk)).link,
-                Ik = Fk ? (0, Xk.cb)((0, Xk.z)(Fk)).deep_link_id : null,
-                Tk = (0, Xk.cb)((0, Xk.z)(kk)).deep_link_id;
-              return (Tk ? (0, Xk.cb)((0, Xk.z)(Tk)).link : null) || Tk || Ik || Fk || kk
-            }(kk);
+          static parseLink(mm) {
+            const Tm = function(mm) {
+              const Tm = (0, hm._)((0, hm.z)(mm)).link,
+                fm = Tm ? (0, hm._)((0, hm.z)(Tm)).deep_link_id : null,
+                Am = (0, hm._)((0, hm.z)(mm)).deep_link_id;
+              return (Am ? (0, hm._)((0, hm.z)(Am)).link : null) || Am || fm || Tm || mm
+            }(mm);
             try {
-              return new DF(Fk)
-            } catch (Ik) {
+              return new WT(Tm)
+            } catch (fm) {
               return null
             }
           }
         }
 
-        function MF(kk) {
-          return DF.parseLink(kk)
+        function FT(mm) {
+          return WT.parseLink(mm)
         }
-        class kI {
+        class mf {
           constructor() {
-            this.providerId = kI.PROVIDER_ID
+            this.providerId = mf.PROVIDER_ID
           }
-          static credential(kk, Fk) {
-            return AF._fromEmailAndPassword(kk, Fk)
+          static credential(mm, Tm) {
+            return vT._fromEmailAndPassword(mm, Tm)
           }
-          static credentialWithLink(kk, Fk) {
-            const Ik = DF.parseLink(Fk);
-            return Sk(Ik, "argument-error"), AF._fromEmailAndCode(kk, Ik.code, Ik.tenantId)
+          static credentialWithLink(mm, Tm) {
+            const fm = WT.parseLink(Tm);
+            return zm(fm, "argument-error"), vT._fromEmailAndCode(mm, fm.code, fm.tenantId)
           }
         }
-        kI.PROVIDER_ID = "password", kI.EMAIL_PASSWORD_SIGN_IN_METHOD = "password", kI.EMAIL_LINK_SIGN_IN_METHOD = "emailLink";
-        class FI {
-          constructor(kk) {
-            this.providerId = kk, this.defaultLanguageCode = null, this.customParameters = {}
+        mf.PROVIDER_ID = "password", mf.EMAIL_PASSWORD_SIGN_IN_METHOD = "password", mf.EMAIL_LINK_SIGN_IN_METHOD = "emailLink";
+        class Tf {
+          constructor(mm) {
+            this.providerId = mm, this.defaultLanguageCode = null, this.customParameters = {}
           }
-          setDefaultLanguage(kk) {
-            this.defaultLanguageCode = kk
+          setDefaultLanguage(mm) {
+            this.defaultLanguageCode = mm
           }
-          setCustomParameters(kk) {
-            return this.customParameters = kk, this
+          setCustomParameters(mm) {
+            return this.customParameters = mm, this
           }
           getCustomParameters() {
             return this.customParameters
           }
         }
-        class II extends FI {
+        class ff extends Tf {
           constructor() {
             super(...arguments), this.scopes = []
           }
-          addScope(kk) {
-            return this.scopes.includes(kk) || this.scopes.push(kk), this
+          addScope(mm) {
+            return this.scopes.includes(mm) || this.scopes.push(mm), this
           }
           getScopes() {
             return [...this.scopes]
           }
         }
-        class XI extends II {
-          static credentialFromJSON(kk) {
-            const Fk = "string" === typeof kk ? JSON.parse(kk) : kk;
-            return Sk("providerId" in Fk && "signInMethod" in Fk, "argument-error"), mF._fromParams(Fk)
+        class hf extends ff {
+          static credentialFromJSON(mm) {
+            const Tm = "string" === typeof mm ? JSON.parse(mm) : mm;
+            return zm("providerId" in Tm && "signInMethod" in Tm, "argument-error"), UT._fromParams(Tm)
           }
-          credential(kk) {
-            return this._credential(Object.assign(Object.assign({}, kk), {
-              nonce: kk.rawNonce
+          credential(mm) {
+            return this._credential(Object.assign(Object.assign({}, mm), {
+              nonce: mm.rawNonce
             }))
           }
-          _credential(kk) {
-            return Sk(kk.idToken || kk.accessToken, "argument-error"), mF._fromParams(Object.assign(Object.assign({}, kk), {
+          _credential(mm) {
+            return zm(mm.idToken || mm.accessToken, "argument-error"), UT._fromParams(Object.assign(Object.assign({}, mm), {
               providerId: this.providerId,
               signInMethod: this.providerId
             }))
           }
-          static credentialFromResult(kk) {
-            return XI.oauthCredentialFromTaggedObject(kk)
+          static credentialFromResult(mm) {
+            return hf.oauthCredentialFromTaggedObject(mm)
           }
-          static credentialFromError(kk) {
-            return XI.oauthCredentialFromTaggedObject(kk.customData || {})
+          static credentialFromError(mm) {
+            return hf.oauthCredentialFromTaggedObject(mm.customData || {})
           }
-          static oauthCredentialFromTaggedObject(kk) {
+          static oauthCredentialFromTaggedObject(mm) {
             let {
-              _tokenResponse: Fk
-            } = kk;
-            if (!Fk) return null;
+              _tokenResponse: Tm
+            } = mm;
+            if (!Tm) return null;
             const {
-              oauthIdToken: Ik,
-              oauthAccessToken: Xk,
-              oauthTokenSecret: Tk,
-              pendingToken: ik,
-              nonce: yk,
-              providerId: lk
-            } = Fk;
-            if (!Xk && !Tk && !Ik && !ik) return null;
-            if (!lk) return null;
+              oauthIdToken: fm,
+              oauthAccessToken: hm,
+              oauthTokenSecret: Am,
+              pendingToken: am,
+              nonce: xm,
+              providerId: wm
+            } = Tm;
+            if (!hm && !Am && !fm && !am) return null;
+            if (!wm) return null;
             try {
-              return new XI(lk)._credential({
-                idToken: Ik,
-                accessToken: Xk,
-                nonce: yk,
-                pendingToken: ik
+              return new hf(wm)._credential({
+                idToken: fm,
+                accessToken: hm,
+                nonce: xm,
+                pendingToken: am
               })
-            } catch (ak) {
+            } catch (Dm) {
               return null
             }
           }
         }
-        class TI extends II {
+        class Af extends ff {
           constructor() {
             super("facebook.com")
           }
-          static credential(kk) {
-            return mF._fromParams({
-              providerId: TI.PROVIDER_ID,
-              signInMethod: TI.FACEBOOK_SIGN_IN_METHOD,
-              accessToken: kk
+          static credential(mm) {
+            return UT._fromParams({
+              providerId: Af.PROVIDER_ID,
+              signInMethod: Af.FACEBOOK_SIGN_IN_METHOD,
+              accessToken: mm
             })
           }
-          static credentialFromResult(kk) {
-            return TI.credentialFromTaggedObject(kk)
+          static credentialFromResult(mm) {
+            return Af.credentialFromTaggedObject(mm)
           }
-          static credentialFromError(kk) {
-            return TI.credentialFromTaggedObject(kk.customData || {})
+          static credentialFromError(mm) {
+            return Af.credentialFromTaggedObject(mm.customData || {})
           }
-          static credentialFromTaggedObject(kk) {
+          static credentialFromTaggedObject(mm) {
             let {
-              _tokenResponse: Fk
-            } = kk;
-            if (!Fk || !("oauthAccessToken" in Fk)) return null;
-            if (!Fk.oauthAccessToken) return null;
+              _tokenResponse: Tm
+            } = mm;
+            if (!Tm || !("oauthAccessToken" in Tm)) return null;
+            if (!Tm.oauthAccessToken) return null;
             try {
-              return TI.credential(Fk.oauthAccessToken)
-            } catch (Ik) {
+              return Af.credential(Tm.oauthAccessToken)
+            } catch (fm) {
               return null
             }
           }
         }
-        TI.FACEBOOK_SIGN_IN_METHOD = "facebook.com", TI.PROVIDER_ID = "facebook.com";
-        class iI extends II {
+        Af.FACEBOOK_SIGN_IN_METHOD = "facebook.com", Af.PROVIDER_ID = "facebook.com";
+        class af extends ff {
           constructor() {
             super("google.com"), this.addScope("profile")
           }
-          static credential(kk, Fk) {
-            return mF._fromParams({
-              providerId: iI.PROVIDER_ID,
-              signInMethod: iI.GOOGLE_SIGN_IN_METHOD,
-              idToken: kk,
-              accessToken: Fk
+          static credential(mm, Tm) {
+            return UT._fromParams({
+              providerId: af.PROVIDER_ID,
+              signInMethod: af.GOOGLE_SIGN_IN_METHOD,
+              idToken: mm,
+              accessToken: Tm
             })
           }
-          static credentialFromResult(kk) {
-            return iI.credentialFromTaggedObject(kk)
+          static credentialFromResult(mm) {
+            return af.credentialFromTaggedObject(mm)
           }
-          static credentialFromError(kk) {
-            return iI.credentialFromTaggedObject(kk.customData || {})
+          static credentialFromError(mm) {
+            return af.credentialFromTaggedObject(mm.customData || {})
           }
-          static credentialFromTaggedObject(kk) {
+          static credentialFromTaggedObject(mm) {
             let {
-              _tokenResponse: Fk
-            } = kk;
-            if (!Fk) return null;
+              _tokenResponse: Tm
+            } = mm;
+            if (!Tm) return null;
             const {
-              oauthIdToken: Ik,
-              oauthAccessToken: Xk
-            } = Fk;
-            if (!Ik && !Xk) return null;
+              oauthIdToken: fm,
+              oauthAccessToken: hm
+            } = Tm;
+            if (!fm && !hm) return null;
             try {
-              return iI.credential(Ik, Xk)
-            } catch (Tk) {
+              return af.credential(fm, hm)
+            } catch (Am) {
               return null
             }
           }
         }
-        iI.GOOGLE_SIGN_IN_METHOD = "google.com", iI.PROVIDER_ID = "google.com";
-        class yI extends II {
+        af.GOOGLE_SIGN_IN_METHOD = "google.com", af.PROVIDER_ID = "google.com";
+        class xf extends ff {
           constructor() {
             super("github.com")
           }
-          static credential(kk) {
-            return mF._fromParams({
-              providerId: yI.PROVIDER_ID,
-              signInMethod: yI.GITHUB_SIGN_IN_METHOD,
-              accessToken: kk
+          static credential(mm) {
+            return UT._fromParams({
+              providerId: xf.PROVIDER_ID,
+              signInMethod: xf.GITHUB_SIGN_IN_METHOD,
+              accessToken: mm
             })
           }
-          static credentialFromResult(kk) {
-            return yI.credentialFromTaggedObject(kk)
+          static credentialFromResult(mm) {
+            return xf.credentialFromTaggedObject(mm)
           }
-          static credentialFromError(kk) {
-            return yI.credentialFromTaggedObject(kk.customData || {})
+          static credentialFromError(mm) {
+            return xf.credentialFromTaggedObject(mm.customData || {})
           }
-          static credentialFromTaggedObject(kk) {
+          static credentialFromTaggedObject(mm) {
             let {
-              _tokenResponse: Fk
-            } = kk;
-            if (!Fk || !("oauthAccessToken" in Fk)) return null;
-            if (!Fk.oauthAccessToken) return null;
+              _tokenResponse: Tm
+            } = mm;
+            if (!Tm || !("oauthAccessToken" in Tm)) return null;
+            if (!Tm.oauthAccessToken) return null;
             try {
-              return yI.credential(Fk.oauthAccessToken)
-            } catch (Ik) {
+              return xf.credential(Tm.oauthAccessToken)
+            } catch (fm) {
               return null
             }
           }
         }
-        yI.GITHUB_SIGN_IN_METHOD = "github.com", yI.PROVIDER_ID = "github.com";
-        class lI extends NF {
-          constructor(kk, Fk) {
-            super(kk, kk), this.pendingToken = Fk
+        xf.GITHUB_SIGN_IN_METHOD = "github.com", xf.PROVIDER_ID = "github.com";
+        class wf extends rT {
+          constructor(mm, Tm) {
+            super(mm, mm), this.pendingToken = Tm
           }
-          _getIdTokenResponse(kk) {
-            return gF(kk, this.buildRequest())
+          _getIdTokenResponse(mm) {
+            return tT(mm, this.buildRequest())
           }
-          _linkToIdToken(kk, Fk) {
-            const Ik = this.buildRequest();
-            return Ik.idToken = Fk, gF(kk, Ik)
+          _linkToIdToken(mm, Tm) {
+            const fm = this.buildRequest();
+            return fm.idToken = Tm, tT(mm, fm)
           }
-          _getReauthenticationResolver(kk) {
-            const Fk = this.buildRequest();
-            return Fk.autoCreate = !1, gF(kk, Fk)
+          _getReauthenticationResolver(mm) {
+            const Tm = this.buildRequest();
+            return Tm.autoCreate = !1, tT(mm, Tm)
           }
           toJSON() {
             return {
@@ -2094,17 +2094,17 @@ export const modules = {
               pendingToken: this.pendingToken
             }
           }
-          static fromJSON(kk) {
-            const Fk = "string" === typeof kk ? JSON.parse(kk) : kk,
+          static fromJSON(mm) {
+            const Tm = "string" === typeof mm ? JSON.parse(mm) : mm,
               {
-                providerId: Ik,
-                signInMethod: Xk,
-                pendingToken: Tk
-              } = Fk;
-            return Ik && Xk && Tk && Ik === Xk ? new lI(Ik, Tk) : null
+                providerId: fm,
+                signInMethod: hm,
+                pendingToken: Am
+              } = Tm;
+            return fm && hm && Am && fm === hm ? new wf(fm, Am) : null
           }
-          static _create(kk, Fk) {
-            return new lI(kk, Fk)
+          static _create(mm, Tm) {
+            return new wf(mm, Tm)
           }
           buildRequest() {
             return {
@@ -2114,753 +2114,753 @@ export const modules = {
             }
           }
         }
-        class aI extends FI {
-          constructor(kk) {
-            Sk(kk.startsWith("saml."), "argument-error"), super(kk)
+        class Df extends Tf {
+          constructor(mm) {
+            zm(mm.startsWith("saml."), "argument-error"), super(mm)
           }
-          static credentialFromResult(kk) {
-            return aI.samlCredentialFromTaggedObject(kk)
+          static credentialFromResult(mm) {
+            return Df.samlCredentialFromTaggedObject(mm)
           }
-          static credentialFromError(kk) {
-            return aI.samlCredentialFromTaggedObject(kk.customData || {})
+          static credentialFromError(mm) {
+            return Df.samlCredentialFromTaggedObject(mm.customData || {})
           }
-          static credentialFromJSON(kk) {
-            const Fk = lI.fromJSON(kk);
-            return Sk(Fk, "argument-error"), Fk
+          static credentialFromJSON(mm) {
+            const Tm = wf.fromJSON(mm);
+            return zm(Tm, "argument-error"), Tm
           }
-          static samlCredentialFromTaggedObject(kk) {
+          static samlCredentialFromTaggedObject(mm) {
             let {
-              _tokenResponse: Fk
-            } = kk;
-            if (!Fk) return null;
+              _tokenResponse: Tm
+            } = mm;
+            if (!Tm) return null;
             const {
-              pendingToken: Ik,
-              providerId: Xk
-            } = Fk;
-            if (!Ik || !Xk) return null;
+              pendingToken: fm,
+              providerId: hm
+            } = Tm;
+            if (!fm || !hm) return null;
             try {
-              return lI._create(Xk, Ik)
-            } catch (Tk) {
+              return wf._create(hm, fm)
+            } catch (Am) {
               return null
             }
           }
         }
-        class qI extends II {
+        class Rf extends ff {
           constructor() {
             super("twitter.com")
           }
-          static credential(kk, Fk) {
-            return mF._fromParams({
-              providerId: qI.PROVIDER_ID,
-              signInMethod: qI.TWITTER_SIGN_IN_METHOD,
-              oauthToken: kk,
-              oauthTokenSecret: Fk
+          static credential(mm, Tm) {
+            return UT._fromParams({
+              providerId: Rf.PROVIDER_ID,
+              signInMethod: Rf.TWITTER_SIGN_IN_METHOD,
+              oauthToken: mm,
+              oauthTokenSecret: Tm
             })
           }
-          static credentialFromResult(kk) {
-            return qI.credentialFromTaggedObject(kk)
+          static credentialFromResult(mm) {
+            return Rf.credentialFromTaggedObject(mm)
           }
-          static credentialFromError(kk) {
-            return qI.credentialFromTaggedObject(kk.customData || {})
+          static credentialFromError(mm) {
+            return Rf.credentialFromTaggedObject(mm.customData || {})
           }
-          static credentialFromTaggedObject(kk) {
+          static credentialFromTaggedObject(mm) {
             let {
-              _tokenResponse: Fk
-            } = kk;
-            if (!Fk) return null;
+              _tokenResponse: Tm
+            } = mm;
+            if (!Tm) return null;
             const {
-              oauthAccessToken: Ik,
-              oauthTokenSecret: Xk
-            } = Fk;
-            if (!Ik || !Xk) return null;
+              oauthAccessToken: fm,
+              oauthTokenSecret: hm
+            } = Tm;
+            if (!fm || !hm) return null;
             try {
-              return qI.credential(Ik, Xk)
-            } catch (Tk) {
+              return Rf.credential(fm, hm)
+            } catch (Am) {
               return null
             }
           }
         }
-        async function LI(kk, Fk) {
-          return Wk(kk, "POST", "/v1/accounts:signUp", Ck(kk, Fk))
+        async function pf(mm, Tm) {
+          return sm(mm, "POST", "/v1/accounts:signUp", ym(mm, Tm))
         }
-        qI.TWITTER_SIGN_IN_METHOD = "twitter.com", qI.PROVIDER_ID = "twitter.com";
-        class tI {
-          constructor(kk) {
-            this.user = kk.user, this.providerId = kk.providerId, this._tokenResponse = kk._tokenResponse, this.operationType = kk.operationType
+        Rf.TWITTER_SIGN_IN_METHOD = "twitter.com", Rf.PROVIDER_ID = "twitter.com";
+        class Ef {
+          constructor(mm) {
+            this.user = mm.user, this.providerId = mm.providerId, this._tokenResponse = mm._tokenResponse, this.operationType = mm.operationType
           }
-          static async _fromIdTokenResponse(kk, Fk, Ik) {
-            let Xk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-            const Tk = await TF._fromIdTokenResponse(kk, Ik, Xk),
-              ik = ZI(Ik);
-            return new tI({
-              user: Tk,
-              providerId: ik,
-              _tokenResponse: Ik,
-              operationType: Fk
+          static async _fromIdTokenResponse(mm, Tm, fm) {
+            let hm = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+            const Am = await AT._fromIdTokenResponse(mm, fm, hm),
+              am = of(fm);
+            return new Ef({
+              user: Am,
+              providerId: am,
+              _tokenResponse: fm,
+              operationType: Tm
             })
           }
-          static async _forOperation(kk, Fk, Ik) {
-            await kk._updateTokensIfNecessary(Ik, !0);
-            const Xk = ZI(Ik);
-            return new tI({
-              user: kk,
-              providerId: Xk,
-              _tokenResponse: Ik,
-              operationType: Fk
+          static async _forOperation(mm, Tm, fm) {
+            await mm._updateTokensIfNecessary(fm, !0);
+            const hm = of(fm);
+            return new Ef({
+              user: mm,
+              providerId: hm,
+              _tokenResponse: fm,
+              operationType: Tm
             })
           }
         }
 
-        function ZI(kk) {
-          return kk.providerId ? kk.providerId : "phoneNumber" in kk ? "phone" : null
+        function of(mm) {
+          return mm.providerId ? mm.providerId : "phoneNumber" in mm ? "phone" : null
         }
-        async function jI(kk) {
-          var Fk;
-          const Ik = pF(kk);
-          if (await Ik._initializationPromise, null === (Fk = Ik.currentUser) || void 0 === Fk ? void 0 : Fk.isAnonymous) return new tI({
-            user: Ik.currentUser,
+        async function Of(mm) {
+          var Tm;
+          const fm = GT(mm);
+          if (await fm._initializationPromise, null === (Tm = fm.currentUser) || void 0 === Tm ? void 0 : Tm.isAnonymous) return new Ef({
+            user: fm.currentUser,
             providerId: null,
             operationType: "signIn"
           });
-          const Xk = await LI(Ik, {
+          const hm = await pf(fm, {
               returnSecureToken: !0
             }),
-            Tk = await tI._fromIdTokenResponse(Ik, "signIn", Xk, !0);
-          return await Ik._updateCurrentUser(Tk.user), Tk
+            Am = await Ef._fromIdTokenResponse(fm, "signIn", hm, !0);
+          return await fm._updateCurrentUser(Am.user), Am
         }
-        class eI extends Xk.h {
-          constructor(kk, Fk, Ik, Xk) {
-            var Tk;
-            super(Fk.code, Fk.message), this.operationType = Ik, this.user = Xk, Object.setPrototypeOf(this, eI.prototype), this.customData = {
-              appName: kk.name,
-              tenantId: null !== (Tk = kk.tenantId) && void 0 !== Tk ? Tk : void 0,
-              _serverResponse: Fk.customData._serverResponse,
-              operationType: Ik
+        class Yf extends hm.h {
+          constructor(mm, Tm, fm, hm) {
+            var Am;
+            super(Tm.code, Tm.message), this.operationType = fm, this.user = hm, Object.setPrototypeOf(this, Yf.prototype), this.customData = {
+              appName: mm.name,
+              tenantId: null !== (Am = mm.tenantId) && void 0 !== Am ? Am : void 0,
+              _serverResponse: Tm.customData._serverResponse,
+              operationType: fm
             }
           }
-          static _fromErrorAndOperation(kk, Fk, Ik, Xk) {
-            return new eI(kk, Fk, Ik, Xk)
+          static _fromErrorAndOperation(mm, Tm, fm, hm) {
+            return new Yf(mm, Tm, fm, hm)
           }
         }
 
-        function wI(kk, Fk, Ik, Xk) {
-          return ("reauthenticate" === Fk ? Ik._getReauthenticationResolver(kk) : Ik._getIdTokenResponse(kk)).catch((Ik => {
-            if ("auth/multi-factor-auth-required" === Ik.code) throw eI._fromErrorAndOperation(kk, Ik, Fk, Xk);
-            throw Ik
+        function qf(mm, Tm, fm, hm) {
+          return ("reauthenticate" === Tm ? fm._getReauthenticationResolver(mm) : fm._getIdTokenResponse(mm)).catch((fm => {
+            if ("auth/multi-factor-auth-required" === fm.code) throw Yf._fromErrorAndOperation(mm, fm, Tm, hm);
+            throw fm
           }))
         }
 
-        function HI(kk) {
-          return new Set(kk.map((kk => {
+        function jf(mm) {
+          return new Set(mm.map((mm => {
             let {
-              providerId: Fk
-            } = kk;
-            return Fk
-          })).filter((kk => !!kk)))
+              providerId: Tm
+            } = mm;
+            return Tm
+          })).filter((mm => !!mm)))
         }
-        async function JI(kk, Fk) {
-          const Ik = (0, Xk.L)(kk);
-          await PI(!0, Ik, Fk);
+        async function Vf(mm, Tm) {
+          const fm = (0, hm.J)(mm);
+          await Kf(!0, fm, Tm);
           const {
-            providerUserInfo: Tk
-          } = await async function(kk, Fk) {
-            return Nk(kk, "POST", "/v1/accounts:update", Fk)
-          }(Ik.auth, {
-            idToken: await Ik.getIdToken(),
-            deleteProvider: [Fk]
-          }), ik = HI(Tk || []);
-          return Ik.providerData = Ik.providerData.filter((kk => ik.has(kk.providerId))), ik.has("phone") || (Ik.phoneNumber = null), await Ik.auth._persistUserIfCurrent(Ik), Ik
+            providerUserInfo: Am
+          } = await async function(mm, Tm) {
+            return Cm(mm, "POST", "/v1/accounts:update", Tm)
+          }(fm.auth, {
+            idToken: await fm.getIdToken(),
+            deleteProvider: [Tm]
+          }), am = jf(Am || []);
+          return fm.providerData = fm.providerData.filter((mm => am.has(mm.providerId))), am.has("phone") || (fm.phoneNumber = null), await fm.auth._persistUserIfCurrent(fm), fm
         }
-        async function xI(kk, Fk) {
-          let Ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const Xk = await rk(kk, Fk._linkToIdToken(kk.auth, await kk.getIdToken()), Ik);
-          return tI._forOperation(kk, "link", Xk)
+        async function If(mm, Tm) {
+          let fm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const hm = await gm(mm, Tm._linkToIdToken(mm.auth, await mm.getIdToken()), fm);
+          return Ef._forOperation(mm, "link", hm)
         }
-        async function PI(kk, Fk, Ik) {
-          await kF(Fk);
-          const Xk = !1 === kk ? "provider-already-linked" : "no-such-provider";
-          Sk(HI(Fk.providerData).has(Ik) === kk, Fk.auth, Xk)
+        async function Kf(mm, Tm, fm) {
+          await mT(Tm);
+          const hm = !1 === mm ? "provider-already-linked" : "no-such-provider";
+          zm(jf(Tm.providerData).has(fm) === mm, Tm.auth, hm)
         }
-        async function KI(kk, Fk) {
-          let Ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        async function Qf(mm, Tm) {
+          let fm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            auth: Xk
-          } = kk, Tk = "reauthenticate";
+            auth: hm
+          } = mm, Am = "reauthenticate";
           try {
-            const ik = await rk(kk, wI(Xk, Tk, Fk, kk), Ik);
-            Sk(ik.idToken, Xk, "internal-error");
-            const yk = hk(ik.idToken);
-            Sk(yk, Xk, "internal-error");
+            const am = await gm(mm, qf(hm, Am, Tm, mm), fm);
+            zm(am.idToken, hm, "internal-error");
+            const xm = dm(am.idToken);
+            zm(xm, hm, "internal-error");
             const {
-              sub: lk
-            } = yk;
-            return Sk(kk.uid === lk, Xk, "user-mismatch"), tI._forOperation(kk, Tk, ik)
-          } catch (ik) {
-            throw "auth/user-not-found" === (null === ik || void 0 === ik ? void 0 : ik.code) && Kk(Xk, "user-mismatch"), ik
+              sub: wm
+            } = xm;
+            return zm(mm.uid === wm, hm, "user-mismatch"), Ef._forOperation(mm, Am, am)
+          } catch (am) {
+            throw "auth/user-not-found" === (null === am || void 0 === am ? void 0 : am.code) && Km(hm, "user-mismatch"), am
           }
         }
-        async function QI(kk, Fk) {
-          let Ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const Xk = "signIn",
-            Tk = await wI(kk, Xk, Fk),
-            ik = await tI._fromIdTokenResponse(kk, Xk, Tk);
-          return Ik || await kk._updateCurrentUser(ik.user), ik
+        async function nf(mm, Tm) {
+          let fm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const hm = "signIn",
+            Am = await qf(mm, hm, Tm),
+            am = await Ef._fromIdTokenResponse(mm, hm, Am);
+          return fm || await mm._updateCurrentUser(am.user), am
         }
-        async function sI(kk, Fk) {
-          return QI(pF(kk), Fk)
+        async function Jf(mm, Tm) {
+          return nf(GT(mm), Tm)
         }
-        async function VI(kk, Fk) {
-          const Ik = (0, Xk.L)(kk);
-          return await PI(!1, Ik, Fk.providerId), xI(Ik, Fk)
+        async function zf(mm, Tm) {
+          const fm = (0, hm.J)(mm);
+          return await Kf(!1, fm, Tm.providerId), If(fm, Tm)
         }
-        async function zI(kk, Fk) {
-          return KI((0, Xk.L)(kk), Fk)
+        async function Zf(mm, Tm) {
+          return Qf((0, hm.J)(mm), Tm)
         }
-        async function SI(kk, Fk) {
-          const Ik = pF(kk),
-            Xk = await async function(kk, Fk) {
-              return Wk(kk, "POST", "/v1/accounts:signInWithCustomToken", Ck(kk, Fk))
-            }(Ik, {
-              token: Fk,
+        async function kf(mm, Tm) {
+          const fm = GT(mm),
+            hm = await async function(mm, Tm) {
+              return sm(mm, "POST", "/v1/accounts:signInWithCustomToken", ym(mm, Tm))
+            }(fm, {
+              token: Tm,
               returnSecureToken: !0
-            }), Tk = await tI._fromIdTokenResponse(Ik, "signIn", Xk);
-          return await Ik._updateCurrentUser(Tk.user), Tk
+            }), Am = await Ef._fromIdTokenResponse(fm, "signIn", hm);
+          return await fm._updateCurrentUser(Am.user), Am
         }
-        class oI {
-          constructor(kk, Fk) {
-            this.factorId = kk, this.uid = Fk.mfaEnrollmentId, this.enrollmentTime = new Date(Fk.enrolledAt).toUTCString(), this.displayName = Fk.displayName
+        class bf {
+          constructor(mm, Tm) {
+            this.factorId = mm, this.uid = Tm.mfaEnrollmentId, this.enrollmentTime = new Date(Tm.enrolledAt).toUTCString(), this.displayName = Tm.displayName
           }
-          static _fromServerResponse(kk, Fk) {
-            return "phoneInfo" in Fk ? vI._fromServerResponse(kk, Fk) : "totpInfo" in Fk ? EI._fromServerResponse(kk, Fk) : Kk(kk, "internal-error")
-          }
-        }
-        class vI extends oI {
-          constructor(kk) {
-            super("phone", kk), this.phoneNumber = kk.phoneInfo
-          }
-          static _fromServerResponse(kk, Fk) {
-            return new vI(Fk)
+          static _fromServerResponse(mm, Tm) {
+            return "phoneInfo" in Tm ? Sf._fromServerResponse(mm, Tm) : "totpInfo" in Tm ? ef._fromServerResponse(mm, Tm) : Km(mm, "internal-error")
           }
         }
-        class EI extends oI {
-          constructor(kk) {
-            super("totp", kk)
+        class Sf extends bf {
+          constructor(mm) {
+            super("phone", mm), this.phoneNumber = mm.phoneInfo
           }
-          static _fromServerResponse(kk, Fk) {
-            return new EI(Fk)
+          static _fromServerResponse(mm, Tm) {
+            return new Sf(Tm)
+          }
+        }
+        class ef extends bf {
+          constructor(mm) {
+            super("totp", mm)
+          }
+          static _fromServerResponse(mm, Tm) {
+            return new ef(Tm)
           }
         }
 
-        function OI(kk, Fk, Ik) {
-          var Xk;
-          Sk((null === (Xk = Ik.url) || void 0 === Xk ? void 0 : Xk.length) > 0, kk, "invalid-continue-uri"), Sk("undefined" === typeof Ik.dynamicLinkDomain || Ik.dynamicLinkDomain.length > 0, kk, "invalid-dynamic-link-domain"), Fk.continueUrl = Ik.url, Fk.dynamicLinkDomain = Ik.dynamicLinkDomain, Fk.canHandleCodeInApp = Ik.handleCodeInApp, Ik.iOS && (Sk(Ik.iOS.bundleId.length > 0, kk, "missing-ios-bundle-id"), Fk.iOSBundleId = Ik.iOS.bundleId), Ik.android && (Sk(Ik.android.packageName.length > 0, kk, "missing-android-pkg-name"), Fk.androidInstallApp = Ik.android.installApp, Fk.androidMinimumVersionCode = Ik.android.minimumVersion, Fk.androidPackageName = Ik.android.packageName)
+        function Nf(mm, Tm, fm) {
+          var hm;
+          zm((null === (hm = fm.url) || void 0 === hm ? void 0 : hm.length) > 0, mm, "invalid-continue-uri"), zm("undefined" === typeof fm.dynamicLinkDomain || fm.dynamicLinkDomain.length > 0, mm, "invalid-dynamic-link-domain"), Tm.continueUrl = fm.url, Tm.dynamicLinkDomain = fm.dynamicLinkDomain, Tm.canHandleCodeInApp = fm.handleCodeInApp, fm.iOS && (zm(fm.iOS.bundleId.length > 0, mm, "missing-ios-bundle-id"), Tm.iOSBundleId = fm.iOS.bundleId), fm.android && (zm(fm.android.packageName.length > 0, mm, "missing-android-pkg-name"), Tm.androidInstallApp = fm.android.installApp, Tm.androidMinimumVersionCode = fm.android.minimumVersion, Tm.androidPackageName = fm.android.packageName)
         }
-        async function nI(kk, Fk, Ik) {
-          var Xk;
-          const Tk = pF(kk),
-            ik = {
+        async function Gf(mm, Tm, fm) {
+          var hm;
+          const Am = GT(mm),
+            am = {
               requestType: "PASSWORD_RESET",
-              email: Fk,
+              email: Tm,
               clientType: "CLIENT_TYPE_WEB"
             };
-          if (null === (Xk = Tk._getRecaptchaConfig()) || void 0 === Xk ? void 0 : Xk.emailPasswordEnabled) {
-            const kk = await OF(Tk, ik, "getOobCode", !0);
-            Ik && OI(Tk, kk, Ik), await dF(Tk, kk)
-          } else Ik && OI(Tk, ik, Ik), await dF(Tk, ik).catch((async kk => {
-            if ("auth/missing-recaptcha-token" !== kk.code) return Promise.reject(kk);
+          if (null === (hm = Am._getRecaptchaConfig()) || void 0 === hm ? void 0 : hm.emailPasswordEnabled) {
+            const mm = await ST(Am, am, "getOobCode", !0);
+            fm && Nf(Am, mm, fm), await BT(Am, mm)
+          } else fm && Nf(Am, am, fm), await BT(Am, am).catch((async mm => {
+            if ("auth/missing-recaptcha-token" !== mm.code) return Promise.reject(mm);
             {
               console.log("Password resets are protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the password reset flow.");
-              const kk = await OF(Tk, ik, "getOobCode", !0);
-              Ik && OI(Tk, kk, Ik), await dF(Tk, kk)
+              const mm = await ST(Am, am, "getOobCode", !0);
+              fm && Nf(Am, mm, fm), await BT(Am, mm)
             }
           }))
         }
-        async function GI(kk, Fk, Ik) {
-          await cF((0, Xk.L)(kk), {
-            oobCode: Fk,
-            newPassword: Ik
+        async function Xf(mm, Tm, fm) {
+          await sT((0, hm.J)(mm), {
+            oobCode: Tm,
+            newPassword: fm
           })
         }
-        async function pI(kk, Fk) {
-          await async function(kk, Fk) {
-            return Nk(kk, "POST", "/v1/accounts:update", Ck(kk, Fk))
-          }((0, Xk.L)(kk), {
-            oobCode: Fk
+        async function Pf(mm, Tm) {
+          await async function(mm, Tm) {
+            return Cm(mm, "POST", "/v1/accounts:update", ym(mm, Tm))
+          }((0, hm.J)(mm), {
+            oobCode: Tm
           })
         }
-        async function uI(kk, Fk) {
-          const Ik = (0, Xk.L)(kk),
-            Tk = await cF(Ik, {
-              oobCode: Fk
+        async function Hf(mm, Tm) {
+          const fm = (0, hm.J)(mm),
+            Am = await sT(fm, {
+              oobCode: Tm
             }),
-            ik = Tk.requestType;
-          switch (Sk(ik, Ik, "internal-error"), ik) {
+            am = Am.requestType;
+          switch (zm(am, fm, "internal-error"), am) {
             case "EMAIL_SIGNIN":
               break;
             case "VERIFY_AND_CHANGE_EMAIL":
-              Sk(Tk.newEmail, Ik, "internal-error");
+              zm(Am.newEmail, fm, "internal-error");
               break;
             case "REVERT_SECOND_FACTOR_ADDITION":
-              Sk(Tk.mfaInfo, Ik, "internal-error");
+              zm(Am.mfaInfo, fm, "internal-error");
             default:
-              Sk(Tk.email, Ik, "internal-error")
+              zm(Am.email, fm, "internal-error")
           }
-          let yk = null;
-          return Tk.mfaInfo && (yk = oI._fromServerResponse(pF(Ik), Tk.mfaInfo)), {
+          let xm = null;
+          return Am.mfaInfo && (xm = bf._fromServerResponse(GT(fm), Am.mfaInfo)), {
             data: {
-              email: ("VERIFY_AND_CHANGE_EMAIL" === Tk.requestType ? Tk.newEmail : Tk.email) || null,
-              previousEmail: ("VERIFY_AND_CHANGE_EMAIL" === Tk.requestType ? Tk.email : Tk.newEmail) || null,
-              multiFactorInfo: yk
+              email: ("VERIFY_AND_CHANGE_EMAIL" === Am.requestType ? Am.newEmail : Am.email) || null,
+              previousEmail: ("VERIFY_AND_CHANGE_EMAIL" === Am.requestType ? Am.email : Am.newEmail) || null,
+              multiFactorInfo: xm
             },
-            operation: ik
+            operation: am
           }
         }
-        async function bI(kk, Fk) {
+        async function yf(mm, Tm) {
           const {
-            data: Ik
-          } = await uI((0, Xk.L)(kk), Fk);
-          return Ik.email
+            data: fm
+          } = await Hf((0, hm.J)(mm), Tm);
+          return fm.email
         }
-        async function RI(kk, Fk, Ik) {
-          var Xk;
-          const Tk = pF(kk),
-            ik = {
+        async function Cf(mm, Tm, fm) {
+          var hm;
+          const Am = GT(mm),
+            am = {
               returnSecureToken: !0,
-              email: Fk,
-              password: Ik,
+              email: Tm,
+              password: fm,
               clientType: "CLIENT_TYPE_WEB"
             };
-          let yk;
-          if (null === (Xk = Tk._getRecaptchaConfig()) || void 0 === Xk ? void 0 : Xk.emailPasswordEnabled) {
-            const kk = await OF(Tk, ik, "signUpPassword");
-            yk = LI(Tk, kk)
-          } else yk = LI(Tk, ik).catch((async kk => {
-            if ("auth/missing-recaptcha-token" === kk.code) {
+          let xm;
+          if (null === (hm = Am._getRecaptchaConfig()) || void 0 === hm ? void 0 : hm.emailPasswordEnabled) {
+            const mm = await ST(Am, am, "signUpPassword");
+            xm = pf(Am, mm)
+          } else xm = pf(Am, am).catch((async mm => {
+            if ("auth/missing-recaptcha-token" === mm.code) {
               console.log("Sign-up is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-up flow.");
-              const kk = await OF(Tk, ik, "signUpPassword");
-              return LI(Tk, kk)
+              const mm = await ST(Am, am, "signUpPassword");
+              return pf(Am, mm)
             }
-            return Promise.reject(kk)
+            return Promise.reject(mm)
           }));
-          const lk = await yk.catch((kk => Promise.reject(kk))),
-            ak = await tI._fromIdTokenResponse(Tk, "signIn", lk);
-          return await Tk._updateCurrentUser(ak.user), ak
+          const wm = await xm.catch((mm => Promise.reject(mm))),
+            Dm = await Ef._fromIdTokenResponse(Am, "signIn", wm);
+          return await Am._updateCurrentUser(Dm.user), Dm
         }
 
-        function UI(kk, Fk, Ik) {
-          return sI((0, Xk.L)(kk), kI.credential(Fk, Ik))
+        function rf(mm, Tm, fm) {
+          return Jf((0, hm.J)(mm), mf.credential(Tm, fm))
         }
-        async function CI(kk, Fk, Ik) {
-          var Xk;
-          const Tk = pF(kk),
-            ik = {
+        async function sf(mm, Tm, fm) {
+          var hm;
+          const Am = GT(mm),
+            am = {
               requestType: "EMAIL_SIGNIN",
-              email: Fk,
+              email: Tm,
               clientType: "CLIENT_TYPE_WEB"
             };
 
-          function yk(kk, Fk) {
-            Sk(Fk.handleCodeInApp, Tk, "argument-error"), Fk && OI(Tk, kk, Fk)
+          function xm(mm, Tm) {
+            zm(Tm.handleCodeInApp, Am, "argument-error"), Tm && Nf(Am, mm, Tm)
           }
-          if (null === (Xk = Tk._getRecaptchaConfig()) || void 0 === Xk ? void 0 : Xk.emailPasswordEnabled) {
-            const kk = await OF(Tk, ik, "getOobCode", !0);
-            yk(kk, Ik), await YF(Tk, kk)
-          } else yk(ik, Ik), await YF(Tk, ik).catch((async kk => {
-            if ("auth/missing-recaptcha-token" !== kk.code) return Promise.reject(kk);
+          if (null === (hm = Am._getRecaptchaConfig()) || void 0 === hm ? void 0 : hm.emailPasswordEnabled) {
+            const mm = await ST(Am, am, "getOobCode", !0);
+            xm(mm, fm), await LT(Am, mm)
+          } else xm(am, fm), await LT(Am, am).catch((async mm => {
+            if ("auth/missing-recaptcha-token" !== mm.code) return Promise.reject(mm);
             {
               console.log("Email link sign-in is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-in flow.");
-              const kk = await OF(Tk, ik, "getOobCode", !0);
-              yk(kk, Ik), await YF(Tk, kk)
+              const mm = await ST(Am, am, "getOobCode", !0);
+              xm(mm, fm), await LT(Am, mm)
             }
           }))
         }
 
-        function NI(kk, Fk) {
-          const Ik = DF.parseLink(Fk);
-          return "EMAIL_SIGNIN" === (null === Ik || void 0 === Ik ? void 0 : Ik.operation)
+        function lf(mm, Tm) {
+          const fm = WT.parseLink(Tm);
+          return "EMAIL_SIGNIN" === (null === fm || void 0 === fm ? void 0 : fm.operation)
         }
-        async function cI(kk, Fk, Ik) {
-          const Tk = (0, Xk.L)(kk),
-            ik = kI.credentialWithLink(Fk, Ik || Ok());
-          return Sk(ik._tenantId === (Tk.tenantId || null), Tk, "tenant-id-mismatch"), sI(Tk, ik)
+        async function Mf(mm, Tm, fm) {
+          const Am = (0, hm.J)(mm),
+            am = mf.credentialWithLink(Tm, fm || bm());
+          return zm(am._tenantId === (Am.tenantId || null), Am, "tenant-id-mismatch"), Jf(Am, am)
         }
-        async function WI(kk, Fk) {
-          const Ik = {
-              identifier: Fk,
-              continueUri: nk() ? Ok() : "http://localhost"
+        async function uf(mm, Tm) {
+          const fm = {
+              identifier: Tm,
+              continueUri: Sm() ? bm() : "http://localhost"
             },
             {
-              signinMethods: Tk
-            } = await async function(kk, Fk) {
-              return Nk(kk, "POST", "/v1/accounts:createAuthUri", Ck(kk, Fk))
-            }((0, Xk.L)(kk), Ik);
-          return Tk || []
+              signinMethods: Am
+            } = await async function(mm, Tm) {
+              return Cm(mm, "POST", "/v1/accounts:createAuthUri", ym(mm, Tm))
+            }((0, hm.J)(mm), fm);
+          return Am || []
         }
-        async function fI(kk, Fk) {
-          const Ik = (0, Xk.L)(kk),
-            Tk = {
+        async function Bf(mm, Tm) {
+          const fm = (0, hm.J)(mm),
+            Am = {
               requestType: "VERIFY_EMAIL",
-              idToken: await kk.getIdToken()
+              idToken: await mm.getIdToken()
             };
-          Fk && OI(Ik.auth, Tk, Fk);
+          Tm && Nf(fm.auth, Am, Tm);
           const {
-            email: ik
-          } = await async function(kk, Fk) {
-            return BF(kk, Fk)
-          }(Ik.auth, Tk);
-          ik !== kk.email && await kk.reload()
+            email: am
+          } = await async function(mm, Tm) {
+            return uT(mm, Tm)
+          }(fm.auth, Am);
+          am !== mm.email && await mm.reload()
         }
-        async function BI(kk, Fk, Ik) {
-          const Tk = (0, Xk.L)(kk),
-            ik = {
+        async function Lf(mm, Tm, fm) {
+          const Am = (0, hm.J)(mm),
+            am = {
               requestType: "VERIFY_AND_CHANGE_EMAIL",
-              idToken: await kk.getIdToken(),
-              newEmail: Fk
+              idToken: await mm.getIdToken(),
+              newEmail: Tm
             };
-          Ik && OI(Tk.auth, ik, Ik);
+          fm && Nf(Am.auth, am, fm);
           const {
-            email: yk
-          } = await async function(kk, Fk) {
-            return BF(kk, Fk)
-          }(Tk.auth, ik);
-          yk !== kk.email && await kk.reload()
+            email: xm
+          } = await async function(mm, Tm) {
+            return uT(mm, Tm)
+          }(Am.auth, am);
+          xm !== mm.email && await mm.reload()
         }
-        async function dI(kk, Fk) {
+        async function vf(mm, Tm) {
           let {
-            displayName: Ik,
-            photoURL: Tk
-          } = Fk;
-          if (void 0 === Ik && void 0 === Tk) return;
-          const ik = (0, Xk.L)(kk),
-            yk = {
-              idToken: await ik.getIdToken(),
-              displayName: Ik,
-              photoUrl: Tk,
+            displayName: fm,
+            photoURL: Am
+          } = Tm;
+          if (void 0 === fm && void 0 === Am) return;
+          const am = (0, hm.J)(mm),
+            xm = {
+              idToken: await am.getIdToken(),
+              displayName: fm,
+              photoUrl: Am,
               returnSecureToken: !0
             },
-            lk = await rk(ik, async function(kk, Fk) {
-              return Nk(kk, "POST", "/v1/accounts:update", Fk)
-            }(ik.auth, yk));
-          ik.displayName = lk.displayName || null, ik.photoURL = lk.photoUrl || null;
-          const ak = ik.providerData.find((kk => {
+            wm = await gm(am, async function(mm, Tm) {
+              return Cm(mm, "POST", "/v1/accounts:update", Tm)
+            }(am.auth, xm));
+          am.displayName = wm.displayName || null, am.photoURL = wm.photoUrl || null;
+          const Dm = am.providerData.find((mm => {
             let {
-              providerId: Fk
-            } = kk;
-            return "password" === Fk
+              providerId: Tm
+            } = mm;
+            return "password" === Tm
           }));
-          ak && (ak.displayName = ik.displayName, ak.photoURL = ik.photoURL), await ik._updateTokensIfNecessary(lk)
+          Dm && (Dm.displayName = am.displayName, Dm.photoURL = am.photoURL), await am._updateTokensIfNecessary(wm)
         }
 
-        function YI(kk, Fk) {
-          return gI((0, Xk.L)(kk), Fk, null)
+        function tf(mm, Tm) {
+          return df((0, hm.J)(mm), Tm, null)
         }
 
-        function AI(kk, Fk) {
-          return gI((0, Xk.L)(kk), null, Fk)
+        function Uf(mm, Tm) {
+          return df((0, hm.J)(mm), null, Tm)
         }
-        async function gI(kk, Fk, Ik) {
+        async function df(mm, Tm, fm) {
           const {
-            auth: Xk
-          } = kk, Tk = {
-            idToken: await kk.getIdToken(),
+            auth: hm
+          } = mm, Am = {
+            idToken: await mm.getIdToken(),
             returnSecureToken: !0
           };
-          Fk && (Tk.email = Fk), Ik && (Tk.password = Ik);
-          const ik = await rk(kk, WF(Xk, Tk));
-          await kk._updateTokensIfNecessary(ik, !0)
+          Tm && (Am.email = Tm), fm && (Am.password = fm);
+          const am = await gm(mm, lT(hm, Am));
+          await mm._updateTokensIfNecessary(am, !0)
         }
-        class mI {
-          constructor(kk, Fk) {
-            let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-            this.isNewUser = kk, this.providerId = Fk, this.profile = Ik
+        class gf {
+          constructor(mm, Tm) {
+            let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+            this.isNewUser = mm, this.providerId = Tm, this.profile = fm
           }
         }
-        class hI extends mI {
-          constructor(kk, Fk, Ik, Xk) {
-            super(kk, Fk, Ik), this.username = Xk
+        class Wf extends gf {
+          constructor(mm, Tm, fm, hm) {
+            super(mm, Tm, fm), this.username = hm
           }
         }
-        class rI extends mI {
-          constructor(kk, Fk) {
-            super(kk, "facebook.com", Fk)
+        class Ff extends gf {
+          constructor(mm, Tm) {
+            super(mm, "facebook.com", Tm)
           }
         }
-        class DI extends hI {
-          constructor(kk, Fk) {
-            super(kk, "github.com", Fk, "string" === typeof(null === Fk || void 0 === Fk ? void 0 : Fk.login) ? null === Fk || void 0 === Fk ? void 0 : Fk.login : null)
+        class mh extends Wf {
+          constructor(mm, Tm) {
+            super(mm, "github.com", Tm, "string" === typeof(null === Tm || void 0 === Tm ? void 0 : Tm.login) ? null === Tm || void 0 === Tm ? void 0 : Tm.login : null)
           }
         }
-        class MI extends mI {
-          constructor(kk, Fk) {
-            super(kk, "google.com", Fk)
+        class Th extends gf {
+          constructor(mm, Tm) {
+            super(mm, "google.com", Tm)
           }
         }
-        class kX extends hI {
-          constructor(kk, Fk, Ik) {
-            super(kk, "twitter.com", Fk, Ik)
+        class fh extends Wf {
+          constructor(mm, Tm, fm) {
+            super(mm, "twitter.com", Tm, fm)
           }
         }
 
-        function FX(kk) {
+        function hh(mm) {
           const {
-            user: Fk,
-            _tokenResponse: Ik
-          } = kk;
-          return Fk.isAnonymous && !Ik ? {
+            user: Tm,
+            _tokenResponse: fm
+          } = mm;
+          return Tm.isAnonymous && !fm ? {
             providerId: null,
             isNewUser: !1,
             profile: null
-          } : function(kk) {
-            var Fk, Ik;
-            if (!kk) return null;
+          } : function(mm) {
+            var Tm, fm;
+            if (!mm) return null;
             const {
-              providerId: Xk
-            } = kk, Tk = kk.rawUserInfo ? JSON.parse(kk.rawUserInfo) : {}, ik = kk.isNewUser || "identitytoolkit#SignupNewUserResponse" === kk.kind;
-            if (!Xk && (null === kk || void 0 === kk ? void 0 : kk.idToken)) {
-              const Xk = null === (Ik = null === (Fk = hk(kk.idToken)) || void 0 === Fk ? void 0 : Fk.firebase) || void 0 === Ik ? void 0 : Ik.sign_in_provider;
-              if (Xk) return new mI(ik, "anonymous" !== Xk && "custom" !== Xk ? Xk : null)
+              providerId: hm
+            } = mm, Am = mm.rawUserInfo ? JSON.parse(mm.rawUserInfo) : {}, am = mm.isNewUser || "identitytoolkit#SignupNewUserResponse" === mm.kind;
+            if (!hm && (null === mm || void 0 === mm ? void 0 : mm.idToken)) {
+              const hm = null === (fm = null === (Tm = dm(mm.idToken)) || void 0 === Tm ? void 0 : Tm.firebase) || void 0 === fm ? void 0 : fm.sign_in_provider;
+              if (hm) return new gf(am, "anonymous" !== hm && "custom" !== hm ? hm : null)
             }
-            if (!Xk) return null;
-            switch (Xk) {
+            if (!hm) return null;
+            switch (hm) {
               case "facebook.com":
-                return new rI(ik, Tk);
+                return new Ff(am, Am);
               case "github.com":
-                return new DI(ik, Tk);
+                return new mh(am, Am);
               case "google.com":
-                return new MI(ik, Tk);
+                return new Th(am, Am);
               case "twitter.com":
-                return new kX(ik, Tk, kk.screenName || null);
+                return new fh(am, Am, mm.screenName || null);
               case "custom":
               case "anonymous":
-                return new mI(ik, null);
+                return new gf(am, null);
               default:
-                return new mI(ik, Xk, Tk)
+                return new gf(am, hm, Am)
             }
-          }(Ik)
+          }(fm)
         }
 
-        function IX(kk, Fk) {
-          return (0, Xk.L)(kk).setPersistence(Fk)
+        function Ah(mm, Tm) {
+          return (0, hm.J)(mm).setPersistence(Tm)
         }
 
-        function XX(kk) {
-          return pF(kk).initializeRecaptchaConfig()
+        function ah(mm) {
+          return GT(mm).initializeRecaptchaConfig()
         }
 
-        function TX(kk, Fk, Ik, Tk) {
-          return (0, Xk.L)(kk).onIdTokenChanged(Fk, Ik, Tk)
+        function xh(mm, Tm, fm, Am) {
+          return (0, hm.J)(mm).onIdTokenChanged(Tm, fm, Am)
         }
 
-        function iX(kk, Fk, Ik) {
-          return (0, Xk.L)(kk).beforeAuthStateChanged(Fk, Ik)
+        function wh(mm, Tm, fm) {
+          return (0, hm.J)(mm).beforeAuthStateChanged(Tm, fm)
         }
 
-        function yX(kk, Fk, Ik, Tk) {
-          return (0, Xk.L)(kk).onAuthStateChanged(Fk, Ik, Tk)
+        function Dh(mm, Tm, fm, Am) {
+          return (0, hm.J)(mm).onAuthStateChanged(Tm, fm, Am)
         }
 
-        function lX(kk) {
-          (0, Xk.L)(kk).useDeviceLanguage()
+        function ih(mm) {
+          (0, hm.J)(mm).useDeviceLanguage()
         }
 
-        function aX(kk, Fk) {
-          return (0, Xk.L)(kk).updateCurrentUser(Fk)
+        function Rh(mm, Tm) {
+          return (0, hm.J)(mm).updateCurrentUser(Tm)
         }
 
-        function qX(kk) {
-          return (0, Xk.L)(kk).signOut()
+        function ph(mm) {
+          return (0, hm.J)(mm).signOut()
         }
-        async function LX(kk) {
-          return (0, Xk.L)(kk).delete()
+        async function Eh(mm) {
+          return (0, hm.J)(mm).delete()
         }
-        class tX {
-          constructor(kk, Fk, Ik) {
-            this.type = kk, this.credential = Fk, this.auth = Ik
+        class oh {
+          constructor(mm, Tm, fm) {
+            this.type = mm, this.credential = Tm, this.auth = fm
           }
-          static _fromIdtoken(kk, Fk) {
-            return new tX("enroll", kk, Fk)
+          static _fromIdtoken(mm, Tm) {
+            return new oh("enroll", mm, Tm)
           }
-          static _fromMfaPendingCredential(kk) {
-            return new tX("signin", kk)
+          static _fromMfaPendingCredential(mm) {
+            return new oh("signin", mm)
           }
           toJSON() {
-            const kk = "enroll" === this.type ? "idToken" : "pendingCredential";
+            const mm = "enroll" === this.type ? "idToken" : "pendingCredential";
             return {
               multiFactorSession: {
-                [kk]: this.credential
+                [mm]: this.credential
               }
             }
           }
-          static fromJSON(kk) {
-            var Fk, Ik;
-            if (null === kk || void 0 === kk ? void 0 : kk.multiFactorSession) {
-              if (null === (Fk = kk.multiFactorSession) || void 0 === Fk ? void 0 : Fk.pendingCredential) return tX._fromMfaPendingCredential(kk.multiFactorSession.pendingCredential);
-              if (null === (Ik = kk.multiFactorSession) || void 0 === Ik ? void 0 : Ik.idToken) return tX._fromIdtoken(kk.multiFactorSession.idToken)
+          static fromJSON(mm) {
+            var Tm, fm;
+            if (null === mm || void 0 === mm ? void 0 : mm.multiFactorSession) {
+              if (null === (Tm = mm.multiFactorSession) || void 0 === Tm ? void 0 : Tm.pendingCredential) return oh._fromMfaPendingCredential(mm.multiFactorSession.pendingCredential);
+              if (null === (fm = mm.multiFactorSession) || void 0 === fm ? void 0 : fm.idToken) return oh._fromIdtoken(mm.multiFactorSession.idToken)
             }
             return null
           }
         }
-        class ZX {
-          constructor(kk, Fk, Ik) {
-            this.session = kk, this.hints = Fk, this.signInResolver = Ik
+        class Oh {
+          constructor(mm, Tm, fm) {
+            this.session = mm, this.hints = Tm, this.signInResolver = fm
           }
-          static _fromError(kk, Fk) {
-            const Ik = pF(kk),
-              Xk = Fk.customData._serverResponse,
-              Tk = (Xk.mfaInfo || []).map((kk => oI._fromServerResponse(Ik, kk)));
-            Sk(Xk.mfaPendingCredential, Ik, "internal-error");
-            const ik = tX._fromMfaPendingCredential(Xk.mfaPendingCredential);
-            return new ZX(ik, Tk, (async kk => {
-              const Tk = await kk._process(Ik, ik);
-              delete Xk.mfaInfo, delete Xk.mfaPendingCredential;
-              const yk = Object.assign(Object.assign({}, Xk), {
-                idToken: Tk.idToken,
-                refreshToken: Tk.refreshToken
+          static _fromError(mm, Tm) {
+            const fm = GT(mm),
+              hm = Tm.customData._serverResponse,
+              Am = (hm.mfaInfo || []).map((mm => bf._fromServerResponse(fm, mm)));
+            zm(hm.mfaPendingCredential, fm, "internal-error");
+            const am = oh._fromMfaPendingCredential(hm.mfaPendingCredential);
+            return new Oh(am, Am, (async mm => {
+              const Am = await mm._process(fm, am);
+              delete hm.mfaInfo, delete hm.mfaPendingCredential;
+              const xm = Object.assign(Object.assign({}, hm), {
+                idToken: Am.idToken,
+                refreshToken: Am.refreshToken
               });
-              switch (Fk.operationType) {
+              switch (Tm.operationType) {
                 case "signIn":
-                  const kk = await tI._fromIdTokenResponse(Ik, Fk.operationType, yk);
-                  return await Ik._updateCurrentUser(kk.user), kk;
+                  const mm = await Ef._fromIdTokenResponse(fm, Tm.operationType, xm);
+                  return await fm._updateCurrentUser(mm.user), mm;
                 case "reauthenticate":
-                  return Sk(Fk.user, Ik, "internal-error"), tI._forOperation(Fk.user, Fk.operationType, yk);
+                  return zm(Tm.user, fm, "internal-error"), Ef._forOperation(Tm.user, Tm.operationType, xm);
                 default:
-                  Kk(Ik, "internal-error")
+                  Km(fm, "internal-error")
               }
             }))
           }
-          async resolveSignIn(kk) {
-            const Fk = kk;
-            return this.signInResolver(Fk)
+          async resolveSignIn(mm) {
+            const Tm = mm;
+            return this.signInResolver(Tm)
           }
         }
 
-        function jX(kk, Fk) {
-          var Ik;
-          const Tk = (0, Xk.L)(kk),
-            ik = Fk;
-          return Sk(Fk.customData.operationType, Tk, "argument-error"), Sk(null === (Ik = ik.customData._serverResponse) || void 0 === Ik ? void 0 : Ik.mfaPendingCredential, Tk, "argument-error"), ZX._fromError(Tk, ik)
+        function Yh(mm, Tm) {
+          var fm;
+          const Am = (0, hm.J)(mm),
+            am = Tm;
+          return zm(Tm.customData.operationType, Am, "argument-error"), zm(null === (fm = am.customData._serverResponse) || void 0 === fm ? void 0 : fm.mfaPendingCredential, Am, "argument-error"), Oh._fromError(Am, am)
         }
-        class eX {
-          constructor(kk) {
-            this.user = kk, this.enrolledFactors = [], kk._onReload((Fk => {
-              Fk.mfaInfo && (this.enrolledFactors = Fk.mfaInfo.map((Fk => oI._fromServerResponse(kk.auth, Fk))))
+        class qh {
+          constructor(mm) {
+            this.user = mm, this.enrolledFactors = [], mm._onReload((Tm => {
+              Tm.mfaInfo && (this.enrolledFactors = Tm.mfaInfo.map((Tm => bf._fromServerResponse(mm.auth, Tm))))
             }))
           }
-          static _fromUser(kk) {
-            return new eX(kk)
+          static _fromUser(mm) {
+            return new qh(mm)
           }
           async getSession() {
-            return tX._fromIdtoken(await this.user.getIdToken(), this.user.auth)
+            return oh._fromIdtoken(await this.user.getIdToken(), this.user.auth)
           }
-          async enroll(kk, Fk) {
-            const Ik = kk,
-              Xk = await this.getSession(),
-              Tk = await rk(this.user, Ik._process(this.user.auth, Xk, Fk));
-            return await this.user._updateTokensIfNecessary(Tk), this.user.reload()
+          async enroll(mm, Tm) {
+            const fm = mm,
+              hm = await this.getSession(),
+              Am = await gm(this.user, fm._process(this.user.auth, hm, Tm));
+            return await this.user._updateTokensIfNecessary(Am), this.user.reload()
           }
-          async unenroll(kk) {
-            const Fk = "string" === typeof kk ? kk : kk.uid,
-              Ik = await this.user.getIdToken();
+          async unenroll(mm) {
+            const Tm = "string" === typeof mm ? mm : mm.uid,
+              fm = await this.user.getIdToken();
             try {
-              const kk = await rk(this.user, (Xk = this.user.auth, Tk = {
-                idToken: Ik,
-                mfaEnrollmentId: Fk
-              }, Nk(Xk, "POST", "/v2/accounts/mfaEnrollment:withdraw", Ck(Xk, Tk))));
-              this.enrolledFactors = this.enrolledFactors.filter((kk => {
+              const mm = await gm(this.user, (hm = this.user.auth, Am = {
+                idToken: fm,
+                mfaEnrollmentId: Tm
+              }, Cm(hm, "POST", "/v2/accounts/mfaEnrollment:withdraw", ym(hm, Am))));
+              this.enrolledFactors = this.enrolledFactors.filter((mm => {
                 let {
-                  uid: Ik
-                } = kk;
-                return Ik !== Fk
-              })), await this.user._updateTokensIfNecessary(kk), await this.user.reload()
-            } catch (ik) {
-              throw ik
+                  uid: fm
+                } = mm;
+                return fm !== Tm
+              })), await this.user._updateTokensIfNecessary(mm), await this.user.reload()
+            } catch (am) {
+              throw am
             }
-            var Xk, Tk
+            var hm, Am
           }
         }
-        const wX = new WeakMap;
+        const jh = new WeakMap;
 
-        function HX(kk) {
-          const Fk = (0, Xk.L)(kk);
-          return wX.has(Fk) || wX.set(Fk, eX._fromUser(Fk)), wX.get(Fk)
+        function Vh(mm) {
+          const Tm = (0, hm.J)(mm);
+          return jh.has(Tm) || jh.set(Tm, qh._fromUser(Tm)), jh.get(Tm)
         }
-        const JX = "__sak";
-        class xX {
-          constructor(kk, Fk) {
-            this.storageRetriever = kk, this.type = Fk
+        const Ih = "__sak";
+        class Kh {
+          constructor(mm, Tm) {
+            this.storageRetriever = mm, this.type = Tm
           }
           _isAvailable() {
             try {
-              return this.storage ? (this.storage.setItem(JX, "1"), this.storage.removeItem(JX), Promise.resolve(!0)) : Promise.resolve(!1)
-            } catch (kk) {
+              return this.storage ? (this.storage.setItem(Ih, "1"), this.storage.removeItem(Ih), Promise.resolve(!0)) : Promise.resolve(!1)
+            } catch (mm) {
               return Promise.resolve(!1)
             }
           }
-          _set(kk, Fk) {
-            return this.storage.setItem(kk, JSON.stringify(Fk)), Promise.resolve()
+          _set(mm, Tm) {
+            return this.storage.setItem(mm, JSON.stringify(Tm)), Promise.resolve()
           }
-          _get(kk) {
-            const Fk = this.storage.getItem(kk);
-            return Promise.resolve(Fk ? JSON.parse(Fk) : null)
+          _get(mm) {
+            const Tm = this.storage.getItem(mm);
+            return Promise.resolve(Tm ? JSON.parse(Tm) : null)
           }
-          _remove(kk) {
-            return this.storage.removeItem(kk), Promise.resolve()
+          _remove(mm) {
+            return this.storage.removeItem(mm), Promise.resolve()
           }
           get storage() {
             return this.storageRetriever()
           }
         }
-        class PX extends xX {
+        class Qh extends Kh {
           constructor() {
-            super((() => window.localStorage), "LOCAL"), this.boundEventHandler = (kk, Fk) => this.onStorageEvent(kk, Fk), this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.safariLocalStorageNotSynced = function() {
-              const kk = (0, Xk.O)();
-              return jF(kk) || PF(kk)
+            super((() => window.localStorage), "LOCAL"), this.boundEventHandler = (mm, Tm) => this.onStorageEvent(mm, Tm), this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.safariLocalStorageNotSynced = function() {
+              const mm = (0, hm.N)();
+              return oT(mm) || IT(mm)
             }() && function() {
               try {
                 return !(!window || window === window.top)
-              } catch (kk) {
+              } catch (mm) {
                 return !1
               }
-            }(), this.fallbackToPolling = KF(), this._shouldAllowMigration = !0
+            }(), this.fallbackToPolling = KT(), this._shouldAllowMigration = !0
           }
-          forAllChangedKeys(kk) {
-            for (const Fk of Object.keys(this.listeners)) {
-              const Ik = this.storage.getItem(Fk),
-                Xk = this.localCache[Fk];
-              Ik !== Xk && kk(Fk, Xk, Ik)
+          forAllChangedKeys(mm) {
+            for (const Tm of Object.keys(this.listeners)) {
+              const fm = this.storage.getItem(Tm),
+                hm = this.localCache[Tm];
+              fm !== hm && mm(Tm, hm, fm)
             }
           }
-          onStorageEvent(kk) {
-            let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (!kk.key) return void this.forAllChangedKeys(((kk, Fk, Ik) => {
-              this.notifyListeners(kk, Ik)
+          onStorageEvent(mm) {
+            let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (!mm.key) return void this.forAllChangedKeys(((mm, Tm, fm) => {
+              this.notifyListeners(mm, fm)
             }));
-            const Ik = kk.key;
-            if (Fk ? this.detachListener() : this.stopPolling(), this.safariLocalStorageNotSynced) {
-              const Xk = this.storage.getItem(Ik);
-              if (kk.newValue !== Xk) null !== kk.newValue ? this.storage.setItem(Ik, kk.newValue) : this.storage.removeItem(Ik);
-              else if (this.localCache[Ik] === kk.newValue && !Fk) return
+            const fm = mm.key;
+            if (Tm ? this.detachListener() : this.stopPolling(), this.safariLocalStorageNotSynced) {
+              const hm = this.storage.getItem(fm);
+              if (mm.newValue !== hm) null !== mm.newValue ? this.storage.setItem(fm, mm.newValue) : this.storage.removeItem(fm);
+              else if (this.localCache[fm] === mm.newValue && !Tm) return
             }
-            const Tk = () => {
-                const kk = this.storage.getItem(Ik);
-                (Fk || this.localCache[Ik] !== kk) && this.notifyListeners(Ik, kk)
+            const Am = () => {
+                const mm = this.storage.getItem(fm);
+                (Tm || this.localCache[fm] !== mm) && this.notifyListeners(fm, mm)
               },
-              ik = this.storage.getItem(Ik);
-            (0, Xk.U)() && 10 === document.documentMode && ik !== kk.newValue && kk.newValue !== kk.oldValue ? setTimeout(Tk, 10) : Tk()
+              am = this.storage.getItem(fm);
+            (0, hm.R)() && 10 === document.documentMode && am !== mm.newValue && mm.newValue !== mm.oldValue ? setTimeout(Am, 10) : Am()
           }
-          notifyListeners(kk, Fk) {
-            this.localCache[kk] = Fk;
-            const Ik = this.listeners[kk];
-            if (Ik)
-              for (const Xk of Array.from(Ik)) Xk(Fk ? JSON.parse(Fk) : Fk)
+          notifyListeners(mm, Tm) {
+            this.localCache[mm] = Tm;
+            const fm = this.listeners[mm];
+            if (fm)
+              for (const hm of Array.from(fm)) hm(Tm ? JSON.parse(Tm) : Tm)
           }
           startPolling() {
             this.stopPolling(), this.pollTimer = setInterval((() => {
-              this.forAllChangedKeys(((kk, Fk, Ik) => {
+              this.forAllChangedKeys(((mm, Tm, fm) => {
                 this.onStorageEvent(new StorageEvent("storage", {
-                  key: kk,
-                  oldValue: Fk,
-                  newValue: Ik
+                  key: mm,
+                  oldValue: Tm,
+                  newValue: fm
                 }), !0)
               }))
             }), 1e3)
@@ -2874,313 +2874,313 @@ export const modules = {
           detachListener() {
             window.removeEventListener("storage", this.boundEventHandler)
           }
-          _addListener(kk, Fk) {
-            0 === Object.keys(this.listeners).length && (this.fallbackToPolling ? this.startPolling() : this.attachListener()), this.listeners[kk] || (this.listeners[kk] = new Set, this.localCache[kk] = this.storage.getItem(kk)), this.listeners[kk].add(Fk)
+          _addListener(mm, Tm) {
+            0 === Object.keys(this.listeners).length && (this.fallbackToPolling ? this.startPolling() : this.attachListener()), this.listeners[mm] || (this.listeners[mm] = new Set, this.localCache[mm] = this.storage.getItem(mm)), this.listeners[mm].add(Tm)
           }
-          _removeListener(kk, Fk) {
-            this.listeners[kk] && (this.listeners[kk].delete(Fk), 0 === this.listeners[kk].size && delete this.listeners[kk]), 0 === Object.keys(this.listeners).length && (this.detachListener(), this.stopPolling())
+          _removeListener(mm, Tm) {
+            this.listeners[mm] && (this.listeners[mm].delete(Tm), 0 === this.listeners[mm].size && delete this.listeners[mm]), 0 === Object.keys(this.listeners).length && (this.detachListener(), this.stopPolling())
           }
-          async _set(kk, Fk) {
-            await super._set(kk, Fk), this.localCache[kk] = JSON.stringify(Fk)
+          async _set(mm, Tm) {
+            await super._set(mm, Tm), this.localCache[mm] = JSON.stringify(Tm)
           }
-          async _get(kk) {
-            const Fk = await super._get(kk);
-            return this.localCache[kk] = JSON.stringify(Fk), Fk
+          async _get(mm) {
+            const Tm = await super._get(mm);
+            return this.localCache[mm] = JSON.stringify(Tm), Tm
           }
-          async _remove(kk) {
-            await super._remove(kk), delete this.localCache[kk]
+          async _remove(mm) {
+            await super._remove(mm), delete this.localCache[mm]
           }
         }
-        PX.type = "LOCAL";
-        const KX = PX;
-        class QX extends xX {
+        Qh.type = "LOCAL";
+        const nh = Qh;
+        class Jh extends Kh {
           constructor() {
             super((() => window.sessionStorage), "SESSION")
           }
-          _addListener(kk, Fk) {}
-          _removeListener(kk, Fk) {}
+          _addListener(mm, Tm) {}
+          _removeListener(mm, Tm) {}
         }
-        QX.type = "SESSION";
-        const sX = QX;
-        class VX {
-          constructor(kk) {
-            this.eventTarget = kk, this.handlersMap = {}, this.boundEventHandler = this.handleEvent.bind(this)
+        Jh.type = "SESSION";
+        const ch = Jh;
+        class zh {
+          constructor(mm) {
+            this.eventTarget = mm, this.handlersMap = {}, this.boundEventHandler = this.handleEvent.bind(this)
           }
-          static _getInstance(kk) {
-            const Fk = this.receivers.find((Fk => Fk.isListeningto(kk)));
-            if (Fk) return Fk;
-            const Ik = new VX(kk);
-            return this.receivers.push(Ik), Ik
+          static _getInstance(mm) {
+            const Tm = this.receivers.find((Tm => Tm.isListeningto(mm)));
+            if (Tm) return Tm;
+            const fm = new zh(mm);
+            return this.receivers.push(fm), fm
           }
-          isListeningto(kk) {
-            return this.eventTarget === kk
+          isListeningto(mm) {
+            return this.eventTarget === mm
           }
-          async handleEvent(kk) {
-            const Fk = kk,
+          async handleEvent(mm) {
+            const Tm = mm,
               {
-                eventId: Ik,
-                eventType: Xk,
-                data: Tk
-              } = Fk.data,
-              ik = this.handlersMap[Xk];
-            if (!(null === ik || void 0 === ik ? void 0 : ik.size)) return;
-            Fk.ports[0].postMessage({
+                eventId: fm,
+                eventType: hm,
+                data: Am
+              } = Tm.data,
+              am = this.handlersMap[hm];
+            if (!(null === am || void 0 === am ? void 0 : am.size)) return;
+            Tm.ports[0].postMessage({
               status: "ack",
-              eventId: Ik,
-              eventType: Xk
+              eventId: fm,
+              eventType: hm
             });
-            const yk = Array.from(ik).map((async kk => kk(Fk.origin, Tk))),
-              lk = await
-            function(kk) {
-              return Promise.all(kk.map((async kk => {
+            const xm = Array.from(am).map((async mm => mm(Tm.origin, Am))),
+              wm = await
+            function(mm) {
+              return Promise.all(mm.map((async mm => {
                 try {
                   return {
                     fulfilled: !0,
-                    value: await kk
+                    value: await mm
                   }
-                } catch (Fk) {
+                } catch (Tm) {
                   return {
                     fulfilled: !1,
-                    reason: Fk
+                    reason: Tm
                   }
                 }
               })))
-            }(yk);
-            Fk.ports[0].postMessage({
+            }(xm);
+            Tm.ports[0].postMessage({
               status: "done",
-              eventId: Ik,
-              eventType: Xk,
-              response: lk
+              eventId: fm,
+              eventType: hm,
+              response: wm
             })
           }
-          _subscribe(kk, Fk) {
-            0 === Object.keys(this.handlersMap).length && this.eventTarget.addEventListener("message", this.boundEventHandler), this.handlersMap[kk] || (this.handlersMap[kk] = new Set), this.handlersMap[kk].add(Fk)
+          _subscribe(mm, Tm) {
+            0 === Object.keys(this.handlersMap).length && this.eventTarget.addEventListener("message", this.boundEventHandler), this.handlersMap[mm] || (this.handlersMap[mm] = new Set), this.handlersMap[mm].add(Tm)
           }
-          _unsubscribe(kk, Fk) {
-            this.handlersMap[kk] && Fk && this.handlersMap[kk].delete(Fk), Fk && 0 !== this.handlersMap[kk].size || delete this.handlersMap[kk], 0 === Object.keys(this.handlersMap).length && this.eventTarget.removeEventListener("message", this.boundEventHandler)
+          _unsubscribe(mm, Tm) {
+            this.handlersMap[mm] && Tm && this.handlersMap[mm].delete(Tm), Tm && 0 !== this.handlersMap[mm].size || delete this.handlersMap[mm], 0 === Object.keys(this.handlersMap).length && this.eventTarget.removeEventListener("message", this.boundEventHandler)
           }
         }
 
-        function zX() {
-          let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-            Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
-            Ik = "";
-          for (let Xk = 0; Xk < Fk; Xk++) Ik += Math.floor(10 * Math.random());
-          return kk + Ik
+        function Zh() {
+          let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
+            Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
+            fm = "";
+          for (let hm = 0; hm < Tm; hm++) fm += Math.floor(10 * Math.random());
+          return mm + fm
         }
-        VX.receivers = [];
-        class SX {
-          constructor(kk) {
-            this.target = kk, this.handlers = new Set
+        zh.receivers = [];
+        class kh {
+          constructor(mm) {
+            this.target = mm, this.handlers = new Set
           }
-          removeMessageHandler(kk) {
-            kk.messageChannel && (kk.messageChannel.port1.removeEventListener("message", kk.bJ), kk.messageChannel.port1.close()), this.handlers.delete(kk)
+          removeMessageHandler(mm) {
+            mm.messageChannel && (mm.messageChannel.port1.removeEventListener("message", mm.lV), mm.messageChannel.port1.close()), this.handlers.delete(mm)
           }
-          async _send(kk, Fk) {
-            let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 50;
-            const Xk = "undefined" !== typeof MessageChannel ? new MessageChannel : null;
-            if (!Xk) throw new Error("connection_unavailable");
-            let Tk, ik;
-            return new Promise(((yk, lk) => {
-              const ak = zX("", 20);
-              Xk.port1.start();
-              const qk = setTimeout((() => {
-                lk(new Error("unsupported_event"))
-              }), Ik);
-              ik = {
-                messageChannel: Xk,
-                bJ(kk) {
-                  const Fk = kk;
-                  if (Fk.data.eventId === ak) switch (Fk.data.status) {
+          async _send(mm, Tm) {
+            let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 50;
+            const hm = "undefined" !== typeof MessageChannel ? new MessageChannel : null;
+            if (!hm) throw new Error("connection_unavailable");
+            let Am, am;
+            return new Promise(((xm, wm) => {
+              const Dm = Zh("", 20);
+              hm.port1.start();
+              const im = setTimeout((() => {
+                wm(new Error("unsupported_event"))
+              }), fm);
+              am = {
+                messageChannel: hm,
+                lV(mm) {
+                  const Tm = mm;
+                  if (Tm.data.eventId === Dm) switch (Tm.data.status) {
                     case "ack":
-                      clearTimeout(qk), Tk = setTimeout((() => {
-                        lk(new Error("timeout"))
+                      clearTimeout(im), Am = setTimeout((() => {
+                        wm(new Error("timeout"))
                       }), 3e3);
                       break;
                     case "done":
-                      clearTimeout(Tk), yk(Fk.data.response);
+                      clearTimeout(Am), xm(Tm.data.response);
                       break;
                     default:
-                      clearTimeout(qk), clearTimeout(Tk), lk(new Error("invalid_response"))
+                      clearTimeout(im), clearTimeout(Am), wm(new Error("invalid_response"))
                   }
                 }
-              }, this.handlers.add(ik), Xk.port1.addEventListener("message", ik.bJ), this.target.postMessage({
-                eventType: kk,
-                eventId: ak,
-                data: Fk
-              }, [Xk.port2])
+              }, this.handlers.add(am), hm.port1.addEventListener("message", am.lV), this.target.postMessage({
+                eventType: mm,
+                eventId: Dm,
+                data: Tm
+              }, [hm.port2])
             })).finally((() => {
-              ik && this.removeMessageHandler(ik)
+              am && this.removeMessageHandler(am)
             }))
           }
         }
 
-        function oX() {
+        function bh() {
           return window
         }
 
-        function vX() {
-          return "undefined" !== typeof oX().WorkerGlobalScope && "function" === typeof oX().importScripts
+        function Sh() {
+          return "undefined" !== typeof bh().WorkerGlobalScope && "function" === typeof bh().importScripts
         }
-        const EX = "firebaseLocalStorageDb",
-          OX = "firebaseLocalStorage",
-          nX = "fbase_key";
-        class GX {
-          constructor(kk) {
-            this.request = kk
+        const eh = "firebaseLocalStorageDb",
+          Nh = "firebaseLocalStorage",
+          Gh = "fbase_key";
+        class Xh {
+          constructor(mm) {
+            this.request = mm
           }
           toPromise() {
-            return new Promise(((kk, Fk) => {
+            return new Promise(((mm, Tm) => {
               this.request.addEventListener("success", (() => {
-                kk(this.request.result)
+                mm(this.request.result)
               })), this.request.addEventListener("error", (() => {
-                Fk(this.request.error)
+                Tm(this.request.error)
               }))
             }))
           }
         }
 
-        function pX(kk, Fk) {
-          return kk.transaction([OX], Fk ? "readwrite" : "readonly").objectStore(OX)
+        function Ph(mm, Tm) {
+          return mm.transaction([Nh], Tm ? "readwrite" : "readonly").objectStore(Nh)
         }
 
-        function uX() {
-          const kk = indexedDB.open(EX, 1);
-          return new Promise(((Fk, Ik) => {
-            kk.addEventListener("error", (() => {
-              Ik(kk.error)
-            })), kk.addEventListener("upgradeneeded", (() => {
-              const Fk = kk.result;
+        function Hh() {
+          const mm = indexedDB.open(eh, 1);
+          return new Promise(((Tm, fm) => {
+            mm.addEventListener("error", (() => {
+              fm(mm.error)
+            })), mm.addEventListener("upgradeneeded", (() => {
+              const Tm = mm.result;
               try {
-                Fk.createObjectStore(OX, {
-                  keyPath: nX
+                Tm.createObjectStore(Nh, {
+                  keyPath: Gh
                 })
-              } catch (Xk) {
-                Ik(Xk)
+              } catch (hm) {
+                fm(hm)
               }
-            })), kk.addEventListener("success", (async () => {
-              const Ik = kk.result;
-              Ik.objectStoreNames.contains(OX) ? Fk(Ik) : (Ik.close(), await
+            })), mm.addEventListener("success", (async () => {
+              const fm = mm.result;
+              fm.objectStoreNames.contains(Nh) ? Tm(fm) : (fm.close(), await
                 function() {
-                  const kk = indexedDB.deleteDatabase(EX);
-                  return new GX(kk).toPromise()
-                }(), Fk(await uX()))
+                  const mm = indexedDB.deleteDatabase(eh);
+                  return new Xh(mm).toPromise()
+                }(), Tm(await Hh()))
             }))
           }))
         }
-        async function bX(kk, Fk, Ik) {
-          const Xk = pX(kk, !0).put({
-            [nX]: Fk,
-            value: Ik
+        async function yh(mm, Tm, fm) {
+          const hm = Ph(mm, !0).put({
+            [Gh]: Tm,
+            value: fm
           });
-          return new GX(Xk).toPromise()
+          return new Xh(hm).toPromise()
         }
 
-        function RX(kk, Fk) {
-          const Ik = pX(kk, !0).delete(Fk);
-          return new GX(Ik).toPromise()
+        function Ch(mm, Tm) {
+          const fm = Ph(mm, !0).delete(Tm);
+          return new Xh(fm).toPromise()
         }
-        class UX {
+        class rh {
           constructor() {
             this.type = "LOCAL", this._shouldAllowMigration = !0, this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.pendingWrites = 0, this.receiver = null, this.sender = null, this.serviceWorkerReceiverAvailable = !1, this.activeServiceWorker = null, this._workerInitializationPromise = this.initializeServiceWorkerMessaging().then((() => {}), (() => {}))
           }
           async _openDb() {
-            return this.db || (this.db = await uX()), this.db
+            return this.db || (this.db = await Hh()), this.db
           }
-          async _withRetries(kk) {
-            let Fk = 0;
+          async _withRetries(mm) {
+            let Tm = 0;
             for (;;) try {
-              const Fk = await this._openDb();
-              return await kk(Fk)
-            } catch (Ik) {
-              if (Fk++ > 3) throw Ik;
+              const Tm = await this._openDb();
+              return await mm(Tm)
+            } catch (fm) {
+              if (Tm++ > 3) throw fm;
               this.db && (this.db.close(), this.db = void 0)
             }
           }
           async initializeServiceWorkerMessaging() {
-            return vX() ? this.initializeReceiver() : this.initializeSender()
+            return Sh() ? this.initializeReceiver() : this.initializeSender()
           }
           async initializeReceiver() {
-            this.receiver = VX._getInstance(vX() ? self : null), this.receiver._subscribe("keyChanged", (async (kk, Fk) => ({
-              keyProcessed: (await this._poll()).includes(Fk.key)
-            }))), this.receiver._subscribe("ping", (async (kk, Fk) => ["keyChanged"]))
+            this.receiver = zh._getInstance(Sh() ? self : null), this.receiver._subscribe("keyChanged", (async (mm, Tm) => ({
+              keyProcessed: (await this._poll()).includes(Tm.key)
+            }))), this.receiver._subscribe("ping", (async (mm, Tm) => ["keyChanged"]))
           }
           async initializeSender() {
-            var kk, Fk;
+            var mm, Tm;
             if (this.activeServiceWorker = await async function() {
                 if (!(null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker)) return null;
                 try {
                   return (await navigator.serviceWorker.ready).active
-                } catch (kk) {
+                } catch (mm) {
                   return null
                 }
               }(), !this.activeServiceWorker) return;
-            this.sender = new SX(this.activeServiceWorker);
-            const Ik = await this.sender._send("ping", {}, 800);
-            Ik && (null === (kk = Ik[0]) || void 0 === kk ? void 0 : kk.fulfilled) && (null === (Fk = Ik[0]) || void 0 === Fk ? void 0 : Fk.value.includes("keyChanged")) && (this.serviceWorkerReceiverAvailable = !0)
+            this.sender = new kh(this.activeServiceWorker);
+            const fm = await this.sender._send("ping", {}, 800);
+            fm && (null === (mm = fm[0]) || void 0 === mm ? void 0 : mm.fulfilled) && (null === (Tm = fm[0]) || void 0 === Tm ? void 0 : Tm.value.includes("keyChanged")) && (this.serviceWorkerReceiverAvailable = !0)
           }
-          async notifyServiceWorker(kk) {
+          async notifyServiceWorker(mm) {
             if (this.sender && this.activeServiceWorker && function() {
-                var kk;
-                return (null === (kk = null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker) || void 0 === kk ? void 0 : kk.controller) || null
+                var mm;
+                return (null === (mm = null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker) || void 0 === mm ? void 0 : mm.controller) || null
               }() === this.activeServiceWorker) try {
               await this.sender._send("keyChanged", {
-                key: kk
+                key: mm
               }, this.serviceWorkerReceiverAvailable ? 800 : 50)
-            } catch (Fk) {}
+            } catch (Tm) {}
           }
           async _isAvailable() {
             try {
               if (!indexedDB) return !1;
-              const kk = await uX();
-              return await bX(kk, JX, "1"), await RX(kk, JX), !0
-            } catch (kk) {}
+              const mm = await Hh();
+              return await yh(mm, Ih, "1"), await Ch(mm, Ih), !0
+            } catch (mm) {}
             return !1
           }
-          async _withPendingWrite(kk) {
+          async _withPendingWrite(mm) {
             this.pendingWrites++;
             try {
-              await kk()
+              await mm()
             } finally {
               this.pendingWrites--
             }
           }
-          async _set(kk, Fk) {
-            return this._withPendingWrite((async () => (await this._withRetries((Ik => bX(Ik, kk, Fk))), this.localCache[kk] = Fk, this.notifyServiceWorker(kk))))
+          async _set(mm, Tm) {
+            return this._withPendingWrite((async () => (await this._withRetries((fm => yh(fm, mm, Tm))), this.localCache[mm] = Tm, this.notifyServiceWorker(mm))))
           }
-          async _get(kk) {
-            const Fk = await this._withRetries((Fk => async function(kk, Fk) {
-              const Ik = pX(kk, !1).get(Fk),
-                Xk = await new GX(Ik).toPromise();
-              return void 0 === Xk ? null : Xk.value
-            }(Fk, kk)));
-            return this.localCache[kk] = Fk, Fk
+          async _get(mm) {
+            const Tm = await this._withRetries((Tm => async function(mm, Tm) {
+              const fm = Ph(mm, !1).get(Tm),
+                hm = await new Xh(fm).toPromise();
+              return void 0 === hm ? null : hm.value
+            }(Tm, mm)));
+            return this.localCache[mm] = Tm, Tm
           }
-          async _remove(kk) {
-            return this._withPendingWrite((async () => (await this._withRetries((Fk => RX(Fk, kk))), delete this.localCache[kk], this.notifyServiceWorker(kk))))
+          async _remove(mm) {
+            return this._withPendingWrite((async () => (await this._withRetries((Tm => Ch(Tm, mm))), delete this.localCache[mm], this.notifyServiceWorker(mm))))
           }
           async _poll() {
-            const kk = await this._withRetries((kk => {
-              const Fk = pX(kk, !1).getAll();
-              return new GX(Fk).toPromise()
+            const mm = await this._withRetries((mm => {
+              const Tm = Ph(mm, !1).getAll();
+              return new Xh(Tm).toPromise()
             }));
-            if (!kk) return [];
+            if (!mm) return [];
             if (0 !== this.pendingWrites) return [];
-            const Fk = [],
-              Ik = new Set;
+            const Tm = [],
+              fm = new Set;
             for (const {
-                fbase_key: Xk,
-                value: Tk
+                fbase_key: hm,
+                value: Am
               }
-              of kk) Ik.add(Xk), JSON.stringify(this.localCache[Xk]) !== JSON.stringify(Tk) && (this.notifyListeners(Xk, Tk), Fk.push(Xk));
-            for (const Xk of Object.keys(this.localCache)) this.localCache[Xk] && !Ik.has(Xk) && (this.notifyListeners(Xk, null), Fk.push(Xk));
-            return Fk
+              of mm) fm.add(hm), JSON.stringify(this.localCache[hm]) !== JSON.stringify(Am) && (this.notifyListeners(hm, Am), Tm.push(hm));
+            for (const hm of Object.keys(this.localCache)) this.localCache[hm] && !fm.has(hm) && (this.notifyListeners(hm, null), Tm.push(hm));
+            return Tm
           }
-          notifyListeners(kk, Fk) {
-            this.localCache[kk] = Fk;
-            const Ik = this.listeners[kk];
-            if (Ik)
-              for (const Xk of Array.from(Ik)) Xk(Fk)
+          notifyListeners(mm, Tm) {
+            this.localCache[mm] = Tm;
+            const fm = this.listeners[mm];
+            if (fm)
+              for (const hm of Array.from(fm)) hm(Tm)
           }
           startPolling() {
             this.stopPolling(), this.pollTimer = setInterval((async () => this._poll()), 800)
@@ -3188,49 +3188,49 @@ export const modules = {
           stopPolling() {
             this.pollTimer && (clearInterval(this.pollTimer), this.pollTimer = null)
           }
-          _addListener(kk, Fk) {
-            0 === Object.keys(this.listeners).length && this.startPolling(), this.listeners[kk] || (this.listeners[kk] = new Set, this._get(kk)), this.listeners[kk].add(Fk)
+          _addListener(mm, Tm) {
+            0 === Object.keys(this.listeners).length && this.startPolling(), this.listeners[mm] || (this.listeners[mm] = new Set, this._get(mm)), this.listeners[mm].add(Tm)
           }
-          _removeListener(kk, Fk) {
-            this.listeners[kk] && (this.listeners[kk].delete(Fk), 0 === this.listeners[kk].size && delete this.listeners[kk]), 0 === Object.keys(this.listeners).length && this.stopPolling()
-          }
-        }
-        UX.type = "LOCAL";
-        const CX = UX;
-        const NX = 1e12;
-        class cX {
-          constructor(kk) {
-            this.auth = kk, this.counter = NX, this._widgets = new Map
-          }
-          render(kk, Fk) {
-            const Ik = this.counter;
-            return this._widgets.set(Ik, new WX(kk, this.auth.name, Fk || {})), this.counter++, Ik
-          }
-          reset(kk) {
-            var Fk;
-            const Ik = kk || NX;
-            null === (Fk = this._widgets.get(Ik)) || void 0 === Fk || Fk.delete(), this._widgets.delete(Ik)
-          }
-          getResponse(kk) {
-            var Fk;
-            const Ik = kk || NX;
-            return (null === (Fk = this._widgets.get(Ik)) || void 0 === Fk ? void 0 : Fk.getResponse()) || ""
-          }
-          async execute(kk) {
-            var Fk;
-            const Ik = kk || NX;
-            return null === (Fk = this._widgets.get(Ik)) || void 0 === Fk || Fk.execute(), ""
+          _removeListener(mm, Tm) {
+            this.listeners[mm] && (this.listeners[mm].delete(Tm), 0 === this.listeners[mm].size && delete this.listeners[mm]), 0 === Object.keys(this.listeners).length && this.stopPolling()
           }
         }
-        class WX {
-          constructor(kk, Fk, Ik) {
-            this.params = Ik, this.timerId = null, this.deleted = !1, this.responseToken = null, this.clickHandler = () => {
+        rh.type = "LOCAL";
+        const sh = rh;
+        const lh = 1e12;
+        class Mh {
+          constructor(mm) {
+            this.auth = mm, this.counter = lh, this._widgets = new Map
+          }
+          render(mm, Tm) {
+            const fm = this.counter;
+            return this._widgets.set(fm, new uh(mm, this.auth.name, Tm || {})), this.counter++, fm
+          }
+          reset(mm) {
+            var Tm;
+            const fm = mm || lh;
+            null === (Tm = this._widgets.get(fm)) || void 0 === Tm || Tm.delete(), this._widgets.delete(fm)
+          }
+          getResponse(mm) {
+            var Tm;
+            const fm = mm || lh;
+            return (null === (Tm = this._widgets.get(fm)) || void 0 === Tm ? void 0 : Tm.getResponse()) || ""
+          }
+          async execute(mm) {
+            var Tm;
+            const fm = mm || lh;
+            return null === (Tm = this._widgets.get(fm)) || void 0 === Tm || Tm.execute(), ""
+          }
+        }
+        class uh {
+          constructor(mm, Tm, fm) {
+            this.params = fm, this.timerId = null, this.deleted = !1, this.responseToken = null, this.clickHandler = () => {
               this.execute()
             };
-            const Xk = "string" === typeof kk ? document.getElementById(kk) : kk;
-            Sk(Xk, "argument-error", {
-              appName: Fk
-            }), this.container = Xk, this.isVisible = "invisible" !== this.params.size, this.isVisible ? this.execute() : this.container.addEventListener("click", this.clickHandler)
+            const hm = "string" === typeof mm ? document.getElementById(mm) : mm;
+            zm(hm, "argument-error", {
+              appName: Tm
+            }), this.container = hm, this.isVisible = "invisible" !== this.params.size, this.isVisible ? this.execute() : this.container.addEventListener("click", this.clickHandler)
           }
           getResponse() {
             return this.checkIfDeleted(), this.responseToken
@@ -3240,23 +3240,23 @@ export const modules = {
           }
           execute() {
             this.checkIfDeleted(), this.timerId || (this.timerId = window.setTimeout((() => {
-              this.responseToken = function(kk) {
-                const Fk = [],
-                  Ik = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-                for (let Xk = 0; Xk < kk; Xk++) Fk.push(Ik.charAt(Math.floor(Math.random() * Ik.length)));
-                return Fk.join("")
+              this.responseToken = function(mm) {
+                const Tm = [],
+                  fm = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                for (let hm = 0; hm < mm; hm++) Tm.push(fm.charAt(Math.floor(Math.random() * fm.length)));
+                return Tm.join("")
               }(50);
               const {
-                callback: kk,
-                "expired-callback": Fk
+                callback: mm,
+                "expired-callback": Tm
               } = this.params;
-              if (kk) try {
-                kk(this.responseToken)
-              } catch (Ik) {}
+              if (mm) try {
+                mm(this.responseToken)
+              } catch (fm) {}
               this.timerId = window.setTimeout((() => {
-                if (this.timerId = null, this.responseToken = null, Fk) try {
-                  Fk()
-                } catch (Ik) {}
+                if (this.timerId = null, this.responseToken = null, Tm) try {
+                  Tm()
+                } catch (fm) {}
                 this.isVisible && this.execute()
               }), 6e4)
             }), 500))
@@ -3265,268 +3265,268 @@ export const modules = {
             if (this.deleted) throw new Error("reCAPTCHA mock was already deleted!")
           }
         }
-        const fX = vF("rcb"),
-          BX = new pk(3e4, 6e4);
-        class dX {
+        const Bh = kT("rcb"),
+          Lh = new Nm(3e4, 6e4);
+        class vh {
           constructor() {
-            var kk;
-            this.hostLanguage = "", this.counter = 0, this.librarySeparatelyLoaded = !!(null === (kk = oX().grecaptcha) || void 0 === kk ? void 0 : kk.render)
+            var mm;
+            this.hostLanguage = "", this.counter = 0, this.librarySeparatelyLoaded = !!(null === (mm = bh().grecaptcha) || void 0 === mm ? void 0 : mm.render)
           }
-          load(kk) {
-            let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-            return Sk(function(kk) {
-              return kk.length <= 6 && /^\s*[a-zA-Z0-9\-]*\s*$/.test(kk)
-            }(Fk), kk, "argument-error"), this.shouldResolveImmediately(Fk) && VF(oX().grecaptcha) ? Promise.resolve(oX().grecaptcha) : new Promise(((Ik, Tk) => {
-              const ik = oX().setTimeout((() => {
-                Tk(Qk(kk, "network-request-failed"))
-              }), BX.get());
-              oX()[fX] = () => {
-                oX().clearTimeout(ik), delete oX()[fX];
-                const Xk = oX().grecaptcha;
-                if (!Xk || !VF(Xk)) return void Tk(Qk(kk, "internal-error"));
-                const yk = Xk.render;
-                Xk.render = (kk, Fk) => {
-                  const Ik = yk(kk, Fk);
-                  return this.counter++, Ik
-                }, this.hostLanguage = Fk, Ik(Xk)
+          load(mm) {
+            let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+            return zm(function(mm) {
+              return mm.length <= 6 && /^\s*[a-zA-Z0-9\-]*\s*$/.test(mm)
+            }(Tm), mm, "argument-error"), this.shouldResolveImmediately(Tm) && JT(bh().grecaptcha) ? Promise.resolve(bh().grecaptcha) : new Promise(((fm, Am) => {
+              const am = bh().setTimeout((() => {
+                Am(Qm(mm, "network-request-failed"))
+              }), Lh.get());
+              bh()[Bh] = () => {
+                bh().clearTimeout(am), delete bh()[Bh];
+                const hm = bh().grecaptcha;
+                if (!hm || !JT(hm)) return void Am(Qm(mm, "internal-error"));
+                const xm = hm.render;
+                hm.render = (mm, Tm) => {
+                  const fm = xm(mm, Tm);
+                  return this.counter++, fm
+                }, this.hostLanguage = Tm, fm(hm)
               };
-              oF(`https://www.google.com/recaptcha/api.js??${(0,Xk.eb)({onload:fX,render:"explicit",hl:Fk})}`).catch((() => {
-                clearTimeout(ik), Tk(Qk(kk, "internal-error"))
+              ZT(`https://www.google.com/recaptcha/api.js??${(0,hm.ab)({onload:Bh,render:"explicit",hl:Tm})}`).catch((() => {
+                clearTimeout(am), Am(Qm(mm, "internal-error"))
               }))
             }))
           }
           clearedOneInstance() {
             this.counter--
           }
-          shouldResolveImmediately(kk) {
-            var Fk;
-            return !!(null === (Fk = oX().grecaptcha) || void 0 === Fk ? void 0 : Fk.render) && (kk === this.hostLanguage || this.counter > 0 || this.librarySeparatelyLoaded)
+          shouldResolveImmediately(mm) {
+            var Tm;
+            return !!(null === (Tm = bh().grecaptcha) || void 0 === Tm ? void 0 : Tm.render) && (mm === this.hostLanguage || this.counter > 0 || this.librarySeparatelyLoaded)
           }
         }
-        class YX {
-          async load(kk) {
-            return new cX(kk)
+        class th {
+          async load(mm) {
+            return new Mh(mm)
           }
           clearedOneInstance() {}
         }
-        const AX = "recaptcha",
-          gX = {
+        const Uh = "recaptcha",
+          dh = {
             theme: "light",
             type: "image"
           };
-        class mX {
-          constructor(kk) {
-            let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.assign({}, gX),
-              Ik = arguments.length > 2 ? arguments[2] : void 0;
-            this.parameters = Fk, this.type = AX, this.destroyed = !1, this.widgetId = null, this.tokenChangeListeners = new Set, this.renderPromise = null, this.recaptcha = null, this.auth = pF(Ik), this.isInvisible = "invisible" === this.parameters.size, Sk("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment");
-            const Xk = "string" === typeof kk ? document.getElementById(kk) : kk;
-            Sk(Xk, this.auth, "argument-error"), this.container = Xk, this.parameters.callback = this.makeTokenCallback(this.parameters.callback), this._recaptchaLoader = this.auth.settings.appVerificationDisabledForTesting ? new YX : new dX, this.validateStartingState()
+        class gh {
+          constructor(mm) {
+            let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.assign({}, dh),
+              fm = arguments.length > 2 ? arguments[2] : void 0;
+            this.parameters = Tm, this.type = Uh, this.destroyed = !1, this.widgetId = null, this.tokenChangeListeners = new Set, this.renderPromise = null, this.recaptcha = null, this.auth = GT(fm), this.isInvisible = "invisible" === this.parameters.size, zm("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment");
+            const hm = "string" === typeof mm ? document.getElementById(mm) : mm;
+            zm(hm, this.auth, "argument-error"), this.container = hm, this.parameters.callback = this.makeTokenCallback(this.parameters.callback), this._recaptchaLoader = this.auth.settings.appVerificationDisabledForTesting ? new th : new vh, this.validateStartingState()
           }
           async verify() {
             this.assertNotDestroyed();
-            const kk = await this.render(),
-              Fk = this.getAssertedRecaptcha(),
-              Ik = Fk.getResponse(kk);
-            return Ik || new Promise((Ik => {
-              const Xk = kk => {
-                kk && (this.tokenChangeListeners.delete(Xk), Ik(kk))
+            const mm = await this.render(),
+              Tm = this.getAssertedRecaptcha(),
+              fm = Tm.getResponse(mm);
+            return fm || new Promise((fm => {
+              const hm = mm => {
+                mm && (this.tokenChangeListeners.delete(hm), fm(mm))
               };
-              this.tokenChangeListeners.add(Xk), this.isInvisible && Fk.execute(kk)
+              this.tokenChangeListeners.add(hm), this.isInvisible && Tm.execute(mm)
             }))
           }
           render() {
             try {
               this.assertNotDestroyed()
-            } catch (kk) {
-              return Promise.reject(kk)
+            } catch (mm) {
+              return Promise.reject(mm)
             }
-            return this.renderPromise || (this.renderPromise = this.makeRenderPromise().catch((kk => {
-              throw this.renderPromise = null, kk
+            return this.renderPromise || (this.renderPromise = this.makeRenderPromise().catch((mm => {
+              throw this.renderPromise = null, mm
             }))), this.renderPromise
           }
           _reset() {
             this.assertNotDestroyed(), null !== this.widgetId && this.getAssertedRecaptcha().reset(this.widgetId)
           }
           clear() {
-            this.assertNotDestroyed(), this.destroyed = !0, this._recaptchaLoader.clearedOneInstance(), this.isInvisible || this.container.childNodes.forEach((kk => {
-              this.container.removeChild(kk)
+            this.assertNotDestroyed(), this.destroyed = !0, this._recaptchaLoader.clearedOneInstance(), this.isInvisible || this.container.childNodes.forEach((mm => {
+              this.container.removeChild(mm)
             }))
           }
           validateStartingState() {
-            Sk(!this.parameters.sitekey, this.auth, "argument-error"), Sk(this.isInvisible || !this.container.hasChildNodes(), this.auth, "argument-error"), Sk("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment")
+            zm(!this.parameters.sitekey, this.auth, "argument-error"), zm(this.isInvisible || !this.container.hasChildNodes(), this.auth, "argument-error"), zm("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment")
           }
-          makeTokenCallback(kk) {
-            return Fk => {
-              if (this.tokenChangeListeners.forEach((kk => kk(Fk))), "function" === typeof kk) kk(Fk);
-              else if ("string" === typeof kk) {
-                const Ik = oX()[kk];
-                "function" === typeof Ik && Ik(Fk)
+          makeTokenCallback(mm) {
+            return Tm => {
+              if (this.tokenChangeListeners.forEach((mm => mm(Tm))), "function" === typeof mm) mm(Tm);
+              else if ("string" === typeof mm) {
+                const fm = bh()[mm];
+                "function" === typeof fm && fm(Tm)
               }
             }
           }
           assertNotDestroyed() {
-            Sk(!this.destroyed, this.auth, "internal-error")
+            zm(!this.destroyed, this.auth, "internal-error")
           }
           async makeRenderPromise() {
             if (await this.init(), !this.widgetId) {
-              let kk = this.container;
+              let mm = this.container;
               if (!this.isInvisible) {
-                const Fk = document.createElement("div");
-                kk.appendChild(Fk), kk = Fk
+                const Tm = document.createElement("div");
+                mm.appendChild(Tm), mm = Tm
               }
-              this.widgetId = this.getAssertedRecaptcha().render(kk, this.parameters)
+              this.widgetId = this.getAssertedRecaptcha().render(mm, this.parameters)
             }
             return this.widgetId
           }
           async init() {
-            Sk(nk() && !vX(), this.auth, "internal-error"), await
+            zm(Sm() && !Sh(), this.auth, "internal-error"), await
             function() {
-              let kk = null;
-              return new Promise((Fk => {
-                "complete" !== document.readyState ? (kk = () => Fk(), window.addEventListener("load", kk)) : Fk()
-              })).catch((Fk => {
-                throw kk && window.removeEventListener("load", kk), Fk
+              let mm = null;
+              return new Promise((Tm => {
+                "complete" !== document.readyState ? (mm = () => Tm(), window.addEventListener("load", mm)) : Tm()
+              })).catch((Tm => {
+                throw mm && window.removeEventListener("load", mm), Tm
               }))
             }(), this.recaptcha = await this._recaptchaLoader.load(this.auth, this.auth.languageCode || void 0);
-            const kk = await async function(kk) {
-              return (await Nk(kk, "GET", "/v1/recaptchaParams")).recaptchaSiteKey || ""
+            const mm = await async function(mm) {
+              return (await Cm(mm, "GET", "/v1/recaptchaParams")).recaptchaSiteKey || ""
             }(this.auth);
-            Sk(kk, this.auth, "internal-error"), this.parameters.sitekey = kk
+            zm(mm, this.auth, "internal-error"), this.parameters.sitekey = mm
           }
           getAssertedRecaptcha() {
-            return Sk(this.recaptcha, this.auth, "internal-error"), this.recaptcha
+            return zm(this.recaptcha, this.auth, "internal-error"), this.recaptcha
           }
         }
-        class hX {
-          constructor(kk, Fk) {
-            this.verificationId = kk, this.onConfirmation = Fk
+        class Wh {
+          constructor(mm, Tm) {
+            this.verificationId = mm, this.onConfirmation = Tm
           }
-          confirm(kk) {
-            const Fk = rF._fromVerification(this.verificationId, kk);
-            return this.onConfirmation(Fk)
+          confirm(mm) {
+            const Tm = gT._fromVerification(this.verificationId, mm);
+            return this.onConfirmation(Tm)
           }
         }
-        async function rX(kk, Fk, Ik) {
-          const Tk = pF(kk),
-            ik = await kT(Tk, Fk, (0, Xk.L)(Ik));
-          return new hX(ik, (kk => sI(Tk, kk)))
+        async function Fh(mm, Tm, fm) {
+          const Am = GT(mm),
+            am = await fA(Am, Tm, (0, hm.J)(fm));
+          return new Wh(am, (mm => Jf(Am, mm)))
         }
-        async function DX(kk, Fk, Ik) {
-          const Tk = (0, Xk.L)(kk);
-          await PI(!1, Tk, "phone");
-          const ik = await kT(Tk.auth, Fk, (0, Xk.L)(Ik));
-          return new hX(ik, (kk => VI(Tk, kk)))
+        async function mA(mm, Tm, fm) {
+          const Am = (0, hm.J)(mm);
+          await Kf(!1, Am, "phone");
+          const am = await fA(Am.auth, Tm, (0, hm.J)(fm));
+          return new Wh(am, (mm => zf(Am, mm)))
         }
-        async function MX(kk, Fk, Ik) {
-          const Tk = (0, Xk.L)(kk),
-            ik = await kT(Tk.auth, Fk, (0, Xk.L)(Ik));
-          return new hX(ik, (kk => zI(Tk, kk)))
+        async function TA(mm, Tm, fm) {
+          const Am = (0, hm.J)(mm),
+            am = await fA(Am.auth, Tm, (0, hm.J)(fm));
+          return new Wh(am, (mm => Zf(Am, mm)))
         }
-        async function kT(kk, Fk, Ik) {
-          var Xk;
-          const Tk = await Ik.verify();
+        async function fA(mm, Tm, fm) {
+          var hm;
+          const Am = await fm.verify();
           try {
-            let ik;
-            if (Sk("string" === typeof Tk, kk, "argument-error"), Sk(Ik.type === AX, kk, "argument-error"), ik = "string" === typeof Fk ? {
-                phoneNumber: Fk
-              } : Fk, "session" in ik) {
-              const Fk = ik.session;
-              if ("phoneNumber" in ik) {
-                Sk("enroll" === Fk.type, kk, "internal-error");
-                const Ik = await
-                function(kk, Fk) {
-                  return Nk(kk, "POST", "/v2/accounts/mfaEnrollment:start", Ck(kk, Fk))
-                }(kk, {
-                  idToken: Fk.credential,
+            let am;
+            if (zm("string" === typeof Am, mm, "argument-error"), zm(fm.type === Uh, mm, "argument-error"), am = "string" === typeof Tm ? {
+                phoneNumber: Tm
+              } : Tm, "session" in am) {
+              const Tm = am.session;
+              if ("phoneNumber" in am) {
+                zm("enroll" === Tm.type, mm, "internal-error");
+                const fm = await
+                function(mm, Tm) {
+                  return Cm(mm, "POST", "/v2/accounts/mfaEnrollment:start", ym(mm, Tm))
+                }(mm, {
+                  idToken: Tm.credential,
                   phoneEnrollmentInfo: {
-                    phoneNumber: ik.phoneNumber,
-                    recaptchaToken: Tk
+                    phoneNumber: am.phoneNumber,
+                    recaptchaToken: Am
                   }
                 });
-                return Ik.phoneSessionInfo.sessionInfo
+                return fm.phoneSessionInfo.sessionInfo
               } {
-                Sk("signin" === Fk.type, kk, "internal-error");
-                const Ik = (null === (Xk = ik.multiFactorHint) || void 0 === Xk ? void 0 : Xk.uid) || ik.multiFactorUid;
-                Sk(Ik, kk, "missing-multi-factor-info");
-                const yk = await
-                function(kk, Fk) {
-                  return Nk(kk, "POST", "/v2/accounts/mfaSignIn:start", Ck(kk, Fk))
-                }(kk, {
-                  mfaPendingCredential: Fk.credential,
-                  mfaEnrollmentId: Ik,
+                zm("signin" === Tm.type, mm, "internal-error");
+                const fm = (null === (hm = am.multiFactorHint) || void 0 === hm ? void 0 : hm.uid) || am.multiFactorUid;
+                zm(fm, mm, "missing-multi-factor-info");
+                const xm = await
+                function(mm, Tm) {
+                  return Cm(mm, "POST", "/v2/accounts/mfaSignIn:start", ym(mm, Tm))
+                }(mm, {
+                  mfaPendingCredential: Tm.credential,
+                  mfaEnrollmentId: fm,
                   phoneSignInInfo: {
-                    recaptchaToken: Tk
+                    recaptchaToken: Am
                   }
                 });
-                return yk.phoneResponseInfo.sessionInfo
+                return xm.phoneResponseInfo.sessionInfo
               }
             } {
               const {
-                sessionInfo: Fk
-              } = await async function(kk, Fk) {
-                return Nk(kk, "POST", "/v1/accounts:sendVerificationCode", Ck(kk, Fk))
-              }(kk, {
-                phoneNumber: ik.phoneNumber,
-                recaptchaToken: Tk
+                sessionInfo: Tm
+              } = await async function(mm, Tm) {
+                return Cm(mm, "POST", "/v1/accounts:sendVerificationCode", ym(mm, Tm))
+              }(mm, {
+                phoneNumber: am.phoneNumber,
+                recaptchaToken: Am
               });
-              return Fk
+              return Tm
             }
           } finally {
-            Ik._reset()
+            fm._reset()
           }
         }
-        async function FT(kk, Fk) {
-          await xI((0, Xk.L)(kk), Fk)
+        async function hA(mm, Tm) {
+          await If((0, hm.J)(mm), Tm)
         }
-        class IT {
-          constructor(kk) {
-            this.providerId = IT.PROVIDER_ID, this.auth = pF(kk)
+        class AA {
+          constructor(mm) {
+            this.providerId = AA.PROVIDER_ID, this.auth = GT(mm)
           }
-          verifyPhoneNumber(kk, Fk) {
-            return kT(this.auth, kk, (0, Xk.L)(Fk))
+          verifyPhoneNumber(mm, Tm) {
+            return fA(this.auth, mm, (0, hm.J)(Tm))
           }
-          static credential(kk, Fk) {
-            return rF._fromVerification(kk, Fk)
+          static credential(mm, Tm) {
+            return gT._fromVerification(mm, Tm)
           }
-          static credentialFromResult(kk) {
-            const Fk = kk;
-            return IT.credentialFromTaggedObject(Fk)
+          static credentialFromResult(mm) {
+            const Tm = mm;
+            return AA.credentialFromTaggedObject(Tm)
           }
-          static credentialFromError(kk) {
-            return IT.credentialFromTaggedObject(kk.customData || {})
+          static credentialFromError(mm) {
+            return AA.credentialFromTaggedObject(mm.customData || {})
           }
-          static credentialFromTaggedObject(kk) {
+          static credentialFromTaggedObject(mm) {
             let {
-              _tokenResponse: Fk
-            } = kk;
-            if (!Fk) return null;
+              _tokenResponse: Tm
+            } = mm;
+            if (!Tm) return null;
             const {
-              phoneNumber: Ik,
-              temporaryProof: Xk
-            } = Fk;
-            return Ik && Xk ? rF._fromTokenResponse(Ik, Xk) : null
+              phoneNumber: fm,
+              temporaryProof: hm
+            } = Tm;
+            return fm && hm ? gT._fromTokenResponse(fm, hm) : null
           }
         }
 
-        function XT(kk, Fk) {
-          return Fk ? yF(Fk) : (Sk(kk._popupRedirectResolver, kk, "argument-error"), kk._popupRedirectResolver)
+        function aA(mm, Tm) {
+          return Tm ? xT(Tm) : (zm(mm._popupRedirectResolver, mm, "argument-error"), mm._popupRedirectResolver)
         }
-        IT.PROVIDER_ID = "phone", IT.PHONE_SIGN_IN_METHOD = "phone";
-        class TT extends NF {
-          constructor(kk) {
-            super("custom", "custom"), this.params = kk
+        AA.PROVIDER_ID = "phone", AA.PHONE_SIGN_IN_METHOD = "phone";
+        class xA extends rT {
+          constructor(mm) {
+            super("custom", "custom"), this.params = mm
           }
-          _getIdTokenResponse(kk) {
-            return gF(kk, this._buildIdpRequest())
+          _getIdTokenResponse(mm) {
+            return tT(mm, this._buildIdpRequest())
           }
-          _linkToIdToken(kk, Fk) {
-            return gF(kk, this._buildIdpRequest(Fk))
+          _linkToIdToken(mm, Tm) {
+            return tT(mm, this._buildIdpRequest(Tm))
           }
-          _getReauthenticationResolver(kk) {
-            return gF(kk, this._buildIdpRequest())
+          _getReauthenticationResolver(mm) {
+            return tT(mm, this._buildIdpRequest())
           }
-          _buildIdpRequest(kk) {
-            const Fk = {
+          _buildIdpRequest(mm) {
+            const Tm = {
               requestUri: this.params.requestUri,
               sessionId: this.params.sessionId,
               postBody: this.params.postBody,
@@ -3535,187 +3535,187 @@ export const modules = {
               returnSecureToken: !0,
               returnIdpCredential: !0
             };
-            return kk && (Fk.idToken = kk), Fk
+            return mm && (Tm.idToken = mm), Tm
           }
         }
 
-        function iT(kk) {
-          return QI(kk.auth, new TT(kk), kk.bypassAuthState)
+        function wA(mm) {
+          return nf(mm.auth, new xA(mm), mm.bypassAuthState)
         }
 
-        function yT(kk) {
+        function DA(mm) {
           const {
-            auth: Fk,
-            user: Ik
-          } = kk;
-          return Sk(Ik, Fk, "internal-error"), KI(Ik, new TT(kk), kk.bypassAuthState)
+            auth: Tm,
+            user: fm
+          } = mm;
+          return zm(fm, Tm, "internal-error"), Qf(fm, new xA(mm), mm.bypassAuthState)
         }
-        async function lT(kk) {
+        async function iA(mm) {
           const {
-            auth: Fk,
-            user: Ik
-          } = kk;
-          return Sk(Ik, Fk, "internal-error"), xI(Ik, new TT(kk), kk.bypassAuthState)
+            auth: Tm,
+            user: fm
+          } = mm;
+          return zm(fm, Tm, "internal-error"), If(fm, new xA(mm), mm.bypassAuthState)
         }
-        class aT {
-          constructor(kk, Fk, Ik, Xk) {
-            let Tk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-            this.auth = kk, this.resolver = Ik, this.user = Xk, this.bypassAuthState = Tk, this.pendingPromise = null, this.eventManager = null, this.filter = Array.isArray(Fk) ? Fk : [Fk]
+        class RA {
+          constructor(mm, Tm, fm, hm) {
+            let Am = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+            this.auth = mm, this.resolver = fm, this.user = hm, this.bypassAuthState = Am, this.pendingPromise = null, this.eventManager = null, this.filter = Array.isArray(Tm) ? Tm : [Tm]
           }
           execute() {
-            return new Promise((async (kk, Fk) => {
+            return new Promise((async (mm, Tm) => {
               this.pendingPromise = {
-                resolve: kk,
-                reject: Fk
+                resolve: mm,
+                reject: Tm
               };
               try {
                 this.eventManager = await this.resolver._initialize(this.auth), await this.onExecution(), this.eventManager.registerConsumer(this)
-              } catch (Ik) {
-                this.reject(Ik)
+              } catch (fm) {
+                this.reject(fm)
               }
             }))
           }
-          async onAuthEvent(kk) {
+          async onAuthEvent(mm) {
             const {
-              urlResponse: Fk,
-              sessionId: Ik,
-              postBody: Xk,
-              tenantId: Tk,
-              error: ik,
-              type: yk
-            } = kk;
-            if (ik) return void this.reject(ik);
-            const lk = {
+              urlResponse: Tm,
+              sessionId: fm,
+              postBody: hm,
+              tenantId: Am,
+              error: am,
+              type: xm
+            } = mm;
+            if (am) return void this.reject(am);
+            const wm = {
               auth: this.auth,
-              requestUri: Fk,
-              sessionId: Ik,
-              tenantId: Tk || void 0,
-              postBody: Xk || void 0,
+              requestUri: Tm,
+              sessionId: fm,
+              tenantId: Am || void 0,
+              postBody: hm || void 0,
               user: this.user,
               bypassAuthState: this.bypassAuthState
             };
             try {
-              this.resolve(await this.getIdpTask(yk)(lk))
-            } catch (ak) {
-              this.reject(ak)
+              this.resolve(await this.getIdpTask(xm)(wm))
+            } catch (Dm) {
+              this.reject(Dm)
             }
           }
-          onError(kk) {
-            this.reject(kk)
+          onError(mm) {
+            this.reject(mm)
           }
-          getIdpTask(kk) {
-            switch (kk) {
+          getIdpTask(mm) {
+            switch (mm) {
               case "signInViaPopup":
               case "signInViaRedirect":
-                return iT;
+                return wA;
               case "linkViaPopup":
               case "linkViaRedirect":
-                return lT;
+                return iA;
               case "reauthViaPopup":
               case "reauthViaRedirect":
-                return yT;
+                return DA;
               default:
-                Kk(this.auth, "internal-error")
+                Km(this.auth, "internal-error")
             }
           }
-          resolve(kk) {
-            Ek(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.resolve(kk), this.unregisterAndCleanUp()
+          resolve(mm) {
+            km(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.resolve(mm), this.unregisterAndCleanUp()
           }
-          reject(kk) {
-            Ek(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.reject(kk), this.unregisterAndCleanUp()
+          reject(mm) {
+            km(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.reject(mm), this.unregisterAndCleanUp()
           }
           unregisterAndCleanUp() {
             this.eventManager && this.eventManager.unregisterConsumer(this), this.pendingPromise = null, this.cleanUp()
           }
         }
-        const qT = new pk(2e3, 1e4);
-        async function LT(kk, Fk, Ik) {
-          const Xk = pF(kk);
-          Vk(kk, Fk, FI);
-          const Tk = XT(Xk, Ik);
-          return new jT(Xk, "signInViaPopup", Fk, Tk).executeNotNull()
+        const pA = new Nm(2e3, 1e4);
+        async function EA(mm, Tm, fm) {
+          const hm = GT(mm);
+          Jm(mm, Tm, Tf);
+          const Am = aA(hm, fm);
+          return new YA(hm, "signInViaPopup", Tm, Am).executeNotNull()
         }
-        async function tT(kk, Fk, Ik) {
-          const Tk = (0, Xk.L)(kk);
-          Vk(Tk.auth, Fk, FI);
-          const ik = XT(Tk.auth, Ik);
-          return new jT(Tk.auth, "reauthViaPopup", Fk, ik, Tk).executeNotNull()
+        async function oA(mm, Tm, fm) {
+          const Am = (0, hm.J)(mm);
+          Jm(Am.auth, Tm, Tf);
+          const am = aA(Am.auth, fm);
+          return new YA(Am.auth, "reauthViaPopup", Tm, am, Am).executeNotNull()
         }
-        async function ZT(kk, Fk, Ik) {
-          const Tk = (0, Xk.L)(kk);
-          Vk(Tk.auth, Fk, FI);
-          const ik = XT(Tk.auth, Ik);
-          return new jT(Tk.auth, "linkViaPopup", Fk, ik, Tk).executeNotNull()
+        async function OA(mm, Tm, fm) {
+          const Am = (0, hm.J)(mm);
+          Jm(Am.auth, Tm, Tf);
+          const am = aA(Am.auth, fm);
+          return new YA(Am.auth, "linkViaPopup", Tm, am, Am).executeNotNull()
         }
-        class jT extends aT {
-          constructor(kk, Fk, Ik, Xk, Tk) {
-            super(kk, Fk, Xk, Tk), this.provider = Ik, this.authWindow = null, this.pollId = null, jT.currentPopupAction && jT.currentPopupAction.cancel(), jT.currentPopupAction = this
+        class YA extends RA {
+          constructor(mm, Tm, fm, hm, Am) {
+            super(mm, Tm, hm, Am), this.provider = fm, this.authWindow = null, this.pollId = null, YA.currentPopupAction && YA.currentPopupAction.cancel(), YA.currentPopupAction = this
           }
           async executeNotNull() {
-            const kk = await this.execute();
-            return Sk(kk, this.auth, "internal-error"), kk
+            const mm = await this.execute();
+            return zm(mm, this.auth, "internal-error"), mm
           }
           async onExecution() {
-            Ek(1 === this.filter.length, "Popup operations only handle one event");
-            const kk = zX();
-            this.authWindow = await this.resolver._openPopup(this.auth, this.provider, this.filter[0], kk), this.authWindow.associatedEvent = kk, this.resolver._originValidation(this.auth).catch((kk => {
-              this.reject(kk)
-            })), this.resolver._isIframeWebStorageSupported(this.auth, (kk => {
-              kk || this.reject(Qk(this.auth, "web-storage-unsupported"))
+            km(1 === this.filter.length, "Popup operations only handle one event");
+            const mm = Zh();
+            this.authWindow = await this.resolver._openPopup(this.auth, this.provider, this.filter[0], mm), this.authWindow.associatedEvent = mm, this.resolver._originValidation(this.auth).catch((mm => {
+              this.reject(mm)
+            })), this.resolver._isIframeWebStorageSupported(this.auth, (mm => {
+              mm || this.reject(Qm(this.auth, "web-storage-unsupported"))
             })), this.pollUserCancellation()
           }
           get eventId() {
-            var kk;
-            return (null === (kk = this.authWindow) || void 0 === kk ? void 0 : kk.associatedEvent) || null
+            var mm;
+            return (null === (mm = this.authWindow) || void 0 === mm ? void 0 : mm.associatedEvent) || null
           }
           cancel() {
-            this.reject(Qk(this.auth, "cancelled-popup-request"))
+            this.reject(Qm(this.auth, "cancelled-popup-request"))
           }
           cleanUp() {
-            this.authWindow && this.authWindow.close(), this.pollId && window.clearTimeout(this.pollId), this.authWindow = null, this.pollId = null, jT.currentPopupAction = null
+            this.authWindow && this.authWindow.close(), this.pollId && window.clearTimeout(this.pollId), this.authWindow = null, this.pollId = null, YA.currentPopupAction = null
           }
           pollUserCancellation() {
-            const kk = () => {
-              var Fk, Ik;
-              (null === (Ik = null === (Fk = this.authWindow) || void 0 === Fk ? void 0 : Fk.window) || void 0 === Ik ? void 0 : Ik.closed) ? this.pollId = window.setTimeout((() => {
-                this.pollId = null, this.reject(Qk(this.auth, "popup-closed-by-user"))
-              }), 8e3): this.pollId = window.setTimeout(kk, qT.get())
+            const mm = () => {
+              var Tm, fm;
+              (null === (fm = null === (Tm = this.authWindow) || void 0 === Tm ? void 0 : Tm.window) || void 0 === fm ? void 0 : fm.closed) ? this.pollId = window.setTimeout((() => {
+                this.pollId = null, this.reject(Qm(this.auth, "popup-closed-by-user"))
+              }), 8e3): this.pollId = window.setTimeout(mm, pA.get())
             };
-            kk()
+            mm()
           }
         }
-        jT.currentPopupAction = null;
-        const eT = "pendingRedirect",
-          wT = new Map;
-        class HT extends aT {
-          constructor(kk, Fk) {
-            super(kk, ["signInViaRedirect", "linkViaRedirect", "reauthViaRedirect", "unknown"], Fk, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.eventId = null
+        YA.currentPopupAction = null;
+        const qA = "pendingRedirect",
+          jA = new Map;
+        class VA extends RA {
+          constructor(mm, Tm) {
+            super(mm, ["signInViaRedirect", "linkViaRedirect", "reauthViaRedirect", "unknown"], Tm, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.eventId = null
           }
           async execute() {
-            let kk = wT.get(this.auth._key());
-            if (!kk) {
+            let mm = jA.get(this.auth._key());
+            if (!mm) {
               try {
-                const Fk = await async function(kk, Fk) {
-                  const Ik = KT(Fk),
-                    Xk = PT(kk);
-                  if (!await Xk._isAvailable()) return !1;
-                  const Tk = "true" === await Xk._get(Ik);
-                  return await Xk._remove(Ik), Tk
+                const Tm = await async function(mm, Tm) {
+                  const fm = nA(Tm),
+                    hm = QA(mm);
+                  if (!await hm._isAvailable()) return !1;
+                  const Am = "true" === await hm._get(fm);
+                  return await hm._remove(fm), Am
                 }(this.resolver, this.auth) ? await super.execute() : null;
-                kk = () => Promise.resolve(Fk)
-              } catch (Fk) {
-                kk = () => Promise.reject(Fk)
+                mm = () => Promise.resolve(Tm)
+              } catch (Tm) {
+                mm = () => Promise.reject(Tm)
               }
-              wT.set(this.auth._key(), kk)
+              jA.set(this.auth._key(), mm)
             }
-            return this.bypassAuthState || wT.set(this.auth._key(), (() => Promise.resolve(null))), kk()
+            return this.bypassAuthState || jA.set(this.auth._key(), (() => Promise.resolve(null))), mm()
           }
-          async onAuthEvent(kk) {
-            if ("signInViaRedirect" === kk.type) return super.onAuthEvent(kk);
-            if ("unknown" !== kk.type) {
-              if (kk.eventId) {
-                const Fk = await this.auth._redirectUserForId(kk.eventId);
-                if (Fk) return this.user = Fk, super.onAuthEvent(kk);
+          async onAuthEvent(mm) {
+            if ("signInViaRedirect" === mm.type) return super.onAuthEvent(mm);
+            if ("unknown" !== mm.type) {
+              if (mm.eventId) {
+                const Tm = await this.auth._redirectUserForId(mm.eventId);
+                if (Tm) return this.user = Tm, super.onAuthEvent(mm);
                 this.resolve(null)
               }
             } else this.resolve(null)
@@ -3723,199 +3723,199 @@ export const modules = {
           async onExecution() {}
           cleanUp() {}
         }
-        async function JT(kk, Fk) {
-          return PT(kk)._set(KT(Fk), "true")
+        async function IA(mm, Tm) {
+          return QA(mm)._set(nA(Tm), "true")
         }
 
-        function xT(kk, Fk) {
-          wT.set(kk._key(), Fk)
+        function KA(mm, Tm) {
+          jA.set(mm._key(), Tm)
         }
 
-        function PT(kk) {
-          return yF(kk._redirectPersistence)
+        function QA(mm) {
+          return xT(mm._redirectPersistence)
         }
 
-        function KT(kk) {
-          return qF(eT, kk.config.apiKey, kk.name)
+        function nA(mm) {
+          return iT(qA, mm.config.apiKey, mm.name)
         }
 
-        function QT(kk, Fk, Ik) {
-          return async function(kk, Fk, Ik) {
-            const Xk = pF(kk);
-            Vk(kk, Fk, FI), await Xk._initializationPromise;
-            const Tk = XT(Xk, Ik);
-            return await JT(Tk, Xk), Tk._openRedirect(Xk, Fk, "signInViaRedirect")
-          }(kk, Fk, Ik)
+        function JA(mm, Tm, fm) {
+          return async function(mm, Tm, fm) {
+            const hm = GT(mm);
+            Jm(mm, Tm, Tf), await hm._initializationPromise;
+            const Am = aA(hm, fm);
+            return await IA(Am, hm), Am._openRedirect(hm, Tm, "signInViaRedirect")
+          }(mm, Tm, fm)
         }
 
-        function sT(kk, Fk, Ik) {
-          return async function(kk, Fk, Ik) {
-            const Tk = (0, Xk.L)(kk);
-            Vk(Tk.auth, Fk, FI), await Tk.auth._initializationPromise;
-            const ik = XT(Tk.auth, Ik);
-            await JT(ik, Tk.auth);
-            const yk = await oT(Tk);
-            return ik._openRedirect(Tk.auth, Fk, "reauthViaRedirect", yk)
-          }(kk, Fk, Ik)
+        function cA(mm, Tm, fm) {
+          return async function(mm, Tm, fm) {
+            const Am = (0, hm.J)(mm);
+            Jm(Am.auth, Tm, Tf), await Am.auth._initializationPromise;
+            const am = aA(Am.auth, fm);
+            await IA(am, Am.auth);
+            const xm = await bA(Am);
+            return am._openRedirect(Am.auth, Tm, "reauthViaRedirect", xm)
+          }(mm, Tm, fm)
         }
 
-        function VT(kk, Fk, Ik) {
-          return async function(kk, Fk, Ik) {
-            const Tk = (0, Xk.L)(kk);
-            Vk(Tk.auth, Fk, FI), await Tk.auth._initializationPromise;
-            const ik = XT(Tk.auth, Ik);
-            await PI(!1, Tk, Fk.providerId), await JT(ik, Tk.auth);
-            const yk = await oT(Tk);
-            return ik._openRedirect(Tk.auth, Fk, "linkViaRedirect", yk)
-          }(kk, Fk, Ik)
+        function zA(mm, Tm, fm) {
+          return async function(mm, Tm, fm) {
+            const Am = (0, hm.J)(mm);
+            Jm(Am.auth, Tm, Tf), await Am.auth._initializationPromise;
+            const am = aA(Am.auth, fm);
+            await Kf(!1, Am, Tm.providerId), await IA(am, Am.auth);
+            const xm = await bA(Am);
+            return am._openRedirect(Am.auth, Tm, "linkViaRedirect", xm)
+          }(mm, Tm, fm)
         }
-        async function zT(kk, Fk) {
-          return await pF(kk)._initializationPromise, ST(kk, Fk, !1)
+        async function ZA(mm, Tm) {
+          return await GT(mm)._initializationPromise, kA(mm, Tm, !1)
         }
-        async function ST(kk, Fk) {
-          let Ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const Xk = pF(kk),
-            Tk = XT(Xk, Fk),
-            ik = new HT(Xk, Tk, Ik),
-            yk = await ik.execute();
-          return yk && !Ik && (delete yk.user._redirectEventId, await Xk._persistUserIfCurrent(yk.user), await Xk._setRedirectUser(null, Fk)), yk
+        async function kA(mm, Tm) {
+          let fm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const hm = GT(mm),
+            Am = aA(hm, Tm),
+            am = new VA(hm, Am, fm),
+            xm = await am.execute();
+          return xm && !fm && (delete xm.user._redirectEventId, await hm._persistUserIfCurrent(xm.user), await hm._setRedirectUser(null, Tm)), xm
         }
-        async function oT(kk) {
-          const Fk = zX(`${kk.uid}:::`);
-          return kk._redirectEventId = Fk, await kk.auth._setRedirectUser(kk), await kk.auth._persistUserIfCurrent(kk), Fk
+        async function bA(mm) {
+          const Tm = Zh(`${mm.uid}:::`);
+          return mm._redirectEventId = Tm, await mm.auth._setRedirectUser(mm), await mm.auth._persistUserIfCurrent(mm), Tm
         }
-        class vT {
-          constructor(kk) {
-            this.auth = kk, this.cachedEventUids = new Set, this.consumers = new Set, this.queuedRedirectEvent = null, this.hasHandledPotentialRedirect = !1, this.lastProcessedEventTime = Date.now()
+        class SA {
+          constructor(mm) {
+            this.auth = mm, this.cachedEventUids = new Set, this.consumers = new Set, this.queuedRedirectEvent = null, this.hasHandledPotentialRedirect = !1, this.lastProcessedEventTime = Date.now()
           }
-          registerConsumer(kk) {
-            this.consumers.add(kk), this.queuedRedirectEvent && this.isEventForConsumer(this.queuedRedirectEvent, kk) && (this.sendToConsumer(this.queuedRedirectEvent, kk), this.saveEventToCache(this.queuedRedirectEvent), this.queuedRedirectEvent = null)
+          registerConsumer(mm) {
+            this.consumers.add(mm), this.queuedRedirectEvent && this.isEventForConsumer(this.queuedRedirectEvent, mm) && (this.sendToConsumer(this.queuedRedirectEvent, mm), this.saveEventToCache(this.queuedRedirectEvent), this.queuedRedirectEvent = null)
           }
-          unregisterConsumer(kk) {
-            this.consumers.delete(kk)
+          unregisterConsumer(mm) {
+            this.consumers.delete(mm)
           }
-          onEvent(kk) {
-            if (this.hasEventBeenHandled(kk)) return !1;
-            let Fk = !1;
-            return this.consumers.forEach((Ik => {
-              this.isEventForConsumer(kk, Ik) && (Fk = !0, this.sendToConsumer(kk, Ik), this.saveEventToCache(kk))
-            })), this.hasHandledPotentialRedirect || ! function(kk) {
-              switch (kk.type) {
+          onEvent(mm) {
+            if (this.hasEventBeenHandled(mm)) return !1;
+            let Tm = !1;
+            return this.consumers.forEach((fm => {
+              this.isEventForConsumer(mm, fm) && (Tm = !0, this.sendToConsumer(mm, fm), this.saveEventToCache(mm))
+            })), this.hasHandledPotentialRedirect || ! function(mm) {
+              switch (mm.type) {
                 case "signInViaRedirect":
                 case "linkViaRedirect":
                 case "reauthViaRedirect":
                   return !0;
                 case "unknown":
-                  return OT(kk);
+                  return NA(mm);
                 default:
                   return !1
               }
-            }(kk) || (this.hasHandledPotentialRedirect = !0, Fk || (this.queuedRedirectEvent = kk, Fk = !0)), Fk
+            }(mm) || (this.hasHandledPotentialRedirect = !0, Tm || (this.queuedRedirectEvent = mm, Tm = !0)), Tm
           }
-          sendToConsumer(kk, Fk) {
-            var Ik;
-            if (kk.error && !OT(kk)) {
-              const Xk = (null === (Ik = kk.error.code) || void 0 === Ik ? void 0 : Ik.split("auth/")[1]) || "internal-error";
-              Fk.onError(Qk(this.auth, Xk))
-            } else Fk.onAuthEvent(kk)
+          sendToConsumer(mm, Tm) {
+            var fm;
+            if (mm.error && !NA(mm)) {
+              const hm = (null === (fm = mm.error.code) || void 0 === fm ? void 0 : fm.split("auth/")[1]) || "internal-error";
+              Tm.onError(Qm(this.auth, hm))
+            } else Tm.onAuthEvent(mm)
           }
-          isEventForConsumer(kk, Fk) {
-            const Ik = null === Fk.eventId || !!kk.eventId && kk.eventId === Fk.eventId;
-            return Fk.filter.includes(kk.type) && Ik
+          isEventForConsumer(mm, Tm) {
+            const fm = null === Tm.eventId || !!mm.eventId && mm.eventId === Tm.eventId;
+            return Tm.filter.includes(mm.type) && fm
           }
-          hasEventBeenHandled(kk) {
-            return Date.now() - this.lastProcessedEventTime >= 6e5 && this.cachedEventUids.clear(), this.cachedEventUids.has(ET(kk))
+          hasEventBeenHandled(mm) {
+            return Date.now() - this.lastProcessedEventTime >= 6e5 && this.cachedEventUids.clear(), this.cachedEventUids.has(eA(mm))
           }
-          saveEventToCache(kk) {
-            this.cachedEventUids.add(ET(kk)), this.lastProcessedEventTime = Date.now()
+          saveEventToCache(mm) {
+            this.cachedEventUids.add(eA(mm)), this.lastProcessedEventTime = Date.now()
           }
         }
 
-        function ET(kk) {
-          return [kk.type, kk.eventId, kk.sessionId, kk.tenantId].filter((kk => kk)).join("-")
+        function eA(mm) {
+          return [mm.type, mm.eventId, mm.sessionId, mm.tenantId].filter((mm => mm)).join("-")
         }
 
-        function OT(kk) {
+        function NA(mm) {
           let {
-            type: Fk,
-            error: Ik
-          } = kk;
-          return "unknown" === Fk && "auth/no-auth-event" === (null === Ik || void 0 === Ik ? void 0 : Ik.code)
+            type: Tm,
+            error: fm
+          } = mm;
+          return "unknown" === Tm && "auth/no-auth-event" === (null === fm || void 0 === fm ? void 0 : fm.code)
         }
-        const nT = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/,
-          GT = /^https?/;
-        async function pT(kk) {
-          if (kk.config.emulator) return;
+        const GA = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/,
+          XA = /^https?/;
+        async function PA(mm) {
+          if (mm.config.emulator) return;
           const {
-            authorizedDomains: Fk
-          } = await async function(kk) {
-            return Nk(kk, "GET", "/v1/projects", arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
-          }(kk);
-          for (const Xk of Fk) try {
-            if (uT(Xk)) return
-          } catch (Ik) {}
-          Kk(kk, "unauthorized-domain")
+            authorizedDomains: Tm
+          } = await async function(mm) {
+            return Cm(mm, "GET", "/v1/projects", arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+          }(mm);
+          for (const hm of Tm) try {
+            if (HA(hm)) return
+          } catch (fm) {}
+          Km(mm, "unauthorized-domain")
         }
 
-        function uT(kk) {
-          const Fk = Ok(),
+        function HA(mm) {
+          const Tm = bm(),
             {
-              protocol: Ik,
-              hostname: Xk
-            } = new URL(Fk);
-          if (kk.startsWith("chrome-extension://")) {
-            const Tk = new URL(kk);
-            return "" === Tk.hostname && "" === Xk ? "chrome-extension:" === Ik && kk.replace("chrome-extension://", "") === Fk.replace("chrome-extension://", "") : "chrome-extension:" === Ik && Tk.hostname === Xk
+              protocol: fm,
+              hostname: hm
+            } = new URL(Tm);
+          if (mm.startsWith("chrome-extension://")) {
+            const Am = new URL(mm);
+            return "" === Am.hostname && "" === hm ? "chrome-extension:" === fm && mm.replace("chrome-extension://", "") === Tm.replace("chrome-extension://", "") : "chrome-extension:" === fm && Am.hostname === hm
           }
-          if (!GT.test(Ik)) return !1;
-          if (nT.test(kk)) return Xk === kk;
-          const Tk = kk.replace(/\./g, "\\.");
-          return new RegExp("^(.+\\." + Tk + "|" + Tk + ")$", "i").test(Xk)
+          if (!XA.test(fm)) return !1;
+          if (GA.test(mm)) return hm === mm;
+          const Am = mm.replace(/\./g, "\\.");
+          return new RegExp("^(.+\\." + Am + "|" + Am + ")$", "i").test(hm)
         }
-        const bT = new pk(3e4, 6e4);
+        const yA = new Nm(3e4, 6e4);
 
-        function RT() {
-          const kk = oX().___jsl;
-          if (null === kk || void 0 === kk ? void 0 : kk.H)
-            for (const Fk of Object.keys(kk.H))
-              if (kk.H[Fk].r = kk.H[Fk].r || [], kk.H[Fk].L = kk.H[Fk].L || [], kk.H[Fk].r = [...kk.H[Fk].L], kk.CP)
-                for (let Ik = 0; Ik < kk.CP.length; Ik++) kk.CP[Ik] = null
+        function CA() {
+          const mm = bh().___jsl;
+          if (null === mm || void 0 === mm ? void 0 : mm.H)
+            for (const Tm of Object.keys(mm.H))
+              if (mm.H[Tm].r = mm.H[Tm].r || [], mm.H[Tm].L = mm.H[Tm].L || [], mm.H[Tm].r = [...mm.H[Tm].L], mm.CP)
+                for (let fm = 0; fm < mm.CP.length; fm++) mm.CP[fm] = null
         }
-        let UT = null;
+        let rA = null;
 
-        function CT(kk) {
-          return UT = UT || function(kk) {
-            return new Promise(((Fk, Ik) => {
-              var Xk, Tk, ik;
+        function sA(mm) {
+          return rA = rA || function(mm) {
+            return new Promise(((Tm, fm) => {
+              var hm, Am, am;
 
-              function yk() {
-                RT(), gapi.load("gapi.iframes", {
+              function xm() {
+                CA(), gapi.load("gapi.iframes", {
                   callback: () => {
-                    Fk(gapi.iframes.getContext())
+                    Tm(gapi.iframes.getContext())
                   },
                   ontimeout: () => {
-                    RT(), Ik(Qk(kk, "network-request-failed"))
+                    CA(), fm(Qm(mm, "network-request-failed"))
                   },
-                  timeout: bT.get()
+                  timeout: yA.get()
                 })
               }
-              if (null === (Tk = null === (Xk = oX().gapi) || void 0 === Xk ? void 0 : Xk.iframes) || void 0 === Tk ? void 0 : Tk.Iframe) Fk(gapi.iframes.getContext());
+              if (null === (Am = null === (hm = bh().gapi) || void 0 === hm ? void 0 : hm.iframes) || void 0 === Am ? void 0 : Am.Iframe) Tm(gapi.iframes.getContext());
               else {
-                if (!(null === (ik = oX().gapi) || void 0 === ik ? void 0 : ik.load)) {
-                  const Fk = vF("iframefcb");
-                  return oX()[Fk] = () => {
-                    gapi.load ? yk() : Ik(Qk(kk, "network-request-failed"))
-                  }, oF(`https://apis.google.com/js/api.js?onload=${Fk}`).catch((kk => Ik(kk)))
+                if (!(null === (am = bh().gapi) || void 0 === am ? void 0 : am.load)) {
+                  const Tm = kT("iframefcb");
+                  return bh()[Tm] = () => {
+                    gapi.load ? xm() : fm(Qm(mm, "network-request-failed"))
+                  }, ZT(`https://apis.google.com/js/api.js?onload=${Tm}`).catch((mm => fm(mm)))
                 }
-                yk()
+                xm()
               }
-            })).catch((kk => {
-              throw UT = null, kk
+            })).catch((mm => {
+              throw rA = null, mm
             }))
-          }(kk), UT
+          }(mm), rA
         }
-        const NT = new pk(5e3, 15e3),
-          cT = {
+        const lA = new Nm(5e3, 15e3),
+          MA = {
             style: {
               position: "absolute",
               top: "-100px",
@@ -3925,102 +3925,102 @@ export const modules = {
             "aria-hidden": "true",
             tabindex: "-1"
           },
-          WT = new Map([
+          uA = new Map([
             ["identitytoolkit.googleapis.com", "p"],
             ["staging-identitytoolkit.sandbox.googleapis.com", "s"],
             ["test-identitytoolkit.sandbox.googleapis.com", "t"]
           ]);
 
-        function fT(kk) {
-          const Fk = kk.config;
-          Sk(Fk.authDomain, kk, "auth-domain-config-required");
-          const Ik = Fk.emulator ? uk(Fk, "emulator/auth/iframe") : `https://${kk.config.authDomain}/__/auth/iframe`,
-            ik = {
-              apiKey: Fk.apiKey,
-              appName: kk.name,
-              v: Tk.i
+        function BA(mm) {
+          const Tm = mm.config;
+          zm(Tm.authDomain, mm, "auth-domain-config-required");
+          const fm = Tm.emulator ? Gm(Tm, "emulator/auth/iframe") : `https://${mm.config.authDomain}/__/auth/iframe`,
+            am = {
+              apiKey: Tm.apiKey,
+              appName: mm.name,
+              v: Am.d
             },
-            yk = WT.get(kk.config.apiHost);
-          yk && (ik.eid = yk);
-          const lk = kk._getFrameworks();
-          return lk.length && (ik.fw = lk.join(",")), `${Ik}?${(0,Xk.eb)(ik).slice(1)}`
+            xm = uA.get(mm.config.apiHost);
+          xm && (am.eid = xm);
+          const wm = mm._getFrameworks();
+          return wm.length && (am.fw = wm.join(",")), `${fm}?${(0,hm.ab)(am).slice(1)}`
         }
-        const BT = {
+        const LA = {
           location: "yes",
           resizable: "yes",
           statusbar: "yes",
           toolbar: "no"
         };
-        class dT {
-          constructor(kk) {
-            this.window = kk, this.associatedEvent = null
+        class vA {
+          constructor(mm) {
+            this.window = mm, this.associatedEvent = null
           }
           close() {
             if (this.window) try {
               this.window.close()
-            } catch (kk) {}
+            } catch (mm) {}
           }
         }
 
-        function YT(kk, Fk, Ik) {
-          let Tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 500,
-            ik = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 600;
-          const yk = Math.max((window.screen.availHeight - ik) / 2, 0).toString(),
-            lk = Math.max((window.screen.availWidth - Tk) / 2, 0).toString();
-          let ak = "";
-          const qk = Object.assign(Object.assign({}, BT), {
-              width: Tk.toString(),
-              height: ik.toString(),
-              top: yk,
-              left: lk
+        function tA(mm, Tm, fm) {
+          let Am = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 500,
+            am = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 600;
+          const xm = Math.max((window.screen.availHeight - am) / 2, 0).toString(),
+            wm = Math.max((window.screen.availWidth - Am) / 2, 0).toString();
+          let Dm = "";
+          const im = Object.assign(Object.assign({}, LA), {
+              width: Am.toString(),
+              height: am.toString(),
+              top: xm,
+              left: wm
             }),
-            Lk = (0, Xk.O)().toLowerCase();
-          Ik && (ak = eF(Lk) ? "_blank" : Ik), ZF(Lk) && (Fk = Fk || "http://localhost", qk.scrollbars = "yes");
-          const tk = Object.entries(qk).reduce(((kk, Fk) => {
-            let [Ik, Xk] = Fk;
-            return `${kk}${Ik}=${Xk},`
+            Rm = (0, hm.N)().toLowerCase();
+          fm && (Dm = OT(Rm) ? "_blank" : fm), ET(Rm) && (Tm = Tm || "http://localhost", im.scrollbars = "yes");
+          const pm = Object.entries(im).reduce(((mm, Tm) => {
+            let [fm, hm] = Tm;
+            return `${mm}${fm}=${hm},`
           }), "");
           if (function() {
-              var kk;
-              return PF(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Xk.O)()) && !!(null === (kk = window.navigator) || void 0 === kk ? void 0 : kk.standalone)
-            }(Lk) && "_self" !== ak) return function(kk, Fk) {
-            const Ik = document.createElement("a");
-            Ik.href = kk, Ik.target = Fk;
-            const Xk = document.createEvent("MouseEvent");
-            Xk.initMouseEvent("click", !0, !0, window, 1, 0, 0, 0, 0, !1, !1, !1, !1, 1, null), Ik.dispatchEvent(Xk)
-          }(Fk || "", ak), new dT(null);
-          const Zk = window.open(Fk || "", ak, tk);
-          Sk(Zk, kk, "popup-blocked");
+              var mm;
+              return IT(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)()) && !!(null === (mm = window.navigator) || void 0 === mm ? void 0 : mm.standalone)
+            }(Rm) && "_self" !== Dm) return function(mm, Tm) {
+            const fm = document.createElement("a");
+            fm.href = mm, fm.target = Tm;
+            const hm = document.createEvent("MouseEvent");
+            hm.initMouseEvent("click", !0, !0, window, 1, 0, 0, 0, 0, !1, !1, !1, !1, 1, null), fm.dispatchEvent(hm)
+          }(Tm || "", Dm), new vA(null);
+          const Em = window.open(Tm || "", Dm, pm);
+          zm(Em, mm, "popup-blocked");
           try {
-            Zk.focus()
-          } catch (jk) {}
-          return new dT(Zk)
+            Em.focus()
+          } catch (om) {}
+          return new vA(Em)
         }
-        const AT = "__/auth/handler",
-          gT = "emulator/auth/handler",
-          mT = encodeURIComponent("fac");
-        async function hT(kk, Fk, Ik, ik, yk, lk) {
-            Sk(kk.config.authDomain, kk, "auth-domain-config-required"), Sk(kk.config.apiKey, kk, "invalid-api-key");
-            const ak = {
-              apiKey: kk.config.apiKey,
-              appName: kk.name,
-              authType: Ik,
-              redirectUrl: ik,
-              v: Tk.i,
-              eventId: yk
+        const UA = "__/auth/handler",
+          dA = "emulator/auth/handler",
+          gA = encodeURIComponent("fac");
+        async function WA(mm, Tm, fm, am, xm, wm) {
+            zm(mm.config.authDomain, mm, "auth-domain-config-required"), zm(mm.config.apiKey, mm, "invalid-api-key");
+            const Dm = {
+              apiKey: mm.config.apiKey,
+              appName: mm.name,
+              authType: fm,
+              redirectUrl: am,
+              v: Am.d,
+              eventId: xm
             };
-            if (Fk instanceof FI) {
-              Fk.setDefaultLanguage(kk.languageCode), ak.providerId = Fk.providerId || "", (0, Xk.T)(Fk.getCustomParameters()) || (ak.customParameters = JSON.stringify(Fk.getCustomParameters()));
-              for (const [kk, Fk] of Object.entries(lk || {})) ak[kk] = Fk
+            if (Tm instanceof Tf) {
+              Tm.setDefaultLanguage(mm.languageCode), Dm.providerId = Tm.providerId || "", (0, hm.Q)(Tm.getCustomParameters()) || (Dm.customParameters = JSON.stringify(Tm.getCustomParameters()));
+              for (const [mm, Tm] of Object.entries(wm || {})) Dm[mm] = Tm
             }
-            if (Fk instanceof II) {
-              const kk = Fk.getScopes().filter((kk => "" !== kk));
-              kk.length > 0 && (ak.scopes = kk.join(","))
+            if (Tm instanceof ff) {
+              const mm = Tm.getScopes().filter((mm => "" !== mm));
+              mm.length > 0 && (Dm.scopes = mm.join(","))
             }
-            kk.tenantId && (ak.tid = kk.tenantId);
-            const qk = ak;
-            for (const Xk of Object.keys(qk)) void 0 === qk[Xk] && delete qk[Xk];
-            const Lk = await kk._getAppCheckToken(),
-              tk = Lk ? `#${mT}=${encodeURIComponent(Lk)}` : "";
-            return `${function(kk){let{config:Fk}=kk;if(!Fk.emulator)return`
-            https: //${Fk.authDomain}/${AT}`;return uk(Fk,gT)}(kk)}?${(0,Xk.eb)(qk).slice(1)}${tk}`}const rT="webStorageSupport";const DT=class{constructor(){this.eventManagers={},this.iframes={},this.originValidationPromises={},this._redirectPersistence=sX,this._completeRedirectFn=ST,this._overrideRedirectResult=xT}async _openPopup(kk,Fk,Ik,Xk){var Tk;Ek(null===(Tk=this.eventManagers[kk._key()])||void 0===Tk?void 0:Tk.manager,"_initialize() not called before _openPopup()");return YT(kk,await hT(kk,Fk,Ik,Ok(),Xk),zX())}async _openRedirect(kk,Fk,Ik,Xk){await this._originValidation(kk);return function(kk){oX().location.href=kk}(await hT(kk,Fk,Ik,Ok(),Xk)),new Promise((()=>{}))}_initialize(kk){const Fk=kk._key();if(this.eventManagers[Fk]){const{manager:kk,promise:Ik}=this.eventManagers[Fk];return kk?Promise.resolve(kk):(Ek(Ik,"If manager is not set, promise should be"),Ik)}const Ik=this.initAndGetManager(kk);return this.eventManagers[Fk]={promise:Ik},Ik.catch((()=>{delete this.eventManagers[Fk]})),Ik}async initAndGetManager(kk){const Fk=await async function(kk){const Fk=await CT(kk),Ik=oX().gapi;return Sk(Ik,kk,"internal-error"),Fk.open({where:document.body,url:fT(kk),messageHandlersFilter:Ik.iframes.CROSS_ORIGIN_IFRAMES_FILTER,attributes:cT,dontclear:!0},(Fk=>new Promise((async(Ik,Xk)=>{await Fk.restyle({setHideOnLeave:!1});const Tk=Qk(kk,"network-request-failed"),ik=oX().setTimeout((()=>{Xk(Tk)}),NT.get());function yk(){oX().clearTimeout(ik),Ik(Fk)}Fk.ping(yk).then(yk,(()=>{Xk(Tk)}))}))))}(kk),Ik=new vT(kk);return Fk.register("authEvent",(Fk=>{Sk(null===Fk||void 0===Fk?void 0:Fk.authEvent,kk,"invalid-auth-event");return{status:Ik.onEvent(Fk.authEvent)?"ACK":"ERROR"}}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER),this.eventManagers[kk._key()]={manager:Ik},this.iframes[kk._key()]=Fk,Ik}_isIframeWebStorageSupported(kk,Fk){this.iframes[kk._key()].send(rT,{type:rT},(Ik=>{var Xk;const Tk=null===(Xk=null===Ik||void 0===Ik?void 0:Ik[0])||void 0===Xk?void 0:Xk[rT];void 0!==Tk&&Fk(!!Tk),Kk(kk,"internal-error")}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER)}_originValidation(kk){const Fk=kk._key();return this.originValidationPromises[Fk]||(this.originValidationPromises[Fk]=pT(kk)),this.originValidationPromises[Fk]}get _shouldInitProactively(){return KF()||jF()||PF()}};class MT{constructor(kk){this.factorId=kk}_process(kk,Fk,Ik){switch(Fk.type){case"enroll":return this._finalizeEnroll(kk,Fk.credential,Ik);case"signin":return this._finalizeSignIn(kk,Fk.credential);default:return vk("unexpected MultiFactorSessionType")}}}class ki extends MT{constructor(kk){super("phone"),this.credential=kk}static _fromCredential(kk){return new ki(kk)}_finalizeEnroll(kk,Fk,Ik){return function(kk,Fk){return Nk(kk,"POST","/v2/accounts/mfaEnrollment:finalize",Ck(kk,Fk))}(kk,{idToken:Fk,displayName:Ik,phoneVerificationInfo:this.credential._makeVerificationRequest()})}_finalizeSignIn(kk,Fk){return function(kk,Fk){return Nk(kk,"POST","/v2/accounts/mfaSignIn:finalize",Ck(kk,Fk))}(kk,{mfaPendingCredential:Fk,phoneVerificationInfo:this.credential._makeVerificationRequest()})}}class Fi{constructor(){}static assertion(kk){return ki._fromCredential(kk)}}Fi.FACTOR_ID="phone";class Ii{static assertionForEnrollment(kk,Fk){return Xi._fromSecret(kk,Fk)}static assertionForSignIn(kk,Fk){return Xi._fromEnrollmentId(kk,Fk)}static async generateSecret(kk){const Fk=kk;Sk("undefined"!==typeof Fk.auth,"internal-error");const Ik=await(Xk=Fk.auth,Tk={idToken:Fk.credential,totpEnrollmentInfo:{}},Nk(Xk,"POST","/v2/accounts/mfaEnrollment:start",Ck(Xk,Tk)));var Xk,Tk;return Ti._fromStartTotpMfaEnrollmentResponse(Ik,Fk.auth)}}Ii.FACTOR_ID="totp";class Xi extends MT{constructor(kk,Fk,Ik){super("totp"),this.otp=kk,this.enrollmentId=Fk,this.secret=Ik}static _fromSecret(kk,Fk){return new Xi(Fk,void 0,kk)}static _fromEnrollmentId(kk,Fk){return new Xi(Fk,kk)}async _finalizeEnroll(kk,Fk,Ik){return Sk("undefined"!==typeof this.secret,kk,"argument-error"),function(kk,Fk){return Nk(kk,"POST","/v2/accounts/mfaEnrollment:finalize",Ck(kk,Fk))}(kk,{idToken:Fk,displayName:Ik,totpVerificationInfo:this.secret._makeTotpVerificationInfo(this.otp)})}async _finalizeSignIn(kk,Fk){Sk(void 0!==this.enrollmentId&&void 0!==this.otp,kk,"argument-error");const Ik={verificationCode:this.otp};return function(kk,Fk){return Nk(kk,"POST","/v2/accounts/mfaSignIn:finalize",Ck(kk,Fk))}(kk,{mfaPendingCredential:Fk,mfaEnrollmentId:this.enrollmentId,totpVerificationInfo:Ik})}}class Ti{constructor(kk,Fk,Ik,Xk,Tk,ik,yk){this.sessionInfo=ik,this.auth=yk,this.secretKey=kk,this.hashingAlgorithm=Fk,this.codeLength=Ik,this.codeIntervalSeconds=Xk,this.enrollmentCompletionDeadline=Tk}static _fromStartTotpMfaEnrollmentResponse(kk,Fk){return new Ti(kk.totpSessionInfo.sharedSecretKey,kk.totpSessionInfo.hashingAlgorithm,kk.totpSessionInfo.verificationCodeLength,kk.totpSessionInfo.periodSec,new Date(kk.totpSessionInfo.finalizeEnrollmentTime).toUTCString(),kk.totpSessionInfo.sessionInfo,Fk)}_makeTotpVerificationInfo(kk){return{sessionInfo:this.sessionInfo,verificationCode:kk}}generateQrCodeUrl(kk,Fk){var Ik;let Xk=!1;return(ii(kk)||ii(Fk))&&(Xk=!0),Xk&&(ii(kk)&&(kk=(null===(Ik=this.auth.currentUser)||void 0===Ik?void 0:Ik.email)||"unknownuser"),ii(Fk)&&(Fk=this.auth.name)),`otpauth://totp/${Fk}:${kk}?secret=${this.secretKey}&issuer=${Fk}&algorithm=${this.hashingAlgorithm}&digits=${this.codeLength}`}}function ii(kk){return"undefined"===typeof kk||0===(null===kk||void 0===kk?void 0:kk.length)}var yi="@firebase/auth",li="0.23.2";class ai{constructor(kk){this.auth=kk,this.internalListeners=new Map}getUid(){var kk;return this.assertAuthConfigured(),(null===(kk=this.auth.currentUser)||void 0===kk?void 0:kk.uid)||null}async getToken(kk){if(this.assertAuthConfigured(),await this.auth._initializationPromise,!this.auth.currentUser)return null;return{accessToken:await this.auth.currentUser.getIdToken(kk)}}addAuthTokenListener(kk){if(this.assertAuthConfigured(),this.internalListeners.has(kk))return;const Fk=this.auth.onIdTokenChanged((Fk=>{kk((null===Fk||void 0===Fk?void 0:Fk.stsTokenManager.accessToken)||null)}));this.internalListeners.set(kk,Fk),this.updateProactiveRefresh()}removeAuthTokenListener(kk){this.assertAuthConfigured();const Fk=this.internalListeners.get(kk);Fk&&(this.internalListeners.delete(kk),Fk(),this.updateProactiveRefresh())}assertAuthConfigured(){Sk(this.auth._initializationPromise,"dependent-sdk-initialized-before-auth")}updateProactiveRefresh(){this.internalListeners.size>0?this.auth._startProactiveRefresh():this.auth._stopProactiveRefresh()}}const qi=(0,Xk.J)("authIdTokenMaxAge")||300;let Li=null;const ti=kk=>async Fk=>{const Ik=Fk&&await Fk.getIdTokenResult(),Xk=Ik&&((new Date).getTime()-Date.parse(Ik.issuedAtTime))/1e3;if(Xk&&Xk>qi)return;const Tk=null===Ik||void 0===Ik?void 0:Ik.token;Li!==Tk&&(Li=Tk,await fetch(kk,{method:Tk?"POST":"DELETE",headers:Tk?{Authorization:`Bearer ${Tk}`}:{}}))};function Zi(){let kk=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,Tk.M)();const Fk=(0,Tk.A)(kk,"auth");if(Fk.isInitialized())return Fk.getImmediate();const Ik=bF(kk,{popupRedirectResolver:DT,persistence:[CX,KX,sX]}),ik=(0,Xk.J)("authTokenSyncURL");if(ik){const kk=ti(ik);iX(Ik,kk,(()=>kk(Ik.currentUser))),TX(Ik,(Fk=>kk(Fk)))}const yk=(0,Xk.G)("auth");return yk&&RF(Ik,`http://${yk}`),Ik}var ji;ji="Browser",(0,Tk.C)(new lk.g("auth",((kk,Fk)=>{let{options:Ik}=Fk;const Xk=kk.getProvider("app").getImmediate(),Tk=kk.getProvider("heartbeat"),ik=kk.getProvider("app-check-internal"),{apiKey:yk,authDomain:lk}=Xk.options;Sk(yk&&!yk.includes(":"),"invalid-api-key",{appName:Xk.name});const ak={apiKey:yk,authDomain:lk,clientPlatform:ji,apiHost:"identitytoolkit.googleapis.com",tokenApiHost:"securetoken.googleapis.com",apiScheme:"https",sdkClientVersion:QF(ji)},qk=new GF(Xk,Tk,ik,ak);return function(kk,Fk){const Ik=(null===Fk||void 0===Fk?void 0:Fk.persistence)||[],Xk=(Array.isArray(Ik)?Ik:[Ik]).map(yF);(null===Fk||void 0===Fk?void 0:Fk.errorMap)&&kk._updateErrorMap(Fk.errorMap),kk._initializeWithPersistence(Xk,null===Fk||void 0===Fk?void 0:Fk.popupRedirectResolver)}(qk,Ik),qk}),"PUBLIC").setInstantiationMode("EXPLICIT").setInstanceCreatedCallback(((kk,Fk,Ik)=>{kk.getProvider("auth-internal").initialize()}))),(0,Tk.C)(new lk.g("auth-internal",(kk=>(kk=>new ai(kk))(pF(kk.getProvider("auth").getImmediate()))),"PRIVATE").setInstantiationMode("EXPLICIT")),(0,Tk.W)(yi,li,function(kk){switch(kk){case"Node":return"node";case"ReactNative":return"rn";case"Worker":return"webworker";case"Cordova":return"cordova";default:return}}(ji)),(0,Tk.W)(yi,li,"esm2017")}};Object.freeze(modules);for(const kk in modules)Object.freeze(modules[kk]);
+            mm.tenantId && (Dm.tid = mm.tenantId);
+            const im = Dm;
+            for (const hm of Object.keys(im)) void 0 === im[hm] && delete im[hm];
+            const Rm = await mm._getAppCheckToken(),
+              pm = Rm ? `#${gA}=${encodeURIComponent(Rm)}` : "";
+            return `${function(mm){let{config:Tm}=mm;if(!Tm.emulator)return`
+            https: //${Tm.authDomain}/${UA}`;return Gm(Tm,dA)}(mm)}?${(0,hm.ab)(im).slice(1)}${pm}`}const FA="webStorageSupport";const ma=class{constructor(){this.eventManagers={},this.iframes={},this.originValidationPromises={},this._redirectPersistence=ch,this._completeRedirectFn=kA,this._overrideRedirectResult=KA}async _openPopup(mm,Tm,fm,hm){var Am;km(null===(Am=this.eventManagers[mm._key()])||void 0===Am?void 0:Am.manager,"_initialize() not called before _openPopup()");return tA(mm,await WA(mm,Tm,fm,bm(),hm),Zh())}async _openRedirect(mm,Tm,fm,hm){await this._originValidation(mm);return function(mm){bh().location.href=mm}(await WA(mm,Tm,fm,bm(),hm)),new Promise((()=>{}))}_initialize(mm){const Tm=mm._key();if(this.eventManagers[Tm]){const{manager:mm,promise:fm}=this.eventManagers[Tm];return mm?Promise.resolve(mm):(km(fm,"If manager is not set, promise should be"),fm)}const fm=this.initAndGetManager(mm);return this.eventManagers[Tm]={promise:fm},fm.catch((()=>{delete this.eventManagers[Tm]})),fm}async initAndGetManager(mm){const Tm=await async function(mm){const Tm=await sA(mm),fm=bh().gapi;return zm(fm,mm,"internal-error"),Tm.open({where:document.body,url:BA(mm),messageHandlersFilter:fm.iframes.CROSS_ORIGIN_IFRAMES_FILTER,attributes:MA,dontclear:!0},(Tm=>new Promise((async(fm,hm)=>{await Tm.restyle({setHideOnLeave:!1});const Am=Qm(mm,"network-request-failed"),am=bh().setTimeout((()=>{hm(Am)}),lA.get());function xm(){bh().clearTimeout(am),fm(Tm)}Tm.ping(xm).then(xm,(()=>{hm(Am)}))}))))}(mm),fm=new SA(mm);return Tm.register("authEvent",(Tm=>{zm(null===Tm||void 0===Tm?void 0:Tm.authEvent,mm,"invalid-auth-event");return{status:fm.onEvent(Tm.authEvent)?"ACK":"ERROR"}}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER),this.eventManagers[mm._key()]={manager:fm},this.iframes[mm._key()]=Tm,fm}_isIframeWebStorageSupported(mm,Tm){this.iframes[mm._key()].send(FA,{type:FA},(fm=>{var hm;const Am=null===(hm=null===fm||void 0===fm?void 0:fm[0])||void 0===hm?void 0:hm[FA];void 0!==Am&&Tm(!!Am),Km(mm,"internal-error")}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER)}_originValidation(mm){const Tm=mm._key();return this.originValidationPromises[Tm]||(this.originValidationPromises[Tm]=PA(mm)),this.originValidationPromises[Tm]}get _shouldInitProactively(){return KT()||oT()||IT()}};class Ta{constructor(mm){this.factorId=mm}_process(mm,Tm,fm){switch(Tm.type){case"enroll":return this._finalizeEnroll(mm,Tm.credential,fm);case"signin":return this._finalizeSignIn(mm,Tm.credential);default:return Zm("unexpected MultiFactorSessionType")}}}class fa extends Ta{constructor(mm){super("phone"),this.credential=mm}static _fromCredential(mm){return new fa(mm)}_finalizeEnroll(mm,Tm,fm){return function(mm,Tm){return Cm(mm,"POST","/v2/accounts/mfaEnrollment:finalize",ym(mm,Tm))}(mm,{idToken:Tm,displayName:fm,phoneVerificationInfo:this.credential._makeVerificationRequest()})}_finalizeSignIn(mm,Tm){return function(mm,Tm){return Cm(mm,"POST","/v2/accounts/mfaSignIn:finalize",ym(mm,Tm))}(mm,{mfaPendingCredential:Tm,phoneVerificationInfo:this.credential._makeVerificationRequest()})}}class ha{constructor(){}static assertion(mm){return fa._fromCredential(mm)}}ha.FACTOR_ID="phone";class Aa{static assertionForEnrollment(mm,Tm){return aa._fromSecret(mm,Tm)}static assertionForSignIn(mm,Tm){return aa._fromEnrollmentId(mm,Tm)}static async generateSecret(mm){const Tm=mm;zm("undefined"!==typeof Tm.auth,"internal-error");const fm=await(hm=Tm.auth,Am={idToken:Tm.credential,totpEnrollmentInfo:{}},Cm(hm,"POST","/v2/accounts/mfaEnrollment:start",ym(hm,Am)));var hm,Am;return xa._fromStartTotpMfaEnrollmentResponse(fm,Tm.auth)}}Aa.FACTOR_ID="totp";class aa extends Ta{constructor(mm,Tm,fm){super("totp"),this.otp=mm,this.enrollmentId=Tm,this.secret=fm}static _fromSecret(mm,Tm){return new aa(Tm,void 0,mm)}static _fromEnrollmentId(mm,Tm){return new aa(Tm,mm)}async _finalizeEnroll(mm,Tm,fm){return zm("undefined"!==typeof this.secret,mm,"argument-error"),function(mm,Tm){return Cm(mm,"POST","/v2/accounts/mfaEnrollment:finalize",ym(mm,Tm))}(mm,{idToken:Tm,displayName:fm,totpVerificationInfo:this.secret._makeTotpVerificationInfo(this.otp)})}async _finalizeSignIn(mm,Tm){zm(void 0!==this.enrollmentId&&void 0!==this.otp,mm,"argument-error");const fm={verificationCode:this.otp};return function(mm,Tm){return Cm(mm,"POST","/v2/accounts/mfaSignIn:finalize",ym(mm,Tm))}(mm,{mfaPendingCredential:Tm,mfaEnrollmentId:this.enrollmentId,totpVerificationInfo:fm})}}class xa{constructor(mm,Tm,fm,hm,Am,am,xm){this.sessionInfo=am,this.auth=xm,this.secretKey=mm,this.hashingAlgorithm=Tm,this.codeLength=fm,this.codeIntervalSeconds=hm,this.enrollmentCompletionDeadline=Am}static _fromStartTotpMfaEnrollmentResponse(mm,Tm){return new xa(mm.totpSessionInfo.sharedSecretKey,mm.totpSessionInfo.hashingAlgorithm,mm.totpSessionInfo.verificationCodeLength,mm.totpSessionInfo.periodSec,new Date(mm.totpSessionInfo.finalizeEnrollmentTime).toUTCString(),mm.totpSessionInfo.sessionInfo,Tm)}_makeTotpVerificationInfo(mm){return{sessionInfo:this.sessionInfo,verificationCode:mm}}generateQrCodeUrl(mm,Tm){var fm;let hm=!1;return(wa(mm)||wa(Tm))&&(hm=!0),hm&&(wa(mm)&&(mm=(null===(fm=this.auth.currentUser)||void 0===fm?void 0:fm.email)||"unknownuser"),wa(Tm)&&(Tm=this.auth.name)),`otpauth://totp/${Tm}:${mm}?secret=${this.secretKey}&issuer=${Tm}&algorithm=${this.hashingAlgorithm}&digits=${this.codeLength}`}}function wa(mm){return"undefined"===typeof mm||0===(null===mm||void 0===mm?void 0:mm.length)}var Da="@firebase/auth",ia="0.23.2";class Ra{constructor(mm){this.auth=mm,this.internalListeners=new Map}getUid(){var mm;return this.assertAuthConfigured(),(null===(mm=this.auth.currentUser)||void 0===mm?void 0:mm.uid)||null}async getToken(mm){if(this.assertAuthConfigured(),await this.auth._initializationPromise,!this.auth.currentUser)return null;return{accessToken:await this.auth.currentUser.getIdToken(mm)}}addAuthTokenListener(mm){if(this.assertAuthConfigured(),this.internalListeners.has(mm))return;const Tm=this.auth.onIdTokenChanged((Tm=>{mm((null===Tm||void 0===Tm?void 0:Tm.stsTokenManager.accessToken)||null)}));this.internalListeners.set(mm,Tm),this.updateProactiveRefresh()}removeAuthTokenListener(mm){this.assertAuthConfigured();const Tm=this.internalListeners.get(mm);Tm&&(this.internalListeners.delete(mm),Tm(),this.updateProactiveRefresh())}assertAuthConfigured(){zm(this.auth._initializationPromise,"dependent-sdk-initialized-before-auth")}updateProactiveRefresh(){this.internalListeners.size>0?this.auth._startProactiveRefresh():this.auth._stopProactiveRefresh()}}const pa=(0,hm.I)("authIdTokenMaxAge")||300;let Ea=null;const oa=mm=>async Tm=>{const fm=Tm&&await Tm.getIdTokenResult(),hm=fm&&((new Date).getTime()-Date.parse(fm.issuedAtTime))/1e3;if(hm&&hm>pa)return;const Am=null===fm||void 0===fm?void 0:fm.token;Ea!==Am&&(Ea=Am,await fetch(mm,{method:Am?"POST":"DELETE",headers:Am?{Authorization:`Bearer ${Am}`}:{}}))};function Oa(){let mm=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,Am.H)();const Tm=(0,Am.z)(mm,"auth");if(Tm.isInitialized())return Tm.getImmediate();const fm=PT(mm,{popupRedirectResolver:ma,persistence:[sh,nh,ch]}),am=(0,hm.I)("authTokenSyncURL");if(am){const mm=oa(am);wh(fm,mm,(()=>mm(fm.currentUser))),xh(fm,(Tm=>mm(Tm)))}const xm=(0,hm.G)("auth");return xm&&HT(fm,`http://${xm}`),fm}var Ya;Ya="Browser",(0,Am.A)(new wm.h("auth",((mm,Tm)=>{let{options:fm}=Tm;const hm=mm.getProvider("app").getImmediate(),Am=mm.getProvider("heartbeat"),am=mm.getProvider("app-check-internal"),{apiKey:xm,authDomain:wm}=hm.options;zm(xm&&!xm.includes(":"),"invalid-api-key",{appName:hm.name});const Dm={apiKey:xm,authDomain:wm,clientPlatform:Ya,apiHost:"identitytoolkit.googleapis.com",tokenApiHost:"securetoken.googleapis.com",apiScheme:"https",sdkClientVersion:QT(Ya)},im=new NT(hm,Am,am,Dm);return function(mm,Tm){const fm=(null===Tm||void 0===Tm?void 0:Tm.persistence)||[],hm=(Array.isArray(fm)?fm:[fm]).map(xT);(null===Tm||void 0===Tm?void 0:Tm.errorMap)&&mm._updateErrorMap(Tm.errorMap),mm._initializeWithPersistence(hm,null===Tm||void 0===Tm?void 0:Tm.popupRedirectResolver)}(im,fm),im}),"PUBLIC").setInstantiationMode("EXPLICIT").setInstanceCreatedCallback(((mm,Tm,fm)=>{mm.getProvider("auth-internal").initialize()}))),(0,Am.A)(new wm.h("auth-internal",(mm=>(mm=>new Ra(mm))(GT(mm.getProvider("auth").getImmediate()))),"PRIVATE").setInstantiationMode("EXPLICIT")),(0,Am.N)(Da,ia,function(mm){switch(mm){case"Node":return"node";case"ReactNative":return"rn";case"Worker":return"webworker";case"Cordova":return"cordova";default:return}}(Ya)),(0,Am.N)(Da,ia,"esm2017")}};Object.freeze(modules);for(const mm in modules)Object.freeze(modules[mm]);

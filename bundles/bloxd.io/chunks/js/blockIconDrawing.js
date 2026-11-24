@@ -1,181 +1,181 @@
 export const id = 2;
 export const ids = [2];
 export const modules = {
-  36377: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      drawBlockIcon: () => Jk,
-      drawBlockIconUrl: () => xk,
-      getDrawnBlockIcon: () => Hk
+  36477: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      drawBlockIcon: () => jm,
+      drawBlockIconUrl: () => Vm,
+      getDrawnBlockIcon: () => qm
     });
-    var Xk = Ik(36386);
-    const Tk = {
+    var hm = fm(36481);
+    const Am = {
         boxes: [
           [0, 0, 0, 1, 1, 1]
         ],
         cropFaces: !1
       },
-      ik = {
+      am = {
         boxes: [
           [0, 0, 0, 1, .5, 1]
         ],
         cropFaces: !1
       },
-      yk = {
+      xm = {
         boxes: [
           [0, 0, 0, 1, .5, 1],
           [0, .5, 0, .5, 1, 1]
         ],
         cropFaces: !0
       };
-    const lk = 1e-6;
+    const wm = 1e-6;
 
-    function ak(kk, Fk, Ik, Xk) {
+    function Dm(mm, Tm, fm, hm) {
       let {
-        origin: Tk,
-        across: ik,
-        down: yk,
-        texture: ak,
-        rect: [qk, Lk, tk, Zk],
-        shade: jk
-      } = Xk;
-      const ek = ik.x * yk.y - ik.y * yk.x;
-      if (Math.abs(ek) < 1e-9) return;
-      const wk = [Tk.x, Tk.x + ik.x, Tk.x + yk.x, Tk.x + ik.x + yk.x],
-        Hk = [Tk.y, Tk.y + ik.y, Tk.y + yk.y, Tk.y + ik.y + yk.y],
-        Jk = Math.max(0, Math.floor(Math.min(...wk))),
-        xk = Math.min(Ik - 1, Math.ceil(Math.max(...wk))),
-        Pk = Math.max(0, Math.floor(Math.min(...Hk))),
-        Kk = Math.min(Ik - 1, Math.ceil(Math.max(...Hk)));
-      for (let Qk = Pk; Qk <= Kk; Qk++)
-        for (let Xk = Jk; Xk <= xk; Xk++) {
-          const wk = Xk + .5 - Tk.x,
-            Hk = Qk + .5 - Tk.y,
-            Jk = (wk * yk.y - Hk * yk.x) / ek,
-            xk = (ik.x * Hk - ik.y * wk) / ek;
-          if (Jk < -lk || Jk > 1 + lk || xk < -lk || xk > 1 + lk) continue;
-          const Pk = Qk * Ik + Xk;
-          Fk[Pk] = 1;
-          const Kk = qk + Math.min(Math.max(Jk, 0), 1) * (tk - qk),
-            sk = Lk + Math.min(Math.max(xk, 0), 1) * (Zk - Lk),
-            Vk = Math.min(ak.width - 1, Math.floor(Kk * ak.width)),
-            zk = 4 * (Math.min(ak.height - 1, Math.floor(sk * ak.height)) * ak.width + Vk),
-            Sk = ak.pixels[zk + 3] / 255;
-          if (0 === Sk) continue;
-          const vk = 4 * Pk,
-            Ek = kk[vk + 3] / 255 * (1 - Sk),
-            Ok = Sk + Ek;
-          for (let Fk = 0; Fk < 3; Fk++) kk[vk + Fk] = (ak.pixels[zk + Fk] * jk * Sk + kk[vk + Fk] * Ek) / Ok;
-          kk[vk + 3] = 255 * Ok
+        origin: Am,
+        across: am,
+        down: xm,
+        texture: Dm,
+        rect: [im, Rm, pm, Em],
+        shade: om
+      } = hm;
+      const Om = am.x * xm.y - am.y * xm.x;
+      if (Math.abs(Om) < 1e-9) return;
+      const Ym = [Am.x, Am.x + am.x, Am.x + xm.x, Am.x + am.x + xm.x],
+        qm = [Am.y, Am.y + am.y, Am.y + xm.y, Am.y + am.y + xm.y],
+        jm = Math.max(0, Math.floor(Math.min(...Ym))),
+        Vm = Math.min(fm - 1, Math.ceil(Math.max(...Ym))),
+        Im = Math.max(0, Math.floor(Math.min(...qm))),
+        Km = Math.min(fm - 1, Math.ceil(Math.max(...qm)));
+      for (let Qm = Im; Qm <= Km; Qm++)
+        for (let hm = jm; hm <= Vm; hm++) {
+          const Ym = hm + .5 - Am.x,
+            qm = Qm + .5 - Am.y,
+            jm = (Ym * xm.y - qm * xm.x) / Om,
+            Vm = (am.x * qm - am.y * Ym) / Om;
+          if (jm < -wm || jm > 1 + wm || Vm < -wm || Vm > 1 + wm) continue;
+          const Im = Qm * fm + hm;
+          Tm[Im] = 1;
+          const Km = im + Math.min(Math.max(jm, 0), 1) * (pm - im),
+            nm = Rm + Math.min(Math.max(Vm, 0), 1) * (Em - Rm),
+            Jm = Math.min(Dm.width - 1, Math.floor(Km * Dm.width)),
+            cm = 4 * (Math.min(Dm.height - 1, Math.floor(nm * Dm.height)) * Dm.width + Jm),
+            zm = Dm.pixels[cm + 3] / 255;
+          if (0 === zm) continue;
+          const Zm = 4 * Im,
+            km = mm[Zm + 3] / 255 * (1 - zm),
+            bm = zm + km;
+          for (let Tm = 0; Tm < 3; Tm++) mm[Zm + Tm] = (Dm.pixels[cm + Tm] * om * zm + mm[Zm + Tm] * km) / bm;
+          mm[Zm + 3] = 255 * bm
         }
     }
-    var qk = Ik(36388);
-    const Lk = new Map,
-      tk = new Map,
-      Zk = new Map,
-      jk = new Map;
+    var im = fm(36484);
+    const Rm = new Map,
+      pm = new Map,
+      Em = new Map,
+      om = new Map;
 
-    function ek(kk, Fk, Ik) {
-      return `${Fk}|${Ik}|${kk}`
+    function Om(mm, Tm, fm) {
+      return `${Tm}|${fm}|${mm}`
     }
 
-    function wk(kk, Fk, Ik) {
-      let Xk = kk.get(Fk);
-      return void 0 === Xk && (Xk = Ik().catch((Ik => {
-        throw kk.delete(Fk), Ik
-      })), kk.set(Fk, Xk)), Xk
+    function Ym(mm, Tm, fm) {
+      let hm = mm.get(Tm);
+      return void 0 === hm && (hm = fm().catch((fm => {
+        throw mm.delete(Tm), fm
+      })), mm.set(Tm, hm)), hm
     }
 
-    function Hk(kk, Fk) {
-      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return tk.get(ek(kk, Fk, Ik))
+    function qm(mm, Tm) {
+      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return pm.get(Om(mm, Tm, fm))
     }
 
-    function Jk(kk, Fk, Ik, Xk) {
-      const Tk = ek(kk, Fk, Ik);
-      return wk(Lk, Tk, (async () => {
-        const ik = await Pk(Xk(kk), Fk, Ik);
-        return tk.set(Tk, ik), ik
+    function jm(mm, Tm, fm, hm) {
+      const Am = Om(mm, Tm, fm);
+      return Ym(Rm, Am, (async () => {
+        const am = await Im(hm(mm), Tm, fm);
+        return pm.set(Am, am), am
       }))
     }
 
-    function xk(kk, Fk, Ik, Xk) {
-      return wk(Zk, ek(kk, Fk, Ik), (async () => {
-        var Tk;
-        const ik = Xk(kk);
-        return null !== (Tk = await (0, qk.d)(ik, Fk, Ik)) && void 0 !== Tk ? Tk : (await Pk(ik, Fk, Ik)).toDataURL()
+    function Vm(mm, Tm, fm, hm) {
+      return Ym(Em, Om(mm, Tm, fm), (async () => {
+        var Am;
+        const am = hm(mm);
+        return null !== (Am = await (0, im.c)(am, Tm, fm)) && void 0 !== Am ? Am : (await Im(am, Tm, fm)).toDataURL()
       }))
     }
-    async function Pk(kk, Fk, Ik) {
+    async function Im(mm, Tm, fm) {
       let {
-        top: lk,
-        left: qk,
-        right: Lk,
-        itemType: tk
-      } = kk;
-      const [Zk, jk, ek] = await Promise.all([Kk(lk), Kk(qk), Kk(Lk)]), wk = function(kk, Fk, Ik, Tk) {
-        const ik = (0, Xk.i)(Ik, Tk),
-          yk = ik * Xk.c.across,
-          lk = ik * Xk.c.down,
-          qk = ik * Xk.c.up,
-          Lk = Math.max(...Fk.boxes.map((kk => kk[4]))),
-          tk = Ik / 2,
-          Zk = lk + (Ik - lk - lk - Lk * qk) / 2,
-          jk = (kk, Fk, Ik) => ({
-            x: tk + (kk - Ik) * yk,
-            y: Zk - lk + (kk + Ik) * lk + (Lk - Fk) * qk
+        top: wm,
+        left: im,
+        right: Rm,
+        itemType: pm
+      } = mm;
+      const [Em, om, Om] = await Promise.all([Km(wm), Km(im), Km(Rm)]), Ym = function(mm, Tm, fm, Am) {
+        const am = (0, hm.f)(fm, Am),
+          xm = am * hm.c.across,
+          wm = am * hm.c.down,
+          im = am * hm.c.up,
+          Rm = Math.max(...Tm.boxes.map((mm => mm[4]))),
+          pm = fm / 2,
+          Em = wm + (fm - wm - wm - Rm * im) / 2,
+          om = (mm, Tm, fm) => ({
+            x: pm + (mm - fm) * xm,
+            y: Em - wm + (mm + fm) * wm + (Rm - Tm) * im
           }),
-          ek = (kk, Ik, Xk, Tk, ik, yk) => ({
-            origin: kk,
+          Om = (mm, fm, hm, Am, am, xm) => ({
+            origin: mm,
             across: {
-              x: Ik.x - kk.x,
-              y: Ik.y - kk.y
+              x: fm.x - mm.x,
+              y: fm.y - mm.y
             },
             down: {
-              x: Xk.x - kk.x,
-              y: Xk.y - kk.y
+              x: hm.x - mm.x,
+              y: hm.y - mm.y
             },
-            texture: Tk,
-            rect: Fk.cropFaces ? ik : [0, 0, 1, 1],
-            shade: yk
+            texture: Am,
+            rect: Tm.cropFaces ? am : [0, 0, 1, 1],
+            shade: xm
           }),
-          wk = new Uint8ClampedArray(Ik * Ik * 4),
-          Hk = new Uint8Array(Ik * Ik),
-          Jk = Xk.g;
-        for (const [Xk, xk, Pk, Kk, Qk, sk] of Fk.boxes) {
-          const Fk = ek(jk(Kk, Qk, sk), jk(Kk, Qk, Pk), jk(Kk, xk, sk), kk.right, [1 - sk, 1 - Qk, 1 - Pk, 1 - xk], Jk.right),
-            Tk = ek(jk(Xk, Qk, sk), jk(Kk, Qk, sk), jk(Xk, xk, sk), kk.left, [Xk, 1 - Qk, Kk, 1 - xk], Jk.left),
-            ik = ek(jk(Xk, Qk, Pk), jk(Kk, Qk, Pk), jk(Xk, Qk, sk), kk.top, [Xk, Pk, Kk, sk], Jk.top);
-          for (const kk of [Fk, Tk, ik]) ak(wk, Hk, Ik, kk)
+          Ym = new Uint8ClampedArray(fm * fm * 4),
+          qm = new Uint8Array(fm * fm),
+          jm = hm.d;
+        for (const [hm, Vm, Im, Km, Qm, nm] of Tm.boxes) {
+          const Tm = Om(om(Km, Qm, nm), om(Km, Qm, Im), om(Km, Vm, nm), mm.right, [1 - nm, 1 - Qm, 1 - Im, 1 - Vm], jm.right),
+            Am = Om(om(hm, Qm, nm), om(Km, Qm, nm), om(hm, Vm, nm), mm.left, [hm, 1 - Qm, Km, 1 - Vm], jm.left),
+            am = Om(om(hm, Qm, Im), om(Km, Qm, Im), om(hm, Qm, nm), mm.top, [hm, Im, Km, nm], jm.top);
+          for (const mm of [Tm, Am, am]) Dm(Ym, qm, fm, mm)
         }
-        return (0, Xk.k)(wk, Ik, Tk, (kk => 1 === Hk[kk])), wk
+        return (0, hm.g)(Ym, fm, Am, (mm => 1 === qm[mm])), Ym
       }({
-        top: Zk,
-        left: jk,
-        right: ek
-      }, function(kk) {
-        return "SlabBlock" === kk ? ik : "StairsBlock" === kk ? yk : Tk
-      }(tk), Fk, Ik), Hk = document.createElement("canvas");
-      Hk.width = Fk, Hk.height = Fk;
-      const Jk = Hk.getContext("2d");
-      if (!Jk) throw new Error("Failed to get 2D context");
-      return Jk.putImageData(new ImageData(wk, Fk, Fk), 0, 0), Hk
+        top: Em,
+        left: om,
+        right: Om
+      }, function(mm) {
+        return "SlabBlock" === mm ? am : "StairsBlock" === mm ? xm : Am
+      }(pm), Tm, fm), qm = document.createElement("canvas");
+      qm.width = Tm, qm.height = Tm;
+      const jm = qm.getContext("2d");
+      if (!jm) throw new Error("Failed to get 2D context");
+      return jm.putImageData(new ImageData(Ym, Tm, Tm), 0, 0), qm
     }
 
-    function Kk(kk) {
-      return wk(jk, kk, (async () => {
-        const Fk = await (0, qk.i)(kk),
-          Ik = document.createElement("canvas");
-        Ik.width = Fk.width, Ik.height = Fk.height;
-        const Xk = Ik.getContext("2d");
-        if (!Xk) throw new Error("Failed to get 2D context");
-        return Xk.drawImage(Fk, 0, 0), {
-          width: Fk.width,
-          height: Fk.height,
-          pixels: Xk.getImageData(0, 0, Fk.width, Fk.height).data
+    function Km(mm) {
+      return Ym(om, mm, (async () => {
+        const Tm = await (0, im.i)(mm),
+          fm = document.createElement("canvas");
+        fm.width = Tm.width, fm.height = Tm.height;
+        const hm = fm.getContext("2d");
+        if (!hm) throw new Error("Failed to get 2D context");
+        return hm.drawImage(Tm, 0, 0), {
+          width: Tm.width,
+          height: Tm.height,
+          pixels: hm.getImageData(0, 0, Tm.width, Tm.height).data
         }
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

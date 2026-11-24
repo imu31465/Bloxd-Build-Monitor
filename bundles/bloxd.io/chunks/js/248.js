@@ -1,25 +1,25 @@
 export const id = 248;
 export const ids = [248];
 export const modules = {
-  39460: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      default: () => kX
+  39594: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      default: () => fh
     });
-    const Xk = [0, 90, 180, 270],
-      Tk = "plotsblueprint";
-    var ik = Ik(58),
-      yk = Ik(36600),
-      lk = Ik(25),
-      ak = Ik(1580),
-      qk = Ik(1665),
-      Lk = Ik(34);
-    const tk = [
+    const hm = [0, 90, 180, 270],
+      Am = "plotsblueprint";
+    var am = fm(59),
+      xm = fm(36686),
+      wm = fm(23),
+      Dm = fm(1635),
+      im = fm(1713),
+      Rm = fm(31);
+    const pm = [
         ["farm_hut", "farm_house", "farm_barn"],
         ["rusticHome_tent", "rusticHome_cabin", "rusticHome_house"],
         ["market_stand", "market_stall", "market_shop"],
         ["castle_wall", "castle_gate", "castle_tower"]
       ],
-      Zk = {
+      Em = {
         farm_hut: {
           displayName: {
             translationKey: "plotsGame:blueprintFarmHut"
@@ -93,18 +93,18 @@ export const modules = {
           tier: "large"
         }
       },
-      jk = ["small", "medium", "large"].flatMap((kk => tk.flat().filter((Fk => Zk[Fk].tier === kk))));
+      om = ["small", "medium", "large"].flatMap((mm => pm.flat().filter((Tm => Em[Tm].tier === mm))));
 
-    function ek(kk) {
-      return Zk[kk]
+    function Om(mm) {
+      return Em[mm]
     }
-    const wk = new Map(tk.flatMap((kk => kk.slice(1).map(((Fk, Ik) => [Fk, kk[Ik]])))));
+    const Ym = new Map(pm.flatMap((mm => mm.slice(1).map(((Tm, fm) => [Tm, mm[fm]])))));
 
-    function Hk(kk) {
-      var Fk;
-      return null !== (Fk = wk.get(kk)) && void 0 !== Fk ? Fk : null
+    function qm(mm) {
+      var Tm;
+      return null !== (Tm = Ym.get(mm)) && void 0 !== Tm ? Tm : null
     }
-    const Jk = {
+    const jm = {
       farm_hut: "plotsGame:journalNoteFarmHut",
       rusticHome_tent: "plotsGame:journalNoteRusticHomeTent",
       castle_tower: "plotsGame:journalNoteCastleTower",
@@ -112,180 +112,180 @@ export const modules = {
       farm_barn: "plotsGame:journalNoteFarmBarn"
     };
 
-    function xk(kk, Fk) {
-      const Ik = new Set(kk),
-        Xk = function(kk) {
-          const Fk = new Set(kk);
-          return new Set(jk.filter((kk => {
-            const Ik = Hk(kk);
-            return null === Ik || Fk.has(Ik)
+    function Vm(mm, Tm) {
+      const fm = new Set(mm),
+        hm = function(mm) {
+          const Tm = new Set(mm);
+          return new Set(om.filter((mm => {
+            const fm = qm(mm);
+            return null === fm || Tm.has(fm)
           })))
-        }(Ik);
-      return jk.map((kk => {
-        const Tk = kk === Fk;
-        return Ik.has(kk) ? {
-          id: kk,
-          active: Tk,
+        }(fm);
+      return om.map((mm => {
+        const Am = mm === Tm;
+        return fm.has(mm) ? {
+          id: mm,
+          active: Am,
           state: "completed",
           unlockedBy: null
-        } : Xk.has(kk) ? {
-          id: kk,
-          active: Tk,
+        } : hm.has(mm) ? {
+          id: mm,
+          active: Am,
           state: "open",
           unlockedBy: null
         } : {
-          id: kk,
-          active: Tk,
+          id: mm,
+          active: Am,
           state: "locked",
-          unlockedBy: Hk(kk)
+          unlockedBy: qm(mm)
         }
       }))
     }
-    const Pk = "plotsJournalChanged";
-    class Kk {
-      constructor(kk, Fk) {
-        this.api = kk, this.placement = Fk, this.pages = null, this.openRequested = !1, this.reported = new Set, this.onOpened = () => {
-          this.placement.stop(), this.Mj("journal_opened")
-        }, this.build = kk => {
-          this.Mj("placement_started"), this.placement.start(kk), (0, yk.e)()
+    const Im = "plotsJournalChanged";
+    class Km {
+      constructor(mm, Tm) {
+        this.api = mm, this.placement = Tm, this.pages = null, this.openRequested = !1, this.reported = new Set, this.onOpened = () => {
+          this.placement.stop(), this.IO("journal_opened")
+        }, this.build = mm => {
+          this.IO("placement_started"), this.placement.start(mm), (0, xm.h)()
         }, this.putAway = () => {
-          this.api.sendCommand(`${Tk} cancel`)
+          this.api.sendCommand(`${Am} cancel`)
         }
       }
       getPages() {
         return this.pages
       }
-      Pe(kk) {
-        let [, Fk, Ik] = kk;
-        this.pages = xk(Fk, Ik), Lk.g.GL(Pk, this.pages, !0)
+      rO(mm) {
+        let [, Tm, fm] = mm;
+        this.pages = Vm(Tm, fm), Rm.j.gp(Im, this.pages, !0)
       }
       openFromServer() {
-        this.openRequested = !0, this.Dt()
+        this.openRequested = !0, this.DE()
       }
-      Dt() {
-        this.openRequested && !lk.d.get("loadingOverlayVisible") && (this.openRequested = !1, null === this.pages || (0, ak.p)() || (0, qk.isTypingInInput)() || null !== this.placement.getView() || (0, yk.p)())
+      DE() {
+        this.openRequested && !wm.c.get("loadingOverlayVisible") && (this.openRequested = !1, null === this.pages || (0, Dm.n)() || (0, im.isTypingInInput)() || null !== this.placement.getView() || (0, xm.s)())
       }
-      Mj(kk) {
-        this.reported.has(kk) || (this.reported.add(kk), this.api.sendCommand(`${Tk} report ${kk}`))
+      IO(mm) {
+        this.reported.has(mm) || (this.reported.add(mm), this.api.sendCommand(`${Am} report ${mm}`))
       }
     }
-    var Qk = Ik(1055),
-      sk = Ik.n(Qk),
-      Vk = Ik(1066),
-      zk = Ik(1406),
-      Sk = Ik(4516),
-      vk = Ik(3352),
-      Ek = Ik(1402),
-      Ok = Ik(1109),
-      nk = Ik(1179),
-      Gk = Ik(9183);
-    const pk = [0, 90, 180, 270],
-      uk = /^(meta\|rot\d)\|([lrud]+)$/,
-      bk = "nesw",
-      Rk = /^meta\|([nesw]*)\|?(Stacked)?$/,
-      Uk = function(kk) {
-        const Fk = new WeakMap;
-        return (Ik, Xk) => {
-          let Tk = Fk.get(Ik);
-          return void 0 === Tk && (Tk = kk(Ik, Xk), Fk.set(Ik, Tk)), Tk
+    var Qm = fm(1080),
+      nm = fm.n(Qm),
+      Jm = fm(1089),
+      cm = fm(1454),
+      zm = fm(4471),
+      Zm = fm(3415),
+      km = fm(1449),
+      bm = fm(1154),
+      Sm = fm(1208),
+      em = fm(9141);
+    const Nm = [0, 90, 180, 270],
+      Gm = /^(meta\|rot\d)\|([lrud]+)$/,
+      Xm = "nesw",
+      Pm = /^meta\|([nesw]*)\|?(Stacked)?$/,
+      Hm = function(mm) {
+        const Tm = new WeakMap;
+        return (fm, hm) => {
+          let Am = Tm.get(fm);
+          return void 0 === Am && (Am = mm(fm, hm), Tm.set(fm, Am)), Am
         }
-      }((kk => new Ck(kk)));
-    class Ck {
-      constructor(kk) {
-        this.blockMetadata = kk, this.blockIdMappings = new Map, this.maxBlockId = void 0;
-        const Fk = new Set(Object.keys(kk).map((Fk => kk[Fk].id)));
-        Fk.add(0), this.maxBlockId = Math.max(...Fk)
+      }((mm => new ym(mm)));
+    class ym {
+      constructor(mm) {
+        this.blockMetadata = mm, this.blockIdMappings = new Map, this.maxBlockId = void 0;
+        const Tm = new Set(Object.keys(mm).map((Tm => mm[Tm].id)));
+        Tm.add(0), this.maxBlockId = Math.max(...Tm)
       }
       static
-      for (kk) {
-        return Uk(kk)
+      for (mm) {
+        return Hm(mm)
       }
-      getBlockIdMapping(kk, Fk) {
-        const Ik = this.getBlockIdMappingKey(kk, Fk);
-        let Xk = this.blockIdMappings.get(Ik);
-        return void 0 === Xk && pk.includes(kk) && (Xk = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, kk, Fk), this.blockIdMappings.set(Ik, Xk)), Xk
+      getBlockIdMapping(mm, Tm) {
+        const fm = this.getBlockIdMappingKey(mm, Tm);
+        let hm = this.blockIdMappings.get(fm);
+        return void 0 === hm && Nm.includes(mm) && (hm = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, mm, Tm), this.blockIdMappings.set(fm, hm)), hm
       }
-      turnBlockId(kk, Fk, Ik) {
-        return this.mapBlockId(this.blockMetadata[kk], Fk, this.getRotationMapping(Fk, Ik), Ik)
+      turnBlockId(mm, Tm, fm) {
+        return this.mapBlockId(this.blockMetadata[mm], Tm, this.getRotationMapping(Tm, fm), fm)
       }
-      getBlockIdMappingKey(kk, Fk) {
-        return `r${kk}|m${Number(Fk)}`
+      getBlockIdMappingKey(mm, Tm) {
+        return `r${mm}|m${Number(Tm)}`
       }
-      createBlockIdMapping(kk, Fk, Ik, Xk) {
-        const Tk = new Uint16Array(Fk + 1),
-          ik = this.getRotationMapping(Ik, Xk);
-        for (const yk in kk) {
-          const Fk = kk[yk];
-          Tk[Fk.id] = this.mapBlockId(Fk, Ik, ik, Xk)
+      createBlockIdMapping(mm, Tm, fm, hm) {
+        const Am = new Uint16Array(Tm + 1),
+          am = this.getRotationMapping(fm, hm);
+        for (const xm in mm) {
+          const Tm = mm[xm];
+          Am[Tm.id] = this.mapBlockId(Tm, fm, am, hm)
         }
-        return Tk
+        return Am
       }
-      getRotationMapping(kk, Fk) {
-        const Ik = Math.round(kk / 90),
-          Xk = new Uint8Array(4);
-        for (let Tk = 0; Tk < 4; Tk++) Xk[Tk] = (4 + Tk - Ik) % 4;
-        if (Fk) {
-          let kk = Xk[0];
-          Xk[0] = Xk[1], Xk[1] = kk, kk = Xk[2], Xk[2] = Xk[3], Xk[3] = kk
+      getRotationMapping(mm, Tm) {
+        const fm = Math.round(mm / 90),
+          hm = new Uint8Array(4);
+        for (let Am = 0; Am < 4; Am++) hm[Am] = (4 + Am - fm) % 4;
+        if (Tm) {
+          let mm = hm[0];
+          hm[0] = hm[1], hm[1] = mm, mm = hm[2], hm[2] = hm[3], hm[3] = mm
         }
-        return Xk
+        return hm
       }
-      mapBlockId(kk, Fk, Ik, Xk) {
-        var Tk;
+      mapBlockId(mm, Tm, fm, hm) {
+        var Am;
         const {
-          blockMetadata: ik
-        } = this, yk = Math.round(Fk / 90), {
-          id: lk,
-          meta: ak
-        } = kk, {
-          rot: qk,
-          rootName: Lk,
-          metaStr: tk
-        } = ak;
-        let Zk;
-        const [, jk, ek] = null !== (Tk = Rk.exec(tk)) && void 0 !== Tk ? Tk : [];
-        if (void 0 !== jk) {
-          var wk, Hk;
-          Zk = null !== (wk = null === (Hk = ik[`${Lk}|meta|${[bk.split("").filter(((kk,Fk)=>jk.split("").some((kk=>{const Ik=bk.indexOf(kk);return((Xk?3-Ik:Ik)+yk)%4===Fk})))).join(""),ek].filter(Boolean).join("|")}`]) || void 0 === Hk ? void 0 : Hk.id) && void 0 !== wk ? wk : lk
-        } else if (null === qk) Zk = lk;
+          blockMetadata: am
+        } = this, xm = Math.round(Tm / 90), {
+          id: wm,
+          meta: Dm
+        } = mm, {
+          rot: im,
+          rootName: Rm,
+          metaStr: pm
+        } = Dm;
+        let Em;
+        const [, om, Om] = null !== (Am = Pm.exec(pm)) && void 0 !== Am ? Am : [];
+        if (void 0 !== om) {
+          var Ym, qm;
+          Em = null !== (Ym = null === (qm = am[`${Rm}|meta|${[Xm.split("").filter(((mm,Tm)=>om.split("").some((mm=>{const fm=Xm.indexOf(mm);return((hm?3-fm:fm)+xm)%4===Tm})))).join(""),Om].filter(Boolean).join("|")}`]) || void 0 === qm ? void 0 : qm.id) && void 0 !== Ym ? Ym : wm
+        } else if (null === im) Em = wm;
         else {
-          var Jk, xk;
-          const kk = Ik[qk - 1] + 1;
-          let Fk = tk.replace(`rot${qk}`, `rot${kk}`);
-          Xk && ak.stairsCorner && (Fk = Fk.replace(/(Left|Right)$/, (kk => "Left" === kk ? "Right" : "Left"))), Xk && "Chest" === Lk && (Fk = Fk.replace(/\|(left|right)$/, ((kk, Fk) => "left" === Fk ? "|right" : "|left")));
-          const Tk = uk.exec(Fk);
-          if (Xk && null !== Tk) {
-            const kk = "lrud".split("").filter((kk => Tk[2].includes("l" === kk ? "r" : "r" === kk ? "l" : kk)));
-            Fk = `${Tk[1]}|${kk.join("")}`
+          var jm, Vm;
+          const mm = fm[im - 1] + 1;
+          let Tm = pm.replace(`rot${im}`, `rot${mm}`);
+          hm && Dm.stairsCorner && (Tm = Tm.replace(/(Left|Right)$/, (mm => "Left" === mm ? "Right" : "Left"))), hm && "Chest" === Rm && (Tm = Tm.replace(/\|(left|right)$/, ((mm, Tm) => "left" === Tm ? "|right" : "|left")));
+          const Am = Gm.exec(Tm);
+          if (hm && null !== Am) {
+            const mm = "lrud".split("").filter((mm => Am[2].includes("l" === mm ? "r" : "r" === mm ? "l" : mm)));
+            Tm = `${Am[1]}|${mm.join("")}`
           }
-          const yk = `${Lk}|${Fk}`;
-          if (Zk = null !== (Jk = null === (xk = ik[yk]) || void 0 === xk ? void 0 : xk.id) && void 0 !== Jk ? Jk : null, null === Zk) {
-            const kk = ik[Lk];
-            Zk = kk.rootMetaDesc === yk ? kk.id : lk
+          const xm = `${Rm}|${Tm}`;
+          if (Em = null !== (jm = null === (Vm = am[xm]) || void 0 === Vm ? void 0 : Vm.id) && void 0 !== jm ? jm : null, null === Em) {
+            const mm = am[Rm];
+            Em = mm.rootMetaDesc === xm ? mm.id : wm
           }
         }
-        return Zk
+        return Em
       }
     }
 
-    function Nk(kk, Fk, Ik) {
+    function Cm(mm, Tm, fm) {
       let {
-        xRotationMappedOrigin: Xk,
-        shouldSwapXZ: Tk
-      } = Ik;
-      const ik = Tk ? Fk : kk;
-      return null === Xk ? ik : Xk - ik
+        xRotationMappedOrigin: hm,
+        shouldSwapXZ: Am
+      } = fm;
+      const am = Am ? Tm : mm;
+      return null === hm ? am : hm - am
     }
 
-    function ck(kk, Fk, Ik) {
+    function rm(mm, Tm, fm) {
       let {
-        zRotationMappedOrigin: Xk,
-        shouldSwapXZ: Tk
-      } = Ik;
-      const ik = Tk ? kk : Fk;
-      return null === Xk ? ik : Xk - ik
+        zRotationMappedOrigin: hm,
+        shouldSwapXZ: Am
+      } = fm;
+      const am = Am ? mm : Tm;
+      return null === hm ? am : hm - am
     }
-    const Wk = {
+    const sm = {
         farm_hut: {
           size: [7, 7, 7],
           palette: ["Aspen Wood Planks", "Messy Stone", "Barkless Aspen Log", "Red Planks", "Glass", "Barkless Pine Log", "Maple Wood Planks", "Smooth Stone"],
@@ -347,493 +347,493 @@ export const modules = {
           layers: ["aaaaaaaaa accccccca accccccca accccccca accccccca accccccca accccccca accccccca aaaaaaaaa", "bbbb.bbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbb.bbba b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b abbbbbbba", "bbbbabbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbbbbbb b.......b b.......b b.......b b...d...b b.......b b.......b b.......b bbbbbbbbb", "ab.bbb.ba b.......b ......... b.......b b...d...b b.......b ......... b.......b ab.bbb.ba", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....a.... ......... ......... ......... ........."]
         }
       },
-      fk = new Map;
+      lm = new Map;
 
-    function Bk(kk, Fk) {
-      const Ik = `${kk}|${Fk}`;
-      let Xk = fk.get(Ik);
-      if (void 0 === Xk) {
+    function Mm(mm, Tm) {
+      const fm = `${mm}|${Tm}`;
+      let hm = lm.get(fm);
+      if (void 0 === hm) {
         const {
-          size: Tk,
-          palette: ik,
-          layers: yk
-        } = Wk[kk], lk = 90 === Fk || 270 === Fk, [ak, qk] = lk ? [Tk[2], Tk[0]] : [Tk[0], Tk[2]], Lk = function(kk, Fk, Ik) {
-          let Xk = null,
-            Tk = null,
-            ik = !1;
-          switch (kk) {
+          size: Am,
+          palette: am,
+          layers: xm
+        } = sm[mm], wm = 90 === Tm || 270 === Tm, [Dm, im] = wm ? [Am[2], Am[0]] : [Am[0], Am[2]], Rm = function(mm, Tm, fm) {
+          let hm = null,
+            Am = null,
+            am = !1;
+          switch (mm) {
             case 0:
               break;
             case 90:
-              Xk = Fk - 1, ik = !0;
+              hm = Tm - 1, am = !0;
               break;
             case 180:
-              Xk = Fk - 1, Tk = Ik - 1;
+              hm = Tm - 1, Am = fm - 1;
               break;
             case 270:
-              Tk = Ik - 1, ik = !0;
+              Am = fm - 1, am = !0;
               break;
             default:
-              throw new Error(`Invalid rotation: ${kk}`)
+              throw new Error(`Invalid rotation: ${mm}`)
           }
           return {
-            xRotationMappedOrigin: Xk,
-            zRotationMappedOrigin: Tk,
-            shouldSwapXZ: ik
+            xRotationMappedOrigin: hm,
+            zRotationMappedOrigin: Am,
+            shouldSwapXZ: am
           }
-        }(Fk, ak, qk), tk = Ck.for(Gk.g), Zk = ik.map((kk => (0, Gk.f)(tk.turnBlockId((0, Gk.j)(kk), Fk, !1)))), jk = [];
-        yk.forEach(((kk, Fk) => {
-          kk.split(" ").forEach(((kk, Ik) => {
-            for (let Xk = 0; Xk < kk.length; Xk++)
-              if ("." !== kk[Xk]) {
-                const Tk = [Nk(Xk, Ik, Lk), Fk, ck(Xk, Ik, Lk)];
-                jk.push({
-                  offset: Tk,
-                  block: Zk[kk.charCodeAt(Xk) - "a".charCodeAt(0)]
+        }(Tm, Dm, im), pm = ym.for(em.i), Em = am.map((mm => (0, em.f)(pm.turnBlockId((0, em.k)(mm), Tm, !1)))), om = [];
+        xm.forEach(((mm, Tm) => {
+          mm.split(" ").forEach(((mm, fm) => {
+            for (let hm = 0; hm < mm.length; hm++)
+              if ("." !== mm[hm]) {
+                const Am = [Cm(hm, fm, Rm), Tm, rm(hm, fm, Rm)];
+                om.push({
+                  offset: Am,
+                  block: Em[mm.charCodeAt(hm) - "a".charCodeAt(0)]
                 })
               }
           }))
-        })), Xk = {
-          size: [ak, Tk[1], qk],
-          cells: jk
-        }, fk.set(Ik, Xk)
+        })), hm = {
+          size: [Dm, Am[1], im],
+          cells: om
+        }, lm.set(fm, hm)
       }
-      return Xk
+      return hm
     }
-    const dk = {
-      farm_hut: Ik.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
-      farm_house: Ik.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
-      farm_barn: Ik.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
-      rusticHome_tent: Ik.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
-      rusticHome_cabin: Ik.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
-      rusticHome_house: Ik.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
-      market_stand: Ik.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
-      market_stall: Ik.p + "static/media/market_stall.9a562807f9dff591618a.webp",
-      market_shop: Ik.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
-      castle_wall: Ik.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
-      castle_gate: Ik.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
-      castle_tower: Ik.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
+    const um = {
+      farm_hut: fm.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
+      farm_house: fm.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
+      farm_barn: fm.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
+      rusticHome_tent: fm.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
+      rusticHome_cabin: fm.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
+      rusticHome_house: fm.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
+      market_stand: fm.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
+      market_stall: fm.p + "static/media/market_stall.9a562807f9dff591618a.webp",
+      market_shop: fm.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
+      castle_wall: fm.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
+      castle_gate: fm.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
+      castle_tower: fm.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
     };
-    var Yk = Ik(1096);
-    const Ak = {
+    var Bm = fm(1135);
+    const Lm = {
       small: "plotsGame:journalTierSmall",
       medium: "plotsGame:journalTierMedium",
       large: "plotsGame:journalTierLarge"
     };
 
-    function gk(kk) {
+    function tm(mm) {
       let {
-        page: Fk,
-        building: Ik,
-        onBuild: Xk,
-        onPutAway: Tk
-      } = kk;
+        page: Tm,
+        building: fm,
+        onBuild: hm,
+        onPutAway: Am
+      } = mm;
       const {
-        t: ik
-      } = (0, nk.y)(), {
-        displayName: yk,
-        tier: lk
-      } = ek(Fk.id), ak = Bk(Fk.id, 0).cells.length, qk = Jk[Fk.id], Lk = "locked" === Fk.state, tk = Ik ? zk.d : zk.m;
-      return (0, Yk.jsxs)("article", {
-        className: sk()("PlotsJournalPage", {
-          Locked: Lk
+        t: am
+      } = (0, Sm.A)(), {
+        displayName: xm,
+        tier: wm
+      } = Om(Tm.id), Dm = Mm(Tm.id, 0).cells.length, im = jm[Tm.id], Rm = "locked" === Tm.state, pm = fm ? cm.e : cm.m;
+      return (0, Bm.jsxs)("article", {
+        className: nm()("PlotsJournalPage", {
+          Locked: Rm
         }),
-        children: [(0, Yk.jsx)("h3", {
+        children: [(0, Bm.jsx)("h3", {
           className: "PlotsJournalPageName",
-          children: ik(yk.translationKey)
-        }), (0, Yk.jsxs)("div", {
+          children: am(xm.translationKey)
+        }), (0, Bm.jsxs)("div", {
           className: "PlotsJournalPageMeta",
-          children: [ik(Ak[lk]), " \xb7 ", ik("plotsGame:journalBlocks", {
-            blocks: String(ak)
+          children: [am(Lm[wm]), " \xb7 ", am("plotsGame:journalBlocks", {
+            blocks: String(Dm)
           })]
-        }), (0, Yk.jsxs)("div", {
+        }), (0, Bm.jsxs)("div", {
           className: "PlotsJournalSketch",
-          children: [jk.map((kk => (0, Yk.jsx)("img", {
-            className: sk()({
-              Shown: kk === Fk.id
+          children: [om.map((mm => (0, Bm.jsx)("img", {
+            className: nm()({
+              Shown: mm === Tm.id
             }),
-            src: dk[kk],
+            src: um[mm],
             alt: "",
             draggable: !1
-          }, kk))), "completed" === Fk.state && (0, Yk.jsx)("span", {
+          }, mm))), "completed" === Tm.state && (0, Bm.jsx)("span", {
             className: "PlotsJournalStamp",
-            children: ik("plotsGame:journalBuilt")
-          }), Lk && (0, Yk.jsx)("span", {
+            children: am("plotsGame:journalBuilt")
+          }), Rm && (0, Bm.jsx)("span", {
             className: "PlotsJournalLock",
-            children: (0, Yk.jsx)(Vk.e, {
+            children: (0, Bm.jsx)(Jm.c, {
               name: "lock"
             })
           })]
-        }), void 0 !== qk && "completed" !== Fk.state && (0, Yk.jsx)("p", {
+        }), void 0 !== im && "completed" !== Tm.state && (0, Bm.jsx)("p", {
           className: "PlotsJournalNote",
-          children: ik(qk)
-        }), (0, Yk.jsxs)("div", {
+          children: am(im)
+        }), (0, Bm.jsxs)("div", {
           className: "PlotsJournalPageAction",
-          children: ["locked" === Fk.state && (0, Yk.jsx)("p", {
+          children: ["locked" === Tm.state && (0, Bm.jsx)("p", {
             className: "PlotsJournalHint",
-            children: ik("plotsGame:journalLocked", {
-              name: ik(ek(Fk.unlockedBy).displayName.translationKey)
+            children: am("plotsGame:journalLocked", {
+              name: am(Om(Tm.unlockedBy).displayName.translationKey)
             })
-          }), Fk.active && (0, Yk.jsxs)(Yk.Fragment, {
-            children: [(0, Yk.jsx)("p", {
+          }), Tm.active && (0, Bm.jsxs)(Bm.Fragment, {
+            children: [(0, Bm.jsx)("p", {
               className: "PlotsJournalHint Building",
-              children: ik("plotsGame:journalBuilding")
-            }), (0, Yk.jsx)(zk.g, {
-              onClick: Tk,
-              children: ik("plotsGame:journalPutAway")
+              children: am("plotsGame:journalBuilding")
+            }), (0, Bm.jsx)(cm.g, {
+              onClick: Am,
+              children: am("plotsGame:journalPutAway")
             })]
-          }), !Lk && !Fk.active && (0, Yk.jsx)(tk, {
+          }), !Rm && !Tm.active && (0, Bm.jsx)(pm, {
             onClick: () => {
-              Xk(Fk.id)
+              hm(Tm.id)
             },
-            children: ik("plotsGame:placementBuild")
+            children: am("plotsGame:placementBuild")
           })]
         })]
       })
     }
 
-    function mk(kk) {
+    function Um(mm) {
       let {
-        className: Fk,
-        page: Ik,
-        hidden: Xk,
-        building: Tk,
-        journal: ik
-      } = kk;
-      return (0, Yk.jsxs)("div", {
-        ref: kk => {
-          null !== kk && (kk.inert = Xk)
+        className: Tm,
+        page: fm,
+        hidden: hm,
+        building: Am,
+        journal: am
+      } = mm;
+      return (0, Bm.jsxs)("div", {
+        ref: mm => {
+          null !== mm && (mm.inert = hm)
         },
-        className: sk()("PlotsJournalSide", Fk),
-        children: [void 0 !== Ik && (0, Yk.jsx)(gk, {
-          page: Ik,
-          building: Tk,
-          onBuild: ik.build,
-          onPutAway: ik.putAway
-        }), void 0 === Ik && (0, Yk.jsx)("div", {
+        className: nm()("PlotsJournalSide", Tm),
+        children: [void 0 !== fm && (0, Bm.jsx)(tm, {
+          page: fm,
+          building: Am,
+          onBuild: am.build,
+          onPutAway: am.putAway
+        }), void 0 === fm && (0, Bm.jsx)("div", {
           className: "PlotsJournalPage"
         })]
       })
     }
-    var hk = Ik(337),
-      rk = Ik(1844);
+    var dm = fm(354),
+      gm = fm(1877);
 
-    function Dk(kk) {
-      return Math.cos((0, rk.k)(kk))
+    function Wm(mm) {
+      return Math.cos((0, gm.j)(mm))
     }
 
-    function Mk(kk) {
-      return (0, rk.A)(Math.acos(hk.e.clamp(kk, -1, 1)))
+    function Fm(mm) {
+      return (0, gm.F)(Math.acos(dm.c.clamp(mm, -1, 1)))
     }
 
-    function kF(kk, Fk, Ik, Xk, Tk) {
-      const ik = Math.abs(Fk - kk),
-        yk = (0, rk.A)(Tk / (Ik * Math.abs(Math.sin((0, rk.k)(kk))))),
-        lk = 450 * Math.min(1, ik / Xk),
-        ak = yk > 0 ? 3 * ik / yk : 1 / 0;
-      return Math.round(Math.max(120, Math.min(lk, ak)))
+    function mT(mm, Tm, fm, hm, Am) {
+      const am = Math.abs(Tm - mm),
+        xm = (0, gm.F)(Am / (fm * Math.abs(Math.sin((0, gm.j)(mm))))),
+        wm = 450 * Math.min(1, am / hm),
+        Dm = xm > 0 ? 3 * am / xm : 1 / 0;
+      return Math.round(Math.max(120, Math.min(wm, Dm)))
     }
-    class FF {
+    class TT {
       constructor() {
         this.samples = []
       }
-      add(kk, Fk) {
+      add(mm, Tm) {
         for (this.samples.push({
-            x: kk,
-            at: Fk
-          }); Fk - this.samples[0].at > 100;) this.samples.shift()
+            x: mm,
+            at: Tm
+          }); Tm - this.samples[0].at > 100;) this.samples.shift()
       }
       get() {
-        const kk = this.samples[0],
-          Fk = this.samples[this.samples.length - 1];
-        return Fk.at > kk.at ? (Fk.x - kk.x) / (Fk.at - kk.at) : 0
+        const mm = this.samples[0],
+          Tm = this.samples[this.samples.length - 1];
+        return Tm.at > mm.at ? (Tm.x - mm.x) / (Tm.at - mm.at) : 0
       }
     }
 
-    function IF(kk, Fk) {
-      return kk > Fk && kk >= 600
+    function fT(mm, Tm) {
+      return mm > Tm && mm >= 600
     }
 
-    function XF(kk) {
-      return Mk(new DOMMatrixReadOnly(getComputedStyle(kk).transform).m11)
+    function hT(mm) {
+      return Fm(new DOMMatrixReadOnly(getComputedStyle(mm).transform).m11)
     }
 
-    function TF(kk, Fk) {
-      kk.style.transform = `rotateY(${-Fk}deg)`, kk.classList.add("Turning")
+    function AT(mm, Tm) {
+      mm.style.transform = `rotateY(${-Tm}deg)`, mm.classList.add("Turning")
     }
 
-    function iF(kk) {
+    function aT(mm) {
       let {
-        journal: Fk
-      } = kk;
+        journal: Tm
+      } = mm;
       const {
-        t: Ik
-      } = (0, nk.y)(), Xk = (0, Ek.f)(Pk, Fk.getPages()), Tk = (0, Ok.n)(IF), [lk, ak] = (0, ik.useState)((() => function(kk) {
-        const Fk = kk.findIndex((kk => kk.active));
-        return -1 !== Fk ? Fk : Math.max(0, kk.findIndex((kk => "open" === kk.state)))
-      }(Xk))), Lk = (0, ik.useRef)(null), tk = (0, ik.useRef)(null), Zk = (0, ik.useRef)({
+        t: fm
+      } = (0, Sm.A)(), hm = (0, km.i)(Im, Tm.getPages()), Am = (0, bm.l)(fT), [wm, Dm] = (0, am.useState)((() => function(mm) {
+        const Tm = mm.findIndex((mm => mm.active));
+        return -1 !== Tm ? Tm : Math.max(0, mm.findIndex((mm => "open" === mm.state)))
+      }(hm))), Rm = (0, am.useRef)(null), pm = (0, am.useRef)(null), Em = (0, am.useRef)({
         Forward: null,
         Back: null
-      }), jk = Tk ? 2 : 1, ek = Tk ? 180 : 90, wk = lk - lk % jk, Hk = wk > 0, Jk = wk + jk < Xk.length, xk = (0, ik.useCallback)((() => {
-        const kk = tk.current;
-        return null === kk ? wk : (tk.current = null, kk.animation.cancel(), (Fk = Zk.current[kk.direction]).style.transform = "", Fk.classList.remove("Turning"), null === kk.next ? wk : (ak(kk.next), kk.next));
-        var Fk
-      }), [wk]), Kk = (0, ik.useCallback)(((kk, Fk, Ik, Xk) => {
-        const Tk = Zk.current[kk],
-          ik = XF(Tk),
-          yk = Fk === ("Forward" === kk) ? ek : 0;
-        TF(Tk, yk);
-        const lk = Tk.animate([{
-          transform: `rotateY(${-ik}deg)`
+      }), om = Am ? 2 : 1, Om = Am ? 180 : 90, Ym = wm - wm % om, qm = Ym > 0, jm = Ym + om < hm.length, Vm = (0, am.useCallback)((() => {
+        const mm = pm.current;
+        return null === mm ? Ym : (pm.current = null, mm.animation.cancel(), (Tm = Em.current[mm.direction]).style.transform = "", Tm.classList.remove("Turning"), null === mm.next ? Ym : (Dm(mm.next), mm.next));
+        var Tm
+      }), [Ym]), Km = (0, am.useCallback)(((mm, Tm, fm, hm) => {
+        const Am = Em.current[mm],
+          am = hT(Am),
+          xm = Tm === ("Forward" === mm) ? Om : 0;
+        AT(Am, xm);
+        const wm = Am.animate([{
+          transform: `rotateY(${-am}deg)`
         }, {
-          transform: `rotateY(${-yk}deg)`
+          transform: `rotateY(${-xm}deg)`
         }], {
-          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : kF(ik, yk, Tk.offsetWidth, ek, yk > ik ? -Ik : Ik),
+          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : mT(am, xm, Am.offsetWidth, Om, xm > am ? -fm : fm),
           easing: "cubic-bezier(0.25, 0.75, 0.5, 1)"
         });
-        tk.current = {
-          direction: kk,
-          animation: lk,
-          next: Fk ? Xk + ("Forward" === kk ? jk : -jk) : null
-        }, lk.onfinish = () => {
-          var kk;
-          (null === (kk = tk.current) || void 0 === kk ? void 0 : kk.animation) === lk && xk()
+        pm.current = {
+          direction: mm,
+          animation: wm,
+          next: Tm ? hm + ("Forward" === mm ? om : -om) : null
+        }, wm.onfinish = () => {
+          var mm;
+          (null === (mm = pm.current) || void 0 === mm ? void 0 : mm.animation) === wm && Vm()
         }
-      }), [jk, ek, xk]), Qk = (0, ik.useCallback)((kk => {
-        if (null !== Lk.current) return;
-        const Fk = xk();
-        ("Forward" === kk ? Fk + jk < Xk.length : Fk > 0) && Kk(kk, !0, 0, Fk)
-      }), [xk, Kk, jk, Xk.length]);
-      (0, ik.useEffect)((() => {
-        Fk.onOpened()
-      }), [Fk]), (0, ik.useEffect)((() => () => {
-        var kk;
-        null === (kk = tk.current) || void 0 === kk || kk.animation.cancel()
-      }), []), (0, ik.useEffect)((() => {
-        const kk = kk => {
-          var Fk;
-          kk.pointerId !== (null === (Fk = Lk.current) || void 0 === Fk ? void 0 : Fk.pointerId) || Lk.current.following || (Lk.current = null)
+      }), [om, Om, Vm]), Qm = (0, am.useCallback)((mm => {
+        if (null !== Rm.current) return;
+        const Tm = Vm();
+        ("Forward" === mm ? Tm + om < hm.length : Tm > 0) && Km(mm, !0, 0, Tm)
+      }), [Vm, Km, om, hm.length]);
+      (0, am.useEffect)((() => {
+        Tm.onOpened()
+      }), [Tm]), (0, am.useEffect)((() => () => {
+        var mm;
+        null === (mm = pm.current) || void 0 === mm || mm.animation.cancel()
+      }), []), (0, am.useEffect)((() => {
+        const mm = mm => {
+          var Tm;
+          mm.pointerId !== (null === (Tm = Rm.current) || void 0 === Tm ? void 0 : Tm.pointerId) || Rm.current.following || (Rm.current = null)
         };
-        return window.addEventListener("pointerup", kk), () => {
-          window.removeEventListener("pointerup", kk)
+        return window.addEventListener("pointerup", mm), () => {
+          window.removeEventListener("pointerup", mm)
         }
-      }), []), (0, vk.b)((kk => ("ArrowLeft" === kk.code || "ArrowRight" === kk.code) && !(0, qk.isTypingInInput)()), (kk => {
-        kk.stopPropagation(), Qk("ArrowLeft" === kk.code ? "Back" : "Forward")
+      }), []), (0, Zm.b)((mm => ("ArrowLeft" === mm.code || "ArrowRight" === mm.code) && !(0, im.isTypingInInput)()), (mm => {
+        mm.stopPropagation(), Qm("ArrowLeft" === mm.code ? "Back" : "Forward")
       }));
-      const Vk = (kk, Fk, Ik) => {
-          const Xk = function(kk, Fk, Ik, Xk) {
-            return (kk < 0 ? Ik : Xk) ? hk.e.clampAbs(kk, Fk) : Math.sign(kk) * Fk * (1 - 1 / (.55 * Math.abs(kk) / Fk + 1))
-          }(kk.base + Ik, jk * kk.width, Jk, Hk);
-          return "Forward" === Fk ? Math.min(Xk, 0) : Math.max(Xk, 0)
+      const Jm = (mm, Tm, fm) => {
+          const hm = function(mm, Tm, fm, hm) {
+            return (mm < 0 ? fm : hm) ? dm.c.clampAbs(mm, Tm) : Math.sign(mm) * Tm * (1 - 1 / (.55 * Math.abs(mm) / Tm + 1))
+          }(mm.base + fm, om * mm.width, jm, qm);
+          return "Forward" === Tm ? Math.min(hm, 0) : Math.max(hm, 0)
         },
-        Gk = (kk, Fk) => {
-          const Ik = Lk.current;
-          if (Lk.current = null, null === Ik.direction) return;
-          Ik.speed.add(kk, Fk);
-          const Xk = Ik.speed.get(),
-            Tk = Vk(Ik, Ik.direction, kk - Ik.x);
-          Kk(Ik.direction, null !== function(kk, Fk, Ik, Xk, Tk) {
-            if (Math.abs(Fk) >= .3 ? Math.sign(Fk) !== Math.sign(kk) : Math.abs(kk) < .5 * Ik) return null;
-            const ik = kk < 0 ? "Forward" : "Back";
-            return ("Forward" === ik ? Xk : Tk) ? ik : null
-          }(Tk, Xk, jk * Ik.width, Jk, Hk), Xk, wk)
+        em = (mm, Tm) => {
+          const fm = Rm.current;
+          if (Rm.current = null, null === fm.direction) return;
+          fm.speed.add(mm, Tm);
+          const hm = fm.speed.get(),
+            Am = Jm(fm, fm.direction, mm - fm.x);
+          Km(fm.direction, null !== function(mm, Tm, fm, hm, Am) {
+            if (Math.abs(Tm) >= .3 ? Math.sign(Tm) !== Math.sign(mm) : Math.abs(mm) < .5 * fm) return null;
+            const am = mm < 0 ? "Forward" : "Back";
+            return ("Forward" === am ? hm : Am) ? am : null
+          }(Am, hm, om * fm.width, jm, qm), hm, Ym)
         },
-        pk = Xk.some((kk => kk.active)),
-        uk = (kk, Ik, Tk) => (0, Yk.jsx)(mk, {
-          className: kk,
-          page: Ik >= 0 && Ik < Xk.length ? Xk[Ik] : void 0,
-          hidden: Tk,
-          building: pk,
-          journal: Fk
+        Nm = hm.some((mm => mm.active)),
+        Gm = (mm, fm, Am) => (0, Bm.jsx)(Um, {
+          className: mm,
+          page: fm >= 0 && fm < hm.length ? hm[fm] : void 0,
+          hidden: Am,
+          building: Nm,
+          journal: Tm
         });
-      return (0, Yk.jsx)(Sk.c, {
-        close: yk.f,
+      return (0, Bm.jsx)(zm.d, {
+        close: xm.j,
         togglePointerLock: !1,
         className: "PlotsJournalOverlay",
-        children: (0, Yk.jsxs)("section", {
-          className: sk()("PlotsJournal", {
-            Spread: Tk
+        children: (0, Bm.jsxs)("section", {
+          className: nm()("PlotsJournal", {
+            Spread: Am
           }),
           role: "dialog",
           "aria-modal": "true",
-          "aria-label": Ik("plotsGame:journalTitle"),
-          children: [(0, Yk.jsx)(zk.k, {
+          "aria-label": fm("plotsGame:journalTitle"),
+          children: [(0, Bm.jsx)(cm.j, {
             className: "PlotsJournalClose",
-            onClick: yk.f
-          }), (0, Yk.jsx)(yF, {
+            onClick: xm.j
+          }), (0, Bm.jsx)(xT, {
             direction: "Back",
-            disabled: !Hk,
-            onTurn: Qk
-          }), (0, Yk.jsx)("div", {
+            disabled: !qm,
+            onTurn: Qm
+          }), (0, Bm.jsx)("div", {
             className: "PlotsJournalBookPages",
-            onPointerDown: kk => {
-              var Fk;
-              if (!kk.isPrimary || 0 !== kk.button || null !== tk.current && null !== kk.target.closest("button")) return;
-              const Ik = new FF;
-              Ik.add(kk.clientX, kk.timeStamp);
-              const Xk = Zk.current.Forward.offsetWidth,
-                Tk = tk.current;
-              tk.current = null;
-              let ik = 0;
-              if (null !== Tk) {
-                const Fk = Zk.current[Tk.direction],
-                  Ik = XF(Fk);
-                Tk.animation.cancel(), TF(Fk, Ik), ik = function(kk, Fk, Ik, Xk) {
-                  return (kk < 0 ? Ik : Xk) ? kk : Math.sign(kk) * Fk * (1 / (1 - Math.min(Math.abs(kk) / Fk, .99)) - 1) / .55
-                }(function(kk, Fk, Ik, Xk) {
-                  return Ik * (Dk(Fk) - Dk("Forward" === kk ? 0 : Xk))
-                }(Tk.direction, Ik, Xk, ek), jk * Xk, Jk, Hk), kk.currentTarget.setPointerCapture(kk.pointerId)
+            onPointerDown: mm => {
+              var Tm;
+              if (!mm.isPrimary || 0 !== mm.button || null !== pm.current && null !== mm.target.closest("button")) return;
+              const fm = new TT;
+              fm.add(mm.clientX, mm.timeStamp);
+              const hm = Em.current.Forward.offsetWidth,
+                Am = pm.current;
+              pm.current = null;
+              let am = 0;
+              if (null !== Am) {
+                const Tm = Em.current[Am.direction],
+                  fm = hT(Tm);
+                Am.animation.cancel(), AT(Tm, fm), am = function(mm, Tm, fm, hm) {
+                  return (mm < 0 ? fm : hm) ? mm : Math.sign(mm) * Tm * (1 / (1 - Math.min(Math.abs(mm) / Tm, .99)) - 1) / .55
+                }(function(mm, Tm, fm, hm) {
+                  return fm * (Wm(Tm) - Wm("Forward" === mm ? 0 : hm))
+                }(Am.direction, fm, hm, Om), om * hm, jm, qm), mm.currentTarget.setPointerCapture(mm.pointerId)
               }
-              Lk.current = {
-                pointerId: kk.pointerId,
-                x: kk.clientX,
-                y: kk.clientY,
-                base: ik,
-                width: Xk,
-                following: null !== Tk,
-                direction: null !== (Fk = null === Tk || void 0 === Tk ? void 0 : Tk.direction) && void 0 !== Fk ? Fk : null,
-                speed: Ik
+              Rm.current = {
+                pointerId: mm.pointerId,
+                x: mm.clientX,
+                y: mm.clientY,
+                base: am,
+                width: hm,
+                following: null !== Am,
+                direction: null !== (Tm = null === Am || void 0 === Am ? void 0 : Am.direction) && void 0 !== Tm ? Tm : null,
+                speed: fm
               }
             },
-            onPointerMove: kk => {
-              const Fk = Lk.current;
-              if (null === Fk || kk.pointerId !== Fk.pointerId) return;
-              if (0 === kk.buttons) return void Gk(kk.clientX, kk.timeStamp);
-              const Ik = kk.clientX - Fk.x;
-              !Fk.following && function(kk, Fk) {
-                return Math.abs(kk) > 8 && Math.abs(kk) > Math.abs(Fk)
-              }(Ik, kk.clientY - Fk.y) && (Fk.following = !0, Fk.direction = Ik < 0 ? "Forward" : "Back", kk.currentTarget.setPointerCapture(kk.pointerId)), null !== Fk.direction && (Fk.speed.add(kk.clientX, kk.timeStamp), TF(Zk.current[Fk.direction], function(kk, Fk, Ik, Xk) {
-                const Tk = Ik * Dk("Forward" === kk ? 0 : Xk) + Fk;
-                return hk.e.clamp(Mk(Tk / Ik), 0, Xk)
-              }(Fk.direction, Vk(Fk, Fk.direction, Ik), Fk.width, ek)))
+            onPointerMove: mm => {
+              const Tm = Rm.current;
+              if (null === Tm || mm.pointerId !== Tm.pointerId) return;
+              if (0 === mm.buttons) return void em(mm.clientX, mm.timeStamp);
+              const fm = mm.clientX - Tm.x;
+              !Tm.following && function(mm, Tm) {
+                return Math.abs(mm) > 8 && Math.abs(mm) > Math.abs(Tm)
+              }(fm, mm.clientY - Tm.y) && (Tm.following = !0, Tm.direction = fm < 0 ? "Forward" : "Back", mm.currentTarget.setPointerCapture(mm.pointerId)), null !== Tm.direction && (Tm.speed.add(mm.clientX, mm.timeStamp), AT(Em.current[Tm.direction], function(mm, Tm, fm, hm) {
+                const Am = fm * Wm("Forward" === mm ? 0 : hm) + Tm;
+                return dm.c.clamp(Fm(Am / fm), 0, hm)
+              }(Tm.direction, Jm(Tm, Tm.direction, fm), Tm.width, Om)))
             },
-            onPointerUp: kk => {
-              var Fk;
-              kk.pointerId === (null === (Fk = Lk.current) || void 0 === Fk ? void 0 : Fk.pointerId) && Gk(kk.clientX, kk.timeStamp)
+            onPointerUp: mm => {
+              var Tm;
+              mm.pointerId === (null === (Tm = Rm.current) || void 0 === Tm ? void 0 : Tm.pointerId) && em(mm.clientX, mm.timeStamp)
             },
-            onPointerCancel: kk => {
-              const Fk = Lk.current;
-              kk.pointerId === (null === Fk || void 0 === Fk ? void 0 : Fk.pointerId) && (Lk.current = null, null !== Fk.direction && Kk(Fk.direction, !1, 0, wk))
+            onPointerCancel: mm => {
+              const Tm = Rm.current;
+              mm.pointerId === (null === Tm || void 0 === Tm ? void 0 : Tm.pointerId) && (Rm.current = null, null !== Tm.direction && Km(Tm.direction, !1, 0, Ym))
             },
-            children: (0, Yk.jsxs)("div", {
+            children: (0, Bm.jsxs)("div", {
               className: "PlotsJournalSheet",
-              children: [Tk && uk("Left", wk - 2, !0), uk("Right", wk + 2 * jk - 1, !0), (0, Yk.jsxs)("div", {
-                ref: kk => {
-                  Zk.current.Back = kk
+              children: [Am && Gm("Left", Ym - 2, !0), Gm("Right", Ym + 2 * om - 1, !0), (0, Bm.jsxs)("div", {
+                ref: mm => {
+                  Em.current.Back = mm
                 },
                 className: "PlotsJournalLeaf Back",
-                children: [uk("Recto", wk - 1, !0), Tk && uk("Verso", wk, !1)]
-              }), (0, Yk.jsxs)("div", {
-                ref: kk => {
-                  Zk.current.Forward = kk
+                children: [Gm("Recto", Ym - 1, !0), Am && Gm("Verso", Ym, !1)]
+              }), (0, Bm.jsxs)("div", {
+                ref: mm => {
+                  Em.current.Forward = mm
                 },
                 className: "PlotsJournalLeaf Forward",
-                children: [uk("Recto", wk + jk - 1, !1), Tk && uk("Verso", wk + jk, !0)]
+                children: [Gm("Recto", Ym + om - 1, !1), Am && Gm("Verso", Ym + om, !0)]
               })]
             })
-          }), (0, Yk.jsx)(yF, {
+          }), (0, Bm.jsx)(xT, {
             direction: "Forward",
-            disabled: !Jk,
-            onTurn: Qk
+            disabled: !jm,
+            onTurn: Qm
           })]
         })
       })
     }
 
-    function yF(kk) {
+    function xT(mm) {
       let {
-        direction: Fk,
-        disabled: Ik,
-        onTurn: Xk
-      } = kk;
+        direction: Tm,
+        disabled: fm,
+        onTurn: hm
+      } = mm;
       const {
-        t: Tk
-      } = (0, nk.y)();
-      return (0, Yk.jsx)("div", {
-        className: sk()("PlotsJournalArrow", Fk),
-        children: (0, Yk.jsx)(zk.d, {
-          disabled: Ik,
-          ariaLabel: Tk("Forward" === Fk ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
+        t: Am
+      } = (0, Sm.A)();
+      return (0, Bm.jsx)("div", {
+        className: nm()("PlotsJournalArrow", Tm),
+        children: (0, Bm.jsx)(cm.e, {
+          disabled: fm,
+          ariaLabel: Am("Forward" === Tm ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
           onClick: () => {
-            Xk(Fk)
+            hm(Tm)
           },
-          children: (0, Yk.jsx)(Vk.e, {
+          children: (0, Bm.jsx)(Jm.c, {
             name: "angle-up"
           })
         })
       })
     }
-    var lF = Ik(36597),
-      aF = Ik(1864),
-      qF = Ik(1913);
-    const LF = "plotsStepChanged",
-      tF = "plotsPlotChanged";
-    class ZF {
+    var wT = fm(36681),
+      DT = fm(1893),
+      iT = fm(1950);
+    const RT = "plotsStepChanged",
+      pT = "plotsPlotChanged";
+    class ET {
       constructor() {
         this.step = ["none"], this.plot = ["none"]
       }
       getStep() {
         return this.step
       }
-      receiveStep(kk) {
-        this.step = kk, Lk.g.GL(LF, kk, !0)
+      receiveStep(mm) {
+        this.step = mm, Rm.j.gp(RT, mm, !0)
       }
       getPlot() {
         return this.plot
       }
-      receivePlot(kk) {
-        this.plot = kk, Lk.g.GL(tF, kk, !0)
+      receivePlot(mm) {
+        this.plot = mm, Rm.j.gp(pT, mm, !0)
       }
     }
-    const jF = "KeyJ";
+    const oT = "KeyJ";
 
-    function eF(kk) {
+    function OT(mm) {
       let {
-        hud: Fk,
-        journal: Ik
-      } = kk;
-      const Xk = (0, Ek.f)(Pk, Ik.getPages()),
-        Tk = (0, Ek.f)(LF, Fk.getStep()),
+        hud: Tm,
+        journal: fm
+      } = mm;
+      const hm = (0, km.i)(Im, fm.getPages()),
+        Am = (0, km.i)(RT, Tm.getStep()),
         {
-          isTouchScreen: ik
-        } = (0, lk.j)(["isTouchScreen"]),
+          isTouchScreen: am
+        } = (0, wm.m)(["isTouchScreen"]),
         {
-          t: Lk
-        } = (0, nk.y)(),
-        tk = null !== Xk && "none" === Tk[0];
-      return (0, vk.b)((kk => null !== Xk && kk.code === jF && !kk.repeat && !(0, qk.isTypingInInput)()), (kk => {
-        (0, ak.F)(kk, tk, yk.p)
-      })), tk ? (0, Yk.jsx)(lF.f, {
+          t: Rm
+        } = (0, Sm.A)(),
+        pm = null !== hm && "none" === Am[0];
+      return (0, Zm.b)((mm => null !== hm && mm.code === oT && !mm.repeat && !(0, im.isTypingInInput)()), (mm => {
+        (0, Dm.w)(mm, pm, xm.s)
+      })), pm ? (0, Bm.jsx)(wT.e, {
         placement: "topRight",
-        children: (0, Yk.jsx)("div", {
+        children: (0, Bm.jsx)("div", {
           className: "PlotsJournalButtonContainer",
-          children: (0, Yk.jsxs)("button", {
+          children: (0, Bm.jsxs)("button", {
             type: "button",
-            className: sk()("PlotsJournalButton SmallTextBold", {
-              Touch: ik
+            className: nm()("PlotsJournalButton SmallTextBold", {
+              Touch: am
             }),
-            onClick: yk.p,
-            children: [(0, Yk.jsx)("span", {
+            onClick: xm.s,
+            children: [(0, Bm.jsx)("span", {
               className: "PlotsJournalButtonIcon",
-              children: (0, Yk.jsx)(aF.d, {
+              children: (0, Bm.jsx)(DT.d, {
                 itemName: "Book",
                 amount: 0
               })
-            }), Lk("plotsGame:journalButton"), !ik && (0, Yk.jsx)(qF.c, {
+            }), Rm("plotsGame:journalButton"), !am && (0, Bm.jsx)(iT.e, {
               className: "PlotsJournalButtonKey",
-              keyCode: jF
+              keyCode: oT
             })]
           })
         })
       }) : null
     }
-    var wF = Ik(38399),
-      HF = Ik(38169),
-      JF = Ik(36969),
-      xF = Ik(9223),
-      PF = Ik(9241),
-      KF = Ik(37811);
-    const QF = new Map([
+    var YT = fm(38509),
+      qT = fm(38254),
+      jT = fm(37032),
+      VT = fm(9167),
+      IT = fm(9193),
+      KT = fm(37858);
+    const QT = new Map([
         ["Aspen Wood Planks", [.78, .706, .502]],
         ["Barkless Aspen Log", [.792, .718, .518]],
         ["Barkless Pine Log", [.49, .353, .275]],
@@ -858,791 +858,791 @@ export const modules = {
         ["White Concrete", [.89, .894, .894]],
         ["White Wool", [.98, .98, .98]]
       ]),
-      sF = [...JF.e.blockRemoveActionRoots, ...HF.c, ...xF.h, "Board", "Code Block", "Custom Lobby Block"],
-      VF = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
-    let zF = null;
+      nT = [...jT.e.blockRemoveActionRoots, ...qT.e, ...VT.h, "Board", "Code Block", "Custom Lobby Block"],
+      JT = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
+    let cT = null;
 
-    function SF() {
-      return zF ??= function() {
-        const kk = oF(),
-          Fk = Math.max(...kk.map((kk => Gk.g[kk].id))) + 1,
-          Ik = new Int32Array(Fk),
-          Xk = new Int32Array(Fk),
-          Tk = new Uint8Array(Fk).fill(1),
-          ik = new Uint8Array(Fk),
-          yk = new Uint8Array(Fk),
-          lk = new Array(Fk).fill("Air"),
-          ak = new Map,
-          qk = kk => {
-            let Fk = ak.get(kk);
-            return void 0 === Fk && (Fk = ak.size + 1, ak.set(kk, Fk)), Fk
+    function zT() {
+      return cT ??= function() {
+        const mm = ZT(),
+          Tm = Math.max(...mm.map((mm => em.i[mm].id))) + 1,
+          fm = new Int32Array(Tm),
+          hm = new Int32Array(Tm),
+          Am = new Uint8Array(Tm).fill(1),
+          am = new Uint8Array(Tm),
+          xm = new Uint8Array(Tm),
+          wm = new Array(Tm).fill("Air"),
+          Dm = new Map,
+          im = mm => {
+            let Tm = Dm.get(mm);
+            return void 0 === Tm && (Tm = Dm.size + 1, Dm.set(mm, Tm)), Tm
           },
-          Lk = new Set(sF);
-        for (const Zk of kk) {
-          var tk;
+          Rm = new Set(nT);
+        for (const Em of mm) {
+          var pm;
           const {
-            id: kk,
-            meta: Fk,
-            altActionable: ak,
-            canBePlacedOver: jk
-          } = Gk.g[Zk];
-          Ik[kk] = qk(vF(Zk));
-          const ek = Fk.stairsCorner;
-          if (null === ek) Xk[kk] = Ik[kk];
+            id: mm,
+            meta: Tm,
+            altActionable: Dm,
+            canBePlacedOver: om
+          } = em.i[Em];
+          fm[mm] = im(kT(Em));
+          const Om = Tm.stairsCorner;
+          if (null === Om) hm[mm] = fm[mm];
           else {
-            const Ik = ek.endsWith("Right");
-            Xk[kk] = qk(`${Fk.rootName}|rot${Ik?Fk.rot%4+1:Fk.rot}|${Fk.halfblockPlacement}|${ek.replace("Right","Left")}`)
+            const fm = Om.endsWith("Right");
+            hm[mm] = im(`${Tm.rootName}|rot${fm?Tm.rot%4+1:Tm.rot}|${Tm.halfblockPlacement}|${Om.replace("Right","Left")}`)
           }
-          Tk[kk] = jk ? 1 : 0, ik[kk] = ak || null !== Fk.open || Zk in KF.b || Lk.has(Fk.rootName) || void 0 !== (0, HF.f)(Fk.rootName) ? 1 : 0;
+          Am[mm] = om ? 1 : 0, am[mm] = Dm || null !== Tm.open || Em in KT.c || Rm.has(Tm.rootName) || void 0 !== (0, qT.g)(Tm.rootName) ? 1 : 0;
           const {
-            rootName: wk
-          } = Fk;
-          yk[kk] = null !== Fk.open || HF.c.includes(wk) || wk.includes("Bookshelf") || wk.includes("Mailbox") ? 1 : 0, lk[kk] = null !== (tk = (0, wF.g)(kk)) && void 0 !== tk ? tk : wk
+            rootName: Ym
+          } = Tm;
+          xm[mm] = null !== Tm.open || qT.e.includes(Ym) || Ym.includes("Bookshelf") || Ym.includes("Mailbox") ? 1 : 0, wm[mm] = null !== (pm = (0, YT.i)(mm)) && void 0 !== pm ? pm : Ym
         }
         return {
-          kinds: Ik,
-          shapes: Xk,
-          empty: Tk,
-          inUse: ik,
-          ownAltActionMessage: yk,
-          placingItems: lk
+          kinds: fm,
+          shapes: hm,
+          empty: Am,
+          inUse: am,
+          ownAltActionMessage: xm,
+          placingItems: wm
         }
-      }(), zF
+      }(), cT
     }
 
-    function oF() {
-      return Object.keys(Gk.g).filter((kk => Gk.g[kk].name === kk))
+    function ZT() {
+      return Object.keys(em.i).filter((mm => em.i[mm].name === mm))
     }
 
-    function vF(kk) {
-      var Fk;
-      const Ik = Gk.g[kk],
+    function kT(mm) {
+      var Tm;
+      const fm = em.i[mm],
         {
-          rootName: Xk,
-          rot: Tk
-        } = Ik.meta,
-        [, ...ik] = (null !== (Fk = Ik.rootMetaDesc) && void 0 !== Fk ? Fk : kk).split("|"),
-        yk = ik.filter((kk => !("meta" === kk || VF.test(kk) || (0, PF.z)(Ik) && /^[nesw]+$/.test(kk) || xF.h.includes(Xk) && /^[lrud]+$/.test(kk) || hk.I.includes(Xk) && /^(left|right)$/.test(kk))));
-      return [Xk, ...yk].map((kk => "fenceGate" === Ik.model && kk === `rot${Tk}` ? "rot" + ((Tk - 1) % 2 + 1) : kk)).join("|")
+          rootName: hm,
+          rot: Am
+        } = fm.meta,
+        [, ...am] = (null !== (Tm = fm.rootMetaDesc) && void 0 !== Tm ? Tm : mm).split("|"),
+        xm = am.filter((mm => !("meta" === mm || JT.test(mm) || (0, IT.y)(fm) && /^[nesw]+$/.test(mm) || VT.h.includes(hm) && /^[lrud]+$/.test(mm) || dm.I.includes(hm) && /^(left|right)$/.test(mm))));
+      return [hm, ...xm].map((mm => "fenceGate" === fm.model && mm === `rot${Am}` ? "rot" + ((Am - 1) % 2 + 1) : mm)).join("|")
     }
 
-    function EF(kk, Fk) {
+    function bT(mm, Tm) {
       const {
-        kinds: Ik,
-        shapes: Xk
-      } = SF();
-      return Ik[kk] === Ik[Fk] || Xk[kk] === Xk[Fk]
+        kinds: fm,
+        shapes: hm
+      } = zT();
+      return fm[mm] === fm[Tm] || hm[mm] === hm[Tm]
     }
 
-    function OF(kk) {
-      return 1 === SF().empty[kk]
+    function ST(mm) {
+      return 1 === zT().empty[mm]
     }
 
-    function nF(kk) {
-      return SF().placingItems[kk]
+    function eT(mm) {
+      return zT().placingItems[mm]
     }
 
-    function GF(kk) {
-      return QF.get(Gk.g[kk].meta.rootName)
+    function NT(mm) {
+      return QT.get(em.i[mm].meta.rootName)
     }
-    var pF = Ik(9219),
-      uF = Ik(9237);
-    const bF = [0, 0, 0, 1, 1, 1],
-      RF = (0, pF.c)([
+    var GT = fm(9161),
+      XT = fm(9184);
+    const PT = [0, 0, 0, 1, 1, 1],
+      HT = (0, GT.d)([
         [2, 0, 2, 6, 6, 6]
       ]),
-      UF = (0, pF.c)([
+      yT = (0, GT.d)([
         [3, 0, 3, 5, 5, 5]
       ]),
-      CF = (0, pF.c)([
+      CT = (0, GT.d)([
         [3, 3, 3, 5, 8, 5]
       ]),
-      NF = [0, 1, 2, 3].map((kk => (0, pF.c)((0, pF.m)([
+      rT = [0, 1, 2, 3].map((mm => (0, GT.d)((0, GT.n)([
         [3, 2, 0, 5, 7, 3]
-      ], kk))));
+      ], mm))));
 
-    function cF(kk) {
+    function sT(mm) {
       const {
-        Re: Fk,
-        model: Ik,
-        blockModel: Xk,
-        meta: Tk
-      } = Gk.g[kk];
-      return void 0 !== Fk ? Fk : "CentreCross" === Ik ? RF : null !== Xk && void 0 !== Xk && Xk.startsWith("torch") ? Tk.halfblockPlacement === uF.d.side ? NF[Tk.rot - 1] : Tk.halfblockPlacement === uF.d.top ? CF : UF : bF
+        AO: Tm,
+        model: fm,
+        blockModel: hm,
+        meta: Am
+      } = em.i[mm];
+      return void 0 !== Tm ? Tm : "CentreCross" === fm ? HT : null !== hm && void 0 !== hm && hm.startsWith("torch") ? Am.halfblockPlacement === XT.e.side ? rT[Am.rot - 1] : Am.halfblockPlacement === XT.e.top ? CT : yT : PT
     }
-    var WF = Ik(36936),
-      fF = Ik(187);
+    var lT = fm(36999),
+      MT = fm(198);
 
-    function BF(kk, Fk) {
-      const Ik = fF.f.CH / 2;
-      return kk[0] < Fk[0] + Ik && kk[0] + 1 > Fk[0] - Ik && kk[1] < Fk[1] + fF.f.NH && kk[1] + 1 > Fk[1] && kk[2] < Fk[2] + Ik && kk[2] + 1 > Fk[2] - Ik
+    function uT(mm, Tm) {
+      const fm = MT.f.dq / 2;
+      return mm[0] < Tm[0] + fm && mm[0] + 1 > Tm[0] - fm && mm[1] < Tm[1] + MT.f.gq && mm[1] + 1 > Tm[1] && mm[2] < Tm[2] + fm && mm[2] + 1 > Tm[2] - fm
     }
 
-    function dF(kk, Fk, Ik, Xk, Tk) {
-      const ik = Math.hypot(...Fk.dir);
-      if (!Number.isFinite(ik) || 0 === ik) return -1;
+    function BT(mm, Tm, fm, hm, Am) {
+      const am = Math.hypot(...Tm.dir);
+      if (!Number.isFinite(am) || 0 === am) return -1;
       const {
-        from: yk,
-        reach: lk,
-        solid: ak
-      } = Fk, qk = [Fk.dir[0] / ik, Fk.dir[1] / ik, Fk.dir[2] / ik], Lk = null === ak ? lk : Math.min(lk, function(kk, Fk, Ik) {
-        const Xk = YF(kk, Fk, Ik);
-        if (Xk !== 1 / 0) return Xk;
-        return (Ik[0] + .5 - kk[0]) * Fk[0] + (Ik[1] + .5 - kk[1]) * Fk[1] + (Ik[2] + .5 - kk[2]) * Fk[2]
-      }(yk, qk, ak) + .75);
-      let tk = -1,
-        Zk = 1 / 0,
-        jk = 1 / 0;
-      for (let ek = 0; ek < kk.length; ek += 4) {
-        const Fk = [kk[ek], kk[ek + 1], kk[ek + 2]],
-          ik = Tk(ek) ? lk : Lk;
-        let ak = -1,
-          wk = YF(yk, qk, Fk);
-        if (wk > ik) {
-          const kk = [Fk[0] + .5 - yk[0], Fk[1] + .5 - yk[1], Fk[2] + .5 - yk[2]];
-          if (wk = kk[0] * qk[0] + kk[1] * qk[1] + kk[2] * qk[2], wk <= 0 || wk > ik) continue;
-          if (ak = Math.hypot(kk[0] - wk * qk[0], kk[1] - wk * qk[1], kk[2] - wk * qk[2]), ak > .7 || !Xk(ek)) continue
-        }(ak < Zk || ak === Zk && wk < jk) && Ik(ek) && (tk = ek, Zk = ak, jk = wk)
+        from: xm,
+        reach: wm,
+        solid: Dm
+      } = Tm, im = [Tm.dir[0] / am, Tm.dir[1] / am, Tm.dir[2] / am], Rm = null === Dm ? wm : Math.min(wm, function(mm, Tm, fm) {
+        const hm = LT(mm, Tm, fm);
+        if (hm !== 1 / 0) return hm;
+        return (fm[0] + .5 - mm[0]) * Tm[0] + (fm[1] + .5 - mm[1]) * Tm[1] + (fm[2] + .5 - mm[2]) * Tm[2]
+      }(xm, im, Dm) + .75);
+      let pm = -1,
+        Em = 1 / 0,
+        om = 1 / 0;
+      for (let Om = 0; Om < mm.length; Om += 4) {
+        const Tm = [mm[Om], mm[Om + 1], mm[Om + 2]],
+          am = Am(Om) ? wm : Rm;
+        let Dm = -1,
+          Ym = LT(xm, im, Tm);
+        if (Ym > am) {
+          const mm = [Tm[0] + .5 - xm[0], Tm[1] + .5 - xm[1], Tm[2] + .5 - xm[2]];
+          if (Ym = mm[0] * im[0] + mm[1] * im[1] + mm[2] * im[2], Ym <= 0 || Ym > am) continue;
+          if (Dm = Math.hypot(mm[0] - Ym * im[0], mm[1] - Ym * im[1], mm[2] - Ym * im[2]), Dm > .7 || !hm(Om)) continue
+        }(Dm < Em || Dm === Em && Ym < om) && fm(Om) && (pm = Om, Em = Dm, om = Ym)
       }
-      return tk
+      return pm
     }
 
-    function YF(kk, Fk, Ik) {
-      let Xk = 0,
-        Tk = 1 / 0;
-      for (let ik = 0; ik < 3; ik++) {
-        const yk = Ik[ik] - kk[ik];
-        if (0 === Fk[ik]) {
-          if (yk > 0 || yk + 1 < 0) return 1 / 0;
+    function LT(mm, Tm, fm) {
+      let hm = 0,
+        Am = 1 / 0;
+      for (let am = 0; am < 3; am++) {
+        const xm = fm[am] - mm[am];
+        if (0 === Tm[am]) {
+          if (xm > 0 || xm + 1 < 0) return 1 / 0;
           continue
         }
-        const lk = yk / Fk[ik],
-          ak = (yk + 1) / Fk[ik];
-        Xk = Math.max(Xk, Math.min(lk, ak)), Tk = Math.min(Tk, Math.max(lk, ak))
+        const wm = xm / Tm[am],
+          Dm = (xm + 1) / Tm[am];
+        hm = Math.max(hm, Math.min(wm, Dm)), Am = Math.min(Am, Math.max(wm, Dm))
       }
-      return Xk <= Tk ? Xk : 1 / 0
+      return hm <= Am ? hm : 1 / 0
     }
-    var AF = Ik(38073),
-      gF = Ik(38509);
-    const mF = [1, 1, 1];
-    class hF {
-      constructor(kk) {
-        this.api = kk, this.meshes = null, this.shown = null
+    var vT = fm(38124),
+      tT = fm(38611);
+    const UT = [1, 1, 1];
+    class dT {
+      constructor(mm) {
+        this.api = mm, this.meshes = null, this.shown = null
       }
-      show(kk) {
-        if (!(0, WF.f)(kk, this.shown))
-          if (this.shown = null === kk ? null : [kk[0], kk[1], kk[2]], null !== this.meshes)
-            for (const Fk of this.meshes) this.api.setGameMesh(Fk, null === kk ? {
+      show(mm) {
+        if (!(0, lT.i)(mm, this.shown))
+          if (this.shown = null === mm ? null : [mm[0], mm[1], mm[2]], null !== this.meshes)
+            for (const Tm of this.meshes) this.api.setGameMesh(Tm, null === mm ? {
               visible: !1
             } : {
-              anchor: kk,
+              anchor: mm,
               visible: !0
             });
-          else if (null !== kk) {
-          const Fk = [AF.c, AF.c, AF.c, 0, 0, 0];
-          this.meshes = [this.build([Fk], AF.g, kk), this.build((0, AF.b)(), AF.o, kk)]
+          else if (null !== mm) {
+          const Tm = [vT.h, vT.h, vT.h, 0, 0, 0];
+          this.meshes = [this.build([Tm], vT.k, mm), this.build((0, vT.d)(), vT.p, mm)]
         }
       }
       dispose() {
-        for (const Fk of null !== (kk = this.meshes) && void 0 !== kk ? kk : []) {
-          var kk;
-          this.api.disposeGameMesh(Fk)
+        for (const Tm of null !== (mm = this.meshes) && void 0 !== mm ? mm : []) {
+          var mm;
+          this.api.disposeGameMesh(Tm)
         }
         this.meshes = null, this.shown = null
       }
-      build(kk, Fk, Ik) {
-        const Xk = [],
-          Tk = [];
-        for (const [ik, yk, lk, ak, qk, Lk] of kk)(0, gF.f)(Xk, Tk, [ak + .5, qk + .5, Lk + .5], [ik, yk, lk]);
+      build(mm, Tm, fm) {
+        const hm = [],
+          Am = [];
+        for (const [am, xm, wm, Dm, im, Rm] of mm)(0, tT.e)(hm, Am, [Dm + .5, im + .5, Rm + .5], [am, xm, wm]);
         return this.api.createGameMesh({
-          positions: Xk,
-          indices: Tk
+          positions: hm,
+          indices: Am
         }, {
-          rgb: mF,
-          alpha: Fk,
+          rgb: UT,
+          alpha: Tm,
           onTop: !0
-        }, Ik)
+        }, fm)
       }
     }
-    class rF {
-      constructor(kk) {
-        this.api = kk, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
+    class gT {
+      constructor(mm) {
+        this.api = mm, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
       }
-      watch(kk) {
-        const Fk = fF.f.se;
+      watch(mm) {
+        const Tm = MT.f.MO;
         this.chunks = [];
-        for (let Ik = 0; Ik < kk.length; Ik += 3) {
-          const Xk = Math.floor(kk[Ik] / Fk),
-            Tk = Math.floor(kk[Ik + 1] / Fk),
-            ik = Math.floor(kk[Ik + 2] / Fk);
-          this.watches(Xk, Tk, ik) || this.chunks.push(Xk, Tk, ik)
+        for (let fm = 0; fm < mm.length; fm += 3) {
+          const hm = Math.floor(mm[fm] / Tm),
+            Am = Math.floor(mm[fm + 1] / Tm),
+            am = Math.floor(mm[fm + 2] / Tm);
+          this.watches(hm, Am, am) || this.chunks.push(hm, Am, am)
         }
         this.versions = [], this.lastCheckMs = -1 / 0, this.changed()
       }
       changed() {
-        const kk = performance.now();
-        if (kk - this.lastCheckMs < 100) return !1;
-        this.lastCheckMs = kk;
-        let Fk = !1;
-        for (let Ik = 0; Ik < this.chunks.length; Ik += 3) {
-          const kk = this.api.getChunkVersion(this.chunks[Ik], this.chunks[Ik + 1], this.chunks[Ik + 2]);
-          this.versions[Ik / 3] !== kk && (this.versions[Ik / 3] = kk, Fk = !0)
+        const mm = performance.now();
+        if (mm - this.lastCheckMs < 100) return !1;
+        this.lastCheckMs = mm;
+        let Tm = !1;
+        for (let fm = 0; fm < this.chunks.length; fm += 3) {
+          const mm = this.api.getChunkVersion(this.chunks[fm], this.chunks[fm + 1], this.chunks[fm + 2]);
+          this.versions[fm / 3] !== mm && (this.versions[fm / 3] = mm, Tm = !0)
         }
-        return Fk
+        return Tm
       }
-      watches(kk, Fk, Ik) {
-        for (let Xk = 0; Xk < this.chunks.length; Xk += 3)
-          if (this.chunks[Xk] === kk && this.chunks[Xk + 1] === Fk && this.chunks[Xk + 2] === Ik) return !0;
+      watches(mm, Tm, fm) {
+        for (let hm = 0; hm < this.chunks.length; hm += 3)
+          if (this.chunks[hm] === mm && this.chunks[hm + 1] === Tm && this.chunks[hm + 2] === fm) return !0;
         return !1
       }
     }
-    const DF = .35,
-      MF = {
+    const WT = .35,
+      FT = {
         size: .9,
         alpha: .35,
         crossed: !1
       },
-      kI = {
+      mf = {
         size: 1.04,
         alpha: .45,
         crossed: !0
       },
-      FI = [.95, .2, .15];
-    class II {
+      Tf = [.95, .2, .15];
+    class ff {
       constructor() {
         this.groups = []
       }
-      add(kk, Fk, Ik, Xk, Tk) {
-        let ik = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : bF;
-        for (const yk of this.groups)
-          if (iI(yk, Xk, Tk)) return yk.cells.push(kk, Fk, Ik), void yk.boxes.push(ik);
+      add(mm, Tm, fm, hm, Am) {
+        let am = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : PT;
+        for (const xm of this.groups)
+          if (af(xm, hm, Am)) return xm.cells.push(mm, Tm, fm), void xm.boxes.push(am);
         this.groups.push({
-          rgb: Xk,
-          look: Tk,
-          cells: [kk, Fk, Ik],
-          boxes: [ik]
+          rgb: hm,
+          look: Am,
+          cells: [mm, Tm, fm],
+          boxes: [am]
         })
       }
       toArray() {
         return this.groups
       }
     }
-    class XI {
-      constructor(kk) {
-        this.api = kk, this.shown = []
+    class hf {
+      constructor(mm) {
+        this.api = mm, this.shown = []
       }
-      show(kk) {
-        const Fk = [];
-        for (const Ik of kk) {
-          const kk = this.shown.findIndex((kk => {
+      show(mm) {
+        const Tm = [];
+        for (const fm of mm) {
+          const mm = this.shown.findIndex((mm => {
             let {
-              group: Fk
-            } = kk;
-            return iI(Fk, Ik.rgb, Ik.look) && yI(Fk, Ik)
-          })); - 1 === kk ? Fk.push(this.build(Ik)) : (Fk.push(this.shown[kk]), this.shown.splice(kk, 1))
+              group: Tm
+            } = mm;
+            return af(Tm, fm.rgb, fm.look) && xf(Tm, fm)
+          })); - 1 === mm ? Tm.push(this.build(fm)) : (Tm.push(this.shown[mm]), this.shown.splice(mm, 1))
         }
-        this.dispose(), this.shown = Fk
+        this.dispose(), this.shown = Tm
       }
       dispose() {
         for (const {
-            meshes: kk
+            meshes: mm
           }
           of this.shown)
-          for (const Fk of kk) this.api.disposeGameMesh(Fk);
+          for (const Tm of mm) this.api.disposeGameMesh(Tm);
         this.shown = []
       }
-      build(kk) {
+      build(mm) {
         const {
-          rgb: Fk,
-          look: Ik,
-          boxes: Xk
-        } = kk, Tk = [Fk[0] + (1 - Fk[0]) * DF, Fk[1] + (1 - Fk[1]) * DF, Fk[2] + (1 - Fk[2]) * DF], ik = [this.buildMesh(kk.cells, Fk, Ik.alpha, ((kk, Fk, Tk, ik) => {
-          TI(kk, Fk, Tk, Xk[ik], Ik.size, !1)
-        })), this.buildMesh(kk.cells, Tk, Ik.alpha, ((kk, Fk, Tk, ik) => {
-          TI(kk, Fk, Tk, Xk[ik], Ik.size, !0)
+          rgb: Tm,
+          look: fm,
+          boxes: hm
+        } = mm, Am = [Tm[0] + (1 - Tm[0]) * WT, Tm[1] + (1 - Tm[1]) * WT, Tm[2] + (1 - Tm[2]) * WT], am = [this.buildMesh(mm.cells, Tm, fm.alpha, ((mm, Tm, Am, am) => {
+          Af(mm, Tm, Am, hm[am], fm.size, !1)
+        })), this.buildMesh(mm.cells, Am, fm.alpha, ((mm, Tm, Am, am) => {
+          Af(mm, Tm, Am, hm[am], fm.size, !0)
         }))];
-        return Ik.crossed && ik.push(this.buildMesh(kk.cells, Fk, .9, ((kk, Fk, Xk) => {
-          (0, gF.h)(kk, Fk, Xk, Ik.size + .01, .12)
+        return fm.crossed && am.push(this.buildMesh(mm.cells, Tm, .9, ((mm, Tm, hm) => {
+          (0, tT.h)(mm, Tm, hm, fm.size + .01, .12)
         }))), {
-          group: kk,
-          meshes: ik
+          group: mm,
+          meshes: am
         }
       }
-      buildMesh(kk, Fk, Ik, Xk) {
-        const Tk = [kk[0], kk[1], kk[2]],
-          ik = [],
-          yk = [];
-        for (let lk = 0; lk < kk.length; lk += 3) Xk(ik, yk, [kk[lk] - Tk[0] + .5, kk[lk + 1] - Tk[1] + .5, kk[lk + 2] - Tk[2] + .5], lk / 3);
+      buildMesh(mm, Tm, fm, hm) {
+        const Am = [mm[0], mm[1], mm[2]],
+          am = [],
+          xm = [];
+        for (let wm = 0; wm < mm.length; wm += 3) hm(am, xm, [mm[wm] - Am[0] + .5, mm[wm + 1] - Am[1] + .5, mm[wm + 2] - Am[2] + .5], wm / 3);
         return this.api.createGameMesh({
-          positions: ik,
-          indices: yk
+          positions: am,
+          indices: xm
         }, {
-          rgb: [Fk[0], Fk[1], Fk[2]],
-          alpha: Ik
-        }, Tk)
+          rgb: [Tm[0], Tm[1], Tm[2]],
+          alpha: fm
+        }, Am)
       }
     }
 
-    function TI(kk, Fk, Ik, Xk, Tk, ik) {
-      for (let yk = 0; yk < Xk.length; yk += 6) {
-        const lk = [0, 0, 0],
-          ak = [0, 0, 0];
-        for (let kk = 0; kk < 3; kk++) lk[kk] = Ik[kk] + ((Xk[yk + kk] + Xk[yk + kk + 3]) / 2 - .5) * Tk, ak[kk] = (Xk[yk + kk + 3] - Xk[yk + kk]) * Tk;
-        (0, gF.c)(kk, Fk, lk, ak, ik)
+    function Af(mm, Tm, fm, hm, Am, am) {
+      for (let xm = 0; xm < hm.length; xm += 6) {
+        const wm = [0, 0, 0],
+          Dm = [0, 0, 0];
+        for (let mm = 0; mm < 3; mm++) wm[mm] = fm[mm] + ((hm[xm + mm] + hm[xm + mm + 3]) / 2 - .5) * Am, Dm[mm] = (hm[xm + mm + 3] - hm[xm + mm]) * Am;
+        (0, tT.c)(mm, Tm, wm, Dm, am)
       }
     }
 
-    function iI(kk, Fk, Ik) {
-      return kk.rgb[0] === Fk[0] && kk.rgb[1] === Fk[1] && kk.rgb[2] === Fk[2] && kk.look === Ik
+    function af(mm, Tm, fm) {
+      return mm.rgb[0] === Tm[0] && mm.rgb[1] === Tm[1] && mm.rgb[2] === Tm[2] && mm.look === fm
     }
 
-    function yI(kk, Fk) {
-      if (kk.cells.length !== Fk.cells.length) return !1;
-      for (let Ik = 0; Ik < kk.cells.length; Ik++)
-        if (kk.cells[Ik] !== Fk.cells[Ik]) return !1;
-      return kk.boxes.every(((kk, Ik) => kk === Fk.boxes[Ik]))
+    function xf(mm, Tm) {
+      if (mm.cells.length !== Tm.cells.length) return !1;
+      for (let fm = 0; fm < mm.cells.length; fm++)
+        if (mm.cells[fm] !== Tm.cells[fm]) return !1;
+      return mm.boxes.every(((mm, fm) => mm === Tm.boxes[fm]))
     }
 
-    function lI(kk, Fk) {
-      return kk.getClientOption(Fk, "blockReach") + 1
+    function wf(mm, Tm) {
+      return mm.getClientOption(Tm, "blockReach") + 1
     }
-    class aI {
-      constructor(kk, Fk, Ik) {
-        this.api = kk, this.localPlayerId = Fk, this.pickNext = Ik, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
+    class Df {
+      constructor(mm, Tm, fm) {
+        this.api = mm, this.localPlayerId = Tm, this.pickNext = fm, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
       }
-      look(kk) {
-        const [Fk, , Ik] = kk.cameraDirection, Xk = Math.hypot(Fk, Ik);
-        Xk > .001 && (this.heading = [Fk / Xk, Ik / Xk])
+      look(mm) {
+        const [Tm, , fm] = mm.cameraDirection, hm = Math.hypot(Tm, fm);
+        hm > .001 && (this.heading = [Tm / hm, fm / hm])
       }
-      tapped(kk, Fk, Ik) {
-        const Xk = lI(this.api, this.localPlayerId),
+      tapped(mm, Tm, fm) {
+        const hm = wf(this.api, this.localPlayerId),
           {
-            origin: Tk,
-            direction: ik
+            origin: Am,
+            direction: am
           } = this.api.getActionRay(),
-          yk = [...Tk],
-          lk = [
-            [yk, [yk[0] + ik[0] * Xk, yk[1] + ik[1] * Xk, yk[2] + ik[2] * Xk]]
+          xm = [...Am],
+          wm = [
+            [xm, [xm[0] + am[0] * hm, xm[1] + am[1] * hm, xm[2] + am[2] * hm]]
           ];
-        null !== kk && lk.push([yk, (0, WF.c)(kk)]), this.tap = {
-          lines: lk,
-          next: Fk,
-          ms: Ik
+        null !== mm && wm.push([xm, (0, lT.e)(mm)]), this.tap = {
+          lines: wm,
+          next: Tm,
+          ms: fm
         }
       }
-      filled(kk, Fk) {
-        this.tap = null, this.turnFrom(kk, Fk), this.retry(Fk)
+      filled(mm, Tm) {
+        this.tap = null, this.turnFrom(mm, Tm), this.retry(Tm)
       }
-      arrived(kk, Fk) {
+      arrived(mm, Tm) {
         const {
-          tap: Ik
+          tap: fm
         } = this;
-        if (null === Ik || Fk - Ik.ms > 1500) return null;
-        const Xk = (0, WF.c)(kk);
-        return (0, WF.f)(Ik.next, kk) || Ik.lines.some((kk => {
-          let [Fk, Ik] = kk;
-          return function(kk, Fk, Ik) {
-            const Xk = [Ik[0] - Fk[0], Ik[1] - Fk[1], Ik[2] - Fk[2]],
-              Tk = [kk[0] - Fk[0], kk[1] - Fk[1], kk[2] - Fk[2]],
-              ik = Xk[0] ** 2 + Xk[1] ** 2 + Xk[2] ** 2,
-              yk = 0 === ik ? 0 : Math.min(1, Math.max(0, (Tk[0] * Xk[0] + Tk[1] * Xk[1] + Tk[2] * Xk[2]) / ik));
-            return Math.hypot(Tk[0] - Xk[0] * yk, Tk[1] - Xk[1] * yk, Tk[2] - Xk[2] * yk)
-          }(Xk, Fk, Ik) <= .9
-        })) ? (this.tap = null, this.turnFrom(kk, Fk), Ik.ms) : null
+        if (null === fm || Tm - fm.ms > 1500) return null;
+        const hm = (0, lT.e)(mm);
+        return (0, lT.i)(fm.next, mm) || fm.lines.some((mm => {
+          let [Tm, fm] = mm;
+          return function(mm, Tm, fm) {
+            const hm = [fm[0] - Tm[0], fm[1] - Tm[1], fm[2] - Tm[2]],
+              Am = [mm[0] - Tm[0], mm[1] - Tm[1], mm[2] - Tm[2]],
+              am = hm[0] ** 2 + hm[1] ** 2 + hm[2] ** 2,
+              xm = 0 === am ? 0 : Math.min(1, Math.max(0, (Am[0] * hm[0] + Am[1] * hm[1] + Am[2] * hm[2]) / am));
+            return Math.hypot(Am[0] - hm[0] * xm, Am[1] - hm[1] * xm, Am[2] - hm[2] * xm)
+          }(hm, Tm, fm) <= .9
+        })) ? (this.tap = null, this.turnFrom(mm, Tm), fm.ms) : null
       }
-      turnFrom(kk, Fk) {
+      turnFrom(mm, Tm) {
         this.pending = {
-          from: kk,
-          ms: Fk,
-          turnMs: Math.max(50, Math.min(250, Fk - this.lastFillMs))
-        }, this.lastFillMs = Fk
+          from: mm,
+          ms: Tm,
+          turnMs: Math.max(50, Math.min(250, Tm - this.lastFillMs))
+        }, this.lastFillMs = Tm
       }
-      retry(kk) {
+      retry(mm) {
         const {
-          pending: Fk
+          pending: Tm
         } = this;
-        if (null === Fk) return;
-        if (kk - Fk.ms > 1500) return void(this.pending = null);
-        const Ik = this.pickNext((0, WF.c)(Fk.from), (kk => (0, WF.f)(kk, Fk.from)));
-        if (null === Ik) return;
+        if (null === Tm) return;
+        if (mm - Tm.ms > 1500) return void(this.pending = null);
+        const fm = this.pickNext((0, lT.e)(Tm.from), (mm => (0, lT.i)(mm, Tm.from)));
+        if (null === fm) return;
         this.pending = null;
         const {
-          turning: Xk
+          turning: hm
         } = this;
-        if (null !== Xk && kk < Xk.endMs && (0, WF.f)(Xk.to, Ik)) return;
-        const Tk = this.api.getActionRay().origin,
-          ik = [Ik[0] + .5 - Tk[0], Ik[1] + .5 - Tk[1], Ik[2] + .5 - Tk[2]],
-          yk = Math.hypot(ik[0], ik[2]);
-        if (yk < .3) {
-          const kk = Math.max(yk, .001);
-          ik[0] = this.heading[0] * kk, ik[2] = this.heading[1] * kk
+        if (null !== hm && mm < hm.endMs && (0, lT.i)(hm.to, fm)) return;
+        const Am = this.api.getActionRay().origin,
+          am = [fm[0] + .5 - Am[0], fm[1] + .5 - Am[1], fm[2] + .5 - Am[2]],
+          xm = Math.hypot(am[0], am[2]);
+        if (xm < .3) {
+          const mm = Math.max(xm, .001);
+          am[0] = this.heading[0] * mm, am[2] = this.heading[1] * mm
         }
-        this.api.turnCamera(ik, Fk.turnMs), this.turning = {
-          to: Ik,
-          endMs: kk + Fk.turnMs
+        this.api.turnCamera(am, Tm.turnMs), this.turning = {
+          to: fm,
+          endMs: mm + Tm.turnMs
         }
       }
     }
-    class qI {
-      constructor(kk, Fk, Ik) {
-        this.api = kk, this.localPlayerId = Fk, this.juice = Ik, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.nextCells = [], this.lastFilled = null, this.lastSeenFilled = null, this.playerCells = [], this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = null, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new rF(kk), this.meshes = new XI(kk), this.outline = new hF(kk), this.turn = new aI(kk, Fk, ((kk, Fk) => this.pickNext(kk, Fk)))
+    class Rf {
+      constructor(mm, Tm, fm) {
+        this.api = mm, this.localPlayerId = Tm, this.juice = fm, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.nextCells = [], this.lastFilled = null, this.lastSeenFilled = null, this.playerCells = [], this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = null, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new gT(mm), this.meshes = new hf(mm), this.outline = new dT(mm), this.turn = new Df(mm, Tm, ((mm, Tm) => this.pickNext(mm, Tm)))
       }
-      Pe(kk) {
-        const Fk = "active" === kk[0] ? `${kk[1]}|${kk[3]}|${kk[4]}|${kk[5]}|${kk[6]}` : "";
-        if ("active" !== kk[0]) "built" === kk[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
+      rO(mm) {
+        const Tm = "active" === mm[0] ? `${mm[1]}|${mm[3]}|${mm[4]}|${mm[5]}|${mm[6]}` : "";
+        if ("active" !== mm[0]) "built" === mm[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
         else {
-          const [, , , , , , , Ik, Xk, Tk, ik] = kk;
-          Fk !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = Ik) : Ik === this.layerY ? this.burstUnlisted(Xk) : Ik > this.layerY && this.finishLayer(Ik), this.layerY = Ik, this.layerCells.has(Ik) || this.layerCells.set(Ik, Xk.filter(tI)), this.ghostCells = Xk, this.palette = Tk, this.occupiedCells = ik
+          const [, , , , , , , fm, hm, Am, am] = mm;
+          Tm !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = fm) : fm === this.layerY ? this.burstUnlisted(hm) : fm > this.layerY && this.finishLayer(fm), this.layerY = fm, this.layerCells.has(fm) || this.layerCells.set(fm, hm.filter(Ef)), this.ghostCells = hm, this.palette = Am, this.occupiedCells = am
         }
-        Fk !== this.blueprint && (this.blueprint = Fk, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((kk => this.api.blockNameToBlockId(kk))), this.chunkWatch.watch([...this.ghostCells.filter(tI), ...this.occupiedCells]), this.refresh()
+        Tm !== this.blueprint && (this.blueprint = Tm, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((mm => this.api.blockNameToBlockId(mm))), this.chunkWatch.watch([...this.ghostCells.filter(Ef), ...this.occupiedCells]), this.refresh()
       }
-      finishLayer(kk) {
-        this.burstUnlisted([]), kk > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = kk)
+      finishLayer(mm) {
+        this.burstUnlisted([]), mm > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = mm)
       }
-      Dt() {
+      DE() {
         if (this.chunkWatch.changed()) return void this.refresh();
-        const kk = performance.now();
-        let Fk = !1;
-        for (const [Tk, ik] of this.foreseen) {
-          var Ik;
-          if (kk - ik > 1e3) this.foreseen.delete(Tk), Fk = !0, (null === (Ik = this.lastFilled) || void 0 === Ik ? void 0 : Ik.join()) === Tk && (this.lastFilled = this.lastSeenFilled)
+        const mm = performance.now();
+        let Tm = !1;
+        for (const [Am, am] of this.foreseen) {
+          var fm;
+          if (mm - am > 1e3) this.foreseen.delete(Am), Tm = !0, (null === (fm = this.lastFilled) || void 0 === fm ? void 0 : fm.join()) === Am && (this.lastFilled = this.lastSeenFilled)
         }
-        const Xk = LI(this.api.getPositionView(this.localPlayerId));
-        (Fk || Xk.some(((kk, Fk) => kk !== this.playerCells[Fk]))) && this.showNext()
+        const hm = pf(this.api.getPositionView(this.localPlayerId));
+        (Tm || hm.some(((mm, Tm) => mm !== this.playerCells[Tm]))) && this.showNext()
       }
       dispose() {
         this.meshes.dispose(), this.outline.dispose()
       }
-      burstUnlisted(kk) {
-        const Fk = new Set;
-        for (let Tk = 0; Tk < kk.length; Tk += 4) Fk.add(`${kk[Tk]},${kk[Tk+1]},${kk[Tk+2]}`);
-        const Ik = [],
+      burstUnlisted(mm) {
+        const Tm = new Set;
+        for (let Am = 0; Am < mm.length; Am += 4) Tm.add(`${mm[Am]},${mm[Am+1]},${mm[Am+2]}`);
+        const fm = [],
           {
-            ghostCells: Xk
+            ghostCells: hm
           } = this;
-        for (let Tk = 0; Tk < Xk.length; Tk += 4) {
-          const kk = `${Xk[Tk]},${Xk[Tk+1]},${Xk[Tk+2]}`;
-          !Fk.has(kk) && this.open.delete(kk) && Ik.push(this.filledCell(Tk))
+        for (let Am = 0; Am < hm.length; Am += 4) {
+          const mm = `${hm[Am]},${hm[Am+1]},${hm[Am+2]}`;
+          !Tm.has(mm) && this.open.delete(mm) && fm.push(this.filledCell(Am))
         }
-        this.burst(Ik)
+        this.burst(fm)
       }
       refresh() {
         const {
-          ghostCells: kk,
-          palette: Fk,
-          occupiedCells: Ik
-        } = this, Xk = new II, Tk = new Set, ik = [], yk = [];
-        for (let lk = 0; lk < kk.length; lk += 4) {
-          const [Ik, ak, qk, Lk] = [kk[lk], kk[lk + 1], kk[lk + 2], kk[lk + 3]], tk = this.api.getBlockId(Ik, ak, qk), Zk = `${Ik},${ak},${qk}`, jk = EF(this.blockIds[Lk], tk);
-          !jk && OF(tk) ? Xk.add(Ik, ak, qk, GF(Fk[Lk]), MF, cF(Fk[Lk])) : jk ? this.open.has(Zk) && ik.push(this.filledCell(lk)) : Xk.add(Ik, ak, qk, FI, kI), !jk && this.api.isBlockInLoadedChunk(Ik, ak, qk) && (Tk.add(Zk), yk.push(Ik, ak, qk, OF(tk) ? 0 : 1))
+          ghostCells: mm,
+          palette: Tm,
+          occupiedCells: fm
+        } = this, hm = new ff, Am = new Set, am = [], xm = [];
+        for (let wm = 0; wm < mm.length; wm += 4) {
+          const [fm, Dm, im, Rm] = [mm[wm], mm[wm + 1], mm[wm + 2], mm[wm + 3]], pm = this.api.getBlockId(fm, Dm, im), Em = `${fm},${Dm},${im}`, om = bT(this.blockIds[Rm], pm);
+          !om && ST(pm) ? hm.add(fm, Dm, im, NT(Tm[Rm]), FT, sT(Tm[Rm])) : om ? this.open.has(Em) && am.push(this.filledCell(wm)) : hm.add(fm, Dm, im, Tf, mf), !om && this.api.isBlockInLoadedChunk(fm, Dm, im) && (Am.add(Em), xm.push(fm, Dm, im, ST(pm) ? 0 : 1))
         }
-        this.open = Tk, this.nextCells = yk;
-        for (let lk = 0; lk < Ik.length; lk += 3) {
-          const [kk, Fk, Tk] = [Ik[lk], Ik[lk + 1], Ik[lk + 2]];
-          OF(this.api.getBlockId(kk, Fk, Tk)) || Xk.add(kk, Fk, Tk, FI, kI)
+        this.open = Am, this.nextCells = xm;
+        for (let wm = 0; wm < fm.length; wm += 3) {
+          const [mm, Tm, Am] = [fm[wm], fm[wm + 1], fm[wm + 2]];
+          ST(this.api.getBlockId(mm, Tm, Am)) || hm.add(mm, Tm, Am, Tf, mf)
         }
-        this.meshes.show(Xk.toArray()), this.burst(ik), this.showNext(), this.turn.retry(performance.now())
+        this.meshes.show(hm.toArray()), this.burst(am), this.showNext(), this.turn.retry(performance.now())
       }
-      burst(kk) {
-        const Fk = performance.now(),
-          Ik = [];
-        for (const [Tk, ik, yk] of kk) {
-          const kk = [Tk, ik, yk];
-          this.lastSeenFilled = kk, this.foreseen.delete(kk.join()) || Ik.push(kk)
+      burst(mm) {
+        const Tm = performance.now(),
+          fm = [];
+        for (const [Am, am, xm] of mm) {
+          const mm = [Am, am, xm];
+          this.lastSeenFilled = mm, this.foreseen.delete(mm.join()) || fm.push(mm)
         }
-        const Xk = this.isHolding(Fk);
-        for (const Tk of Ik) {
-          if (this.lastFilled = Tk, Xk && this.pressFilled) {
-            this.turn.filled(Tk, Fk);
+        const hm = this.isHolding(Tm);
+        for (const Am of fm) {
+          if (this.lastFilled = Am, hm && this.pressFilled) {
+            this.turn.filled(Am, Tm);
             continue
           }
-          const kk = this.turn.arrived(Tk, Fk);
-          if (null !== kk) {
-            this.pressFilled = Xk;
-            for (const [Fk, Ik] of this.foreseen) Ik <= kk && this.foreseen.delete(Fk)
+          const mm = this.turn.arrived(Am, Tm);
+          if (null !== mm) {
+            this.pressFilled = hm;
+            for (const [Tm, fm] of this.foreseen) fm <= mm && this.foreseen.delete(Tm)
           }
         }
-        this.juice.filled(kk)
+        this.juice.filled(mm)
       }
       showNext() {
-        var kk;
-        const Fk = this.api.getPositionView(this.localPlayerId);
-        this.playerCells.splice(0, 1 / 0, ...LI(Fk));
-        const Ik = this.lastFilled;
-        this.nextCell = this.pickNext(null === Ik ? [Fk[0], Fk[1] + 1, Fk[2]] : (0, WF.c)(Ik), (() => !1)), this.outline.show(null !== (kk = this.aimed) && void 0 !== kk ? kk : this.nextCell)
+        var mm;
+        const Tm = this.api.getPositionView(this.localPlayerId);
+        this.playerCells.splice(0, 1 / 0, ...pf(Tm));
+        const fm = this.lastFilled;
+        this.nextCell = this.pickNext(null === fm ? [Tm[0], Tm[1] + 1, Tm[2]] : (0, lT.e)(fm), (() => !1)), this.outline.show(null !== (mm = this.aimed) && void 0 !== mm ? mm : this.nextCell)
       }
-      pickNext(kk, Fk) {
-        const Ik = this.api.getPositionView(this.localPlayerId),
-          Xk = [Ik[0], Ik[1] + fF.f.NH * fF.f.playerEyeToHeightRatio, Ik[2]],
-          Tk = lI(this.api, this.localPlayerId),
+      pickNext(mm, Tm) {
+        const fm = this.api.getPositionView(this.localPlayerId),
+          hm = [fm[0], fm[1] + MT.f.gq * MT.f.playerEyeToHeightRatio, fm[2]],
+          Am = wf(this.api, this.localPlayerId),
           {
-            nextCells: ik
+            nextCells: am
           } = this,
-          yk = kk => [ik[kk], ik[kk + 1], ik[kk + 2]],
-          lk = function(kk, Fk, Ik, Xk, Tk, ik) {
-            let yk = -1,
-              lk = -1,
-              ak = 1 / 0;
-            for (let qk = 0; qk < kk.length; qk += Fk) {
-              const Fk = (ik(qk) ? 2 : 0) + (Xk(qk) ? 1 : 0);
-              if (Fk < lk || Tk(qk)) continue;
-              const Lk = (kk[qk] + .5 - Ik[0]) ** 2 + (kk[qk + 1] + .5 - Ik[1]) ** 2 + (kk[qk + 2] + .5 - Ik[2]) ** 2;
-              (Fk > lk || Lk < ak) && (yk = qk, lk = Fk, ak = Lk)
+          xm = mm => [am[mm], am[mm + 1], am[mm + 2]],
+          wm = function(mm, Tm, fm, hm, Am, am) {
+            let xm = -1,
+              wm = -1,
+              Dm = 1 / 0;
+            for (let im = 0; im < mm.length; im += Tm) {
+              const Tm = (am(im) ? 2 : 0) + (hm(im) ? 1 : 0);
+              if (Tm < wm || Am(im)) continue;
+              const Rm = (mm[im] + .5 - fm[0]) ** 2 + (mm[im + 1] + .5 - fm[1]) ** 2 + (mm[im + 2] + .5 - fm[2]) ** 2;
+              (Tm > wm || Rm < Dm) && (xm = im, wm = Tm, Dm = Rm)
             }
-            return yk
-          }(ik, 4, kk, (kk => 1 === ik[kk + 3]), (kk => {
-            const Xk = yk(kk);
-            return BF(Xk, Ik) || this.foreseen.has(Xk.join()) || Fk(Xk)
-          }), (kk => function(kk, Fk, Ik) {
-            return (Fk[0] + .5 - kk[0]) ** 2 + (Fk[1] + .5 - kk[1]) ** 2 + (Fk[2] + .5 - kk[2]) ** 2 <= Ik ** 2
-          }(Xk, yk(kk), Tk)));
-        return -1 === lk ? null : yk(lk)
+            return xm
+          }(am, 4, mm, (mm => 1 === am[mm + 3]), (mm => {
+            const hm = xm(mm);
+            return uT(hm, fm) || this.foreseen.has(hm.join()) || Tm(hm)
+          }), (mm => function(mm, Tm, fm) {
+            return (Tm[0] + .5 - mm[0]) ** 2 + (Tm[1] + .5 - mm[1]) ** 2 + (Tm[2] + .5 - mm[2]) ** 2 <= fm ** 2
+          }(hm, xm(mm), Am)));
+        return -1 === wm ? null : xm(wm)
       }
-      afterRender(kk) {
-        var Fk;
-        this.turn.look(kk);
-        const Ik = this.api.getTargetedBlock();
-        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === Ik ? null : Ik.position), this.outline.show(null !== (Fk = this.aimed) && void 0 !== Fk ? Fk : this.nextCell)
+      afterRender(mm) {
+        var Tm;
+        this.turn.look(mm);
+        const fm = this.api.getTargetedBlock();
+        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === fm ? null : fm.position), this.outline.show(null !== (Tm = this.aimed) && void 0 !== Tm ? Tm : this.nextCell)
       }
-      isHolding(kk) {
-        return null !== this.altMs && kk - this.altMs <= 500
+      isHolding(mm) {
+        return null !== this.altMs && mm - this.altMs <= 500
       }
-      attemptAltAction(kk) {
-        const Fk = performance.now();
-        if (this.isHolding(Fk) || (this.pressFilled = !1), this.altMs = Fk, this.pressFilled) return "preventPlacement";
-        const Ik = this.findAimed(kk);
-        if (null !== Ik) return this.foreseen.set(Ik.join(), Fk), this.lastFilled = Ik, this.aimed = null, this.showNext(), this.turn.filled(Ik, Fk), this.pressFilled = !0, "preventPlacement";
-        null !== this.nextCell && this.turn.tapped(kk, this.nextCell, Fk)
+      attemptAltAction(mm) {
+        const Tm = performance.now();
+        if (this.isHolding(Tm) || (this.pressFilled = !1), this.altMs = Tm, this.pressFilled) return "preventPlacement";
+        const fm = this.findAimed(mm);
+        if (null !== fm) return this.foreseen.set(fm.join(), Tm), this.lastFilled = fm, this.aimed = null, this.showNext(), this.turn.filled(fm, Tm), this.pressFilled = !0, "preventPlacement";
+        null !== this.nextCell && this.turn.tapped(mm, this.nextCell, Tm)
       }
-      findAimed(kk) {
-        return function(kk, Fk, Ik, Xk, Tk, ik, yk) {
-          const lk = kk.BFk(Fk),
-            ak = null === lk || null === kk.blockNameToBlockId(lk.name, !0) ? null : lk.name,
-            qk = kk.getPositionView(Fk),
+      findAimed(mm) {
+        return function(mm, Tm, fm, hm, Am, am, xm) {
+          const wm = mm.MTm(Tm),
+            Dm = null === wm || null === mm.blockNameToBlockId(wm.name, !0) ? null : wm.name,
+            im = mm.getPositionView(Tm),
             {
-              origin: Lk,
-              direction: tk
-            } = kk.getActionRay(),
-            Zk = dF(Xk, {
-              from: Lk,
-              dir: tk,
-              reach: lI(kk, Fk),
-              solid: Ik
-            }, (Fk => {
-              const Ik = [Xk[Fk], Xk[Fk + 1], Xk[Fk + 2]];
-              return !EF(Tk[Xk[Fk + 3]], kk.getBlockId(...Ik)) && !yk.has(Ik.join()) && kk.isBlockInLoadedChunk(...Ik) && !BF(Ik, qk)
-            }), (kk => null === ak || ak === nF(Tk[Xk[kk + 3]])), (kk => null !== ik && Xk[kk] === ik[0] && Xk[kk + 1] === ik[1] && Xk[kk + 2] === ik[2]));
-          return -1 === Zk ? null : [Xk[Zk], Xk[Zk + 1], Xk[Zk + 2]]
-        }(this.api, this.localPlayerId, kk, this.ghostCells, this.blockIds, this.nextCell, this.foreseen)
+              origin: Rm,
+              direction: pm
+            } = mm.getActionRay(),
+            Em = BT(hm, {
+              from: Rm,
+              dir: pm,
+              reach: wf(mm, Tm),
+              solid: fm
+            }, (Tm => {
+              const fm = [hm[Tm], hm[Tm + 1], hm[Tm + 2]];
+              return !bT(Am[hm[Tm + 3]], mm.getBlockId(...fm)) && !xm.has(fm.join()) && mm.isBlockInLoadedChunk(...fm) && !uT(fm, im)
+            }), (mm => null === Dm || Dm === eT(Am[hm[mm + 3]])), (mm => null !== am && hm[mm] === am[0] && hm[mm + 1] === am[1] && hm[mm + 2] === am[2]));
+          return -1 === Em ? null : [hm[Em], hm[Em + 1], hm[Em + 2]]
+        }(this.api, this.localPlayerId, mm, this.ghostCells, this.blockIds, this.nextCell, this.foreseen)
       }
       endPress() {
         this.altMs = null, this.pressFilled = !1
       }
-      filledCell(kk) {
+      filledCell(mm) {
         const {
-          ghostCells: Fk
-        } = this, [Ik, Xk, Tk] = GF(this.palette[Fk[kk + 3]]);
-        return [Fk[kk], Fk[kk + 1], Fk[kk + 2], Ik, Xk, Tk]
+          ghostCells: Tm
+        } = this, [fm, hm, Am] = NT(this.palette[Tm[mm + 3]]);
+        return [Tm[mm], Tm[mm + 1], Tm[mm + 2], fm, hm, Am]
       }
     }
 
-    function LI(kk) {
-      let [Fk, Ik, Xk] = kk;
-      const Tk = fF.f.CH / 2;
-      return [Math.floor(Fk), Math.floor(Ik), Math.floor(Xk), Math.floor(Fk - Tk), Math.floor(Fk + Tk), Math.floor(Ik + fF.f.NH), Math.floor(Xk - Tk), Math.floor(Xk + Tk)]
+    function pf(mm) {
+      let [Tm, fm, hm] = mm;
+      const Am = MT.f.dq / 2;
+      return [Math.floor(Tm), Math.floor(fm), Math.floor(hm), Math.floor(Tm - Am), Math.floor(Tm + Am), Math.floor(fm + MT.f.gq), Math.floor(hm - Am), Math.floor(hm + Am)]
     }
 
-    function tI(kk, Fk) {
-      return Fk % 4 !== 3
+    function Ef(mm, Tm) {
+      return Tm % 4 !== 3
     }
 
-    function ZI(kk, Fk, Ik, Xk, Tk) {
-      if (!kk.isBlockInLoadedChunk(Fk, Xk - 6, Ik) || !kk.isBlockInLoadedChunk(Fk, Xk + 6 + Tk, Ik) || !kk.canModifyBlockAt(Fk, Xk, Ik)) return NaN;
-      let ik = Xk - 1;
-      if (0 !== kk.getBlockId(Fk, ik, Ik)) {
-        for (; ik < Xk + 6 && 0 !== kk.getBlockId(Fk, ik + 1, Ik);) ik++;
-        return ik
+    function of(mm, Tm, fm, hm, Am) {
+      if (!mm.isBlockInLoadedChunk(Tm, hm - 6, fm) || !mm.isBlockInLoadedChunk(Tm, hm + 6 + Am, fm) || !mm.canModifyBlockAt(Tm, hm, fm)) return NaN;
+      let am = hm - 1;
+      if (0 !== mm.getBlockId(Tm, am, fm)) {
+        for (; am < hm + 6 && 0 !== mm.getBlockId(Tm, am + 1, fm);) am++;
+        return am
       }
-      for (; ik > Xk - 6;)
-        if (ik--, 0 !== kk.getBlockId(Fk, ik, Ik)) return ik;
+      for (; am > hm - 6;)
+        if (am--, 0 !== mm.getBlockId(Tm, am, fm)) return am;
       return NaN
     }
 
-    function jI(kk, Fk, Ik, Xk, Tk) {
-      let ik = 0;
-      for (let yk = Xk + 1; yk <= Xk + Tk; yk++) 0 !== kk.getBlockId(Fk, yk, Ik) && ik++;
-      return ik
+    function Of(mm, Tm, fm, hm, Am) {
+      let am = 0;
+      for (let xm = hm + 1; xm <= hm + Am; xm++) 0 !== mm.getBlockId(Tm, xm, fm) && am++;
+      return am
     }
 
-    function eI(kk) {
-      const Fk = new Map;
-      for (const yk of kk) {
-        var Ik;
-        if (Number.isNaN(yk)) return null;
-        Fk.set(yk, (null !== (Ik = Fk.get(yk)) && void 0 !== Ik ? Ik : 0) + 1)
+    function Yf(mm) {
+      const Tm = new Map;
+      for (const xm of mm) {
+        var fm;
+        if (Number.isNaN(xm)) return null;
+        Tm.set(xm, (null !== (fm = Tm.get(xm)) && void 0 !== fm ? fm : 0) + 1)
       }
-      let Xk = NaN,
-        Tk = 0;
-      for (const [yk, lk] of Fk)(lk > Tk || lk === Tk && yk < Xk) && (Xk = yk, Tk = lk);
-      let ik = 0;
-      for (const yk of kk) ik += Math.abs(yk - Xk);
-      return ik
+      let hm = NaN,
+        Am = 0;
+      for (const [xm, wm] of Tm)(wm > Am || wm === Am && xm < hm) && (hm = xm, Am = wm);
+      let am = 0;
+      for (const xm of mm) am += Math.abs(xm - hm);
+      return am
     }
 
-    function wI(kk, Fk, Ik, Xk) {
+    function qf(mm, Tm, fm, hm) {
       const {
-        eye: Tk,
-        forward: ik,
-        tanHalfFovX: yk,
-        tanHalfFovY: lk
-      } = kk, [ak, qk] = function(kk) {
-        let [Fk, Ik, Xk] = kk;
-        const Tk = Math.hypot(Fk, Xk),
-          [ik, yk] = [Xk / Tk, -Fk / Tk];
+        eye: Am,
+        forward: am,
+        tanHalfFovX: xm,
+        tanHalfFovY: wm
+      } = mm, [Dm, im] = function(mm) {
+        let [Tm, fm, hm] = mm;
+        const Am = Math.hypot(Tm, hm),
+          [am, xm] = [hm / Am, -Tm / Am];
         return [
-          [ik, 0, yk],
-          [Ik * yk, Xk * ik - Fk * yk, -Ik * ik]
+          [am, 0, xm],
+          [fm * xm, hm * am - Tm * xm, -fm * am]
         ]
-      }(ik), [Lk, tk] = [Fk * yk, Ik * lk], Zk = ik[0] + Lk * ak[0] + tk * qk[0], jk = ik[1] + tk * qk[1], ek = ik[2] + Lk * ak[2] + tk * qk[2], wk = (Xk - Tk[1]) / jk;
-      return wk > 0 && wk < 1 / 0 ? [Tk[0] + wk * Zk, Tk[2] + wk * ek] : null
+      }(am), [Rm, pm] = [Tm * xm, fm * wm], Em = am[0] + Rm * Dm[0] + pm * im[0], om = am[1] + pm * im[1], Om = am[2] + Rm * Dm[2] + pm * im[2], Ym = (hm - Am[1]) / om;
+      return Ym > 0 && Ym < 1 / 0 ? [Am[0] + Ym * Em, Am[2] + Ym * Om] : null
     }
-    const HI = "plotsBlueprintPlacementChanged",
-      JI = {
+    const jf = "plotsBlueprintPlacementChanged",
+      Vf = {
         size: .9,
         alpha: .2,
         crossed: !1
       };
-    class xI {
-      constructor(kk, Fk) {
-        this.api = kk, this.localPlayerId = Fk, this.placing = null, this.view = null, this.camera = {
+    class If {
+      constructor(mm, Tm) {
+        this.api = mm, this.localPlayerId = Tm, this.placing = null, this.view = null, this.camera = {
           eye: [0, 0, 0],
           forward: [0, 0, 1],
           tanHalfFovX: 1,
           tanHalfFovY: 1
-        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = kk => {
-          var Fk, Ik, Xk, ik;
-          const yk = null !== (Fk = null === (Ik = this.placing) || void 0 === Ik ? void 0 : Ik.rotation) && void 0 !== Fk ? Fk : 0,
+        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = mm => {
+          var Tm, fm, hm, am;
+          const xm = null !== (Tm = null === (fm = this.placing) || void 0 === fm ? void 0 : fm.rotation) && void 0 !== Tm ? Tm : 0,
             {
-              size: lk
-            } = Bk(kk, yk),
-            ak = this.api.OJ(this.localPlayerId),
-            [qk, Lk] = null !== (Xk = null !== (ik = function(kk, Fk, Ik) {
-              const [Xk, Tk, ik] = Fk, [yk, lk, ak] = [Math.floor(Ik[0]), Math.floor(Ik[1]), Math.floor(Ik[2])], qk = 6 + Math.max(Xk, ik) / 2, [Lk, tk] = [Math.ceil(qk + Xk / 2), Math.ceil(qk + ik / 2)], [Zk, jk] = [yk - Lk, ak - tk], [ek, wk] = [2 * Lk + 1, 2 * tk + 1], Hk = new Float64Array(ek * wk), Jk = new Uint16Array(ek * wk);
-              for (let Qk = 0; Qk < ek; Qk++)
-                for (let Fk = 0; Fk < wk; Fk++) {
-                  const Ik = ZI(kk, Zk + Qk, jk + Fk, lk, Tk);
-                  Hk[Qk * wk + Fk] = Ik, Number.isNaN(Ik) || (Jk[Qk * wk + Fk] = jI(kk, Zk + Qk, jk + Fk, Ik, Tk))
+              size: wm
+            } = Mm(mm, xm),
+            Dm = this.api.rV(this.localPlayerId),
+            [im, Rm] = null !== (hm = null !== (am = function(mm, Tm, fm) {
+              const [hm, Am, am] = Tm, [xm, wm, Dm] = [Math.floor(fm[0]), Math.floor(fm[1]), Math.floor(fm[2])], im = 6 + Math.max(hm, am) / 2, [Rm, pm] = [Math.ceil(im + hm / 2), Math.ceil(im + am / 2)], [Em, om] = [xm - Rm, Dm - pm], [Om, Ym] = [2 * Rm + 1, 2 * pm + 1], qm = new Float64Array(Om * Ym), jm = new Uint16Array(Om * Ym);
+              for (let Qm = 0; Qm < Om; Qm++)
+                for (let Tm = 0; Tm < Ym; Tm++) {
+                  const fm = of(mm, Em + Qm, om + Tm, wm, Am);
+                  qm[Qm * Ym + Tm] = fm, Number.isNaN(fm) || (jm[Qm * Ym + Tm] = Of(mm, Em + Qm, om + Tm, fm, Am))
                 }
-              const xk = [];
-              let Pk = null,
-                Kk = 1 / 0;
-              for (let Qk = 0; Qk + Xk <= ek; Qk++)
-                for (let kk = 0; kk + ik <= wk; kk++) {
-                  const [Fk, Tk] = [Zk + Qk, jk + kk], lk = Math.hypot(Fk + Xk / 2 - Ik[0], Tk + ik / 2 - Ik[2]);
-                  if (lk > qk || yk >= Fk - 2 && yk < Fk + Xk + 2 && ak >= Tk - 2 && ak < Tk + ik + 2) continue;
-                  xk.length = 0;
-                  let Lk = 0;
-                  for (let Ik = 0; Ik < Xk; Ik++)
-                    for (let Fk = 0; Fk < ik; Fk++) xk.push(Hk[(Qk + Ik) * wk + kk + Fk]), Lk += Jk[(Qk + Ik) * wk + kk + Fk];
-                  const tk = eI(xk);
-                  if (null === tk) continue;
-                  const ek = lk + 3 * (tk + Lk);
-                  ek < Kk && (Kk = ek, Pk = [Fk, Tk])
+              const Vm = [];
+              let Im = null,
+                Km = 1 / 0;
+              for (let Qm = 0; Qm + hm <= Om; Qm++)
+                for (let mm = 0; mm + am <= Ym; mm++) {
+                  const [Tm, Am] = [Em + Qm, om + mm], wm = Math.hypot(Tm + hm / 2 - fm[0], Am + am / 2 - fm[2]);
+                  if (wm > im || xm >= Tm - 2 && xm < Tm + hm + 2 && Dm >= Am - 2 && Dm < Am + am + 2) continue;
+                  Vm.length = 0;
+                  let Rm = 0;
+                  for (let fm = 0; fm < hm; fm++)
+                    for (let Tm = 0; Tm < am; Tm++) Vm.push(qm[(Qm + fm) * Ym + mm + Tm]), Rm += jm[(Qm + fm) * Ym + mm + Tm];
+                  const pm = Yf(Vm);
+                  if (null === pm) continue;
+                  const Om = wm + 3 * (pm + Rm);
+                  Om < Km && (Km = Om, Im = [Tm, Am])
                 }
-              return Pk
-            }(this.api, lk, ak)) && void 0 !== ik ? ik : this.cornerOnTarget(lk)) && void 0 !== Xk ? Xk : [Math.floor(ak[0]) + 2, Math.floor(ak[2])];
+              return Im
+            }(this.api, wm, Dm)) && void 0 !== am ? am : this.cornerOnTarget(wm)) && void 0 !== hm ? hm : [Math.floor(Dm[0]) + 2, Math.floor(Dm[2])];
           this.placing = {
-            id: kk,
-            rotation: yk,
-            corner: [qk, this.playerLevel(), Lk],
+            id: mm,
+            rotation: xm,
+            corner: [im, this.playerLevel(), Rm],
             sent: null,
             refusals: 0,
             hover: null,
             drag: null
-          }, this.update(), this.api.sendCommand(`${Tk} preview`)
+          }, this.update(), this.api.sendCommand(`${Am} preview`)
         }, this.rotate = () => {
           const {
-            id: kk,
-            rotation: Fk,
-            corner: Ik
-          } = this.placing, Tk = Xk[(Xk.indexOf(Fk) + 1) % Xk.length], [ik, , yk] = Bk(kk, Fk).size, [lk, , ak] = Bk(kk, Tk).size;
-          this.moveTo(Ik[0] + Math.floor(ik / 2) - Math.floor(lk / 2), Ik[2] + Math.floor(yk / 2) - Math.floor(ak / 2), Tk)
-        }, this.hoverAt = (kk, Fk) => {
-          this.placing.hover = [kk, Fk], this.moveCentreTo(this.camera, kk, Fk)
+            id: mm,
+            rotation: Tm,
+            corner: fm
+          } = this.placing, Am = hm[(hm.indexOf(Tm) + 1) % hm.length], [am, , xm] = Mm(mm, Tm).size, [wm, , Dm] = Mm(mm, Am).size;
+          this.moveTo(fm[0] + Math.floor(am / 2) - Math.floor(wm / 2), fm[2] + Math.floor(xm / 2) - Math.floor(Dm / 2), Am)
+        }, this.hoverAt = (mm, Tm) => {
+          this.placing.hover = [mm, Tm], this.moveCentreTo(this.camera, mm, Tm)
         }, this.endHover = () => {
           this.placing.hover = null
-        }, this.beginDrag = (kk, Fk) => {
-          const Ik = this.placing,
+        }, this.beginDrag = (mm, Tm) => {
+          const fm = this.placing,
             {
-              eye: Xk,
-              forward: Tk,
-              tanHalfFovX: ik,
-              tanHalfFovY: yk
+              eye: hm,
+              forward: Am,
+              tanHalfFovX: am,
+              tanHalfFovY: xm
             } = this.camera,
-            lk = {
-              eye: [Xk[0], Xk[1], Xk[2]],
-              forward: [Tk[0], Tk[1], Tk[2]],
-              tanHalfFovX: ik,
-              tanHalfFovY: yk
+            wm = {
+              eye: [hm[0], hm[1], hm[2]],
+              forward: [Am[0], Am[1], Am[2]],
+              tanHalfFovX: am,
+              tanHalfFovY: xm
             },
-            ak = Ik.corner[1],
-            qk = wI(lk, kk, Fk, ak);
-          Ik.hover = null, Ik.drag = qk && {
-            view: lk,
-            ground: qk,
-            corner: [Ik.corner[0], Ik.corner[2]],
-            level: ak
+            Dm = fm.corner[1],
+            im = qf(wm, mm, Tm, Dm);
+          fm.hover = null, fm.drag = im && {
+            view: wm,
+            ground: im,
+            corner: [fm.corner[0], fm.corner[2]],
+            level: Dm
           }
-        }, this.dragTo = (kk, Fk) => {
-          const Ik = this.placing.drag,
-            Xk = Ik && wI(Ik.view, kk, Fk, Ik.level);
-          null !== Ik && null !== Xk && this.moveTo(Ik.corner[0] + Math.round(Xk[0] - Ik.ground[0]), Ik.corner[1] + Math.round(Xk[1] - Ik.ground[1]))
+        }, this.dragTo = (mm, Tm) => {
+          const fm = this.placing.drag,
+            hm = fm && qf(fm.view, mm, Tm, fm.level);
+          null !== fm && null !== hm && this.moveTo(fm.corner[0] + Math.round(hm[0] - fm.ground[0]), fm.corner[1] + Math.round(hm[1] - fm.ground[1]))
         }, this.endDrag = () => {
           this.placing.drag = null
         }, this.tap = () => {
-          const kk = this.view;
-          kk.waiting || (kk.blocked ? this.GL({
-            ...kk,
+          const mm = this.view;
+          mm.waiting || (mm.blocked ? this.gp({
+            ...mm,
             refusals: ++this.placing.refusals
           }) : this.build())
         }, this.build = () => {
-          const kk = this.placing,
+          const mm = this.placing,
             {
-              id: Fk,
-              rotation: Ik,
-              corner: Xk
-            } = kk;
-          this.api.sendCommand(`${Tk} place ${Fk} ${Xk.join(" ")} ${Ik}`), kk.sent = {
+              id: Tm,
+              rotation: fm,
+              corner: hm
+            } = mm;
+          this.api.sendCommand(`${Am} place ${Tm} ${hm.join(" ")} ${fm}`), mm.sent = {
             atMs: performance.now(),
-            corner: [...Xk],
-            rotation: Ik,
+            corner: [...hm],
+            rotation: fm,
             timedOut: !1
           }, this.update()
         }, this.stop = () => {
-          null !== this.placing && (this.close(), this.api.sendCommand(`${Tk} preview off`))
-        }, this.chunkWatch = new rF(kk), this.meshes = new XI(kk)
+          null !== this.placing && (this.close(), this.api.sendCommand(`${Am} preview off`))
+        }, this.chunkWatch = new gT(mm), this.meshes = new hf(mm)
       }
       getView() {
         return this.view
       }
-      Dt() {
-        const kk = this.placing;
-        null !== kk && (null !== kk.sent && !kk.sent.timedOut && performance.now() - kk.sent.atMs > 3e3 ? (kk.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(kk) || this.chunkWatch.changed()) && this.update())
+      DE() {
+        const mm = this.placing;
+        null !== mm && (null !== mm.sent && !mm.sent.timedOut && performance.now() - mm.sent.atMs > 3e3 ? (mm.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(mm) || this.chunkWatch.changed()) && this.update())
       }
-      afterRender(kk) {
-        const Fk = this.placing;
-        null !== Fk && (! function(kk, Fk) {
-          for (let Ik = 0; Ik < 3; Ik++) Fk.eye[Ik] = kk.cameraPosition[Ik], Fk.forward[Ik] = kk.cameraDirection[Ik];
-          Fk.tanHalfFovX = kk.tanHalfFovX, Fk.tanHalfFovY = kk.tanHalfFovY
-        }(kk, this.camera), null !== Fk.hover && this.moveCentreTo(this.camera, Fk.hover[0], Fk.hover[1]))
+      afterRender(mm) {
+        const Tm = this.placing;
+        null !== Tm && (! function(mm, Tm) {
+          for (let fm = 0; fm < 3; fm++) Tm.eye[fm] = mm.cameraPosition[fm], Tm.forward[fm] = mm.cameraDirection[fm];
+          Tm.tanHalfFovX = mm.tanHalfFovX, Tm.tanHalfFovY = mm.tanHalfFovY
+        }(mm, this.camera), null !== Tm.hover && this.moveCentreTo(this.camera, Tm.hover[0], Tm.hover[1]))
       }
-      Pe(kk) {
-        const Fk = this.placing;
-        if (null === Fk || null === Fk.sent || "active" !== kk[0]) return;
+      rO(mm) {
+        const Tm = this.placing;
+        if (null === Tm || null === Tm.sent || "active" !== mm[0]) return;
         const {
-          sent: Ik
-        } = Fk, [, Xk, Tk, ik, yk, lk, ak] = kk;
-        Tk && Xk === Fk.id && ak === Ik.rotation && ik === Ik.corner[0] && yk === Ik.corner[1] && lk === Ik.corner[2] && this.close()
+          sent: fm
+        } = Tm, [, hm, Am, am, xm, wm, Dm] = mm;
+        Am && hm === Tm.id && Dm === fm.rotation && am === fm.corner[0] && xm === fm.corner[1] && wm === fm.corner[2] && this.close()
       }
       endFromServer() {
         null !== this.placing && this.close()
@@ -1650,142 +1650,142 @@ export const modules = {
       dispose() {
         this.meshes.dispose()
       }
-      cornerOnTarget(kk) {
-        let [Fk, , Ik] = kk;
-        const Xk = this.api.getTargetedBlock();
-        if (null === Xk) return null;
-        const [Tk, , ik] = Xk.position;
-        return [Tk - Math.floor(Fk / 2), ik - Math.floor(Ik / 2)]
+      cornerOnTarget(mm) {
+        let [Tm, , fm] = mm;
+        const hm = this.api.getTargetedBlock();
+        if (null === hm) return null;
+        const [Am, , am] = hm.position;
+        return [Am - Math.floor(Tm / 2), am - Math.floor(fm / 2)]
       }
       playerLevel() {
-        var kk;
-        const [Fk, Ik, Xk] = this.api.OJ(this.localPlayerId);
-        if (null !== (kk = this.api.getLocalPlayerMovement()) && void 0 !== kk && kk.onGround) return Math.ceil(Ik - .01);
-        const [Tk, ik, yk] = [Math.floor(Fk), Math.floor(Ik), Math.floor(Xk)];
-        for (let lk = ik; lk >= ik - 2; lk--)
-          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(Tk, lk, yk))) return lk + 1;
-        return ik
+        var mm;
+        const [Tm, fm, hm] = this.api.rV(this.localPlayerId);
+        if (null !== (mm = this.api.getLocalPlayerMovement()) && void 0 !== mm && mm.onGround) return Math.ceil(fm - .01);
+        const [Am, am, xm] = [Math.floor(Tm), Math.floor(fm), Math.floor(hm)];
+        for (let wm = am; wm >= am - 2; wm--)
+          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(Am, wm, xm))) return wm + 1;
+        return am
       }
-      followPlayerLevel(kk) {
-        if (PI(kk)) return !1;
-        const Fk = this.playerLevel();
-        return Fk !== kk.corner[1] && (kk.corner[1] = Fk, !0)
+      followPlayerLevel(mm) {
+        if (Kf(mm)) return !1;
+        const Tm = this.playerLevel();
+        return Tm !== mm.corner[1] && (mm.corner[1] = Tm, !0)
       }
-      moveCentreTo(kk, Fk, Ik) {
-        const Xk = this.placing,
-          Tk = wI(kk, Fk, Ik, Xk.corner[1]);
-        if (null !== Tk) {
-          const [kk, , Fk] = Bk(Xk.id, Xk.rotation).size;
-          this.moveTo(Math.round(Tk[0] - kk / 2), Math.round(Tk[1] - Fk / 2))
+      moveCentreTo(mm, Tm, fm) {
+        const hm = this.placing,
+          Am = qf(mm, Tm, fm, hm.corner[1]);
+        if (null !== Am) {
+          const [mm, , Tm] = Mm(hm.id, hm.rotation).size;
+          this.moveTo(Math.round(Am[0] - mm / 2), Math.round(Am[1] - Tm / 2))
         }
       }
-      moveTo(kk, Fk) {
-        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
-        const Xk = this.placing;
-        if (PI(Xk)) return;
-        const [Tk, ik, yk] = Xk.corner;
-        if (this.centreOnPlot(Tk, yk) && !this.centreOnPlot(kk, Fk, Ik))
-          if (this.centreOnPlot(kk, yk, Ik)) Fk = yk;
+      moveTo(mm, Tm) {
+        let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+        const hm = this.placing;
+        if (Kf(hm)) return;
+        const [Am, am, xm] = hm.corner;
+        if (this.centreOnPlot(Am, xm) && !this.centreOnPlot(mm, Tm, fm))
+          if (this.centreOnPlot(mm, xm, fm)) Tm = xm;
           else {
-            if (!this.centreOnPlot(Tk, Fk, Ik)) return;
-            kk = Tk
-          } kk === Tk && Fk === yk && Ik === Xk.rotation || (Xk.rotation = Ik, Xk.corner = [kk, ik, Fk], this.update())
+            if (!this.centreOnPlot(Am, Tm, fm)) return;
+            mm = Am
+          } mm === Am && Tm === xm && fm === hm.rotation || (hm.rotation = fm, hm.corner = [mm, am, Tm], this.update())
       }
-      centreOnPlot(kk, Fk) {
-        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+      centreOnPlot(mm, Tm) {
+        let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
         const {
-          id: Xk,
-          corner: Tk
-        } = this.placing, [ik, , yk] = Bk(Xk, Ik).size;
-        return this.api.canModifyBlockAt(kk + Math.floor(ik / 2), Tk[1], Fk + Math.floor(yk / 2))
+          id: hm,
+          corner: Am
+        } = this.placing, [am, , xm] = Mm(hm, fm).size;
+        return this.api.canModifyBlockAt(mm + Math.floor(am / 2), Am[1], Tm + Math.floor(xm / 2))
       }
       close() {
-        this.placing = null, this.meshes.dispose(), this.GL(null)
+        this.placing = null, this.meshes.dispose(), this.gp(null)
       }
       update() {
         const {
-          id: kk,
-          rotation: Fk,
-          corner: Ik,
-          refusals: Xk
-        } = this.placing, Tk = new II, ik = [];
-        let yk = !1,
-          lk = 0;
+          id: mm,
+          rotation: Tm,
+          corner: fm,
+          refusals: hm
+        } = this.placing, Am = new ff, am = [];
+        let xm = !1,
+          wm = 0;
         for (const {
-            offset: Lk,
-            block: tk
+            offset: Rm,
+            block: pm
           }
-          of Bk(kk, Fk).cells) {
-          const [kk, Fk, Xk] = [Ik[0] + Lk[0], Ik[1] + Lk[1], Ik[2] + Lk[2]];
-          ik.push(kk, Fk, Xk);
-          const ak = !this.api.canModifyBlockAt(kk, Fk, Xk),
-            qk = this.api.getBlockId(kk, Fk, Xk),
-            Zk = !OF(qk) && !EF(this.api.blockNameToBlockId(tk), qk);
-          yk ||= ak, lk += Zk ? 1 : 0, ak || Zk ? Tk.add(kk, Fk, Xk, FI, kI) : Tk.add(kk, Fk, Xk, GF(tk), JI, cF(tk))
+          of Mm(mm, Tm).cells) {
+          const [mm, Tm, hm] = [fm[0] + Rm[0], fm[1] + Rm[1], fm[2] + Rm[2]];
+          am.push(mm, Tm, hm);
+          const Dm = !this.api.canModifyBlockAt(mm, Tm, hm),
+            im = this.api.getBlockId(mm, Tm, hm),
+            Em = !ST(im) && !bT(this.api.blockNameToBlockId(pm), im);
+          xm ||= Dm, wm += Em ? 1 : 0, Dm || Em ? Am.add(mm, Tm, hm, Tf, mf) : Am.add(mm, Tm, hm, NT(pm), Vf, sT(pm))
         }
-        this.chunkWatch.watch(ik), this.meshes.show(Tk.toArray());
-        const ak = this.view,
-          qk = PI(this.placing);
-        (null === ak || void 0 === ak ? void 0 : ak.id) === kk && ak.blocked === yk && ak.toClear === lk && ak.waiting === qk && ak.refusals === Xk || this.GL({
-          id: kk,
-          blocked: yk,
-          toClear: lk,
-          waiting: qk,
-          refusals: Xk
+        this.chunkWatch.watch(am), this.meshes.show(Am.toArray());
+        const Dm = this.view,
+          im = Kf(this.placing);
+        (null === Dm || void 0 === Dm ? void 0 : Dm.id) === mm && Dm.blocked === xm && Dm.toClear === wm && Dm.waiting === im && Dm.refusals === hm || this.gp({
+          id: mm,
+          blocked: xm,
+          toClear: wm,
+          waiting: im,
+          refusals: hm
         })
       }
-      GL(kk) {
-        this.view = kk, Lk.g.GL(HI, kk, !0)
+      gp(mm) {
+        this.view = mm, Rm.j.gp(jf, mm, !0)
       }
     }
 
-    function PI(kk) {
+    function Kf(mm) {
       let {
-        sent: Fk
-      } = kk;
-      return null !== Fk && !Fk.timedOut
+        sent: Tm
+      } = mm;
+      return null !== Tm && !Tm.timedOut
     }
-    var KI = Ik(4210),
-      QI = Ik(39154);
+    var Qf = fm(4171),
+      nf = fm(39275);
 
-    function sI(kk, Fk, Ik) {
-      const Xk = [255 * kk, 255 * Fk, 255 * Ik],
-        [Tk, ik, yk] = Xk.map((kk => kk + .4 * (255 - kk)));
+    function Jf(mm, Tm, fm) {
+      const hm = [255 * mm, 255 * Tm, 255 * fm],
+        [Am, am, xm] = hm.map((mm => mm + .4 * (255 - mm)));
       return {
         texture: "square_particle",
-        St: 48,
-        minLifeTime: .3 / QI.e,
-        maxLifeTime: .55 / QI.e,
+        yp: 48,
+        minLifeTime: .3 / nf.d,
+        maxLifeTime: .55 / nf.d,
         minSize: .07,
         maxSize: .14,
         minEmitPower: 1,
         maxEmitPower: 1,
         emitRate: 0,
-        gravity: [0, -14 * QI.e * QI.e, 0],
+        gravity: [0, -14 * nf.d * nf.d, 0],
         colorGradients: [{
           timeFraction: 0,
-          minColor: [...Xk, 1],
-          maxColor: [Tk, ik, yk, 1]
+          minColor: [...hm, 1],
+          maxColor: [Am, am, xm, 1]
         }, {
           timeFraction: 1,
-          minColor: [...Xk, 0],
-          maxColor: [Tk, ik, yk, 0]
+          minColor: [...hm, 0],
+          maxColor: [Am, am, xm, 0]
         }],
-        blendMode: KI.d.Standard
+        blendMode: Qf.g.Standard
       }
     }
-    const VI = {
+    const zf = {
       texture: "glint",
       mipmaps: !1,
-      St: 96,
-      minLifeTime: .5 / QI.e,
-      maxLifeTime: .9 / QI.e,
+      yp: 96,
+      minLifeTime: .5 / nf.d,
+      maxLifeTime: .9 / nf.d,
       minSize: .15,
       maxSize: .3,
       minEmitPower: 1,
       maxEmitPower: 1,
       emitRate: 0,
-      gravity: [0, 2 * QI.e * QI.e, 0],
+      gravity: [0, 2 * nf.d * nf.d, 0],
       colorGradients: [{
         timeFraction: 0,
         minColor: [255, 224, 97, 1],
@@ -1794,601 +1794,601 @@ export const modules = {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }],
-      blendMode: KI.d.OneOne
+      blendMode: Qf.g.OneOne
     };
-    class zI {
-      constructor(kk, Fk) {
-        this.api = kk, this.localPlayerId = Fk, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
+    class Zf {
+      constructor(mm, Tm) {
+        this.api = mm, this.localPlayerId = Tm, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
       }
-      filled(kk) {
+      filled(mm) {
         if (this.api.particlesEnabled())
-          for (const [Fk, Ik, Xk, Tk, ik, yk] of kk.slice(0, 3)) {
-            const kk = `${Tk},${ik},${yk}`;
-            let lk = this.chips.get(kk);
-            void 0 === lk && (lk = this.api.createParticles(sI(Tk, ik, yk), {
-              pos: [Fk + .5, Ik + .5, Xk + .5]
-            }), this.chips.set(kk, lk));
-            for (let Fk = 0; Fk < 8; Fk++) this.setPoint(Fk, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
-            lk.emitPoints([Fk + .5, Ik + .5, Xk + .5], this.points, 8)
+          for (const [Tm, fm, hm, Am, am, xm] of mm.slice(0, 3)) {
+            const mm = `${Am},${am},${xm}`;
+            let wm = this.chips.get(mm);
+            void 0 === wm && (wm = this.api.createParticles(Jf(Am, am, xm), {
+              pos: [Tm + .5, fm + .5, hm + .5]
+            }), this.chips.set(mm, wm));
+            for (let Tm = 0; Tm < 8; Tm++) this.setPoint(Tm, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
+            wm.emitPoints([Tm + .5, fm + .5, hm + .5], this.points, 8)
           }
       }
-      layerDone(kk) {
+      layerDone(mm) {
         this.api.playSound(this.localPlayerId, "magicAccent2", .7, 1.1);
-        const Fk = kk.length / 3;
-        if (0 === Fk || !this.api.particlesEnabled()) return;
-        const Ik = Math.min(Fk, 48),
-          [Xk, Tk, ik] = [kk[0] + .5, kk[1] + 1, kk[2] + .5];
-        let yk = 0;
-        for (let lk = 0; lk < Ik; lk++) {
-          const ak = 3 * Math.floor(lk * Fk / Ik);
-          for (let Fk = 0; Fk < 2; Fk++) this.setPoint(yk++, kk[ak] + Math.random() - Xk, kk[ak + 1] + 1 - Tk, kk[ak + 2] + Math.random() - ik, .6 + .8 * Math.random())
+        const Tm = mm.length / 3;
+        if (0 === Tm || !this.api.particlesEnabled()) return;
+        const fm = Math.min(Tm, 48),
+          [hm, Am, am] = [mm[0] + .5, mm[1] + 1, mm[2] + .5];
+        let xm = 0;
+        for (let wm = 0; wm < fm; wm++) {
+          const Dm = 3 * Math.floor(wm * Tm / fm);
+          for (let Tm = 0; Tm < 2; Tm++) this.setPoint(xm++, mm[Dm] + Math.random() - hm, mm[Dm + 1] + 1 - Am, mm[Dm + 2] + Math.random() - am, .6 + .8 * Math.random())
         }
-        this.sparkles ??= this.api.createParticles(VI, {
-          pos: [Xk, Tk, ik]
-        }), this.sparkles.emitPoints([Xk, Tk, ik], this.points, yk)
+        this.sparkles ??= this.api.createParticles(zf, {
+          pos: [hm, Am, am]
+        }), this.sparkles.emitPoints([hm, Am, am], this.points, xm)
       }
       dispose() {
-        var kk;
-        for (const Fk of this.chips.values()) Fk.stop();
-        this.chips.clear(), null === (kk = this.sparkles) || void 0 === kk || kk.stop(), this.sparkles = null
+        var mm;
+        for (const Tm of this.chips.values()) Tm.stop();
+        this.chips.clear(), null === (mm = this.sparkles) || void 0 === mm || mm.stop(), this.sparkles = null
       }
-      setPoint(kk, Fk, Ik, Xk, Tk) {
-        const ik = 4 * kk;
-        this.points[ik] = Fk, this.points[ik + 1] = Ik, this.points[ik + 2] = Xk, this.points[ik + 3] = Tk
+      setPoint(mm, Tm, fm, hm, Am) {
+        const am = 4 * mm;
+        this.points[am] = Tm, this.points[am + 1] = fm, this.points[am + 2] = hm, this.points[am + 3] = Am
       }
     }
-    var SI = Ik(1916);
-    const oI = "SpecialAction1",
-      vI = "KeyY",
-      EI = "KeyX";
+    var kf = fm(1957);
+    const bf = "SpecialAction1",
+      Sf = "KeyY",
+      ef = "KeyX";
 
-    function OI(kk) {
+    function Nf(mm) {
       let {
-        placement: Fk
-      } = kk;
-      const Ik = (0, Ek.f)(HI, Fk.getView()),
+        placement: Tm
+      } = mm;
+      const fm = (0, km.i)(jf, Tm.getView()),
         {
-          t: Xk
-        } = (0, nk.y)(),
+          t: hm
+        } = (0, Sm.A)(),
         {
-          isTouchScreen: Tk
-        } = (0, lk.j)(["isTouchScreen"]),
-        ik = null !== Ik,
-        yk = ik && !Ik.blocked && !Ik.waiting;
-      if ((0, vk.b)((kk => ik && !kk.repeat && !(0, qk.isTypingInInput)() && !(0, ak.p)() && !Tk), (kk => {
-          const Ik = function(kk, Fk, Ik) {
-            if (kk === EI) return Fk.stop;
-            if (kk === vI) return Ik ? Fk.build : GI;
-            return SI.s[oI].includes(kk) ? Fk.rotate : null
-          }(kk.code, Fk, yk);
-          null !== Ik && (kk.stopPropagation(), Ik())
-        })), !ik) return null;
-      let Lk = Tk ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
-      return Ik.blocked ? Lk = "plotsGame:placementOffPlot" : Ik.toClear > 0 && (Lk = "plotsGame:placementClear"), (0, Yk.jsx)(lF.f, {
+          isTouchScreen: Am
+        } = (0, wm.m)(["isTouchScreen"]),
+        am = null !== fm,
+        xm = am && !fm.blocked && !fm.waiting;
+      if ((0, Zm.b)((mm => am && !mm.repeat && !(0, im.isTypingInInput)() && !(0, Dm.n)() && !Am), (mm => {
+          const fm = function(mm, Tm, fm) {
+            if (mm === ef) return Tm.stop;
+            if (mm === Sf) return fm ? Tm.build : Xf;
+            return kf.r[bf].includes(mm) ? Tm.rotate : null
+          }(mm.code, Tm, xm);
+          null !== fm && (mm.stopPropagation(), fm())
+        })), !am) return null;
+      let Rm = Am ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
+      return fm.blocked ? Rm = "plotsGame:placementOffPlot" : fm.toClear > 0 && (Rm = "plotsGame:placementClear"), (0, Bm.jsx)(wT.e, {
         placement: "bottom",
-        children: (0, Yk.jsxs)("div", {
+        children: (0, Bm.jsxs)("div", {
           className: "PlotsPlacementCard",
-          children: [(0, Yk.jsx)("div", {
+          children: [(0, Bm.jsx)("div", {
             className: "PlotsPlacementCardTitle SmallTextBold",
-            children: Xk(ek(Ik.id).displayName.translationKey)
-          }), (0, Yk.jsx)("div", {
-            className: sk()("PlotsPlacementCardHint SmallTextLight", {
-              Nudge: Ik.refusals > 0
+            children: hm(Om(fm.id).displayName.translationKey)
+          }), (0, Bm.jsx)("div", {
+            className: nm()("PlotsPlacementCardHint SmallTextLight", {
+              Nudge: fm.refusals > 0
             }),
-            children: Xk(Lk)
-          }, Ik.refusals), (0, Yk.jsxs)("div", {
+            children: hm(Rm)
+          }, fm.refusals), (0, Bm.jsxs)("div", {
             className: "PlotsPlacementCardButtons",
-            children: [(0, Yk.jsxs)(zk.d, {
-              onClick: Fk.rotate,
-              children: [(0, Yk.jsx)(nI, {
-                noaAction: oI
-              }), Xk("plotsGame:placementRotate")]
-            }), (0, Yk.jsxs)(zk.G, {
-              onClick: Fk.stop,
-              children: [(0, Yk.jsx)(nI, {
-                keyCode: EI
-              }), Xk("general:cancel")]
-            }), (0, Yk.jsxs)(zk.m, {
-              disabled: !yk,
-              onClick: Fk.build,
-              children: [(0, Yk.jsx)(nI, {
-                keyCode: vI
-              }), Xk("plotsGame:placementBuild")]
+            children: [(0, Bm.jsxs)(cm.e, {
+              onClick: Tm.rotate,
+              children: [(0, Bm.jsx)(Gf, {
+                noaAction: bf
+              }), hm("plotsGame:placementRotate")]
+            }), (0, Bm.jsxs)(cm.O, {
+              onClick: Tm.stop,
+              children: [(0, Bm.jsx)(Gf, {
+                keyCode: ef
+              }), hm("general:cancel")]
+            }), (0, Bm.jsxs)(cm.m, {
+              disabled: !xm,
+              onClick: Tm.build,
+              children: [(0, Bm.jsx)(Gf, {
+                keyCode: Sf
+              }), hm("plotsGame:placementBuild")]
             })]
           })]
         })
       })
     }
 
-    function nI(kk) {
-      return (0, Yk.jsx)(qF.c, {
+    function Gf(mm) {
+      return (0, Bm.jsx)(iT.e, {
         className: "PlotsPlacementKey",
-        ...kk
+        ...mm
       })
     }
 
-    function GI() {}
-    var pI = Ik(4529);
-    class uI {
-      constructor(kk) {
-        this.placement = kk, this.press = null
+    function Xf() {}
+    var Pf = fm(4481);
+    class Hf {
+      constructor(mm) {
+        this.placement = mm, this.press = null
       }
-      down(kk) {
+      down(mm) {
         if (null !== this.press) return !1;
         const {
-          id: Fk,
-          mouse: Ik,
-          x: Xk,
-          y: Tk,
-          atMs: ik
-        } = kk;
+          id: Tm,
+          mouse: fm,
+          x: hm,
+          y: Am,
+          atMs: am
+        } = mm;
         return this.press = {
-          id: Fk,
-          mouse: Ik,
-          x: Xk,
-          y: Tk,
-          atMs: ik,
+          id: Tm,
+          mouse: fm,
+          x: hm,
+          y: Am,
+          atMs: am,
           moved: !1
-        }, Ik || this.placement.beginDrag(kk.ndcX, kk.ndcY), !0
+        }, fm || this.placement.beginDrag(mm.ndcX, mm.ndcY), !0
       }
-      move(kk) {
-        const Fk = this.press;
-        null !== Fk && Fk.id === kk.id && (Fk.moved ||= Math.hypot(kk.x - Fk.x, kk.y - Fk.y) > 8), kk.mouse ? this.placement.hoverAt(kk.ndcX, kk.ndcY) : (null === Fk || void 0 === Fk ? void 0 : Fk.id) === kk.id && this.placement.dragTo(kk.ndcX, kk.ndcY)
+      move(mm) {
+        const Tm = this.press;
+        null !== Tm && Tm.id === mm.id && (Tm.moved ||= Math.hypot(mm.x - Tm.x, mm.y - Tm.y) > 8), mm.mouse ? this.placement.hoverAt(mm.ndcX, mm.ndcY) : (null === Tm || void 0 === Tm ? void 0 : Tm.id) === mm.id && this.placement.dragTo(mm.ndcX, mm.ndcY)
       }
-      up(kk) {
-        const Fk = this.press;
-        (null === Fk || void 0 === Fk ? void 0 : Fk.id) === kk.id && (this.move(kk), this.end(), !Fk.moved && (Fk.mouse || kk.atMs - Fk.atMs <= 250) && this.placement.tap())
+      up(mm) {
+        const Tm = this.press;
+        (null === Tm || void 0 === Tm ? void 0 : Tm.id) === mm.id && (this.move(mm), this.end(), !Tm.moved && (Tm.mouse || mm.atMs - Tm.atMs <= 250) && this.placement.tap())
       }
-      cancel(kk) {
-        var Fk;
-        (null === (Fk = this.press) || void 0 === Fk ? void 0 : Fk.id) === kk && this.end()
+      cancel(mm) {
+        var Tm;
+        (null === (Tm = this.press) || void 0 === Tm ? void 0 : Tm.id) === mm && this.end()
       }
-      leave(kk) {
+      leave(mm) {
         let {
-          id: Fk,
-          mouse: Ik
-        } = kk;
-        Ik && this.placement.endHover(), this.cancel(Fk)
+          id: Tm,
+          mouse: fm
+        } = mm;
+        fm && this.placement.endHover(), this.cancel(Tm)
       }
       end() {
         this.press.mouse || this.placement.endDrag(), this.press = null
       }
     }
 
-    function bI(kk) {
+    function yf(mm) {
       let {
-        placement: Fk
-      } = kk;
-      return null === (0, Ek.f)(HI, Fk.getView()) ? null : (0, Yk.jsx)(RI, {
-        placement: Fk
+        placement: Tm
+      } = mm;
+      return null === (0, km.i)(jf, Tm.getView()) ? null : (0, Bm.jsx)(Cf, {
+        placement: Tm
       })
     }
 
-    function RI(kk) {
+    function Cf(mm) {
       let {
-        placement: Fk
-      } = kk;
-      (0, pI.e)(!0, !0, "PlotsPlacementLayer");
-      const Ik = (0, ik.useMemo)((() => new uI(Fk)), [Fk]);
-      return (0, Yk.jsx)("div", {
+        placement: Tm
+      } = mm;
+      (0, Pf.d)(!0, !0, "PlotsPlacementLayer");
+      const fm = (0, am.useMemo)((() => new Hf(Tm)), [Tm]);
+      return (0, Bm.jsx)("div", {
         className: "PlotsPlacementLayer",
-        onPointerDown: kk => {
-          "mouse" === kk.pointerType && 0 !== kk.button || !Ik.down(UI(kk)) || kk.currentTarget.setPointerCapture(kk.pointerId)
+        onPointerDown: mm => {
+          "mouse" === mm.pointerType && 0 !== mm.button || !fm.down(rf(mm)) || mm.currentTarget.setPointerCapture(mm.pointerId)
         },
-        onPointerMove: kk => {
-          Ik.move(UI(kk))
+        onPointerMove: mm => {
+          fm.move(rf(mm))
         },
-        onPointerUp: kk => {
-          Ik.up(UI(kk))
+        onPointerUp: mm => {
+          fm.up(rf(mm))
         },
-        onPointerCancel: kk => {
-          Ik.cancel(kk.pointerId)
+        onPointerCancel: mm => {
+          fm.cancel(mm.pointerId)
         },
-        onLostPointerCapture: kk => {
-          Ik.cancel(kk.pointerId)
+        onLostPointerCapture: mm => {
+          fm.cancel(mm.pointerId)
         },
-        onPointerLeave: kk => {
-          Ik.leave(UI(kk))
+        onPointerLeave: mm => {
+          fm.leave(rf(mm))
         },
         "aria-hidden": !0
       })
     }
 
-    function UI(kk) {
+    function rf(mm) {
       const {
-        left: Fk,
-        top: Ik,
-        width: Xk,
-        height: Tk
-      } = kk.currentTarget.getBoundingClientRect();
+        left: Tm,
+        top: fm,
+        width: hm,
+        height: Am
+      } = mm.currentTarget.getBoundingClientRect();
       return {
-        id: kk.pointerId,
-        mouse: "mouse" === kk.pointerType,
-        x: kk.clientX,
-        y: kk.clientY,
-        ndcX: (kk.clientX - Fk) / Xk * 2 - 1,
-        ndcY: 1 - (kk.clientY - Ik) / Tk * 2,
-        atMs: kk.timeStamp
+        id: mm.pointerId,
+        mouse: "mouse" === mm.pointerType,
+        x: mm.clientX,
+        y: mm.clientY,
+        ndcX: (mm.clientX - Tm) / hm * 2 - 1,
+        ndcY: 1 - (mm.clientY - fm) / Am * 2,
+        atMs: mm.timeStamp
       }
     }
-    var CI = Ik(2300),
-      NI = Ik(36691),
-      cI = Ik(1907),
-      WI = Ik(1248);
-    const fI = {
+    var sf = fm(2332),
+      lf = fm(36777),
+      Mf = fm(1946),
+      uf = fm(1268);
+    const Bf = {
       own: "crown",
       shared: "user-group",
       other: "house"
     };
 
-    function BI(kk) {
+    function Lf(mm) {
       let {
-        hud: Fk
-      } = kk;
-      const Ik = (0, Ek.f)(tF, Fk.getPlot()),
-        [Xk, Tk] = (0, ik.useState)(null),
-        yk = (0, NI.m)(Xk);
-      if ("none" === Ik[0]) return null;
-      const [, lk, ak, qk, Lk, tk] = Ik;
-      return (0, Yk.jsx)("div", {
-        className: sk()("PlotsPlotBannerContainer", {
-          Below: yk
+        hud: Tm
+      } = mm;
+      const fm = (0, km.i)(pT, Tm.getPlot()),
+        [hm, Am] = (0, am.useState)(null),
+        xm = (0, lf.h)(hm);
+      if ("none" === fm[0]) return null;
+      const [, wm, Dm, im, Rm, pm] = fm;
+      return (0, Bm.jsx)("div", {
+        className: nm()("PlotsPlotBannerContainer", {
+          Below: xm
         }),
-        children: (0, Yk.jsx)(dI, {
-          plotX: lk,
-          plotZ: ak,
-          ownerName: qk,
-          ownerId: Lk,
-          relation: tk,
-          plaqueRef: Tk
-        }, `${lk},${ak}`)
+        children: (0, Bm.jsx)(vf, {
+          plotX: wm,
+          plotZ: Dm,
+          ownerName: im,
+          ownerId: Rm,
+          relation: pm,
+          plaqueRef: Am
+        }, `${wm},${Dm}`)
       })
     }
 
-    function dI(kk) {
-      var Fk, Ik;
+    function vf(mm) {
+      var Tm, fm;
       let {
-        plotX: Xk,
-        plotZ: Tk,
-        ownerName: ik,
-        ownerId: yk,
-        relation: lk,
-        plaqueRef: ak
-      } = kk;
+        plotX: hm,
+        plotZ: Am,
+        ownerName: am,
+        ownerId: xm,
+        relation: wm,
+        plaqueRef: Dm
+      } = mm;
       const {
-        t: qk
-      } = (0, nk.y)(), Lk = (0, cI.k)("hiddenPlayerNames"), tk = (0, cI.k)("players"), Zk = null === yk ? null : null !== (Fk = null === (Ik = tk.byId[yk]) || void 0 === Ik ? void 0 : Ik.cosmetics) && void 0 !== Fk ? Fk : null, jk = qk("plotsGame:plotBannerCoords", {
-        x: Xk,
-        z: Tk
-      }), ek = "own" === lk || null !== ik;
-      return (0, Yk.jsxs)("div", {
-        ref: ak,
-        className: sk()("PlotsPlotBanner", {
-          Own: "own" === lk,
-          Shared: "shared" === lk
+        t: im
+      } = (0, Sm.A)(), Rm = (0, Mf.k)("hiddenPlayerNames"), pm = (0, Mf.k)("players"), Em = null === xm ? null : null !== (Tm = null === (fm = pm.byId[xm]) || void 0 === fm ? void 0 : fm.cosmetics) && void 0 !== Tm ? Tm : null, om = im("plotsGame:plotBannerCoords", {
+        x: hm,
+        z: Am
+      }), Om = "own" === wm || null !== am;
+      return (0, Bm.jsxs)("div", {
+        ref: Dm,
+        className: nm()("PlotsPlotBanner", {
+          Own: "own" === wm,
+          Shared: "shared" === wm
         }),
         role: "status",
-        children: [(0, Yk.jsxs)("span", {
-          className: sk()("PlotsPlotBannerSeal", {
-            Face: null !== Zk
+        children: [(0, Bm.jsxs)("span", {
+          className: nm()("PlotsPlotBannerSeal", {
+            Face: null !== Em
           }),
-          children: [null !== Zk && (0, Yk.jsx)(CI.e, {
-            cosmetics: Zk
-          }), null === Zk && (0, Yk.jsx)(Vk.e, {
-            name: fI[lk]
+          children: [null !== Em && (0, Bm.jsx)(sf.d, {
+            cosmetics: Em
+          }), null === Em && (0, Bm.jsx)(Jm.c, {
+            name: Bf[wm]
           })]
-        }), (0, Yk.jsxs)("div", {
+        }), (0, Bm.jsxs)("div", {
           className: "PlotsPlotBannerText",
-          children: [(0, Yk.jsxs)("div", {
+          children: [(0, Bm.jsxs)("div", {
             className: "PlotsPlotBannerTitle SmallTextBold",
-            children: ["own" === lk && qk("plotsGame:plotBannerYours"), "own" !== lk && null !== ik && qk("plotsGame:plotBannerOwner", {
-              name: (0, WI.d)(ik, Lk)
-            }), !ek && jk]
-          }), ek && (0, Yk.jsxs)("div", {
+            children: ["own" === wm && im("plotsGame:plotBannerYours"), "own" !== wm && null !== am && im("plotsGame:plotBannerOwner", {
+              name: (0, uf.f)(am, Rm)
+            }), !Om && om]
+          }), Om && (0, Bm.jsxs)("div", {
             className: "PlotsPlotBannerCoords SmallTextLight",
-            children: [jk, "shared" === lk && (0, Yk.jsx)("span", {
+            children: [om, "shared" === wm && (0, Bm.jsx)("span", {
               className: "PlotsPlotBannerBadge",
-              children: qk("plotsGame:plotBannerShared")
+              children: im("plotsGame:plotBannerShared")
             })]
           })]
         })]
       })
     }
 
-    function YI(kk) {
+    function tf(mm) {
       let {
-        progress: Fk,
-        goal: Ik
-      } = kk;
-      const Xk = Math.min(Fk, Ik);
-      return (0, Yk.jsxs)("div", {
+        progress: Tm,
+        goal: fm
+      } = mm;
+      const hm = Math.min(Tm, fm);
+      return (0, Bm.jsxs)("div", {
         className: "PlotsProgress",
-        children: [(0, Yk.jsx)("div", {
+        children: [(0, Bm.jsx)("div", {
           className: "PlotsProgressBar",
           role: "progressbar",
           "aria-valuemin": 0,
-          "aria-valuemax": Ik,
-          "aria-valuenow": Xk,
-          children: (0, Yk.jsx)("div", {
+          "aria-valuemax": fm,
+          "aria-valuenow": hm,
+          children: (0, Bm.jsx)("div", {
             className: "PlotsProgressBarFill",
             style: {
-              transform: `scaleX(${Xk/Ik})`
+              transform: `scaleX(${hm/fm})`
             }
           })
-        }), (0, Yk.jsxs)("span", {
+        }), (0, Bm.jsxs)("span", {
           className: "PlotsProgressCount",
-          children: [Xk, "/", Ik]
+          children: [hm, "/", fm]
         })]
       })
     }
 
-    function AI(kk) {
+    function Uf(mm) {
       return {
-        translationKey: `plotsGame:${kk}`,
+        translationKey: `plotsGame:${mm}`,
         actions: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []
       }
     }
-    const gI = {
+    const df = {
       house: {
         icon: "house",
         titleKey: "plotsGame:starterLotHouseTitle",
-        desktop: AI("starterLotHouseHint", ["alt-fire"]),
-        touch: AI("starterLotHouseHint", ["alt-fire"]),
+        desktop: Uf("starterLotHouseHint", ["alt-fire"]),
+        touch: Uf("starterLotHouseHint", ["alt-fire"]),
         plainKey: "plotsGame:starterLotHousePlain"
       },
       garden: {
         icon: "sparkle",
         titleKey: "plotsGame:starterLotGarden",
-        desktop: AI("starterLotGardenHint", ["alt-fire"]),
-        touch: AI("starterLotGardenHint", ["alt-fire"]),
+        desktop: Uf("starterLotGardenHint", ["alt-fire"]),
+        touch: Uf("starterLotGardenHint", ["alt-fire"]),
         plainKey: "plotsGame:starterLotGardenPlain"
       },
       boulder: {
         icon: "hammer",
         titleKey: "plotsGame:starterLotBoulder",
-        desktop: AI("starterLotBreakHint", ["primary-fire"]),
-        touch: AI("starterLotBreakHintTouch"),
+        desktop: Uf("starterLotBreakHint", ["primary-fire"]),
+        touch: Uf("starterLotBreakHintTouch"),
         plainKey: "plotsGame:starterLotBreakPlain"
       },
       fly: {
         icon: "angles-up",
         titleKey: "plotsGame:starterLotFly",
-        desktop: AI("starterLotFlyHint", ["jump"]),
-        touch: AI("starterLotFlyHintTouch"),
+        desktop: Uf("starterLotFlyHint", ["jump"]),
+        touch: Uf("starterLotFlyHintTouch"),
         plainKey: "plotsGame:starterLotFlyPlain"
       },
       backpack: {
         icon: "backpack",
         titleKey: "plotsGame:starterLotBackpack",
-        desktop: AI("starterLotBackpackHint", ["OpenInventory"]),
-        touch: AI("starterLotBackpackHintTouch"),
+        desktop: Uf("starterLotBackpackHint", ["OpenInventory"]),
+        touch: Uf("starterLotBackpackHintTouch"),
         plainKey: "plotsGame:starterLotBackpackPlain"
       },
       neighbour: {
         icon: "person",
         titleKey: "plotsGame:starterLotNeighbour",
-        desktop: AI("starterLotNeighbourHint", ["forward", "left", "backward", "right"]),
-        touch: AI("starterLotNeighbourHintTouch"),
+        desktop: Uf("starterLotNeighbourHint", ["forward", "left", "backward", "right"]),
+        touch: Uf("starterLotNeighbourHintTouch"),
         plainKey: "plotsGame:starterLotNeighbourPlain"
       }
     };
 
-    function mI(kk, Fk, Ik) {
+    function gf(mm, Tm, fm) {
       const {
-        translationKey: Xk,
-        actions: Tk
-      } = Ik ? Fk.touch : Fk.desktop;
-      if (0 === Tk.length) return kk(Xk);
-      const ik = [];
-      for (const yk of Tk) {
-        const Xk = (0, SI.r)(yk, Ik),
-          Tk = SI.s[yk][0];
-        if (null === Xk && void 0 === Tk) return kk(Fk.plainKey);
-        ik.push(null === Xk ? (0, SI.n)(Tk) : kk(Xk.translationKey))
+        translationKey: hm,
+        actions: Am
+      } = fm ? Tm.touch : Tm.desktop;
+      if (0 === Am.length) return mm(hm);
+      const am = [];
+      for (const xm of Am) {
+        const hm = (0, kf.o)(xm, fm),
+          Am = kf.r[xm][0];
+        if (null === hm && void 0 === Am) return mm(Tm.plainKey);
+        am.push(null === hm ? (0, kf.k)(Am) : mm(hm.translationKey))
       }
-      return kk(Xk, {
-        key: ik.join("")
+      return mm(hm, {
+        key: am.join("")
       })
     }
 
-    function hI(kk) {
+    function Wf(mm) {
       let {
-        hud: Fk
-      } = kk;
-      const Ik = (0, Ek.f)(LF, Fk.getStep()),
+        hud: Tm
+      } = mm;
+      const fm = (0, km.i)(RT, Tm.getStep()),
         {
-          t: Xk
-        } = (0, nk.y)();
-      return (0, Yk.jsxs)(lF.f, {
+          t: hm
+        } = (0, Sm.A)();
+      return (0, Bm.jsxs)(wT.e, {
         placement: "bottom",
-        children: ["step" === Ik[0] && (0, Yk.jsx)(rI, {
-          step: Ik[1],
-          progress: Ik[2],
-          goal: Ik[3]
-        }, Ik[1]), "celebrate" === Ik[0] && (0, Yk.jsx)(DI, {
-          className: sk()("Celebrate", {
-            Gold: "house" === Ik[1]
+        children: ["step" === fm[0] && (0, Bm.jsx)(Ff, {
+          step: fm[1],
+          progress: fm[2],
+          goal: fm[3]
+        }, fm[1]), "celebrate" === fm[0] && (0, Bm.jsx)(mh, {
+          className: nm()("Celebrate", {
+            Gold: "house" === fm[1]
           }),
           icon: "star",
-          title: Xk("house" === Ik[1] ? "plotsGame:starterLotYourPlot" : "plotsGame:starterLotBriefDone")
-        }, `celebrate-${Ik[1]}`)]
+          title: hm("house" === fm[1] ? "plotsGame:starterLotYourPlot" : "plotsGame:starterLotBriefDone")
+        }, `celebrate-${fm[1]}`)]
       })
     }
 
-    function rI(kk) {
+    function Ff(mm) {
       let {
-        step: Fk,
-        progress: Ik,
-        goal: Xk
-      } = kk;
+        step: Tm,
+        progress: fm,
+        goal: hm
+      } = mm;
       const {
-        isTouchScreen: Tk
-      } = (0, lk.j)(["isTouchScreen"]), {
-        t: ik
-      } = (0, nk.y)(), yk = gI[Fk];
-      return (0, Yk.jsxs)(DI, {
-        icon: yk.icon,
-        title: ik(yk.titleKey),
-        children: [(0, Yk.jsx)("div", {
+        isTouchScreen: Am
+      } = (0, wm.m)(["isTouchScreen"]), {
+        t: am
+      } = (0, Sm.A)(), xm = df[Tm];
+      return (0, Bm.jsxs)(mh, {
+        icon: xm.icon,
+        title: am(xm.titleKey),
+        children: [(0, Bm.jsx)("div", {
           className: "PlotsStepCardHint SmallTextLight",
-          children: mI(ik, yk, Tk)
-        }), Xk > 1 && (0, Yk.jsx)(YI, {
-          progress: Ik,
-          goal: Xk
-        }), "backpack" === Fk && Tk && (0, Yk.jsx)(MI, {})]
+          children: gf(am, xm, Am)
+        }), hm > 1 && (0, Bm.jsx)(tf, {
+          progress: fm,
+          goal: hm
+        }), "backpack" === Tm && Am && (0, Bm.jsx)(Th, {})]
       })
     }
 
-    function DI(kk) {
+    function mh(mm) {
       let {
-        className: Fk,
-        icon: Ik,
-        title: Xk,
-        children: Tk
-      } = kk;
-      return (0, Yk.jsxs)("div", {
-        className: sk()("PlotsStepCard", Fk),
+        className: Tm,
+        icon: fm,
+        title: hm,
+        children: Am
+      } = mm;
+      return (0, Bm.jsxs)("div", {
+        className: nm()("PlotsStepCard", Tm),
         role: "status",
-        children: [(0, Yk.jsx)("span", {
+        children: [(0, Bm.jsx)("span", {
           className: "PlotsStepCardIcon",
-          children: (0, Yk.jsx)(Vk.e, {
-            name: Ik
+          children: (0, Bm.jsx)(Jm.c, {
+            name: fm
           })
-        }), (0, Yk.jsxs)("div", {
+        }), (0, Bm.jsxs)("div", {
           className: "PlotsStepCardBody",
-          children: [(0, Yk.jsx)("div", {
+          children: [(0, Bm.jsx)("div", {
             className: "PlotsStepCardTitle SmallTextBold",
-            children: Xk
-          }), Tk]
+            children: hm
+          }), Am]
         })]
       })
     }
 
-    function MI() {
-      return (0, ik.useEffect)((() => (lk.d.set({
+    function Th() {
+      return (0, am.useEffect)((() => (wm.c.set({
         backpackPointerRequested: !0
       }), () => {
-        lk.d.set({
+        wm.c.set({
           backpackPointerRequested: !1
         })
       })), []), null
     }
-    const kX = function(kk, Fk, Ik, Xk) {
+    const fh = function(mm, Tm, fm, hm) {
       let {
-        localPlayerId: Tk
-      } = Xk;
-      const lk = new ZF;
-      let ak = null,
-        qk = null,
-        Lk = null,
-        tk = null,
-        Zk = null;
-      const jk = [];
+        localPlayerId: Am
+      } = hm;
+      const wm = new ET;
+      let Dm = null,
+        im = null,
+        Rm = null,
+        pm = null,
+        Em = null;
+      const om = [];
       return {
-        onCreate: kk => {
-          ak = new zI(kk, Tk), qk = new qI(kk, Tk, ak), Lk = new qI(kk, Tk, ak), tk = new xI(kk, Tk), Zk = new Kk(kk, tk), jk.push((0, yk.v)((0, ik.createElement)(ik.Fragment, null, (0, ik.createElement)(BI, {
-            hud: lk
-          }), (0, ik.createElement)(hI, {
-            hud: lk
-          }), (0, ik.createElement)(eF, {
-            hud: lk,
-            journal: Zk
-          }), (0, ik.createElement)(bI, {
-            placement: tk
-          }), (0, ik.createElement)(OI, {
-            placement: tk
+        onCreate: mm => {
+          Dm = new Zf(mm, Am), im = new Rf(mm, Am, Dm), Rm = new Rf(mm, Am, Dm), pm = new If(mm, Am), Em = new Km(mm, pm), om.push((0, xm.w)((0, am.createElement)(am.Fragment, null, (0, am.createElement)(Lf, {
+            hud: wm
+          }), (0, am.createElement)(Wf, {
+            hud: wm
+          }), (0, am.createElement)(OT, {
+            hud: wm,
+            journal: Em
+          }), (0, am.createElement)(yf, {
+            placement: pm
+          }), (0, am.createElement)(Nf, {
+            placement: pm
           })), {
-            content: (0, ik.createElement)(iF, {
-              journal: Zk
+            content: (0, am.createElement)(aT, {
+              journal: Em
             })
           }))
         },
-        Dt: () => {
-          qk.Dt(), Lk.Dt(), tk.Dt(), Zk.Dt()
+        DE: () => {
+          im.DE(), Rm.DE(), pm.DE(), Em.DE()
         },
-        onPlayerAttemptAltAction: (kk, Fk, Ik, Xk, Tk, ik) => {
-          var yk;
-          if (null !== ik) return;
-          const lk = void 0 === Fk ? null : [Fk, Ik, Xk];
-          return null !== (yk = qk.attemptAltAction(lk)) && void 0 !== yk ? yk : Lk.attemptAltAction(lk)
+        onPlayerAttemptAltAction: (mm, Tm, fm, hm, Am, am) => {
+          var xm;
+          if (null !== am) return;
+          const wm = void 0 === Tm ? null : [Tm, fm, hm];
+          return null !== (xm = im.attemptAltAction(wm)) && void 0 !== xm ? xm : Rm.attemptAltAction(wm)
         },
         onPlayerClickUp: () => {
-          qk.endPress(), Lk.endPress()
+          im.endPress(), Rm.endPress()
         },
-        onAfterRender: (kk, Fk) => {
-          tk.afterRender(Fk), qk.afterRender(Fk), Lk.afterRender(Fk)
+        onAfterRender: (mm, Tm) => {
+          pm.afterRender(Tm), im.afterRender(Tm), Rm.afterRender(Tm)
         },
         onClose: () => {
-          for (const kk of jk) kk();
-          ak.dispose(), qk.dispose(), Lk.dispose(), tk.dispose(), ak = null, qk = null, Lk = null, tk = null, Zk = null
+          for (const mm of om) mm();
+          Dm.dispose(), im.dispose(), Rm.dispose(), pm.dispose(), Dm = null, im = null, Rm = null, pm = null, Em = null
         },
-        onReceivedMessageFromServer: (kk, Fk) => {
-          if ("plotsStarterLot" === kk) lk.receiveStep(Fk);
-          else if ("plotsPlot" === kk) lk.receivePlot(Fk);
-          else if ("plotsStarterHouse" === kk) qk.Pe(Fk);
-          else if ("plotsBlueprint" === kk) {
-            const kk = Fk;
-            Lk.Pe(kk), tk.Pe(kk)
-          } else "plotsJournal" === kk ? Zk.Pe(Fk) : "plotsJournalOpen" === kk ? Zk.openFromServer() : "plotsPreviewEnd" === kk && tk.endFromServer()
+        onReceivedMessageFromServer: (mm, Tm) => {
+          if ("plotsStarterLot" === mm) wm.receiveStep(Tm);
+          else if ("plotsPlot" === mm) wm.receivePlot(Tm);
+          else if ("plotsStarterHouse" === mm) im.rO(Tm);
+          else if ("plotsBlueprint" === mm) {
+            const mm = Tm;
+            Rm.rO(mm), pm.rO(mm)
+          } else "plotsJournal" === mm ? Em.rO(Tm) : "plotsJournalOpen" === mm ? Em.openFromServer() : "plotsPreviewEnd" === mm && pm.endFromServer()
         }
       }
     }
   },
-  39154: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Xk,
-      f: () => ik
+  39275: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => hm,
+      g: () => am
     });
-    const Xk = 1 / .6,
-      Tk = {
+    const hm = 1 / .6,
+      Am = {
         kind: "smokePuff"
       };
-    class ik {
-      constructor(kk, Fk, Ik) {
-        this.style = kk, this.St = Fk, this.half = Ik, this.particles = null, this.lastFrame = -1
+    class am {
+      constructor(mm, Tm, fm) {
+        this.style = mm, this.yp = Tm, this.half = fm, this.particles = null, this.lastFrame = -1
       }
-      emit(kk, Fk, Ik) {
-        let ik = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return Ik !== this.lastFrame && (this.lastFrame = Ik, this.particles || (this.particles = kk.createParticles(function(kk, Fk) {
+      emit(mm, Tm, fm) {
+        let am = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return fm !== this.lastFrame && (this.lastFrame = fm, this.particles || (this.particles = mm.createParticles(function(mm, Tm) {
           const [
-            [Ik, ik, yk],
-            [lk, ak, qk]
-          ] = kk.colours;
+            [fm, am, xm],
+            [wm, Dm, im]
+          ] = mm.colours;
           return {
-            texture: kk.soft ? Tk : "square_particle",
-            St: Fk,
-            minLifeTime: kk.life[0] / Xk,
-            maxLifeTime: kk.life[1] / Xk,
-            minEmitPower: kk.power[0] * Xk,
-            maxEmitPower: kk.power[1] * Xk,
-            minSize: kk.size[0],
-            maxSize: kk.size[1],
+            texture: mm.soft ? Am : "square_particle",
+            yp: Tm,
+            minLifeTime: mm.life[0] / hm,
+            maxLifeTime: mm.life[1] / hm,
+            minEmitPower: mm.power[0] * hm,
+            maxEmitPower: mm.power[1] * hm,
+            minSize: mm.size[0],
+            maxSize: mm.size[1],
             emitRate: 0,
-            gravity: [0, kk.lift * Xk * Xk, 0],
-            dir1: [-kk.spread, 1, -kk.spread],
-            dir2: [kk.spread, 1, kk.spread],
+            gravity: [0, mm.lift * hm * hm, 0],
+            dir1: [-mm.spread, 1, -mm.spread],
+            dir2: [mm.spread, 1, mm.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [Ik, ik, yk, kk.alpha],
-              maxColor: [lk, ak, qk, kk.alpha]
+              minColor: [fm, am, xm, mm.alpha],
+              maxColor: [wm, Dm, im, mm.alpha]
             }, {
               timeFraction: 1,
-              minColor: [Ik, ik, yk, 0],
-              maxColor: [lk, ak, qk, 0]
+              minColor: [fm, am, xm, 0],
+              maxColor: [wm, Dm, im, 0]
             }],
-            blendMode: kk.blendMode
+            blendMode: mm.blendMode
           }
-        }(this.style, this.St), {
-          pos: Fk,
+        }(this.style, this.yp), {
+          pos: Tm,
           half: this.half
-        })), this.particles.moveTo(Fk, this.half), this.particles.emit(ik), !0)
+        })), this.particles.moveTo(Tm, this.half), this.particles.emit(am), !0)
       }
       dispose() {
-        var kk;
-        null === (kk = this.particles) || void 0 === kk || kk.stop(), this.particles = null
+        var mm;
+        null === (mm = this.particles) || void 0 === mm || mm.stop(), this.particles = null
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

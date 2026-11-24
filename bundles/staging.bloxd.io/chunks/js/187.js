@@ -1,106 +1,106 @@
 export const id = 187;
 export const ids = [187];
 export const modules = {
-  37749: (kk, Fk, Ik) => {
-    var Xk = Ik(37758);
+  37783: (mm, Tm, fm) => {
+    var hm = fm(37785);
 
-    function Tk(kk) {
-      for (var Fk, Ik, Tk = 0, ik = kk.length, yk = 0; yk < kk.length;) {
-        for (Fk = kk[yk], Ik = 0; yk < ik && kk[yk] === Fk;) ++yk, ++Ik;
-        Tk += Xk.log2(Ik) / 7 | 0, Tk += Xk.log2(Fk >>> 0) / 7 | 0, Tk += 2
+    function Am(mm) {
+      for (var Tm, fm, Am = 0, am = mm.length, xm = 0; xm < mm.length;) {
+        for (Tm = mm[xm], fm = 0; xm < am && mm[xm] === Tm;) ++xm, ++fm;
+        Am += hm.log2(fm) / 7 | 0, Am += hm.log2(Tm >>> 0) / 7 | 0, Am += 2
       }
-      return Tk
+      return Am
     }
-    Fk.size = Tk, Fk.encode = function(kk, Fk) {
-      Fk || (Fk = new Uint8Array(Tk(kk)));
-      for (var Ik, Xk, ik = 0, yk = Fk.length, lk = 0; lk < kk.length;) {
-        for (Ik = kk[lk], Xk = 0; lk < kk.length && kk[lk] === Ik;) ++lk, ++Xk;
-        for (; ik < yk && Xk >= 128;) Fk[ik++] = 128 + (127 & Xk), Xk >>>= 7;
-        if (ik >= yk) throw new Error("RLE buffer overflow");
-        for (Fk[ik++] = Xk, Ik >>>= 0; ik < yk && Ik >= 128;) Fk[ik++] = 128 + (127 & Ik), Ik >>>= 7;
-        if (ik >= yk) throw new Error("RLE buffer overflow");
-        Fk[ik++] = Ik
+    Tm.size = Am, Tm.encode = function(mm, Tm) {
+      Tm || (Tm = new Uint8Array(Am(mm)));
+      for (var fm, hm, am = 0, xm = Tm.length, wm = 0; wm < mm.length;) {
+        for (fm = mm[wm], hm = 0; wm < mm.length && mm[wm] === fm;) ++wm, ++hm;
+        for (; am < xm && hm >= 128;) Tm[am++] = 128 + (127 & hm), hm >>>= 7;
+        if (am >= xm) throw new Error("RLE buffer overflow");
+        for (Tm[am++] = hm, fm >>>= 0; am < xm && fm >= 128;) Tm[am++] = 128 + (127 & fm), fm >>>= 7;
+        if (am >= xm) throw new Error("RLE buffer overflow");
+        Tm[am++] = fm
       }
-      return Fk
-    }, Fk.decode = function(kk, Fk) {
-      for (var Ik, Xk, Tk, ik, yk = Fk.length, lk = kk.length, ak = 0, qk = 0; qk < lk;) {
-        for (Ik = 0, Xk = 0; qk < lk && kk[qk] >= 128;) Ik += (127 & kk[qk++]) << Xk, Xk += 7;
-        if (Ik += kk[qk++] << Xk, qk >= lk) throw new Error("RLE buffer underrun");
-        if (ak + Ik > yk) throw new Error("Chunk buffer overflow");
-        for (Tk = 0, Xk = 0; qk < lk && kk[qk] >= 128;) Tk += (127 & kk[qk++]) << Xk, Xk += 7;
-        if (qk >= lk) throw new Error("RLE buffer underrun");
-        for (Tk += kk[qk++] << Xk, ik = 0; ik < Ik; ++ik) Fk[ak++] = Tk
+      return Tm
+    }, Tm.decode = function(mm, Tm) {
+      for (var fm, hm, Am, am, xm = Tm.length, wm = mm.length, Dm = 0, im = 0; im < wm;) {
+        for (fm = 0, hm = 0; im < wm && mm[im] >= 128;) fm += (127 & mm[im++]) << hm, hm += 7;
+        if (fm += mm[im++] << hm, im >= wm) throw new Error("RLE buffer underrun");
+        if (Dm + fm > xm) throw new Error("Chunk buffer overflow");
+        for (Am = 0, hm = 0; im < wm && mm[im] >= 128;) Am += (127 & mm[im++]) << hm, hm += 7;
+        if (im >= wm) throw new Error("RLE buffer underrun");
+        for (Am += mm[im++] << hm, am = 0; am < fm; ++am) Tm[Dm++] = Am
       }
-      return Fk
+      return Tm
     }
   },
-  37758: (kk, Fk) => {
-    function Ik(kk) {
-      var Fk = 32;
-      return (kk &= -kk) && Fk--, 65535 & kk && (Fk -= 16), 16711935 & kk && (Fk -= 8), 252645135 & kk && (Fk -= 4), 858993459 & kk && (Fk -= 2), 1431655765 & kk && (Fk -= 1), Fk
+  37785: (mm, Tm) => {
+    function fm(mm) {
+      var Tm = 32;
+      return (mm &= -mm) && Tm--, 65535 & mm && (Tm -= 16), 16711935 & mm && (Tm -= 8), 252645135 & mm && (Tm -= 4), 858993459 & mm && (Tm -= 2), 1431655765 & mm && (Tm -= 1), Tm
     }
-    Fk.INT_BITS = 32, Fk.INT_MAX = 2147483647, Fk.INT_MIN = -1 << 31, Fk.sign = function(kk) {
-      return (kk > 0) - (kk < 0)
-    }, Fk.abs = function(kk) {
-      var Fk = kk >> 31;
-      return (kk ^ Fk) - Fk
-    }, Fk.min = function(kk, Fk) {
-      return Fk ^ (kk ^ Fk) & -(kk < Fk)
-    }, Fk.max = function(kk, Fk) {
-      return kk ^ (kk ^ Fk) & -(kk < Fk)
-    }, Fk.isPow2 = function(kk) {
-      return !(kk & kk - 1) && !!kk
-    }, Fk.log2 = function(kk) {
-      var Fk, Ik;
-      return Fk = (kk > 65535) << 4, Fk |= Ik = ((kk >>>= Fk) > 255) << 3, Fk |= Ik = ((kk >>>= Ik) > 15) << 2, (Fk |= Ik = ((kk >>>= Ik) > 3) << 1) | (kk >>>= Ik) >> 1
-    }, Fk.log10 = function(kk) {
-      return kk >= 1e9 ? 9 : kk >= 1e8 ? 8 : kk >= 1e7 ? 7 : kk >= 1e6 ? 6 : kk >= 1e5 ? 5 : kk >= 1e4 ? 4 : kk >= 1e3 ? 3 : kk >= 100 ? 2 : kk >= 10 ? 1 : 0
-    }, Fk.popCount = function(kk) {
-      return 16843009 * ((kk = (858993459 & (kk -= kk >>> 1 & 1431655765)) + (kk >>> 2 & 858993459)) + (kk >>> 4) & 252645135) >>> 24
-    }, Fk.countTrailingZeros = Ik, Fk.nextPow2 = function(kk) {
-      return kk += 0 === kk, --kk, kk |= kk >>> 1, kk |= kk >>> 2, kk |= kk >>> 4, kk |= kk >>> 8, (kk |= kk >>> 16) + 1
-    }, Fk.prevPow2 = function(kk) {
-      return kk |= kk >>> 1, kk |= kk >>> 2, kk |= kk >>> 4, kk |= kk >>> 8, (kk |= kk >>> 16) - (kk >>> 1)
-    }, Fk.parity = function(kk) {
-      return kk ^= kk >>> 16, kk ^= kk >>> 8, kk ^= kk >>> 4, 27030 >>> (kk &= 15) & 1
+    Tm.INT_BITS = 32, Tm.INT_MAX = 2147483647, Tm.INT_MIN = -1 << 31, Tm.sign = function(mm) {
+      return (mm > 0) - (mm < 0)
+    }, Tm.abs = function(mm) {
+      var Tm = mm >> 31;
+      return (mm ^ Tm) - Tm
+    }, Tm.min = function(mm, Tm) {
+      return Tm ^ (mm ^ Tm) & -(mm < Tm)
+    }, Tm.max = function(mm, Tm) {
+      return mm ^ (mm ^ Tm) & -(mm < Tm)
+    }, Tm.isPow2 = function(mm) {
+      return !(mm & mm - 1) && !!mm
+    }, Tm.log2 = function(mm) {
+      var Tm, fm;
+      return Tm = (mm > 65535) << 4, Tm |= fm = ((mm >>>= Tm) > 255) << 3, Tm |= fm = ((mm >>>= fm) > 15) << 2, (Tm |= fm = ((mm >>>= fm) > 3) << 1) | (mm >>>= fm) >> 1
+    }, Tm.log10 = function(mm) {
+      return mm >= 1e9 ? 9 : mm >= 1e8 ? 8 : mm >= 1e7 ? 7 : mm >= 1e6 ? 6 : mm >= 1e5 ? 5 : mm >= 1e4 ? 4 : mm >= 1e3 ? 3 : mm >= 100 ? 2 : mm >= 10 ? 1 : 0
+    }, Tm.popCount = function(mm) {
+      return 16843009 * ((mm = (858993459 & (mm -= mm >>> 1 & 1431655765)) + (mm >>> 2 & 858993459)) + (mm >>> 4) & 252645135) >>> 24
+    }, Tm.countTrailingZeros = fm, Tm.nextPow2 = function(mm) {
+      return mm += 0 === mm, --mm, mm |= mm >>> 1, mm |= mm >>> 2, mm |= mm >>> 4, mm |= mm >>> 8, (mm |= mm >>> 16) + 1
+    }, Tm.prevPow2 = function(mm) {
+      return mm |= mm >>> 1, mm |= mm >>> 2, mm |= mm >>> 4, mm |= mm >>> 8, (mm |= mm >>> 16) - (mm >>> 1)
+    }, Tm.parity = function(mm) {
+      return mm ^= mm >>> 16, mm ^= mm >>> 8, mm ^= mm >>> 4, 27030 >>> (mm &= 15) & 1
     };
-    var Xk = new Array(256);
-    ! function(kk) {
-      for (var Fk = 0; Fk < 256; ++Fk) {
-        var Ik = Fk,
-          Xk = Fk,
-          Tk = 7;
-        for (Ik >>>= 1; Ik; Ik >>>= 1) Xk <<= 1, Xk |= 1 & Ik, --Tk;
-        kk[Fk] = Xk << Tk & 255
+    var hm = new Array(256);
+    ! function(mm) {
+      for (var Tm = 0; Tm < 256; ++Tm) {
+        var fm = Tm,
+          hm = Tm,
+          Am = 7;
+        for (fm >>>= 1; fm; fm >>>= 1) hm <<= 1, hm |= 1 & fm, --Am;
+        mm[Tm] = hm << Am & 255
       }
-    }(Xk), Fk.reverse = function(kk) {
-      return Xk[255 & kk] << 24 | Xk[kk >>> 8 & 255] << 16 | Xk[kk >>> 16 & 255] << 8 | Xk[kk >>> 24 & 255]
-    }, Fk.interleave2 = function(kk, Fk) {
-      return (kk = 1431655765 & ((kk = 858993459 & ((kk = 252645135 & ((kk = 16711935 & ((kk &= 65535) | kk << 8)) | kk << 4)) | kk << 2)) | kk << 1)) | (Fk = 1431655765 & ((Fk = 858993459 & ((Fk = 252645135 & ((Fk = 16711935 & ((Fk &= 65535) | Fk << 8)) | Fk << 4)) | Fk << 2)) | Fk << 1)) << 1
-    }, Fk.deinterleave2 = function(kk, Fk) {
-      return (kk = 65535 & ((kk = 16711935 & ((kk = 252645135 & ((kk = 858993459 & ((kk = kk >>> Fk & 1431655765) | kk >>> 1)) | kk >>> 2)) | kk >>> 4)) | kk >>> 16)) << 16 >> 16
-    }, Fk.interleave3 = function(kk, Fk, Ik) {
-      return kk = 1227133513 & ((kk = 3272356035 & ((kk = 251719695 & ((kk = 4278190335 & ((kk &= 1023) | kk << 16)) | kk << 8)) | kk << 4)) | kk << 2), (kk |= (Fk = 1227133513 & ((Fk = 3272356035 & ((Fk = 251719695 & ((Fk = 4278190335 & ((Fk &= 1023) | Fk << 16)) | Fk << 8)) | Fk << 4)) | Fk << 2)) << 1) | (Ik = 1227133513 & ((Ik = 3272356035 & ((Ik = 251719695 & ((Ik = 4278190335 & ((Ik &= 1023) | Ik << 16)) | Ik << 8)) | Ik << 4)) | Ik << 2)) << 2
-    }, Fk.deinterleave3 = function(kk, Fk) {
-      return (kk = 1023 & ((kk = 4278190335 & ((kk = 251719695 & ((kk = 3272356035 & ((kk = kk >>> Fk & 1227133513) | kk >>> 2)) | kk >>> 4)) | kk >>> 8)) | kk >>> 16)) << 22 >> 22
-    }, Fk.nextCombination = function(kk) {
-      var Fk = kk | kk - 1;
-      return Fk + 1 | (~Fk & -~Fk) - 1 >>> Ik(kk) + 1
+    }(hm), Tm.reverse = function(mm) {
+      return hm[255 & mm] << 24 | hm[mm >>> 8 & 255] << 16 | hm[mm >>> 16 & 255] << 8 | hm[mm >>> 24 & 255]
+    }, Tm.interleave2 = function(mm, Tm) {
+      return (mm = 1431655765 & ((mm = 858993459 & ((mm = 252645135 & ((mm = 16711935 & ((mm &= 65535) | mm << 8)) | mm << 4)) | mm << 2)) | mm << 1)) | (Tm = 1431655765 & ((Tm = 858993459 & ((Tm = 252645135 & ((Tm = 16711935 & ((Tm &= 65535) | Tm << 8)) | Tm << 4)) | Tm << 2)) | Tm << 1)) << 1
+    }, Tm.deinterleave2 = function(mm, Tm) {
+      return (mm = 65535 & ((mm = 16711935 & ((mm = 252645135 & ((mm = 858993459 & ((mm = mm >>> Tm & 1431655765) | mm >>> 1)) | mm >>> 2)) | mm >>> 4)) | mm >>> 16)) << 16 >> 16
+    }, Tm.interleave3 = function(mm, Tm, fm) {
+      return mm = 1227133513 & ((mm = 3272356035 & ((mm = 251719695 & ((mm = 4278190335 & ((mm &= 1023) | mm << 16)) | mm << 8)) | mm << 4)) | mm << 2), (mm |= (Tm = 1227133513 & ((Tm = 3272356035 & ((Tm = 251719695 & ((Tm = 4278190335 & ((Tm &= 1023) | Tm << 16)) | Tm << 8)) | Tm << 4)) | Tm << 2)) << 1) | (fm = 1227133513 & ((fm = 3272356035 & ((fm = 251719695 & ((fm = 4278190335 & ((fm &= 1023) | fm << 16)) | fm << 8)) | fm << 4)) | fm << 2)) << 2
+    }, Tm.deinterleave3 = function(mm, Tm) {
+      return (mm = 1023 & ((mm = 4278190335 & ((mm = 251719695 & ((mm = 3272356035 & ((mm = mm >>> Tm & 1227133513) | mm >>> 2)) | mm >>> 4)) | mm >>> 8)) | mm >>> 16)) << 22 >> 22
+    }, Tm.nextCombination = function(mm) {
+      var Tm = mm | mm - 1;
+      return Tm + 1 | (~Tm & -~Tm) - 1 >>> fm(mm) + 1
     }
   },
-  39794: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      emptyColumnHeight: () => Kk,
-      loadHeatmapSchematic: () => Qk,
-      readSchematicBlocks: () => sk
+  39917: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      emptyColumnHeight: () => Km,
+      loadHeatmapSchematic: () => Qm,
+      readSchematicBlocks: () => nm
     });
-    var Xk = Ik(3709),
-      Tk = Ik.n(Xk),
-      ik = Ik(3682),
-      yk = Ik(37749),
-      lk = Ik(187),
-      ak = Ik(9183);
-    const qk = [{
+    var hm = fm(3731),
+      Am = fm.n(hm),
+      am = fm(3716),
+      xm = fm(37783),
+      wm = fm(198),
+      Dm = fm(9141);
+    const im = [{
         name: "x",
         type: "int"
       }, {
@@ -110,20 +110,20 @@ export const modules = {
         name: "z",
         type: "int"
       }],
-      Lk = [{
+      Rm = [{
         name: "name",
         type: "string"
       }, {
         name: "startOffset",
         type: {
           type: "record",
-          fields: qk
+          fields: im
         }
       }, {
         name: "dimensions",
         type: {
           type: "record",
-          fields: qk
+          fields: im
         }
       }, {
         name: "chunkData",
@@ -131,26 +131,26 @@ export const modules = {
           type: "array",
           items: {
             type: "record",
-            fields: [...qk, {
+            fields: [...im, {
               name: "rle",
               type: "bytes"
             }]
           }
         }
       }],
-      tk = Tk().Type.forSchema({
+      pm = Am().Type.forSchema({
         type: "record",
-        fields: Lk
+        fields: Rm
       }),
-      Zk = Tk().Type.forSchema({
+      Em = Am().Type.forSchema({
         type: "record",
-        fields: [...Lk, {
+        fields: [...Rm, {
           name: "blockData",
           type: {
             type: "array",
             items: {
               type: "record",
-              fields: [...qk, {
+              fields: [...im, {
                 name: "data",
                 type: "bytes"
               }]
@@ -160,187 +160,187 @@ export const modules = {
           name: "pasteOffset",
           type: {
             type: "record",
-            fields: qk
+            fields: im
           }
         }]
       }),
-      jk = 2,
-      ek = 6,
-      wk = {
+      om = 2,
+      Om = 6,
+      Ym = {
         Water: [63, 118, 228],
         Lava: [232, 110, 30]
       },
-      Hk = [150, 150, 150],
-      Jk = 16,
-      xk = 4096,
-      Pk = lk.f.se,
-      Kk = -2147483648;
-    async function Qk(kk) {
-      const Fk = await sk(new Uint8Array(await kk.arrayBuffer()), await async function() {
+      qm = [150, 150, 150],
+      jm = 16,
+      Vm = 4096,
+      Im = wm.f.MO,
+      Km = -2147483648;
+    async function Qm(mm) {
+      const Tm = await nm(new Uint8Array(await mm.arrayBuffer()), await async function() {
         const {
-          averageColors: kk
-        } = await Ik.e(204).then((() => Ik(34274))), Fk = new Map;
-        return Ik => {
-          var Xk, Tk, ik, yk, lk;
-          const qk = Fk.get(Ik);
-          if (void 0 !== qk) return qk;
-          const Lk = null !== (Xk = null === (Tk = ak.g[Ik]) || void 0 === Tk ? void 0 : Tk.name) && void 0 !== Xk ? Xk : "",
-            tk = null !== (ik = kk[Lk]) && void 0 !== ik ? ik : kk[Lk.split("|")[0]],
-            Zk = wk[Lk.split("|")[0]],
-            jk = null !== (yk = null !== (lk = null === tk || void 0 === tk ? void 0 : tk[0]) && void 0 !== lk ? lk : Zk) && void 0 !== yk ? yk : 0 === (null === tk || void 0 === tk ? void 0 : tk.length) ? null : Hk;
-          return Fk.set(Ik, jk), jk
+          averageColors: mm
+        } = await fm.e(204).then((() => fm(34376))), Tm = new Map;
+        return fm => {
+          var hm, Am, am, xm, wm;
+          const im = Tm.get(fm);
+          if (void 0 !== im) return im;
+          const Rm = null !== (hm = null === (Am = Dm.i[fm]) || void 0 === Am ? void 0 : Am.name) && void 0 !== hm ? hm : "",
+            pm = null !== (am = mm[Rm]) && void 0 !== am ? am : mm[Rm.split("|")[0]],
+            Em = Ym[Rm.split("|")[0]],
+            om = null !== (xm = null !== (wm = null === pm || void 0 === pm ? void 0 : pm[0]) && void 0 !== wm ? wm : Em) && void 0 !== xm ? xm : 0 === (null === pm || void 0 === pm ? void 0 : pm.length) ? null : qm;
+          return Tm.set(fm, om), om
         }
       }());
       return {
-        surface: Fk.surface,
-        topDown: zk(Fk.columnTops)
+        surface: Tm.surface,
+        topDown: cm(Tm.columnTops)
       }
     }
-    async function sk(kk, Fk) {
-      var Ik;
-      if (kk.byteLength < 4) throw new Error("The file is too short to be a schematic.");
-      const Xk = new DataView(kk.buffer, kk.byteOffset, kk.byteLength).getUint32(0, !0);
-      if (Xk > ek) throw new Error("The file isn't a schematic this version of Bloxd can read.");
-      const Tk = (Xk >= jk ? Zk : tk).decode(ik.je.from(kk.subarray(4)), 0).value;
-      if (!Tk) throw new Error("The file isn't a schematic.");
-      if (0 === Tk.chunkData.length) throw new Error("The schematic has no blocks in it.");
-      const lk = null !== (Ik = Tk.pasteOffset) && void 0 !== Ik ? Ik : {
+    async function nm(mm, Tm) {
+      var fm;
+      if (mm.byteLength < 4) throw new Error("The file is too short to be a schematic.");
+      const hm = new DataView(mm.buffer, mm.byteOffset, mm.byteLength).getUint32(0, !0);
+      if (hm > Om) throw new Error("The file isn't a schematic this version of Bloxd can read.");
+      const Am = (hm >= om ? Em : pm).decode(am.XO.from(mm.subarray(4)), 0).value;
+      if (!Am) throw new Error("The file isn't a schematic.");
+      if (0 === Am.chunkData.length) throw new Error("The schematic has no blocks in it.");
+      const wm = null !== (fm = Am.pasteOffset) && void 0 !== fm ? fm : {
           x: 0,
           y: 0,
           z: 0
         },
-        ak = [lk.x, lk.y, lk.z].map((kk => Math.floor(kk / Pk))),
-        qk = Tk.chunkData.map((kk => ({
-          x: kk.x + ak[0],
-          y: kk.y + ak[1],
-          z: kk.z + ak[2],
-          rle: kk.rle
+        Dm = [wm.x, wm.y, wm.z].map((mm => Math.floor(mm / Im))),
+        im = Am.chunkData.map((mm => ({
+          x: mm.x + Dm[0],
+          y: mm.y + Dm[1],
+          z: mm.z + Dm[2],
+          rle: mm.rle
         }))),
-        Lk = new Map;
-      for (const [ik, tk] of qk.entries()) {
-        const kk = new Uint16Array(Pk ** 3);
-        yk.decode(tk.rle, kk), Lk.set(`${tk.x},${tk.y},${tk.z}`, kk), ik % Jk === Jk - 1 && await Sk()
+        Rm = new Map;
+      for (const [am, pm] of im.entries()) {
+        const mm = new Uint16Array(Im ** 3);
+        xm.decode(pm.rle, mm), Rm.set(`${pm.x},${pm.y},${pm.z}`, mm), am % jm === jm - 1 && await zm()
       }
-      const wk = (kk, Fk, Ik) => kk * Pk * Pk + Fk * Pk + Ik,
-        Hk = (kk, Fk, Ik) => {
-          var Xk, Tk;
-          const ik = Math.floor(kk / Pk),
-            yk = Math.floor(Fk / Pk),
-            lk = Math.floor(Ik / Pk);
-          return null !== (Xk = null === (Tk = Lk.get(`${ik},${yk},${lk}`)) || void 0 === Tk ? void 0 : Tk[wk(kk - ik * Pk, Fk - yk * Pk, Ik - lk * Pk)]) && void 0 !== Xk ? Xk : 0
+      const Ym = (mm, Tm, fm) => mm * Im * Im + Tm * Im + fm,
+        qm = (mm, Tm, fm) => {
+          var hm, Am;
+          const am = Math.floor(mm / Im),
+            xm = Math.floor(Tm / Im),
+            wm = Math.floor(fm / Im);
+          return null !== (hm = null === (Am = Rm.get(`${am},${xm},${wm}`)) || void 0 === Am ? void 0 : Am[Ym(mm - am * Im, Tm - xm * Im, fm - wm * Im)]) && void 0 !== hm ? hm : 0
         },
-        xk = new Map,
-        Qk = [],
-        sk = [];
-      for (const [ik, yk] of qk.entries()) {
-        const kk = Lk.get(`${yk.x},${yk.y},${yk.z}`),
-          Ik = [yk.x * Pk, yk.y * Pk, yk.z * Pk],
-          Xk = (Fk, Xk, Tk) => Fk < 0 || Xk < 0 || Tk < 0 || Fk >= Pk || Xk >= Pk || Tk >= Pk ? Hk(Ik[0] + Fk, Ik[1] + Xk, Ik[2] + Tk) : kk[wk(Fk, Xk, Tk)],
-          Tk = `${yk.x},${yk.z}`;
-        let lk = xk.get(Tk);
-        void 0 === lk && (lk = {
-          chunkX: yk.x,
-          chunkZ: yk.z,
-          heights: new Int32Array(Pk * Pk).fill(Kk),
-          colours: new Uint8Array(Pk * Pk * 3)
-        }, xk.set(Tk, lk));
-        for (let ik = 0; ik < Pk; ik++)
-          for (let Tk = 0; Tk < Pk; Tk++)
-            for (let yk = 0; yk < Pk; yk++) {
-              const ak = kk[wk(ik, Tk, yk)];
-              if (0 === ak) continue;
-              const qk = Ik[0] + ik,
-                Lk = Ik[1] + Tk,
-                tk = Ik[2] + yk,
-                Zk = Fk(ak);
-              if (null === Zk) continue;
-              const jk = yk * Pk + ik;
-              Lk > lk.heights[jk] && (lk.heights[jk] = Lk, lk.colours.set(Zk, 3 * jk));
-              !Vk(ak) && (Vk(Xk(ik + 1, Tk, yk)) || Vk(Xk(ik - 1, Tk, yk)) || Vk(Xk(ik, Tk + 1, yk)) || Vk(Xk(ik, Tk - 1, yk)) || Vk(Xk(ik, Tk, yk + 1)) || Vk(Xk(ik, Tk, yk - 1))) && (Qk.push(qk, Lk, tk), sk.push(Zk[0], Zk[1], Zk[2]))
+        Vm = new Map,
+        Qm = [],
+        nm = [];
+      for (const [am, xm] of im.entries()) {
+        const mm = Rm.get(`${xm.x},${xm.y},${xm.z}`),
+          fm = [xm.x * Im, xm.y * Im, xm.z * Im],
+          hm = (Tm, hm, Am) => Tm < 0 || hm < 0 || Am < 0 || Tm >= Im || hm >= Im || Am >= Im ? qm(fm[0] + Tm, fm[1] + hm, fm[2] + Am) : mm[Ym(Tm, hm, Am)],
+          Am = `${xm.x},${xm.z}`;
+        let wm = Vm.get(Am);
+        void 0 === wm && (wm = {
+          chunkX: xm.x,
+          chunkZ: xm.z,
+          heights: new Int32Array(Im * Im).fill(Km),
+          colours: new Uint8Array(Im * Im * 3)
+        }, Vm.set(Am, wm));
+        for (let am = 0; am < Im; am++)
+          for (let Am = 0; Am < Im; Am++)
+            for (let xm = 0; xm < Im; xm++) {
+              const Dm = mm[Ym(am, Am, xm)];
+              if (0 === Dm) continue;
+              const im = fm[0] + am,
+                Rm = fm[1] + Am,
+                pm = fm[2] + xm,
+                Em = Tm(Dm);
+              if (null === Em) continue;
+              const om = xm * Im + am;
+              Rm > wm.heights[om] && (wm.heights[om] = Rm, wm.colours.set(Em, 3 * om));
+              !Jm(Dm) && (Jm(hm(am + 1, Am, xm)) || Jm(hm(am - 1, Am, xm)) || Jm(hm(am, Am + 1, xm)) || Jm(hm(am, Am - 1, xm)) || Jm(hm(am, Am, xm + 1)) || Jm(hm(am, Am, xm - 1))) && (Qm.push(im, Rm, pm), nm.push(Em[0], Em[1], Em[2]))
             }
-        ik % Jk === Jk - 1 && await Sk()
+        am % jm === jm - 1 && await zm()
       }
-      if (0 === Qk.length) throw new Error("The schematic has no blocks in it.");
+      if (0 === Qm.length) throw new Error("The schematic has no blocks in it.");
       return {
-        name: Tk.name,
+        name: Am.name,
         surface: {
-          positions: Int32Array.from(Qk),
-          colours: Uint8Array.from(sk),
-          count: Qk.length / 3
+          positions: Int32Array.from(Qm),
+          colours: Uint8Array.from(nm),
+          count: Qm.length / 3
         },
-        columnTops: [...xk.values()]
+        columnTops: [...Vm.values()]
       }
     }
 
-    function Vk(kk) {
-      if (0 === kk) return !0;
-      const Fk = ak.g[kk];
-      return void 0 === Fk || Fk.qj || Fk.transTex || !1 === Fk.solid
+    function Jm(mm) {
+      if (0 === mm) return !0;
+      const Tm = Dm.i[mm];
+      return void 0 === Tm || Tm.Qo || Tm.transTex || !1 === Tm.solid
     }
 
-    function zk(kk) {
-      let Fk = 1 / 0,
-        Ik = -1 / 0,
-        Xk = 1 / 0,
-        Tk = -1 / 0;
+    function cm(mm) {
+      let Tm = 1 / 0,
+        fm = -1 / 0,
+        hm = 1 / 0,
+        Am = -1 / 0;
       for (const {
-          chunkX: ek,
-          chunkZ: wk,
-          heights: Hk
+          chunkX: Om,
+          chunkZ: Ym,
+          heights: qm
         }
-        of kk) Hk.forEach(((kk, ik) => {
-        if (kk === Kk) return;
-        const yk = ek * Pk + ik % Pk,
-          lk = wk * Pk + Math.floor(ik / Pk);
-        Fk = Math.min(Fk, yk), Ik = Math.max(Ik, yk), Xk = Math.min(Xk, lk), Tk = Math.max(Tk, lk)
+        of mm) qm.forEach(((mm, am) => {
+        if (mm === Km) return;
+        const xm = Om * Im + am % Im,
+          wm = Ym * Im + Math.floor(am / Im);
+        Tm = Math.min(Tm, xm), fm = Math.max(fm, xm), hm = Math.min(hm, wm), Am = Math.max(Am, wm)
       }));
-      const ik = Ik - Fk + 1,
-        yk = Tk - Xk + 1,
-        lk = Math.max(1, Math.ceil(ik / xk), Math.ceil(yk / xk)),
-        ak = Math.ceil(ik / lk),
-        qk = Math.ceil(yk / lk),
-        Lk = document.createElement("canvas");
-      Lk.width = ak, Lk.height = qk;
-      const tk = Lk.getContext("2d");
-      if (!tk) throw new Error("Couldn't draw the schematic from above.");
-      const Zk = tk.createImageData(ak, qk),
-        jk = new Int32Array(ak * qk).fill(Kk);
+      const am = fm - Tm + 1,
+        xm = Am - hm + 1,
+        wm = Math.max(1, Math.ceil(am / Vm), Math.ceil(xm / Vm)),
+        Dm = Math.ceil(am / wm),
+        im = Math.ceil(xm / wm),
+        Rm = document.createElement("canvas");
+      Rm.width = Dm, Rm.height = im;
+      const pm = Rm.getContext("2d");
+      if (!pm) throw new Error("Couldn't draw the schematic from above.");
+      const Em = pm.createImageData(Dm, im),
+        om = new Int32Array(Dm * im).fill(Km);
       for (const {
-          chunkX: ek,
-          chunkZ: wk,
-          heights: Hk,
-          colours: Jk
+          chunkX: Om,
+          chunkZ: Ym,
+          heights: qm,
+          colours: jm
         }
-        of kk) Hk.forEach(((kk, Fk) => {
-        const Tk = ek * Pk + Fk % Pk,
-          ik = wk * Pk + Math.floor(Fk / Pk),
-          yk = Math.floor((ik - Xk) / lk) * ak + Math.floor((Ik - Tk) / lk);
-        kk === Kk || kk <= jk[yk] || (jk[yk] = kk, Zk.data.set(Jk.subarray(3 * Fk, 3 * Fk + 3), 4 * yk), Zk.data[4 * yk + 3] = 255)
+        of mm) qm.forEach(((mm, Tm) => {
+        const Am = Om * Im + Tm % Im,
+          am = Ym * Im + Math.floor(Tm / Im),
+          xm = Math.floor((am - hm) / wm) * Dm + Math.floor((fm - Am) / wm);
+        mm === Km || mm <= om[xm] || (om[xm] = mm, Em.data.set(jm.subarray(3 * Tm, 3 * Tm + 3), 4 * xm), Em.data[4 * xm + 3] = 255)
       }));
-      return tk.putImageData(Zk, 0, 0), {
-        maxX: Ik,
-        minZ: Xk,
-        width: ak * lk,
-        depth: qk * lk,
-        canvas: Lk
+      return pm.putImageData(Em, 0, 0), {
+        maxX: fm,
+        minZ: hm,
+        width: Dm * wm,
+        depth: im * wm,
+        canvas: Rm
       }
     }
 
-    function Sk() {
-      return new Promise((kk => {
-        setTimeout(kk, 0)
+    function zm() {
+      return new Promise((mm => {
+        setTimeout(mm, 0)
       }))
     }
   },
-  9278: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => Tk,
-      g: () => ik
+  9240: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => Am,
+      e: () => am
     });
-    var Xk = Ik(9237);
-    const Tk = "Air",
-      ik = Object.freeze(new Xk.g(Tk, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var hm = fm(9184);
+    const Am = "Air",
+      am = Object.freeze(new hm.g(Am, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

@@ -1,176 +1,176 @@
 export const id = 314;
 export const ids = [314];
 export const modules = {
-  41850: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      _TGATextureLoader: () => lk
+  41879: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      _TGATextureLoader: () => wm
     });
-    var Xk = Ik(38674);
+    var hm = fm(38766);
 
-    function Tk(kk) {
-      let Fk = 0;
+    function Am(mm) {
+      let Tm = 0;
       return {
-        id_length: kk[Fk++],
-        colormap_type: kk[Fk++],
-        image_type: kk[Fk++],
-        colormap_index: kk[Fk++] | kk[Fk++] << 8,
-        colormap_length: kk[Fk++] | kk[Fk++] << 8,
-        colormap_size: kk[Fk++],
-        origin: [kk[Fk++] | kk[Fk++] << 8, kk[Fk++] | kk[Fk++] << 8],
-        width: kk[Fk++] | kk[Fk++] << 8,
-        height: kk[Fk++] | kk[Fk++] << 8,
-        pixel_size: kk[Fk++],
-        flags: kk[17]
+        id_length: mm[Tm++],
+        colormap_type: mm[Tm++],
+        image_type: mm[Tm++],
+        colormap_index: mm[Tm++] | mm[Tm++] << 8,
+        colormap_length: mm[Tm++] | mm[Tm++] << 8,
+        colormap_size: mm[Tm++],
+        origin: [mm[Tm++] | mm[Tm++] << 8, mm[Tm++] | mm[Tm++] << 8],
+        width: mm[Tm++] | mm[Tm++] << 8,
+        height: mm[Tm++] | mm[Tm++] << 8,
+        pixel_size: mm[Tm++],
+        flags: mm[17]
       }
     }
 
-    function ik(kk, Fk) {
-      if (Fk.length < 19) return void Xk.e.Error("Unable to load TGA file - Not enough data to contain header");
-      let Ik = 18;
-      const ik = Tk(Fk);
-      if (ik.id_length + Ik > Fk.length) return void Xk.e.Error("Unable to load TGA file - Not enough data");
-      Ik += ik.id_length;
-      let lk, ak = !1,
-        qk = !1,
-        Lk = !1;
-      switch (ik.image_type) {
+    function am(mm, Tm) {
+      if (Tm.length < 19) return void hm.b.Error("Unable to load TGA file - Not enough data to contain header");
+      let fm = 18;
+      const am = Am(Tm);
+      if (am.id_length + fm > Tm.length) return void hm.b.Error("Unable to load TGA file - Not enough data");
+      fm += am.id_length;
+      let wm, Dm = !1,
+        im = !1,
+        Rm = !1;
+      switch (am.image_type) {
         case 9:
-          ak = !0;
+          Dm = !0;
         case 1:
-          qk = !0;
+          im = !0;
           break;
         case 10:
-          ak = !0;
+          Dm = !0;
         case 2:
           break;
         case 11:
-          ak = !0;
+          Dm = !0;
         case 3:
-          Lk = !0
+          Rm = !0
       }
-      const tk = ik.pixel_size >> 3,
-        Zk = ik.width * ik.height * tk;
-      let jk, ek, wk, Hk, Jk, xk, Pk;
-      if (qk && (jk = Fk.subarray(Ik, Ik += ik.colormap_length * (ik.colormap_size >> 3))), ak) {
-        let kk, Xk, Tk;
-        lk = new Uint8Array(Zk);
-        let ik = 0;
-        const yk = new Uint8Array(tk);
-        for (; Ik < Zk && ik < Zk;)
-          if (kk = Fk[Ik++], Xk = 1 + (127 & kk), 128 & kk) {
-            for (Tk = 0; Tk < tk; ++Tk) yk[Tk] = Fk[Ik++];
-            for (Tk = 0; Tk < Xk; ++Tk) lk.set(yk, ik + Tk * tk);
-            ik += tk * Xk
+      const pm = am.pixel_size >> 3,
+        Em = am.width * am.height * pm;
+      let om, Om, Ym, qm, jm, Vm, Im;
+      if (im && (om = Tm.subarray(fm, fm += am.colormap_length * (am.colormap_size >> 3))), Dm) {
+        let mm, hm, Am;
+        wm = new Uint8Array(Em);
+        let am = 0;
+        const xm = new Uint8Array(pm);
+        for (; fm < Em && am < Em;)
+          if (mm = Tm[fm++], hm = 1 + (127 & mm), 128 & mm) {
+            for (Am = 0; Am < pm; ++Am) xm[Am] = Tm[fm++];
+            for (Am = 0; Am < hm; ++Am) wm.set(xm, am + Am * pm);
+            am += pm * hm
           } else {
-            for (Xk *= tk, Tk = 0; Tk < Xk; ++Tk) lk[ik + Tk] = Fk[Ik++];
-            ik += Xk
+            for (hm *= pm, Am = 0; Am < hm; ++Am) wm[am + Am] = Tm[fm++];
+            am += hm
           }
-      } else lk = Fk.subarray(Ik, Ik + (qk ? ik.width * ik.height : Zk));
-      switch ((48 & ik.flags) >> 4) {
+      } else wm = Tm.subarray(fm, fm + (im ? am.width * am.height : Em));
+      switch ((48 & am.flags) >> 4) {
         default:
         case 2:
-          ek = 0, Hk = 1, Pk = ik.width, wk = 0, Jk = 1, xk = ik.height;
+          Om = 0, qm = 1, Im = am.width, Ym = 0, jm = 1, Vm = am.height;
           break;
         case 0:
-          ek = 0, Hk = 1, Pk = ik.width, wk = ik.height - 1, Jk = -1, xk = -1;
+          Om = 0, qm = 1, Im = am.width, Ym = am.height - 1, jm = -1, Vm = -1;
           break;
         case 3:
-          ek = ik.width - 1, Hk = -1, Pk = -1, wk = 0, Jk = 1, xk = ik.height;
+          Om = am.width - 1, qm = -1, Im = -1, Ym = 0, jm = 1, Vm = am.height;
           break;
         case 1:
-          ek = ik.width - 1, Hk = -1, Pk = -1, wk = ik.height - 1, Jk = -1, xk = -1
+          Om = am.width - 1, qm = -1, Im = -1, Ym = am.height - 1, jm = -1, Vm = -1
       }
-      const Kk = "_getImageData" + (Lk ? "Grey" : "") + ik.pixel_size + "bits",
-        Qk = yk[Kk](ik, jk, lk, wk, Jk, xk, ek, Hk, Pk);
-      kk.Oe()._uploadDataToTextureDirectly(kk, Qk)
+      const Km = "_getImageData" + (Rm ? "Grey" : "") + am.pixel_size + "bits",
+        Qm = xm[Km](am, om, wm, Ym, jm, Vm, Om, qm, Im);
+      mm.dO()._uploadDataToTextureDirectly(mm, Qm)
     }
-    const yk = {
-      GetTGAHeader: Tk,
-      UploadContent: ik,
-      _getImageData8bits: function(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak) {
-        const qk = Ik,
-          Lk = Fk,
-          tk = kk.width,
-          Zk = kk.height;
-        let jk, ek, wk, Hk = 0;
-        const Jk = new Uint8Array(tk * Zk * 4);
-        for (wk = Xk; wk !== ik; wk += Tk)
-          for (ek = yk; ek !== ak; ek += lk, Hk++) jk = qk[Hk], Jk[4 * (ek + tk * wk) + 3] = 255, Jk[4 * (ek + tk * wk) + 2] = Lk[3 * jk + 0], Jk[4 * (ek + tk * wk) + 1] = Lk[3 * jk + 1], Jk[4 * (ek + tk * wk) + 0] = Lk[3 * jk + 2];
-        return Jk
+    const xm = {
+      GetTGAHeader: Am,
+      UploadContent: am,
+      _getImageData8bits: function(mm, Tm, fm, hm, Am, am, xm, wm, Dm) {
+        const im = fm,
+          Rm = Tm,
+          pm = mm.width,
+          Em = mm.height;
+        let om, Om, Ym, qm = 0;
+        const jm = new Uint8Array(pm * Em * 4);
+        for (Ym = hm; Ym !== am; Ym += Am)
+          for (Om = xm; Om !== Dm; Om += wm, qm++) om = im[qm], jm[4 * (Om + pm * Ym) + 3] = 255, jm[4 * (Om + pm * Ym) + 2] = Rm[3 * om + 0], jm[4 * (Om + pm * Ym) + 1] = Rm[3 * om + 1], jm[4 * (Om + pm * Ym) + 0] = Rm[3 * om + 2];
+        return jm
       },
-      _getImageData16bits: function(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak) {
-        const qk = Ik,
-          Lk = kk.width,
-          tk = kk.height;
-        let Zk, jk, ek, wk = 0;
-        const Hk = new Uint8Array(Lk * tk * 4);
-        for (ek = Xk; ek !== ik; ek += Tk)
-          for (jk = yk; jk !== ak; jk += lk, wk += 2) {
-            Zk = qk[wk + 0] + (qk[wk + 1] << 8);
-            const kk = 255 * ((31744 & Zk) >> 10) / 31 | 0,
-              Fk = 255 * ((992 & Zk) >> 5) / 31 | 0,
-              Ik = 255 * (31 & Zk) / 31 | 0;
-            Hk[4 * (jk + Lk * ek) + 0] = kk, Hk[4 * (jk + Lk * ek) + 1] = Fk, Hk[4 * (jk + Lk * ek) + 2] = Ik, Hk[4 * (jk + Lk * ek) + 3] = 32768 & Zk ? 0 : 255
+      _getImageData16bits: function(mm, Tm, fm, hm, Am, am, xm, wm, Dm) {
+        const im = fm,
+          Rm = mm.width,
+          pm = mm.height;
+        let Em, om, Om, Ym = 0;
+        const qm = new Uint8Array(Rm * pm * 4);
+        for (Om = hm; Om !== am; Om += Am)
+          for (om = xm; om !== Dm; om += wm, Ym += 2) {
+            Em = im[Ym + 0] + (im[Ym + 1] << 8);
+            const mm = 255 * ((31744 & Em) >> 10) / 31 | 0,
+              Tm = 255 * ((992 & Em) >> 5) / 31 | 0,
+              fm = 255 * (31 & Em) / 31 | 0;
+            qm[4 * (om + Rm * Om) + 0] = mm, qm[4 * (om + Rm * Om) + 1] = Tm, qm[4 * (om + Rm * Om) + 2] = fm, qm[4 * (om + Rm * Om) + 3] = 32768 & Em ? 0 : 255
           }
-        return Hk
+        return qm
       },
-      _getImageData24bits: function(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak) {
-        const qk = Ik,
-          Lk = kk.width,
-          tk = kk.height;
-        let Zk, jk, ek = 0;
-        const wk = new Uint8Array(Lk * tk * 4);
-        for (jk = Xk; jk !== ik; jk += Tk)
-          for (Zk = yk; Zk !== ak; Zk += lk, ek += 3) wk[4 * (Zk + Lk * jk) + 3] = 255, wk[4 * (Zk + Lk * jk) + 2] = qk[ek + 0], wk[4 * (Zk + Lk * jk) + 1] = qk[ek + 1], wk[4 * (Zk + Lk * jk) + 0] = qk[ek + 2];
-        return wk
+      _getImageData24bits: function(mm, Tm, fm, hm, Am, am, xm, wm, Dm) {
+        const im = fm,
+          Rm = mm.width,
+          pm = mm.height;
+        let Em, om, Om = 0;
+        const Ym = new Uint8Array(Rm * pm * 4);
+        for (om = hm; om !== am; om += Am)
+          for (Em = xm; Em !== Dm; Em += wm, Om += 3) Ym[4 * (Em + Rm * om) + 3] = 255, Ym[4 * (Em + Rm * om) + 2] = im[Om + 0], Ym[4 * (Em + Rm * om) + 1] = im[Om + 1], Ym[4 * (Em + Rm * om) + 0] = im[Om + 2];
+        return Ym
       },
-      _getImageData32bits: function(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak) {
-        const qk = Ik,
-          Lk = kk.width,
-          tk = kk.height;
-        let Zk, jk, ek = 0;
-        const wk = new Uint8Array(Lk * tk * 4);
-        for (jk = Xk; jk !== ik; jk += Tk)
-          for (Zk = yk; Zk !== ak; Zk += lk, ek += 4) wk[4 * (Zk + Lk * jk) + 2] = qk[ek + 0], wk[4 * (Zk + Lk * jk) + 1] = qk[ek + 1], wk[4 * (Zk + Lk * jk) + 0] = qk[ek + 2], wk[4 * (Zk + Lk * jk) + 3] = qk[ek + 3];
-        return wk
+      _getImageData32bits: function(mm, Tm, fm, hm, Am, am, xm, wm, Dm) {
+        const im = fm,
+          Rm = mm.width,
+          pm = mm.height;
+        let Em, om, Om = 0;
+        const Ym = new Uint8Array(Rm * pm * 4);
+        for (om = hm; om !== am; om += Am)
+          for (Em = xm; Em !== Dm; Em += wm, Om += 4) Ym[4 * (Em + Rm * om) + 2] = im[Om + 0], Ym[4 * (Em + Rm * om) + 1] = im[Om + 1], Ym[4 * (Em + Rm * om) + 0] = im[Om + 2], Ym[4 * (Em + Rm * om) + 3] = im[Om + 3];
+        return Ym
       },
-      _getImageDataGrey8bits: function(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak) {
-        const qk = Ik,
-          Lk = kk.width,
-          tk = kk.height;
-        let Zk, jk, ek, wk = 0;
-        const Hk = new Uint8Array(Lk * tk * 4);
-        for (ek = Xk; ek !== ik; ek += Tk)
-          for (jk = yk; jk !== ak; jk += lk, wk++) Zk = qk[wk], Hk[4 * (jk + Lk * ek) + 0] = Zk, Hk[4 * (jk + Lk * ek) + 1] = Zk, Hk[4 * (jk + Lk * ek) + 2] = Zk, Hk[4 * (jk + Lk * ek) + 3] = 255;
-        return Hk
+      _getImageDataGrey8bits: function(mm, Tm, fm, hm, Am, am, xm, wm, Dm) {
+        const im = fm,
+          Rm = mm.width,
+          pm = mm.height;
+        let Em, om, Om, Ym = 0;
+        const qm = new Uint8Array(Rm * pm * 4);
+        for (Om = hm; Om !== am; Om += Am)
+          for (om = xm; om !== Dm; om += wm, Ym++) Em = im[Ym], qm[4 * (om + Rm * Om) + 0] = Em, qm[4 * (om + Rm * Om) + 1] = Em, qm[4 * (om + Rm * Om) + 2] = Em, qm[4 * (om + Rm * Om) + 3] = 255;
+        return qm
       },
-      _getImageDataGrey16bits: function(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak) {
-        const qk = Ik,
-          Lk = kk.width,
-          tk = kk.height;
-        let Zk, jk, ek = 0;
-        const wk = new Uint8Array(Lk * tk * 4);
-        for (jk = Xk; jk !== ik; jk += Tk)
-          for (Zk = yk; Zk !== ak; Zk += lk, ek += 2) wk[4 * (Zk + Lk * jk) + 0] = qk[ek + 0], wk[4 * (Zk + Lk * jk) + 1] = qk[ek + 0], wk[4 * (Zk + Lk * jk) + 2] = qk[ek + 0], wk[4 * (Zk + Lk * jk) + 3] = qk[ek + 1];
-        return wk
+      _getImageDataGrey16bits: function(mm, Tm, fm, hm, Am, am, xm, wm, Dm) {
+        const im = fm,
+          Rm = mm.width,
+          pm = mm.height;
+        let Em, om, Om = 0;
+        const Ym = new Uint8Array(Rm * pm * 4);
+        for (om = hm; om !== am; om += Am)
+          for (Em = xm; Em !== Dm; Em += wm, Om += 2) Ym[4 * (Em + Rm * om) + 0] = im[Om + 0], Ym[4 * (Em + Rm * om) + 1] = im[Om + 0], Ym[4 * (Em + Rm * om) + 2] = im[Om + 0], Ym[4 * (Em + Rm * om) + 3] = im[Om + 1];
+        return Ym
       }
     };
-    class lk {
+    class wm {
       constructor() {
         this.supportCascades = !1
       }
       loadCubeData() {
         throw ".env not supported in Cube."
       }
-      loadData(kk, Fk, Ik) {
-        const Xk = new Uint8Array(kk.buffer, kk.byteOffset, kk.byteLength),
-          yk = Tk(Xk);
-        Ik(yk.width, yk.height, Fk.generateMipMaps, !1, (() => {
-          ik(Fk, Xk)
+      loadData(mm, Tm, fm) {
+        const hm = new Uint8Array(mm.buffer, mm.byteOffset, mm.byteLength),
+          xm = Am(hm);
+        fm(xm.width, xm.height, Tm.generateMipMaps, !1, (() => {
+          am(Tm, hm)
         }))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

@@ -1,39 +1,39 @@
 export const id = 232;
 export const ids = [232];
 export const modules = {
-  37331: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => tk,
-      h: () => Zk,
-      i: () => wk,
-      k: () => jk
+  37336: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => pm,
+      c: () => Em,
+      d: () => Ym,
+      e: () => om
     });
-    var Xk = Ik(37166),
-      Tk = Ik(37158),
-      ik = Ik(37189),
-      yk = Ik(37201);
+    var hm = fm(37197),
+      Am = fm(37191),
+      am = fm(37208),
+      xm = fm(37224);
 
-    function lk(kk) {
-      return Math.pow(kk, Tk.g)
+    function wm(mm) {
+      return Math.pow(mm, Am.g)
     }
 
-    function ak(kk) {
-      return kk <= .04045 ? .0773993808 * kk : Math.pow(.947867299 * (kk + .055), 2.4)
+    function Dm(mm) {
+      return mm <= .04045 ? .0773993808 * mm : Math.pow(.947867299 * (mm + .055), 2.4)
     }
 
-    function qk(kk) {
-      return Math.pow(kk, Tk.d)
+    function im(mm) {
+      return Math.pow(mm, Am.f)
     }
 
-    function Lk(kk) {
-      return kk <= .0031308 ? 12.92 * kk : 1.055 * Math.pow(kk, .41666) - .055
+    function Rm(mm) {
+      return mm <= .0031308 ? 12.92 * mm : 1.055 * Math.pow(mm, .41666) - .055
     }
-    class tk {
+    class pm {
       constructor() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.r = kk, this.g = Fk, this.b = Ik
+        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.r = mm, this.g = Tm, this.b = fm
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + "}"
@@ -42,416 +42,416 @@ export const modules = {
         return "Color3"
       }
       getHashCode() {
-        let kk = 255 * this.r | 0;
-        return kk = 397 * kk ^ 255 * this.g, kk = 397 * kk ^ 255 * this.b, kk
+        let mm = 255 * this.r | 0;
+        return mm = 397 * mm ^ 255 * this.g, mm = 397 * mm ^ 255 * this.b, mm
       }
-      toArray(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return kk[Fk] = this.r, kk[Fk + 1] = this.g, kk[Fk + 2] = this.b, this
+      toArray(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return mm[Tm] = this.r, mm[Tm + 1] = this.g, mm[Tm + 2] = this.b, this
       }
-      hFk(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return tk.FromArrayToRef(kk, Fk, this), this
+      UTm(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return pm.FromArrayToRef(mm, Tm, this), this
       }
       toColor4() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        return new Zk(this.r, this.g, this.b, kk)
+        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        return new Em(this.r, this.g, this.b, mm)
       }
-      iXk() {
+      ahm() {
         return [this.r, this.g, this.b]
       }
       toLuminance() {
         return .3 * this.r + .59 * this.g + .11 * this.b
       }
-      multiply(kk) {
-        return new tk(this.r * kk.r, this.g * kk.g, this.b * kk.b)
+      multiply(mm) {
+        return new pm(this.r * mm.r, this.g * mm.g, this.b * mm.b)
       }
-      multiplyToRef(kk, Fk) {
-        return Fk.r = this.r * kk.r, Fk.g = this.g * kk.g, Fk.b = this.b * kk.b, Fk
+      multiplyToRef(mm, Tm) {
+        return Tm.r = this.r * mm.r, Tm.g = this.g * mm.g, Tm.b = this.b * mm.b, Tm
       }
-      multiplyInPlace(kk) {
-        return this.r *= kk.r, this.g *= kk.g, this.b *= kk.b, this
+      multiplyInPlace(mm) {
+        return this.r *= mm.r, this.g *= mm.g, this.b *= mm.b, this
       }
-      multiplyByFloats(kk, Fk, Ik) {
-        return new tk(this.r * kk, this.g * Fk, this.b * Ik)
+      multiplyByFloats(mm, Tm, fm) {
+        return new pm(this.r * mm, this.g * Tm, this.b * fm)
       }
-      divide(kk) {
+      divide(mm) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(kk, Fk) {
+      divideToRef(mm, Tm) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(kk) {
+      divideInPlace(mm) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(kk) {
-        return this.minimizeInPlaceFromFloats(kk.r, kk.g, kk.b)
+      minimizeInPlace(mm) {
+        return this.minimizeInPlaceFromFloats(mm.r, mm.g, mm.b)
       }
-      maximizeInPlace(kk) {
-        return this.maximizeInPlaceFromFloats(kk.r, kk.g, kk.b)
+      maximizeInPlace(mm) {
+        return this.maximizeInPlaceFromFloats(mm.r, mm.g, mm.b)
       }
-      minimizeInPlaceFromFloats(kk, Fk, Ik) {
-        return this.r = Math.min(kk, this.r), this.g = Math.min(Fk, this.g), this.b = Math.min(Ik, this.b), this
+      minimizeInPlaceFromFloats(mm, Tm, fm) {
+        return this.r = Math.min(mm, this.r), this.g = Math.min(Tm, this.g), this.b = Math.min(fm, this.b), this
       }
-      maximizeInPlaceFromFloats(kk, Fk, Ik) {
-        return this.r = Math.max(kk, this.r), this.g = Math.max(Fk, this.g), this.b = Math.max(Ik, this.b), this
+      maximizeInPlaceFromFloats(mm, Tm, fm) {
+        return this.r = Math.max(mm, this.r), this.g = Math.max(Tm, this.g), this.b = Math.max(fm, this.b), this
       }
-      floorToRef(kk) {
+      floorToRef(mm) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(kk) {
+      fractToRef(mm) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      equals(kk) {
-        return kk && this.r === kk.r && this.g === kk.g && this.b === kk.b
+      equals(mm) {
+        return mm && this.r === mm.r && this.g === mm.g && this.b === mm.b
       }
-      equalsFloats(kk, Fk, Ik) {
-        return this.Ryk(kk, Fk, Ik)
+      equalsFloats(mm, Tm, fm) {
+        return this.Mxm(mm, Tm, fm)
       }
-      Ryk(kk, Fk, Ik) {
-        return this.r === kk && this.g === Fk && this.b === Ik
+      Mxm(mm, Tm, fm) {
+        return this.r === mm && this.g === Tm && this.b === fm
       }
-      equalsWithEpsilon(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Tk.b;
-        return (0, ik.WithinEpsilon)(this.r, kk.r, Fk) && (0, ik.WithinEpsilon)(this.g, kk.g, Fk) && (0, ik.WithinEpsilon)(this.b, kk.b, Fk)
+      equalsWithEpsilon(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Am.c;
+        return (0, am.WithinEpsilon)(this.r, mm.r, Tm) && (0, am.WithinEpsilon)(this.g, mm.g, Tm) && (0, am.WithinEpsilon)(this.b, mm.b, Tm)
       }
-      nX() {
+      GA() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(kk) {
+      negateToRef(mm) {
         throw new ReferenceError("Can not negate a color")
       }
-      scale(kk) {
-        return new tk(this.r * kk, this.g * kk, this.b * kk)
+      scale(mm) {
+        return new pm(this.r * mm, this.g * mm, this.b * mm)
       }
-      scaleInPlace(kk) {
-        return this.r *= kk, this.g *= kk, this.b *= kk, this
+      scaleInPlace(mm) {
+        return this.r *= mm, this.g *= mm, this.b *= mm, this
       }
-      scaleToRef(kk, Fk) {
-        return Fk.r = this.r * kk, Fk.g = this.g * kk, Fk.b = this.b * kk, Fk
+      scaleToRef(mm, Tm) {
+        return Tm.r = this.r * mm, Tm.g = this.g * mm, Tm.b = this.b * mm, Tm
       }
-      scaleAndAddToRef(kk, Fk) {
-        return Fk.r += this.r * kk, Fk.g += this.g * kk, Fk.b += this.b * kk, Fk
+      scaleAndAddToRef(mm, Tm) {
+        return Tm.r += this.r * mm, Tm.g += this.g * mm, Tm.b += this.b * mm, Tm
       }
       clampToRef() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          Ik = arguments.length > 2 ? arguments[2] : void 0;
-        return Ik.r = (0, ik.Clamp)(this.r, kk, Fk), Ik.g = (0, ik.Clamp)(this.g, kk, Fk), Ik.b = (0, ik.Clamp)(this.b, kk, Fk), Ik
+        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          fm = arguments.length > 2 ? arguments[2] : void 0;
+        return fm.r = (0, am.Clamp)(this.r, mm, Tm), fm.g = (0, am.Clamp)(this.g, mm, Tm), fm.b = (0, am.Clamp)(this.b, mm, Tm), fm
       }
-      add(kk) {
-        return new tk(this.r + kk.r, this.g + kk.g, this.b + kk.b)
+      add(mm) {
+        return new pm(this.r + mm.r, this.g + mm.g, this.b + mm.b)
       }
-      addInPlace(kk) {
-        return this.r += kk.r, this.g += kk.g, this.b += kk.b, this
+      addInPlace(mm) {
+        return this.r += mm.r, this.g += mm.g, this.b += mm.b, this
       }
-      addInPlaceFromFloats(kk, Fk, Ik) {
-        return this.r += kk, this.g += Fk, this.b += Ik, this
+      addInPlaceFromFloats(mm, Tm, fm) {
+        return this.r += mm, this.g += Tm, this.b += fm, this
       }
-      addToRef(kk, Fk) {
-        return Fk.r = this.r + kk.r, Fk.g = this.g + kk.g, Fk.b = this.b + kk.b, Fk
+      addToRef(mm, Tm) {
+        return Tm.r = this.r + mm.r, Tm.g = this.g + mm.g, Tm.b = this.b + mm.b, Tm
       }
-      subtract(kk) {
-        return new tk(this.r - kk.r, this.g - kk.g, this.b - kk.b)
+      subtract(mm) {
+        return new pm(this.r - mm.r, this.g - mm.g, this.b - mm.b)
       }
-      subtractToRef(kk, Fk) {
-        return Fk.r = this.r - kk.r, Fk.g = this.g - kk.g, Fk.b = this.b - kk.b, Fk
+      subtractToRef(mm, Tm) {
+        return Tm.r = this.r - mm.r, Tm.g = this.g - mm.g, Tm.b = this.b - mm.b, Tm
       }
-      zXk(kk) {
-        return this.r -= kk.r, this.g -= kk.g, this.b -= kk.b, this
+      zhm(mm) {
+        return this.r -= mm.r, this.g -= mm.g, this.b -= mm.b, this
       }
-      subtractFromFloats(kk, Fk, Ik) {
-        return new tk(this.r - kk, this.g - Fk, this.b - Ik)
+      subtractFromFloats(mm, Tm, fm) {
+        return new pm(this.r - mm, this.g - Tm, this.b - fm)
       }
-      subtractFromFloatsToRef(kk, Fk, Ik, Xk) {
-        return Xk.r = this.r - kk, Xk.g = this.g - Fk, Xk.b = this.b - Ik, Xk
+      subtractFromFloatsToRef(mm, Tm, fm, hm) {
+        return hm.r = this.r - mm, hm.g = this.g - Tm, hm.b = this.b - fm, hm
       }
       clone() {
-        return new tk(this.r, this.g, this.b)
+        return new pm(this.r, this.g, this.b)
       }
-      kS(kk) {
-        return this.r = kk.r, this.g = kk.g, this.b = kk.b, this
+      ZZ(mm) {
+        return this.r = mm.r, this.g = mm.g, this.b = mm.b, this
       }
-      t5(kk, Fk, Ik) {
-        return this.r = kk, this.g = Fk, this.b = Ik, this
+      Z8(mm, Tm, fm) {
+        return this.r = mm, this.g = Tm, this.b = fm, this
       }
-      set(kk, Fk, Ik) {
-        return this.t5(kk, Fk, Ik)
+      set(mm, Tm, fm) {
+        return this.Z8(mm, Tm, fm)
       }
-      I6(kk) {
-        return this.r = this.g = this.b = kk, this
+      Y5(mm) {
+        return this.r = this.g = this.b = mm, this
       }
       toHexString() {
-        const kk = Math.round(255 * this.r),
-          Fk = Math.round(255 * this.g),
-          Ik = Math.round(255 * this.b);
-        return "#" + (0, ik.ToHex)(kk) + (0, ik.ToHex)(Fk) + (0, ik.ToHex)(Ik)
+        const mm = Math.round(255 * this.r),
+          Tm = Math.round(255 * this.g),
+          fm = Math.round(255 * this.b);
+        return "#" + (0, am.ToHex)(mm) + (0, am.ToHex)(Tm) + (0, am.ToHex)(fm)
       }
-      fromHexString(kk) {
-        return "#" !== kk.substring(0, 1) || 7 !== kk.length || (this.r = parseInt(kk.substring(1, 3), 16) / 255, this.g = parseInt(kk.substring(3, 5), 16) / 255, this.b = parseInt(kk.substring(5, 7), 16) / 255), this
+      fromHexString(mm) {
+        return "#" !== mm.substring(0, 1) || 7 !== mm.length || (this.r = parseInt(mm.substring(1, 3), 16) / 255, this.g = parseInt(mm.substring(3, 5), 16) / 255, this.b = parseInt(mm.substring(5, 7), 16) / 255), this
       }
       toHSV() {
-        return this.toHSVToRef(new tk)
+        return this.toHSVToRef(new pm)
       }
-      toHSVToRef(kk) {
-        const Fk = this.r,
-          Ik = this.g,
-          Xk = this.b,
-          Tk = Math.max(Fk, Ik, Xk),
-          ik = Math.min(Fk, Ik, Xk);
-        let yk = 0,
-          lk = 0;
-        const ak = Tk,
-          qk = Tk - ik;
-        return 0 !== Tk && (lk = qk / Tk), Tk != ik && (Tk == Fk ? (yk = (Ik - Xk) / qk, Ik < Xk && (yk += 6)) : Tk == Ik ? yk = (Xk - Fk) / qk + 2 : Tk == Xk && (yk = (Fk - Ik) / qk + 4), yk *= 60), kk.r = yk, kk.g = lk, kk.b = ak, kk
+      toHSVToRef(mm) {
+        const Tm = this.r,
+          fm = this.g,
+          hm = this.b,
+          Am = Math.max(Tm, fm, hm),
+          am = Math.min(Tm, fm, hm);
+        let xm = 0,
+          wm = 0;
+        const Dm = Am,
+          im = Am - am;
+        return 0 !== Am && (wm = im / Am), Am != am && (Am == Tm ? (xm = (fm - hm) / im, fm < hm && (xm += 6)) : Am == fm ? xm = (hm - Tm) / im + 2 : Am == hm && (xm = (Tm - fm) / im + 4), xm *= 60), mm.r = xm, mm.g = wm, mm.b = Dm, mm
       }
       toLinearSpace() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Fk = new tk;
-        return this.toLinearSpaceToRef(Fk, kk), Fk
+        let mm = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Tm = new pm;
+        return this.toLinearSpaceToRef(Tm, mm), Tm
       }
-      toLinearSpaceToRef(kk) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (kk.r = ak(this.r), kk.g = ak(this.g), kk.b = ak(this.b)) : (kk.r = lk(this.r), kk.g = lk(this.g), kk.b = lk(this.b)), this
+      toLinearSpaceToRef(mm) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (mm.r = Dm(this.r), mm.g = Dm(this.g), mm.b = Dm(this.b)) : (mm.r = wm(this.r), mm.g = wm(this.g), mm.b = wm(this.b)), this
       }
       toGammaSpace() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Fk = new tk;
-        return this.toGammaSpaceToRef(Fk, kk), Fk
+        let mm = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Tm = new pm;
+        return this.toGammaSpaceToRef(Tm, mm), Tm
       }
-      toGammaSpaceToRef(kk) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (kk.r = Lk(this.r), kk.g = Lk(this.g), kk.b = Lk(this.b)) : (kk.r = qk(this.r), kk.g = qk(this.g), kk.b = qk(this.b)), this
+      toGammaSpaceToRef(mm) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (mm.r = Rm(this.r), mm.g = Rm(this.g), mm.b = Rm(this.b)) : (mm.r = im(this.r), mm.g = im(this.g), mm.b = im(this.b)), this
       }
-      static HSVtoRGBToRef(kk, Fk, Ik, Xk) {
-        const Tk = Ik * Fk,
-          ik = kk / 60,
-          yk = Tk * (1 - Math.abs(ik % 2 - 1));
-        let lk = 0,
-          ak = 0,
-          qk = 0;
-        ik >= 0 && ik <= 1 ? (lk = Tk, ak = yk) : ik >= 1 && ik <= 2 ? (lk = yk, ak = Tk) : ik >= 2 && ik <= 3 ? (ak = Tk, qk = yk) : ik >= 3 && ik <= 4 ? (ak = yk, qk = Tk) : ik >= 4 && ik <= 5 ? (lk = yk, qk = Tk) : ik >= 5 && ik <= 6 && (lk = Tk, qk = yk);
-        const Lk = Ik - Tk;
-        return Xk.r = lk + Lk, Xk.g = ak + Lk, Xk.b = qk + Lk, Xk
+      static HSVtoRGBToRef(mm, Tm, fm, hm) {
+        const Am = fm * Tm,
+          am = mm / 60,
+          xm = Am * (1 - Math.abs(am % 2 - 1));
+        let wm = 0,
+          Dm = 0,
+          im = 0;
+        am >= 0 && am <= 1 ? (wm = Am, Dm = xm) : am >= 1 && am <= 2 ? (wm = xm, Dm = Am) : am >= 2 && am <= 3 ? (Dm = Am, im = xm) : am >= 3 && am <= 4 ? (Dm = xm, im = Am) : am >= 4 && am <= 5 ? (wm = xm, im = Am) : am >= 5 && am <= 6 && (wm = Am, im = xm);
+        const Rm = fm - Am;
+        return hm.r = wm + Rm, hm.g = Dm + Rm, hm.b = im + Rm, hm
       }
-      static FromHSV(kk, Fk, Ik) {
-        const Xk = new tk(0, 0, 0);
-        return tk.HSVtoRGBToRef(kk, Fk, Ik, Xk), Xk
+      static FromHSV(mm, Tm, fm) {
+        const hm = new pm(0, 0, 0);
+        return pm.HSVtoRGBToRef(mm, Tm, fm, hm), hm
       }
-      static FromHexString(kk) {
-        return new tk(0, 0, 0).fromHexString(kk)
+      static FromHexString(mm) {
+        return new pm(0, 0, 0).fromHexString(mm)
       }
-      static FromArray(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new tk(kk[Fk], kk[Fk + 1], kk[Fk + 2])
+      static FromArray(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new pm(mm[Tm], mm[Tm + 1], mm[Tm + 2])
       }
-      static FromArrayToRef(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Ik = arguments.length > 2 ? arguments[2] : void 0;
-        Ik.r = kk[Fk], Ik.g = kk[Fk + 1], Ik.b = kk[Fk + 2]
+      static FromArrayToRef(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          fm = arguments.length > 2 ? arguments[2] : void 0;
+        fm.r = mm[Tm], fm.g = mm[Tm + 1], fm.b = mm[Tm + 2]
       }
-      static FromInts(kk, Fk, Ik) {
-        return new tk(kk / 255, Fk / 255, Ik / 255)
+      static FromInts(mm, Tm, fm) {
+        return new pm(mm / 255, Tm / 255, fm / 255)
       }
-      static Lerp(kk, Fk, Ik) {
-        const Xk = new tk(0, 0, 0);
-        return tk.LerpToRef(kk, Fk, Ik, Xk), Xk
+      static Lerp(mm, Tm, fm) {
+        const hm = new pm(0, 0, 0);
+        return pm.LerpToRef(mm, Tm, fm, hm), hm
       }
-      static LerpToRef(kk, Fk, Ik, Xk) {
-        Xk.r = kk.r + (Fk.r - kk.r) * Ik, Xk.g = kk.g + (Fk.g - kk.g) * Ik, Xk.b = kk.b + (Fk.b - kk.b) * Ik
+      static LerpToRef(mm, Tm, fm, hm) {
+        hm.r = mm.r + (Tm.r - mm.r) * fm, hm.g = mm.g + (Tm.g - mm.g) * fm, hm.b = mm.b + (Tm.b - mm.b) * fm
       }
-      static Hermite(kk, Fk, Ik, Xk, Tk) {
-        const ik = Tk * Tk,
-          yk = Tk * ik,
-          lk = 2 * yk - 3 * ik + 1,
-          ak = -2 * yk + 3 * ik,
-          qk = yk - 2 * ik + Tk,
-          Lk = yk - ik,
-          Zk = kk.r * lk + Ik.r * ak + Fk.r * qk + Xk.r * Lk,
-          jk = kk.g * lk + Ik.g * ak + Fk.g * qk + Xk.g * Lk,
-          ek = kk.b * lk + Ik.b * ak + Fk.b * qk + Xk.b * Lk;
-        return new tk(Zk, jk, ek)
+      static Hermite(mm, Tm, fm, hm, Am) {
+        const am = Am * Am,
+          xm = Am * am,
+          wm = 2 * xm - 3 * am + 1,
+          Dm = -2 * xm + 3 * am,
+          im = xm - 2 * am + Am,
+          Rm = xm - am,
+          Em = mm.r * wm + fm.r * Dm + Tm.r * im + hm.r * Rm,
+          om = mm.g * wm + fm.g * Dm + Tm.g * im + hm.g * Rm,
+          Om = mm.b * wm + fm.b * Dm + Tm.b * im + hm.b * Rm;
+        return new pm(Em, om, Om)
       }
-      static Hermite1stDerivative(kk, Fk, Ik, Xk, Tk) {
-        const ik = tk.Black();
-        return this.Hermite1stDerivativeToRef(kk, Fk, Ik, Xk, Tk, ik), ik
+      static Hermite1stDerivative(mm, Tm, fm, hm, Am) {
+        const am = pm.Black();
+        return this.Hermite1stDerivativeToRef(mm, Tm, fm, hm, Am, am), am
       }
-      static Hermite1stDerivativeToRef(kk, Fk, Ik, Xk, Tk, ik) {
-        const yk = Tk * Tk;
-        ik.r = 6 * (yk - Tk) * kk.r + (3 * yk - 4 * Tk + 1) * Fk.r + 6 * (-yk + Tk) * Ik.r + (3 * yk - 2 * Tk) * Xk.r, ik.g = 6 * (yk - Tk) * kk.g + (3 * yk - 4 * Tk + 1) * Fk.g + 6 * (-yk + Tk) * Ik.g + (3 * yk - 2 * Tk) * Xk.g, ik.b = 6 * (yk - Tk) * kk.b + (3 * yk - 4 * Tk + 1) * Fk.b + 6 * (-yk + Tk) * Ik.b + (3 * yk - 2 * Tk) * Xk.b
+      static Hermite1stDerivativeToRef(mm, Tm, fm, hm, Am, am) {
+        const xm = Am * Am;
+        am.r = 6 * (xm - Am) * mm.r + (3 * xm - 4 * Am + 1) * Tm.r + 6 * (-xm + Am) * fm.r + (3 * xm - 2 * Am) * hm.r, am.g = 6 * (xm - Am) * mm.g + (3 * xm - 4 * Am + 1) * Tm.g + 6 * (-xm + Am) * fm.g + (3 * xm - 2 * Am) * hm.g, am.b = 6 * (xm - Am) * mm.b + (3 * xm - 4 * Am + 1) * Tm.b + 6 * (-xm + Am) * fm.b + (3 * xm - 2 * Am) * hm.b
       }
       static Red() {
-        return new tk(1, 0, 0)
+        return new pm(1, 0, 0)
       }
       static Green() {
-        return new tk(0, 1, 0)
+        return new pm(0, 1, 0)
       }
       static Blue() {
-        return new tk(0, 0, 1)
+        return new pm(0, 0, 1)
       }
       static Black() {
-        return new tk(0, 0, 0)
+        return new pm(0, 0, 0)
       }
       static get BlackReadOnly() {
-        return tk._BlackReadOnly
+        return pm._BlackReadOnly
       }
       static White() {
-        return new tk(1, 1, 1)
+        return new pm(1, 1, 1)
       }
       static Purple() {
-        return new tk(.5, 0, .5)
+        return new pm(.5, 0, .5)
       }
       static Magenta() {
-        return new tk(1, 0, 1)
+        return new pm(1, 0, 1)
       }
       static Yellow() {
-        return new tk(1, 1, 0)
+        return new pm(1, 1, 0)
       }
       static Gray() {
-        return new tk(.5, .5, .5)
+        return new pm(.5, .5, .5)
       }
       static Teal() {
-        return new tk(0, 1, 1)
+        return new pm(0, 1, 1)
       }
       static Random() {
-        return new tk(Math.random(), Math.random(), Math.random())
+        return new pm(Math.random(), Math.random(), Math.random())
       }
     }
-    tk._V8PerformanceHack = new tk(.5, .5, .5), tk._BlackReadOnly = tk.Black();
-    class Zk {
+    pm._V8PerformanceHack = new pm(.5, .5, .5), pm._BlackReadOnly = pm.Black();
+    class Em {
       constructor() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this.r = kk, this.g = Fk, this.b = Ik, this.a = Xk
+        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this.r = mm, this.g = Tm, this.b = fm, this.a = hm
       }
-      iXk() {
+      ahm() {
         return [this.r, this.g, this.b, this.a]
       }
-      toArray(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return kk[Fk] = this.r, kk[Fk + 1] = this.g, kk[Fk + 2] = this.b, kk[Fk + 3] = this.a, this
+      toArray(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return mm[Tm] = this.r, mm[Tm + 1] = this.g, mm[Tm + 2] = this.b, mm[Tm + 3] = this.a, this
       }
-      hFk(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.r = kk[Fk], this.g = kk[Fk + 1], this.b = kk[Fk + 2], this.a = kk[Fk + 3], this
+      UTm(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.r = mm[Tm], this.g = mm[Tm + 1], this.b = mm[Tm + 2], this.a = mm[Tm + 3], this
       }
-      equals(kk) {
-        return kk && this.r === kk.r && this.g === kk.g && this.b === kk.b && this.a === kk.a
+      equals(mm) {
+        return mm && this.r === mm.r && this.g === mm.g && this.b === mm.b && this.a === mm.a
       }
-      add(kk) {
-        return new Zk(this.r + kk.r, this.g + kk.g, this.b + kk.b, this.a + kk.a)
+      add(mm) {
+        return new Em(this.r + mm.r, this.g + mm.g, this.b + mm.b, this.a + mm.a)
       }
-      addToRef(kk, Fk) {
-        return Fk.r = this.r + kk.r, Fk.g = this.g + kk.g, Fk.b = this.b + kk.b, Fk.a = this.a + kk.a, Fk
+      addToRef(mm, Tm) {
+        return Tm.r = this.r + mm.r, Tm.g = this.g + mm.g, Tm.b = this.b + mm.b, Tm.a = this.a + mm.a, Tm
       }
-      addInPlace(kk) {
-        return this.r += kk.r, this.g += kk.g, this.b += kk.b, this.a += kk.a, this
+      addInPlace(mm) {
+        return this.r += mm.r, this.g += mm.g, this.b += mm.b, this.a += mm.a, this
       }
-      addInPlaceFromFloats(kk, Fk, Ik, Xk) {
-        return this.r += kk, this.g += Fk, this.b += Ik, this.a += Xk, this
+      addInPlaceFromFloats(mm, Tm, fm, hm) {
+        return this.r += mm, this.g += Tm, this.b += fm, this.a += hm, this
       }
-      subtract(kk) {
-        return new Zk(this.r - kk.r, this.g - kk.g, this.b - kk.b, this.a - kk.a)
+      subtract(mm) {
+        return new Em(this.r - mm.r, this.g - mm.g, this.b - mm.b, this.a - mm.a)
       }
-      subtractToRef(kk, Fk) {
-        return Fk.r = this.r - kk.r, Fk.g = this.g - kk.g, Fk.b = this.b - kk.b, Fk.a = this.a - kk.a, Fk
+      subtractToRef(mm, Tm) {
+        return Tm.r = this.r - mm.r, Tm.g = this.g - mm.g, Tm.b = this.b - mm.b, Tm.a = this.a - mm.a, Tm
       }
-      zXk(kk) {
-        return this.r -= kk.r, this.g -= kk.g, this.b -= kk.b, this.a -= kk.a, this
+      zhm(mm) {
+        return this.r -= mm.r, this.g -= mm.g, this.b -= mm.b, this.a -= mm.a, this
       }
-      subtractFromFloats(kk, Fk, Ik, Xk) {
-        return new Zk(this.r - kk, this.g - Fk, this.b - Ik, this.a - Xk)
+      subtractFromFloats(mm, Tm, fm, hm) {
+        return new Em(this.r - mm, this.g - Tm, this.b - fm, this.a - hm)
       }
-      subtractFromFloatsToRef(kk, Fk, Ik, Xk, Tk) {
-        return Tk.r = this.r - kk, Tk.g = this.g - Fk, Tk.b = this.b - Ik, Tk.a = this.a - Xk, Tk
+      subtractFromFloatsToRef(mm, Tm, fm, hm, Am) {
+        return Am.r = this.r - mm, Am.g = this.g - Tm, Am.b = this.b - fm, Am.a = this.a - hm, Am
       }
-      scale(kk) {
-        return new Zk(this.r * kk, this.g * kk, this.b * kk, this.a * kk)
+      scale(mm) {
+        return new Em(this.r * mm, this.g * mm, this.b * mm, this.a * mm)
       }
-      scaleInPlace(kk) {
-        return this.r *= kk, this.g *= kk, this.b *= kk, this.a *= kk, this
+      scaleInPlace(mm) {
+        return this.r *= mm, this.g *= mm, this.b *= mm, this.a *= mm, this
       }
-      scaleToRef(kk, Fk) {
-        return Fk.r = this.r * kk, Fk.g = this.g * kk, Fk.b = this.b * kk, Fk.a = this.a * kk, Fk
+      scaleToRef(mm, Tm) {
+        return Tm.r = this.r * mm, Tm.g = this.g * mm, Tm.b = this.b * mm, Tm.a = this.a * mm, Tm
       }
-      scaleAndAddToRef(kk, Fk) {
-        return Fk.r += this.r * kk, Fk.g += this.g * kk, Fk.b += this.b * kk, Fk.a += this.a * kk, Fk
+      scaleAndAddToRef(mm, Tm) {
+        return Tm.r += this.r * mm, Tm.g += this.g * mm, Tm.b += this.b * mm, Tm.a += this.a * mm, Tm
       }
       clampToRef() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          Ik = arguments.length > 2 ? arguments[2] : void 0;
-        return Ik.r = (0, ik.Clamp)(this.r, kk, Fk), Ik.g = (0, ik.Clamp)(this.g, kk, Fk), Ik.b = (0, ik.Clamp)(this.b, kk, Fk), Ik.a = (0, ik.Clamp)(this.a, kk, Fk), Ik
+        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          fm = arguments.length > 2 ? arguments[2] : void 0;
+        return fm.r = (0, am.Clamp)(this.r, mm, Tm), fm.g = (0, am.Clamp)(this.g, mm, Tm), fm.b = (0, am.Clamp)(this.b, mm, Tm), fm.a = (0, am.Clamp)(this.a, mm, Tm), fm
       }
-      multiply(kk) {
-        return new Zk(this.r * kk.r, this.g * kk.g, this.b * kk.b, this.a * kk.a)
+      multiply(mm) {
+        return new Em(this.r * mm.r, this.g * mm.g, this.b * mm.b, this.a * mm.a)
       }
-      multiplyToRef(kk, Fk) {
-        return Fk.r = this.r * kk.r, Fk.g = this.g * kk.g, Fk.b = this.b * kk.b, Fk.a = this.a * kk.a, Fk
+      multiplyToRef(mm, Tm) {
+        return Tm.r = this.r * mm.r, Tm.g = this.g * mm.g, Tm.b = this.b * mm.b, Tm.a = this.a * mm.a, Tm
       }
-      multiplyInPlace(kk) {
-        return this.r *= kk.r, this.g *= kk.g, this.b *= kk.b, this.a *= kk.a, this
+      multiplyInPlace(mm) {
+        return this.r *= mm.r, this.g *= mm.g, this.b *= mm.b, this.a *= mm.a, this
       }
-      multiplyByFloats(kk, Fk, Ik, Xk) {
-        return new Zk(this.r * kk, this.g * Fk, this.b * Ik, this.a * Xk)
+      multiplyByFloats(mm, Tm, fm, hm) {
+        return new Em(this.r * mm, this.g * Tm, this.b * fm, this.a * hm)
       }
-      divide(kk) {
+      divide(mm) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(kk, Fk) {
+      divideToRef(mm, Tm) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(kk) {
+      divideInPlace(mm) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(kk) {
-        return this.r = Math.min(this.r, kk.r), this.g = Math.min(this.g, kk.g), this.b = Math.min(this.b, kk.b), this.a = Math.min(this.a, kk.a), this
+      minimizeInPlace(mm) {
+        return this.r = Math.min(this.r, mm.r), this.g = Math.min(this.g, mm.g), this.b = Math.min(this.b, mm.b), this.a = Math.min(this.a, mm.a), this
       }
-      maximizeInPlace(kk) {
-        return this.r = Math.max(this.r, kk.r), this.g = Math.max(this.g, kk.g), this.b = Math.max(this.b, kk.b), this.a = Math.max(this.a, kk.a), this
+      maximizeInPlace(mm) {
+        return this.r = Math.max(this.r, mm.r), this.g = Math.max(this.g, mm.g), this.b = Math.max(this.b, mm.b), this.a = Math.max(this.a, mm.a), this
       }
-      minimizeInPlaceFromFloats(kk, Fk, Ik, Xk) {
-        return this.r = Math.min(kk, this.r), this.g = Math.min(Fk, this.g), this.b = Math.min(Ik, this.b), this.a = Math.min(Xk, this.a), this
+      minimizeInPlaceFromFloats(mm, Tm, fm, hm) {
+        return this.r = Math.min(mm, this.r), this.g = Math.min(Tm, this.g), this.b = Math.min(fm, this.b), this.a = Math.min(hm, this.a), this
       }
-      maximizeInPlaceFromFloats(kk, Fk, Ik, Xk) {
-        return this.r = Math.max(kk, this.r), this.g = Math.max(Fk, this.g), this.b = Math.max(Ik, this.b), this.a = Math.max(Xk, this.a), this
+      maximizeInPlaceFromFloats(mm, Tm, fm, hm) {
+        return this.r = Math.max(mm, this.r), this.g = Math.max(Tm, this.g), this.b = Math.max(fm, this.b), this.a = Math.max(hm, this.a), this
       }
-      floorToRef(kk) {
+      floorToRef(mm) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(kk) {
+      fractToRef(mm) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      nX() {
+      GA() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(kk) {
+      negateToRef(mm) {
         throw new ReferenceError("Can not negate a color")
       }
-      equalsWithEpsilon(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Tk.b;
-        return (0, ik.WithinEpsilon)(this.r, kk.r, Fk) && (0, ik.WithinEpsilon)(this.g, kk.g, Fk) && (0, ik.WithinEpsilon)(this.b, kk.b, Fk) && (0, ik.WithinEpsilon)(this.a, kk.a, Fk)
+      equalsWithEpsilon(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Am.c;
+        return (0, am.WithinEpsilon)(this.r, mm.r, Tm) && (0, am.WithinEpsilon)(this.g, mm.g, Tm) && (0, am.WithinEpsilon)(this.b, mm.b, Tm) && (0, am.WithinEpsilon)(this.a, mm.a, Tm)
       }
-      Ryk(kk, Fk, Ik, Xk) {
-        return this.r === kk && this.g === Fk && this.b === Ik && this.a === Xk
+      Mxm(mm, Tm, fm, hm) {
+        return this.r === mm && this.g === Tm && this.b === fm && this.a === hm
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + " A:" + this.a + "}"
@@ -460,346 +460,346 @@ export const modules = {
         return "Color4"
       }
       getHashCode() {
-        let kk = 255 * this.r | 0;
-        return kk = 397 * kk ^ 255 * this.g, kk = 397 * kk ^ 255 * this.b, kk = 397 * kk ^ 255 * this.a, kk
+        let mm = 255 * this.r | 0;
+        return mm = 397 * mm ^ 255 * this.g, mm = 397 * mm ^ 255 * this.b, mm = 397 * mm ^ 255 * this.a, mm
       }
       clone() {
-        return (new Zk).kS(this)
+        return (new Em).ZZ(this)
       }
-      kS(kk) {
-        return this.r = kk.r, this.g = kk.g, this.b = kk.b, this.a = kk.a, this
+      ZZ(mm) {
+        return this.r = mm.r, this.g = mm.g, this.b = mm.b, this.a = mm.a, this
       }
-      t5(kk, Fk, Ik, Xk) {
-        return this.r = kk, this.g = Fk, this.b = Ik, this.a = Xk, this
+      Z8(mm, Tm, fm, hm) {
+        return this.r = mm, this.g = Tm, this.b = fm, this.a = hm, this
       }
-      set(kk, Fk, Ik, Xk) {
-        return this.t5(kk, Fk, Ik, Xk)
+      set(mm, Tm, fm, hm) {
+        return this.Z8(mm, Tm, fm, hm)
       }
-      I6(kk) {
-        return this.r = this.g = this.b = this.a = kk, this
+      Y5(mm) {
+        return this.r = this.g = this.b = this.a = mm, this
       }
       toHexString() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Fk = Math.round(255 * this.r),
-          Ik = Math.round(255 * this.g),
-          Xk = Math.round(255 * this.b);
-        if (kk) return "#" + (0, ik.ToHex)(Fk) + (0, ik.ToHex)(Ik) + (0, ik.ToHex)(Xk);
-        const Tk = Math.round(255 * this.a);
-        return "#" + (0, ik.ToHex)(Fk) + (0, ik.ToHex)(Ik) + (0, ik.ToHex)(Xk) + (0, ik.ToHex)(Tk)
+        let mm = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Tm = Math.round(255 * this.r),
+          fm = Math.round(255 * this.g),
+          hm = Math.round(255 * this.b);
+        if (mm) return "#" + (0, am.ToHex)(Tm) + (0, am.ToHex)(fm) + (0, am.ToHex)(hm);
+        const Am = Math.round(255 * this.a);
+        return "#" + (0, am.ToHex)(Tm) + (0, am.ToHex)(fm) + (0, am.ToHex)(hm) + (0, am.ToHex)(Am)
       }
-      fromHexString(kk) {
-        return "#" !== kk.substring(0, 1) || 9 !== kk.length && 7 !== kk.length || (this.r = parseInt(kk.substring(1, 3), 16) / 255, this.g = parseInt(kk.substring(3, 5), 16) / 255, this.b = parseInt(kk.substring(5, 7), 16) / 255, 9 === kk.length && (this.a = parseInt(kk.substring(7, 9), 16) / 255)), this
+      fromHexString(mm) {
+        return "#" !== mm.substring(0, 1) || 9 !== mm.length && 7 !== mm.length || (this.r = parseInt(mm.substring(1, 3), 16) / 255, this.g = parseInt(mm.substring(3, 5), 16) / 255, this.b = parseInt(mm.substring(5, 7), 16) / 255, 9 === mm.length && (this.a = parseInt(mm.substring(7, 9), 16) / 255)), this
       }
       toLinearSpace() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Fk = new Zk;
-        return this.toLinearSpaceToRef(Fk, kk), Fk
+        let mm = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Tm = new Em;
+        return this.toLinearSpaceToRef(Tm, mm), Tm
       }
-      toLinearSpaceToRef(kk) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (kk.r = ak(this.r), kk.g = ak(this.g), kk.b = ak(this.b)) : (kk.r = lk(this.r), kk.g = lk(this.g), kk.b = lk(this.b)), kk.a = this.a, this
+      toLinearSpaceToRef(mm) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (mm.r = Dm(this.r), mm.g = Dm(this.g), mm.b = Dm(this.b)) : (mm.r = wm(this.r), mm.g = wm(this.g), mm.b = wm(this.b)), mm.a = this.a, this
       }
       toGammaSpace() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Fk = new Zk;
-        return this.toGammaSpaceToRef(Fk, kk), Fk
+        let mm = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Tm = new Em;
+        return this.toGammaSpaceToRef(Tm, mm), Tm
       }
-      toGammaSpaceToRef(kk) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (kk.r = Lk(this.r), kk.g = Lk(this.g), kk.b = Lk(this.b)) : (kk.r = qk(this.r), kk.g = qk(this.g), kk.b = qk(this.b)), kk.a = this.a, this
+      toGammaSpaceToRef(mm) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (mm.r = Rm(this.r), mm.g = Rm(this.g), mm.b = Rm(this.b)) : (mm.r = im(this.r), mm.g = im(this.g), mm.b = im(this.b)), mm.a = this.a, this
       }
-      static FromHexString(kk) {
-        return "#" !== kk.substring(0, 1) || 9 !== kk.length && 7 !== kk.length ? new Zk(0, 0, 0, 0) : new Zk(0, 0, 0, 1).fromHexString(kk)
+      static FromHexString(mm) {
+        return "#" !== mm.substring(0, 1) || 9 !== mm.length && 7 !== mm.length ? new Em(0, 0, 0, 0) : new Em(0, 0, 0, 1).fromHexString(mm)
       }
-      static Lerp(kk, Fk, Ik) {
-        return Zk.LerpToRef(kk, Fk, Ik, new Zk)
+      static Lerp(mm, Tm, fm) {
+        return Em.LerpToRef(mm, Tm, fm, new Em)
       }
-      static LerpToRef(kk, Fk, Ik, Xk) {
-        return Xk.r = kk.r + (Fk.r - kk.r) * Ik, Xk.g = kk.g + (Fk.g - kk.g) * Ik, Xk.b = kk.b + (Fk.b - kk.b) * Ik, Xk.a = kk.a + (Fk.a - kk.a) * Ik, Xk
+      static LerpToRef(mm, Tm, fm, hm) {
+        return hm.r = mm.r + (Tm.r - mm.r) * fm, hm.g = mm.g + (Tm.g - mm.g) * fm, hm.b = mm.b + (Tm.b - mm.b) * fm, hm.a = mm.a + (Tm.a - mm.a) * fm, hm
       }
-      static Hermite(kk, Fk, Ik, Xk, Tk) {
-        const ik = Tk * Tk,
-          yk = Tk * ik,
-          lk = 2 * yk - 3 * ik + 1,
-          ak = -2 * yk + 3 * ik,
-          qk = yk - 2 * ik + Tk,
-          Lk = yk - ik,
-          tk = kk.r * lk + Ik.r * ak + Fk.r * qk + Xk.r * Lk,
-          jk = kk.g * lk + Ik.g * ak + Fk.g * qk + Xk.g * Lk,
-          ek = kk.b * lk + Ik.b * ak + Fk.b * qk + Xk.b * Lk,
-          wk = kk.a * lk + Ik.a * ak + Fk.a * qk + Xk.a * Lk;
-        return new Zk(tk, jk, ek, wk)
+      static Hermite(mm, Tm, fm, hm, Am) {
+        const am = Am * Am,
+          xm = Am * am,
+          wm = 2 * xm - 3 * am + 1,
+          Dm = -2 * xm + 3 * am,
+          im = xm - 2 * am + Am,
+          Rm = xm - am,
+          pm = mm.r * wm + fm.r * Dm + Tm.r * im + hm.r * Rm,
+          om = mm.g * wm + fm.g * Dm + Tm.g * im + hm.g * Rm,
+          Om = mm.b * wm + fm.b * Dm + Tm.b * im + hm.b * Rm,
+          Ym = mm.a * wm + fm.a * Dm + Tm.a * im + hm.a * Rm;
+        return new Em(pm, om, Om, Ym)
       }
-      static Hermite1stDerivative(kk, Fk, Ik, Xk, Tk) {
-        const ik = new Zk;
-        return this.Hermite1stDerivativeToRef(kk, Fk, Ik, Xk, Tk, ik), ik
+      static Hermite1stDerivative(mm, Tm, fm, hm, Am) {
+        const am = new Em;
+        return this.Hermite1stDerivativeToRef(mm, Tm, fm, hm, Am, am), am
       }
-      static Hermite1stDerivativeToRef(kk, Fk, Ik, Xk, Tk, ik) {
-        const yk = Tk * Tk;
-        ik.r = 6 * (yk - Tk) * kk.r + (3 * yk - 4 * Tk + 1) * Fk.r + 6 * (-yk + Tk) * Ik.r + (3 * yk - 2 * Tk) * Xk.r, ik.g = 6 * (yk - Tk) * kk.g + (3 * yk - 4 * Tk + 1) * Fk.g + 6 * (-yk + Tk) * Ik.g + (3 * yk - 2 * Tk) * Xk.g, ik.b = 6 * (yk - Tk) * kk.b + (3 * yk - 4 * Tk + 1) * Fk.b + 6 * (-yk + Tk) * Ik.b + (3 * yk - 2 * Tk) * Xk.b, ik.a = 6 * (yk - Tk) * kk.a + (3 * yk - 4 * Tk + 1) * Fk.a + 6 * (-yk + Tk) * Ik.a + (3 * yk - 2 * Tk) * Xk.a
+      static Hermite1stDerivativeToRef(mm, Tm, fm, hm, Am, am) {
+        const xm = Am * Am;
+        am.r = 6 * (xm - Am) * mm.r + (3 * xm - 4 * Am + 1) * Tm.r + 6 * (-xm + Am) * fm.r + (3 * xm - 2 * Am) * hm.r, am.g = 6 * (xm - Am) * mm.g + (3 * xm - 4 * Am + 1) * Tm.g + 6 * (-xm + Am) * fm.g + (3 * xm - 2 * Am) * hm.g, am.b = 6 * (xm - Am) * mm.b + (3 * xm - 4 * Am + 1) * Tm.b + 6 * (-xm + Am) * fm.b + (3 * xm - 2 * Am) * hm.b, am.a = 6 * (xm - Am) * mm.a + (3 * xm - 4 * Am + 1) * Tm.a + 6 * (-xm + Am) * fm.a + (3 * xm - 2 * Am) * hm.a
       }
-      static FromColor3(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new Zk(kk.r, kk.g, kk.b, Fk)
+      static FromColor3(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new Em(mm.r, mm.g, mm.b, Tm)
       }
-      static FromArray(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new Zk(kk[Fk], kk[Fk + 1], kk[Fk + 2], kk[Fk + 3])
+      static FromArray(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new Em(mm[Tm], mm[Tm + 1], mm[Tm + 2], mm[Tm + 3])
       }
-      static FromArrayToRef(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Ik = arguments.length > 2 ? arguments[2] : void 0;
-        Ik.r = kk[Fk], Ik.g = kk[Fk + 1], Ik.b = kk[Fk + 2], Ik.a = kk[Fk + 3]
+      static FromArrayToRef(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          fm = arguments.length > 2 ? arguments[2] : void 0;
+        fm.r = mm[Tm], fm.g = mm[Tm + 1], fm.b = mm[Tm + 2], fm.a = mm[Tm + 3]
       }
-      static FromInts(kk, Fk, Ik, Xk) {
-        return new Zk(kk / 255, Fk / 255, Ik / 255, Xk / 255)
+      static FromInts(mm, Tm, fm, hm) {
+        return new Em(mm / 255, Tm / 255, fm / 255, hm / 255)
       }
-      static CheckColors4(kk, Fk) {
-        if (kk.length === 3 * Fk) {
-          const Fk = [];
-          for (let Ik = 0; Ik < kk.length; Ik += 3) {
-            const Xk = Ik / 3 * 4;
-            Fk[Xk] = kk[Ik], Fk[Xk + 1] = kk[Ik + 1], Fk[Xk + 2] = kk[Ik + 2], Fk[Xk + 3] = 1
+      static CheckColors4(mm, Tm) {
+        if (mm.length === 3 * Tm) {
+          const Tm = [];
+          for (let fm = 0; fm < mm.length; fm += 3) {
+            const hm = fm / 3 * 4;
+            Tm[hm] = mm[fm], Tm[hm + 1] = mm[fm + 1], Tm[hm + 2] = mm[fm + 2], Tm[hm + 3] = 1
           }
-          return Fk
+          return Tm
         }
-        return kk
+        return mm
       }
     }
-    Zk._V8PerformanceHack = new Zk(.5, .5, .5, .5);
-    class jk {}
-    jk.Color3 = (0, Xk.b)(3, tk.Black), jk.Color4 = (0, Xk.b)(3, (() => new Zk(0, 0, 0, 0)));
-    let ek = !1;
+    Em._V8PerformanceHack = new Em(.5, .5, .5, .5);
+    class om {}
+    om.Color3 = (0, hm.c)(3, pm.Black), om.Color4 = (0, hm.c)(3, (() => new Em(0, 0, 0, 0)));
+    let Om = !1;
 
-    function wk() {
-      ek || (ek = !0, Object.defineProperties(tk.prototype, {
+    function Ym() {
+      Om || (Om = !0, Object.defineProperties(pm.prototype, {
         dimension: {
           value: [3]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(Zk.prototype, {
+      }), Object.defineProperties(Em.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), (0, yk.f)("BABYLON.Color3", tk), (0, yk.f)("BABYLON.Color4", Zk))
+      }), (0, xm.d)("BABYLON.Color3", pm), (0, xm.d)("BABYLON.Color4", Em))
     }
   },
-  37158: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => ik,
-      d: () => Xk,
-      g: () => Tk
+  37191: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => am,
+      f: () => hm,
+      g: () => Am
     });
-    const Xk = 1 / 2.2,
-      Tk = 2.2;
+    const hm = 1 / 2.2,
+      Am = 2.2;
     Math.sqrt(5);
-    let ik = .001
+    let am = .001
   },
-  37189: (kk, Fk, Ik) => {
-    function Xk(kk) {
-      return parseInt(kk.toString().replace(/\W/g, ""))
+  37208: (mm, Tm, fm) => {
+    function hm(mm) {
+      return parseInt(mm.toString().replace(/\W/g, ""))
     }
 
-    function Tk(kk, Fk) {
-      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
-      return Math.abs(kk - Fk) <= Ik
+    function Am(mm, Tm) {
+      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
+      return Math.abs(mm - Tm) <= fm
     }
 
-    function ik(kk, Fk, Ik) {
-      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
-      return kk < Fk - Xk || kk > Ik + Xk
+    function am(mm, Tm, fm) {
+      let hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
+      return mm < Tm - hm || mm > fm + hm
     }
 
-    function yk(kk, Fk) {
-      return kk === Fk ? kk : Math.random() * (Fk - kk) + kk
+    function xm(mm, Tm) {
+      return mm === Tm ? mm : Math.random() * (Tm - mm) + mm
     }
 
-    function lk(kk, Fk, Ik) {
-      return kk + (Fk - kk) * Ik
+    function wm(mm, Tm, fm) {
+      return mm + (Tm - mm) * fm
     }
 
-    function ak(kk, Fk, Ik) {
-      let Xk = Hk(Fk - kk, 360);
-      return Xk > 180 && (Xk -= 360), kk + Xk * Zk(Ik)
+    function Dm(mm, Tm, fm) {
+      let hm = qm(Tm - mm, 360);
+      return hm > 180 && (hm -= 360), mm + hm * Em(fm)
     }
 
-    function qk(kk, Fk, Ik) {
-      let Xk;
-      return Xk = kk != Fk ? Zk((Ik - kk) / (Fk - kk)) : 0, Xk
+    function im(mm, Tm, fm) {
+      let hm;
+      return hm = mm != Tm ? Em((fm - mm) / (Tm - mm)) : 0, hm
     }
 
-    function Lk(kk, Fk, Ik, Xk, Tk) {
-      const ik = Tk * Tk,
-        yk = Tk * ik;
-      return kk * (2 * yk - 3 * ik + 1) + Ik * (-2 * yk + 3 * ik) + Fk * (yk - 2 * ik + Tk) + Xk * (yk - ik)
+    function Rm(mm, Tm, fm, hm, Am) {
+      const am = Am * Am,
+        xm = Am * am;
+      return mm * (2 * xm - 3 * am + 1) + fm * (-2 * xm + 3 * am) + Tm * (xm - 2 * am + Am) + hm * (xm - am)
     }
 
-    function tk(kk, Fk, Ik, Xk, Tk) {
-      const ik = Tk * Tk;
-      return 6 * (ik - Tk) * kk + (3 * ik - 4 * Tk + 1) * Fk + 6 * (-ik + Tk) * Ik + (3 * ik - 2 * Tk) * Xk
+    function pm(mm, Tm, fm, hm, Am) {
+      const am = Am * Am;
+      return 6 * (am - Am) * mm + (3 * am - 4 * Am + 1) * Tm + 6 * (-am + Am) * fm + (3 * am - 2 * Am) * hm
     }
 
-    function Zk(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return Math.min(Ik, Math.max(Fk, kk))
+    function Em(mm) {
+      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Math.min(fm, Math.max(Tm, mm))
     }
 
-    function jk(kk) {
-      return kk -= 2 * Math.PI * Math.floor((kk + Math.PI) / (2 * Math.PI))
+    function om(mm) {
+      return mm -= 2 * Math.PI * Math.floor((mm + Math.PI) / (2 * Math.PI))
     }
 
-    function ek(kk) {
-      const Fk = kk.toString(16);
-      return kk <= 15 ? ("0" + Fk).toUpperCase() : Fk.toUpperCase()
+    function Om(mm) {
+      const Tm = mm.toString(16);
+      return mm <= 15 ? ("0" + Tm).toUpperCase() : Tm.toUpperCase()
     }
 
-    function wk(kk) {
-      if (Math.log2) return Math.floor(Math.log2(kk));
-      if (kk < 0) return NaN;
-      if (0 === kk) return -1 / 0;
-      let Fk = 0;
-      if (kk < 1) {
-        for (; kk < 1;) Fk++, kk *= 2;
-        Fk = -Fk
-      } else if (kk > 1)
-        for (; kk > 1;) Fk++, kk = Math.floor(kk / 2);
-      return Fk
+    function Ym(mm) {
+      if (Math.log2) return Math.floor(Math.log2(mm));
+      if (mm < 0) return NaN;
+      if (0 === mm) return -1 / 0;
+      let Tm = 0;
+      if (mm < 1) {
+        for (; mm < 1;) Tm++, mm *= 2;
+        Tm = -Tm
+      } else if (mm > 1)
+        for (; mm > 1;) Tm++, mm = Math.floor(mm / 2);
+      return Tm
     }
 
-    function Hk(kk, Fk) {
-      return kk - Math.floor(kk / Fk) * Fk
+    function qm(mm, Tm) {
+      return mm - Math.floor(mm / Tm) * Tm
     }
 
-    function Jk(kk, Fk, Ik) {
-      return (kk - Fk) / (Ik - Fk)
+    function jm(mm, Tm, fm) {
+      return (mm - Tm) / (fm - Tm)
     }
 
-    function xk(kk, Fk, Ik) {
-      return kk * (Ik - Fk) + Fk
+    function Vm(mm, Tm, fm) {
+      return mm * (fm - Tm) + Tm
     }
 
-    function Pk(kk, Fk) {
-      let Ik = Hk(Fk - kk, 360);
-      return Ik > 180 && (Ik -= 360), Ik
+    function Im(mm, Tm) {
+      let fm = qm(Tm - mm, 360);
+      return fm > 180 && (fm -= 360), fm
     }
 
-    function Kk(kk, Fk) {
-      const Ik = Hk(kk, 2 * Fk);
-      return Fk - Math.abs(Ik - Fk)
+    function Km(mm, Tm) {
+      const fm = qm(mm, 2 * Tm);
+      return Tm - Math.abs(fm - Tm)
     }
 
-    function Qk(kk, Fk, Ik) {
-      let Xk = Zk(Ik);
-      return Xk = -2 * Xk * Xk * Xk + 3 * Xk * Xk, Fk * Xk + kk * (1 - Xk)
+    function Qm(mm, Tm, fm) {
+      let hm = Em(fm);
+      return hm = -2 * hm * hm * hm + 3 * hm * hm, Tm * hm + mm * (1 - hm)
     }
 
-    function sk(kk, Fk, Ik) {
-      let Xk;
-      return Xk = Math.abs(Fk - kk) <= Ik ? Fk : kk + Math.sign(Fk - kk) * Ik, Xk
+    function nm(mm, Tm, fm) {
+      let hm;
+      return hm = Math.abs(Tm - mm) <= fm ? Tm : mm + Math.sign(Tm - mm) * fm, hm
     }
 
-    function Vk(kk, Fk, Ik) {
-      const Xk = Pk(kk, Fk);
-      let Tk;
-      return Tk = -Ik < Xk && Xk < Ik ? Fk : sk(kk, Fk = kk + Xk, Ik), Tk
+    function Jm(mm, Tm, fm) {
+      const hm = Im(mm, Tm);
+      let Am;
+      return Am = -fm < hm && hm < fm ? Tm : nm(mm, Tm = mm + hm, fm), Am
     }
 
-    function zk(kk, Fk, Ik) {
-      return (kk - Fk) / (Ik - Fk)
+    function cm(mm, Tm, fm) {
+      return (mm - Tm) / (fm - Tm)
     }
 
-    function Sk(kk, Fk, Ik) {
-      return (Ik - Fk) * kk + Fk
+    function zm(mm, Tm, fm) {
+      return (fm - Tm) * mm + Tm
     }
 
-    function vk(kk, Fk) {
-      const Ik = kk % Fk;
-      return 0 === Ik ? Fk : vk(Fk, Ik)
+    function Zm(mm, Tm) {
+      const fm = mm % Tm;
+      return 0 === fm ? Tm : Zm(Tm, fm)
     }
-    Ik.r(Fk), Ik.d(Fk, {
-      Clamp: () => Zk,
-      DeltaAngle: () => Pk,
-      Denormalize: () => xk,
-      ExtractAsInt: () => Xk,
-      Hermite: () => Lk,
-      Hermite1stDerivative: () => tk,
-      HighestCommonFactor: () => vk,
-      ILog2: () => wk,
-      InverseLerp: () => qk,
-      Lerp: () => lk,
-      LerpAngle: () => ak,
-      MoveTowards: () => sk,
-      MoveTowardsAngle: () => Vk,
-      Normalize: () => Jk,
-      NormalizeRadians: () => jk,
-      OutsideRange: () => ik,
-      PercentToRange: () => Sk,
-      PingPong: () => Kk,
-      RandomRange: () => yk,
-      RangeToPercent: () => zk,
-      Repeat: () => Hk,
-      SmoothStep: () => Qk,
-      ToHex: () => ek,
-      WithinEpsilon: () => Tk
+    fm.r(Tm), fm.d(Tm, {
+      Clamp: () => Em,
+      DeltaAngle: () => Im,
+      Denormalize: () => Vm,
+      ExtractAsInt: () => hm,
+      Hermite: () => Rm,
+      Hermite1stDerivative: () => pm,
+      HighestCommonFactor: () => Zm,
+      ILog2: () => Ym,
+      InverseLerp: () => im,
+      Lerp: () => wm,
+      LerpAngle: () => Dm,
+      MoveTowards: () => nm,
+      MoveTowardsAngle: () => Jm,
+      Normalize: () => jm,
+      NormalizeRadians: () => om,
+      OutsideRange: () => am,
+      PercentToRange: () => zm,
+      PingPong: () => Km,
+      RandomRange: () => xm,
+      RangeToPercent: () => cm,
+      Repeat: () => qm,
+      SmoothStep: () => Qm,
+      ToHex: () => Om,
+      WithinEpsilon: () => Am
     })
   },
-  37166: (kk, Fk, Ik) => {
-    function Xk(kk, Fk) {
-      const Ik = [];
-      for (let Xk = 0; Xk < kk; ++Xk) Ik.push(Fk());
-      return Ik
+  37197: (mm, Tm, fm) => {
+    function hm(mm, Tm) {
+      const fm = [];
+      for (let hm = 0; hm < mm; ++hm) fm.push(Tm());
+      return fm
     }
 
-    function Tk(kk, Fk) {
-      return Xk(kk, Fk)
+    function Am(mm, Tm) {
+      return hm(mm, Tm)
     }
-    Ik.d(Fk, {
-      b: () => Xk,
-      c: () => Tk,
-      f: () => yk
+    fm.d(Tm, {
+      c: () => hm,
+      d: () => Am,
+      h: () => xm
     });
-    const ik = ["push", "splice", "pop", "shift", "unshift"];
+    const am = ["push", "splice", "pop", "shift", "unshift"];
 
-    function yk(kk, Fk) {
-      const Ik = ik.map((Ik => function(kk, Fk, Ik) {
-        const Xk = kk[Fk];
-        if ("function" !== typeof Xk) return null;
-        const Tk = function() {
-          const Xk = kk.length,
-            ik = Tk.previous.apply(kk, arguments);
-          return Ik(Fk, Xk), ik
+    function xm(mm, Tm) {
+      const fm = am.map((fm => function(mm, Tm, fm) {
+        const hm = mm[Tm];
+        if ("function" !== typeof hm) return null;
+        const Am = function() {
+          const hm = mm.length,
+            am = Am.previous.apply(mm, arguments);
+          return fm(Tm, hm), am
         };
-        return Xk.next = Tk, Tk.previous = Xk, kk[Fk] = Tk, () => {
-          const Ik = Tk.previous;
-          if (!Ik) return;
-          const Xk = Tk.next;
-          Xk ? (Ik.next = Xk, Xk.previous = Ik) : (Ik.next = void 0, kk[Fk] = Ik), Tk.next = void 0, Tk.previous = void 0
+        return hm.next = Am, Am.previous = hm, mm[Tm] = Am, () => {
+          const fm = Am.previous;
+          if (!fm) return;
+          const hm = Am.next;
+          hm ? (fm.next = hm, hm.previous = fm) : (fm.next = void 0, mm[Tm] = fm), Am.next = void 0, Am.previous = void 0
         }
-      }(kk, Ik, Fk)));
+      }(mm, fm, Tm)));
       return () => {
-        for (const kk of Ik) kk?.()
+        for (const mm of fm) mm?.()
       }
     }
   },
-  37201: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => ik,
-      f: () => Tk
+  37224: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => am,
+      d: () => Am
     });
-    const Xk = {};
+    const hm = {};
 
-    function Tk(kk, Fk) {
-      Xk[kk] = Fk
+    function Am(mm, Tm) {
+      hm[mm] = Tm
     }
 
-    function ik(kk) {
-      return Xk[kk]
+    function am(mm) {
+      return hm[mm]
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

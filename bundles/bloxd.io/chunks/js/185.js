@@ -1,2445 +1,2445 @@
 export const id = 185;
 export const ids = [185];
 export const modules = {
-  9163: (kk, Fk) => {
-    Fk.discordURLBuilder = function(kk) {
-      var Fk;
-      const Ik = (null === (Fk = null === window || void 0 === window ? void 0 : window.location) || void 0 === Fk ? void 0 : Fk.hostname) || "localhost",
-        Xk = kk.hostname.split("."),
-        Tk = !kk.hostname.includes("trycloudflare.com") && !kk.hostname.includes("discordsays.com") && Xk.length > 2 ? `/${Xk[0]}` : "";
-      return kk.pathname.startsWith("/.proxy") ? `${kk.protocol}//${Ik}${Tk}${kk.pathname}${kk.search}` : `${kk.protocol}//${Ik}/.proxy/colyseus${Tk}${kk.pathname}${kk.search}`
+  9127: (mm, Tm) => {
+    Tm.discordURLBuilder = function(mm) {
+      var Tm;
+      const fm = (null === (Tm = null === window || void 0 === window ? void 0 : window.location) || void 0 === Tm ? void 0 : Tm.hostname) || "localhost",
+        hm = mm.hostname.split("."),
+        Am = !mm.hostname.includes("trycloudflare.com") && !mm.hostname.includes("discordsays.com") && hm.length > 2 ? `/${hm[0]}` : "";
+      return mm.pathname.startsWith("/.proxy") ? `${mm.protocol}//${fm}${Am}${mm.pathname}${mm.search}` : `${mm.protocol}//${fm}/.proxy/colyseus${Am}${mm.pathname}${mm.search}`
     }
   },
-  9155: (kk, Fk, Ik) => {
-    var Xk, Tk, ik, yk, lk = Ik(9070),
-      ak = Ik(9158),
-      qk = Ik(9130);
-    Xk = new WeakMap, Tk = new WeakMap, ik = new WeakMap, yk = new WeakMap, Fk.Auth = class {
-      constructor(kk) {
-        this.http = kk, this.settings = {
+  9114: (mm, Tm, fm) => {
+    var hm, Am, am, xm, wm = fm(9018),
+      Dm = fm(9121),
+      im = fm(9086);
+    hm = new WeakMap, Am = new WeakMap, am = new WeakMap, xm = new WeakMap, Tm.Auth = class {
+      constructor(mm) {
+        this.http = mm, this.settings = {
           path: "/auth",
           key: "colyseus-auth-token"
-        }, Xk.set(this, !1), Tk.set(this, void 0), ik.set(this, void 0), yk.set(this, qk.createNanoEvents()), ak.getItem(this.settings.key, (kk => this.token = kk))
+        }, hm.set(this, !1), Am.set(this, void 0), am.set(this, void 0), xm.set(this, im.createNanoEvents()), Dm.getItem(this.settings.key, (mm => this.token = mm))
       }
-      set token(kk) {
-        this.http.authToken = kk
+      set token(mm) {
+        this.http.authToken = mm
       }
       get token() {
         return this.http.authToken
       }
-      onChange(kk) {
-        const Fk = lk.__classPrivateFieldGet(this, yk, "f").on("change", kk);
-        return lk.__classPrivateFieldGet(this, Xk, "f") || lk.__classPrivateFieldSet(this, Tk, new Promise(((kk, Fk) => {
-          this.getUserData().then((kk => {
-            this.emitChange(Object.assign(Object.assign({}, kk), {
+      onChange(mm) {
+        const Tm = wm.__classPrivateFieldGet(this, xm, "f").on("change", mm);
+        return wm.__classPrivateFieldGet(this, hm, "f") || wm.__classPrivateFieldSet(this, Am, new Promise(((mm, Tm) => {
+          this.getUserData().then((mm => {
+            this.emitChange(Object.assign(Object.assign({}, mm), {
               token: this.token
             }))
-          })).catch((kk => {
+          })).catch((mm => {
             this.emitChange({
               user: null,
               token: void 0
             })
           })).finally((() => {
-            kk()
+            mm()
           }))
-        })), "f"), lk.__classPrivateFieldSet(this, Xk, !0, "f"), Fk
+        })), "f"), wm.__classPrivateFieldSet(this, hm, !0, "f"), Tm
       }
       getUserData() {
-        return lk.__awaiter(this, void 0, void 0, (function*() {
+        return wm.__awaiter(this, void 0, void 0, (function*() {
           if (this.token) return (yield this.http.get(`${this.settings.path}/userdata`)).data;
           throw new Error("missing auth.token")
         }))
       }
-      registerWithEmailAndPassword(kk, Fk, Ik) {
-        return lk.__awaiter(this, void 0, void 0, (function*() {
-          const Xk = (yield this.http.post(`${this.settings.path}/register`, {
+      registerWithEmailAndPassword(mm, Tm, fm) {
+        return wm.__awaiter(this, void 0, void 0, (function*() {
+          const hm = (yield this.http.post(`${this.settings.path}/register`, {
             body: {
-              email: kk,
-              password: Fk,
-              options: Ik
+              email: mm,
+              password: Tm,
+              options: fm
             }
           })).data;
-          return this.emitChange(Xk), Xk
+          return this.emitChange(hm), hm
         }))
       }
-      signInWithEmailAndPassword(kk, Fk) {
-        return lk.__awaiter(this, void 0, void 0, (function*() {
-          const Ik = (yield this.http.post(`${this.settings.path}/login`, {
+      signInWithEmailAndPassword(mm, Tm) {
+        return wm.__awaiter(this, void 0, void 0, (function*() {
+          const fm = (yield this.http.post(`${this.settings.path}/login`, {
             body: {
-              email: kk,
-              password: Fk
+              email: mm,
+              password: Tm
             }
           })).data;
-          return this.emitChange(Ik), Ik
+          return this.emitChange(fm), fm
         }))
       }
-      signInAnonymously(kk) {
-        return lk.__awaiter(this, void 0, void 0, (function*() {
-          const Fk = (yield this.http.post(`${this.settings.path}/anonymous`, {
+      signInAnonymously(mm) {
+        return wm.__awaiter(this, void 0, void 0, (function*() {
+          const Tm = (yield this.http.post(`${this.settings.path}/anonymous`, {
             body: {
-              options: kk
+              options: mm
             }
           })).data;
-          return this.emitChange(Fk), Fk
+          return this.emitChange(Tm), Tm
         }))
       }
-      sendPasswordResetEmail(kk) {
-        return lk.__awaiter(this, void 0, void 0, (function*() {
+      sendPasswordResetEmail(mm) {
+        return wm.__awaiter(this, void 0, void 0, (function*() {
           return (yield this.http.post(`${this.settings.path}/forgot-password`, {
             body: {
-              email: kk
+              email: mm
             }
           })).data
         }))
       }
-      signInWithProvider(kk) {
-        return lk.__awaiter(this, arguments, void 0, (function*(kk) {
-          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return new Promise(((Ik, Xk) => {
-            const Tk = Fk.width || 480,
-              yk = Fk.height || 768,
-              ak = this.token ? `?token=${this.token}` : "",
-              qk = `Login with ${kk[0].toUpperCase()+kk.substring(1)}`,
-              Lk = this.http.client.getHttpEndpoint(`${Fk.prefix||`${this.settings.path}/provider`}/${kk}${ak}`),
-              tk = screen.width / 2 - Tk / 2,
-              Zk = screen.height / 2 - yk / 2;
-            lk.__classPrivateFieldSet(this, ik, window.open(Lk, qk, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + Tk + ", height=" + yk + ", top=" + Zk + ", left=" + tk), "f");
-            const jk = kk => {
-                void 0 === kk.data.user && void 0 === kk.data.token || (clearInterval(ek), lk.__classPrivateFieldGet(this, ik, "f").close(), lk.__classPrivateFieldSet(this, ik, void 0, "f"), window.removeEventListener("message", jk), void 0 !== kk.data.error ? Xk(kk.data.error) : (Ik(kk.data), this.emitChange(kk.data)))
+      signInWithProvider(mm) {
+        return wm.__awaiter(this, arguments, void 0, (function*(mm) {
+          let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return new Promise(((fm, hm) => {
+            const Am = Tm.width || 480,
+              xm = Tm.height || 768,
+              Dm = this.token ? `?token=${this.token}` : "",
+              im = `Login with ${mm[0].toUpperCase()+mm.substring(1)}`,
+              Rm = this.http.client.getHttpEndpoint(`${Tm.prefix||`${this.settings.path}/provider`}/${mm}${Dm}`),
+              pm = screen.width / 2 - Am / 2,
+              Em = screen.height / 2 - xm / 2;
+            wm.__classPrivateFieldSet(this, am, window.open(Rm, im, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + Am + ", height=" + xm + ", top=" + Em + ", left=" + pm), "f");
+            const om = mm => {
+                void 0 === mm.data.user && void 0 === mm.data.token || (clearInterval(Om), wm.__classPrivateFieldGet(this, am, "f").close(), wm.__classPrivateFieldSet(this, am, void 0, "f"), window.removeEventListener("message", om), void 0 !== mm.data.error ? hm(mm.data.error) : (fm(mm.data), this.emitChange(mm.data)))
               },
-              ek = setInterval((() => {
-                lk.__classPrivateFieldGet(this, ik, "f") && !lk.__classPrivateFieldGet(this, ik, "f").closed || (lk.__classPrivateFieldSet(this, ik, void 0, "f"), Xk("iI"), window.removeEventListener("message", jk))
+              Om = setInterval((() => {
+                wm.__classPrivateFieldGet(this, am, "f") && !wm.__classPrivateFieldGet(this, am, "f").closed || (wm.__classPrivateFieldSet(this, am, void 0, "f"), hm("Af"), window.removeEventListener("message", om))
               }), 200);
-            window.addEventListener("message", jk)
+            window.addEventListener("message", om)
           }))
         }))
       }
       signOut() {
-        return lk.__awaiter(this, void 0, void 0, (function*() {
+        return wm.__awaiter(this, void 0, void 0, (function*() {
           this.emitChange({
             user: null,
             token: null
           })
         }))
       }
-      emitChange(kk) {
-        void 0 !== kk.token && (this.token = kk.token, null === kk.token ? ak.removeItem(this.settings.key) : ak.setItem(this.settings.key, kk.token)), lk.__classPrivateFieldGet(this, yk, "f").emit("change", kk)
+      emitChange(mm) {
+        void 0 !== mm.token && (this.token = mm.token, null === mm.token ? Dm.removeItem(this.settings.key) : Dm.setItem(this.settings.key, mm.token)), wm.__classPrivateFieldGet(this, xm, "f").emit("change", mm)
       }
     }
   },
-  9066: (kk, Fk, Ik) => {
-    var Xk, Tk = Ik(9070),
-      ik = Ik(9077),
-      yk = Ik(9080),
-      lk = Ik(9148),
-      ak = Ik(9155),
-      qk = Ik(9163);
-    class Lk extends Error {
-      constructor(kk, Fk) {
-        super(kk), this.code = Fk, this.name = "MatchMakeError", Object.setPrototypeOf(this, Lk.prototype)
+  9012: (mm, Tm, fm) => {
+    var hm, Am = fm(9018),
+      am = fm(9023),
+      xm = fm(9026),
+      wm = fm(9103),
+      Dm = fm(9114),
+      im = fm(9127);
+    class Rm extends Error {
+      constructor(mm, Tm) {
+        super(mm), this.code = Tm, this.name = "MatchMakeError", Object.setPrototypeOf(this, Rm.prototype)
       }
     }
-    const tk = "undefined" !== typeof window && "undefined" !== typeof(null === (Xk = null === window || void 0 === window ? void 0 : window.location) || void 0 === Xk ? void 0 : Xk.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
-    class Zk {
+    const pm = "undefined" !== typeof window && "undefined" !== typeof(null === (hm = null === window || void 0 === window ? void 0 : window.location) || void 0 === hm ? void 0 : hm.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
+    class Em {
       constructor() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : tk,
-          Fk = arguments.length > 1 ? arguments[1] : void 0;
-        var Ik, Xk;
-        if ("string" === typeof kk) {
-          const Fk = kk.startsWith("/") ? new URL(kk, tk) : new URL(kk),
-            Ik = "https:" === Fk.protocol || "wss:" === Fk.protocol,
-            Xk = Number(Fk.port || (Ik ? 443 : 80));
+        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : pm,
+          Tm = arguments.length > 1 ? arguments[1] : void 0;
+        var fm, hm;
+        if ("string" === typeof mm) {
+          const Tm = mm.startsWith("/") ? new URL(mm, pm) : new URL(mm),
+            fm = "https:" === Tm.protocol || "wss:" === Tm.protocol,
+            hm = Number(Tm.port || (fm ? 443 : 80));
           this.settings = {
-            hostname: Fk.hostname,
-            pathname: Fk.pathname,
-            port: Xk,
-            secure: Ik,
-            searchParams: Fk.searchParams.toString() || void 0
+            hostname: Tm.hostname,
+            pathname: Tm.pathname,
+            port: hm,
+            secure: fm,
+            searchParams: Tm.searchParams.toString() || void 0
           }
-        } else void 0 === kk.port && (kk.port = kk.secure ? 443 : 80), void 0 === kk.pathname && (kk.pathname = ""), this.settings = kk;
-        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new lk.HTTP(this, (null === Fk || void 0 === Fk ? void 0 : Fk.headers) || {}), this.auth = new ak.Auth(this.http), this.urlBuilder = null === Fk || void 0 === Fk ? void 0 : Fk.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (Xk = null === (Ik = null === window || void 0 === window ? void 0 : window.location) || void 0 === Ik ? void 0 : Ik.hostname) || void 0 === Xk ? void 0 : Xk.includes("discordsays.com")) && (this.urlBuilder = qk.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
+        } else void 0 === mm.port && (mm.port = mm.secure ? 443 : 80), void 0 === mm.pathname && (mm.pathname = ""), this.settings = mm;
+        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new wm.HTTP(this, (null === Tm || void 0 === Tm ? void 0 : Tm.headers) || {}), this.auth = new Dm.Auth(this.http), this.urlBuilder = null === Tm || void 0 === Tm ? void 0 : Tm.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (hm = null === (fm = null === window || void 0 === window ? void 0 : window.location) || void 0 === fm ? void 0 : fm.hostname) || void 0 === hm ? void 0 : hm.includes("discordsays.com")) && (this.urlBuilder = im.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
       }
-      joinOrCreate(kk) {
-        return Tk.__awaiter(this, arguments, void 0, (function*(kk) {
-          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            Ik = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinOrCreate", kk, Fk, Ik)
+      joinOrCreate(mm) {
+        return Am.__awaiter(this, arguments, void 0, (function*(mm) {
+          let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            fm = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinOrCreate", mm, Tm, fm)
         }))
       }
-      create(kk) {
-        return Tk.__awaiter(this, arguments, void 0, (function*(kk) {
-          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            Ik = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("create", kk, Fk, Ik)
+      create(mm) {
+        return Am.__awaiter(this, arguments, void 0, (function*(mm) {
+          let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            fm = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("create", mm, Tm, fm)
         }))
       }
-      join(kk) {
-        return Tk.__awaiter(this, arguments, void 0, (function*(kk) {
-          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            Ik = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("join", kk, Fk, Ik)
+      join(mm) {
+        return Am.__awaiter(this, arguments, void 0, (function*(mm) {
+          let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            fm = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("join", mm, Tm, fm)
         }))
       }
-      joinById(kk) {
-        return Tk.__awaiter(this, arguments, void 0, (function*(kk) {
-          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            Ik = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinById", kk, Fk, Ik)
+      joinById(mm) {
+        return Am.__awaiter(this, arguments, void 0, (function*(mm) {
+          let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            fm = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinById", mm, Tm, fm)
         }))
       }
-      reconnect(kk, Fk) {
-        return Tk.__awaiter(this, void 0, void 0, (function*() {
-          if ("string" === typeof kk && "string" === typeof Fk) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
-          const [Ik, Xk] = kk.split(":");
-          if (!Ik || !Xk) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
-          return yield this.createMatchMakeRequest("reconnect", Ik, {
-            reconnectionToken: Xk
-          }, Fk)
+      reconnect(mm, Tm) {
+        return Am.__awaiter(this, void 0, void 0, (function*() {
+          if ("string" === typeof mm && "string" === typeof Tm) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
+          const [fm, hm] = mm.split(":");
+          if (!fm || !hm) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
+          return yield this.createMatchMakeRequest("reconnect", fm, {
+            reconnectionToken: hm
+          }, Tm)
         }))
       }
-      consumeSeatReservation(kk, Fk, Ik) {
-        return Tk.__awaiter(this, void 0, void 0, (function*() {
-          const Xk = this.createRoom(kk.room.name, Fk);
-          Xk.roomId = kk.room.roomId, Xk.sessionId = kk.sessionId;
-          const yk = {
-            sessionId: Xk.sessionId
+      consumeSeatReservation(mm, Tm, fm) {
+        return Am.__awaiter(this, void 0, void 0, (function*() {
+          const hm = this.createRoom(mm.room.name, Tm);
+          hm.roomId = mm.room.roomId, hm.sessionId = mm.sessionId;
+          const xm = {
+            sessionId: hm.sessionId
           };
-          kk.reconnectionToken && (yk.reconnectionToken = kk.reconnectionToken);
-          const lk = Ik || Xk;
-          return Xk.connect(this.buildEndpoint(kk.room, yk, kk.protocol), kk.devMode && (() => Tk.__awaiter(this, void 0, void 0, (function*() {
-            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${Xk.roomId}'...`);
-            let Ik = 0;
-            const ik = () => Tk.__awaiter(this, void 0, void 0, (function*() {
-              Ik++;
+          mm.reconnectionToken && (xm.reconnectionToken = mm.reconnectionToken);
+          const wm = fm || hm;
+          return hm.connect(this.buildEndpoint(mm.room, xm, mm.protocol), mm.devMode && (() => Am.__awaiter(this, void 0, void 0, (function*() {
+            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${hm.roomId}'...`);
+            let fm = 0;
+            const am = () => Am.__awaiter(this, void 0, void 0, (function*() {
+              fm++;
               try {
-                yield this.consumeSeatReservation(kk, Fk, lk), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${Xk.roomId}'`)
-              } catch (Tk) {
-                Ik < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${Ik} out of 8)`), setTimeout(ik, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
+                yield this.consumeSeatReservation(mm, Tm, wm), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${hm.roomId}'`)
+              } catch (Am) {
+                fm < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${fm} out of 8)`), setTimeout(am, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
               }
             }));
-            setTimeout(ik, 2e3)
-          }))), lk, kk, this.http.headers), new Promise(((kk, Fk) => {
-            const Ik = (kk, Ik) => Fk(new ik.ServerError(kk, Ik));
-            lk.onError.once(Ik), lk.onJoin.once((() => {
-              lk.onError.remove(Ik), setTimeout((() => {
+            setTimeout(am, 2e3)
+          }))), wm, mm, this.http.headers), new Promise(((mm, Tm) => {
+            const fm = (mm, fm) => Tm(new am.ServerError(mm, fm));
+            wm.onError.once(fm), wm.onJoin.once((() => {
+              wm.onError.remove(fm), setTimeout((() => {
                 try {
-                  const kk = [96, 98, 63, 61, 198, 165, 255, 148, 109, 255, 166, 172, 119, 97, 118, 161, 237, 220, 8, 144];
-                  kk && lk.aE(128, new Uint8Array(kk))
+                  const mm = [96, 98, 63, 61, 198, 165, 255, 148, 109, 255, 166, 172, 119, 97, 118, 161, 237, 220, 8, 144];
+                  mm && wm.Lk(128, new Uint8Array(mm))
                 } catch {}
-              }), 3e3), kk(lk)
+              }), 3e3), mm(wm)
             }))
           }))
         }))
       }
-      createMatchMakeRequest(kk, Fk) {
-        return Tk.__awaiter(this, arguments, void 0, (function*(kk, Fk) {
-          let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            Xk = arguments.length > 3 ? arguments[3] : void 0,
-            Tk = arguments.length > 4 ? arguments[4] : void 0;
-          const ik = (yield this.http.post(`matchmake/${kk}/${Fk}`, {
+      createMatchMakeRequest(mm, Tm) {
+        return Am.__awaiter(this, arguments, void 0, (function*(mm, Tm) {
+          let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            hm = arguments.length > 3 ? arguments[3] : void 0,
+            Am = arguments.length > 4 ? arguments[4] : void 0;
+          const am = (yield this.http.post(`matchmake/${mm}/${Tm}`, {
             headers: {
               "X-Requested-With": "XMLHtttpRequest",
               Accept: "application/json",
               "Content-Type": "application/json"
             },
-            body: JSON.stringify(Ik)
+            body: JSON.stringify(fm)
           })).data;
-          if (ik.error) throw new Lk(ik.error, ik.code);
-          return "reconnect" === kk && (ik.reconnectionToken = Ik.reconnectionToken), yield this.consumeSeatReservation(ik, Xk, Tk)
+          if (am.error) throw new Rm(am.error, am.code);
+          return "reconnect" === mm && (am.reconnectionToken = fm.reconnectionToken), yield this.consumeSeatReservation(am, hm, Am)
         }))
       }
-      createRoom(kk, Fk) {
-        return new yk.dt(kk, Fk)
+      createRoom(mm, Tm) {
+        return new xm.hE(mm, Tm)
       }
-      buildEndpoint(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
-          Xk = this.settings.searchParams || "";
-        this.http.authToken && (Fk._authToken = this.http.authToken);
-        for (const yk in Fk) Fk.hasOwnProperty(yk) && (Xk += (Xk ? "&" : "") + `${yk}=${Fk[yk]}`);
-        "h3" === Ik && (Ik = "http");
-        let Tk = this.settings.secure ? `${Ik}s://` : `${Ik}://`;
-        kk.publicAddress ? Tk += `${kk.publicAddress}` : Tk += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
-        const ik = `${Tk}/${kk.processId}/${kk.roomId}?${Xk}`;
-        return this.urlBuilder ? this.urlBuilder(new URL(ik)) : ik
+      buildEndpoint(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
+          hm = this.settings.searchParams || "";
+        this.http.authToken && (Tm._authToken = this.http.authToken);
+        for (const xm in Tm) Tm.hasOwnProperty(xm) && (hm += (hm ? "&" : "") + `${xm}=${Tm[xm]}`);
+        "h3" === fm && (fm = "http");
+        let Am = this.settings.secure ? `${fm}s://` : `${fm}://`;
+        mm.publicAddress ? Am += `${mm.publicAddress}` : Am += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
+        const am = `${Am}/${mm.processId}/${mm.roomId}?${hm}`;
+        return this.urlBuilder ? this.urlBuilder(new URL(am)) : am
       }
       getHttpEndpoint() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-        const Fk = kk.startsWith("/") ? kk : `/${kk}`;
-        let Ik = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${Fk}`;
-        return this.settings.searchParams && (Ik += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(Ik)) : Ik
+        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+        const Tm = mm.startsWith("/") ? mm : `/${mm}`;
+        let fm = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${Tm}`;
+        return this.settings.searchParams && (fm += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(fm)) : fm
       }
       getEndpointPort() {
         return 80 !== this.settings.port && 443 !== this.settings.port ? `:${this.settings.port}` : ""
       }
     }
-    Zk.VERSION = "0.16.22", Fk.Client = Zk, Fk.MatchMakeError = Lk
+    Em.VERSION = "0.16.22", Tm.Client = Em, Tm.MatchMakeError = Rm
   },
-  9083: (kk, Fk, Ik) => {
-    var Xk = Ik(9092),
-      Tk = Ik(9105);
-    Fk.Connection = class {
-      constructor(kk) {
-        if (this.events = {}, "h3" === kk) this.transport = new Xk.H3TransportTransport(this.events);
-        else this.transport = new Tk.WebSocketTransport(this.events)
+  9033: (mm, Tm, fm) => {
+    var hm = fm(9042),
+      Am = fm(9055);
+    Tm.Connection = class {
+      constructor(mm) {
+        if (this.events = {}, "h3" === mm) this.transport = new hm.H3TransportTransport(this.events);
+        else this.transport = new Am.WebSocketTransport(this.events)
       }
-      connect(kk, Fk) {
-        this.transport.connect.call(this.transport, kk, Fk)
+      connect(mm, Tm) {
+        this.transport.connect.call(this.transport, mm, Tm)
       }
-      send(kk) {
-        this.transport.send(kk)
+      send(mm) {
+        this.transport.send(mm)
       }
-      sendUnreliable(kk) {
-        this.transport.sendUnreliable(kk)
+      sendUnreliable(mm) {
+        this.transport.sendUnreliable(mm)
       }
-      close(kk, Fk) {
-        this.transport.close(kk, Fk)
+      close(mm, Tm) {
+        this.transport.close(mm, Tm)
       }
       get isOpen() {
         return this.transport.isOpen
       }
     }
   },
-  9148: (kk, Fk, Ik) => {
-    var Xk = Ik(9077);
+  9103: (mm, Tm, fm) => {
+    var hm = fm(9023);
 
-    function Tk(kk) {
-      var Fk = Object.create(null);
-      return kk && Object.keys(kk).forEach((function(Ik) {
-        if ("default" !== Ik) {
-          var Xk = Object.getOwnPropertyDescriptor(kk, Ik);
-          Object.defineProperty(Fk, Ik, Xk.get ? Xk : {
+    function Am(mm) {
+      var Tm = Object.create(null);
+      return mm && Object.keys(mm).forEach((function(fm) {
+        if ("default" !== fm) {
+          var hm = Object.getOwnPropertyDescriptor(mm, fm);
+          Object.defineProperty(Tm, fm, hm.get ? hm : {
             enumerable: !0,
             get: function() {
-              return kk[Ik]
+              return mm[fm]
             }
           })
         }
-      })), Fk.default = kk, Object.freeze(Fk)
+      })), Tm.default = mm, Object.freeze(Tm)
     }
-    var ik = Tk(Ik(9150));
-    Fk.HTTP = class {
-      constructor(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.client = kk, this.headers = Fk
+    var am = Am(fm(9107));
+    Tm.HTTP = class {
+      constructor(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.client = mm, this.headers = Tm
       }
-      get(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("get", kk, Fk)
+      get(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("get", mm, Tm)
       }
-      post(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("post", kk, Fk)
+      post(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("post", mm, Tm)
       }
-      del(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("del", kk, Fk)
+      del(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("del", mm, Tm)
       }
-      put(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("put", kk, Fk)
+      put(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("put", mm, Tm)
       }
-      request(kk, Fk) {
-        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return ik[kk](this.client.getHttpEndpoint(Fk), this.getOptions(Ik)).catch((kk => {
-          var Fk;
-          if (kk.aborted) throw new Xk.AbortError("Request aborted");
-          const Ik = kk.statusCode,
-            Tk = (null === (Fk = kk.data) || void 0 === Fk ? void 0 : Fk.error) || kk.statusMessage || kk.message;
-          if (!Ik && !Tk) throw kk;
-          throw new Xk.ServerError(Ik, Tk)
+      request(mm, Tm) {
+        let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return am[mm](this.client.getHttpEndpoint(Tm), this.getOptions(fm)).catch((mm => {
+          var Tm;
+          if (mm.aborted) throw new hm.AbortError("Request aborted");
+          const fm = mm.statusCode,
+            Am = (null === (Tm = mm.data) || void 0 === Tm ? void 0 : Tm.error) || mm.statusMessage || mm.message;
+          if (!fm && !Am) throw mm;
+          throw new hm.ServerError(fm, Am)
         }))
       }
-      getOptions(kk) {
-        return kk.headers = Object.assign({}, this.headers, kk.headers), this.authToken && (kk.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (kk.withCredentials = !0), kk
+      getOptions(mm) {
+        return mm.headers = Object.assign({}, this.headers, mm.headers), this.authToken && (mm.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (mm.withCredentials = !0), mm
       }
     }
   },
-  9118: (kk, Fk) => {
-    var Ik, Xk;
-    Fk.Protocol = void 0, (Ik = Fk.Protocol || (Fk.Protocol = {}))[Ik.HANDSHAKE = 9] = "HANDSHAKE", Ik[Ik.JOIN_ROOM = 10] = "JOIN_ROOM", Ik[Ik.ERROR = 11] = "ERROR", Ik[Ik.LEAVE_ROOM = 12] = "LEAVE_ROOM", Ik[Ik.ROOM_DATA = 13] = "ROOM_DATA", Ik[Ik.ROOM_STATE = 14] = "ROOM_STATE", Ik[Ik.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", Ik[Ik.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", Ik[Ik.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", Fk.ErrorCode = void 0, (Xk = Fk.ErrorCode || (Fk.ErrorCode = {}))[Xk.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", Xk[Xk.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", Xk[Xk.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", Xk[Xk.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", Xk[Xk.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", Xk[Xk.AUTH_FAILED = 4215] = "AUTH_FAILED", Xk[Xk.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
+  9073: (mm, Tm) => {
+    var fm, hm;
+    Tm.Protocol = void 0, (fm = Tm.Protocol || (Tm.Protocol = {}))[fm.HANDSHAKE = 9] = "HANDSHAKE", fm[fm.JOIN_ROOM = 10] = "JOIN_ROOM", fm[fm.ERROR = 11] = "ERROR", fm[fm.LEAVE_ROOM = 12] = "LEAVE_ROOM", fm[fm.ROOM_DATA = 13] = "ROOM_DATA", fm[fm.ROOM_STATE = 14] = "ROOM_STATE", fm[fm.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", fm[fm.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", fm[fm.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", Tm.ErrorCode = void 0, (hm = Tm.ErrorCode || (Tm.ErrorCode = {}))[hm.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", hm[hm.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", hm[hm.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", hm[hm.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", hm[hm.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", hm[hm.AUTH_FAILED = 4215] = "AUTH_FAILED", hm[hm.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
   },
-  9080: (kk, Fk, Ik) => {
-    var Xk = Ik(9083),
-      Tk = Ik(9118),
-      ik = Ik(9121),
-      yk = Ik(9130),
-      lk = Ik(9135),
-      ak = Ik(9098),
-      qk = Ik(9137),
-      Lk = Ik(9077),
-      tk = Ik(9144);
-    class Zk {
-      constructor(kk, Fk) {
-        this.onStateChange = lk.createSignal(), this.onError = lk.createSignal(), this.NJ = lk.createSignal(), this.onJoin = lk.createSignal(), this.hasJoined = !1, this.onMessageHandlers = yk.createNanoEvents(), this.roomId = null, this.name = kk, this.packr = new tk.Packr, this.packr.encode(void 0), Fk && (this.LJ = new(ik.getSerializer("schema")), this.rootSchema = Fk, this.LJ.state = new Fk), this.onError(((kk, Fk) => {
-          var Ik;
-          return null === (Ik = console.warn) || void 0 === Ik ? void 0 : Ik.call(console, `colyseus.js - onError => (${kk}) ${Fk}`)
-        })), this.NJ((() => this.qJ()))
+  9026: (mm, Tm, fm) => {
+    var hm = fm(9033),
+      Am = fm(9073),
+      am = fm(9080),
+      xm = fm(9086),
+      wm = fm(9091),
+      Dm = fm(9050),
+      im = fm(9095),
+      Rm = fm(9023),
+      pm = fm(9101);
+    class Em {
+      constructor(mm, Tm) {
+        this.onStateChange = wm.createSignal(), this.onError = wm.createSignal(), this.tV = wm.createSignal(), this.onJoin = wm.createSignal(), this.hasJoined = !1, this.onMessageHandlers = xm.createNanoEvents(), this.roomId = null, this.name = mm, this.packr = new pm.Packr, this.packr.encode(void 0), Tm && (this.qV = new(am.getSerializer("schema")), this.rootSchema = Tm, this.qV.state = new Tm), this.onError(((mm, Tm) => {
+          var fm;
+          return null === (fm = console.warn) || void 0 === fm ? void 0 : fm.call(console, `colyseus.js - onError => (${mm}) ${Tm}`)
+        })), this.tV((() => this.YV()))
       }
-      connect(kk, Fk) {
-        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
-          Tk = arguments.length > 3 ? arguments[3] : void 0,
-          ik = arguments.length > 4 ? arguments[4] : void 0;
-        const yk = new Xk.Connection(Tk.protocol);
-        if (Ik.connection = yk, yk.events.onmessage = Zk.prototype.onMessageCallback.bind(Ik), yk.events.onclose = function(kk) {
-            var Xk;
-            if (!Ik.hasJoined) return null === (Xk = console.warn) || void 0 === Xk || Xk.call(console, `Room connection was closed unexpectedly (${kk.code}): ${kk.reason}`), void Ik.onError.invoke(kk.code, kk.reason);
-            kk.code === Lk.CloseCode.DEVMODE_RESTART && Fk ? Fk() : (Ik.NJ.invoke(kk.code, kk.reason), Ik.destroy())
-          }, yk.events.onerror = function(kk) {
-            var Fk;
-            null === (Fk = console.warn) || void 0 === Fk || Fk.call(console, `Room, onError (${kk.code}): ${kk.reason}`), Ik.onError.invoke(kk.code, kk.reason)
-          }, "h3" === Tk.protocol) {
-          const Fk = new URL(kk);
-          yk.connect(Fk.origin, Tk)
-        } else yk.connect(kk, ik)
+      connect(mm, Tm) {
+        let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
+          Am = arguments.length > 3 ? arguments[3] : void 0,
+          am = arguments.length > 4 ? arguments[4] : void 0;
+        const xm = new hm.Connection(Am.protocol);
+        if (fm.connection = xm, xm.events.onmessage = Em.prototype.onMessageCallback.bind(fm), xm.events.onclose = function(mm) {
+            var hm;
+            if (!fm.hasJoined) return null === (hm = console.warn) || void 0 === hm || hm.call(console, `Room connection was closed unexpectedly (${mm.code}): ${mm.reason}`), void fm.onError.invoke(mm.code, mm.reason);
+            mm.code === Rm.CloseCode.DEVMODE_RESTART && Tm ? Tm() : (fm.tV.invoke(mm.code, mm.reason), fm.destroy())
+          }, xm.events.onerror = function(mm) {
+            var Tm;
+            null === (Tm = console.warn) || void 0 === Tm || Tm.call(console, `Room, onError (${mm.code}): ${mm.reason}`), fm.onError.invoke(mm.code, mm.reason)
+          }, "h3" === Am.protocol) {
+          const Tm = new URL(mm);
+          xm.connect(Tm.origin, Am)
+        } else xm.connect(mm, am)
       }
       leave() {
-        let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return new Promise((Fk => {
-          this.NJ((kk => Fk(kk))), this.connection ? kk ? (this.packr.buffer[0] = Tk.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.NJ.invoke(Lk.CloseCode.CONSENTED)
+        let mm = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return new Promise((Tm => {
+          this.tV((mm => Tm(mm))), this.connection ? mm ? (this.packr.buffer[0] = Am.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.tV.invoke(Rm.CloseCode.CONSENTED)
         }))
       }
-      bJ(kk, Fk) {
-        return this.onMessageHandlers.on(this.getMessageHandlerKey(kk), Fk)
+      lV(mm, Tm) {
+        return this.onMessageHandlers.on(this.getMessageHandlerKey(mm), Tm)
       }
-      send(kk, Fk) {
-        const Ik = {
+      send(mm, Tm) {
+        const fm = {
           offset: 1
         };
-        this.packr.buffer[0] = Tk.Protocol.ROOM_DATA, "string" === typeof kk ? ak.encode.string(this.packr.buffer, kk, Ik) : ak.encode.number(this.packr.buffer, kk, Ik), this.packr.position = 0;
-        const Xk = void 0 !== Fk ? this.packr.pack(Fk, 2048 + Ik.offset) : this.packr.buffer.subarray(0, Ik.offset);
-        this.connection.send(Xk)
+        this.packr.buffer[0] = Am.Protocol.ROOM_DATA, "string" === typeof mm ? Dm.encode.string(this.packr.buffer, mm, fm) : Dm.encode.number(this.packr.buffer, mm, fm), this.packr.position = 0;
+        const hm = void 0 !== Tm ? this.packr.pack(Tm, 2048 + fm.offset) : this.packr.buffer.subarray(0, fm.offset);
+        this.connection.send(hm)
       }
-      sendUnreliable(kk, Fk) {
-        const Ik = {
+      sendUnreliable(mm, Tm) {
+        const fm = {
           offset: 1
         };
-        this.packr.buffer[0] = Tk.Protocol.ROOM_DATA, "string" === typeof kk ? ak.encode.string(this.packr.buffer, kk, Ik) : ak.encode.number(this.packr.buffer, kk, Ik), this.packr.position = 0;
-        const Xk = void 0 !== Fk ? this.packr.pack(Fk, 2048 + Ik.offset) : this.packr.buffer.subarray(0, Ik.offset);
-        this.connection.sendUnreliable(Xk)
+        this.packr.buffer[0] = Am.Protocol.ROOM_DATA, "string" === typeof mm ? Dm.encode.string(this.packr.buffer, mm, fm) : Dm.encode.number(this.packr.buffer, mm, fm), this.packr.position = 0;
+        const hm = void 0 !== Tm ? this.packr.pack(Tm, 2048 + fm.offset) : this.packr.buffer.subarray(0, fm.offset);
+        this.connection.sendUnreliable(hm)
       }
-      aE(kk, Fk) {
-        const Ik = {
+      Lk(mm, Tm) {
+        const fm = {
           offset: 1
         };
-        if (this.packr.buffer[0] = Tk.Protocol.ROOM_DATA_BYTES, "string" === typeof kk ? ak.encode.string(this.packr.buffer, kk, Ik) : ak.encode.number(this.packr.buffer, kk, Ik), Fk.byteLength + Ik.offset > this.packr.buffer.byteLength) {
-          const kk = new Uint8Array(Ik.offset + Fk.byteLength);
-          kk.set(this.packr.buffer), this.packr.useBuffer(kk)
+        if (this.packr.buffer[0] = Am.Protocol.ROOM_DATA_BYTES, "string" === typeof mm ? Dm.encode.string(this.packr.buffer, mm, fm) : Dm.encode.number(this.packr.buffer, mm, fm), Tm.byteLength + fm.offset > this.packr.buffer.byteLength) {
+          const mm = new Uint8Array(fm.offset + Tm.byteLength);
+          mm.set(this.packr.buffer), this.packr.useBuffer(mm)
         }
-        this.packr.buffer.set(Fk, Ik.offset), this.connection.send(this.packr.buffer.subarray(0, Ik.offset + Fk.byteLength))
+        this.packr.buffer.set(Tm, fm.offset), this.connection.send(this.packr.buffer.subarray(0, fm.offset + Tm.byteLength))
       }
       get state() {
-        return this.LJ.getState()
+        return this.qV.getState()
       }
-      qJ() {
-        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.NJ.clear(), this.onMessageHandlers.events = {}, this.LJ instanceof qk.QG && (this.LJ.Xe.root.callbacks = {})
+      YV() {
+        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.tV.clear(), this.onMessageHandlers.events = {}, this.qV instanceof im.lN && (this.qV.JO.root.callbacks = {})
       }
-      onMessageCallback(kk) {
-        const Fk = new Uint8Array(kk.data),
-          Ik = {
+      onMessageCallback(mm) {
+        const Tm = new Uint8Array(mm.data),
+          fm = {
             offset: 1
           },
-          Xk = Fk[0];
-        if (Xk === Tk.Protocol.JOIN_ROOM) {
-          const kk = ak.decode.utf8Read(Fk, Ik, Fk[Ik.offset++]);
-          if (this.serializerId = ak.decode.utf8Read(Fk, Ik, Fk[Ik.offset++]), !this.LJ) {
-            const kk = ik.getSerializer(this.serializerId);
-            this.LJ = new kk
+          hm = Tm[0];
+        if (hm === Am.Protocol.JOIN_ROOM) {
+          const mm = Dm.decode.utf8Read(Tm, fm, Tm[fm.offset++]);
+          if (this.serializerId = Dm.decode.utf8Read(Tm, fm, Tm[fm.offset++]), !this.qV) {
+            const mm = am.getSerializer(this.serializerId);
+            this.qV = new mm
           }
-          Fk.byteLength > Ik.offset && this.LJ.handshake && this.LJ.handshake(Fk, Ik), this.reconnectionToken = `${this.roomId}:${kk}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = Tk.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
-        } else if (Xk === Tk.Protocol.ERROR) {
-          const kk = ak.decode.number(Fk, Ik),
-            Xk = ak.decode.string(Fk, Ik);
-          this.onError.invoke(kk, Xk)
-        } else if (Xk === Tk.Protocol.LEAVE_ROOM) this.leave();
-        else if (Xk === Tk.Protocol.ROOM_STATE) this.LJ.setState(Fk, Ik), this.onStateChange.invoke(this.LJ.getState());
-        else if (Xk === Tk.Protocol.ROOM_STATE_PATCH) this.LJ.patch(Fk, Ik), this.onStateChange.invoke(this.LJ.getState());
-        else if (Xk === Tk.Protocol.ROOM_DATA) {
-          const kk = ak.decode.stringCheck(Fk, Ik) ? ak.decode.string(Fk, Ik) : ak.decode.number(Fk, Ik),
-            Xk = Fk.byteLength > Ik.offset ? tk.unpack(Fk, {
-              start: Ik.offset
+          Tm.byteLength > fm.offset && this.qV.handshake && this.qV.handshake(Tm, fm), this.reconnectionToken = `${this.roomId}:${mm}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = Am.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
+        } else if (hm === Am.Protocol.ERROR) {
+          const mm = Dm.decode.number(Tm, fm),
+            hm = Dm.decode.string(Tm, fm);
+          this.onError.invoke(mm, hm)
+        } else if (hm === Am.Protocol.LEAVE_ROOM) this.leave();
+        else if (hm === Am.Protocol.ROOM_STATE) this.qV.setState(Tm, fm), this.onStateChange.invoke(this.qV.getState());
+        else if (hm === Am.Protocol.ROOM_STATE_PATCH) this.qV.patch(Tm, fm), this.onStateChange.invoke(this.qV.getState());
+        else if (hm === Am.Protocol.ROOM_DATA) {
+          const mm = Dm.decode.stringCheck(Tm, fm) ? Dm.decode.string(Tm, fm) : Dm.decode.number(Tm, fm),
+            hm = Tm.byteLength > fm.offset ? pm.unpack(Tm, {
+              start: fm.offset
             }) : void 0;
-          this.dispatchMessage(kk, Xk)
-        } else if (Xk === Tk.Protocol.ROOM_DATA_BYTES) {
-          const kk = ak.decode.stringCheck(Fk, Ik) ? ak.decode.string(Fk, Ik) : ak.decode.number(Fk, Ik);
-          this.dispatchMessage(kk, Fk.subarray(Ik.offset))
+          this.dispatchMessage(mm, hm)
+        } else if (hm === Am.Protocol.ROOM_DATA_BYTES) {
+          const mm = Dm.decode.stringCheck(Tm, fm) ? Dm.decode.string(Tm, fm) : Dm.decode.number(Tm, fm);
+          this.dispatchMessage(mm, Tm.subarray(fm.offset))
         }
       }
-      dispatchMessage(kk, Fk) {
-        var Ik;
-        const Xk = this.getMessageHandlerKey(kk);
-        this.onMessageHandlers.events[Xk] ? this.onMessageHandlers.emit(Xk, Fk) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", kk, Fk) : null === (Ik = console.warn) || void 0 === Ik || Ik.call(console, `colyseus.js: onMessage() not registered for type '${kk}'.`)
+      dispatchMessage(mm, Tm) {
+        var fm;
+        const hm = this.getMessageHandlerKey(mm);
+        this.onMessageHandlers.events[hm] ? this.onMessageHandlers.emit(hm, Tm) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", mm, Tm) : null === (fm = console.warn) || void 0 === fm || fm.call(console, `colyseus.js: onMessage() not registered for type '${mm}'.`)
       }
       destroy() {
-        this.LJ && this.LJ.teardown()
+        this.qV && this.qV.teardown()
       }
-      getMessageHandlerKey(kk) {
-        switch (typeof kk) {
+      getMessageHandlerKey(mm) {
+        switch (typeof mm) {
           case "string":
-            return kk;
+            return mm;
           case "number":
-            return `i${kk}`;
+            return `i${mm}`;
           default:
             throw new Error("invalid message type.")
         }
       }
     }
-    Fk.dt = Zk
+    Tm.hE = Em
   },
-  9158: (kk, Fk, Ik) => {
-    var Xk = Ik(9070);
-    let Tk;
+  9121: (mm, Tm, fm) => {
+    var hm = fm(9018);
+    let Am;
 
-    function ik() {
-      if (!Tk) try {
-        Tk = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
-      } catch (kk) {}
-      return Tk || "undefined" === typeof globalThis.indexedDB || (Tk = new yk), Tk || (Tk = {
+    function am() {
+      if (!Am) try {
+        Am = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
+      } catch (mm) {}
+      return Am || "undefined" === typeof globalThis.indexedDB || (Am = new xm), Am || (Am = {
         cache: {},
-        setItem: function(kk, Fk) {
-          this.cache[kk] = Fk
+        setItem: function(mm, Tm) {
+          this.cache[mm] = Tm
         },
-        getItem: function(kk) {
-          this.cache[kk]
+        getItem: function(mm) {
+          this.cache[mm]
         },
-        removeItem: function(kk) {
-          delete this.cache[kk]
+        removeItem: function(mm) {
+          delete this.cache[mm]
         }
-      }), Tk
+      }), Am
     }
-    class yk {
+    class xm {
       constructor() {
-        this.dbPromise = new Promise((kk => {
-          const Fk = indexedDB.open("_colyseus_storage", 1);
-          Fk.onupgradeneeded = () => Fk.result.createObjectStore("store"), Fk.onsuccess = () => kk(Fk.result)
+        this.dbPromise = new Promise((mm => {
+          const Tm = indexedDB.open("_colyseus_storage", 1);
+          Tm.onupgradeneeded = () => Tm.result.createObjectStore("store"), Tm.onsuccess = () => mm(Tm.result)
         }))
       }
-      tx(kk, Fk) {
-        return Xk.__awaiter(this, void 0, void 0, (function*() {
-          const Ik = (yield this.dbPromise).transaction("store", kk).objectStore("store");
-          return Fk(Ik)
+      tx(mm, Tm) {
+        return hm.__awaiter(this, void 0, void 0, (function*() {
+          const fm = (yield this.dbPromise).transaction("store", mm).objectStore("store");
+          return Tm(fm)
         }))
       }
-      setItem(kk, Fk) {
-        return this.tx("readwrite", (Ik => Ik.put(Fk, kk))).then()
+      setItem(mm, Tm) {
+        return this.tx("readwrite", (fm => fm.put(Tm, mm))).then()
       }
-      getItem(kk) {
-        return Xk.__awaiter(this, void 0, void 0, (function*() {
-          const Fk = yield this.tx("readonly", (Fk => Fk.get(kk)));
-          return new Promise((kk => {
-            Fk.onsuccess = () => kk(Fk.result)
+      getItem(mm) {
+        return hm.__awaiter(this, void 0, void 0, (function*() {
+          const Tm = yield this.tx("readonly", (Tm => Tm.get(mm)));
+          return new Promise((mm => {
+            Tm.onsuccess = () => mm(Tm.result)
           }))
         }))
       }
-      removeItem(kk) {
-        return this.tx("readwrite", (Fk => Fk.delete(kk))).then()
+      removeItem(mm) {
+        return this.tx("readwrite", (Tm => Tm.delete(mm))).then()
       }
     }
-    Fk.getItem = function(kk, Fk) {
-      const Ik = ik().getItem(kk);
-      "undefined" !== typeof Promise && Ik instanceof Promise ? Ik.then((kk => Fk(kk))) : Fk(Ik)
-    }, Fk.removeItem = function(kk) {
-      ik().removeItem(kk)
-    }, Fk.setItem = function(kk, Fk) {
-      ik().setItem(kk, Fk)
+    Tm.getItem = function(mm, Tm) {
+      const fm = am().getItem(mm);
+      "undefined" !== typeof Promise && fm instanceof Promise ? fm.then((mm => Tm(mm))) : Tm(fm)
+    }, Tm.removeItem = function(mm) {
+      am().removeItem(mm)
+    }, Tm.setItem = function(mm, Tm) {
+      am().setItem(mm, Tm)
     }
   },
-  9130: (kk, Fk) => {
-    Fk.createNanoEvents = () => ({
-      emit(kk) {
-        let Fk = this.events[kk] || [];
-        for (var Ik = arguments.length, Xk = new Array(Ik > 1 ? Ik - 1 : 0), Tk = 1; Tk < Ik; Tk++) Xk[Tk - 1] = arguments[Tk];
-        for (let ik = 0, yk = Fk.length; ik < yk; ik++) Fk[ik](...Xk)
+  9086: (mm, Tm) => {
+    Tm.createNanoEvents = () => ({
+      emit(mm) {
+        let Tm = this.events[mm] || [];
+        for (var fm = arguments.length, hm = new Array(fm > 1 ? fm - 1 : 0), Am = 1; Am < fm; Am++) hm[Am - 1] = arguments[Am];
+        for (let am = 0, xm = Tm.length; am < xm; am++) Tm[am](...hm)
       },
       events: {},
-      on(kk, Fk) {
-        var Ik;
-        return (null === (Ik = this.events[kk]) || void 0 === Ik ? void 0 : Ik.push(Fk)) || (this.events[kk] = [Fk]), () => {
-          var Ik;
-          this.events[kk] = null === (Ik = this.events[kk]) || void 0 === Ik ? void 0 : Ik.filter((kk => Fk !== kk))
+      on(mm, Tm) {
+        var fm;
+        return (null === (fm = this.events[mm]) || void 0 === fm ? void 0 : fm.push(Tm)) || (this.events[mm] = [Tm]), () => {
+          var fm;
+          this.events[mm] = null === (fm = this.events[mm]) || void 0 === fm ? void 0 : fm.filter((mm => Tm !== mm))
         }
       }
     })
   },
-  9135: (kk, Fk) => {
-    class Ik {
+  9091: (mm, Tm) => {
+    class fm {
       constructor() {
         this.handlers = []
       }
-      register(kk) {
-        return this.handlers.push(kk), this
+      register(mm) {
+        return this.handlers.push(mm), this
       }
       invoke() {
-        for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
-        this.handlers.forEach((kk => kk.apply(this, Fk)))
+        for (var mm = arguments.length, Tm = new Array(mm), fm = 0; fm < mm; fm++) Tm[fm] = arguments[fm];
+        this.handlers.forEach((mm => mm.apply(this, Tm)))
       }
       invokeAsync() {
-        for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
-        return Promise.all(this.handlers.map((kk => kk.apply(this, Fk))))
+        for (var mm = arguments.length, Tm = new Array(mm), fm = 0; fm < mm; fm++) Tm[fm] = arguments[fm];
+        return Promise.all(this.handlers.map((mm => mm.apply(this, Tm))))
       }
-      remove(kk) {
-        const Fk = this.handlers.indexOf(kk);
-        this.handlers[Fk] = this.handlers[this.handlers.length - 1], this.handlers.pop()
+      remove(mm) {
+        const Tm = this.handlers.indexOf(mm);
+        this.handlers[Tm] = this.handlers[this.handlers.length - 1], this.handlers.pop()
       }
       clear() {
         this.handlers = []
       }
     }
-    Fk.EventEmitter = Ik, Fk.createSignal = function() {
-      const kk = new Ik;
+    Tm.EventEmitter = fm, Tm.createSignal = function() {
+      const mm = new fm;
 
-      function Fk(Fk) {
-        return kk.register(Fk, null === this)
+      function Tm(Tm) {
+        return mm.register(Tm, null === this)
       }
-      return Fk.once = Fk => {
-        const Ik = function() {
-          for (var Xk = arguments.length, Tk = new Array(Xk), ik = 0; ik < Xk; ik++) Tk[ik] = arguments[ik];
-          Fk.apply(this, Tk), kk.remove(Ik)
+      return Tm.once = Tm => {
+        const fm = function() {
+          for (var hm = arguments.length, Am = new Array(hm), am = 0; am < hm; am++) Am[am] = arguments[am];
+          Tm.apply(this, Am), mm.remove(fm)
         };
-        kk.register(Ik)
-      }, Fk.remove = Fk => kk.remove(Fk), Fk.invoke = function() {
-        return kk.invoke(...arguments)
-      }, Fk.invokeAsync = function() {
-        return kk.invokeAsync(...arguments)
-      }, Fk.clear = () => kk.clear(), Fk
+        mm.register(fm)
+      }, Tm.remove = Tm => mm.remove(Tm), Tm.invoke = function() {
+        return mm.invoke(...arguments)
+      }, Tm.invokeAsync = function() {
+        return mm.invokeAsync(...arguments)
+      }, Tm.clear = () => mm.clear(), Tm
     }
   },
-  9077: (kk, Fk) => {
-    var Ik;
-    Fk.CloseCode = void 0, (Ik = Fk.CloseCode || (Fk.CloseCode = {}))[Ik.CONSENTED = 4e3] = "CONSENTED", Ik[Ik.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
-    class Xk extends Error {
-      constructor(kk, Fk) {
-        super(Fk), this.name = "ServerError", this.code = kk
+  9023: (mm, Tm) => {
+    var fm;
+    Tm.CloseCode = void 0, (fm = Tm.CloseCode || (Tm.CloseCode = {}))[fm.CONSENTED = 4e3] = "CONSENTED", fm[fm.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
+    class hm extends Error {
+      constructor(mm, Tm) {
+        super(Tm), this.name = "ServerError", this.code = mm
       }
     }
-    class Tk extends Error {
-      constructor(kk) {
-        super(kk), this.name = "AbortError"
+    class Am extends Error {
+      constructor(mm) {
+        super(mm), this.name = "AbortError"
       }
     }
-    Fk.AbortError = Tk, Fk.ServerError = Xk
+    Tm.AbortError = Am, Tm.ServerError = hm
   },
-  9054: (kk, Fk, Ik) => {
-    Ik(9061);
-    var Xk = Ik(9066),
-      Tk = Ik(9118),
-      ik = Ik(9080),
-      yk = Ik(9155),
-      lk = Ik(9077),
-      ak = Ik(9137),
-      qk = Ik(9172),
-      Lk = Ik(9121);
-    Lk.registerSerializer("schema", ak.QG), Lk.registerSerializer("none", qk.NoneSerializer), Fk.Client = Xk.Client, Fk.MatchMakeError = Xk.MatchMakeError, Object.defineProperty(Fk, "ErrorCode", {
+  8998: (mm, Tm, fm) => {
+    fm(9006);
+    var hm = fm(9012),
+      Am = fm(9073),
+      am = fm(9026),
+      xm = fm(9114),
+      wm = fm(9023),
+      Dm = fm(9095),
+      im = fm(9129),
+      Rm = fm(9080);
+    Rm.registerSerializer("schema", Dm.lN), Rm.registerSerializer("none", im.NoneSerializer), Tm.Client = hm.Client, Tm.MatchMakeError = hm.MatchMakeError, Object.defineProperty(Tm, "ErrorCode", {
       enumerable: !0,
       get: function() {
-        return Tk.ErrorCode
+        return Am.ErrorCode
       }
-    }), Object.defineProperty(Fk, "Protocol", {
+    }), Object.defineProperty(Tm, "Protocol", {
       enumerable: !0,
       get: function() {
-        return Tk.Protocol
+        return Am.Protocol
       }
-    }), Fk.dt = ik.dt, Fk.Auth = yk.Auth, Fk.ServerError = lk.ServerError, Fk.QG = ak.QG, Fk.getStateCallbacks = ak.getStateCallbacks, Fk.registerSerializer = Lk.registerSerializer
+    }), Tm.hE = am.hE, Tm.Auth = xm.Auth, Tm.ServerError = wm.ServerError, Tm.lN = Dm.lN, Tm.getStateCallbacks = Dm.getStateCallbacks, Tm.registerSerializer = Rm.registerSerializer
   },
-  9061: () => {
-    ArrayBuffer.isView || (ArrayBuffer.isView = kk => null !== kk && "object" === typeof kk && kk.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
+  9006: () => {
+    ArrayBuffer.isView || (ArrayBuffer.isView = mm => null !== mm && "object" === typeof mm && mm.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
   },
-  9172: (kk, Fk) => {
-    Fk.NoneSerializer = class {
-      setState(kk) {}
+  9129: (mm, Tm) => {
+    Tm.NoneSerializer = class {
+      setState(mm) {}
       getState() {
         return null
       }
-      patch(kk) {}
+      patch(mm) {}
       teardown() {}
-      handshake(kk) {}
+      handshake(mm) {}
     }
   },
-  9137: (kk, Fk, Ik) => {
-    var Xk = Ik(9098);
-    Fk.QG = class {
-      setState(kk, Fk) {
-        this.Xe.decode(kk, Fk)
+  9095: (mm, Tm, fm) => {
+    var hm = fm(9050);
+    Tm.lN = class {
+      setState(mm, Tm) {
+        this.JO.decode(mm, Tm)
       }
       getState() {
         return this.state
       }
-      patch(kk, Fk) {
-        return this.Xe.decode(kk, Fk)
+      patch(mm, Tm) {
+        return this.JO.decode(mm, Tm)
       }
       teardown() {
-        this.Xe.root.clearRefs()
+        this.JO.root.clearRefs()
       }
-      handshake(kk, Fk) {
-        this.state ? (Xk.Reflection.decode(kk, Fk), this.Xe = new Xk.Decoder(this.state)) : (this.Xe = Xk.Reflection.decode(kk, Fk), this.state = this.Xe.state)
+      handshake(mm, Tm) {
+        this.state ? (hm.Reflection.decode(mm, Tm), this.JO = new hm.Decoder(this.state)) : (this.JO = hm.Reflection.decode(mm, Tm), this.state = this.JO.state)
       }
-    }, Fk.getStateCallbacks = function(kk) {
+    }, Tm.getStateCallbacks = function(mm) {
       try {
-        return Xk.getDecoderStateCallbacks(kk.LJ.Xe)
-      } catch (Fk) {
+        return hm.getDecoderStateCallbacks(mm.qV.JO)
+      } catch (Tm) {
         return
       }
     }
   },
-  9121: (kk, Fk) => {
-    const Ik = {};
-    Fk.getSerializer = function(kk) {
-      const Fk = Ik[kk];
-      if (!Fk) throw new Error("missing serializer: " + kk);
-      return Fk
-    }, Fk.registerSerializer = function(kk, Fk) {
-      Ik[kk] = Fk
+  9080: (mm, Tm) => {
+    const fm = {};
+    Tm.getSerializer = function(mm) {
+      const Tm = fm[mm];
+      if (!Tm) throw new Error("missing serializer: " + mm);
+      return Tm
+    }, Tm.registerSerializer = function(mm, Tm) {
+      fm[mm] = Tm
     }
   },
-  9092: (kk, Fk, Ik) => {
-    var Xk = Ik(9070),
-      Tk = Ik(9098);
-    Fk.H3TransportTransport = class {
-      constructor(kk) {
-        this.events = kk, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
+  9042: (mm, Tm, fm) => {
+    var hm = fm(9018),
+      Am = fm(9050);
+    Tm.H3TransportTransport = class {
+      constructor(mm) {
+        this.events = mm, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
       }
-      connect(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const Ik = Fk.fingerprint && {
+      connect(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const fm = Tm.fingerprint && {
           serverCertificateHashes: [{
             algorithm: "sha-256",
-            value: new Uint8Array(Fk.fingerprint).buffer
+            value: new Uint8Array(Tm.fingerprint).buffer
           }]
         } || void 0;
-        this.wt = new WebTransport(kk, Ik), this.wt.ready.then((kk => {
-          console.log("WebTransport ready!", kk), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
-          this.wt.incomingBidirectionalStreams.getReader().read().then((kk => {
-            this.reader = kk.value.readable.getReader(), this.writer = kk.value.writable.getWriter(), this.sendSeatReservation(Fk.room.roomId, Fk.sessionId, Fk.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
-          })).catch((kk => {
-            console.error("failed to read incoming stream", kk), console.error("TODO: close the connection")
+        this.wt = new WebTransport(mm, fm), this.wt.ready.then((mm => {
+          console.log("WebTransport ready!", mm), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
+          this.wt.incomingBidirectionalStreams.getReader().read().then((mm => {
+            this.reader = mm.value.readable.getReader(), this.writer = mm.value.writable.getWriter(), this.sendSeatReservation(Tm.room.roomId, Tm.sessionId, Tm.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
+          })).catch((mm => {
+            console.error("failed to read incoming stream", mm), console.error("TODO: close the connection")
           }))
-        })).catch((kk => {
-          console.log("WebTransport not ready!", kk), this._close()
-        })), this.wt.closed.then((kk => {
-          console.log("WebTransport closed w/ success", kk), this.events.onclose({
-            code: kk.closeCode,
-            reason: kk.reason
+        })).catch((mm => {
+          console.log("WebTransport not ready!", mm), this._close()
+        })), this.wt.closed.then((mm => {
+          console.log("WebTransport closed w/ success", mm), this.events.onclose({
+            code: mm.closeCode,
+            reason: mm.reason
           })
-        })).catch((kk => {
-          console.log("WebTransport closed w/ error", kk), this.events.onerror(kk), this.events.onclose({
-            code: kk.closeCode,
-            reason: kk.reason
+        })).catch((mm => {
+          console.log("WebTransport closed w/ error", mm), this.events.onerror(mm), this.events.onclose({
+            code: mm.closeCode,
+            reason: mm.reason
           })
         })).finally((() => {
           this._close()
         }))
       }
-      send(kk) {
-        const Fk = Tk.encode.number(this.lengthPrefixBuffer, kk.length, {
+      send(mm) {
+        const Tm = Am.encode.number(this.lengthPrefixBuffer, mm.length, {
             offset: 0
           }),
-          Ik = new Uint8Array(Fk + kk.length);
-        Ik.set(this.lengthPrefixBuffer.subarray(0, Fk), 0), Ik.set(kk, Fk), this.writer.write(Ik)
+          fm = new Uint8Array(Tm + mm.length);
+        fm.set(this.lengthPrefixBuffer.subarray(0, Tm), 0), fm.set(mm, Tm), this.writer.write(fm)
       }
-      sendUnreliable(kk) {
-        const Fk = Tk.encode.number(this.lengthPrefixBuffer, kk.length, {
+      sendUnreliable(mm) {
+        const Tm = Am.encode.number(this.lengthPrefixBuffer, mm.length, {
             offset: 0
           }),
-          Ik = new Uint8Array(Fk + kk.length);
-        Ik.set(this.lengthPrefixBuffer.subarray(0, Fk), 0), Ik.set(kk, Fk), this.unreliableWriter.write(Ik)
+          fm = new Uint8Array(Tm + mm.length);
+        fm.set(this.lengthPrefixBuffer.subarray(0, Tm), 0), fm.set(mm, Tm), this.unreliableWriter.write(fm)
       }
-      close(kk, Fk) {
+      close(mm, Tm) {
         try {
           this.wt.close({
-            closeCode: kk,
-            reason: Fk
+            closeCode: mm,
+            reason: Tm
           })
-        } catch (Ik) {
-          console.error(Ik)
+        } catch (fm) {
+          console.error(fm)
         }
       }
       readIncomingData() {
-        return Xk.__awaiter(this, void 0, void 0, (function*() {
-          let kk;
+        return hm.__awaiter(this, void 0, void 0, (function*() {
+          let mm;
           for (; this.isOpen;) {
             try {
-              kk = yield this.reader.read();
-              const Fk = kk.value,
-                Ik = {
+              mm = yield this.reader.read();
+              const Tm = mm.value,
+                fm = {
                   offset: 0
                 };
               do {
-                const kk = Tk.decode.number(Fk, Ik);
+                const mm = Am.decode.number(Tm, fm);
                 this.events.onmessage({
-                  data: Fk.subarray(Ik.offset, Ik.offset + kk)
-                }), Ik.offset += kk
-              } while (Ik.offset < Fk.length)
-            } catch (Fk) {
-              -1 === Fk.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Fk);
+                  data: Tm.subarray(fm.offset, fm.offset + mm)
+                }), fm.offset += mm
+              } while (fm.offset < Tm.length)
+            } catch (Tm) {
+              -1 === Tm.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Tm);
               break
             }
-            if (kk.done) break
+            if (mm.done) break
           }
         }))
       }
       readIncomingUnreliableData() {
-        return Xk.__awaiter(this, void 0, void 0, (function*() {
-          let kk;
+        return hm.__awaiter(this, void 0, void 0, (function*() {
+          let mm;
           for (; this.isOpen;) {
             try {
-              kk = yield this.unreliableReader.read();
-              const Fk = kk.value,
-                Ik = {
+              mm = yield this.unreliableReader.read();
+              const Tm = mm.value,
+                fm = {
                   offset: 0
                 };
               do {
-                const kk = Tk.decode.number(Fk, Ik);
+                const mm = Am.decode.number(Tm, fm);
                 this.events.onmessage({
-                  data: Fk.subarray(Ik.offset, Ik.offset + kk)
-                }), Ik.offset += kk
-              } while (Ik.offset < Fk.length)
-            } catch (Fk) {
-              -1 === Fk.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Fk);
+                  data: Tm.subarray(fm.offset, fm.offset + mm)
+                }), fm.offset += mm
+              } while (fm.offset < Tm.length)
+            } catch (Tm) {
+              -1 === Tm.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Tm);
               break
             }
-            if (kk.done) break
+            if (mm.done) break
           }
         }))
       }
-      sendSeatReservation(kk, Fk, Ik) {
-        const Xk = {
+      sendSeatReservation(mm, Tm, fm) {
+        const hm = {
             offset: 0
           },
-          ik = [];
-        Tk.encode.string(ik, kk, Xk), Tk.encode.string(ik, Fk, Xk), Ik && Tk.encode.string(ik, Ik, Xk), this.writer.write(new Uint8Array(ik).buffer)
+          am = [];
+        Am.encode.string(am, mm, hm), Am.encode.string(am, Tm, hm), fm && Am.encode.string(am, fm, hm), this.writer.write(new Uint8Array(am).buffer)
       }
       _close() {
         this.isOpen = !1
       }
     }
   },
-  9105: (kk, Fk, Ik) => {
-    var Xk = Ik(9111);
-    const Tk = globalThis.WebSocket || Xk;
-    Fk.WebSocketTransport = class {
-      constructor(kk) {
-        this.events = kk
+  9055: (mm, Tm, fm) => {
+    var hm = fm(9064);
+    const Am = globalThis.WebSocket || hm;
+    Tm.WebSocketTransport = class {
+      constructor(mm) {
+        this.events = mm
       }
-      send(kk) {
-        this.ws.send(kk)
+      send(mm) {
+        this.ws.send(mm)
       }
-      sendUnreliable(kk) {
+      sendUnreliable(mm) {
         console.warn("colyseus.js: The WebSocket transport does not support unreliable messages")
       }
-      connect(kk, Fk) {
+      connect(mm, Tm) {
         try {
-          this.ws = new Tk(kk, {
-            headers: Fk,
+          this.ws = new Am(mm, {
+            headers: Tm,
             protocols: this.protocols
           })
-        } catch (Ik) {
-          this.ws = new Tk(kk, this.protocols)
+        } catch (fm) {
+          this.ws = new Am(mm, this.protocols)
         }
         this.ws.binaryType = "arraybuffer", this.ws.onopen = this.events.onopen, this.ws.onmessage = this.events.onmessage, this.ws.onclose = this.events.onclose, this.ws.onerror = this.events.onerror
       }
-      close(kk, Fk) {
-        this.ws.close(kk, Fk)
+      close(mm, Tm) {
+        this.ws.close(mm, Tm)
       }
       get isOpen() {
-        return this.ws.readyState === Tk.OPEN
+        return this.ws.readyState === Am.OPEN
       }
     }
   },
-  9111: kk => {
-    kk.exports = function() {
+  9064: mm => {
+    mm.exports = function() {
       throw new Error("ws does not work in the browser. Browser clients must use the native WebSocket object")
     }
   },
-  9150: (kk, Fk, Ik) => {
-    function Xk(kk, Fk) {
-      Fk.headers = kk.headers || {}, Fk.statusMessage = kk.statusText, Fk.statusCode = kk.status, Fk.data = kk.response
+  9107: (mm, Tm, fm) => {
+    function hm(mm, Tm) {
+      Tm.headers = mm.headers || {}, Tm.statusMessage = mm.statusText, Tm.statusCode = mm.status, Tm.data = mm.response
     }
 
-    function Tk(kk, Fk, Ik) {
-      return new Promise((function(Tk, ik) {
-        Ik = Ik || {};
-        var yk, lk, ak, qk = new XMLHttpRequest,
-          Lk = Ik.body,
-          tk = Ik.headers || {};
-        for (yk in Ik.timeout && (qk.timeout = Ik.timeout), qk.ontimeout = qk.onerror = function(kk) {
-            kk.timeout = "timeout" == kk.type, ik(kk)
-          }, qk.onabort = function(kk) {
-            kk.aborted = !0, ik(kk)
-          }, qk.open(kk, Fk.href || Fk), qk.onload = function() {
-            for (ak = qk.getAllResponseHeaders().trim().split(/[\r\n]+/), Xk(qk, qk); lk = ak.shift();) lk = lk.split(": "), qk.headers[lk.shift().toLowerCase()] = lk.join(": ");
-            if ((lk = qk.headers["content-type"]) && ~lk.indexOf("application/json")) try {
-              qk.data = JSON.parse(qk.data, Ik.reviver)
-            } catch (kk) {
-              return Xk(qk, kk), ik(kk)
-            }(qk.status >= 400 ? ik : Tk)(qk)
-          }, typeof FormData < "u" && Lk instanceof FormData || Lk && "object" == typeof Lk && (tk["content-type"] = "application/json", Lk = JSON.stringify(Lk)), qk.withCredentials = !!Ik.withCredentials, tk) qk.setRequestHeader(yk, tk[yk]);
-        qk.send(Lk), Ik.signal && Ik.signal.addEventListener("abort", (function() {
-          qk.abort()
+    function Am(mm, Tm, fm) {
+      return new Promise((function(Am, am) {
+        fm = fm || {};
+        var xm, wm, Dm, im = new XMLHttpRequest,
+          Rm = fm.body,
+          pm = fm.headers || {};
+        for (xm in fm.timeout && (im.timeout = fm.timeout), im.ontimeout = im.onerror = function(mm) {
+            mm.timeout = "timeout" == mm.type, am(mm)
+          }, im.onabort = function(mm) {
+            mm.aborted = !0, am(mm)
+          }, im.open(mm, Tm.href || Tm), im.onload = function() {
+            for (Dm = im.getAllResponseHeaders().trim().split(/[\r\n]+/), hm(im, im); wm = Dm.shift();) wm = wm.split(": "), im.headers[wm.shift().toLowerCase()] = wm.join(": ");
+            if ((wm = im.headers["content-type"]) && ~wm.indexOf("application/json")) try {
+              im.data = JSON.parse(im.data, fm.reviver)
+            } catch (mm) {
+              return hm(im, mm), am(mm)
+            }(im.status >= 400 ? am : Am)(im)
+          }, typeof FormData < "u" && Rm instanceof FormData || Rm && "object" == typeof Rm && (pm["content-type"] = "application/json", Rm = JSON.stringify(Rm)), im.withCredentials = !!fm.withCredentials, pm) im.setRequestHeader(xm, pm[xm]);
+        im.send(Rm), fm.signal && fm.signal.addEventListener("abort", (function() {
+          im.abort()
         }))
       }))
     }
-    Ik.r(Fk), Ik.d(Fk, {
-      del: () => ak,
-      get: () => ik,
-      patch: () => lk,
-      post: () => yk,
-      put: () => qk,
-      send: () => Tk
+    fm.r(Tm), fm.d(Tm, {
+      del: () => Dm,
+      get: () => am,
+      patch: () => wm,
+      post: () => xm,
+      put: () => im,
+      send: () => Am
     });
-    var ik = Tk.bind(Tk, "GET"),
-      yk = Tk.bind(Tk, "POST"),
-      lk = Tk.bind(Tk, "PATCH"),
-      ak = Tk.bind(Tk, "DELETE"),
-      qk = Tk.bind(Tk, "PUT")
+    var am = Am.bind(Am, "GET"),
+      xm = Am.bind(Am, "POST"),
+      wm = Am.bind(Am, "PATCH"),
+      Dm = Am.bind(Am, "DELETE"),
+      im = Am.bind(Am, "PUT")
   },
-  9144: (kk, Fk, Ik) => {
-    var Xk, Tk, ik;
-    Ik.r(Fk), Ik.d(Fk, {
-      ALWAYS: () => gF,
-      C1: () => Qk,
-      DECIMAL_FIT: () => hF,
-      DECIMAL_ROUND: () => mF,
-      Decoder: () => qF,
-      Encoder: () => YF,
-      FLOAT32_OPTIONS: () => eF,
-      NEVER: () => AF,
-      Packr: () => bF,
-      RESERVE_START_SPACE: () => MF,
-      RESET_BUFFER_MODE: () => DF,
-      REUSE_BUFFER_MODE: () => rF,
-      Unpackr: () => Ek,
-      addExtension: () => cF,
-      clearSource: () => lF,
-      decode: () => jF,
-      decodeIter: () => kI,
-      encode: () => dF,
-      encodeIter: () => FI,
-      isNativeAccelerationEnabled: () => Wk,
-      mapsAsObjects: () => XI,
-      pack: () => BF,
-      roundFloat32: () => KF,
-      unpack: () => tF,
-      unpackMultiple: () => ZF,
-      useRecords: () => II
+  9101: (mm, Tm, fm) => {
+    var hm, Am, am;
+    fm.r(Tm), fm.d(Tm, {
+      ALWAYS: () => tT,
+      C1: () => Qm,
+      DECIMAL_FIT: () => dT,
+      DECIMAL_ROUND: () => UT,
+      Decoder: () => iT,
+      Encoder: () => LT,
+      FLOAT32_OPTIONS: () => OT,
+      NEVER: () => vT,
+      Packr: () => PT,
+      RESERVE_START_SPACE: () => FT,
+      RESET_BUFFER_MODE: () => WT,
+      REUSE_BUFFER_MODE: () => gT,
+      Unpackr: () => km,
+      addExtension: () => sT,
+      clearSource: () => wT,
+      decode: () => oT,
+      decodeIter: () => mf,
+      encode: () => BT,
+      encodeIter: () => Tf,
+      isNativeAccelerationEnabled: () => sm,
+      mapsAsObjects: () => hf,
+      pack: () => uT,
+      roundFloat32: () => KT,
+      unpack: () => pT,
+      unpackMultiple: () => ET,
+      useRecords: () => ff
     });
     try {
-      Xk = new TextDecoder
-    } catch (TI) {}
-    var yk = 0;
-    const lk = [];
-    var ak, qk, Lk, tk, Zk, jk = lk,
-      ek = 0,
-      wk = {},
-      Hk = 0,
-      Jk = 0,
-      xk = [],
-      Pk = {
+      hm = new TextDecoder
+    } catch (Af) {}
+    var xm = 0;
+    const wm = [];
+    var Dm, im, Rm, pm, Em, om = wm,
+      Om = 0,
+      Ym = {},
+      qm = 0,
+      jm = 0,
+      Vm = [],
+      Im = {
         useRecords: !1,
         mapsAsObjects: !0
       };
-    class Kk {}
-    const Qk = new Kk;
-    Qk.name = "MessagePack 0xC1";
-    var sk, Vk, zk, Sk = !1,
-      vk = 2;
+    class Km {}
+    const Qm = new Km;
+    Qm.name = "MessagePack 0xC1";
+    var nm, Jm, cm, zm = !1,
+      Zm = 2;
     try {
       new Function("")
-    } catch (TI) {
-      vk = 1 / 0
+    } catch (Af) {
+      Zm = 1 / 0
     }
-    class Ek {
-      constructor(kk) {
-        kk && (!1 === kk.useRecords && void 0 === kk.mapsAsObjects && (kk.mapsAsObjects = !0), kk.sequential && !1 !== kk.trusted && (kk.trusted = !0, kk.structures || 0 == kk.useRecords || (kk.structures = [], kk.maxSharedStructures || (kk.maxSharedStructures = 0))), kk.structures ? kk.structures.sharedLength = kk.structures.length : kk.getStructures && ((kk.structures = []).uninitialized = !0, kk.structures.sharedLength = 0), kk.int64AsNumber && (kk.int64AsType = "number")), Object.assign(this, kk)
+    class km {
+      constructor(mm) {
+        mm && (!1 === mm.useRecords && void 0 === mm.mapsAsObjects && (mm.mapsAsObjects = !0), mm.sequential && !1 !== mm.trusted && (mm.trusted = !0, mm.structures || 0 == mm.useRecords || (mm.structures = [], mm.maxSharedStructures || (mm.maxSharedStructures = 0))), mm.structures ? mm.structures.sharedLength = mm.structures.length : mm.getStructures && ((mm.structures = []).uninitialized = !0, mm.structures.sharedLength = 0), mm.int64AsNumber && (mm.int64AsType = "number")), Object.assign(this, mm)
       }
-      unpack(kk, Fk) {
-        if (Tk) return yF((() => (lF(), this ? this.unpack(kk, Fk) : Ek.prototype.unpack.call(Pk, kk, Fk))));
-        kk.buffer || kk.constructor !== ArrayBuffer || (kk = "undefined" !== typeof Buffer ? Buffer.from(kk) : new Uint8Array(kk)), "object" === typeof Fk ? (ik = Fk.end || kk.length, yk = Fk.start || 0) : (yk = 0, ik = Fk > -1 ? Fk : kk.length), ek = 0, Jk = 0, qk = null, jk = lk, Lk = null, Tk = kk;
+      unpack(mm, Tm) {
+        if (Am) return xT((() => (wT(), this ? this.unpack(mm, Tm) : km.prototype.unpack.call(Im, mm, Tm))));
+        mm.buffer || mm.constructor !== ArrayBuffer || (mm = "undefined" !== typeof Buffer ? Buffer.from(mm) : new Uint8Array(mm)), "object" === typeof Tm ? (am = Tm.end || mm.length, xm = Tm.start || 0) : (xm = 0, am = Tm > -1 ? Tm : mm.length), Om = 0, jm = 0, im = null, om = wm, Rm = null, Am = mm;
         try {
-          Zk = kk.dataView || (kk.dataView = new DataView(kk.buffer, kk.byteOffset, kk.byteLength))
-        } catch (TI) {
-          if (Tk = null, kk instanceof Uint8Array) throw TI;
-          throw new Error("Source must be a Uint8Array or Buffer but was a " + (kk && "object" == typeof kk ? kk.constructor.name : typeof kk))
+          Em = mm.dataView || (mm.dataView = new DataView(mm.buffer, mm.byteOffset, mm.byteLength))
+        } catch (Af) {
+          if (Am = null, mm instanceof Uint8Array) throw Af;
+          throw new Error("Source must be a Uint8Array or Buffer but was a " + (mm && "object" == typeof mm ? mm.constructor.name : typeof mm))
         }
-        if (this instanceof Ek) {
-          if (wk = this, this.structures) return ak = this.structures, Ok(Fk);
-          (!ak || ak.length > 0) && (ak = [])
-        } else wk = Pk, (!ak || ak.length > 0) && (ak = []);
-        return Ok(Fk)
+        if (this instanceof km) {
+          if (Ym = this, this.structures) return Dm = this.structures, bm(Tm);
+          (!Dm || Dm.length > 0) && (Dm = [])
+        } else Ym = Im, (!Dm || Dm.length > 0) && (Dm = []);
+        return bm(Tm)
       }
-      unpackMultiple(kk, Fk) {
-        let Ik, Xk = 0;
+      unpackMultiple(mm, Tm) {
+        let fm, hm = 0;
         try {
-          Sk = !0;
-          let Tk = kk.length,
-            ik = this ? this.unpack(kk, Tk) : LF.unpack(kk, Tk);
-          if (!Fk) {
-            for (Ik = [ik]; yk < Tk;) Xk = yk, Ik.push(Ok());
-            return Ik
+          zm = !0;
+          let Am = mm.length,
+            am = this ? this.unpack(mm, Am) : RT.unpack(mm, Am);
+          if (!Tm) {
+            for (fm = [am]; xm < Am;) hm = xm, fm.push(bm());
+            return fm
           }
-          if (!1 === Fk(ik, Xk, yk)) return;
-          for (; yk < Tk;)
-            if (Xk = yk, !1 === Fk(Ok(), Xk, yk)) return
-        } catch (TI) {
-          throw TI.lastPosition = Xk, TI.values = Ik, TI
+          if (!1 === Tm(am, hm, xm)) return;
+          for (; xm < Am;)
+            if (hm = xm, !1 === Tm(bm(), hm, xm)) return
+        } catch (Af) {
+          throw Af.lastPosition = hm, Af.values = fm, Af
         } finally {
-          Sk = !1, lF()
+          zm = !1, wT()
         }
       }
-      _mergeStructures(kk, Fk) {
-        Vk && (kk = Vk.call(this, kk)), kk = kk || [], Object.isFrozen(kk) && (kk = kk.map((kk => kk.slice(0))));
-        for (let Ik = 0, Xk = kk.length; Ik < Xk; Ik++) {
-          let Fk = kk[Ik];
-          Fk && (Fk.isShared = !0, Ik >= 32 && (Fk.highByte = Ik - 32 >> 5))
+      _mergeStructures(mm, Tm) {
+        Jm && (mm = Jm.call(this, mm)), mm = mm || [], Object.isFrozen(mm) && (mm = mm.map((mm => mm.slice(0))));
+        for (let fm = 0, hm = mm.length; fm < hm; fm++) {
+          let Tm = mm[fm];
+          Tm && (Tm.isShared = !0, fm >= 32 && (Tm.highByte = fm - 32 >> 5))
         }
-        kk.sharedLength = kk.length;
-        for (let Ik in Fk || [])
-          if (Ik >= 0) {
-            let Xk = kk[Ik],
-              Tk = Fk[Ik];
-            Tk && (Xk && ((kk.restoreStructures || (kk.restoreStructures = []))[Ik] = Xk), kk[Ik] = Tk)
-          } return this.structures = kk
+        mm.sharedLength = mm.length;
+        for (let fm in Tm || [])
+          if (fm >= 0) {
+            let hm = mm[fm],
+              Am = Tm[fm];
+            Am && (hm && ((mm.restoreStructures || (mm.restoreStructures = []))[fm] = hm), mm[fm] = Am)
+          } return this.structures = mm
       }
-      decode(kk, Fk) {
-        return this.unpack(kk, Fk)
+      decode(mm, Tm) {
+        return this.unpack(mm, Tm)
       }
     }
 
-    function Ok(kk) {
+    function bm(mm) {
       try {
-        if (!wk.trusted && !Sk) {
-          let kk = ak.sharedLength || 0;
-          kk < ak.length && (ak.length = kk)
+        if (!Ym.trusted && !zm) {
+          let mm = Dm.sharedLength || 0;
+          mm < Dm.length && (Dm.length = mm)
         }
-        let Fk;
-        if (wk.randomAccessStructure && Tk[yk] < 64 && Tk[yk] >= 32 && sk ? (Fk = sk(Tk, yk, ik, wk), Tk = null, kk && kk.lazy || !Fk || (Fk = Fk.toJSON()), yk = ik) : Fk = Gk(), Lk && (yk = Lk.postBundlePosition, Lk = null), Sk && (ak.restoreStructures = null), yk == ik) ak && ak.restoreStructures && nk(), ak = null, Tk = null, tk && (tk = null);
+        let Tm;
+        if (Ym.randomAccessStructure && Am[xm] < 64 && Am[xm] >= 32 && nm ? (Tm = nm(Am, xm, am, Ym), Am = null, mm && mm.lazy || !Tm || (Tm = Tm.toJSON()), xm = am) : Tm = em(), Rm && (xm = Rm.postBundlePosition, Rm = null), zm && (Dm.restoreStructures = null), xm == am) Dm && Dm.restoreStructures && Sm(), Dm = null, Am = null, pm && (pm = null);
         else {
-          if (yk > ik) throw new Error("Unexpected end of MessagePack data");
-          if (!Sk) {
-            let kk;
+          if (xm > am) throw new Error("Unexpected end of MessagePack data");
+          if (!zm) {
+            let mm;
             try {
-              kk = JSON.stringify(Fk, ((kk, Fk) => "bigint" === typeof Fk ? `${Fk}n` : Fk)).slice(0, 100)
-            } catch (TI) {
-              kk = "(JSON view not available " + TI + ")"
+              mm = JSON.stringify(Tm, ((mm, Tm) => "bigint" === typeof Tm ? `${Tm}n` : Tm)).slice(0, 100)
+            } catch (Af) {
+              mm = "(JSON view not available " + Af + ")"
             }
-            throw new Error("Data read, but end of buffer not reached " + kk)
+            throw new Error("Data read, but end of buffer not reached " + mm)
           }
         }
-        return Fk
-      } catch (TI) {
-        throw ak && ak.restoreStructures && nk(), lF(), (TI instanceof RangeError || TI.message.startsWith("Unexpected end of buffer") || yk > ik) && (TI.incomplete = !0), TI
+        return Tm
+      } catch (Af) {
+        throw Dm && Dm.restoreStructures && Sm(), wT(), (Af instanceof RangeError || Af.message.startsWith("Unexpected end of buffer") || xm > am) && (Af.incomplete = !0), Af
       }
     }
 
-    function nk() {
-      for (let kk in ak.restoreStructures) ak[kk] = ak.restoreStructures[kk];
-      ak.restoreStructures = null
+    function Sm() {
+      for (let mm in Dm.restoreStructures) Dm[mm] = Dm.restoreStructures[mm];
+      Dm.restoreStructures = null
     }
 
-    function Gk() {
-      let kk = Tk[yk++];
-      if (kk < 160) {
-        if (kk < 128) {
-          if (kk < 64) return kk;
+    function em() {
+      let mm = Am[xm++];
+      if (mm < 160) {
+        if (mm < 128) {
+          if (mm < 64) return mm;
           {
-            let Fk = ak[63 & kk] || wk.getStructures && Rk()[63 & kk];
-            return Fk ? (Fk.read || (Fk.read = uk(Fk, 63 & kk)), Fk.read()) : kk
+            let Tm = Dm[63 & mm] || Ym.getStructures && Pm()[63 & mm];
+            return Tm ? (Tm.read || (Tm.read = Gm(Tm, 63 & mm)), Tm.read()) : mm
           }
         }
-        if (kk < 144) {
-          if (kk -= 128, wk.mapsAsObjects) {
-            let Fk = {};
-            for (let Ik = 0; Ik < kk; Ik++) {
-              let kk = Mk();
-              "__proto__" === kk && (kk = "__proto_"), Fk[kk] = Gk()
+        if (mm < 144) {
+          if (mm -= 128, Ym.mapsAsObjects) {
+            let Tm = {};
+            for (let fm = 0; fm < mm; fm++) {
+              let mm = Fm();
+              "__proto__" === mm && (mm = "__proto_"), Tm[mm] = em()
             }
-            return Fk
+            return Tm
           } {
-            let Fk = new Map;
-            for (let Ik = 0; Ik < kk; Ik++) Fk.set(Gk(), Gk());
-            return Fk
+            let Tm = new Map;
+            for (let fm = 0; fm < mm; fm++) Tm.set(em(), em());
+            return Tm
           }
         } {
-          kk -= 144;
-          let Fk = new Array(kk);
-          for (let Ik = 0; Ik < kk; Ik++) Fk[Ik] = Gk();
-          return wk.freezeData ? Object.freeze(Fk) : Fk
+          mm -= 144;
+          let Tm = new Array(mm);
+          for (let fm = 0; fm < mm; fm++) Tm[fm] = em();
+          return Ym.freezeData ? Object.freeze(Tm) : Tm
         }
       }
-      if (kk < 192) {
-        let Fk = kk - 160;
-        if (Jk >= yk) return qk.slice(yk - Hk, (yk += Fk) - Hk);
-        if (0 == Jk && ik < 140) {
-          let kk = Fk < 16 ? gk(Fk) : Ak(Fk);
-          if (null != kk) return kk
+      if (mm < 192) {
+        let Tm = mm - 160;
+        if (jm >= xm) return im.slice(xm - qm, (xm += Tm) - qm);
+        if (0 == jm && am < 140) {
+          let mm = Tm < 16 ? tm(Tm) : Lm(Tm);
+          if (null != mm) return mm
         }
-        return Uk(Fk)
+        return Hm(Tm)
       } {
-        let Fk;
-        switch (kk) {
+        let Tm;
+        switch (mm) {
           case 192:
             return null;
           case 193:
-            return Lk ? (Fk = Gk(), Fk > 0 ? Lk[1].slice(Lk.position1, Lk.position1 += Fk) : Lk[0].slice(Lk.position0, Lk.position0 -= Fk)) : Qk;
+            return Rm ? (Tm = em(), Tm > 0 ? Rm[1].slice(Rm.position1, Rm.position1 += Tm) : Rm[0].slice(Rm.position0, Rm.position0 -= Tm)) : Qm;
           case 194:
             return !1;
           case 195:
             return !0;
           case 196:
-            if (Fk = Tk[yk++], void 0 === Fk) throw new Error("Unexpected end of buffer");
-            return hk(Fk);
+            if (Tm = Am[xm++], void 0 === Tm) throw new Error("Unexpected end of buffer");
+            return dm(Tm);
           case 197:
-            return Fk = Zk.getUint16(yk), yk += 2, hk(Fk);
+            return Tm = Em.getUint16(xm), xm += 2, dm(Tm);
           case 198:
-            return Fk = Zk.getUint32(yk), yk += 4, hk(Fk);
+            return Tm = Em.getUint32(xm), xm += 4, dm(Tm);
           case 199:
-            return rk(Tk[yk++]);
+            return gm(Am[xm++]);
           case 200:
-            return Fk = Zk.getUint16(yk), yk += 2, rk(Fk);
+            return Tm = Em.getUint16(xm), xm += 2, gm(Tm);
           case 201:
-            return Fk = Zk.getUint32(yk), yk += 4, rk(Fk);
+            return Tm = Em.getUint32(xm), xm += 4, gm(Tm);
           case 202:
-            if (Fk = Zk.getFloat32(yk), wk.useFloat32 > 2) {
-              let kk = aF[(127 & Tk[yk]) << 1 | Tk[yk + 1] >> 7];
-              return yk += 4, (kk * Fk + (Fk > 0 ? .5 : -.5) | 0) / kk
+            if (Tm = Em.getFloat32(xm), Ym.useFloat32 > 2) {
+              let mm = DT[(127 & Am[xm]) << 1 | Am[xm + 1] >> 7];
+              return xm += 4, (mm * Tm + (Tm > 0 ? .5 : -.5) | 0) / mm
             }
-            return yk += 4, Fk;
+            return xm += 4, Tm;
           case 203:
-            return Fk = Zk.getFloat64(yk), yk += 8, Fk;
+            return Tm = Em.getFloat64(xm), xm += 8, Tm;
           case 204:
-            return Tk[yk++];
+            return Am[xm++];
           case 205:
-            return Fk = Zk.getUint16(yk), yk += 2, Fk;
+            return Tm = Em.getUint16(xm), xm += 2, Tm;
           case 206:
-            return Fk = Zk.getUint32(yk), yk += 4, Fk;
+            return Tm = Em.getUint32(xm), xm += 4, Tm;
           case 207:
-            return "number" === wk.int64AsType ? (Fk = 4294967296 * Zk.getUint32(yk), Fk += Zk.getUint32(yk + 4)) : "string" === wk.int64AsType ? Fk = Zk.getBigUint64(yk).toString() : "auto" === wk.int64AsType ? (Fk = Zk.getBigUint64(yk), Fk <= BigInt(2) << BigInt(52) && (Fk = Number(Fk))) : Fk = Zk.getBigUint64(yk), yk += 8, Fk;
+            return "number" === Ym.int64AsType ? (Tm = 4294967296 * Em.getUint32(xm), Tm += Em.getUint32(xm + 4)) : "string" === Ym.int64AsType ? Tm = Em.getBigUint64(xm).toString() : "auto" === Ym.int64AsType ? (Tm = Em.getBigUint64(xm), Tm <= BigInt(2) << BigInt(52) && (Tm = Number(Tm))) : Tm = Em.getBigUint64(xm), xm += 8, Tm;
           case 208:
-            return Zk.getInt8(yk++);
+            return Em.getInt8(xm++);
           case 209:
-            return Fk = Zk.getInt16(yk), yk += 2, Fk;
+            return Tm = Em.getInt16(xm), xm += 2, Tm;
           case 210:
-            return Fk = Zk.getInt32(yk), yk += 4, Fk;
+            return Tm = Em.getInt32(xm), xm += 4, Tm;
           case 211:
-            return "number" === wk.int64AsType ? (Fk = 4294967296 * Zk.getInt32(yk), Fk += Zk.getUint32(yk + 4)) : "string" === wk.int64AsType ? Fk = Zk.getBigInt64(yk).toString() : "auto" === wk.int64AsType ? (Fk = Zk.getBigInt64(yk), Fk >= BigInt(-2) << BigInt(52) && Fk <= BigInt(2) << BigInt(52) && (Fk = Number(Fk))) : Fk = Zk.getBigInt64(yk), yk += 8, Fk;
+            return "number" === Ym.int64AsType ? (Tm = 4294967296 * Em.getInt32(xm), Tm += Em.getUint32(xm + 4)) : "string" === Ym.int64AsType ? Tm = Em.getBigInt64(xm).toString() : "auto" === Ym.int64AsType ? (Tm = Em.getBigInt64(xm), Tm >= BigInt(-2) << BigInt(52) && Tm <= BigInt(2) << BigInt(52) && (Tm = Number(Tm))) : Tm = Em.getBigInt64(xm), xm += 8, Tm;
           case 212:
-            if (Fk = Tk[yk++], 114 == Fk) return FF(63 & Tk[yk++]);
+            if (Tm = Am[xm++], 114 == Tm) return TT(63 & Am[xm++]);
             {
-              let kk = xk[Fk];
-              if (kk) return kk.read ? (yk++, kk.read(Gk())) : kk.noBuffer ? (yk++, kk()) : kk(Tk.subarray(yk, ++yk));
-              throw new Error("Unknown extension " + Fk)
+              let mm = Vm[Tm];
+              if (mm) return mm.read ? (xm++, mm.read(em())) : mm.noBuffer ? (xm++, mm()) : mm(Am.subarray(xm, ++xm));
+              throw new Error("Unknown extension " + Tm)
             }
           case 213:
-            return Fk = Tk[yk], 114 == Fk ? (yk++, FF(63 & Tk[yk++], Tk[yk++])) : rk(2);
+            return Tm = Am[xm], 114 == Tm ? (xm++, TT(63 & Am[xm++], Am[xm++])) : gm(2);
           case 214:
-            return rk(4);
+            return gm(4);
           case 215:
-            return rk(8);
+            return gm(8);
           case 216:
-            return rk(16);
+            return gm(16);
           case 217:
-            return Fk = Tk[yk++], Jk >= yk ? qk.slice(yk - Hk, (yk += Fk) - Hk) : Ck(Fk);
+            return Tm = Am[xm++], jm >= xm ? im.slice(xm - qm, (xm += Tm) - qm) : ym(Tm);
           case 218:
-            return Fk = Zk.getUint16(yk), Jk >= (yk += 2) ? qk.slice(yk - Hk, (yk += Fk) - Hk) : Nk(Fk);
+            return Tm = Em.getUint16(xm), jm >= (xm += 2) ? im.slice(xm - qm, (xm += Tm) - qm) : Cm(Tm);
           case 219:
-            return Fk = Zk.getUint32(yk), Jk >= (yk += 4) ? qk.slice(yk - Hk, (yk += Fk) - Hk) : ck(Fk);
+            return Tm = Em.getUint32(xm), jm >= (xm += 4) ? im.slice(xm - qm, (xm += Tm) - qm) : rm(Tm);
           case 220:
-            return Fk = Zk.getUint16(yk), yk += 2, Bk(Fk);
+            return Tm = Em.getUint16(xm), xm += 2, Mm(Tm);
           case 221:
-            return Fk = Zk.getUint32(yk), yk += 4, Bk(Fk);
+            return Tm = Em.getUint32(xm), xm += 4, Mm(Tm);
           case 222:
-            return Fk = Zk.getUint16(yk), yk += 2, dk(Fk);
+            return Tm = Em.getUint16(xm), xm += 2, um(Tm);
           case 223:
-            return Fk = Zk.getUint32(yk), yk += 4, dk(Fk);
+            return Tm = Em.getUint32(xm), xm += 4, um(Tm);
           default:
-            if (kk >= 224) return kk - 256;
-            if (void 0 === kk) {
-              let kk = new Error("Unexpected end of MessagePack data");
-              throw kk.incomplete = !0, kk
+            if (mm >= 224) return mm - 256;
+            if (void 0 === mm) {
+              let mm = new Error("Unexpected end of MessagePack data");
+              throw mm.incomplete = !0, mm
             }
-            throw new Error("Unknown MessagePack token " + kk)
+            throw new Error("Unknown MessagePack token " + mm)
         }
       }
     }
-    const pk = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
+    const Nm = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
 
-    function uk(kk, Fk) {
-      function Ik() {
-        if (Ik.count++ > vk) {
-          let Ik = kk.read = new Function("r", "return function(){return " + (wk.freezeData ? "Object.freeze" : "") + "({" + kk.map((kk => "__proto__" === kk ? "__proto_:r()" : pk.test(kk) ? kk + ":r()" : "[" + JSON.stringify(kk) + "]:r()")).join(",") + "})}")(Gk);
-          return 0 === kk.highByte && (kk.read = bk(Fk, kk.read)), Ik()
+    function Gm(mm, Tm) {
+      function fm() {
+        if (fm.count++ > Zm) {
+          let fm = mm.read = new Function("r", "return function(){return " + (Ym.freezeData ? "Object.freeze" : "") + "({" + mm.map((mm => "__proto__" === mm ? "__proto_:r()" : Nm.test(mm) ? mm + ":r()" : "[" + JSON.stringify(mm) + "]:r()")).join(",") + "})}")(em);
+          return 0 === mm.highByte && (mm.read = Xm(Tm, mm.read)), fm()
         }
-        let Xk = {};
-        for (let Fk = 0, Ik = kk.length; Fk < Ik; Fk++) {
-          let Ik = kk[Fk];
-          "__proto__" === Ik && (Ik = "__proto_"), Xk[Ik] = Gk()
+        let hm = {};
+        for (let Tm = 0, fm = mm.length; Tm < fm; Tm++) {
+          let fm = mm[Tm];
+          "__proto__" === fm && (fm = "__proto_"), hm[fm] = em()
         }
-        return wk.freezeData ? Object.freeze(Xk) : Xk
+        return Ym.freezeData ? Object.freeze(hm) : hm
       }
-      return Ik.count = 0, 0 === kk.highByte ? bk(Fk, Ik) : Ik
+      return fm.count = 0, 0 === mm.highByte ? Xm(Tm, fm) : fm
     }
-    const bk = (kk, Fk) => function() {
-      let Ik = Tk[yk++];
-      if (0 === Ik) return Fk();
-      let Xk = kk < 32 ? -(kk + (Ik << 5)) : kk + (Ik << 5),
-        ik = ak[Xk] || Rk()[Xk];
-      if (!ik) throw new Error("Record id is not defined for " + Xk);
-      return ik.read || (ik.read = uk(ik, kk)), ik.read()
+    const Xm = (mm, Tm) => function() {
+      let fm = Am[xm++];
+      if (0 === fm) return Tm();
+      let hm = mm < 32 ? -(mm + (fm << 5)) : mm + (fm << 5),
+        am = Dm[hm] || Pm()[hm];
+      if (!am) throw new Error("Record id is not defined for " + hm);
+      return am.read || (am.read = Gm(am, mm)), am.read()
     };
 
-    function Rk() {
-      let kk = yF((() => (Tk = null, wk.getStructures())));
-      return ak = wk._mergeStructures(kk, ak)
+    function Pm() {
+      let mm = xT((() => (Am = null, Ym.getStructures())));
+      return Dm = Ym._mergeStructures(mm, Dm)
     }
-    var Uk = fk,
-      Ck = fk,
-      Nk = fk,
-      ck = fk;
-    let Wk = !1;
+    var Hm = lm,
+      ym = lm,
+      Cm = lm,
+      rm = lm;
+    let sm = !1;
 
-    function fk(kk) {
-      let Fk;
-      if (kk < 16 && (Fk = gk(kk))) return Fk;
-      if (kk > 64 && Xk) return Xk.decode(Tk.subarray(yk, yk += kk));
-      const Ik = yk + kk,
-        ik = [];
-      for (Fk = ""; yk < Ik;) {
-        const kk = Tk[yk++];
-        if (0 === (128 & kk)) ik.push(kk);
-        else if (192 === (224 & kk)) {
-          const Fk = 63 & Tk[yk++];
-          ik.push((31 & kk) << 6 | Fk)
-        } else if (224 === (240 & kk)) {
-          const Fk = 63 & Tk[yk++],
-            Ik = 63 & Tk[yk++];
-          ik.push((31 & kk) << 12 | Fk << 6 | Ik)
-        } else if (240 === (248 & kk)) {
-          let Fk = (7 & kk) << 18 | (63 & Tk[yk++]) << 12 | (63 & Tk[yk++]) << 6 | 63 & Tk[yk++];
-          Fk > 65535 && (Fk -= 65536, ik.push(Fk >>> 10 & 1023 | 55296), Fk = 56320 | 1023 & Fk), ik.push(Fk)
-        } else ik.push(kk);
-        ik.length >= 4096 && (Fk += Yk.apply(String, ik), ik.length = 0)
+    function lm(mm) {
+      let Tm;
+      if (mm < 16 && (Tm = tm(mm))) return Tm;
+      if (mm > 64 && hm) return hm.decode(Am.subarray(xm, xm += mm));
+      const fm = xm + mm,
+        am = [];
+      for (Tm = ""; xm < fm;) {
+        const mm = Am[xm++];
+        if (0 === (128 & mm)) am.push(mm);
+        else if (192 === (224 & mm)) {
+          const Tm = 63 & Am[xm++];
+          am.push((31 & mm) << 6 | Tm)
+        } else if (224 === (240 & mm)) {
+          const Tm = 63 & Am[xm++],
+            fm = 63 & Am[xm++];
+          am.push((31 & mm) << 12 | Tm << 6 | fm)
+        } else if (240 === (248 & mm)) {
+          let Tm = (7 & mm) << 18 | (63 & Am[xm++]) << 12 | (63 & Am[xm++]) << 6 | 63 & Am[xm++];
+          Tm > 65535 && (Tm -= 65536, am.push(Tm >>> 10 & 1023 | 55296), Tm = 56320 | 1023 & Tm), am.push(Tm)
+        } else am.push(mm);
+        am.length >= 4096 && (Tm += Bm.apply(String, am), am.length = 0)
       }
-      return ik.length > 0 && (Fk += Yk.apply(String, ik)), Fk
+      return am.length > 0 && (Tm += Bm.apply(String, am)), Tm
     }
 
-    function Bk(kk) {
-      let Fk = new Array(kk);
-      for (let Ik = 0; Ik < kk; Ik++) Fk[Ik] = Gk();
-      return wk.freezeData ? Object.freeze(Fk) : Fk
+    function Mm(mm) {
+      let Tm = new Array(mm);
+      for (let fm = 0; fm < mm; fm++) Tm[fm] = em();
+      return Ym.freezeData ? Object.freeze(Tm) : Tm
     }
 
-    function dk(kk) {
-      if (wk.mapsAsObjects) {
-        let Fk = {};
-        for (let Ik = 0; Ik < kk; Ik++) {
-          let kk = Mk();
-          "__proto__" === kk && (kk = "__proto_"), Fk[kk] = Gk()
+    function um(mm) {
+      if (Ym.mapsAsObjects) {
+        let Tm = {};
+        for (let fm = 0; fm < mm; fm++) {
+          let mm = Fm();
+          "__proto__" === mm && (mm = "__proto_"), Tm[mm] = em()
         }
-        return Fk
+        return Tm
       } {
-        let Fk = new Map;
-        for (let Ik = 0; Ik < kk; Ik++) Fk.set(Gk(), Gk());
-        return Fk
+        let Tm = new Map;
+        for (let fm = 0; fm < mm; fm++) Tm.set(em(), em());
+        return Tm
       }
     }
-    var Yk = String.fromCharCode;
+    var Bm = String.fromCharCode;
 
-    function Ak(kk) {
-      let Fk = yk,
-        Ik = new Array(kk);
-      for (let Xk = 0; Xk < kk; Xk++) {
-        const kk = Tk[yk++];
-        if ((128 & kk) > 0) return void(yk = Fk);
-        Ik[Xk] = kk
+    function Lm(mm) {
+      let Tm = xm,
+        fm = new Array(mm);
+      for (let hm = 0; hm < mm; hm++) {
+        const mm = Am[xm++];
+        if ((128 & mm) > 0) return void(xm = Tm);
+        fm[hm] = mm
       }
-      return Yk.apply(String, Ik)
+      return Bm.apply(String, fm)
     }
 
-    function gk(kk) {
-      if (kk < 4) {
-        if (kk < 2) {
-          if (0 === kk) return "";
+    function tm(mm) {
+      if (mm < 4) {
+        if (mm < 2) {
+          if (0 === mm) return "";
           {
-            let kk = Tk[yk++];
-            return (128 & kk) > 1 ? void(yk -= 1) : Yk(kk)
+            let mm = Am[xm++];
+            return (128 & mm) > 1 ? void(xm -= 1) : Bm(mm)
           }
         } {
-          let Fk = Tk[yk++],
-            Ik = Tk[yk++];
-          if ((128 & Fk) > 0 || (128 & Ik) > 0) return void(yk -= 2);
-          if (kk < 3) return Yk(Fk, Ik);
-          let Xk = Tk[yk++];
-          return (128 & Xk) > 0 ? void(yk -= 3) : Yk(Fk, Ik, Xk)
+          let Tm = Am[xm++],
+            fm = Am[xm++];
+          if ((128 & Tm) > 0 || (128 & fm) > 0) return void(xm -= 2);
+          if (mm < 3) return Bm(Tm, fm);
+          let hm = Am[xm++];
+          return (128 & hm) > 0 ? void(xm -= 3) : Bm(Tm, fm, hm)
         }
       } {
-        let Fk = Tk[yk++],
-          Ik = Tk[yk++],
-          Xk = Tk[yk++],
-          ik = Tk[yk++];
-        if ((128 & Fk) > 0 || (128 & Ik) > 0 || (128 & Xk) > 0 || (128 & ik) > 0) return void(yk -= 4);
-        if (kk < 6) {
-          if (4 === kk) return Yk(Fk, Ik, Xk, ik);
+        let Tm = Am[xm++],
+          fm = Am[xm++],
+          hm = Am[xm++],
+          am = Am[xm++];
+        if ((128 & Tm) > 0 || (128 & fm) > 0 || (128 & hm) > 0 || (128 & am) > 0) return void(xm -= 4);
+        if (mm < 6) {
+          if (4 === mm) return Bm(Tm, fm, hm, am);
           {
-            let kk = Tk[yk++];
-            return (128 & kk) > 0 ? void(yk -= 5) : Yk(Fk, Ik, Xk, ik, kk)
+            let mm = Am[xm++];
+            return (128 & mm) > 0 ? void(xm -= 5) : Bm(Tm, fm, hm, am, mm)
           }
         }
-        if (kk < 8) {
-          let lk = Tk[yk++],
-            ak = Tk[yk++];
-          if ((128 & lk) > 0 || (128 & ak) > 0) return void(yk -= 6);
-          if (kk < 7) return Yk(Fk, Ik, Xk, ik, lk, ak);
-          let qk = Tk[yk++];
-          return (128 & qk) > 0 ? void(yk -= 7) : Yk(Fk, Ik, Xk, ik, lk, ak, qk)
+        if (mm < 8) {
+          let wm = Am[xm++],
+            Dm = Am[xm++];
+          if ((128 & wm) > 0 || (128 & Dm) > 0) return void(xm -= 6);
+          if (mm < 7) return Bm(Tm, fm, hm, am, wm, Dm);
+          let im = Am[xm++];
+          return (128 & im) > 0 ? void(xm -= 7) : Bm(Tm, fm, hm, am, wm, Dm, im)
         } {
-          let lk = Tk[yk++],
-            ak = Tk[yk++],
-            qk = Tk[yk++],
-            Lk = Tk[yk++];
-          if ((128 & lk) > 0 || (128 & ak) > 0 || (128 & qk) > 0 || (128 & Lk) > 0) return void(yk -= 8);
-          if (kk < 10) {
-            if (8 === kk) return Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk);
+          let wm = Am[xm++],
+            Dm = Am[xm++],
+            im = Am[xm++],
+            Rm = Am[xm++];
+          if ((128 & wm) > 0 || (128 & Dm) > 0 || (128 & im) > 0 || (128 & Rm) > 0) return void(xm -= 8);
+          if (mm < 10) {
+            if (8 === mm) return Bm(Tm, fm, hm, am, wm, Dm, im, Rm);
             {
-              let kk = Tk[yk++];
-              return (128 & kk) > 0 ? void(yk -= 9) : Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, kk)
+              let mm = Am[xm++];
+              return (128 & mm) > 0 ? void(xm -= 9) : Bm(Tm, fm, hm, am, wm, Dm, im, Rm, mm)
             }
           }
-          if (kk < 12) {
-            let tk = Tk[yk++],
-              Zk = Tk[yk++];
-            if ((128 & tk) > 0 || (128 & Zk) > 0) return void(yk -= 10);
-            if (kk < 11) return Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, tk, Zk);
-            let jk = Tk[yk++];
-            return (128 & jk) > 0 ? void(yk -= 11) : Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, tk, Zk, jk)
+          if (mm < 12) {
+            let pm = Am[xm++],
+              Em = Am[xm++];
+            if ((128 & pm) > 0 || (128 & Em) > 0) return void(xm -= 10);
+            if (mm < 11) return Bm(Tm, fm, hm, am, wm, Dm, im, Rm, pm, Em);
+            let om = Am[xm++];
+            return (128 & om) > 0 ? void(xm -= 11) : Bm(Tm, fm, hm, am, wm, Dm, im, Rm, pm, Em, om)
           } {
-            let tk = Tk[yk++],
-              Zk = Tk[yk++],
-              jk = Tk[yk++],
-              ek = Tk[yk++];
-            if ((128 & tk) > 0 || (128 & Zk) > 0 || (128 & jk) > 0 || (128 & ek) > 0) return void(yk -= 12);
-            if (kk < 14) {
-              if (12 === kk) return Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, tk, Zk, jk, ek);
+            let pm = Am[xm++],
+              Em = Am[xm++],
+              om = Am[xm++],
+              Om = Am[xm++];
+            if ((128 & pm) > 0 || (128 & Em) > 0 || (128 & om) > 0 || (128 & Om) > 0) return void(xm -= 12);
+            if (mm < 14) {
+              if (12 === mm) return Bm(Tm, fm, hm, am, wm, Dm, im, Rm, pm, Em, om, Om);
               {
-                let kk = Tk[yk++];
-                return (128 & kk) > 0 ? void(yk -= 13) : Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, tk, Zk, jk, ek, kk)
+                let mm = Am[xm++];
+                return (128 & mm) > 0 ? void(xm -= 13) : Bm(Tm, fm, hm, am, wm, Dm, im, Rm, pm, Em, om, Om, mm)
               }
             } {
-              let wk = Tk[yk++],
-                Hk = Tk[yk++];
-              if ((128 & wk) > 0 || (128 & Hk) > 0) return void(yk -= 14);
-              if (kk < 15) return Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, tk, Zk, jk, ek, wk, Hk);
-              let Jk = Tk[yk++];
-              return (128 & Jk) > 0 ? void(yk -= 15) : Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, tk, Zk, jk, ek, wk, Hk, Jk)
+              let Ym = Am[xm++],
+                qm = Am[xm++];
+              if ((128 & Ym) > 0 || (128 & qm) > 0) return void(xm -= 14);
+              if (mm < 15) return Bm(Tm, fm, hm, am, wm, Dm, im, Rm, pm, Em, om, Om, Ym, qm);
+              let jm = Am[xm++];
+              return (128 & jm) > 0 ? void(xm -= 15) : Bm(Tm, fm, hm, am, wm, Dm, im, Rm, pm, Em, om, Om, Ym, qm, jm)
             }
           }
         }
       }
     }
 
-    function mk() {
-      let kk, Fk = Tk[yk++];
-      if (Fk < 192) kk = Fk - 160;
-      else switch (Fk) {
+    function Um() {
+      let mm, Tm = Am[xm++];
+      if (Tm < 192) mm = Tm - 160;
+      else switch (Tm) {
         case 217:
-          kk = Tk[yk++];
+          mm = Am[xm++];
           break;
         case 218:
-          kk = Zk.getUint16(yk), yk += 2;
+          mm = Em.getUint16(xm), xm += 2;
           break;
         case 219:
-          kk = Zk.getUint32(yk), yk += 4;
+          mm = Em.getUint32(xm), xm += 4;
           break;
         default:
           throw new Error("Expected string")
       }
-      return fk(kk)
+      return lm(mm)
     }
 
-    function hk(kk) {
-      return wk.copyBuffers ? Uint8Array.prototype.slice.call(Tk, yk, yk += kk) : Tk.subarray(yk, yk += kk)
+    function dm(mm) {
+      return Ym.copyBuffers ? Uint8Array.prototype.slice.call(Am, xm, xm += mm) : Am.subarray(xm, xm += mm)
     }
 
-    function rk(kk) {
-      let Fk = Tk[yk++];
-      if (xk[Fk]) {
-        let Ik;
-        return xk[Fk](Tk.subarray(yk, Ik = yk += kk), (kk => {
-          yk = kk;
+    function gm(mm) {
+      let Tm = Am[xm++];
+      if (Vm[Tm]) {
+        let fm;
+        return Vm[Tm](Am.subarray(xm, fm = xm += mm), (mm => {
+          xm = mm;
           try {
-            return Gk()
+            return em()
           } finally {
-            yk = Ik
+            xm = fm
           }
         }))
       }
-      throw new Error("Unknown extension type " + Fk)
+      throw new Error("Unknown extension type " + Tm)
     }
-    var Dk = new Array(4096);
+    var Wm = new Array(4096);
 
-    function Mk() {
-      let kk = Tk[yk++];
-      if (!(kk >= 160 && kk < 192)) return yk--, kF(Gk());
-      if (kk -= 160, Jk >= yk) return qk.slice(yk - Hk, (yk += kk) - Hk);
-      if (!(0 == Jk && ik < 180)) return Uk(kk);
-      let Fk, Ik = 4095 & (kk << 5 ^ (kk > 1 ? Zk.getUint16(yk) : kk > 0 ? Tk[yk] : 0)),
-        Xk = Dk[Ik],
-        lk = yk,
-        ak = yk + kk - 3,
-        Lk = 0;
-      if (Xk && Xk.bytes == kk) {
-        for (; lk < ak;) {
-          if (Fk = Zk.getUint32(lk), Fk != Xk[Lk++]) {
-            lk = 1879048192;
+    function Fm() {
+      let mm = Am[xm++];
+      if (!(mm >= 160 && mm < 192)) return xm--, mT(em());
+      if (mm -= 160, jm >= xm) return im.slice(xm - qm, (xm += mm) - qm);
+      if (!(0 == jm && am < 180)) return Hm(mm);
+      let Tm, fm = 4095 & (mm << 5 ^ (mm > 1 ? Em.getUint16(xm) : mm > 0 ? Am[xm] : 0)),
+        hm = Wm[fm],
+        wm = xm,
+        Dm = xm + mm - 3,
+        Rm = 0;
+      if (hm && hm.bytes == mm) {
+        for (; wm < Dm;) {
+          if (Tm = Em.getUint32(wm), Tm != hm[Rm++]) {
+            wm = 1879048192;
             break
           }
-          lk += 4
+          wm += 4
         }
-        for (ak += 3; lk < ak;)
-          if (Fk = Tk[lk++], Fk != Xk[Lk++]) {
-            lk = 1879048192;
+        for (Dm += 3; wm < Dm;)
+          if (Tm = Am[wm++], Tm != hm[Rm++]) {
+            wm = 1879048192;
             break
-          } if (lk === ak) return yk = lk, Xk.string;
-        ak -= 3, lk = yk
+          } if (wm === Dm) return xm = wm, hm.string;
+        Dm -= 3, wm = xm
       }
-      for (Xk = [], Dk[Ik] = Xk, Xk.bytes = kk; lk < ak;) Fk = Zk.getUint32(lk), Xk.push(Fk), lk += 4;
-      for (ak += 3; lk < ak;) Fk = Tk[lk++], Xk.push(Fk);
-      let tk = kk < 16 ? gk(kk) : Ak(kk);
-      return Xk.string = null != tk ? tk : Uk(kk)
+      for (hm = [], Wm[fm] = hm, hm.bytes = mm; wm < Dm;) Tm = Em.getUint32(wm), hm.push(Tm), wm += 4;
+      for (Dm += 3; wm < Dm;) Tm = Am[wm++], hm.push(Tm);
+      let pm = mm < 16 ? tm(mm) : Lm(mm);
+      return hm.string = null != pm ? pm : Hm(mm)
     }
 
-    function kF(kk) {
-      if ("string" === typeof kk) return kk;
-      if ("number" === typeof kk || "boolean" === typeof kk || "bigint" === typeof kk) return kk.toString();
-      if (null == kk) return kk + "";
-      if (wk.allowArraysInMapKeys && Array.isArray(kk) && kk.flat().every((kk => ["string", "number", "boolean", "bigint"].includes(typeof kk)))) return kk.flat().toString();
-      throw new Error("Invalid property type for record: " + typeof kk)
+    function mT(mm) {
+      if ("string" === typeof mm) return mm;
+      if ("number" === typeof mm || "boolean" === typeof mm || "bigint" === typeof mm) return mm.toString();
+      if (null == mm) return mm + "";
+      if (Ym.allowArraysInMapKeys && Array.isArray(mm) && mm.flat().every((mm => ["string", "number", "boolean", "bigint"].includes(typeof mm)))) return mm.flat().toString();
+      throw new Error("Invalid property type for record: " + typeof mm)
     }
-    const FF = (kk, Fk) => {
-      let Ik = Gk().map(kF),
-        Xk = kk;
-      void 0 !== Fk && (kk = kk < 32 ? -((Fk << 5) + kk) : (Fk << 5) + kk, Ik.highByte = Fk);
-      let Tk = ak[kk];
-      return Tk && (Tk.isShared || Sk) && ((ak.restoreStructures || (ak.restoreStructures = []))[kk] = Tk), ak[kk] = Ik, Ik.read = uk(Ik, Xk), Ik.read()
+    const TT = (mm, Tm) => {
+      let fm = em().map(mT),
+        hm = mm;
+      void 0 !== Tm && (mm = mm < 32 ? -((Tm << 5) + mm) : (Tm << 5) + mm, fm.highByte = Tm);
+      let Am = Dm[mm];
+      return Am && (Am.isShared || zm) && ((Dm.restoreStructures || (Dm.restoreStructures = []))[mm] = Am), Dm[mm] = fm, fm.read = Gm(fm, hm), fm.read()
     };
-    xk[0] = () => {}, xk[0].noBuffer = !0, xk[66] = kk => {
-      let Fk = kk.length,
-        Ik = BigInt(128 & kk[0] ? kk[0] - 256 : kk[0]);
-      for (let Xk = 1; Xk < Fk; Xk++) Ik <<= BigInt(8), Ik += BigInt(kk[Xk]);
-      return Ik
+    Vm[0] = () => {}, Vm[0].noBuffer = !0, Vm[66] = mm => {
+      let Tm = mm.length,
+        fm = BigInt(128 & mm[0] ? mm[0] - 256 : mm[0]);
+      for (let hm = 1; hm < Tm; hm++) fm <<= BigInt(8), fm += BigInt(mm[hm]);
+      return fm
     };
-    let IF = {
+    let fT = {
       Error: Error,
       TypeError: TypeError,
       ReferenceError: ReferenceError
     };
-    xk[101] = () => {
-      let kk = Gk();
-      return (IF[kk[0]] || Error)(kk[1], {
-        cause: kk[2]
+    Vm[101] = () => {
+      let mm = em();
+      return (fT[mm[0]] || Error)(mm[1], {
+        cause: mm[2]
       })
-    }, xk[105] = kk => {
-      if (!1 === wk.structuredClone) throw new Error("Structured clone extension is disabled");
-      let Fk = Zk.getUint32(yk - 4);
-      tk || (tk = new Map);
-      let Ik, Xk = Tk[yk];
-      Ik = Xk >= 144 && Xk < 160 || 220 == Xk || 221 == Xk ? [] : {};
-      let ik = {
-        target: Ik
+    }, Vm[105] = mm => {
+      if (!1 === Ym.structuredClone) throw new Error("Structured clone extension is disabled");
+      let Tm = Em.getUint32(xm - 4);
+      pm || (pm = new Map);
+      let fm, hm = Am[xm];
+      fm = hm >= 144 && hm < 160 || 220 == hm || 221 == hm ? [] : {};
+      let am = {
+        target: fm
       };
-      tk.set(Fk, ik);
-      let lk = Gk();
-      return ik.used ? Object.assign(Ik, lk) : (ik.target = lk, lk)
-    }, xk[112] = kk => {
-      if (!1 === wk.structuredClone) throw new Error("Structured clone extension is disabled");
-      let Fk = Zk.getUint32(yk - 4),
-        Ik = tk.get(Fk);
-      return Ik.used = !0, Ik.target
-    }, xk[115] = () => new Set(Gk());
-    const XF = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((kk => kk + "Array"));
-    let TF = "object" === typeof globalThis ? globalThis : window;
-    xk[116] = kk => {
-      let Fk = kk[0],
-        Ik = XF[Fk];
-      if (!Ik) {
-        if (16 === Fk) {
-          let Fk = new ArrayBuffer(kk.length - 1);
-          return new Uint8Array(Fk).set(kk.subarray(1)), Fk
+      pm.set(Tm, am);
+      let wm = em();
+      return am.used ? Object.assign(fm, wm) : (am.target = wm, wm)
+    }, Vm[112] = mm => {
+      if (!1 === Ym.structuredClone) throw new Error("Structured clone extension is disabled");
+      let Tm = Em.getUint32(xm - 4),
+        fm = pm.get(Tm);
+      return fm.used = !0, fm.target
+    }, Vm[115] = () => new Set(em());
+    const hT = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((mm => mm + "Array"));
+    let AT = "object" === typeof globalThis ? globalThis : window;
+    Vm[116] = mm => {
+      let Tm = mm[0],
+        fm = hT[Tm];
+      if (!fm) {
+        if (16 === Tm) {
+          let Tm = new ArrayBuffer(mm.length - 1);
+          return new Uint8Array(Tm).set(mm.subarray(1)), Tm
         }
-        throw new Error("Could not find typed array for code " + Fk)
+        throw new Error("Could not find typed array for code " + Tm)
       }
-      return new TF[Ik](Uint8Array.prototype.slice.call(kk, 1).buffer)
-    }, xk[120] = () => {
-      let kk = Gk();
-      return new RegExp(kk[0], kk[1])
+      return new AT[fm](Uint8Array.prototype.slice.call(mm, 1).buffer)
+    }, Vm[120] = () => {
+      let mm = em();
+      return new RegExp(mm[0], mm[1])
     };
-    const iF = [];
+    const aT = [];
 
-    function yF(kk) {
-      zk && zk();
-      let Fk = ik,
-        Ik = yk,
-        Xk = ek,
-        lk = Hk,
-        xk = Jk,
-        Pk = qk,
-        Kk = jk,
-        Qk = tk,
-        sk = Lk,
-        Vk = new Uint8Array(Tk.slice(0, ik)),
-        vk = ak,
-        Ek = ak.slice(0, ak.length),
-        Ok = wk,
-        nk = Sk,
-        Gk = kk();
-      return ik = Fk, yk = Ik, ek = Xk, Hk = lk, Jk = xk, qk = Pk, jk = Kk, tk = Qk, Lk = sk, Tk = Vk, Sk = nk, (ak = vk).splice(0, ak.length, ...Ek), wk = Ok, Zk = new DataView(Tk.buffer, Tk.byteOffset, Tk.byteLength), Gk
+    function xT(mm) {
+      cm && cm();
+      let Tm = am,
+        fm = xm,
+        hm = Om,
+        wm = qm,
+        Vm = jm,
+        Im = im,
+        Km = om,
+        Qm = pm,
+        nm = Rm,
+        Jm = new Uint8Array(Am.slice(0, am)),
+        Zm = Dm,
+        km = Dm.slice(0, Dm.length),
+        bm = Ym,
+        Sm = zm,
+        em = mm();
+      return am = Tm, xm = fm, Om = hm, qm = wm, jm = Vm, im = Im, om = Km, pm = Qm, Rm = nm, Am = Jm, zm = Sm, (Dm = Zm).splice(0, Dm.length, ...km), Ym = bm, Em = new DataView(Am.buffer, Am.byteOffset, Am.byteLength), em
     }
 
-    function lF() {
-      Tk = null, tk = null, ak = null
+    function wT() {
+      Am = null, pm = null, Dm = null
     }
-    xk[98] = kk => {
-      let Fk = (kk[0] << 24) + (kk[1] << 16) + (kk[2] << 8) + kk[3],
-        Ik = yk;
-      return yk += Fk - kk.length, Lk = iF, (Lk = [mk(), mk()]).position0 = 0, Lk.position1 = 0, Lk.postBundlePosition = yk, yk = Ik, Gk()
-    }, xk[255] = kk => 4 == kk.length ? new Date(1e3 * (16777216 * kk[0] + (kk[1] << 16) + (kk[2] << 8) + kk[3])) : 8 == kk.length ? new Date(((kk[0] << 22) + (kk[1] << 14) + (kk[2] << 6) + (kk[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & kk[3]) + 16777216 * kk[4] + (kk[5] << 16) + (kk[6] << 8) + kk[7])) : 12 == kk.length ? new Date(((kk[0] << 24) + (kk[1] << 16) + (kk[2] << 8) + kk[3]) / 1e6 + 1e3 * ((128 & kk[4] ? -281474976710656 : 0) + 1099511627776 * kk[6] + 4294967296 * kk[7] + 16777216 * kk[8] + (kk[9] << 16) + (kk[10] << 8) + kk[11])) : new Date("invalid");
-    const aF = new Array(147);
-    for (let iI = 0; iI < 256; iI++) aF[iI] = +("1e" + Math.floor(45.15 - .30103 * iI));
-    const qF = Ek;
-    var LF = new Ek({
+    Vm[98] = mm => {
+      let Tm = (mm[0] << 24) + (mm[1] << 16) + (mm[2] << 8) + mm[3],
+        fm = xm;
+      return xm += Tm - mm.length, Rm = aT, (Rm = [Um(), Um()]).position0 = 0, Rm.position1 = 0, Rm.postBundlePosition = xm, xm = fm, em()
+    }, Vm[255] = mm => 4 == mm.length ? new Date(1e3 * (16777216 * mm[0] + (mm[1] << 16) + (mm[2] << 8) + mm[3])) : 8 == mm.length ? new Date(((mm[0] << 22) + (mm[1] << 14) + (mm[2] << 6) + (mm[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & mm[3]) + 16777216 * mm[4] + (mm[5] << 16) + (mm[6] << 8) + mm[7])) : 12 == mm.length ? new Date(((mm[0] << 24) + (mm[1] << 16) + (mm[2] << 8) + mm[3]) / 1e6 + 1e3 * ((128 & mm[4] ? -281474976710656 : 0) + 1099511627776 * mm[6] + 4294967296 * mm[7] + 16777216 * mm[8] + (mm[9] << 16) + (mm[10] << 8) + mm[11])) : new Date("invalid");
+    const DT = new Array(147);
+    for (let af = 0; af < 256; af++) DT[af] = +("1e" + Math.floor(45.15 - .30103 * af));
+    const iT = km;
+    var RT = new km({
       useRecords: !1
     });
-    const tF = LF.unpack,
-      ZF = LF.unpackMultiple,
-      jF = LF.unpack,
-      eF = {
+    const pT = RT.unpack,
+      ET = RT.unpackMultiple,
+      oT = RT.unpack,
+      OT = {
         NEVER: 0,
         ALWAYS: 1,
         DECIMAL_ROUND: 3,
         DECIMAL_FIT: 4
       };
-    let wF, HF, JF, xF = new Float32Array(1),
-      PF = new Uint8Array(xF.buffer, 0, 4);
+    let YT, qT, jT, VT = new Float32Array(1),
+      IT = new Uint8Array(VT.buffer, 0, 4);
 
-    function KF(kk) {
-      xF[0] = kk;
-      let Fk = aF[(127 & PF[3]) << 1 | PF[2] >> 7];
-      return (Fk * kk + (kk > 0 ? .5 : -.5) | 0) / Fk
+    function KT(mm) {
+      VT[0] = mm;
+      let Tm = DT[(127 & IT[3]) << 1 | IT[2] >> 7];
+      return (Tm * mm + (mm > 0 ? .5 : -.5) | 0) / Tm
     }
     try {
-      wF = new TextEncoder
-    } catch (TI) {}
-    const QF = "undefined" !== typeof Buffer,
-      sF = QF ? function(kk) {
-        return Buffer.allocUnsafeSlow(kk)
+      YT = new TextEncoder
+    } catch (Af) {}
+    const QT = "undefined" !== typeof Buffer,
+      nT = QT ? function(mm) {
+        return Buffer.allocUnsafeSlow(mm)
       } : Uint8Array,
-      VF = QF ? Buffer : Uint8Array,
-      zF = QF ? 4294967296 : 2144337920;
-    let SF, oF, vF, EF, OF, nF = 0,
-      GF = null;
-    const pF = /[\u0080-\uFFFF]/,
-      uF = Symbol("record-id");
-    class bF extends Ek {
-      constructor(kk) {
-        let Fk, Ik, Xk, Tk;
-        super(kk), this.offset = 0;
-        let ik = VF.prototype.utf8Write ? function(kk, Fk) {
-            return SF.utf8Write(kk, Fk, SF.byteLength - Fk)
-          } : !(!wF || !wF.encodeInto) && function(kk, Fk) {
-            return wF.encodeInto(kk, SF.subarray(Fk)).written
+      JT = QT ? Buffer : Uint8Array,
+      cT = QT ? 4294967296 : 2144337920;
+    let zT, ZT, kT, bT, ST, eT = 0,
+      NT = null;
+    const GT = /[\u0080-\uFFFF]/,
+      XT = Symbol("record-id");
+    class PT extends km {
+      constructor(mm) {
+        let Tm, fm, hm, Am;
+        super(mm), this.offset = 0;
+        let am = JT.prototype.utf8Write ? function(mm, Tm) {
+            return zT.utf8Write(mm, Tm, zT.byteLength - Tm)
+          } : !(!YT || !YT.encodeInto) && function(mm, Tm) {
+            return YT.encodeInto(mm, zT.subarray(Tm)).written
           },
-          yk = this;
-        kk || (kk = {});
-        let lk = kk && kk.sequential,
-          ak = kk.structures || kk.saveStructures,
-          qk = kk.maxSharedStructures;
-        if (null == qk && (qk = ak ? 32 : 0), qk > 8160) throw new Error("Maximum maxSharedStructure is 8160");
-        kk.structuredClone && void 0 == kk.moreTypes && (this.moreTypes = !0);
-        let Lk = kk.maxOwnStructures;
-        null == Lk && (Lk = ak ? 32 : 64), this.structures || 0 == kk.useRecords || (this.structures = []);
-        let tk = qk > 32 || Lk + qk > 64,
-          Zk = qk + 64,
-          jk = qk + Lk + 64;
-        if (jk > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
-        let ek = [],
-          wk = 0,
-          Hk = 0;
-        this.pack = this.encode = function(kk, ik) {
-          if (SF || (SF = new sF(8192), vF = SF.dataView || (SF.dataView = new DataView(SF.buffer, 0, 8192)), nF = 0), EF = SF.length - 10, EF - nF < 2048 ? (SF = new sF(SF.length), vF = SF.dataView || (SF.dataView = new DataView(SF.buffer, 0, SF.length)), EF = SF.length - 10, nF = 0) : nF = nF + 7 & 2147483640, Fk = nF, ik & MF && (nF += 255 & ik), Tk = yk.structuredClone ? new Map : null, yk.bundleStrings && "string" !== typeof kk ? (GF = [], GF.size = 1 / 0) : GF = null, Xk = yk.structures, Xk) {
-            Xk.uninitialized && (Xk = yk._mergeStructures(yk.getStructures()));
-            let kk = Xk.sharedLength || 0;
-            if (kk > qk) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + Xk.sharedLength);
-            if (!Xk.transitions) {
-              Xk.transitions = Object.create(null);
-              for (let Fk = 0; Fk < kk; Fk++) {
-                let kk = Xk[Fk];
-                if (!kk) continue;
-                let Ik, Tk = Xk.transitions;
-                for (let Fk = 0, Xk = kk.length; Fk < Xk; Fk++) {
-                  let Xk = kk[Fk];
-                  Ik = Tk[Xk], Ik || (Ik = Tk[Xk] = Object.create(null)), Tk = Ik
+          xm = this;
+        mm || (mm = {});
+        let wm = mm && mm.sequential,
+          Dm = mm.structures || mm.saveStructures,
+          im = mm.maxSharedStructures;
+        if (null == im && (im = Dm ? 32 : 0), im > 8160) throw new Error("Maximum maxSharedStructure is 8160");
+        mm.structuredClone && void 0 == mm.moreTypes && (this.moreTypes = !0);
+        let Rm = mm.maxOwnStructures;
+        null == Rm && (Rm = Dm ? 32 : 64), this.structures || 0 == mm.useRecords || (this.structures = []);
+        let pm = im > 32 || Rm + im > 64,
+          Em = im + 64,
+          om = im + Rm + 64;
+        if (om > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
+        let Om = [],
+          Ym = 0,
+          qm = 0;
+        this.pack = this.encode = function(mm, am) {
+          if (zT || (zT = new nT(8192), kT = zT.dataView || (zT.dataView = new DataView(zT.buffer, 0, 8192)), eT = 0), bT = zT.length - 10, bT - eT < 2048 ? (zT = new nT(zT.length), kT = zT.dataView || (zT.dataView = new DataView(zT.buffer, 0, zT.length)), bT = zT.length - 10, eT = 0) : eT = eT + 7 & 2147483640, Tm = eT, am & FT && (eT += 255 & am), Am = xm.structuredClone ? new Map : null, xm.bundleStrings && "string" !== typeof mm ? (NT = [], NT.size = 1 / 0) : NT = null, hm = xm.structures, hm) {
+            hm.uninitialized && (hm = xm._mergeStructures(xm.getStructures()));
+            let mm = hm.sharedLength || 0;
+            if (mm > im) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + hm.sharedLength);
+            if (!hm.transitions) {
+              hm.transitions = Object.create(null);
+              for (let Tm = 0; Tm < mm; Tm++) {
+                let mm = hm[Tm];
+                if (!mm) continue;
+                let fm, Am = hm.transitions;
+                for (let Tm = 0, hm = mm.length; Tm < hm; Tm++) {
+                  let hm = mm[Tm];
+                  fm = Am[hm], fm || (fm = Am[hm] = Object.create(null)), Am = fm
                 }
-                Tk[uF] = Fk + 64
+                Am[XT] = Tm + 64
               }
-              this.lastNamedStructuresLength = kk
+              this.lastNamedStructuresLength = mm
             }
-            lk || (Xk.nextId = kk + 64)
+            wm || (hm.nextId = mm + 64)
           }
-          let ak;
-          Ik && (Ik = !1);
+          let Dm;
+          fm && (fm = !1);
           try {
-            yk.randomAccessStructure && kk && kk.constructor && kk.constructor === Object ? Ek(kk) : Pk(kk);
-            let Ik = GF;
-            if (GF && NF(Fk, Pk, 0), Tk && Tk.idsToInsert) {
-              let kk = Tk.idsToInsert.sort(((kk, Fk) => kk.offset > Fk.offset ? 1 : -1)),
-                Xk = kk.length,
-                ik = -1;
-              for (; Ik && Xk > 0;) {
-                let Tk = kk[--Xk].offset + Fk;
-                Tk < Ik.stringsPosition + Fk && -1 === ik && (ik = 0), Tk > Ik.position + Fk ? ik >= 0 && (ik += 6) : (ik >= 0 && (vF.setUint32(Ik.position + Fk, vF.getUint32(Ik.position + Fk) + ik), ik = -1), Ik = Ik.previous, Xk++)
+            xm.randomAccessStructure && mm && mm.constructor && mm.constructor === Object ? km(mm) : Im(mm);
+            let fm = NT;
+            if (NT && rT(Tm, Im, 0), Am && Am.idsToInsert) {
+              let mm = Am.idsToInsert.sort(((mm, Tm) => mm.offset > Tm.offset ? 1 : -1)),
+                hm = mm.length,
+                am = -1;
+              for (; fm && hm > 0;) {
+                let Am = mm[--hm].offset + Tm;
+                Am < fm.stringsPosition + Tm && -1 === am && (am = 0), Am > fm.position + Tm ? am >= 0 && (am += 6) : (am >= 0 && (kT.setUint32(fm.position + Tm, kT.getUint32(fm.position + Tm) + am), am = -1), fm = fm.previous, hm++)
               }
-              ik >= 0 && Ik && vF.setUint32(Ik.position + Fk, vF.getUint32(Ik.position + Fk) + ik), nF += 6 * kk.length, nF > EF && zk(nF), yk.offset = nF;
-              let lk = function(kk, Fk) {
-                let Ik, Xk = 6 * Fk.length,
-                  Tk = kk.length - Xk;
-                for (; Ik = Fk.pop();) {
-                  let Fk = Ik.offset,
-                    ik = Ik.id;
-                  kk.copyWithin(Fk + Xk, Fk, Tk), Xk -= 6;
-                  let yk = Fk + Xk;
-                  kk[yk++] = 214, kk[yk++] = 105, kk[yk++] = ik >> 24, kk[yk++] = ik >> 16 & 255, kk[yk++] = ik >> 8 & 255, kk[yk++] = 255 & ik, Tk = Fk
+              am >= 0 && fm && kT.setUint32(fm.position + Tm, kT.getUint32(fm.position + Tm) + am), eT += 6 * mm.length, eT > bT && cm(eT), xm.offset = eT;
+              let wm = function(mm, Tm) {
+                let fm, hm = 6 * Tm.length,
+                  Am = mm.length - hm;
+                for (; fm = Tm.pop();) {
+                  let Tm = fm.offset,
+                    am = fm.id;
+                  mm.copyWithin(Tm + hm, Tm, Am), hm -= 6;
+                  let xm = Tm + hm;
+                  mm[xm++] = 214, mm[xm++] = 105, mm[xm++] = am >> 24, mm[xm++] = am >> 16 & 255, mm[xm++] = am >> 8 & 255, mm[xm++] = 255 & am, Am = Tm
                 }
-                return kk
-              }(SF.subarray(Fk, nF), kk);
-              return Tk = null, lk
+                return mm
+              }(zT.subarray(Tm, eT), mm);
+              return Am = null, wm
             }
-            return yk.offset = nF, ik & rF ? (SF.start = Fk, SF.end = nF, SF) : SF.subarray(Fk, nF)
-          } catch (TI) {
-            throw ak = TI, TI
+            return xm.offset = eT, am & gT ? (zT.start = Tm, zT.end = eT, zT) : zT.subarray(Tm, eT)
+          } catch (Af) {
+            throw Dm = Af, Af
           } finally {
-            if (Xk && (Jk(), Ik && yk.saveStructures)) {
-              let Ik = Xk.sharedLength || 0,
-                Tk = SF.subarray(Fk, nF),
-                lk = WF(Xk, yk);
-              if (!ak) return !1 === yk.saveStructures(lk, lk.isCompatible) ? yk.pack(kk, ik) : (yk.lastNamedStructuresLength = Ik, SF.length > 1073741824 && (SF = null), Tk)
+            if (hm && (jm(), fm && xm.saveStructures)) {
+              let fm = hm.sharedLength || 0,
+                Am = zT.subarray(Tm, eT),
+                wm = lT(hm, xm);
+              if (!Dm) return !1 === xm.saveStructures(wm, wm.isCompatible) ? xm.pack(mm, am) : (xm.lastNamedStructuresLength = fm, zT.length > 1073741824 && (zT = null), Am)
             }
-            SF.length > 1073741824 && (SF = null), ik & DF && (nF = Fk)
+            zT.length > 1073741824 && (zT = null), am & WT && (eT = Tm)
           }
         };
-        const Jk = () => {
-            Hk < 10 && Hk++;
-            let kk = Xk.sharedLength || 0;
-            if (Xk.length > kk && !lk && (Xk.length = kk), wk > 1e4) Xk.transitions = null, Hk = 0, wk = 0, ek.length > 0 && (ek = []);
-            else if (ek.length > 0 && !lk) {
-              for (let kk = 0, Fk = ek.length; kk < Fk; kk++) ek[kk][uF] = 0;
-              ek = []
+        const jm = () => {
+            qm < 10 && qm++;
+            let mm = hm.sharedLength || 0;
+            if (hm.length > mm && !wm && (hm.length = mm), Ym > 1e4) hm.transitions = null, qm = 0, Ym = 0, Om.length > 0 && (Om = []);
+            else if (Om.length > 0 && !wm) {
+              for (let mm = 0, Tm = Om.length; mm < Tm; mm++) Om[mm][XT] = 0;
+              Om = []
             }
           },
-          xk = kk => {
-            var Fk = kk.length;
-            Fk < 16 ? SF[nF++] = 144 | Fk : Fk < 65536 ? (SF[nF++] = 220, SF[nF++] = Fk >> 8, SF[nF++] = 255 & Fk) : (SF[nF++] = 221, vF.setUint32(nF, Fk), nF += 4);
-            for (let Ik = 0; Ik < Fk; Ik++) Pk(kk[Ik])
+          Vm = mm => {
+            var Tm = mm.length;
+            Tm < 16 ? zT[eT++] = 144 | Tm : Tm < 65536 ? (zT[eT++] = 220, zT[eT++] = Tm >> 8, zT[eT++] = 255 & Tm) : (zT[eT++] = 221, kT.setUint32(eT, Tm), eT += 4);
+            for (let fm = 0; fm < Tm; fm++) Im(mm[fm])
           },
-          Pk = kk => {
-            nF > EF && (SF = zk(nF));
-            var Ik, Xk = typeof kk;
-            if ("string" === Xk) {
-              let Xk, Tk = kk.length;
-              if (GF && Tk >= 4 && Tk < 4096) {
-                if ((GF.size += Tk) > 21760) {
-                  let kk, Ik, Xk = (GF[0] ? 3 * GF[0].length + GF[1].length : 0) + 10;
-                  nF + Xk > EF && (SF = zk(nF + Xk)), GF.position ? (Ik = GF, SF[nF] = 200, nF += 3, SF[nF++] = 98, kk = nF - Fk, nF += 4, NF(Fk, Pk, 0), vF.setUint16(kk + Fk - 3, nF - Fk - kk)) : (SF[nF++] = 214, SF[nF++] = 98, kk = nF - Fk, nF += 4), GF = ["", ""], GF.previous = Ik, GF.size = 0, GF.position = kk
+          Im = mm => {
+            eT > bT && (zT = cm(eT));
+            var fm, hm = typeof mm;
+            if ("string" === hm) {
+              let hm, Am = mm.length;
+              if (NT && Am >= 4 && Am < 4096) {
+                if ((NT.size += Am) > 21760) {
+                  let mm, fm, hm = (NT[0] ? 3 * NT[0].length + NT[1].length : 0) + 10;
+                  eT + hm > bT && (zT = cm(eT + hm)), NT.position ? (fm = NT, zT[eT] = 200, eT += 3, zT[eT++] = 98, mm = eT - Tm, eT += 4, rT(Tm, Im, 0), kT.setUint16(mm + Tm - 3, eT - Tm - mm)) : (zT[eT++] = 214, zT[eT++] = 98, mm = eT - Tm, eT += 4), NT = ["", ""], NT.previous = fm, NT.size = 0, NT.position = mm
                 }
-                let Ik = pF.test(kk);
-                return GF[Ik ? 0 : 1] += kk, SF[nF++] = 193, void Pk(Ik ? -Tk : Tk)
+                let fm = GT.test(mm);
+                return NT[fm ? 0 : 1] += mm, zT[eT++] = 193, void Im(fm ? -Am : Am)
               }
-              Xk = Tk < 32 ? 1 : Tk < 256 ? 2 : Tk < 65536 ? 3 : 5;
-              let yk = 3 * Tk;
-              if (nF + yk > EF && (SF = zk(nF + yk)), Tk < 64 || !ik) {
-                let Fk, ik, yk, lk = nF + Xk;
-                for (Fk = 0; Fk < Tk; Fk++) ik = kk.charCodeAt(Fk), ik < 128 ? SF[lk++] = ik : ik < 2048 ? (SF[lk++] = ik >> 6 | 192, SF[lk++] = 63 & ik | 128) : 55296 === (64512 & ik) && 56320 === (64512 & (yk = kk.charCodeAt(Fk + 1))) ? (ik = 65536 + ((1023 & ik) << 10) + (1023 & yk), Fk++, SF[lk++] = ik >> 18 | 240, SF[lk++] = ik >> 12 & 63 | 128, SF[lk++] = ik >> 6 & 63 | 128, SF[lk++] = 63 & ik | 128) : (SF[lk++] = ik >> 12 | 224, SF[lk++] = ik >> 6 & 63 | 128, SF[lk++] = 63 & ik | 128);
-                Ik = lk - nF - Xk
-              } else Ik = ik(kk, nF + Xk);
-              Ik < 32 ? SF[nF++] = 160 | Ik : Ik < 256 ? (Xk < 2 && SF.copyWithin(nF + 2, nF + 1, nF + 1 + Ik), SF[nF++] = 217, SF[nF++] = Ik) : Ik < 65536 ? (Xk < 3 && SF.copyWithin(nF + 3, nF + 2, nF + 2 + Ik), SF[nF++] = 218, SF[nF++] = Ik >> 8, SF[nF++] = 255 & Ik) : (Xk < 5 && SF.copyWithin(nF + 5, nF + 3, nF + 3 + Ik), SF[nF++] = 219, vF.setUint32(nF, Ik), nF += 4), nF += Ik
-            } else if ("number" === Xk)
-              if (kk >>> 0 === kk) kk < 32 || kk < 128 && !1 === this.useRecords || kk < 64 && !this.randomAccessStructure ? SF[nF++] = kk : kk < 256 ? (SF[nF++] = 204, SF[nF++] = kk) : kk < 65536 ? (SF[nF++] = 205, SF[nF++] = kk >> 8, SF[nF++] = 255 & kk) : (SF[nF++] = 206, vF.setUint32(nF, kk), nF += 4);
-              else if ((kk | 0) === kk) kk >= -32 ? SF[nF++] = 256 + kk : kk >= -128 ? (SF[nF++] = 208, SF[nF++] = kk + 256) : kk >= -32768 ? (SF[nF++] = 209, vF.setInt16(nF, kk), nF += 2) : (SF[nF++] = 210, vF.setInt32(nF, kk), nF += 4);
+              hm = Am < 32 ? 1 : Am < 256 ? 2 : Am < 65536 ? 3 : 5;
+              let xm = 3 * Am;
+              if (eT + xm > bT && (zT = cm(eT + xm)), Am < 64 || !am) {
+                let Tm, am, xm, wm = eT + hm;
+                for (Tm = 0; Tm < Am; Tm++) am = mm.charCodeAt(Tm), am < 128 ? zT[wm++] = am : am < 2048 ? (zT[wm++] = am >> 6 | 192, zT[wm++] = 63 & am | 128) : 55296 === (64512 & am) && 56320 === (64512 & (xm = mm.charCodeAt(Tm + 1))) ? (am = 65536 + ((1023 & am) << 10) + (1023 & xm), Tm++, zT[wm++] = am >> 18 | 240, zT[wm++] = am >> 12 & 63 | 128, zT[wm++] = am >> 6 & 63 | 128, zT[wm++] = 63 & am | 128) : (zT[wm++] = am >> 12 | 224, zT[wm++] = am >> 6 & 63 | 128, zT[wm++] = 63 & am | 128);
+                fm = wm - eT - hm
+              } else fm = am(mm, eT + hm);
+              fm < 32 ? zT[eT++] = 160 | fm : fm < 256 ? (hm < 2 && zT.copyWithin(eT + 2, eT + 1, eT + 1 + fm), zT[eT++] = 217, zT[eT++] = fm) : fm < 65536 ? (hm < 3 && zT.copyWithin(eT + 3, eT + 2, eT + 2 + fm), zT[eT++] = 218, zT[eT++] = fm >> 8, zT[eT++] = 255 & fm) : (hm < 5 && zT.copyWithin(eT + 5, eT + 3, eT + 3 + fm), zT[eT++] = 219, kT.setUint32(eT, fm), eT += 4), eT += fm
+            } else if ("number" === hm)
+              if (mm >>> 0 === mm) mm < 32 || mm < 128 && !1 === this.useRecords || mm < 64 && !this.randomAccessStructure ? zT[eT++] = mm : mm < 256 ? (zT[eT++] = 204, zT[eT++] = mm) : mm < 65536 ? (zT[eT++] = 205, zT[eT++] = mm >> 8, zT[eT++] = 255 & mm) : (zT[eT++] = 206, kT.setUint32(eT, mm), eT += 4);
+              else if ((mm | 0) === mm) mm >= -32 ? zT[eT++] = 256 + mm : mm >= -128 ? (zT[eT++] = 208, zT[eT++] = mm + 256) : mm >= -32768 ? (zT[eT++] = 209, kT.setInt16(eT, mm), eT += 2) : (zT[eT++] = 210, kT.setInt32(eT, mm), eT += 4);
             else {
-              let Fk;
-              if ((Fk = this.useFloat32) > 0 && kk < 4294967296 && kk >= -2147483648) {
-                let Ik;
-                if (SF[nF++] = 202, vF.setFloat32(nF, kk), Fk < 4 || ((Ik = kk * aF[(127 & SF[nF]) << 1 | SF[nF + 1] >> 7]) | 0) === Ik) return void(nF += 4);
-                nF--
+              let Tm;
+              if ((Tm = this.useFloat32) > 0 && mm < 4294967296 && mm >= -2147483648) {
+                let fm;
+                if (zT[eT++] = 202, kT.setFloat32(eT, mm), Tm < 4 || ((fm = mm * DT[(127 & zT[eT]) << 1 | zT[eT + 1] >> 7]) | 0) === fm) return void(eT += 4);
+                eT--
               }
-              SF[nF++] = 203, vF.setFloat64(nF, kk), nF += 8
-            } else if ("object" === Xk || "function" === Xk)
-              if (kk) {
-                if (Tk) {
-                  let Ik = Tk.get(kk);
-                  if (Ik) {
-                    if (!Ik.id) {
-                      let kk = Tk.idsToInsert || (Tk.idsToInsert = []);
-                      Ik.id = kk.push(Ik)
+              zT[eT++] = 203, kT.setFloat64(eT, mm), eT += 8
+            } else if ("object" === hm || "function" === hm)
+              if (mm) {
+                if (Am) {
+                  let fm = Am.get(mm);
+                  if (fm) {
+                    if (!fm.id) {
+                      let mm = Am.idsToInsert || (Am.idsToInsert = []);
+                      fm.id = mm.push(fm)
                     }
-                    return SF[nF++] = 214, SF[nF++] = 112, vF.setUint32(nF, Ik.id), void(nF += 4)
+                    return zT[eT++] = 214, zT[eT++] = 112, kT.setUint32(eT, fm.id), void(eT += 4)
                   }
-                  Tk.set(kk, {
-                    offset: nF - Fk
+                  Am.set(mm, {
+                    offset: eT - Tm
                   })
                 }
-                let ik = kk.constructor;
-                if (ik === Object) Vk(kk);
-                else if (ik === Array) xk(kk);
-                else if (ik === Map)
-                  if (this.mapAsEmptyObject) SF[nF++] = 128;
+                let am = mm.constructor;
+                if (am === Object) Jm(mm);
+                else if (am === Array) Vm(mm);
+                else if (am === Map)
+                  if (this.mapAsEmptyObject) zT[eT++] = 128;
                   else {
-                    (Ik = kk.size) < 16 ? SF[nF++] = 128 | Ik : Ik < 65536 ? (SF[nF++] = 222, SF[nF++] = Ik >> 8, SF[nF++] = 255 & Ik) : (SF[nF++] = 223, vF.setUint32(nF, Ik), nF += 4);
-                    for (let [Fk, Ik] of kk) Pk(Fk), Pk(Ik)
+                    (fm = mm.size) < 16 ? zT[eT++] = 128 | fm : fm < 65536 ? (zT[eT++] = 222, zT[eT++] = fm >> 8, zT[eT++] = 255 & fm) : (zT[eT++] = 223, kT.setUint32(eT, fm), eT += 4);
+                    for (let [Tm, fm] of mm) Im(Tm), Im(fm)
                   }
                 else {
-                  for (let Fk = 0, Ik = HF.length; Fk < Ik; Fk++) {
-                    if (kk instanceof JF[Fk]) {
-                      let Ik = HF[Fk];
-                      if (Ik.write) {
-                        Ik.type && (SF[nF++] = 212, SF[nF++] = Ik.type, SF[nF++] = 0);
-                        let Fk = Ik.write.call(this, kk);
-                        return void(Fk === kk ? Array.isArray(kk) ? xk(kk) : Vk(kk) : Pk(Fk))
+                  for (let Tm = 0, fm = qT.length; Tm < fm; Tm++) {
+                    if (mm instanceof jT[Tm]) {
+                      let fm = qT[Tm];
+                      if (fm.write) {
+                        fm.type && (zT[eT++] = 212, zT[eT++] = fm.type, zT[eT++] = 0);
+                        let Tm = fm.write.call(this, mm);
+                        return void(Tm === mm ? Array.isArray(mm) ? Vm(mm) : Jm(mm) : Im(Tm))
                       }
-                      let Xk, Tk = SF,
-                        ik = vF,
-                        yk = nF;
-                      SF = null;
+                      let hm, Am = zT,
+                        am = kT,
+                        xm = eT;
+                      zT = null;
                       try {
-                        Xk = Ik.pack.call(this, kk, (kk => (SF = Tk, Tk = null, nF += kk, nF > EF && zk(nF), {
-                          target: SF,
-                          targetView: vF,
-                          position: nF - kk
-                        })), Pk)
+                        hm = fm.pack.call(this, mm, (mm => (zT = Am, Am = null, eT += mm, eT > bT && cm(eT), {
+                          target: zT,
+                          targetView: kT,
+                          position: eT - mm
+                        })), Im)
                       } finally {
-                        Tk && (SF = Tk, vF = ik, nF = yk, EF = SF.length - 10)
+                        Am && (zT = Am, kT = am, eT = xm, bT = zT.length - 10)
                       }
-                      return void(Xk && (Xk.length + nF > EF && zk(Xk.length + nF), nF = CF(Xk, SF, nF, Ik.type)))
+                      return void(hm && (hm.length + eT > bT && cm(hm.length + eT), eT = CT(hm, zT, eT, fm.type)))
                     }
                   }
-                  if (Array.isArray(kk)) xk(kk);
+                  if (Array.isArray(mm)) Vm(mm);
                   else {
-                    if (kk.toJSON) {
-                      const Fk = kk.toJSON();
-                      if (Fk !== kk) return Pk(Fk)
+                    if (mm.toJSON) {
+                      const Tm = mm.toJSON();
+                      if (Tm !== mm) return Im(Tm)
                     }
-                    if ("function" === Xk) return Pk(this.writeFunction && this.writeFunction(kk));
-                    Vk(kk)
+                    if ("function" === hm) return Im(this.writeFunction && this.writeFunction(mm));
+                    Jm(mm)
                   }
                 }
-              } else SF[nF++] = 192;
-            else if ("boolean" === Xk) SF[nF++] = kk ? 195 : 194;
-            else if ("bigint" === Xk) {
-              if (kk < BigInt(1) << BigInt(63) && kk >= -(BigInt(1) << BigInt(63))) SF[nF++] = 211, vF.setBigInt64(nF, kk);
-              else if (kk < BigInt(1) << BigInt(64) && kk > 0) SF[nF++] = 207, vF.setBigUint64(nF, kk);
+              } else zT[eT++] = 192;
+            else if ("boolean" === hm) zT[eT++] = mm ? 195 : 194;
+            else if ("bigint" === hm) {
+              if (mm < BigInt(1) << BigInt(63) && mm >= -(BigInt(1) << BigInt(63))) zT[eT++] = 211, kT.setBigInt64(eT, mm);
+              else if (mm < BigInt(1) << BigInt(64) && mm > 0) zT[eT++] = 207, kT.setBigUint64(eT, mm);
               else {
                 if (!this.largeBigIntToFloat) {
-                  if (this.largeBigIntToString) return Pk(kk.toString());
-                  if (this.useBigIntExtension && kk < BigInt(2) ** BigInt(1023) && kk > -(BigInt(2) ** BigInt(1023))) {
-                    SF[nF++] = 199, nF++, SF[nF++] = 66;
-                    let Fk, Ik = [];
+                  if (this.largeBigIntToString) return Im(mm.toString());
+                  if (this.useBigIntExtension && mm < BigInt(2) ** BigInt(1023) && mm > -(BigInt(2) ** BigInt(1023))) {
+                    zT[eT++] = 199, eT++, zT[eT++] = 66;
+                    let Tm, fm = [];
                     do {
-                      let Xk = kk & BigInt(255);
-                      Fk = (Xk & BigInt(128)) === (kk < BigInt(0) ? BigInt(128) : BigInt(0)), Ik.push(Xk), kk >>= BigInt(8)
-                    } while (kk !== BigInt(0) && kk !== BigInt(-1) || !Fk);
-                    SF[nF - 2] = Ik.length;
-                    for (let kk = Ik.length; kk > 0;) SF[nF++] = Number(Ik[--kk]);
+                      let hm = mm & BigInt(255);
+                      Tm = (hm & BigInt(128)) === (mm < BigInt(0) ? BigInt(128) : BigInt(0)), fm.push(hm), mm >>= BigInt(8)
+                    } while (mm !== BigInt(0) && mm !== BigInt(-1) || !Tm);
+                    zT[eT - 2] = fm.length;
+                    for (let mm = fm.length; mm > 0;) zT[eT++] = Number(fm[--mm]);
                     return
                   }
-                  throw new RangeError(kk + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
+                  throw new RangeError(mm + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
                 }
-                SF[nF++] = 203, vF.setFloat64(nF, Number(kk))
+                zT[eT++] = 203, kT.setFloat64(eT, Number(mm))
               }
-              nF += 8
+              eT += 8
             } else {
-              if ("undefined" !== Xk) throw new Error("Unknown type: " + Xk);
-              this.encodeUndefinedAsNil ? SF[nF++] = 192 : (SF[nF++] = 212, SF[nF++] = 0, SF[nF++] = 0)
+              if ("undefined" !== hm) throw new Error("Unknown type: " + hm);
+              this.encodeUndefinedAsNil ? zT[eT++] = 192 : (zT[eT++] = 212, zT[eT++] = 0, zT[eT++] = 0)
             }
           },
-          Kk = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? kk => {
-            let Fk;
+          Km = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? mm => {
+            let Tm;
             if (this.skipValues) {
-              Fk = [];
-              for (let Ik in kk) "function" === typeof kk.hasOwnProperty && !kk.hasOwnProperty(Ik) || this.skipValues.includes(kk[Ik]) || Fk.push(Ik)
-            } else Fk = Object.keys(kk);
-            let Ik, Xk = Fk.length;
-            if (Xk < 16 ? SF[nF++] = 128 | Xk : Xk < 65536 ? (SF[nF++] = 222, SF[nF++] = Xk >> 8, SF[nF++] = 255 & Xk) : (SF[nF++] = 223, vF.setUint32(nF, Xk), nF += 4), this.coercibleKeyAsNumber)
-              for (let Tk = 0; Tk < Xk; Tk++) {
-                Ik = Fk[Tk];
-                let Xk = Number(Ik);
-                Pk(isNaN(Xk) ? Ik : Xk), Pk(kk[Ik])
+              Tm = [];
+              for (let fm in mm) "function" === typeof mm.hasOwnProperty && !mm.hasOwnProperty(fm) || this.skipValues.includes(mm[fm]) || Tm.push(fm)
+            } else Tm = Object.keys(mm);
+            let fm, hm = Tm.length;
+            if (hm < 16 ? zT[eT++] = 128 | hm : hm < 65536 ? (zT[eT++] = 222, zT[eT++] = hm >> 8, zT[eT++] = 255 & hm) : (zT[eT++] = 223, kT.setUint32(eT, hm), eT += 4), this.coercibleKeyAsNumber)
+              for (let Am = 0; Am < hm; Am++) {
+                fm = Tm[Am];
+                let hm = Number(fm);
+                Im(isNaN(hm) ? fm : hm), Im(mm[fm])
               } else
-                for (let Tk = 0; Tk < Xk; Tk++) Pk(Ik = Fk[Tk]), Pk(kk[Ik])
-          } : kk => {
-            SF[nF++] = 222;
-            let Ik = nF - Fk;
-            nF += 2;
-            let Xk = 0;
-            for (let Fk in kk)("function" !== typeof kk.hasOwnProperty || kk.hasOwnProperty(Fk)) && (Pk(Fk), Pk(kk[Fk]), Xk++);
-            if (Xk > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
-            SF[Ik++ + Fk] = Xk >> 8, SF[Ik + Fk] = 255 & Xk
+                for (let Am = 0; Am < hm; Am++) Im(fm = Tm[Am]), Im(mm[fm])
+          } : mm => {
+            zT[eT++] = 222;
+            let fm = eT - Tm;
+            eT += 2;
+            let hm = 0;
+            for (let Tm in mm)("function" !== typeof mm.hasOwnProperty || mm.hasOwnProperty(Tm)) && (Im(Tm), Im(mm[Tm]), hm++);
+            if (hm > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
+            zT[fm++ + Tm] = hm >> 8, zT[fm + Tm] = 255 & hm
           },
-          Qk = !1 === this.useRecords ? Kk : kk.progressiveRecords && !tk ? kk => {
-            let Ik, Tk, ik = Xk.transitions || (Xk.transitions = Object.create(null)),
-              yk = nF++ - Fk;
-            for (let lk in kk)
-              if ("function" !== typeof kk.hasOwnProperty || kk.hasOwnProperty(lk)) {
-                if (Ik = ik[lk], Ik) ik = Ik;
+          Qm = !1 === this.useRecords ? Km : mm.progressiveRecords && !pm ? mm => {
+            let fm, Am, am = hm.transitions || (hm.transitions = Object.create(null)),
+              xm = eT++ - Tm;
+            for (let wm in mm)
+              if ("function" !== typeof mm.hasOwnProperty || mm.hasOwnProperty(wm)) {
+                if (fm = am[wm], fm) am = fm;
                 else {
-                  let ak = Object.keys(kk),
-                    qk = ik;
-                  ik = Xk.transitions;
-                  let Lk = 0;
-                  for (let kk = 0, Fk = ak.length; kk < Fk; kk++) {
-                    let Fk = ak[kk];
-                    Ik = ik[Fk], Ik || (Ik = ik[Fk] = Object.create(null), Lk++), ik = Ik
+                  let Dm = Object.keys(mm),
+                    im = am;
+                  am = hm.transitions;
+                  let Rm = 0;
+                  for (let mm = 0, Tm = Dm.length; mm < Tm; mm++) {
+                    let Tm = Dm[mm];
+                    fm = am[Tm], fm || (fm = am[Tm] = Object.create(null), Rm++), am = fm
                   }
-                  yk + Fk + 1 == nF ? (nF--, Sk(ik, ak, Lk)) : vk(ik, ak, yk, Lk), Tk = !0, ik = qk[lk]
+                  xm + Tm + 1 == eT ? (eT--, zm(am, Dm, Rm)) : Zm(am, Dm, xm, Rm), Am = !0, am = im[wm]
                 }
-                Pk(kk[lk])
-              } if (!Tk) {
-              let Ik = ik[uF];
-              Ik ? SF[yk + Fk] = Ik : vk(ik, Object.keys(kk), yk, 0)
+                Im(mm[wm])
+              } if (!Am) {
+              let fm = am[XT];
+              fm ? zT[xm + Tm] = fm : Zm(am, Object.keys(mm), xm, 0)
             }
-          } : kk => {
-            let Fk, Ik = Xk.transitions || (Xk.transitions = Object.create(null)),
-              Tk = 0;
-            for (let Xk in kk)("function" !== typeof kk.hasOwnProperty || kk.hasOwnProperty(Xk)) && (Fk = Ik[Xk], Fk || (Fk = Ik[Xk] = Object.create(null), Tk++), Ik = Fk);
-            let ik = Ik[uF];
-            ik ? ik >= 96 && tk ? (SF[nF++] = 96 + (31 & (ik -= 96)), SF[nF++] = ik >> 5) : SF[nF++] = ik : Sk(Ik, Ik.__keys__ || Object.keys(kk), Tk);
-            for (let Xk in kk)("function" !== typeof kk.hasOwnProperty || kk.hasOwnProperty(Xk)) && Pk(kk[Xk])
+          } : mm => {
+            let Tm, fm = hm.transitions || (hm.transitions = Object.create(null)),
+              Am = 0;
+            for (let hm in mm)("function" !== typeof mm.hasOwnProperty || mm.hasOwnProperty(hm)) && (Tm = fm[hm], Tm || (Tm = fm[hm] = Object.create(null), Am++), fm = Tm);
+            let am = fm[XT];
+            am ? am >= 96 && pm ? (zT[eT++] = 96 + (31 & (am -= 96)), zT[eT++] = am >> 5) : zT[eT++] = am : zm(fm, fm.__keys__ || Object.keys(mm), Am);
+            for (let hm in mm)("function" !== typeof mm.hasOwnProperty || mm.hasOwnProperty(hm)) && Im(mm[hm])
           },
-          sk = "function" == typeof this.useRecords && this.useRecords,
-          Vk = sk ? kk => {
-            sk(kk) ? Qk(kk) : Kk(kk)
-          } : Qk,
-          zk = kk => {
-            let Ik;
-            if (kk > 16777216) {
-              if (kk - Fk > zF) throw new Error("Packed buffer would be larger than maximum buffer size");
-              Ik = Math.min(zF, 4096 * Math.round(Math.max((kk - Fk) * (kk > 67108864 ? 1.25 : 2), 4194304) / 4096))
-            } else Ik = 1 + (Math.max(kk - Fk << 2, SF.length - 1) >> 12) << 12;
-            let Xk = new sF(Ik);
-            return vF = Xk.dataView || (Xk.dataView = new DataView(Xk.buffer, 0, Ik)), kk = Math.min(kk, SF.length), SF.copy ? SF.copy(Xk, 0, Fk, kk) : Xk.set(SF.slice(Fk, kk)), nF -= Fk, Fk = 0, EF = Xk.length - 10, SF = Xk
+          nm = "function" == typeof this.useRecords && this.useRecords,
+          Jm = nm ? mm => {
+            nm(mm) ? Qm(mm) : Km(mm)
+          } : Qm,
+          cm = mm => {
+            let fm;
+            if (mm > 16777216) {
+              if (mm - Tm > cT) throw new Error("Packed buffer would be larger than maximum buffer size");
+              fm = Math.min(cT, 4096 * Math.round(Math.max((mm - Tm) * (mm > 67108864 ? 1.25 : 2), 4194304) / 4096))
+            } else fm = 1 + (Math.max(mm - Tm << 2, zT.length - 1) >> 12) << 12;
+            let hm = new nT(fm);
+            return kT = hm.dataView || (hm.dataView = new DataView(hm.buffer, 0, fm)), mm = Math.min(mm, zT.length), zT.copy ? zT.copy(hm, 0, Tm, mm) : hm.set(zT.slice(Tm, mm)), eT -= Tm, Tm = 0, bT = hm.length - 10, zT = hm
           },
-          Sk = (kk, Fk, Tk) => {
-            let ik = Xk.nextId;
-            ik || (ik = 64), ik < Zk && this.shouldShareStructure && !this.shouldShareStructure(Fk) ? (ik = Xk.nextOwnId, ik < jk || (ik = Zk), Xk.nextOwnId = ik + 1) : (ik >= jk && (ik = Zk), Xk.nextId = ik + 1);
-            let yk = Fk.highByte = ik >= 96 && tk ? ik - 96 >> 5 : -1;
-            kk[uF] = ik, kk.__keys__ = Fk, Xk[ik - 64] = Fk, ik < Zk ? (Fk.isShared = !0, Xk.sharedLength = ik - 63, Ik = !0, yk >= 0 ? (SF[nF++] = 96 + (31 & ik), SF[nF++] = yk) : SF[nF++] = ik) : (yk >= 0 ? (SF[nF++] = 213, SF[nF++] = 114, SF[nF++] = 96 + (31 & ik), SF[nF++] = yk) : (SF[nF++] = 212, SF[nF++] = 114, SF[nF++] = ik), Tk && (wk += Hk * Tk), ek.length >= Lk && (ek.shift()[uF] = 0), ek.push(kk), Pk(Fk))
+          zm = (mm, Tm, Am) => {
+            let am = hm.nextId;
+            am || (am = 64), am < Em && this.shouldShareStructure && !this.shouldShareStructure(Tm) ? (am = hm.nextOwnId, am < om || (am = Em), hm.nextOwnId = am + 1) : (am >= om && (am = Em), hm.nextId = am + 1);
+            let xm = Tm.highByte = am >= 96 && pm ? am - 96 >> 5 : -1;
+            mm[XT] = am, mm.__keys__ = Tm, hm[am - 64] = Tm, am < Em ? (Tm.isShared = !0, hm.sharedLength = am - 63, fm = !0, xm >= 0 ? (zT[eT++] = 96 + (31 & am), zT[eT++] = xm) : zT[eT++] = am) : (xm >= 0 ? (zT[eT++] = 213, zT[eT++] = 114, zT[eT++] = 96 + (31 & am), zT[eT++] = xm) : (zT[eT++] = 212, zT[eT++] = 114, zT[eT++] = am), Am && (Ym += qm * Am), Om.length >= Rm && (Om.shift()[XT] = 0), Om.push(mm), Im(Tm))
           },
-          vk = (kk, Ik, Xk, Tk) => {
-            let ik = SF,
-              yk = nF,
-              lk = EF,
-              ak = Fk;
-            SF = oF, nF = 0, Fk = 0, SF || (oF = SF = new sF(8192)), EF = SF.length - 10, Sk(kk, Ik, Tk), oF = SF;
-            let qk = nF;
-            if (SF = ik, nF = yk, EF = lk, Fk = ak, qk > 1) {
-              let kk = nF + qk - 1;
-              kk > EF && zk(kk);
-              let Ik = Xk + Fk;
-              SF.copyWithin(Ik + qk, Ik + 1, nF), SF.set(oF.slice(0, qk), Ik), nF = kk
-            } else SF[Xk + Fk] = oF[0]
+          Zm = (mm, fm, hm, Am) => {
+            let am = zT,
+              xm = eT,
+              wm = bT,
+              Dm = Tm;
+            zT = ZT, eT = 0, Tm = 0, zT || (ZT = zT = new nT(8192)), bT = zT.length - 10, zm(mm, fm, Am), ZT = zT;
+            let im = eT;
+            if (zT = am, eT = xm, bT = wm, Tm = Dm, im > 1) {
+              let mm = eT + im - 1;
+              mm > bT && cm(mm);
+              let fm = hm + Tm;
+              zT.copyWithin(fm + im, fm + 1, eT), zT.set(ZT.slice(0, im), fm), eT = mm
+            } else zT[hm + Tm] = ZT[0]
           },
-          Ek = kk => {
-            let Tk = OF(kk, SF, Fk, nF, Xk, zk, ((kk, Fk, Xk) => {
-              if (Xk) return Ik = !0;
-              nF = Fk;
-              let Tk = SF;
-              return Pk(kk), Jk(), Tk !== SF ? {
-                position: nF,
-                targetView: vF,
-                target: SF
-              } : nF
+          km = mm => {
+            let Am = ST(mm, zT, Tm, eT, hm, cm, ((mm, Tm, hm) => {
+              if (hm) return fm = !0;
+              eT = Tm;
+              let Am = zT;
+              return Im(mm), jm(), Am !== zT ? {
+                position: eT,
+                targetView: kT,
+                target: zT
+              } : eT
             }), this);
-            if (0 === Tk) return Vk(kk);
-            nF = Tk
+            if (0 === Am) return Jm(mm);
+            eT = Am
           }
       }
-      useBuffer(kk) {
-        SF = kk, vF = SF.dataView || (SF.dataView = new DataView(SF.buffer, SF.byteOffset, SF.byteLength)), nF = 0
+      useBuffer(mm) {
+        zT = mm, kT = zT.dataView || (zT.dataView = new DataView(zT.buffer, zT.byteOffset, zT.byteLength)), eT = 0
       }
-      set position(kk) {
-        nF = kk
+      set position(mm) {
+        eT = mm
       }
       get position() {
-        return nF
+        return eT
       }
-      set buffer(kk) {
-        SF = kk
+      set buffer(mm) {
+        zT = mm
       }
       get buffer() {
-        return SF
+        return zT
       }
       clearSharedData() {
         this.structures && (this.structures = []), this.typedStructs && (this.typedStructs = [])
       }
     }
 
-    function RF(kk, Fk, Ik, Xk) {
-      let Tk = kk.byteLength;
-      if (Tk + 1 < 256) {
+    function HT(mm, Tm, fm, hm) {
+      let Am = mm.byteLength;
+      if (Am + 1 < 256) {
         var {
-          target: ik,
-          position: yk
-        } = Ik(4 + Tk);
-        ik[yk++] = 199, ik[yk++] = Tk + 1
-      } else if (Tk + 1 < 65536) {
+          target: am,
+          position: xm
+        } = fm(4 + Am);
+        am[xm++] = 199, am[xm++] = Am + 1
+      } else if (Am + 1 < 65536) {
         var {
-          target: ik,
-          position: yk
-        } = Ik(5 + Tk);
-        ik[yk++] = 200, ik[yk++] = Tk + 1 >> 8, ik[yk++] = Tk + 1 & 255
+          target: am,
+          position: xm
+        } = fm(5 + Am);
+        am[xm++] = 200, am[xm++] = Am + 1 >> 8, am[xm++] = Am + 1 & 255
       } else {
         var {
-          target: ik,
-          position: yk,
-          targetView: lk
-        } = Ik(7 + Tk);
-        ik[yk++] = 201, lk.setUint32(yk, Tk + 1), yk += 4
+          target: am,
+          position: xm,
+          targetView: wm
+        } = fm(7 + Am);
+        am[xm++] = 201, wm.setUint32(xm, Am + 1), xm += 4
       }
-      ik[yk++] = 116, ik[yk++] = Fk, kk.buffer || (kk = new Uint8Array(kk)), ik.set(new Uint8Array(kk.buffer, kk.byteOffset, kk.byteLength), yk)
+      am[xm++] = 116, am[xm++] = Tm, mm.buffer || (mm = new Uint8Array(mm)), am.set(new Uint8Array(mm.buffer, mm.byteOffset, mm.byteLength), xm)
     }
 
-    function UF(kk, Fk) {
-      let Ik = kk.byteLength;
-      var Xk, Tk;
-      if (Ik < 256) {
+    function yT(mm, Tm) {
+      let fm = mm.byteLength;
+      var hm, Am;
+      if (fm < 256) {
         var {
-          target: Xk,
-          position: Tk
-        } = Fk(Ik + 2);
-        Xk[Tk++] = 196, Xk[Tk++] = Ik
-      } else if (Ik < 65536) {
+          target: hm,
+          position: Am
+        } = Tm(fm + 2);
+        hm[Am++] = 196, hm[Am++] = fm
+      } else if (fm < 65536) {
         var {
-          target: Xk,
-          position: Tk
-        } = Fk(Ik + 3);
-        Xk[Tk++] = 197, Xk[Tk++] = Ik >> 8, Xk[Tk++] = 255 & Ik
+          target: hm,
+          position: Am
+        } = Tm(fm + 3);
+        hm[Am++] = 197, hm[Am++] = fm >> 8, hm[Am++] = 255 & fm
       } else {
         var {
-          target: Xk,
-          position: Tk,
-          targetView: ik
-        } = Fk(Ik + 5);
-        Xk[Tk++] = 198, ik.setUint32(Tk, Ik), Tk += 4
+          target: hm,
+          position: Am,
+          targetView: am
+        } = Tm(fm + 5);
+        hm[Am++] = 198, am.setUint32(Am, fm), Am += 4
       }
-      Xk.set(kk, Tk)
+      hm.set(mm, Am)
     }
 
-    function CF(kk, Fk, Ik, Xk) {
-      let Tk = kk.length;
-      switch (Tk) {
+    function CT(mm, Tm, fm, hm) {
+      let Am = mm.length;
+      switch (Am) {
         case 1:
-          Fk[Ik++] = 212;
+          Tm[fm++] = 212;
           break;
         case 2:
-          Fk[Ik++] = 213;
+          Tm[fm++] = 213;
           break;
         case 4:
-          Fk[Ik++] = 214;
+          Tm[fm++] = 214;
           break;
         case 8:
-          Fk[Ik++] = 215;
+          Tm[fm++] = 215;
           break;
         case 16:
-          Fk[Ik++] = 216;
+          Tm[fm++] = 216;
           break;
         default:
-          Tk < 256 ? (Fk[Ik++] = 199, Fk[Ik++] = Tk) : Tk < 65536 ? (Fk[Ik++] = 200, Fk[Ik++] = Tk >> 8, Fk[Ik++] = 255 & Tk) : (Fk[Ik++] = 201, Fk[Ik++] = Tk >> 24, Fk[Ik++] = Tk >> 16 & 255, Fk[Ik++] = Tk >> 8 & 255, Fk[Ik++] = 255 & Tk)
+          Am < 256 ? (Tm[fm++] = 199, Tm[fm++] = Am) : Am < 65536 ? (Tm[fm++] = 200, Tm[fm++] = Am >> 8, Tm[fm++] = 255 & Am) : (Tm[fm++] = 201, Tm[fm++] = Am >> 24, Tm[fm++] = Am >> 16 & 255, Tm[fm++] = Am >> 8 & 255, Tm[fm++] = 255 & Am)
       }
-      return Fk[Ik++] = Xk, Fk.set(kk, Ik), Ik += Tk
+      return Tm[fm++] = hm, Tm.set(mm, fm), fm += Am
     }
 
-    function NF(kk, Fk, Ik) {
-      if (GF.length > 0) {
-        vF.setUint32(GF.position + kk, nF + Ik - GF.position - kk), GF.stringsPosition = nF - kk;
-        let Xk = GF;
-        GF = null, Fk(Xk[0]), Fk(Xk[1])
+    function rT(mm, Tm, fm) {
+      if (NT.length > 0) {
+        kT.setUint32(NT.position + mm, eT + fm - NT.position - mm), NT.stringsPosition = eT - mm;
+        let hm = NT;
+        NT = null, Tm(hm[0]), Tm(hm[1])
       }
     }
 
-    function cF(kk) {
-      if (kk.Class) {
-        if (!kk.pack && !kk.write) throw new Error("Extension has no pack or write function");
-        if (kk.pack && !kk.type) throw new Error("Extension has no type (numeric code to identify the extension)");
-        JF.unshift(kk.Class), HF.unshift(kk)
-      }! function(kk) {
-        kk.unpack ? xk[kk.type] = kk.unpack : xk[kk.type] = kk
-      }(kk)
+    function sT(mm) {
+      if (mm.Class) {
+        if (!mm.pack && !mm.write) throw new Error("Extension has no pack or write function");
+        if (mm.pack && !mm.type) throw new Error("Extension has no type (numeric code to identify the extension)");
+        jT.unshift(mm.Class), qT.unshift(mm)
+      }! function(mm) {
+        mm.unpack ? Vm[mm.type] = mm.unpack : Vm[mm.type] = mm
+      }(mm)
     }
 
-    function WF(kk, Fk) {
-      return kk.isCompatible = kk => {
-        let Ik = !kk || (Fk.lastNamedStructuresLength || 0) === kk.length;
-        return Ik || Fk._mergeStructures(kk), Ik
-      }, kk
+    function lT(mm, Tm) {
+      return mm.isCompatible = mm => {
+        let fm = !mm || (Tm.lastNamedStructuresLength || 0) === mm.length;
+        return fm || Tm._mergeStructures(mm), fm
+      }, mm
     }
-    JF = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, Kk], HF = [{
-      pack(kk, Fk, Ik) {
-        let Xk = kk.getTime() / 1e3;
-        if ((this.useTimestamp32 || 0 === kk.getMilliseconds()) && Xk >= 0 && Xk < 4294967296) {
+    jT = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, Km], qT = [{
+      pack(mm, Tm, fm) {
+        let hm = mm.getTime() / 1e3;
+        if ((this.useTimestamp32 || 0 === mm.getMilliseconds()) && hm >= 0 && hm < 4294967296) {
           let {
-            target: kk,
-            targetView: Ik,
-            position: Tk
-          } = Fk(6);
-          kk[Tk++] = 214, kk[Tk++] = 255, Ik.setUint32(Tk, Xk)
-        } else if (Xk > 0 && Xk < 4294967296) {
+            target: mm,
+            targetView: fm,
+            position: Am
+          } = Tm(6);
+          mm[Am++] = 214, mm[Am++] = 255, fm.setUint32(Am, hm)
+        } else if (hm > 0 && hm < 4294967296) {
           let {
-            target: Ik,
-            targetView: Tk,
-            position: ik
-          } = Fk(10);
-          Ik[ik++] = 215, Ik[ik++] = 255, Tk.setUint32(ik, 4e6 * kk.getMilliseconds() + (Xk / 1e3 / 4294967296 | 0)), Tk.setUint32(ik + 4, Xk)
-        } else if (isNaN(Xk)) {
-          if (this.onInvalidDate) return Fk(0), Ik(this.onInvalidDate());
+            target: fm,
+            targetView: Am,
+            position: am
+          } = Tm(10);
+          fm[am++] = 215, fm[am++] = 255, Am.setUint32(am, 4e6 * mm.getMilliseconds() + (hm / 1e3 / 4294967296 | 0)), Am.setUint32(am + 4, hm)
+        } else if (isNaN(hm)) {
+          if (this.onInvalidDate) return Tm(0), fm(this.onInvalidDate());
           let {
-            target: kk,
-            targetView: Xk,
-            position: Tk
-          } = Fk(3);
-          kk[Tk++] = 212, kk[Tk++] = 255, kk[Tk++] = 255
+            target: mm,
+            targetView: hm,
+            position: Am
+          } = Tm(3);
+          mm[Am++] = 212, mm[Am++] = 255, mm[Am++] = 255
         } else {
           let {
-            target: Ik,
-            targetView: Tk,
-            position: ik
-          } = Fk(15);
-          Ik[ik++] = 199, Ik[ik++] = 12, Ik[ik++] = 255, Tk.setUint32(ik, 1e6 * kk.getMilliseconds()), Tk.setBigInt64(ik + 4, BigInt(Math.floor(Xk)))
+            target: fm,
+            targetView: Am,
+            position: am
+          } = Tm(15);
+          fm[am++] = 199, fm[am++] = 12, fm[am++] = 255, Am.setUint32(am, 1e6 * mm.getMilliseconds()), Am.setBigInt64(am + 4, BigInt(Math.floor(hm)))
         }
       }
     }, {
-      pack(kk, Fk, Ik) {
-        if (this.setAsEmptyObject) return Fk(0), Ik({});
-        let Xk = Array.from(kk),
+      pack(mm, Tm, fm) {
+        if (this.setAsEmptyObject) return Tm(0), fm({});
+        let hm = Array.from(mm),
           {
-            target: Tk,
-            position: ik
-          } = Fk(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Tk[ik++] = 212, Tk[ik++] = 115, Tk[ik++] = 0), Ik(Xk)
+            target: Am,
+            position: am
+          } = Tm(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Am[am++] = 212, Am[am++] = 115, Am[am++] = 0), fm(hm)
       }
     }, {
-      pack(kk, Fk, Ik) {
+      pack(mm, Tm, fm) {
         let {
-          target: Xk,
-          position: Tk
-        } = Fk(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Xk[Tk++] = 212, Xk[Tk++] = 101, Xk[Tk++] = 0), Ik([kk.name, kk.message, kk.cause])
+          target: hm,
+          position: Am
+        } = Tm(this.moreTypes ? 3 : 0);
+        this.moreTypes && (hm[Am++] = 212, hm[Am++] = 101, hm[Am++] = 0), fm([mm.name, mm.message, mm.cause])
       }
     }, {
-      pack(kk, Fk, Ik) {
+      pack(mm, Tm, fm) {
         let {
-          target: Xk,
-          position: Tk
-        } = Fk(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Xk[Tk++] = 212, Xk[Tk++] = 120, Xk[Tk++] = 0), Ik([kk.source, kk.flags])
+          target: hm,
+          position: Am
+        } = Tm(this.moreTypes ? 3 : 0);
+        this.moreTypes && (hm[Am++] = 212, hm[Am++] = 120, hm[Am++] = 0), fm([mm.source, mm.flags])
       }
     }, {
-      pack(kk, Fk) {
-        this.moreTypes ? RF(kk, 16, Fk) : UF(QF ? Buffer.from(kk) : new Uint8Array(kk), Fk)
+      pack(mm, Tm) {
+        this.moreTypes ? HT(mm, 16, Tm) : yT(QT ? Buffer.from(mm) : new Uint8Array(mm), Tm)
       }
     }, {
-      pack(kk, Fk) {
-        let Ik = kk.constructor;
-        Ik !== VF && this.moreTypes ? RF(kk, XF.indexOf(Ik.name), Fk) : UF(kk, Fk)
+      pack(mm, Tm) {
+        let fm = mm.constructor;
+        fm !== JT && this.moreTypes ? HT(mm, hT.indexOf(fm.name), Tm) : yT(mm, Tm)
       }
     }, {
-      pack(kk, Fk) {
+      pack(mm, Tm) {
         let {
-          target: Ik,
-          position: Xk
-        } = Fk(1);
-        Ik[Xk] = 193
+          target: fm,
+          position: hm
+        } = Tm(1);
+        fm[hm] = 193
       }
     }];
-    let fF = new bF({
+    let MT = new PT({
       useRecords: !1
     });
-    const BF = fF.pack,
-      dF = fF.pack,
-      YF = bF,
+    const uT = MT.pack,
+      BT = MT.pack,
+      LT = PT,
       {
-        NEVER: AF,
-        ALWAYS: gF,
-        DECIMAL_ROUND: mF,
-        DECIMAL_FIT: hF
-      } = eF,
-      rF = 512,
-      DF = 1024,
-      MF = 2048;
-    const kI = function(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!kk || "object" !== typeof kk) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
-        const Ik = new Ek(Fk);
-        let Xk;
-        const Tk = kk => {
-          let Fk;
-          Xk && (kk = Buffer.concat([Xk, kk]), Xk = void 0);
+        NEVER: vT,
+        ALWAYS: tT,
+        DECIMAL_ROUND: UT,
+        DECIMAL_FIT: dT
+      } = OT,
+      gT = 512,
+      WT = 1024,
+      FT = 2048;
+    const mf = function(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!mm || "object" !== typeof mm) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
+        const fm = new km(Tm);
+        let hm;
+        const Am = mm => {
+          let Tm;
+          hm && (mm = Buffer.concat([hm, mm]), hm = void 0);
           try {
-            Fk = Ik.unpackMultiple(kk)
-          } catch (Tk) {
-            if (!Tk.incomplete) throw Tk;
-            Xk = kk.slice(Tk.lastPosition), Fk = Tk.values
+            Tm = fm.unpackMultiple(mm)
+          } catch (Am) {
+            if (!Am.incomplete) throw Am;
+            hm = mm.slice(Am.lastPosition), Tm = Am.values
           }
-          return Fk
+          return Tm
         };
-        return "function" === typeof kk[Symbol.iterator] ? function*() {
-          for (const Fk of kk) yield* Tk(Fk)
-        }() : "function" === typeof kk[Symbol.asyncIterator] ? async function*() {
-          for await (const Fk of kk) yield* Tk(Fk)
+        return "function" === typeof mm[Symbol.iterator] ? function*() {
+          for (const Tm of mm) yield* Am(Tm)
+        }() : "function" === typeof mm[Symbol.asyncIterator] ? async function*() {
+          for await (const Tm of mm) yield* Am(Tm)
         }(): void 0
       },
-      FI = function(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (kk && "object" === typeof kk) {
-          if ("function" === typeof kk[Symbol.iterator]) return function*(kk, Fk) {
-            const Ik = new bF(Fk);
-            for (const Xk of kk) yield Ik.pack(Xk)
-          }(kk, Fk);
-          if ("function" === typeof kk.then || "function" === typeof kk[Symbol.asyncIterator]) return async function*(kk, Fk) {
-            const Ik = new bF(Fk);
-            for await (const Xk of kk) yield Ik.pack(Xk)
-          }(kk, Fk);
+      Tf = function(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (mm && "object" === typeof mm) {
+          if ("function" === typeof mm[Symbol.iterator]) return function*(mm, Tm) {
+            const fm = new PT(Tm);
+            for (const hm of mm) yield fm.pack(hm)
+          }(mm, Tm);
+          if ("function" === typeof mm.then || "function" === typeof mm[Symbol.asyncIterator]) return async function*(mm, Tm) {
+            const fm = new PT(Tm);
+            for await (const hm of mm) yield fm.pack(hm)
+          }(mm, Tm);
           throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a Promise")
         }
         throw new Error("first argument must be an Iterable, Async Iterable, or a Promise for an Async Iterable")
       },
-      II = !1,
-      XI = !0
+      ff = !1,
+      hf = !0
   },
-  9098: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      $changes: () => wk,
-      $childType: () => Hk,
-      $decoder: () => Lk,
-      $deleteByIndex: () => jk,
-      $encoder: () => qk,
-      $filter: () => tk,
-      $getByIndex: () => Zk,
-      $numFields: () => vk,
-      $refId: () => lk,
-      $track: () => ak,
-      $values: () => Qk,
-      ArraySchema: () => XX,
-      Callbacks: () => XT,
-      ChangeTree: () => nI,
-      CollectionSchema: () => yX,
-      Decoder: () => mX,
-      Encoder: () => dX,
-      FieldBuilder: () => qX,
-      MapSchema: () => iX,
-      Metadata: () => mF,
-      OPERATION: () => Tk,
-      Reflection: () => MX,
-      ReflectionField: () => rX,
-      ReflectionType: () => DX,
-      Root: () => GX,
-      Schema: () => OX,
-      SetSchema: () => lX,
-      StateCallbackStrategy: () => IT,
-      StateView: () => UX,
-      StreamSchema: () => aX,
-      TypeContext: () => WF,
-      createPool: () => iT,
-      decode: () => KF,
-      decodeKeyValueOperation: () => rI,
-      decodeSchemaOperation: () => hI,
-      defineCustomTypes: () => zF,
-      defineTypes: () => oX,
-      deprecated: () => zX,
-      dumpChanges: () => EX,
-      encode: () => IF,
-      encodeArray: () => NI,
-      encodeIndexedEntry: () => UI,
-      encodeKeyValueOperation: () => CI,
-      encodeMapEntry: () => RI,
-      encodeSchemaOperation: () => bI,
-      le: () => HX,
-      fullStateOnly: () => KX,
-      getDecoderStateCallbacks: () => kT,
-      getEncodeDescriptor: () => FI,
-      getRawChangesCallback: () => FT,
-      isBuilder: () => LX,
-      patchOnly: () => PX,
-      registerType: () => VF,
-      schema: () => vX,
-      t: () => eX,
-      type: () => QX,
-      unreliable: () => xX,
-      view: () => JX
+  9050: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      $changes: () => Ym,
+      $childType: () => qm,
+      $decoder: () => Rm,
+      $deleteByIndex: () => om,
+      $encoder: () => im,
+      $filter: () => pm,
+      $getByIndex: () => Em,
+      $numFields: () => Zm,
+      $refId: () => wm,
+      $track: () => Dm,
+      $values: () => Qm,
+      ArraySchema: () => ah,
+      Callbacks: () => aA,
+      ChangeTree: () => Gf,
+      CollectionSchema: () => Dh,
+      Decoder: () => gh,
+      Encoder: () => vh,
+      FieldBuilder: () => ph,
+      MapSchema: () => wh,
+      Metadata: () => UT,
+      OPERATION: () => Am,
+      Reflection: () => TA,
+      ReflectionField: () => Fh,
+      ReflectionType: () => mA,
+      Root: () => Xh,
+      Schema: () => Nh,
+      SetSchema: () => ih,
+      StateCallbackStrategy: () => AA,
+      StateView: () => rh,
+      StreamSchema: () => Rh,
+      TypeContext: () => lT,
+      createPool: () => wA,
+      decode: () => KT,
+      decodeKeyValueOperation: () => Ff,
+      decodeSchemaOperation: () => Wf,
+      defineCustomTypes: () => cT,
+      defineTypes: () => bh,
+      deprecated: () => Zh,
+      dumpChanges: () => eh,
+      encode: () => fT,
+      encodeArray: () => lf,
+      encodeIndexedEntry: () => rf,
+      encodeKeyValueOperation: () => sf,
+      encodeMapEntry: () => Cf,
+      encodeSchemaOperation: () => yf,
+      kO: () => Vh,
+      fullStateOnly: () => nh,
+      getDecoderStateCallbacks: () => fA,
+      getEncodeDescriptor: () => Tf,
+      getRawChangesCallback: () => hA,
+      isBuilder: () => Eh,
+      patchOnly: () => Qh,
+      registerType: () => JT,
+      schema: () => Sh,
+      t: () => qh,
+      type: () => Jh,
+      unreliable: () => Kh,
+      view: () => Ih
     });
-    const Xk = 255;
-    var Tk;
+    const hm = 255;
+    var Am;
 
-    function ik(kk) {
-      Object.defineProperty(kk, Symbol.metadata, {
+    function am(mm) {
+      Object.defineProperty(mm, Symbol.metadata, {
         value: void 0,
         writable: !0,
         configurable: !0,
         enumerable: !1
       })
-    }! function(kk) {
-      kk[kk.ADD = 128] = "ADD", kk[kk.REPLACE = 0] = "REPLACE", kk[kk.DELETE = 64] = "DELETE", kk[kk.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", kk[kk.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", kk[kk.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", kk[kk.CLEAR = 10] = "CLEAR", kk[kk.REVERSE = 15] = "REVERSE", kk[kk.MOVE = 32] = "MOVE", kk[kk.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", kk[kk.ADD_BY_REFID = 129] = "ADD_BY_REFID"
-    }(Tk || (Tk = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
-    const yk = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
+    }! function(mm) {
+      mm[mm.ADD = 128] = "ADD", mm[mm.REPLACE = 0] = "REPLACE", mm[mm.DELETE = 64] = "DELETE", mm[mm.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", mm[mm.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", mm[mm.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", mm[mm.CLEAR = 10] = "CLEAR", mm[mm.REVERSE = 15] = "REVERSE", mm[mm.MOVE = 32] = "MOVE", mm[mm.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", mm[mm.ADD_BY_REFID = 129] = "ADD_BY_REFID"
+    }(Am || (Am = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
+    const xm = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
     if ("function" === typeof Symbol && "function" !== typeof Symbol.for) {
-      const kk = "colyseus.symbolRegistry",
-        Fk = yk[kk] || (yk[kk] = Object.create(null));
-      Symbol.for = function(kk) {
-        return Fk[kk] || (Fk[kk] = Symbol(kk))
-      }, Symbol.keyFor = function(kk) {
-        for (const Ik in Fk)
-          if (Fk[Ik] === kk) return Ik
+      const mm = "colyseus.symbolRegistry",
+        Tm = xm[mm] || (xm[mm] = Object.create(null));
+      Symbol.for = function(mm) {
+        return Tm[mm] || (Tm[mm] = Symbol(mm))
+      }, Symbol.keyFor = function(mm) {
+        for (const fm in Tm)
+          if (Tm[fm] === mm) return fm
       }
     }
-    const lk = Symbol.for("$refId"),
-      ak = "~track",
-      qk = "~encoder",
-      Lk = "~decoder",
-      tk = "~filter",
-      Zk = "~getByIndex",
-      jk = "~deleteByIndex",
-      ek = "~resyncPrune",
-      wk = Symbol.for("$changes"),
-      Hk = Symbol.for("$childType"),
-      Jk = Symbol.for("$proxyTarget"),
-      xk = "~onEncodeEnd",
-      Pk = "~reset",
-      Kk = "~onDecodeEnd",
-      Qk = Symbol.for("$values"),
-      sk = "~builder",
-      Vk = "~descriptors",
-      zk = "~__encodeDescriptor",
-      Sk = "~encoders",
-      vk = "~__numFields",
-      Ek = "~__refTypeFieldIndexes",
-      Ok = "~__viewFieldIndexes",
-      nk = "$__fieldIndexesByViewTag",
-      Gk = "~__unreliableFieldIndexes",
-      pk = "~__patchOnlyFieldIndexes",
-      uk = "~__fullSyncSkipIndexes",
-      bk = "~__fullStateOnlyFieldIndexes",
-      Rk = "~__streamFieldIndexes",
-      Uk = "~__streamPriorities";
-    let Ck;
+    const wm = Symbol.for("$refId"),
+      Dm = "~track",
+      im = "~encoder",
+      Rm = "~decoder",
+      pm = "~filter",
+      Em = "~getByIndex",
+      om = "~deleteByIndex",
+      Om = "~resyncPrune",
+      Ym = Symbol.for("$changes"),
+      qm = Symbol.for("$childType"),
+      jm = Symbol.for("$proxyTarget"),
+      Vm = "~onEncodeEnd",
+      Im = "~reset",
+      Km = "~onDecodeEnd",
+      Qm = Symbol.for("$values"),
+      nm = "~builder",
+      Jm = "~descriptors",
+      cm = "~__encodeDescriptor",
+      zm = "~encoders",
+      Zm = "~__numFields",
+      km = "~__refTypeFieldIndexes",
+      bm = "~__viewFieldIndexes",
+      Sm = "$__fieldIndexesByViewTag",
+      em = "~__unreliableFieldIndexes",
+      Nm = "~__patchOnlyFieldIndexes",
+      Gm = "~__fullSyncSkipIndexes",
+      Xm = "~__fullStateOnlyFieldIndexes",
+      Pm = "~__streamFieldIndexes",
+      Hm = "~__streamPriorities";
+    let ym;
     try {
-      Ck = new TextEncoder
-    } catch (yT) {}
-    const Nk = new ArrayBuffer(8),
-      ck = new Int32Array(Nk),
-      Wk = new Float32Array(Nk),
-      fk = new Float64Array(Nk),
-      Bk = new BigInt64Array(Nk),
-      dk = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(kk, Fk) {
-        for (var Ik = 0, Xk = 0, Tk = 0, ik = kk.length; Tk < ik; Tk++)(Ik = kk.charCodeAt(Tk)) < 128 ? Xk += 1 : Ik < 2048 ? Xk += 2 : Ik < 55296 || Ik >= 57344 ? Xk += 3 : (Tk++, Xk += 4);
-        return Xk
+      ym = new TextEncoder
+    } catch (DA) {}
+    const Cm = new ArrayBuffer(8),
+      rm = new Int32Array(Cm),
+      sm = new Float32Array(Cm),
+      lm = new Float64Array(Cm),
+      Mm = new BigInt64Array(Cm),
+      um = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(mm, Tm) {
+        for (var fm = 0, hm = 0, Am = 0, am = mm.length; Am < am; Am++)(fm = mm.charCodeAt(Am)) < 128 ? hm += 1 : fm < 2048 ? hm += 2 : fm < 55296 || fm >= 57344 ? hm += 3 : (Am++, hm += 4);
+        return hm
       };
 
-    function Yk(kk, Fk, Ik) {
-      for (var Xk = 0, Tk = 0, ik = Fk.length; Tk < ik; Tk++)(Xk = Fk.charCodeAt(Tk)) < 128 ? kk[Ik.offset++] = Xk : Xk < 2048 ? (kk[Ik.offset] = 192 | Xk >> 6, kk[Ik.offset + 1] = 128 | 63 & Xk, Ik.offset += 2) : Xk < 55296 || Xk >= 57344 ? (kk[Ik.offset] = 224 | Xk >> 12, kk[Ik.offset + 1] = 128 | Xk >> 6 & 63, kk[Ik.offset + 2] = 128 | 63 & Xk, Ik.offset += 3) : (Tk++, Xk = 65536 + ((1023 & Xk) << 10 | 1023 & Fk.charCodeAt(Tk)), kk[Ik.offset] = 240 | Xk >> 18, kk[Ik.offset + 1] = 128 | Xk >> 12 & 63, kk[Ik.offset + 2] = 128 | Xk >> 6 & 63, kk[Ik.offset + 3] = 128 | 63 & Xk, Ik.offset += 4)
+    function Bm(mm, Tm, fm) {
+      for (var hm = 0, Am = 0, am = Tm.length; Am < am; Am++)(hm = Tm.charCodeAt(Am)) < 128 ? mm[fm.offset++] = hm : hm < 2048 ? (mm[fm.offset] = 192 | hm >> 6, mm[fm.offset + 1] = 128 | 63 & hm, fm.offset += 2) : hm < 55296 || hm >= 57344 ? (mm[fm.offset] = 224 | hm >> 12, mm[fm.offset + 1] = 128 | hm >> 6 & 63, mm[fm.offset + 2] = 128 | 63 & hm, fm.offset += 3) : (Am++, hm = 65536 + ((1023 & hm) << 10 | 1023 & Tm.charCodeAt(Am)), mm[fm.offset] = 240 | hm >> 18, mm[fm.offset + 1] = 128 | hm >> 12 & 63, mm[fm.offset + 2] = 128 | hm >> 6 & 63, mm[fm.offset + 3] = 128 | 63 & hm, fm.offset += 4)
     }
 
-    function Ak(kk, Fk, Ik) {
-      kk[Ik.offset++] = 255 & Fk
+    function Lm(mm, Tm, fm) {
+      mm[fm.offset++] = 255 & Tm
     }
 
-    function gk(kk, Fk, Ik) {
-      kk[Ik.offset++] = 255 & Fk, kk[Ik.offset++] = Fk >> 8 & 255
+    function tm(mm, Tm, fm) {
+      mm[fm.offset++] = 255 & Tm, mm[fm.offset++] = Tm >> 8 & 255
     }
 
-    function mk(kk, Fk, Ik) {
-      kk[Ik.offset++] = 255 & Fk, kk[Ik.offset++] = Fk >> 8 & 255
+    function Um(mm, Tm, fm) {
+      mm[fm.offset++] = 255 & Tm, mm[fm.offset++] = Tm >> 8 & 255
     }
 
-    function hk(kk, Fk, Ik) {
-      kk[Ik.offset++] = 255 & Fk, kk[Ik.offset++] = Fk >> 8 & 255, kk[Ik.offset++] = Fk >> 16 & 255, kk[Ik.offset++] = Fk >> 24 & 255
+    function dm(mm, Tm, fm) {
+      mm[fm.offset++] = 255 & Tm, mm[fm.offset++] = Tm >> 8 & 255, mm[fm.offset++] = Tm >> 16 & 255, mm[fm.offset++] = Tm >> 24 & 255
     }
 
-    function rk(kk, Fk, Ik) {
-      const Xk = Fk >> 24,
-        Tk = Fk >> 16,
-        ik = Fk >> 8,
-        yk = Fk;
-      kk[Ik.offset++] = 255 & yk, kk[Ik.offset++] = 255 & ik, kk[Ik.offset++] = 255 & Tk, kk[Ik.offset++] = 255 & Xk
+    function gm(mm, Tm, fm) {
+      const hm = Tm >> 24,
+        Am = Tm >> 16,
+        am = Tm >> 8,
+        xm = Tm;
+      mm[fm.offset++] = 255 & xm, mm[fm.offset++] = 255 & am, mm[fm.offset++] = 255 & Am, mm[fm.offset++] = 255 & hm
     }
 
-    function Dk(kk, Fk, Ik) {
-      const Xk = Math.floor(Fk / Math.pow(2, 32));
-      rk(kk, Fk >>> 0, Ik), rk(kk, Xk, Ik)
+    function Wm(mm, Tm, fm) {
+      const hm = Math.floor(Tm / Math.pow(2, 32));
+      gm(mm, Tm >>> 0, fm), gm(mm, hm, fm)
     }
 
-    function Mk(kk, Fk, Ik) {
-      const Xk = Fk / Math.pow(2, 32) | 0;
-      rk(kk, Fk >>> 0, Ik), rk(kk, Xk, Ik)
+    function Fm(mm, Tm, fm) {
+      const hm = Tm / Math.pow(2, 32) | 0;
+      gm(mm, Tm >>> 0, fm), gm(mm, hm, fm)
     }
 
-    function kF(kk, Fk, Ik) {
-      Wk[0] = Fk, hk(kk, ck[0], Ik)
+    function mT(mm, Tm, fm) {
+      sm[0] = Tm, dm(mm, rm[0], fm)
     }
 
-    function FF(kk, Fk, Ik) {
-      fk[0] = Fk, hk(kk, ck[0], Ik), hk(kk, ck[1], Ik)
+    function TT(mm, Tm, fm) {
+      lm[0] = Tm, dm(mm, rm[0], fm), dm(mm, rm[1], fm)
     }
-    const IF = {
-        int8: Ak,
-        uint8: function(kk, Fk, Ik) {
-          kk[Ik.offset++] = 255 & Fk
+    const fT = {
+        int8: Lm,
+        uint8: function(mm, Tm, fm) {
+          mm[fm.offset++] = 255 & Tm
         },
-        int16: gk,
-        uint16: mk,
-        int32: hk,
-        uint32: rk,
-        int64: Dk,
-        uint64: Mk,
-        bigint64: function(kk, Fk, Ik) {
-          Bk[0] = BigInt.asIntN(64, Fk), hk(kk, ck[0], Ik), hk(kk, ck[1], Ik)
+        int16: tm,
+        uint16: Um,
+        int32: dm,
+        uint32: gm,
+        int64: Wm,
+        uint64: Fm,
+        bigint64: function(mm, Tm, fm) {
+          Mm[0] = BigInt.asIntN(64, Tm), dm(mm, rm[0], fm), dm(mm, rm[1], fm)
         },
-        biguint64: function(kk, Fk, Ik) {
-          Bk[0] = BigInt.asIntN(64, Fk), hk(kk, ck[0], Ik), hk(kk, ck[1], Ik)
+        biguint64: function(mm, Tm, fm) {
+          Mm[0] = BigInt.asIntN(64, Tm), dm(mm, rm[0], fm), dm(mm, rm[1], fm)
         },
-        float32: kF,
-        float64: FF,
-        boolean: function(kk, Fk, Ik) {
-          kk[Ik.offset++] = Fk ? 1 : 0
+        float32: mT,
+        float64: TT,
+        boolean: function(mm, Tm, fm) {
+          mm[fm.offset++] = Tm ? 1 : 0
         },
-        string: function(kk, Fk, Ik) {
-          Fk || (Fk = "");
-          let Xk = dk(Fk, "utf8"),
-            Tk = 0;
-          if (Xk < 32) kk[Ik.offset++] = 160 | Xk, Tk = 1;
-          else if (Xk < 256) kk[Ik.offset++] = 217, kk[Ik.offset++] = Xk, Tk = 2;
-          else if (Xk < 65536) kk[Ik.offset++] = 218, mk(kk, Xk, Ik), Tk = 3;
+        string: function(mm, Tm, fm) {
+          Tm || (Tm = "");
+          let hm = um(Tm, "utf8"),
+            Am = 0;
+          if (hm < 32) mm[fm.offset++] = 160 | hm, Am = 1;
+          else if (hm < 256) mm[fm.offset++] = 217, mm[fm.offset++] = hm, Am = 2;
+          else if (hm < 65536) mm[fm.offset++] = 218, Um(mm, hm, fm), Am = 3;
           else {
-            if (!(Xk < 4294967296)) throw new Error("String too long");
-            kk[Ik.offset++] = 219, rk(kk, Xk, Ik), Tk = 5
+            if (!(hm < 4294967296)) throw new Error("String too long");
+            mm[fm.offset++] = 219, gm(mm, hm, fm), Am = 5
           }
-          return Yk(kk, Fk, Ik), Tk + Xk
+          return Bm(mm, Tm, fm), Am + hm
         },
-        number: function kk(Fk, Ik, Xk) {
-          return isNaN(Ik) ? kk(Fk, 0, Xk) : isFinite(Ik) ? Ik !== (0 | Ik) ? Math.abs(Ik) <= 34028235e31 && (Wk[0] = Ik, Math.abs(Math.abs(Wk[0]) - Math.abs(Ik)) < 1e-4) ? (Fk[Xk.offset++] = 202, kF(Fk, Ik, Xk), 5) : (Fk[Xk.offset++] = 203, FF(Fk, Ik, Xk), 9) : Ik >= 0 ? Ik < 128 ? (Fk[Xk.offset++] = 255 & Ik, 1) : Ik < 256 ? (Fk[Xk.offset++] = 204, Fk[Xk.offset++] = 255 & Ik, 2) : Ik < 65536 ? (Fk[Xk.offset++] = 205, mk(Fk, Ik, Xk), 3) : Ik < 4294967296 ? (Fk[Xk.offset++] = 206, rk(Fk, Ik, Xk), 5) : (Fk[Xk.offset++] = 207, Mk(Fk, Ik, Xk), 9) : Ik >= -32 ? (Fk[Xk.offset++] = 224 | Ik + 32, 1) : Ik >= -128 ? (Fk[Xk.offset++] = 208, Ak(Fk, Ik, Xk), 2) : Ik >= -32768 ? (Fk[Xk.offset++] = 209, gk(Fk, Ik, Xk), 3) : Ik >= -2147483648 ? (Fk[Xk.offset++] = 210, hk(Fk, Ik, Xk), 5) : (Fk[Xk.offset++] = 211, Dk(Fk, Ik, Xk), 9) : kk(Fk, Ik > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, Xk)
+        number: function mm(Tm, fm, hm) {
+          return isNaN(fm) ? mm(Tm, 0, hm) : isFinite(fm) ? fm !== (0 | fm) ? Math.abs(fm) <= 34028235e31 && (sm[0] = fm, Math.abs(Math.abs(sm[0]) - Math.abs(fm)) < 1e-4) ? (Tm[hm.offset++] = 202, mT(Tm, fm, hm), 5) : (Tm[hm.offset++] = 203, TT(Tm, fm, hm), 9) : fm >= 0 ? fm < 128 ? (Tm[hm.offset++] = 255 & fm, 1) : fm < 256 ? (Tm[hm.offset++] = 204, Tm[hm.offset++] = 255 & fm, 2) : fm < 65536 ? (Tm[hm.offset++] = 205, Um(Tm, fm, hm), 3) : fm < 4294967296 ? (Tm[hm.offset++] = 206, gm(Tm, fm, hm), 5) : (Tm[hm.offset++] = 207, Fm(Tm, fm, hm), 9) : fm >= -32 ? (Tm[hm.offset++] = 224 | fm + 32, 1) : fm >= -128 ? (Tm[hm.offset++] = 208, Lm(Tm, fm, hm), 2) : fm >= -32768 ? (Tm[hm.offset++] = 209, tm(Tm, fm, hm), 3) : fm >= -2147483648 ? (Tm[hm.offset++] = 210, dm(Tm, fm, hm), 5) : (Tm[hm.offset++] = 211, Wm(Tm, fm, hm), 9) : mm(Tm, fm > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, hm)
         },
-        utf8Write: Yk,
-        utf8Length: dk
+        utf8Write: Bm,
+        utf8Length: um
       },
-      XF = new ArrayBuffer(8),
-      TF = new Int32Array(XF),
-      iF = new Float32Array(XF),
-      yF = new Float64Array(XF),
-      lF = new BigUint64Array(XF),
-      aF = new BigInt64Array(XF);
+      hT = new ArrayBuffer(8),
+      AT = new Int32Array(hT),
+      aT = new Float32Array(hT),
+      xT = new Float64Array(hT),
+      wT = new BigUint64Array(hT),
+      DT = new BigInt64Array(hT);
 
-    function qF(kk, Fk, Ik) {
-      Ik > kk.length - Fk.offset && (Ik = kk.length - Fk.offset);
-      for (var Xk = "", Tk = 0, ik = Fk.offset, yk = Fk.offset + Ik; ik < yk; ik++) {
-        var lk = kk[ik];
-        if (0 !== (128 & lk))
-          if (192 !== (224 & lk))
-            if (224 !== (240 & lk)) {
-              if (240 !== (248 & lk)) {
-                console.error("decode.utf8Read(): Invalid byte " + lk + " at offset " + ik + ". Skip to end of string: " + (Fk.offset + Ik));
+    function iT(mm, Tm, fm) {
+      fm > mm.length - Tm.offset && (fm = mm.length - Tm.offset);
+      for (var hm = "", Am = 0, am = Tm.offset, xm = Tm.offset + fm; am < xm; am++) {
+        var wm = mm[am];
+        if (0 !== (128 & wm))
+          if (192 !== (224 & wm))
+            if (224 !== (240 & wm)) {
+              if (240 !== (248 & wm)) {
+                console.error("decode.utf8Read(): Invalid byte " + wm + " at offset " + am + ". Skip to end of string: " + (Tm.offset + fm));
                 break
-              }(Tk = (7 & lk) << 18 | (63 & kk[++ik]) << 12 | (63 & kk[++ik]) << 6 | 63 & kk[++ik]) >= 65536 ? (Tk -= 65536, Xk += String.fromCharCode(55296 + (Tk >>> 10), 56320 + (1023 & Tk))) : Xk += String.fromCharCode(Tk)
-            } else Xk += String.fromCharCode((15 & lk) << 12 | (63 & kk[++ik]) << 6 | 63 & kk[++ik]);
-        else Xk += String.fromCharCode((31 & lk) << 6 | 63 & kk[++ik]);
-        else Xk += String.fromCharCode(lk)
+              }(Am = (7 & wm) << 18 | (63 & mm[++am]) << 12 | (63 & mm[++am]) << 6 | 63 & mm[++am]) >= 65536 ? (Am -= 65536, hm += String.fromCharCode(55296 + (Am >>> 10), 56320 + (1023 & Am))) : hm += String.fromCharCode(Am)
+            } else hm += String.fromCharCode((15 & wm) << 12 | (63 & mm[++am]) << 6 | 63 & mm[++am]);
+        else hm += String.fromCharCode((31 & wm) << 6 | 63 & mm[++am]);
+        else hm += String.fromCharCode(wm)
       }
-      return Fk.offset += Ik, Xk
+      return Tm.offset += fm, hm
     }
 
-    function LF(kk, Fk) {
-      return tF(kk, Fk) << 24 >> 24
+    function RT(mm, Tm) {
+      return pT(mm, Tm) << 24 >> 24
     }
 
-    function tF(kk, Fk) {
-      return kk[Fk.offset++]
+    function pT(mm, Tm) {
+      return mm[Tm.offset++]
     }
 
-    function ZF(kk, Fk) {
-      return jF(kk, Fk) << 16 >> 16
+    function ET(mm, Tm) {
+      return oT(mm, Tm) << 16 >> 16
     }
 
-    function jF(kk, Fk) {
-      return kk[Fk.offset++] | kk[Fk.offset++] << 8
+    function oT(mm, Tm) {
+      return mm[Tm.offset++] | mm[Tm.offset++] << 8
     }
 
-    function eF(kk, Fk) {
-      return kk[Fk.offset++] | kk[Fk.offset++] << 8 | kk[Fk.offset++] << 16 | kk[Fk.offset++] << 24
+    function OT(mm, Tm) {
+      return mm[Tm.offset++] | mm[Tm.offset++] << 8 | mm[Tm.offset++] << 16 | mm[Tm.offset++] << 24
     }
 
-    function wF(kk, Fk) {
-      return eF(kk, Fk) >>> 0
+    function YT(mm, Tm) {
+      return OT(mm, Tm) >>> 0
     }
 
-    function HF(kk, Fk) {
-      return TF[0] = eF(kk, Fk), iF[0]
+    function qT(mm, Tm) {
+      return AT[0] = OT(mm, Tm), aT[0]
     }
 
-    function JF(kk, Fk) {
-      return TF[0] = eF(kk, Fk), TF[1] = eF(kk, Fk), yF[0]
+    function jT(mm, Tm) {
+      return AT[0] = OT(mm, Tm), AT[1] = OT(mm, Tm), xT[0]
     }
 
-    function xF(kk, Fk) {
-      const Ik = wF(kk, Fk);
-      return eF(kk, Fk) * Math.pow(2, 32) + Ik
+    function VT(mm, Tm) {
+      const fm = YT(mm, Tm);
+      return OT(mm, Tm) * Math.pow(2, 32) + fm
     }
 
-    function PF(kk, Fk) {
-      const Ik = wF(kk, Fk);
-      return wF(kk, Fk) * Math.pow(2, 32) + Ik
+    function IT(mm, Tm) {
+      const fm = YT(mm, Tm);
+      return YT(mm, Tm) * Math.pow(2, 32) + fm
     }
-    const KF = {
-        utf8Read: qF,
-        int8: LF,
-        uint8: tF,
-        int16: ZF,
-        uint16: jF,
-        int32: eF,
-        uint32: wF,
-        float32: HF,
-        float64: JF,
-        int64: xF,
-        uint64: PF,
-        bigint64: function(kk, Fk) {
-          return TF[0] = eF(kk, Fk), TF[1] = eF(kk, Fk), aF[0]
+    const KT = {
+        utf8Read: iT,
+        int8: RT,
+        uint8: pT,
+        int16: ET,
+        uint16: oT,
+        int32: OT,
+        uint32: YT,
+        float32: qT,
+        float64: jT,
+        int64: VT,
+        uint64: IT,
+        bigint64: function(mm, Tm) {
+          return AT[0] = OT(mm, Tm), AT[1] = OT(mm, Tm), DT[0]
         },
-        biguint64: function(kk, Fk) {
-          return TF[0] = eF(kk, Fk), TF[1] = eF(kk, Fk), lF[0]
+        biguint64: function(mm, Tm) {
+          return AT[0] = OT(mm, Tm), AT[1] = OT(mm, Tm), wT[0]
         },
-        boolean: function(kk, Fk) {
-          return tF(kk, Fk) > 0
+        boolean: function(mm, Tm) {
+          return pT(mm, Tm) > 0
         },
-        string: function(kk, Fk) {
-          const Ik = kk[Fk.offset++];
-          let Xk;
-          return Ik < 192 ? Xk = 31 & Ik : 217 === Ik ? Xk = tF(kk, Fk) : 218 === Ik ? Xk = jF(kk, Fk) : 219 === Ik && (Xk = wF(kk, Fk)), qF(kk, Fk, Xk)
+        string: function(mm, Tm) {
+          const fm = mm[Tm.offset++];
+          let hm;
+          return fm < 192 ? hm = 31 & fm : 217 === fm ? hm = pT(mm, Tm) : 218 === fm ? hm = oT(mm, Tm) : 219 === fm && (hm = YT(mm, Tm)), iT(mm, Tm, hm)
         },
-        number: function(kk, Fk) {
-          const Ik = kk[Fk.offset++];
-          return Ik < 128 ? Ik : 202 === Ik ? HF(kk, Fk) : 203 === Ik ? JF(kk, Fk) : 204 === Ik ? tF(kk, Fk) : 205 === Ik ? jF(kk, Fk) : 206 === Ik ? wF(kk, Fk) : 207 === Ik ? PF(kk, Fk) : 208 === Ik ? LF(kk, Fk) : 209 === Ik ? ZF(kk, Fk) : 210 === Ik ? eF(kk, Fk) : 211 === Ik ? xF(kk, Fk) : Ik > 223 ? -1 * (255 - Ik + 1) : void 0
+        number: function(mm, Tm) {
+          const fm = mm[Tm.offset++];
+          return fm < 128 ? fm : 202 === fm ? qT(mm, Tm) : 203 === fm ? jT(mm, Tm) : 204 === fm ? pT(mm, Tm) : 205 === fm ? oT(mm, Tm) : 206 === fm ? YT(mm, Tm) : 207 === fm ? IT(mm, Tm) : 208 === fm ? RT(mm, Tm) : 209 === fm ? ET(mm, Tm) : 210 === fm ? OT(mm, Tm) : 211 === fm ? VT(mm, Tm) : fm > 223 ? -1 * (255 - fm + 1) : void 0
         },
-        stringCheck: function(kk, Fk) {
-          const Ik = kk[Fk.offset];
-          return Ik < 192 && Ik > 160 || 217 === Ik || 218 === Ik || 219 === Ik
+        stringCheck: function(mm, Tm) {
+          const fm = mm[Tm.offset];
+          return fm < 192 && fm > 160 || 217 === fm || 218 === fm || 219 === fm
         }
       },
-      QF = {},
-      sF = new Map;
+      QT = {},
+      nT = new Map;
 
-    function VF(kk, Fk) {
-      Fk.constructor && (Object.prototype.hasOwnProperty.call(Fk, "constructor") && null == Fk.constructor[Symbol.metadata] && ik(Fk.constructor), sF.set(Fk.constructor, kk), QF[kk] = Fk), Fk.encode && (IF[kk] = Fk.encode), Fk.decode && (KF[kk] = Fk.decode)
+    function JT(mm, Tm) {
+      Tm.constructor && (Object.prototype.hasOwnProperty.call(Tm, "constructor") && null == Tm.constructor[Symbol.metadata] && am(Tm.constructor), nT.set(Tm.constructor, mm), QT[mm] = Tm), Tm.encode && (fT[mm] = Tm.encode), Tm.decode && (KT[mm] = Tm.decode)
     }
 
-    function zF(kk) {
-      for (const Fk in kk) VF(Fk, kk[Fk]);
-      return kk => QX(kk)
+    function cT(mm) {
+      for (const Tm in mm) JT(Tm, mm[Tm]);
+      return mm => Jh(mm)
     }
-    const SF = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
+    const zT = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
 
-    function oF() {
+    function ZT() {
       return {
         pendingByView: new Map,
         sentByView: new Map,
@@ -2450,160 +2450,160 @@ export const modules = {
       }
     }
 
-    function vF(kk) {
-      return kk._stream ??= oF()
+    function kT(mm) {
+      return mm._stream ??= ZT()
     }
 
-    function EF(kk, Fk, Ik) {
-      0 === Fk.activeViews.size && vF(kk).broadcastPending.add(Ik)
+    function bT(mm, Tm, fm) {
+      0 === Tm.activeViews.size && kT(mm).broadcastPending.add(fm)
     }
 
-    function OF(kk, Fk, Ik, Xk) {
-      const ik = kk._stream;
-      if (void 0 === ik) return !0;
-      let yk = !1;
-      return ik.broadcastPending.delete(Xk) ? yk = !0 : ik.sentBroadcast.delete(Xk) && ik.broadcastDeletes.add(Xk), Fk.forEachActiveView((kk => {
-        const Fk = ik.pendingByView.get(kk.id);
-        if (Fk?.has(Xk)) return Fk.delete(Xk), void(yk = !0);
-        const lk = ik.sentByView.get(kk.id);
-        if (lk?.has(Xk)) {
-          lk.delete(Xk);
-          let Fk = kk.changes.get(Ik);
-          void 0 === Fk && (Fk = new Map, kk.changes.set(Ik, Fk)), Fk.set(Xk, Tk.DELETE)
+    function ST(mm, Tm, fm, hm) {
+      const am = mm._stream;
+      if (void 0 === am) return !0;
+      let xm = !1;
+      return am.broadcastPending.delete(hm) ? xm = !0 : am.sentBroadcast.delete(hm) && am.broadcastDeletes.add(hm), Tm.forEachActiveView((mm => {
+        const Tm = am.pendingByView.get(mm.id);
+        if (Tm?.has(hm)) return Tm.delete(hm), void(xm = !0);
+        const wm = am.sentByView.get(mm.id);
+        if (wm?.has(hm)) {
+          wm.delete(hm);
+          let Tm = mm.changes.get(fm);
+          void 0 === Tm && (Tm = new Map, mm.changes.set(fm, Tm)), Tm.set(hm, Am.DELETE)
         }
-      })), yk
+      })), xm
     }
 
-    function nF(kk, Fk) {
-      const Ik = kk._stream?.pendingByView;
-      if (void 0 === Ik) return !1;
-      for (const [Xk, Tk] of Ik)
-        if (Tk.size > 0 && void 0 !== Fk.activeViews.get(Xk)?.deref()) return !0;
+    function eT(mm, Tm) {
+      const fm = mm._stream?.pendingByView;
+      if (void 0 === fm) return !1;
+      for (const [hm, Am] of fm)
+        if (Am.size > 0 && void 0 !== Tm.activeViews.get(hm)?.deref()) return !0;
       return !1
     }
 
-    function GF(kk) {
-      const Fk = kk._stream;
-      return void 0 !== Fk && (Fk.broadcastPending.size > 0 || Fk.broadcastDeletes.size > 0)
+    function NT(mm) {
+      const Tm = mm._stream;
+      return void 0 !== Tm && (Tm.broadcastPending.size > 0 || Tm.broadcastDeletes.size > 0)
     }
 
-    function pF(kk, Fk, Ik) {
-      const Xk = vF(kk);
-      let Tk = Xk.pendingByView.get(Fk);
-      void 0 === Tk && (Tk = new Set, Xk.pendingByView.set(Fk, Tk)), Tk.add(Ik)
+    function GT(mm, Tm, fm) {
+      const hm = kT(mm);
+      let Am = hm.pendingByView.get(Tm);
+      void 0 === Am && (Am = new Set, hm.pendingByView.set(Tm, Am)), Am.add(fm)
     }
 
-    function uF(kk, Fk) {
-      const Ik = kk._stream;
-      void 0 !== Ik && (Ik.pendingByView.delete(Fk), Ik.sentByView.delete(Fk), Ik.priorityByView?.delete(Fk))
+    function XT(mm, Tm) {
+      const fm = mm._stream;
+      void 0 !== fm && (fm.pendingByView.delete(Tm), fm.sentByView.delete(Tm), fm.priorityByView?.delete(Tm))
     }
-    const bF = {
+    const PT = {
       8: "uint8",
       16: "uint16",
       32: "uint32"
     };
 
-    function RF(kk) {
-      if (null == kk || "object" !== typeof kk) throw new Error("t.quantized(): options object with { min, max } is required.");
+    function HT(mm) {
+      if (null == mm || "object" !== typeof mm) throw new Error("t.quantized(): options object with { min, max } is required.");
       const {
-        min: Fk,
-        max: Ik
-      } = kk;
-      if ("number" !== typeof Fk || "number" !== typeof Ik || !(Ik > Fk) || !Number.isFinite(Fk) || !Number.isFinite(Ik)) throw new Error(`t.quantized(): require finite min < max (got min=${Fk}, max=${Ik}).`);
-      const Xk = kk.bits ?? 16;
-      if (8 !== Xk && 16 !== Xk && 32 !== Xk) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${Xk}).`);
-      const Tk = kk.mode ?? "clamp";
-      if ("clamp" !== Tk && "wrap" !== Tk) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(Tk)}).`);
-      const ik = "wrap" === Tk,
-        yk = Math.pow(2, Xk);
+        min: Tm,
+        max: fm
+      } = mm;
+      if ("number" !== typeof Tm || "number" !== typeof fm || !(fm > Tm) || !Number.isFinite(Tm) || !Number.isFinite(fm)) throw new Error(`t.quantized(): require finite min < max (got min=${Tm}, max=${fm}).`);
+      const hm = mm.bits ?? 16;
+      if (8 !== hm && 16 !== hm && 32 !== hm) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${hm}).`);
+      const Am = mm.mode ?? "clamp";
+      if ("clamp" !== Am && "wrap" !== Am) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(Am)}).`);
+      const am = "wrap" === Am,
+        xm = Math.pow(2, hm);
       return {
-        min: Fk,
-        max: Ik,
-        bits: Xk,
-        wrap: ik,
-        wire: bF[Xk],
-        range: Ik - Fk,
-        span: ik ? yk : Fk === -Ik ? yk - 2 : yk - 1
+        min: Tm,
+        max: fm,
+        bits: hm,
+        wrap: am,
+        wire: PT[hm],
+        range: fm - Tm,
+        span: am ? xm : Tm === -fm ? xm - 2 : xm - 1
       }
     }
 
-    function UF(kk) {
-      return null !== kk && "object" === typeof kk && void 0 !== kk.quantized
+    function yT(mm) {
+      return null !== mm && "object" === typeof mm && void 0 !== mm.quantized
     }
 
-    function CF(kk, Fk) {
-      if (kk.wrap) {
-        if (!Number.isFinite(Fk)) return 0;
-        const Ik = kk.range;
-        let Xk = (Fk - kk.min) % Ik;
-        Xk < 0 && (Xk += Ik);
-        const Tk = kk.span;
-        return Math.floor(Xk / Ik * Tk + .5) % Tk
+    function CT(mm, Tm) {
+      if (mm.wrap) {
+        if (!Number.isFinite(Tm)) return 0;
+        const fm = mm.range;
+        let hm = (Tm - mm.min) % fm;
+        hm < 0 && (hm += fm);
+        const Am = mm.span;
+        return Math.floor(hm / fm * Am + .5) % Am
       }
-      if (Fk !== Fk) return 0;
-      const Ik = Fk < kk.min ? kk.min : Fk > kk.max ? kk.max : Fk;
-      return Math.floor((Ik - kk.min) / kk.range * kk.span + .5)
+      if (Tm !== Tm) return 0;
+      const fm = Tm < mm.min ? mm.min : Tm > mm.max ? mm.max : Tm;
+      return Math.floor((fm - mm.min) / mm.range * mm.span + .5)
     }
 
-    function NF(kk, Fk) {
-      return kk.min + Fk / kk.span * kk.range
+    function rT(mm, Tm) {
+      return mm.min + Tm / mm.span * mm.range
     }
 
-    function cF(kk) {
-      const Fk = IF[kk.wire];
-      return (Ik, Xk, Tk) => Fk(Ik, CF(kk, Xk), Tk)
+    function sT(mm) {
+      const Tm = fT[mm.wire];
+      return (fm, hm, Am) => Tm(fm, CT(mm, hm), Am)
     }
-    class WF {
+    class lT {
       types = {};
       schemas = new Map;
       hasFilters = !1;
       static inheritedTypes = new WeakMap;
       static cachedContexts = new WeakMap;
-      static register(kk) {
-        const Fk = Object.getPrototypeOf(kk);
-        if (Fk !== OX) {
-          let Ik = WF.inheritedTypes.get(Fk);
-          Ik || (Ik = new Set, WF.inheritedTypes.set(Fk, Ik)), Ik.add(kk)
+      static register(mm) {
+        const Tm = Object.getPrototypeOf(mm);
+        if (Tm !== Nh) {
+          let fm = lT.inheritedTypes.get(Tm);
+          fm || (fm = new Set, lT.inheritedTypes.set(Tm, fm)), fm.add(mm)
         }
       }
-      static cache(kk) {
-        let Fk = WF.cachedContexts.get(kk);
-        return Fk || (Fk = new WF(kk), WF.cachedContexts.set(kk, Fk)), Fk
+      static cache(mm) {
+        let Tm = lT.cachedContexts.get(mm);
+        return Tm || (Tm = new lT(mm), lT.cachedContexts.set(mm, Tm)), Tm
       }
-      constructor(kk) {
-        kk && this.discoverTypes(kk)
+      constructor(mm) {
+        mm && this.discoverTypes(mm)
       }
-      has(kk) {
-        return this.schemas.has(kk)
+      has(mm) {
+        return this.schemas.has(mm)
       }
-      get(kk) {
-        return this.types[kk]
+      get(mm) {
+        return this.types[mm]
       }
-      add(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
-        return !this.schemas.has(kk) && (this.types[Fk] = kk, null == kk[Symbol.metadata] && mF.initialize(kk), this.schemas.set(kk, Fk), !0)
+      add(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
+        return !this.schemas.has(mm) && (this.types[Tm] = mm, null == mm[Symbol.metadata] && UT.initialize(mm), this.schemas.set(mm, Tm), !0)
       }
-      getTypeId(kk) {
-        return this.schemas.get(kk)
+      getTypeId(mm) {
+        return this.schemas.get(mm)
       }
-      discoverTypes(kk) {
-        if (!this.add(kk)) return;
-        WF.inheritedTypes.get(kk)?.forEach((kk => {
-          this.discoverTypes(kk)
+      discoverTypes(mm) {
+        if (!this.add(mm)) return;
+        lT.inheritedTypes.get(mm)?.forEach((mm => {
+          this.discoverTypes(mm)
         }));
-        let Fk = kk;
+        let Tm = mm;
         for (;
-          (Fk = Object.getPrototypeOf(Fk)) && Fk !== OX && Fk !== Function.prototype;) this.discoverTypes(Fk);
-        const Ik = kk[Symbol.metadata];
-        (Ik[Ok] || Ik[Rk]) && (this.hasFilters = !0);
-        for (const Xk in Ik) {
-          const kk = Ik[Xk].type;
-          if ("string" !== typeof kk && !UF(kk))
-            if ("function" === typeof kk) this.discoverTypes(kk);
+          (Tm = Object.getPrototypeOf(Tm)) && Tm !== Nh && Tm !== Function.prototype;) this.discoverTypes(Tm);
+        const fm = mm[Symbol.metadata];
+        (fm[bm] || fm[Pm]) && (this.hasFilters = !0);
+        for (const hm in fm) {
+          const mm = fm[hm].type;
+          if ("string" !== typeof mm && !yT(mm))
+            if ("function" === typeof mm) this.discoverTypes(mm);
             else {
-              const Fk = Object.values(kk)[0];
-              if ("string" === typeof Fk) continue;
-              this.discoverTypes(Fk)
+              const Tm = Object.values(mm)[0];
+              if ("string" === typeof Tm) continue;
+              this.discoverTypes(Tm)
             }
         }
       }
@@ -2612,303 +2612,303 @@ export const modules = {
       }
     }
 
-    function fF(kk) {
-      const Fk = dF(kk);
-      return Fk ? {
-        complexTypeKlass: QF[Fk],
-        childType: kk[Fk]
+    function MT(mm) {
+      const Tm = BT(mm);
+      return Tm ? {
+        complexTypeKlass: QT[Tm],
+        childType: mm[Tm]
       } : {
         complexTypeKlass: !1,
-        childType: kk
+        childType: mm
       }
     }
 
-    function BF(kk, Fk) {
-      const Ik = YF(kk),
-        Xk = dF(Ik),
-        Tk = Xk && dF(Ik[Xk]);
-      if (Tk) throw new Error(`${Fk?`${Fk}: `:""}@colyseus/schema: nested collections are not supported ("${Xk}" of "${Tk}"). Collections can only hold primitive types or Schema classes, wrap the inner ${Tk} in a Schema class.`);
-      return Ik
+    function uT(mm, Tm) {
+      const fm = LT(mm),
+        hm = BT(fm),
+        Am = hm && BT(fm[hm]);
+      if (Am) throw new Error(`${Tm?`${Tm}: `:""}@colyseus/schema: nested collections are not supported ("${hm}" of "${Am}"). Collections can only hold primitive types or Schema classes, wrap the inner ${Am} in a Schema class.`);
+      return fm
     }
 
-    function dF(kk) {
-      return "object" === typeof kk && null !== kk ? Object.keys(kk).find((kk => void 0 !== QF[kk])) : void 0
+    function BT(mm) {
+      return "object" === typeof mm && null !== mm ? Object.keys(mm).find((mm => void 0 !== QT[mm])) : void 0
     }
 
-    function YF(kk) {
-      if ("object" !== typeof kk || null === kk) return kk;
-      if (Array.isArray(kk)) return {
-        array: YF(kk[0])
+    function LT(mm) {
+      if ("object" !== typeof mm || null === mm) return mm;
+      if (Array.isArray(mm)) return {
+        array: LT(mm[0])
       };
-      const Fk = function(kk) {
-        const Fk = Object.keys(kk),
-          Ik = Fk.filter((kk => /\d+/.test(kk)));
-        if (Ik.length > 0 && Ik.length === Fk.length / 2 && kk[kk[Ik[0]]] == Ik[0]) return "number";
-        if (Fk.length > 0 && Fk.every((Fk => kk[Fk] === Fk))) return "string"
-      }(kk);
-      if (Fk) return Fk;
-      if (UF(kk)) return "string" === typeof kk.quantized.wire ? kk : {
-        quantized: RF(kk.quantized)
+      const Tm = function(mm) {
+        const Tm = Object.keys(mm),
+          fm = Tm.filter((mm => /\d+/.test(mm)));
+        if (fm.length > 0 && fm.length === Tm.length / 2 && mm[mm[fm[0]]] == fm[0]) return "number";
+        if (Tm.length > 0 && Tm.every((Tm => mm[Tm] === Tm))) return "string"
+      }(mm);
+      if (Tm) return Tm;
+      if (yT(mm)) return "string" === typeof mm.quantized.wire ? mm : {
+        quantized: HT(mm.quantized)
       };
-      if (void 0 !== kk.type) return YF(kk.type);
-      const Ik = dF(kk);
-      return Ik && (kk[Ik] = YF(kk[Ik])), kk
+      if (void 0 !== mm.type) return LT(mm.type);
+      const fm = BT(mm);
+      return fm && (mm[fm] = LT(mm[fm])), mm
     }
-    const AF = [Ek, Gk, pk, uk, bk, Rk, Sk];
+    const vT = [km, em, Nm, Gm, Xm, Pm, zm];
 
-    function gF(kk, Fk, Ik) {
-      kk[Fk] || Object.defineProperty(kk, Fk, {
+    function tT(mm, Tm, fm) {
+      mm[Tm] || Object.defineProperty(mm, Tm, {
         value: [],
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), kk[Fk].push(Ik)
+      }), mm[Tm].push(fm)
     }
-    const mF = {
-        addField(kk, Fk, Ik, Xk, Tk) {
-          if (Fk >= 63) throw new Error(`Can't define field '${Ik}'.\nSchema instances may only have up to 63 fields.`);
-          kk[Fk] = Object.assign(kk[Fk] || {}, {
-            type: Xk,
-            index: Fk,
-            name: Ik
-          }), Object.defineProperty(kk, Vk, {
-            value: kk[Vk] || {},
+    const UT = {
+        addField(mm, Tm, fm, hm, Am) {
+          if (Tm >= 63) throw new Error(`Can't define field '${fm}'.\nSchema instances may only have up to 63 fields.`);
+          mm[Tm] = Object.assign(mm[Tm] || {}, {
+            type: hm,
+            index: Tm,
+            name: fm
+          }), Object.defineProperty(mm, Jm, {
+            value: mm[Jm] || {},
             enumerable: !1,
             configurable: !0
-          }), kk[Vk][Ik] = Tk || {
+          }), mm[Jm][fm] = Am || {
             value: void 0,
             writable: !0,
             enumerable: !0,
             configurable: !0
-          }, Object.defineProperty(kk, vk, {
-            value: Fk,
+          }, Object.defineProperty(mm, Zm, {
+            value: Tm,
             enumerable: !1,
             configurable: !0
-          }), Object.defineProperty(kk, Ik, {
-            value: Fk,
+          }), Object.defineProperty(mm, fm, {
+            value: Tm,
             enumerable: !1,
             configurable: !0
-          }), "string" === typeof kk[Fk].type || UF(kk[Fk].type) || (void 0 === kk[Ek] && Object.defineProperty(kk, Ek, {
+          }), "string" === typeof mm[Tm].type || yT(mm[Tm].type) || (void 0 === mm[km] && Object.defineProperty(mm, km, {
             value: [],
             enumerable: !1,
             configurable: !0
-          }), kk[Ek].push(Fk));
-          const ik = kk[Fk].type;
-          if (ik && "object" === typeof ik && void 0 !== ik.stream) {
-            if (void 0 !== ik.array) throw new Error(SF);
-            kk[Fk].stream = !0, kk[Rk] || Object.defineProperty(kk, Rk, {
+          }), mm[km].push(Tm));
+          const am = mm[Tm].type;
+          if (am && "object" === typeof am && void 0 !== am.stream) {
+            if (void 0 !== am.array) throw new Error(zT);
+            mm[Tm].stream = !0, mm[Pm] || Object.defineProperty(mm, Pm, {
               value: [],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), kk[Rk].includes(Fk) || kk[Rk].push(Fk);
-            const Tk = Xk?.priority;
-            "function" === typeof Tk && mF.setStreamPriority(kk, Ik, Tk)
+            }), mm[Pm].includes(Tm) || mm[Pm].push(Tm);
+            const Am = hm?.priority;
+            "function" === typeof Am && UT.setStreamPriority(mm, fm, Am)
           }
         },
-        setTag(kk, Fk, Ik) {
-          const Xk = kk[Fk];
-          if (kk[Xk].tag = Ik, kk[Ok] || (Object.defineProperty(kk, Ok, {
+        setTag(mm, Tm, fm) {
+          const hm = mm[Tm];
+          if (mm[hm].tag = fm, mm[bm] || (Object.defineProperty(mm, bm, {
               value: [],
               enumerable: !1,
               configurable: !0
-            }), Object.defineProperty(kk, nk, {
+            }), Object.defineProperty(mm, Sm, {
               value: {},
               enumerable: !1,
               configurable: !0
-            })), kk[Ok].push(Xk), Ik < 0) kk[nk][Ik] || (kk[nk][Ik] = []), kk[nk][Ik].push(Xk);
+            })), mm[bm].push(hm), fm < 0) mm[Sm][fm] || (mm[Sm][fm] = []), mm[Sm][fm].push(hm);
           else
-            for (let Tk = Ik; Tk > 0; Tk &= Tk - 1) {
-              const Fk = Tk & -Tk;
-              kk[nk][Fk] || (kk[nk][Fk] = []), kk[nk][Fk].push(Xk)
+            for (let Am = fm; Am > 0; Am &= Am - 1) {
+              const Tm = Am & -Am;
+              mm[Sm][Tm] || (mm[Sm][Tm] = []), mm[Sm][Tm].push(hm)
             }
         },
-        setUnreliable(kk, Fk) {
-          const Ik = kk[Fk];
-          if ("string" !== typeof kk[Ik].type) throw new Error(`@unreliable cannot be applied to ref-type field "${Fk}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
-          kk[Ik].unreliable = !0, kk[Gk] || Object.defineProperty(kk, Gk, {
+        setUnreliable(mm, Tm) {
+          const fm = mm[Tm];
+          if ("string" !== typeof mm[fm].type) throw new Error(`@unreliable cannot be applied to ref-type field "${Tm}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
+          mm[fm].unreliable = !0, mm[em] || Object.defineProperty(mm, em, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), kk[Gk].push(Ik)
+          }), mm[em].push(fm)
         },
-        setPatchOnly(kk, Fk) {
-          const Ik = kk[Fk];
-          if (kk[Ik].fullStateOnly) throw new Error(`field "${Fk}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          kk[Ik].patchOnly = !0, gF(kk, pk, Ik), gF(kk, uk, Ik)
+        setPatchOnly(mm, Tm) {
+          const fm = mm[Tm];
+          if (mm[fm].fullStateOnly) throw new Error(`field "${Tm}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          mm[fm].patchOnly = !0, tT(mm, Nm, fm), tT(mm, Gm, fm)
         },
-        setDeprecated(kk, Fk) {
-          const Ik = kk[Fk];
-          kk[Ik].deprecated = !0, gF(kk, uk, Ik), Object.defineProperty(kk, Ik, {
-            value: kk[Ik],
+        setDeprecated(mm, Tm) {
+          const fm = mm[Tm];
+          mm[fm].deprecated = !0, tT(mm, Gm, fm), Object.defineProperty(mm, fm, {
+            value: mm[fm],
             enumerable: !1,
             configurable: !0
           })
         },
-        setFullStateOnly(kk, Fk) {
-          const Ik = kk[Fk];
-          if (kk[Ik].patchOnly) throw new Error(`field "${Fk}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          kk[Ik].fullStateOnly = !0, gF(kk, bk, Ik)
+        setFullStateOnly(mm, Tm) {
+          const fm = mm[Tm];
+          if (mm[fm].patchOnly) throw new Error(`field "${Tm}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          mm[fm].fullStateOnly = !0, tT(mm, Xm, fm)
         },
-        setStream(kk, Fk) {
-          const Ik = kk[Fk];
-          kk[Ik].stream = !0, kk[Rk] || Object.defineProperty(kk, Rk, {
+        setStream(mm, Tm) {
+          const fm = mm[Tm];
+          mm[fm].stream = !0, mm[Pm] || Object.defineProperty(mm, Pm, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), kk[Rk].push(Ik)
+          }), mm[Pm].push(fm)
         },
-        setStreamPriority(kk, Fk, Ik) {
-          const Xk = kk[Fk];
-          kk[Uk] || Object.defineProperty(kk, Uk, {
+        setStreamPriority(mm, Tm, fm) {
+          const hm = mm[Tm];
+          mm[Hm] || Object.defineProperty(mm, Hm, {
             value: {},
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), kk[Uk][Xk] = Ik
+          }), mm[Hm][hm] = fm
         },
-        getStreamPriority: (kk, Fk) => kk?.[Uk]?.[Fk],
-        defineField(kk, Fk, Ik, Xk, Tk) {
-          const ik = BF(Tk, `${kk.name}.${Xk}`),
+        getStreamPriority: (mm, Tm) => mm?.[Hm]?.[Tm],
+        defineField(mm, Tm, fm, hm, Am) {
+          const am = uT(Am, `${mm.name}.${hm}`),
             {
-              complexTypeKlass: yk,
-              childType: lk
-            } = fF(ik);
-          mF.addField(Fk, Ik, Xk, ik, VX(Xk, Ik, lk, yk)), Fk[Vk][Xk] && Object.defineProperty(kk.prototype, Xk, Fk[Vk][Xk]), ("string" === typeof ik || UF(ik)) && (Fk[Sk] || Object.defineProperty(Fk, Sk, {
+              complexTypeKlass: xm,
+              childType: wm
+            } = MT(am);
+          UT.addField(Tm, fm, hm, am, zh(hm, fm, wm, xm)), Tm[Jm][hm] && Object.defineProperty(mm.prototype, hm, Tm[Jm][hm]), ("string" === typeof am || yT(am)) && (Tm[zm] || Object.defineProperty(Tm, zm, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), Fk[Sk][Ik] = "string" === typeof ik ? IF[ik] : cF(ik.quantized))
+          }), Tm[zm][fm] = "string" === typeof am ? fT[am] : sT(am.quantized))
         },
-        setFields(kk, Fk) {
-          const Ik = kk.prototype.constructor;
-          WF.register(Ik);
-          const Xk = Object.getPrototypeOf(Ik),
-            Tk = Xk && Xk[Symbol.metadata],
-            ik = mF.initialize(Ik);
-          Ik[ak] || (Ik[ak] = OX[ak]), Ik[qk] || (Ik[qk] = OX[qk]), Ik[Lk] || (Ik[Lk] = OX[Lk]), Ik.prototype.toJSON || (Ik.prototype.toJSON = OX.prototype.toJSON);
-          let yk = ik[vk] ?? (Tk && Tk[vk]) ?? -1;
-          yk++, ik[Sk] || Object.defineProperty(ik, Sk, {
-            value: Tk?.[Sk] ? [...Tk[Sk]] : [],
+        setFields(mm, Tm) {
+          const fm = mm.prototype.constructor;
+          lT.register(fm);
+          const hm = Object.getPrototypeOf(fm),
+            Am = hm && hm[Symbol.metadata],
+            am = UT.initialize(fm);
+          fm[Dm] || (fm[Dm] = Nh[Dm]), fm[im] || (fm[im] = Nh[im]), fm[Rm] || (fm[Rm] = Nh[Rm]), fm.prototype.toJSON || (fm.prototype.toJSON = Nh.prototype.toJSON);
+          let xm = am[Zm] ?? (Am && Am[Zm]) ?? -1;
+          xm++, am[zm] || Object.defineProperty(am, zm, {
+            value: Am?.[zm] ? [...Am[zm]] : [],
             enumerable: !1,
             configurable: !0,
             writable: !0
           });
-          for (const lk in Fk) {
-            if (void 0 !== ik[lk]) throw new Error(`@colyseus/schema: Duplicate '${lk}' definition on '${Ik.name||"(anonymous)"}'.`);
-            mF.defineField(Ik, ik, yk, lk, Fk[lk]), yk++
+          for (const wm in Tm) {
+            if (void 0 !== am[wm]) throw new Error(`@colyseus/schema: Duplicate '${wm}' definition on '${fm.name||"(anonymous)"}'.`);
+            UT.defineField(fm, am, xm, wm, Tm[wm]), xm++
           }
-          return kk
+          return mm
         },
-        isDeprecated: (kk, Fk) => !0 === kk[Fk].deprecated,
-        initialize(kk) {
-          const Fk = Object.getPrototypeOf(kk),
-            Ik = Fk[Symbol.metadata];
-          let Xk = kk[Symbol.metadata] ?? Object.create(null);
-          if (Fk !== OX && Xk === Ik && (Xk = Object.create(null), Ik)) {
-            Object.setPrototypeOf(Xk, Ik), Object.defineProperty(Xk, vk, {
-              value: Ik[vk],
+        isDeprecated: (mm, Tm) => !0 === mm[Tm].deprecated,
+        initialize(mm) {
+          const Tm = Object.getPrototypeOf(mm),
+            fm = Tm[Symbol.metadata];
+          let hm = mm[Symbol.metadata] ?? Object.create(null);
+          if (Tm !== Nh && hm === fm && (hm = Object.create(null), fm)) {
+            Object.setPrototypeOf(hm, fm), Object.defineProperty(hm, Zm, {
+              value: fm[Zm],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), void 0 !== Ik[Ok] && (Object.defineProperty(Xk, Ok, {
-              value: [...Ik[Ok]],
+            }), void 0 !== fm[bm] && (Object.defineProperty(hm, bm, {
+              value: [...fm[bm]],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), Object.defineProperty(Xk, nk, {
+            }), Object.defineProperty(hm, Sm, {
               value: {
-                ...Ik[nk]
+                ...fm[Sm]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             }));
-            for (const kk of AF) {
-              const Fk = Ik[kk];
-              void 0 !== Fk && Object.defineProperty(Xk, kk, {
-                value: [...Fk],
+            for (const mm of vT) {
+              const Tm = fm[mm];
+              void 0 !== Tm && Object.defineProperty(hm, mm, {
+                value: [...Tm],
                 enumerable: !1,
                 configurable: !0,
                 writable: !0
               })
             }
-            Object.defineProperty(Xk, Vk, {
+            Object.defineProperty(hm, Jm, {
               value: {
-                ...Ik[Vk]
+                ...fm[Jm]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             })
           }
-          return Object.defineProperty(kk, Symbol.metadata, {
-            value: Xk,
+          return Object.defineProperty(mm, Symbol.metadata, {
+            value: hm,
             writable: !1,
             configurable: !0
-          }), Xk
+          }), hm
         },
-        isValidInstance: kk => kk.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(kk.constructor[Symbol.metadata], vk),
-        getFields(kk) {
-          const Fk = kk[Symbol.metadata],
-            Ik = {};
-          for (let Xk = 0; Xk <= Fk[vk]; Xk++) Ik[Fk[Xk].name] = Fk[Xk].type;
-          return Ik
+        isValidInstance: mm => mm.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(mm.constructor[Symbol.metadata], Zm),
+        getFields(mm) {
+          const Tm = mm[Symbol.metadata],
+            fm = {};
+          for (let hm = 0; hm <= Tm[Zm]; hm++) fm[Tm[hm].name] = Tm[hm].type;
+          return fm
         },
-        hasViewTagAtIndex: (kk, Fk) => kk?.[Ok]?.includes(Fk),
-        hasUnreliableAtIndex: (kk, Fk) => kk?.[Gk]?.includes(Fk),
-        hasPatchOnlyAtIndex: (kk, Fk) => kk?.[pk]?.includes(Fk),
-        hasFullStateOnlyAtIndex: (kk, Fk) => kk?.[bk]?.includes(Fk),
-        hasStreamAtIndex: (kk, Fk) => kk?.[Rk]?.includes(Fk)
+        hasViewTagAtIndex: (mm, Tm) => mm?.[bm]?.includes(Tm),
+        hasUnreliableAtIndex: (mm, Tm) => mm?.[em]?.includes(Tm),
+        hasPatchOnlyAtIndex: (mm, Tm) => mm?.[Nm]?.includes(Tm),
+        hasFullStateOnlyAtIndex: (mm, Tm) => mm?.[Xm]?.includes(Tm),
+        hasStreamAtIndex: (mm, Tm) => mm?.[Pm]?.includes(Tm)
       },
-      hF = (kk, Fk, Ik) => kk(Fk, Ik);
-    class rF {
+      dT = (mm, Tm, fm) => mm(Tm, fm);
+    class gT {
       dirtyLow = 0;
       dirtyHigh = 0;
       ops;
-      constructor(kk) {
-        this.ops = new Uint8Array(Math.max(kk + 1, 1))
+      constructor(mm) {
+        this.ops = new Uint8Array(Math.max(mm + 1, 1))
       }
-      record(kk, Fk) {
-        const Ik = this.ops[kk];
-        0 === Ik ? this.ops[kk] = Fk : (Ik === Tk.DELETE || Ik === Tk.ADD && Fk === Tk.DELETE_AND_ADD) && (this.ops[kk] = Tk.DELETE_AND_ADD), kk < 32 ? this.dirtyLow |= 1 << kk : this.dirtyHigh |= 1 << kk - 32
+      record(mm, Tm) {
+        const fm = this.ops[mm];
+        0 === fm ? this.ops[mm] = Tm : (fm === Am.DELETE || fm === Am.ADD && Tm === Am.DELETE_AND_ADD) && (this.ops[mm] = Am.DELETE_AND_ADD), mm < 32 ? this.dirtyLow |= 1 << mm : this.dirtyHigh |= 1 << mm - 32
       }
-      recordDelete(kk, Fk) {
-        this.ops[kk] = Fk, kk < 32 ? this.dirtyLow |= 1 << kk : this.dirtyHigh |= 1 << kk - 32
+      recordDelete(mm, Tm) {
+        this.ops[mm] = Tm, mm < 32 ? this.dirtyLow |= 1 << mm : this.dirtyHigh |= 1 << mm - 32
       }
-      recordRaw(kk, Fk) {
-        this.record(kk, Fk)
+      recordRaw(mm, Tm) {
+        this.record(mm, Tm)
       }
-      operationAt(kk) {
-        const Fk = this.ops[kk];
-        return 0 === Fk ? void 0 : Fk
+      operationAt(mm) {
+        const Tm = this.ops[mm];
+        return 0 === Tm ? void 0 : Tm
       }
-      setOperationAt(kk, Fk) {
-        this.ops[kk] = Fk
+      setOperationAt(mm, Tm) {
+        this.ops[mm] = Tm
       }
-      forEach(kk) {
-        this.forEachWithCtx(kk, hF)
+      forEach(mm) {
+        this.forEachWithCtx(mm, dT)
       }
-      forEachWithCtx(kk, Fk) {
-        let Ik = this.dirtyLow,
-          Xk = this.dirtyHigh;
-        const Tk = this.ops;
-        for (; 0 !== Ik;) {
-          const Xk = Ik & -Ik,
-            ik = 31 - Math.clz32(Xk);
-          Ik ^= Xk, Fk(kk, ik, Tk[ik])
+      forEachWithCtx(mm, Tm) {
+        let fm = this.dirtyLow,
+          hm = this.dirtyHigh;
+        const Am = this.ops;
+        for (; 0 !== fm;) {
+          const hm = fm & -fm,
+            am = 31 - Math.clz32(hm);
+          fm ^= hm, Tm(mm, am, Am[am])
         }
-        for (; 0 !== Xk;) {
-          const Ik = Xk & -Xk,
-            ik = 31 - Math.clz32(Ik) + 32;
-          Xk ^= Ik, Fk(kk, ik, Tk[ik])
+        for (; 0 !== hm;) {
+          const fm = hm & -hm,
+            am = 31 - Math.clz32(fm) + 32;
+          hm ^= fm, Tm(mm, am, Am[am])
         }
       }
       size() {
-        return MF(this.dirtyLow) + MF(this.dirtyHigh)
+        return FT(this.dirtyLow) + FT(this.dirtyHigh)
       }
       has() {
         return 0 !== (this.dirtyLow | this.dirtyHigh)
@@ -2917,359 +2917,359 @@ export const modules = {
         this.dirtyLow = 0, this.dirtyHigh = 0, this.ops.fill(0)
       }
     }
-    class DF {
-      Ne = new Map;
+    class WT {
+      hY = new Map;
       pureOps = [];
-      record(kk, Fk) {
-        const Ik = this.Ne.get(kk);
-        void 0 === Ik ? this.Ne.set(kk, Fk) : (Ik === Tk.DELETE || Ik === Tk.ADD && Fk === Tk.DELETE_AND_ADD) && this.Ne.set(kk, Tk.DELETE_AND_ADD)
+      record(mm, Tm) {
+        const fm = this.hY.get(mm);
+        void 0 === fm ? this.hY.set(mm, Tm) : (fm === Am.DELETE || fm === Am.ADD && Tm === Am.DELETE_AND_ADD) && this.hY.set(mm, Am.DELETE_AND_ADD)
       }
-      recordDelete(kk, Fk) {
-        this.Ne.set(kk, Fk)
+      recordDelete(mm, Tm) {
+        this.hY.set(mm, Tm)
       }
-      recordRaw(kk, Fk) {
-        this.Ne.set(kk, Fk)
+      recordRaw(mm, Tm) {
+        this.hY.set(mm, Tm)
       }
-      recordPure(kk) {
-        this.pureOps.push([this.Ne.size, kk])
+      recordPure(mm) {
+        this.pureOps.push([this.hY.size, mm])
       }
-      operationAt(kk) {
-        return this.Ne.get(kk)
+      operationAt(mm) {
+        return this.hY.get(mm)
       }
-      setOperationAt(kk, Fk) {
-        this.Ne.has(kk) && this.Ne.set(kk, Fk)
+      setOperationAt(mm, Tm) {
+        this.hY.has(mm) && this.hY.set(mm, Tm)
       }
-      forEach(kk) {
-        this.forEachWithCtx(kk, hF)
+      forEach(mm) {
+        this.forEachWithCtx(mm, dT)
       }
-      forEachWithCtx(kk, Fk) {
-        const Ik = this.pureOps;
-        if (Ik.length > 0) {
-          let Xk = 0,
-            Tk = 0;
-          for (const [ik, yk] of this.Ne) {
-            for (; Xk < Ik.length && Ik[Xk][0] <= Tk;) {
-              const Tk = Ik[Xk++][1];
-              Fk(kk, -Tk, Tk)
+      forEachWithCtx(mm, Tm) {
+        const fm = this.pureOps;
+        if (fm.length > 0) {
+          let hm = 0,
+            Am = 0;
+          for (const [am, xm] of this.hY) {
+            for (; hm < fm.length && fm[hm][0] <= Am;) {
+              const Am = fm[hm++][1];
+              Tm(mm, -Am, Am)
             }
-            Fk(kk, ik, yk), Tk++
+            Tm(mm, am, xm), Am++
           }
-          for (; Xk < Ik.length;) {
-            const Tk = Ik[Xk++][1];
-            Fk(kk, -Tk, Tk)
+          for (; hm < fm.length;) {
+            const Am = fm[hm++][1];
+            Tm(mm, -Am, Am)
           }
         } else
-          for (const [Xk, Tk] of this.Ne) Fk(kk, Xk, Tk)
+          for (const [hm, Am] of this.hY) Tm(mm, hm, Am)
       }
       size() {
-        return this.Ne.size + this.pureOps.length
+        return this.hY.size + this.pureOps.length
       }
       has() {
-        return this.Ne.size > 0 || this.pureOps.length > 0
+        return this.hY.size > 0 || this.pureOps.length > 0
       }
       reset() {
-        this.Ne.clear(), this.pureOps.length = 0
+        this.hY.clear(), this.pureOps.length = 0
       }
-      shift(kk) {
-        const Fk = new Map;
-        for (const [Ik, Xk] of this.Ne) Fk.set(Ik + kk, Xk);
-        this.Ne = Fk
+      shift(mm) {
+        const Tm = new Map;
+        for (const [fm, hm] of this.hY) Tm.set(fm + mm, hm);
+        this.hY = Tm
       }
     }
 
-    function MF(kk) {
-      return 16843009 * ((kk = (858993459 & (kk -= kk >>> 1 & 1431655765)) + (kk >>> 2 & 858993459)) + (kk >>> 4) & 252645135) >>> 24
+    function FT(mm) {
+      return 16843009 * ((mm = (858993459 & (mm -= mm >>> 1 & 1431655765)) + (mm >>> 2 & 858993459)) + (mm >>> 4) & 252645135) >>> 24
     }
 
-    function kI(kk) {
-      if (void 0 === kk) return 0;
-      let Fk = 0;
-      for (let Ik = 0, Xk = kk.length; Ik < Xk; Ik++) {
-        const Xk = kk[Ik];
-        Xk < 32 && (Fk |= 1 << Xk)
+    function mf(mm) {
+      if (void 0 === mm) return 0;
+      let Tm = 0;
+      for (let fm = 0, hm = mm.length; fm < hm; fm++) {
+        const hm = mm[fm];
+        hm < 32 && (Tm |= 1 << hm)
       }
-      return Fk
+      return Tm
     }
 
-    function FI(kk) {
-      const Fk = kk.constructor;
-      if (Object.prototype.hasOwnProperty.call(Fk, zk)) return Fk[zk];
-      const Ik = Fk[Symbol.metadata],
-        Xk = mF.isValidInstance(kk),
-        Tk = (Ik?.[Ok]?.length ?? 0) > 0,
-        ik = function(kk) {
-          const Fk = [],
-            Ik = [],
-            Xk = [],
-            Tk = [],
-            ik = kk?.[vk];
-          if (void 0 === ik) return {
-            names: Fk,
-            types: Ik,
-            tags: Xk,
-            encoders: Tk
+    function Tf(mm) {
+      const Tm = mm.constructor;
+      if (Object.prototype.hasOwnProperty.call(Tm, cm)) return Tm[cm];
+      const fm = Tm[Symbol.metadata],
+        hm = UT.isValidInstance(mm),
+        Am = (fm?.[bm]?.length ?? 0) > 0,
+        am = function(mm) {
+          const Tm = [],
+            fm = [],
+            hm = [],
+            Am = [],
+            am = mm?.[Zm];
+          if (void 0 === am) return {
+            names: Tm,
+            types: fm,
+            tags: hm,
+            encoders: Am
           };
-          const yk = kk[Sk];
-          for (let lk = 0; lk <= ik; lk++) {
-            const ik = kk[lk];
-            void 0 !== ik ? (Fk[lk] = ik.name, Ik[lk] = ik.type, Xk[lk] = ik.tag, Tk[lk] = yk?.[lk]) : (Fk[lk] = void 0, Ik[lk] = void 0, Xk[lk] = void 0, Tk[lk] = void 0)
+          const xm = mm[zm];
+          for (let wm = 0; wm <= am; wm++) {
+            const am = mm[wm];
+            void 0 !== am ? (Tm[wm] = am.name, fm[wm] = am.type, hm[wm] = am.tag, Am[wm] = xm?.[wm]) : (Tm[wm] = void 0, fm[wm] = void 0, hm[wm] = void 0, Am[wm] = void 0)
           }
           return {
-            names: Fk,
-            types: Ik,
-            tags: Xk,
-            encoders: Tk
+            names: Tm,
+            types: fm,
+            tags: hm,
+            encoders: Am
           }
-        }(Ik),
-        yk = Xk && !Tk ? void 0 : Fk[tk],
-        lk = {
-          encoder: Fk[qk],
-          filter: yk,
-          metadata: Ik,
-          isSchema: Xk,
-          filterBitmask: Xk ? kI(Ik?.[Ok]) : 0,
-          hasAnyFullStateOnly: (Ik?.[bk]?.length ?? 0) > 0,
-          hasAnyUnreliable: (Ik?.[Gk]?.length ?? 0) > 0,
-          hasAnyStream: (Ik?.[Rk]?.length ?? 0) > 0,
-          hasAnyView: Tk,
-          fullStateOnlyBitmask: kI(Ik?.[bk]),
-          unreliableBitmask: kI(Ik?.[Gk]),
-          streamBitmask: kI(Ik?.[Rk]),
-          names: ik.names,
-          types: ik.types,
-          tags: ik.tags,
-          encoders: ik.encoders
+        }(fm),
+        xm = hm && !Am ? void 0 : Tm[pm],
+        wm = {
+          encoder: Tm[im],
+          filter: xm,
+          metadata: fm,
+          isSchema: hm,
+          filterBitmask: hm ? mf(fm?.[bm]) : 0,
+          hasAnyFullStateOnly: (fm?.[Xm]?.length ?? 0) > 0,
+          hasAnyUnreliable: (fm?.[em]?.length ?? 0) > 0,
+          hasAnyStream: (fm?.[Pm]?.length ?? 0) > 0,
+          hasAnyView: Am,
+          fullStateOnlyBitmask: mf(fm?.[Xm]),
+          unreliableBitmask: mf(fm?.[em]),
+          streamBitmask: mf(fm?.[Pm]),
+          names: am.names,
+          types: am.types,
+          tags: am.tags,
+          encoders: am.encoders
         };
-      return Object.defineProperty(Fk, zk, {
-        value: lk,
+      return Object.defineProperty(Tm, cm, {
+        value: wm,
         enumerable: !1,
         writable: !0,
         configurable: !0
-      }), lk
+      }), wm
     }
 
-    function II(kk, Fk) {
-      if (void 0 !== kk.parentRef && Fk(kk.parentRef, kk._parentIndex)) return !0;
-      for (let Ik = kk.extraParents; void 0 !== Ik; Ik = Ik.next)
-        if (Fk(Ik.ref, Ik.index)) return !0;
+    function ff(mm, Tm) {
+      if (void 0 !== mm.parentRef && Tm(mm.parentRef, mm._parentIndex)) return !0;
+      for (let fm = mm.extraParents; void 0 !== fm; fm = fm.next)
+        if (Tm(fm.ref, fm.index)) return !0;
       return !1
     }
-    const XI = (kk, Fk) => {
-        kk.isFieldUnreliable(Fk) ? kk.ensureUnreliableRecorder().record(Fk, Tk.ADD) : kk.record(Fk, Tk.ADD)
+    const hf = (mm, Tm) => {
+        mm.isFieldUnreliable(Tm) ? mm.ensureUnreliableRecorder().record(Tm, Am.ADD) : mm.record(Tm, Am.ADD)
       },
-      TI = (kk, Fk) => kk(Fk);
+      Af = (mm, Tm) => mm(Tm);
 
-    function iI(kk, Fk, Ik) {
-      const Xk = kk.refTarget;
-      if (void 0 !== Xk[Hk]) {
-        if (kk.isPatchOnly) return;
-        if (Array.isArray(Xk.items)) {
-          const kk = Xk.items;
-          for (let Xk = 0, Tk = kk.length; Xk < Tk; Xk++) void 0 !== kk[Xk] && Ik(Fk, Xk)
-        } else if (void 0 !== Xk.journal)
-          for (const [kk, Tk] of Xk.journal.keyByIndex) Xk.$items.has(Tk) && Ik(Fk, kk);
-        else if (void 0 !== Xk.$items)
-          for (const kk of Xk.$items.keys()) Ik(Fk, kk)
+    function af(mm, Tm, fm) {
+      const hm = mm.refTarget;
+      if (void 0 !== hm[qm]) {
+        if (mm.isPatchOnly) return;
+        if (Array.isArray(hm.items)) {
+          const mm = hm.items;
+          for (let hm = 0, Am = mm.length; hm < Am; hm++) void 0 !== mm[hm] && fm(Tm, hm)
+        } else if (void 0 !== hm.journal)
+          for (const [mm, Am] of hm.journal.keyByIndex) hm.$items.has(Am) && fm(Tm, mm);
+        else if (void 0 !== hm.$items)
+          for (const mm of hm.$items.keys()) fm(Tm, mm)
       } else {
-        const Tk = kk.metadata;
-        if (!Tk) return;
-        const ik = Tk[vk] ?? -1,
-          yk = Tk[uk],
-          lk = kk.encDescriptor.names;
-        for (let kk = 0; kk <= ik; kk++) {
-          const Tk = lk[kk];
-          if (void 0 === Tk) continue;
-          if (yk && yk.includes(kk)) continue;
-          const ik = Xk[Tk];
-          void 0 !== ik && null !== ik && Ik(Fk, kk)
+        const Am = mm.metadata;
+        if (!Am) return;
+        const am = Am[Zm] ?? -1,
+          xm = Am[Gm],
+          wm = mm.encDescriptor.names;
+        for (let mm = 0; mm <= am; mm++) {
+          const Am = wm[mm];
+          if (void 0 === Am) continue;
+          if (xm && xm.includes(mm)) continue;
+          const am = hm[Am];
+          void 0 !== am && null !== am && fm(Tm, mm)
         }
       }
     }
 
-    function yI(kk, Fk, Ik, Xk) {
-      ! function(kk, Fk, Ik) {
-        if (!Fk) return;
-        const Xk = Fk[wk],
-          Tk = !Xk._isSchema;
-        let ik;
-        Tk ? (Fk = Xk.parent, Ik = Xk.parentIndex, ik = Fk?.[wk].metadata) : ik = Xk.metadata;
-        const yk = (ik?.[pk]?.includes(Ik) ? SI : 0) | (ik?.[bk]?.includes(Ik) ? oI : 0),
-          lk = Xk.flags & OI | yk,
-          ak = kk.flags;
-        kk.flags = ak | lk;
-        lk & ~ak & oI && (kk.reset(), kk.unreliableRecorder?.reset());
-        const qk = kk.root?.types;
-        if (!qk?.hasFilters) return;
-        const Lk = ik?.[Ok]?.includes(Ik) ?? !1,
-          tk = ik?.[Rk]?.includes(Ik) ?? !1,
-          Zk = Xk.isFiltered || Lk || tk;
-        if (kk.isFiltered = Zk, tk && !Tk) {
-          kk.isStreamCollection = !0;
-          const Fk = vF(kk.ref);
-          if (void 0 === Fk.priority) {
-            const kk = mF.getStreamPriority(ik, Ik);
-            void 0 !== kk && (Fk.priority = kk)
+    function xf(mm, Tm, fm, hm) {
+      ! function(mm, Tm, fm) {
+        if (!Tm) return;
+        const hm = Tm[Ym],
+          Am = !hm._isSchema;
+        let am;
+        Am ? (Tm = hm.parent, fm = hm.parentIndex, am = Tm?.[Ym].metadata) : am = hm.metadata;
+        const xm = (am?.[Nm]?.includes(fm) ? kf : 0) | (am?.[Xm]?.includes(fm) ? bf : 0),
+          wm = hm.flags & Nf | xm,
+          Dm = mm.flags;
+        mm.flags = Dm | wm;
+        wm & ~Dm & bf && (mm.reset(), mm.unreliableRecorder?.reset());
+        const im = mm.root?.types;
+        if (!im?.hasFilters) return;
+        const Rm = am?.[bm]?.includes(fm) ?? !1,
+          pm = am?.[Pm]?.includes(fm) ?? !1,
+          Em = hm.isFiltered || Rm || pm;
+        if (mm.isFiltered = Em, pm && !Am) {
+          mm.isStreamCollection = !0;
+          const Tm = kT(mm.ref);
+          if (void 0 === Tm.priority) {
+            const mm = UT.getStreamPriority(am, fm);
+            void 0 !== mm && (Tm.priority = mm)
           }
-          kk.root?.registerStream(kk.ref)
+          mm.root?.registerStream(mm.ref)
         }
-        if (Zk) {
-          const Fk = aI(kk);
-          kk.isVisibilitySharedWithParent = Xk.isFiltered && Fk && !tk && (!Lk || Tk && ik[Ik].tag !== wX)
+        if (Em) {
+          const Tm = Df(mm);
+          mm.isVisibilitySharedWithParent = hm.isFiltered && Tm && !pm && (!Rm || Am && am[fm].tag !== jh)
         }
-      }(kk, Fk, Ik), kk.isFullStateOnly || (kk.has() && kk.root?.enqueueChangeTree(kk), kk.unreliableRecorder?.has() && kk.root?.enqueueUnreliable(kk), kk.has() || kk.unreliableRecorder?.has() || kk.root?.enqueueChangeTree(kk))
+      }(mm, Tm, fm), mm.isFullStateOnly || (mm.has() && mm.root?.enqueueChangeTree(mm), mm.unreliableRecorder?.has() && mm.root?.enqueueUnreliable(mm), mm.has() || mm.unreliableRecorder?.has() || mm.root?.enqueueChangeTree(mm))
     }
 
-    function lI(kk) {
-      const Fk = kk.pendingFilterRefresh;
-      for (let Ik = 0; Ik < Fk.length; Ik++) {
-        const kk = Fk[Ik];
-        0 !== (kk.flags & EI) && qI(kk)
+    function wf(mm) {
+      const Tm = mm.pendingFilterRefresh;
+      for (let fm = 0; fm < Tm.length; fm++) {
+        const mm = Tm[fm];
+        0 !== (mm.flags & ef) && Rf(mm)
       }
-      Fk.length = 0
+      Tm.length = 0
     }
 
-    function aI(kk) {
-      return kk._isSchema || "string" !== typeof kk.refTarget[Hk]
+    function Df(mm) {
+      return mm._isSchema || "string" !== typeof mm.refTarget[qm]
     }
 
-    function qI(kk) {
-      kk.flags &= ~EI;
-      const Fk = kk.root;
-      if (void 0 === Fk || void 0 === kk.parentRef) return;
-      const Ik = aI(kk);
-      let Xk = eI(kk, kk.parentRef, kk._parentIndex, Ik);
-      for (let ik = kk.extraParents; void 0 !== ik && Xk !== jI; ik = ik.next) Xk |= eI(kk, ik.ref, ik.index, Ik);
-      if (0 === Xk) return;
-      kk.isVisibilitySharedWithParent = 0 !== (Xk & ZI);
-      const Tk = 0 === (Xk & tI);
-      Tk !== kk.isFiltered && (kk.isFiltered = Tk, Tk || kk.isFullStateOnly || (kk.forEachLiveWithCtx(kk, XI), kk.has() && Fk.enqueueChangeTree(kk), kk.unreliableRecorder?.has() && Fk.enqueueUnreliable(kk)), kk.forEachChildWithCtx(kk, wI))
+    function Rf(mm) {
+      mm.flags &= ~ef;
+      const Tm = mm.root;
+      if (void 0 === Tm || void 0 === mm.parentRef) return;
+      const fm = Df(mm);
+      let hm = Yf(mm, mm.parentRef, mm._parentIndex, fm);
+      for (let am = mm.extraParents; void 0 !== am && hm !== Of; am = am.next) hm |= Yf(mm, am.ref, am.index, fm);
+      if (0 === hm) return;
+      mm.isVisibilitySharedWithParent = 0 !== (hm & of);
+      const Am = 0 === (hm & Ef);
+      Am !== mm.isFiltered && (mm.isFiltered = Am, Am || mm.isFullStateOnly || (mm.forEachLiveWithCtx(mm, hf), mm.has() && Tm.enqueueChangeTree(mm), mm.unreliableRecorder?.has() && Tm.enqueueUnreliable(mm)), mm.forEachChildWithCtx(mm, qf))
     }
-    const LI = 1,
-      tI = 2,
-      ZI = 4,
-      jI = LI | tI | ZI;
+    const pf = 1,
+      Ef = 2,
+      of = 4,
+      Of = pf | Ef | of;
 
-    function eI(kk, Fk, Ik, Xk) {
-      const Tk = Fk[wk];
-      if (Tk.root !== kk.root || ! function(kk, Fk, Ik) {
-          const Xk = Fk.refTarget;
-          if (Fk.isArray) {
-            const Fk = Xk.items,
-              Tk = Fk[Ik];
-            if (void 0 !== Tk && Tk[wk] === kk) return !0;
-            for (let Ik = 0, Xk = Fk.length; Ik < Xk; Ik++) {
-              const Xk = Fk[Ik];
-              if (void 0 !== Xk && Xk[wk] === kk) return !0
+    function Yf(mm, Tm, fm, hm) {
+      const Am = Tm[Ym];
+      if (Am.root !== mm.root || ! function(mm, Tm, fm) {
+          const hm = Tm.refTarget;
+          if (Tm.isArray) {
+            const Tm = hm.items,
+              Am = Tm[fm];
+            if (void 0 !== Am && Am[Ym] === mm) return !0;
+            for (let fm = 0, hm = Tm.length; fm < hm; fm++) {
+              const hm = Tm[fm];
+              if (void 0 !== hm && hm[Ym] === mm) return !0
             }
             return !1
           }
-          const Tk = Fk.getValue(Ik);
-          return void 0 !== Tk && Tk[wk] === kk
-        }(kk, Tk, Ik)) return 0;
-      Tk.flags & EI && qI(Tk);
-      let ik = LI;
-      if (Tk._isSchema) {
-        void 0 !== Tk.encDescriptor.tags[Ik] || Tk.isFieldStream(Ik) || (Tk.isFiltered ? Xk && (ik |= ZI) : ik |= tI)
-      } else if (Tk.isFiltered) {
-        if (Xk && !Tk.isStreamCollection) {
-          const kk = Tk.parent?.[wk];
-          (kk?._isSchema ? kk.encDescriptor.tags[Tk.parentIndex] : void 0) !== wX && (ik |= ZI)
+          const Am = Tm.getValue(fm);
+          return void 0 !== Am && Am[Ym] === mm
+        }(mm, Am, fm)) return 0;
+      Am.flags & ef && Rf(Am);
+      let am = pf;
+      if (Am._isSchema) {
+        void 0 !== Am.encDescriptor.tags[fm] || Am.isFieldStream(fm) || (Am.isFiltered ? hm && (am |= of) : am |= Ef)
+      } else if (Am.isFiltered) {
+        if (hm && !Am.isStreamCollection) {
+          const mm = Am.parent?.[Ym];
+          (mm?._isSchema ? mm.encDescriptor.tags[Am.parentIndex] : void 0) !== jh && (am |= of)
         }
-      } else ik |= tI;
-      return ik
+      } else am |= Ef;
+      return am
     }
-    const wI = (kk, Fk, Ik) => {
-      qI(Fk)
+    const qf = (mm, Tm, fm) => {
+      Rf(Tm)
     };
 
-    function HI(kk, Fk, Ik, Xk) {
-      if (kk.addParent(Fk, Xk), !Ik) return;
-      const Tk = Ik.add(kk);
-      Ik !== kk.root && (kk.root = Ik, yI(kk, Fk, Xk));
-      const ik = Fk?.[wk];
-      if (void 0 !== ik && void 0 !== ik.subscribedViews && void 0 !== Fk[Hk] && function(kk, Fk, Ik, Xk) {
-          const Tk = kk.subscribedViews;
-          if (void 0 === Tk) return;
-          const ik = kk.isStreamCollection,
-            yk = ik ? kk.ref : void 0,
-            lk = ik ? void 0 : Ik[wk];
-          for (let ak = 0, qk = Tk.length; ak < qk; ak++) {
-            let kk = Tk[ak];
-            for (; 0 !== kk;) {
-              const Ik = kk & -kk;
-              kk ^= Ik;
-              const qk = 32 * ak + (31 - Math.clz32(Ik)),
-                Lk = Xk.activeViews.get(qk),
-                tk = Lk?.deref();
-              void 0 !== tk ? ik ? pF(yk, qk, Fk) : void 0 !== lk && tk.markVisible(lk) : Tk[ak] &= ~Ik
+    function jf(mm, Tm, fm, hm) {
+      if (mm.addParent(Tm, hm), !fm) return;
+      const Am = fm.add(mm);
+      fm !== mm.root && (mm.root = fm, xf(mm, Tm, hm));
+      const am = Tm?.[Ym];
+      if (void 0 !== am && void 0 !== am.subscribedViews && void 0 !== Tm[qm] && function(mm, Tm, fm, hm) {
+          const Am = mm.subscribedViews;
+          if (void 0 === Am) return;
+          const am = mm.isStreamCollection,
+            xm = am ? mm.ref : void 0,
+            wm = am ? void 0 : fm[Ym];
+          for (let Dm = 0, im = Am.length; Dm < im; Dm++) {
+            let mm = Am[Dm];
+            for (; 0 !== mm;) {
+              const fm = mm & -mm;
+              mm ^= fm;
+              const im = 32 * Dm + (31 - Math.clz32(fm)),
+                Rm = hm.activeViews.get(im),
+                pm = Rm?.deref();
+              void 0 !== pm ? am ? GT(xm, im, Tm) : void 0 !== wm && pm.markVisible(wm) : Am[Dm] &= ~fm
             }
           }
-        }(ik, Xk, kk.ref, Ik), Tk) {
-        let Fk = KI[QI];
-        void 0 === Fk && (Fk = {
+        }(am, hm, mm.ref, fm), Am) {
+        let Tm = Qf[nf];
+        void 0 === Tm && (Tm = {
           parentRef: void 0,
           root: void 0
-        }, KI[QI] = Fk), Fk.parentRef = kk.ref, Fk.root = Ik, QI++, xI(kk, Fk, sI), QI--
+        }, Qf[nf] = Tm), Tm.parentRef = mm.ref, Tm.root = fm, nf++, If(mm, Tm, Jf), nf--
       }
     }
 
-    function JI(kk, Fk, Ik) {
-      kk(Fk, Ik)
+    function Vf(mm, Tm, fm) {
+      mm(Tm, fm)
     }
 
-    function xI(kk, Fk, Ik) {
-      const Xk = kk.refTarget;
-      if (Xk[Hk]) {
-        if ("string" !== typeof Xk[Hk]) {
-          const kk = Xk.items;
-          if (void 0 !== kk)
-            for (let Xk = 0, Tk = kk.length; Xk < Tk; Xk++) {
-              const Tk = kk[Xk];
-              Tk && Ik(Fk, Tk[wk], Xk)
+    function If(mm, Tm, fm) {
+      const hm = mm.refTarget;
+      if (hm[qm]) {
+        if ("string" !== typeof hm[qm]) {
+          const mm = hm.items;
+          if (void 0 !== mm)
+            for (let hm = 0, Am = mm.length; hm < Am; hm++) {
+              const Am = mm[hm];
+              Am && fm(Tm, Am[Ym], hm)
             } else {
-              const kk = Xk.$items,
-                Tk = Xk._collectionIndexes;
-              for (const Xk of kk.keys()) {
-                const ik = kk.get(Xk);
-                ik && Ik(Fk, ik[wk], Tk?.[Xk] ?? Xk)
+              const mm = hm.$items,
+                Am = hm._collectionIndexes;
+              for (const hm of mm.keys()) {
+                const am = mm.get(hm);
+                am && fm(Tm, am[Ym], Am?.[hm] ?? hm)
               }
             }
         }
       } else {
-        const Tk = kk.metadata,
-          ik = Tk?.[Ek];
-        if (!ik) return;
-        const yk = kk.encDescriptor.names;
-        for (let kk = 0, lk = ik.length; kk < lk; kk++) {
-          const Tk = ik[kk],
-            lk = Xk[yk[Tk]];
-          lk && Ik(Fk, lk[wk], Tk)
+        const Am = mm.metadata,
+          am = Am?.[km];
+        if (!am) return;
+        const xm = mm.encDescriptor.names;
+        for (let mm = 0, wm = am.length; mm < wm; mm++) {
+          const Am = am[mm],
+            wm = hm[xm[Am]];
+          wm && fm(Tm, wm[Ym], Am)
         }
       }
     }
 
-    function PI(kk, Fk, Ik) {
-      Fk.root !== kk ? Fk.setRoot(kk) : kk.add(Fk)
+    function Kf(mm, Tm, fm) {
+      Tm.root !== mm ? Tm.setRoot(mm) : mm.add(Tm)
     }
-    const KI = [];
-    let QI = 0;
+    const Qf = [];
+    let nf = 0;
 
-    function sI(kk, Fk, Ik) {
-      if (Fk.root === kk.root) return kk.root.add(Fk), void kk.root.moveNextToParent(Fk);
-      Fk.setParent(kk.parentRef, kk.root, Ik)
+    function Jf(mm, Tm, fm) {
+      if (Tm.root === mm.root) return mm.root.add(Tm), void mm.root.moveNextToParent(Tm);
+      Tm.setParent(mm.parentRef, mm.root, fm)
     }
 
-    function VI(kk, Fk, Ik) {
-      const Xk = (3 & Ik) << 3;
-      return Ik < 4 ? kk >>> Xk & 255 : Fk >>> Xk & 255
+    function zf(mm, Tm, fm) {
+      const hm = (3 & fm) << 3;
+      return fm < 4 ? mm >>> hm & 255 : Tm >>> hm & 255
     }
-    const zI = (kk, Fk, Ik) => kk(Fk, Ik);
-    const SI = 16,
-      oI = 32,
-      vI = 128,
-      EI = 256,
-      OI = SI | oI;
-    class nI {
+    const Zf = (mm, Tm, fm) => mm(Tm, fm);
+    const kf = 16,
+      bf = 32,
+      Sf = 128,
+      ef = 256,
+      Nf = kf | bf;
+    class Gf {
       ref;
       refTarget;
       get isArray() {
@@ -3302,183 +3302,183 @@ export const modules = {
       get isFiltered() {
         return 0 !== (1 & this.flags)
       }
-      set isFiltered(kk) {
-        this.flags = kk ? 1 | this.flags : -2 & this.flags
+      set isFiltered(mm) {
+        this.flags = mm ? 1 | this.flags : -2 & this.flags
       }
       get isVisibilitySharedWithParent() {
         return 0 !== (2 & this.flags)
       }
-      set isVisibilitySharedWithParent(kk) {
-        this.flags = kk ? 2 | this.flags : -3 & this.flags
+      set isVisibilitySharedWithParent(mm) {
+        this.flags = mm ? 2 | this.flags : -3 & this.flags
       }
       get isNew() {
         return 0 !== (4 & this.flags)
       }
-      set isNew(kk) {
-        this.flags = kk ? 4 | this.flags : -5 & this.flags
+      set isNew(mm) {
+        this.flags = mm ? 4 | this.flags : -5 & this.flags
       }
       get isUnreliable() {
         return 0 !== (8 & this.flags)
       }
-      set isUnreliable(kk) {
-        this.flags = kk ? 8 | this.flags : -9 & this.flags
+      set isUnreliable(mm) {
+        this.flags = mm ? 8 | this.flags : -9 & this.flags
       }
       get isPatchOnly() {
-        return 0 !== (this.flags & SI)
+        return 0 !== (this.flags & kf)
       }
-      set isPatchOnly(kk) {
-        this.flags = kk ? this.flags | SI : this.flags & ~SI
+      set isPatchOnly(mm) {
+        this.flags = mm ? this.flags | kf : this.flags & ~kf
       }
       get isFullStateOnly() {
-        return 0 !== (this.flags & oI)
+        return 0 !== (this.flags & bf)
       }
-      set isFullStateOnly(kk) {
-        this.flags = kk ? this.flags | oI : this.flags & ~oI
+      set isFullStateOnly(mm) {
+        this.flags = mm ? this.flags | bf : this.flags & ~bf
       }
       get isStreamCollection() {
         return 0 !== (64 & this.flags)
       }
-      set isStreamCollection(kk) {
-        this.flags = kk ? 64 | this.flags : -65 & this.flags
+      set isStreamCollection(mm) {
+        this.flags = mm ? 64 | this.flags : -65 & this.flags
       }
       get needsRestage() {
-        return 0 !== (this.flags & vI)
+        return 0 !== (this.flags & Sf)
       }
-      set needsRestage(kk) {
-        this.flags = kk ? this.flags | vI : -129 & this.flags
+      set needsRestage(mm) {
+        this.flags = mm ? this.flags | Sf : -129 & this.flags
       }
       get hasFilteredFields() {
         return this.isFiltered || this.encDescriptor.hasAnyView
       }
       ensureUnreliableRecorder() {
-        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new rF(this.metadata?.[vk] ?? 0) : new DF), this.unreliableRecorder
+        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new gT(this.metadata?.[Zm] ?? 0) : new WT), this.unreliableRecorder
       }
-      isFieldUnreliable(kk) {
-        const Fk = this.encDescriptor;
-        return !!Fk.hasAnyUnreliable && (kk < 32 ? 0 !== (Fk.unreliableBitmask & 1 << kk) : mF.hasUnreliableAtIndex(this.metadata, kk))
+      isFieldUnreliable(mm) {
+        const Tm = this.encDescriptor;
+        return !!Tm.hasAnyUnreliable && (mm < 32 ? 0 !== (Tm.unreliableBitmask & 1 << mm) : UT.hasUnreliableAtIndex(this.metadata, mm))
       }
-      isFieldFullStateOnly(kk) {
+      isFieldFullStateOnly(mm) {
         if (this.isFullStateOnly) return !0;
-        const Fk = this.encDescriptor;
-        return !!Fk.hasAnyFullStateOnly && (kk < 32 ? 0 !== (Fk.fullStateOnlyBitmask & 1 << kk) : mF.hasFullStateOnlyAtIndex(this.metadata, kk))
+        const Tm = this.encDescriptor;
+        return !!Tm.hasAnyFullStateOnly && (mm < 32 ? 0 !== (Tm.fullStateOnlyBitmask & 1 << mm) : UT.hasFullStateOnlyAtIndex(this.metadata, mm))
       }
-      isFieldStream(kk) {
-        const Fk = this.encDescriptor;
-        return !!Fk.hasAnyStream && (kk < 32 ? 0 !== (Fk.streamBitmask & 1 << kk) : mF.hasStreamAtIndex(this.metadata, kk))
+      isFieldStream(mm) {
+        const Tm = this.encDescriptor;
+        return !!Tm.hasAnyStream && (mm < 32 ? 0 !== (Tm.streamBitmask & 1 << mm) : UT.hasStreamAtIndex(this.metadata, mm))
       }
-      constructor(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk;
-        this.ref = kk, this.refTarget = Fk;
-        const Ik = FI(kk);
-        this.encDescriptor = Ik, this.metadata = Ik.metadata;
-        const Xk = Ik.isSchema;
-        if (this._isSchema = Xk, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, Xk) {
-          const kk = this.metadata?.[vk] ?? 0;
-          kk > 7 && (this.ops = new Uint8Array(kk + 1))
+      constructor(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mm;
+        this.ref = mm, this.refTarget = Tm;
+        const fm = Tf(mm);
+        this.encDescriptor = fm, this.metadata = fm.metadata;
+        const hm = fm.isSchema;
+        if (this._isSchema = hm, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, hm) {
+          const mm = this.metadata?.[Zm] ?? 0;
+          mm > 7 && (this.ops = new Uint8Array(mm + 1))
         } else this.collDirty = new Map
       }
-      _opAt(kk) {
-        const Fk = this.ops;
-        if (void 0 !== Fk) return Fk[kk];
-        const Ik = (3 & kk) << 3;
-        return kk < 4 ? this.opsLow >>> Ik & 255 : this.opsHigh >>> Ik & 255
+      _opAt(mm) {
+        const Tm = this.ops;
+        if (void 0 !== Tm) return Tm[mm];
+        const fm = (3 & mm) << 3;
+        return mm < 4 ? this.opsLow >>> fm & 255 : this.opsHigh >>> fm & 255
       }
-      _opPut(kk, Fk) {
-        const Ik = this.ops;
-        if (void 0 !== Ik) return void(Ik[kk] = Fk);
-        const Xk = (3 & kk) << 3,
-          Tk = ~(255 << Xk);
-        kk < 4 ? this.opsLow = this.opsLow & Tk | Fk << Xk : this.opsHigh = this.opsHigh & Tk | Fk << Xk
+      _opPut(mm, Tm) {
+        const fm = this.ops;
+        if (void 0 !== fm) return void(fm[mm] = Tm);
+        const hm = (3 & mm) << 3,
+          Am = ~(255 << hm);
+        mm < 4 ? this.opsLow = this.opsLow & Am | Tm << hm : this.opsHigh = this.opsHigh & Am | Tm << hm
       }
-      _markDirty(kk) {
-        kk < 32 ? this.dirtyLow |= 1 << kk : this.dirtyHigh |= 1 << kk - 32
+      _markDirty(mm) {
+        mm < 32 ? this.dirtyLow |= 1 << mm : this.dirtyHigh |= 1 << mm - 32
       }
-      record(kk, Fk) {
+      record(mm, Tm) {
         if (this._isSchema) {
-          const Ik = this._opAt(kk);
-          0 === Ik ? this._opPut(kk, Fk) : (Ik === Tk.DELETE || Ik === Tk.ADD && Fk === Tk.DELETE_AND_ADD) && this._opPut(kk, Tk.DELETE_AND_ADD), this._markDirty(kk)
+          const fm = this._opAt(mm);
+          0 === fm ? this._opPut(mm, Tm) : (fm === Am.DELETE || fm === Am.ADD && Tm === Am.DELETE_AND_ADD) && this._opPut(mm, Am.DELETE_AND_ADD), this._markDirty(mm)
         } else {
-          const Ik = this.collDirty,
-            Xk = Ik.get(kk);
-          let ik;
-          ik = void 0 === Xk ? Fk : Xk === Tk.DELETE || Xk === Tk.ADD && Fk === Tk.DELETE_AND_ADD ? Tk.DELETE_AND_ADD : Xk, Ik.set(kk, ik)
+          const fm = this.collDirty,
+            hm = fm.get(mm);
+          let am;
+          am = void 0 === hm ? Tm : hm === Am.DELETE || hm === Am.ADD && Tm === Am.DELETE_AND_ADD ? Am.DELETE_AND_ADD : hm, fm.set(mm, am)
         }
       }
-      recordDelete(kk, Fk) {
-        this._isSchema ? (this._opPut(kk, Fk), this._markDirty(kk)) : this.collDirty.set(kk, Fk)
+      recordDelete(mm, Tm) {
+        this._isSchema ? (this._opPut(mm, Tm), this._markDirty(mm)) : this.collDirty.set(mm, Tm)
       }
-      recordRaw(kk, Fk) {
-        this._isSchema ? (this._opPut(kk, Fk), this._markDirty(kk)) : this.collDirty.set(kk, Fk)
+      recordRaw(mm, Tm) {
+        this._isSchema ? (this._opPut(mm, Tm), this._markDirty(mm)) : this.collDirty.set(mm, Tm)
       }
-      recordPure(kk) {
+      recordPure(mm) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): pure operations are not supported");
-        (this.collPureOps ??= []).push([this.collDirty.size, kk])
+        (this.collPureOps ??= []).push([this.collDirty.size, mm])
       }
-      operationAt(kk) {
+      operationAt(mm) {
         if (this._isSchema) {
-          const Fk = this._opAt(kk);
-          return 0 === Fk ? void 0 : Fk
+          const Tm = this._opAt(mm);
+          return 0 === Tm ? void 0 : Tm
         }
-        return this.collDirty.get(kk)
+        return this.collDirty.get(mm)
       }
-      setOperationAt(kk, Fk) {
-        if (this._isSchema) this._opPut(kk, Fk);
+      setOperationAt(mm, Tm) {
+        if (this._isSchema) this._opPut(mm, Tm);
         else {
-          const Ik = this.collDirty;
-          Ik.has(kk) && Ik.set(kk, Fk)
+          const fm = this.collDirty;
+          fm.has(mm) && fm.set(mm, Tm)
         }
       }
-      forEach(kk) {
-        this.forEachWithCtx(kk, zI)
+      forEach(mm) {
+        this.forEachWithCtx(mm, Zf)
       }
-      forEachWithCtx(kk, Fk) {
+      forEachWithCtx(mm, Tm) {
         if (this._isSchema) {
-          let Ik = this.dirtyLow,
-            Xk = this.dirtyHigh;
-          const Tk = this.ops;
-          if (void 0 !== Tk) {
-            for (; 0 !== Ik;) {
-              const Xk = Ik & -Ik,
-                ik = 31 - Math.clz32(Xk);
-              Ik ^= Xk, Fk(kk, ik, Tk[ik])
+          let fm = this.dirtyLow,
+            hm = this.dirtyHigh;
+          const Am = this.ops;
+          if (void 0 !== Am) {
+            for (; 0 !== fm;) {
+              const hm = fm & -fm,
+                am = 31 - Math.clz32(hm);
+              fm ^= hm, Tm(mm, am, Am[am])
             }
-            for (; 0 !== Xk;) {
-              const Ik = Xk & -Xk,
-                ik = 31 - Math.clz32(Ik) + 32;
-              Xk ^= Ik, Fk(kk, ik, Tk[ik])
+            for (; 0 !== hm;) {
+              const fm = hm & -hm,
+                am = 31 - Math.clz32(fm) + 32;
+              hm ^= fm, Tm(mm, am, Am[am])
             }
           } else {
-            const Xk = this.opsLow,
-              Tk = this.opsHigh;
-            for (; 0 !== Ik;) {
-              const ik = Ik & -Ik,
-                yk = 31 - Math.clz32(ik);
-              Ik ^= ik, Fk(kk, yk, VI(Xk, Tk, yk))
+            const hm = this.opsLow,
+              Am = this.opsHigh;
+            for (; 0 !== fm;) {
+              const am = fm & -fm,
+                xm = 31 - Math.clz32(am);
+              fm ^= am, Tm(mm, xm, zf(hm, Am, xm))
             }
           }
           return
         }
-        const Ik = this.collDirty,
-          Xk = this.collPureOps;
-        if (void 0 !== Xk && Xk.length > 0) {
-          let Tk = 0,
-            ik = 0;
-          for (const [yk, lk] of Ik) {
-            for (; Tk < Xk.length && Xk[Tk][0] <= ik;) {
-              const Ik = Xk[Tk++][1];
-              Fk(kk, -Ik, Ik)
+        const fm = this.collDirty,
+          hm = this.collPureOps;
+        if (void 0 !== hm && hm.length > 0) {
+          let Am = 0,
+            am = 0;
+          for (const [xm, wm] of fm) {
+            for (; Am < hm.length && hm[Am][0] <= am;) {
+              const fm = hm[Am++][1];
+              Tm(mm, -fm, fm)
             }
-            Fk(kk, yk, lk), ik++
+            Tm(mm, xm, wm), am++
           }
-          for (; Tk < Xk.length;) {
-            const Ik = Xk[Tk++][1];
-            Fk(kk, -Ik, Ik)
+          for (; Am < hm.length;) {
+            const fm = hm[Am++][1];
+            Tm(mm, -fm, fm)
           }
         } else
-          for (const [Tk, ik] of Ik) Fk(kk, Tk, ik)
+          for (const [Am, am] of fm) Tm(mm, Am, am)
       }
       size() {
-        return this._isSchema ? MF(this.dirtyLow) + MF(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
+        return this._isSchema ? FT(this.dirtyLow) + FT(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
       }
       has() {
         return this._isSchema ? 0 !== (this.dirtyLow | this.dirtyHigh) : this.collDirty.size > 0 || void 0 !== this.collPureOps && this.collPureOps.length > 0
@@ -3491,81 +3491,81 @@ export const modules = {
         if (void 0 !== this.root) throw new Error(`@colyseus/schema: cannot recycle an attached ChangeTree (${this.ref?.constructor?.name}). Remove the instance from its parent collection before releasing it to a pool.`);
         this.reset(), this.unreliableRecorder?.reset(), this.flags = 132, this._fullSyncGen = 0, this.parentRef = void 0, this._parentIndex = void 0, this.extraParents = void 0, this.changesNode = void 0, this.unreliableChangesNode = void 0, this.paused = !1, this.visibleViews = void 0, this.tagViews = void 0, this.subscribedViews = void 0
       }
-      insertAt(kk, Fk) {
+      insertAt(mm, Tm) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): insertAt is not supported");
-        const Ik = this.collDirty,
-          Xk = new Map,
-          ik = !this.paused && !this.isFullStateOnly;
-        if (kk > 0)
-          for (const [Tk, yk] of Ik) Tk < kk && Xk.set(Tk, yk);
-        if (ik)
-          for (let yk = 0; yk < Fk; yk++) Xk.set(kk + yk, Tk.ADD);
-        for (const [Tk, yk] of Ik) Tk >= kk && Xk.set(Tk + Fk, yk);
-        this.collDirty = Xk, ik && this.root?.enqueueChangeTree(this)
+        const fm = this.collDirty,
+          hm = new Map,
+          am = !this.paused && !this.isFullStateOnly;
+        if (mm > 0)
+          for (const [Am, xm] of fm) Am < mm && hm.set(Am, xm);
+        if (am)
+          for (let xm = 0; xm < Tm; xm++) hm.set(mm + xm, Am.ADD);
+        for (const [Am, xm] of fm) Am >= mm && hm.set(Am + Tm, xm);
+        this.collDirty = hm, am && this.root?.enqueueChangeTree(this)
       }
-      removeAt(kk, Fk) {
+      removeAt(mm, Tm) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): removeAt is not supported");
-        const Ik = this.collDirty,
-          Xk = kk + Fk;
-        let Tk = !1;
-        for (const yk of Ik.keys())
-          if (yk >= Xk) {
-            Tk = !0;
+        const fm = this.collDirty,
+          hm = mm + Tm;
+        let Am = !1;
+        for (const xm of fm.keys())
+          if (xm >= hm) {
+            Am = !0;
             break
-          } if (!Tk) {
-          for (let Fk = kk; Fk < Xk; Fk++) Ik.delete(Fk);
+          } if (!Am) {
+          for (let Tm = mm; Tm < hm; Tm++) fm.delete(Tm);
           return
         }
-        const ik = new Map;
-        for (const [yk, lk] of Ik) yk < kk ? ik.set(yk, lk) : yk >= Xk && ik.set(yk - Fk, lk);
-        this.collDirty = ik
+        const am = new Map;
+        for (const [xm, wm] of fm) xm < mm ? am.set(xm, wm) : xm >= hm && am.set(xm - Tm, wm);
+        this.collDirty = am
       }
-      unshift(kk) {
-        this.insertAt(0, kk)
+      unshift(mm) {
+        this.insertAt(0, mm)
       }
-      setRoot(kk) {
-        ! function(kk, Fk) {
-          kk.root = Fk;
-          const Ik = Fk.add(kk);
-          yI(kk, kk.parent, kk.parentIndex), Ik && xI(kk, Fk, PI)
-        }(this, kk)
+      setRoot(mm) {
+        ! function(mm, Tm) {
+          mm.root = Tm;
+          const fm = Tm.add(mm);
+          xf(mm, mm.parent, mm.parentIndex), fm && If(mm, Tm, Kf)
+        }(this, mm)
       }
-      setParent(kk, Fk, Ik) {
-        HI(this, kk, Fk, Ik)
+      setParent(mm, Tm, fm) {
+        jf(this, mm, Tm, fm)
       }
-      forEachChild(kk) {
-        xI(this, kk, JI)
+      forEachChild(mm) {
+        If(this, mm, Vf)
       }
-      forEachChildWithCtx(kk, Fk) {
-        xI(this, kk, Fk)
+      forEachChildWithCtx(mm, Tm) {
+        If(this, mm, Tm)
       }
-      forEachLive(kk) {
-        iI(this, kk, TI)
+      forEachLive(mm) {
+        af(this, mm, Af)
       }
-      forEachLiveWithCtx(kk, Fk) {
-        iI(this, kk, Fk)
+      forEachLiveWithCtx(mm, Tm) {
+        af(this, mm, Tm)
       }
-      operation(kk) {
-        this.paused || this.isFullStateOnly || (this.recordPure(kk), this.root?.enqueueChangeTree(this))
+      operation(mm) {
+        this.paused || this.isFullStateOnly || (this.recordPure(mm), this.root?.enqueueChangeTree(this))
       }
-      _routeAndRecord(kk, Fk, Ik) {
-        if (!this.paused && !this.isFieldFullStateOnly(kk)) {
-          if (this.isFieldUnreliable(kk) && !this.isNew) {
-            const Xk = this.ensureUnreliableRecorder();
-            return Ik ? Xk.recordRaw(kk, Fk) : Xk.record(kk, Fk), void this.root?.enqueueUnreliable(this)
+      _routeAndRecord(mm, Tm, fm) {
+        if (!this.paused && !this.isFieldFullStateOnly(mm)) {
+          if (this.isFieldUnreliable(mm) && !this.isNew) {
+            const hm = this.ensureUnreliableRecorder();
+            return fm ? hm.recordRaw(mm, Tm) : hm.record(mm, Tm), void this.root?.enqueueUnreliable(this)
           }
-          Ik ? this.recordRaw(kk, Fk) : this.record(kk, Fk), this.root?.enqueueChangeTree(this)
+          fm ? this.recordRaw(mm, Tm) : this.record(mm, Tm), this.root?.enqueueChangeTree(this)
         }
       }
-      change(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Tk.ADD;
-        this._routeAndRecord(kk, Fk, !1)
+      change(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Am.ADD;
+        this._routeAndRecord(mm, Tm, !1)
       }
-      indexedOperation(kk, Fk) {
-        this._routeAndRecord(kk, Fk, !0)
+      indexedOperation(mm, Tm) {
+        this._routeAndRecord(mm, Tm, !0)
       }
-      getChange(kk) {
-        return this.operationAt(kk)
+      getChange(mm) {
+        return this.operationAt(mm)
       }
       pause() {
         this.paused = !0
@@ -3573,60 +3573,60 @@ export const modules = {
       resume() {
         this.paused = !1
       }
-      untracked(kk) {
-        const Fk = this.paused;
+      untracked(mm) {
+        const Tm = this.paused;
         this.paused = !0;
         try {
-          return kk()
+          return mm()
         } finally {
-          this.paused = Fk
+          this.paused = Tm
         }
       }
-      markDirty(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Tk.ADD;
-        const Ik = this.paused;
+      markDirty(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Am.ADD;
+        const fm = this.paused;
         this.paused = !1;
         try {
-          this.change(kk, Fk)
+          this.change(mm, Tm)
         } finally {
-          this.paused = Ik
+          this.paused = fm
         }
       }
-      getValue(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.refTarget[Zk](kk, Fk)
+      getValue(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.refTarget[Em](mm, Tm)
       }
-      delete(kk, Fk) {
-        if (void 0 === kk) {
+      delete(mm, Tm) {
+        if (void 0 === mm) {
           try {
-            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${kk}'`)
-          } catch (yT) {
-            console.warn(yT)
+            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${mm}'`)
+          } catch (DA) {
+            console.warn(DA)
           }
           return
         }
-        if (this.paused || this.isFieldFullStateOnly(kk)) return this.getValue(kk);
-        const Ik = this.isFieldUnreliable(kk) && !this.isNew;
-        Ik ? this.ensureUnreliableRecorder().recordDelete(kk, Fk ?? Tk.DELETE) : this.recordDelete(kk, Fk ?? Tk.DELETE);
-        const Xk = this.getValue(kk);
-        return Xk && Xk[wk] && this.root?.remove(Xk[wk]), Ik ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), Xk
+        if (this.paused || this.isFieldFullStateOnly(mm)) return this.getValue(mm);
+        const fm = this.isFieldUnreliable(mm) && !this.isNew;
+        fm ? this.ensureUnreliableRecorder().recordDelete(mm, Tm ?? Am.DELETE) : this.recordDelete(mm, Tm ?? Am.DELETE);
+        const hm = this.getValue(mm);
+        return hm && hm[Ym] && this.root?.remove(hm[Ym]), fm ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), hm
       }
       endEncode() {
-        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[xk]?.(), this.isNew = !1
+        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[Vm]?.(), this.isNew = !1
       }
       endEncodeUnreliable() {
-        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[xk]?.()
+        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[Vm]?.()
       }
       discard() {
-        this._isSchema || this.refTarget[xk]?.(), this.reset(), this.unreliableRecorder?.reset()
+        this._isSchema || this.refTarget[Vm]?.(), this.reset(), this.unreliableRecorder?.reset()
       }
       discardAll() {
-        const kk = kk => {
-          if (kk < 0) return;
-          const Fk = this.getValue(kk);
-          Fk && Fk[wk] && Fk[wk].discardAll()
+        const mm = mm => {
+          if (mm < 0) return;
+          const Tm = this.getValue(mm);
+          Tm && Tm[Ym] && Tm[Ym].discardAll()
         };
-        this.forEach(kk), this.unreliableRecorder?.forEach(kk), this.discard()
+        this.forEach(mm), this.unreliableRecorder?.forEach(mm), this.discard()
       }
       get changed() {
         return this.has() || (this.unreliableRecorder?.has() ?? !1)
@@ -3637,89 +3637,89 @@ export const modules = {
       get parentIndex() {
         return this._parentIndex
       }
-      addParent(kk, Fk) {
-        ! function(kk, Fk, Ik) {
-          if (kk.parentRef) {
-            if (kk.parentRef[wk] === Fk[wk]) return void(kk._parentIndex = Ik);
-            if (II(kk, ((kk, Ik) => kk[wk] === Fk[wk]))) return void(kk._parentIndex = Ik)
+      addParent(mm, Tm) {
+        ! function(mm, Tm, fm) {
+          if (mm.parentRef) {
+            if (mm.parentRef[Ym] === Tm[Ym]) return void(mm._parentIndex = fm);
+            if (ff(mm, ((mm, fm) => mm[Ym] === Tm[Ym]))) return void(mm._parentIndex = fm)
           }
-          void 0 === kk.parentRef ? (kk.parentRef = Fk, kk._parentIndex = Ik) : (kk.extraParents = {
-            ref: kk.parentRef,
-            index: kk._parentIndex,
-            next: kk.extraParents
-          }, kk.parentRef = Fk, kk._parentIndex = Ik)
-        }(this, kk, Fk)
+          void 0 === mm.parentRef ? (mm.parentRef = Tm, mm._parentIndex = fm) : (mm.extraParents = {
+            ref: mm.parentRef,
+            index: mm._parentIndex,
+            next: mm.extraParents
+          }, mm.parentRef = Tm, mm._parentIndex = fm)
+        }(this, mm, Tm)
       }
-      setParentIndex(kk, Fk) {
-        ! function(kk, Fk, Ik) {
-          if (void 0 !== kk.extraParents)
-            if (kk.parentRef[wk] !== Fk[wk]) {
-              for (let Xk = kk.extraParents; void 0 !== Xk; Xk = Xk.next)
-                if (Xk.ref[wk] === Fk[wk]) return void(Xk.index = Ik)
-            } else kk._parentIndex = Ik;
-          else kk._parentIndex = Ik
-        }(this, kk, Fk)
+      setParentIndex(mm, Tm) {
+        ! function(mm, Tm, fm) {
+          if (void 0 !== mm.extraParents)
+            if (mm.parentRef[Ym] !== Tm[Ym]) {
+              for (let hm = mm.extraParents; void 0 !== hm; hm = hm.next)
+                if (hm.ref[Ym] === Tm[Ym]) return void(hm.index = fm)
+            } else mm._parentIndex = fm;
+          else mm._parentIndex = fm
+        }(this, mm, Tm)
       }
       removeParent() {
-        return function(kk, Fk) {
-          if (kk.parentRef && kk.parentRef[wk] === Fk[wk]) return kk.extraParents ? (kk.parentRef = kk.extraParents.ref, kk._parentIndex = kk.extraParents.index, kk.extraParents = kk.extraParents.next) : (kk.parentRef = void 0, kk._parentIndex = void 0), !0;
-          let Ik = kk.extraParents,
-            Xk = null;
-          for (; Ik;) {
-            if (Ik.ref[wk] === Fk[wk]) return Xk ? Xk.next = Ik.next : kk.extraParents = Ik.next, !0;
-            Xk = Ik, Ik = Ik.next
+        return function(mm, Tm) {
+          if (mm.parentRef && mm.parentRef[Ym] === Tm[Ym]) return mm.extraParents ? (mm.parentRef = mm.extraParents.ref, mm._parentIndex = mm.extraParents.index, mm.extraParents = mm.extraParents.next) : (mm.parentRef = void 0, mm._parentIndex = void 0), !0;
+          let fm = mm.extraParents,
+            hm = null;
+          for (; fm;) {
+            if (fm.ref[Ym] === Tm[Ym]) return hm ? hm.next = fm.next : mm.extraParents = fm.next, !0;
+            hm = fm, fm = fm.next
           }
-          return void 0 === kk.parentRef
+          return void 0 === mm.parentRef
         }(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.parent)
       }
-      findParent(kk) {
-        return function(kk, Fk) {
-          if (void 0 !== kk.parentRef && Fk(kk.parentRef, kk._parentIndex)) return {
-            ref: kk.parentRef,
-            index: kk._parentIndex
+      findParent(mm) {
+        return function(mm, Tm) {
+          if (void 0 !== mm.parentRef && Tm(mm.parentRef, mm._parentIndex)) return {
+            ref: mm.parentRef,
+            index: mm._parentIndex
           };
-          for (let Ik = kk.extraParents; void 0 !== Ik; Ik = Ik.next)
-            if (Fk(Ik.ref, Ik.index)) return {
-              ref: Ik.ref,
-              index: Ik.index
+          for (let fm = mm.extraParents; void 0 !== fm; fm = fm.next)
+            if (Tm(fm.ref, fm.index)) return {
+              ref: fm.ref,
+              index: fm.index
             }
-        }(this, kk)
+        }(this, mm)
       }
-      hasParent(kk) {
-        return II(this, kk)
+      hasParent(mm) {
+        return ff(this, mm)
       }
-      indexInParent(kk) {
-        return function(kk, Fk) {
-          if (kk.parentRef && kk.parentRef[wk] === Fk[wk]) return kk._parentIndex;
-          for (let Ik = kk.extraParents; void 0 !== Ik; Ik = Ik.next)
-            if (Ik.ref[wk] === Fk[wk]) return Ik.index
-        }(this, kk)
+      indexInParent(mm) {
+        return function(mm, Tm) {
+          if (mm.parentRef && mm.parentRef[Ym] === Tm[Ym]) return mm._parentIndex;
+          for (let fm = mm.extraParents; void 0 !== fm; fm = fm.next)
+            if (fm.ref[Ym] === Tm[Ym]) return fm.index
+        }(this, mm)
       }
       getAllParents() {
-        return function(kk) {
-          const Fk = [];
-          kk.parentRef && Fk.push({
-            ref: kk.parentRef,
-            index: kk._parentIndex
+        return function(mm) {
+          const Tm = [];
+          mm.parentRef && Tm.push({
+            ref: mm.parentRef,
+            index: mm._parentIndex
           });
-          let Ik = kk.extraParents;
-          for (; Ik;) Fk.push({
-            ref: Ik.ref,
-            index: Ik.index
-          }), Ik = Ik.next;
-          return Fk
+          let fm = mm.extraParents;
+          for (; fm;) Tm.push({
+            ref: fm.ref,
+            index: fm.index
+          }), fm = fm.next;
+          return Tm
         }(this)
       }
     }
-    class GI {
+    class Xf {
       ref;
       root = void 0;
       parentRef = void 0;
       paused = !1;
       isNew = !1;
       flags = 0;
-      constructor(kk) {
-        this.ref = kk
+      constructor(mm) {
+        this.ref = mm
       }
       change() {}
       delete() {}
@@ -3738,606 +3738,606 @@ export const modules = {
       discardAll() {}
       pause() {}
       resume() {}
-      untracked(kk) {
-        return kk()
+      untracked(mm) {
+        return mm()
       }
       markDirty() {}
-      forEachChild(kk) {
-        const Fk = this.ref;
-        if (Fk[Hk]) {
-          if ("string" !== typeof Fk[Hk])
-            for (const [Ik, Xk] of Fk.entries()) Xk && kk(Xk[wk], Fk._collectionIndexes?.[Ik] ?? Ik);
+      forEachChild(mm) {
+        const Tm = this.ref;
+        if (Tm[qm]) {
+          if ("string" !== typeof Tm[qm])
+            for (const [fm, hm] of Tm.entries()) hm && mm(hm[Ym], Tm._collectionIndexes?.[fm] ?? fm);
           return
         }
-        const Ik = Fk.constructor,
-          Xk = Ik?.[Symbol.metadata];
-        if (!Xk) return;
-        const Tk = Xk[Ek] ?? [];
-        for (let ik = 0; ik < Tk.length; ik++) {
-          const Ik = Tk[ik],
-            yk = Fk[Xk[Ik].name];
-          yk && kk(yk[wk], Ik)
+        const fm = Tm.constructor,
+          hm = fm?.[Symbol.metadata];
+        if (!hm) return;
+        const Am = hm[km] ?? [];
+        for (let am = 0; am < Am.length; am++) {
+          const fm = Am[am],
+            xm = Tm[hm[fm].name];
+          xm && mm(xm[Ym], fm)
         }
       }
-      forEachChildWithCtx(kk, Fk) {
-        this.forEachChild(((Ik, Xk) => Fk(kk, Ik, Xk)))
+      forEachChildWithCtx(mm, Tm) {
+        this.forEachChild(((fm, hm) => Tm(mm, fm, hm)))
       }
       forEachLive() {}
       forEachLiveWithCtx() {}
       forEach() {}
     }
 
-    function pI(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk;
-      var Ik;
-      Object.defineProperty(kk, wk, {
-        value: (Ik = Fk, new GI(Ik)),
+    function Pf(mm) {
+      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mm;
+      var fm;
+      Object.defineProperty(mm, Ym, {
+        value: (fm = Tm, new Xf(fm)),
         enumerable: !1,
         writable: !0
       })
     }
 
-    function uI(kk, Fk, Ik, Xk, ik, yk, ak) {
-      void 0 !== ak ? ak(Fk, Xk, yk) : "string" === typeof Ik ? IF[Ik]?.(Fk, Xk, yk) : null != Ik[Symbol.metadata] ? (IF.number(Fk, Xk[lk], yk), (ik & Tk.ADD) === Tk.ADD && kk.tryEncodeTypeId(Fk, Ik, Xk.constructor, yk)) : IF.number(Fk, Xk[lk], yk)
+    function Hf(mm, Tm, fm, hm, am, xm, Dm) {
+      void 0 !== Dm ? Dm(Tm, hm, xm) : "string" === typeof fm ? fT[fm]?.(Tm, hm, xm) : null != fm[Symbol.metadata] ? (fT.number(Tm, hm[wm], xm), (am & Am.ADD) === Am.ADD && mm.tryEncodeTypeId(Tm, fm, hm.constructor, xm)) : fT.number(Tm, hm[wm], xm)
     }
-    const bI = function(kk, Fk, Ik, Xk, ik, yk, lk, ak) {
-        if (Fk[yk.offset++] = 255 & (Xk | ik), ik === Tk.DELETE) return;
-        const qk = Ik.encDescriptor,
-          Lk = Ik.ref,
-          tk = Lk[Qk][Xk] ?? Lk[qk.names[Xk]];
-        uI(kk, Fk, qk.types[Xk], tk, ik, yk, qk.encoders[Xk])
+    const yf = function(mm, Tm, fm, hm, am, xm, wm, Dm) {
+        if (Tm[xm.offset++] = 255 & (hm | am), am === Am.DELETE) return;
+        const im = fm.encDescriptor,
+          Rm = fm.ref,
+          pm = Rm[Qm][hm] ?? Rm[im.names[hm]];
+        Hf(mm, Tm, im.types[hm], pm, am, xm, im.encoders[hm])
       },
-      RI = function(kk, Fk, Ik, Xk, ik, yk) {
-        if (Fk[yk.offset++] = 255 & ik, IF.number(Fk, Xk, yk), ik === Tk.DELETE) return;
-        const lk = Ik.ref;
-        if ((ik & Tk.ADD) === Tk.ADD) {
-          const kk = lk.$indexes.get(Xk);
-          IF.string(Fk, kk, yk)
+      Cf = function(mm, Tm, fm, hm, am, xm) {
+        if (Tm[xm.offset++] = 255 & am, fT.number(Tm, hm, xm), am === Am.DELETE) return;
+        const wm = fm.ref;
+        if ((am & Am.ADD) === Am.ADD) {
+          const mm = wm.$indexes.get(hm);
+          fT.string(Tm, mm, xm)
         }
-        uI(kk, Fk, lk[Hk], lk[Zk](Xk), ik, yk)
+        Hf(mm, Tm, wm[qm], wm[Em](hm), am, xm)
       },
-      UI = function(kk, Fk, Ik, Xk, ik, yk) {
-        if (Fk[yk.offset++] = 255 & ik, IF.number(Fk, Xk, yk), ik === Tk.DELETE) return;
-        const lk = Ik.ref;
-        uI(kk, Fk, lk[Hk], lk[Zk](Xk), ik, yk)
+      rf = function(mm, Tm, fm, hm, am, xm) {
+        if (Tm[xm.offset++] = 255 & am, fT.number(Tm, hm, xm), am === Am.DELETE) return;
+        const wm = fm.ref;
+        Hf(mm, Tm, wm[qm], wm[Em](hm), am, xm)
       },
-      CI = function(kk, Fk, Ik, Xk, ik, yk) {
-        const lk = Ik.ref;
-        (ik & Tk.ADD) === Tk.ADD && "function" === typeof lk.set ? RI(kk, Fk, Ik, Xk, ik, yk) : UI(kk, Fk, Ik, Xk, ik, yk)
+      sf = function(mm, Tm, fm, hm, am, xm) {
+        const wm = fm.ref;
+        (am & Am.ADD) === Am.ADD && "function" === typeof wm.set ? Cf(mm, Tm, fm, hm, am, xm) : rf(mm, Tm, fm, hm, am, xm)
       },
-      NI = function(kk, Fk, Ik, Xk, ik, yk, ak, qk) {
-        const Lk = Ik.refTarget,
-          tk = Lk[Hk],
-          jk = "string" !== typeof tk;
-        let ek;
-        if (qk && Ik.isFiltered && jk) {
-          const kk = Lk.tmpItems[Xk];
-          if (!kk) return;
-          if (ek = kk[lk], ik === Tk.DELETE) ik = Tk.DELETE_BY_REFID;
-          else if ((ik & Tk.ADD) === Tk.ADD) ik = Tk.ADD_BY_REFID;
-          else if ((ik & Tk.MOVE) === Tk.MOVE) return
-        } else if (ik === Tk.DELETE && jk) {
-          const kk = Lk.tmpItems[Xk];
-          if (!kk) return;
-          ek = kk[lk], ik = Tk.DELETE_BY_REFID
-        } else ek = Xk;
-        if (Fk[yk.offset++] = 255 & ik, IF.number(Fk, ek, yk), ik === Tk.DELETE || ik === Tk.DELETE_BY_REFID) return;
-        uI(kk, Fk, tk, Lk[Zk](Xk, ak), ik, yk)
+      lf = function(mm, Tm, fm, hm, am, xm, Dm, im) {
+        const Rm = fm.refTarget,
+          pm = Rm[qm],
+          om = "string" !== typeof pm;
+        let Om;
+        if (im && fm.isFiltered && om) {
+          const mm = Rm.tmpItems[hm];
+          if (!mm) return;
+          if (Om = mm[wm], am === Am.DELETE) am = Am.DELETE_BY_REFID;
+          else if ((am & Am.ADD) === Am.ADD) am = Am.ADD_BY_REFID;
+          else if ((am & Am.MOVE) === Am.MOVE) return
+        } else if (am === Am.DELETE && om) {
+          const mm = Rm.tmpItems[hm];
+          if (!mm) return;
+          Om = mm[wm], am = Am.DELETE_BY_REFID
+        } else Om = hm;
+        if (Tm[xm.offset++] = 255 & am, fT.number(Tm, Om, xm), am === Am.DELETE || am === Am.DELETE_BY_REFID) return;
+        Hf(mm, Tm, pm, Rm[Em](hm, Dm), am, xm)
       };
 
-    function cI(kk, Fk, Ik, Xk, ik, yk, ak) {
-      const qk = kk.resyncVisited;
-      let Lk = qk.get(kk.currentRefId);
-      if (void 0 === Lk && qk.set(kk.currentRefId, Lk = new Set), Lk.add(Xk), void 0 !== ik && Ik === Tk.ADD && ik !== yk) {
-        const Ik = ik[lk];
-        void 0 !== Ik && (kk.root.removeRef(Ik), ak?.push({
-          ref: Fk,
-          refId: kk.currentRefId,
-          op: Tk.DELETE,
-          dynamicIndex: Xk,
+    function Mf(mm, Tm, fm, hm, am, xm, Dm) {
+      const im = mm.resyncVisited;
+      let Rm = im.get(mm.currentRefId);
+      if (void 0 === Rm && im.set(mm.currentRefId, Rm = new Set), Rm.add(hm), void 0 !== am && fm === Am.ADD && am !== xm) {
+        const fm = am[wm];
+        void 0 !== fm && (mm.root.removeRef(fm), Dm?.push({
+          ref: Tm,
+          refId: mm.currentRefId,
+          op: Am.DELETE,
+          dynamicIndex: hm,
           value: void 0,
-          previousValue: ik
+          previousValue: am
         }))
       }
     }
 
-    function WI(kk, Fk, Ik, Xk) {
-      const Tk = Fk[lk];
-      if (void 0 === Tk || Ik.has(Tk)) return;
-      Ik.add(Tk);
-      const ik = Fk.constructor[Symbol.metadata],
-        yk = ik?.[Ek];
-      if (void 0 === yk) return;
-      const ak = ik[pk];
-      for (let lk = 0; lk < yk.length; lk++) {
-        const Tk = yk[lk];
-        if (void 0 !== ak && ak.includes(Tk)) continue;
-        const qk = ik[Tk],
-          Lk = Fk[qk.name];
-        Lk && (OX.is(qk.type) ? WI(kk, Lk, Ik, Xk) : fI(kk, Lk, Ik, Xk))
+    function uf(mm, Tm, fm, hm) {
+      const Am = Tm[wm];
+      if (void 0 === Am || fm.has(Am)) return;
+      fm.add(Am);
+      const am = Tm.constructor[Symbol.metadata],
+        xm = am?.[km];
+      if (void 0 === xm) return;
+      const Dm = am[Nm];
+      for (let wm = 0; wm < xm.length; wm++) {
+        const Am = xm[wm];
+        if (void 0 !== Dm && Dm.includes(Am)) continue;
+        const im = am[Am],
+          Rm = Tm[im.name];
+        Rm && (Nh.is(im.type) ? uf(mm, Rm, fm, hm) : Bf(mm, Rm, fm, hm))
       }
     }
 
-    function fI(kk, Fk, Ik, Xk) {
-      const ik = Fk[Jk] ?? Fk,
-        yk = ik[lk];
-      if (void 0 === yk || Ik.has(yk)) return;
-      Ik.add(yk);
-      const ak = kk.resyncVisited.get(yk);
-      if (void 0 === ak) return;
-      const qk = kk.root;
-      ik[ek](ak, ((kk, Ik) => {
-        Xk?.push({
-          ref: Fk,
-          refId: yk,
-          op: Tk.DELETE,
-          dynamicIndex: Ik,
+    function Bf(mm, Tm, fm, hm) {
+      const am = Tm[jm] ?? Tm,
+        xm = am[wm];
+      if (void 0 === xm || fm.has(xm)) return;
+      fm.add(xm);
+      const Dm = mm.resyncVisited.get(xm);
+      if (void 0 === Dm) return;
+      const im = mm.root;
+      am[Om](Dm, ((mm, fm) => {
+        hm?.push({
+          ref: Tm,
+          refId: xm,
+          op: Am.DELETE,
+          dynamicIndex: fm,
           value: void 0,
-          previousValue: kk
+          previousValue: mm
         });
-        const ik = kk?.[lk];
-        void 0 !== ik && qk.removeRef(ik)
-      }), (Fk => {
-        OX.isSchema(Fk) && WI(kk, Fk, Ik, Xk)
+        const am = mm?.[wm];
+        void 0 !== am && im.removeRef(am)
+      }), (Tm => {
+        Nh.isSchema(Tm) && uf(mm, Tm, fm, hm)
       }))
     }
-    const BI = 1,
-      dI = 2,
-      YI = 3,
-      AI = 4,
-      gI = 5;
+    const Lf = 1,
+      vf = 2,
+      tf = 3,
+      Uf = 4,
+      df = 5;
 
-    function mI(kk, Fk, Ik, Xk, ik, yk, ak, qk, Lk) {
-      const tk = kk.root;
-      let Zk;
-      if ((Fk & Tk.DELETE) === Tk.DELETE) {
-        const kk = ik?.[lk];
-        void 0 !== kk && tk.removeRef(kk), Fk !== Tk.DELETE_AND_ADD && Ik[jk](Xk), Zk = void 0
+    function gf(mm, Tm, fm, hm, am, xm, Dm, im, Rm) {
+      const pm = mm.root;
+      let Em;
+      if ((Tm & Am.DELETE) === Am.DELETE) {
+        const mm = am?.[wm];
+        void 0 !== mm && pm.removeRef(mm), Tm !== Am.DELETE_AND_ADD && fm[om](hm), Em = void 0
       }
-      if (Fk === Tk.DELETE);
-      else if ("string" === typeof yk) Zk = KF[yk](ak, qk);
-      else if (UF(yk)) Zk = function(kk, Fk, Ik) {
-        return NF(kk, (0, KF[kk.wire])(Fk, Ik))
-      }(yk.quantized, ak, qk);
-      else if (OX.is(yk)) {
-        const Ik = KF.number(ak, qk);
-        if (Zk = tk.refs.get(Ik), (Fk & Tk.ADD) === Tk.ADD) {
-          const Xk = kk.getInstanceType(ak, qk, yk);
-          Zk || (Zk = kk.createInstanceOfType(Xk)), tk.addRef(Ik, Zk, Zk !== ik || Fk === Tk.DELETE_AND_ADD && Zk === ik)
+      if (Tm === Am.DELETE);
+      else if ("string" === typeof xm) Em = KT[xm](Dm, im);
+      else if (yT(xm)) Em = function(mm, Tm, fm) {
+        return rT(mm, (0, KT[mm.wire])(Tm, fm))
+      }(xm.quantized, Dm, im);
+      else if (Nh.is(xm)) {
+        const fm = KT.number(Dm, im);
+        if (Em = pm.refs.get(fm), (Tm & Am.ADD) === Am.ADD) {
+          const hm = mm.getInstanceType(Dm, im, xm);
+          Em || (Em = mm.createInstanceOfType(hm)), pm.addRef(fm, Em, Em !== am || Tm === Am.DELETE_AND_ADD && Em === am)
         }
       } else {
-        const Ik = (ek = Object.keys(yk)[0], QF[ek]),
-          Xk = KF.number(ak, qk);
-        null !== kk.resyncVisited && function(kk, Fk) {
-          const Ik = kk.resyncVisited;
-          Ik.has(Fk) || Ik.set(Fk, new Set)
-        }(kk, Xk);
-        const jk = tk.refs.has(Xk) ? ik || tk.refs.get(Xk) : Ik.constructor.initializeForDecoder();
-        if (Zk = jk.clone(!0), Zk[Hk] = Object.values(yk)[0], ik) {
-          let kk = ik[lk];
-          if (void 0 !== kk && Xk !== kk) {
-            (Fk & Tk.DELETE) !== Tk.DELETE && tk.removeRef(kk);
-            const Ik = ik.entries();
-            let Xk;
+        const fm = (Om = Object.keys(xm)[0], QT[Om]),
+          hm = KT.number(Dm, im);
+        null !== mm.resyncVisited && function(mm, Tm) {
+          const fm = mm.resyncVisited;
+          fm.has(Tm) || fm.set(Tm, new Set)
+        }(mm, hm);
+        const om = pm.refs.has(hm) ? am || pm.refs.get(hm) : fm.constructor.initializeForDecoder();
+        if (Em = om.clone(!0), Em[qm] = Object.values(xm)[0], am) {
+          let mm = am[wm];
+          if (void 0 !== mm && hm !== mm) {
+            (Tm & Am.DELETE) !== Am.DELETE && pm.removeRef(mm);
+            const fm = am.entries();
+            let hm;
             for (;
-              (Xk = Ik.next()) && !Xk.done;) {
-              const [Fk, Ik] = Xk.value;
-              "object" === typeof Ik && (kk = Ik[lk]), Lk?.push({
-                ref: ik,
-                refId: kk,
-                op: Tk.DELETE,
-                field: Fk,
+              (hm = fm.next()) && !hm.done;) {
+              const [Tm, fm] = hm.value;
+              "object" === typeof fm && (mm = fm[wm]), Rm?.push({
+                ref: am,
+                refId: mm,
+                op: Am.DELETE,
+                field: Tm,
                 value: void 0,
-                previousValue: Ik
+                previousValue: fm
               })
             }
           }
         }
-        tk.addRef(Xk, Zk, jk !== ik || Fk === Tk.DELETE_AND_ADD && jk === ik)
+        pm.addRef(hm, Em, om !== am || Tm === Am.DELETE_AND_ADD && om === am)
       }
-      var ek;
-      return Zk
+      var Om;
+      return Em
     }
-    const hI = function(kk, Fk, Ik, Xk, Tk) {
-        const ik = Fk[Ik.offset++],
-          yk = Xk.constructor[Symbol.metadata],
-          lk = ik >> 6 << 6,
-          ak = ik % (lk || 255),
-          qk = yk[ak];
-        if (void 0 === qk) return console.warn("@colyseus/schema: field not defined at", {
-          index: ak,
-          ref: Xk.constructor.name,
-          metadata: yk
+    const Wf = function(mm, Tm, fm, hm, Am) {
+        const am = Tm[fm.offset++],
+          xm = hm.constructor[Symbol.metadata],
+          wm = am >> 6 << 6,
+          Dm = am % (wm || 255),
+          im = xm[Dm];
+        if (void 0 === im) return console.warn("@colyseus/schema: field not defined at", {
+          index: Dm,
+          ref: hm.constructor.name,
+          metadata: xm
         }), -1;
-        const Lk = !0 === qk.deprecated,
-          tk = Lk ? void 0 : Xk[Zk](ak),
-          jk = mI(kk, lk, Xk, ak, tk, qk.type, Fk, Ik, Tk);
-        Lk || (null !== jk && void 0 !== jk && (Xk[qk.name] = jk), tk !== jk && Tk?.push({
-          ref: Xk,
-          refId: kk.currentRefId,
-          op: lk,
-          field: qk.name,
-          value: jk,
-          previousValue: tk
+        const Rm = !0 === im.deprecated,
+          pm = Rm ? void 0 : hm[Em](Dm),
+          om = gf(mm, wm, hm, Dm, pm, im.type, Tm, fm, Am);
+        Rm || (null !== om && void 0 !== om && (hm[im.name] = om), pm !== om && Am?.push({
+          ref: hm,
+          refId: mm.currentRefId,
+          op: wm,
+          field: im.name,
+          value: om,
+          previousValue: pm
         }))
       },
-      rI = function(kk, Fk, Ik, Xk, ik) {
-        const yk = Xk[Jk] ?? Xk,
-          lk = Fk[Ik.offset++];
-        if (lk === Tk.CLEAR) return kk.removeChildRefs(yk, ik), void yk.clear();
-        const ak = KF.number(Fk, Ik),
-          qk = yk[Hk],
-          Lk = yk.constructor.COLLECTION_KIND;
-        let tk;
-        (lk & Tk.ADD) === Tk.ADD ? Lk === BI ? (tk = KF.string(Fk, Ik), yk.setIndex(ak, tk)) : tk = ak : tk = yk.getIndex(ak);
-        const jk = yk[Zk](ak),
-          ek = mI(kk, lk, Xk, ak, jk, qk, Fk, Ik, ik);
-        if (null !== kk.resyncVisited && cI(kk, Xk, lk, tk, jk, ek, ik), null !== ek && void 0 !== ek) switch (Lk) {
-          case BI:
-            yk.$items.set(tk, ek);
+      Ff = function(mm, Tm, fm, hm, am) {
+        const xm = hm[jm] ?? hm,
+          wm = Tm[fm.offset++];
+        if (wm === Am.CLEAR) return mm.removeChildRefs(xm, am), void xm.clear();
+        const Dm = KT.number(Tm, fm),
+          im = xm[qm],
+          Rm = xm.constructor.COLLECTION_KIND;
+        let pm;
+        (wm & Am.ADD) === Am.ADD ? Rm === Lf ? (pm = KT.string(Tm, fm), xm.setIndex(Dm, pm)) : pm = Dm : pm = xm.getIndex(Dm);
+        const om = xm[Em](Dm),
+          Om = gf(mm, wm, hm, Dm, om, im, Tm, fm, am);
+        if (null !== mm.resyncVisited && Mf(mm, hm, wm, pm, om, Om, am), null !== Om && void 0 !== Om) switch (Rm) {
+          case Lf:
+            xm.$items.set(pm, Om);
             break;
-          case dI:
-            yk.$setAt(ak, ek, null !== kk.resyncVisited && lk === Tk.ADD ? Tk.REPLACE : lk);
+          case vf:
+            xm.$setAt(Dm, Om, null !== mm.resyncVisited && wm === Am.ADD ? Am.REPLACE : wm);
             break;
-          case YI:
-          case AI:
-          case gI:
-            yk.$items.has(ak) || (yk.$items.set(ak, ek), "number" === typeof yk.$refId && ak >= yk.$refId && (yk.$refId = ak + 1));
+          case tf:
+          case Uf:
+          case df:
+            xm.$items.has(Dm) || (xm.$items.set(Dm, Om), "number" === typeof xm.$refId && Dm >= xm.$refId && (xm.$refId = Dm + 1));
             break;
           default:
-            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${yk.constructor?.name} \u2014 item at index ${ak} was not stored.`)
+            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${xm.constructor?.name} \u2014 item at index ${Dm} was not stored.`)
         }
-        jk !== ek && ik?.push({
-          ref: Xk,
-          refId: kk.currentRefId,
-          op: lk,
-          dynamicIndex: tk,
-          value: ek,
-          previousValue: jk
+        om !== Om && am?.push({
+          ref: hm,
+          refId: mm.currentRefId,
+          op: wm,
+          dynamicIndex: pm,
+          value: Om,
+          previousValue: om
         })
       },
-      DI = function(kk, Fk, Ik, Xk, ik) {
-        const yk = Xk[Jk] ?? Xk;
-        let lk, ak = Fk[Ik.offset++];
-        if (ak === Tk.CLEAR) return kk.removeChildRefs(yk, ik), void yk.clear();
-        if (ak === Tk.REVERSE) return void yk.items.reverse();
-        if (ak === Tk.DELETE_BY_REFID) {
-          const ak = KF.number(Fk, Ik),
-            qk = kk.root.refs.get(ak);
-          if (void 0 === qk) return;
-          if (kk.root.removeRef(ak), lk = yk.findIndex((kk => kk === qk)), -1 === lk) return;
-          return yk[jk](lk), void ik?.push({
-            ref: Xk,
-            refId: kk.currentRefId,
-            op: Tk.DELETE,
-            dynamicIndex: lk,
+      mh = function(mm, Tm, fm, hm, am) {
+        const xm = hm[jm] ?? hm;
+        let wm, Dm = Tm[fm.offset++];
+        if (Dm === Am.CLEAR) return mm.removeChildRefs(xm, am), void xm.clear();
+        if (Dm === Am.REVERSE) return void xm.items.reverse();
+        if (Dm === Am.DELETE_BY_REFID) {
+          const Dm = KT.number(Tm, fm),
+            im = mm.root.refs.get(Dm);
+          if (void 0 === im) return;
+          if (mm.root.removeRef(Dm), wm = xm.findIndex((mm => mm === im)), -1 === wm) return;
+          return xm[om](wm), void am?.push({
+            ref: hm,
+            refId: mm.currentRefId,
+            op: Am.DELETE,
+            dynamicIndex: wm,
             value: void 0,
-            previousValue: qk
+            previousValue: im
           })
         }
-        if (ak === Tk.ADD_BY_REFID) {
-          const Xk = KF.number(Fk, Ik),
-            Tk = kk.root.refs.get(Xk);
-          Tk && (lk = yk.findIndex((kk => kk === Tk))), -1 !== lk && void 0 !== lk || (lk = yk.length)
-        } else lk = KF.number(Fk, Ik);
-        const qk = yk[Hk];
-        let Lk = lk;
-        const tk = yk.items[lk],
-          Zk = mI(kk, ak, Xk, lk, tk, qk, Fk, Ik, ik);
-        null !== kk.resyncVisited && cI(kk, Xk, ak, lk, tk, Zk, ik), null !== Zk && void 0 !== Zk && Zk !== tk && yk.$setAt(lk, Zk, null !== kk.resyncVisited && ak === Tk.ADD ? Tk.REPLACE : ak), tk !== Zk && ik?.push({
-          ref: Xk,
-          refId: kk.currentRefId,
-          op: ak,
-          dynamicIndex: Lk,
-          value: Zk,
-          previousValue: tk
+        if (Dm === Am.ADD_BY_REFID) {
+          const hm = KT.number(Tm, fm),
+            Am = mm.root.refs.get(hm);
+          Am && (wm = xm.findIndex((mm => mm === Am))), -1 !== wm && void 0 !== wm || (wm = xm.length)
+        } else wm = KT.number(Tm, fm);
+        const im = xm[qm];
+        let Rm = wm;
+        const pm = xm.items[wm],
+          Em = gf(mm, Dm, hm, wm, pm, im, Tm, fm, am);
+        null !== mm.resyncVisited && Mf(mm, hm, Dm, wm, pm, Em, am), null !== Em && void 0 !== Em && Em !== pm && xm.$setAt(wm, Em, null !== mm.resyncVisited && Dm === Am.ADD ? Am.REPLACE : Dm), pm !== Em && am?.push({
+          ref: hm,
+          refId: mm.currentRefId,
+          op: Dm,
+          dynamicIndex: Rm,
+          value: Em,
+          previousValue: pm
         })
       };
-    class MI extends Error {}
+    class Th extends Error {}
 
-    function kX(kk, Fk, Ik, Xk) {
-      if (!(kk instanceof Fk)) throw new MI(`a '${Fk.name}' was expected, but '${kk&&kk.constructor.name}' was provided in ${Ik.constructor.name}#${Xk}`)
+    function fh(mm, Tm, fm, hm) {
+      if (!(mm instanceof Tm)) throw new Th(`a '${Tm.name}' was expected, but '${mm&&mm.constructor.name}' was provided in ${fm.constructor.name}#${hm}`)
     }
-    const FX = (kk, Fk) => {
-        const Ik = kk.toString(),
-          Xk = Fk.toString();
-        return Ik < Xk ? -1 : Ik > Xk ? 1 : 0
+    const hh = (mm, Tm) => {
+        const fm = mm.toString(),
+          hm = Tm.toString();
+        return fm < hm ? -1 : fm > hm ? 1 : 0
       },
-      IX = {
-        get: (kk, Fk) => "symbol" === typeof Fk || isNaN(Fk) ? Reflect.get(kk, Fk) : kk.items[Fk],
-        set: (kk, Fk, Ik) => {
-          if ("symbol" !== typeof Fk && !isNaN(Fk)) {
-            if (void 0 === Ik || null === Ik) kk.$deleteAt(Fk);
+      Ah = {
+        get: (mm, Tm) => "symbol" === typeof Tm || isNaN(Tm) ? Reflect.get(mm, Tm) : mm.items[Tm],
+        set: (mm, Tm, fm) => {
+          if ("symbol" !== typeof Tm && !isNaN(Tm)) {
+            if (void 0 === fm || null === fm) mm.$deleteAt(Tm);
             else {
-              let Xk;
-              if (Ik[wk]) {
-                kX(Ik, kk[Hk], kk, Fk);
-                const ik = kk.items[Fk];
-                kk.isMovingItems ? (Xk = kk.$wireIndex(Number(Fk)), void 0 !== ik ? Ik[wk].isNew ? kk[wk].indexedOperation(Xk, Tk.MOVE_AND_ADD) : (kk[wk].getChange(Xk) & Tk.DELETE) === Tk.DELETE ? kk[wk].indexedOperation(Xk, Tk.DELETE_AND_MOVE) : kk[wk].indexedOperation(Xk, Tk.MOVE) : Ik[wk].isNew && kk[wk].indexedOperation(Xk, Tk.ADD), Ik[wk].setParent(kk, kk[wk].root, Xk)) : Xk = kk.$changeAt(Number(Fk), Ik), void 0 !== ik && ik[wk].root?.remove(ik[wk])
-              } else Xk = kk.$changeAt(Number(Fk), Ik);
-              kk.items[Fk] = Ik, void 0 !== Xk && (kk.tmpItems[Xk] = Ik)
+              let hm;
+              if (fm[Ym]) {
+                fh(fm, mm[qm], mm, Tm);
+                const am = mm.items[Tm];
+                mm.isMovingItems ? (hm = mm.$wireIndex(Number(Tm)), void 0 !== am ? fm[Ym].isNew ? mm[Ym].indexedOperation(hm, Am.MOVE_AND_ADD) : (mm[Ym].getChange(hm) & Am.DELETE) === Am.DELETE ? mm[Ym].indexedOperation(hm, Am.DELETE_AND_MOVE) : mm[Ym].indexedOperation(hm, Am.MOVE) : fm[Ym].isNew && mm[Ym].indexedOperation(hm, Am.ADD), fm[Ym].setParent(mm, mm[Ym].root, hm)) : hm = mm.$changeAt(Number(Tm), fm), void 0 !== am && am[Ym].root?.remove(am[Ym])
+              } else hm = mm.$changeAt(Number(Tm), fm);
+              mm.items[Tm] = fm, void 0 !== hm && (mm.tmpItems[hm] = fm)
             }
             return !0
           }
-          return Reflect.set(kk, Fk, Ik)
+          return Reflect.set(mm, Tm, fm)
         },
-        deleteProperty: (kk, Fk) => ("number" === typeof Fk ? kk.$deleteAt(Fk) : delete kk[Fk], !0),
-        has: (kk, Fk) => "symbol" === typeof Fk || isNaN(Number(Fk)) ? Reflect.has(kk, Fk) : Reflect.has(kk.items, Fk)
+        deleteProperty: (mm, Tm) => ("number" === typeof Tm ? mm.$deleteAt(Tm) : delete mm[Tm], !0),
+        has: (mm, Tm) => "symbol" === typeof Tm || isNaN(Number(Tm)) ? Reflect.has(mm, Tm) : Reflect.has(mm.items, Tm)
       };
-    class XX {
-      [wk];
-      [lk];
-      [Jk];
-      [Hk];
+    class ah {
+      [Ym];
+      [wm];
+      [jm];
+      [qm];
       items = [];
       tmpItems = [];
       deletedIndexes = [];
       isMovingItems = !1;
       _needsCompaction = !1;
-      static[qk] = NI;
-      static[Lk] = DI;
-      static COLLECTION_KIND = dI;
-      static[tk](kk, Fk, Ik) {
-        if (!Ik) return !0;
-        const Xk = kk[Jk] ?? kk;
-        return "string" === typeof Xk[Hk] || Ik.isChangeTreeVisible(Xk.tmpItems[Fk]?.[wk])
+      static[im] = lf;
+      static[Rm] = mh;
+      static COLLECTION_KIND = vf;
+      static[pm](mm, Tm, fm) {
+        if (!fm) return !0;
+        const hm = mm[jm] ?? mm;
+        return "string" === typeof hm[qm] || fm.isChangeTreeVisible(hm.tmpItems[Tm]?.[Ym])
       }
-      static is(kk) {
-        return Array.isArray(kk) || void 0 !== kk.array
+      static is(mm) {
+        return Array.isArray(mm) || void 0 !== mm.array
       }
-      static from(kk) {
-        return new XX(...Array.from(kk))
+      static from(mm) {
+        return new ah(...Array.from(mm))
       }
       constructor() {
-        this[Hk] = void 0, this[Jk] = this;
-        const kk = new Proxy(this, IX);
-        return Object.defineProperty(this, wk, {
-          value: new nI(kk, this),
+        this[qm] = void 0, this[jm] = this;
+        const mm = new Proxy(this, Ah);
+        return Object.defineProperty(this, Ym, {
+          value: new Gf(mm, this),
           enumerable: !1,
           writable: !0
-        }), arguments.length > 0 && this.push(...arguments), kk
+        }), arguments.length > 0 && this.push(...arguments), mm
       }
       static initializeForDecoder() {
-        const kk = Object.create(XX.prototype);
-        kk.items = [], kk.isMovingItems = !1, kk._needsCompaction = !1, kk[Hk] = void 0, kk[Jk] = kk;
-        const Fk = new Proxy(kk, IX);
-        return pI(kk, Fk), Fk
+        const mm = Object.create(ah.prototype);
+        mm.items = [], mm.isMovingItems = !1, mm._needsCompaction = !1, mm[qm] = void 0, mm[jm] = mm;
+        const Tm = new Proxy(mm, Ah);
+        return Pf(mm, Tm), Tm
       }
-      set length(kk) {
-        0 === kk ? this.clear() : kk < this.items.length ? this.splice(kk, this.length - kk) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
+      set length(mm) {
+        0 === mm ? this.clear() : mm < this.items.length ? this.splice(mm, this.length - mm) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
       }
       get length() {
         return this.items.length
       }
       pauseTracking() {
-        this[wk].pause()
+        this[Ym].pause()
       }
       resumeTracking() {
-        this[wk].resume()
+        this[Ym].resume()
       }
-      untracked(kk) {
-        return this[wk].untracked(kk)
+      untracked(mm) {
+        return this[Ym].untracked(mm)
       }
       get isTrackingPaused() {
-        return this[wk].paused
+        return this[Ym].paused
       }
       push() {
-        const kk = this[Jk],
-          Fk = kk.items,
-          Ik = kk.tmpItems,
-          Xk = kk[wk],
-          ik = kk[Hk];
-        let yk = Ik.length;
-        for (let lk = 0, ak = arguments.length; lk < ak; lk++, yk++) {
-          const ak = lk < 0 || arguments.length <= lk ? void 0 : arguments[lk];
-          if (void 0 === ak || null === ak) return;
-          "object" === typeof ak && ik && kX(ak, ik, kk, lk), Xk.indexedOperation(yk, Tk.ADD), Fk.push(ak), Ik.push(ak), ak[wk]?.setParent(this, Xk.root, yk)
+        const mm = this[jm],
+          Tm = mm.items,
+          fm = mm.tmpItems,
+          hm = mm[Ym],
+          am = mm[qm];
+        let xm = fm.length;
+        for (let wm = 0, Dm = arguments.length; wm < Dm; wm++, xm++) {
+          const Dm = wm < 0 || arguments.length <= wm ? void 0 : arguments[wm];
+          if (void 0 === Dm || null === Dm) return;
+          "object" === typeof Dm && am && fh(Dm, am, mm, wm), hm.indexedOperation(xm, Am.ADD), Tm.push(Dm), fm.push(Dm), Dm[Ym]?.setParent(this, hm.root, xm)
         }
-        return yk
+        return xm
       }
       pop() {
-        const kk = this[Jk],
-          Fk = kk.tmpItems,
-          Ik = kk.deletedIndexes;
-        let Xk = -1;
-        for (let ik = Fk.length - 1; ik >= 0; ik--)
-          if (!0 !== Ik[ik]) {
-            Xk = ik;
+        const mm = this[jm],
+          Tm = mm.tmpItems,
+          fm = mm.deletedIndexes;
+        let hm = -1;
+        for (let am = Tm.length - 1; am >= 0; am--)
+          if (!0 !== fm[am]) {
+            hm = am;
             break
-          } if (Xk < 0) return;
-        const Tk = kk.$isUnsentAdd(Xk);
-        return kk[wk].delete(Xk), Tk ? kk.$cancelAdd(Xk) : Ik[Xk] = !0, kk.items.pop()
+          } if (hm < 0) return;
+        const Am = mm.$isUnsentAdd(hm);
+        return mm[Ym].delete(hm), Am ? mm.$cancelAdd(hm) : fm[hm] = !0, mm.items.pop()
       }
-      at(kk) {
-        return kk < 0 && (kk += this.length), this.items[kk]
+      at(mm) {
+        return mm < 0 && (mm += this.length), this.items[mm]
       }
-      $wireIndex(kk) {
-        const Fk = this.deletedIndexes;
-        if (0 === Fk.length) return kk;
-        const Ik = this.tmpItems;
-        let Xk = 0;
-        for (let Tk = 0; Tk < Ik.length; Tk++)
-          if (!0 !== Fk[Tk]) {
-            if (Xk === kk) return Tk;
-            Xk++
-          } return Ik.length + (kk - Xk)
+      $wireIndex(mm) {
+        const Tm = this.deletedIndexes;
+        if (0 === Tm.length) return mm;
+        const fm = this.tmpItems;
+        let hm = 0;
+        for (let Am = 0; Am < fm.length; Am++)
+          if (!0 !== Tm[Am]) {
+            if (hm === mm) return Am;
+            hm++
+          } return fm.length + (mm - hm)
       }
-      $isUnsentAdd(kk) {
-        const Fk = this[wk];
-        return 0 === (576 & Fk.flags) && !Fk.paused && "string" !== typeof this[Hk] && Fk.operationAt(kk) === Tk.ADD
+      $isUnsentAdd(mm) {
+        const Tm = this[Ym];
+        return 0 === (576 & Tm.flags) && !Tm.paused && "string" !== typeof this[qm] && Tm.operationAt(mm) === Am.ADD
       }
-      $cancelAdd(kk) {
-        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const Ik = this[wk],
-          Xk = this.tmpItems[kk];
-        this.tmpItems.splice(kk, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(kk, 1), Ik.removeAt(kk, 1);
-        const Tk = Xk?.[wk];
-        void 0 !== Tk && void 0 === Tk.root && Tk.removeParent(this), Fk && this.$reindexChildren(kk)
+      $cancelAdd(mm) {
+        let Tm = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const fm = this[Ym],
+          hm = this.tmpItems[mm];
+        this.tmpItems.splice(mm, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(mm, 1), fm.removeAt(mm, 1);
+        const Am = hm?.[Ym];
+        void 0 !== Am && void 0 === Am.root && Am.removeParent(this), Tm && this.$reindexChildren(mm)
       }
-      $reindexChildren(kk, Fk) {
-        if (!this[wk].hasFilteredFields) return;
-        if ("string" === typeof this[Hk]) return;
-        const Ik = this.tmpItems,
-          Xk = Ik.length;
-        if (void 0 !== Fk)
-          for (; kk < Xk && Ik[kk] === Fk[kk];) kk++;
-        for (let Tk = kk; Tk < Xk; Tk++) Ik[Tk]?.[wk]?.setParentIndex(this, Tk)
+      $reindexChildren(mm, Tm) {
+        if (!this[Ym].hasFilteredFields) return;
+        if ("string" === typeof this[qm]) return;
+        const fm = this.tmpItems,
+          hm = fm.length;
+        if (void 0 !== Tm)
+          for (; mm < hm && fm[mm] === Tm[mm];) mm++;
+        for (let Am = mm; Am < hm; Am++) fm[Am]?.[Ym]?.setParentIndex(this, Am)
       }
-      $changeAt(kk, Fk) {
-        if (void 0 === Fk || null === Fk) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
-        if (this.items[kk] === Fk) return;
-        const Ik = void 0 !== this.items[kk] ? "object" === typeof Fk ? Tk.DELETE_AND_ADD : Tk.REPLACE : Tk.ADD,
-          Xk = this.$wireIndex(kk),
-          ik = this[wk];
-        return ik.change(Xk, Ik), Fk[wk]?.setParent(this, ik.root, Xk), Xk
+      $changeAt(mm, Tm) {
+        if (void 0 === Tm || null === Tm) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
+        if (this.items[mm] === Tm) return;
+        const fm = void 0 !== this.items[mm] ? "object" === typeof Tm ? Am.DELETE_AND_ADD : Am.REPLACE : Am.ADD,
+          hm = this.$wireIndex(mm),
+          am = this[Ym];
+        return am.change(hm, fm), Tm[Ym]?.setParent(this, am.root, hm), hm
       }
-      $deleteAt(kk, Fk) {
-        this[wk].delete(this.$wireIndex(kk), Fk)
+      $deleteAt(mm, Tm) {
+        this[Ym].delete(this.$wireIndex(mm), Tm)
       }
-      $setAt(kk, Fk, Ik) {
-        Ik === Tk.ADD && void 0 !== this.items[kk] ? this.items.splice(kk, 0, Fk) : Ik === Tk.DELETE_AND_MOVE ? (this.items.splice(kk, 1), this.items[kk] = Fk) : (kk > this.items.length && (this._needsCompaction = !0), this.items[kk] = Fk)
+      $setAt(mm, Tm, fm) {
+        fm === Am.ADD && void 0 !== this.items[mm] ? this.items.splice(mm, 0, Tm) : fm === Am.DELETE_AND_MOVE ? (this.items.splice(mm, 1), this.items[mm] = Tm) : (mm > this.items.length && (this._needsCompaction = !0), this.items[mm] = Tm)
       }
       clear() {
-        const kk = this[Jk];
-        if (0 === kk.items.length) return;
-        const Fk = kk[wk];
-        Fk.forEachChild(((kk, Ik) => {
-          Fk.root?.remove(kk)
-        })), Fk.discard(), Fk.operation(Tk.CLEAR), kk.items.length = 0, kk.tmpItems.length = 0
-      } [Pk]() {
-        const kk = this[Jk] ?? this,
-          Fk = kk[wk];
-        if (Fk.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
-        const Ik = kk.items;
-        for (let Xk = 0; Xk < Ik.length; Xk++) Ik[Xk]?.[Pk]?.();
-        kk.items.length = 0, kk.tmpItems.length = 0, kk.deletedIndexes.length = 0, Fk.recycle(), kk[lk] = void 0
+        const mm = this[jm];
+        if (0 === mm.items.length) return;
+        const Tm = mm[Ym];
+        Tm.forEachChild(((mm, fm) => {
+          Tm.root?.remove(mm)
+        })), Tm.discard(), Tm.operation(Am.CLEAR), mm.items.length = 0, mm.tmpItems.length = 0
+      } [Im]() {
+        const mm = this[jm] ?? this,
+          Tm = mm[Ym];
+        if (Tm.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
+        const fm = mm.items;
+        for (let hm = 0; hm < fm.length; hm++) fm[hm]?.[Im]?.();
+        mm.items.length = 0, mm.tmpItems.length = 0, mm.deletedIndexes.length = 0, Tm.recycle(), mm[wm] = void 0
       }
       concat() {
-        return new XX(...this.items.concat(...arguments))
+        return new ah(...this.items.concat(...arguments))
       }
-      join(kk) {
-        return this.items.join(kk)
+      join(mm) {
+        return this.items.join(mm)
       }
       reverse() {
-        const kk = this[Jk],
-          Fk = kk[wk];
-        if (Fk.has() || kk.deletedIndexes.length > 0) {
-          const Fk = kk.items.slice().reverse();
-          return this.clear(), this.push(...Fk), this
+        const mm = this[jm],
+          Tm = mm[Ym];
+        if (Tm.has() || mm.deletedIndexes.length > 0) {
+          const Tm = mm.items.slice().reverse();
+          return this.clear(), this.push(...Tm), this
         }
-        return Fk.operation(Tk.REVERSE), kk.items.reverse(), kk.tmpItems.reverse(), kk.$reindexChildren(0), this
+        return Tm.operation(Am.REVERSE), mm.items.reverse(), mm.tmpItems.reverse(), mm.$reindexChildren(0), this
       }
       shift() {
-        const kk = this[Jk],
-          Fk = kk.items;
-        if (0 === Fk.length) return;
-        const Ik = kk[wk],
-          Xk = kk.deletedIndexes;
-        let ik = 0;
-        for (; !0 === Xk[ik];) ik++;
-        const yk = kk.$isUnsentAdd(ik);
-        return Ik.delete(ik, Tk.DELETE), yk ? kk.$cancelAdd(ik) : Xk[ik] = !0, Fk.shift()
+        const mm = this[jm],
+          Tm = mm.items;
+        if (0 === Tm.length) return;
+        const fm = mm[Ym],
+          hm = mm.deletedIndexes;
+        let am = 0;
+        for (; !0 === hm[am];) am++;
+        const xm = mm.$isUnsentAdd(am);
+        return fm.delete(am, Am.DELETE), xm ? mm.$cancelAdd(am) : hm[am] = !0, Tm.shift()
       }
-      slice(kk, Fk) {
-        const Ik = new XX;
-        return Ik.push(...this.items.slice(kk, Fk)), Ik
+      slice(mm, Tm) {
+        const fm = new ah;
+        return fm.push(...this.items.slice(mm, Tm)), fm
       }
       sort() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : FX;
-        const Fk = this[Jk];
-        Fk.isMovingItems = !0;
-        const Ik = Fk[wk];
-        return Fk.items.sort(kk).forEach(((kk, Fk) => Ik.change(Fk, Tk.REPLACE))), Fk.tmpItems.sort(kk), Fk.$reindexChildren(0), Fk.isMovingItems = !1, this
+        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : hh;
+        const Tm = this[jm];
+        Tm.isMovingItems = !0;
+        const fm = Tm[Ym];
+        return Tm.items.sort(mm).forEach(((mm, Tm) => fm.change(Tm, Am.REPLACE))), Tm.tmpItems.sort(mm), Tm.$reindexChildren(0), Tm.isMovingItems = !1, this
       }
-      splice(kk, Fk) {
-        const Ik = this[Jk],
-          Xk = Ik[wk],
-          ik = Ik.items,
-          yk = Ik.tmpItems,
-          lk = Ik.deletedIndexes,
-          ak = ik.length,
-          qk = yk.length;
-        for (var Lk = arguments.length, tk = new Array(Lk > 2 ? Lk - 2 : 0), Zk = 2; Zk < Lk; Zk++) tk[Zk - 2] = arguments[Zk];
-        const jk = tk.length,
-          ek = [];
-        for (let Tk = 0; Tk < qk; Tk++) !0 !== lk[Tk] && ek.push(Tk);
-        let Hk;
-        if (ak > kk) {
-          void 0 === Fk && (Fk = ak - kk);
-          for (let ik = kk; ik < kk + Fk; ik++) {
-            const kk = ek[ik],
-              Fk = Ik.$isUnsentAdd(kk);
-            Xk.delete(kk, Tk.DELETE), Fk ? (Hk ??= []).push(kk) : lk[kk] = !0
+      splice(mm, Tm) {
+        const fm = this[jm],
+          hm = fm[Ym],
+          am = fm.items,
+          xm = fm.tmpItems,
+          wm = fm.deletedIndexes,
+          Dm = am.length,
+          im = xm.length;
+        for (var Rm = arguments.length, pm = new Array(Rm > 2 ? Rm - 2 : 0), Em = 2; Em < Rm; Em++) pm[Em - 2] = arguments[Em];
+        const om = pm.length,
+          Om = [];
+        for (let Am = 0; Am < im; Am++) !0 !== wm[Am] && Om.push(Am);
+        let qm;
+        if (Dm > mm) {
+          void 0 === Tm && (Tm = Dm - mm);
+          for (let am = mm; am < mm + Tm; am++) {
+            const mm = Om[am],
+              Tm = fm.$isUnsentAdd(mm);
+            hm.delete(mm, Am.DELETE), Tm ? (qm ??= []).push(mm) : wm[mm] = !0
           }
-        } else Fk = 0;
-        if (jk > 0) {
-          const ik = ek[kk] ?? ak,
-            qk = Math.min(jk, Fk);
-          for (let kk = 0; kk < qk; kk++) {
-            const Fk = ik + kk;
-            let Ik;
-            const ak = void 0 !== Hk ? Hk.indexOf(Fk) : -1; - 1 !== ak ? (Hk.splice(ak, 1), Ik = Tk.ADD) : Ik = lk[Fk] ? Tk.DELETE_AND_ADD : Tk.ADD, Xk.indexedOperation(Fk, Ik), yk[Fk] = tk[kk], lk[Fk] = !1, tk[kk][wk]?.setParent(this, Xk.root, Fk)
+        } else Tm = 0;
+        if (om > 0) {
+          const am = Om[mm] ?? Dm,
+            im = Math.min(om, Tm);
+          for (let mm = 0; mm < im; mm++) {
+            const Tm = am + mm;
+            let fm;
+            const Dm = void 0 !== qm ? qm.indexOf(Tm) : -1; - 1 !== Dm ? (qm.splice(Dm, 1), fm = Am.ADD) : fm = wm[Tm] ? Am.DELETE_AND_ADD : Am.ADD, hm.indexedOperation(Tm, fm), xm[Tm] = pm[mm], wm[Tm] = !1, pm[mm][Ym]?.setParent(this, hm.root, Tm)
           }
-          const Lk = jk - qk;
-          if (Lk > 0) {
-            const kk = ik + qk;
-            Xk.insertAt(kk, Lk);
-            for (let Fk = 0; Fk < Lk; Fk++) tk[qk + Fk][wk]?.setParent(this, Xk.root, kk + Fk);
-            lk.length > 0 && lk.splice(kk, 0, ...new Array(Lk).fill(!1)), yk.splice(kk, 0, ...tk.slice(qk)), Ik.$reindexChildren(kk + Lk)
+          const Rm = om - im;
+          if (Rm > 0) {
+            const mm = am + im;
+            hm.insertAt(mm, Rm);
+            for (let Tm = 0; Tm < Rm; Tm++) pm[im + Tm][Ym]?.setParent(this, hm.root, mm + Tm);
+            wm.length > 0 && wm.splice(mm, 0, ...new Array(Rm).fill(!1)), xm.splice(mm, 0, ...pm.slice(im)), fm.$reindexChildren(mm + Rm)
           }
         }
-        if (void 0 !== Hk && Hk.length > 0) {
-          for (let kk = Hk.length - 1; kk >= 0; kk--) Ik.$cancelAdd(Hk[kk], !1);
-          Ik.$reindexChildren(Hk[0])
+        if (void 0 !== qm && qm.length > 0) {
+          for (let mm = qm.length - 1; mm >= 0; mm--) fm.$cancelAdd(qm[mm], !1);
+          fm.$reindexChildren(qm[0])
         }
-        return Xk.root?.enqueueChangeTree(Xk), ik.splice(kk, Fk, ...tk)
+        return hm.root?.enqueueChangeTree(hm), am.splice(mm, Tm, ...pm)
       }
       unshift() {
-        const kk = this[Jk],
-          Fk = kk[wk];
-        Fk.unshift(arguments.length);
-        for (let Xk = 0; Xk < arguments.length; Xk++)(Xk < 0 || arguments.length <= Xk ? void 0 : arguments[Xk])?.[wk]?.setParent(this, Fk.root, Xk);
-        const Ik = kk.deletedIndexes;
-        return Ik.length > 0 && Ik.unshift(...new Array(arguments.length).fill(!1)), kk.tmpItems.unshift(...arguments), kk.$reindexChildren(arguments.length), kk.items.unshift(...arguments)
+        const mm = this[jm],
+          Tm = mm[Ym];
+        Tm.unshift(arguments.length);
+        for (let hm = 0; hm < arguments.length; hm++)(hm < 0 || arguments.length <= hm ? void 0 : arguments[hm])?.[Ym]?.setParent(this, Tm.root, hm);
+        const fm = mm.deletedIndexes;
+        return fm.length > 0 && fm.unshift(...new Array(arguments.length).fill(!1)), mm.tmpItems.unshift(...arguments), mm.$reindexChildren(arguments.length), mm.items.unshift(...arguments)
       }
-      indexOf(kk, Fk) {
-        return this.items.indexOf(kk, Fk)
+      indexOf(mm, Tm) {
+        return this.items.indexOf(mm, Tm)
       }
-      lastIndexOf(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
-        return this.items.lastIndexOf(kk, Fk)
+      lastIndexOf(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
+        return this.items.lastIndexOf(mm, Tm)
       }
-      every(kk, Fk) {
-        return this.items.every(kk, Fk)
+      every(mm, Tm) {
+        return this.items.every(mm, Tm)
       }
-      some(kk, Fk) {
-        return this.items.some(kk, Fk)
+      some(mm, Tm) {
+        return this.items.some(mm, Tm)
       }
-      forEach(kk, Fk) {
-        return this.items.forEach(kk, Fk)
+      forEach(mm, Tm) {
+        return this.items.forEach(mm, Tm)
       }
-      map(kk, Fk) {
-        return this.items.map(kk, Fk)
+      map(mm, Tm) {
+        return this.items.map(mm, Tm)
       }
-      filter(kk, Fk) {
-        return this.items.filter(kk, Fk)
+      filter(mm, Tm) {
+        return this.items.filter(mm, Tm)
       }
-      reduce(kk, Fk) {
+      reduce(mm, Tm) {
         return this.items.reduce.apply(this.items, arguments)
       }
-      reduceRight(kk, Fk) {
+      reduceRight(mm, Tm) {
         return this.items.reduceRight.apply(this.items, arguments)
       }
-      find(kk, Fk) {
-        return this.items.find(kk, Fk)
+      find(mm, Tm) {
+        return this.items.find(mm, Tm)
       }
-      findIndex(kk, Fk) {
-        return this.items.findIndex(kk, Fk)
+      findIndex(mm, Tm) {
+        return this.items.findIndex(mm, Tm)
       }
-      fill(kk, Fk, Ik) {
+      fill(mm, Tm, fm) {
         throw new Error("ArraySchema#fill() not implemented")
       }
-      copyWithin(kk, Fk, Ik) {
+      copyWithin(mm, Tm, fm) {
         throw new Error("ArraySchema#copyWithin() not implemented")
       }
       toString() {
@@ -4349,7 +4349,7 @@ export const modules = {
         return this.items[Symbol.iterator]()
       }
       static get[Symbol.species]() {
-        return XX
+        return ah
       } [Symbol.unscopables];
       entries() {
         return this.items.entries()
@@ -4360,118 +4360,118 @@ export const modules = {
       values() {
         return this.items.values()
       }
-      includes(kk, Fk) {
-        return this.items.includes(kk, Fk)
+      includes(mm, Tm) {
+        return this.items.includes(mm, Tm)
       }
-      flatMap(kk, Fk) {
+      flatMap(mm, Tm) {
         throw new Error("ArraySchema#flatMap() is not supported.")
       }
-      flat(kk) {
+      flat(mm) {
         throw new Error("ArraySchema#flat() is not supported.")
       }
       findLast() {
         return this.items.findLast.apply(this.items, arguments)
       }
       findLastIndex() {
-        for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
+        for (var mm = arguments.length, Tm = new Array(mm), fm = 0; fm < mm; fm++) Tm[fm] = arguments[fm];
         return this.items.findLastIndex.apply(this.items, arguments)
       }
-      with(kk, Fk) {
-        const Ik = this.items.slice();
-        return kk < 0 && (kk += this.length), Ik[kk] = Fk, new XX(...Ik)
+      with(mm, Tm) {
+        const fm = this.items.slice();
+        return mm < 0 && (mm += this.length), fm[mm] = Tm, new ah(...fm)
       }
       toReversed() {
         return this.items.slice().reverse()
       }
-      toSorted(kk) {
-        return this.items.slice().sort(kk)
+      toSorted(mm) {
+        return this.items.slice().sort(mm)
       }
-      toSpliced(kk, Fk) {
-        for (var Ik = arguments.length, Xk = new Array(Ik > 2 ? Ik - 2 : 0), Tk = 2; Tk < Ik; Tk++) Xk[Tk - 2] = arguments[Tk];
-        const ik = this.items.slice();
-        return ik.splice.apply(ik, arguments), ik
+      toSpliced(mm, Tm) {
+        for (var fm = arguments.length, hm = new Array(fm > 2 ? fm - 2 : 0), Am = 2; Am < fm; Am++) hm[Am - 2] = arguments[Am];
+        const am = this.items.slice();
+        return am.splice.apply(am, arguments), am
       }
       shuffle() {
-        return this.move((kk => {
-          let Fk = this.items.length;
-          for (; 0 != Fk;) {
-            let kk = Math.floor(Math.random() * Fk);
-            Fk--, [this[Fk], this[kk]] = [this[kk], this[Fk]]
+        return this.move((mm => {
+          let Tm = this.items.length;
+          for (; 0 != Tm;) {
+            let mm = Math.floor(Math.random() * Tm);
+            Tm--, [this[Tm], this[mm]] = [this[mm], this[Tm]]
           }
         }))
       }
-      move(kk) {
-        return this.isMovingItems = !0, kk(this), this.isMovingItems = !1, this
-      } [Zk](kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const Ik = this[Jk] ?? this;
-        return Fk || Ik.deletedIndexes[kk] ? Ik.items[kk] : Ik.tmpItems[kk] || Ik.items[kk]
-      } [jk](kk) {
-        const Fk = this[Jk] ?? this;
-        Fk.items[kk] = void 0, Fk._needsCompaction = !0
-      } [xk]() {
-        const kk = this.tmpItems;
-        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, kk), this.deletedIndexes.length = 0)
-      } [Kk]() {
-        const kk = this[Jk] ?? this;
-        kk._needsCompaction && (kk._needsCompaction = !1, kk.items = kk.items.filter((kk => void 0 !== kk)))
-      } [ek](kk, Fk, Ik) {
-        const Xk = this[Jk] ?? this,
-          Tk = Xk.items;
-        let ik = !1;
-        for (let yk = 0; yk < Tk.length; yk++) {
-          const lk = Tk[yk];
-          kk.has(yk) ? Ik(lk) : (ik = !0, Fk(lk, yk), Xk[jk](yk))
+      move(mm) {
+        return this.isMovingItems = !0, mm(this), this.isMovingItems = !1, this
+      } [Em](mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const fm = this[jm] ?? this;
+        return Tm || fm.deletedIndexes[mm] ? fm.items[mm] : fm.tmpItems[mm] || fm.items[mm]
+      } [om](mm) {
+        const Tm = this[jm] ?? this;
+        Tm.items[mm] = void 0, Tm._needsCompaction = !0
+      } [Vm]() {
+        const mm = this.tmpItems;
+        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, mm), this.deletedIndexes.length = 0)
+      } [Km]() {
+        const mm = this[jm] ?? this;
+        mm._needsCompaction && (mm._needsCompaction = !1, mm.items = mm.items.filter((mm => void 0 !== mm)))
+      } [Om](mm, Tm, fm) {
+        const hm = this[jm] ?? this,
+          Am = hm.items;
+        let am = !1;
+        for (let xm = 0; xm < Am.length; xm++) {
+          const wm = Am[xm];
+          mm.has(xm) ? fm(wm) : (am = !0, Tm(wm, xm), hm[om](xm))
         }
-        ik && Xk[Kk]()
+        am && hm[Km]()
       }
       toArray() {
         return this.items.slice(0)
       }
       toJSON() {
-        return this.toArray().map((kk => "function" === typeof kk.toJSON ? kk.toJSON() : kk))
+        return this.toArray().map((mm => "function" === typeof mm.toJSON ? mm.toJSON() : mm))
       }
-      clone(kk) {
-        let Fk;
-        return kk ? (Fk = new XX, Fk.push(...this.items)) : Fk = new XX(...this.map((kk => kk[wk] ? kk.clone() : kk))), Fk
+      clone(mm) {
+        let Tm;
+        return mm ? (Tm = new ah, Tm.push(...this.items)) : Tm = new ah(...this.map((mm => mm[Ym] ? mm.clone() : mm))), Tm
       }
     }
-    VF("array", {
-      constructor: XX
+    JT("array", {
+      constructor: ah
     });
-    class TX {
+    class xh {
       keyByIndex = new Map;
       indexByKey = Object.create(null);
       nextIndex = 0;
       snapshots;
-      indexOf(kk) {
-        const Fk = this.indexByKey[kk];
-        return void 0 === Fk ? void 0 : Fk
+      indexOf(mm) {
+        const Tm = this.indexByKey[mm];
+        return void 0 === Tm ? void 0 : Tm
       }
-      assign(kk) {
-        const Fk = this.nextIndex++;
-        return this.indexByKey[kk] = Fk, this.keyByIndex.set(Fk, kk), Fk
+      assign(mm) {
+        const Tm = this.nextIndex++;
+        return this.indexByKey[mm] = Tm, this.keyByIndex.set(Tm, mm), Tm
       }
-      snapshot(kk, Fk) {
-        (this.snapshots ??= new Map).set(kk, Fk)
+      snapshot(mm, Tm) {
+        (this.snapshots ??= new Map).set(mm, Tm)
       }
-      forgetSnapshot(kk) {
-        this.snapshots?.delete(kk)
+      forgetSnapshot(mm) {
+        this.snapshots?.delete(mm)
       }
-      snapshotAt(kk) {
-        return this.snapshots?.get(kk)
+      snapshotAt(mm) {
+        return this.snapshots?.get(mm)
       }
-      setIndex(kk, Fk) {
-        this.keyByIndex.set(kk, Fk), this.indexByKey[Fk] = kk
+      setIndex(mm, Tm) {
+        this.keyByIndex.set(mm, Tm), this.indexByKey[Tm] = mm
       }
-      keyOf(kk) {
-        return this.keyByIndex.get(kk)
+      keyOf(mm) {
+        return this.keyByIndex.get(mm)
       }
       cleanupAfterEncode() {
         if (void 0 !== this.snapshots) {
-          for (const [kk] of this.snapshots) {
-            const Fk = this.keyByIndex.get(kk);
-            void 0 !== Fk && (delete this.indexByKey[Fk], this.keyByIndex.delete(kk))
+          for (const [mm] of this.snapshots) {
+            const Tm = this.keyByIndex.get(mm);
+            void 0 !== Tm && (delete this.indexByKey[Tm], this.keyByIndex.delete(mm))
           }
           this.snapshots.clear()
         }
@@ -4480,25 +4480,25 @@ export const modules = {
         this.indexByKey = Object.create(null), this.keyByIndex.clear(), this.snapshots?.clear(), this.nextIndex = 0
       }
     }
-    class iX {
-      [wk];
-      [lk];
+    class wh {
+      [Ym];
+      [wm];
       childType;
-      [Hk];
+      [qm];
       $items = new Map;
-      journal = new TX;
+      journal = new xh;
       _stream;
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(kk) {
-        (this._stream ??= oF()).maxPerTick = kk
+      set maxPerTick(mm) {
+        (this._stream ??= ZT()).maxPerTick = mm
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(kk) {
-        (this._stream ??= oF()).priority = kk
+      set priority(mm) {
+        (this._stream ??= ZT()).priority = mm
       }
       get $indexes() {
         return this.journal.keyByIndex
@@ -4506,30 +4506,30 @@ export const modules = {
       get _collectionIndexes() {
         return this.journal.indexByKey
       }
-      static[qk] = RI;
-      static[Lk] = rI;
-      static COLLECTION_KIND = BI;
-      static[tk](kk, Fk, Ik) {
-        if (!Ik || "string" === typeof kk[Hk]) return !0;
-        const Xk = kk[Zk](Fk) ?? kk.journal.snapshotAt(Fk);
-        return Ik.isChangeTreeVisible(Xk[wk])
+      static[im] = Cf;
+      static[Rm] = Ff;
+      static COLLECTION_KIND = Lf;
+      static[pm](mm, Tm, fm) {
+        if (!fm || "string" === typeof mm[qm]) return !0;
+        const hm = mm[Em](Tm) ?? mm.journal.snapshotAt(Tm);
+        return fm.isChangeTreeVisible(hm[Ym])
       }
-      static is(kk) {
-        return void 0 !== kk.map
+      static is(mm) {
+        return void 0 !== mm.map
       }
-      constructor(kk) {
-        if (Object.defineProperty(this, wk, {
-            value: new nI(this),
+      constructor(mm) {
+        if (Object.defineProperty(this, Ym, {
+            value: new Gf(this),
             enumerable: !1,
             writable: !0
-          }), this[Hk] = void 0, kk)
-          if (kk instanceof Map || kk instanceof iX) kk.forEach(((kk, Fk) => this.set(Fk, kk)));
+          }), this[qm] = void 0, mm)
+          if (mm instanceof Map || mm instanceof wh) mm.forEach(((mm, Tm) => this.set(Tm, mm)));
           else
-            for (const Fk in kk) this.set(Fk, kk[Fk])
+            for (const Tm in mm) this.set(Tm, mm[Tm])
       }
       static initializeForDecoder() {
-        const kk = Object.create(iX.prototype);
-        return kk.$items = new Map, kk.journal = new TX, kk[Hk] = void 0, pI(kk), kk
+        const mm = Object.create(wh.prototype);
+        return mm.$items = new Map, mm.journal = new xh, mm[qm] = void 0, Pf(mm), mm
       } [Symbol.iterator]() {
         return this.$items[Symbol.iterator]()
       }
@@ -4537,61 +4537,61 @@ export const modules = {
         return this.$items[Symbol.toStringTag]
       }
       static get[Symbol.species]() {
-        return iX
+        return wh
       }
-      set(kk, Fk) {
-        if (void 0 === Fk || null === Fk) throw new Error(`MapSchema#set('${kk}', ${Fk}): trying to set ${Fk} value on '${kk}'.`);
-        "object" === typeof Fk && this[Hk] && kX(Fk, this[Hk], this, kk), kk = kk.toString();
-        const Ik = this[wk],
-          Xk = void 0 !== Fk[wk],
-          ik = this.journal;
-        let yk, lk = ik.indexOf(kk);
-        if (void 0 !== lk) {
-          yk = Tk.REPLACE;
-          const Ik = this.$items.get(kk);
-          if (Ik === Fk) return;
-          Xk && (yk = Tk.DELETE_AND_ADD, void 0 !== Ik && Ik[wk].root?.remove(Ik[wk])), void 0 !== ik.snapshotAt(lk) && ik.forgetSnapshot(lk)
-        } else lk = ik.assign(kk), yk = Tk.ADD;
-        return this.$items.set(kk, Fk), yk === Tk.ADD && Ik.isStreamCollection ? void 0 !== Ik.root && EF(this, Ik.root, lk) : Ik.change(lk, yk), Xk && Fk[wk].setParent(this, Ik.root, lk), this
+      set(mm, Tm) {
+        if (void 0 === Tm || null === Tm) throw new Error(`MapSchema#set('${mm}', ${Tm}): trying to set ${Tm} value on '${mm}'.`);
+        "object" === typeof Tm && this[qm] && fh(Tm, this[qm], this, mm), mm = mm.toString();
+        const fm = this[Ym],
+          hm = void 0 !== Tm[Ym],
+          am = this.journal;
+        let xm, wm = am.indexOf(mm);
+        if (void 0 !== wm) {
+          xm = Am.REPLACE;
+          const fm = this.$items.get(mm);
+          if (fm === Tm) return;
+          hm && (xm = Am.DELETE_AND_ADD, void 0 !== fm && fm[Ym].root?.remove(fm[Ym])), void 0 !== am.snapshotAt(wm) && am.forgetSnapshot(wm)
+        } else wm = am.assign(mm), xm = Am.ADD;
+        return this.$items.set(mm, Tm), xm === Am.ADD && fm.isStreamCollection ? void 0 !== fm.root && bT(this, fm.root, wm) : fm.change(wm, xm), hm && Tm[Ym].setParent(this, fm.root, wm), this
       }
-      get(kk) {
-        return this.$items.get(kk)
+      get(mm) {
+        return this.$items.get(mm)
       }
-      getOrInsert(kk, Fk) {
-        return this.$items.has(kk) ? this.$items.get(kk) : (this.set(kk, Fk), Fk)
+      getOrInsert(mm, Tm) {
+        return this.$items.has(mm) ? this.$items.get(mm) : (this.set(mm, Tm), Tm)
       }
-      getOrInsertComputed(kk, Fk) {
-        if (this.$items.has(kk)) return this.$items.get(kk);
-        const Ik = Fk(kk);
-        return this.set(kk, Ik), Ik
+      getOrInsertComputed(mm, Tm) {
+        if (this.$items.has(mm)) return this.$items.get(mm);
+        const fm = Tm(mm);
+        return this.set(mm, fm), fm
       }
-      delete(kk) {
-        if (!this.$items.has(kk)) return !1;
-        const Fk = this.journal.indexOf(kk),
-          Ik = this.$items.get(kk),
-          Xk = this[wk];
-        if (Xk.isStreamCollection) {
-          const Tk = Xk.root;
-          let ik = !1;
-          return void 0 !== Tk && (ik = OF(this, Tk, this[lk], Fk)), void 0 !== Ik?.[wk] && Tk?.remove(Ik[wk]), this.$items.delete(kk), ik || this.journal.snapshot(Fk, Ik), !0
+      delete(mm) {
+        if (!this.$items.has(mm)) return !1;
+        const Tm = this.journal.indexOf(mm),
+          fm = this.$items.get(mm),
+          hm = this[Ym];
+        if (hm.isStreamCollection) {
+          const Am = hm.root;
+          let am = !1;
+          return void 0 !== Am && (am = ST(this, Am, this[wm], Tm)), void 0 !== fm?.[Ym] && Am?.remove(fm[Ym]), this.$items.delete(mm), am || this.journal.snapshot(Tm, fm), !0
         }
-        return this.journal.snapshot(Fk, Ik), Xk.delete(Fk), this.$items.delete(kk)
+        return this.journal.snapshot(Tm, fm), hm.delete(Tm), this.$items.delete(mm)
       }
       clear() {
-        const kk = this[wk];
-        kk.discard(), kk.forEachChild(((Fk, Ik) => {
-          kk.root?.remove(Fk)
-        })), this.journal.reset(), this.$items.clear(), kk.operation(Tk.CLEAR)
-      } [Pk]() {
-        const kk = this[wk];
-        if (kk.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
-        this.$items.forEach((kk => kk?.[Pk]?.())), this.$items.clear(), this.journal.reset(), kk.recycle(), this[lk] = void 0
+        const mm = this[Ym];
+        mm.discard(), mm.forEachChild(((Tm, fm) => {
+          mm.root?.remove(Tm)
+        })), this.journal.reset(), this.$items.clear(), mm.operation(Am.CLEAR)
+      } [Im]() {
+        const mm = this[Ym];
+        if (mm.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
+        this.$items.forEach((mm => mm?.[Im]?.())), this.$items.clear(), this.journal.reset(), mm.recycle(), this[wm] = void 0
       }
-      has(kk) {
-        return this.$items.has(kk)
+      has(mm) {
+        return this.$items.has(mm)
       }
-      forEach(kk) {
-        this.$items.forEach(kk)
+      forEach(mm) {
+        this.$items.forEach(mm)
       }
       entries() {
         return this.$items.entries()
@@ -4606,69 +4606,69 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[wk].pause()
+        this[Ym].pause()
       }
       resumeTracking() {
-        this[wk].resume()
+        this[Ym].resume()
       }
-      untracked(kk) {
-        return this[wk].untracked(kk)
+      untracked(mm) {
+        return this[Ym].untracked(mm)
       }
       get isTrackingPaused() {
-        return this[wk].paused
+        return this[Ym].paused
       }
-      setIndex(kk, Fk) {
-        this.journal.setIndex(kk, Fk)
+      setIndex(mm, Tm) {
+        this.journal.setIndex(mm, Tm)
       }
-      getIndex(kk) {
-        return this.journal.keyOf(kk)
-      } [Zk](kk) {
-        const Fk = this.journal.keyOf(kk);
-        return void 0 !== Fk ? this.$items.get(Fk) : void 0
-      } [jk](kk) {
-        const Fk = this.journal.keyOf(kk);
-        void 0 !== Fk && (this.$items.delete(Fk), this.journal.keyByIndex.delete(kk))
-      } [ek](kk, Fk, Ik) {
-        let Xk = null;
-        if (this.$items.forEach(((Tk, ik) => {
-            kk.has(ik) ? Ik(Tk) : ((Xk ??= new Set).add(ik), Fk(Tk, ik))
-          })), null !== Xk) {
-          Xk.forEach((kk => {
-            this.$items.delete(kk), delete this.journal.indexByKey[kk]
+      getIndex(mm) {
+        return this.journal.keyOf(mm)
+      } [Em](mm) {
+        const Tm = this.journal.keyOf(mm);
+        return void 0 !== Tm ? this.$items.get(Tm) : void 0
+      } [om](mm) {
+        const Tm = this.journal.keyOf(mm);
+        void 0 !== Tm && (this.$items.delete(Tm), this.journal.keyByIndex.delete(mm))
+      } [Om](mm, Tm, fm) {
+        let hm = null;
+        if (this.$items.forEach(((Am, am) => {
+            mm.has(am) ? fm(Am) : ((hm ??= new Set).add(am), Tm(Am, am))
+          })), null !== hm) {
+          hm.forEach((mm => {
+            this.$items.delete(mm), delete this.journal.indexByKey[mm]
           }));
-          const kk = [];
-          this.journal.keyByIndex.forEach(((Fk, Ik) => {
-            Xk.has(Fk) && kk.push(Ik)
+          const mm = [];
+          this.journal.keyByIndex.forEach(((Tm, fm) => {
+            hm.has(Tm) && mm.push(fm)
           }));
-          for (let Fk = 0; Fk < kk.length; Fk++) this.journal.keyByIndex.delete(kk[Fk])
+          for (let Tm = 0; Tm < mm.length; Tm++) this.journal.keyByIndex.delete(mm[Tm])
         }
-      } [xk]() {
+      } [Vm]() {
         this.journal.cleanupAfterEncode()
       }
-      _dropView(kk) {
-        uF(this, kk)
+      _dropView(mm) {
+        XT(this, mm)
       }
       _unregister() {}
       toJSON() {
-        return Object.fromEntries(Array.from(this, (kk => {
-          let [Fk, Ik] = kk;
-          return [Fk, "function" === typeof Ik.toJSON ? Ik.toJSON() : Ik]
+        return Object.fromEntries(Array.from(this, (mm => {
+          let [Tm, fm] = mm;
+          return [Tm, "function" === typeof fm.toJSON ? fm.toJSON() : fm]
         })))
       }
-      clone(kk) {
-        let Fk;
-        return kk ? Fk = Object.assign(new iX, this) : (Fk = new iX, this.forEach(((kk, Ik) => {
-          kk[wk] ? Fk.set(Ik, kk.clone()) : Fk.set(Ik, kk)
-        }))), Fk
+      clone(mm) {
+        let Tm;
+        return mm ? Tm = Object.assign(new wh, this) : (Tm = new wh, this.forEach(((mm, fm) => {
+          mm[Ym] ? Tm.set(fm, mm.clone()) : Tm.set(fm, mm)
+        }))), Tm
       }
     }
-    VF("map", {
-      constructor: iX
+    JT("map", {
+      constructor: wh
     });
-    class yX {
-      [wk];
-      [lk];
-      [Hk];
+    class Dh {
+      [Ym];
+      [wm];
+      [qm];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4676,79 +4676,79 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(kk) {
-        (this._stream ??= oF()).maxPerTick = kk
+      set maxPerTick(mm) {
+        (this._stream ??= ZT()).maxPerTick = mm
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(kk) {
-        (this._stream ??= oF()).priority = kk
+      set priority(mm) {
+        (this._stream ??= ZT()).priority = mm
       }
-      static[qk] = UI;
-      static[Lk] = rI;
-      static COLLECTION_KIND = AI;
-      static[tk](kk, Fk, Ik) {
-        return !Ik || "string" === typeof kk[Hk] || Ik.isChangeTreeVisible((kk[Zk](Fk) ?? kk.deletedItems[Fk])[wk])
+      static[im] = rf;
+      static[Rm] = Ff;
+      static COLLECTION_KIND = Uf;
+      static[pm](mm, Tm, fm) {
+        return !fm || "string" === typeof mm[qm] || fm.isChangeTreeVisible((mm[Em](Tm) ?? mm.deletedItems[Tm])[Ym])
       }
-      static is(kk) {
-        return void 0 !== kk.collection
+      static is(mm) {
+        return void 0 !== mm.collection
       }
-      constructor(kk) {
-        Object.defineProperty(this, wk, {
-          value: new nI(this),
+      constructor(mm) {
+        Object.defineProperty(this, Ym, {
+          value: new Gf(this),
           enumerable: !1,
           writable: !0
-        }), this[Hk] = void 0, kk && kk.forEach((kk => this.add(kk)))
+        }), this[qm] = void 0, mm && mm.forEach((mm => this.add(mm)))
       }
       static initializeForDecoder() {
-        const kk = Object.create(yX.prototype);
-        return kk.$items = new Map, kk.deletedItems = {}, kk.$refId = 0, kk[Hk] = void 0, pI(kk), kk
+        const mm = Object.create(Dh.prototype);
+        return mm.$items = new Map, mm.deletedItems = {}, mm.$refId = 0, mm[qm] = void 0, Pf(mm), mm
       }
-      add(kk) {
-        const Fk = this.$refId++,
-          Ik = this[wk];
-        return this.$items.set(Fk, kk), Ik.isStreamCollection ? void 0 !== Ik.root && EF(this, Ik.root, Fk) : Ik.change(Fk), void 0 !== kk[wk] && kk[wk].setParent(this, Ik.root, Fk), Fk
+      add(mm) {
+        const Tm = this.$refId++,
+          fm = this[Ym];
+        return this.$items.set(Tm, mm), fm.isStreamCollection ? void 0 !== fm.root && bT(this, fm.root, Tm) : fm.change(Tm), void 0 !== mm[Ym] && mm[Ym].setParent(this, fm.root, Tm), Tm
       }
-      at(kk) {
-        const Fk = Array.from(this.$items.keys())[kk];
-        return this.$items.get(Fk)
+      at(mm) {
+        const Tm = Array.from(this.$items.keys())[mm];
+        return this.$items.get(Tm)
       }
       entries() {
         return this.$items.entries()
       }
-      delete(kk) {
-        const Fk = this.$items.entries();
-        let Ik, Xk;
+      delete(mm) {
+        const Tm = this.$items.entries();
+        let fm, hm;
         for (;
-          (Xk = Fk.next()) && !Xk.done;)
-          if (kk === Xk.value[1]) {
-            Ik = Xk.value[0];
+          (hm = Tm.next()) && !hm.done;)
+          if (mm === hm.value[1]) {
+            fm = hm.value[0];
             break
-          } if (void 0 === Ik) return !1;
-        const Tk = this[wk];
-        if (Tk.isStreamCollection) {
-          const kk = Tk.root,
-            Fk = this.$items.get(Ik);
-          return void 0 !== kk && OF(this, kk, this[lk], Ik), void 0 !== Fk?.[wk] && kk?.remove(Fk[wk]), this.deletedItems[Ik] = Fk, this.$items.delete(Ik)
+          } if (void 0 === fm) return !1;
+        const Am = this[Ym];
+        if (Am.isStreamCollection) {
+          const mm = Am.root,
+            Tm = this.$items.get(fm);
+          return void 0 !== mm && ST(this, mm, this[wm], fm), void 0 !== Tm?.[Ym] && mm?.remove(Tm[Ym]), this.deletedItems[fm] = Tm, this.$items.delete(fm)
         }
-        return this.deletedItems[Ik] = Tk.delete(Ik), this.$items.delete(Ik)
+        return this.deletedItems[fm] = Am.delete(fm), this.$items.delete(fm)
       }
       clear() {
-        const kk = this[wk];
-        kk.discard(), kk.forEachChild(((Fk, Ik) => {
-          kk.root?.remove(Fk)
-        })), this.$items.clear(), kk.operation(Tk.CLEAR)
-      } [Pk]() {
-        const kk = this[wk];
-        if (kk.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
-        this.$items.forEach((kk => kk?.[Pk]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, kk.recycle(), this[lk] = void 0
+        const mm = this[Ym];
+        mm.discard(), mm.forEachChild(((Tm, fm) => {
+          mm.root?.remove(Tm)
+        })), this.$items.clear(), mm.operation(Am.CLEAR)
+      } [Im]() {
+        const mm = this[Ym];
+        if (mm.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
+        this.$items.forEach((mm => mm?.[Im]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, mm.recycle(), this[wm] = void 0
       }
-      has(kk) {
-        return Array.from(this.$items.values()).some((Fk => Fk === kk))
+      has(mm) {
+        return Array.from(this.$items.values()).some((Tm => Tm === mm))
       }
-      forEach(kk) {
-        this.$items.forEach(((Fk, Ik, Xk) => kk(Fk, Ik, this)))
+      forEach(mm) {
+        this.$items.forEach(((Tm, fm, hm) => mm(Tm, fm, this)))
       }
       values() {
         return this.$items.values()
@@ -4757,62 +4757,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[wk].pause()
+        this[Ym].pause()
       }
       resumeTracking() {
-        this[wk].resume()
+        this[Ym].resume()
       }
-      untracked(kk) {
-        return this[wk].untracked(kk)
+      untracked(mm) {
+        return this[Ym].untracked(mm)
       }
       get isTrackingPaused() {
-        return this[wk].paused
+        return this[Ym].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(kk, Fk) {}
-      getIndex(kk) {
-        return kk
-      } [Zk](kk) {
-        return this.$items.get(kk)
-      } [jk](kk) {
-        this.$items.delete(kk)
-      } [ek](kk, Fk, Ik) {
-        let Xk = null;
-        if (this.$items.forEach(((Tk, ik) => {
-            kk.has(ik) ? Ik(Tk) : ((Xk ??= []).push(ik), Fk(Tk, ik))
-          })), null !== Xk)
-          for (let Tk = 0; Tk < Xk.length; Tk++) this[jk](Xk[Tk])
-      } [xk]() {
-        for (const kk in this.deletedItems) delete this.deletedItems[kk]
+      setIndex(mm, Tm) {}
+      getIndex(mm) {
+        return mm
+      } [Em](mm) {
+        return this.$items.get(mm)
+      } [om](mm) {
+        this.$items.delete(mm)
+      } [Om](mm, Tm, fm) {
+        let hm = null;
+        if (this.$items.forEach(((Am, am) => {
+            mm.has(am) ? fm(Am) : ((hm ??= []).push(am), Tm(Am, am))
+          })), null !== hm)
+          for (let Am = 0; Am < hm.length; Am++) this[om](hm[Am])
+      } [Vm]() {
+        for (const mm in this.deletedItems) delete this.deletedItems[mm]
       }
-      _dropView(kk) {
-        uF(this, kk)
+      _dropView(mm) {
+        XT(this, mm)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const kk = [];
-        return this.forEach(((Fk, Ik) => {
-          kk.push("function" === typeof Fk.toJSON ? Fk.toJSON() : Fk)
-        })), kk
+        const mm = [];
+        return this.forEach(((Tm, fm) => {
+          mm.push("function" === typeof Tm.toJSON ? Tm.toJSON() : Tm)
+        })), mm
       }
-      clone(kk) {
-        let Fk;
-        return kk ? Fk = Object.assign(new yX, this) : (Fk = new yX, this.forEach((kk => {
-          kk[wk] ? Fk.add(kk.clone()) : Fk.add(kk)
-        }))), Fk
+      clone(mm) {
+        let Tm;
+        return mm ? Tm = Object.assign(new Dh, this) : (Tm = new Dh, this.forEach((mm => {
+          mm[Ym] ? Tm.add(mm.clone()) : Tm.add(mm)
+        }))), Tm
       }
     }
-    VF("collection", {
-      constructor: yX
+    JT("collection", {
+      constructor: Dh
     });
-    class lX {
-      [wk];
-      [lk];
-      [Hk];
+    class ih {
+      [Ym];
+      [wm];
+      [qm];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4820,81 +4820,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(kk) {
-        (this._stream ??= oF()).maxPerTick = kk
+      set maxPerTick(mm) {
+        (this._stream ??= ZT()).maxPerTick = mm
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(kk) {
-        (this._stream ??= oF()).priority = kk
+      set priority(mm) {
+        (this._stream ??= ZT()).priority = mm
       }
-      static[qk] = UI;
-      static[Lk] = rI;
-      static COLLECTION_KIND = YI;
-      static[tk](kk, Fk, Ik) {
-        return !Ik || "string" === typeof kk[Hk] || Ik.isVisible((kk[Zk](Fk) ?? kk.deletedItems[Fk])[wk])
+      static[im] = rf;
+      static[Rm] = Ff;
+      static COLLECTION_KIND = tf;
+      static[pm](mm, Tm, fm) {
+        return !fm || "string" === typeof mm[qm] || fm.isVisible((mm[Em](Tm) ?? mm.deletedItems[Tm])[Ym])
       }
-      static is(kk) {
-        return void 0 !== kk.set
+      static is(mm) {
+        return void 0 !== mm.set
       }
-      constructor(kk) {
-        Object.defineProperty(this, wk, {
-          value: new nI(this),
+      constructor(mm) {
+        Object.defineProperty(this, Ym, {
+          value: new Gf(this),
           enumerable: !1,
           writable: !0
-        }), this[Hk] = void 0, kk && kk.forEach((kk => this.add(kk)))
+        }), this[qm] = void 0, mm && mm.forEach((mm => this.add(mm)))
       }
       static initializeForDecoder() {
-        const kk = Object.create(lX.prototype);
-        return kk.$items = new Map, kk.deletedItems = {}, kk.$refId = 0, kk[Hk] = void 0, pI(kk), kk
+        const mm = Object.create(ih.prototype);
+        return mm.$items = new Map, mm.deletedItems = {}, mm.$refId = 0, mm[qm] = void 0, Pf(mm), mm
       }
-      add(kk) {
-        if (this.has(kk)) return !1;
-        const Fk = this.$refId++,
-          Ik = this[wk];
-        return this.$items.set(Fk, kk), Ik.isStreamCollection ? void 0 !== Ik.root && EF(this, Ik.root, Fk) : Ik.change(Fk, Tk.ADD), void 0 !== kk[wk] && kk[wk].setParent(this, Ik.root, Fk), Fk
+      add(mm) {
+        if (this.has(mm)) return !1;
+        const Tm = this.$refId++,
+          fm = this[Ym];
+        return this.$items.set(Tm, mm), fm.isStreamCollection ? void 0 !== fm.root && bT(this, fm.root, Tm) : fm.change(Tm, Am.ADD), void 0 !== mm[Ym] && mm[Ym].setParent(this, fm.root, Tm), Tm
       }
       entries() {
         return this.$items.entries()
       }
-      delete(kk) {
-        const Fk = this.$items.entries();
-        let Ik, Xk;
+      delete(mm) {
+        const Tm = this.$items.entries();
+        let fm, hm;
         for (;
-          (Xk = Fk.next()) && !Xk.done;)
-          if (kk === Xk.value[1]) {
-            Ik = Xk.value[0];
+          (hm = Tm.next()) && !hm.done;)
+          if (mm === hm.value[1]) {
+            fm = hm.value[0];
             break
-          } if (void 0 === Ik) return !1;
-        const Tk = this[wk];
-        if (Tk.isStreamCollection) {
-          const kk = Tk.root,
-            Fk = this.$items.get(Ik);
-          return void 0 !== kk && OF(this, kk, this[lk], Ik), void 0 !== Fk?.[wk] && kk?.remove(Fk[wk]), this.deletedItems[Ik] = Fk, this.$items.delete(Ik)
+          } if (void 0 === fm) return !1;
+        const Am = this[Ym];
+        if (Am.isStreamCollection) {
+          const mm = Am.root,
+            Tm = this.$items.get(fm);
+          return void 0 !== mm && ST(this, mm, this[wm], fm), void 0 !== Tm?.[Ym] && mm?.remove(Tm[Ym]), this.deletedItems[fm] = Tm, this.$items.delete(fm)
         }
-        return this.deletedItems[Ik] = Tk.delete(Ik), this.$items.delete(Ik)
+        return this.deletedItems[fm] = Am.delete(fm), this.$items.delete(fm)
       }
       clear() {
-        const kk = this[wk];
-        kk.discard(), this.$items.clear(), kk.operation(Tk.CLEAR)
-      } [Pk]() {
-        const kk = this[wk];
-        if (kk.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
-        this.$items.forEach((kk => kk?.[Pk]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, kk.recycle(), this[lk] = void 0
+        const mm = this[Ym];
+        mm.discard(), this.$items.clear(), mm.operation(Am.CLEAR)
+      } [Im]() {
+        const mm = this[Ym];
+        if (mm.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
+        this.$items.forEach((mm => mm?.[Im]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, mm.recycle(), this[wm] = void 0
       }
-      has(kk) {
-        const Fk = this.$items.values();
-        let Ik, Xk = !1;
+      has(mm) {
+        const Tm = this.$items.values();
+        let fm, hm = !1;
         for (;
-          (Ik = Fk.next()) && !Ik.done;)
-          if (kk === Ik.value) {
-            Xk = !0;
+          (fm = Tm.next()) && !fm.done;)
+          if (mm === fm.value) {
+            hm = !0;
             break
-          } return Xk
+          } return hm
       }
-      forEach(kk) {
-        this.$items.forEach(((Fk, Ik, Xk) => kk(Fk, Ik, this)))
+      forEach(mm) {
+        this.$items.forEach(((Tm, fm, hm) => mm(Tm, fm, this)))
       }
       values() {
         return this.$items.values()
@@ -4903,62 +4903,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[wk].pause()
+        this[Ym].pause()
       }
       resumeTracking() {
-        this[wk].resume()
+        this[Ym].resume()
       }
-      untracked(kk) {
-        return this[wk].untracked(kk)
+      untracked(mm) {
+        return this[Ym].untracked(mm)
       }
       get isTrackingPaused() {
-        return this[wk].paused
+        return this[Ym].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(kk, Fk) {}
-      getIndex(kk) {
-        return kk
-      } [Zk](kk) {
-        return this.$items.get(kk)
-      } [jk](kk) {
-        this.$items.delete(kk)
-      } [ek](kk, Fk, Ik) {
-        let Xk = null;
-        if (this.$items.forEach(((Tk, ik) => {
-            kk.has(ik) ? Ik(Tk) : ((Xk ??= []).push(ik), Fk(Tk, ik))
-          })), null !== Xk)
-          for (let Tk = 0; Tk < Xk.length; Tk++) this[jk](Xk[Tk])
-      } [xk]() {
-        for (const kk in this.deletedItems) delete this.deletedItems[kk]
+      setIndex(mm, Tm) {}
+      getIndex(mm) {
+        return mm
+      } [Em](mm) {
+        return this.$items.get(mm)
+      } [om](mm) {
+        this.$items.delete(mm)
+      } [Om](mm, Tm, fm) {
+        let hm = null;
+        if (this.$items.forEach(((Am, am) => {
+            mm.has(am) ? fm(Am) : ((hm ??= []).push(am), Tm(Am, am))
+          })), null !== hm)
+          for (let Am = 0; Am < hm.length; Am++) this[om](hm[Am])
+      } [Vm]() {
+        for (const mm in this.deletedItems) delete this.deletedItems[mm]
       }
-      _dropView(kk) {
-        uF(this, kk)
+      _dropView(mm) {
+        XT(this, mm)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const kk = [];
-        return this.forEach(((Fk, Ik) => {
-          kk.push("function" === typeof Fk.toJSON ? Fk.toJSON() : Fk)
-        })), kk
+        const mm = [];
+        return this.forEach(((Tm, fm) => {
+          mm.push("function" === typeof Tm.toJSON ? Tm.toJSON() : Tm)
+        })), mm
       }
-      clone(kk) {
-        let Fk;
-        return kk ? Fk = Object.assign(new lX, this) : (Fk = new lX, this.forEach((kk => {
-          kk[wk] ? Fk.add(kk.clone()) : Fk.add(kk)
-        }))), Fk
+      clone(mm) {
+        let Tm;
+        return mm ? Tm = Object.assign(new ih, this) : (Tm = new ih, this.forEach((mm => {
+          mm[Ym] ? Tm.add(mm.clone()) : Tm.add(mm)
+        }))), Tm
       }
     }
-    VF("set", {
-      constructor: lX
+    JT("set", {
+      constructor: ih
     });
-    class aX {
-      [wk];
-      [lk];
-      [Hk];
+    class Rh {
+      [Ym];
+      [wm];
+      [qm];
       $items = new Map;
       $nextPosition = 0;
       _itemIndex = new Map;
@@ -4966,81 +4966,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(kk) {
-        (this._stream ??= oF()).maxPerTick = kk
+      set maxPerTick(mm) {
+        (this._stream ??= ZT()).maxPerTick = mm
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(kk) {
-        (this._stream ??= oF()).priority = kk
+      set priority(mm) {
+        (this._stream ??= ZT()).priority = mm
       }
       static $isStream = !0;
-      static[qk] = UI;
-      static[Lk] = rI;
-      static COLLECTION_KIND = gI;
-      static[tk](kk, Fk, Ik) {
-        if (!Ik) return !0;
-        const Xk = kk[Zk](Fk);
-        return void 0 !== Xk && Ik.isVisible(Xk[wk])
+      static[im] = rf;
+      static[Rm] = Ff;
+      static COLLECTION_KIND = df;
+      static[pm](mm, Tm, fm) {
+        if (!fm) return !0;
+        const hm = mm[Em](Tm);
+        return void 0 !== hm && fm.isVisible(hm[Ym])
       }
-      static is(kk) {
-        return kk && void 0 !== kk.stream
+      static is(mm) {
+        return mm && void 0 !== mm.stream
       }
       constructor() {
-        Object.defineProperty(this, wk, {
-          value: new nI(this),
+        Object.defineProperty(this, Ym, {
+          value: new Gf(this),
           enumerable: !1,
           writable: !0
-        }), this[Hk] = void 0
+        }), this[qm] = void 0
       }
       static initializeForDecoder() {
-        const kk = Object.create(aX.prototype);
-        return kk.$items = new Map, kk.$nextPosition = 0, kk._itemIndex = new Map, kk[Hk] = void 0, pI(kk), kk
+        const mm = Object.create(Rh.prototype);
+        return mm.$items = new Map, mm.$nextPosition = 0, mm._itemIndex = new Map, mm[qm] = void 0, Pf(mm), mm
       }
-      add(kk) {
-        if (this._itemIndex.has(kk)) return -1;
-        const Fk = this.$nextPosition++;
-        this.$items.set(Fk, kk), this._itemIndex.set(kk, Fk);
-        const Ik = this[wk].root;
-        return void 0 !== kk[wk] && kk[wk].setParent(this, Ik, Fk), void 0 !== Ik && EF(this, Ik, Fk), Fk
+      add(mm) {
+        if (this._itemIndex.has(mm)) return -1;
+        const Tm = this.$nextPosition++;
+        this.$items.set(Tm, mm), this._itemIndex.set(mm, Tm);
+        const fm = this[Ym].root;
+        return void 0 !== mm[Ym] && mm[Ym].setParent(this, fm, Tm), void 0 !== fm && bT(this, fm, Tm), Tm
       }
-      remove(kk) {
-        const Fk = this._itemIndex.get(kk);
-        if (void 0 === Fk) return !1;
-        this._itemIndex.delete(kk), this.$items.delete(Fk);
-        const Ik = this[wk].root;
-        return void 0 !== Ik && (OF(this, Ik, this[lk], Fk), void 0 !== kk[wk] && Ik.remove(kk[wk])), !0
+      remove(mm) {
+        const Tm = this._itemIndex.get(mm);
+        if (void 0 === Tm) return !1;
+        this._itemIndex.delete(mm), this.$items.delete(Tm);
+        const fm = this[Ym].root;
+        return void 0 !== fm && (ST(this, fm, this[wm], Tm), void 0 !== mm[Ym] && fm.remove(mm[Ym])), !0
       }
-      has(kk) {
-        return this._itemIndex.has(kk)
+      has(mm) {
+        return this._itemIndex.has(mm)
       }
       clear() {
-        const kk = this[wk].root;
-        if (void 0 !== kk) {
-          ! function(kk, Fk, Ik) {
-            const Xk = kk._stream;
-            if (void 0 !== Xk) {
-              Xk.broadcastPending.clear();
-              for (const kk of Xk.sentBroadcast) Xk.broadcastDeletes.add(kk);
-              Xk.sentBroadcast.clear(), Fk.forEachActiveView((kk => {
-                Xk.pendingByView.get(kk.id)?.clear();
-                const Fk = Xk.sentByView.get(kk.id);
-                if (void 0 !== Fk && Fk.size > 0) {
-                  let Xk = kk.changes.get(Ik);
-                  void 0 === Xk && (Xk = new Map, kk.changes.set(Ik, Xk));
-                  for (const kk of Fk) Xk.set(kk, Tk.DELETE);
-                  Fk.clear()
+        const mm = this[Ym].root;
+        if (void 0 !== mm) {
+          ! function(mm, Tm, fm) {
+            const hm = mm._stream;
+            if (void 0 !== hm) {
+              hm.broadcastPending.clear();
+              for (const mm of hm.sentBroadcast) hm.broadcastDeletes.add(mm);
+              hm.sentBroadcast.clear(), Tm.forEachActiveView((mm => {
+                hm.pendingByView.get(mm.id)?.clear();
+                const Tm = hm.sentByView.get(mm.id);
+                if (void 0 !== Tm && Tm.size > 0) {
+                  let hm = mm.changes.get(fm);
+                  void 0 === hm && (hm = new Map, mm.changes.set(fm, hm));
+                  for (const mm of Tm) hm.set(mm, Am.DELETE);
+                  Tm.clear()
                 }
               }))
             }
-          }(this, kk, this[lk]);
-          for (const Fk of this.$items.values()) void 0 !== Fk[wk] && kk.remove(Fk[wk])
+          }(this, mm, this[wm]);
+          for (const Tm of this.$items.values()) void 0 !== Tm[Ym] && mm.remove(Tm[Ym])
         }
         this.$items.clear(), this._itemIndex.clear()
       }
-      forEach(kk) {
-        for (const [Fk, Ik] of this.$items) kk(Ik, Fk, this)
+      forEach(mm) {
+        for (const [Tm, fm] of this.$items) mm(fm, Tm, this)
       }
       values() {
         return this.$items.values()
@@ -5056,43 +5056,43 @@ export const modules = {
       get length() {
         return this.$items.size
       }
-      setIndex(kk, Fk) {}
-      getIndex(kk) {
-        return kk
-      } [Zk](kk) {
-        return this.$items.get(kk)
-      } [jk](kk) {
-        const Fk = this.$items.get(kk);
-        void 0 !== Fk && (this._itemIndex.delete(Fk), this.$items.delete(kk))
-      } [ek]() {} [xk]() {}
+      setIndex(mm, Tm) {}
+      getIndex(mm) {
+        return mm
+      } [Em](mm) {
+        return this.$items.get(mm)
+      } [om](mm) {
+        const Tm = this.$items.get(mm);
+        void 0 !== Tm && (this._itemIndex.delete(Tm), this.$items.delete(mm))
+      } [Om]() {} [Vm]() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const kk = [];
-        return this.forEach((Fk => {
-          kk.push("function" === typeof Fk?.toJSON ? Fk.toJSON() : Fk)
-        })), kk
+        const mm = [];
+        return this.forEach((Tm => {
+          mm.push("function" === typeof Tm?.toJSON ? Tm.toJSON() : Tm)
+        })), mm
       }
-      clone(kk) {
-        if (kk) {
-          return Object.assign(new aX, this)
+      clone(mm) {
+        if (mm) {
+          return Object.assign(new Rh, this)
         }
-        const Fk = new aX;
-        return Fk.maxPerTick = this.maxPerTick, this.forEach((kk => {
-          Fk.add("function" === typeof kk?.clone ? kk.clone() : kk)
-        })), Fk
+        const Tm = new Rh;
+        return Tm.maxPerTick = this.maxPerTick, this.forEach((mm => {
+          Tm.add("function" === typeof mm?.clone ? mm.clone() : mm)
+        })), Tm
       }
-      _dropView(kk) {
-        uF(this, kk)
+      _dropView(mm) {
+        XT(this, mm)
       }
       _unregister() {}
     }
-    VF("stream", {
-      constructor: aX
+    JT("stream", {
+      constructor: Rh
     });
-    class qX {
-      [sk] = !0;
+    class ph {
+      [nm] = !0;
       _type;
       _default = void 0;
       _hasDefault = !1;
@@ -5106,14 +5106,14 @@ export const modules = {
       _optional = !1;
       _noSync = !1;
       _streamPriority = void 0;
-      constructor(kk) {
-        this._type = kk
+      constructor(mm) {
+        this._type = mm
       }
-      default (kk) {
-        return this._default = kk, this._hasDefault = !0, this
+      default (mm) {
+        return this._default = mm, this._hasDefault = !0, this
       }
-      view(kk) {
-        return this._view = kk ?? -1, this
+      view(mm) {
+        return this._view = mm ?? -1, this
       }
       unreliable() {
         return this._unreliable = !0, this
@@ -5128,16 +5128,16 @@ export const modules = {
         return this._noSync = !0, this
       }
       stream() {
-        const kk = this._type;
-        if (kk && "object" === typeof kk && void 0 !== kk.array) throw new Error(SF);
+        const mm = this._type;
+        if (mm && "object" === typeof mm && void 0 !== mm.array) throw new Error(zT);
         return this._stream = !0, this
       }
-      priority(kk) {
-        return this._streamPriority = kk, this
+      priority(mm) {
+        return this._streamPriority = mm, this
       }
       deprecated() {
-        let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._deprecated = !0, this._deprecatedThrows = kk, this
+        let mm = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._deprecated = !0, this._deprecatedThrows = mm, this
       }
       optional() {
         return this._optional = !0, this
@@ -5161,135 +5161,135 @@ export const modules = {
       }
     }
 
-    function LX(kk) {
-      return null != kk && !0 === kk[sk]
+    function Eh(mm) {
+      return null != mm && !0 === mm[nm]
     }
 
-    function tX(kk) {
-      return () => new qX(kk)
+    function oh(mm) {
+      return () => new ph(mm)
     }
 
-    function ZX(kk) {
-      if (LX(kk)) {
-        const Fk = kk._type;
-        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof Fk?`use the type name instead: t.array("${Fk}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
+    function Oh(mm) {
+      if (Eh(mm)) {
+        const Tm = mm._type;
+        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof Tm?`use the type name instead: t.array("${Tm}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
       }
-      return kk
+      return mm
     }
 
-    function jX(kk) {
-      return new qX({
-        quantized: RF(kk)
+    function Yh(mm) {
+      return new ph({
+        quantized: HT(mm)
       })
     }
-    const eX = Object.freeze({
-        string: tX("string"),
-        number: tX("number"),
-        boolean: tX("boolean"),
-        int8: tX("int8"),
-        uint8: tX("uint8"),
-        int16: tX("int16"),
-        uint16: tX("uint16"),
-        int32: tX("int32"),
-        uint32: tX("uint32"),
-        int64: tX("int64"),
-        uint64: tX("uint64"),
-        float32: tX("float32"),
-        float64: tX("float64"),
-        bigint64: tX("bigint64"),
-        biguint64: tX("biguint64"),
-        ref: kk => new qX(kk),
-        array: kk => new qX({
-          array: ZX(kk)
+    const qh = Object.freeze({
+        string: oh("string"),
+        number: oh("number"),
+        boolean: oh("boolean"),
+        int8: oh("int8"),
+        uint8: oh("uint8"),
+        int16: oh("int16"),
+        uint16: oh("uint16"),
+        int32: oh("int32"),
+        uint32: oh("uint32"),
+        int64: oh("int64"),
+        uint64: oh("uint64"),
+        float32: oh("float32"),
+        float64: oh("float64"),
+        bigint64: oh("bigint64"),
+        biguint64: oh("biguint64"),
+        ref: mm => new ph(mm),
+        array: mm => new ph({
+          array: Oh(mm)
         }),
-        map: kk => new qX({
-          map: ZX(kk)
+        map: mm => new ph({
+          map: Oh(mm)
         }),
-        set: kk => new qX({
-          set: ZX(kk)
+        set: mm => new ph({
+          set: Oh(mm)
         }),
-        collection: kk => new qX({
-          collection: ZX(kk)
+        collection: mm => new ph({
+          collection: Oh(mm)
         }),
-        stream: kk => {
-          const Fk = new qX({
-            stream: ZX(kk)
+        stream: mm => {
+          const Tm = new ph({
+            stream: Oh(mm)
           });
-          return Fk._stream = !0, Fk
+          return Tm._stream = !0, Tm
         },
-        quantized: jX,
-        angle: kk => jX({
+        quantized: Yh,
+        angle: mm => Yh({
           min: 0,
           max: 2 * Math.PI,
           mode: "wrap",
-          bits: kk?.bits ?? 16
+          bits: mm?.bits ?? 16
         })
       }),
-      wX = -1;
+      jh = -1;
 
-    function HX(kk) {
-      return WF.register(kk), kk
+    function Vh(mm) {
+      return lT.register(mm), mm
     }
 
-    function JX() {
-      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : wX;
-      return function(Fk, Ik) {
-        const Xk = mF.initialize(Fk.constructor);
-        mF.setTag(Xk, Ik, kk)
+    function Ih() {
+      let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : jh;
+      return function(Tm, fm) {
+        const hm = UT.initialize(Tm.constructor);
+        UT.setTag(hm, fm, mm)
       }
     }
 
-    function xX(kk, Fk) {
-      const Ik = mF.initialize(kk.constructor);
-      mF.setUnreliable(Ik, Fk)
+    function Kh(mm, Tm) {
+      const fm = UT.initialize(mm.constructor);
+      UT.setUnreliable(fm, Tm)
     }
 
-    function PX(kk, Fk) {
-      const Ik = mF.initialize(kk.constructor);
-      mF.setPatchOnly(Ik, Fk)
+    function Qh(mm, Tm) {
+      const fm = UT.initialize(mm.constructor);
+      UT.setPatchOnly(fm, Tm)
     }
 
-    function KX(kk, Fk) {
-      const Ik = mF.initialize(kk.constructor);
-      mF.setFullStateOnly(Ik, Fk)
+    function nh(mm, Tm) {
+      const fm = UT.initialize(mm.constructor);
+      UT.setFullStateOnly(fm, Tm)
     }
 
-    function QX(kk, Fk) {
-      return function(Ik, Xk) {
-        const Tk = Ik.constructor;
-        if (!kk) throw new Error(`${Tk.name}: @type() reference provided for "${Xk}" is undefined. Make sure you don't have any circular dependencies.`);
-        kk = BF(kk, `${Tk.name}.${Xk}`), WF.register(Tk);
-        const ik = Object.getPrototypeOf(Tk)[Symbol.metadata],
-          yk = mF.initialize(Tk);
-        let lk = yk[Xk];
-        if (void 0 !== yk[lk]) {
-          if (yk[lk].deprecated) return;
-          if (void 0 !== yk[lk].type) {
-            const kk = new Error(`@colyseus/schema: Duplicate '${Xk}' definition on '${Tk.name}'.\nCheck @type() annotation`);
-            throw new Error(`${kk.message} ${kk.stack.split("\n")[4].trim()}`)
+    function Jh(mm, Tm) {
+      return function(fm, hm) {
+        const Am = fm.constructor;
+        if (!mm) throw new Error(`${Am.name}: @type() reference provided for "${hm}" is undefined. Make sure you don't have any circular dependencies.`);
+        mm = uT(mm, `${Am.name}.${hm}`), lT.register(Am);
+        const am = Object.getPrototypeOf(Am)[Symbol.metadata],
+          xm = UT.initialize(Am);
+        let wm = xm[hm];
+        if (void 0 !== xm[wm]) {
+          if (xm[wm].deprecated) return;
+          if (void 0 !== xm[wm].type) {
+            const mm = new Error(`@colyseus/schema: Duplicate '${hm}' definition on '${Am.name}'.\nCheck @type() annotation`);
+            throw new Error(`${mm.message} ${mm.stack.split("\n")[4].trim()}`)
           }
-        } else lk = yk[vk] ?? (ik && ik[vk]) ?? -1, lk++;
-        if (Fk && Fk.manual) mF.addField(yk, lk, Xk, kk, {
+        } else wm = xm[Zm] ?? (am && am[Zm]) ?? -1, wm++;
+        if (Tm && Tm.manual) UT.addField(xm, wm, hm, mm, {
           enumerable: !0,
           configurable: !0,
           writable: !0
         });
         else {
           const {
-            complexTypeKlass: Fk,
-            childType: Ik
-          } = fF(kk);
-          mF.addField(yk, lk, Xk, kk, VX(Xk, lk, Ik, Fk))
+            complexTypeKlass: Tm,
+            childType: fm
+          } = MT(mm);
+          UT.addField(xm, wm, hm, mm, zh(hm, wm, fm, Tm))
         }
-        yk[Vk][Xk] && Object.defineProperty(Ik, Xk, yk[Vk][Xk]), ("string" === typeof kk || UF(kk)) && (yk[Sk] || Object.defineProperty(yk, Sk, {
+        xm[Jm][hm] && Object.defineProperty(fm, hm, xm[Jm][hm]), ("string" === typeof mm || yT(mm)) && (xm[zm] || Object.defineProperty(xm, zm, {
           value: [],
           enumerable: !1,
           configurable: !0,
           writable: !0
-        }), yk[Sk][lk] = "string" === typeof kk ? IF[kk] : cF(kk.quantized))
+        }), xm[zm][wm] = "string" === typeof mm ? fT[mm] : sT(mm.quantized))
       }
     }
-    const sX = {
+    const ch = {
       number: "number",
       int8: "number",
       uint8: "number",
@@ -5307,432 +5307,432 @@ export const modules = {
       boolean: "boolean"
     };
 
-    function VX(kk, Fk, Ik, Xk) {
-      let ik;
-      return ik = Xk ? function(kk, Fk, Ik, Xk) {
-        const ik = Xk.constructor === XX,
-          yk = Xk.constructor === iX;
-        return function(kk) {
-          const Xk = this[Qk],
-            lk = Xk[Fk];
-          if (kk !== lk) {
-            if (void 0 !== kk && null !== kk) {
-              if (!ik || kk instanceof XX)
-                if (!yk || kk instanceof iX) kk[Hk] = Ik;
+    function zh(mm, Tm, fm, hm) {
+      let am;
+      return am = hm ? function(mm, Tm, fm, hm) {
+        const am = hm.constructor === ah,
+          xm = hm.constructor === wh;
+        return function(mm) {
+          const hm = this[Qm],
+            wm = hm[Tm];
+          if (mm !== wm) {
+            if (void 0 !== mm && null !== mm) {
+              if (!am || mm instanceof ah)
+                if (!xm || mm instanceof wh) mm[qm] = fm;
                 else {
-                  const Fk = new iX;
-                  if (Fk[Hk] = Ik, kk instanceof Map) kk.forEach(((kk, Ik) => Fk.set(Ik, kk)));
+                  const Tm = new wh;
+                  if (Tm[qm] = fm, mm instanceof Map) mm.forEach(((mm, fm) => Tm.set(fm, mm)));
                   else
-                    for (const Ik in kk) Fk.set(Ik, kk[Ik]);
-                  kk = Fk
+                    for (const fm in mm) Tm.set(fm, mm[fm]);
+                  mm = Tm
                 }
               else {
-                const Fk = new XX;
-                Fk[Hk] = Ik, Fk.push(...kk), kk = Fk
+                const Tm = new ah;
+                Tm[qm] = fm, Tm.push(...mm), mm = Tm
               }
-              const Xk = this[wk],
-                qk = this.constructor;
-              void 0 !== lk && null !== lk && lk[wk] ? (Xk.root?.remove(lk[wk]), qk[ak](Xk, Fk, Tk.DELETE_AND_ADD)) : qk[ak](Xk, Fk, Tk.ADD), kk[wk]?.setParent(this, Xk.root, Fk)
-            } else void 0 !== lk && null !== lk && this[wk].delete(Fk);
-            Xk[Fk] = kk
+              const hm = this[Ym],
+                im = this.constructor;
+              void 0 !== wm && null !== wm && wm[Ym] ? (hm.root?.remove(wm[Ym]), im[Dm](hm, Tm, Am.DELETE_AND_ADD)) : im[Dm](hm, Tm, Am.ADD), mm[Ym]?.setParent(this, hm.root, Tm)
+            } else void 0 !== wm && null !== wm && this[Ym].delete(Tm);
+            hm[Tm] = mm
           }
         }
-      }(0, Fk, Ik, Xk) : "string" === typeof Ik ? function(kk, Fk, Ik) {
-        const Xk = sX[Ik],
-          ik = "string" === Ik,
-          yk = "boolean" === Ik;
-        return function(Ik) {
-          const lk = this[Qk],
-            qk = lk[Fk];
-          if (Ik !== qk) {
-            if (void 0 !== Ik && null !== Ik) {
-              if (!yk && void 0 !== Xk && typeof Ik !== Xk && (!ik || null !== Ik)) {
-                const Fk = Ik && Ik.constructor ? ` (${Ik.constructor.name})` : "";
-                throw new MI(`a '${Xk}' was expected, but '${JSON.stringify(Ik)}'${Fk} was provided in ${this.constructor.name}#${kk}`)
+      }(0, Tm, fm, hm) : "string" === typeof fm ? function(mm, Tm, fm) {
+        const hm = ch[fm],
+          am = "string" === fm,
+          xm = "boolean" === fm;
+        return function(fm) {
+          const wm = this[Qm],
+            im = wm[Tm];
+          if (fm !== im) {
+            if (void 0 !== fm && null !== fm) {
+              if (!xm && void 0 !== hm && typeof fm !== hm && (!am || null !== fm)) {
+                const Tm = fm && fm.constructor ? ` (${fm.constructor.name})` : "";
+                throw new Th(`a '${hm}' was expected, but '${JSON.stringify(fm)}'${Tm} was provided in ${this.constructor.name}#${mm}`)
               }
-              this.constructor[ak](this[wk], Fk, Tk.ADD)
-            } else void 0 !== qk && null !== qk && this[wk].delete(Fk);
-            lk[Fk] = Ik
+              this.constructor[Dm](this[Ym], Tm, Am.ADD)
+            } else void 0 !== im && null !== im && this[Ym].delete(Tm);
+            wm[Tm] = fm
           }
         }
-      }(kk, Fk, Ik) : UF(Ik) ? function(kk, Fk, Ik) {
-        return function(Xk) {
-          const ik = this[Qk],
-            yk = ik[Fk];
-          if (void 0 !== Xk && null !== Xk) {
-            if ("number" !== typeof Xk) throw new MI(`a 'number' was expected, but '${JSON.stringify(Xk)}' was provided in ${this.constructor.name}#${kk}`);
-            if ((Xk = NF(Ik, CF(Ik, Xk))) === yk) return;
-            this.constructor[ak](this[wk], Fk, Tk.ADD)
+      }(mm, Tm, fm) : yT(fm) ? function(mm, Tm, fm) {
+        return function(hm) {
+          const am = this[Qm],
+            xm = am[Tm];
+          if (void 0 !== hm && null !== hm) {
+            if ("number" !== typeof hm) throw new Th(`a 'number' was expected, but '${JSON.stringify(hm)}' was provided in ${this.constructor.name}#${mm}`);
+            if ((hm = rT(fm, CT(fm, hm))) === xm) return;
+            this.constructor[Dm](this[Ym], Tm, Am.ADD)
           } else {
-            if (Xk === yk) return;
-            void 0 !== yk && null !== yk && this[wk].delete(Fk)
+            if (hm === xm) return;
+            void 0 !== xm && null !== xm && this[Ym].delete(Tm)
           }
-          ik[Fk] = Xk
+          am[Tm] = hm
         }
-      }(kk, Fk, Ik.quantized) : function(kk, Fk, Ik) {
-        return function(Xk) {
-          const ik = this[Qk],
-            yk = ik[Fk];
-          if (Xk !== yk) {
-            if (void 0 !== Xk && null !== Xk) {
-              kX(Xk, Ik, this, kk);
-              const ik = this[wk],
-                lk = this.constructor;
-              void 0 !== yk && null !== yk && yk[wk] ? (ik.root?.remove(yk[wk]), lk[ak](ik, Fk, Tk.DELETE_AND_ADD)) : lk[ak](ik, Fk, Tk.ADD), Xk[wk]?.setParent(this, ik.root, Fk)
-            } else void 0 !== yk && null !== yk && this[wk].delete(Fk);
-            ik[Fk] = Xk
+      }(mm, Tm, fm.quantized) : function(mm, Tm, fm) {
+        return function(hm) {
+          const am = this[Qm],
+            xm = am[Tm];
+          if (hm !== xm) {
+            if (void 0 !== hm && null !== hm) {
+              fh(hm, fm, this, mm);
+              const am = this[Ym],
+                wm = this.constructor;
+              void 0 !== xm && null !== xm && xm[Ym] ? (am.root?.remove(xm[Ym]), wm[Dm](am, Tm, Am.DELETE_AND_ADD)) : wm[Dm](am, Tm, Am.ADD), hm[Ym]?.setParent(this, am.root, Tm)
+            } else void 0 !== xm && null !== xm && this[Ym].delete(Tm);
+            am[Tm] = hm
           }
         }
-      }(kk, Fk, Ik), {
+      }(mm, Tm, fm), {
         get: function() {
-          return this[Qk][Fk]
+          return this[Qm][Tm]
         },
-        set: ik,
+        set: am,
         enumerable: !0,
         configurable: !0
       }
     }
 
-    function zX() {
-      let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return function(Fk, Ik) {
-        const Xk = mF.initialize(Fk.constructor);
-        mF.setDeprecated(Xk, Ik), kk && (Xk[Vk] ??= {}, Xk[Vk][Ik] = {
+    function Zh() {
+      let mm = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      return function(Tm, fm) {
+        const hm = UT.initialize(Tm.constructor);
+        UT.setDeprecated(hm, fm), mm && (hm[Jm] ??= {}, hm[Jm][fm] = {
           get: function() {
-            throw new Error(`${Ik} is deprecated.`)
+            throw new Error(`${fm} is deprecated.`)
           },
-          set: function(kk) {},
+          set: function(mm) {},
           enumerable: !1,
           configurable: !0
-        }, Object.defineProperty(Fk, Ik, Xk[Vk][Ik]))
+        }, Object.defineProperty(Tm, fm, hm[Jm][fm]))
       }
     }
-    let SX = !1;
+    let kh = !1;
 
-    function oX(kk, Fk, Ik) {
-      SX || (SX = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
-      for (let Xk in Fk) QX(Fk[Xk], Ik)(kk.prototype, Xk);
-      return kk
+    function bh(mm, Tm, fm) {
+      kh || (kh = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
+      for (let hm in Tm) Jh(Tm[hm], fm)(mm.prototype, hm);
+      return mm
     }
 
-    function vX(kk, Fk) {
-      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : OX;
-      if (null == kk || "object" !== typeof kk) throw new Error(`schema(): first argument must be a fields object (got ${typeof kk}).`);
-      const Xk = {},
-        Tk = {},
-        ik = {},
-        yk = {},
-        lk = (kk, Fk) => {
-          if (Fk.hasDefault)((kk, Fk) => {
-            "function" === typeof Fk ? yk[kk] = Fk : Fk && "function" === typeof Fk.clone ? yk[kk] = () => Fk.clone() : ik[kk] = Fk
-          })(kk, Fk.default);
-          else if (!Fk.optional) {
-            const Ik = function(kk) {
-              if (kk && "object" === typeof kk) {
-                if (void 0 !== kk.array) return () => new XX;
-                if (void 0 !== kk.map) return () => new iX;
-                if (void 0 !== kk.set) return () => new lX;
-                if (void 0 !== kk.collection) return () => new yX;
-                if (void 0 !== kk.stream) return () => new aX
-              } else if ("function" === typeof kk && OX.is(kk) && (!kk.prototype.initialize || 0 === kk.prototype.initialize.length)) return () => new kk
-            }(Fk.type);
-            Ik && (yk[kk] = Ik)
+    function Sh(mm, Tm) {
+      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Nh;
+      if (null == mm || "object" !== typeof mm) throw new Error(`schema(): first argument must be a fields object (got ${typeof mm}).`);
+      const hm = {},
+        Am = {},
+        am = {},
+        xm = {},
+        wm = (mm, Tm) => {
+          if (Tm.hasDefault)((mm, Tm) => {
+            "function" === typeof Tm ? xm[mm] = Tm : Tm && "function" === typeof Tm.clone ? xm[mm] = () => Tm.clone() : am[mm] = Tm
+          })(mm, Tm.default);
+          else if (!Tm.optional) {
+            const fm = function(mm) {
+              if (mm && "object" === typeof mm) {
+                if (void 0 !== mm.array) return () => new ah;
+                if (void 0 !== mm.map) return () => new wh;
+                if (void 0 !== mm.set) return () => new ih;
+                if (void 0 !== mm.collection) return () => new Dh;
+                if (void 0 !== mm.stream) return () => new Rh
+              } else if ("function" === typeof mm && Nh.is(mm) && (!mm.prototype.initialize || 0 === mm.prototype.initialize.length)) return () => new mm
+            }(Tm.type);
+            fm && (xm[mm] = fm)
           }
         },
-        ak = {},
-        qk = [],
-        Lk = [],
-        tk = {},
-        Zk = [],
-        jk = [],
-        ek = {},
-        wk = [];
-      for (const Qk in kk) {
-        const Ik = kk[Qk],
-          ik = `schema(${Fk?`'${Fk}'`:""}): field '${Qk}'`;
-        if (LX(Ik)) {
-          const kk = Ik.toDefinition();
-          if (kk.noSync) {
-            if (void 0 !== kk.view || kk.unreliable || kk.patchOnly || kk.fullStateOnly || kk.stream) throw new Error(`${ik} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
-            lk(Qk, kk);
+        Dm = {},
+        im = [],
+        Rm = [],
+        pm = {},
+        Em = [],
+        om = [],
+        Om = {},
+        Ym = [];
+      for (const Qm in mm) {
+        const fm = mm[Qm],
+          am = `schema(${Tm?`'${Tm}'`:""}): field '${Qm}'`;
+        if (Eh(fm)) {
+          const mm = fm.toDefinition();
+          if (mm.noSync) {
+            if (void 0 !== mm.view || mm.unreliable || mm.patchOnly || mm.fullStateOnly || mm.stream) throw new Error(`${am} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
+            wm(Qm, mm);
             continue
           }
-          if (kk.patchOnly && kk.fullStateOnly) throw new Error(`${ik} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
-          const Fk = BF(kk.type, ik);
-          if ("function" === typeof Fk && !OX.is(Fk)) throw new Error(`${ik} is a synced ref to non-Schema class '${Fk.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
-          Xk[Qk] = Fk, void 0 !== kk.view && (ak[Qk] = kk.view), kk.unreliable && qk.push(Qk), kk.patchOnly && Lk.push(Qk), kk.deprecated && (tk[Qk] = kk.deprecatedThrows), kk.fullStateOnly && Zk.push(Qk), kk.stream && jk.push(Qk), void 0 !== kk.streamPriority && (ek[Qk] = kk.streamPriority), kk.optional && wk.push(Qk), lk(Qk, kk)
+          if (mm.patchOnly && mm.fullStateOnly) throw new Error(`${am} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
+          const Tm = uT(mm.type, am);
+          if ("function" === typeof Tm && !Nh.is(Tm)) throw new Error(`${am} is a synced ref to non-Schema class '${Tm.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
+          hm[Qm] = Tm, void 0 !== mm.view && (Dm[Qm] = mm.view), mm.unreliable && im.push(Qm), mm.patchOnly && Rm.push(Qm), mm.deprecated && (pm[Qm] = mm.deprecatedThrows), mm.fullStateOnly && Em.push(Qm), mm.stream && om.push(Qm), void 0 !== mm.streamPriority && (Om[Qm] = mm.streamPriority), mm.optional && Ym.push(Qm), wm(Qm, mm)
         } else {
-          if ("function" !== typeof Ik) throw new Error(`${ik} must be a t.* builder, Schema subclass, or method (got ${typeof Ik}).`);
-          OX.is(Ik) ? (Xk[Qk] = Ik, Ik.prototype.initialize && 0 !== Ik.prototype.initialize.length || (yk[Qk] = () => new Ik)) : Tk[Qk] = Ik
+          if ("function" !== typeof fm) throw new Error(`${am} must be a t.* builder, Schema subclass, or method (got ${typeof fm}).`);
+          Nh.is(fm) ? (hm[Qm] = fm, fm.prototype.initialize && 0 !== fm.prototype.initialize.length || (xm[Qm] = () => new fm)) : Am[Qm] = fm
         }
       }
-      const Hk = kk => {
-          for (const Fk in ik) kk[Fk] = ik[Fk];
-          for (const Fk in yk) kk[Fk] = yk[Fk]()
+      const qm = mm => {
+          for (const Tm in am) mm[Tm] = am[Tm];
+          for (const Tm in xm) mm[Tm] = xm[Tm]()
         },
-        Jk = () => {
-          const kk = {};
-          return Hk(kk), kk
+        jm = () => {
+          const mm = {};
+          return qm(mm), mm
         },
-        xk = "function" === typeof Tk.initialize,
-        Pk = Tk.initialize ?? Ik._initialize,
-        Kk = class extends Ik {
+        Vm = "function" === typeof Am.initialize,
+        Im = Am.initialize ?? fm._initialize,
+        Km = class extends fm {
           constructor() {
-            for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
-            const Tk = Fk[0];
-            void 0 === Tk ? (super(), Hk(this)) : super(Object.assign(Jk(), xk ? (kk => {
-              const Fk = Object.keys(Xk),
-                Ik = {};
-              for (const Xk in kk) Fk.includes(Xk) || (Ik[Xk] = kk[Xk]);
-              return Ik
-            })(Tk) : Tk)), Pk && new.target === Kk && Pk.apply(this, Fk)
+            for (var mm = arguments.length, Tm = new Array(mm), fm = 0; fm < mm; fm++) Tm[fm] = arguments[fm];
+            const Am = Tm[0];
+            void 0 === Am ? (super(), qm(this)) : super(Object.assign(jm(), Vm ? (mm => {
+              const Tm = Object.keys(hm),
+                fm = {};
+              for (const hm in mm) Tm.includes(hm) || (fm[hm] = mm[hm]);
+              return fm
+            })(Am) : Am)), Im && new.target === Km && Im.apply(this, Tm)
           }
         };
-      Fk && Object.defineProperty(Kk, "name", {
-        value: Fk
-      }), mF.setFields(Kk, Xk), Kk._getDefaultValues = Jk, Kk._initialize = Pk, Object.assign(Kk.prototype, Tk);
-      for (const Qk in ak) JX(ak[Qk])(Kk.prototype, Qk);
-      for (const Qk of qk) xX(Kk.prototype, Qk);
-      for (const Qk of Lk) PX(Kk.prototype, Qk);
-      for (const Qk in tk) zX(tk[Qk])(Kk.prototype, Qk);
-      if (Zk.length > 0 || jk.length > 0) {
-        const kk = Kk[Symbol.metadata];
-        for (const Fk of Zk) mF.setFullStateOnly(kk, Fk);
-        for (const Fk of jk) mF.setStream(kk, Fk);
-        for (const Fk in ek) mF.setStreamPriority(kk, Fk, ek[Fk])
+      Tm && Object.defineProperty(Km, "name", {
+        value: Tm
+      }), UT.setFields(Km, hm), Km._getDefaultValues = jm, Km._initialize = Im, Object.assign(Km.prototype, Am);
+      for (const Qm in Dm) Ih(Dm[Qm])(Km.prototype, Qm);
+      for (const Qm of im) Kh(Km.prototype, Qm);
+      for (const Qm of Rm) Qh(Km.prototype, Qm);
+      for (const Qm in pm) Zh(pm[Qm])(Km.prototype, Qm);
+      if (Em.length > 0 || om.length > 0) {
+        const mm = Km[Symbol.metadata];
+        for (const Tm of Em) UT.setFullStateOnly(mm, Tm);
+        for (const Tm of om) UT.setStream(mm, Tm);
+        for (const Tm in Om) UT.setStreamPriority(mm, Tm, Om[Tm])
       }
-      if (wk.length > 0) {
-        const kk = Kk[Symbol.metadata];
-        for (const Fk of wk) kk[kk[Fk]].optional = !0
+      if (Ym.length > 0) {
+        const mm = Km[Symbol.metadata];
+        for (const Tm of Ym) mm[mm[Tm]].optional = !0
       }
-      return Kk.extend = (kk, Fk) => vX(kk, Fk, Kk), Kk
+      return Km.extend = (mm, Tm) => Sh(mm, Tm, Km), Km
     }
 
-    function EX(kk) {
-      const Fk = kk[wk].root,
-        Ik = {
+    function eh(mm) {
+      const Tm = mm[Ym].root,
+        fm = {
           ops: {},
           refs: []
         };
-      let Xk = Fk.changes.next;
-      for (; Xk;) {
-        const kk = Xk.changeTree;
-        void 0 !== kk ? (Ik.refs.push(`refId#${kk.ref[lk]}`), kk.forEach(((kk, Fk) => {
-          if (kk < 0 || !Fk) return;
-          const Xk = Tk[Fk];
-          Ik.ops[Xk] || (Ik.ops[Xk] = 0), Ik.ops[Xk]++
-        })), Xk = Xk.next) : Xk = Xk.next
+      let hm = Tm.changes.next;
+      for (; hm;) {
+        const mm = hm.changeTree;
+        void 0 !== mm ? (fm.refs.push(`refId#${mm.ref[wm]}`), mm.forEach(((mm, Tm) => {
+          if (mm < 0 || !Tm) return;
+          const hm = Am[Tm];
+          fm.ops[hm] || (fm.ops[hm] = 0), fm.ops[hm]++
+        })), hm = hm.next) : hm = hm.next
       }
-      return Ik
+      return fm
     }
-    class OX {
-      static[qk] = bI;
-      static[Lk] = hI;
-      [lk];
-      [Qk];
-      static initialize(kk) {
-        Object.defineProperty(kk, wk, {
-          value: new nI(kk),
+    class Nh {
+      static[im] = yf;
+      static[Rm] = Wf;
+      [wm];
+      [Qm];
+      static initialize(mm) {
+        Object.defineProperty(mm, Ym, {
+          value: new Gf(mm),
           enumerable: !1,
           writable: !0
-        }), kk[Qk] = []
+        }), mm[Qm] = []
       }
       static initializeForDecoder() {
-        const kk = Object.create(this.prototype);
-        return pI(kk), kk[Qk] = [], kk
+        const mm = Object.create(this.prototype);
+        return Pf(mm), mm[Qm] = [], mm
       }
-      static reset(kk) {
-        const Fk = kk?.[wk];
-        if (void 0 === Fk || "function" !== typeof Fk.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
-        if (void 0 !== Fk.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${kk.constructor.name}) with multiple parents.`);
-        kk[Pk]()
-      } [Pk]() {
-        const kk = this.constructor[Symbol.metadata],
-          Fk = kk?.[Ek] ?? [],
-          Ik = this[Qk];
-        for (let Xk = 0; Xk < Fk.length; Xk++) {
-          const kk = Ik[Fk[Xk]];
-          kk?.[Pk]?.()
+      static reset(mm) {
+        const Tm = mm?.[Ym];
+        if (void 0 === Tm || "function" !== typeof Tm.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
+        if (void 0 !== Tm.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${mm.constructor.name}) with multiple parents.`);
+        mm[Im]()
+      } [Im]() {
+        const mm = this.constructor[Symbol.metadata],
+          Tm = mm?.[km] ?? [],
+          fm = this[Qm];
+        for (let hm = 0; hm < Tm.length; hm++) {
+          const mm = fm[Tm[hm]];
+          mm?.[Im]?.()
         }
-        this[wk].recycle(), this[lk] = void 0
+        this[Ym].recycle(), this[wm] = void 0
       }
-      static is(kk) {
-        const Fk = kk[Symbol.metadata];
-        return "object" === typeof Fk && null !== Fk
+      static is(mm) {
+        const Tm = mm[Symbol.metadata];
+        return "object" === typeof Tm && null !== Tm
       }
-      static isSchema(kk) {
-        return "function" === typeof kk?.assign
+      static isSchema(mm) {
+        return "function" === typeof mm?.assign
       }
-      static[ak](kk, Fk) {
-        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Tk.ADD;
-        kk.change(Fk, Ik)
+      static[Dm](mm, Tm) {
+        let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Am.ADD;
+        mm.change(Tm, fm)
       }
-      static[tk](kk, Fk, Ik) {
-        const Xk = kk.constructor[Symbol.metadata],
-          Tk = Xk[Fk]?.tag;
-        return void 0 === Ik ? void 0 === Tk : void 0 === Tk || (Tk === wX ? Ik.isChangeTreeVisible(kk[wk]) : Ik.hasTagOnTree(kk[wk], Tk))
+      static[pm](mm, Tm, fm) {
+        const hm = mm.constructor[Symbol.metadata],
+          Am = hm[Tm]?.tag;
+        return void 0 === fm ? void 0 === Am : void 0 === Am || (Am === jh ? fm.isChangeTreeVisible(mm[Ym]) : fm.hasTagOnTree(mm[Ym], Am))
       }
-      constructor(kk) {
-        OX.initialize(this), kk && OX.assignProps(this, kk)
+      constructor(mm) {
+        Nh.initialize(this), mm && Nh.assignProps(this, mm)
       }
-      assign(kk) {
-        return OX.assignProps(this, kk), this
+      assign(mm) {
+        return Nh.assignProps(this, mm), this
       }
-      static assignProps(kk, Fk) {
-        const Ik = kk.constructor[Symbol.metadata];
-        if (Ik && void 0 !== Ik[vk])
-          for (let Tk = 0; Tk <= Ik[vk]; Tk++) {
-            const Xk = Ik[Tk];
-            if (!Xk) continue;
-            const ik = Fk[Xk.name];
-            void 0 !== ik && (kk[Xk.name] = ik)
+      static assignProps(mm, Tm) {
+        const fm = mm.constructor[Symbol.metadata];
+        if (fm && void 0 !== fm[Zm])
+          for (let Am = 0; Am <= fm[Zm]; Am++) {
+            const hm = fm[Am];
+            if (!hm) continue;
+            const am = Tm[hm.name];
+            void 0 !== am && (mm[hm.name] = am)
           }
-        const Xk = Object.keys(Fk);
-        for (let Tk = 0; Tk < Xk.length; Tk++) {
-          const ik = Xk[Tk];
-          Ik && void 0 !== Ik[ik] || (kk[ik] = Fk[ik])
+        const hm = Object.keys(Tm);
+        for (let Am = 0; Am < hm.length; Am++) {
+          const am = hm[Am];
+          fm && void 0 !== fm[am] || (mm[am] = Tm[am])
         }
       }
-      restore(kk) {
-        const Fk = this.constructor[Symbol.metadata];
-        for (const Ik in Fk) {
-          const Xk = Fk[Ik],
-            Tk = Xk.name,
-            ik = Xk.type,
-            yk = kk[Tk];
-          if (void 0 !== yk && null !== yk)
-            if ("string" === typeof ik) this[Tk] = yk;
-            else if (OX.is(ik)) {
-            const kk = new ik;
-            kk.restore(yk), this[Tk] = kk
-          } else if ("object" === typeof ik) {
-            const kk = Object.keys(ik)[0],
-              Fk = ik[kk];
-            if ("map" === kk) {
-              const kk = this[Tk];
-              for (const Ik in yk)
-                if (OX.is(Fk)) {
-                  const Xk = new Fk;
-                  Xk.restore(yk[Ik]), kk.set(Ik, Xk)
-                } else kk.set(Ik, yk[Ik])
-            } else if ("array" === kk) {
-              const kk = this[Tk];
-              for (let Ik = 0; Ik < yk.length; Ik++)
-                if (OX.is(Fk)) {
-                  const Xk = new Fk;
-                  Xk.restore(yk[Ik]), kk.push(Xk)
-                } else kk.push(yk[Ik])
+      restore(mm) {
+        const Tm = this.constructor[Symbol.metadata];
+        for (const fm in Tm) {
+          const hm = Tm[fm],
+            Am = hm.name,
+            am = hm.type,
+            xm = mm[Am];
+          if (void 0 !== xm && null !== xm)
+            if ("string" === typeof am) this[Am] = xm;
+            else if (Nh.is(am)) {
+            const mm = new am;
+            mm.restore(xm), this[Am] = mm
+          } else if ("object" === typeof am) {
+            const mm = Object.keys(am)[0],
+              Tm = am[mm];
+            if ("map" === mm) {
+              const mm = this[Am];
+              for (const fm in xm)
+                if (Nh.is(Tm)) {
+                  const hm = new Tm;
+                  hm.restore(xm[fm]), mm.set(fm, hm)
+                } else mm.set(fm, xm[fm])
+            } else if ("array" === mm) {
+              const mm = this[Am];
+              for (let fm = 0; fm < xm.length; fm++)
+                if (Nh.is(Tm)) {
+                  const hm = new Tm;
+                  hm.restore(xm[fm]), mm.push(hm)
+                } else mm.push(xm[fm])
             }
           }
         }
         return this
       }
-      setDirty(kk, Fk) {
-        const Ik = this.constructor[Symbol.metadata];
-        this[wk].change(Ik[Ik[kk]].index, Fk)
+      setDirty(mm, Tm) {
+        const fm = this.constructor[Symbol.metadata];
+        this[Ym].change(fm[fm[mm]].index, Tm)
       }
       pauseTracking() {
-        this[wk].pause()
+        this[Ym].pause()
       }
       resumeTracking() {
-        this[wk].resume()
+        this[Ym].resume()
       }
-      untracked(kk) {
-        return this[wk].untracked(kk)
+      untracked(mm) {
+        return this[Ym].untracked(mm)
       }
       get isTrackingPaused() {
-        return this[wk].paused
+        return this[Ym].paused
       }
       clone() {
-        const kk = Object.create(this.constructor.prototype);
-        OX.initialize(kk);
-        const Fk = this.constructor[Symbol.metadata];
-        for (const Ik in Fk) {
-          const Xk = Fk[Ik].name;
-          "object" === typeof this[Xk] && "function" === typeof this[Xk]?.clone ? kk[Xk] = this[Xk].clone() : kk[Xk] = this[Xk]
+        const mm = Object.create(this.constructor.prototype);
+        Nh.initialize(mm);
+        const Tm = this.constructor[Symbol.metadata];
+        for (const fm in Tm) {
+          const hm = Tm[fm].name;
+          "object" === typeof this[hm] && "function" === typeof this[hm]?.clone ? mm[hm] = this[hm].clone() : mm[hm] = this[hm]
         }
-        return kk
+        return mm
       }
       toJSON() {
-        const kk = {},
-          Fk = this.constructor[Symbol.metadata];
-        for (const Ik in Fk) {
-          const Xk = Fk[Ik],
-            Tk = Xk.name;
-          Xk.deprecated || null === this[Tk] || "undefined" === typeof this[Tk] || (kk[Tk] = "function" === typeof this[Tk].toJSON ? this[Tk].toJSON() : this[Tk])
+        const mm = {},
+          Tm = this.constructor[Symbol.metadata];
+        for (const fm in Tm) {
+          const hm = Tm[fm],
+            Am = hm.name;
+          hm.deprecated || null === this[Am] || "undefined" === typeof this[Am] || (mm[Am] = "function" === typeof this[Am].toJSON ? this[Am].toJSON() : this[Am])
         }
-        return kk
+        return mm
       }
       discardAllChanges() {
-        this[wk].discardAll()
-      } [Zk](kk) {
-        return this[this.constructor[Symbol.metadata][kk].name]
-      } [jk](kk) {
-        this[this.constructor[Symbol.metadata][kk].name] = void 0
+        this[Ym].discardAll()
+      } [Em](mm) {
+        return this[this.constructor[Symbol.metadata][mm].name]
+      } [om](mm) {
+        this[this.constructor[Symbol.metadata][mm].name] = void 0
       }
-      static debugRefIds(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Xk = arguments.length > 3 ? arguments[3] : void 0,
-          Tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        const ik = Fk ? ` - ${JSON.stringify(kk.toJSON())}` : "",
-          yk = kk[wk],
-          ak = kk[lk],
-          qk = Xk ? Xk.root.refCount[ak] : yk.refCount,
-          Lk = qk > 1 ? ` [\xd7${qk}]` : "";
-        let tk = `${function(kk){return new Array(kk).fill(0).map(((Fk,Ik)=>Ik===kk-1?"\u2514\u2500 ":"   ")).join("")}(Ik)}${Tk}${kk.constructor.name} (refId: ${ak})${Lk}${ik}\n`;
-        return yk.forEachChild(((Tk, ik) => {
-          let yk = ik;
-          "number" === typeof ik && kk.$indexes && (yk = kk.$indexes.get(ik) ?? ik);
-          const lk = void 0 !== kk.forEach && void 0 !== yk ? `["${yk}"]: ` : "";
-          tk += this.debugRefIds(Tk.ref, Fk, Ik + 1, Xk, lk)
-        })), tk
+      static debugRefIds(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          hm = arguments.length > 3 ? arguments[3] : void 0,
+          Am = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        const am = Tm ? ` - ${JSON.stringify(mm.toJSON())}` : "",
+          xm = mm[Ym],
+          Dm = mm[wm],
+          im = hm ? hm.root.refCount[Dm] : xm.refCount,
+          Rm = im > 1 ? ` [\xd7${im}]` : "";
+        let pm = `${function(mm){return new Array(mm).fill(0).map(((Tm,fm)=>fm===mm-1?"\u2514\u2500 ":"   ")).join("")}(fm)}${Am}${mm.constructor.name} (refId: ${Dm})${Rm}${am}\n`;
+        return xm.forEachChild(((Am, am) => {
+          let xm = am;
+          "number" === typeof am && mm.$indexes && (xm = mm.$indexes.get(am) ?? am);
+          const wm = void 0 !== mm.forEach && void 0 !== xm ? `["${xm}"]: ` : "";
+          pm += this.debugRefIds(Am.ref, Tm, fm + 1, hm, wm)
+        })), pm
       }
-      static debugRefIdEncodingOrder(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
-        const Ik = [],
-          Xk = kk[wk];
-        if ("changes" === Fk) {
-          let kk = Xk.root.changes?.next;
-          for (; kk;) kk.changeTree && Ik.push(kk.changeTree.ref[lk]), kk = kk.next;
-          return Ik
+      static debugRefIdEncodingOrder(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
+        const fm = [],
+          hm = mm[Ym];
+        if ("changes" === Tm) {
+          let mm = hm.root.changes?.next;
+          for (; mm;) mm.changeTree && fm.push(mm.changeTree.ref[wm]), mm = mm.next;
+          return fm
         }
-        const Tk = "allFilteredChanges" === Fk,
-          ik = new Set,
-          yk = kk => {
-            ik.has(kk) || (ik.add(kk), kk.isFiltered === Tk && Ik.push(kk.ref[lk]), kk.forEachChild(((kk, Fk) => yk(kk))))
+        const Am = "allFilteredChanges" === Tm,
+          am = new Set,
+          xm = mm => {
+            am.has(mm) || (am.add(mm), mm.isFiltered === Am && fm.push(mm.ref[wm]), mm.forEachChild(((mm, Tm) => xm(mm))))
           };
-        return yk(Xk), Ik
+        return xm(hm), fm
       }
-      static debugRefIdsFromDecoder(kk) {
-        return this.debugRefIds(kk.state, !1, 0, kk)
+      static debugRefIdsFromDecoder(mm) {
+        return this.debugRefIds(mm.state, !1, 0, mm)
       }
-      static debugChanges(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const Ik = kk[wk],
-          Xk = Fk ? "allChanges" : "changes";
-        let ik = `${kk.constructor.name} (${kk[lk]}) -> .${Xk}:\n`;
-        return Fk ? Ik.forEachLive((kk => {
-          ik += `- [${kk}]: ADD (${JSON.stringify(Ik.getValue(Number(kk),!0))})\n`
-        })) : Ik.forEach(((kk, Fk) => {
-          kk < 0 || !Fk || (ik += `- [${kk}]: ${Tk[Fk]} (${JSON.stringify(Ik.getValue(Number(kk),!1))})\n`)
-        })), ik
+      static debugChanges(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const fm = mm[Ym],
+          hm = Tm ? "allChanges" : "changes";
+        let am = `${mm.constructor.name} (${mm[wm]}) -> .${hm}:\n`;
+        return Tm ? fm.forEachLive((mm => {
+          am += `- [${mm}]: ADD (${JSON.stringify(fm.getValue(Number(mm),!0))})\n`
+        })) : fm.forEach(((mm, Tm) => {
+          mm < 0 || !Tm || (am += `- [${mm}]: ${Am[Tm]} (${JSON.stringify(fm.getValue(Number(mm),!1))})\n`)
+        })), am
       }
     }
-    ik(OX);
-    const nX = {
+    am(Nh);
+    const Gh = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class GX {
+    class Xh {
       types;
       nextUniqueId = 0;
       changeTrees = {};
       get refCount() {
-        const kk = {};
-        for (const Fk in this.changeTrees) kk[Fk] = this.changeTrees[Fk].refCount;
-        return kk
+        const mm = {};
+        for (const Tm in this.changeTrees) mm[Tm] = this.changeTrees[Tm].refCount;
+        return mm
       }
       changes = {
         next: void 0,
@@ -5745,8 +5745,8 @@ export const modules = {
         nextPosition: 0
       };
       pendingFilterRefresh = [];
-      enqueueFilterRefresh(kk) {
-        this.types.hasFilters && (kk.flags & EI || (kk.flags |= EI, this.pendingFilterRefresh.push(kk)))
+      enqueueFilterRefresh(mm) {
+        this.types.hasFilters && (mm.flags & ef || (mm.flags |= ef, this.pendingFilterRefresh.push(mm)))
       }
       _nodePool = [];
       _nextViewId = 0;
@@ -5754,144 +5754,144 @@ export const modules = {
       acquireViewId() {
         return this._freeViewIds.length > 0 ? this._freeViewIds.pop() : this._nextViewId++
       }
-      releaseViewId(kk) {
-        this._freeViewIds.push(kk)
+      releaseViewId(mm) {
+        this._freeViewIds.push(mm)
       }
       activeViews = new Map;
       streamTrees = new Set;
-      registerView(kk) {
-        this.activeViews.set(kk.id, new WeakRef(kk))
+      registerView(mm) {
+        this.activeViews.set(mm.id, new WeakRef(mm))
       }
-      unregisterView(kk) {
-        this.activeViews.delete(kk.id);
-        const Fk = kk.id;
-        for (const Ik of this.streamTrees) Ik._dropView(Fk)
+      unregisterView(mm) {
+        this.activeViews.delete(mm.id);
+        const Tm = mm.id;
+        for (const fm of this.streamTrees) fm._dropView(Tm)
       }
-      forEachActiveView(kk) {
-        for (const [Fk, Ik] of this.activeViews) {
-          const Xk = Ik.deref();
-          if (void 0 !== Xk) kk(Xk);
+      forEachActiveView(mm) {
+        for (const [Tm, fm] of this.activeViews) {
+          const hm = fm.deref();
+          if (void 0 !== hm) mm(hm);
           else {
-            this.activeViews.delete(Fk);
-            for (const kk of this.streamTrees) kk._dropView(Fk)
+            this.activeViews.delete(Tm);
+            for (const mm of this.streamTrees) mm._dropView(Tm)
           }
         }
       }
-      registerStream(kk) {
-        this.streamTrees.add(kk)
+      registerStream(mm) {
+        this.streamTrees.add(mm)
       }
-      unregisterStream(kk) {
-        this.streamTrees.delete(kk)
+      unregisterStream(mm) {
+        this.streamTrees.delete(mm)
       }
-      constructor(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.types = kk, this.nextUniqueId = Fk
+      constructor(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.types = mm, this.nextUniqueId = Tm
       }
-      add(kk) {
-        const Fk = kk.ref;
-        void 0 === Fk[lk] && (nX.value = this.nextUniqueId++, Object.defineProperty(Fk, lk, nX));
-        const Ik = Fk[lk],
-          Xk = void 0 === this.changeTrees[Ik];
-        Xk && (this.changeTrees[Ik] = kk), kk.needsRestage && (kk.needsRestage = !1, kk.forEachLiveWithCtx(kk, XI));
-        const Tk = Xk ? 0 : kk.refCount;
-        return kk.refCount = Tk + 1, Tk > 0 && this.enqueueFilterRefresh(kk), Xk
+      add(mm) {
+        const Tm = mm.ref;
+        void 0 === Tm[wm] && (Gh.value = this.nextUniqueId++, Object.defineProperty(Tm, wm, Gh));
+        const fm = Tm[wm],
+          hm = void 0 === this.changeTrees[fm];
+        hm && (this.changeTrees[fm] = mm), mm.needsRestage && (mm.needsRestage = !1, mm.forEachLiveWithCtx(mm, hf));
+        const Am = hm ? 0 : mm.refCount;
+        return mm.refCount = Am + 1, Am > 0 && this.enqueueFilterRefresh(mm), hm
       }
-      remove(kk) {
-        const Fk = kk.refCount - 1;
-        if (Fk <= 0) {
-          if (kk.root = void 0, delete this.changeTrees[kk.ref[lk]], kk.isStreamCollection) {
-            const Fk = kk.ref;
-            Fk._unregister?.(), this.unregisterStream(Fk)
+      remove(mm) {
+        const Tm = mm.refCount - 1;
+        if (Tm <= 0) {
+          if (mm.root = void 0, delete this.changeTrees[mm.ref[wm]], mm.isStreamCollection) {
+            const Tm = mm.ref;
+            Tm._unregister?.(), this.unregisterStream(Tm)
           }
-          this.removeFromQueue(kk), this.removeFromUnreliableQueue(kk), kk.refCount = 0, kk.needsRestage = !0, kk.forEachChild(((Fk, Ik) => {
-            Fk.removeParent(kk.ref) && (void 0 === Fk.parentRef || Fk.refCount > 0 ? this.remove(Fk) : this.moveNextToParent(Fk))
+          this.removeFromQueue(mm), this.removeFromUnreliableQueue(mm), mm.refCount = 0, mm.needsRestage = !0, mm.forEachChild(((Tm, fm) => {
+            Tm.removeParent(mm.ref) && (void 0 === Tm.parentRef || Tm.refCount > 0 ? this.remove(Tm) : this.moveNextToParent(Tm))
           }))
-        } else kk.refCount = Fk, this.enqueueFilterRefresh(kk), this.recursivelyMoveNextToParent(kk);
-        return Fk
+        } else mm.refCount = Tm, this.enqueueFilterRefresh(mm), this.recursivelyMoveNextToParent(mm);
+        return Tm
       }
-      recursivelyMoveNextToParent(kk) {
-        this.moveNextToParent(kk), kk.forEachChild(((kk, Fk) => this.recursivelyMoveNextToParent(kk)))
+      recursivelyMoveNextToParent(mm) {
+        this.moveNextToParent(mm), mm.forEachChild(((mm, Tm) => this.recursivelyMoveNextToParent(mm)))
       }
-      moveNextToParent(kk) {
-        kk.changesNode && this._moveNextToParentInList(this.changes, kk, kk.changesNode, "changesNode"), kk.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, kk, kk.unreliableChangesNode, "unreliableChangesNode")
+      moveNextToParent(mm) {
+        mm.changesNode && this._moveNextToParentInList(this.changes, mm, mm.changesNode, "changesNode"), mm.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, mm, mm.unreliableChangesNode, "unreliableChangesNode")
       }
-      _moveNextToParentInList(kk, Fk, Ik, Xk) {
-        const Tk = Fk.parent;
-        if (!Tk || !Tk[wk]) return;
-        const ik = Tk[wk][Xk];
-        ik && ik !== Ik && (Ik.position > ik.position || (Ik.prev ? Ik.prev.next = Ik.next : kk.next = Ik.next, Ik.next ? Ik.next.prev = Ik.prev : kk.tail = Ik.prev, Ik.prev = kk.tail, Ik.next = void 0, kk.tail.next = Ik, kk.tail = Ik, Ik.position = kk.nextPosition++))
+      _moveNextToParentInList(mm, Tm, fm, hm) {
+        const Am = Tm.parent;
+        if (!Am || !Am[Ym]) return;
+        const am = Am[Ym][hm];
+        am && am !== fm && (fm.position > am.position || (fm.prev ? fm.prev.next = fm.next : mm.next = fm.next, fm.next ? fm.next.prev = fm.prev : mm.tail = fm.prev, fm.prev = mm.tail, fm.next = void 0, mm.tail.next = fm, mm.tail = fm, fm.position = mm.nextPosition++))
       }
-      enqueueChangeTree(kk) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk.changesNode) || (kk.changesNode = this._appendToList(this.changes, kk))
+      enqueueChangeTree(mm) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mm.changesNode) || (mm.changesNode = this._appendToList(this.changes, mm))
       }
-      enqueueUnreliable(kk) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk.unreliableChangesNode) || (kk.unreliableChangesNode = this._appendToList(this.unreliableChanges, kk))
+      enqueueUnreliable(mm) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mm.unreliableChangesNode) || (mm.unreliableChangesNode = this._appendToList(this.unreliableChanges, mm))
       }
-      _appendToList(kk, Fk) {
-        const Ik = this._nodePool;
-        let Xk;
-        return Ik.length > 0 ? (Xk = Ik.pop(), Xk.changeTree = Fk, Xk.next = void 0, Xk.prev = void 0) : Xk = {
-          changeTree: Fk,
+      _appendToList(mm, Tm) {
+        const fm = this._nodePool;
+        let hm;
+        return fm.length > 0 ? (hm = fm.pop(), hm.changeTree = Tm, hm.next = void 0, hm.prev = void 0) : hm = {
+          changeTree: Tm,
           next: void 0,
           prev: void 0,
           position: 0
-        }, kk.next ? (Xk.prev = kk.tail, kk.tail.next = Xk, kk.tail = Xk) : (kk.nextPosition = 0, kk.next = Xk, kk.tail = Xk), Xk.position = kk.nextPosition++, Xk
+        }, mm.next ? (hm.prev = mm.tail, mm.tail.next = hm, mm.tail = hm) : (mm.nextPosition = 0, mm.next = hm, mm.tail = hm), hm.position = mm.nextPosition++, hm
       }
-      releaseNode(kk) {
-        kk.changeTree = void 0, kk.prev = void 0, kk.next = void 0, this._nodePool.push(kk)
+      releaseNode(mm) {
+        mm.changeTree = void 0, mm.prev = void 0, mm.next = void 0, this._nodePool.push(mm)
       }
-      removeFromQueue(kk) {
-        return this._removeNode(this.changes, kk, kk.changesNode, "changesNode")
+      removeFromQueue(mm) {
+        return this._removeNode(this.changes, mm, mm.changesNode, "changesNode")
       }
-      removeFromUnreliableQueue(kk) {
-        return this._removeNode(this.unreliableChanges, kk, kk.unreliableChangesNode, "unreliableChangesNode")
+      removeFromUnreliableQueue(mm) {
+        return this._removeNode(this.unreliableChanges, mm, mm.unreliableChangesNode, "unreliableChangesNode")
       }
-      _removeNode(kk, Fk, Ik, Xk) {
-        return !(!Ik || Ik.changeTree !== Fk) && (Ik.prev ? Ik.prev.next = Ik.next : kk.next = Ik.next, Ik.next ? Ik.next.prev = Ik.prev : kk.tail = Ik.prev, Fk[Xk] = void 0, this.releaseNode(Ik), !0)
+      _removeNode(mm, Tm, fm, hm) {
+        return !(!fm || fm.changeTree !== Tm) && (fm.prev ? fm.prev.next = fm.next : mm.next = fm.next, fm.next ? fm.next.prev = fm.prev : mm.tail = fm.prev, Tm[hm] = void 0, this.releaseNode(fm), !0)
       }
     }
 
-    function pX(kk, Fk) {
-      if (-1 === Fk || Fk >= kk.length) return !1;
-      const Ik = kk.length - 1;
-      for (let Xk = Fk; Xk < Ik; Xk++) kk[Xk] = kk[Xk + 1];
-      return kk.length = Ik, !0
+    function Ph(mm, Tm) {
+      if (-1 === Tm || Tm >= mm.length) return !1;
+      const fm = mm.length - 1;
+      for (let hm = Tm; hm < fm; hm++) mm[hm] = mm[hm + 1];
+      return mm.length = fm, !0
     }
 
-    function uX(kk, Fk, Ik) {
-      const Xk = ~Ik,
-        Tk = kk.changeTrees;
-      for (const ik in Tk) {
-        const kk = Tk[ik],
-          Ik = kk.visibleViews;
-        void 0 !== Ik && Fk < Ik.length && (Ik[Fk] &= Xk);
-        const yk = kk.subscribedViews;
-        void 0 !== yk && Fk < yk.length && (yk[Fk] &= Xk);
-        const lk = kk.tagViews;
-        void 0 !== lk && lk.forEach((kk => {
-          Fk < kk.length && (kk[Fk] &= Xk)
+    function Hh(mm, Tm, fm) {
+      const hm = ~fm,
+        Am = mm.changeTrees;
+      for (const am in Am) {
+        const mm = Am[am],
+          fm = mm.visibleViews;
+        void 0 !== fm && Tm < fm.length && (fm[Tm] &= hm);
+        const xm = mm.subscribedViews;
+        void 0 !== xm && Tm < xm.length && (xm[Tm] &= hm);
+        const wm = mm.tagViews;
+        void 0 !== wm && wm.forEach((mm => {
+          Tm < mm.length && (mm[Tm] &= hm)
         }))
       }
     }
-    const bX = new FinalizationRegistry((kk => {
+    const yh = new FinalizationRegistry((mm => {
       let {
-        root: Fk,
-        id: Ik,
-        slot: Xk,
-        bit: Tk
-      } = kk;
-      uX(Fk, Xk, Tk), Fk.activeViews.delete(Ik);
-      for (const ik of Fk.streamTrees) ik._dropView(Ik);
-      Fk.releaseViewId(Ik)
+        root: Tm,
+        id: fm,
+        slot: hm,
+        bit: Am
+      } = mm;
+      Hh(Tm, hm, Am), Tm.activeViews.delete(fm);
+      for (const am of Tm.streamTrees) am._dropView(fm);
+      Tm.releaseViewId(fm)
     }));
 
-    function RX(kk) {
-      if (void 0 === kk) return "undefined";
-      if (null === kk) return "null";
-      const Fk = typeof kk;
-      return "string" === Fk ? JSON.stringify(kk.length > 30 ? `${kk.slice(0,30)}\u2026` : kk) : "object" !== Fk && "function" !== Fk ? `${Fk} ${String(kk)}` : Array.isArray(kk) ? `Array(${kk.length})` : kk.constructor?.name ?? "Object"
+    function Ch(mm) {
+      if (void 0 === mm) return "undefined";
+      if (null === mm) return "null";
+      const Tm = typeof mm;
+      return "string" === Tm ? JSON.stringify(mm.length > 30 ? `${mm.slice(0,30)}\u2026` : mm) : "object" !== Tm && "function" !== Tm ? `${Tm} ${String(mm)}` : Array.isArray(mm) ? `Array(${mm.length})` : mm.constructor?.name ?? "Object"
     }
-    class UX {
+    class rh {
       iterable;
       items;
       id = -1;
@@ -5900,385 +5900,385 @@ export const modules = {
       _bit = 0;
       changes = new Map;
       constructor() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this.iterable = kk, kk && (this.items = [])
+        let mm = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.iterable = mm, mm && (this.items = [])
       }
-      _bindRoot(kk) {
-        void 0 === this._root && (this._root = kk, this.id = kk.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), kk.registerView(this), bX.register(this, {
-          root: kk,
+      _bindRoot(mm) {
+        void 0 === this._root && (this._root = mm, this.id = mm.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), mm.registerView(this), yh.register(this, {
+          root: mm,
           id: this.id,
           slot: this._slot,
           bit: this._bit
         }, this))
       }
       dispose() {
-        void 0 !== this._root && (this._root.unregisterView(this), uX(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), bX.unregister(this), this._root = void 0, this.id = -1)
+        void 0 !== this._root && (this._root.unregisterView(this), Hh(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), yh.unregister(this), this._root = void 0, this.id = -1)
       }
-      isVisible(kk) {
-        const Fk = kk.visibleViews,
-          Ik = this._slot;
-        return void 0 !== Fk && Ik < Fk.length && 0 !== (Fk[Ik] & this._bit)
+      isVisible(mm) {
+        const Tm = mm.visibleViews,
+          fm = this._slot;
+        return void 0 !== Tm && fm < Tm.length && 0 !== (Tm[fm] & this._bit)
       }
-      markVisible(kk) {
-        const Fk = this._slot;
-        let Ik = kk.visibleViews;
-        for (void 0 === Ik && (Ik = kk.visibleViews = []); Ik.length <= Fk;) Ik.push(0);
-        Ik[Fk] |= this._bit
+      markVisible(mm) {
+        const Tm = this._slot;
+        let fm = mm.visibleViews;
+        for (void 0 === fm && (fm = mm.visibleViews = []); fm.length <= Tm;) fm.push(0);
+        fm[Tm] |= this._bit
       }
-      unmarkVisible(kk) {
-        const Fk = kk.visibleViews;
-        if (void 0 === Fk) return;
-        const Ik = this._slot;
-        Ik < Fk.length && (Fk[Ik] &= ~this._bit)
+      unmarkVisible(mm) {
+        const Tm = mm.visibleViews;
+        if (void 0 === Tm) return;
+        const fm = this._slot;
+        fm < Tm.length && (Tm[fm] &= ~this._bit)
       }
-      isSubscribed(kk) {
-        const Fk = kk.subscribedViews,
-          Ik = this._slot;
-        return void 0 !== Fk && Ik < Fk.length && 0 !== (Fk[Ik] & this._bit)
+      isSubscribed(mm) {
+        const Tm = mm.subscribedViews,
+          fm = this._slot;
+        return void 0 !== Tm && fm < Tm.length && 0 !== (Tm[fm] & this._bit)
       }
-      _setSubscribed(kk) {
-        const Fk = this._slot;
-        let Ik = kk.subscribedViews;
-        for (void 0 === Ik && (Ik = kk.subscribedViews = []); Ik.length <= Fk;) Ik.push(0);
-        Ik[Fk] |= this._bit
+      _setSubscribed(mm) {
+        const Tm = this._slot;
+        let fm = mm.subscribedViews;
+        for (void 0 === fm && (fm = mm.subscribedViews = []); fm.length <= Tm;) fm.push(0);
+        fm[Tm] |= this._bit
       }
-      _clearSubscribed(kk) {
-        const Fk = kk.subscribedViews;
-        if (void 0 === Fk) return;
-        const Ik = this._slot;
-        Ik < Fk.length && (Fk[Ik] &= ~this._bit)
+      _clearSubscribed(mm) {
+        const Tm = mm.subscribedViews;
+        if (void 0 === Tm) return;
+        const fm = this._slot;
+        fm < Tm.length && (Tm[fm] &= ~this._bit)
       }
-      hasTagOnTree(kk, Fk) {
-        const Ik = kk.tagViews;
-        if (void 0 === Ik) return !1;
-        const Xk = this._slot,
-          Tk = this._bit;
-        for (let ik = Fk; 0 !== ik; ik &= ik - 1) {
-          const kk = Ik.get(ik & -ik);
-          if (void 0 !== kk && Xk < kk.length && 0 !== (kk[Xk] & Tk)) return !0
+      hasTagOnTree(mm, Tm) {
+        const fm = mm.tagViews;
+        if (void 0 === fm) return !1;
+        const hm = this._slot,
+          Am = this._bit;
+        for (let am = Tm; 0 !== am; am &= am - 1) {
+          const mm = fm.get(am & -am);
+          if (void 0 !== mm && hm < mm.length && 0 !== (mm[hm] & Am)) return !0
         }
         return !1
       }
-      addTag(kk, Fk) {
-        if (Fk === wX) return;
-        let Ik = kk.tagViews;
-        void 0 === Ik && (Ik = kk.tagViews = new Map);
-        const Xk = this._slot,
-          Tk = this._bit;
-        for (let ik = Fk; ik > 0; ik &= ik - 1) {
-          const kk = ik & -ik;
-          let Fk = Ik.get(kk);
-          for (void 0 === Fk && (Fk = [], Ik.set(kk, Fk)); Fk.length <= Xk;) Fk.push(0);
-          Fk[Xk] |= Tk
+      addTag(mm, Tm) {
+        if (Tm === jh) return;
+        let fm = mm.tagViews;
+        void 0 === fm && (fm = mm.tagViews = new Map);
+        const hm = this._slot,
+          Am = this._bit;
+        for (let am = Tm; am > 0; am &= am - 1) {
+          const mm = am & -am;
+          let Tm = fm.get(mm);
+          for (void 0 === Tm && (Tm = [], fm.set(mm, Tm)); Tm.length <= hm;) Tm.push(0);
+          Tm[hm] |= Am
         }
       }
-      removeTag(kk, Fk) {
-        if (Fk === wX) return;
-        const Ik = kk.tagViews;
-        if (void 0 === Ik) return;
-        const Xk = this._slot,
-          Tk = ~this._bit;
-        for (let ik = Fk; ik > 0; ik &= ik - 1) {
-          const kk = Ik.get(ik & -ik);
-          void 0 !== kk && Xk < kk.length && (kk[Xk] &= Tk)
+      removeTag(mm, Tm) {
+        if (Tm === jh) return;
+        const fm = mm.tagViews;
+        if (void 0 === fm) return;
+        const hm = this._slot,
+          Am = ~this._bit;
+        for (let am = Tm; am > 0; am &= am - 1) {
+          const mm = fm.get(am & -am);
+          void 0 !== mm && hm < mm.length && (mm[hm] &= Am)
         }
       }
-      removeAllTagsOnTree(kk) {
-        const Fk = kk.tagViews;
-        if (void 0 === Fk) return;
-        const Ik = this._slot,
-          Xk = ~this._bit;
-        Fk.forEach((kk => {
-          Ik < kk.length && (kk[Ik] &= Xk)
+      removeAllTagsOnTree(mm) {
+        const Tm = mm.tagViews;
+        if (void 0 === Tm) return;
+        const fm = this._slot,
+          hm = ~this._bit;
+        Tm.forEach((mm => {
+          fm < mm.length && (mm[fm] &= hm)
         }))
       }
-      add(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wX,
-          Ik = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        return this._add(kk, Fk, Ik, !1)
+      add(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jh,
+          fm = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        return this._add(mm, Tm, fm, !1)
       }
-      _addImmediate(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wX;
-        this._add(kk, Fk, !0, !0)
+      _addImmediate(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jh;
+        this._add(mm, Tm, !0, !0)
       }
-      _add(kk, Fk, Ik, Xk) {
-        const ik = kk?.[wk];
-        if (!ik) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${RX(kk)}`), !1;
-        const yk = ik.parent;
-        if (!yk && 0 !== kk[lk]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${ik.ref.constructor.name}" instance to the state before calling view.add()`);
-        void 0 === this._root && void 0 !== ik.root && this._bindRoot(ik.root);
-        const ak = yk?.[wk];
-        if (!Xk && ak?.isStreamCollection) return pF(yk, this.id, ik.parentIndex), !0;
-        const qk = kk.constructor[Symbol.metadata],
-          Lk = this.isVisible(ik);
-        if (!this.iterable || !Ik || Lk && -1 !== this.items.indexOf(kk) || this.items.push(kk), this.markVisible(ik), Ik && yk && this.addParentOf(ik, Fk), !Xk && ik.isStreamCollection) return !0;
-        if (Fk === wX && ik.isNew) return this._markSubtreeVisible(ik, Fk), !1;
-        let tk = this.changes.get(kk[lk]);
-        void 0 === tk && (tk = new Map, this.changes.set(kk[lk], tk));
-        let Zk = !1;
-        const jk = ik.encDescriptor.tags;
-        if (ik.forEachChild(((kk, Ik) => {
-            const Xk = jk[Ik];
-            if (void 0 !== Xk) {
-              if (!(Xk === wX || Fk !== wX && 0 !== (Xk & Fk))) return
+      _add(mm, Tm, fm, hm) {
+        const am = mm?.[Ym];
+        if (!am) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${Ch(mm)}`), !1;
+        const xm = am.parent;
+        if (!xm && 0 !== mm[wm]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${am.ref.constructor.name}" instance to the state before calling view.add()`);
+        void 0 === this._root && void 0 !== am.root && this._bindRoot(am.root);
+        const Dm = xm?.[Ym];
+        if (!hm && Dm?.isStreamCollection) return GT(xm, this.id, am.parentIndex), !0;
+        const im = mm.constructor[Symbol.metadata],
+          Rm = this.isVisible(am);
+        if (!this.iterable || !fm || Rm && -1 !== this.items.indexOf(mm) || this.items.push(mm), this.markVisible(am), fm && xm && this.addParentOf(am, Tm), !hm && am.isStreamCollection) return !0;
+        if (Tm === jh && am.isNew) return this._markSubtreeVisible(am, Tm), !1;
+        let pm = this.changes.get(mm[wm]);
+        void 0 === pm && (pm = new Map, this.changes.set(mm[wm], pm));
+        let Em = !1;
+        const om = am.encDescriptor.tags;
+        if (am.forEachChild(((mm, fm) => {
+            const hm = om[fm];
+            if (void 0 !== hm) {
+              if (!(hm === jh || Tm !== jh && 0 !== (hm & Tm))) return
             }
-            this.add(kk.ref, Fk, !1) && (Zk = !0)
-          })), Fk !== wX) {
-          this.addTag(ik, Fk);
-          const kk = qk?.[nk];
-          if (void 0 !== kk)
-            for (let Ik = Fk; Ik > 0; Ik &= Ik - 1) kk[Ik & -Ik]?.forEach((kk => {
-              ik.getChange(kk) !== Tk.DELETE && tk.set(kk, Tk.ADD)
+            this.add(mm.ref, Tm, !1) && (Em = !0)
+          })), Tm !== jh) {
+          this.addTag(am, Tm);
+          const mm = im?.[Sm];
+          if (void 0 !== mm)
+            for (let fm = Tm; fm > 0; fm &= fm - 1) mm[fm & -fm]?.forEach((mm => {
+              am.getChange(mm) !== Am.DELETE && pm.set(mm, Am.ADD)
             }))
         }
-        if ((Fk === wX || !Lk) && (!ik.isNew || Zk))
-          if (ik.isArray && "string" !== typeof ik.refTarget[Hk]) ik.refTarget.items.length > 0 && (tk.set(-1, Tk.ADD), Zk = !0);
+        if ((Tm === jh || !Rm) && (!am.isNew || Em))
+          if (am.isArray && "string" !== typeof am.refTarget[qm]) am.refTarget.items.length > 0 && (pm.set(-1, Am.ADD), Em = !0);
           else {
-            const kk = ik.encDescriptor.tags;
-            ik.forEachLive((Ik => {
-              const Xk = kk[Ik];
-              (void 0 === Xk || Xk === wX || Fk !== wX && 0 !== (Xk & Fk)) && (tk.set(Ik, Tk.ADD), Zk = !0)
+            const mm = am.encDescriptor.tags;
+            am.forEachLive((fm => {
+              const hm = mm[fm];
+              (void 0 === hm || hm === jh || Tm !== jh && 0 !== (hm & Tm)) && (pm.set(fm, Am.ADD), Em = !0)
             }))
-          } return Zk
+          } return Em
       }
-      _markSubtreeVisible(kk, Fk) {
-        const Ik = kk.encDescriptor.tags;
-        kk.forEachChild(((kk, Xk) => {
-          const Tk = Ik[Xk];
-          if (void 0 !== Tk) {
-            if (!(Tk === wX || Fk !== wX && 0 !== (Tk & Fk))) return
+      _markSubtreeVisible(mm, Tm) {
+        const fm = mm.encDescriptor.tags;
+        mm.forEachChild(((mm, hm) => {
+          const Am = fm[hm];
+          if (void 0 !== Am) {
+            if (!(Am === jh || Tm !== jh && 0 !== (Am & Tm))) return
           }
-          kk.isNew ? (this.markVisible(kk), this._markSubtreeVisible(kk, Fk)) : this._add(kk.ref, Fk, !1, !1)
+          mm.isNew ? (this.markVisible(mm), this._markSubtreeVisible(mm, Tm)) : this._add(mm.ref, Tm, !1, !1)
         }))
       }
-      addParentOf(kk, Fk) {
-        const Ik = kk.parent[wk],
-          Xk = kk.parentIndex;
-        this.isVisible(Ik) || this.markVisible(Ik);
-        const ik = Ik.parent?.[wk];
-        if (ik && this.addParentOf(Ik, Fk), Ik.hasFilteredFields && Ik.getChange(Xk) !== Tk.DELETE) {
-          let ik = this.changes.get(Ik.ref[lk]);
-          void 0 === ik && (ik = new Map, this.changes.set(Ik.ref[lk], ik));
-          const yk = Ik.encDescriptor.tags[Xk];
-          void 0 !== yk && yk !== wX && 0 !== (yk & Fk) && this.addTag(Ik, Fk), ik.set(Ik.isArray ? kk : Xk, Tk.ADD)
+      addParentOf(mm, Tm) {
+        const fm = mm.parent[Ym],
+          hm = mm.parentIndex;
+        this.isVisible(fm) || this.markVisible(fm);
+        const am = fm.parent?.[Ym];
+        if (am && this.addParentOf(fm, Tm), fm.hasFilteredFields && fm.getChange(hm) !== Am.DELETE) {
+          let am = this.changes.get(fm.ref[wm]);
+          void 0 === am && (am = new Map, this.changes.set(fm.ref[wm], am));
+          const xm = fm.encDescriptor.tags[hm];
+          void 0 !== xm && xm !== jh && 0 !== (xm & Tm) && this.addTag(fm, Tm), am.set(fm.isArray ? mm : hm, Am.ADD)
         }
       }
-      _touchAncestorsOf(kk) {
-        let Fk = kk.parent?.[wk];
-        if (void 0 === Fk) return;
-        const Ik = [];
-        for (; void 0 !== Fk;) {
-          if (Fk.hasFilteredFields) {
-            const kk = Fk.ref[lk];
-            if (this.changes.has(kk)) break;
-            Ik.push(Fk)
+      _touchAncestorsOf(mm) {
+        let Tm = mm.parent?.[Ym];
+        if (void 0 === Tm) return;
+        const fm = [];
+        for (; void 0 !== Tm;) {
+          if (Tm.hasFilteredFields) {
+            const mm = Tm.ref[wm];
+            if (this.changes.has(mm)) break;
+            fm.push(Tm)
           }
-          Fk = Fk.parent?.[wk]
+          Tm = Tm.parent?.[Ym]
         }
-        for (let Xk = Ik.length - 1; Xk >= 0; Xk--) this.changes.set(Ik[Xk].ref[lk], new Map)
+        for (let hm = fm.length - 1; hm >= 0; hm--) this.changes.set(fm[hm].ref[wm], new Map)
       }
-      remove(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wX,
-          Ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const Xk = kk?.[wk];
-        if (!Xk) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${RX(kk)}`), this;
-        const ik = Xk.parent?.[wk];
-        if (ik?.isStreamCollection) return this.unmarkVisible(Xk), this.iterable && !Ik && pX(this.items, this.items.indexOf(kk)),
-          function(kk, Fk, Ik, Xk, ik) {
-            const yk = kk._stream;
-            if (void 0 === yk) return !1;
-            const lk = yk.pendingByView.get(Fk);
-            if (lk?.has(Xk)) return lk.delete(Xk), !1;
-            const ak = yk.sentByView.get(Fk);
-            if (ak?.has(Xk)) {
-              ak.delete(Xk);
-              let kk = ik.get(Ik);
-              return void 0 === kk && (kk = new Map, ik.set(Ik, kk)), kk.set(Xk, Tk.DELETE), !0
+      remove(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jh,
+          fm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const hm = mm?.[Ym];
+        if (!hm) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${Ch(mm)}`), this;
+        const am = hm.parent?.[Ym];
+        if (am?.isStreamCollection) return this.unmarkVisible(hm), this.iterable && !fm && Ph(this.items, this.items.indexOf(mm)),
+          function(mm, Tm, fm, hm, am) {
+            const xm = mm._stream;
+            if (void 0 === xm) return !1;
+            const wm = xm.pendingByView.get(Tm);
+            if (wm?.has(hm)) return wm.delete(hm), !1;
+            const Dm = xm.sentByView.get(Tm);
+            if (Dm?.has(hm)) {
+              Dm.delete(hm);
+              let mm = am.get(fm);
+              return void 0 === mm && (mm = new Map, am.set(fm, mm)), mm.set(hm, Am.DELETE), !0
             }
-          }(Xk.parent, this.id, Xk.parent[lk], Xk.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(Xk), this;
-        if (Xk.isStreamCollection) {
-          this.unmarkVisible(Xk), this.iterable && !Ik && pX(this.items, this.items.indexOf(kk));
-          const Fk = Xk.ref,
-            ik = Fk._stream;
-          if (void 0 !== ik) {
-            ik.pendingByView.get(this.id)?.clear();
-            const kk = ik.sentByView.get(this.id);
-            if (void 0 !== kk && kk.size > 0) {
-              const Ik = Fk[lk];
-              let Xk = this.changes.get(Ik);
-              void 0 === Xk && (Xk = new Map, this.changes.set(Ik, Xk));
-              for (const Fk of kk) Xk.set(Fk, Tk.DELETE);
-              kk.clear()
+          }(hm.parent, this.id, hm.parent[wm], hm.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(hm), this;
+        if (hm.isStreamCollection) {
+          this.unmarkVisible(hm), this.iterable && !fm && Ph(this.items, this.items.indexOf(mm));
+          const Tm = hm.ref,
+            am = Tm._stream;
+          if (void 0 !== am) {
+            am.pendingByView.get(this.id)?.clear();
+            const mm = am.sentByView.get(this.id);
+            if (void 0 !== mm && mm.size > 0) {
+              const fm = Tm[wm];
+              let hm = this.changes.get(fm);
+              void 0 === hm && (hm = new Map, this.changes.set(fm, hm));
+              for (const Tm of mm) hm.set(Tm, Am.DELETE);
+              mm.clear()
             }
           }
           return this
         }
-        this.unmarkVisible(Xk), this.iterable && !Ik && pX(this.items, this.items.indexOf(kk));
-        const yk = Xk.ref,
-          ak = yk.constructor[Symbol.metadata],
-          qk = yk[lk];
-        this._touchAncestorsOf(Xk);
-        let Lk = this.changes.get(qk);
-        if (void 0 === Lk && (Lk = new Map, this.changes.set(qk, Lk)), Fk === wX) {
-          const kk = Xk.parent;
-          if (kk && !mF.isValidInstance(kk) && Xk.isFiltered) {
-            const Fk = ik.isArray ? Xk : Xk.parentIndex,
-              Ik = kk[lk];
-            let yk = this.changes.get(Ik);
-            void 0 === yk ? (yk = new Map, this.changes.set(Ik, yk)) : yk.get(Fk) === Tk.ADD && this._dropPendingEntries(Xk), yk.set(Fk, Tk.DELETE), this._recursiveDeleteVisibleChangeTree(Xk)
-          } else ak?.[Ok]?.forEach((kk => this._removeViewField(Xk, Lk, kk)))
+        this.unmarkVisible(hm), this.iterable && !fm && Ph(this.items, this.items.indexOf(mm));
+        const xm = hm.ref,
+          Dm = xm.constructor[Symbol.metadata],
+          im = xm[wm];
+        this._touchAncestorsOf(hm);
+        let Rm = this.changes.get(im);
+        if (void 0 === Rm && (Rm = new Map, this.changes.set(im, Rm)), Tm === jh) {
+          const mm = hm.parent;
+          if (mm && !UT.isValidInstance(mm) && hm.isFiltered) {
+            const Tm = am.isArray ? hm : hm.parentIndex,
+              fm = mm[wm];
+            let xm = this.changes.get(fm);
+            void 0 === xm ? (xm = new Map, this.changes.set(fm, xm)) : xm.get(Tm) === Am.ADD && this._dropPendingEntries(hm), xm.set(Tm, Am.DELETE), this._recursiveDeleteVisibleChangeTree(hm)
+          } else Dm?.[bm]?.forEach((mm => this._removeViewField(hm, Rm, mm)))
         } else {
-          const kk = ak?.[nk];
-          if (void 0 !== kk)
-            for (let Ik = Fk; Ik > 0; Ik &= Ik - 1) kk[Ik & -Ik]?.forEach((kk => this._removeViewField(Xk, Lk, kk)))
+          const mm = Dm?.[Sm];
+          if (void 0 !== mm)
+            for (let fm = Tm; fm > 0; fm &= fm - 1) mm[fm & -fm]?.forEach((mm => this._removeViewField(hm, Rm, mm)))
         }
-        return void 0 === Fk ? this.removeAllTagsOnTree(Xk) : this.removeTag(Xk, Fk), this
+        return void 0 === Tm ? this.removeAllTagsOnTree(hm) : this.removeTag(hm, Tm), this
       }
-      has(kk) {
-        return this.isVisible(kk[wk])
+      has(mm) {
+        return this.isVisible(mm[Ym])
       }
-      hasTag(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wX;
-        return this.hasTagOnTree(kk[wk], Fk)
+      hasTag(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jh;
+        return this.hasTagOnTree(mm[Ym], Tm)
       }
-      subscribe(kk, Fk) {
-        const Ik = kk?.[wk];
-        if (!Ik) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${RX(kk)}`), this;
-        if (void 0 === this._root && void 0 !== Ik.root && this._bindRoot(Ik.root), void 0 !== Fk)
-          if (Ik.isStreamCollection) {
-            const Ik = vF(kk);
-            null === Fk ? Ik.priorityByView?.delete(this.id) : (Ik.priorityByView ??= new Map).set(this.id, Fk)
+      subscribe(mm, Tm) {
+        const fm = mm?.[Ym];
+        if (!fm) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${Ch(mm)}`), this;
+        if (void 0 === this._root && void 0 !== fm.root && this._bindRoot(fm.root), void 0 !== Tm)
+          if (fm.isStreamCollection) {
+            const fm = kT(mm);
+            null === Tm ? fm.priorityByView?.delete(this.id) : (fm.priorityByView ??= new Map).set(this.id, Tm)
           } else {
-            const Fk = kk?.constructor?.name ?? "collection",
-              Xk = Ik.parent;
-            if (void 0 === Xk) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${Fk} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
+            const Tm = mm?.constructor?.name ?? "collection",
+              hm = fm.parent;
+            if (void 0 === hm) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${Tm} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
             else {
-              const kk = Xk?.constructor?.[Symbol.metadata]?.[Ik.parentIndex]?.name,
-                Tk = kk ? `${Xk.constructor.name}#${kk}` : Fk;
-              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${Tk} is a ${Fk}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
+              const mm = hm?.constructor?.[Symbol.metadata]?.[fm.parentIndex]?.name,
+                Am = mm ? `${hm.constructor.name}#${mm}` : Tm;
+              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${Am} is a ${Tm}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
             }
-          } if (this.isSubscribed(Ik)) return this;
-        const Xk = void 0 !== Ik.parent && !this.isVisible(Ik);
-        if (Xk ? (this.addParentOf(Ik, wX), this._add(kk, wX, !1, !1)) : this.markVisible(Ik), this._setSubscribed(Ik), Ik.isStreamCollection) {
-          const Fk = kk;
-          Ik.forEachChild(((kk, Ik) => {
-            pF(Fk, this.id, Ik)
+          } if (this.isSubscribed(fm)) return this;
+        const hm = void 0 !== fm.parent && !this.isVisible(fm);
+        if (hm ? (this.addParentOf(fm, jh), this._add(mm, jh, !1, !1)) : this.markVisible(fm), this._setSubscribed(fm), fm.isStreamCollection) {
+          const Tm = mm;
+          fm.forEachChild(((mm, fm) => {
+            GT(Tm, this.id, fm)
           }))
-        } else Xk || Ik.forEachChild((kk => {
-          this.markVisible(kk)
+        } else hm || fm.forEachChild((mm => {
+          this.markVisible(mm)
         }));
         return this
       }
-      unsubscribe(kk) {
-        const Fk = kk?.[wk];
-        if (!Fk) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${RX(kk)}`), this;
-        if (!this.isSubscribed(Fk)) return this;
-        this._clearSubscribed(Fk);
-        const Ik = Fk.ref[lk];
-        if (Fk.isStreamCollection) {
-          const Fk = kk._stream;
-          if (void 0 !== Fk) {
-            Fk.pendingByView.get(this.id)?.clear();
-            const kk = Fk.sentByView.get(this.id);
-            if (void 0 !== kk && kk.size > 0) {
-              let Fk = this.changes.get(Ik);
-              void 0 === Fk && (Fk = new Map, this.changes.set(Ik, Fk));
-              for (const Ik of kk) Fk.set(Ik, Tk.DELETE);
-              kk.clear()
+      unsubscribe(mm) {
+        const Tm = mm?.[Ym];
+        if (!Tm) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${Ch(mm)}`), this;
+        if (!this.isSubscribed(Tm)) return this;
+        this._clearSubscribed(Tm);
+        const fm = Tm.ref[wm];
+        if (Tm.isStreamCollection) {
+          const Tm = mm._stream;
+          if (void 0 !== Tm) {
+            Tm.pendingByView.get(this.id)?.clear();
+            const mm = Tm.sentByView.get(this.id);
+            if (void 0 !== mm && mm.size > 0) {
+              let Tm = this.changes.get(fm);
+              void 0 === Tm && (Tm = new Map, this.changes.set(fm, Tm));
+              for (const fm of mm) Tm.set(fm, Am.DELETE);
+              mm.clear()
             }
           }
         } else {
-          const kk = Fk.isArray;
-          let Xk = this.changes.get(Ik);
-          Fk.forEachChild(((Fk, ik) => {
-            void 0 === Xk && (Xk = new Map, this.changes.set(Ik, Xk)), Xk.set(kk ? Fk : ik, Tk.DELETE), this.unmarkVisible(Fk)
+          const mm = Tm.isArray;
+          let hm = this.changes.get(fm);
+          Tm.forEachChild(((Tm, am) => {
+            void 0 === hm && (hm = new Map, this.changes.set(fm, hm)), hm.set(mm ? Tm : am, Am.DELETE), this.unmarkVisible(Tm)
           }))
         }
-        return this.unmarkVisible(Fk), this
+        return this.unmarkVisible(Tm), this
       }
       clear() {
         if (!this.iterable) throw new Error("StateView#clear() is only available for iterable StateView's. Use StateView(iterable: true) constructor.");
-        for (let kk = 0, Fk = this.items.length; kk < Fk; kk++) this.remove(this.items[kk], wX, !0);
+        for (let mm = 0, Tm = this.items.length; mm < Tm; mm++) this.remove(this.items[mm], jh, !0);
         this.items.length = 0
       }
-      isChangeTreeVisible(kk) {
-        let Fk = this.isVisible(kk);
-        if (!Fk && kk.isVisibilitySharedWithParent)
-          if (this.isVisible(kk.parent[wk])) this.markVisible(kk), Fk = !0;
+      isChangeTreeVisible(mm) {
+        let Tm = this.isVisible(mm);
+        if (!Tm && mm.isVisibilitySharedWithParent)
+          if (this.isVisible(mm.parent[Ym])) this.markVisible(mm), Tm = !0;
           else
-            for (let Ik = kk.extraParents; void 0 !== Ik; Ik = Ik.next) {
-              const Xk = Ik.ref[wk];
-              if (Xk.isFiltered && this.isVisible(Xk)) {
-                this.markVisible(kk), Fk = !0;
+            for (let fm = mm.extraParents; void 0 !== fm; fm = fm.next) {
+              const hm = fm.ref[Ym];
+              if (hm.isFiltered && this.isVisible(hm)) {
+                this.markVisible(mm), Tm = !0;
                 break
               }
             }
-        return Fk
+        return Tm
       }
-      _recursiveDeleteVisibleChangeTree(kk) {
-        kk.forEachChild((kk => {
-          this.unmarkVisible(kk), this._recursiveDeleteVisibleChangeTree(kk)
+      _recursiveDeleteVisibleChangeTree(mm) {
+        mm.forEachChild((mm => {
+          this.unmarkVisible(mm), this._recursiveDeleteVisibleChangeTree(mm)
         }))
       }
-      _dropPendingEntries(kk) {
-        this.changes.delete(kk.ref[lk]), kk.forEachChild((kk => this._dropPendingEntries(kk)))
+      _dropPendingEntries(mm) {
+        this.changes.delete(mm.ref[wm]), mm.forEachChild((mm => this._dropPendingEntries(mm)))
       }
-      _removeViewField(kk, Fk, Ik) {
-        const Xk = Fk.get(Ik) === Tk.ADD;
-        Fk.set(Ik, Tk.DELETE);
-        const ik = kk.ref[kk.encDescriptor.names[Ik]],
-          yk = ik?.[wk];
-        yk && (this.unmarkVisible(yk), this._recursiveDeleteVisibleChangeTree(yk), Xk && this._dropPendingEntries(yk))
+      _removeViewField(mm, Tm, fm) {
+        const hm = Tm.get(fm) === Am.ADD;
+        Tm.set(fm, Am.DELETE);
+        const am = mm.ref[mm.encDescriptor.names[fm]],
+          xm = am?.[Ym];
+        xm && (this.unmarkVisible(xm), this._recursiveDeleteVisibleChangeTree(xm), hm && this._dropPendingEntries(xm))
       }
     }
 
-    function CX(kk) {
-      kk.structSwitchEmitted || (kk.shouldEmitSwitch && (kk.buffer[kk.it.offset++] = 255, IF.number(kk.buffer, kk.ref[lk], kk.it)), kk.structSwitchEmitted = !0)
+    function sh(mm) {
+      mm.structSwitchEmitted || (mm.shouldEmitSwitch && (mm.buffer[mm.it.offset++] = 255, fT.number(mm.buffer, mm.ref[wm], mm.it)), mm.structSwitchEmitted = !0)
     }
 
-    function NX(kk, Fk) {
-      fX(kk, Fk, Tk.ADD)
+    function lh(mm, Tm) {
+      Bh(mm, Tm, Am.ADD)
     }
 
-    function cX(kk, Fk) {
-      if (Fk._fullSyncGen === kk.gen) return;
-      Fk._fullSyncGen = kk.gen;
-      if (!kk.hasView || kk.view.isChangeTreeVisible(Fk)) {
-        const Ik = Fk.encDescriptor;
-        kk.changeTree = Fk, kk.ref = Fk.ref, kk.encoder = Ik.encoder, kk.filter = Ik.filter, kk.metadata = Ik.metadata, kk.treeIsFiltered = Fk.isFiltered, kk.isSchema = Ik.isSchema, kk.filterBitmask = Ik.filterBitmask, kk.tags = Ik.tags, kk.structSwitchEmitted = !1, kk.shouldEmitSwitch = kk.hasView || kk.it.offset > kk.initialOffset || Fk !== kk.rootChangeTree, Fk.isArray && Fk.collDirty.size > 0 && (Fk.flags |= 512), iI(Fk, kk, NX)
+    function Mh(mm, Tm) {
+      if (Tm._fullSyncGen === mm.gen) return;
+      Tm._fullSyncGen = mm.gen;
+      if (!mm.hasView || mm.view.isChangeTreeVisible(Tm)) {
+        const fm = Tm.encDescriptor;
+        mm.changeTree = Tm, mm.ref = Tm.ref, mm.encoder = fm.encoder, mm.filter = fm.filter, mm.metadata = fm.metadata, mm.treeIsFiltered = Tm.isFiltered, mm.isSchema = fm.isSchema, mm.filterBitmask = fm.filterBitmask, mm.tags = fm.tags, mm.structSwitchEmitted = !1, mm.shouldEmitSwitch = mm.hasView || mm.it.offset > mm.initialOffset || Tm !== mm.rootChangeTree, Tm.isArray && Tm.collDirty.size > 0 && (Tm.flags |= 512), af(Tm, mm, lh)
       }
-      xI(Fk, kk, WX)
+      If(Tm, mm, uh)
     }
 
-    function WX(kk, Fk, Ik) {
-      cX(kk, Fk)
+    function uh(mm, Tm, fm) {
+      Mh(mm, Tm)
     }
 
-    function fX(kk, Fk, Ik) {
-      if (Fk < 0) {
-        if (kk.treeIsFiltered !== kk.emitFiltered) return;
-        return CX(kk), void(kk.buffer[kk.it.offset++] = 255 & Math.abs(Fk))
+    function Bh(mm, Tm, fm) {
+      if (Tm < 0) {
+        if (mm.treeIsFiltered !== mm.emitFiltered) return;
+        return sh(mm), void(mm.buffer[mm.it.offset++] = 255 & Math.abs(Tm))
       }
-      if ((kk.isSchema ? kk.treeIsFiltered || (Fk < 32 ? 0 !== (kk.filterBitmask & 1 << Fk) : void 0 !== kk.tags[Fk]) : kk.treeIsFiltered) !== kk.emitFiltered) return;
-      const Xk = kk.isEncodeAll ? Tk.ADD : Ik;
-      void 0 !== Xk && (void 0 === kk.filter || kk.filter(kk.ref, Fk, kk.view)) && (CX(kk), kk.encoder(kk.self, kk.buffer, kk.changeTree, Fk, Xk, kk.it, kk.isEncodeAll, kk.hasView, kk.metadata))
+      if ((mm.isSchema ? mm.treeIsFiltered || (Tm < 32 ? 0 !== (mm.filterBitmask & 1 << Tm) : void 0 !== mm.tags[Tm]) : mm.treeIsFiltered) !== mm.emitFiltered) return;
+      const hm = mm.isEncodeAll ? Am.ADD : fm;
+      void 0 !== hm && (void 0 === mm.filter || mm.filter(mm.ref, Tm, mm.view)) && (sh(mm), mm.encoder(mm.self, mm.buffer, mm.changeTree, Tm, hm, mm.it, mm.isEncodeAll, mm.hasView, mm.metadata))
     }
 
-    function BX(kk, Fk) {
-      const Ik = new Uint8Array(kk.length + Fk.length);
-      return Ik.set(kk, 0), Ik.set(Fk, kk.length), Ik
+    function Lh(mm, Tm) {
+      const fm = new Uint8Array(mm.length + Tm.length);
+      return fm.set(mm, 0), fm.set(Tm, mm.length), fm
     }
-    class dX {
+    class vh {
       static BUFFER_SIZE = 16384;
-      sharedBuffer = new Uint8Array(dX.BUFFER_SIZE);
+      sharedBuffer = new Uint8Array(vh.BUFFER_SIZE);
       context;
       state;
       root;
-      constructor(kk, Fk) {
-        this.context = WF.cache(kk.constructor), this.root = Fk ?? new GX(this.context), this.setState(kk)
+      constructor(mm, Tm) {
+        this.context = lT.cache(mm.constructor), this.root = Tm ?? new Xh(this.context), this.setState(mm)
       }
-      setState(kk) {
-        this.state = kk, this.state[wk].setRoot(this.root)
+      setState(mm) {
+        this.state = mm, this.state[Ym].setRoot(this.root)
       }
       _encodeCtx = {
         self: void 0,
@@ -6306,271 +6306,271 @@ export const modules = {
       };
       _fullSyncGen = 0;
       encode() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          Fk = arguments.length > 1 ? arguments[1] : void 0,
-          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : kk.offset;
-        return this._encodeChannel(kk, Fk, Ik, Xk, !1)
+          Tm = arguments.length > 1 ? arguments[1] : void 0,
+          fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : mm.offset;
+        return this._encodeChannel(mm, Tm, fm, hm, !1)
       }
       encodeUnreliable() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          Fk = arguments.length > 1 ? arguments[1] : void 0,
-          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : kk.offset;
-        return this._encodeChannel(kk, Fk, Ik, Xk, !0)
+          Tm = arguments.length > 1 ? arguments[1] : void 0,
+          fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : mm.offset;
+        return this._encodeChannel(mm, Tm, fm, hm, !0)
       }
-      _encodeChannel(kk, Fk, Ik, Xk, Tk) {
-        this.root.pendingFilterRefresh.length > 0 && lI(this.root);
-        const ik = void 0 !== Fk,
-          yk = this.state[wk],
-          lk = this._encodeCtx;
-        lk.self = this, lk.buffer = Ik, lk.it = kk, lk.view = Fk, lk.isEncodeAll = !1, lk.hasView = ik, lk.emitFiltered = ik;
-        let ak = Tk ? this.root.unreliableChanges : this.root.changes;
-        for (; ak = ak.next;) {
-          const Ik = ak.changeTree;
-          if (ik && !Fk.isChangeTreeVisible(Ik)) continue;
-          const qk = Tk ? Ik.unreliableRecorder : Ik;
-          if (!qk || !qk.has()) continue;
-          const Lk = Ik.encDescriptor;
-          lk.changeTree = Ik, lk.ref = Ik.ref, lk.encoder = Lk.encoder, lk.filter = Lk.filter, lk.metadata = Lk.metadata, lk.treeIsFiltered = Ik.isFiltered, lk.isSchema = Lk.isSchema, lk.filterBitmask = Lk.filterBitmask, lk.tags = Lk.tags, lk.structSwitchEmitted = !1, lk.isRootTree = Ik === yk, lk.shouldEmitSwitch = ik || kk.offset > Xk || !lk.isRootTree, qk.forEachWithCtx(lk, fX)
+      _encodeChannel(mm, Tm, fm, hm, Am) {
+        this.root.pendingFilterRefresh.length > 0 && wf(this.root);
+        const am = void 0 !== Tm,
+          xm = this.state[Ym],
+          wm = this._encodeCtx;
+        wm.self = this, wm.buffer = fm, wm.it = mm, wm.view = Tm, wm.isEncodeAll = !1, wm.hasView = am, wm.emitFiltered = am;
+        let Dm = Am ? this.root.unreliableChanges : this.root.changes;
+        for (; Dm = Dm.next;) {
+          const fm = Dm.changeTree;
+          if (am && !Tm.isChangeTreeVisible(fm)) continue;
+          const im = Am ? fm.unreliableRecorder : fm;
+          if (!im || !im.has()) continue;
+          const Rm = fm.encDescriptor;
+          wm.changeTree = fm, wm.ref = fm.ref, wm.encoder = Rm.encoder, wm.filter = Rm.filter, wm.metadata = Rm.metadata, wm.treeIsFiltered = fm.isFiltered, wm.isSchema = Rm.isSchema, wm.filterBitmask = Rm.filterBitmask, wm.tags = Rm.tags, wm.structSwitchEmitted = !1, wm.isRootTree = fm === xm, wm.shouldEmitSwitch = am || mm.offset > hm || !wm.isRootTree, im.forEachWithCtx(wm, Bh)
         }
-        return Tk || ik || !this._isStreamBroadcastMode || this._emitStreamBroadcast(Ik, kk), kk.offset > Ik.byteLength ? (Ik = this._resizeBuffer(Ik, kk.offset), kk.offset = Xk, this._encodeChannel(kk, Fk, Ik, Xk, Tk)) : Ik.subarray(0, kk.offset)
+        return Am || am || !this._isStreamBroadcastMode || this._emitStreamBroadcast(fm, mm), mm.offset > fm.byteLength ? (fm = this._resizeBuffer(fm, mm.offset), mm.offset = hm, this._encodeChannel(mm, Tm, fm, hm, Am)) : fm.subarray(0, mm.offset)
       }
-      encodeFullSync(kk, Fk, Ik, Xk) {
-        let Tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : kk.offset;
-        this.root.pendingFilterRefresh.length > 0 && lI(this.root);
-        const ik = void 0 !== Xk,
-          yk = this.state[wk],
-          lk = this._encodeCtx;
-        return lk.self = this, lk.buffer = Fk, lk.it = kk, lk.view = Xk, lk.isEncodeAll = !0, lk.hasView = ik, lk.emitFiltered = Ik, lk.gen = ++this._fullSyncGen, lk.initialOffset = Tk, lk.rootChangeTree = yk, cX(lk, yk), kk.offset > Fk.byteLength ? (Fk = this._resizeBuffer(Fk, kk.offset), kk.offset = Tk, this.encodeFullSync(kk, Fk, Ik, Xk, Tk)) : Fk.subarray(0, kk.offset)
+      encodeFullSync(mm, Tm, fm, hm) {
+        let Am = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : mm.offset;
+        this.root.pendingFilterRefresh.length > 0 && wf(this.root);
+        const am = void 0 !== hm,
+          xm = this.state[Ym],
+          wm = this._encodeCtx;
+        return wm.self = this, wm.buffer = Tm, wm.it = mm, wm.view = hm, wm.isEncodeAll = !0, wm.hasView = am, wm.emitFiltered = fm, wm.gen = ++this._fullSyncGen, wm.initialOffset = Am, wm.rootChangeTree = xm, Mh(wm, xm), mm.offset > Tm.byteLength ? (Tm = this._resizeBuffer(Tm, mm.offset), mm.offset = Am, this.encodeFullSync(mm, Tm, fm, hm, Am)) : Tm.subarray(0, mm.offset)
       }
-      _resizeBuffer(kk, Fk) {
-        const Ik = Math.ceil(Fk / dX.BUFFER_SIZE) * dX.BUFFER_SIZE,
-          Xk = new Uint8Array(Ik);
-        return Xk.set(kk), kk === this.sharedBuffer && (this.sharedBuffer = Xk), Xk
+      _resizeBuffer(mm, Tm) {
+        const fm = Math.ceil(Tm / vh.BUFFER_SIZE) * vh.BUFFER_SIZE,
+          hm = new Uint8Array(fm);
+        return hm.set(mm), mm === this.sharedBuffer && (this.sharedBuffer = hm), hm
       }
       encodeAll() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
-        return this.encodeFullSync(kk, Fk, !1)
+          Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
+        return this.encodeFullSync(mm, Tm, !1)
       }
-      encodeAllView(kk, Fk, Ik) {
-        let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const Tk = Ik.offset;
-        return Xk = this.encodeFullSync(Ik, Xk, !0, kk, Tk), BX(Xk.subarray(0, Fk), Xk.subarray(Tk, Ik.offset))
+      encodeAllView(mm, Tm, fm) {
+        let hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const Am = fm.offset;
+        return hm = this.encodeFullSync(fm, hm, !0, mm, Am), Lh(hm.subarray(0, Tm), hm.subarray(Am, fm.offset))
       }
-      ensureCapacity(kk, Fk) {
-        if (Fk + dX.BUFFER_SIZE <= kk.byteLength) return kk;
-        const Ik = Math.ceil((Fk + dX.BUFFER_SIZE) / dX.BUFFER_SIZE) * dX.BUFFER_SIZE,
-          Xk = new Uint8Array(Ik);
-        return Xk.set(kk.subarray(0, Fk)), kk === this.sharedBuffer && (this.sharedBuffer = Xk), Xk
+      ensureCapacity(mm, Tm) {
+        if (Tm + vh.BUFFER_SIZE <= mm.byteLength) return mm;
+        const fm = Math.ceil((Tm + vh.BUFFER_SIZE) / vh.BUFFER_SIZE) * vh.BUFFER_SIZE,
+          hm = new Uint8Array(fm);
+        return hm.set(mm.subarray(0, Tm)), mm === this.sharedBuffer && (this.sharedBuffer = hm), hm
       }
-      encodeView(kk, Fk, Ik) {
-        let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
-          ik = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const yk = Ik.offset;
-        this._emitStreamPriority(kk);
-        for (const ak of kk.changes.keys()) {
-          const Fk = kk.changes.get(ak),
-            ik = this.root.changeTrees[ak];
-          if (void 0 === ik) {
-            kk.changes.delete(ak);
+      encodeView(mm, Tm, fm) {
+        let hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
+          am = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const xm = fm.offset;
+        this._emitStreamPriority(mm);
+        for (const Dm of mm.changes.keys()) {
+          const Tm = mm.changes.get(Dm),
+            am = this.root.changeTrees[Dm];
+          if (void 0 === am) {
+            mm.changes.delete(Dm);
             continue
           }
-          if (0 === Fk.size) continue;
-          const yk = ik.encDescriptor,
-            qk = yk.encoder,
-            Lk = yk.metadata,
-            tk = ik.ref,
-            jk = ik.refTarget;
-          Xk = this.ensureCapacity(Xk, Ik.offset), Xk[Ik.offset++] = 255, IF.number(Xk, tk[lk], Ik);
-          for (const [ak, ek] of Fk) {
-            let Fk;
-            if (-1 === ak) {
-              const kk = jk.tmpItems,
-                Fk = jk.deletedIndexes;
-              for (let yk = 0; yk < kk.length; yk++) void 0 !== kk[yk] && !0 !== Fk[yk] && qk(this, Xk, ik, yk, Tk.ADD, Ik, !1, !0, Lk);
+          if (0 === Tm.size) continue;
+          const xm = am.encDescriptor,
+            im = xm.encoder,
+            Rm = xm.metadata,
+            pm = am.ref,
+            om = am.refTarget;
+          hm = this.ensureCapacity(hm, fm.offset), hm[fm.offset++] = 255, fT.number(hm, pm[wm], fm);
+          for (const [Dm, Om] of Tm) {
+            let Tm;
+            if (-1 === Dm) {
+              const mm = om.tmpItems,
+                Tm = om.deletedIndexes;
+              for (let xm = 0; xm < mm.length; xm++) void 0 !== mm[xm] && !0 !== Tm[xm] && im(this, hm, am, xm, Am.ADD, fm, !1, !0, Rm);
               continue
             }
-            if ("number" === typeof ak) Fk = ak;
+            if ("number" === typeof Dm) Tm = Dm;
             else {
-              const Ik = ak.indexInParent(tk);
-              if (void 0 === Ik) continue;
-              if (Fk = Ik, ek === Tk.ADD && ik.getChange(Fk) === Tk.DELETE) {
-                kk.changes.delete(ak.ref[lk]);
+              const fm = Dm.indexInParent(pm);
+              if (void 0 === fm) continue;
+              if (Tm = fm, Om === Am.ADD && am.getChange(Tm) === Am.DELETE) {
+                mm.changes.delete(Dm.ref[wm]);
                 continue
               }
             }
-            qk(this, Xk, ik, Fk, void 0 !== jk[Zk](Fk) && ek || Tk.DELETE, Ik, !1, !0, Lk)
+            im(this, hm, am, Tm, void 0 !== om[Em](Tm) && Om || Am.DELETE, fm, !1, !0, Rm)
           }
         }
-        return kk.changes.clear(), Xk = this.encode(Ik, kk, Xk), ik ? BX(Xk.subarray(0, Fk), Xk.subarray(yk, Ik.offset)) : Xk.subarray(yk, Ik.offset)
+        return mm.changes.clear(), hm = this.encode(fm, mm, hm), am ? Lh(hm.subarray(0, Tm), hm.subarray(xm, fm.offset)) : hm.subarray(xm, fm.offset)
       }
-      encodeUnreliableView(kk, Fk, Ik) {
-        let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const Tk = Ik.offset;
-        return Xk = this.encodeUnreliable(Ik, kk, Xk, Tk), BX(Xk.subarray(0, Fk), Xk.subarray(Tk, Ik.offset))
+      encodeUnreliableView(mm, Tm, fm) {
+        let hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const Am = fm.offset;
+        return hm = this.encodeUnreliable(fm, mm, hm, Am), Lh(hm.subarray(0, Tm), hm.subarray(Am, fm.offset))
       }
-      _emitStreamBroadcast(kk, Fk) {
-        const Ik = this.root.streamTrees;
-        for (const Xk of Ik) {
-          const Ik = Xk,
-            ik = Ik[wk],
-            yk = Ik[lk];
-          if (void 0 === yk) continue;
-          const ak = Ik._stream,
-            qk = ak.broadcastDeletes,
-            Lk = ak.broadcastPending,
-            tk = ak.sentBroadcast,
-            jk = qk.size > 0,
-            ek = Lk.size > 0,
-            Hk = ik.encDescriptor,
-            Jk = Hk.encoder,
-            xk = Hk.metadata;
-          if (jk || ek) {
-            if (kk[Fk.offset++] = 255, IF.number(kk, yk, Fk), jk) {
-              for (const Ik of qk) Jk(this, kk, ik, Ik, Tk.DELETE, Fk, !1, !1, xk);
-              qk.clear()
+      _emitStreamBroadcast(mm, Tm) {
+        const fm = this.root.streamTrees;
+        for (const hm of fm) {
+          const fm = hm,
+            am = fm[Ym],
+            xm = fm[wm];
+          if (void 0 === xm) continue;
+          const Dm = fm._stream,
+            im = Dm.broadcastDeletes,
+            Rm = Dm.broadcastPending,
+            pm = Dm.sentBroadcast,
+            om = im.size > 0,
+            Om = Rm.size > 0,
+            qm = am.encDescriptor,
+            jm = qm.encoder,
+            Vm = qm.metadata;
+          if (om || Om) {
+            if (mm[Tm.offset++] = 255, fT.number(mm, xm, Tm), om) {
+              for (const fm of im) jm(this, mm, am, fm, Am.DELETE, Tm, !1, !1, Vm);
+              im.clear()
             }
-            const Xk = ak.maxPerTick,
-              ek = [];
-            let Hk = 0;
-            const Pk = [];
-            for (const yk of Lk) {
-              if (Hk >= Xk) break;
-              const lk = Ik[Zk](yk);
-              void 0 !== lk ? (Jk(this, kk, ik, yk, Tk.ADD, Fk, !1, !1, xk), tk.add(yk), ek.push(lk), Pk.push(yk), Hk++) : Pk.push(yk)
+            const hm = Dm.maxPerTick,
+              Om = [];
+            let qm = 0;
+            const Im = [];
+            for (const xm of Rm) {
+              if (qm >= hm) break;
+              const wm = fm[Em](xm);
+              void 0 !== wm ? (jm(this, mm, am, xm, Am.ADD, Tm, !1, !1, Vm), pm.add(xm), Om.push(wm), Im.push(xm), qm++) : Im.push(xm)
             }
-            for (const kk of Pk) Lk.delete(kk);
-            for (const Ik of ek) {
-              const Xk = Ik[wk];
-              if (void 0 === Xk) continue;
-              const ik = Ik[lk];
-              if (void 0 === ik) continue;
-              kk[Fk.offset++] = 255, IF.number(kk, ik, Fk);
-              const yk = Xk.encDescriptor,
-                ak = yk.encoder,
-                qk = yk.metadata;
-              Xk.forEachLive((Ik => {
-                mF.hasUnreliableAtIndex(qk, Ik) || ak(this, kk, Xk, Ik, Tk.ADD, Fk, !1, !1, qk)
+            for (const mm of Im) Rm.delete(mm);
+            for (const fm of Om) {
+              const hm = fm[Ym];
+              if (void 0 === hm) continue;
+              const am = fm[wm];
+              if (void 0 === am) continue;
+              mm[Tm.offset++] = 255, fT.number(mm, am, Tm);
+              const xm = hm.encDescriptor,
+                Dm = xm.encoder,
+                im = xm.metadata;
+              hm.forEachLive((fm => {
+                UT.hasUnreliableAtIndex(im, fm) || Dm(this, mm, hm, fm, Am.ADD, Tm, !1, !1, im)
               }))
             }
           }
-          for (const Xk of tk) {
-            const Tk = Ik[Zk](Xk);
-            if (void 0 === Tk) continue;
-            const ik = Tk[wk];
-            if (void 0 === ik || !ik.has()) continue;
-            const yk = Tk[lk];
-            if (void 0 === yk) continue;
-            kk[Fk.offset++] = 255, IF.number(kk, yk, Fk);
-            const ak = ik.encDescriptor,
-              qk = ak.encoder,
-              Lk = ak.metadata;
-            ik.forEach(((Ik, Xk) => {
-              Ik < 0 || mF.hasUnreliableAtIndex(Lk, Ik) || qk(this, kk, ik, Ik, Xk, Fk, !1, !1, Lk)
+          for (const hm of pm) {
+            const Am = fm[Em](hm);
+            if (void 0 === Am) continue;
+            const am = Am[Ym];
+            if (void 0 === am || !am.has()) continue;
+            const xm = Am[wm];
+            if (void 0 === xm) continue;
+            mm[Tm.offset++] = 255, fT.number(mm, xm, Tm);
+            const Dm = am.encDescriptor,
+              im = Dm.encoder,
+              Rm = Dm.metadata;
+            am.forEach(((fm, hm) => {
+              fm < 0 || UT.hasUnreliableAtIndex(Rm, fm) || im(this, mm, am, fm, hm, Tm, !1, !1, Rm)
             }))
           }
         }
       }
-      _emitStreamPriority(kk) {
-        const Fk = this.root.streamTrees;
-        if (0 === Fk.size) return;
-        const Ik = kk.id;
-        for (const Xk of Fk) {
-          const Fk = Xk,
-            ik = Fk._stream,
-            yk = ik.pendingByView.get(Ik);
-          if (void 0 === yk || 0 === yk.size) continue;
-          const ak = ik.priorityByView?.get(Ik),
-            qk = void 0 !== ak,
-            Lk = ik.priority,
-            tk = ik.maxPerTick,
-            jk = [],
-            ek = [];
-          if (qk || void 0 !== Lk) {
-            const Ik = [],
-              Xk = [];
-            let Tk = 0;
-            for (const ik of yk) {
-              const yk = Fk[Zk](ik);
-              if (void 0 === yk) {
-                ek.push(ik);
+      _emitStreamPriority(mm) {
+        const Tm = this.root.streamTrees;
+        if (0 === Tm.size) return;
+        const fm = mm.id;
+        for (const hm of Tm) {
+          const Tm = hm,
+            am = Tm._stream,
+            xm = am.pendingByView.get(fm);
+          if (void 0 === xm || 0 === xm.size) continue;
+          const Dm = am.priorityByView?.get(fm),
+            im = void 0 !== Dm,
+            Rm = am.priority,
+            pm = am.maxPerTick,
+            om = [],
+            Om = [];
+          if (im || void 0 !== Rm) {
+            const fm = [],
+              hm = [];
+            let Am = 0;
+            for (const am of xm) {
+              const xm = Tm[Em](am);
+              if (void 0 === xm) {
+                Om.push(am);
                 continue
               }
-              const lk = qk ? ak(yk) : Lk(kk, yk);
-              if (Tk < tk) {
-                let kk = Tk++;
-                for (; kk > 0 && Xk[kk - 1] < lk;) Xk[kk] = Xk[kk - 1], Ik[kk] = Ik[kk - 1], kk--;
-                Xk[kk] = lk, Ik[kk] = ik
-              } else if (lk > Xk[tk - 1]) {
-                let kk = tk - 1;
-                for (; kk > 0 && Xk[kk - 1] < lk;) Xk[kk] = Xk[kk - 1], Ik[kk] = Ik[kk - 1], kk--;
-                Xk[kk] = lk, Ik[kk] = ik
+              const wm = im ? Dm(xm) : Rm(mm, xm);
+              if (Am < pm) {
+                let mm = Am++;
+                for (; mm > 0 && hm[mm - 1] < wm;) hm[mm] = hm[mm - 1], fm[mm] = fm[mm - 1], mm--;
+                hm[mm] = wm, fm[mm] = am
+              } else if (wm > hm[pm - 1]) {
+                let mm = pm - 1;
+                for (; mm > 0 && hm[mm - 1] < wm;) hm[mm] = hm[mm - 1], fm[mm] = fm[mm - 1], mm--;
+                hm[mm] = wm, fm[mm] = am
               }
             }
-            for (let kk = 0; kk < Tk; kk++) jk.push(Ik[kk])
+            for (let mm = 0; mm < Am; mm++) om.push(fm[mm])
           } else
-            for (const kk of yk) {
-              if (jk.length >= tk) break;
-              jk.push(kk)
+            for (const mm of xm) {
+              if (om.length >= pm) break;
+              om.push(mm)
             }
-          for (const kk of ek) yk.delete(kk);
-          const Hk = jk.length;
-          let Jk = ik.sentByView.get(Ik);
-          void 0 === Jk && (Jk = new Set, ik.sentByView.set(Ik, Jk));
-          for (let Ik = 0; Ik < Hk; Ik++) {
-            const Xk = jk[Ik],
-              ik = Fk[Zk](Xk);
-            if (void 0 === ik) {
-              yk.delete(Xk);
+          for (const mm of Om) xm.delete(mm);
+          const qm = om.length;
+          let jm = am.sentByView.get(fm);
+          void 0 === jm && (jm = new Set, am.sentByView.set(fm, jm));
+          for (let fm = 0; fm < qm; fm++) {
+            const hm = om[fm],
+              am = Tm[Em](hm);
+            if (void 0 === am) {
+              xm.delete(hm);
               continue
             }
-            kk._addImmediate(ik);
-            const ak = ik[wk];
-            if (void 0 !== ak) {
-              const Fk = ik[lk];
-              let Ik = kk.changes.get(Fk);
-              void 0 === Ik && (Ik = new Map, kk.changes.set(Fk, Ik));
-              const Xk = ak.metadata;
-              ak.forEachLive((kk => {
-                mF.hasUnreliableAtIndex(Xk, kk) || Ik.set(kk, Tk.ADD)
+            mm._addImmediate(am);
+            const Dm = am[Ym];
+            if (void 0 !== Dm) {
+              const Tm = am[wm];
+              let fm = mm.changes.get(Tm);
+              void 0 === fm && (fm = new Map, mm.changes.set(Tm, fm));
+              const hm = Dm.metadata;
+              Dm.forEachLive((mm => {
+                UT.hasUnreliableAtIndex(hm, mm) || fm.set(mm, Am.ADD)
               }))
             }
-            yk.delete(Xk), Jk.add(Xk)
+            xm.delete(hm), jm.add(hm)
           }
         }
       }
       discardChanges() {
-        const kk = this.root.changes;
-        let Fk = kk.next;
-        const Ik = this.root;
-        for (; Fk;) {
-          const kk = Fk.next;
-          Fk.changeTree.endEncode(), Ik.releaseNode(Fk), Fk = kk
+        const mm = this.root.changes;
+        let Tm = mm.next;
+        const fm = this.root;
+        for (; Tm;) {
+          const mm = Tm.next;
+          Tm.changeTree.endEncode(), fm.releaseNode(Tm), Tm = mm
         }
-        kk.next = void 0, kk.tail = void 0
+        mm.next = void 0, mm.tail = void 0
       }
       discardUnreliableChanges() {
-        const kk = this.root.unreliableChanges;
-        let Fk = kk.next;
-        const Ik = this.root;
-        for (; Fk;) {
-          const kk = Fk.next;
-          Fk.changeTree.endEncodeUnreliable(), Ik.releaseNode(Fk), Fk = kk
+        const mm = this.root.unreliableChanges;
+        let Tm = mm.next;
+        const fm = this.root;
+        for (; Tm;) {
+          const mm = Tm.next;
+          Tm.changeTree.endEncodeUnreliable(), fm.releaseNode(Tm), Tm = mm
         }
-        kk.next = void 0, kk.tail = void 0
+        mm.next = void 0, mm.tail = void 0
       }
-      tryEncodeTypeId(kk, Fk, Ik, Xk) {
-        const Tk = this.context.getTypeId(Fk),
-          ik = this.context.getTypeId(Ik);
-        void 0 !== ik ? Tk !== ik && (kk[Xk.offset++] = 213, IF.number(kk, ik, Xk)) : console.warn(`@colyseus/schema WARNING: Class "${Ik.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
+      tryEncodeTypeId(mm, Tm, fm, hm) {
+        const Am = this.context.getTypeId(Tm),
+          am = this.context.getTypeId(fm);
+        void 0 !== am ? Am !== am && (mm[hm.offset++] = 213, fT.number(mm, am, hm)) : console.warn(`@colyseus/schema WARNING: Class "${fm.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
       }
       get hasChanges() {
         return void 0 !== this.root.changes.next || this._hasStreamBacklog()
@@ -6579,28 +6579,28 @@ export const modules = {
         return 0 === this.root.activeViews.size && this.root.streamTrees.size > 0
       }
       _hasStreamBacklog() {
-        const kk = this.root;
-        if (0 === kk.streamTrees.size) return !1;
-        const Fk = 0 === kk.activeViews.size;
-        for (const Ik of kk.streamTrees)
-          if (Fk ? GF(Ik) : nF(Ik, kk)) return !0;
+        const mm = this.root;
+        if (0 === mm.streamTrees.size) return !1;
+        const Tm = 0 === mm.activeViews.size;
+        for (const fm of mm.streamTrees)
+          if (Tm ? NT(fm) : eT(fm, mm)) return !0;
         return !1
       }
       get hasUnreliableChanges() {
         return void 0 !== this.root.unreliableChanges.next
       }
     }
-    class YX extends Error {
-      constructor(kk) {
-        super(kk), this.name = "DecodingWarning"
+    class th extends Error {
+      constructor(mm) {
+        super(mm), this.name = "DecodingWarning"
       }
     }
-    const AX = {
+    const Uh = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class gX {
+    class dh {
       refs = new Map;
       refCount = {};
       deletedRefs = new Set;
@@ -6609,1181 +6609,1181 @@ export const modules = {
       getNextUniqueId() {
         return this.nextUniqueId++
       }
-      addRef(kk, Fk) {
-        let Ik = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.refs.set(kk, Fk), void 0 === Fk[lk] ? (AX.value = kk, Object.defineProperty(Fk, lk, AX)) : Fk[lk] !== kk && (Fk[lk] = kk), Ik && (this.refCount[kk] = (this.refCount[kk] || 0) + 1), this.deletedRefs.has(kk) && this.deletedRefs.delete(kk)
+      addRef(mm, Tm) {
+        let fm = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this.refs.set(mm, Tm), void 0 === Tm[wm] ? (Uh.value = mm, Object.defineProperty(Tm, wm, Uh)) : Tm[wm] !== mm && (Tm[wm] = mm), fm && (this.refCount[mm] = (this.refCount[mm] || 0) + 1), this.deletedRefs.has(mm) && this.deletedRefs.delete(mm)
       }
-      removeRef(kk) {
-        const Fk = this.refCount[kk];
-        if (void 0 !== Fk)
-          if (0 !== Fk)(this.refCount[kk] = Fk - 1) <= 0 && this.deletedRefs.add(kk);
+      removeRef(mm) {
+        const Tm = this.refCount[mm];
+        if (void 0 !== Tm)
+          if (0 !== Tm)(this.refCount[mm] = Tm - 1) <= 0 && this.deletedRefs.add(mm);
           else try {
-            const Fk = this.refs.get(kk);
-            throw new YX(`trying to remove refId '${kk}' with 0 refCount (${Fk.constructor.name}: ${JSON.stringify(Fk)})`)
-          } catch (yT) {
-            console.warn(yT)
+            const Tm = this.refs.get(mm);
+            throw new th(`trying to remove refId '${mm}' with 0 refCount (${Tm.constructor.name}: ${JSON.stringify(Tm)})`)
+          } catch (DA) {
+            console.warn(DA)
           } else try {
-            throw new YX("trying to remove refId that doesn't exist: " + kk)
-          } catch (yT) {
-            console.warn(yT)
+            throw new th("trying to remove refId that doesn't exist: " + mm)
+          } catch (DA) {
+            console.warn(DA)
           }
       }
       clearRefs() {
         this.refs.clear(), this.deletedRefs.clear(), this.callbacks = {}, this.refCount = {}
       }
       garbageCollectDeletedRefs() {
-        this.deletedRefs.forEach((kk => {
-          if (this.refCount[kk] > 0) return;
-          const Fk = this.refs.get(kk),
-            Ik = Fk.constructor[Symbol.metadata];
-          if (null != Ik)
-            for (const Xk in Ik) {
-              const kk = Fk[Ik[Xk].name];
-              if ("object" === typeof kk && kk) {
-                const Fk = kk[lk];
-                void 0 === Fk || this.deletedRefs.has(Fk) || this.removeRef(Fk)
+        this.deletedRefs.forEach((mm => {
+          if (this.refCount[mm] > 0) return;
+          const Tm = this.refs.get(mm),
+            fm = Tm.constructor[Symbol.metadata];
+          if (null != fm)
+            for (const hm in fm) {
+              const mm = Tm[fm[hm].name];
+              if ("object" === typeof mm && mm) {
+                const Tm = mm[wm];
+                void 0 === Tm || this.deletedRefs.has(Tm) || this.removeRef(Tm)
               }
-            } else "function" === typeof Fk[Hk] && Array.from(Fk.values()).forEach((kk => {
-              const Fk = kk[lk];
-              void 0 === Fk || this.deletedRefs.has(Fk) || this.removeRef(Fk)
+            } else "function" === typeof Tm[qm] && Array.from(Tm.values()).forEach((mm => {
+              const Tm = mm[wm];
+              void 0 === Tm || this.deletedRefs.has(Tm) || this.removeRef(Tm)
             }));
-          this.refs.delete(kk), delete this.refCount[kk], delete this.callbacks[kk]
+          this.refs.delete(mm), delete this.refCount[mm], delete this.callbacks[mm]
         })), this.deletedRefs.clear()
       }
-      addCallback(kk, Fk, Ik) {
-        if (void 0 === kk) {
-          const kk = "number" === typeof Fk ? Tk[Fk] : Fk;
-          throw new Error(`Can't addCallback on '${kk}' (refId is undefined)`)
+      addCallback(mm, Tm, fm) {
+        if (void 0 === mm) {
+          const mm = "number" === typeof Tm ? Am[Tm] : Tm;
+          throw new Error(`Can't addCallback on '${mm}' (refId is undefined)`)
         }
-        return this.callbacks[kk] || (this.callbacks[kk] = {}), this.callbacks[kk][Fk] || (this.callbacks[kk][Fk] = []), this.callbacks[kk][Fk].push(Ik), () => this.removeCallback(kk, Fk, Ik)
+        return this.callbacks[mm] || (this.callbacks[mm] = {}), this.callbacks[mm][Tm] || (this.callbacks[mm][Tm] = []), this.callbacks[mm][Tm].push(fm), () => this.removeCallback(mm, Tm, fm)
       }
-      removeCallback(kk, Fk, Ik) {
-        const Xk = this.callbacks?.[kk]?.[Fk]?.indexOf(Ik);
-        void 0 !== Xk && -1 !== Xk && pX(this.callbacks[kk][Fk], Xk)
+      removeCallback(mm, Tm, fm) {
+        const hm = this.callbacks?.[mm]?.[Tm]?.indexOf(fm);
+        void 0 !== hm && -1 !== hm && Ph(this.callbacks[mm][Tm], hm)
       }
     }
-    class mX {
+    class gh {
       context;
       state;
       root;
       currentRefId = 0;
-      sG;
+      vN;
       resyncVisited = null;
       resyncDamaged = !1;
-      constructor(kk, Fk) {
-        this.setState(kk), this.context = Fk || new WF(kk.constructor)
+      constructor(mm, Tm) {
+        this.setState(mm), this.context = Tm || new lT(mm.constructor)
       }
-      setState(kk) {
-        this.state = kk, this.root = new gX, this.root.addRef(0, kk)
+      setState(mm) {
+        this.state = mm, this.root = new dh, this.root.addRef(0, mm)
       }
-      decode(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decode(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
             offset: 0
           },
-          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
-        const Tk = void 0 !== this.sG ? [] : null,
-          ik = this.root,
-          yk = kk.byteLength;
-        let lk = Ik.constructor[Lk];
-        for (this.currentRefId = 0; Fk.offset < yk;) {
-          if (kk[Fk.offset] == Xk) {
-            Fk.offset++, Ik[Kk]?.();
-            const Xk = KF.number(kk, Fk),
-              Tk = ik.refs.get(Xk);
-            Tk ? (Ik = Tk, lk = Ik.constructor[Lk], this.currentRefId = Xk) : (console.error(`"refId" not found: ${Xk}`, {
-              previousRef: Ik,
+          fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
+        const Am = void 0 !== this.vN ? [] : null,
+          am = this.root,
+          xm = mm.byteLength;
+        let wm = fm.constructor[Rm];
+        for (this.currentRefId = 0; Tm.offset < xm;) {
+          if (mm[Tm.offset] == hm) {
+            Tm.offset++, fm[Km]?.();
+            const hm = KT.number(mm, Tm),
+              Am = am.refs.get(hm);
+            Am ? (fm = Am, wm = fm.constructor[Rm], this.currentRefId = hm) : (console.error(`"refId" not found: ${hm}`, {
+              previousRef: fm,
               previousRefId: this.currentRefId
-            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(kk, Fk, yk));
+            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(mm, Tm, xm));
             continue
-          } - 1 !== lk(this, kk, Fk, Ik, Tk) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(kk, Fk, yk))
+          } - 1 !== wm(this, mm, Tm, fm, Am) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(mm, Tm, xm))
         }
-        return Ik[Kk]?.(), null !== this.resyncVisited && function(kk, Fk) {
-          kk.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : WI(kk, kk.state, new Set, Fk)
-        }(this, Tk), null !== Tk && this.sG?.(Tk), ik.garbageCollectDeletedRefs(), Tk
+        return fm[Km]?.(), null !== this.resyncVisited && function(mm, Tm) {
+          mm.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : uf(mm, mm.state, new Set, Tm)
+        }(this, Am), null !== Am && this.vN?.(Am), am.garbageCollectDeletedRefs(), Am
       }
-      decodeResync(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decodeResync(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           offset: 0
         };
         this.resyncVisited = new Map, this.resyncDamaged = !1;
         try {
-          return this.decode(kk, Fk)
+          return this.decode(mm, Tm)
         } finally {
           this.resyncVisited = null
         }
       }
-      skipCurrentStructure(kk, Fk, Ik) {
+      skipCurrentStructure(mm, Tm, fm) {
         null !== this.resyncVisited && (this.resyncDamaged = !0);
-        const Tk = {
-          offset: Fk.offset
+        const Am = {
+          offset: Tm.offset
         };
-        for (; Fk.offset < Ik && (kk[Fk.offset] !== Xk || (Tk.offset = Fk.offset + 1, !this.root.refs.has(KF.number(kk, Tk))));) Fk.offset++
+        for (; Tm.offset < fm && (mm[Tm.offset] !== hm || (Am.offset = Tm.offset + 1, !this.root.refs.has(KT.number(mm, Am))));) Tm.offset++
       }
-      getInstanceType(kk, Fk, Ik) {
-        let Xk;
-        if (213 === kk[Fk.offset]) {
-          Fk.offset++;
-          const Ik = KF.number(kk, Fk);
-          Xk = this.context.get(Ik)
+      getInstanceType(mm, Tm, fm) {
+        let hm;
+        if (213 === mm[Tm.offset]) {
+          Tm.offset++;
+          const fm = KT.number(mm, Tm);
+          hm = this.context.get(fm)
         }
-        return Xk || Ik
+        return hm || fm
       }
-      createInstanceOfType(kk) {
-        return kk.initializeForDecoder()
+      createInstanceOfType(mm) {
+        return mm.initializeForDecoder()
       }
-      removeChildRefs(kk, Fk) {
-        const Ik = "string" !== typeof kk[Hk],
-          Xk = kk[lk];
-        kk.forEach(((ik, yk) => {
-          Fk?.push({
-            ref: kk,
-            refId: Xk,
-            op: Tk.DELETE,
-            field: yk,
+      removeChildRefs(mm, Tm) {
+        const fm = "string" !== typeof mm[qm],
+          hm = mm[wm];
+        mm.forEach(((am, xm) => {
+          Tm?.push({
+            ref: mm,
+            refId: hm,
+            op: Am.DELETE,
+            field: xm,
             value: void 0,
-            previousValue: ik
-          }), Ik && this.root.removeRef(ik[lk])
+            previousValue: am
+          }), fm && this.root.removeRef(am[wm])
         }))
       }
     }
-    const hX = vX({
-        min: eX.float64(),
-        max: eX.float64(),
-        bits: eX.uint8(),
-        mode: eX.uint8()
+    const Wh = Sh({
+        min: qh.float64(),
+        max: qh.float64(),
+        bits: qh.uint8(),
+        mode: qh.uint8()
       }, "QuantizedDescriptor"),
-      rX = vX({
-        name: eX.string(),
-        type: eX.string(),
-        referencedType: eX.number(),
-        childPrimitive: eX.string(),
-        quantized: eX.ref(hX).optional()
+      Fh = Sh({
+        name: qh.string(),
+        type: qh.string(),
+        referencedType: qh.number(),
+        childPrimitive: qh.string(),
+        quantized: qh.ref(Wh).optional()
       }, "ReflectionField"),
-      DX = vX({
-        id: eX.number(),
-        extendsId: eX.number(),
-        fields: eX.array(rX)
+      mA = Sh({
+        id: qh.number(),
+        extendsId: qh.number(),
+        fields: qh.array(Fh)
       }, "ReflectionType"),
-      MX = vX({
-        types: eX.array(DX),
-        rootType: eX.number()
+      TA = Sh({
+        types: qh.array(mA),
+        rootType: qh.number()
       }, "Reflection");
 
-    function kT(kk) {
-      const Fk = kk.root,
-        Ik = Fk.callbacks,
-        Xk = new WeakMap;
-      let ik;
+    function fA(mm) {
+      const Tm = mm.root,
+        fm = Tm.callbacks,
+        hm = new WeakMap;
+      let am;
 
-      function yk(kk, Ik) {
-        let qk = Ik.instance?.constructor[Symbol.metadata] || kk,
-          Lk = Ik.instance && "function" === typeof Ik.instance.forEach || kk && !OX.is(kk);
-        if (qk && !Lk) {
-          const kk = function(kk, Tk, yk, ak) {
-            return ak && void 0 !== Ik.instance[Tk] && !Xk.has(ik) && yk(Ik.instance[Tk], void 0), Fk.addCallback(kk[lk], Tk, yk)
+      function xm(mm, fm) {
+        let im = fm.instance?.constructor[Symbol.metadata] || mm,
+          Rm = fm.instance && "function" === typeof fm.instance.forEach || mm && !Nh.is(mm);
+        if (im && !Rm) {
+          const mm = function(mm, Am, xm, Dm) {
+            return Dm && void 0 !== fm.instance[Am] && !hm.has(am) && xm(fm.instance[Am], void 0), Tm.addCallback(mm[wm], Am, xm)
           };
           return new Proxy({
-            listen: function(Fk, Tk) {
-              let yk = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-              if (Ik.instance) return kk(Ik.instance, Fk, Tk, yk);
+            listen: function(Tm, Am) {
+              let xm = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+              if (fm.instance) return mm(fm.instance, Tm, Am, xm);
               {
-                let lk = () => {};
-                return Ik.onInstanceAvailable(((Ik, ak) => {
-                  lk = kk(Ik, Fk, Tk, yk && ak && !Xk.has(ik))
-                })), () => lk()
+                let wm = () => {};
+                return fm.onInstanceAvailable(((fm, Dm) => {
+                  wm = mm(fm, Tm, Am, xm && Dm && !hm.has(am))
+                })), () => wm()
               }
             },
-            onChange: function(kk) {
-              return Fk.addCallback(Ik.instance[lk], Tk.REPLACE, kk)
+            onChange: function(mm) {
+              return Tm.addCallback(fm.instance[wm], Am.REPLACE, mm)
             },
-            bindTo: function(kk, Xk) {
-              return Xk || (Xk = Object.keys(qk).map((kk => qk[kk].name))), Fk.addCallback(Ik.instance[lk], Tk.REPLACE, (() => {
-                Xk.forEach((Fk => kk[Fk] = Ik.instance[Fk]))
+            bindTo: function(mm, hm) {
+              return hm || (hm = Object.keys(im).map((mm => im[mm].name))), Tm.addCallback(fm.instance[wm], Am.REPLACE, (() => {
+                hm.forEach((Tm => mm[Tm] = fm.instance[Tm]))
               }))
             }
           }, {
-            get(kk, Fk) {
-              const Xk = qk[qk[Fk]];
-              if (Xk) {
-                const kk = Ik.instance?.[Fk],
-                  Tk = Xk => {
-                    const Tk = ak(Ik.instance).listen(Fk, ((kk, Fk) => {
-                      Xk(kk, !1), Tk?.()
+            get(mm, Tm) {
+              const hm = im[im[Tm]];
+              if (hm) {
+                const mm = fm.instance?.[Tm],
+                  Am = hm => {
+                    const Am = Dm(fm.instance).listen(Tm, ((mm, Tm) => {
+                      hm(mm, !1), Am?.()
                     }), !1);
-                    void 0 !== kk?.[lk] && Xk(kk, !0)
+                    void 0 !== mm?.[wm] && hm(mm, !0)
                   };
-                return yk(Xk.type, {
-                  instance: void 0 !== kk?.[lk] && kk,
-                  parentInstance: Ik.instance,
-                  onInstanceAvailable: Tk
+                return xm(hm.type, {
+                  instance: void 0 !== mm?.[wm] && mm,
+                  parentInstance: fm.instance,
+                  onInstanceAvailable: Am
                 })
               }
-              return kk[Fk]
+              return mm[Tm]
             },
-            has: (kk, Fk) => void 0 !== qk[Fk],
-            set(kk, Fk, Ik) {
+            has: (mm, Tm) => void 0 !== im[Tm],
+            set(mm, Tm, fm) {
               throw new Error("not allowed")
             },
-            deleteProperty(kk, Fk) {
+            deleteProperty(mm, Tm) {
               throw new Error("not allowed")
             }
           })
         } {
-          const kk = function(kk, Ik, yk) {
-              return yk && kk.forEach(((kk, Fk) => Ik(kk, Fk))), Fk.addCallback(kk[lk], Tk.ADD, ((kk, Fk) => {
-                Xk.set(Ik, !0), ik = Ik, Ik(kk, Fk), Xk.delete(Ik), ik = void 0
+          const mm = function(mm, fm, xm) {
+              return xm && mm.forEach(((mm, Tm) => fm(mm, Tm))), Tm.addCallback(mm[wm], Am.ADD, ((mm, Tm) => {
+                hm.set(fm, !0), am = fm, fm(mm, Tm), hm.delete(fm), am = void 0
               }))
             },
-            yk = function(kk, Ik) {
-              return Fk.addCallback(kk[lk], Tk.DELETE, Ik)
+            xm = function(mm, fm) {
+              return Tm.addCallback(mm[wm], Am.DELETE, fm)
             },
-            ak = function(kk, Ik) {
-              return Fk.addCallback(kk[lk], Tk.REPLACE, Ik)
+            Dm = function(mm, fm) {
+              return Tm.addCallback(mm[wm], Am.REPLACE, fm)
             };
           return new Proxy({
-            mJ: function(Fk) {
-              let Tk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-              if (Ik.instance) return kk(Ik.instance, Fk, Tk && !Xk.has(ik));
-              if (Ik.onInstanceAvailable) {
-                let yk = () => {};
-                return Ik.onInstanceAvailable(((Ik, lk) => {
-                  yk = kk(Ik, Fk, Tk && lk && !Xk.has(ik))
-                })), () => yk()
+            pI: function(Tm) {
+              let Am = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+              if (fm.instance) return mm(fm.instance, Tm, Am && !hm.has(am));
+              if (fm.onInstanceAvailable) {
+                let xm = () => {};
+                return fm.onInstanceAvailable(((fm, wm) => {
+                  xm = mm(fm, Tm, Am && wm && !hm.has(am))
+                })), () => xm()
               }
             },
-            iG: function(kk) {
-              if (Ik.instance) return yk(Ik.instance, kk);
-              if (Ik.onInstanceAvailable) {
-                let Fk = () => {};
-                return Ik.onInstanceAvailable((Ik => {
-                  Fk = yk(Ik, kk)
-                })), () => Fk()
+            oN: function(mm) {
+              if (fm.instance) return xm(fm.instance, mm);
+              if (fm.onInstanceAvailable) {
+                let Tm = () => {};
+                return fm.onInstanceAvailable((fm => {
+                  Tm = xm(fm, mm)
+                })), () => Tm()
               }
             },
-            onChange: function(kk) {
-              if (Ik.instance) return ak(Ik.instance, kk);
-              if (Ik.onInstanceAvailable) {
-                let Fk = () => {};
-                return Ik.onInstanceAvailable((Ik => {
-                  Fk = ak(Ik, kk)
-                })), () => Fk()
+            onChange: function(mm) {
+              if (fm.instance) return Dm(fm.instance, mm);
+              if (fm.onInstanceAvailable) {
+                let Tm = () => {};
+                return fm.onInstanceAvailable((fm => {
+                  Tm = Dm(fm, mm)
+                })), () => Tm()
               }
             }
           }, {
-            get(kk, Fk) {
-              if (!kk[Fk]) throw new Error(`Can't access '${Fk}' through callback proxy. access the instance directly.`);
-              return kk[Fk]
+            get(mm, Tm) {
+              if (!mm[Tm]) throw new Error(`Can't access '${Tm}' through callback proxy. access the instance directly.`);
+              return mm[Tm]
             },
-            has: (kk, Fk) => void 0 !== kk[Fk],
-            set(kk, Fk, Ik) {
+            has: (mm, Tm) => void 0 !== mm[Tm],
+            set(mm, Tm, fm) {
               throw new Error("not allowed")
             },
-            deleteProperty(kk, Fk) {
+            deleteProperty(mm, Tm) {
               throw new Error("not allowed")
             }
           })
         }
       }
 
-      function ak(kk) {
-        return yk(void 0, {
-          instance: kk
+      function Dm(mm) {
+        return xm(void 0, {
+          instance: mm
         })
       }
-      return kk.sG = function(kk) {
-        const Fk = new Set;
-        for (let Xk = 0, ik = kk.length; Xk < ik; Xk++) {
-          const ik = kk[Xk],
-            yk = ik.refId,
-            ak = ik.ref,
-            qk = Ik[yk];
-          if (qk) {
-            if ((ik.op & Tk.DELETE) === Tk.DELETE && OX.isSchema(ik.previousValue)) {
-              const kk = Ik[ik.previousValue[lk]]?.[Tk.DELETE];
-              for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk]()
+      return mm.vN = function(mm) {
+        const Tm = new Set;
+        for (let hm = 0, am = mm.length; hm < am; hm++) {
+          const am = mm[hm],
+            xm = am.refId,
+            Dm = am.ref,
+            im = fm[xm];
+          if (im) {
+            if ((am.op & Am.DELETE) === Am.DELETE && Nh.isSchema(am.previousValue)) {
+              const mm = fm[am.previousValue[wm]]?.[Am.DELETE];
+              for (let Tm = mm?.length - 1; Tm >= 0; Tm--) mm[Tm]()
             }
-            if (OX.isSchema(ak)) {
-              if (!Fk.has(yk)) {
-                const kk = qk?.[Tk.REPLACE];
-                for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk]()
+            if (Nh.isSchema(Dm)) {
+              if (!Tm.has(xm)) {
+                const mm = im?.[Am.REPLACE];
+                for (let Tm = mm?.length - 1; Tm >= 0; Tm--) mm[Tm]()
               }
-              if (qk.hasOwnProperty(ik.field)) {
-                const kk = qk[ik.field];
-                for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ik.value, ik.previousValue)
+              if (im.hasOwnProperty(am.field)) {
+                const mm = im[am.field];
+                for (let Tm = mm?.length - 1; Tm >= 0; Tm--) mm[Tm](am.value, am.previousValue)
               }
             } else {
-              if ((ik.op & Tk.DELETE) === Tk.DELETE) {
-                if (void 0 !== ik.previousValue) {
-                  const kk = qk[Tk.DELETE];
-                  for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ik.previousValue, ik.dynamicIndex ?? ik.field)
+              if ((am.op & Am.DELETE) === Am.DELETE) {
+                if (void 0 !== am.previousValue) {
+                  const mm = im[Am.DELETE];
+                  for (let Tm = mm?.length - 1; Tm >= 0; Tm--) mm[Tm](am.previousValue, am.dynamicIndex ?? am.field)
                 }
-                if ((ik.op & Tk.ADD) === Tk.ADD) {
-                  const kk = qk[Tk.ADD];
-                  for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ik.value, ik.dynamicIndex ?? ik.field)
+                if ((am.op & Am.ADD) === Am.ADD) {
+                  const mm = im[Am.ADD];
+                  for (let Tm = mm?.length - 1; Tm >= 0; Tm--) mm[Tm](am.value, am.dynamicIndex ?? am.field)
                 }
-              } else if ((ik.op & Tk.ADD) === Tk.ADD && ik.previousValue !== ik.value) {
-                const kk = qk[Tk.ADD];
-                for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ik.value, ik.dynamicIndex ?? ik.field)
+              } else if ((am.op & Am.ADD) === Am.ADD && am.previousValue !== am.value) {
+                const mm = im[Am.ADD];
+                for (let Tm = mm?.length - 1; Tm >= 0; Tm--) mm[Tm](am.value, am.dynamicIndex ?? am.field)
               }
-              if (ik.value !== ik.previousValue && (void 0 !== ik.value || void 0 !== ik.previousValue)) {
-                const kk = qk[Tk.REPLACE];
-                for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ik.value, ik.dynamicIndex ?? ik.field)
+              if (am.value !== am.previousValue && (void 0 !== am.value || void 0 !== am.previousValue)) {
+                const mm = im[Am.REPLACE];
+                for (let Tm = mm?.length - 1; Tm >= 0; Tm--) mm[Tm](am.value, am.dynamicIndex ?? am.field)
               }
             }
-            Fk.add(yk)
+            Tm.add(xm)
           }
         }
-      }, ak
+      }, Dm
     }
 
-    function FT(kk, Fk) {
-      kk.sG = Fk
+    function hA(mm, Tm) {
+      mm.vN = Tm
     }
-    MX.encode = function(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    TA.encode = function(mm) {
+      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         offset: 0
       };
-      const Ik = kk.context,
-        Xk = new MX,
-        Tk = new dX(Xk),
-        ik = Ik.schemas.get(kk.state.constructor);
-      ik > 0 && (Xk.rootType = ik);
-      const yk = new Set,
-        lk = {},
-        ak = kk => {
-          if (void 0 === kk.extendsId || yk.has(kk.extendsId)) {
-            yk.add(kk.id), Xk.types.push(kk);
-            const Fk = lk[kk.id];
-            void 0 !== Fk && (delete lk[kk.id], Fk.forEach((kk => ak(kk))))
-          } else void 0 === lk[kk.extendsId] && (lk[kk.extendsId] = []), lk[kk.extendsId].push(kk)
+      const fm = mm.context,
+        hm = new TA,
+        Am = new vh(hm),
+        am = fm.schemas.get(mm.state.constructor);
+      am > 0 && (hm.rootType = am);
+      const xm = new Set,
+        wm = {},
+        Dm = mm => {
+          if (void 0 === mm.extendsId || xm.has(mm.extendsId)) {
+            xm.add(mm.id), hm.types.push(mm);
+            const Tm = wm[mm.id];
+            void 0 !== Tm && (delete wm[mm.id], Tm.forEach((mm => Dm(mm))))
+          } else void 0 === wm[mm.extendsId] && (wm[mm.extendsId] = []), wm[mm.extendsId].push(mm)
         };
-      Ik.schemas.forEach(((kk, Fk) => {
-        const Xk = new DX;
-        Xk.id = Number(kk);
-        const Tk = Object.getPrototypeOf(Fk);
-        Tk !== OX && (Xk.extendsId = Ik.schemas.get(Tk));
-        const ik = Fk[Symbol.metadata];
-        if (ik !== Tk[Symbol.metadata]) {
-          const kk = ik[vk] ?? -1;
-          for (let Fk = 0; Fk <= kk; Fk++) {
-            const kk = ik[Fk];
-            if (void 0 === kk) continue;
-            const Tk = kk.name;
-            if (!Object.prototype.hasOwnProperty.call(ik, Tk)) continue;
-            const yk = new rX;
-            let lk;
-            if (yk.name = Tk, "string" === typeof kk.type) lk = kk.type;
-            else if (UF(kk.type)) {
-              const Fk = kk.type.quantized;
-              lk = "quantized";
-              const Ik = new hX;
-              Ik.min = Fk.min, Ik.max = Fk.max, Ik.bits = Fk.bits, Ik.mode = Fk.wrap ? 1 : 0, yk.quantized = Ik
+      fm.schemas.forEach(((mm, Tm) => {
+        const hm = new mA;
+        hm.id = Number(mm);
+        const Am = Object.getPrototypeOf(Tm);
+        Am !== Nh && (hm.extendsId = fm.schemas.get(Am));
+        const am = Tm[Symbol.metadata];
+        if (am !== Am[Symbol.metadata]) {
+          const mm = am[Zm] ?? -1;
+          for (let Tm = 0; Tm <= mm; Tm++) {
+            const mm = am[Tm];
+            if (void 0 === mm) continue;
+            const Am = mm.name;
+            if (!Object.prototype.hasOwnProperty.call(am, Am)) continue;
+            const xm = new Fh;
+            let wm;
+            if (xm.name = Am, "string" === typeof mm.type) wm = mm.type;
+            else if (yT(mm.type)) {
+              const Tm = mm.type.quantized;
+              wm = "quantized";
+              const fm = new Wh;
+              fm.min = Tm.min, fm.max = Tm.max, fm.bits = Tm.bits, fm.mode = Tm.wrap ? 1 : 0, xm.quantized = fm
             } else {
-              let Fk;
-              OX.is(kk.type) ? (lk = "ref", Fk = kk.type) : (lk = Object.keys(kk.type)[0], "string" === typeof kk.type[lk] ? yk.childPrimitive = kk.type[lk] : Fk = kk.type[lk]), yk.referencedType = Fk ? Ik.getTypeId(Fk) : -1
+              let Tm;
+              Nh.is(mm.type) ? (wm = "ref", Tm = mm.type) : (wm = Object.keys(mm.type)[0], "string" === typeof mm.type[wm] ? xm.childPrimitive = mm.type[wm] : Tm = mm.type[wm]), xm.referencedType = Tm ? fm.getTypeId(Tm) : -1
             }
-            yk.type = lk, Xk.fields.push(yk)
+            xm.type = wm, hm.fields.push(xm)
           }
         }
-        ak(Xk)
+        Dm(hm)
       }));
-      for (const qk in lk) lk[qk].forEach((kk => Xk.types.push(kk)));
-      return Tk.encodeAll(Fk).slice(0, Fk.offset)
-    }, MX.decode = function(kk, Fk) {
-      const Ik = new MX;
-      new mX(Ik).decode(kk, Fk);
-      const Xk = new WF;
-      Ik.types.forEach((kk => {
-        const Fk = Xk.get(kk.extendsId) ?? OX,
-          Ik = class extends Fk {};
-        WF.register(Ik), Xk.add(Ik, kk.id)
+      for (const im in wm) wm[im].forEach((mm => hm.types.push(mm)));
+      return Am.encodeAll(Tm).slice(0, Tm.offset)
+    }, TA.decode = function(mm, Tm) {
+      const fm = new TA;
+      new gh(fm).decode(mm, Tm);
+      const hm = new lT;
+      fm.types.forEach((mm => {
+        const Tm = hm.get(mm.extendsId) ?? Nh,
+          fm = class extends Tm {};
+        lT.register(fm), hm.add(fm, mm.id)
       }), {});
-      Ik.types.forEach((kk => {
-        const Fk = Xk.get(kk.id),
-          Tk = mF.initialize(Fk),
-          ik = [];
-        let yk = kk;
+      fm.types.forEach((mm => {
+        const Tm = hm.get(mm.id),
+          Am = UT.initialize(Tm),
+          am = [];
+        let xm = mm;
         do {
-          ik.push(yk), yk = Ik.types.find((kk => kk.id === yk.extendsId))
-        } while (yk);
-        let lk = 0;
-        ik.reverse().forEach((kk => {
-          ((kk, Fk, Ik) => {
-            Fk.fields.forEach(((Fk, Tk) => {
-              const ik = Ik + Tk;
-              if (void 0 !== Fk.quantized) {
-                const Ik = Fk.quantized;
-                mF.addField(kk, ik, Fk.name, {
-                  quantized: RF({
-                    min: Ik.min,
-                    max: Ik.max,
-                    bits: Ik.bits,
-                    mode: 1 === Ik.mode ? "wrap" : "clamp"
+          am.push(xm), xm = fm.types.find((mm => mm.id === xm.extendsId))
+        } while (xm);
+        let wm = 0;
+        am.reverse().forEach((mm => {
+          ((mm, Tm, fm) => {
+            Tm.fields.forEach(((Tm, Am) => {
+              const am = fm + Am;
+              if (void 0 !== Tm.quantized) {
+                const fm = Tm.quantized;
+                UT.addField(mm, am, Tm.name, {
+                  quantized: HT({
+                    min: fm.min,
+                    max: fm.max,
+                    bits: fm.bits,
+                    mode: 1 === fm.mode ? "wrap" : "clamp"
                   })
                 })
-              } else if (void 0 !== Fk.referencedType) {
-                const Ik = Fk.type,
-                  Tk = Xk.get(Fk.referencedType) ?? Fk.childPrimitive;
-                "ref" === Ik ? mF.addField(kk, ik, Fk.name, Tk) : mF.addField(kk, ik, Fk.name, {
-                  [Ik]: Tk
+              } else if (void 0 !== Tm.referencedType) {
+                const fm = Tm.type,
+                  Am = hm.get(Tm.referencedType) ?? Tm.childPrimitive;
+                "ref" === fm ? UT.addField(mm, am, Tm.name, Am) : UT.addField(mm, am, Tm.name, {
+                  [fm]: Am
                 })
-              } else mF.addField(kk, ik, Fk.name, Fk.type)
+              } else UT.addField(mm, am, Tm.name, Tm.type)
             }))
-          })(Tk, kk, lk), lk += kk.fields.length
+          })(Am, mm, wm), wm += mm.fields.length
         }))
       }));
-      const Tk = new(Xk.get(Ik.rootType || 0));
-      return new mX(Tk, Xk)
-    }, MX.makeEncodable = function(kk) {
-      const Fk = kk[Symbol.metadata];
-      if (!Fk) return kk;
-      const Ik = Fk[vk];
-      if (void 0 === Ik) return kk;
-      for (let Xk = 0; Xk <= Ik; Xk++) {
-        const Ik = Fk[Xk];
-        Ik && mF.defineField(kk, Fk, Xk, Ik.name, Ik.type)
+      const Am = new(hm.get(fm.rootType || 0));
+      return new gh(Am, hm)
+    }, TA.makeEncodable = function(mm) {
+      const Tm = mm[Symbol.metadata];
+      if (!Tm) return mm;
+      const fm = Tm[Zm];
+      if (void 0 === fm) return mm;
+      for (let hm = 0; hm <= fm; hm++) {
+        const fm = Tm[hm];
+        fm && UT.defineField(mm, Tm, hm, fm.name, fm.type)
       }
-      return Object.prototype.hasOwnProperty.call(kk, zk) && delete kk[zk], kk
+      return Object.prototype.hasOwnProperty.call(mm, cm) && delete mm[cm], mm
     };
-    class IT {
-      Xe;
+    class AA {
+      JO;
       uniqueRefIds = new Set;
       isTriggering = !1;
-      constructor(kk) {
-        this.Xe = kk, this.Xe.sG = this.sG.bind(this)
+      constructor(mm) {
+        this.JO = mm, this.JO.vN = this.vN.bind(this)
       }
       get callbacks() {
-        return this.Xe.root.callbacks
+        return this.JO.root.callbacks
       }
       get state() {
-        return this.Xe.state
+        return this.JO.state
       }
-      addCallback(kk, Fk, Ik) {
-        return this.Xe.root.addCallback(kk, Fk, Ik)
+      addCallback(mm, Tm, fm) {
+        return this.JO.root.addCallback(mm, Tm, fm)
       }
-      addCallbackOrWaitCollectionAvailable(kk, Fk, Ik, Xk) {
-        let ik = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          yk = () => {};
-        const ak = () => yk(),
-          qk = kk[Fk];
-        if (qk && void 0 !== qk[lk]) return ik = ik && !1 === this.isTriggering, Ik === Tk.ADD && ik && qk.forEach(((kk, Fk) => {
-          Xk(kk, Fk)
-        })), this.addCallback(qk[lk], Ik, Xk);
+      addCallbackOrWaitCollectionAvailable(mm, Tm, fm, hm) {
+        let am = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          xm = () => {};
+        const Dm = () => xm(),
+          im = mm[Tm];
+        if (im && void 0 !== im[wm]) return am = am && !1 === this.isTriggering, fm === Am.ADD && am && im.forEach(((mm, Tm) => {
+          hm(mm, Tm)
+        })), this.addCallback(im[wm], fm, hm);
         {
-          let Tk;
-          return Tk = this.addCallback(kk[lk], Fk, ((kk, Fk) => {
-            null !== kk && void 0 !== kk && (Tk(), yk = this.addCallback(kk[lk], Ik, Xk))
-          })), yk = Tk, ak
+          let Am;
+          return Am = this.addCallback(mm[wm], Tm, ((mm, Tm) => {
+            null !== mm && void 0 !== mm && (Am(), xm = this.addCallback(mm[wm], fm, hm))
+          })), xm = Am, Dm
         }
       }
       listen() {
         return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.listenInstance(this.state, arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2]) : this.listenInstance(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2], arguments.length <= 3 ? void 0 : arguments[3])
       }
-      listenInstance(kk, Fk, Ik) {
-        let Xk = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        Xk = Xk && !1 === this.isTriggering;
-        const Tk = kk[Fk];
-        return Xk && null !== Tk && void 0 !== Tk && Ik(Tk, void 0), this.addCallback(kk[lk], Fk, Ik)
+      listenInstance(mm, Tm, fm) {
+        let hm = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        hm = hm && !1 === this.isTriggering;
+        const Am = mm[Tm];
+        return hm && null !== Am && void 0 !== Am && fm(Am, void 0), this.addCallback(mm[wm], Tm, fm)
       }
       onChange() {
         if (2 === arguments.length && "string" !== typeof(arguments.length <= 0 ? void 0 : arguments[0])) {
-          const kk = arguments.length <= 0 ? void 0 : arguments[0],
-            Fk = arguments.length <= 1 ? void 0 : arguments[1];
-          return this.addCallback(kk[lk], Tk.REPLACE, Fk)
+          const mm = arguments.length <= 0 ? void 0 : arguments[0],
+            Tm = arguments.length <= 1 ? void 0 : arguments[1];
+          return this.addCallback(mm[wm], Am.REPLACE, Tm)
         }
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Tk.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Tk.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Am.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Am.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      mJ() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Tk.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Tk.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
+      pI() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Am.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Am.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
       }
-      iG() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Tk.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Tk.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
+      oN() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Am.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Am.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      bindTo(kk, Fk, Ik) {
-        let Xk = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const ik = kk.constructor[Symbol.metadata];
-        Ik || (Ik = Object.keys(ik).filter((kk => !isNaN(Number(kk)))).map((kk => ik[kk].name)));
-        const yk = () => {
-          for (const Xk of Ik) {
-            const Ik = kk[Xk];
-            void 0 !== Ik && (Fk[Xk] = Ik)
+      bindTo(mm, Tm, fm) {
+        let hm = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const am = mm.constructor[Symbol.metadata];
+        fm || (fm = Object.keys(am).filter((mm => !isNaN(Number(mm)))).map((mm => am[mm].name)));
+        const xm = () => {
+          for (const hm of fm) {
+            const fm = mm[hm];
+            void 0 !== fm && (Tm[hm] = fm)
           }
         };
-        return Xk && yk(), this.addCallback(kk[lk], Tk.REPLACE, yk)
+        return hm && xm(), this.addCallback(mm[wm], Am.REPLACE, xm)
       }
-      sG(kk) {
+      vN(mm) {
         this.uniqueRefIds.clear(), this.isTriggering = !0;
-        for (let Fk = 0, Ik = kk.length; Fk < Ik; Fk++) {
-          const Ik = kk[Fk],
-            Xk = Ik.refId,
-            ik = Ik.ref,
-            yk = this.callbacks[Xk];
-          if (yk) {
-            if ((Ik.op & Tk.DELETE) === Tk.DELETE && OX.isSchema(Ik.previousValue)) {
-              const kk = Ik.previousValue[lk],
-                Fk = this.callbacks[kk]?.[Tk.DELETE];
-              if (Fk)
-                for (let Ik = Fk.length - 1; Ik >= 0; Ik--) try {
-                  Fk[Ik]()
-                } catch (yT) {
-                  console.error(yT)
+        for (let Tm = 0, fm = mm.length; Tm < fm; Tm++) {
+          const fm = mm[Tm],
+            hm = fm.refId,
+            am = fm.ref,
+            xm = this.callbacks[hm];
+          if (xm) {
+            if ((fm.op & Am.DELETE) === Am.DELETE && Nh.isSchema(fm.previousValue)) {
+              const mm = fm.previousValue[wm],
+                Tm = this.callbacks[mm]?.[Am.DELETE];
+              if (Tm)
+                for (let fm = Tm.length - 1; fm >= 0; fm--) try {
+                  Tm[fm]()
+                } catch (DA) {
+                  console.error(DA)
                 }
             }
-            if (OX.isSchema(ik)) {
-              if (!this.uniqueRefIds.has(Xk)) {
-                const kk = yk[Tk.REPLACE];
-                if (kk)
-                  for (let Fk = kk.length - 1; Fk >= 0; Fk--) try {
-                    kk[Fk]()
-                  } catch (yT) {
-                    console.error(yT)
+            if (Nh.isSchema(am)) {
+              if (!this.uniqueRefIds.has(hm)) {
+                const mm = xm[Am.REPLACE];
+                if (mm)
+                  for (let Tm = mm.length - 1; Tm >= 0; Tm--) try {
+                    mm[Tm]()
+                  } catch (DA) {
+                    console.error(DA)
                   }
               }
-              const kk = yk[Ik.field];
-              if (kk)
-                for (let Fk = kk.length - 1; Fk >= 0; Fk--) try {
-                  kk[Fk](Ik.value, Ik.previousValue)
-                } catch (yT) {
-                  console.error(yT)
+              const mm = xm[fm.field];
+              if (mm)
+                for (let Tm = mm.length - 1; Tm >= 0; Tm--) try {
+                  mm[Tm](fm.value, fm.previousValue)
+                } catch (DA) {
+                  console.error(DA)
                 }
             } else {
-              const kk = Ik.dynamicIndex ?? Ik.field;
-              if ((Ik.op & Tk.DELETE) === Tk.DELETE) {
-                if (void 0 !== Ik.previousValue) {
-                  const Fk = yk[Tk.DELETE];
-                  if (Fk)
-                    for (let Xk = Fk.length - 1; Xk >= 0; Xk--) try {
-                      Fk[Xk](Ik.previousValue, kk)
-                    } catch (yT) {
-                      console.error(yT)
+              const mm = fm.dynamicIndex ?? fm.field;
+              if ((fm.op & Am.DELETE) === Am.DELETE) {
+                if (void 0 !== fm.previousValue) {
+                  const Tm = xm[Am.DELETE];
+                  if (Tm)
+                    for (let hm = Tm.length - 1; hm >= 0; hm--) try {
+                      Tm[hm](fm.previousValue, mm)
+                    } catch (DA) {
+                      console.error(DA)
                     }
                 }
-                if ((Ik.op & Tk.ADD) === Tk.ADD) {
-                  const Fk = yk[Tk.ADD];
-                  if (Fk)
-                    for (let Xk = Fk.length - 1; Xk >= 0; Xk--) try {
-                      Fk[Xk](Ik.value, kk)
-                    } catch (yT) {
-                      console.error(yT)
+                if ((fm.op & Am.ADD) === Am.ADD) {
+                  const Tm = xm[Am.ADD];
+                  if (Tm)
+                    for (let hm = Tm.length - 1; hm >= 0; hm--) try {
+                      Tm[hm](fm.value, mm)
+                    } catch (DA) {
+                      console.error(DA)
                     }
                 }
-              } else if ((Ik.op & Tk.ADD) === Tk.ADD && Ik.previousValue !== Ik.value) {
-                const Fk = yk[Tk.ADD];
-                if (Fk)
-                  for (let Xk = Fk.length - 1; Xk >= 0; Xk--) try {
-                    Fk[Xk](Ik.value, kk)
-                  } catch (yT) {
-                    console.error(yT)
+              } else if ((fm.op & Am.ADD) === Am.ADD && fm.previousValue !== fm.value) {
+                const Tm = xm[Am.ADD];
+                if (Tm)
+                  for (let hm = Tm.length - 1; hm >= 0; hm--) try {
+                    Tm[hm](fm.value, mm)
+                  } catch (DA) {
+                    console.error(DA)
                   }
               }
-              if (Ik.value !== Ik.previousValue) {
-                const Fk = yk[Tk.REPLACE];
-                if (Fk)
-                  for (let Xk = Fk.length - 1; Xk >= 0; Xk--) try {
-                    Fk[Xk](kk, Ik.value)
-                  } catch (yT) {
-                    console.error(yT)
+              if (fm.value !== fm.previousValue) {
+                const Tm = xm[Am.REPLACE];
+                if (Tm)
+                  for (let hm = Tm.length - 1; hm >= 0; hm--) try {
+                    Tm[hm](mm, fm.value)
+                  } catch (DA) {
+                    console.error(DA)
                   }
               }
             }
-            this.uniqueRefIds.add(Xk)
+            this.uniqueRefIds.add(hm)
           }
         }
         this.isTriggering = !1
       }
     }
-    const XT = {
-      get(kk) {
-        if (kk instanceof mX) return new IT(kk);
-        if ("Xe" in kk.LJ) return new IT(kk.LJ.Xe);
+    const aA = {
+      get(mm) {
+        if (mm instanceof gh) return new AA(mm);
+        if ("JO" in mm.qV) return new AA(mm.qV.JO);
         throw new Error("Invalid room or decoder")
       },
-      getLegacy(kk) {
-        if (kk instanceof mX) return kT(kk);
-        if ("Xe" in kk.LJ) return kT(kk.LJ.Xe);
+      getLegacy(mm) {
+        if (mm instanceof gh) return fA(mm);
+        if ("JO" in mm.qV) return fA(mm.qV.JO);
         throw new Error("Invalid room or decoder")
       },
-      getRawChanges: (kk, Fk) => FT(kk, Fk)
+      getRawChanges: (mm, Tm) => hA(mm, Tm)
     };
-    class TT {
+    class xA {
       _free = [];
       _factory;
       _maxSize;
-      constructor(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this._factory = kk, this._maxSize = Fk.maxSize ?? 1 / 0;
-        const Ik = Fk.preallocate ?? 0;
-        for (let Xk = 0; Xk < Ik; Xk++) this._free.push(kk())
+      constructor(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this._factory = mm, this._maxSize = Tm.maxSize ?? 1 / 0;
+        const fm = Tm.preallocate ?? 0;
+        for (let hm = 0; hm < fm; hm++) this._free.push(mm())
       }
       acquire() {
         return this._free.length > 0 ? this._free.pop() : this._factory()
       }
-      release(kk) {
-        OX.reset(kk), this._free.length < this._maxSize && this._free.push(kk)
+      release(mm) {
+        Nh.reset(mm), this._free.length < this._maxSize && this._free.push(mm)
       }
       get size() {
         return this._free.length
       }
     }
 
-    function iT(kk) {
-      return new TT((() => new kk), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+    function wA(mm) {
+      return new xA((() => new mm), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
     }
-    VF("map", {
-      constructor: iX
-    }), VF("array", {
-      constructor: XX
-    }), VF("set", {
-      constructor: lX
-    }), VF("collection", {
-      constructor: yX
+    JT("map", {
+      constructor: wh
+    }), JT("array", {
+      constructor: ah
+    }), JT("set", {
+      constructor: ih
+    }), JT("collection", {
+      constructor: Dh
     })
   },
-  9070: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      __addDisposableResource: () => Uk,
-      __assign: () => ik,
-      __asyncDelegator: () => Sk,
-      __asyncGenerator: () => zk,
-      __asyncValues: () => vk,
-      __await: () => Vk,
-      __awaiter: () => ek,
-      __classPrivateFieldGet: () => uk,
-      __classPrivateFieldIn: () => Rk,
-      __classPrivateFieldSet: () => bk,
-      __createBinding: () => Hk,
-      __decorate: () => lk,
-      __disposeResources: () => Nk,
-      __esDecorate: () => qk,
-      __exportStar: () => Jk,
-      __extends: () => Tk,
-      __generator: () => wk,
-      __importDefault: () => pk,
-      __importStar: () => Gk,
-      __makeTemplateObject: () => Ek,
-      __metadata: () => jk,
-      __param: () => ak,
-      __propKey: () => tk,
-      __read: () => Pk,
-      __rest: () => yk,
-      __rewriteRelativeImportExtension: () => ck,
-      __runInitializers: () => Lk,
-      __setFunctionName: () => Zk,
-      __spread: () => Kk,
-      __spreadArray: () => sk,
-      __spreadArrays: () => Qk,
-      __values: () => xk,
-      default: () => Wk
+  9018: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      __addDisposableResource: () => Hm,
+      __assign: () => am,
+      __asyncDelegator: () => zm,
+      __asyncGenerator: () => cm,
+      __asyncValues: () => Zm,
+      __await: () => Jm,
+      __awaiter: () => Om,
+      __classPrivateFieldGet: () => Gm,
+      __classPrivateFieldIn: () => Pm,
+      __classPrivateFieldSet: () => Xm,
+      __createBinding: () => qm,
+      __decorate: () => wm,
+      __disposeResources: () => Cm,
+      __esDecorate: () => im,
+      __exportStar: () => jm,
+      __extends: () => Am,
+      __generator: () => Ym,
+      __importDefault: () => Nm,
+      __importStar: () => em,
+      __makeTemplateObject: () => km,
+      __metadata: () => om,
+      __param: () => Dm,
+      __propKey: () => pm,
+      __read: () => Im,
+      __rest: () => xm,
+      __rewriteRelativeImportExtension: () => rm,
+      __runInitializers: () => Rm,
+      __setFunctionName: () => Em,
+      __spread: () => Km,
+      __spreadArray: () => nm,
+      __spreadArrays: () => Qm,
+      __values: () => Vm,
+      default: () => sm
     });
-    var Xk = function(kk, Fk) {
-      return Xk = Object.setPrototypeOf || {
+    var hm = function(mm, Tm) {
+      return hm = Object.setPrototypeOf || {
         __proto__: []
       }
-      instanceof Array && function(kk, Fk) {
-        kk.__proto__ = Fk
-      } || function(kk, Fk) {
-        for (var Ik in Fk) Object.prototype.hasOwnProperty.call(Fk, Ik) && (kk[Ik] = Fk[Ik])
-      }, Xk(kk, Fk)
+      instanceof Array && function(mm, Tm) {
+        mm.__proto__ = Tm
+      } || function(mm, Tm) {
+        for (var fm in Tm) Object.prototype.hasOwnProperty.call(Tm, fm) && (mm[fm] = Tm[fm])
+      }, hm(mm, Tm)
     };
 
-    function Tk(kk, Fk) {
-      if ("function" !== typeof Fk && null !== Fk) throw new TypeError("Class extends value " + String(Fk) + " is not a constructor or null");
+    function Am(mm, Tm) {
+      if ("function" !== typeof Tm && null !== Tm) throw new TypeError("Class extends value " + String(Tm) + " is not a constructor or null");
 
-      function Ik() {
-        this.constructor = kk
+      function fm() {
+        this.constructor = mm
       }
-      Xk(kk, Fk), kk.prototype = null === Fk ? Object.create(Fk) : (Ik.prototype = Fk.prototype, new Ik)
+      hm(mm, Tm), mm.prototype = null === Tm ? Object.create(Tm) : (fm.prototype = Tm.prototype, new fm)
     }
-    var ik = function() {
-      return ik = Object.assign || function(kk) {
-        for (var Fk, Ik = 1, Xk = arguments.length; Ik < Xk; Ik++)
-          for (var Tk in Fk = arguments[Ik]) Object.prototype.hasOwnProperty.call(Fk, Tk) && (kk[Tk] = Fk[Tk]);
-        return kk
-      }, ik.apply(this, arguments)
+    var am = function() {
+      return am = Object.assign || function(mm) {
+        for (var Tm, fm = 1, hm = arguments.length; fm < hm; fm++)
+          for (var Am in Tm = arguments[fm]) Object.prototype.hasOwnProperty.call(Tm, Am) && (mm[Am] = Tm[Am]);
+        return mm
+      }, am.apply(this, arguments)
     };
 
-    function yk(kk, Fk) {
-      var Ik = {};
-      for (var Xk in kk) Object.prototype.hasOwnProperty.call(kk, Xk) && Fk.indexOf(Xk) < 0 && (Ik[Xk] = kk[Xk]);
-      if (null != kk && "function" === typeof Object.getOwnPropertySymbols) {
-        var Tk = 0;
-        for (Xk = Object.getOwnPropertySymbols(kk); Tk < Xk.length; Tk++) Fk.indexOf(Xk[Tk]) < 0 && Object.prototype.propertyIsEnumerable.call(kk, Xk[Tk]) && (Ik[Xk[Tk]] = kk[Xk[Tk]])
+    function xm(mm, Tm) {
+      var fm = {};
+      for (var hm in mm) Object.prototype.hasOwnProperty.call(mm, hm) && Tm.indexOf(hm) < 0 && (fm[hm] = mm[hm]);
+      if (null != mm && "function" === typeof Object.getOwnPropertySymbols) {
+        var Am = 0;
+        for (hm = Object.getOwnPropertySymbols(mm); Am < hm.length; Am++) Tm.indexOf(hm[Am]) < 0 && Object.prototype.propertyIsEnumerable.call(mm, hm[Am]) && (fm[hm[Am]] = mm[hm[Am]])
       }
-      return Ik
+      return fm
     }
 
-    function lk(kk, Fk, Ik, Xk) {
-      var Tk, ik = arguments.length,
-        yk = ik < 3 ? Fk : null === Xk ? Xk = Object.getOwnPropertyDescriptor(Fk, Ik) : Xk;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) yk = Reflect.decorate(kk, Fk, Ik, Xk);
+    function wm(mm, Tm, fm, hm) {
+      var Am, am = arguments.length,
+        xm = am < 3 ? Tm : null === hm ? hm = Object.getOwnPropertyDescriptor(Tm, fm) : hm;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) xm = Reflect.decorate(mm, Tm, fm, hm);
       else
-        for (var lk = kk.length - 1; lk >= 0; lk--)(Tk = kk[lk]) && (yk = (ik < 3 ? Tk(yk) : ik > 3 ? Tk(Fk, Ik, yk) : Tk(Fk, Ik)) || yk);
-      return ik > 3 && yk && Object.defineProperty(Fk, Ik, yk), yk
+        for (var wm = mm.length - 1; wm >= 0; wm--)(Am = mm[wm]) && (xm = (am < 3 ? Am(xm) : am > 3 ? Am(Tm, fm, xm) : Am(Tm, fm)) || xm);
+      return am > 3 && xm && Object.defineProperty(Tm, fm, xm), xm
     }
 
-    function ak(kk, Fk) {
-      return function(Ik, Xk) {
-        Fk(Ik, Xk, kk)
+    function Dm(mm, Tm) {
+      return function(fm, hm) {
+        Tm(fm, hm, mm)
       }
     }
 
-    function qk(kk, Fk, Ik, Xk, Tk, ik) {
-      function yk(kk) {
-        if (void 0 !== kk && "function" !== typeof kk) throw new TypeError("Function expected");
-        return kk
+    function im(mm, Tm, fm, hm, Am, am) {
+      function xm(mm) {
+        if (void 0 !== mm && "function" !== typeof mm) throw new TypeError("Function expected");
+        return mm
       }
-      for (var lk, ak = Xk.kind, qk = "getter" === ak ? "get" : "setter" === ak ? "set" : "value", Lk = !Fk && kk ? Xk.static ? kk : kk.prototype : null, tk = Fk || (Lk ? Object.getOwnPropertyDescriptor(Lk, Xk.name) : {}), Zk = !1, jk = Ik.length - 1; jk >= 0; jk--) {
-        var ek = {};
-        for (var wk in Xk) ek[wk] = "access" === wk ? {} : Xk[wk];
-        for (var wk in Xk.access) ek.access[wk] = Xk.access[wk];
-        ek.addInitializer = function(kk) {
-          if (Zk) throw new TypeError("Cannot add initializers after decoration has completed");
-          ik.push(yk(kk || null))
+      for (var wm, Dm = hm.kind, im = "getter" === Dm ? "get" : "setter" === Dm ? "set" : "value", Rm = !Tm && mm ? hm.static ? mm : mm.prototype : null, pm = Tm || (Rm ? Object.getOwnPropertyDescriptor(Rm, hm.name) : {}), Em = !1, om = fm.length - 1; om >= 0; om--) {
+        var Om = {};
+        for (var Ym in hm) Om[Ym] = "access" === Ym ? {} : hm[Ym];
+        for (var Ym in hm.access) Om.access[Ym] = hm.access[Ym];
+        Om.addInitializer = function(mm) {
+          if (Em) throw new TypeError("Cannot add initializers after decoration has completed");
+          am.push(xm(mm || null))
         };
-        var Hk = (0, Ik[jk])("accessor" === ak ? {
-          get: tk.get,
-          set: tk.set
-        } : tk[qk], ek);
-        if ("accessor" === ak) {
-          if (void 0 === Hk) continue;
-          if (null === Hk || "object" !== typeof Hk) throw new TypeError("Object expected");
-          (lk = yk(Hk.get)) && (tk.get = lk), (lk = yk(Hk.set)) && (tk.set = lk), (lk = yk(Hk.init)) && Tk.unshift(lk)
-        } else(lk = yk(Hk)) && ("field" === ak ? Tk.unshift(lk) : tk[qk] = lk)
+        var qm = (0, fm[om])("accessor" === Dm ? {
+          get: pm.get,
+          set: pm.set
+        } : pm[im], Om);
+        if ("accessor" === Dm) {
+          if (void 0 === qm) continue;
+          if (null === qm || "object" !== typeof qm) throw new TypeError("Object expected");
+          (wm = xm(qm.get)) && (pm.get = wm), (wm = xm(qm.set)) && (pm.set = wm), (wm = xm(qm.init)) && Am.unshift(wm)
+        } else(wm = xm(qm)) && ("field" === Dm ? Am.unshift(wm) : pm[im] = wm)
       }
-      Lk && Object.defineProperty(Lk, Xk.name, tk), Zk = !0
+      Rm && Object.defineProperty(Rm, hm.name, pm), Em = !0
     }
 
-    function Lk(kk, Fk, Ik) {
-      for (var Xk = arguments.length > 2, Tk = 0; Tk < Fk.length; Tk++) Ik = Xk ? Fk[Tk].call(kk, Ik) : Fk[Tk].call(kk);
-      return Xk ? Ik : void 0
+    function Rm(mm, Tm, fm) {
+      for (var hm = arguments.length > 2, Am = 0; Am < Tm.length; Am++) fm = hm ? Tm[Am].call(mm, fm) : Tm[Am].call(mm);
+      return hm ? fm : void 0
     }
 
-    function tk(kk) {
-      return "symbol" === typeof kk ? kk : "".concat(kk)
+    function pm(mm) {
+      return "symbol" === typeof mm ? mm : "".concat(mm)
     }
 
-    function Zk(kk, Fk, Ik) {
-      return "symbol" === typeof Fk && (Fk = Fk.description ? "[".concat(Fk.description, "]") : ""), Object.defineProperty(kk, "name", {
+    function Em(mm, Tm, fm) {
+      return "symbol" === typeof Tm && (Tm = Tm.description ? "[".concat(Tm.description, "]") : ""), Object.defineProperty(mm, "name", {
         configurable: !0,
-        value: Ik ? "".concat(Ik, " ", Fk) : Fk
+        value: fm ? "".concat(fm, " ", Tm) : Tm
       })
     }
 
-    function jk(kk, Fk) {
-      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(kk, Fk)
+    function om(mm, Tm) {
+      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(mm, Tm)
     }
 
-    function ek(kk, Fk, Ik, Xk) {
-      return new(Ik || (Ik = Promise))((function(Tk, ik) {
-        function yk(kk) {
+    function Om(mm, Tm, fm, hm) {
+      return new(fm || (fm = Promise))((function(Am, am) {
+        function xm(mm) {
           try {
-            ak(Xk.next(kk))
-          } catch (Fk) {
-            ik(Fk)
+            Dm(hm.next(mm))
+          } catch (Tm) {
+            am(Tm)
           }
         }
 
-        function lk(kk) {
+        function wm(mm) {
           try {
-            ak(Xk.throw(kk))
-          } catch (Fk) {
-            ik(Fk)
+            Dm(hm.throw(mm))
+          } catch (Tm) {
+            am(Tm)
           }
         }
 
-        function ak(kk) {
-          var Fk;
-          kk.done ? Tk(kk.value) : (Fk = kk.value, Fk instanceof Ik ? Fk : new Ik((function(kk) {
-            kk(Fk)
-          }))).then(yk, lk)
+        function Dm(mm) {
+          var Tm;
+          mm.done ? Am(mm.value) : (Tm = mm.value, Tm instanceof fm ? Tm : new fm((function(mm) {
+            mm(Tm)
+          }))).then(xm, wm)
         }
-        ak((Xk = Xk.apply(kk, Fk || [])).next())
+        Dm((hm = hm.apply(mm, Tm || [])).next())
       }))
     }
 
-    function wk(kk, Fk) {
-      var Ik, Xk, Tk, ik = {
+    function Ym(mm, Tm) {
+      var fm, hm, Am, am = {
           label: 0,
           sent: function() {
-            if (1 & Tk[0]) throw Tk[1];
-            return Tk[1]
+            if (1 & Am[0]) throw Am[1];
+            return Am[1]
           },
           trys: [],
           ops: []
         },
-        yk = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
-      return yk.next = lk(0), yk.throw = lk(1), yk.return = lk(2), "function" === typeof Symbol && (yk[Symbol.iterator] = function() {
+        xm = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
+      return xm.next = wm(0), xm.throw = wm(1), xm.return = wm(2), "function" === typeof Symbol && (xm[Symbol.iterator] = function() {
         return this
-      }), yk;
+      }), xm;
 
-      function lk(lk) {
-        return function(ak) {
-          return function(lk) {
-            if (Ik) throw new TypeError("Generator is already executing.");
-            for (; yk && (yk = 0, lk[0] && (ik = 0)), ik;) try {
-              if (Ik = 1, Xk && (Tk = 2 & lk[0] ? Xk.return : lk[0] ? Xk.throw || ((Tk = Xk.return) && Tk.call(Xk), 0) : Xk.next) && !(Tk = Tk.call(Xk, lk[1])).done) return Tk;
-              switch (Xk = 0, Tk && (lk = [2 & lk[0], Tk.value]), lk[0]) {
+      function wm(wm) {
+        return function(Dm) {
+          return function(wm) {
+            if (fm) throw new TypeError("Generator is already executing.");
+            for (; xm && (xm = 0, wm[0] && (am = 0)), am;) try {
+              if (fm = 1, hm && (Am = 2 & wm[0] ? hm.return : wm[0] ? hm.throw || ((Am = hm.return) && Am.call(hm), 0) : hm.next) && !(Am = Am.call(hm, wm[1])).done) return Am;
+              switch (hm = 0, Am && (wm = [2 & wm[0], Am.value]), wm[0]) {
                 case 0:
                 case 1:
-                  Tk = lk;
+                  Am = wm;
                   break;
                 case 4:
-                  return ik.label++, {
-                    value: lk[1],
+                  return am.label++, {
+                    value: wm[1],
                     done: !1
                   };
                 case 5:
-                  ik.label++, Xk = lk[1], lk = [0];
+                  am.label++, hm = wm[1], wm = [0];
                   continue;
                 case 7:
-                  lk = ik.ops.pop(), ik.trys.pop();
+                  wm = am.ops.pop(), am.trys.pop();
                   continue;
                 default:
-                  if (!(Tk = (Tk = ik.trys).length > 0 && Tk[Tk.length - 1]) && (6 === lk[0] || 2 === lk[0])) {
-                    ik = 0;
+                  if (!(Am = (Am = am.trys).length > 0 && Am[Am.length - 1]) && (6 === wm[0] || 2 === wm[0])) {
+                    am = 0;
                     continue
                   }
-                  if (3 === lk[0] && (!Tk || lk[1] > Tk[0] && lk[1] < Tk[3])) {
-                    ik.label = lk[1];
+                  if (3 === wm[0] && (!Am || wm[1] > Am[0] && wm[1] < Am[3])) {
+                    am.label = wm[1];
                     break
                   }
-                  if (6 === lk[0] && ik.label < Tk[1]) {
-                    ik.label = Tk[1], Tk = lk;
+                  if (6 === wm[0] && am.label < Am[1]) {
+                    am.label = Am[1], Am = wm;
                     break
                   }
-                  if (Tk && ik.label < Tk[2]) {
-                    ik.label = Tk[2], ik.ops.push(lk);
+                  if (Am && am.label < Am[2]) {
+                    am.label = Am[2], am.ops.push(wm);
                     break
                   }
-                  Tk[2] && ik.ops.pop(), ik.trys.pop();
+                  Am[2] && am.ops.pop(), am.trys.pop();
                   continue
               }
-              lk = Fk.call(kk, ik)
-            } catch (ak) {
-              lk = [6, ak], Xk = 0
+              wm = Tm.call(mm, am)
+            } catch (Dm) {
+              wm = [6, Dm], hm = 0
             } finally {
-              Ik = Tk = 0
+              fm = Am = 0
             }
-            if (5 & lk[0]) throw lk[1];
+            if (5 & wm[0]) throw wm[1];
             return {
-              value: lk[0] ? lk[1] : void 0,
+              value: wm[0] ? wm[1] : void 0,
               done: !0
             }
-          }([lk, ak])
+          }([wm, Dm])
         }
       }
     }
-    var Hk = Object.create ? function(kk, Fk, Ik, Xk) {
-      void 0 === Xk && (Xk = Ik);
-      var Tk = Object.getOwnPropertyDescriptor(Fk, Ik);
-      Tk && !("get" in Tk ? !Fk.__esModule : Tk.writable || Tk.configurable) || (Tk = {
+    var qm = Object.create ? function(mm, Tm, fm, hm) {
+      void 0 === hm && (hm = fm);
+      var Am = Object.getOwnPropertyDescriptor(Tm, fm);
+      Am && !("get" in Am ? !Tm.__esModule : Am.writable || Am.configurable) || (Am = {
         enumerable: !0,
         get: function() {
-          return Fk[Ik]
+          return Tm[fm]
         }
-      }), Object.defineProperty(kk, Xk, Tk)
-    } : function(kk, Fk, Ik, Xk) {
-      void 0 === Xk && (Xk = Ik), kk[Xk] = Fk[Ik]
+      }), Object.defineProperty(mm, hm, Am)
+    } : function(mm, Tm, fm, hm) {
+      void 0 === hm && (hm = fm), mm[hm] = Tm[fm]
     };
 
-    function Jk(kk, Fk) {
-      for (var Ik in kk) "default" === Ik || Object.prototype.hasOwnProperty.call(Fk, Ik) || Hk(Fk, kk, Ik)
+    function jm(mm, Tm) {
+      for (var fm in mm) "default" === fm || Object.prototype.hasOwnProperty.call(Tm, fm) || qm(Tm, mm, fm)
     }
 
-    function xk(kk) {
-      var Fk = "function" === typeof Symbol && Symbol.iterator,
-        Ik = Fk && kk[Fk],
-        Xk = 0;
-      if (Ik) return Ik.call(kk);
-      if (kk && "number" === typeof kk.length) return {
+    function Vm(mm) {
+      var Tm = "function" === typeof Symbol && Symbol.iterator,
+        fm = Tm && mm[Tm],
+        hm = 0;
+      if (fm) return fm.call(mm);
+      if (mm && "number" === typeof mm.length) return {
         next: function() {
-          return kk && Xk >= kk.length && (kk = void 0), {
-            value: kk && kk[Xk++],
-            done: !kk
+          return mm && hm >= mm.length && (mm = void 0), {
+            value: mm && mm[hm++],
+            done: !mm
           }
         }
       };
-      throw new TypeError(Fk ? "Object is not iterable." : "Symbol.iterator is not defined.")
+      throw new TypeError(Tm ? "Object is not iterable." : "Symbol.iterator is not defined.")
     }
 
-    function Pk(kk, Fk) {
-      var Ik = "function" === typeof Symbol && kk[Symbol.iterator];
-      if (!Ik) return kk;
-      var Xk, Tk, ik = Ik.call(kk),
-        yk = [];
+    function Im(mm, Tm) {
+      var fm = "function" === typeof Symbol && mm[Symbol.iterator];
+      if (!fm) return mm;
+      var hm, Am, am = fm.call(mm),
+        xm = [];
       try {
         for (;
-          (void 0 === Fk || Fk-- > 0) && !(Xk = ik.next()).done;) yk.push(Xk.value)
-      } catch (lk) {
-        Tk = {
-          error: lk
+          (void 0 === Tm || Tm-- > 0) && !(hm = am.next()).done;) xm.push(hm.value)
+      } catch (wm) {
+        Am = {
+          error: wm
         }
       } finally {
         try {
-          Xk && !Xk.done && (Ik = ik.return) && Ik.call(ik)
+          hm && !hm.done && (fm = am.return) && fm.call(am)
         } finally {
-          if (Tk) throw Tk.error
+          if (Am) throw Am.error
         }
       }
-      return yk
+      return xm
     }
 
-    function Kk() {
-      for (var kk = [], Fk = 0; Fk < arguments.length; Fk++) kk = kk.concat(Pk(arguments[Fk]));
-      return kk
+    function Km() {
+      for (var mm = [], Tm = 0; Tm < arguments.length; Tm++) mm = mm.concat(Im(arguments[Tm]));
+      return mm
     }
 
-    function Qk() {
-      for (var kk = 0, Fk = 0, Ik = arguments.length; Fk < Ik; Fk++) kk += arguments[Fk].length;
-      var Xk = Array(kk),
-        Tk = 0;
-      for (Fk = 0; Fk < Ik; Fk++)
-        for (var ik = arguments[Fk], yk = 0, lk = ik.length; yk < lk; yk++, Tk++) Xk[Tk] = ik[yk];
-      return Xk
+    function Qm() {
+      for (var mm = 0, Tm = 0, fm = arguments.length; Tm < fm; Tm++) mm += arguments[Tm].length;
+      var hm = Array(mm),
+        Am = 0;
+      for (Tm = 0; Tm < fm; Tm++)
+        for (var am = arguments[Tm], xm = 0, wm = am.length; xm < wm; xm++, Am++) hm[Am] = am[xm];
+      return hm
     }
 
-    function sk(kk, Fk, Ik) {
-      if (Ik || 2 === arguments.length)
-        for (var Xk, Tk = 0, ik = Fk.length; Tk < ik; Tk++) !Xk && Tk in Fk || (Xk || (Xk = Array.prototype.slice.call(Fk, 0, Tk)), Xk[Tk] = Fk[Tk]);
-      return kk.concat(Xk || Array.prototype.slice.call(Fk))
+    function nm(mm, Tm, fm) {
+      if (fm || 2 === arguments.length)
+        for (var hm, Am = 0, am = Tm.length; Am < am; Am++) !hm && Am in Tm || (hm || (hm = Array.prototype.slice.call(Tm, 0, Am)), hm[Am] = Tm[Am]);
+      return mm.concat(hm || Array.prototype.slice.call(Tm))
     }
 
-    function Vk(kk) {
-      return this instanceof Vk ? (this.v = kk, this) : new Vk(kk)
+    function Jm(mm) {
+      return this instanceof Jm ? (this.v = mm, this) : new Jm(mm)
     }
 
-    function zk(kk, Fk, Ik) {
+    function cm(mm, Tm, fm) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var Xk, Tk = Ik.apply(kk, Fk || []),
-        ik = [];
-      return Xk = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), yk("next"), yk("throw"), yk("return", (function(kk) {
-        return function(Fk) {
-          return Promise.resolve(Fk).then(kk, qk)
+      var hm, Am = fm.apply(mm, Tm || []),
+        am = [];
+      return hm = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), xm("next"), xm("throw"), xm("return", (function(mm) {
+        return function(Tm) {
+          return Promise.resolve(Tm).then(mm, im)
         }
-      })), Xk[Symbol.asyncIterator] = function() {
+      })), hm[Symbol.asyncIterator] = function() {
         return this
-      }, Xk;
+      }, hm;
 
-      function yk(kk, Fk) {
-        Tk[kk] && (Xk[kk] = function(Fk) {
-          return new Promise((function(Ik, Xk) {
-            ik.push([kk, Fk, Ik, Xk]) > 1 || lk(kk, Fk)
+      function xm(mm, Tm) {
+        Am[mm] && (hm[mm] = function(Tm) {
+          return new Promise((function(fm, hm) {
+            am.push([mm, Tm, fm, hm]) > 1 || wm(mm, Tm)
           }))
-        }, Fk && (Xk[kk] = Fk(Xk[kk])))
+        }, Tm && (hm[mm] = Tm(hm[mm])))
       }
 
-      function lk(kk, Fk) {
+      function wm(mm, Tm) {
         try {
-          (Ik = Tk[kk](Fk)).value instanceof Vk ? Promise.resolve(Ik.value.v).then(ak, qk) : Lk(ik[0][2], Ik)
-        } catch (Xk) {
-          Lk(ik[0][3], Xk)
+          (fm = Am[mm](Tm)).value instanceof Jm ? Promise.resolve(fm.value.v).then(Dm, im) : Rm(am[0][2], fm)
+        } catch (hm) {
+          Rm(am[0][3], hm)
         }
-        var Ik
+        var fm
       }
 
-      function ak(kk) {
-        lk("next", kk)
+      function Dm(mm) {
+        wm("next", mm)
       }
 
-      function qk(kk) {
-        lk("throw", kk)
+      function im(mm) {
+        wm("throw", mm)
       }
 
-      function Lk(kk, Fk) {
-        kk(Fk), ik.shift(), ik.length && lk(ik[0][0], ik[0][1])
+      function Rm(mm, Tm) {
+        mm(Tm), am.shift(), am.length && wm(am[0][0], am[0][1])
       }
     }
 
-    function Sk(kk) {
-      var Fk, Ik;
-      return Fk = {}, Xk("next"), Xk("throw", (function(kk) {
-        throw kk
-      })), Xk("return"), Fk[Symbol.iterator] = function() {
+    function zm(mm) {
+      var Tm, fm;
+      return Tm = {}, hm("next"), hm("throw", (function(mm) {
+        throw mm
+      })), hm("return"), Tm[Symbol.iterator] = function() {
         return this
-      }, Fk;
+      }, Tm;
 
-      function Xk(Xk, Tk) {
-        Fk[Xk] = kk[Xk] ? function(Fk) {
-          return (Ik = !Ik) ? {
-            value: Vk(kk[Xk](Fk)),
+      function hm(hm, Am) {
+        Tm[hm] = mm[hm] ? function(Tm) {
+          return (fm = !fm) ? {
+            value: Jm(mm[hm](Tm)),
             done: !1
-          } : Tk ? Tk(Fk) : Fk
-        } : Tk
+          } : Am ? Am(Tm) : Tm
+        } : Am
       }
     }
 
-    function vk(kk) {
+    function Zm(mm) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var Fk, Ik = kk[Symbol.asyncIterator];
-      return Ik ? Ik.call(kk) : (kk = xk(kk), Fk = {}, Xk("next"), Xk("throw"), Xk("return"), Fk[Symbol.asyncIterator] = function() {
+      var Tm, fm = mm[Symbol.asyncIterator];
+      return fm ? fm.call(mm) : (mm = Vm(mm), Tm = {}, hm("next"), hm("throw"), hm("return"), Tm[Symbol.asyncIterator] = function() {
         return this
-      }, Fk);
+      }, Tm);
 
-      function Xk(Ik) {
-        Fk[Ik] = kk[Ik] && function(Fk) {
-          return new Promise((function(Xk, Tk) {
-            (function(kk, Fk, Ik, Xk) {
-              Promise.resolve(Xk).then((function(Fk) {
-                kk({
-                  value: Fk,
-                  done: Ik
+      function hm(fm) {
+        Tm[fm] = mm[fm] && function(Tm) {
+          return new Promise((function(hm, Am) {
+            (function(mm, Tm, fm, hm) {
+              Promise.resolve(hm).then((function(Tm) {
+                mm({
+                  value: Tm,
+                  done: fm
                 })
-              }), Fk)
-            })(Xk, Tk, (Fk = kk[Ik](Fk)).done, Fk.value)
+              }), Tm)
+            })(hm, Am, (Tm = mm[fm](Tm)).done, Tm.value)
           }))
         }
       }
     }
 
-    function Ek(kk, Fk) {
-      return Object.defineProperty ? Object.defineProperty(kk, "raw", {
-        value: Fk
-      }) : kk.raw = Fk, kk
+    function km(mm, Tm) {
+      return Object.defineProperty ? Object.defineProperty(mm, "raw", {
+        value: Tm
+      }) : mm.raw = Tm, mm
     }
-    var Ok = Object.create ? function(kk, Fk) {
-        Object.defineProperty(kk, "default", {
+    var bm = Object.create ? function(mm, Tm) {
+        Object.defineProperty(mm, "default", {
           enumerable: !0,
-          value: Fk
+          value: Tm
         })
-      } : function(kk, Fk) {
-        kk.default = Fk
+      } : function(mm, Tm) {
+        mm.default = Tm
       },
-      nk = function(kk) {
-        return nk = Object.getOwnPropertyNames || function(kk) {
-          var Fk = [];
-          for (var Ik in kk) Object.prototype.hasOwnProperty.call(kk, Ik) && (Fk[Fk.length] = Ik);
-          return Fk
-        }, nk(kk)
+      Sm = function(mm) {
+        return Sm = Object.getOwnPropertyNames || function(mm) {
+          var Tm = [];
+          for (var fm in mm) Object.prototype.hasOwnProperty.call(mm, fm) && (Tm[Tm.length] = fm);
+          return Tm
+        }, Sm(mm)
       };
 
-    function Gk(kk) {
-      if (kk && kk.__esModule) return kk;
-      var Fk = {};
-      if (null != kk)
-        for (var Ik = nk(kk), Xk = 0; Xk < Ik.length; Xk++) "default" !== Ik[Xk] && Hk(Fk, kk, Ik[Xk]);
-      return Ok(Fk, kk), Fk
+    function em(mm) {
+      if (mm && mm.__esModule) return mm;
+      var Tm = {};
+      if (null != mm)
+        for (var fm = Sm(mm), hm = 0; hm < fm.length; hm++) "default" !== fm[hm] && qm(Tm, mm, fm[hm]);
+      return bm(Tm, mm), Tm
     }
 
-    function pk(kk) {
-      return kk && kk.__esModule ? kk : {
-        default: kk
+    function Nm(mm) {
+      return mm && mm.__esModule ? mm : {
+        default: mm
       }
     }
 
-    function uk(kk, Fk, Ik, Xk) {
-      if ("a" === Ik && !Xk) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof Fk ? kk !== Fk || !Xk : !Fk.has(kk)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === Ik ? Xk : "a" === Ik ? Xk.call(kk) : Xk ? Xk.value : Fk.get(kk)
+    function Gm(mm, Tm, fm, hm) {
+      if ("a" === fm && !hm) throw new TypeError("Private accessor was defined without a getter");
+      if ("function" === typeof Tm ? mm !== Tm || !hm : !Tm.has(mm)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+      return "m" === fm ? hm : "a" === fm ? hm.call(mm) : hm ? hm.value : Tm.get(mm)
     }
 
-    function bk(kk, Fk, Ik, Xk, Tk) {
-      if ("m" === Xk) throw new TypeError("Private method is not writable");
-      if ("a" === Xk && !Tk) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof Fk ? kk !== Fk || !Tk : !Fk.has(kk)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === Xk ? Tk.call(kk, Ik) : Tk ? Tk.value = Ik : Fk.set(kk, Ik), Ik
+    function Xm(mm, Tm, fm, hm, Am) {
+      if ("m" === hm) throw new TypeError("Private method is not writable");
+      if ("a" === hm && !Am) throw new TypeError("Private accessor was defined without a setter");
+      if ("function" === typeof Tm ? mm !== Tm || !Am : !Tm.has(mm)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+      return "a" === hm ? Am.call(mm, fm) : Am ? Am.value = fm : Tm.set(mm, fm), fm
     }
 
-    function Rk(kk, Fk) {
-      if (null === Fk || "object" !== typeof Fk && "function" !== typeof Fk) throw new TypeError("Cannot use 'in' operator on non-object");
-      return "function" === typeof kk ? Fk === kk : kk.has(Fk)
+    function Pm(mm, Tm) {
+      if (null === Tm || "object" !== typeof Tm && "function" !== typeof Tm) throw new TypeError("Cannot use 'in' operator on non-object");
+      return "function" === typeof mm ? Tm === mm : mm.has(Tm)
     }
 
-    function Uk(kk, Fk, Ik) {
-      if (null !== Fk && void 0 !== Fk) {
-        if ("object" !== typeof Fk && "function" !== typeof Fk) throw new TypeError("Object expected.");
-        var Xk, Tk;
-        if (Ik) {
+    function Hm(mm, Tm, fm) {
+      if (null !== Tm && void 0 !== Tm) {
+        if ("object" !== typeof Tm && "function" !== typeof Tm) throw new TypeError("Object expected.");
+        var hm, Am;
+        if (fm) {
           if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-          Xk = Fk[Symbol.asyncDispose]
+          hm = Tm[Symbol.asyncDispose]
         }
-        if (void 0 === Xk) {
+        if (void 0 === hm) {
           if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-          Xk = Fk[Symbol.dispose], Ik && (Tk = Xk)
+          hm = Tm[Symbol.dispose], fm && (Am = hm)
         }
-        if ("function" !== typeof Xk) throw new TypeError("Object not disposable.");
-        Tk && (Xk = function() {
+        if ("function" !== typeof hm) throw new TypeError("Object not disposable.");
+        Am && (hm = function() {
           try {
-            Tk.call(this)
-          } catch (kk) {
-            return Promise.reject(kk)
+            Am.call(this)
+          } catch (mm) {
+            return Promise.reject(mm)
           }
-        }), kk.stack.push({
-          value: Fk,
-          dispose: Xk,
-          async: Ik
+        }), mm.stack.push({
+          value: Tm,
+          dispose: hm,
+          async: fm
         })
-      } else Ik && kk.stack.push({
+      } else fm && mm.stack.push({
         async: !0
       });
-      return Fk
+      return Tm
     }
-    var Ck = "function" === typeof SuppressedError ? SuppressedError : function(kk, Fk, Ik) {
-      var Xk = new Error(Ik);
-      return Xk.name = "SuppressedError", Xk.error = kk, Xk.suppressed = Fk, Xk
+    var ym = "function" === typeof SuppressedError ? SuppressedError : function(mm, Tm, fm) {
+      var hm = new Error(fm);
+      return hm.name = "SuppressedError", hm.error = mm, hm.suppressed = Tm, hm
     };
 
-    function Nk(kk) {
-      function Fk(Fk) {
-        kk.error = kk.hasError ? new Ck(Fk, kk.error, "An error was suppressed during disposal.") : Fk, kk.hasError = !0
+    function Cm(mm) {
+      function Tm(Tm) {
+        mm.error = mm.hasError ? new ym(Tm, mm.error, "An error was suppressed during disposal.") : Tm, mm.hasError = !0
       }
-      var Ik, Xk = 0;
-      return function Tk() {
-        for (; Ik = kk.stack.pop();) try {
-          if (!Ik.async && 1 === Xk) return Xk = 0, kk.stack.push(Ik), Promise.resolve().then(Tk);
-          if (Ik.dispose) {
-            var ik = Ik.dispose.call(Ik.value);
-            if (Ik.async) return Xk |= 2, Promise.resolve(ik).then(Tk, (function(kk) {
-              return Fk(kk), Tk()
+      var fm, hm = 0;
+      return function Am() {
+        for (; fm = mm.stack.pop();) try {
+          if (!fm.async && 1 === hm) return hm = 0, mm.stack.push(fm), Promise.resolve().then(Am);
+          if (fm.dispose) {
+            var am = fm.dispose.call(fm.value);
+            if (fm.async) return hm |= 2, Promise.resolve(am).then(Am, (function(mm) {
+              return Tm(mm), Am()
             }))
-          } else Xk |= 1
-        } catch (yk) {
-          Fk(yk)
+          } else hm |= 1
+        } catch (xm) {
+          Tm(xm)
         }
-        if (1 === Xk) return kk.hasError ? Promise.reject(kk.error) : Promise.resolve();
-        if (kk.hasError) throw kk.error
+        if (1 === hm) return mm.hasError ? Promise.reject(mm.error) : Promise.resolve();
+        if (mm.hasError) throw mm.error
       }()
     }
 
-    function ck(kk, Fk) {
-      return "string" === typeof kk && /^\.\.?\//.test(kk) ? kk.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(kk, Ik, Xk, Tk, ik) {
-        return Ik ? Fk ? ".jsx" : ".js" : !Xk || Tk && ik ? Xk + Tk + "." + ik.toLowerCase() + "js" : kk
-      })) : kk
+    function rm(mm, Tm) {
+      return "string" === typeof mm && /^\.\.?\//.test(mm) ? mm.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(mm, fm, hm, Am, am) {
+        return fm ? Tm ? ".jsx" : ".js" : !hm || Am && am ? hm + Am + "." + am.toLowerCase() + "js" : mm
+      })) : mm
     }
-    const Wk = {
-      __extends: Tk,
-      __assign: ik,
-      __rest: yk,
-      __decorate: lk,
-      __param: ak,
-      __esDecorate: qk,
-      __runInitializers: Lk,
-      __propKey: tk,
-      __setFunctionName: Zk,
-      __metadata: jk,
-      __awaiter: ek,
-      __generator: wk,
-      __createBinding: Hk,
-      __exportStar: Jk,
-      __values: xk,
-      __read: Pk,
-      __spread: Kk,
-      __spreadArrays: Qk,
-      __spreadArray: sk,
-      __await: Vk,
-      __asyncGenerator: zk,
-      __asyncDelegator: Sk,
-      __asyncValues: vk,
-      __makeTemplateObject: Ek,
-      __importStar: Gk,
-      __importDefault: pk,
-      __classPrivateFieldGet: uk,
-      __classPrivateFieldSet: bk,
-      __classPrivateFieldIn: Rk,
-      __addDisposableResource: Uk,
-      __disposeResources: Nk,
-      __rewriteRelativeImportExtension: ck
+    const sm = {
+      __extends: Am,
+      __assign: am,
+      __rest: xm,
+      __decorate: wm,
+      __param: Dm,
+      __esDecorate: im,
+      __runInitializers: Rm,
+      __propKey: pm,
+      __setFunctionName: Em,
+      __metadata: om,
+      __awaiter: Om,
+      __generator: Ym,
+      __createBinding: qm,
+      __exportStar: jm,
+      __values: Vm,
+      __read: Im,
+      __spread: Km,
+      __spreadArrays: Qm,
+      __spreadArray: nm,
+      __await: Jm,
+      __asyncGenerator: cm,
+      __asyncDelegator: zm,
+      __asyncValues: Zm,
+      __makeTemplateObject: km,
+      __importStar: em,
+      __importDefault: Nm,
+      __classPrivateFieldGet: Gm,
+      __classPrivateFieldSet: Xm,
+      __classPrivateFieldIn: Pm,
+      __addDisposableResource: Hm,
+      __disposeResources: Cm,
+      __rewriteRelativeImportExtension: rm
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

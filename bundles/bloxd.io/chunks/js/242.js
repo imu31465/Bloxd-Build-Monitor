@@ -1,196 +1,196 @@
 export const id = 242;
 export const ids = [242];
 export const modules = {
-  39109: (kk, Fk, Ik) => {
-    function Xk(kk) {
-      return !(!kk.lobbyLeaderboardInfo && !kk.lobbyManage)
+  39237: (mm, Tm, fm) => {
+    function hm(mm) {
+      return !(!mm.lobbyLeaderboardInfo && !mm.lobbyManage)
     }
-    Ik.d(Fk, {
-      b: () => Xk
+    fm.d(Tm, {
+      c: () => hm
     })
   },
-  39087: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => ik,
-      f: () => yk
+  39209: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => am,
+      d: () => xm
     });
-    var Xk = Ik(34);
-    let Tk = !1;
+    var hm = fm(31);
+    let Am = !1;
 
-    function ik() {
-      return Tk
+    function am() {
+      return Am
     }
 
-    function yk(kk) {
-      Tk !== kk && (Tk = kk, Xk.g.GL("replayViewer|videoExportChanged"))
+    function xm(mm) {
+      Am !== mm && (Am = mm, hm.j.gp("replayViewer|videoExportChanged"))
     }
   },
-  39011: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => ik
+  39140: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => am
     });
-    var Xk = Ik(34),
-      Tk = Ik(1894);
+    var hm = fm(31),
+      Am = fm(1928);
 
-    function ik(kk) {
+    function am(mm) {
       let {
-        taskId: Fk,
-        progress: Ik
-      } = kk;
-      const Xk = Tk.e.get("_tasks");
-      null !== Xk && void 0 !== Xk && Xk[Fk] && Tk.e.apply({
+        taskId: Tm,
+        progress: fm
+      } = mm;
+      const hm = Am.b.get("_tasks");
+      null !== hm && void 0 !== hm && hm[Tm] && Am.b.apply({
         _tasks: {
-          ...Xk,
-          [Fk]: {
-            ...Xk[Fk],
-            progress: Ik
+          ...hm,
+          [Tm]: {
+            ...hm[Tm],
+            progress: fm
           }
         }
       })
     }
-    Xk.g.subscribe("clientTaskProgress", (kk => {
-      ik(kk)
+    hm.j.subscribe("clientTaskProgress", (mm => {
+      am(mm)
     }))
   },
-  39102: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Kk,
-      h: () => Qk,
-      j: () => Pk
+  39229: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => Km,
+      e: () => Qm,
+      g: () => Im
     });
-    var Xk = Ik(4799),
-      Tk = Ik(2744),
-      ik = Ik(1844);
-    const yk = new Map(Object.entries(Xk.k).map((kk => {
-      let [Fk, Ik] = kk;
-      return [Ik, Fk]
+    var hm = fm(4741),
+      Am = fm(2813),
+      am = fm(1877);
+    const xm = new Map(Object.entries(hm.m).map((mm => {
+      let [Tm, fm] = mm;
+      return [fm, Tm]
     })));
 
-    function lk(kk) {
-      return (0, ik.A)(kk).toFixed(1)
+    function wm(mm) {
+      return (0, am.F)(mm).toFixed(1)
     }
 
-    function ak(kk, Fk) {
-      return `camera set by ${yk.get(kk[Fk+1])}: heading ${`${lk(kk[Fk+2])} -> ${lk(kk[Fk+4])}`} deg, pitch ${`${lk(kk[Fk+3])} -> ${lk(kk[Fk+5])}`} deg, at ${kk[Fk].toFixed(1)} ms`
+    function Dm(mm, Tm) {
+      return `camera set by ${xm.get(mm[Tm+1])}: heading ${`${wm(mm[Tm+2])} -> ${wm(mm[Tm+4])}`} deg, pitch ${`${wm(mm[Tm+3])} -> ${wm(mm[Tm+5])}`} deg, at ${mm[Tm].toFixed(1)} ms`
     }
-    class qk {
-      constructor(kk, Fk) {
-        this.width = kk, this.St = Fk, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(kk * Fk)
+    class im {
+      constructor(mm, Tm) {
+        this.width = mm, this.yp = Tm, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(mm * Tm)
       }
-      push(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const Ik = this.data.subarray(this.next * this.width, (this.next + 1) * this.width);
-        for (let Xk = 0; Xk < this.width; Xk++) Ik[Xk] = kk[Fk + Xk];
-        return this.next = (this.next + 1) % this.St, this.size = Math.min(this.size + 1, this.St), Ik
+      push(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const fm = this.data.subarray(this.next * this.width, (this.next + 1) * this.width);
+        for (let hm = 0; hm < this.width; hm++) fm[hm] = mm[Tm + hm];
+        return this.next = (this.next + 1) % this.yp, this.size = Math.min(this.size + 1, this.yp), fm
       }
       lines() {
-        const kk = [],
-          Fk = (this.next - this.size + this.St) % this.St;
-        for (let Ik = 0; Ik < this.size; Ik++) {
-          const Xk = (Fk + Ik) % this.St * this.width;
-          kk.push(Array.from(this.data.subarray(Xk, Xk + this.width)).join(","))
+        const mm = [],
+          Tm = (this.next - this.size + this.yp) % this.yp;
+        for (let fm = 0; fm < this.size; fm++) {
+          const hm = (Tm + fm) % this.yp * this.width;
+          mm.push(Array.from(this.data.subarray(hm, hm + this.width)).join(","))
         }
-        return kk
+        return mm
       }
     }
-    const Lk = 0,
-      tk = 2,
-      Zk = 3,
-      jk = 4;
+    const Rm = 0,
+      pm = 2,
+      Em = 3,
+      om = 4;
 
-    function ek(kk) {
-      return Number.isFinite(kk) ? String(Math.round(10 * kk) / 10) : String(kk)
+    function Om(mm) {
+      return Number.isFinite(mm) ? String(Math.round(10 * mm) / 10) : String(mm)
     }
 
-    function wk(kk) {
-      return Number.isFinite(kk) ? kk.toFixed(1) : String(kk)
+    function Ym(mm) {
+      return Number.isFinite(mm) ? mm.toFixed(1) : String(mm)
     }
-    class Hk {
+    class qm {
       constructor() {
-        this.frames = 0, this.looked = 0, this.idle = 0, this.iW = 0, this.pastLimit = 0, this.lockSkips = 0, this.iH = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.cameraSets = 0, this.cameraSetsLost = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
+        this.frames = 0, this.looked = 0, this.idle = 0, this.Fs = 0, this.pastLimit = 0, this.lockSkips = 0, this.jq = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.cameraSets = 0, this.cameraSetsLost = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
       }
       moved() {
-        return this.events > 0 || 0 !== this.raw[0] || 0 !== this.raw[1] || this.lockSkips > 0 || this.iW > 0 || this.dropped > 0 || this.cameraSets > 0
+        return this.events > 0 || 0 !== this.raw[0] || 0 !== this.raw[1] || this.lockSkips > 0 || this.Fs > 0 || this.dropped > 0 || this.cameraSets > 0
       }
       hasEvent() {
-        return this.iW > 0 || this.pastLimit > 0 || this.bigEvents > 0 || this.dropped > 0 || this.cameraSets > 0
+        return this.Fs > 0 || this.pastLimit > 0 || this.bigEvents > 0 || this.dropped > 0 || this.cameraSets > 0
       }
     }
-    class Jk {
+    class jm {
       constructor() {
-        var kk = this;
-        this.remote = (0, Tk.p)(), this.tally = new Hk, this.records = new qk(10, this.remote ? 1 : 3600), this.events = new qk(4, this.remote ? 1 : 12e3), this.event = new Float64Array(4), this.takes = null, this.client = "js", this.started = !1, this.record = function(Fk) {
-          let Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-          const [Xk, Tk, ik, yk, lk, ak, qk, Hk, Jk, xk] = kk.records.push(Fk, Ik), Pk = kk.tally;
-          switch (Pk.frames++, qk) {
-            case Lk:
-              return void Pk.idle++;
-            case jk:
-              return void Pk.iH++;
-            case Zk:
-              return Pk.lockSkips++, void(0 === ik && 0 === yk || kk.outlier(`lock skip dropped raw (${ek(ik)}, ${ek(yk)}) at ${wk(Xk)} ms`))
+        var mm = this;
+        this.remote = (0, Am.p)(), this.tally = new qm, this.records = new im(10, this.remote ? 1 : 3600), this.events = new im(4, this.remote ? 1 : 12e3), this.event = new Float64Array(4), this.takes = null, this.client = "js", this.started = !1, this.record = function(Tm) {
+          let fm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+          const [hm, Am, am, xm, wm, Dm, im, qm, jm, Vm] = mm.records.push(Tm, fm), Im = mm.tally;
+          switch (Im.frames++, im) {
+            case Rm:
+              return void Im.idle++;
+            case om:
+              return void Im.jq++;
+            case Em:
+              return Im.lockSkips++, void(0 === am && 0 === xm || mm.outlier(`lock skip dropped raw (${Om(am)}, ${Om(xm)}) at ${Ym(hm)} ms`))
           }
-          Pk.looked++, Number.isFinite(Tk) && (Pk.dtMin = Math.min(Pk.dtMin, Tk), Pk.dtMax = Math.max(Pk.dtMax, Tk), Pk.dtSum += Tk, Tk > 0 && (Pk.peakRate = Math.max(Pk.peakRate, Math.hypot(lk, ak) / Tk))), Pk.raw[0] += ik, Pk.raw[1] += yk, Pk.turned[0] += lk, Pk.turned[1] += ak;
-          const Kk = Math.abs(ik) > xk || Math.abs(yk) > xk,
-            Qk = `raw (${ek(ik)}, ${ek(yk)}) over ${wk(Tk)} ms, limit ${ek(xk)}, filter v (${Hk.toFixed(3)}, ${Jk.toFixed(3)}) px/ms, at ${wk(Xk)} ms`;
-          qk === tk ? (Pk.iW++, kk.outlier(`spike put right: ${Qk} -> turned (${ek(lk)}, ${ek(ak)})`)) : Kk ? (Pk.pastLimit++, kk.outlier(`kept past limit: ${Qk}`)) : Tk > 50 && (Pk.longFrames++, kk.remote || kk.outlier(`long frame: ${Qk}, turned in full`))
-        }, this.onMouseMove = kk => {
-          const Fk = this.tally,
+          Im.looked++, Number.isFinite(Am) && (Im.dtMin = Math.min(Im.dtMin, Am), Im.dtMax = Math.max(Im.dtMax, Am), Im.dtSum += Am, Am > 0 && (Im.peakRate = Math.max(Im.peakRate, Math.hypot(wm, Dm) / Am))), Im.raw[0] += am, Im.raw[1] += xm, Im.turned[0] += wm, Im.turned[1] += Dm;
+          const Km = Math.abs(am) > Vm || Math.abs(xm) > Vm,
+            Qm = `raw (${Om(am)}, ${Om(xm)}) over ${Ym(Am)} ms, limit ${Om(Vm)}, filter v (${qm.toFixed(3)}, ${jm.toFixed(3)}) px/ms, at ${Ym(hm)} ms`;
+          im === pm ? (Im.Fs++, mm.outlier(`spike put right: ${Qm} -> turned (${Om(wm)}, ${Om(Dm)})`)) : Km ? (Im.pastLimit++, mm.outlier(`kept past limit: ${Qm}`)) : Am > 50 && (Im.longFrames++, mm.remote || mm.outlier(`long frame: ${Qm}, turned in full`))
+        }, this.onMouseMove = mm => {
+          const Tm = this.tally,
             {
-              movementX: Ik,
-              movementY: Xk
-            } = kk;
-          Fk.events++;
-          const Tk = Math.max(Math.abs(Ik), Math.abs(Xk));
-          Fk.eventMax = Math.max(Fk.eventMax, Tk);
-          const ik = null !== document.pointerLockElement,
-            yk = this.event;
-          yk[0] = kk.timeStamp, yk[1] = Ik, yk[2] = Xk, yk[3] = ik ? 1 : 0, this.events.push(yk), Tk >= 200 && (Fk.bigEvents++, this.eventOutlier(`big mousemove (${Ik}, ${Xk}) at ${wk(kk.timeStamp)} ms, lock ${ik?"eq":"free"}`))
+              movementX: fm,
+              movementY: hm
+            } = mm;
+          Tm.events++;
+          const Am = Math.max(Math.abs(fm), Math.abs(hm));
+          Tm.eventMax = Math.max(Tm.eventMax, Am);
+          const am = null !== document.pointerLockElement,
+            xm = this.event;
+          xm[0] = mm.timeStamp, xm[1] = fm, xm[2] = hm, xm[3] = am ? 1 : 0, this.events.push(xm), Am >= 200 && (Tm.bigEvents++, this.eventOutlier(`big mousemove (${fm}, ${hm}) at ${Ym(mm.timeStamp)} ms, lock ${am?"ni":"free"}`))
         }, this.onLockChange = () => {
-          const kk = document.pointerLockElement;
-          (0, Tk.g)("look", `pointer lock ${kk?`gained (${kk.tagName.toLowerCase()})`:"lost"} at ${wk(performance.now())} ms`)
+          const mm = document.pointerLockElement;
+          (0, Am.g)("look", `pointer lock ${mm?`gained (${mm.tagName.toLowerCase()})`:"lost"} at ${Ym(performance.now())} ms`)
         }, this.onLockError = () => {
-          (0, Tk.g)("look", `pointer lock request failed at ${wk(performance.now())} ms`)
+          (0, Am.g)("look", `pointer lock request failed at ${Ym(performance.now())} ms`)
         }, this.onVisibility = () => {
-          (0, Tk.g)("look", `page ${document.visibilityState} at ${wk(performance.now())} ms`)
+          (0, Am.g)("look", `page ${document.visibilityState} at ${Ym(performance.now())} ms`)
         }, this.flush = () => {
           this.takeRecords();
-          const kk = this.tally;
-          if (this.tally = new Hk, !kk.moved() || this.remote && !kk.hasEvent()) return;
-          const Fk = kk.looked > 0 ? kk.dtSum / kk.looked : NaN,
-            Ik = [`${kk.frames} frames (${kk.looked} looked, ${kk.idle} idle${"wasm"===this.client?`, ${kk.iH} carried`:""})`, `dt avg ${wk(Fk)} min ${wk(kk.dtMin)} max ${wk(kk.dtMax)}, ${kk.longFrames} long`, `${kk.events} mousemoves (max ${ek(kk.eventMax)} px, ${kk.bigEvents} big)`, `raw (${ek(kk.raw[0])}, ${ek(kk.raw[1])}) turned (${ek(kk.turned[0])}, ${ek(kk.turned[1])})`, `peak ${kk.peakRate.toFixed(2)} px/ms`, `put right ${kk.iW}, past limit ${kk.pastLimit}, lock skips ${kk.lockSkips}`, "lock " + (document.pointerLockElement ? "eq" : "free")];
-          kk.dropped > 0 && Ik.push(`${kk.dropped} doubled spike copies dropped`), kk.cameraSets > 0 && Ik.push(`${kk.cameraSets} camera sets`), kk.cameraSetsLost > 0 && Ik.push(`${kk.cameraSetsLost} camera set records lost`), kk.lost > 0 && Ik.push(`${kk.lost} records lost`), kk.suppressed > 0 && Ik.push(`${kk.suppressed} outlier lines not shown`), (0, Tk.g)("look", `1s: ${Ik.join("; ")}`)
+          const mm = this.tally;
+          if (this.tally = new qm, !mm.moved() || this.remote && !mm.hasEvent()) return;
+          const Tm = mm.looked > 0 ? mm.dtSum / mm.looked : NaN,
+            fm = [`${mm.frames} frames (${mm.looked} looked, ${mm.idle} idle${"wasm"===this.client?`, ${mm.jq} carried`:""})`, `dt avg ${Ym(Tm)} min ${Ym(mm.dtMin)} max ${Ym(mm.dtMax)}, ${mm.longFrames} long`, `${mm.events} mousemoves (max ${Om(mm.eventMax)} px, ${mm.bigEvents} big)`, `raw (${Om(mm.raw[0])}, ${Om(mm.raw[1])}) turned (${Om(mm.turned[0])}, ${Om(mm.turned[1])})`, `peak ${mm.peakRate.toFixed(2)} px/ms`, `put right ${mm.Fs}, past limit ${mm.pastLimit}, lock skips ${mm.lockSkips}`, "lock " + (document.pointerLockElement ? "ni" : "free")];
+          mm.dropped > 0 && fm.push(`${mm.dropped} doubled spike copies dropped`), mm.cameraSets > 0 && fm.push(`${mm.cameraSets} camera sets`), mm.cameraSetsLost > 0 && fm.push(`${mm.cameraSetsLost} camera set records lost`), mm.lost > 0 && fm.push(`${mm.lost} records lost`), mm.suppressed > 0 && fm.push(`${mm.suppressed} outlier lines not shown`), (0, Am.g)("look", `1s: ${fm.join("; ")}`)
         }, this.dump = () => [`look records (${this.client}): nowMs,dtMs,rawX,rawY,turnedX,turnedY,outcome,vX,vY,limit`, ...this.records.lines(), "mousemove events: timeStamp,movementX,movementY,locked", ...this.events.lines()].join("\n")
       }
-      start(kk, Fk) {
-        this.client = kk, this.takes = Fk;
+      start(mm, Tm) {
+        this.client = mm, this.takes = Tm;
         const {
-          screen: Ik
+          screen: fm
         } = window;
-        (0, Tk.g)("look", `start: ${kk} client, dpr ${window.devicePixelRatio}, screen ${Ik.width}x${Ik.height}, pointer lock ${document.pointerLockElement?"eq":"free"}`), this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
+        (0, Am.g)("look", `start: ${mm} client, dpr ${window.devicePixelRatio}, screen ${fm.width}x${fm.height}, pointer lock ${document.pointerLockElement?"ni":"free"}`), this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
           capture: !0,
           passive: !0
-        }), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), this.remote || (0, Tk.f)("look", this.dump))
+        }), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), this.remote || (0, Am.f)("look", this.dump))
       }
-      outlier(kk) {
-        const Fk = this.tally;
-        Fk.outliers >= 20 ? Fk.suppressed++ : (Fk.outliers++, (0, Tk.g)("look", kk))
+      outlier(mm) {
+        const Tm = this.tally;
+        Tm.outliers >= 20 ? Tm.suppressed++ : (Tm.outliers++, (0, Am.g)("look", mm))
       }
-      eventOutlier(kk) {
-        const Fk = this.tally;
-        Fk.eventLines >= 10 ? Fk.suppressed++ : (Fk.eventLines++, (0, Tk.g)("look", kk))
+      eventOutlier(mm) {
+        const Tm = this.tally;
+        Tm.eventLines >= 10 ? Tm.suppressed++ : (Tm.eventLines++, (0, Am.g)("look", mm))
       }
       takeRecords() {
         if (null === this.takes) return;
-        const kk = this.takes.look();
-        if (kk.length >= 2) {
-          this.tally.lost += kk[0], this.tally.dropped += kk[1];
-          for (let Fk = 2; Fk + 10 <= kk.length; Fk += 10) this.record(kk, Fk)
+        const mm = this.takes.look();
+        if (mm.length >= 2) {
+          this.tally.lost += mm[0], this.tally.dropped += mm[1];
+          for (let Tm = 2; Tm + 10 <= mm.length; Tm += 10) this.record(mm, Tm)
         }
-        const Fk = this.takes.cameraSets();
-        if (Fk.length >= Xk.e) {
-          this.tally.cameraSetsLost += Fk[0];
-          for (let kk = Xk.e; kk + Xk.f <= Fk.length; kk += Xk.f) this.tally.cameraSets++, this.outlier(ak(Fk, kk))
+        const Tm = this.takes.cameraSets();
+        if (Tm.length >= hm.b) {
+          this.tally.cameraSetsLost += Tm[0];
+          for (let mm = hm.b; mm + hm.e <= Tm.length; mm += hm.e) this.tally.cameraSets++, this.outlier(Dm(Tm, mm))
         }
       }
       droppedCopy() {
@@ -200,1211 +200,1211 @@ export const modules = {
         this.takeRecords(), this.takes = null
       }
     }
-    let xk = null;
+    let Vm = null;
 
-    function Pk(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      return xk ??= new Jk, xk.start(kk, Fk), xk.record
+    function Im(mm) {
+      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      return Vm ??= new jm, Vm.start(mm, Tm), Vm.record
     }
 
-    function Kk() {
-      var kk;
-      null === (kk = xk) || void 0 === kk || kk.endTake()
+    function Km() {
+      var mm;
+      null === (mm = Vm) || void 0 === mm || mm.endTake()
     }
 
-    function Qk() {
-      var kk;
-      null === (kk = xk) || void 0 === kk || kk.droppedCopy()
+    function Qm() {
+      var mm;
+      null === (mm = Vm) || void 0 === mm || mm.droppedCopy()
     }
   },
-  38945: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => kI,
-      f: () => DF,
-      j: () => MF
+  39079: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => mf,
+      f: () => WT,
+      g: () => FT
     });
-    var Xk = Ik(3631),
-      Tk = Ik(149),
-      ik = Ik(187),
-      yk = Ik(633),
-      lk = Ik(41),
-      ak = Ik(2700),
-      qk = Ik(3702),
-      Lk = Ik(3682),
-      tk = Ik(1217);
-    const Zk = new WeakMap;
-    class jk {
-      constructor(kk, Fk) {
-        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
-          vqk: !0
+    var hm = fm(3672),
+      Am = fm(168),
+      am = fm(198),
+      xm = fm(658),
+      wm = fm(37),
+      Dm = fm(2760),
+      im = fm(3729),
+      Rm = fm(3716),
+      pm = fm(1235);
+    const Em = new WeakMap;
+    class om {
+      constructor(mm, Tm) {
+        let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
+          Nim: !0
         };
-        this.callbacks = Fk, this.options = Ik, this.sIk = void 0, this.sessionId = void 0, this.kE = [], this.Eqk = !1, this.ee = !1, this.Oqk = void 0, this.Dv = 0, this.PTk = 0, this.nqk = (kk, Fk) => {
-          if (this.ee) return;
-          const Ik = Number(kk);
-          this.Eqk ? this.Gqk(Ik, Fk) : this.kE.push({
-            id: Ik,
-            payload: Fk
+        this.callbacks = Tm, this.options = fm, this.nfm = void 0, this.sessionId = void 0, this.Yk = [], this.Gim = !1, this.PO = !1, this.Xim = void 0, this.Rk = 0, this.KAm = 0, this.Pim = (mm, Tm) => {
+          if (this.PO) return;
+          const fm = Number(mm);
+          this.Gim ? this.Him(fm, Tm) : this.Yk.push({
+            id: fm,
+            payload: Tm
           })
         }, this.dispose = () => {
-          this.ee || (this.ee = !0, Zk.delete(this), this.kE.length = 0, this.Oqk())
-        }, this.sIk = kk, this.sessionId = kk.sessionId, Zk.set(this, []), this.Oqk = this.pqk()
+          this.PO || (this.PO = !0, Em.delete(this), this.Yk.length = 0, this.Xim())
+        }, this.nfm = mm, this.sessionId = mm.sessionId, Em.set(this, []), this.Xim = this.yim()
       }
-      uqk(kk) {
-        this.Oqk(), this.sIk = kk, this.sessionId = kk.sessionId, this.Dv = 0, this.PTk = 0, this.Oqk = this.pqk()
+      Cim(mm) {
+        this.Xim(), this.nfm = mm, this.sessionId = mm.sessionId, this.Rk = 0, this.KAm = 0, this.Xim = this.yim()
       }
-      get Qv() {
-        return this.PTk
+      get uZ() {
+        return this.KAm
       }
-      pqk() {
-        const kk = this.sIk.bJ("*", this.nqk);
-        return this.options.vqk && this.sIk.NJ(this.dispose), kk
+      yim() {
+        const mm = this.nfm.lV("*", this.Pim);
+        return this.options.Nim && this.nfm.tV(this.dispose), mm
       }
-      Gqk(kk, Fk) {
+      Him(mm, Tm) {
         try {
-          (0, qk.ac)(kk) && (Fk = (0, qk.b)(kk, Lk.je.from(Fk)));
-          const Ik = Zk.get(this)[kk];
-          if ("function" !== typeof Ik) {
-            if (this.callbacks.bqk) return void this.callbacks.bqk(kk, Fk);
-            throw new Error(`No onMessage handler registered for message id ${kk}`)
+          (0, im.rc)(mm) && (Tm = (0, im.e)(mm, Rm.XO.from(Tm)));
+          const fm = Em.get(this)[mm];
+          if ("function" !== typeof fm) {
+            if (this.callbacks.Mim) return void this.callbacks.Mim(mm, Tm);
+            throw new Error(`No onMessage handler registered for message id ${mm}`)
           }
-          Ik(Fk)
-        } catch (Ik) {
-          this.callbacks.Rqk(`Error in onMessage ${kk} with payload ${JSON.stringify(Fk)}`, Ik)
+          fm(Tm)
+        } catch (fm) {
+          this.callbacks.uim(`Error in onMessage ${mm} with payload ${JSON.stringify(Tm)}`, fm)
         } finally {
-          this.Dv++
+          this.Rk++
         }
       }
-      Uqk() {
+      Bim() {
         for (const {
-            id: kk,
-            payload: Fk
+            id: mm,
+            payload: Tm
           }
-          of this.kE) {
-          if (this.ee) break;
-          this.Gqk(kk, Fk)
+          of this.Yk) {
+          if (this.PO) break;
+          this.Him(mm, Tm)
         }
-        this.kE.length = 0
+        this.Yk.length = 0
       }
-      Hs() {
-        return this.ee
+      aJ() {
+        return this.PO
       }
-      Cqk() {
-        if (this.Eqk || this.ee) throw new Error("Trying to getOnMessageRegistrationHandler after registration finished");
+      Lim() {
+        if (this.Gim || this.PO) throw new Error("Trying to getOnMessageRegistrationHandler after registration finished");
         return {
-          bJ: (kk, Fk) => {
-            if (this.Eqk || this.ee) throw new Error("Trying to call onMessage after registration finished");
-            this.bJ(kk, Fk)
+          lV: (mm, Tm) => {
+            if (this.Gim || this.PO) throw new Error("Trying to call onMessage after registration finished");
+            this.lV(mm, Tm)
           },
           finishRegistration: () => {
-            if (this.ee) throw new Error("Cannot finish message registration after disposal");
-            this.Eqk = !0, this.Uqk()
+            if (this.PO) throw new Error("Cannot finish message registration after disposal");
+            this.Gim = !0, this.Bim()
           }
         }
       }
-      bJ(kk, Fk) {
-        var Ik, Xk;
-        null === (Ik = (Xk = this.callbacks).Nqk) || void 0 === Ik || Ik.call(Xk);
-        const Tk = Zk.get(this);
-        for (; kk > Tk.length;) Tk[Tk.length] = null;
-        Tk[kk] = Fk
+      lV(mm, Tm) {
+        var fm, hm;
+        null === (fm = (hm = this.callbacks).vim) || void 0 === fm || fm.call(hm);
+        const Am = Em.get(this);
+        for (; mm > Am.length;) Am[Am.length] = null;
+        Am[mm] = Tm
       }
-      send(kk, Fk) {
-        this.cqk(), (0, tk.E)(Fk) ? this.sIk.aE(kk, Fk) : this.sIk.send(kk, Fk)
+      send(mm, Tm) {
+        this.tim(), (0, pm.x)(Tm) ? this.nfm.Lk(mm, Tm) : this.nfm.send(mm, Tm)
       }
-      cqk() {
-        var kk, Fk;
-        (this.PTk++, 5 === ek++) && (null === (kk = (Fk = this.callbacks).Nqk) || void 0 === kk || kk.call(Fk), ek = 0)
+      tim() {
+        var mm, Tm;
+        (this.KAm++, 5 === Om++) && (null === (mm = (Tm = this.callbacks).vim) || void 0 === mm || mm.call(Tm), Om = 0)
       }
-      qJ() {
-        this.dispose(), this.sIk.qJ()
+      YV() {
+        this.dispose(), this.nfm.YV()
       }
       leave() {
-        this.dispose(), this.sIk.leave()
+        this.dispose(), this.nfm.leave()
       }
     }
-    let ek = 0;
-    var wk = Ik(3646);
-    class Hk extends jk {
-      constructor(kk) {
-        super(kk, {
-          Nqk: () => {
-            (0, lk.o)(!0) && (0, Xk.Fv)()
+    let Om = 0;
+    var Ym = fm(3689);
+    class qm extends om {
+      constructor(mm) {
+        super(mm, {
+          vim: () => {
+            (0, wm.l)(!0) && (0, hm.sZ)()
           },
-          Rqk: (kk, Fk) => {
-            var Ik;
-            null === (Ik = (0, ak.e)()) || void 0 === Ik || Ik.Sw(kk, Fk)
+          uim: (mm, Tm) => {
+            var fm;
+            null === (fm = (0, Dm.d)()) || void 0 === fm || fm.sY(mm, Tm)
           }
         }, {
-          vqk: !1
-        }), (0, wk.h)(kk)
+          Nim: !1
+        }), (0, Ym.g)(mm)
       }
-      XE(kk, Fk) {
-        return !!(0, wk.o)((0, wk.d)(), this.sIk, kk, Fk) && (this.cqk(), !0)
+      Vk(mm, Tm) {
+        return !!(0, Ym.l)((0, Ym.e)(), this.nfm, mm, Tm) && (this.tim(), !0)
       }
-      uqk(kk) {
-        this.Wqk(), super.uqk(kk), (0, wk.h)(kk)
+      Cim(mm) {
+        this.Uim(), super.Cim(mm), (0, Ym.g)(mm)
       }
-      qJ() {
-        super.qJ(), this.Wqk()
+      YV() {
+        super.YV(), this.Uim()
       }
-      Wqk() {
-        this.sIk.LJ.Xe.sG = void 0
+      Uim() {
+        this.nfm.qV.JO.vN = void 0
       }
     }
-    var Jk = Ik(34),
-      xk = Ik(1894),
-      Pk = Ik(1665),
-      Kk = Ik(36449),
-      Qk = Ik(38947),
-      sk = Ik(38046),
-      Vk = Ik(37811),
-      zk = Ik(628),
-      Sk = Ik(38393);
+    var jm = fm(31),
+      Vm = fm(1928),
+      Im = fm(1713),
+      Km = fm(36545),
+      Qm = fm(39088),
+      nm = fm(38098),
+      Jm = fm(37858),
+      cm = fm(653),
+      zm = fm(38504);
 
-    function vk(kk, Fk, Ik) {
-      const Xk = function(kk) {
-          const Fk = new Int32Array(kk.length * Sk.e);
-          return kk.forEach(((kk, Ik) => {
-            const Xk = Ik * Sk.e;
-            if (4 === kk.length) {
-              const [Ik, Tk, ik, yk] = kk;
-              Fk.set([Ik, Tk, ik, Ik, Tk, ik, yk], Xk)
+    function Zm(mm, Tm, fm) {
+      const hm = function(mm) {
+          const Tm = new Int32Array(mm.length * zm.f);
+          return mm.forEach(((mm, fm) => {
+            const hm = fm * zm.f;
+            if (4 === mm.length) {
+              const [fm, Am, am, xm] = mm;
+              Tm.set([fm, Am, am, fm, Am, am, xm], hm)
             } else {
-              const [Ik, Tk, ik, yk, lk, ak, qk] = kk;
-              Fk.set([Ik, ik, lk, Tk, yk, ak, qk], Xk)
+              const [fm, Am, am, xm, wm, Dm, im] = mm;
+              Tm.set([fm, am, wm, Am, xm, Dm, im], hm)
             }
-          })), Fk
-        }(Ik),
-        Tk = (Fk, Ik, Xk, Tk) => {
-          kk.setBlockNoMulti(Fk, Ik, Xk, Tk, !0)
+          })), Tm
+        }(fm),
+        Am = (Tm, fm, hm, Am) => {
+          mm.setBlockNoMulti(Tm, fm, hm, Am, !0)
         };
-      kk.client.gameRecorder.isCapturing() ? (0, Sk.lb)(Xk, (0, Sk.ib)(Xk), Tk) : kk.qZ.XZ.tV(Xk, {
-        pN: Tk,
-        isHookId: Fk => kk.blockChangeHasHooks(Fk),
-        watched: () => function(kk, Fk, Ik) {
-          const Xk = [],
-            Tk = (kk, Fk, Ik) => {
-              Xk.push(kk, Fk, Ik)
+      mm.client.gameRecorder.isCapturing() ? (0, zm.cb)(hm, (0, zm.bb)(hm), Am) : mm.IE.oE.ZJ(hm, {
+        Gs: Am,
+        isHookId: Tm => mm.blockChangeHasHooks(Tm),
+        watched: () => function(mm, Tm, fm) {
+          const hm = [],
+            Am = (mm, Tm, fm) => {
+              hm.push(mm, Tm, fm)
             },
-            ik = new Set;
-          for (let yk = 0; yk < Ik.length; yk += Sk.e)
-            for (let Fk = (0, zk.X)(Ik[yk]); Fk <= (0, zk.X)(Ik[yk + 3]); Fk++)
-              for (let Xk = (0, zk.X)(Ik[yk + 1]); Xk <= (0, zk.X)(Ik[yk + 4]); Xk++)
-                for (let lk = (0, zk.X)(Ik[yk + 2]); lk <= (0, zk.X)(Ik[yk + 5]); lk++) {
-                  const Ik = `${Fk}|${Xk}|${lk}`;
-                  ik.has(Ik) || (ik.add(Ik), kk.blockDataOwner.forEachDataCell(Fk, Xk, lk, Tk))
+            am = new Set;
+          for (let xm = 0; xm < fm.length; xm += zm.f)
+            for (let Tm = (0, cm.M)(fm[xm]); Tm <= (0, cm.M)(fm[xm + 3]); Tm++)
+              for (let hm = (0, cm.M)(fm[xm + 1]); hm <= (0, cm.M)(fm[xm + 4]); hm++)
+                for (let wm = (0, cm.M)(fm[xm + 2]); wm <= (0, cm.M)(fm[xm + 5]); wm++) {
+                  const fm = `${Tm}|${hm}|${wm}`;
+                  am.has(fm) || (am.add(fm), mm.blockDataOwner.forEachDataCell(Tm, hm, wm, Am))
                 }
-          return Fk.forEachCell(Tk), Int32Array.from(Xk)
-        }(kk, Fk, Xk)
-      }), kk.qZ.Skk()
+          return Tm.forEachCell(Am), Int32Array.from(hm)
+        }(mm, Tm, hm)
+      }), mm.IE.Jmm()
     }
 
-    function Ek(kk) {
-      kk.tIk = new Set, kk.eIk = new Set, kk.ZIk = new Set, kk.wIk = new Set, kk.jIk = [], kk.HIk = [], kk.iN = new Set, kk.Qi = [], kk.yN = []
+    function km(mm) {
+      mm.pfm = new Set, mm.Ofm = new Set, mm.Efm = new Set, mm.Yfm = new Set, mm.ofm = [], mm.qfm = [], mm.uC = new Set, mm.Sa = [], mm.tC = []
     }
-    class Ok {
-      constructor(kk) {
-        this.qZ = kk
+    class bm {
+      constructor(mm) {
+        this.IE = mm
       }
-      register(kk) {
-        const Fk = this.qZ,
-          Ik = (0, ak.c)();
-        kk.bJ(qk.P, (kk => {
-          Fk.XZ.tIk.add(kk), Fk.XZ.eIk.delete(kk)
-        })), kk.bJ(qk.U, (kk => {
-          Fk.XZ.eIk.add(kk), Fk.XZ.tIk.delete(kk)
-        })), kk.bJ(qk.Ud, (kk => {
-          Fk.XZ.eIk.delete(kk), Fk.XZ.tIk.delete(kk)
-        })), kk.bJ(qk.S, (kk => {
-          Fk.XZ.ZIk.add(kk), Fk.XZ.wIk.delete(kk)
-        })), kk.bJ(qk.X, (kk => {
-          Fk.XZ.wIk.add(kk), Fk.XZ.ZIk.delete(kk)
-        })), kk.bJ(qk.Yd, (kk => {
-          Fk.XZ.wIk.delete(kk), Fk.XZ.ZIk.delete(kk)
-        })), kk.bJ(qk.Q, (kk => {
-          (0, tk.gb)(kk, Fk.XZ.HIk), (0, tk.gb)(kk, Fk.XZ.jIk), Fk.XZ.jIk.push(kk)
-        })), kk.bJ(qk.W, (kk => {
-          (0, tk.gb)(kk, Fk.XZ.jIk), (0, tk.gb)(kk, Fk.XZ.HIk), Fk.XZ.HIk.push(kk)
-        })), kk.bJ(qk.Wd, (kk => {
-          (0, tk.gb)(kk, Fk.XZ.jIk), (0, tk.gb)(kk, Fk.XZ.HIk)
-        })), kk.bJ(qk.kf, (kk => {
+      register(mm) {
+        const Tm = this.IE,
+          fm = (0, Dm.c)();
+        mm.lV(im.bb, (mm => {
+          Tm.oE.pfm.add(mm), Tm.oE.Ofm.delete(mm)
+        })), mm.lV(im.kb, (mm => {
+          Tm.oE.Ofm.add(mm), Tm.oE.pfm.delete(mm)
+        })), mm.lV(im.de, (mm => {
+          Tm.oE.Ofm.delete(mm), Tm.oE.pfm.delete(mm)
+        })), mm.lV(im.ib, (mm => {
+          Tm.oE.Efm.add(mm), Tm.oE.Yfm.delete(mm)
+        })), mm.lV(im.pb, (mm => {
+          Tm.oE.Yfm.add(mm), Tm.oE.Efm.delete(mm)
+        })), mm.lV(im.he, (mm => {
+          Tm.oE.Yfm.delete(mm), Tm.oE.Efm.delete(mm)
+        })), mm.lV(im.eb, (mm => {
+          (0, pm.Z)(mm, Tm.oE.qfm), (0, pm.Z)(mm, Tm.oE.ofm), Tm.oE.ofm.push(mm)
+        })), mm.lV(im.mb, (mm => {
+          (0, pm.Z)(mm, Tm.oE.ofm), (0, pm.Z)(mm, Tm.oE.qfm), Tm.oE.qfm.push(mm)
+        })), mm.lV(im.ge, (mm => {
+          (0, pm.Z)(mm, Tm.oE.ofm), (0, pm.Z)(mm, Tm.oE.qfm)
+        })), mm.lV(im.Cf, (mm => {
           let {
-            qI: Ik,
-            LI: Xk
-          } = kk;
-          Xk ? Fk.XZ.iN.delete(Ik) : Fk.XZ.iN.add(Ik)
-        })), kk.bJ(qk.if, (kk => {
+            Df: fm,
+            Rf: hm
+          } = mm;
+          hm ? Tm.oE.uC.delete(fm) : Tm.oE.uC.add(fm)
+        })), mm.lV(im.Bf, (mm => {
           let {
-            Qi: Xk,
-            si: Tk
-          } = kk;
-          Ik.updateWalkThroughRect(Fk.oR, Xk, Tk)
-        })), (0, Xk.onGameResetOnce)((() => {
-          Ek(Fk.XZ)
-        })), kk.bJ(qk.Ub, (kk => {
-          sk.c.applyServerUpdate(kk)
-        })), kk.bJ(qk.bb, (kk => {
-          Ik.applyServerBlocks((() => {
-            ! function(kk, Fk) {
+            Sa: hm,
+            ea: Am
+          } = mm;
+          fm.updateWalkThroughRect(Tm.xH, hm, Am)
+        })), (0, hm.onGameResetOnce)((() => {
+          km(Tm.oE)
+        })), mm.lV(im.lc, (mm => {
+          nm.b.applyServerUpdate(mm)
+        })), mm.lV(im.wb, (mm => {
+          fm.applyServerBlocks((() => {
+            ! function(mm, Tm) {
               for (const {
-                  Ui: Ik,
-                  Ci: Xk
+                  ua: fm,
+                  Ba: hm
                 }
-                of Fk) {
-                const Fk = Vk.b[Xk];
-                if (Fk) {
+                of Tm) {
+                const Tm = Jm.c[hm];
+                if (Tm) {
                   const {
-                    compX: Xk,
-                    compY: Tk,
-                    compZ: ik,
-                    mainMultiblock: yk
-                  } = Fk;
-                  kk.lG(Ik[0] - Xk, Ik[1] - Tk, Ik[2] - ik, yk)
+                    compX: hm,
+                    compY: Am,
+                    compZ: am,
+                    mainMultiblock: xm
+                  } = Tm;
+                  mm.zN(fm[0] - hm, fm[1] - Am, fm[2] - am, xm)
                 }
               }
               for (const {
-                  Ui: Ik,
-                  Ci: Xk,
-                  Ni: Tk
+                  ua: fm,
+                  Ba: hm,
+                  La: Am
                 }
-                of Fk) kk.setBlockNoMulti(Ik[0], Ik[1], Ik[2], Xk, !0), kk.blockDataOwner.setBlockData(Ik[0], Ik[1], Ik[2], null === Tk ? void 0 : JSON.parse(Tk)), kk.blockAdded(Ik[0], Ik[1], Ik[2], Xk)
-            }(Ik, kk)
-          })), Jk.g.GL("changeBlockFail", kk), Ik.client.triggerGameCallback("onChangeBlockFail", kk), Jk.g.GL("EditBoard", {
+                of Tm) mm.setBlockNoMulti(fm[0], fm[1], fm[2], hm, !0), mm.blockDataOwner.setBlockData(fm[0], fm[1], fm[2], null === Am ? void 0 : JSON.parse(Am)), mm.blockAdded(fm[0], fm[1], fm[2], hm)
+            }(fm, mm)
+          })), jm.j.gp("changeBlockFail", mm), fm.client.triggerGameCallback("onChangeBlockFail", mm), jm.j.gp("EditBoard", {
             pos: null
-          }), Jk.g.GL("EditCodeBlock", {
+          }), jm.j.gp("EditCodeBlock", {
             pos: null,
             canChangePos: null
           })
-        })), kk.bJ(qk.Bb, (kk => {
-          Ik.applyServerBlocks((() => {
-            vk(Ik, sk.c, kk)
+        })), mm.lV(im.Sb, (mm => {
+          fm.applyServerBlocks((() => {
+            Zm(fm, nm.b, mm)
           }))
-        })), kk.bJ(qk.cf, (kk => {
+        })), mm.lV(im.tf, (mm => {
           let {
-            dT: Fk,
-            YT: Xk
-          } = kk;
-          if (Ik.jB(Fk[0], Fk[1], Fk[2])) {
-            const kk = (0, ak.c)().QJ(Fk[0], Fk[1], Fk[2]);
-            (0, ak.c)().updateMailboxContents(Fk[0], Fk[1], Fk[2], kk, Xk)
+            ma: Tm,
+            Ta: hm
+          } = mm;
+          if (fm.Yu(Tm[0], Tm[1], Tm[2])) {
+            const mm = (0, Dm.c)().XV(Tm[0], Tm[1], Tm[2]);
+            (0, Dm.c)().updateMailboxContents(Tm[0], Tm[1], Tm[2], mm, hm)
           }
-        })), kk.bJ(qk.ne, (kk => {
+        })), mm.lV(im.Ce, (mm => {
           let {
-            pos: Fk,
-            data: Xk
-          } = kk;
-          Ik.blockDataOwner.setBlockData(Fk[0], Fk[1], Fk[2], Xk), Ik.blockAdded(Fk[0], Fk[1], Fk[2], Ik.QJ(Fk[0], Fk[1], Fk[2]))
+            pos: Tm,
+            data: hm
+          } = mm;
+          fm.blockDataOwner.setBlockData(Tm[0], Tm[1], Tm[2], hm), fm.blockAdded(Tm[0], Tm[1], Tm[2], fm.XV(Tm[0], Tm[1], Tm[2]))
         }))
       }
     }
-    var nk = Ik(37217),
-      Gk = Ik(36783),
-      pk = Ik(38084),
-      uk = Ik(37909),
-      bk = Ik(38094);
-    class Rk {
-      constructor(kk, Fk) {
-        this.qZ = kk, this.setUpQueuedEntity = Fk
+    var Sm = fm(37238),
+      em = fm(36861),
+      Nm = fm(38135),
+      Gm = fm(37974),
+      Xm = fm(38149);
+    class Pm {
+      constructor(mm, Tm) {
+        this.IE = mm, this.setUpQueuedEntity = Tm
       }
-      register(kk) {
-        const Fk = this.qZ,
-          Ik = (0, ak.c)();
-        kk.bJ(qk.N, (kk => {
+      register(mm) {
+        const Tm = this.IE,
+          fm = (0, Dm.c)();
+        mm.lV(im.Z, (mm => {
           let {
-            dX: Fk,
-            YX: Ik
-          } = kk;
-          this.setUpQueuedEntity(Fk), Fk = (0, Gk.c)(Fk), (0, ak.c)().client.gameRecorder.recordBulletShot(Fk, Ik), Jk.g.GL(`bulletShot|${Fk}`, {
-            bulletDirections: Ik
+            Fh: Tm,
+            mA: fm
+          } = mm;
+          this.setUpQueuedEntity(Tm), Tm = (0, em.d)(Tm), (0, Dm.c)().client.gameRecorder.recordBulletShot(Tm, fm), jm.j.gp(`bulletShot|${Tm}`, {
+            bulletDirections: fm
           })
-        })), kk.bJ(qk.Yb, (kk => {
+        })), mm.lV(im.nc, (mm => {
           let {
-            Mk: Fk,
-            kF: Ik
-          } = kk;
-          Jk.g.GL("damagedByOtherPlayer", {
-            Mk: Fk,
-            direction: Ik
+            Fm: Tm,
+            mT: fm
+          } = mm;
+          jm.j.gp("damagedByOtherPlayer", {
+            Fm: Tm,
+            direction: fm
           }, !0)
-        })), kk.bJ(qk.od, (kk => {
-          Jk.g.GL("playerKilled", kk, !0), (0, ak.c)().client.gameRecorder.recordPlayerKilled(kk.deadEId, kk.killerEId, kk.withItem, kk.killstreak)
-        })), kk.bJ(qk.Jb, (kk => {
-          Jk.g.GL("customKillfeed", kk, !0), (0, ak.c)().client.gameRecorder.recordCustomKillfeed(kk.killer, kk.victim, kk.withItem)
-        })), kk.bJ(qk.Bd, (kk => {
+        })), mm.lV(im.Gd, (mm => {
+          jm.j.gp("playerKilled", mm, !0), (0, Dm.c)().client.gameRecorder.recordPlayerKilled(mm.deadEId, mm.killerEId, mm.withItem, mm.killstreak)
+        })), mm.lV(im.Vb, (mm => {
+          jm.j.gp("customKillfeed", mm, !0), (0, Dm.c)().client.gameRecorder.recordCustomKillfeed(mm.killer, mm.victim, mm.withItem)
+        })), mm.lV(im.Rd, (mm => {
           let {
-            xX: Ik,
-            PX: Xk
-          } = kk;
-          this.setUpQueuedEntity(Ik);
-          const Tk = Fk.MJ.BFk(Ik);
-          null !== Tk && void 0 !== Tk && Tk.isGun() && Tk.reload(Date.now(), Xk)
-        })), kk.bJ(qk.ke, (kk => {
+            Jh: fm,
+            zh: hm
+          } = mm;
+          this.setUpQueuedEntity(fm);
+          const Am = Tm.qI.MTm(fm);
+          null !== Am && void 0 !== Am && Am.isGun() && Am.reload(Date.now(), hm)
+        })), mm.lV(im.ye, (mm => {
           let {
-            KX: Ik,
-            QX: Xk
-          } = kk;
-          const Tk = Xk ? (0, bk.c)(Fk, Xk) : void 0;
-          Jk.g.GL("sendHitmarker", {
-            KX: Ik,
-            screenPos: Tk
+            Zh: fm,
+            kh: hm
+          } = mm;
+          const Am = hm ? (0, Xm.c)(Tm, hm) : void 0;
+          jm.j.gp("sendHitmarker", {
+            Zh: fm,
+            screenPos: Am
           }, !0)
-        })), kk.bJ(qk.Bc, (kk => {
+        })), mm.lV(im.Sc, (mm => {
           let {
-            oi: Xk,
-            Ei: Tk,
-            ni: ik,
-            Gi: yk,
-            ui: lk,
-            bi: ak,
-            Ri: qk
-          } = kk;
-          this.setUpQueuedEntity(Xk), Xk = (0, Gk.c)(Xk);
-          const Lk = Fk.MJ.RFk(Xk);
-          if (Lk && (Lk.lastHurtTime = performance.now()), (0, pk.playRigHurt)(Fk, Xk, ak), Jk.g.GL("lifeformHurt", {
-              eId: Xk,
-              Ri: qk
-            }), Tk) {
-            const kk = (0, bk.c)(Fk, Tk.QX);
-            Jk.g.GL("yourAttackHit", {
-              KX: yk,
-              screenPos: kk,
-              hitSelf: Xk === Fk.oR
+            Pa: hm,
+            Ha: Am,
+            Ca: am,
+            ra: xm,
+            sa: wm,
+            la: Dm,
+            Ma: im
+          } = mm;
+          this.setUpQueuedEntity(hm), hm = (0, em.d)(hm);
+          const Rm = Tm.qI.PTm(hm);
+          if (Rm && (Rm.lastHurtTime = performance.now()), (0, Nm.playRigHurt)(Tm, hm, Dm), jm.j.gp("lifeformHurt", {
+              eId: hm,
+              Ma: im
+            }), Am) {
+            const mm = (0, Xm.c)(Tm, Am.kh);
+            jm.j.gp("yourAttackHit", {
+              Zh: xm,
+              screenPos: mm,
+              hitSelf: hm === Tm.xH
             })
           }
-          Xk === Fk.oR && (Ik.shakePlayerCamera(Xk, lk / 40, 200), Jk.g.GL("closeShopOnDamaged", null), Jk.g.GL("damagedByOtherPlayer", {
-            Mk: null,
-            direction: ak,
-            ui: lk
+          hm === Tm.xH && (fm.shakePlayerCamera(hm, wm / 40, 200), jm.j.gp("closeShopOnDamaged", null), jm.j.gp("damagedByOtherPlayer", {
+            Fm: null,
+            direction: Dm,
+            sa: wm
           }, !0));
-          const tk = Fk.MJ.OJ(Xk);
-          if (tk && (ik || yk)) {
-            const kk = [tk[0], tk[1] + 1, tk[2]];
-            ik && (0, uk.k)(Fk, uk.z, kk, 15), yk && (0, uk.k)(Fk, uk.s, kk, 10)
+          const pm = Tm.qI.rV(hm);
+          if (pm && (am || xm)) {
+            const mm = [pm[0], pm[1] + 1, pm[2]];
+            am && (0, Gm.g)(Tm, Gm.B, mm, 15), xm && (0, Gm.g)(Tm, Gm.n, mm, 10)
           }
-        })), kk.bJ(qk.yc, (kk => {
+        })), mm.lV(im.Rc, (mm => {
           let {
-            KF: Ik,
-            QF: Xk,
-            sF: Tk
-          } = kk;
-          (0, nk.b)(Fk).setHealthFrac((0, Gk.c)(Ik), Tk), Jk.g.GL("lifeformHealthChanged", {
-            eId: (0, Gk.c)(Ik),
-            QF: Xk,
-            sF: Tk
+            IT: fm,
+            KT: hm,
+            QT: Am
+          } = mm;
+          (0, Sm.d)(Tm).setHealthFrac((0, em.d)(fm), Am), jm.j.gp("lifeformHealthChanged", {
+            eId: (0, em.d)(fm),
+            KT: hm,
+            QT: Am
           })
-        })), kk.bJ(qk.I, (kk => {
+        })), mm.lV(im.T, (mm => {
           let {
-            RX: Ik,
-            UX: Xk
-          } = kk;
-          (0, ak.c)().playerAttacked(Fk.oR, Ik, Xk)
-        })), kk.bJ(qk.gb, (() => {
-          const kk = Fk.MJ.BFk(Fk.oR);
-          null !== kk && void 0 !== kk && kk.isChargeable() && kk.finishCharging(!1, Date.now())
-        })), kk.bJ(qk.Lb, (kk => {
+            Mh: fm,
+            uh: hm
+          } = mm;
+          (0, Dm.c)().playerAttacked(Tm.xH, fm, hm)
+        })), mm.lV(im.Ab, (() => {
+          const mm = Tm.qI.MTm(Tm.xH);
+          null !== mm && void 0 !== mm && mm.isChargeable() && mm.finishCharging(!1, Date.now())
+        })), mm.lV(im.Zb, (mm => {
           let {
-            wX: Fk,
-            HX: Ik,
-            JX: Xk,
-            sT: Tk,
-            VT: ik,
-            zT: yk
-          } = kk;
-          Fk = (0, Gk.c)(Fk), (0, ak.c)().client.updateEffect(Fk, Ik, {
-            displayName: Xk,
-            icon: Tk,
-            duration: ik,
-            level: yk
+            Kh: Tm,
+            Qh: fm,
+            nh: hm,
+            eA: Am,
+            NA: am,
+            XA: xm
+          } = mm;
+          Tm = (0, em.d)(Tm), (0, Dm.c)().client.updateEffect(Tm, fm, {
+            displayName: hm,
+            icon: Am,
+            duration: am,
+            level: xm
           })
-        })), kk.bJ(qk.Dd, (kk => {
+        })), mm.lV(im.Sd, (mm => {
           let {
-            wX: Fk,
-            HX: Ik
-          } = kk;
-          Fk = (0, Gk.c)(Fk), (0, ak.c)().client.removeEffect(Fk, Ik)
-        })), kk.bJ(qk.af, (kk => {
-          Jk.g.GL("ttbEffectMultiplier", kk)
+            Kh: Tm,
+            Qh: fm
+          } = mm;
+          Tm = (0, em.d)(Tm), (0, Dm.c)().client.removeEffect(Tm, fm)
+        })), mm.lV(im.pf, (mm => {
+          jm.j.gp("ttbEffectMultiplier", mm)
         }))
       }
     }
-    var Uk = Ik(38973),
-      Ck = Ik(37215),
-      Nk = Ik(4196),
-      ck = Ik(38105),
-      Wk = Ik(36764),
-      fk = Ik(36772),
-      Bk = Ik(37127),
-      dk = Ik(37299),
-      Yk = Ik(38109),
-      Ak = Ik(38979);
-    class gk {
-      constructor(kk, Fk) {
-        this.qZ = kk, this.setUpQueuedEntity = Fk
+    var Hm = fm(39109),
+      ym = fm(37233),
+      Cm = fm(4160),
+      rm = fm(38159),
+      sm = fm(36843),
+      lm = fm(36846),
+      Mm = fm(37168),
+      um = fm(37312),
+      Bm = fm(38168),
+      Lm = fm(39114);
+    class tm {
+      constructor(mm, Tm) {
+        this.IE = mm, this.setUpQueuedEntity = Tm
       }
-      register(kk) {
-        const Fk = this.qZ,
-          Ik = (0, ak.c)();
-        kk.bJ(qk.Lc, (kk => {
+      register(mm) {
+        const Tm = this.IE,
+          fm = (0, Dm.c)();
+        mm.lV(im.cd, (mm => {
           let {
-            eId: Ik,
-            settings: Xk
-          } = kk;
-          (0, dk.c)(Ik);
-          for (const Fk in Xk)(0, dk.b)(Ik, Fk, Xk[Fk]);
-          if ("canSee" in Xk && Fk.MJ.Ukk(Ik, "hidingMeshManager")) {
-            const kk = Fk.MJ.getState(Ik, "hidingMeshManager");
-            kk.canSee = (0, Yk.b)("canSee", Xk.canSee), kk._forceUpdate = !0
+            eId: fm,
+            settings: hm
+          } = mm;
+          (0, um.f)(fm);
+          for (const Tm in hm)(0, um.d)(fm, Tm, hm[Tm]);
+          if ("canSee" in hm && Tm.qI.Pmm(fm, "hidingMeshManager")) {
+            const mm = Tm.qI.getState(fm, "hidingMeshManager");
+            mm.canSee = (0, Bm.c)("canSee", hm.canSee), mm._forceUpdate = !0
           }
-        })), kk.bJ(qk.C, (kk => {
+        })), mm.lV(im.L, (mm => {
           let {
-            AT: Ik,
-            gT: Xk,
-            animationScript: Tk,
-            mT: ik,
-            hT: yk,
-            rT: lk,
-            DT: qk
-          } = kk;
-          Ik = (0, Gk.c)(Ik);
-          const Lk = null === Tk && null !== lk ? (0, Uk.c)(lk, qk) : Tk;
-          (0, ak.c)().client.gameRecorder.recordAnimateEntity(Ik, Xk, Lk, ik, yk), (0, nk.b)(Fk).animations.animateEntity(Ik, Xk, Tk, ik, yk, lk, qk), null !== Tk || Ik === Fk.oR && Xk === Ck.c.Emote && (0, ak.c)().client.cameraController.endTemporaryThirdPerson()
-        })), kk.bJ(qk.he, (kk => {
-          (0, Ak.c)(kk)
-        })), kk.bJ(qk.nd, (kk => {
-          for (const Fk of kk)(0, ck.y)(Fk);
-          Jk.g.GL("playerCosmeticsUpdated", kk, !0)
-        })), kk.bJ(qk.H, (kk => {
-          for (const Ik of kk)(0, Bk.f)(Fk, Ik)
-        })), kk.bJ(qk.Mc, (kk => {
-          (0, uk.o)(Fk, (0, tk.u)(kk))
-        })), kk.bJ(qk.Oc, (kk => {
-          Nk.g[kk.Zi] ? (0, uk.o)(Fk, {
-            ...Nk.g[kk.Zi],
-            pos1: kk.pos1,
-            pos2: kk.pos2
-          }) : console.error(`Unknown preset id: ${kk.Zi}`)
-        })), kk.bJ(qk.jd, (kk => {
-          var Fk, Ik;
+            fa: fm,
+            ha: hm,
+            animationScript: Am,
+            Aa: am,
+            aa: xm,
+            xa: wm,
+            Da: im
+          } = mm;
+          fm = (0, em.d)(fm);
+          const Rm = null === Am && null !== wm ? (0, Hm.g)(wm, im) : Am;
+          (0, Dm.c)().client.gameRecorder.recordAnimateEntity(fm, hm, Rm, am, xm), (0, Sm.d)(Tm).animations.animateEntity(fm, hm, Am, am, xm, wm, im), null !== Am || fm === Tm.xH && hm === ym.h.Emote && (0, Dm.c)().client.cameraController.endTemporaryThirdPerson()
+        })), mm.lV(im.xe, (mm => {
+          (0, Lm.e)(mm)
+        })), mm.lV(im.Fd, (mm => {
+          for (const Tm of mm)(0, rm.H)(Tm);
+          jm.j.gp("playerCosmeticsUpdated", mm, !0)
+        })), mm.lV(im.Q, (mm => {
+          for (const fm of mm)(0, Mm.d)(Tm, fm)
+        })), mm.lV(im.fd, (mm => {
+          (0, Gm.j)(Tm, (0, pm.p)(mm))
+        })), mm.lV(im.id, (mm => {
+          Cm.g[mm.na] ? (0, Gm.j)(Tm, {
+            ...Cm.g[mm.na],
+            pos1: mm.pos1,
+            pos2: mm.pos2
+          }) : console.error(`Unknown preset id: ${mm.na}`)
+        })), mm.lV(im.Bd, (mm => {
+          var Tm, fm;
           let {
-            AX: Xk,
-            gX: Tk,
-            mX: ik,
-            hX: yk
-          } = kk, {
-            DX: lk,
-            MX: qk
-          } = null !== yk && void 0 !== yk ? yk : {};
+            TA: hm,
+            fA: Am,
+            hA: am,
+            AA: xm
+          } = mm, {
+            xA: wm,
+            wA: im
+          } = null !== xm && void 0 !== xm ? xm : {};
           const {
-            rX: Lk
-          } = null !== yk && void 0 !== yk ? yk : {};
-          lk = null !== (Fk = lk) && void 0 !== Fk ? Fk : void 0, qk = null !== (Ik = qk) && void 0 !== Ik ? Ik : void 0, "string" === typeof Lk && this.setUpQueuedEntity(Lk), (0, ak.c)().client.gameRecorder.recordPlaySound(Xk, Tk, ik, yk), Wk.d.play((0, fk.f)(Xk), Tk, Lk, lk, qk).rate(ik)
-        })), kk.bJ(qk.ef, (kk => {
-          for (const Fk in kk) {
-            const Xk = kk[Fk];
-            for (const kk in Xk) Ik.client.meshCreator.handleParticleSystemUpdate(Fk, kk, Xk[kk])
+            aA: Rm
+          } = null !== xm && void 0 !== xm ? xm : {};
+          wm = null !== (Tm = wm) && void 0 !== Tm ? Tm : void 0, im = null !== (fm = im) && void 0 !== fm ? fm : void 0, "string" === typeof Rm && this.setUpQueuedEntity(Rm), (0, Dm.c)().client.gameRecorder.recordPlaySound(hm, Am, am, xm), sm.e.play((0, lm.g)(hm), Am, Rm, wm, im).rate(am)
+        })), mm.lV(im.wf, (mm => {
+          for (const Tm in mm) {
+            const hm = mm[Tm];
+            for (const mm in hm) fm.client.meshCreator.handleParticleSystemUpdate(Tm, mm, hm[mm])
           }
         }))
       }
     }
-    var mk = Ik(37794),
-      hk = Ik(37777);
-    class rk {
-      constructor(kk) {
-        this.qZ = kk
+    var Um = fm(37836),
+      dm = fm(37811);
+    class gm {
+      constructor(mm) {
+        this.IE = mm
       }
-      register(kk) {
-        const Fk = this.qZ,
-          Ik = (0, ak.c)();
+      register(mm) {
+        const Tm = this.IE,
+          fm = (0, Dm.c)();
 
-        function Xk() {
-          return Fk.MJ.sFk(Fk.oR)
+        function hm() {
+          return Tm.qI.QTm(Tm.xH)
         }
-        kk.bJ(qk.lc, (kk => {
+        mm.lV(im.zc, (mm => {
           let {
-            TF: Ik,
-            iF: Xk,
-            yF: Tk,
-            lF: ik,
-            aF: yk,
-            qF: lk,
-            LF: ak,
-            tF: qk,
-            ZF: Lk
-          } = kk;
-          if (!Fk.MJ.Ukk(Ik, "itemState")) return void(0, mk.m)(Fk, Ik, [yk, lk, ak], Xk, {
-            amount: Tk,
-            attributes: JSON.parse(ik),
-            tF: qk,
-            size: Lk
+            AT: fm,
+            aT: hm,
+            xT: Am,
+            wT: am,
+            DT: xm,
+            iT: wm,
+            RT: Dm,
+            pT: im,
+            ET: Rm
+          } = mm;
+          if (!Tm.qI.Pmm(fm, "itemState")) return void(0, Um.k)(Tm, fm, [xm, wm, Dm], hm, {
+            amount: Am,
+            attributes: JSON.parse(am),
+            pT: im,
+            size: Rm
           });
-          const tk = Fk.MJ.getState(Ik, "itemState");
-          tk.amount = Tk, tk.tF = qk, tk.creationTime = Date.now(), (0, hk.setServerPosition)(Fk.MJ.getState(Ik, "smoothToServerPos"), yk, lk, ak)
-        })), kk.bJ(qk.Z, (kk => {
-          (0, nk.b)(Fk).setCantPickUp(kk, !0), Fk.MJ.Ukk(kk, "itemState") && (Fk.MJ.getState(kk, "itemState").tF = !0)
-        })), kk.bJ(qk.Td, (kk => {
-          (0, nk.b)(Fk).setCantPickUp(kk, !1), Fk.MJ.Ukk(kk, "itemState") && (Fk.MJ.getState(kk, "itemState").tF = !1)
-        })), kk.bJ(qk.cd, (kk => {
+          const pm = Tm.qI.getState(fm, "itemState");
+          pm.amount = Am, pm.pT = im, pm.creationTime = Date.now(), (0, dm.setServerPosition)(Tm.qI.getState(fm, "smoothToServerPos"), xm, wm, Dm)
+        })), mm.lV(im.tb, (mm => {
+          (0, Sm.d)(Tm).setCantPickUp(mm, !0), Tm.qI.Pmm(mm, "itemState") && (Tm.qI.getState(mm, "itemState").pT = !0)
+        })), mm.lV(im.ce, (mm => {
+          (0, Sm.d)(Tm).setCantPickUp(mm, !1), Tm.qI.Pmm(mm, "itemState") && (Tm.qI.getState(mm, "itemState").pT = !1)
+        })), mm.lV(im.vd, (mm => {
           let {
-            pickUpItems: Fk,
-            pickUpAckSeq: Ik
-          } = kk;
+            pickUpItems: Tm,
+            pickUpAckSeq: fm
+          } = mm;
           for (const {
-              name: Tk,
-              amount: ik,
-              attributes: yk
+              name: Am,
+              amount: am,
+              attributes: xm
             }
-            of Fk) Xk().pickUpItem({
-            name: Tk,
-            amount: ik,
-            typeObj: mk.E[Tk],
-            attributes: yk
+            of Tm) hm().pickUpItem({
+            name: Am,
+            amount: am,
+            typeObj: Um.x[Am],
+            attributes: xm
           });
-          (0, ak.c)().client.inventoryPrediction.serverChangeApplied(Ik)
-        })), kk.bJ(qk.Be, (kk => {
+          (0, Dm.c)().client.inventoryPrediction.serverChangeApplied(fm)
+        })), mm.lV(im.Oe, (mm => {
           let {
-            index: Ik,
-            name: Xk,
-            amount: Tk,
-            attributes: ik,
-            setSlotAckSeq: yk
-          } = kk;
-          const lk = Fk.MJ.VFk(Fk.oR);
-          (Ik < lk.playerInventory.numSlots || lk.yX || lk.inCreative) && lk.setItemSlot(Ik, Xk, Tk, ik), (0, ak.c)().client.inventoryPrediction.serverChangeApplied(yk)
-        })), kk.bJ(qk.ic, (kk => {
-          (0, ak.c)().client.inventoryPrediction.acknowledge(kk)
-        })), kk.bJ(qk.y, (kk => {
+            index: fm,
+            name: hm,
+            amount: Am,
+            attributes: am,
+            setSlotAckSeq: xm
+          } = mm;
+          const wm = Tm.qI.nTm(Tm.xH);
+          (fm < wm.playerInventory.numSlots || wm.ph || wm.inCreative) && wm.setItemSlot(fm, hm, Am, am), (0, Dm.c)().client.inventoryPrediction.serverChangeApplied(xm)
+        })), mm.lV(im.yc, (mm => {
+          (0, Dm.c)().client.inventoryPrediction.acknowledge(mm)
+        })), mm.lV(im.K, (mm => {
           let {
-            wF: Fk,
-            HF: Ik,
-            JF: Xk,
-            PF: Tk
-          } = kk;
-          (0, ak.c)().client.itemDropPrediction.onActionItemDrops(Fk, Ik, Xk, Tk)
-        })), kk.bJ(qk.vb, (kk => {
-          Xk().clearInventory(), (0, ak.c)().client.inventoryPrediction.serverChangeApplied(kk)
-        })), kk.bJ(qk.Fe, (kk => {
-          Jk.g.GL("setSelectedInventorySlotI", kk, !0)
-        })), kk.bJ(qk.mb, (kk => {
+            YT: Tm,
+            qT: fm,
+            jT: hm,
+            VT: Am
+          } = mm;
+          (0, Dm.c)().client.itemDropPrediction.onActionItemDrops(Tm, fm, hm, Am)
+        })), mm.lV(im.Nb, (mm => {
+          hm().clearInventory(), (0, Dm.c)().client.inventoryPrediction.serverChangeApplied(mm)
+        })), mm.lV(im.Re, (mm => {
+          jm.j.gp("setSelectedInventorySlotI", mm, !0)
+        })), mm.lV(im.Gb, (mm => {
           let {
-            SX: Ik,
-            oX: Xk,
-            vX: Tk,
-            EX: ik,
-            OX: yk,
-            GX: lk,
-            pX: qk,
-            uX: Lk
-          } = kk;
-          const tk = Fk.MJ.VFk(Fk.oR);
-          if (lk) {
+            Nh: fm,
+            Gh: hm,
+            Xh: Am,
+            Ph: am,
+            Hh: xm,
+            yh: wm,
+            Ch: im,
+            rh: Rm
+          } = mm;
+          const pm = Tm.qI.nTm(Tm.xH);
+          if (wm) {
             const {
-              iX: kk,
-              tX: Fk
-            } = Lk;
-            return (0, ak.c)().client.inventoryPrediction.y5(Fk, (() => {
-              tk.chestRefreshed(Xk, Tk, ik, qk, kk)
-            })) && Jk.g.GL("chestToggleFromServer", !1, !0), void Jk.g.GL("chestRefreshedFromServer")
-          }(Ik || tk.yX) && (Ik ? (tk.chestOpened(Xk, Tk, ik, yk, qk), null !== yk && (0, ak.c)().client.ironChestPasskeyCache.onChestOpened(ik, yk)) : tk.chestClosed(), Jk.g.GL("chestToggleFromServer", Ik, !0))
-        })), kk.bJ(qk.Kb, (kk => {
+              Rh: mm,
+              qh: Tm
+            } = Rm;
+            return (0, Dm.c)().client.inventoryPrediction.Q8(Tm, (() => {
+              pm.chestRefreshed(hm, Am, am, im, mm)
+            })) && jm.j.gp("chestToggleFromServer", !1, !0), void jm.j.gp("chestRefreshedFromServer")
+          }(fm || pm.ph) && (fm ? (pm.chestOpened(hm, Am, am, xm, im), null !== xm && (0, Dm.c)().client.ironChestPasskeyCache.onChestOpened(am, xm)) : pm.chestClosed(), jm.j.gp("chestToggleFromServer", fm, !0))
+        })), mm.lV(im.Xb, (mm => {
           let {
-            craftingRecipeItemName: Xk,
-            recipesForItem: Tk
-          } = kk;
-          Xk ? Ik.craftingManager.editRecipesForPlayer(Fk.oR, Xk, Tk) : Ik.craftingManager.resetAllPlayerRecipes(Fk.oR), Jk.g.GL("craftingRecipesEdited", {
-            itemName: Xk,
-            recipesForItem: Tk
+            craftingRecipeItemName: hm,
+            recipesForItem: Am
+          } = mm;
+          hm ? fm.craftingManager.editRecipesForPlayer(Tm.xH, hm, Am) : fm.craftingManager.resetAllPlayerRecipes(Tm.xH), jm.j.gp("craftingRecipesEdited", {
+            itemName: hm,
+            recipesForItem: Am
           })
-        })), kk.bJ(qk.Kd, (kk => {
+        })), mm.lV(im.Xd, (mm => {
           let {
-            FF: Fk,
-            IF: Ik,
-            XF: Tk
-          } = kk;
-          Xk().removeItemName(Fk, Ik), (0, ak.c)().client.inventoryPrediction.serverChangeApplied(Tk)
-        })), kk.bJ(qk.Hd, (kk => {
+            TT: Tm,
+            fT: fm,
+            hT: Am
+          } = mm;
+          hm().removeItemName(Tm, fm), (0, Dm.c)().client.inventoryPrediction.serverChangeApplied(Am)
+        })), mm.lV(im.Vd, (mm => {
           let {
-            Ki: Xk
-          } = kk;
-          Ik.craftingManager.removeRecipes(Fk.oR, Xk), Jk.g.GL("craftingRecipesEdited", {
-            itemName: Xk,
+            ba: hm
+          } = mm;
+          fm.craftingManager.removeRecipes(Tm.xH, hm), jm.j.gp("craftingRecipesEdited", {
+            itemName: hm,
             recipesForItem: []
           })
         }))
       }
     }
-    var Dk = Ik(6475),
-      Mk = Ik(37450),
-      kF = Ik(354),
-      FF = Ik.n(kF),
-      IF = Ik(4508),
-      XF = Ik(37712),
-      TF = Ik(38252),
-      iF = Ik(37447);
-    class yF {
-      constructor(kk, Fk) {
-        this.qZ = kk, this.setUpQueuedEntity = Fk
+    var Wm = fm(6451),
+      Fm = fm(37461),
+      mT = fm(362),
+      TT = fm.n(mT),
+      fT = fm(4460),
+      hT = fm(37751),
+      AT = fm(38337),
+      aT = fm(37457);
+    class xT {
+      constructor(mm, Tm) {
+        this.IE = mm, this.setUpQueuedEntity = Tm
       }
-      register(kk) {
-        const Fk = this.qZ,
-          Ik = (0, ak.c)();
-        kk.bJ(qk.Ye, (kk => {
+      register(mm) {
+        const Tm = this.IE,
+          fm = (0, Dm.c)();
+        mm.lV(im.kf, (mm => {
           let {
-            cT: Ik,
-            WT: Tk,
-            fT: ik,
-            BT: yk
-          } = kk;
-          const lk = [Tk, ik, yk];
-          Fk.MJ.setPosition(Fk.oR, lk), (0, Xk.sendColyMessage)(qk.ug, {
-            yl: Ik,
-            ll: IF.f
-          }), Jk.g.GL("localPlayerTeleported", {
-            pos: lk,
+            dA: fm,
+            gA: Am,
+            WA: am,
+            FA: xm
+          } = mm;
+          const wm = [Am, am, xm];
+          Tm.qI.setPosition(Tm.xH, wm), (0, hm.sendColyMessage)(im._g, {
+            Rw: fm,
+            pw: fT.e
+          }), jm.j.gp("localPlayerTeleported", {
+            pos: wm,
             isCorrection: !1
           })
-        })), kk.bJ(qk.Wc, (kk => {
+        })), mm.lV(im.qd, (mm => {
           let {
-            OF: Fk,
-            nF: Ik,
-            GF: Xk,
-            pF: Tk
-          } = kk;
-          this.setUpQueuedEntity(Fk);
-          const ik = [Ik, Xk, Tk];
-          Jk.g.GL(`otherPlayerTeleported|${Fk}`, {
-            pos: ik
+            bT: Tm,
+            ST: fm,
+            eT: hm,
+            NT: Am
+          } = mm;
+          this.setUpQueuedEntity(Tm);
+          const am = [fm, hm, Am];
+          jm.j.gp(`otherPlayerTeleported|${Tm}`, {
+            pos: am
           })
-        })), kk.bJ(qk.sd, (kk => {
+        })), mm.lV(im.Jd, (mm => {
           let {
-            XT: Ik,
-            TT: Tk,
-            iT: ik,
-            yT: yk,
-            lT: lk,
-            aT: ak,
-            qT: Lk,
-            tT: tk,
-            LT: Zk,
-            eT: jk
-          } = kk;
-          const ek = [Tk, ik, yk];
-          Fk.MJ.setPosition(Fk.oR, ek);
-          const wk = Fk.MJ.FFk(Fk.oR),
-            Hk = Fk.MJ.aN(Fk.oR);
-          FF().set(Hk.fC, 0, 0, 0), FF().set(Hk.YC, 0, 0, 0), FF().set(Hk.TH, lk, ak, Lk), Hk.gC(), wk._flying = null !== jk, jk ? (wk.flyAccel.wT = jk.wT, wk.flyAccel.HT = jk.HT) : wk.flyAccel.reset(), tk && wk.movementType === Dk.m.GLIDING && (wk.ZT = tk.ZT, FF().copy(wk.jT, tk.jT)), (0, Xk.sendColyMessage)(qk.ug, {
-            yl: Ik,
-            ll: IF.f
-          }), Jk.g.GL("localPlayerTeleported", {
-            pos: ek,
+            pA: fm,
+            EA: Am,
+            oA: am,
+            OA: xm,
+            YA: wm,
+            qA: Dm,
+            jA: Rm,
+            IA: pm,
+            VA: Em,
+            nA: om
+          } = mm;
+          const Om = [Am, am, xm];
+          Tm.qI.setPosition(Tm.xH, Om);
+          const Ym = Tm.qI.mTm(Tm.xH),
+            qm = Tm.qI.WC(Tm.xH);
+          TT().set(qm.zC, 0, 0, 0), TT().set(qm.ZC, 0, 0, 0), TT().set(qm.qq, wm, Dm, Rm), qm.bC(), Ym._flying = null !== om, om ? (Ym.flyAccel.JA = om.JA, Ym.flyAccel.cA = om.cA) : Ym.flyAccel.reset(), pm && Ym.movementType === Wm.l.GLIDING && (Ym.KA = pm.KA, TT().copy(Ym.QA, pm.QA)), (0, hm.sendColyMessage)(im._g, {
+            Rw: fm,
+            pw: fT.e
+          }), jm.j.gp("localPlayerTeleported", {
+            pos: Om,
             isCorrection: !0
           })
-        })), kk.bJ(qk.Ie, (kk => {
+        })), mm.lV(im.Ve, (mm => {
           let {
-            vehicleEId: Fk,
-            overrides: Ik
-          } = kk;
-          (0, ak.c)().applyRiddenVehicleSettingOverrides(Fk, Ik)
-        })), kk.bJ(qk.gf, (kk => {
+            vehicleEId: Tm,
+            overrides: fm
+          } = mm;
+          (0, Dm.c)().applyRiddenVehicleSettingOverrides(Tm, fm)
+        })), mm.lV(im.xf, (mm => {
           let {
-            mk: Ik,
-            hk: Xk,
-            rk: Tk
-          } = kk;
-          const ik = Fk.MJ.FFk(Fk.oR).physicsState.type === Dk.n.SLEEPING && Ik === Dk.n.DEFAULT;
-          (0, ak.c)().updatePositionAndPhysics(Fk.oR, {
-            type: Ik,
-            tier: Xk
-          }, !0, Tk), ik && (0, ak.c)().updateHeldVehicleStatus()
-        })), kk.bJ(qk.fb, (kk => {
+            Um: fm,
+            dm: hm,
+            gm: Am
+          } = mm;
+          const am = Tm.qI.mTm(Tm.xH).physicsState.type === Wm.m.SLEEPING && fm === Wm.m.DEFAULT;
+          (0, Dm.c)().updatePositionAndPhysics(Tm.xH, {
+            type: fm,
+            tier: hm
+          }, !0, Am), am && (0, Dm.c)().updateHeldVehicleStatus()
+        })), mm.lV(im.yb, (mm => {
           let {
-            jF: Ik,
-            eF: Xk
-          } = kk;
-          Fk.MJ.KFk(Fk.oR).setPose(Ik, Xk)
-        })), kk.bJ(qk.oe, (kk => {
+            oT: fm,
+            OT: hm
+          } = mm;
+          Tm.qI.ITm(Tm.xH).setPose(fm, hm)
+        })), mm.lV(im.Ee, (mm => {
           const {
-            fi: Ik,
-            kIk: Xk
-          } = (0, Mk.e)([kk[0], kk[1], kk[2]]);
-          iF.b.setLookDirection(Fk, Ik, Xk), (0, XF.v)(Ik, Xk);
-          const Tk = Fk.MJ.KFk(Fk.oR);
-          Tk && (Tk.heading = Ik)
-        })), kk.bJ(qk.qe, (kk => {
-          Ik.client.cameraController.setCameraZoom(kk)
-        })), kk.bJ(qk.Me, (kk => {
+            wi: fm,
+            FTm: hm
+          } = (0, Fm.f)([mm[0], mm[1], mm[2]]);
+          aT.e.setLookDirection(Tm, fm, hm), (0, hT.w)(fm, hm);
+          const Am = Tm.qI.ITm(Tm.xH);
+          Am && (Am.heading = fm)
+        })), mm.lV(im.Ge, (mm => {
+          fm.client.cameraController.setCameraZoom(mm)
+        })), mm.lV(im.$e, (mm => {
           let {
-            ST: Xk,
-            oT: Tk
-          } = kk;
-          Ik.shakePlayerCamera(Fk.oR, Xk, Tk)
-        })), kk.bJ(qk.pc, (kk => {
-          Fk.MJ.KFk(Fk.oR).jumpMultiplier.setMultiplierType("jumpEffectAmount", kk)
-        })), (0, Xk.onGameResetOnce)((() => {
-          Fk.MJ.KFk(Fk.oR).jumpMultiplier.setMultiplierType("jumpEffectAmount", 1)
-        })), kk.bJ(qk.E, (kk => {
-          Fk.MJ.aN(Fk.oR).applyImpulse(kk)
-        })), kk.bJ(qk.Le, (kk => {
-          const Ik = Fk.MJ.aN(Fk.oR);
-          FF().set(Ik.fC, 0, 0, 0), FF().set(Ik.YC, 0, 0, 0), FF().copy(Ik.TH, kk), Ik.gC()
-        })), (0, Xk.onGameResetOnce)((() => {
-          (0, TF.setFloatingYValue)(Fk.MJ.getState(Fk.oR, "physics"), Fk.MJ.ZY(Fk.oR), null)
-        })), kk.bJ(qk.Ob, (kk => {
+            PA: hm,
+            HA: Am
+          } = mm;
+          fm.shakePlayerCamera(Tm.xH, hm, Am)
+        })), mm.lV(im.Gc, (mm => {
+          Tm.qI.ITm(Tm.xH).jumpMultiplier.setMultiplierType("jumpEffectAmount", mm)
+        })), (0, hm.onGameResetOnce)((() => {
+          Tm.qI.ITm(Tm.xH).jumpMultiplier.setMultiplierType("jumpEffectAmount", 1)
+        })), mm.lV(im.N, (mm => {
+          Tm.qI.WC(Tm.xH).applyImpulse(mm)
+        })), mm.lV(im.Xe, (mm => {
+          const fm = Tm.qI.WC(Tm.xH);
+          TT().set(fm.zC, 0, 0, 0), TT().set(fm.ZC, 0, 0, 0), TT().copy(fm.qq, mm), fm.bC()
+        })), (0, hm.onGameResetOnce)((() => {
+          (0, AT.setFloatingYValue)(Tm.qI.getState(Tm.xH, "physics"), Tm.qI.uB(Tm.xH), null)
+        })), mm.lV(im.ac, (mm => {
           let {
-            CX: Ik,
-            NX: Xk,
-            cX: Tk
-          } = kk;
-          const ik = (0, Gk.c)(Ik);
-          if (ik === Fk.oR) {
-            const kk = Fk.MJ.ZY(Fk.oR).position;
-            Tk ??= Math.floor(kk[1]) - 1, (0, TF.setFloatingYValue)(Fk.MJ.getState(Fk.oR, "physics"), Fk.MJ.ZY(Fk.oR), Xk ? Tk : null)
-          }(0, nk.b)(Fk).setFloating(ik, Xk, Tk);
-          const yk = Fk.MJ.getState(ik, "floating");
-          yk && (yk.isFloating = Xk, yk.cX = Xk ? Tk : null)
+            Bh: fm,
+            Lh: hm,
+            Uh: Am
+          } = mm;
+          const am = (0, em.d)(fm);
+          if (am === Tm.xH) {
+            const mm = Tm.qI.uB(Tm.xH).position;
+            Am ??= Math.floor(mm[1]) - 1, (0, AT.setFloatingYValue)(Tm.qI.getState(Tm.xH, "physics"), Tm.qI.uB(Tm.xH), hm ? Am : null)
+          }(0, Sm.d)(Tm).setFloating(am, hm, Am);
+          const xm = Tm.qI.getState(am, "floating");
+          xm && (xm.isFloating = hm, xm.Uh = hm ? Am : null)
         }))
       }
     }
 
-    function lF(kk, Fk, Ik, Xk, Tk) {
-      let ik = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      if (!kk.MJ.QFk(kk.oR)) return console.log("Got resync inven but don't have inven component"), void Fk.acknowledge(Xk);
-      ik && console.error("Had to sync inven"), Fk.y5(Xk, Tk) && Ik.GL("chestToggleFromServer", !1, !0), Ik.GL("syncedInvenFromServer")
+    function wT(mm, Tm, fm, hm, Am) {
+      let am = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      if (!mm.qI.KTm(mm.xH)) return console.log("Got resync inven but don't have inven component"), void Tm.acknowledge(hm);
+      am && console.error("Had to sync inven"), Tm.Q8(hm, Am) && fm.gp("chestToggleFromServer", !1, !0), fm.gp("syncedInvenFromServer")
     }
-    var aF = Ik(38992),
-      qF = Ik(38997),
-      LF = Ik(1902);
-    var tF = Ik(4495);
+    var DT = fm(39129),
+      iT = fm(39133),
+      RT = fm(1934);
+    var pT = fm(4441);
 
-    function ZF(kk) {
-      const Fk = kk.XZ;
-      let Ik = 0,
-        Tk = -1,
-        yk = -1 / 0,
-        lk = null,
-        ak = !0;
-      const Lk = () => {
-        if (++Ik % 10 !== 0) return;
-        const Lk = (0, Xk.getLastReceivedPacketId)();
-        if (Lk <= Tk) return;
-        const [tk, Zk, jk] = kk.MJ.OJ(kk.oR), ek = ! function(kk) {
-          var Fk;
-          let Ik = null === (Fk = kk.MJ.XIk(kk.oR)) || void 0 === Fk ? void 0 : Fk.le;
-          if (void 0 === Ik) return !1;
-          const Xk = new Set;
-          for (; void 0 !== Ik && !Xk.has(Ik);) {
-            var Tk;
-            Xk.add(Ik);
-            const Fk = kk.MJ.getState(Ik, "smoothToServerPos"),
-              ik = Array.isArray(Fk) ? null : null === Fk || void 0 === Fk ? void 0 : Fk.serverPosition;
-            if (ik) {
-              const Fk = kk.MJ.OJ(Ik);
-              if (Math.abs(Fk[0] - ik[0]) > 10 || Math.abs(Fk[1] - ik[1]) > 10 || Math.abs(Fk[2] - ik[2]) > 10) return !0
+    function ET(mm) {
+      const Tm = mm.oE;
+      let fm = 0,
+        Am = -1,
+        xm = -1 / 0,
+        wm = null,
+        Dm = !0;
+      const Rm = () => {
+        if (++fm % 10 !== 0) return;
+        const Rm = (0, hm.getLastReceivedPacketId)();
+        if (Rm <= Am) return;
+        const [pm, Em, om] = mm.qI.rV(mm.xH), Om = ! function(mm) {
+          var Tm;
+          let fm = null === (Tm = mm.qI.hfm(mm.xH)) || void 0 === Tm ? void 0 : Tm.kO;
+          if (void 0 === fm) return !1;
+          const hm = new Set;
+          for (; void 0 !== fm && !hm.has(fm);) {
+            var Am;
+            hm.add(fm);
+            const Tm = mm.qI.getState(fm, "smoothToServerPos"),
+              am = Array.isArray(Tm) ? null : null === Tm || void 0 === Tm ? void 0 : Tm.serverPosition;
+            if (am) {
+              const Tm = mm.qI.rV(fm);
+              if (Math.abs(Tm[0] - am[0]) > 10 || Math.abs(Tm[1] - am[1]) > 10 || Math.abs(Tm[2] - am[2]) > 10) return !0
             }
-            Ik = null === (Tk = kk.MJ.XIk(Ik)) || void 0 === Tk ? void 0 : Tk.le
+            fm = null === (Am = mm.qI.hfm(fm)) || void 0 === Am ? void 0 : Am.kO
           }
           return !1
-        }(kk) && function(kk, Fk, Ik, Xk) {
-          const Tk = ik.f.se;
-          for (let ik = 0; ik < kk.length; ik++) {
-            const yk = kk[ik];
-            if (!(0, tF.g)(Fk, Ik, Xk, yk[0] * Tk, yk[1] * Tk, yk[2] * Tk)) return !1
+        }(mm) && function(mm, Tm, fm, hm) {
+          const Am = am.f.MO;
+          for (let am = 0; am < mm.length; am++) {
+            const xm = mm[am];
+            if (!(0, pT.h)(Tm, fm, hm, xm[0] * Am, xm[1] * Am, xm[2] * Am)) return !1
           }
           return !0
-        }(Fk.IH.He, tk, Zk, jk), wk = null === lk || Math.abs(tk - lk[0]) > 8 || Math.abs(Zk - lk[1]) > 8 || Math.abs(jk - lk[2]) > 8, Hk = !ak || wk || performance.now() - yk >= 1e4;
-        ak = ek, ek && Hk && (Tk = Lk, yk = performance.now(), lk = [tk, Zk, jk], (0, Xk.sendColyMessage)(qk.bg, {
-          Dy: Lk
+        }(Tm.Oq.HO, pm, Em, om), Ym = null === wm || Math.abs(pm - wm[0]) > 8 || Math.abs(Em - wm[1]) > 8 || Math.abs(om - wm[2]) > 8, qm = !Dm || Ym || performance.now() - xm >= 1e4;
+        Dm = Om, Om && qm && (Am = Rm, xm = performance.now(), wm = [pm, Em, om], (0, hm.sendColyMessage)(im.Dg, {
+          fw: Rm
         }))
       };
-      return kk.on("Dt", Lk), () => {
-        kk.off("Dt", Lk)
+      return mm.on("DE", Rm), () => {
+        mm.off("DE", Rm)
       }
     }
-    var jF = Ik(39003),
-      eF = Ik(1475),
-      wF = Ik(2695),
-      HF = Ik(2837),
-      JF = Ik(4784);
-    class xF {
-      constructor(kk, Fk, Ik) {
-        this.qZ = kk, this.gameNameWithVariation = Fk, this.connectionResume = Ik, this.stopChunkReports = () => {}, this.replayResume = null
+    var oT = fm(39137),
+      OT = fm(1519),
+      YT = fm(2756),
+      qT = fm(2903),
+      jT = fm(4717);
+    class VT {
+      constructor(mm, Tm, fm) {
+        this.IE = mm, this.gameNameWithVariation = Tm, this.connectionResume = fm, this.stopChunkReports = () => {}, this.replayResume = null
       }
       clearUiRequestsAndQTEs() {
-        JF.b.reset(), (0, aF.d)()
+        jT.d.reset(), (0, DT.c)()
       }
       startChunkReports() {
-        const kk = function(kk) {
-            let Fk = null,
-              Ik = -1 / 0,
-              Tk = null;
-            const ik = () => {
-                Tk = null;
-                const ik = Math.ceil(kk.OE[0]),
-                  yk = Math.ceil(kk.OE[1]);
-                Fk && Fk[0] === ik && Fk[1] === yk || (Fk = [ik, yk], Ik = performance.now(), (0, Xk.sendColyMessage)(qk.$f, {
-                  Ry: ik,
-                  Uy: yk
+        const mm = function(mm) {
+            let Tm = null,
+              fm = -1 / 0,
+              Am = null;
+            const am = () => {
+                Am = null;
+                const am = Math.ceil(mm.kS[0]),
+                  xm = Math.ceil(mm.kS[1]);
+                Tm && Tm[0] === am && Tm[1] === xm || (Tm = [am, xm], fm = performance.now(), (0, hm.sendColyMessage)(im.Bg, {
+                  Bx: am,
+                  Lx: xm
                 }))
               },
-              yk = () => {
-                null === Tk && (Tk = setTimeout(ik, Math.max(0, Ik + 250 - performance.now())))
+              xm = () => {
+                null === Am && (Am = setTimeout(am, Math.max(0, fm + 250 - performance.now())))
               };
-            return ik(), kk.on("addRemoveDistanceChanged", yk), () => {
-              kk.off("addRemoveDistanceChanged", yk), null !== Tk && (clearTimeout(Tk), Tk = null)
+            return am(), mm.on("addRemoveDistanceChanged", xm), () => {
+              mm.off("addRemoveDistanceChanged", xm), null !== Am && (clearTimeout(Am), Am = null)
             }
-          }(this.qZ.XZ),
-          Fk = ZF(this.qZ);
+          }(this.IE.oE),
+          Tm = ET(this.IE);
         this.stopChunkReports = () => {
-          kk(), Fk()
+          mm(), Tm()
         }
       }
       restartChunkStreaming() {
-        (0, XF.i)(this.qZ, (0, ak.c)().recentChunkEdits.chunksEditedSince(this.connectionResume.getDroppedAt() - jF.d)), this.startChunkReports()
+        (0, hT.m)(this.IE, (0, Dm.c)().recentChunkEdits.chunksEditedSince(this.connectionResume.getDroppedAt() - oT.b)), this.startChunkReports()
       }
-      register(kk) {
-        const Fk = this.qZ,
-          Ik = (0, ak.c)();
-        kk.bJ(qk.Kc, (kk => {
-          xk.e.applyNewClientOptions(kk)
-        })), kk.bJ(qk.gd, (kk => {
-          wF.d.onReceiveColyseusPing(kk)
-        })), kk.bJ(qk.te, (kk => {
+      register(mm) {
+        const Tm = this.IE,
+          fm = (0, Dm.c)();
+        mm.lV(im.ad, (mm => {
+          Vm.b.applyNewClientOptions(mm)
+        })), mm.lV(im.xd, (mm => {
+          YT.e.onReceiveColyseusPing(mm)
+        })), mm.lV(im.He, (mm => {
           let {
-            key: Fk,
-            value: Ik
-          } = kk;
-          (0, Pk.setCookie)(this.gameNameWithVariation, Fk, Ik)
-        })), kk.bJ(qk.xe, (kk => {
-          Jk.g.GL("setDiscordReportKey", kk)
-        })), (0, Xk.onGameResetOnce)((() => {
+            key: Tm,
+            value: fm
+          } = mm;
+          (0, Im.setCookie)(this.gameNameWithVariation, Tm, fm)
+        })), mm.lV(im.Ke, (mm => {
+          jm.j.gp("setDiscordReportKey", mm)
+        })), (0, hm.onGameResetOnce)((() => {
           this.stopChunkReports()
-        })), kk.bJ(qk.dc, (Tk => {
+        })), mm.lV(im.uc, (Am => {
           const {
-            tI: ik,
-            ZI: yk
-          } = Tk;
-          if ((0, Xk.setAdjustment)(yk), this.connectionResume.onInitialInfo(Tk.jI, Tk.eI), Xk.offlineInputReplay.Av(Tk.wI), this.connectionResume.isResuming()) {
-            console.log("Resumed the connection as eId", ik);
+            pf: am,
+            Ef: xm
+          } = Am;
+          if ((0, hm.setAdjustment)(xm), this.connectionResume.onInitialInfo(Am.Yf, Am.qf), hm.offlineInputReplay.Dk(Am.jf), this.connectionResume.isResuming()) {
+            console.log("Resumed the connection as eId", am);
             try {
-              null === Tk.HI && (0, ak.c)().client.inventoryPrediction.dropPending(), this.stopChunkReports(), Ek(Fk.XZ), xk.e.apply({
+              null === Am.Vf && (0, Dm.c)().client.inventoryPrediction.dropPending(), this.stopChunkReports(), km(Tm.oE), Vm.b.apply({
                 shopInfo: null,
-                _shopVersion: LF.e
+                _shopVersion: RT.c
               });
-              const Ik = Fk.MJ.VFk(Fk.oR);
-              Ik.yX && (Ik.chestClosed(), Jk.g.GL("chestToggleFromServer", !1, !0)), this.clearUiRequestsAndQTEs(), Jk.g.GL("initInfoReceived", kk)
+              const fm = Tm.qI.nTm(Tm.xH);
+              fm.ph && (fm.chestClosed(), jm.j.gp("chestToggleFromServer", !1, !0)), this.clearUiRequestsAndQTEs(), jm.j.gp("initInfoReceived", mm)
             } finally {
-              const kk = null === Tk.HI ? null : {
+              const mm = null === Am.Vf ? null : {
                 sync: null,
                 endSeq: null
               };
-              this.replayResume = kk, this.connectionResume.onResumeInitialInfo(Tk.HI, (() => {
-                kk.endSeq = (0, ak.c)().client.inventoryPrediction.lastActionSeq
-              })), null === kk && this.restartChunkStreaming()
+              this.replayResume = mm, this.connectionResume.onResumeInitialInfo(Am.Vf, (() => {
+                mm.endSeq = (0, Dm.c)().client.inventoryPrediction.lastActionSeq
+              })), null === mm && this.restartChunkStreaming()
             }
-          } else console.log("Local client is eId", ik), (0, XF.k)(Fk), Jk.g.GL("loadingScreenState", "loadingPage:loadingWorld"), Fk.Nkk = ik, Fk.MJ.Ukk(Fk.oR, Fk.MJ.names.entityName) && Fk.MJ.Eu(Fk.oR, Fk.MJ.names.entityName), (0, ak.c)().setEntityName(Fk.Nkk, (0, ak.c)().getRawEntityName(Fk.oR)), Fk.xR[Fk.Nkk] = {}, Fk.MJ.Tu(Fk.oR, Fk.MJ.names.entityName), Jk.g.GL("initInfoReceived", kk), this.startChunkReports(), Ik.client.onServerConnectionFinalised()
-        })), kk.bJ(qk.ge, (() => {
+          } else console.log("Local client is eId", am), (0, hT.o)(Tm), jm.j.gp("loadingScreenState", "loadingPage:loadingWorld"), Tm.Cmm = am, Tm.qI.Pmm(Tm.xH, Tm.qI.names.entityName) && Tm.qI.WG(Tm.xH, Tm.qI.names.entityName), (0, Dm.c)().setEntityName(Tm.Cmm, (0, Dm.c)().getRawEntityName(Tm.xH)), Tm.mH[Tm.Cmm] = {}, Tm.qI.vG(Tm.xH, Tm.qI.names.entityName), jm.j.gp("initInfoReceived", mm), this.startChunkReports(), fm.client.onServerConnectionFinalised()
+        })), mm.lV(im.te, (() => {
           this.connectionResume.isResuming() ? this.connectionResume.onResumed((() => {
-            const kk = this.replayResume;
-            if (this.replayResume = null, !kk) return;
+            const mm = this.replayResume;
+            if (this.replayResume = null, !mm) return;
             this.restartChunkStreaming();
             const {
-              inventoryPrediction: Ik
-            } = (0, ak.c)().client, {
-              sync: Tk
-            } = kk, ik = new Set(Xk.offlineInputReplay.takeDroppedActions());
-            if (Tk) {
-              var yk;
-              const Xk = null !== (yk = kk.endSeq) && void 0 !== yk ? yk : Ik.lastActionSeq;
-              Ik.forget((kk => kk > Tk.tX && kk <= Xk || ik.has(kk))), lF(Fk, Ik, Jk.g, Tk.tX, Tk.load)
-            } else Ik.dropPending(), Ik.askForSnapshot()
+              inventoryPrediction: fm
+            } = (0, Dm.c)().client, {
+              sync: Am
+            } = mm, am = new Set(hm.offlineInputReplay.takeDroppedActions());
+            if (Am) {
+              var xm;
+              const hm = null !== (xm = mm.endSeq) && void 0 !== xm ? xm : fm.lastActionSeq;
+              fm.forget((mm => mm > Am.qh && mm <= hm || am.has(mm))), wT(Tm, fm, jm.j, Am.qh, Am.load)
+            } else fm.dropPending(), fm.askForSnapshot()
           })) : console.warn("ResumeComplete arrived without a resume")
-        })), kk.bJ(qk.Se, (kk => {
+        })), mm.lV(im.gf, (mm => {
           let {
-            TX: Ik,
-            LX: Xk,
-            tX: Tk
-          } = kk;
+            ih: fm,
+            Yh: hm,
+            qh: Am
+          } = mm;
           const {
-            inventoryPrediction: ik
-          } = (0, ak.c)().client, yk = () => {
-            Fk.MJ.VFk(Fk.oR).loadFromString(Ik)
+            inventoryPrediction: am
+          } = (0, Dm.c)().client, xm = () => {
+            Tm.qI.nTm(Tm.xH).loadFromString(fm)
           };
           this.replayResume && (this.replayResume.sync = {
-            tX: Tk,
-            load: yk
-          }), lF(Fk, ik, Jk.g, Tk, yk, Xk)
-        })), kk.bJ(qk.xd, (kk => {
+            qh: Am,
+            load: xm
+          }), wT(Tm, am, jm.j, Am, xm, hm)
+        })), mm.lV(im.Nd, (mm => {
           let {
-            type: Fk,
-            location1: Ik,
-            location2: Xk,
-            location3: Tk,
-            score: ik
-          } = kk;
-          (0, HF.v)({
-            type: Fk,
-            location1: Ik,
-            location2: Xk,
-            location3: Tk,
-            score: ik
+            type: Tm,
+            location1: fm,
+            location2: hm,
+            location3: Am,
+            score: am
+          } = mm;
+          (0, qT.z)({
+            type: Tm,
+            location1: fm,
+            location2: hm,
+            location3: Am,
+            score: am
           })
-        })), kk.bJ(qk.ee, (kk => {
+        })), mm.lV(im.se, (mm => {
           let {
-            type: Fk,
-            resourceType: Ik,
-            amount: Xk,
-            category: Tk,
-            itemName: ik
-          } = kk;
-          (0, HF.x)({
-            type: Fk,
-            resourceType: Ik,
-            amount: Xk,
-            category: Tk,
-            itemName: ik
+            type: Tm,
+            resourceType: fm,
+            amount: hm,
+            category: Am,
+            itemName: am
+          } = mm;
+          (0, qT.D)({
+            type: Tm,
+            resourceType: fm,
+            amount: hm,
+            category: Am,
+            itemName: am
           })
-        })), kk.bJ(qk.xc, (kk => {
+        })), mm.lV(im.Pc, (mm => {
           let {
-            leaveEventType: Fk,
-            category: Ik,
-            subCategory: Xk,
-            value: Tk
-          } = kk;
-          (0, HF.H)({
-            leaveEventType: Fk,
-            category: Ik,
-            subCategory: Xk,
-            value: Tk
+            leaveEventType: Tm,
+            category: fm,
+            subCategory: hm,
+            value: Am
+          } = mm;
+          (0, qT.P)({
+            leaveEventType: Tm,
+            category: fm,
+            subCategory: hm,
+            value: Am
           })
-        })), kk.bJ(qk.Hb, (kk => {
+        })), mm.lV(im.Ub, (mm => {
           let {
-            cat1: Fk,
-            cat2: Ik,
-            cat3: Xk,
-            value: Tk
-          } = kk;
-          (0, HF.r)({
-            cat1: Fk,
-            cat2: Ik,
-            cat3: Xk,
-            value: Tk
+            cat1: Tm,
+            cat2: fm,
+            cat3: hm,
+            value: Am
+          } = mm;
+          (0, qT.w)({
+            cat1: Tm,
+            cat2: fm,
+            cat3: hm,
+            value: Am
           })
-        })), kk.bJ(qk.rc, (kk => {
-          (0, ak.c)().client.leaveGameUnwanted({
-            reason: kk,
+        })), mm.lV(im.Kc, (mm => {
+          (0, Dm.c)().client.leaveGameUnwanted({
+            reason: mm,
             requiresRefresh: !1,
             canReconnect: !1,
             automaticallyReconnect: !1
-          }), (0, eF.navigatePreserveSearch)("/")
-        })), kk.bJ(qk.le, (kk => {
-          Jk.g.GL("serverUpdating", Date.now() + kk, !0)
-        })), kk.bJ(qk.Ic, qF.b), kk.bJ(qk.Ec, (kk => {
-          console.error(`[logErrorToConsole]: ${kk}`)
+          }), (0, OT.navigatePreserveSearch)("/")
+        })), mm.lV(im.Ae, (mm => {
+          jm.j.gp("serverUpdating", Date.now() + mm, !0)
+        })), mm.lV(im.Yc, iT.d), mm.lV(im.Tc, (mm => {
+          console.error(`[logErrorToConsole]: ${mm}`)
         }))
       }
     }
-    var PF = Ik(39011),
-      KF = Ik(39028),
-      QF = Ik(1018),
-      sF = Ik(39016),
-      VF = Ik(39020),
-      zF = Ik(3602);
-    class SF {
-      constructor(kk, Fk) {
-        this.qZ = kk, this.clientApi = Fk
+    var IT = fm(39140),
+      KT = fm(39150),
+      QT = fm(1041),
+      nT = fm(39143),
+      JT = fm(39147),
+      cT = fm(3634);
+    class zT {
+      constructor(mm, Tm) {
+        this.IE = mm, this.clientApi = Tm
       }
-      register(kk) {
-        const Fk = this.qZ,
-          Ik = (0, ak.c)();
-        kk.bJ(qk.kb, (kk => {
+      register(mm) {
+        const Tm = this.IE,
+          fm = (0, Dm.c)();
+        mm.lV(im.Cb, (mm => {
           let {
-            chatMsgId: Fk,
-            content: Ik,
-            chatterEId: Xk
-          } = kk;
-          Jk.g.GL("chat", {
-            serverChatMsgId: Fk,
-            content: Ik,
-            chatterEId: Xk
+            chatMsgId: Tm,
+            content: fm,
+            chatterEId: hm
+          } = mm;
+          jm.j.gp("chat", {
+            serverChatMsgId: Tm,
+            content: fm,
+            chatterEId: hm
           }, !0)
-        })), kk.bJ(qk.$e, (kk => {
-          Jk.g.GL("TopRightHelper", kk, !0)
-        })), kk.bJ(qk.Ue, (kk => {
-          (0, PF.d)(kk)
-        })), kk.bJ(qk.tc, (kk => {
+        })), mm.lV(im.mf, (mm => {
+          jm.j.gp("TopRightHelper", mm, !0)
+        })), mm.lV(im.jf, (mm => {
+          (0, IT.c)(mm)
+        })), mm.lV(im.Nc, (mm => {
           let {
-            category: Fk,
-            timeframe: Ik,
-            data: Xk
-          } = kk;
-          Jk.g.GL("leaderboardResponse", {
-            category: Fk,
-            timeframe: Ik,
-            data: Xk
+            category: Tm,
+            timeframe: fm,
+            data: hm
+          } = mm;
+          jm.j.gp("leaderboardResponse", {
+            category: Tm,
+            timeframe: fm,
+            data: hm
           })
-        })), kk.bJ(qk.Qe, (() => {
-          Jk.g.GL("showShopTutorial", null, !0)
-        })), kk.bJ(qk.vd, (kk => {
-          Jk.g.GL("progressBarUpdate", kk, !0)
-        })), kk.bJ(qk.hc, (kk => {
-          Jk.g.GL("middleScreenBarInitiate", {
-            duration: kk.WX,
-            fX: kk.fX,
-            horizBarRemOffset: kk.BX
+        })), mm.lV(im.cf, (() => {
+          jm.j.gp("showShopTutorial", null, !0)
+        })), mm.lV(im.Md, (mm => {
+          jm.j.gp("progressBarUpdate", mm, !0)
+        })), mm.lV(im.xc, (mm => {
+          jm.j.gp("middleScreenBarInitiate", {
+            duration: mm.dh,
+            gh: mm.gh,
+            horizBarRemOffset: mm.Wh
           }, !0)
-        })), kk.bJ(qk.Od, (() => {
-          Jk.g.GL("middleScreenBarRemove", !0)
-        })), kk.bJ(qk.ue, (kk => {
+        })), mm.lV(im._d, (() => {
+          jm.j.gp("middleScreenBarRemove", !0)
+        })), mm.lV(im.Ie, (mm => {
           let {
-            id: Fk,
-            position: Ik,
-            style: Xk,
-            ZX: Tk,
-            eX: ik
-          } = kk;
-          Jk.g.GL("setDirectionArrow", {
-            id: Fk,
-            position: Ik,
-            style: Xk,
-            text: (0, qk.s)(Tk),
-            eX: ik
+            id: Tm,
+            position: fm,
+            style: hm,
+            jh: Am,
+            Ih: am
+          } = mm;
+          jm.j.gp("setDirectionArrow", {
+            id: Tm,
+            position: fm,
+            style: hm,
+            text: (0, im.A)(Am),
+            Ih: am
           }, !0)
-        })), kk.bJ(qk.sb, (kk => {
+        })), mm.lV(im.Lb, (mm => {
           let {
-            id: Fk
-          } = kk;
-          Jk.g.GL("clearDirectionArrow", {
-            id: Fk
+            id: Tm
+          } = mm;
+          jm.j.gp("clearDirectionArrow", {
+            id: Tm
           }, !0)
-        })), kk.bJ(qk.Eb, (kk => {
-          (0, zF.onCosmeticPackGranted)(kk)
-        })), kk.bJ(qk.Qc, (kk => {
+        })), mm.lV(im.Tb, (mm => {
+          (0, cT.onCosmeticPackGranted)(mm)
+        })), mm.lV(im.ld, (mm => {
           let {
-            id: Fk,
-            QI: Ik
-          } = kk;
+            id: Tm,
+            zf: fm
+          } = mm;
           const {
-            type: Tk,
-            params: ik
-          } = (0, KF.e)(Ik), yk = {
-            ...ik
+            type: Am,
+            params: am
+          } = (0, KT.e)(fm), xm = {
+            ...am
           };
-          for (const Xk of KF.d) Xk in yk && yk[Xk] && (yk[Xk] = (0, qk.s)(yk[Xk]));
-          JF.b.queueQTE(Fk, Tk, yk).getResult().then((kk => {
-            "boolean" === typeof kk && (0, Xk.sendColyMessage)(qk._h, {
-              qteId: Fk,
-              qteResponse: kk
+          for (const hm of KT.d) hm in xm && xm[hm] && (xm[hm] = (0, im.A)(xm[hm]));
+          jT.d.queueQTE(Tm, Am, xm).getResult().then((mm => {
+            "boolean" === typeof mm && (0, hm.sendColyMessage)(im.vi, {
+              qteId: Tm,
+              qteResponse: mm
             })
           }))
-        })), kk.bJ(qk.Pd, (kk => {
-          JF.b.cancelQTE(kk)
-        })), (0, Xk.onGameResetOnce)((() => {
-          JF.b.reset()
-        })), kk.bJ(qk.Uc, (kk => {
+        })), mm.lV(im.$d, (mm => {
+          jT.d.cancelQTE(mm)
+        })), (0, hm.onGameResetOnce)((() => {
+          jT.d.reset()
+        })), mm.lV(im.od, (mm => {
           let {
-            id: Fk,
-            clientParameters: Ik
-          } = kk;
-          (0, aF.h)(Fk, Ik)
-        })), kk.bJ(qk.Qd, (kk => {
-          (0, aF.j)(kk)
-        })), kk.bJ(qk.bf, (kk => {
+            id: Tm,
+            clientParameters: fm
+          } = mm;
+          (0, DT.d)(Tm, fm)
+        })), mm.lV(im.be, (mm => {
+          (0, DT.g)(mm)
+        })), mm.lV(im.qf, (mm => {
           let {
-            text: Fk,
-            id: Ik,
-            destructive: Tk
-          } = kk;
-          (0, aF.l)(Ik, Fk, Tk, (kk => {
-            (0, Xk.sendColyMessage)(qk.rj, {
-              Rq: Ik,
-              Uq: kk,
-              Cq: 5
+            text: Tm,
+            id: fm,
+            destructive: Am
+          } = mm;
+          (0, DT.k)(fm, Tm, Am, (mm => {
+            (0, hm.sendColyMessage)(im.Yj, {
+              Li: fm,
+              Ui: mm,
+              gi: 5
             })
           }))
-        })), kk.bJ(qk._c, (kk => {
+        })), mm.lV(im.td, (mm => {
           let {
-            info: Fk
-          } = kk;
-          Jk.g.GL("overShopInfo", Fk, !0)
-        })), kk.bJ(qk.Rb, (kk => {
+            info: Tm
+          } = mm;
+          jm.j.gp("overShopInfo", Tm, !0)
+        })), mm.lV(im.gc, (mm => {
           let {
-            vT: Ik,
-            ET: Xk
-          } = kk;
-          this.clientApi.openShop(Fk.oR, Ik, Xk)
-        })), kk.bJ(qk.Qb, (kk => {
+            yA: fm,
+            CA: hm
+          } = mm;
+          this.clientApi.openShop(Tm.xH, fm, hm)
+        })), mm.lV(im.cc, (mm => {
           let {
-            Vi: Fk,
-            zi: Ik,
-            Si: Xk
-          } = kk;
-          Jk.g.GL("flyingMiddleMessage", {
-            content: (0, qk.s)(Fk),
-            zi: Ik,
-            Si: Xk
+            Na: Tm,
+            Ga: fm,
+            Xa: hm
+          } = mm;
+          jm.j.gp("flyingMiddleMessage", {
+            content: (0, im.A)(Tm),
+            Ga: fm,
+            Xa: hm
           }, !0)
-        })), kk.bJ(qk.of, (kk => {
-          const Fk = kk === QF.f ? null : {
-            message: `Currently loaded as variation: ${kk}`,
+        })), mm.lV(im.Gf, (mm => {
+          const Tm = mm === QT.f ? null : {
+            message: `Currently loaded as variation: ${mm}`,
             type: "Warning"
           };
-          Jk.g.GL("showPermanentBottomMessage", Fk, !0)
-        })), kk.bJ(qk.Sb, (kk => {
+          jm.j.gp("showPermanentBottomMessage", Tm, !0)
+        })), mm.lV(im.jc, (mm => {
           let {
-            messageType: Fk,
-            data: Xk
-          } = kk;
-          (0, sF.c)(Fk) ? (0, sF.b)(Fk, Xk) : ("freeCamPerms" === Fk && Ik.client.freeCameraController.setPerms(Xk.key, Xk.value), Ik.client.triggerGameCallback("onReceivedMessageFromServer", Fk, Xk))
-        })), kk.bJ(qk.xb, VF.g)
+            messageType: Tm,
+            data: hm
+          } = mm;
+          (0, nT.f)(Tm) ? (0, nT.e)(Tm, hm) : ("freeCamPerms" === Tm && fm.client.freeCameraController.setPerms(hm.key, hm.value), fm.client.triggerGameCallback("onReceivedMessageFromServer", Tm, hm))
+        })), mm.lV(im.Ob, JT.e)
       }
     }
-    class oF {
-      constructor(kk, Fk, Ik, Xk) {
-        this.gameNameWithVariation = kk, this.qZ = Ik, this.connectionResume = Xk, this.stateReplicationHandler = void 0, this.stateReplicationHandler = new Qk.e(Fk, this.qZ)
+    class ZT {
+      constructor(mm, Tm, fm, hm) {
+        this.gameNameWithVariation = mm, this.IE = fm, this.connectionResume = hm, this.stateReplicationHandler = void 0, this.stateReplicationHandler = new Qm.d(Tm, this.IE)
       }
       setupStateReplicationHandlers() {
-        this.stateReplicationHandler.setup(), (0, Xk.onGameResetOnce)((() => {
+        this.stateReplicationHandler.setup(), (0, hm.onGameResetOnce)((() => {
           this.stateReplicationHandler.dispose()
         }))
       }
-      uqk(kk) {
-        this.stateReplicationHandler.dispose(), this.stateReplicationHandler = new Qk.e(kk, this.qZ), this.stateReplicationHandler.setup()
+      Cim(mm) {
+        this.stateReplicationHandler.dispose(), this.stateReplicationHandler = new Qm.d(mm, this.IE), this.stateReplicationHandler.setup()
       }
-      setupOnMessageListeners(kk, Fk) {
-        const Ik = this.qZ,
-          Xk = kk => {
-            this.stateReplicationHandler.setUpIfQueued(kk)
+      setupOnMessageListeners(mm, Tm) {
+        const fm = this.IE,
+          hm = mm => {
+            this.stateReplicationHandler.setUpIfQueued(mm)
           };
-        new xF(Ik, this.gameNameWithVariation, this.connectionResume).register(kk), new Ok(Ik).register(kk), new rk(Ik).register(kk), new Rk(Ik, Xk).register(kk), new gk(Ik, Xk).register(kk), new SF(Ik, Fk).register(kk), new yF(Ik, Xk).register(kk)
+        new VT(fm, this.gameNameWithVariation, this.connectionResume).register(mm), new bm(fm).register(mm), new gm(fm).register(mm), new Pm(fm, hm).register(mm), new tm(fm, hm).register(mm), new zT(fm, Tm).register(mm), new xT(fm, hm).register(mm)
       }
     }
     window.addEventListener("beforeunload", (() => {}));
-    var vF = Ik(39034),
-      EF = Ik(39040),
-      OF = Ik(667),
-      nF = Ik(2852);
-    class GF {
-      constructor(kk, Fk, Ik, Xk) {
-        this.msgHandler = Ik, this.listener = Xk, this.session = void 0, this.attachedRoom = null, this.detachRoomListeners = null, this.suspended = !1, this.droppedAt = 0, this.session = new vF.b({
-          reconnect: kk,
-          isLive: () => Xk.isLive(),
-          onReconnected: kk => {
-            this.resumeOnRoom(kk)
+    var kT = fm(39156),
+      bT = fm(39164),
+      ST = fm(690),
+      eT = fm(2932);
+    class NT {
+      constructor(mm, Tm, fm, hm) {
+        this.msgHandler = fm, this.listener = hm, this.session = void 0, this.attachedRoom = null, this.detachRoomListeners = null, this.suspended = !1, this.droppedAt = 0, this.session = new kT.c({
+          reconnect: mm,
+          isLive: () => hm.isLive(),
+          onReconnected: mm => {
+            this.resumeOnRoom(mm)
           },
-          onGaveUp: (kk, Fk) => {
-            Xk.onGaveUp(kk, Fk)
+          onGaveUp: (mm, Tm) => {
+            hm.onGaveUp(mm, Tm)
           },
-          freeze: Fk,
-          releaseSeat: Fk => {
-            kk(Fk).then((kk => {
-              kk.leave(!0)
-            }), (kk => {
-              console.warn("Couldn't release the held seat of a game left while reconnecting", kk)
+          freeze: Tm,
+          releaseSeat: Tm => {
+            mm(Tm).then((mm => {
+              mm.leave(!0)
+            }), (mm => {
+              console.warn("Couldn't release the held seat of a game left while reconnecting", mm)
             }))
           }
         })
       }
-      onInitialInfo(kk, Fk) {
-        this.session.onInitialInfo(kk, Fk)
+      onInitialInfo(mm, Tm) {
+        this.session.onInitialInfo(mm, Tm)
       }
       isResuming() {
         return this.session.isResuming()
@@ -1412,175 +1412,175 @@ export const modules = {
       getDroppedAt() {
         return this.droppedAt
       }
-      onResumeInitialInfo(kk, Fk) {
-        if (this.session.onResuming(), null === kk) {
+      onResumeInitialInfo(mm, Tm) {
+        if (this.session.onResuming(), null === mm) {
           try {
-            (0, ak.c)().client.itemDropPrediction.reset()
-          } catch (Ik) {
-            console.error("Error dropping the item drop predictions on resuming", Ik)
+            (0, Dm.c)().client.itemDropPrediction.reset()
+          } catch (fm) {
+            console.error("Error dropping the item drop predictions on resuming", fm)
           }
-          return Xk.offlineInputReplay.discard(), void this.setSuspended(!1)
-        }(0, ak.c)().client.itemDropPrediction.onResumeReplayOffered(), Xk.offlineInputReplay.replayFrom(kk.xI, Fk)
+          return hm.offlineInputReplay.discard(), void this.setSuspended(!1)
+        }(0, Dm.c)().client.itemDropPrediction.onResumeReplayOffered(), hm.offlineInputReplay.replayFrom(mm.Qf, Tm)
       }
-      onResumed(kk) {
-        this.setSuspended(!1), (0, Xk.resendBeacons)();
+      onResumed(mm) {
+        this.setSuspended(!1), (0, hm.resendBeacons)();
         try {
-          kk()
-        } catch (Fk) {
-          console.error("Error completing the resume", Fk)
+          mm()
+        } catch (Tm) {
+          console.error("Error completing the resume", Tm)
         } finally {
           this.session.onResumed()
         }
       }
-      attachRoom(kk) {
-        const Fk = (0, OF.l)((() => kk.connection.isOpen));
-        kk.NJ(Fk);
-        const Ik = new EF.b((() => {
-          this.session.canHoldSeat() && this.listener.isLive() && (console.warn("The game server went silent, reconnecting"), this.onConnectionDropped(kk, "silent"), kk.leave(!1))
+      attachRoom(mm) {
+        const Tm = (0, ST.j)((() => mm.connection.isOpen));
+        mm.tV(Tm);
+        const fm = new bT.d((() => {
+          this.session.canHoldSeat() && this.listener.isLive() && (console.warn("The game server went silent, reconnecting"), this.onConnectionDropped(mm, "silent"), mm.leave(!1))
         }));
-        kk.onStateChange((() => {
-          Ik.heard()
+        mm.onStateChange((() => {
+          fm.heard()
         }));
-        const Xk = Fk => {
-          Fk.persisted || kk.leave(!0)
+        const hm = Tm => {
+          Tm.persisted || mm.leave(!0)
         };
-        window.addEventListener("pagehide", Xk), kk.NJ(((Fk, Ik) => {
-          if (kk === this.attachedRoom && this.listener.isLive()) return (0, ik.i)(Fk) && this.session.canHoldSeat() ? (console.warn(`Connection to the game server dropped with code ${Fk}, reconnecting`), this.listener.onDropped(Fk, Ik), void this.onConnectionDropped(kk, String(Fk))) : void this.listener.onRoomLeft(Fk, Ik)
-        })), this.attachedRoom = kk, this.detachRoomListeners = () => {
-          Fk(), Ik.dispose(), window.removeEventListener("pagehide", Xk)
+        window.addEventListener("pagehide", hm), mm.tV(((Tm, fm) => {
+          if (mm === this.attachedRoom && this.listener.isLive()) return (0, am.h)(Tm) && this.session.canHoldSeat() ? (console.warn(`Connection to the game server dropped with code ${Tm}, reconnecting`), this.listener.onDropped(Tm, fm), void this.onConnectionDropped(mm, String(Tm))) : void this.listener.onRoomLeft(Tm, fm)
+        })), this.attachedRoom = mm, this.detachRoomListeners = () => {
+          Tm(), fm.dispose(), window.removeEventListener("pagehide", hm)
         }
       }
       dispose() {
         this.detachRoom(), this.session.leave(), this.setSuspended(!1)
       }
-      setSuspended(kk) {
-        kk !== this.suspended && (this.suspended = kk, (0, Xk.setConnectionSuspended)(kk), (0, ak.c)().client.itemDropPrediction.setSuspended(kk))
+      setSuspended(mm) {
+        mm !== this.suspended && (this.suspended = mm, (0, hm.setConnectionSuspended)(mm), (0, Dm.c)().client.itemDropPrediction.setSuspended(mm))
       }
       detachRoom() {
-        var kk;
-        null === (kk = this.detachRoomListeners) || void 0 === kk || kk.call(this), this.detachRoomListeners = null, this.attachedRoom = null
+        var mm;
+        null === (mm = this.detachRoomListeners) || void 0 === mm || mm.call(this), this.detachRoomListeners = null, this.attachedRoom = null
       }
-      onConnectionDropped(kk, Fk) {
-        (0, nF.reportClientError)("disconnect", "Left room", Fk), this.isResuming() || (this.droppedAt = Date.now()), this.detachRoom(), Xk.offlineInputReplay.onConnectionLost(), this.setSuspended(!0), this.session.onConnectionLost(kk.reconnectionToken)
+      onConnectionDropped(mm, Tm) {
+        (0, eT.reportClientError)("disconnect", "Left room", Tm), this.isResuming() || (this.droppedAt = Date.now()), this.detachRoom(), hm.offlineInputReplay.onConnectionLost(), this.setSuspended(!0), this.session.onConnectionLost(mm.reconnectionToken)
       }
-      resumeOnRoom(kk) {
-        if (!this.listener.isLive()) return console.warn("Left the game while reconnecting, leaving the resumed room"), kk.leave(!0), void this.dispose();
-        console.log("Reconnected to the game server, waiting for the game to resume"), (0, Ak.m)(), Xk.offlineInputReplay.onConnectionReplaced(), this.msgHandler.uqk(kk), this.listener.onReconnected(kk), this.attachRoom(kk)
+      resumeOnRoom(mm) {
+        if (!this.listener.isLive()) return console.warn("Left the game while reconnecting, leaving the resumed room"), mm.leave(!0), void this.dispose();
+        console.log("Reconnected to the game server, waiting for the game to resume"), (0, Lm.s)(), hm.offlineInputReplay.onConnectionReplaced(), this.msgHandler.Cim(mm), this.listener.onReconnected(mm), this.attachRoom(mm)
       }
     }
-    var pF = Ik(2889),
-      uF = Ik(2898),
-      bF = Ik(1301),
-      RF = Ik(1276),
-      UF = Ik(4671),
-      CF = Ik(3089),
-      NF = Ik(1076),
-      cF = Ik(37740),
-      WF = Ik(39046),
-      fF = Ik(8880),
-      BF = Ik(39054),
-      dF = Ik(1199),
-      YF = Ik(36486),
-      AF = Ik(39058),
-      gF = Ik(1652),
-      mF = Ik(2709);
+    var GT = fm(2979),
+      XT = fm(2982),
+      PT = fm(1321),
+      HT = fm(1296),
+      yT = fm(4620),
+      CT = fm(3148),
+      rT = fm(1103),
+      sT = fm(37770),
+      lT = fm(39169),
+      MT = fm(8854),
+      uT = fm(39171),
+      BT = fm(1223),
+      LT = fm(36573),
+      vT = fm(39180),
+      tT = fm(1698),
+      UT = fm(2765);
 
-    function hF(kk) {
-      var Fk, Ik;
-      if ("object" !== typeof kk || null === kk) return {
-        errType: typeof kk
+    function dT(mm) {
+      var Tm, fm;
+      if ("object" !== typeof mm || null === mm) return {
+        errType: typeof mm
       };
-      const Xk = kk;
+      const hm = mm;
       return {
-        errType: null !== (Fk = null === (Ik = kk.constructor) || void 0 === Ik ? void 0 : Ik.name) && void 0 !== Fk ? Fk : "",
-        errName: "string" === typeof Xk.name ? Xk.name : "",
-        eventType: "string" === typeof Xk.type ? Xk.type : "",
-        errStack: "string" === typeof Xk.stack ? Xk.stack.split("\n").slice(1).join(" | ") : ""
+        errType: null !== (Tm = null === (fm = mm.constructor) || void 0 === fm ? void 0 : fm.name) && void 0 !== Tm ? Tm : "",
+        errName: "string" === typeof hm.name ? hm.name : "",
+        eventType: "string" === typeof hm.type ? hm.type : "",
+        errStack: "string" === typeof hm.stack ? hm.stack.split("\n").slice(1).join(" | ") : ""
       }
     }
 
-    function rF(kk) {
-      if ("undefined" !== typeof ProgressEvent && kk instanceof ProgressEvent) return !0;
-      if (!(kk instanceof Error)) return !1;
-      const Fk = kk.code;
-      return "ServerError" === kk.name && void 0 === Fk || "AbortError" === kk.name || "seat reservation expired." === kk.message || "early_leave" === kk.message
-    }(0, wk.p)((kk => {
-      (0, nF.reportClientError)("wasm_net", kk)
+    function gT(mm) {
+      if ("undefined" !== typeof ProgressEvent && mm instanceof ProgressEvent) return !0;
+      if (!(mm instanceof Error)) return !1;
+      const Tm = mm.code;
+      return "ServerError" === mm.name && void 0 === Tm || "AbortError" === mm.name || "seat reservation expired." === mm.message || "early_leave" === mm.message
+    }(0, Ym.m)((mm => {
+      (0, eT.reportClientError)("wasm_net", mm)
     }));
-    let DF = !0;
+    let WT = !0;
 
-    function MF() {
-      DF = !1
+    function FT() {
+      WT = !1
     }
-    class kI {
-      constructor(kk) {
-        this.gameNameWithVariation = void 0, this.lobbyName = void 0, this.colyClient = void 0, this.userContext = void 0, this.joinedAt = null, this.checkSendPath = () => {}, this.qZ = void 0, this.connectionResume = void 0, this.incomingMsgInitialisor = void 0, this.gameNameWithVariation = kk.gameNameWithVariation, this.lobbyName = kk.lobbyName, this.colyClient = kk.colyClient, this.userContext = kk.userContext
+    class mf {
+      constructor(mm) {
+        this.gameNameWithVariation = void 0, this.lobbyName = void 0, this.colyClient = void 0, this.userContext = void 0, this.joinedAt = null, this.checkSendPath = () => {}, this.IE = void 0, this.connectionResume = void 0, this.incomingMsgInitialisor = void 0, this.gameNameWithVariation = mm.gameNameWithVariation, this.lobbyName = mm.lobbyName, this.colyClient = mm.colyClient, this.userContext = mm.userContext
       }
-      async connectToServer(kk, Fk, Ik) {
-        xk.e.reset(), kk.xR = {
-          [kk.oR]: {}
-        }, kk.Nkk = void 0, (0, Ak.m)(), (0, ak.c)().removeAllEntityNames(), (0, ak.c)().setEntityName(kk.oR, this.userContext.getPlayerName()), (0, bF.s)({
+      async connectToServer(mm, Tm, fm) {
+        Vm.b.reset(), mm.mH = {
+          [mm.xH]: {}
+        }, mm.Cmm = void 0, (0, Lm.s)(), (0, Dm.c)().removeAllEntityNames(), (0, Dm.c)().setEntityName(mm.xH, this.userContext.getPlayerName()), (0, PT.r)({
           lobbyName: this.lobbyName
         }), console.log("Waiting for clientConnection passed promise to resolve");
-        const yk = (0, gF.c)();
+        const xm = (0, tT.e)();
         console.log("joining server with game", this.gameNameWithVariation, "lobbyName", this.lobbyName);
-        const lk = performance.now();
-        Ik.aborted || (0, RF.r)("wasm_core_ready", lk);
-        const qk = (0, BF.f)(this.userContext, (() => {
+        const wm = performance.now();
+        fm.aborted || (0, HT.j)("wasm_core_ready", wm);
+        const im = (0, uT.e)(this.userContext, (() => {
           const {
-            roomName: Xk,
-            joinOptions: Tk
-          } = (0, Kk.g)(this.userContext, this.gameNameWithVariation, this.lobbyName, Fk, (kk => CF.b.isUsingCustomGameTexturePack(kk)));
-          return Tk.joinAdHold = yk, Tk.renderBackend = (0, mF.e)(kk.Xw), (0, WF.i)((() => this.colyClient.joinOrCreateUntil(Ik, Xk, Tk)), Ik)
+            roomName: hm,
+            joinOptions: Am
+          } = (0, Km.d)(this.userContext, this.gameNameWithVariation, this.lobbyName, Tm, (mm => CT.b.isUsingCustomGameTexturePack(mm)));
+          return Am.joinAdHold = xm, Am.renderBackend = (0, UT.e)(mm.qY), (0, lT.h)((() => this.colyClient.joinOrCreateUntil(fm, hm, Am)), fm)
         }));
-        return Jk.g.GL("loadingScreenState", "loadingPage:joiningLobby"), await qk.then((Fk => {
-          if (this.joinedAt = performance.now(), (0, RF.r)("wasm_joined", this.joinedAt), this.qZ = kk, yk) {
-            const kk = (0, gF.k)((() => {
-              Fk.send(Tk.f), (0, RF.n)()
+        return jm.j.gp("loadingScreenState", "loadingPage:joiningLobby"), await im.then((Tm => {
+          if (this.joinedAt = performance.now(), (0, HT.j)("wasm_joined", this.joinedAt), this.IE = mm, xm) {
+            const mm = (0, tT.p)((() => {
+              Tm.send(Am.f), (0, HT.i)()
             }));
-            Fk.NJ(kk), (0, Xk.onGameResetOnce)(kk)
+            Tm.tV(mm), (0, hm.onGameResetOnce)(mm)
           }
-          const Ik = new Hk(Fk);
-          this.connectionResume = new GF((kk => this.colyClient.reconnect(kk)), (Fk => {
-            kk.sE(Fk)
-          }), Ik, {
-            isLive: () => (0, ak.c)().client.getMsgHandler() === Ik,
-            onDropped: (kk, Fk) => {
-              (0, uF.g)(kk) || this.logUnrecognisedConnectionLoss(kk, void 0, {
+          const fm = new qm(Tm);
+          this.connectionResume = new NT((mm => this.colyClient.reconnect(mm)), (Tm => {
+            mm.nS(Tm)
+          }), fm, {
+            isLive: () => (0, Dm.c)().client.getMsgHandler() === fm,
+            onDropped: (mm, Tm) => {
+              (0, XT.j)(mm) || this.logUnrecognisedConnectionLoss(mm, void 0, {
                 site: "drop",
-                closeReason: null !== Fk && void 0 !== Fk ? Fk : "",
+                closeReason: null !== Tm && void 0 !== Tm ? Tm : "",
                 sinceJoined: this.sinceJoined()
               })
             },
-            onRoomLeft: (kk, Fk) => {
-              this.onRoomLeft(kk, Fk)
+            onRoomLeft: (mm, Tm) => {
+              this.onRoomLeft(mm, Tm)
             },
-            onReconnected: kk => {
-              this.incomingMsgInitialisor.uqk(kk), this.checkSendPath = (0, cF.f)(Ik, kk, wk.s)
+            onReconnected: mm => {
+              this.incomingMsgInitialisor.Cim(mm), this.checkSendPath = (0, sT.e)(fm, mm, Ym.p)
             },
-            onGaveUp: (kk, Fk) => {
-              this.onResumeGaveUp(kk, Fk)
+            onGaveUp: (mm, Tm) => {
+              this.onResumeGaveUp(mm, Tm)
             }
-          }), this.connectionResume.attachRoom(Fk), (0, Xk.onGameResetOnce)((() => {
+          }), this.connectionResume.attachRoom(Tm), (0, hm.onGameResetOnce)((() => {
             this.connectionResume.dispose()
           }));
-          const ik = Ik.send,
-            lk = Ik.bJ,
-            qk = Ik.sIk.send,
-            Lk = Ik.sIk.bJ,
-            tk = Ik.Gqk;
-          this.checkSendPath = (0, cF.f)(Ik, Fk, wk.s);
-          const Zk = setInterval((() => {
-            ik === Ik.send && lk === Ik.bJ && qk === Ik.sIk.send && Lk === Ik.sIk.bJ && tk === Ik.Gqk || MF(), this.checkSendPath()
+          const am = fm.send,
+            wm = fm.lV,
+            im = fm.nfm.send,
+            Rm = fm.nfm.lV,
+            pm = fm.Him;
+          this.checkSendPath = (0, sT.e)(fm, Tm, Ym.p);
+          const Em = setInterval((() => {
+            am === fm.send && wm === fm.lV && im === fm.nfm.send && Rm === fm.nfm.lV && pm === fm.Him || FT(), this.checkSendPath()
           }), 1e4);
-          return (0, Xk.onGameResetOnce)((() => {
-            clearInterval(Zk)
+          return (0, hm.onGameResetOnce)((() => {
+            clearInterval(Em)
           })), {
             success: !0,
-            successDetails: Ik
+            successDetails: fm
           }
-        })).catch((Fk => {
-          if (Ik.aborted && Fk === (0, dF.e)(Ik)) return {
+        })).catch((Tm => {
+          if (fm.aborted && Tm === (0, BT.c)(fm)) return {
             success: !1,
             failDetails: {
               reason: "Left the game while it loaded",
@@ -1588,22 +1588,22 @@ export const modules = {
               canReconnect: !1
             }
           };
-          if (Fk instanceof YF.f) return console.warn("Seat request timed out", this.lobbyName, this.gameNameWithVariation), {
+          if (Tm instanceof LT.e) return console.warn("Seat request timed out", this.lobbyName, this.gameNameWithVariation), {
             success: !1,
             failDetails: {
-              reason: Fk.message,
+              reason: Tm.message,
               requiresRefresh: !1,
               canReconnect: !1,
               gameServerUnreachable: "timedOut",
-              joinFailure: (0, AF.d)(Fk, Fk.leg)
+              joinFailure: (0, vT.e)(Tm, Tm.leg)
             }
           };
-          kk.Sw(`Failed to connect to bloxd room, check your internet connection. lobbyName: ${this.lobbyName}, gameNameWithVariation: ${this.gameNameWithVariation} code: ${Fk.code}\n`, Fk);
-          const Xk = Fk.code;
-          return Xk === ik.d.serverUpdating.code ? (this.goToUpdateWaiting(), {
+          mm.sY(`Failed to connect to bloxd room, check your internet connection. lobbyName: ${this.lobbyName}, gameNameWithVariation: ${this.gameNameWithVariation} code: ${Tm.code}\n`, Tm);
+          const hm = Tm.code;
+          return hm === am.b.serverUpdating.code ? (this.goToUpdateWaiting(), {
             success: !1,
             failDetails: {
-              reason: ik.d.serverUpdating.text,
+              reason: am.b.serverUpdating.text,
               requiresRefresh: !1,
               canReconnect: !0,
               goesToUpdateWaiting: !0
@@ -1611,1405 +1611,1405 @@ export const modules = {
           }) : {
             success: !1,
             failDetails: {
-              ...this.onConnectionToServerLost(Xk, Fk.message, {
+              ...this.onConnectionToServerLost(hm, Tm.message, {
                 site: "join",
-                sinceJoinStart: (0, uF.d)(performance.now() - lk),
-                ...hF(Fk)
-              }, rF(Fk)),
-              rematch: (0, WF.e)(Fk),
-              gameRefused: (0, fF.e)(Fk),
-              joinFailure: (0, AF.d)(Fk, this.colyClient.legReached())
+                sinceJoinStart: (0, XT.c)(performance.now() - wm),
+                ...dT(Tm)
+              }, gT(Tm)),
+              rematch: (0, lT.e)(Tm),
+              gameRefused: (0, MT.c)(Tm),
+              joinFailure: (0, vT.e)(Tm, this.colyClient.legReached())
             }
           }
         }))
       }
-      setupServerListeners(kk, Fk, Ik) {
-        Jk.g.GL("loadingScreenState", "loadingPage:loadingPlayerInfo"), this.incomingMsgInitialisor = new oF(this.gameNameWithVariation, Fk.sIk, kk, this.connectionResume), this.incomingMsgInitialisor.setupStateReplicationHandlers();
-        const Tk = Fk.Cqk();
-        this.incomingMsgInitialisor.setupOnMessageListeners(Tk, Ik), (0, Xk.onConnectionToServerReady)(Tk, Fk), Tk.finishRegistration()
+      setupServerListeners(mm, Tm, fm) {
+        jm.j.gp("loadingScreenState", "loadingPage:loadingPlayerInfo"), this.incomingMsgInitialisor = new ZT(this.gameNameWithVariation, Tm.nfm, mm, this.connectionResume), this.incomingMsgInitialisor.setupStateReplicationHandlers();
+        const Am = Tm.Lim();
+        this.incomingMsgInitialisor.setupOnMessageListeners(Am, fm), (0, hm.onConnectionToServerReady)(Am, Tm), Am.finishRegistration()
       }
       dispose() {
         this.connectionResume.dispose()
       }
-      onResumeGaveUp(kk, Fk) {
-        (0, NF.ow)(new Error("Reconnect failed"), {
-          ...(0, pF.k)(Fk),
+      onResumeGaveUp(mm, Tm) {
+        (0, rT.lY)(new Error("Reconnect failed"), {
+          ...(0, GT.k)(Tm),
           game: this.gameNameWithVariation
-        }), (0, nF.reportClientError)("disconnect", "Reconnect failed", Fk.reason), (0, ak.c)().client.leaveGameUnwanted({
+        }), (0, eT.reportClientError)("disconnect", "Reconnect failed", Tm.reason), (0, Dm.c)().client.leaveGameUnwanted({
           reason: {
             translationKey: "general:lostConnection"
           },
-          canReconnect: !kk,
-          canPlayAgain: kk,
+          canReconnect: !mm,
+          canPlayAgain: mm,
           requiresRefresh: !1,
           automaticallyReconnect: !1
-        }), (0, eF.navigatePreserveSearch)("/")
+        }), (0, OT.navigatePreserveSearch)("/")
       }
       sinceJoined() {
-        return null === this.joinedAt ? "" : (0, uF.d)(performance.now() - this.joinedAt)
+        return null === this.joinedAt ? "" : (0, XT.c)(performance.now() - this.joinedAt)
       }
-      onRoomLeft(kk, Fk) {
-        var Ik;
-        if (kk === ik.d.gameOrPluginKick.code) return;
-        if (console.log(`Left room with code ${kk}`), kk === ik.d.serverUpdating.code) return (0, nF.reportClientError)("disconnect", "Left room", "serverUpdating"), (0, ak.c)().client.leaveGame(this.getUpdateWaitingUrl()), void this.goToUpdateWaiting();
-        this.qZ.Sw(`Kicked from server with code ${kk}`, new Error);
-        const Xk = Object.keys(ik.d).find((Fk => ik.d[Fk].code === kk));
-        (0, nF.reportClientError)("disconnect", "Left room", null !== Xk && void 0 !== Xk ? Xk : String(kk));
-        const Tk = this.onConnectionToServerLost(kk, void 0, {
+      onRoomLeft(mm, Tm) {
+        var fm;
+        if (mm === am.b.gameOrPluginKick.code) return;
+        if (console.log(`Left room with code ${mm}`), mm === am.b.serverUpdating.code) return (0, eT.reportClientError)("disconnect", "Left room", "serverUpdating"), (0, Dm.c)().client.leaveGame(this.getUpdateWaitingUrl()), void this.goToUpdateWaiting();
+        this.IE.sY(`Kicked from server with code ${mm}`, new Error);
+        const hm = Object.keys(am.b).find((Tm => am.b[Tm].code === mm));
+        (0, eT.reportClientError)("disconnect", "Left room", null !== hm && void 0 !== hm ? hm : String(mm));
+        const Am = this.onConnectionToServerLost(mm, void 0, {
           site: "leave",
-          closeReason: null !== Fk && void 0 !== Fk ? Fk : "",
+          closeReason: null !== Tm && void 0 !== Tm ? Tm : "",
           sinceJoined: this.sinceJoined()
         });
-        (0, ak.c)().client.leaveGameUnwanted({
-          reason: `You have disconnected from the server.\n${Tk.reason}`,
-          canReconnect: Tk.canReconnect,
-          requiresRefresh: Tk.requiresRefresh,
-          automaticallyReconnect: null !== (Ik = Tk.automaticallyReconnect) && void 0 !== Ik && Ik
-        }), (0, eF.navigatePreserveSearch)("/")
+        (0, Dm.c)().client.leaveGameUnwanted({
+          reason: `You have disconnected from the server.\n${Am.reason}`,
+          canReconnect: Am.canReconnect,
+          requiresRefresh: Am.requiresRefresh,
+          automaticallyReconnect: null !== (fm = Am.automaticallyReconnect) && void 0 !== fm && fm
+        }), (0, OT.navigatePreserveSearch)("/")
       }
       getUpdateWaitingUrl() {
-        return (0, UF.A)(this.gameNameWithVariation, this.lobbyName)
+        return (0, yT.B)(this.gameNameWithVariation, this.lobbyName)
       }
       goToUpdateWaiting() {
-        (0, eF.navigatePreserveSearch)(this.getUpdateWaitingUrl())
+        (0, OT.navigatePreserveSearch)(this.getUpdateWaitingUrl())
       }
-      onConnectionToServerLost(kk, Fk, Ik) {
-        var Xk;
-        let Tk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (null !== (Xk = Fk) && void 0 !== Xk && Xk.endsWith(ik.m) && (this.userContext.invalidateTrafficCode(), Fk = Fk.replace(ik.m, "")), kk === ik.d.outdatedVersion.code) return console.error("Outdated client with version ", yk.b, ", refreshing page"), (0, Pk.reloadBloxd)(), {
+      onConnectionToServerLost(mm, Tm, fm) {
+        var hm;
+        let Am = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (null !== (hm = Tm) && void 0 !== hm && hm.endsWith(am.i) && (this.userContext.invalidateTrafficCode(), Tm = Tm.replace(am.i, "")), mm === am.b.outdatedVersion.code) return console.error("Outdated client with version ", xm.d, ", refreshing page"), (0, Im.reloadBloxd)(), {
           reason: "Outdated client",
           requiresRefresh: !0,
           canReconnect: !1
         };
-        if (kk === ik.d.loadRecaptchaError.code) return console.error("Load recaptcha error, refreshing page"), (0, Pk.reloadBloxd)(), {
+        if (mm === am.b.loadRecaptchaError.code) return console.error("Load recaptcha error, refreshing page"), (0, Im.reloadBloxd)(), {
           reason: "Failed to load recaptcha",
           requiresRefresh: !0,
           canReconnect: !1
         };
-        for (const yk in ik.d) {
+        for (const xm in am.b) {
           const {
-            code: Ik,
-            text: Xk,
-            canReconnect: Tk
-          } = ik.d[yk];
-          if (Ik === kk) {
-            console.log("matched known error", kk, "leaving game");
+            code: fm,
+            text: hm,
+            canReconnect: Am
+          } = am.b[xm];
+          if (fm === mm) {
+            console.log("matched known error", mm, "leaving game");
             return {
-              reason: "" !== Xk ? Xk : Fk || `Code: ${kk}`,
+              reason: "" !== hm ? hm : Tm || `Code: ${mm}`,
               requiresRefresh: !1,
-              canReconnect: Tk,
-              automaticallyReconnect: Ik === ik.d.customGameUpdated.code || Ik === ik.d.duplicateLobbyNameError.code
+              canReconnect: Am,
+              automaticallyReconnect: fm === am.b.customGameUpdated.code || fm === am.b.duplicateLobbyNameError.code
             }
           }
         }
-        return console.log("Didn't match known error, leaving game"), (0, uF.f)(kk) || Tk ? console.warn("Connection lost", kk, Fk) : this.logUnrecognisedConnectionLoss(kk, Fk, Ik), {
-          reason: `Either your internet isn't working or this is a bug.\nCode: ${kk}`,
+        return console.log("Didn't match known error, leaving game"), (0, XT.g)(mm) || Am ? console.warn("Connection lost", mm, Tm) : this.logUnrecognisedConnectionLoss(mm, Tm, fm), {
+          reason: `Either your internet isn't working or this is a bug.\nCode: ${mm}`,
           requiresRefresh: !1,
           canReconnect: !1,
-          gameServerUnreachable: Tk ? "failed" : void 0
+          gameServerUnreachable: Am ? "failed" : void 0
         }
       }
-      logUnrecognisedConnectionLoss(kk, Fk, Ik) {
-        (0, NF.ow)(new Error("Unrecognised connection loss"), {
-          code: String(kk),
-          cause: null !== Fk && void 0 !== Fk ? Fk : "",
-          ...Ik,
+      logUnrecognisedConnectionLoss(mm, Tm, fm) {
+        (0, rT.lY)(new Error("Unrecognised connection loss"), {
+          code: String(mm),
+          cause: null !== Tm && void 0 !== Tm ? Tm : "",
+          ...fm,
           game: this.gameNameWithVariation,
-          ...(0, uF.j)()
+          ...(0, XT.n)()
         })
       }
     }
   },
-  38947: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => gI,
-      g: () => kX
+  39088: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => df,
+      g: () => fh
     });
-    var Xk, Tk, ik, yk, lk, ak, qk, Lk, tk, Zk, jk, ek, wk, Hk, Jk, xk, Pk, Kk, Qk, sk, Vk, zk, Sk, vk, Ek, Ok, nk, Gk, pk, uk, bk, Rk, Uk, Ck, Nk, ck, Wk, fk, Bk, dk, Yk, Ak, gk, mk, hk, rk, Dk, Mk, kF, FF, IF, XF, TF, iF, yF, lF, aF, qF, LF, tF, ZF, jF, eF, wF, HF, JF, xF, PF, KF, QF, sF, VF, zF, SF, oF, vF, EF, OF, nF, GF, pF, uF, bF, RF, UF, CF, NF, cF, WF, fF, BF, dF, YF, AF, gF, mF, hF, rF, DF, MF = Ik(34),
-      kI = Ik(37217),
-      FI = Ik(38960),
-      II = Ik(38967),
-      XI = Ik(9098),
-      TI = Ik(621),
-      iI = Ik(614),
-      yI = Ik(36816);
-    let lI = (Xk = (0, XI.type)("number"), Tk = (0, XI.type)("number"), ik = (0, XI.type)("number"), yk = (0, XI.type)("number"), lk = (0, XI.type)("number"), ak = (0, XI.type)("number"), qk = (0, XI.type)("string"), Lk = class extends XI.Schema {
+    var hm, Am, am, xm, wm, Dm, im, Rm, pm, Em, om, Om, Ym, qm, jm, Vm, Im, Km, Qm, nm, Jm, cm, zm, Zm, km, bm, Sm, em, Nm, Gm, Xm, Pm, Hm, ym, Cm, rm, sm, lm, Mm, um, Bm, Lm, tm, Um, dm, gm, Wm, Fm, mT, TT, fT, hT, AT, aT, xT, wT, DT, iT, RT, pT, ET, oT, OT, YT, qT, jT, VT, IT, KT, QT, nT, JT, cT, zT, ZT, kT, bT, ST, eT, NT, GT, XT, PT, HT, yT, CT, rT, sT, lT, MT, uT, BT, LT, vT, tT, UT, dT, gT, WT, FT = fm(31),
+      mf = fm(37238),
+      Tf = fm(39098),
+      ff = fm(39106),
+      hf = fm(9050),
+      Af = fm(649),
+      af = fm(645),
+      xf = fm(36886);
+    let wf = (hm = (0, hf.type)("number"), Am = (0, hf.type)("number"), am = (0, hf.type)("number"), xm = (0, hf.type)("number"), wm = (0, hf.type)("number"), Dm = (0, hf.type)("number"), im = (0, hf.type)("string"), Rm = class extends hf.Schema {
         constructor() {
-          super(...arguments), (0, FI.e)(this, "id", tk, this), (0, FI.e)(this, "amount", Zk, this), (0, FI.e)(this, "x", jk, this), (0, FI.e)(this, "y", ek, this), (0, FI.e)(this, "z", wk, this), (0, FI.e)(this, "size", Hk, this), (0, FI.e)(this, "attributes", Jk, this)
+          super(...arguments), (0, Tf.e)(this, "id", pm, this), (0, Tf.e)(this, "amount", Em, this), (0, Tf.e)(this, "x", om, this), (0, Tf.e)(this, "y", Om, this), (0, Tf.e)(this, "z", Ym, this), (0, Tf.e)(this, "size", qm, this), (0, Tf.e)(this, "attributes", jm, this)
         }
-      }, tk = (0, II.b)(Lk.prototype, "id", [Xk], {
+      }, pm = (0, ff.c)(Rm.prototype, "id", [hm], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), Zk = (0, II.b)(Lk.prototype, "amount", [Tk], {
+      }), Em = (0, ff.c)(Rm.prototype, "amount", [Am], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), jk = (0, II.b)(Lk.prototype, "x", [ik], {
+      }), om = (0, ff.c)(Rm.prototype, "x", [am], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), ek = (0, II.b)(Lk.prototype, "y", [yk], {
+      }), Om = (0, ff.c)(Rm.prototype, "y", [xm], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), wk = (0, II.b)(Lk.prototype, "z", [lk], {
+      }), Ym = (0, ff.c)(Rm.prototype, "z", [wm], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), Hk = (0, II.b)(Lk.prototype, "size", [ak], {
+      }), qm = (0, ff.c)(Rm.prototype, "size", [Dm], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 1
         }
-      }), Jk = (0, II.b)(Lk.prototype, "attributes", [qk], {
+      }), jm = (0, ff.c)(Rm.prototype, "attributes", [im], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return "{}"
         }
-      }), Lk),
-      aI = (xk = (0, XI.type)("string"), Pk = (0, XI.type)("string"), Kk = class extends XI.Schema {
+      }), Rm),
+      Df = (Vm = (0, hf.type)("string"), Im = (0, hf.type)("string"), Km = class extends hf.Schema {
         constructor() {
-          super(...arguments), (0, FI.e)(this, "itemName", Qk, this), (0, FI.e)(this, "enchantmentTier", sk, this)
+          super(...arguments), (0, Tf.e)(this, "itemName", Qm, this), (0, Tf.e)(this, "enchantmentTier", nm, this)
         }
-      }, Qk = (0, II.b)(Kk.prototype, "itemName", [xk], {
+      }, Qm = (0, ff.c)(Km.prototype, "itemName", [Vm], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), sk = (0, II.b)(Kk.prototype, "enchantmentTier", [Pk], {
+      }), nm = (0, ff.c)(Km.prototype, "enchantmentTier", [Im], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), Kk),
-      qI = (Vk = (0, XI.type)("string"), zk = (0, XI.type)("string"), Sk = (0, XI.type)("number"), vk = (0, XI.type)("number"), Ek = (0, XI.type)("number"), Ok = (0, XI.type)("float32"), nk = (0, XI.type)("float32"), Gk = (0, XI.type)("float32"), pk = (0, XI.type)("string"), uk = (0, XI.type)(["number"]), bk = (0, XI.type)("boolean"), Rk = class extends XI.Schema {
+      }), Km),
+      Rf = (Jm = (0, hf.type)("string"), cm = (0, hf.type)("string"), zm = (0, hf.type)("number"), Zm = (0, hf.type)("number"), km = (0, hf.type)("number"), bm = (0, hf.type)("float32"), Sm = (0, hf.type)("float32"), em = (0, hf.type)("float32"), Nm = (0, hf.type)("string"), Gm = (0, hf.type)(["number"]), Xm = (0, hf.type)("boolean"), Pm = class extends hf.Schema {
         constructor() {
-          super(...arguments), (0, FI.e)(this, "type", Uk, this), (0, FI.e)(this, "name", Ck, this), (0, FI.e)(this, "x", Nk, this), (0, FI.e)(this, "y", ck, this), (0, FI.e)(this, "z", Wk, this), (0, FI.e)(this, "xRotation", fk, this), (0, FI.e)(this, "yRotation", Bk, this), (0, FI.e)(this, "zRotation", dk, this), (0, FI.e)(this, "followingEId", Yk, this), (0, FI.e)(this, "followingOffset", Ak, this), (0, FI.e)(this, "shouldMatchFollowingEntityRotation", gk, this)
+          super(...arguments), (0, Tf.e)(this, "type", Hm, this), (0, Tf.e)(this, "name", ym, this), (0, Tf.e)(this, "x", Cm, this), (0, Tf.e)(this, "y", rm, this), (0, Tf.e)(this, "z", sm, this), (0, Tf.e)(this, "xRotation", lm, this), (0, Tf.e)(this, "yRotation", Mm, this), (0, Tf.e)(this, "zRotation", um, this), (0, Tf.e)(this, "followingEId", Bm, this), (0, Tf.e)(this, "followingOffset", Lm, this), (0, Tf.e)(this, "shouldMatchFollowingEntityRotation", tm, this)
         }
-      }, Uk = (0, II.b)(Rk.prototype, "type", [Vk], {
+      }, Hm = (0, ff.c)(Pm.prototype, "type", [Jm], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), Ck = (0, II.b)(Rk.prototype, "name", [zk], {
+      }), ym = (0, ff.c)(Pm.prototype, "name", [cm], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return ""
         }
-      }), Nk = (0, II.b)(Rk.prototype, "x", [Sk], {
+      }), Cm = (0, ff.c)(Pm.prototype, "x", [zm], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), ck = (0, II.b)(Rk.prototype, "y", [vk], {
+      }), rm = (0, ff.c)(Pm.prototype, "y", [Zm], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), Wk = (0, II.b)(Rk.prototype, "z", [Ek], {
+      }), sm = (0, ff.c)(Pm.prototype, "z", [km], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), fk = (0, II.b)(Rk.prototype, "xRotation", [Ok], {
+      }), lm = (0, ff.c)(Pm.prototype, "xRotation", [bm], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), Bk = (0, II.b)(Rk.prototype, "yRotation", [nk], {
+      }), Mm = (0, ff.c)(Pm.prototype, "yRotation", [Sm], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), dk = (0, II.b)(Rk.prototype, "zRotation", [Gk], {
+      }), um = (0, ff.c)(Pm.prototype, "zRotation", [em], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), Yk = (0, II.b)(Rk.prototype, "followingEId", [pk], {
+      }), Bm = (0, ff.c)(Pm.prototype, "followingEId", [Nm], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), Ak = (0, II.b)(Rk.prototype, "followingOffset", [uk], {
+      }), Lm = (0, ff.c)(Pm.prototype, "followingOffset", [Gm], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
-          return new XI.ArraySchema(0, 0, 0)
+          return new hf.ArraySchema(0, 0, 0)
         }
-      }), gk = (0, II.b)(Rk.prototype, "shouldMatchFollowingEntityRotation", [bk], {
+      }), tm = (0, ff.c)(Pm.prototype, "shouldMatchFollowingEntityRotation", [Xm], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !0
         }
-      }), Rk),
-      LI = (mk = (0, XI.type)("float32"), hk = (0, XI.type)("float32"), rk = (0, XI.type)("boolean"), Dk = (0, XI.type)("boolean"), Mk = (0, XI.type)("float32"), kF = (0, XI.type)("boolean"), FF = (0, XI.type)("string"), IF = (0, XI.type)("string"), XF = (0, XI.type)("string"), TF = (0, XI.type)("string"), iF = (0, XI.type)(["number"]), yF = (0, XI.type)("number"), lF = (0, XI.type)({
-        map: aI
-      }), aF = class extends qI {
+      }), Pm),
+      pf = (Um = (0, hf.type)("float32"), dm = (0, hf.type)("float32"), gm = (0, hf.type)("boolean"), Wm = (0, hf.type)("boolean"), Fm = (0, hf.type)("float32"), mT = (0, hf.type)("boolean"), TT = (0, hf.type)("string"), fT = (0, hf.type)("string"), hT = (0, hf.type)("string"), AT = (0, hf.type)("string"), aT = (0, hf.type)(["number"]), xT = (0, hf.type)("number"), wT = (0, hf.type)({
+        map: Df
+      }), DT = class extends Rf {
         constructor() {
-          super(...arguments), (0, FI.e)(this, "scale", qF, this), (0, FI.e)(this, "speed", LF, this), (0, FI.e)(this, "jumping", tF, this), (0, FI.e)(this, "crouching", ZF, this), (0, FI.e)(this, "cameraPitch", jF, this), (0, FI.e)(this, "armSwinging", eF, this), (0, FI.e)(this, "heldItemName", wF, this), (0, FI.e)(this, "heldItemEnchantmentTier", HF, this), (0, FI.e)(this, "pose", JF, this), (0, FI.e)(this, "ridingVehicleEId", xF, this), (0, FI.e)(this, "meshOffset", PF, this), (0, FI.e)(this, "baseRenderHeading", KF, this), (0, FI.e)(this, "armour", QF, this)
+          super(...arguments), (0, Tf.e)(this, "scale", iT, this), (0, Tf.e)(this, "speed", RT, this), (0, Tf.e)(this, "jumping", pT, this), (0, Tf.e)(this, "crouching", ET, this), (0, Tf.e)(this, "cameraPitch", oT, this), (0, Tf.e)(this, "armSwinging", OT, this), (0, Tf.e)(this, "heldItemName", YT, this), (0, Tf.e)(this, "heldItemEnchantmentTier", qT, this), (0, Tf.e)(this, "pose", jT, this), (0, Tf.e)(this, "ridingVehicleEId", VT, this), (0, Tf.e)(this, "meshOffset", IT, this), (0, Tf.e)(this, "baseRenderHeading", KT, this), (0, Tf.e)(this, "armour", QT, this)
         }
-      }, qF = (0, II.b)(aF.prototype, "scale", [mk], {
+      }, iT = (0, ff.c)(DT.prototype, "scale", [Um], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 1
         }
-      }), LF = (0, II.b)(aF.prototype, "speed", [hk], {
+      }), RT = (0, ff.c)(DT.prototype, "speed", [dm], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), tF = (0, II.b)(aF.prototype, "jumping", [rk], {
+      }), pT = (0, ff.c)(DT.prototype, "jumping", [gm], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !1
         }
-      }), ZF = (0, II.b)(aF.prototype, "crouching", [Dk], {
+      }), ET = (0, ff.c)(DT.prototype, "crouching", [Wm], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !1
         }
-      }), jF = (0, II.b)(aF.prototype, "cameraPitch", [Mk], {
+      }), oT = (0, ff.c)(DT.prototype, "cameraPitch", [Fm], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), eF = (0, II.b)(aF.prototype, "armSwinging", [kF], {
+      }), OT = (0, ff.c)(DT.prototype, "armSwinging", [mT], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !1
         }
-      }), wF = (0, II.b)(aF.prototype, "heldItemName", [FF], {
+      }), YT = (0, ff.c)(DT.prototype, "heldItemName", [TT], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), HF = (0, II.b)(aF.prototype, "heldItemEnchantmentTier", [IF], {
+      }), qT = (0, ff.c)(DT.prototype, "heldItemEnchantmentTier", [fT], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), JF = (0, II.b)(aF.prototype, "pose", [XF], {
+      }), jT = (0, ff.c)(DT.prototype, "pose", [hT], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return "standing"
         }
-      }), xF = (0, II.b)(aF.prototype, "ridingVehicleEId", [TF], {
+      }), VT = (0, ff.c)(DT.prototype, "ridingVehicleEId", [AT], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return null
         }
-      }), PF = (0, II.b)(aF.prototype, "meshOffset", [iF], {
+      }), IT = (0, ff.c)(DT.prototype, "meshOffset", [aT], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
-          return new XI.ArraySchema(0, 0, 0)
+          return new hf.ArraySchema(0, 0, 0)
         }
-      }), KF = (0, II.b)(aF.prototype, "baseRenderHeading", [yF], {
+      }), KT = (0, ff.c)(DT.prototype, "baseRenderHeading", [xT], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), QF = (0, II.b)(aF.prototype, "armour", [lF], {
+      }), QT = (0, ff.c)(DT.prototype, "armour", [wT], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
-          return new XI.MapSchema
+          return new hf.MapSchema
         }
-      }), aF),
-      tI = (sF = (0, XI.type)("string"), VF = (0, XI.type)("string"), zF = (0, XI.type)("string"), SF = (0, XI.type)("uint8"), oF = class extends LI {
+      }), DT),
+      Ef = (nT = (0, hf.type)("string"), JT = (0, hf.type)("string"), cT = (0, hf.type)("string"), zT = (0, hf.type)("uint8"), ZT = class extends pf {
         constructor() {
-          super(...arguments), (0, FI.e)(this, "variation", vF, this), (0, FI.e)(this, "ownerDbId", EF, this), (0, FI.e)(this, "metaInfo", OF, this), (0, FI.e)(this, "aiState", nF, this)
+          super(...arguments), (0, Tf.e)(this, "variation", kT, this), (0, Tf.e)(this, "ownerDbId", bT, this), (0, Tf.e)(this, "metaInfo", ST, this), (0, Tf.e)(this, "aiState", eT, this)
         }
-      }, vF = (0, II.b)(oF.prototype, "variation", [sF], {
+      }, kT = (0, ff.c)(ZT.prototype, "variation", [nT], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return "default"
         }
-      }), EF = (0, II.b)(oF.prototype, "ownerDbId", [VF], {
+      }), bT = (0, ff.c)(ZT.prototype, "ownerDbId", [JT], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return null
         }
-      }), OF = (0, II.b)(oF.prototype, "metaInfo", [zF], {
+      }), ST = (0, ff.c)(ZT.prototype, "metaInfo", [cT], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return ""
         }
-      }), nF = (0, II.b)(oF.prototype, "aiState", [SF], {
+      }), eT = (0, ff.c)(ZT.prototype, "aiState", [zT], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), oF);
-    GF = (0, XI.type)("string"), pF = (0, XI.type)("string"), uF = (0, XI.type)("string"), bF = (0, XI.type)("string"), RF = class extends qI {
+      }), ZT);
+    NT = (0, hf.type)("string"), GT = (0, hf.type)("string"), XT = (0, hf.type)("string"), PT = (0, hf.type)("string"), HT = class extends Rf {
       constructor() {
-        super(...arguments), (0, FI.e)(this, "meshKind", UF, this), (0, FI.e)(this, "meshOpts", CF, this), (0, FI.e)(this, "pose", NF, this), (0, FI.e)(this, "leaderboardTop", cF, this)
+        super(...arguments), (0, Tf.e)(this, "meshKind", yT, this), (0, Tf.e)(this, "meshOpts", CT, this), (0, Tf.e)(this, "pose", rT, this), (0, Tf.e)(this, "leaderboardTop", sT, this)
       }
-    }, UF = (0, II.b)(RF.prototype, "meshKind", [GF], {
+    }, yT = (0, ff.c)(HT.prototype, "meshKind", [NT], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
-    }), CF = (0, II.b)(RF.prototype, "meshOpts", [pF], {
+    }), CT = (0, ff.c)(HT.prototype, "meshOpts", [GT], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
-    }), NF = (0, II.b)(RF.prototype, "pose", [uF], {
+    }), rT = (0, ff.c)(HT.prototype, "pose", [XT], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
-    }), cF = (0, II.b)(RF.prototype, "leaderboardTop", [bF], {
+    }), sT = (0, ff.c)(HT.prototype, "leaderboardTop", [PT], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
     });
 
-    function ZI(kk) {
-      return Object.keys(XI.Metadata.getFields(kk))
+    function of(mm) {
+      return Object.keys(hf.Metadata.getFields(mm))
     }
-    const jI = ZI(tI);
-    for (const FX of TI.r)
-      if (!jI.includes(FX)) throw new Error(`Mob Schema is missing a networked property: "${FX}"`);
-    const eI = ZI((WF = (0, XI.type)("string"), fF = (0, XI.type)("float32"), BF = (0, XI.type)("float32"), dF = (0, XI.type)("float32"), YF = (0, XI.type)("float32"), AF = class extends qI {
+    const Of = of(Ef);
+    for (const hh of Af.q)
+      if (!Of.includes(hh)) throw new Error(`Mob Schema is missing a networked property: "${hh}"`);
+    const Yf = of((lT = (0, hf.type)("string"), MT = (0, hf.type)("float32"), uT = (0, hf.type)("float32"), BT = (0, hf.type)("float32"), LT = (0, hf.type)("float32"), vT = class extends Rf {
       constructor() {
-        super(...arguments), (0, FI.e)(this, "soundName", gF, this), (0, FI.e)(this, "volume", mF, this), (0, FI.e)(this, "refDistance", hF, this), (0, FI.e)(this, "maxHearDist", rF, this), (0, FI.e)(this, "rate", DF, this)
+        super(...arguments), (0, Tf.e)(this, "soundName", tT, this), (0, Tf.e)(this, "volume", UT, this), (0, Tf.e)(this, "refDistance", dT, this), (0, Tf.e)(this, "maxHearDist", gT, this), (0, Tf.e)(this, "rate", WT, this)
       }
-    }, gF = (0, II.b)(AF.prototype, "soundName", [WF], {
+    }, tT = (0, ff.c)(vT.prototype, "soundName", [lT], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
         return ""
       }
-    }), mF = (0, II.b)(AF.prototype, "volume", [fF], {
+    }), UT = (0, ff.c)(vT.prototype, "volume", [MT], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
         return 1
       }
-    }), hF = (0, II.b)(AF.prototype, "refDistance", [BF], {
+    }), dT = (0, ff.c)(vT.prototype, "refDistance", [uT], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
-        return yI.f
+        return xf.f
       }
-    }), rF = (0, II.b)(AF.prototype, "maxHearDist", [dF], {
+    }), gT = (0, ff.c)(vT.prototype, "maxHearDist", [BT], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
-        return yI.d
+        return xf.c
       }
-    }), DF = (0, II.b)(AF.prototype, "rate", [YF], {
+    }), WT = (0, ff.c)(vT.prototype, "rate", [LT], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
         return 1
       }
-    }), AF));
-    for (const FX of iI.k)
-      if (!eI.includes(FX)) throw new Error(`AudioEntity Schema is missing a replicated property: "${FX}"`);
-    var wI = Ik(38422),
-      HI = Ik(1231),
-      JI = Ik(628),
-      xI = Ik(38201),
-      PI = Ik(4210),
-      KI = Ik(337),
-      QI = Ik(37327),
-      sI = Ik(38105),
-      VI = Ik(2148),
-      zI = Ik(37299),
-      SI = Ik(38453),
-      oI = Ik(37435),
-      vI = Ik(354),
-      EI = Ik.n(vI),
-      OI = Ik(37932),
-      nI = Ik(37134),
-      GI = Ik(38088),
-      pI = Ik(38116);
-    class uI {
-      constructor(kk, Fk) {
-        this.bloxd = kk, this.eId = Fk, this.qZ = void 0, this.colyseusEntity = void 0, this.canSeeSub = void 0, this.canAttackSub = void 0, this.interactableSub = void 0, this.overlayColourSub = void 0, this.opacitySub = void 0, this.zIndexSub = void 0, this.multilineTextBoxSub = void 0, this.previousHidingMeshManagerState = void 0, this.meshKind = void 0, this.meshOpts = void 0, this.leaderboardTop = void 0, this.meshRebuildQueued = !1, this.ee = !1, this.qZ = kk.qZ
+    }), vT));
+    for (const hh of af.k)
+      if (!Yf.includes(hh)) throw new Error(`AudioEntity Schema is missing a replicated property: "${hh}"`);
+    var qf = fm(38532),
+      jf = fm(1247),
+      Vf = fm(653),
+      If = fm(38298),
+      Kf = fm(4171),
+      Qf = fm(354),
+      nf = fm(37330),
+      Jf = fm(38159),
+      zf = fm(2208),
+      Zf = fm(37312),
+      kf = fm(38564),
+      bf = fm(37451),
+      Sf = fm(362),
+      ef = fm.n(Sf),
+      Nf = fm(37997),
+      Gf = fm(37173),
+      Xf = fm(38140),
+      Pf = fm(38179);
+    class Hf {
+      constructor(mm, Tm) {
+        this.bloxd = mm, this.eId = Tm, this.IE = void 0, this.colyseusEntity = void 0, this.canSeeSub = void 0, this.canAttackSub = void 0, this.interactableSub = void 0, this.overlayColourSub = void 0, this.opacitySub = void 0, this.zIndexSub = void 0, this.multilineTextBoxSub = void 0, this.previousHidingMeshManagerState = void 0, this.meshKind = void 0, this.meshOpts = void 0, this.leaderboardTop = void 0, this.meshRebuildQueued = !1, this.PO = !1, this.IE = mm.IE
       }
-      initClient(kk) {
-        var Fk, Ik, Xk;
-        this.colyseusEntity = kk, this.meshKind = kk.meshKind, this.meshOpts = kk.meshOpts, this.leaderboardTop = kk.leaderboardTop, this.qZ.MJ.add([kk.x, kk.y, kk.z], 1, 1, null, null, !1, !1, this.eId), this.qZ.MJ.Tu(this.eId, "smoothToServerPos");
-        const Tk = "Person" === this.meshKind;
-        this.qZ.MJ.Tu(this.eId, "meshRotation", {
+      initClient(mm) {
+        var Tm, fm, hm;
+        this.colyseusEntity = mm, this.meshKind = mm.meshKind, this.meshOpts = mm.meshOpts, this.leaderboardTop = mm.leaderboardTop, this.IE.qI.add([mm.x, mm.y, mm.z], 1, 1, null, null, !1, !1, this.eId), this.IE.qI.vG(this.eId, "smoothToServerPos");
+        const Am = "Person" === this.meshKind;
+        this.IE.qI.vG(this.eId, "meshRotation", {
           isServerControlled: !0,
-          ...Tk ? {
+          ...Am ? {
             defaultRotationsPerSecond: .5
           } : {},
-          childrenNodeParams: Tk ? [{
+          childrenNodeParams: Am ? [{
             nodeName: "HeadMesh",
-            softTolerance: SI.h,
+            softTolerance: kf.i,
             hardTolerance: null
           }] : []
-        }), this.updateHidingMeshMgr(), this.canSeeSub = MF.g.subscribe(`otherEntitySettings|${this.eId}|canSee`, (kk => {
+        }), this.updateHidingMeshMgr(), this.canSeeSub = FT.j.subscribe(`otherEntitySettings|${this.eId}|canSee`, (mm => {
           this.updateHidingMeshMgr()
         }));
-        const ik = () => {
-          const kk = this.qZ.MJ.eFk(this.eId);
-          if (!kk) return;
-          const Fk = (0, oI.g)(this.eId);
-          if ("number" === typeof kk.Ip) {
-            var Ik, Xk, Tk, ik;
-            const yk = null === (Ik = (0, VI.k)("head", null === (Tk = this.getSpec()) || void 0 === Tk || null === (ik = Tk.opts.textures) || void 0 === ik ? void 0 : ik.head)) || void 0 === Ik || null === (Xk = Ik.personModel) || void 0 === Xk ? void 0 : Xk.fullBody;
-            return this.qZ.Xw.kp.setPickable(kk.Ip, Fk && !yk), void(0, nI.updatePersonAttachmentPickability)(this.qZ, this.eId, Fk)
+        const am = () => {
+          const mm = this.IE.qI.oTm(this.eId);
+          if (!mm) return;
+          const Tm = (0, bf.i)(this.eId);
+          if ("number" === typeof mm.QG) {
+            var fm, hm, Am, am;
+            const xm = null === (fm = (0, zf.g)("head", null === (Am = this.getSpec()) || void 0 === Am || null === (am = Am.opts.textures) || void 0 === am ? void 0 : am.head)) || void 0 === fm || null === (hm = fm.personModel) || void 0 === hm ? void 0 : hm.fullBody;
+            return this.IE.qY.YG.setPickable(mm.QG, Tm && !xm), void(0, Gf.updatePersonAttachmentPickability)(this.IE, this.eId, Tm)
           }
-          const yk = kk.mesh;
-          if (yk)
-            for (const lk of [yk, ...yk.getChildMeshes(!1)]) "gw" in lk && !lk.name.startsWith("Cape|") && (lk.gw = Fk)
+          const xm = mm.mesh;
+          if (xm)
+            for (const wm of [xm, ...xm.getChildMeshes(!1)]) "xq" in wm && !wm.name.startsWith("Cape|") && (wm.xq = Tm)
         };
-        this.canAttackSub = MF.g.subscribe(`otherEntitySettings|${this.eId}|canAttack`, ik), this.interactableSub = MF.g.subscribe(`otherEntitySettings|${this.eId}|interactable`, ik), this.overlayColourSub = MF.g.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|overlayColour`, (kk => {
-          this.updateOverlayColour(kk)
-        })), this.opacitySub = MF.g.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|opacity`, (kk => {
-          this.updateOpacity(kk)
-        })), this.zIndexSub = MF.g.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|zIndex`, (kk => {
-          this.updateZIndex(kk)
+        this.canAttackSub = FT.j.subscribe(`otherEntitySettings|${this.eId}|canAttack`, am), this.interactableSub = FT.j.subscribe(`otherEntitySettings|${this.eId}|interactable`, am), this.overlayColourSub = FT.j.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|overlayColour`, (mm => {
+          this.updateOverlayColour(mm)
+        })), this.opacitySub = FT.j.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|opacity`, (mm => {
+          this.updateOpacity(mm)
+        })), this.zIndexSub = FT.j.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|zIndex`, (mm => {
+          this.updateZIndex(mm)
         }));
-        const yk = this.qZ.xR[this.qZ.oR][this.eId];
-        this.updateOverlayColour(null !== (Fk = null === yk || void 0 === yk ? void 0 : yk.overlayColour) && void 0 !== Fk ? Fk : null), this.updateOpacity(null !== (Ik = null === yk || void 0 === yk ? void 0 : yk.opacity) && void 0 !== Ik ? Ik : 1), this.updateZIndex(null !== (Xk = null === yk || void 0 === yk ? void 0 : yk.zIndex) && void 0 !== Xk ? Xk : 0), this.multilineTextBoxSub = (0, zI.p)(this.qZ, this.eId)
+        const xm = this.IE.mH[this.IE.xH][this.eId];
+        this.updateOverlayColour(null !== (Tm = null === xm || void 0 === xm ? void 0 : xm.overlayColour) && void 0 !== Tm ? Tm : null), this.updateOpacity(null !== (fm = null === xm || void 0 === xm ? void 0 : xm.opacity) && void 0 !== fm ? fm : 1), this.updateZIndex(null !== (hm = null === xm || void 0 === xm ? void 0 : xm.zIndex) && void 0 !== hm ? hm : 0), this.multilineTextBoxSub = (0, Zf.p)(this.IE, this.eId)
       }
-      onChangeClient(kk, Fk) {
-        if ("xRotation" === kk || "yRotation" === kk || "zRotation" === kk)(0, zI.t)(this.qZ, this.eId, kk, Fk);
-        else if ("pose" === kk) {
-          const kk = this.qZ.MJ.KFk(this.eId);
-          kk && (kk.pose = Fk || "standing")
-        } else "meshKind" === kk || "meshOpts" === kk ? (this[kk] = Fk, this.queueMeshRebuild()) : "name" === kk && "" !== Fk ? this.updateHidingMeshMgr() : "leaderboardTop" === kk && (this.leaderboardTop = Fk, MF.g.GL(`leaderboardTop|${this.eId}`, Fk))
+      onChangeClient(mm, Tm) {
+        if ("xRotation" === mm || "yRotation" === mm || "zRotation" === mm)(0, Zf.s)(this.IE, this.eId, mm, Tm);
+        else if ("pose" === mm) {
+          const mm = this.IE.qI.ITm(this.eId);
+          mm && (mm.pose = Tm || "standing")
+        } else "meshKind" === mm || "meshOpts" === mm ? (this[mm] = Tm, this.queueMeshRebuild()) : "name" === mm && "" !== Tm ? this.updateHidingMeshMgr() : "leaderboardTop" === mm && (this.leaderboardTop = Tm, FT.j.gp(`leaderboardTop|${this.eId}`, Tm))
       }
       disposeClient() {
-        this.ee = !0, this.qZ.MJ.deleteEntity(this.eId), MF.g.unsubscribe(this.canSeeSub), MF.g.unsubscribe(this.canAttackSub), MF.g.unsubscribe(this.interactableSub), MF.g.unsubscribe(this.overlayColourSub), MF.g.unsubscribe(this.opacitySub), MF.g.unsubscribe(this.zIndexSub), MF.g.unsubscribe(this.multilineTextBoxSub)
+        this.PO = !0, this.IE.qI.deleteEntity(this.eId), FT.j.unsubscribe(this.canSeeSub), FT.j.unsubscribe(this.canAttackSub), FT.j.unsubscribe(this.interactableSub), FT.j.unsubscribe(this.overlayColourSub), FT.j.unsubscribe(this.opacitySub), FT.j.unsubscribe(this.zIndexSub), FT.j.unsubscribe(this.multilineTextBoxSub)
       }
       getCurrentHidingMeshMgrState() {
-        var kk, Fk;
+        var mm, Tm;
         return {
-          canSee: null !== (kk = null === (Fk = this.qZ.xR[this.qZ.oR][this.eId]) || void 0 === Fk ? void 0 : Fk.canSee) && void 0 !== kk && kk,
+          canSee: null !== (mm = null === (Tm = this.IE.mH[this.IE.xH][this.eId]) || void 0 === Tm ? void 0 : Tm.canSee) && void 0 !== mm && mm,
           name: this.colyseusEntity.name,
           meshKind: this.meshKind,
           meshOpts: this.meshOpts
         }
       }
       updateHidingMeshMgr() {
-        var kk, Fk, Ik;
+        var mm, Tm, fm;
         const {
-          qZ: Xk
+          IE: hm
         } = this, {
-          MJ: Tk
-        } = Xk, ik = this.getCurrentHidingMeshMgrState();
-        if ((0, KI.ce)(this.previousHidingMeshManagerState, ik)) return;
-        if (this.previousHidingMeshManagerState = ik, Tk.Eu(this.eId, "hidingMeshManager"), null === (kk = Xk.xR[Xk.oR][this.eId]) || void 0 === kk || !kk.canSee) return;
-        const yk = this.getSpec();
-        if (!yk) return;
+          qI: Am
+        } = hm, am = this.getCurrentHidingMeshMgrState();
+        if ((0, Qf.Zd)(this.previousHidingMeshManagerState, am)) return;
+        if (this.previousHidingMeshManagerState = am, Am.WG(this.eId, "hidingMeshManager"), null === (mm = hm.mH[hm.xH][this.eId]) || void 0 === mm || !mm.canSee) return;
+        const xm = this.getSpec();
+        if (!xm) return;
         const {
-          type: lk,
-          opts: ak
-        } = yk;
-        "Person" === lk && (ak.textures = (0, VI.o)(ak.textures)), ak.eId = this.eId, Tk.Tu(this.eId, "hidingMeshManager", {
+          type: wm,
+          opts: Dm
+        } = xm;
+        "Person" === wm && (Dm.textures = (0, zf.i)(Dm.textures)), Dm.eId = this.eId, Am.vG(this.eId, "hidingMeshManager", {
           addMeshComponent: () => {
-            var kk, Fk, Ik;
-            "Leaderboard" === lk && (ak.leaderboardTop = this.leaderboardTop);
-            const ik = this.bloxd.client.meshCreator.getEntityMesh(lk, ak, (kk => {
-              var Fk, Ik;
-              if ("number" === typeof kk) {
-                var Tk, ik, yk;
-                const Fk = Xk.Xw.kp;
-                Fk.setEntityId(kk, this.eId);
-                const Ik = "Person" === lk && (null === (Tk = (0, VI.k)("head", null === (yk = ak.textures) || void 0 === yk ? void 0 : yk.head)) || void 0 === Tk || null === (ik = Tk.personModel) || void 0 === ik ? void 0 : ik.fullBody);
-                return void Fk.setPickable(kk, (0, oI.g)(this.eId) && !Ik)
+            var mm, Tm, fm;
+            "Leaderboard" === wm && (Dm.leaderboardTop = this.leaderboardTop);
+            const am = this.bloxd.client.meshCreator.getEntityMesh(wm, Dm, (mm => {
+              var Tm, fm;
+              if ("number" === typeof mm) {
+                var Am, am, xm;
+                const Tm = hm.qY.YG;
+                Tm.setEntityId(mm, this.eId);
+                const fm = "Person" === wm && (null === (Am = (0, zf.g)("head", null === (xm = Dm.textures) || void 0 === xm ? void 0 : xm.head)) || void 0 === Am || null === (am = Am.personModel) || void 0 === am ? void 0 : am.fullBody);
+                return void Tm.setPickable(mm, (0, bf.i)(this.eId) && !fm)
               }
-              const qk = kk;
-              for (const lk of [qk, ...qk.getChildMeshes(!1)]) void 0 === lk.gw || lk.name.startsWith("Cape|") || (lk.gw = (0, oI.g)(this.eId), lk.metadata ??= new Xk.Xw.mw, lk.metadata.eId = this.eId);
-              this.updateOpacity(null !== (Fk = null === (Ik = Xk.xR[Xk.oR][this.eId]) || void 0 === Ik ? void 0 : Ik.opacity) && void 0 !== Fk ? Fk : 1)
+              const im = mm;
+              for (const wm of [im, ...im.getChildMeshes(!1)]) void 0 === wm.xq || wm.name.startsWith("Cape|") || (wm.xq = (0, bf.i)(this.eId), wm.metadata ??= new hm.qY.wq, wm.metadata.eId = this.eId);
+              this.updateOpacity(null !== (Tm = null === (fm = hm.mH[hm.xH][this.eId]) || void 0 === fm ? void 0 : fm.opacity) && void 0 !== Tm ? Tm : 1)
             }));
-            if (!ik) return;
+            if (!am) return;
             const {
-              Ip: yk,
-              mesh: qk,
-              meshOffset: Lk,
-              nameYOffset: tk,
-              modelLoaded: Zk
-            } = ik;
-            null === Zk || void 0 === Zk || Zk.then((() => {
-              var kk;
-              (null === (kk = Tk.eFk(this.eId)) || void 0 === kk ? void 0 : kk.mesh) === qk && (this.previousHidingMeshManagerState = null, this.updateHidingMeshMgr())
+              QG: xm,
+              mesh: im,
+              meshOffset: Rm,
+              nameYOffset: pm,
+              modelLoaded: Em
+            } = am;
+            null === Em || void 0 === Em || Em.then((() => {
+              var mm;
+              (null === (mm = Am.oTm(this.eId)) || void 0 === mm ? void 0 : mm.mesh) === im && (this.previousHidingMeshManagerState = null, this.updateHidingMeshMgr())
             }));
-            const jk = null === yk ? null : Xk.Xw.kp.XXk(yk, 0);
-            if (Tk.Tu(this.eId, Tk.names.mesh, {
-                Ip: yk,
-                vIk: jk,
-                mesh: qk,
-                Dyk: !1,
-                OIk: "Leaderboard" !== lk,
-                offset: Lk.slice(),
-                ryk: "ParticleEmitter" === lk && ak.followTargetMeshOffset ? kk => {
-                  var Fk;
-                  EI().copy(kk, Lk);
-                  const Ik = null === (Fk = Tk.XIk(this.eId)) || void 0 === Fk ? void 0 : Fk.le,
-                    Xk = void 0 === Ik ? null : Tk.KFk(Ik);
-                  if (Xk) {
-                    var ik, yk;
-                    const Fk = this.bloxd.getEntityHeading(null !== (ik = Xk.ridingVehicleEId) && void 0 !== ik ? ik : Ik, !0),
-                      Tk = Math.sin(Fk),
-                      lk = Math.cos(Fk);
-                    kk[0] += Xk.meshOffset[0] * lk + Xk.meshOffset[2] * Tk, kk[1] += Xk.meshOffset[1], kk[2] += Xk.meshOffset[2] * lk - Xk.meshOffset[0] * Tk;
-                    const ak = null !== (yk = Xk.ridingVehicleEId) && void 0 !== yk ? yk : null;
-                    null !== ak && (0, pI.b)(this.qZ, ak, kk)
+            const om = null === xm ? null : hm.qY.YG.hhm(xm, 0);
+            if (Am.vG(this.eId, Am.names.mesh, {
+                QG: xm,
+                kfm: om,
+                mesh: im,
+                awm: !1,
+                Sfm: "Leaderboard" !== wm,
+                offset: Rm.slice(),
+                Awm: "ParticleEmitter" === wm && Dm.followTargetMeshOffset ? mm => {
+                  var Tm;
+                  ef().copy(mm, Rm);
+                  const fm = null === (Tm = Am.hfm(this.eId)) || void 0 === Tm ? void 0 : Tm.kO,
+                    hm = void 0 === fm ? null : Am.ITm(fm);
+                  if (hm) {
+                    var am, xm;
+                    const Tm = this.bloxd.getEntityHeading(null !== (am = hm.ridingVehicleEId) && void 0 !== am ? am : fm, !0),
+                      Am = Math.sin(Tm),
+                      wm = Math.cos(Tm);
+                    mm[0] += hm.meshOffset[0] * wm + hm.meshOffset[2] * Am, mm[1] += hm.meshOffset[1], mm[2] += hm.meshOffset[2] * wm - hm.meshOffset[0] * Am;
+                    const Dm = null !== (xm = hm.ridingVehicleEId) && void 0 !== xm ? xm : null;
+                    null !== Dm && (0, Pf.e)(this.IE, Dm, mm)
                   }
                 } : null
-              }), "Person" === lk) {
-              var ek, wk, Hk, Jk;
-              Tk.Tu(this.eId, Tk.names.meshAttachments, {
-                personFullBody: null !== (ek = null === (wk = (0, VI.k)("head", null === (Jk = ak.textures) || void 0 === Jk ? void 0 : Jk.head)) || void 0 === wk || null === (Hk = wk.personModel) || void 0 === Hk ? void 0 : Hk.fullBody) && void 0 !== ek && ek
+              }), "Person" === wm) {
+              var Om, Ym, qm, jm;
+              Am.vG(this.eId, Am.names.meshAttachments, {
+                personFullBody: null !== (Om = null === (Ym = (0, zf.g)("head", null === (jm = Dm.textures) || void 0 === jm ? void 0 : jm.head)) || void 0 === Ym || null === (qm = Ym.personModel) || void 0 === qm ? void 0 : qm.fullBody) && void 0 !== Om && Om
               });
-              for (const kk of HI.w) {
-                var xk, Pk, Kk;
-                const Fk = null === (xk = ak.textures) || void 0 === xk ? void 0 : xk[kk];
-                Fk && null !== (Pk = (0, VI.k)(kk, Fk)) && void 0 !== Pk && null !== (Kk = Pk.attachments) && void 0 !== Kk && Kk.length && sI.c.Player.meshApi.updatePlayerCosmetic(this.eId, yk, kk, Fk)
+              for (const mm of jf.r) {
+                var Vm, Im, Km;
+                const Tm = null === (Vm = Dm.textures) || void 0 === Vm ? void 0 : Vm[mm];
+                Tm && null !== (Im = (0, zf.g)(mm, Tm)) && void 0 !== Im && null !== (Km = Im.attachments) && void 0 !== Km && Km.length && Jf.e.Player.meshApi.updatePlayerCosmetic(this.eId, xm, mm, Tm)
               }
-              Tk.Tu(this.eId, Tk.names.moveState), Tk.Tu(this.eId, "updateWalkingState", {
-                Ip: yk,
-                vIk: jk,
-                walkingLegSwingDuration: SI.p
-              }), Tk.Tu(this.eId, "humanoidMesh", {
-                Ip: yk,
-                vIk: jk,
+              Am.vG(this.eId, Am.names.moveState), Am.vG(this.eId, "updateWalkingState", {
+                QG: xm,
+                kfm: om,
+                walkingLegSwingDuration: kf.o
+              }), Am.vG(this.eId, "humanoidMesh", {
+                QG: xm,
+                kfm: om,
                 heldItemPositionParams: {},
                 maxWalkingAngleOverride: null
-              }), Tk.Tu(this.eId, "animator", {
-                Ip: yk,
-                vIk: jk,
+              }), Am.vG(this.eId, "animator", {
+                QG: xm,
+                kfm: om,
                 modelLifeformType: "Player"
-              }), GI.h.hasAnimation("Person") && Tk.Tu(this.eId, "rigAnimation", {
+              }), Xf.f.hasAnimation("Person") && Am.vG(this.eId, "rigAnimation", {
                 target: "Person",
-                Ip: yk
-              }), Tk.KFk(this.eId).pose = this.colyseusEntity.pose || "standing"
-            } else if ("BloxdBlock" === lk && null !== yk) {
-              Tk.Tu(this.eId, "animator", {
-                Ip: yk,
-                vIk: jk,
+                QG: xm
+              }), Am.ITm(this.eId).pose = this.colyseusEntity.pose || "standing"
+            } else if ("BloxdBlock" === wm && null !== xm) {
+              Am.vG(this.eId, "animator", {
+                QG: xm,
+                kfm: om,
                 modelLifeformType: null
               });
-              const kk = (0, xI.r)(ak.blockName);
-              null !== kk && Tk.Tu(this.eId, "rigAnimation", {
-                target: kk,
-                Ip: yk
+              const mm = (0, If.z)(Dm.blockName);
+              null !== mm && Am.vG(this.eId, "rigAnimation", {
+                target: mm,
+                QG: xm
               })
             }
-            Tk.Plk(this.eId, "entityName", {
+            Am.Zwm(this.eId, "entityName", {
               name: this.colyseusEntity.name,
-              nameYOffset: tk
-            }), this.bloxd.setEntityName(this.eId, this.colyseusEntity.name), !0 === ak.autoRotate && (Tk.Eu(this.eId, "meshRotation"), Tk.Tu(this.eId, "autoRotate"));
+              nameYOffset: pm
+            }), this.bloxd.setEntityName(this.eId, this.colyseusEntity.name), !0 === Dm.autoRotate && (Am.WG(this.eId, "meshRotation"), Am.vG(this.eId, "autoRotate"));
             const {
-              lineToEId: Qk
-            } = ak;
-            (0, JI.Q)(Qk) || Tk.Tu(this.eId, "lineToEntity", {
-              lineToEId: Qk
+              lineToEId: Qm
+            } = Dm;
+            (0, Vf.H)(Qm) || Am.vG(this.eId, "lineToEntity", {
+              lineToEId: Qm
             });
-            const sk = Xk.xR[Xk.oR][this.eId];
-            this.updateOverlayColour(null !== (kk = null === sk || void 0 === sk ? void 0 : sk.overlayColour) && void 0 !== kk ? kk : null), this.updateOpacity(null !== (Fk = null === sk || void 0 === sk ? void 0 : sk.opacity) && void 0 !== Fk ? Fk : 1), this.updateZIndex(null !== (Ik = null === sk || void 0 === sk ? void 0 : sk.zIndex) && void 0 !== Ik ? Ik : 0)
+            const nm = hm.mH[hm.xH][this.eId];
+            this.updateOverlayColour(null !== (mm = null === nm || void 0 === nm ? void 0 : nm.overlayColour) && void 0 !== mm ? mm : null), this.updateOpacity(null !== (Tm = null === nm || void 0 === nm ? void 0 : nm.opacity) && void 0 !== Tm ? Tm : 1), this.updateZIndex(null !== (fm = null === nm || void 0 === nm ? void 0 : nm.zIndex) && void 0 !== fm ? fm : 0)
           },
           removeMeshComponent: () => {
-            "Person" !== lk && "BloxdBlock" !== lk || Tk.Eu(this.eId, "rigAnimation"), Tk.Eu(this.eId, Tk.names.mesh), Tk.Ukk(this.eId, Tk.names.meshAttachments) && Tk.Eu(this.eId, Tk.names.meshAttachments), Tk.Eu(this.eId, "entityName"), Tk.Eu(this.eId, "autoRotate"), Tk.Eu(this.eId, "lineToEntity"), "Person" === lk ? (Tk.Eu(this.eId, Tk.names.moveState), Tk.Eu(this.eId, "updateWalkingState"), Tk.Eu(this.eId, "humanoidMesh"), Tk.Eu(this.eId, "animator")) : "BloxdBlock" === lk && Tk.Eu(this.eId, "animator")
+            "Person" !== wm && "BloxdBlock" !== wm || Am.WG(this.eId, "rigAnimation"), Am.WG(this.eId, Am.names.mesh), Am.Pmm(this.eId, Am.names.meshAttachments) && Am.WG(this.eId, Am.names.meshAttachments), Am.WG(this.eId, "entityName"), Am.WG(this.eId, "autoRotate"), Am.WG(this.eId, "lineToEntity"), "Person" === wm ? (Am.WG(this.eId, Am.names.moveState), Am.WG(this.eId, "updateWalkingState"), Am.WG(this.eId, "humanoidMesh"), Am.WG(this.eId, "animator")) : "BloxdBlock" === wm && Am.WG(this.eId, "animator")
           },
-          hideDist: null !== (Fk = ak.hideDist) && void 0 !== Fk ? Fk : 80,
-          movingHideDist: null !== (Ik = ak.hideDist) && void 0 !== Ik ? Ik : 120,
-          displayOutsideLoadedChunk: ak.hideDist > 100,
+          hideDist: null !== (Tm = Dm.hideDist) && void 0 !== Tm ? Tm : 80,
+          movingHideDist: null !== (fm = Dm.hideDist) && void 0 !== fm ? fm : 120,
+          displayOutsideLoadedChunk: Dm.hideDist > 100,
           immediatelyUpdate: !0,
-          Zy: "BloxdBlock" === lk ? ak.blockName : lk
+          Ix: "BloxdBlock" === wm ? Dm.blockName : wm
         })
       }
       queueMeshRebuild() {
         this.meshRebuildQueued || (this.meshRebuildQueued = !0, queueMicrotask((() => {
-          this.meshRebuildQueued = !1, this.ee || this.updateHidingMeshMgr()
+          this.meshRebuildQueued = !1, this.PO || this.updateHidingMeshMgr()
         })))
       }
       getSpec() {
-        return (0, PI.g)({
+        return (0, Kf.k)({
           meshKind: this.meshKind,
           meshOpts: this.meshOpts
         })
       }
-      updateOverlayColour(kk) {
-        var Fk, Ik;
+      updateOverlayColour(mm) {
+        var Tm, fm;
         if ("Person" !== this.meshKind) return;
-        let Xk = new QI.b(0, 0, 0, 0);
-        if (null !== kk) {
-          const Fk = (0, KI.Y)(kk);
-          Xk = new QI.b(Fk[0] / 255, Fk[1] / 255, Fk[2] / 255, .5)
+        let hm = new nf.e(0, 0, 0, 0);
+        if (null !== mm) {
+          const Tm = (0, Qf.X)(mm);
+          hm = new nf.e(Tm[0] / 255, Tm[1] / 255, Tm[2] / 255, .5)
         }
-        const Tk = null !== (Fk = null === (Ik = this.qZ.MJ.eFk(this.eId)) || void 0 === Ik ? void 0 : Ik.Ip) && void 0 !== Fk ? Fk : null;
-        null !== Tk && sI.c.Player.meshApi.updateMeshOverlayColour(Tk, Xk)
+        const Am = null !== (Tm = null === (fm = this.IE.qI.oTm(this.eId)) || void 0 === fm ? void 0 : fm.QG) && void 0 !== Tm ? Tm : null;
+        null !== Am && Jf.e.Player.meshApi.updateMeshOverlayColour(Am, hm)
       }
-      updateZIndex(kk) {
-        var Fk;
+      updateZIndex(mm) {
+        var Tm;
         if ("Person" !== this.meshKind) return;
-        const Ik = null === (Fk = this.qZ.MJ.eFk(this.eId)) || void 0 === Fk ? void 0 : Fk.Ip;
-        "number" === typeof Ik && this.qZ.Xw.kp.setRenderingGroupId(Ik, kk)
+        const fm = null === (Tm = this.IE.qI.oTm(this.eId)) || void 0 === Tm ? void 0 : Tm.QG;
+        "number" === typeof fm && this.IE.qY.YG.setRenderingGroupId(fm, mm)
       }
-      updateOpacity(kk) {
-        const Fk = this.qZ.MJ.eFk(this.eId);
-        Fk && ("number" !== typeof Fk.Ip ? Fk.mesh && "ParticleEmitter" !== this.meshKind && (0, OI.d)(Fk.mesh, kk) : sI.c.Player.meshApi.updateMeshOpacity(Fk.Ip, kk))
+      updateOpacity(mm) {
+        const Tm = this.IE.qI.oTm(this.eId);
+        Tm && ("number" !== typeof Tm.QG ? Tm.mesh && "ParticleEmitter" !== this.meshKind && (0, Nf.g)(Tm.mesh, mm) : Jf.e.Player.meshApi.updateMeshOpacity(Tm.QG, mm))
       }
     }
-    var bI = Ik(38956);
-    class RI {
-      constructor(kk, Fk) {
-        this.eId = Fk, this.qZ = void 0, this.schema = void 0, this.qZ = kk.qZ
+    var yf = fm(39093);
+    class Cf {
+      constructor(mm, Tm) {
+        this.eId = Tm, this.IE = void 0, this.schema = void 0, this.IE = mm.IE
       }
-      initClient(kk) {
-        this.schema = kk, this.qZ.MJ.add([kk.x, kk.y, kk.z], .1, .1, null, null, !1, !1, this.eId), this.qZ.MJ.Tu(this.eId, "smoothToServerPos"), bI.b.add(this.eId, this.copyOpts())
+      initClient(mm) {
+        this.schema = mm, this.IE.qI.add([mm.x, mm.y, mm.z], .1, .1, null, null, !1, !1, this.eId), this.IE.qI.vG(this.eId, "smoothToServerPos"), yf.b.add(this.eId, this.copyOpts())
       }
-      onChangeClient(kk) {
-        iI.k.includes(kk) && bI.b.update(this.eId, this.copyOpts())
+      onChangeClient(mm) {
+        af.k.includes(mm) && yf.b.update(this.eId, this.copyOpts())
       }
       disposeClient() {
-        bI.b.remove(this.eId), this.qZ.MJ.deleteEntity(this.eId)
+        yf.b.remove(this.eId), this.IE.qI.deleteEntity(this.eId)
       }
       copyOpts() {
         const {
-          soundName: kk,
-          volume: Fk,
-          refDistance: Ik,
-          maxHearDist: Xk,
-          rate: Tk
+          soundName: mm,
+          volume: Tm,
+          refDistance: fm,
+          maxHearDist: hm,
+          rate: Am
         } = this.schema;
         return {
-          soundName: kk,
-          volume: Fk,
-          refDistance: Ik,
-          maxHearDist: Xk,
-          rate: Tk
+          soundName: mm,
+          volume: Tm,
+          refDistance: fm,
+          maxHearDist: hm,
+          rate: Am
         }
       }
     }
-    var UI = Ik(3631),
-      CI = Ik(36783),
-      NI = Ik(6475),
-      cI = Ik(37794),
-      WI = Ik(2700),
-      fI = Ik(38143),
-      BI = Ik(9054),
-      dI = Ik(38469),
-      YI = Ik(37777),
-      AI = Ik(2852);
-    class gI {
-      constructor(kk, Fk) {
-        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 4,
-          Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now();
-        this.sIk = kk, this.qZ = Fk, this.setupBudgetMs = Ik, this.now = Xk, this.createStateCallbacks = void 0, this.roomStateCallbacks = void 0, this.allItems = {}, this.detachers = new Map, this.deferredSetups = new Map, this.queuedSetups = new Map, this.promotedSetups = new Set, this.setupBudgetLeftMs = void 0, this.lastRefillMs = void 0, this.roomState = void 0, this.ee = !1, this.onFrame = () => {
+    var rf = fm(3672),
+      sf = fm(36861),
+      lf = fm(6451),
+      Mf = fm(37836),
+      uf = fm(2760),
+      Bf = fm(38218),
+      Lf = fm(8998),
+      vf = fm(38576),
+      tf = fm(37811),
+      Uf = fm(2932);
+    class df {
+      constructor(mm, Tm) {
+        let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 4,
+          hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now();
+        this.nfm = mm, this.IE = Tm, this.setupBudgetMs = fm, this.now = hm, this.createStateCallbacks = void 0, this.roomStateCallbacks = void 0, this.allItems = {}, this.detachers = new Map, this.deferredSetups = new Map, this.queuedSetups = new Map, this.promotedSetups = new Set, this.setupBudgetLeftMs = void 0, this.lastRefillMs = void 0, this.roomState = void 0, this.PO = !1, this.onFrame = () => {
           this.setUpQueuedEntities(!0)
-        }, this.VJ = () => {
+        }, this.HV = () => {
           this.setUpQueuedEntities(this.now() - this.lastRefillMs > 100)
         }, this.setUpPromoted = () => {
-          for (const kk of this.promotedSetups) {
-            this.promotedSetups.delete(kk);
-            const Fk = this.queuedSetups.get(kk);
-            Fk && (this.queuedSetups.delete(kk), this.timedSetup(Fk, kk))
+          for (const mm of this.promotedSetups) {
+            this.promotedSetups.delete(mm);
+            const Tm = this.queuedSetups.get(mm);
+            Tm && (this.queuedSetups.delete(mm), this.timedSetup(Tm, mm))
           }
-        }, this.createStateCallbacks = (0, BI.getStateCallbacks)(kk), this.roomStateCallbacks = this.createStateCallbacks(kk.state), this.roomState = kk.state, this.setupBudgetLeftMs = Ik, this.lastRefillMs = Xk()
+        }, this.createStateCallbacks = (0, Lf.getStateCallbacks)(mm), this.roomStateCallbacks = this.createStateCallbacks(mm.state), this.roomState = mm.state, this.setupBudgetLeftMs = fm, this.lastRefillMs = hm()
       }
       setup() {
-        this.setupEntityHandlers(), this.setupItemHandlers(), this.sIk.onStateChange(this.setUpPromoted), this.qZ.on("beforeInputs", this.onFrame), this.qZ.on("Dt", this.VJ)
+        this.setupEntityHandlers(), this.setupItemHandlers(), this.nfm.onStateChange(this.setUpPromoted), this.IE.on("beforeInputs", this.onFrame), this.IE.on("DE", this.HV)
       }
-      setUpQueuedEntities(kk) {
-        var Fk;
-        if ((null === (Fk = (0, WI.c)().client.getMsgHandler()) || void 0 === Fk ? void 0 : Fk.sIk) !== this.sIk) return this.qZ.off("beforeInputs", this.onFrame), this.qZ.off("Dt", this.VJ), this.queuedSetups.clear(), void this.promotedSetups.clear();
-        if (kk && (this.setupBudgetLeftMs = this.setupBudgetMs, this.lastRefillMs = this.now()), this.setUpPromoted(), 0 !== this.queuedSetups.size)
-          for (EI().copy(mI, this.qZ.MJ.OJ(this.qZ.oR)); this.setupBudgetLeftMs > 0;) {
-            const kk = this.nearestQueued(mI);
-            if (null === kk) return;
-            this.setUpIfQueued(kk), this.setUpPromoted()
+      setUpQueuedEntities(mm) {
+        var Tm;
+        if ((null === (Tm = (0, uf.c)().client.getMsgHandler()) || void 0 === Tm ? void 0 : Tm.nfm) !== this.nfm) return this.IE.off("beforeInputs", this.onFrame), this.IE.off("DE", this.HV), this.queuedSetups.clear(), void this.promotedSetups.clear();
+        if (mm && (this.setupBudgetLeftMs = this.setupBudgetMs, this.lastRefillMs = this.now()), this.setUpPromoted(), 0 !== this.queuedSetups.size)
+          for (ef().copy(gf, this.IE.qI.rV(this.IE.xH)); this.setupBudgetLeftMs > 0;) {
+            const mm = this.nearestQueued(gf);
+            if (null === mm) return;
+            this.setUpIfQueued(mm), this.setUpPromoted()
           }
       }
-      nearestQueued(kk) {
-        let Fk = null,
-          Ik = 1 / 0;
-        return this.queuedSetups.forEach(((Xk, Tk) => {
-          const ik = function(kk, Fk) {
-            return (Fk.x - kk[0]) ** 2 + (Fk.y - kk[1]) ** 2 + (Fk.z - kk[2]) ** 2
-          }(kk, Xk);
-          (null === Fk || ik < Ik) && (Fk = Tk, Ik = ik)
-        })), Fk
+      nearestQueued(mm) {
+        let Tm = null,
+          fm = 1 / 0;
+        return this.queuedSetups.forEach(((hm, Am) => {
+          const am = function(mm, Tm) {
+            return (Tm.x - mm[0]) ** 2 + (Tm.y - mm[1]) ** 2 + (Tm.z - mm[2]) ** 2
+          }(mm, hm);
+          (null === Tm || am < fm) && (Tm = Am, fm = am)
+        })), Tm
       }
-      setUpOrQueue(kk, Fk) {
-        0 === this.queuedSetups.size && this.setupBudgetLeftMs > 0 || this.mustSetUpNow(kk, Fk) ? this.timedSetup(kk, Fk) : this.queuedSetups.set(Fk, kk)
+      setUpOrQueue(mm, Tm) {
+        0 === this.queuedSetups.size && this.setupBudgetLeftMs > 0 || this.mustSetUpNow(mm, Tm) ? this.timedSetup(mm, Tm) : this.queuedSetups.set(Tm, mm)
       }
-      mustSetUpNow(kk, Fk) {
-        const Ik = this.qZ.Nkk;
-        if (Fk === Ik) return !0;
-        const Xk = this.roomState.entities.get(Ik);
-        return !(!Xk || Xk.ridingVehicleEId !== Fk && Xk.followingEId !== Fk) || (hI(kk.type) === wI.d || (0, WI.c)().getFollowingEntities(Fk).length > 0)
+      mustSetUpNow(mm, Tm) {
+        const fm = this.IE.Cmm;
+        if (Tm === fm) return !0;
+        const hm = this.roomState.entities.get(fm);
+        return !(!hm || hm.ridingVehicleEId !== Tm && hm.followingEId !== Tm) || (Wf(mm.type) === qf.c || (0, uf.c)().getFollowingEntities(Tm).length > 0)
       }
-      setUpIfQueued(kk) {
-        const Fk = this.queuedSetups.get(kk);
-        Fk && (this.queuedSetups.delete(kk), this.timedSetup(Fk, kk))
+      setUpIfQueued(mm) {
+        const Tm = this.queuedSetups.get(mm);
+        Tm && (this.queuedSetups.delete(mm), this.timedSetup(Tm, mm))
       }
-      promoteIfQueued(kk) {
-        null !== kk && this.queuedSetups.has(kk) && this.promotedSetups.add(kk)
+      promoteIfQueued(mm) {
+        null !== mm && this.queuedSetups.has(mm) && this.promotedSetups.add(mm)
       }
-      timedSetup(kk, Fk) {
-        const Ik = this.now();
-        this.setupEntity(kk, Fk), this.setupBudgetLeftMs -= this.now() - Ik
+      timedSetup(mm, Tm) {
+        const fm = this.now();
+        this.setupEntity(mm, Tm), this.setupBudgetLeftMs -= this.now() - fm
       }
       setupEntityHandlers() {
-        this.roomStateCallbacks.entities.mJ(((kk, Fk) => {
-          this.qZ.Nkk ? this.setUpOrQueue(kk, Fk) : this.deferEntitySetupUntilInitInfo(kk, Fk)
-        })), this.roomStateCallbacks.entities.iG(((kk, Fk) => {
-          const Ik = this.deferredSetups.get(Fk);
-          Ik && (MF.g.unsubscribe(Ik), this.deferredSetups.delete(Fk)), this.queuedSetups.delete(Fk), this.detach(Fk), (0, WI.c)().client.disposeEntity(Fk)
+        this.roomStateCallbacks.entities.pI(((mm, Tm) => {
+          this.IE.Cmm ? this.setUpOrQueue(mm, Tm) : this.deferEntitySetupUntilInitInfo(mm, Tm)
+        })), this.roomStateCallbacks.entities.oN(((mm, Tm) => {
+          const fm = this.deferredSetups.get(Tm);
+          fm && (FT.j.unsubscribe(fm), this.deferredSetups.delete(Tm)), this.queuedSetups.delete(Tm), this.detach(Tm), (0, uf.c)().client.disposeEntity(Tm)
         }))
       }
-      deferEntitySetupUntilInitInfo(kk, Fk) {
-        const Ik = MF.g.iJ("initInfoReceived", (() => {
-          this.deferredSetups.delete(Fk), this.setUpOrQueue(kk, Fk)
+      deferEntitySetupUntilInitInfo(mm, Tm) {
+        const fm = FT.j.wV("initInfoReceived", (() => {
+          this.deferredSetups.delete(Tm), this.setUpOrQueue(mm, Tm)
         }));
-        this.deferredSetups.set(Fk, Ik), (0, UI.onGameResetOnce)((() => {
-          this.deferredSetups.get(Fk) === Ik && (MF.g.unsubscribe(Ik), this.deferredSetups.delete(Fk)), (0, WI.c)().updatePositionAndPhysics(this.qZ.oR, {
-            type: NI.n.DEFAULT,
+        this.deferredSetups.set(Tm, fm), (0, rf.onGameResetOnce)((() => {
+          this.deferredSetups.get(Tm) === fm && (FT.j.unsubscribe(fm), this.deferredSetups.delete(Tm)), (0, uf.c)().updatePositionAndPhysics(this.IE.xH, {
+            type: lf.m.DEFAULT,
             tier: null
-          }, !0), (0, WI.c)().takeHeldPlayerBodySize(this.qZ.oR);
-          const kk = this.qZ.MJ.FFk(this.qZ.oR);
-          kk && (kk.movementType = NI.m.NORMAL)
+          }, !0), (0, uf.c)().takeHeldPlayerBodySize(this.IE.xH);
+          const mm = this.IE.qI.mTm(this.IE.xH);
+          mm && (mm.movementType = lf.l.NORMAL)
         }))
       }
-      setupEntity(kk, Fk) {
-        const Ik = Fk === this.qZ.Nkk;
-        if (Ik)(0, WI.c)().client.qY(this.qZ.oR, null, null);
+      setupEntity(mm, Tm) {
+        const fm = Tm === this.IE.Cmm;
+        if (fm)(0, uf.c)().client.lB(this.IE.xH, null, null);
         else {
           const {
-            type: Ik
-          } = kk, Xk = hI(Ik);
-          if (void 0 === Xk) return void
-          function(kk, Fk) {
-            const Ik = String(kk);
-            if (rI.has(Ik)) return;
-            rI.add(Ik);
-            const Xk = Ik.length > 80 ? `${Ik.slice(0,80)}...` : Ik,
-              Tk = `No client handler for entity type ${JSON.stringify(Xk)}, so entity ${Fk} is not set up`;
-            console.warn(Tk), (0, AI.reportClientError)("uncaught", Tk, "unknown_entity_type")
-          }(Ik, Fk);
-          (0, WI.c)().client.qY(Fk, kk, new Xk((0, WI.c)(), Fk, Ik))
+            type: fm
+          } = mm, hm = Wf(fm);
+          if (void 0 === hm) return void
+          function(mm, Tm) {
+            const fm = String(mm);
+            if (Ff.has(fm)) return;
+            Ff.add(fm);
+            const hm = fm.length > 80 ? `${fm.slice(0,80)}...` : fm,
+              Am = `No client handler for entity type ${JSON.stringify(hm)}, so entity ${Tm} is not set up`;
+            console.warn(Am), (0, Uf.reportClientError)("uncaught", Am, "unknown_entity_type")
+          }(fm, Tm);
+          (0, uf.c)().client.lB(Tm, mm, new hm((0, uf.c)(), Tm, fm))
         }
-        const Xk = this.createStateCallbacks(kk);
-        if (Ik) return this.setupMapSchemaCallbacks(Fk, kk, Xk, "armour"), this.setupScalarField(Fk, kk, Xk, "scale"), this.setupScalarField(Fk, kk, Xk, "ridingVehicleEId"), this.setupScalarField(Fk, kk, Xk, "followingEId"), this.setupScalarField(Fk, kk, Xk, "followingOffset"), void this.setupScalarField(Fk, kk, Xk, "shouldMatchFollowingEntityRotation");
-        for (const Tk of ZI(kk.constructor)) kk[Tk] instanceof XI.MapSchema ? this.setupMapSchemaCallbacks(Fk, kk, Xk, Tk) : this.setupScalarField(Fk, kk, Xk, Tk)
+        const hm = this.createStateCallbacks(mm);
+        if (fm) return this.setupMapSchemaCallbacks(Tm, mm, hm, "armour"), this.setupScalarField(Tm, mm, hm, "scale"), this.setupScalarField(Tm, mm, hm, "ridingVehicleEId"), this.setupScalarField(Tm, mm, hm, "followingEId"), this.setupScalarField(Tm, mm, hm, "followingOffset"), void this.setupScalarField(Tm, mm, hm, "shouldMatchFollowingEntityRotation");
+        for (const Am of of(mm.constructor)) mm[Am] instanceof hf.MapSchema ? this.setupMapSchemaCallbacks(Tm, mm, hm, Am) : this.setupScalarField(Tm, mm, hm, Am)
       }
-      setupMapSchemaCallbacks(kk, Fk, Ik, Xk) {
-        const Tk = Ik[Xk],
-          ik = new Map;
-        Tk.mJ(((Ik, Tk) => {
-          if (this.onEntityFieldChange(kk, Fk, Xk, {
-              key: Tk,
-              value: Ik
-            }), !(Ik instanceof XI.Schema)) return;
-          const yk = this.createStateCallbacks(Ik),
-            lk = [];
-          for (const ik of ZI(Ik.constructor)) lk.push(this.listenForFutureChanges(yk, ik, (() => {
-            this.onEntityFieldChange(kk, Fk, Xk, {
-              key: Tk,
-              value: Ik
+      setupMapSchemaCallbacks(mm, Tm, fm, hm) {
+        const Am = fm[hm],
+          am = new Map;
+        Am.pI(((fm, Am) => {
+          if (this.onEntityFieldChange(mm, Tm, hm, {
+              key: Am,
+              value: fm
+            }), !(fm instanceof hf.Schema)) return;
+          const xm = this.createStateCallbacks(fm),
+            wm = [];
+          for (const am of of(fm.constructor)) wm.push(this.listenForFutureChanges(xm, am, (() => {
+            this.onEntityFieldChange(mm, Tm, hm, {
+              key: Am,
+              value: fm
             })
           })));
-          ik.set(Tk, (() => {
-            for (const kk of lk) kk()
+          am.set(Am, (() => {
+            for (const mm of wm) mm()
           }))
-        })), Tk.iG(((Ik, Tk) => {
-          var yk;
-          null === (yk = ik.get(Tk)) || void 0 === yk || yk(), ik.delete(Tk), this.onEntityFieldChange(kk, Fk, Xk, {
-            key: Tk,
+        })), Am.oN(((fm, Am) => {
+          var xm;
+          null === (xm = am.get(Am)) || void 0 === xm || xm(), am.delete(Am), this.onEntityFieldChange(mm, Tm, hm, {
+            key: Am,
             value: null
           })
-        })), this.addDetacher(kk, (() => {
-          for (const kk of ik.values()) kk();
-          ik.clear()
+        })), this.addDetacher(mm, (() => {
+          for (const mm of am.values()) mm();
+          am.clear()
         }))
       }
-      setupScalarField(kk, Fk, Ik, Xk) {
-        this.onEntityFieldChange(kk, Fk, Xk, Fk[Xk]);
-        const Tk = this.listenForFutureChanges(Ik, Xk, (Ik => {
-          this.onEntityFieldChange(kk, Fk, Xk, Ik)
+      setupScalarField(mm, Tm, fm, hm) {
+        this.onEntityFieldChange(mm, Tm, hm, Tm[hm]);
+        const Am = this.listenForFutureChanges(fm, hm, (fm => {
+          this.onEntityFieldChange(mm, Tm, hm, fm)
         }));
-        this.addDetacher(kk, Tk)
+        this.addDetacher(mm, Am)
       }
-      addDetacher(kk, Fk) {
-        let Ik = this.detachers.get(kk);
-        Ik || (Ik = [], this.detachers.set(kk, Ik)), Ik.push(Fk)
+      addDetacher(mm, Tm) {
+        let fm = this.detachers.get(mm);
+        fm || (fm = [], this.detachers.set(mm, fm)), fm.push(Tm)
       }
-      detach(kk) {
-        for (const Ik of null !== (Fk = this.detachers.get(kk)) && void 0 !== Fk ? Fk : []) {
-          var Fk;
-          Ik()
+      detach(mm) {
+        for (const fm of null !== (Tm = this.detachers.get(mm)) && void 0 !== Tm ? Tm : []) {
+          var Tm;
+          fm()
         }
-        this.detachers.delete(kk)
+        this.detachers.delete(mm)
       }
-      listenForFutureChanges(kk, Fk, Ik) {
-        return kk.listen(Fk, Ik, !1)
+      listenForFutureChanges(mm, Tm, fm) {
+        return mm.listen(Tm, fm, !1)
       }
-      onEntityFieldChange(kk, Fk, Ik, Xk) {
-        switch (Ik) {
+      onEntityFieldChange(mm, Tm, fm, hm) {
+        switch (fm) {
           case "ridingVehicleEId": {
-            this.promoteIfQueued(Xk);
-            const Fk = this.qZ.MJ.KFk((0, CI.c)(kk));
-            Fk && (Fk.ridingVehicleEId = Xk);
+            this.promoteIfQueued(hm);
+            const Tm = this.IE.qI.ITm((0, sf.d)(mm));
+            Tm && (Tm.ridingVehicleEId = hm);
             break
           }
           case "armour":
-            this.handleArmourChange(kk, Xk);
+            this.handleArmourChange(mm, hm);
             break;
           case "followingEId":
-            this.promoteIfQueued(Xk), this.handleFollowingEIdChange(kk, Fk, Xk);
+            this.promoteIfQueued(hm), this.handleFollowingEIdChange(mm, Tm, hm);
             break;
           case "xRotation":
           case "yRotation":
           case "zRotation":
-            this.handleRotationChange(kk, Ik, Xk);
+            this.handleRotationChange(mm, fm, hm);
             break;
           case "scale":
-            this.handleScaleChange(kk, Xk);
+            this.handleScaleChange(mm, hm);
             break;
           case "baseRenderHeading":
-            this.handleBaseRenderHeadingChange(kk, Xk);
+            this.handleBaseRenderHeadingChange(mm, hm);
             break;
           case "followingOffset":
-            this.handleFollowingOffsetChange(kk, Xk);
+            this.handleFollowingOffsetChange(mm, hm);
             break;
           case "shouldMatchFollowingEntityRotation":
-            this.handleShouldMatchFollowingEntityRotationChange(kk, Xk);
+            this.handleShouldMatchFollowingEntityRotationChange(mm, hm);
             break;
           case "x":
           case "y":
           case "z":
-            return void this.handlePositionChange(kk, Ik, Xk)
-        }(0, WI.c)().client.updateEntityField(kk, Ik, Xk)
+            return void this.handlePositionChange(mm, fm, hm)
+        }(0, uf.c)().client.updateEntityField(mm, fm, hm)
       }
-      handleArmourChange(kk, Fk) {
-        var Ik, Xk;
+      handleArmourChange(mm, Tm) {
+        var fm, hm;
         const {
-          key: Tk,
-          value: ik
-        } = Fk;
-        (0, sI.w)(kk, Tk, null !== (Ik = null === ik || void 0 === ik ? void 0 : ik.itemName) && void 0 !== Ik ? Ik : null, null !== (Xk = null === ik || void 0 === ik ? void 0 : ik.enchantmentTier) && void 0 !== Xk ? Xk : null)
+          key: Am,
+          value: am
+        } = Tm;
+        (0, Jf.E)(mm, Am, null !== (fm = null === am || void 0 === am ? void 0 : am.itemName) && void 0 !== fm ? fm : null, null !== (hm = null === am || void 0 === am ? void 0 : am.enchantmentTier) && void 0 !== hm ? hm : null)
       }
-      handleFollowingEIdChange(kk, Fk, Ik) {
-        const Xk = (0, CI.c)(kk),
-          Tk = Xk === this.qZ.oR;
-        if (this.qZ.MJ.Eu(Xk, this.qZ.MJ.names.zK), Ik) this.qZ.MJ.Eu(Xk, "smoothToServerPos"), this.qZ.MJ.Tu(Xk, this.qZ.MJ.names.zK, {
-          le: (0, CI.c)(Ik),
-          offset: Array.from(Fk.followingOffset),
-          TIk: Fk.shouldMatchFollowingEntityRotation,
-          aIk: !0,
-          qIk: (kk, Xk) => {
-            if (EI().copy(kk, Fk.followingOffset), Fk.ridingVehicleEId === Ik) {
-              const Fk = (0, CI.c)(Ik),
-                Tk = (0, WI.c)().getEntityHeading(Fk, Xk);
-              EI().ei(kk, kk, EI().ZERO, Tk)
+      handleFollowingEIdChange(mm, Tm, fm) {
+        const hm = (0, sf.d)(mm),
+          Am = hm === this.IE.xH;
+        if (this.IE.qI.WG(hm, this.IE.qI.names.bK), fm) this.IE.qI.WG(hm, "smoothToServerPos"), this.IE.qI.vG(hm, this.IE.qI.names.bK, {
+          kO: (0, sf.d)(fm),
+          offset: Array.from(Tm.followingOffset),
+          Afm: Tm.shouldMatchFollowingEntityRotation,
+          Dfm: !0,
+          ifm: (mm, hm) => {
+            if (ef().copy(mm, Tm.followingOffset), Tm.ridingVehicleEId === fm) {
+              const Tm = (0, sf.d)(fm),
+                Am = (0, uf.c)().getEntityHeading(Tm, hm);
+              ef().pa(mm, mm, ef().ZERO, Am)
             }
           }
         });
-        else if (!Tk) {
-          this.qZ.MJ.Ukk(Xk, "smoothToServerPos") || this.qZ.MJ.Tu(Xk, "smoothToServerPos");
-          const kk = this.qZ.MJ.getState(Xk, "smoothToServerPos"),
-            Fk = this.qZ.MJ.ZY(Xk).position;
-          (0, YI.setServerPosition)(kk, Fk[0], Fk[1], Fk[2])
+        else if (!Am) {
+          this.IE.qI.Pmm(hm, "smoothToServerPos") || this.IE.qI.vG(hm, "smoothToServerPos");
+          const mm = this.IE.qI.getState(hm, "smoothToServerPos"),
+            Tm = this.IE.qI.uB(hm).position;
+          (0, tf.setServerPosition)(mm, Tm[0], Tm[1], Tm[2])
         }
       }
-      handleRotationChange(kk, Fk, Ik) {
-        const Xk = "xRotation" === Fk ? 0 : "yRotation" === Fk ? 1 : 2;
-        for (const Tk of (0, WI.c)().getFollowingEntities(kk)) {
-          const kk = this.qZ.MJ.getState(Tk, "meshRotation"),
-            Fk = this.qZ.MJ.XIk(Tk);
-          kk && Fk.TIk && (kk.serverSetRotation[Xk] = Ik)
+      handleRotationChange(mm, Tm, fm) {
+        const hm = "xRotation" === Tm ? 0 : "yRotation" === Tm ? 1 : 2;
+        for (const Am of (0, uf.c)().getFollowingEntities(mm)) {
+          const mm = this.IE.qI.getState(Am, "meshRotation"),
+            Tm = this.IE.qI.hfm(Am);
+          mm && Tm.Afm && (mm.serverSetRotation[hm] = fm)
         }
       }
-      handleScaleChange(kk, Fk) {
-        const Ik = (0, CI.c)(kk);
-        if (MF.g.GL(`entityScale|${Ik}`, Fk), Ik === this.qZ.oR) {
-          var Xk;
-          (0, WI.c)().removeFromEyeHeightCache(Ik);
-          const kk = this.qZ.MJ.FFk(this.qZ.oR),
-            Fk = null !== (Xk = null === kk || void 0 === kk ? void 0 : kk.physicsState) && void 0 !== Xk ? Xk : {
-              type: NI.n.DEFAULT,
+      handleScaleChange(mm, Tm) {
+        const fm = (0, sf.d)(mm);
+        if (FT.j.gp(`entityScale|${fm}`, Tm), fm === this.IE.xH) {
+          var hm;
+          (0, uf.c)().removeFromEyeHeightCache(fm);
+          const mm = this.IE.qI.mTm(this.IE.xH),
+            Tm = null !== (hm = null === mm || void 0 === mm ? void 0 : mm.physicsState) && void 0 !== hm ? hm : {
+              type: lf.m.DEFAULT,
               tier: null
             };
-          return void(0, WI.c)().updatePositionAndPhysics(this.qZ.oR, Fk, !1)
+          return void(0, uf.c)().updatePositionAndPhysics(this.IE.xH, Tm, !1)
         }
-        const Tk = (0, WI.c)().getLifeformType(Ik);
-        if (null === Tk) return;
+        const Am = (0, uf.c)().getLifeformType(fm);
+        if (null === Am) return;
         const {
-          physicsBodyWidth: ik,
-          physicsBodyHeight: yk
-        } = (0, dI.g)(Fk, Tk);
-        this.qZ.MJ.FIk(Ik, ik, yk, ik)
+          physicsBodyWidth: am,
+          physicsBodyHeight: xm
+        } = (0, vf.e)(Tm, Am);
+        this.IE.qI.mfm(fm, am, xm, am)
       }
-      handleBaseRenderHeadingChange(kk, Fk) {
-        const Ik = this.qZ.MJ.getState(kk, "meshRotation");
-        Ik && (Ik.baseRenderRotation[1] = Fk);
-        for (const Xk of (0, WI.c)().getFollowingEntities(kk)) {
-          const kk = this.qZ.MJ.getState(Xk, "meshRotation"),
-            Ik = this.qZ.MJ.XIk(Xk);
-          kk && Ik.TIk && (kk.baseRenderRotation[1] = Fk)
+      handleBaseRenderHeadingChange(mm, Tm) {
+        const fm = this.IE.qI.getState(mm, "meshRotation");
+        fm && (fm.baseRenderRotation[1] = Tm);
+        for (const hm of (0, uf.c)().getFollowingEntities(mm)) {
+          const mm = this.IE.qI.getState(hm, "meshRotation"),
+            fm = this.IE.qI.hfm(hm);
+          mm && fm.Afm && (mm.baseRenderRotation[1] = Tm)
         }
       }
-      handleFollowingOffsetChange(kk, Fk) {
-        const Ik = this.qZ.MJ.XIk((0, CI.c)(kk));
-        if (Ik && Ik.offset) {
-          const kk = Fk ? Array.from(Fk) : EI().ZERO;
-          Ik.offset[0] = kk[0], Ik.offset[1] = kk[1], Ik.offset[2] = kk[2]
+      handleFollowingOffsetChange(mm, Tm) {
+        const fm = this.IE.qI.hfm((0, sf.d)(mm));
+        if (fm && fm.offset) {
+          const mm = Tm ? Array.from(Tm) : ef().ZERO;
+          fm.offset[0] = mm[0], fm.offset[1] = mm[1], fm.offset[2] = mm[2]
         }
       }
-      handleShouldMatchFollowingEntityRotationChange(kk, Fk) {
-        const Ik = this.qZ.MJ.XIk((0, CI.c)(kk));
-        Ik && (Ik.TIk = null === Fk || void 0 === Fk || Fk)
+      handleShouldMatchFollowingEntityRotationChange(mm, Tm) {
+        const fm = this.IE.qI.hfm((0, sf.d)(mm));
+        fm && (fm.Afm = null === Tm || void 0 === Tm || Tm)
       }
-      handlePositionChange(kk, Fk, Ik) {
-        if (this.qZ.MJ.Ukk(kk, "smoothToServerPos")) {
-          const Xk = this.qZ.MJ.getState(kk, "smoothToServerPos");
-          (0, YI.setServerPositionAxis)(Xk, DI[Fk], Ik)
+      handlePositionChange(mm, Tm, fm) {
+        if (this.IE.qI.Pmm(mm, "smoothToServerPos")) {
+          const hm = this.IE.qI.getState(mm, "smoothToServerPos");
+          (0, tf.setServerPositionAxis)(hm, mh[Tm], fm)
         }
       }
       setupItemHandlers() {
-        this.roomStateCallbacks.items.mJ(((kk, Fk) => {
-          this.allItems[Fk] = kk, (0, cI.m)(this.qZ, Fk, [kk.x, kk.y, kk.z], kk.id, {
-            amount: kk.amount,
-            attributes: JSON.parse(kk.attributes),
-            tF: (0, kI.b)(this.qZ).cantPickUpItem(Fk),
-            size: kk.size,
-            predictedAt: (0, WI.c)().client.itemDropPrediction.onServerItemAdded(Fk)
+        this.roomStateCallbacks.items.pI(((mm, Tm) => {
+          this.allItems[Tm] = mm, (0, Mf.k)(this.IE, Tm, [mm.x, mm.y, mm.z], mm.id, {
+            amount: mm.amount,
+            attributes: JSON.parse(mm.attributes),
+            pT: (0, mf.d)(this.IE).cantPickUpItem(Tm),
+            size: mm.size,
+            predictedAt: (0, uf.c)().client.itemDropPrediction.onServerItemAdded(Tm)
           });
-          const Ik = this.createStateCallbacks(kk);
-          for (const Xk of ZI(lI)) this.onItemFieldChange(Fk, Xk, kk[Xk]), this.addDetacher(Fk, this.listenForFutureChanges(Ik, Xk, (kk => {
-            this.onItemFieldChange(Fk, Xk, kk)
+          const fm = this.createStateCallbacks(mm);
+          for (const hm of of(wf)) this.onItemFieldChange(Tm, hm, mm[hm]), this.addDetacher(Tm, this.listenForFutureChanges(fm, hm, (mm => {
+            this.onItemFieldChange(Tm, hm, mm)
           })))
-        })), this.roomStateCallbacks.items.iG(((kk, Fk) => {
-          delete this.allItems[Fk], this.detach(Fk), (0, WI.c)().client.itemDropPrediction.onServerItemRemoved(Fk), this.qZ.MJ.Ukk(Fk, this.qZ.MJ.names.itemState) && this.qZ.MJ.deleteEntity(Fk), (0, kI.b)(this.qZ).disposeEntity(Fk)
+        })), this.roomStateCallbacks.items.oN(((mm, Tm) => {
+          delete this.allItems[Tm], this.detach(Tm), (0, uf.c)().client.itemDropPrediction.onServerItemRemoved(Tm), this.IE.qI.Pmm(Tm, this.IE.qI.names.itemState) && this.IE.qI.deleteEntity(Tm), (0, mf.d)(this.IE).disposeEntity(Tm)
         }))
       }
-      onItemFieldChange(kk, Fk, Ik) {
-        if (Fk in DI) {
-          if (this.qZ.MJ.Ukk(kk, "itemState")) {
-            const Xk = this.qZ.MJ.getState(kk, "smoothToServerPos");
-            (0, YI.setServerPositionAxis)(Xk, DI[Fk], Ik), (0, WI.c)().client.itemDropPrediction.onServerItemMoved(kk)
+      onItemFieldChange(mm, Tm, fm) {
+        if (Tm in mh) {
+          if (this.IE.qI.Pmm(mm, "itemState")) {
+            const hm = this.IE.qI.getState(mm, "smoothToServerPos");
+            (0, tf.setServerPositionAxis)(hm, mh[Tm], fm), (0, uf.c)().client.itemDropPrediction.onServerItemMoved(mm)
           }
           return
         }
-        if (!this.qZ.MJ.Ukk(kk, "itemState")) return;
-        const Xk = this.qZ.MJ.getState(kk, "itemState");
-        "amount" === Fk && Ik !== Xk.amount && (Xk.creationTime = Date.now()), Xk[Fk] = "attributes" === Fk ? JSON.parse(Ik) : Ik
+        if (!this.IE.qI.Pmm(mm, "itemState")) return;
+        const hm = this.IE.qI.getState(mm, "itemState");
+        "amount" === Tm && fm !== hm.amount && (hm.creationTime = Date.now()), hm[Tm] = "attributes" === Tm ? JSON.parse(fm) : fm
       }
       dispose() {
-        if (!this.ee) {
-          this.ee = !0, this.qZ.off("beforeInputs", this.onFrame), this.qZ.off("Dt", this.VJ), this.queuedSetups.clear(), this.promotedSetups.clear();
-          for (const kk of this.deferredSetups.values()) MF.g.unsubscribe(kk);
-          this.deferredSetups.clear(), this.qZ.MJ.Eu(this.qZ.oR, this.qZ.MJ.names.zK);
-          for (const kk in this.allItems) this.qZ.MJ.deleteEntity(kk), delete this.allItems[kk];
-          for (const kk of [...this.detachers.keys()]) this.detach(kk);
-          (0, kI.b)(this.qZ).clear();
-          for (const kk of (0, WI.c)().client.iterateEntityIds())(0, WI.c)().client.disposeEntity(kk)
+        if (!this.PO) {
+          this.PO = !0, this.IE.off("beforeInputs", this.onFrame), this.IE.off("DE", this.HV), this.queuedSetups.clear(), this.promotedSetups.clear();
+          for (const mm of this.deferredSetups.values()) FT.j.unsubscribe(mm);
+          this.deferredSetups.clear(), this.IE.qI.WG(this.IE.xH, this.IE.qI.names.bK);
+          for (const mm in this.allItems) this.IE.qI.deleteEntity(mm), delete this.allItems[mm];
+          for (const mm of [...this.detachers.keys()]) this.detach(mm);
+          (0, mf.d)(this.IE).clear();
+          for (const mm of (0, uf.c)().client.iterateEntityIds())(0, uf.c)().client.disposeEntity(mm)
         }
       }
     }
-    const mI = [0, 0, 0];
+    const gf = [0, 0, 0];
 
-    function hI(kk) {
-      if ("string" !== typeof kk) return;
-      const Fk = kk.indexOf("|"),
-        Ik = -1 === Fk ? kk : kk.slice(0, Fk),
-        Xk = kX();
-      return Object.hasOwn(Xk, Ik) ? Xk[Ik] : void 0
+    function Wf(mm) {
+      if ("string" !== typeof mm) return;
+      const Tm = mm.indexOf("|"),
+        fm = -1 === Tm ? mm : mm.slice(0, Tm),
+        hm = fh();
+      return Object.hasOwn(hm, fm) ? hm[fm] : void 0
     }
-    const rI = new Set;
-    const DI = {
+    const Ff = new Set;
+    const mh = {
       x: 0,
       y: 1,
       z: 2
     };
-    let MI = null;
+    let Th = null;
 
-    function kX() {
-      return null !== MI || (MI = {
-        ...Object.fromEntries(iI.m.map((kk => {
+    function fh() {
+      return null !== Th || (Th = {
+        ...Object.fromEntries(af.n.map((mm => {
           const {
-            Zy: Fk
-          } = (0, fI.d)(kk);
-          return [kk, Fk]
+            Ix: Tm
+          } = (0, Bf.c)(mm);
+          return [mm, Tm]
         }))),
-        Pebble: wI.d,
-        Snowball: wI.d,
-        "Snowball Launcher": wI.d,
-        "Reinforced Pebble": wI.d,
-        Bullet: wI.d,
-        "Reinforced Ball": wI.d,
-        Ball: wI.d,
-        Mango: wI.d,
-        "Moonstone Orb": wI.d,
-        ...Object.fromEntries(TI.s.map((kk => [(0, KI.ic)(kk), wI.d]))),
-        Arrow: wI.d,
-        "Arrow of Speed": wI.d,
-        "Arrow of Poison": wI.d,
-        "Arrow of Slowness": wI.d,
-        "Arrow of Weakness": wI.d,
-        "Arrow of Knockback": wI.d,
-        "Arrow of Strength": wI.d,
-        "Arrow of Invisibility": wI.d,
-        "Arrow of Jumping": wI.d,
-        "Arrow of Defense": wI.d,
-        "Arrow of Instant Healing": wI.d,
-        "Arrow of Instant Damage": wI.d,
-        "Arrow of Regeneration": wI.d,
-        "Arrow of Haste": wI.d,
-        "Arrow of Shield": wI.d,
-        "Arrow of Double Jump": wI.d,
-        "Arrow of Heat Resistance": wI.d,
-        "Arrow of X-Ray Vision": wI.d,
-        "Arrow of Mining Yield": wI.d,
-        "Arrow of Brain Rot": wI.d,
-        "Arrow of Milk": wI.d,
-        Fireball: wI.d,
-        "Bouncy Bomb": wI.d,
-        RPG: wI.d,
-        "Obby RPG": wI.d,
-        "Super RPG": wI.d,
-        "Grenade Launcher": wI.d,
-        Iceball: wI.d,
-        Coconut: wI.d,
-        "Splash Speed Potion": wI.d,
-        "Splash Defense Potion": wI.d,
-        "Splash Strength Potion": wI.d,
-        "Splash Invisibility Potion": wI.d,
-        "Splash Jump Potion": wI.d,
-        "Splash Knockback Potion": wI.d,
-        "Splash Poison Potion": wI.d,
-        "Splash Speed Potion II": wI.d,
-        "Splash Defense Potion II": wI.d,
-        "Splash Strength Potion II": wI.d,
-        "Splash Jump Potion II": wI.d,
-        "Splash Knockback Potion II": wI.d,
-        "Splash Poison Potion II": wI.d,
-        "Splash Slowness Potion": wI.d,
-        "Splash Slowness Potion II": wI.d,
-        "Splash Weakness Potion": wI.d,
-        "Splash Weakness Potion II": wI.d,
-        "Splash Milk Potion": wI.d,
-        "Splash Instant Damage Potion": wI.d,
-        "Splash Instant Damage Potion II": wI.d,
-        "Splash Instant Healing Potion": wI.d,
-        "Splash Instant Healing Potion II": wI.d,
-        "Splash Regeneration Potion": wI.d,
-        "Splash Regeneration Potion II": wI.d,
-        "Splash Haste Potion": wI.d,
-        "Splash Haste Potion II": wI.d,
-        "Splash Shield Potion": wI.d,
-        "Splash Shield Potion II": wI.d,
-        "Splash Double Jump Potion": wI.d,
-        "Splash Heat Resistance Potion": wI.d,
-        "Splash X-Ray Vision Potion": wI.d,
-        "Splash Mining Yield Potion": wI.d,
-        "Splash Mining Yield Potion II": wI.d,
-        "Splash Brain Rot Potion": wI.d,
-        "Yellow Paintball Gun": wI.d,
-        "White Paintball Gun": wI.d,
-        "Red Paintball Gun": wI.d,
-        "Purple Paintball Gun": wI.d,
-        "Pink Paintball Gun": wI.d,
-        "Orange Paintball Gun": wI.d,
-        "Magenta Paintball Gun": wI.d,
-        "Lime Paintball Gun": wI.d,
-        "Light Gray Paintball Gun": wI.d,
-        "Light Blue Paintball Gun": wI.d,
-        "Green Paintball Gun": wI.d,
-        "Gray Paintball Gun": wI.d,
-        "Cyan Paintball Gun": wI.d,
-        "Brown Paintball Gun": wI.d,
-        "Blue Paintball Gun": wI.d,
-        "Black Paintball Gun": wI.d,
-        "Yellow Heavy Paintball Gun": wI.d,
-        "White Heavy Paintball Gun": wI.d,
-        "Red Heavy Paintball Gun": wI.d,
-        "Purple Heavy Paintball Gun": wI.d,
-        "Pink Heavy Paintball Gun": wI.d,
-        "Orange Heavy Paintball Gun": wI.d,
-        "Magenta Heavy Paintball Gun": wI.d,
-        "Lime Heavy Paintball Gun": wI.d,
-        "Light Gray Heavy Paintball Gun": wI.d,
-        "Light Blue Heavy Paintball Gun": wI.d,
-        "Green Heavy Paintball Gun": wI.d,
-        "Gray Heavy Paintball Gun": wI.d,
-        "Cyan Heavy Paintball Gun": wI.d,
-        "Brown Heavy Paintball Gun": wI.d,
-        "Blue Heavy Paintball Gun": wI.d,
-        "Black Heavy Paintball Gun": wI.d,
-        "Toxin Ball": wI.d,
-        "Splash Aura XP Potion": wI.d,
-        "Splash Aura XP Potion II": wI.d,
-        "Arrow of Aura XP": wI.d,
-        Firecracker: wI.d,
-        "Rainbow Firecracker": wI.d,
-        "White Firecracker": wI.d,
-        "Orange Firecracker": wI.d,
-        "Magenta Firecracker": wI.d,
-        "Light Blue Firecracker": wI.d,
-        "Yellow Firecracker": wI.d,
-        "Lime Firecracker": wI.d,
-        "Pink Firecracker": wI.d,
-        "Gray Firecracker": wI.d,
-        "Light Gray Firecracker": wI.d,
-        "Cyan Firecracker": wI.d,
-        "Purple Firecracker": wI.d,
-        "Blue Firecracker": wI.d,
-        "Brown Firecracker": wI.d,
-        "Green Firecracker": wI.d,
-        "Red Firecracker": wI.d,
-        "Black Firecracker": wI.d,
-        "Firecracker Pebble": wI.d,
-        "Rainbow Firecracker Pebble": wI.d,
-        "White Firecracker Pebble": wI.d,
-        "Orange Firecracker Pebble": wI.d,
-        "Magenta Firecracker Pebble": wI.d,
-        "Light Blue Firecracker Pebble": wI.d,
-        "Yellow Firecracker Pebble": wI.d,
-        "Lime Firecracker Pebble": wI.d,
-        "Pink Firecracker Pebble": wI.d,
-        "Gray Firecracker Pebble": wI.d,
-        "Light Gray Firecracker Pebble": wI.d,
-        "Cyan Firecracker Pebble": wI.d,
-        "Purple Firecracker Pebble": wI.d,
-        "Blue Firecracker Pebble": wI.d,
-        "Brown Firecracker Pebble": wI.d,
-        "Green Firecracker Pebble": wI.d,
-        "Red Firecracker Pebble": wI.d,
-        "Black Firecracker Pebble": wI.d,
-        "Blinding Pebble": wI.d,
-        Poop: wI.d,
-        "Wood Boomerang": wI.d,
-        "Stone Boomerang": wI.d,
-        "Iron Boomerang": wI.d,
-        "Gold Boomerang": wI.d,
-        "Diamond Boomerang": wI.d,
-        "Amethite Boomerang": wI.d,
-        "Magmasteel Boomerang": wI.d,
-        "Rubellite Boomerang": wI.d,
-        "Serpentite Boomerang": wI.d,
-        "Moonstone Boomerang": wI.d,
-        "67 Base Projectile": wI.d,
-        "67 Boosted Projectile": wI.d,
-        "Capitano Grenade": wI.d,
-        "Scatter Pellet": wI.d,
-        "Lucky Bomb": wI.d,
-        "Unlucky Bomb": wI.d,
-        "Swap Orb": wI.d,
-        Mesh: uI,
-        AudioEntity: RI
-      }), MI
+        Pebble: qf.c,
+        Snowball: qf.c,
+        "Snowball Launcher": qf.c,
+        "Reinforced Pebble": qf.c,
+        Bullet: qf.c,
+        "Reinforced Ball": qf.c,
+        Ball: qf.c,
+        Mango: qf.c,
+        "Moonstone Orb": qf.c,
+        ...Object.fromEntries(Af.u.map((mm => [(0, Qf.Wb)(mm), qf.c]))),
+        Arrow: qf.c,
+        "Arrow of Speed": qf.c,
+        "Arrow of Poison": qf.c,
+        "Arrow of Slowness": qf.c,
+        "Arrow of Weakness": qf.c,
+        "Arrow of Knockback": qf.c,
+        "Arrow of Strength": qf.c,
+        "Arrow of Invisibility": qf.c,
+        "Arrow of Jumping": qf.c,
+        "Arrow of Defense": qf.c,
+        "Arrow of Instant Healing": qf.c,
+        "Arrow of Instant Damage": qf.c,
+        "Arrow of Regeneration": qf.c,
+        "Arrow of Haste": qf.c,
+        "Arrow of Shield": qf.c,
+        "Arrow of Double Jump": qf.c,
+        "Arrow of Heat Resistance": qf.c,
+        "Arrow of X-Ray Vision": qf.c,
+        "Arrow of Mining Yield": qf.c,
+        "Arrow of Brain Rot": qf.c,
+        "Arrow of Milk": qf.c,
+        Fireball: qf.c,
+        "Bouncy Bomb": qf.c,
+        RPG: qf.c,
+        "Obby RPG": qf.c,
+        "Super RPG": qf.c,
+        "Grenade Launcher": qf.c,
+        Iceball: qf.c,
+        Coconut: qf.c,
+        "Splash Speed Potion": qf.c,
+        "Splash Defense Potion": qf.c,
+        "Splash Strength Potion": qf.c,
+        "Splash Invisibility Potion": qf.c,
+        "Splash Jump Potion": qf.c,
+        "Splash Knockback Potion": qf.c,
+        "Splash Poison Potion": qf.c,
+        "Splash Speed Potion II": qf.c,
+        "Splash Defense Potion II": qf.c,
+        "Splash Strength Potion II": qf.c,
+        "Splash Jump Potion II": qf.c,
+        "Splash Knockback Potion II": qf.c,
+        "Splash Poison Potion II": qf.c,
+        "Splash Slowness Potion": qf.c,
+        "Splash Slowness Potion II": qf.c,
+        "Splash Weakness Potion": qf.c,
+        "Splash Weakness Potion II": qf.c,
+        "Splash Milk Potion": qf.c,
+        "Splash Instant Damage Potion": qf.c,
+        "Splash Instant Damage Potion II": qf.c,
+        "Splash Instant Healing Potion": qf.c,
+        "Splash Instant Healing Potion II": qf.c,
+        "Splash Regeneration Potion": qf.c,
+        "Splash Regeneration Potion II": qf.c,
+        "Splash Haste Potion": qf.c,
+        "Splash Haste Potion II": qf.c,
+        "Splash Shield Potion": qf.c,
+        "Splash Shield Potion II": qf.c,
+        "Splash Double Jump Potion": qf.c,
+        "Splash Heat Resistance Potion": qf.c,
+        "Splash X-Ray Vision Potion": qf.c,
+        "Splash Mining Yield Potion": qf.c,
+        "Splash Mining Yield Potion II": qf.c,
+        "Splash Brain Rot Potion": qf.c,
+        "Yellow Paintball Gun": qf.c,
+        "White Paintball Gun": qf.c,
+        "Red Paintball Gun": qf.c,
+        "Purple Paintball Gun": qf.c,
+        "Pink Paintball Gun": qf.c,
+        "Orange Paintball Gun": qf.c,
+        "Magenta Paintball Gun": qf.c,
+        "Lime Paintball Gun": qf.c,
+        "Light Gray Paintball Gun": qf.c,
+        "Light Blue Paintball Gun": qf.c,
+        "Green Paintball Gun": qf.c,
+        "Gray Paintball Gun": qf.c,
+        "Cyan Paintball Gun": qf.c,
+        "Brown Paintball Gun": qf.c,
+        "Blue Paintball Gun": qf.c,
+        "Black Paintball Gun": qf.c,
+        "Yellow Heavy Paintball Gun": qf.c,
+        "White Heavy Paintball Gun": qf.c,
+        "Red Heavy Paintball Gun": qf.c,
+        "Purple Heavy Paintball Gun": qf.c,
+        "Pink Heavy Paintball Gun": qf.c,
+        "Orange Heavy Paintball Gun": qf.c,
+        "Magenta Heavy Paintball Gun": qf.c,
+        "Lime Heavy Paintball Gun": qf.c,
+        "Light Gray Heavy Paintball Gun": qf.c,
+        "Light Blue Heavy Paintball Gun": qf.c,
+        "Green Heavy Paintball Gun": qf.c,
+        "Gray Heavy Paintball Gun": qf.c,
+        "Cyan Heavy Paintball Gun": qf.c,
+        "Brown Heavy Paintball Gun": qf.c,
+        "Blue Heavy Paintball Gun": qf.c,
+        "Black Heavy Paintball Gun": qf.c,
+        "Toxin Ball": qf.c,
+        "Splash Aura XP Potion": qf.c,
+        "Splash Aura XP Potion II": qf.c,
+        "Arrow of Aura XP": qf.c,
+        Firecracker: qf.c,
+        "Rainbow Firecracker": qf.c,
+        "White Firecracker": qf.c,
+        "Orange Firecracker": qf.c,
+        "Magenta Firecracker": qf.c,
+        "Light Blue Firecracker": qf.c,
+        "Yellow Firecracker": qf.c,
+        "Lime Firecracker": qf.c,
+        "Pink Firecracker": qf.c,
+        "Gray Firecracker": qf.c,
+        "Light Gray Firecracker": qf.c,
+        "Cyan Firecracker": qf.c,
+        "Purple Firecracker": qf.c,
+        "Blue Firecracker": qf.c,
+        "Brown Firecracker": qf.c,
+        "Green Firecracker": qf.c,
+        "Red Firecracker": qf.c,
+        "Black Firecracker": qf.c,
+        "Firecracker Pebble": qf.c,
+        "Rainbow Firecracker Pebble": qf.c,
+        "White Firecracker Pebble": qf.c,
+        "Orange Firecracker Pebble": qf.c,
+        "Magenta Firecracker Pebble": qf.c,
+        "Light Blue Firecracker Pebble": qf.c,
+        "Yellow Firecracker Pebble": qf.c,
+        "Lime Firecracker Pebble": qf.c,
+        "Pink Firecracker Pebble": qf.c,
+        "Gray Firecracker Pebble": qf.c,
+        "Light Gray Firecracker Pebble": qf.c,
+        "Cyan Firecracker Pebble": qf.c,
+        "Purple Firecracker Pebble": qf.c,
+        "Blue Firecracker Pebble": qf.c,
+        "Brown Firecracker Pebble": qf.c,
+        "Green Firecracker Pebble": qf.c,
+        "Red Firecracker Pebble": qf.c,
+        "Black Firecracker Pebble": qf.c,
+        "Blinding Pebble": qf.c,
+        Poop: qf.c,
+        "Wood Boomerang": qf.c,
+        "Stone Boomerang": qf.c,
+        "Iron Boomerang": qf.c,
+        "Gold Boomerang": qf.c,
+        "Diamond Boomerang": qf.c,
+        "Amethite Boomerang": qf.c,
+        "Magmasteel Boomerang": qf.c,
+        "Rubellite Boomerang": qf.c,
+        "Serpentite Boomerang": qf.c,
+        "Moonstone Boomerang": qf.c,
+        "67 Base Projectile": qf.c,
+        "67 Boosted Projectile": qf.c,
+        "Capitano Grenade": qf.c,
+        "Scatter Pellet": qf.c,
+        "Lucky Bomb": qf.c,
+        "Unlucky Bomb": qf.c,
+        "Swap Orb": qf.c,
+        Mesh: Hf,
+        AudioEntity: Cf
+      }), Th
     }
   },
-  39003: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => ik,
-      e: () => yk
+  39137: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => am,
+      c: () => xm
     });
-    var Xk = Ik(628),
-      Tk = Ik(37744);
-    const ik = 4e4;
-    class yk {
+    var hm = fm(653),
+      Am = fm(37778);
+    const am = 4e4;
+    class xm {
       constructor() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now;
-        this.now = kk, this.editedAt = new Map, this.lastChunkX = NaN, this.lastChunkY = NaN, this.lastChunkZ = NaN, this.lastChunkId = ""
+        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now;
+        this.now = mm, this.editedAt = new Map, this.lastChunkX = NaN, this.lastChunkY = NaN, this.lastChunkZ = NaN, this.lastChunkId = ""
       }
-      noteEdit(kk, Fk, Ik) {
-        const ik = (0, Xk.X)(kk),
-          yk = (0, Xk.X)(Fk),
-          lk = (0, Xk.X)(Ik),
-          ak = this.now();
-        if (ik !== this.lastChunkX || yk !== this.lastChunkY || lk !== this.lastChunkZ) {
-          this.lastChunkX = ik, this.lastChunkY = yk, this.lastChunkZ = lk, this.lastChunkId = (0, Tk.d)(ik, yk, lk), this.editedAt.delete(this.lastChunkId), this.editedAt.set(this.lastChunkId, ak);
-          for (const [kk, Fk] of this.editedAt) {
-            if (Fk >= ak - 3e5) break;
-            this.editedAt.delete(kk)
+      noteEdit(mm, Tm, fm) {
+        const am = (0, hm.M)(mm),
+          xm = (0, hm.M)(Tm),
+          wm = (0, hm.M)(fm),
+          Dm = this.now();
+        if (am !== this.lastChunkX || xm !== this.lastChunkY || wm !== this.lastChunkZ) {
+          this.lastChunkX = am, this.lastChunkY = xm, this.lastChunkZ = wm, this.lastChunkId = (0, Am.c)(am, xm, wm), this.editedAt.delete(this.lastChunkId), this.editedAt.set(this.lastChunkId, Dm);
+          for (const [mm, Tm] of this.editedAt) {
+            if (Tm >= Dm - 3e5) break;
+            this.editedAt.delete(mm)
           }
-        } else this.editedAt.set(this.lastChunkId, ak)
+        } else this.editedAt.set(this.lastChunkId, Dm)
       }
-      chunksEditedSince(kk) {
-        const Fk = [];
-        for (const [Ik, Xk] of this.editedAt) Xk >= kk && Fk.push(Ik);
-        return Fk
+      chunksEditedSince(mm) {
+        const Tm = [];
+        for (const [fm, hm] of this.editedAt) hm >= mm && Tm.push(fm);
+        return Tm
       }
     }
   },
-  39073: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => ZF,
-      e: () => NF,
-      f: () => OF,
-      j: () => cF
+  39192: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => ET,
+      f: () => rT,
+      g: () => ST,
+      h: () => sT
     });
-    var Xk = Ik(3631),
-      Tk = Ik(8743),
-      ik = Ik(36675),
-      yk = Ik(1395),
-      lk = Ik(36764),
-      ak = Ik(38956),
-      qk = Ik(38945),
-      Lk = Ik(3702),
-      tk = Ik(37863),
-      Zk = Ik(39080),
-      jk = Ik(1231),
-      ek = Ik(318),
-      wk = Ik(34),
-      Hk = Ik(1894),
-      Jk = Ik(95),
-      xk = Ik(41),
-      Pk = Ik(1916),
-      Kk = Ik(1844),
-      Qk = Ik(2885);
-    class sk {
-      constructor(kk) {
-        this.storeForMs = kk, this.clicks = new Qk.c
+    var hm = fm(3672),
+      Am = fm(8702),
+      am = fm(36768),
+      xm = fm(1438),
+      wm = fm(36843),
+      Dm = fm(39093),
+      im = fm(39079),
+      Rm = fm(3729),
+      pm = fm(37929),
+      Em = fm(39200),
+      om = fm(1247),
+      Om = fm(339),
+      Ym = fm(31),
+      qm = fm(1928),
+      jm = fm(105),
+      Vm = fm(37),
+      Im = fm(1957),
+      Km = fm(1877),
+      Qm = fm(2972);
+    class nm {
+      constructor(mm) {
+        this.storeForMs = mm, this.clicks = new Qm.b
       }
       click() {
         this.clicks.enqueue(Date.now());
-        const kk = Date.now() - this.storeForMs;
-        for (; this.clicks.size > 0 && this.clicks.peek() < kk;) this.clicks.dequeue()
+        const mm = Date.now() - this.storeForMs;
+        for (; this.clicks.size > 0 && this.clicks.peek() < mm;) this.clicks.dequeue()
       }
-      getNumClicksInMs(kk) {
-        let Fk = 0;
-        return this.clicks.forEach((Ik => {
-          Ik > Date.now() - kk && Fk++
-        })), Fk
+      getNumClicksInMs(mm) {
+        let Tm = 0;
+        return this.clicks.forEach((fm => {
+          fm > Date.now() - mm && Tm++
+        })), Tm
       }
-      getMaxClickSeparationInMs(kk) {
+      getMaxClickSeparationInMs(mm) {
         if (0 === this.clicks.size) return this.storeForMs;
-        let Fk = 0,
-          Ik = Date.now() - kk;
-        this.clicks.forEach((Xk => {
-          Xk < Date.now() - kk || (Fk = Math.max(Fk, Math.abs(Xk - Ik)), Ik = Xk)
+        let Tm = 0,
+          fm = Date.now() - mm;
+        this.clicks.forEach((hm => {
+          hm < Date.now() - mm || (Tm = Math.max(Tm, Math.abs(hm - fm)), fm = hm)
         }));
-        const Xk = Math.abs(Date.now() - Ik);
-        return Math.max(Fk, Xk)
+        const hm = Math.abs(Date.now() - fm);
+        return Math.max(Tm, hm)
       }
     }
-    class Vk {
-      constructor(kk) {
-        this.storeForMs = kk, this.clickDownDurations = new Qk.c
+    class Jm {
+      constructor(mm) {
+        this.storeForMs = mm, this.clickDownDurations = new Qm.b
       }
-      registerClickDownDuration(kk) {
+      registerClickDownDuration(mm) {
         this.clickDownDurations.enqueue({
-          dur: kk,
+          dur: mm,
           atTime: Date.now()
         });
-        const Fk = Date.now() - this.storeForMs;
-        for (; this.clickDownDurations.size > 0 && this.clickDownDurations.peek().atTime < Fk;) this.clickDownDurations.dequeue()
+        const Tm = Date.now() - this.storeForMs;
+        for (; this.clickDownDurations.size > 0 && this.clickDownDurations.peek().atTime < Tm;) this.clickDownDurations.dequeue()
       }
-      clickDownDurationsCheck(kk) {
-        if (kk > this.storeForMs) return console.error("overDuration is greater than storeForMs"), "0:0";
-        let Fk = 0,
-          Ik = 0;
-        return this.clickDownDurations.forEach((Xk => {
-          Xk.atTime > Date.now() - kk && (Fk++, Ik = Math.max(Ik, Xk.dur))
-        })), `${Fk}:${Ik}`
+      clickDownDurationsCheck(mm) {
+        if (mm > this.storeForMs) return console.error("overDuration is greater than storeForMs"), "0:0";
+        let Tm = 0,
+          fm = 0;
+        return this.clickDownDurations.forEach((hm => {
+          hm.atTime > Date.now() - mm && (Tm++, fm = Math.max(fm, hm.dur))
+        })), `${Tm}:${fm}`
       }
     }
-    var zk = Ik(36498),
-      Sk = Ik(39087),
-      vk = Ik(25),
-      Ek = Ik(2700),
-      Ok = Ik(1301),
-      nk = Ik(39020),
-      Gk = Ik(4423),
-      pk = Ik(129),
-      uk = Ik(38145),
-      bk = Ik(38369),
-      Rk = Ik(628),
-      Uk = Ik(36491),
-      Ck = Ik(15),
-      Nk = Ik(9183),
-      ck = Ik(1217),
-      Wk = Ik(187),
-      fk = Ik(39089),
-      Bk = Ik(39094),
-      dk = Ik(38176),
-      Yk = Ik(39113),
-      Ak = Ik(38094),
-      gk = Ik(3344),
-      mk = Ik(1580),
-      hk = Ik(36600),
-      rk = Ik(2744),
-      Dk = Ik(39102),
-      Mk = Ik(39109),
-      kF = Ik(37939);
-    const FF = {
+    var cm = fm(36582),
+      zm = fm(39209),
+      Zm = fm(23),
+      km = fm(2760),
+      bm = fm(1321),
+      Sm = fm(39147),
+      em = fm(4375),
+      Nm = fm(135),
+      Gm = fm(38224),
+      Xm = fm(38476),
+      Pm = fm(653),
+      Hm = fm(36578),
+      ym = fm(16),
+      Cm = fm(9141),
+      rm = fm(1235),
+      sm = fm(198),
+      lm = fm(39217),
+      Mm = fm(39222),
+      um = fm(38270),
+      Bm = fm(39241),
+      Lm = fm(38149),
+      tm = fm(3409),
+      Um = fm(1635),
+      dm = fm(36686),
+      gm = fm(2813),
+      Wm = fm(39229),
+      Fm = fm(39237),
+      mT = fm(38001);
+    const TT = {
       forward: "freeCamForward",
       backward: "freeCamBackward",
       left: "freeCamLeft",
@@ -3018,1025 +3018,991 @@ export const modules = {
       crouch: "freeCamDown"
     };
 
-    function IF() {
-      var kk, Fk;
-      return !(null === (kk = (0, Ek.c)().client) || void 0 === kk || null === (Fk = kk.freeCameraController) || void 0 === Fk || !Fk.movesFly())
+    function fT() {
+      var mm, Tm;
+      return !(null === (mm = (0, km.c)().client) || void 0 === mm || null === (Tm = mm.freeCameraController) || void 0 === Tm || !Tm.movesFly())
     }
 
-    function XF(kk) {
-      const Fk = kk.on.bind(kk);
-      kk.on = (kk, Ik) => {
-        Pk.A.has(kk) ? Fk(kk, Ik) : Fk(kk, (Fk => {
-          var Xk;
-          return null !== (Xk = (0, Ek.c)().client) && void 0 !== Xk && Xk.isReplayMode() ? function(kk) {
-            return kk in FF
-          }(kk) && IF() ? Ik(Fk) : void 0 : Ik(Fk)
+    function hT(mm) {
+      const Tm = mm.on.bind(mm);
+      mm.on = (mm, fm) => {
+        Im.x.has(mm) ? Tm(mm, fm) : Tm(mm, (Tm => {
+          var hm;
+          return null !== (hm = (0, km.c)().client) && void 0 !== hm && hm.isReplayMode() ? function(mm) {
+            return mm in TT
+          }(mm) && fT() ? fm(Tm) : void 0 : fm(Tm)
         }))
       }
     }
-    const TF = 5e3,
-      iF = 1;
-    let yF, lF = iF,
-      aF = 0;
-    const qF = !0;
-    let LF = qF;
-    Hk.e.subscribe("_ignoreBasicBoards", (kk => {
-      LF = kk
-    })), (0, Xk.onGameReset)((() => {
-      LF = qF
+    const AT = 5e3,
+      aT = 1;
+    let xT, wT = aT,
+      DT = 0;
+    const iT = !0;
+    let RT = iT;
+    qm.b.subscribe("_ignoreBasicBoards", (mm => {
+      RT = mm
+    })), (0, hm.onGameReset)((() => {
+      RT = iT
     }));
-    let tF = null;
-    const ZF = () => tF;
-    let jF, eF, wF;
-    var HF, JF, xF, PF, KF, QF, sF, VF, zF;
-    const SF = [0, 1, 8, 255, "length", "undefined", void 0, "d", 3, 2, 63, 6, "fromCodePoint", 7, 12, "push", 127, 248, "e", "f", null, 30, 10, 91, 8191, 88, 13, 14, 128, "a", 45, !1, 5, 4, 34, 207, 240, "i", 212, 159, 9, "g", 224, 151, 25, 223, 238, 117, 111, !0, "c", 76, "h", 49, 177, 100, 37, 27, 150, 243, 141, 65, 41, 60, 167, 157, 110, 56, 206, 214];
+    let pT = null;
+    const ET = () => pT;
+    let oT, OT, YT;
+    var qT, jT, VT, IT, KT, QT, nT, JT, cT;
+    const zT = [1, 216, 0, "h", 226, 9, "g", 50, "f", 7, 8, 255, "length", "undefined", void 0, 40, 145, 3, 2, "a", 63, 6, "fromCodePoint", 12, "push", "c", 159, "b", 188, 91, "e", 87, 8191, 88, 13, 14, 4, 5, 153, 117, 191, 155, 195, 31, 16, 89, 138, "i", 250, 249, 177, 139, 147, 205, 103, 146, 235, "d", 33554432, 67108864, 36, 160, 151, "j", 227, 228, 245, null, 61, 51, !1, 75, 96, 137, 234, 171, 100, 202, 133, 118, 169, !0, 240, 99, 112, 220, 10, 248, 67];
 
-    function oF(...kk) {
-      return kk[SF[4]] = SF[1], typeof PF !== SF[5] && PF ? (new PF).decode(new KF(kk[SF[0]])) : typeof QF !== SF[5] && QF ? QF.from(kk[SF[0]]).toString("utf-8") : zF(kk[SF[0]])
+    function ZT(...mm) {
+      return mm[zT[12]] = zT[0], typeof IT !== zT[13] && IT ? (new IT).decode(new KT(mm[zT[2]])) : typeof QT !== zT[13] && QT ? QT.from(mm[zT[2]]).toString("utf-8") : cT(mm[zT[2]])
     }
 
-    function vF() {}
+    function kT() {}
 
-    function EF() {
-      EF = function() {}
+    function bT() {
+      bT = function() {}
     }
 
-    function OF(kk) {
-      function Fk() {
-        return kk.MJ.BFk(kk.oR)
+    function ST(mm) {
+      function Tm() {
+        return mm.qI.MTm(mm.xH)
       }
-      XF(kk.inputs.down), XF(kk.inputs.up);
-      for (const Xk of ["forward", "backward", "left", "right", "sprint", "jump", "crouch"]) {
-        const Fk = (Fk, Ik) => {
-          var Tk, ik;
-          if (IF()) {
-            var yk;
-            const Tk = FF[Xk];
-            var lk, ak;
-            if (Tk) null === (lk = (0, Ek.c)().client) || void 0 === lk || null === (ak = lk.freeCameraController) || void 0 === ak || ak.handlefreeCamKeyPress(Tk, Fk, Ik);
-            return void(Ik || null !== (yk = (0, Ek.c)().client) && void 0 !== yk && yk.isReplayMode() || (kk.MJ.mFk()[Xk] = !1))
+      hT(mm.inputs.down), hT(mm.inputs.up);
+      for (const hm of ["forward", "backward", "left", "right", "sprint", "jump", "crouch"]) {
+        const Tm = (Tm, fm) => {
+          var Am, am;
+          if (fT()) {
+            var xm;
+            const Am = TT[hm];
+            var wm, Dm;
+            if (Am) null === (wm = (0, km.c)().client) || void 0 === wm || null === (Dm = wm.freeCameraController) || void 0 === Dm || Dm.handlefreeCamKeyPress(Am, Tm, fm);
+            return void(fm || null !== (xm = (0, km.c)().client) && void 0 !== xm && xm.isReplayMode() || (mm.qI.tTm()[hm] = !1))
           }
-          if (null !== (Tk = (0, Ek.c)().client) && void 0 !== Tk && null !== (ik = Tk.freeCameraController) && void 0 !== ik && ik.isKeyPressOverriden(Fk)) return;
-          kk.MJ.mFk()[Xk] = Ik
+          if (null !== (Am = (0, km.c)().client) && void 0 !== Am && null !== (am = Am.freeCameraController) && void 0 !== am && am.isKeyPressOverriden(Tm)) return;
+          mm.qI.tTm()[hm] = fm
         };
-        kk.inputs.down.on(Xk, (kk => Fk(kk, !0))), kk.inputs.up.on(Xk, (kk => Fk(kk, !1)))
+        mm.inputs.down.on(hm, (mm => Tm(mm, !0))), mm.inputs.up.on(hm, (mm => Tm(mm, !1)))
       }
-      kk.inputs.down.on("crouch", (() => {
-        if (IF()) return;
-        if (!kk.gJ.canCrouch) return;
-        const Fk = kk.MJ.mFk();
-        vk.d.get("clientEscMenuOptions").crouchIsToggle && (Fk.crouchToggled = !Fk.crouchToggled && !Fk.padSneakToggled), Fk.padSneakToggled = !1
+      mm.inputs.down.on("crouch", (() => {
+        if (fT()) return;
+        if (!mm.xI.canCrouch) return;
+        const Tm = mm.qI.tTm();
+        Zm.c.get("clientEscMenuOptions").crouchIsToggle && (Tm.crouchToggled = !Tm.crouchToggled && !Tm.padSneakToggled), Tm.padSneakToggled = !1
       }));
-      const Ik = () => {
-        const kk = Fk();
-        kk.isGun() && kk.inaccuracyCalculator.jump()
+      const fm = () => {
+        const mm = Tm();
+        mm.isGun() && mm.inaccuracyCalculator.jump()
       };
-      kk.inputs.down.on("jump", (kk => {
-        IF() || (Ik(), jF(kk))
+      mm.inputs.down.on("jump", (mm => {
+        fT() || (fm(), oT(mm))
       }));
-      for (const Xk of Pk.l) kk.inputs.down.on(Xk, (kk => {
-        var Fk, Ik;
-        null !== (Fk = (0, Ek.c)().client) && void 0 !== Fk && null !== (Ik = Fk.freeCameraController) && void 0 !== Ik && Ik.handlefreeCamKeyPress(Xk, kk, !0) && (kk.preventDefault(), kk.stopPropagation())
-      })), kk.inputs.up.on(Xk, (kk => {
-        var Fk, Ik;
-        null !== (Fk = (0, Ek.c)().client) && void 0 !== Fk && null !== (Ik = Fk.freeCameraController) && void 0 !== Ik && Ik.handlefreeCamKeyPress(Xk, kk, !1) && (kk.preventDefault(), kk.stopPropagation())
+      for (const hm of Im.j) mm.inputs.down.on(hm, (mm => {
+        var Tm, fm;
+        null !== (Tm = (0, km.c)().client) && void 0 !== Tm && null !== (fm = Tm.freeCameraController) && void 0 !== fm && fm.handlefreeCamKeyPress(hm, mm, !0) && (mm.preventDefault(), mm.stopPropagation())
+      })), mm.inputs.up.on(hm, (mm => {
+        var Tm, fm;
+        null !== (Tm = (0, km.c)().client) && void 0 !== Tm && null !== (fm = Tm.freeCameraController) && void 0 !== fm && fm.handlefreeCamKeyPress(hm, mm, !1) && (mm.preventDefault(), mm.stopPropagation())
       }));
-      kk.inputs.down.on("recordGame", (() => {
-        var kk, Fk;
-        null === (kk = (0, Ek.c)().client) || void 0 === kk || null === (Fk = kk.gameRecorder) || void 0 === Fk || Fk.toggleRecording()
-      })), kk.inputs.down.on("recordClip", (() => {
-        var kk, Fk;
-        (0, zk.c)() || null === (kk = (0, Ek.c)().client) || void 0 === kk || null === (Fk = kk.gameRecorder) || void 0 === Fk || Fk.saveClip()
+      mm.inputs.down.on("recordGame", (() => {
+        var mm, Tm;
+        null === (mm = (0, km.c)().client) || void 0 === mm || null === (Tm = mm.gameRecorder) || void 0 === Tm || Tm.toggleRecording()
+      })), mm.inputs.down.on("recordClip", (() => {
+        var mm, Tm;
+        (0, cm.d)() || null === (mm = (0, km.c)().client) || void 0 === mm || null === (Tm = mm.gameRecorder) || void 0 === Tm || Tm.saveClip()
       }));
-      for (const Xk of Pk.A) kk.inputs.down.on(Xk, (() => {
-        var kk;
-        if ((0, Sk.b)()) return;
-        if ("replayViewerOpen" === Xk) return void wk.g.GL("replayViewer|requested", "toggle");
-        const Fk = null === (kk = (0, Ek.c)().client) || void 0 === kk ? void 0 : kk.gameReplayer;
-        ((0, zk.c)() || null !== Fk && void 0 !== Fk && Fk.isReplayMode()) && (null === Fk || void 0 === Fk || Fk.handleAction(Xk))
+      for (const hm of Im.x) mm.inputs.down.on(hm, (() => {
+        var mm;
+        if ((0, zm.b)()) return;
+        if ("replayViewerOpen" === hm) return void Ym.j.gp("replayViewer|requested", "toggle");
+        const Tm = null === (mm = (0, km.c)().client) || void 0 === mm ? void 0 : mm.gameReplayer;
+        ((0, cm.d)() || null !== Tm && void 0 !== Tm && Tm.isReplayMode()) && (null === Tm || void 0 === Tm || Tm.handleAction(hm))
       }));
-      const yk = new sk(3e4),
-        tk = new Vk(4e4);
-      let Zk = 0;
-      const xk = kk => {
-          let Fk = 0,
-            Ik = null;
-          const Xk = Fk => null !== Fk && Fk === Ik && (Ik = null, kk(), !0);
+      const xm = new nm(3e4),
+        pm = new Jm(4e4);
+      let Em = 0;
+      const Vm = mm => {
+          let Tm = 0,
+            fm = null;
+          const hm = Tm => null !== Tm && Tm === fm && (fm = null, mm(), !0);
           return {
-            press: () => (Fk++, (0, fk.e)() || (Xk(Ik), Ik = Fk), Fk),
-            owns: kk => kk === Ik,
-            release: Xk
+            press: () => (Tm++, (0, lm.c)() || (hm(fm), fm = Tm), Tm),
+            owns: mm => mm === fm,
+            release: hm
           }
         },
-        Qk = (kk, Ik) => {
-          Ik && cF(jk.d.TouchDownFirePrimary), kk ? Ck() : ((0, bk.e)(), Fk().CIk()), Ik || cF(jk.d.DownFirePrimary), NF(!0), yk.click();
-          const Tk = yk.getMaxClickSeparationInMs(3e4) < 1e3 / 30,
-            ik = yk.getMaxClickSeparationInMs(1e4) < 20,
-            lk = yk.getMaxClickSeparationInMs(4e3) < 1e3 / 70;
-          if (Tk || ik || lk) {
-            let kk;
-            if (Tk) kk = 30;
-            else if (ik) kk = 50;
+        Qm = (mm, fm) => {
+          fm && sT(om.d.TouchDownFirePrimary), mm ? ym() : ((0, Xm.e)(), Tm().Cfm()), fm || sT(om.d.DownFirePrimary), rT(!0), xm.click();
+          const Am = xm.getMaxClickSeparationInMs(3e4) < 1e3 / 30,
+            am = xm.getMaxClickSeparationInMs(1e4) < 20,
+            wm = xm.getMaxClickSeparationInMs(4e3) < 1e3 / 70;
+          if (Am || am || wm) {
+            let mm;
+            if (Am) mm = 30;
+            else if (am) mm = 50;
             else {
-              if (!lk) throw new Error("???");
-              kk = 70
-            }(0, Xk.sendColyMessage)(Lk.Hj, kk)
+              if (!wm) throw new Error("???");
+              mm = 70
+            }(0, hm.sendColyMessage)(Rm.ok, mm)
           }
         },
-        Gk = xk((() => {
-          const kk = Date.now() - Zk;
-          tk.registerClickDownDuration(kk), Fk().bIk(), cF(jk.d.UpFirePrimary), NF(!1);
-          const Ik = tk.clickDownDurationsCheck(4e4);
-          (0, Xk.sendColyMessage)(Lk.cg, Ik)
+        em = Vm((() => {
+          const mm = Date.now() - Em;
+          pm.registerClickDownDuration(mm), Tm().Pfm(), sT(om.d.UpFirePrimary), rT(!1);
+          const fm = pm.clickDownDurationsCheck(4e4);
+          (0, hm.sendColyMessage)(Rm.Hg, fm)
         }));
-      let pk = 0;
-      kk.inputs.down.on("primary-fire", (function(kk) {
-        pk = Gk.press(), Gk.owns(pk) && (Zk = Date.now(), Math.abs(performance.now() - kk.timeStamp) > 5e3 || (Qk(kk.altKey, "changedTouches" in kk), jF(kk)))
-      })), kk.inputs.up.on("primary-fire", (function(kk) {
-        Gk.release(pk) && jF(kk, !0)
+      let Nm = 0;
+      mm.inputs.down.on("primary-fire", (function(mm) {
+        Nm = em.press(), em.owns(Nm) && (Em = Date.now(), Math.abs(performance.now() - mm.timeStamp) > 5e3 || (Qm(mm.altKey, "changedTouches" in mm), oT(mm)))
+      })), mm.inputs.up.on("primary-fire", (function(mm) {
+        em.release(Nm) && oT(mm, !0)
       }));
-      const uk = () => {
-          Fk().Vqk(), cF(jk.d.DownFireSecondary), NF(!0), kk.Vkk && !kk.Vkk.position && (0, qk.j)()
+      const Gm = () => {
+          Tm().Zim(), sT(om.d.DownFireSecondary), rT(!0), mm.Qmm && !mm.Qmm.position && (0, im.g)()
         },
-        Rk = xk((() => {
-          Fk().uIk(), cF(jk.d.UpFireSecondary), NF(!1)
+        Pm = Vm((() => {
+          Tm().Xfm(), sT(om.d.UpFireSecondary), rT(!1)
         }));
-      let Uk = 0;
-      kk.inputs.down.on("alt-fire", (function(kk) {
-        Uk = Rk.press(), Rk.owns(Uk) && (uk(), jF(kk))
-      })), kk.inputs.up.on("alt-fire", (function(kk) {
-        Rk.release(Uk) && jF(kk, !0)
+      let Hm = 0;
+      mm.inputs.down.on("alt-fire", (function(mm) {
+        Hm = Pm.press(), Pm.owns(Hm) && (Gm(), oT(mm))
+      })), mm.inputs.up.on("alt-fire", (function(mm) {
+        Pm.release(Hm) && oT(mm, !0)
       }));
-      const Ck = () => Fk().oqk();
-      kk.inputs.down.on("mid-fire", (() => {
-        (0, fk.e)() || Ck()
+      const ym = () => Tm().eim();
+      mm.inputs.down.on("mid-fire", (() => {
+        (0, lm.c)() || ym()
       }));
-      const Nk = kk => {
-          (0, Xk.sendColyMessage)(Lk.oh, kk, !0)
+      const Cm = mm => {
+          (0, hm.sendColyMessage)(Rm.Ih, mm, !0)
         },
-        Yk = kk => {
-          (0, Xk.sendColyMessage)(Lk.rh, {
-            jq: kk,
-            eq: aF()
+        Bm = mm => {
+          (0, hm.sendColyMessage)(Rm.Lh, {
+            Qi: mm,
+            ni: DT()
           }, !0)
         };
-      for (const Xk of ["SpecialAction1", "SpecialAction2"]) kk.inputs.down.on(Xk, (() => {
-        Nk(Xk)
-      })), kk.inputs.up.on(Xk, (() => {
-        Yk(Xk)
+      for (const hm of ["SpecialAction1", "SpecialAction2"]) mm.inputs.down.on(hm, (() => {
+        Cm(hm)
+      })), mm.inputs.up.on(hm, (() => {
+        Bm(hm)
       }));
-      const yF = () => {
-        const kk = Fk();
-        kk.isGun() && kk.reload(Date.now())
+      const xT = () => {
+        const mm = Tm();
+        mm.isGun() && mm.reload(Date.now())
       };
-      kk.inputs.down.on("ReloadGun", yF);
-      const aF = () => {
-        let Fk = "a";
-        return kk.physics.testSolid.toString().includes("vZ") || (Fk = "b"), Fk
+      mm.inputs.down.on("ReloadGun", xT);
+      const DT = () => {
+        let Tm = "a";
+        return mm.physics.testSolid.toString().includes("CE") || (Tm = "b"), Tm
       };
-      kk.inputs.down.on("OpenInventory", (kk => {
-        kk.preventDefault(), (0, mk.C)(kk, "inventory", (0, Bk.e)((0, Ek.e)()))
-      })), kk.inputs.bind("ShiftHeld", "ShiftLeft", "ShiftRight");
-      const qF = kk => {
-        wk.g.GL("DropItemKeyPressed", kk)
+      mm.inputs.down.on("OpenInventory", (mm => {
+        mm.preventDefault(), (0, Um.v)(mm, "inventory", (0, Mm.c)((0, km.d)()))
+      })), mm.inputs.bind("ShiftHeld", "ShiftLeft", "ShiftRight");
+      const iT = mm => {
+        Ym.j.gp("DropItemKeyPressed", mm)
       };
-      kk.inputs.down.on("DropItem", (() => {
-        qF(kk.MJ.mFk().crouch)
-      })), kk.inputs.down.on("OpenShop", (Fk => {
-        (0, zk.c)() || "inGame" === vk.d.get("gameState") && (0, mk.z)(Fk, ek.r.SHOP, !(0, Tk.d)(kk.gJ.shopInfo))
-      })), kk.inputs.down.on("OpenLobbyLeaderboard", (Fk => {
-        (0, zk.c)() || "inGame" === vk.d.get("gameState") && (0, mk.z)(Fk, ek.r.LOBBY_LEADERBOARD, (0, Mk.b)(kk.gJ))
-      })), kk.inputs.down.on("HideUi", (() => {
-        wk.g.GL("showUi", !1)
-      })), kk.inputs.up.on("HideUi", (() => {
-        wk.g.GL("showUi", !0)
+      mm.inputs.down.on("DropItem", (() => {
+        iT(mm.qI.tTm().crouch)
+      })), mm.inputs.down.on("OpenShop", (Tm => {
+        (0, cm.d)() || "inGame" === Zm.c.get("gameState") && (0, Um.t)(Tm, Om.n.SHOP, !(0, Am.e)(mm.xI.shopInfo))
+      })), mm.inputs.down.on("OpenLobbyLeaderboard", (Tm => {
+        (0, cm.d)() || "inGame" === Zm.c.get("gameState") && (0, Um.t)(Tm, Om.n.LOBBY_LEADERBOARD, (0, Fm.c)(mm.xI))
+      })), mm.inputs.down.on("HideUi", (() => {
+        Ym.j.gp("showUi", !1)
+      })), mm.inputs.up.on("HideUi", (() => {
+        Ym.j.gp("showUi", !0)
       }));
-      const LF = kk => {
-        0 === kk && (kk = 10), wk.g.GL("setSelectedInventorySlotI", kk - 1), wk.g.GL("numkeyPressed", kk)
+      const RT = mm => {
+        0 === mm && (mm = 10), Ym.j.gp("setSelectedInventorySlotI", mm - 1), Ym.j.gp("numkeyPressed", mm)
       };
-      for (let Xk = 1; Xk <= 10; Xk++) kk.inputs.down.on("HotBarSlot" + Xk.toString(), (() => {
-        LF(Xk)
+      for (let hm = 1; hm <= 10; hm++) mm.inputs.down.on("HotBarSlot" + hm.toString(), (() => {
+        RT(hm)
       }));
-      kk.inputs.down.on("OpenTasksAndLeaderboard", (Fk => {
-        const Ik = (0, hk.j)();
-        Ik ? (0, mk.F)(Fk, !0, Ik) : (0, mk.C)(Fk, "retentionFeatures", !(!kk.gJ._tasks && !kk.gJ._availableLeaderboards))
-      })), kk.inputs.down.on("OpenCodeEditor", (Fk => {
-        (0, mk.F)(Fk, (0, nk.d)((0, Ok.d)()), (() => {
-          wk.g.GL("EditLobbyCode", kk.MJ.OJ(kk.oR).map(Math.floor))
+      mm.inputs.down.on("OpenTasksAndLeaderboard", (Tm => {
+        const fm = (0, dm.m)();
+        fm ? (0, Um.w)(Tm, !0, fm) : (0, Um.v)(Tm, "retentionFeatures", !(!mm.xI._tasks && !mm.xI._availableLeaderboards))
+      })), mm.inputs.down.on("OpenCodeEditor", (Tm => {
+        (0, Um.w)(Tm, (0, Sm.c)((0, bm.d)()), (() => {
+          Ym.j.gp("EditLobbyCode", mm.qI.rV(mm.xH).map(Math.floor))
         }))
-      })), kk.inputs.bind("ToggleFullCoordinateOverlay", "F3"), kk.inputs.down.on("ToggleFullCoordinateOverlay", (() => {
-        wk.g.GL("toggleFullCoordinateOverlay")
+      })), mm.inputs.bind("ToggleFullCoordinateOverlay", "F3"), mm.inputs.down.on("ToggleFullCoordinateOverlay", (() => {
+        Ym.j.gp("toggleFullCoordinateOverlay")
       }));
-      const ZF = () => {
-        (0, Ek.c)().client.cameraController.swapCameraZoom()
+      const ET = () => {
+        (0, km.c)().client.cameraController.swapCameraZoom()
       };
-      kk.inputs.down.on("SwapCameraZoom", ZF), kk.inputs.down.on("OpenInviteLink", (kk => {
-        (0, mk.C)(kk, "inviteLink", Jk.featureFlags.canUseInviteLinks)
-      })), kk.inputs.bind("Y", "KeyY"), kk.inputs.down.on("Y", (kk => {
-        (0, zk.c)() || wk.g.GL("YKeyPressed")
-      })), kk.inputs.bind("X", "KeyX"), kk.inputs.down.on("X", (kk => {
-        (0, zk.c)() || wk.g.GL("XKeyPressed")
-      })), kk.inputs.down.on("OpenEmoteWheel", (() => {
-        wk.g.GL("requestEmoteWheelHoldOpen")
-      })), kk.inputs.up.on("OpenEmoteWheel", (() => {
-        wk.g.GL("requestEmoteWheelHoldRelease")
-      })), kk.inputs.down.on("Zoom", (() => {
-        if ("inGame" === vk.d.get("gameState")) {
-          kk.MJ.getState(kk.oR, "playerCameraAdjustment").zoomKeyPressed = !0, (0, Ek.c)().client.cameraController.handleZoomKeyPressed()
+      mm.inputs.down.on("SwapCameraZoom", ET), mm.inputs.down.on("OpenInviteLink", (mm => {
+        (0, Um.v)(mm, "inviteLink", jm.featureFlags.canUseInviteLinks)
+      })), mm.inputs.bind("Y", "KeyY"), mm.inputs.down.on("Y", (mm => {
+        (0, cm.d)() || Ym.j.gp("YKeyPressed")
+      })), mm.inputs.bind("X", "KeyX"), mm.inputs.down.on("X", (mm => {
+        (0, cm.d)() || Ym.j.gp("XKeyPressed")
+      })), mm.inputs.down.on("OpenEmoteWheel", (() => {
+        Ym.j.gp("requestEmoteWheelHoldOpen")
+      })), mm.inputs.up.on("OpenEmoteWheel", (() => {
+        Ym.j.gp("requestEmoteWheelHoldRelease")
+      })), mm.inputs.down.on("Zoom", (() => {
+        if ("inGame" === Zm.c.get("gameState")) {
+          mm.qI.getState(mm.xH, "playerCameraAdjustment").zoomKeyPressed = !0, (0, km.c)().client.cameraController.handleZoomKeyPressed()
         }
-      })), kk.inputs.up.on("Zoom", (() => {
-        kk.MJ.getState(kk.oR, "playerCameraAdjustment").zoomKeyPressed = !1
-      })), nF();
-      const wF = kk => function() {
-        return eF(), kk(...arguments)
+      })), mm.inputs.up.on("Zoom", (() => {
+        mm.qI.getState(mm.xH, "playerCameraAdjustment").zoomKeyPressed = !1
+      })), eT();
+      const YT = mm => function() {
+        return OT(), mm(...arguments)
       };
 
-      function HF(kk) {
-        "inGame" !== vk.d.get("gameState") || (0, mk.s)() || (wk.g.GL("ctrlCrouchWithoutFullscreen"), kk.preventDefault())
+      function qT(mm) {
+        "inGame" !== Zm.c.get("gameState") || (0, Um.o)() || (Ym.j.gp("ctrlCrouchWithoutFullscreen"), mm.preventDefault())
       }
-      tF = {
-        primaryFireDown: wF((() => {
-          const kk = Gk.press();
-          return Gk.owns(kk) && (Zk = Date.now(), Qk(!1, !1)), kk
+      pT = {
+        primaryFireDown: YT((() => {
+          const mm = em.press();
+          return em.owns(mm) && (Em = Date.now(), Qm(!1, !1)), mm
         })),
-        primaryFireUp: wF((kk => {
-          Gk.release(kk)
+        primaryFireUp: YT((mm => {
+          em.release(mm)
         })),
-        altFireDown: wF((() => {
-          const kk = Rk.press();
-          return Rk.owns(kk) && uk(), kk
+        altFireDown: YT((() => {
+          const mm = Pm.press();
+          return Pm.owns(mm) && Gm(), mm
         })),
-        altFireUp: wF((kk => {
-          Rk.release(kk)
+        altFireUp: YT((mm => {
+          Pm.release(mm)
         })),
-        jumpDown: wF(Ik),
-        specialActionDown: wF(Nk),
-        specialActionUp: wF(Yk),
-        reloadGun: wF(yF),
-        dropItem: wF(qF),
-        swapCameraZoom: wF(ZF),
-        pickBlock: wF(Ck)
-      }, kk.inputs.down.on("ctrlCrouch", HF), kk.inputs.up.on("ctrlCrouch", HF), kk.inputs.bind("ctrlCrouch", "ControlLeft");
-      const JF = kk => {
-        "inGame" === vk.d.get("gameState") && kk.ctrlKey && !(0, mk.s)() && kk.preventDefault()
+        jumpDown: YT(fm),
+        specialActionDown: YT(Cm),
+        specialActionUp: YT(Bm),
+        reloadGun: YT(xT),
+        dropItem: YT(iT),
+        swapCameraZoom: YT(ET),
+        pickBlock: YT(ym)
+      }, mm.inputs.down.on("ctrlCrouch", qT), mm.inputs.up.on("ctrlCrouch", qT), mm.inputs.bind("ctrlCrouch", "ControlLeft");
+      const jT = mm => {
+        "inGame" === Zm.c.get("gameState") && mm.ctrlKey && !(0, Um.o)() && mm.preventDefault()
       };
-      document.addEventListener("keydown", JF), document.addEventListener("keyup", JF), document.addEventListener("keypress", JF), kk.inputs.bind("Alt", "AltLeft", "AltRight"), kk.inputs.down.on("Alt", (kk => {
-        kk.preventDefault()
+      document.addEventListener("keydown", jT), document.addEventListener("keyup", jT), document.addEventListener("keypress", jT), mm.inputs.bind("Alt", "AltLeft", "AltRight"), mm.inputs.down.on("Alt", (mm => {
+        mm.preventDefault()
       }));
-      const xF = Fk => (0, Ak.e)(kk, Fk),
-        PF = Fk => (0, Ak.i)(kk, Fk),
-        KF = [0, 0, 0],
-        QF = [0, 0, 1];
-      kk.on("afterRender", (Fk => {
-        (0, ik.e)(kk.camera.heading), (0, Ak.l)(kk, KF, QF), (0, Ek.c)().client.triggerGameCallback("onAfterRender", Fk, {
-          cameraHeading: kk.camera.heading,
-          cameraPitch: kk.camera.pitch,
-          cameraPosition: KF,
-          cameraDirection: QF,
-          tanHalfFovX: (0, Ak.b)(kk),
-          tanHalfFovY: Math.tan(kk.Xw.PD().fov / 2),
+      const VT = Tm => (0, Lm.g)(mm, Tm),
+        IT = Tm => (0, Lm.k)(mm, Tm),
+        KT = [0, 0, 0],
+        QT = [0, 0, 1];
+      mm.on("afterRender", (Tm => {
+        (0, am.i)(mm.camera.heading), (0, Lm.m)(mm, KT, QT), (0, km.c)().client.triggerGameCallback("onAfterRender", Tm, {
+          cameraHeading: mm.camera.heading,
+          cameraPitch: mm.camera.pitch,
+          cameraPosition: KT,
+          cameraDirection: QT,
+          tanHalfFovX: (0, Lm.b)(mm),
+          tanHalfFovY: Math.tan(mm.qY.cW().fov / 2),
           screenBandPct: {
-            x: gk.d,
-            y: (0, gk.j)()
+            x: tm.e,
+            y: (0, tm.i)()
           },
-          projectWorldPosToScreenPos: xF,
-          projectWorldPosToViewport: PF
+          projectWorldPosToScreenPos: VT,
+          projectWorldPosToViewport: IT
         })
-      })), (0, rk.o)("look") && (kk.camera.FW = (0, Dk.j)("js"), kk.inputs.DW = Dk.h), (0, rk.o)("remesh") && (0, kF.m)(kk), kk.on("beforeInputs", (() => {
-        if ((0, Sk.b)()) return kk.inputs.XB.dx = 0, void(kk.inputs.XB.dy = 0);
-        if (kk.camera.XB.dx += kk.inputs.XB.dx, kk.camera.XB.dy += kk.inputs.XB.dy, 0 !== kk.inputs.XB.dx || 0 !== kk.inputs.XB.dy) {
-          kk.MJ.getState(kk.oR, "playerCameraAdjustment").lastPointerMove = Date.now()
+      })), (0, gm.o)("look") && (mm.camera.Ws = (0, Wm.g)("js"), mm.inputs.XM = Wm.e), (0, gm.o)("remesh") && (0, mT.f)(mm), mm.on("beforeInputs", (() => {
+        if ((0, zm.b)()) return mm.inputs.rM.dx = 0, void(mm.inputs.rM.dy = 0);
+        if (mm.camera.rM.dx += mm.inputs.rM.dx, mm.camera.rM.dy += mm.inputs.rM.dy, 0 !== mm.inputs.rM.dx || 0 !== mm.inputs.rM.dy) {
+          mm.qI.getState(mm.xH, "playerCameraAdjustment").lastPointerMove = Date.now()
         }
-        kk.inputs.XB.dx = 0, kk.inputs.XB.dy = 0
+        mm.inputs.rM.dx = 0, mm.inputs.rM.dy = 0
       }));
-      let sF = 0;
-      const VF = [0, 0, 0],
-        zF = [0, 0, 0],
-        SF = {
-          base: VF,
-          max: zF
+      let nT = 0;
+      const JT = [0, 0, 0],
+        cT = [0, 0, 0],
+        zT = {
+          base: JT,
+          max: cT
         },
-        oF = kk => {
-          const Fk = Wk.f.droppedBlockSize / 2;
-          return [0, 1, 2].every((Ik => kk[Ik] >= VF[Ik] - Fk && kk[Ik] <= zF[Ik] + Fk))
+        ZT = mm => {
+          const Tm = sm.f.droppedBlockSize / 2;
+          return [0, 1, 2].every((fm => mm[fm] >= JT[fm] - Tm && mm[fm] <= cT[fm] + Tm))
         };
-      kk.on("Dt", (function(Fk) {
-        wk.g.GL("noaTick", Fk);
-        const Ik = (0, Ek.c)().client;
-        if (Ik.triggerGameCallback("Dt", Fk), Ik.isClientGameSessionActive()) try {
-          ak.b.Dt(Fk)
-        } catch (yk) {
-          console.error("Error ticking audio entities", yk)
+      mm.on("DE", (function(Tm) {
+        Ym.j.gp("noaTick", Tm);
+        const fm = (0, km.c)().client;
+        if (fm.triggerGameCallback("DE", Tm), fm.isClientGameSessionActive()) try {
+          Dm.b.DE(Tm)
+        } catch (xm) {
+          console.error("Error ticking audio entities", xm)
         }
-        if (!kk.MJ.WFk(kk.oR).isAlive) return;
-        Date.now() - sF > 9e3 && (! function() {
-          const kk = (0, Ek.e)();
-          "number" === typeof kk.gJ.speedMultiplier && "number" === typeof kk.gJ.jumpAmount && (0, Xk.sendColyMessage)(Lk.Ph, {
-            ga: (0, ck.h)(kk.gJ.speedMultiplier),
-            ma: (0, ck.d)(kk.gJ.jumpAmount),
-            ha: (0, ck.h)(kk.gJ.crouchingSpeed),
-            ra: (0, ck.h)(kk.gJ.walkingSpeed),
-            Da: (0, ck.h)(kk.gJ.runningSpeed),
-            Ma: (0, ck.d)(kk.wkk),
-            kq: kk.MJ.FFk(kk.oR).jumpForce,
-            Fq: kk.MJ.ZY(1).width,
-            Iq: kk.MJ.ZY(1).height,
-            Xq: kk.MJ.aN(1).Xq
+        if (!mm.qI.sTm(mm.xH).isAlive) return;
+        Date.now() - nT > 9e3 && (! function() {
+          const mm = (0, km.d)();
+          "number" === typeof mm.xI.speedMultiplier && "number" === typeof mm.xI.jumpAmount && (0, hm.sendColyMessage)(Rm.ii, {
+            WD: (0, rm.h)(mm.xI.speedMultiplier),
+            FD: (0, rm.e)(mm.xI.jumpAmount),
+            mi: (0, rm.h)(mm.xI.crouchingSpeed),
+            Ti: (0, rm.h)(mm.xI.walkingSpeed),
+            Ai: (0, rm.h)(mm.xI.runningSpeed),
+            ai: (0, rm.e)(mm.omm),
+            xi: mm.qI.mTm(mm.xH).jumpForce,
+            Di: mm.qI.uB(1).width,
+            ii: mm.qI.uB(1).height,
+            Ri: mm.qI.WC(1).Ri
           }, !0)
-        }(), sF = Date.now());
-        const Tk = kk.MJ.mFk();
-        if ((Tk.jump || Tk.forward || Tk.backward || Tk.left || Tk.right || Tk.sprint) && wk.g.GL("usedKeyboard"), kk.MJ.zFk(kk.oR) && !0 === kk.gJ.canPickUpItems) {
-          const Fk = kk.MJ.OJ(kk.oR),
-            Ik = (0, Kk.o)(lF),
-            Tk = (0, Kk.p)(lF);
-          VF[0] = Fk[0] - Ik, VF[1] = Fk[1] - .6 * Tk, VF[2] = Fk[2] - Ik, zF[0] = Fk[0] + Ik, zF[1] = Fk[1] + Wk.f.NH + .6 * Tk, zF[2] = Fk[2] + Ik;
-          const ik = kk.MJ.Klk(SF, kk.MJ.names.autoRotate),
+        }(), nT = Date.now());
+        const Am = mm.qI.tTm();
+        if ((Am.jump || Am.forward || Am.backward || Am.left || Am.right || Am.sprint) && Ym.j.gp("usedKeyboard"), mm.qI.JTm(mm.xH) && !0 === mm.xI.canPickUpItems) {
+          const Tm = mm.qI.rV(mm.xH),
+            fm = (0, Km.p)(wT),
+            Am = (0, Km.t)(wT);
+          JT[0] = Tm[0] - fm, JT[1] = Tm[1] - .6 * Am, JT[2] = Tm[2] - fm, cT[0] = Tm[0] + fm, cT[1] = Tm[1] + sm.f.gq + .6 * Am, cT[2] = Tm[2] + fm;
+          const am = mm.qI.kwm(zT, mm.qI.names.autoRotate),
             {
-              itemDropPrediction: yk
-            } = (0, Ek.c)().client,
-            ak = Xk.offlineInputReplay.holdsInput();
-          if (ik.length > 0)
-            for (const tk of ik) {
-              const Fk = kk.MJ.getState(tk, "itemState");
-              if (void 0 === Fk || Date.now() - Fk.creationTime < 500) continue;
-              let Ik = tk,
-                Tk = null;
-              if (Fk.tF) {
-                const kk = yk.pickupTarget(tk, oF, ak);
-                if (null === kk) continue;
+              itemDropPrediction: xm
+            } = (0, km.c)().client,
+            Dm = hm.offlineInputReplay.holdsInput();
+          if (am.length > 0)
+            for (const pm of am) {
+              const Tm = mm.qI.getState(pm, "itemState");
+              if (void 0 === Tm || Date.now() - Tm.creationTime < 500) continue;
+              let fm = pm,
+                Am = null;
+              if (Tm.pT) {
+                const mm = xm.pickupTarget(pm, ZT, Dm);
+                if (null === mm) continue;
                 ({
-                  xq: Ik,
-                  Qq: Tk
-                } = kk)
+                  ki: fm,
+                  Ni: Am
+                } = mm)
               }
-              const ik = kk.MJ.getState(Ik, "itemState");
-              if (ik.tF && null === Tk) continue;
-              let Zk = 0,
-                jk = null,
-                ek = !1;
-              if (0 === ik.amount) ek = !0;
+              const am = mm.qI.getState(fm, "itemState");
+              if (am.pT && null === Am) continue;
+              let Em = 0,
+                om = null,
+                Om = !1;
+              if (0 === am.amount) Om = !0;
               else {
                 const {
-                  amountPickedUp: Fk
-                } = kk.MJ.sFk(kk.oR).pickUpItem({
-                  name: ik.name,
-                  typeObj: ik.typeObj,
-                  amount: ik.amount,
-                  attributes: ik.attributes
+                  amountPickedUp: Tm
+                } = mm.qI.QTm(mm.xH).pickUpItem({
+                  name: am.name,
+                  typeObj: am.typeObj,
+                  amount: am.amount,
+                  attributes: am.attributes
                 });
-                if (Zk = Fk, 0 === Zk) continue;
-                jk = dk.c.pickUp(ik, Zk), ik.amount -= Zk, ik.amount < 0 ? console.error("Picking up led to less than 0 of item!") : 0 === ik.amount ? ek = !0 : ik.creationTime = Date.now() + TF
+                if (Em = Tm, 0 === Em) continue;
+                om = um.b.pickUp(am, Em), am.amount -= Em, am.amount < 0 ? console.error("Picking up led to less than 0 of item!") : 0 === am.amount ? Om = !0 : am.creationTime = Date.now() + AT
               }
-              const wk = (0, Ek.c)().client.inventoryPrediction.record(jk);
-              (0, Xk.sendColyMessage)(Lk.ih, {
-                xq: null === Tk ? Ik : "",
-                Pq: Zk,
-                Kq: qk.f,
-                Ly: wk,
-                Qq: Tk
-              }, !0), ek && (ak && yk.onPickedUpOffline(Ik, wk, Tk), null === Tk && kk.MJ.deleteEntity(Ik));
-              lk.d.play("pickUp", Wk.f.pickupSoundVol).rate(1 + Math.random() * Wk.f.pickupSoundRateVariation)
+              const Ym = (0, km.c)().client.inventoryPrediction.record(om);
+              (0, hm.sendColyMessage)(Rm.Fh, {
+                ki: null === Am ? fm : "",
+                bi: Em,
+                Si: im.f,
+                jx: Ym,
+                Ni: Am
+              }, !0), Om && (Dm && xm.onPickedUpOffline(fm, Ym, Am), null === Am && mm.qI.deleteEntity(fm));
+              wm.e.play("pickUp", sm.f.pickupSoundVol).rate(1 + Math.random() * sm.f.pickupSoundRateVariation)
             }
         }
-        if (!kk.MJ.eFk(kk.oR)) return;
-        const ik = kk.inputs.XB.yFk;
-        if (0 !== ik) {
-          const Fk = ik > 0 ? 1 : -1;
-          kk.inputs.state["mid-fire"] || kk.inputs.state.Alt || !kk.gJ.useInventory ? (kk.inputs.state["mid-fire"] && wk.g.GL("requestEmoteWheelClose"), (0, Ek.c)().client.cameraController.handleScrollZoom(Fk)) : wk.g.GL("ScrollInventorySlot", Fk)
+        if (!mm.qI.oTm(mm.xH)) return;
+        const am = mm.inputs.rM.aTm;
+        if (0 !== am) {
+          const Tm = am > 0 ? 1 : -1;
+          mm.inputs.state["mid-fire"] || mm.inputs.state.Alt || !mm.xI.useInventory ? (mm.inputs.state["mid-fire"] && Ym.j.gp("requestEmoteWheelClose"), (0, km.c)().client.cameraController.handleScrollZoom(Tm)) : Ym.j.gp("ScrollInventorySlot", Tm)
         }
-      })), Hk.e.subscribe("droppedItemScale", (kk => {
-        lF = "number" === typeof kk && isFinite(kk) ? kk : iF
+      })), qm.b.subscribe("droppedItemScale", (mm => {
+        wT = "number" === typeof mm && isFinite(mm) ? mm : aT
       }))
     }
 
-    function nF() {
-      const kk = (0, Ek.e)();
-      if (kk)
-        for (const Fk in Pk.s) {
-          kk.inputs.unbind(Fk);
-          for (const Ik of Pk.s[Fk]) kk.inputs.bind(Fk, Ik)
+    function eT() {
+      const mm = (0, km.d)();
+      if (mm)
+        for (const Tm in Im.r) {
+          mm.inputs.unbind(Tm);
+          for (const fm of Im.r[Tm]) mm.inputs.bind(Tm, fm)
         }
     }
-    EF(HF = {}, JF = ["([xh7$H>J2XIP.bRE0E_~Vu;:nPAc&jJlA0h", "awaQmoZf=UVjq9,l=l/<PFnz5Z?jQ>K;#2G_L0Sn*2B:36QKIZREU*@KI", "6II1M8a8iUL00IdO}AmGpQb$[&BY&5nBPg#{k1Q(5hT~$IG+", "i=f%Wweo&SbS|*BxDbUJ{wjze<j!xHkl7Xz", "~&|N]0gemn)>m", 'b=>ok6Ak"cnGK%zndIVl5"mK!&', "Tk+Em9vM}[ZPi1#lM01ws9VLUq,[D!:%B9pNc1y", "ag(hpMdqC:3nHu", "to4p?3Y4cn<vi^Fb^ncA", '+gPJK}"b*X', 'T@ruL0]bl9m)7*al(LT{,(RvQ)V_=RfUPZdh21aU/:"_5T?+', "N;*oIQc=EqeAxTL|mKZ$f!?R(&gH[0wf=@m", "FkN]f!Ym>:GK(T^|{_#NO!.n[L,%0&*xm9]+$Ty", "L!4+d`!(g[X>y%HUIS^,n.KqVX]o=*X", "wq4l}Ym8mq!],1xJbOZB_qtJLHB>u9(+AKjhn$^Dn&z)}09CS=2lH]!Zn9`Ny", "JOTED?Bvp", ':`mw4]7$+|mTRF4ONlh%&.uUIU9KN9eUAZkloG"$,nVN}p]W~9>JN_Rz', "eLB<159>t[p(LWBC5bAetV/zaw@:G.zaK_De", "w:[Ez2n6t>T#vuv6lOI", 'Y2b{IbvRj:5H=%EfKbn{5Ng8%[LYPH7BG[$NcY"?X|3ml+2C:Dz', "+h^h/E7LC|y=q3B69H]Jg![Ku", 'Z2#{$"o4LHR<l5GW#CnG_3TDj[[H0&kU";L<}3.>1)_;Kz', "b_rEa!:K&&BY#>alklJ_{$`Jzwr+fpI:o`<G`5(KgPa8G%(+6wz", "4lC1BKbvN21}:9.RQIslb$Xc59x]eF!Ok|weX3_AIc;", "epRv}QLMnw~2WTulxqE{:`y", "L&=JkQd8{L:T^I*6cA%J@=`E**+)S!1lRE{Gr,E(Kc>$xzyx[hI", "qh=_/axUKqub?IqxmZt{1Yf8@*3Nb>KlTb)_*NPoB[79n3aUTb#JwTH$!9C", ':9j!b$COzq(:Yz7fw@Dl)5">[Z&bt6J60brXx(tfVP"k^&C.[0z', "~|_Xh04qw>g?a1m:SBV`,KIdVX,*=IrK", "O:;%oTD$DZ:Yo0]UN[[Au_9vVPc}*F*JQbvB~OVDacc}v5;J82a$[Yimyi>", "JhgNd.|>9j.l}1,:mJxh", "hpd!$NO?CH!}.H}l%|Vl&FNf(n+|t0_+i==e201A{L#?>sy6Qq%{Ks@m", ":{vB[D>Dd>vHO`~bPJ#{RFK)7)tmqp", '&D[E|2Jq"hk9#.tBaJ(!^63f:S<|NprKa9mEAo:m', 'gblhd(Sno>(]"RqK]xFNh3]n@H(8;p6nKgk$U', '1[|lO(cA{hrN%.*:WLDeV3oKz&Y;"IcCW=6lwkI)GHbH@0<;,L5X', 'Ya:vLQfU$cgi<3yn@lrEt`Wq{9D:&.$bMb=57q0v@Sw]$pP;I99Jb!WU*2"om', ".[DhH0X>mq9HN9|%", 'Yk>N0EEmUL9Z"F.R?B@<.=4:R)4k81Y%%x2]gay', "5wfG%(c>1)/?9IG.mL2QqZy", "_@v}(=y", "eDn{=9>zbZV;0&EbR[(hd5xo6qGj@1Kvq:Z!6jS>P:mTOI", "iwWA4FA>%[2SGH&OY2m", "l=XwbV:)0i8N+u}+Hm", 'd[ZA/w"Mg[[X2;NUi92en]IUSq]N+uiK&D=<V@`m', "iL+ECGxKwU5PZkqJ}0.e", "s20!K};8w>9{~uG;QEI", "3IOv21]La>HYU5gUs*Owd@UJcq4uW>b6,gxBr,=L5hTuM!NW>+z", "aI>E[W+RTLO0lz[Ru+4lqDDz", "r*v}jYrO:Zdk}0<.:wi_h3ML5Lh[?KdbL{g{!EUm", "y!t{)5YJDo`#70#lMC9JWKE(5Le[tp`no+1h", "nO,AD>#qNjhA6F`l}|%N$1/?C|_{tRIl^9ilBV7L92.$/(tJaqu]Ekn6e", '][yh+FNY3q43=&kaLL;%Oj})]XSn|%"OU9`hY_XD|)sZQH#n', "m!Y$>1dx/HRQHsm6_Hn%$TQ(C[9Hr!@U", "pptAZ>}f<Ql%}0].f[eAFqM2y9ERB`[6hK^,d*RzlS>", "VH4_^q:Kb9TNBp}U7@lpL2>nGj@8&&)Uu&I", "AwalA8aKAcmAm", 'K_+G13O6$qQBHun%H!2ptFxUpw(8Bps6c:Nl;F>Ox|naOI"~jy', "b=BlwZV_1>)=t3lJ|xI", "!I~p<6EGYo__y", '>|n1"*HD[Z@:,^2:a|6N,4KJDScmm', 'M:;V0EzXzU;Q)1za|JD]&3v$DZq?L9G.@EOv6K}Jt:,|Gk+CJgxBu9"OI', "mKi_m3+XTw1P.!W.$|XVoTRRj>x%O`jCuZcEoEQxh|s", "SwJlWwIG.cB1Y(Y+Mk`$<qp6$q,%s0)|:w=`Eky", '&!k}D!ncKU1}{%];.AVlaKaK5LTmI+On1@K<z1zMeQ"Z/I', "lIx}QTdm&Sw]=%>f[xmA%V7L*j]DG+Uf&m", "IqD!48hUFU$}FFzR$lXw=og8{LJ8%*_;A_w]A5w_]X", ",J5{1_aU@j!?!)LW:w?w(aa)4UA[0*M^HD_u:.#m", 'sO`BCkkn%[tXm9Ef#x/_]Q~D(ZMNx+G+w@MhF*"R>H3&@1<;', 'b__{?3&mAU"Zzu}+`P^A$ZOz`cv]"9Ebgxwpd,A$?Lq*cI', "^nS{ROB$1:XGnTWn;|(}~qQmkU", "%`K{i`s(B*@<K5ZJp`gJY3y", "HqdBjEufmZ%1*H8U", "VHfv?3Hz_[j}|^,aW_w$WGr_`)b1a!s:Y@4p/EyRbZiIv!{n}[Q]}0)UFwyhm", "lLg1fa&)A", "b0D!z1kRA<REO`Ol)p,w(=PfSZb*2)MK&m", ":&@QyW^M@o/:XIK;Hm", ".q=N89We4)<%m66R&Db1;q}ZA", "._F{`9=?f:(Qq9%fixJe5a^6/ii|.;@Uo|Ov:", "PqtAyQI3NPmVd+AgMIs_k9==_HQ}70sxqEZ!k1y", "@A;v/TNJSwb%Kktf{x:w(W)f2nW0m", "MbbEvO*81|", 'GEX,.={$gX<%O(;Kag45.="?h[4nk!..:nC1;$y', '!+Qp5kn$z&<IWTp.";8_d*Zfli6Iw;1.TkD!n', 'NBQpH6DLm&|]a1{x10,w?_7MFUGNX"g.EIQ$L', "p`SX[6hf$US?J0+fo[:V*NKJ>|%A@1UbQ0W$so~De", "_j0ArqifFwn>6($bd*l]l}Pm", '{IueJ`qfZLl<2)fUnn7w:3bR*PdmV;.Rg[eVDkbM7>WY"*%fj|Vey94J]2W', "iZ8e2YNeE9cDF.Ol1Ekp3$/cx)TjS)qKGA&$i", "JhQ}(TfGsoPvnu7KjH+1XY*JKU7Z.aD+3HDlJ$~z", ")&TXwWe)TL8?^F^OAqBNj9FJKwXxOFQJxwOG89tJDjsZ;0<;7y", "pwg_:]|>(S&T%z/Wv={hK}}EKhn%#.C;}y", "7H.eQTV>**J1m;dfKA#u`8:3+|:8FH,:OxJ<>15Dzwp|c%@+yLyw9WA$wU^vm", "REpe%VNZ<2LxS!KntE=+2bnR}:", ";h,%qEy", "%hR}X3Y8vn", '#lP{S1!UZ98!;p{Cw:^Au1SLk>vY"Kygt*@QmY3qJ2HaEkqKQA8Q*YueG:Nnm', '8a:%aG"ODX"jFzB:Waz', "Ww{}$ZVnDj}#)sMbt2%{@!*myZ(S]*Y%d0wQ8YSDI", 'RD%_iOZ)1:Dp)"..]2d!+', '$0b%oNy6X|5l#.Zau!iQ_5tJx)"kN9:Wg`Gu', "ZAN_5EYqe>HbNpn|%=FNIYlUYn{*f0dJcad]%wkD=h", '`a0}2":J]X$nV!S:O_<%P24:VP', "PDoBl*Yq;:g8>;SneZQAwZVO3&o", '~&z1$j4e$q6]EF!OoxVl"$Qxh[A=/^LWT0@p~5geu', "W=EJWGee!wr{T8!O}[nJPFdK_:6]xFcxkh$Jn5GE^9<x}pbxQ2A,A8x(#U", "WxZphYvLt2HG;p@.Y|Qp4`sZ,ZW}u6PUUEdhV__L%2^vO*A", '3E0}Ej>MA>]Ze5=n"y', "&&wBi*}f0n<1DkxK;[ToQW>z", '69&wY]kL7>l*#kb:`03AS9/OL2"&KH>fEI9JZQX6qHd_THLWqE4p', "XqWh7$5$}2Ib:9?+^a~pLQf3zw>e`+@+=y", "S2ke^]aUz9?k4p", "!I)<pYGJIhF5@0XUg+eh%.0vP:s", "~`X,Z_0De)I1_HBJeKnG3@k$]oa", "6&2emMk=0LMk48JK", "%9Al|`OO>PJ][9L+G2e]6s:e&n", 'VB4_["6_f[9n*HL.$EyG!kn6fH^=4;A', "[wp<9NBvyStqk)OlMb~Q5kdq|cxAxHSvQ+Q$`b=_@P", "kCk]Vq6cTw:a1%P", "8=.]29j_M>yEm", "V:x!P8SnzqG?F.Igj=7w`3y", 'L_yV0ksmR:{*O(rJ#BAQ|8MO0iL>P5;x";8_)', "P{>Xx.NJ&9+AO%5bmZs$WKh;|c~<O`MOi[oeS9kAyS79%z", '"|:vV8>z', "S%q6jrZJ", "JMXl=Cz#", "Tq{tzOo2", "j[xK+!v9", "s:cBL1.b", '7J/`/"zb', "&KT(5hOV", "kYsyCbkq", "FxJGb#wq", "s%8y*#l", "fkJGG#@q", "pDJhbQ8:", "_bc3bW.o", "/J*V", "AHWV;#+M", "_0I8A>,F", "7D:qARWd", "YNPIKjeM"]), EF(xF = function() {
-        var kk, Fk, Ik, Xk = [function() {
-          return globalThis
-        }, function() {
-          return global
-        }, function() {
-          return window
-        }, function() {
-          return new Function("return this")()
-        }];
-        EF(kk = void 0, Fk = []);
-        try {
-          EF(kk = Object, Fk[SF[15]]("".__proto__.constructor.name))
-        } catch (KF) {}
-        kk: for (Ik = SF[0]; Ik < Xk[SF[4]]; Ik++) try {
-          var Tk;
-          for (kk = Xk[Ik](), Tk = SF[0]; Tk < Fk[SF[4]]; Tk++)
-            if (typeof kk[Fk[Tk]] === SF[5]) continue kk;
-          return kk
-        } catch (KF) {}
-        return kk || this
-      }() || {}, PF = xF.TextDecoder, KF = xF.Uint8Array, QF = xF.je, sF = xF.String || String, VF = xF.Array || Array, zF = function() {
-        var kk, Fk, Ik = new VF(SF[28]);
-        return EF(kk = sF[SF[12]] || sF.fromCharCode, Fk = []),
-          function(...Xk) {
-            for (EF(Xk[SF[4]] = SF[1], Xk[SF[1]] = SF[6], Xk[SF[9]] = SF[6], Xk[SF[8]] = Xk[SF[0]][SF[4]], Fk[SF[4]] = SF[0]), Xk[SF[7]] = SF[0]; Xk[SF[7]] < Xk[SF[8]];) EF(Xk[SF[9]] = Xk[SF[0]][Xk[SF[7]]++], Xk[SF[9]] <= SF[16] ? Xk[SF[1]] = Xk[SF[9]] : Xk[SF[9]] <= SF[45] ? Xk[SF[1]] = (31 & Xk[SF[9]]) << SF[11] | Xk[SF[0]][Xk[SF[7]]++] & SF[10] : Xk[SF[9]] <= 239 ? Xk[SF[1]] = (15 & Xk[SF[9]]) << SF[14] | (Xk[SF[0]][Xk[SF[7]]++] & SF[10]) << SF[11] | Xk[SF[0]][Xk[SF[7]]++] & SF[10] : sF[SF[12]] ? Xk[SF[1]] = (Xk[SF[9]] & SF[13]) << 18 | (Xk[SF[0]][Xk[SF[7]]++] & SF[10]) << SF[14] | (Xk[SF[0]][Xk[SF[7]]++] & SF[10]) << SF[11] | Xk[SF[0]][Xk[SF[7]]++] & SF[10] : (Xk[SF[1]] = SF[10], Xk[SF[7]] += SF[8]), Fk[SF[15]](Ik[Xk[SF[1]]] || (Ik[Xk[SF[1]]] = kk(Xk[SF[1]]))));
-            return Fk.join("")
-          }
-      }()),
-      function(...kk) {
-        return kk[SF[4]] = SF[1], typeof HF[kk[SF[0]]] === SF[5] ? HF[kk[SF[0]]] = function(kk) {
-          var Fk, Ik, Xk, Tk, ik, yk, lk;
-          for (EF(Fk = "" + (kk || ""), Ik = Fk.length, Xk = [], Tk = SF[0], ik = SF[0], yk = -SF[1]), lk = SF[0]; lk < Ik; lk++) {
-            var ak = 'ymzIpuAeXh<PL)H&^:nU|i~xR;+%BJvl{,bK6a.WOfCg/@D(0!5E$owQjq>*9s2Zc[S#=8k`1}_G]NVY?3TF"4Md7tr'.indexOf(Fk[lk]);
-            if (ak !== -SF[1])
-              if (yk < SF[0]) yk = ak;
+    bT(qT = {}, jT = [".CqRgsn5PCQ", "F2O%HZPB#dn4szEV|2cMy*%%`Uf,U[/Q.xa6JL8vJ:6Zi*^z].mj#OpB", "GbJjv$jee@)b{pZ$P2cjpO/;}1*SCaWTX5mF6[5]P1F(</t3MpB", "&q!lkWqA", "A,}!MmVQ31,!72k_XA", "iaFMzSuim+d2T`0Xz5We@mZ4A+s;?_+uZ~UqxCk", 'z9sJj|+&&+S7L|j5Hiv+s?eAY@iqwz[5ait+K"_vpRY,3"`!(;<lCOM_3(,TA', '2qI^Q$tC4RN6f8"X&+r!U=440w', "XpKev[T49pwZObh:1}B", "$d;J{NW4Z@98{vu:J6<ls_NiH", '6M{6]GU%8:98/`"u7k', "?Q.+c?@]S(cCEjQ!JaKIZ?PukpG{<B", '+&fz"$q^?;>Gux(jJxkhq4gGJ:Rh<a6V~VPR{,y{70=:T`KL`VRyhWk', "txuJe##![9W>g_.5<9zqG[!e.Vi@nBv]{x/6G*&P%hD4;P6!.sY!kWO]M", "M+Mhc_%::p4C#=/w|x,qV{xQb:p1&bMQOQg#EL24:b", "vdBFduk", "Vu6laS%8UP&;AZiLJamqd", "$9R+x4t4QVK64Q+]n3OH", 'S(!6/#O@4gJg9ZdNb4,!`Nrvudhdw"[3_+(y^|:vcDzVA', 'R;+6b.zBhPA"!H<v.9`Xu+Hvj9oEiL^zr9Y0c#]w^R}', "86G7YsiR80V28bu$&+j,}+k", "=6Q)EZP:AbA+L(JN76V^E4g!eIAcHj1", "jNy+NSlv`U<ZFs[5,6x", "hJI7>,k", "i4X,hCn],[sQujW]h.^zoS34f+]S,$L6AG/II_)P>wb#!cdjC+AZg", 'R5t+"CZiu9XCDJhLRsRh*;CW}1&GKsfuO~M%0^y.%h~', "|~:^{_RPRIYivs]L3&5<S#DPM", "m.C6/#E<RIs>k_nTd:zZv[s@Nbl,UZv3=aNF$Ud_>wEGD{u:DxJ+c", '[VRM+"}e~0O1z`MQu5)H1?fV1CFjAc0Gc}BqS_2Eg@o.mJ%XKqnh/Z`!sEj', '"q4Sp0BWoV<dBQKwrR7sg.SqH', "#xQ^BCcv](vO%2mN1.!lQ)1;A.}", ":4;lJ7j!mwEg|BYj%9FhYC8PKC3x|B(w8[wI}`6GEbLNA", "NNA<spRW71Ay5mq]49d6yJen|wQ2m`D<vF]+!", "#&0ld%Qe_w>8<BDaFh=6r[`]&+6{N(L:aqvqk#IWcpP=2phwN}X,<S&PJhP", "[9+6.pP:PV", "gh[74a3:.(%D,{0]M5~#pNk", "CX:^h{TP!Cs7i[MvAp<%e#;]~RHZP@3zz9uM;#tue", '6NnHK"M%:;X', "K.U+6[Z%Y@R^ezA_<Nc<_UgA", "!,T63JnOpRP", "tq:792K81VJ[E|]LVuF<n[k", "R4$6zf9])[%S{@Sw5A", "0M{6K&AQNbxj@ZI", 'M.k)rfB_zd.(em,Qj4jIV|7.pU06pj4LDCX#0L"4CbK[%|@jKCyF5fSA', "MhA)d[l:p1", "Ud}ZP=8u>EdZ[b:L.h#S]+t&|h|=EZDvJiEhqqD8H", "TqSqC7*]r[Kgdj[G&hvMXGr%k._", "|ah^G`$%oClp1$Tu{++e1{`@O;DQ^$iwi5aIn*;{gwc&:BwX", "Vb4H=p[]S(AcFxP!/&l!BC?eId{7T/]z", "N&M%y[ae~:+SmaWN{6M%Qf]wS(yNq$j]y+OM>Zx{JhXOXjXGKVPR7_/wb;IIA", "$d+#zliE~1q;?H1Q755X@#6^Di*l]H#!Kq>mJJW,1[a6!H", "V.$%:)]G]VXN4`r3Pd;Hx?ivgwKIA", '6pB/GJMP+Pa#p|"X4h=XUO}G6gn>h_}zap4XY~sAu@1"Da8uRGzqkOC,?;+', "2q$hIW483(+{r$|NJ+|/^.&iTw(ZF[L:Au#HyJ!!yi0lR|+u", "Vp&!,{cBFh$", "!9:qf|0!Kgg{Qa0GjdmRx?~{71cOJ@`G3&`H.py];R", "}90eAWDM[1(#A", "G}mF/pfA5PTOUbk_eA", "7Qj!;,@@OiZFjBNvgu)HA#T8#@`e#$|jwhB", 'M;WXHO[!(g2lc|mu"9^z]Jg].(0SDJ#]nMnlt|0A', "e.cj,{c_@CJ89Z.5%M{m#=4%DbicRx8L05tJ2Ysq40q:SH>VX,G!j+]@/I", "4sfXm&Y4qiuCovQG,~nM+UQ]j[^FO(P!KMu<1$)%*gl,;$h", '^30,{#~w19DX#$gG|9@l=0(_:isDb"X3rR&Id', "q.(%;YU%/@vI6B|Xdd/I", "ZMl0zlM<Dh6Np[u::FV+OCbeS(`73@^Q#~fm[qYuM", "z}Ij/NTB%@^7p|D:&aZSXG{A", "&5k<J&m%_.OAP@`3haLXS{$<E:R^&x", 'N2|zvu:%khcNKxXG!iX,P4Y%+w.eo8z_I.ky"|K:gw', "w+cqFG#5`:qUp|B_RJPRfs.5C12DzJg])6,q1mOObb6C5zC<Nh)H", "SU7XI2b{j9!9SZiL1i{s};<<OU)bP{i", "#5}ZEZ8Mo(t7|*]w*.;HjfOqdEtA1zUN}uzjkPP8j[)U<JxazA", "7(ZM={XB:b]lI$`GYd2J;Od,A.k+|$t3~CCX[Of5=w.", "zuhMa`g?MIP8+@]za,d,v", "DS6JAZ8Ma+!l}j[]_pCHPY{@K9W,@agG2.5JI.l%<:", "e,zq_G*])b#QAp7j89yM|m#@A.C:s(5usdq02JWNLP0gA", '$sx7kWE<bp7:;"}L7[FjFGZWzdjP92e6d:rFy`be^VLCPJJLvp=hX', "%qt+#;dW![0Q>$k}:.peq=xw{+y{v[@", 'MFNjx,_:~0(jl|z!J91F$&;]xwzC!czG=a|F"m"W9.`X[=.!c;w!6%Ve;b', "&+:7(mjeHEX@=@Sw8d(lFs~*:hX@ezlzN&zF8|X86b77Xj!5Zk", "BpH!ySC,<:4%>=6<JN#h=0^eeIaZTBP_T&DF!", "q2xZ~&h^O;!IZj.G/,RMMZZiw.N", 'w./#&N5]0+E1@2<vO(:jH21el0#G"?x:Tukh', "+9a%90z,O;t>Y2s6oqbh=2,MHwqS*(|Nwp@I", "hJ.+g.k84:p", "GNSq!8Y4P1xPBQ|uC2p!q=Kur9VN02Da~}p,G^i40+FdszQ]IA", 'O[t+_G#e%.Bq}$0j&x/IpZ?qqh]Cov"Lgz]+Hp[A', "*sD7S{f5{wfiDaKzA.`6X", "w;M%($I_Ei5P=QBvBbc+c?7;&E(jlbp5L,Nq4`iWFi)HG=oGbq0e#=y]41", "v4Nq8.G*r(5CRsE<|N.Molh@~CI2._NvH}~,5)tC19KvQc=$bhVj1mC<lR", 'KC_ez.xw6;:{+"eQ4N(l/?}w8iw^*[gXz4K7+0Oe`C#StvB53uDRT', 'Gq$H^|K4QVe"ljVz#ClspNYN[VgZ$zt]}diI]&]G9+g{wB~j~.A', "FNe%Ql<<?hY1Xs?L#k", ")Ns%~`u_QPjOAYWu#djZ!fh];prmYx", "Q;eB#5|i", "{Qk~81Rr", "4K=Cfi%,", 'N%5X8@0Ztg.*+lkHwKde""!`[PEz)SkH[>|o[wN{9Jz^Imw%S%v/e', "qH%OT&Rr!G0[@~AD`g?NCC14kj:>caAD[FKWnnoL`T03=h@2i*", '9)3*E=bYck^(H8qww).4x:E+6"VP7ETxSh@Pe', "o(q+", "^h.j/6(1", "700}BaVw", "o1>*3)Z@", 'L~O*bP%Zif.+zQTGce/dll]nV#6>MWTGV2jDVcLgR">_F}c~W~I=d', "L~O*bP%Zif.+zQTGce/dll]nV#6>MWTG+C$D,,!@cb.`kjz[A(", 'z"9lPK/QgC`).>Bhh"%}JxP:bmcrSPOJ#8er;', "i)B:", "Op*)jMW>", "z|g8)MR>", "LzXc!e&A", "bkFtfeK", "B5Xcce8A", "<?vE?*ha", "Z#Tz", "p${Ow&7m", "2V)dY;1I"]), bT(VT = function() {
+      var mm, Tm, fm, hm = [function() {
+        return globalThis
+      }, function() {
+        return global
+      }, function() {
+        return window
+      }, function() {
+        return new Function("return this")()
+      }];
+      bT(mm = void 0, Tm = []);
+      try {
+        bT(mm = Object, Tm[zT[24]]("".__proto__.constructor.name))
+      } catch (KT) {}
+      mm: for (fm = zT[2]; fm < hm[zT[12]]; fm++) try {
+        var Am;
+        for (mm = hm[fm](), Am = zT[2]; Am < Tm[zT[12]]; Am++)
+          if (typeof mm[Tm[Am]] === zT[13]) continue mm;
+        return mm
+      } catch (KT) {}
+      return mm || this
+    }() || {}, IT = VT.TextDecoder, KT = VT.Uint8Array, QT = VT.XO, nT = VT.String || String, JT = VT.Array || Array, cT = function(...mm) {
+      return bT(mm[zT[12]] = zT[2], mm[zT[25]] = new JT(128), mm[-zT[26]] = nT[zT[22]] || nT.fromCharCode, mm[-zT[15]] = []),
+        function(...Tm) {
+          for (bT(Tm[zT[12]] = zT[0], Tm[zT[19]] = zT[14], Tm[zT[18]] = zT[14], Tm[zT[17]] = Tm[zT[2]][zT[12]], mm[-zT[15]][zT[12]] = zT[2]), Tm[-zT[16]] = zT[2]; Tm[-zT[16]] < Tm[zT[17]];) bT(Tm[zT[18]] = Tm[zT[2]][Tm[-zT[16]]++], Tm[zT[18]] <= 127 ? Tm[zT[19]] = Tm[zT[18]] : Tm[zT[18]] <= 223 ? Tm[zT[19]] = (Tm[zT[18]] & zT[43]) << zT[21] | Tm[zT[2]][Tm[-zT[16]]++] & zT[20] : Tm[zT[18]] <= 239 ? Tm[zT[19]] = (15 & Tm[zT[18]]) << zT[23] | (Tm[zT[2]][Tm[-zT[16]]++] & zT[20]) << zT[21] | Tm[zT[2]][Tm[-zT[16]]++] & zT[20] : nT[zT[22]] ? Tm[zT[19]] = (Tm[zT[18]] & zT[9]) << 18 | (Tm[zT[2]][Tm[-zT[16]]++] & zT[20]) << zT[23] | (Tm[zT[2]][Tm[-zT[16]]++] & zT[20]) << zT[21] | Tm[zT[2]][Tm[-zT[16]]++] & zT[20] : (Tm[zT[19]] = zT[20], Tm[-zT[16]] += zT[17]), mm[-zT[15]][zT[24]](mm[zT[25]][Tm[zT[19]]] || (mm[zT[25]][Tm[zT[19]]] = mm[-zT[26]](Tm[zT[19]]))));
+          return mm[-zT[15]].join("")
+        }
+    }()), bT(YT = (...mm) => {
+      mm[zT[12]] = zT[0],
+        function(...mm) {
+          return mm[zT[12]] = zT[0], typeof qT[mm[zT[2]]] === zT[13] ? qT[mm[zT[2]]] = function(...mm) {
+            for (bT(mm[zT[12]] = zT[0], mm[zT[19]] = '7VrfXAUBNtLKjq._C$Fwy0gm2/[eQZc*InsG1>}PR6(z^]%H|J#3DkS~!xb,p:=5)i<ET9?Y8aO`vdW"+{u4l&;o@hM', mm[zT[39]] = "" + (mm[zT[2]] || ""), mm[zT[17]] = mm[zT[39]].length, mm[-zT[40]] = [], mm[zT[37]] = zT[2], mm[zT[8]] = zT[2], mm[zT[9]] = -zT[0]), mm[zT[10]] = zT[2]; mm[zT[10]] < mm[zT[17]]; mm[zT[10]]++)
+              if (mm[zT[5]] = mm[zT[19]].indexOf(mm[zT[39]][mm[zT[10]]]), mm[zT[5]] !== -zT[0])
+                if (mm[zT[9]] < zT[2]) mm[zT[9]] = mm[zT[5]];
+                else {
+                  bT(mm[zT[9]] += mm[zT[5]] * zT[29], mm[zT[37]] |= mm[zT[9]] << mm[zT[8]], mm[zT[8]] += (mm[zT[9]] & zT[32]) > zT[33] ? zT[34] : zT[35]);
+                  do {
+                    bT(mm[-zT[40]].push(mm[zT[37]] & zT[11]), mm[zT[37]] >>= zT[10], mm[zT[8]] -= zT[10])
+                  } while (mm[zT[8]] > zT[9]);
+                  mm[zT[9]] = -zT[0]
+                } return mm[zT[9]] > -zT[0] && mm[-zT[40]].push((mm[zT[37]] | mm[zT[9]] << mm[zT[8]]) & zT[11]), ZT(mm[-zT[40]])
+          }(jT[mm[zT[2]]]) : qT[mm[zT[2]]]
+        }(94) in kT && function(...mm) {
+          mm[zT[12]] = zT[2]
+        }(), mm[-zT[60]] = zT[2];
+      for (const Tm in mm[zT[2]]) {
+        function fm(...mm) {
+          for (bT(mm[zT[12]] = zT[0], mm[zT[19]] = 'z1:$^C"nb>;84Jp`~VYeO]k&L,X[w!BNWEUG<tQ%MDg|5dH/R9FKj3m?cv6@h2{i7Z}r_ysfuTSoPx.(I+Aq#a=l0)*', mm[-zT[55]] = "" + (mm[zT[2]] || ""), mm[zT[17]] = mm[-zT[55]].length, mm[zT[57]] = [], mm[zT[56]] = zT[2], mm[zT[21]] = zT[2], mm[zT[9]] = -zT[0]), mm[zT[3]] = zT[2]; mm[zT[3]] < mm[zT[17]]; mm[zT[3]]++)
+            if (mm[zT[47]] = mm[zT[19]].indexOf(mm[-zT[55]][mm[zT[3]]]), mm[zT[47]] !== -zT[0])
+              if (mm[zT[9]] < zT[2]) mm[zT[9]] = mm[zT[47]];
               else {
-                EF(yk += ak * SF[23], Tk |= yk << ik, ik += (yk & SF[24]) > SF[25] ? SF[26] : SF[27]);
+                bT(mm[zT[9]] += mm[zT[47]] * zT[29], mm[zT[56]] |= mm[zT[9]] << mm[zT[21]], mm[zT[21]] += (mm[zT[9]] & zT[32]) > zT[33] ? zT[34] : zT[35]);
                 do {
-                  EF(Xk.push(Tk & SF[3]), Tk >>= SF[2], ik -= SF[2])
-                } while (ik > SF[13]);
-                yk = -SF[1]
-              }
-          }
-          return yk > -SF[1] && Xk.push((Tk | yk << ik) & SF[3]), oF(Xk)
-        }(JF[kk[SF[0]]]) : HF[kk[SF[0]]]
-      }(123) + "O" in vF && function(...kk) {
-        function Fk() {}
-        kk[SF[4]] = SF[0], EF(kk[SF[16]] = function(...kk) {
-          for (EF(kk[SF[4]] = SF[9], kk[-SF[21]] = SF[0], kk[SF[8]] = SF[0], kk[-SF[17]] = new Fk(SF[0]), kk[SF[7]] = kk[-SF[17]], kk[SF[18]] = kk[SF[0]], kk[SF[19]] = kk[SF[1]]); kk[SF[18]] !== SF[20] || kk[SF[19]] !== SF[20];) EF(kk[SF[8]] = (kk[SF[18]] ? kk[SF[18]].val : SF[0]) + (kk[SF[19]] ? kk[SF[19]].val : SF[0]) + kk[-SF[21]], kk[-SF[21]] = Math.floor(kk[SF[8]] / SF[22]), kk[SF[7]].next = new Fk(kk[SF[8]] % SF[22]), kk[SF[7]] = kk[SF[7]].next, kk[SF[18]] = kk[SF[18]] ? kk[SF[18]].next : SF[20], kk[SF[19]] = kk[SF[19]] ? kk[SF[19]].next : SF[20]);
-          return kk[-SF[21]] && (kk[SF[7]].next = new Fk(kk[-SF[21]])), kk[-SF[17]].next
-        }, console.log(kk[SF[16]]))
-      }(), EF(wF = (...kk) => {
-        EF(kk[SF[4]] = SF[1], kk[SF[1]] = SF[0]);
-        for (const Fk in kk[SF[0]]) {
-          function Ik(...kk) {
-            for (EF(kk[SF[4]] = SF[1], kk[-SF[33]] = 'b#]6xqNs+H_1Mnc*}>P5~O[7<"D/|ylpi89aF4QoJTGdU0:zL%?jw!vCKk;u@$mIf&tVE=2(r^.Y`eW)X{3gR,ZBShA', kk[SF[35]] = "" + (kk[SF[0]] || ""), kk[SF[36]] = kk[SF[35]].length, kk[SF[33]] = [], kk[SF[18]] = SF[0], kk[SF[19]] = SF[0], kk[SF[13]] = -SF[1]), kk[SF[2]] = SF[0]; kk[SF[2]] < kk[SF[36]]; kk[SF[2]]++)
-              if (kk[SF[37]] = kk[-SF[33]].indexOf(kk[SF[35]][kk[SF[2]]]), kk[SF[37]] !== -SF[1])
-                if (kk[SF[13]] < SF[0]) kk[SF[13]] = kk[SF[37]];
-                else {
-                  EF(kk[SF[13]] += kk[SF[37]] * SF[23], kk[SF[18]] |= kk[SF[13]] << kk[SF[19]], kk[SF[19]] += (kk[SF[13]] & SF[24]) > SF[25] ? SF[26] : SF[27]);
-                  do {
-                    EF(kk[SF[33]].push(kk[SF[18]] & SF[3]), kk[SF[18]] >>= SF[2], kk[SF[19]] -= SF[2])
-                  } while (kk[SF[19]] > SF[13]);
-                  kk[SF[13]] = -SF[1]
-                } return kk[SF[13]] > -SF[1] && kk[SF[33]].push((kk[SF[18]] | kk[SF[13]] << kk[SF[19]]) & SF[3]), oF(kk[SF[33]])
+                  bT(mm[zT[57]].push(mm[zT[56]] & zT[11]), mm[zT[56]] >>= zT[10], mm[zT[21]] -= zT[10])
+                } while (mm[zT[21]] > zT[9]);
+                mm[zT[9]] = -zT[0]
+              } return mm[zT[9]] > -zT[0] && mm[zT[57]].push((mm[zT[56]] | mm[zT[9]] << mm[zT[21]]) & zT[11]), ZT(mm[zT[57]])
+        }
+
+        function hm(...mm) {
+          return mm[zT[12]] = zT[0], typeof qT[mm[zT[2]]] === zT[13] ? qT[mm[zT[2]]] = fm(jT[mm[zT[2]]]) : qT[mm[zT[2]]]
+        }
+
+        function Am() {
+          function mm(...mm) {
+            return mm[zT[12]] = zT[0], mm[zT[2]][zT[0]] * zT[59] + (mm[zT[2]][zT[2]] < zT[2] ? zT[58] | mm[zT[2]][zT[2]] : mm[zT[2]][zT[2]])
           }
 
-          function Xk(...kk) {
-            return kk[SF[4]] = SF[1], typeof HF[kk[SF[0]]] === SF[5] ? HF[kk[SF[0]]] = Ik(JF[kk[SF[0]]]) : HF[kk[SF[0]]]
-          }
-
-          function Tk(...kk) {
-            kk[SF[4]] = SF[0]
-          }
-          Xk(125) in vF && Tk(), kk[SF[1]]++
-        }
-        return kk[SF[1]]
-      }, eF = (...kk) => {
-        function Fk(kk) {
-          return typeof HF[kk] === SF[5] ? HF[kk] = function(...kk) {
-            for (EF(kk[SF[4]] = SF[1], kk[SF[1]] = ')29/@"[u#_07v<6H;LR3lQroM*b^DGK5Ni(VUkwJ`xPdyqjC+B{O$8zaEn!p:ZhX|~Ygm]AFfI%W?tc1e.>SsT=4&,}', kk[SF[38]] = "" + (kk[SF[0]] || ""), kk[SF[8]] = kk[SF[38]].length, kk[SF[7]] = [], kk[SF[18]] = SF[0], kk[SF[42]] = SF[0], kk[SF[41]] = -SF[1]), kk[-SF[39]] = SF[0]; kk[-SF[39]] < kk[SF[8]]; kk[-SF[39]]++)
-              if (kk[SF[40]] = kk[SF[1]].indexOf(kk[SF[38]][kk[-SF[39]]]), kk[SF[40]] !== -SF[1])
-                if (kk[SF[41]] < SF[0]) kk[SF[41]] = kk[SF[40]];
-                else {
-                  EF(kk[SF[41]] += kk[SF[40]] * SF[23], kk[SF[18]] |= kk[SF[41]] << kk[SF[42]], kk[SF[42]] += (kk[SF[41]] & SF[24]) > SF[25] ? SF[26] : SF[27]);
-                  do {
-                    EF(kk[SF[7]].push(kk[SF[18]] & SF[3]), kk[SF[18]] >>= SF[2], kk[SF[42]] -= SF[2])
-                  } while (kk[SF[42]] > SF[13]);
-                  kk[SF[41]] = -SF[1]
-                } return kk[SF[41]] > -SF[1] && kk[SF[7]].push((kk[SF[18]] | kk[SF[41]] << kk[SF[42]]) & SF[3]), oF(kk[SF[7]])
-          }(JF[kk]) : HF[kk]
-        }
-        if (kk[SF[4]] = SF[0], Fk(126) + "V" in vF && function(...kk) {
-            EF(kk[SF[4]] = SF[0], kk[-SF[44]] = function(...kk) {
-              for (EF(kk[SF[4]] = SF[1], kk[SF[43]] = SF[0], kk[SF[9]] = {}, kk[SF[8]] = SF[0], kk[SF[33]] = SF[0], kk[SF[32]] = SF[0], kk[SF[11]] = kk[SF[0]].length), kk[SF[41]] = SF[0]; kk[SF[41]] < kk[SF[11]]; kk[SF[41]]++) {
-                for (EF(kk[SF[9]] = {}, kk[SF[8]] = SF[0], kk[SF[33]] = SF[1]), kk[-SF[39]] = kk[SF[41]] + SF[1]; kk[-SF[39]] < kk[SF[11]]; kk[-SF[39]]++) kk[SF[0]][kk[SF[41]]].x !== kk[SF[0]][kk[-SF[39]]].x || kk[SF[0]][kk[SF[41]]].y !== kk[SF[0]][kk[-SF[39]]].y ? (kk[SF[0]][kk[SF[41]]].y === kk[SF[0]][kk[-SF[39]]].y ? kk[SF[32]] = Number.MAX_SAFE_INTEGER : kk[SF[32]] = (kk[SF[0]][kk[SF[41]]].x - kk[SF[0]][kk[-SF[39]]].x) / (kk[SF[0]][kk[SF[41]]].y - kk[SF[0]][kk[-SF[39]]].y), kk[SF[9]][kk[SF[32]]] || (kk[SF[9]][kk[SF[32]]] = SF[0]), EF(kk[SF[9]][kk[SF[32]]]++, kk[SF[8]] = Math.max(kk[SF[8]], kk[SF[9]][kk[SF[32]]]))) : kk[SF[33]]++;
-                EF(kk[SF[8]] += kk[SF[33]], kk[SF[43]] = Math.max(kk[SF[43]], kk[SF[8]]))
-              }
-              return kk[SF[43]]
-            }, console.log(kk[-SF[44]]))
-          }(), aF++ === SF[32]) {
-          function Ik(...kk) {
-            function Fk(...kk) {
-              return kk[SF[4]] = SF[1], typeof HF[kk[SF[0]]] === SF[5] ? HF[kk[SF[0]]] = function(...kk) {
-                for (EF(kk[SF[4]] = SF[1], kk[-SF[26]] = 'AbVgHPB|OTnE%9X;?Zq@iNSsc^wY~2]vtMJlpC8Fu.I7kK$zrD"({R51G[h#dx>+yf},moLaWU3`=&!Qe/4j6)0*:<_', kk[-SF[28]] = "" + (kk[SF[0]] || ""), kk[-SF[47]] = kk[-SF[28]].length, kk[SF[7]] = [], kk[SF[45]] = SF[0], kk[SF[11]] = SF[0], kk[SF[48]] = -SF[1]), kk[-SF[46]] = SF[0]; kk[-SF[46]] < kk[-SF[47]]; kk[-SF[46]]++)
-                  if (kk[SF[37]] = kk[-SF[26]].indexOf(kk[-SF[28]][kk[-SF[46]]]), kk[SF[37]] !== -SF[1])
-                    if (kk[SF[48]] < SF[0]) kk[SF[48]] = kk[SF[37]];
-                    else {
-                      EF(kk[SF[48]] += kk[SF[37]] * SF[23], kk[SF[45]] |= kk[SF[48]] << kk[SF[11]], kk[SF[11]] += (kk[SF[48]] & SF[24]) > SF[25] ? SF[26] : SF[27]);
-                      do {
-                        EF(kk[SF[7]].push(kk[SF[45]] & SF[3]), kk[SF[45]] >>= SF[2], kk[SF[11]] -= SF[2])
-                      } while (kk[SF[11]] > SF[13]);
-                      kk[SF[48]] = -SF[1]
-                    } return kk[SF[48]] > -SF[1] && kk[SF[7]].push((kk[SF[45]] | kk[SF[48]] << kk[SF[11]]) & SF[3]), oF(kk[SF[7]])
-              }(JF[kk[SF[0]]]) : HF[kk[SF[0]]]
-            }
-
-            function Ik(kk) {
-              if (!kk) return -SF[1];
-              const Fk = Ik(kk.left),
-                Xk = Ik(kk.right),
-                Tk = Math.abs(Fk - Xk);
-              if (Fk === 1 / 0 || Xk === 1 / 0 || Tk > SF[1]) return 1 / 0;
-              return Math.max(Fk, Xk) + SF[1]
-            }
-            kk[SF[4]] = SF[0], window[Fk(SF[28]) + Fk(129) + Fk(130) + "_"] = {
-              buildCharacterMap: function(...kk) {
-                kk[SF[4]] = SF[1];
-                const Fk = {};
-                for (let Ik of kk[SF[0]].replace(/[^w]/g, "").toLowerCase()) Fk[Ik] = Fk[Ik] + SF[1] || SF[1];
-                return Fk
-              },
-              isAnagrams: function(...kk) {
-                kk[SF[4]] = SF[9];
-                const Fk = buildCharMap(kk[SF[0]]),
-                  Ik = buildCharMap(kk[SF[1]]);
-                for (let Xk in Fk)
-                  if (Fk[Xk] !== Ik[Xk]) return SF[31];
-                return Object.keys(Fk).length !== Object.keys(Ik).length ? SF[31] : SF[49]
-              },
-              isBalanced: function(kk) {
-                return Ik(kk) !== 1 / 0
-              },
-              getHeightBalanced: Ik
+          function Tm(...mm) {
+            switch (mm[zT[12]] = zT[0], ((mm[zT[2]] & zT[58]) !== zT[2]) * zT[0] + (mm[zT[2]] < zT[2]) * zT[18]) {
+              case zT[2]:
+                return [mm[zT[2]] % zT[58], Math.trunc(mm[zT[2]] / zT[59])];
+              case zT[0]:
+                return [mm[zT[2]] % zT[58] - zT[58], Math.trunc(mm[zT[2]] / zT[59]) + zT[0]];
+              case zT[18]:
+                return [((mm[zT[2]] + zT[58]) % zT[58] + zT[58]) % zT[58], Math.round(mm[zT[2]] / zT[59])];
+              case zT[17]:
+                return [mm[zT[2]] % zT[58], Math.trunc(mm[zT[2]] / zT[59])]
             }
           }
-          Fk(SF[16]) + "q" in vF && Ik(), (SF[0], xk.o)() && (SF[0], tk[SF[50]])("4 "), aF = SF[0]
+          let fm = mm([zT[18], zT[36]]),
+            hm = mm([zT[0], zT[18]]),
+            Am = fm + hm,
+            am = Am - hm,
+            xm = am * zT[18],
+            wm = xm / zT[18];
+          bT(console.log(Tm(Am)), console.log(Tm(am)), console.log(Tm(xm)), console.log(Tm(wm)))
         }
-      }), jF = function(kk) {
-        function Fk(kk) {
-          return typeof HF[kk] === SF[5] ? HF[kk] = function(...kk) {
-            for (EF(kk[SF[4]] = SF[1], kk[-SF[53]] = 'l,qI)DN|e0=34H{x.]faJ+CFW6w2@mR9&;ioZAB}Tg^hzEpMc[XvryK($j1sku%O<dU5V`tY>Q"nPGb!*#:_8/?7S~L', kk[SF[51]] = "" + (kk[SF[0]] || ""), kk[SF[50]] = kk[SF[51]].length, kk[-SF[56]] = [], kk[SF[55]] = SF[0], kk[SF[26]] = SF[0], kk[SF[41]] = -SF[1]), kk[SF[52]] = SF[0]; kk[SF[52]] < kk[SF[50]]; kk[SF[52]]++)
-              if (kk[SF[54]] = kk[-SF[53]].indexOf(kk[SF[51]][kk[SF[52]]]), kk[SF[54]] !== -SF[1])
-                if (kk[SF[41]] < SF[0]) kk[SF[41]] = kk[SF[54]];
-                else {
-                  EF(kk[SF[41]] += kk[SF[54]] * SF[23], kk[SF[55]] |= kk[SF[41]] << kk[SF[26]], kk[SF[26]] += (kk[SF[41]] & SF[24]) > SF[25] ? SF[26] : SF[27]);
-                  do {
-                    EF(kk[-SF[56]].push(kk[SF[55]] & SF[3]), kk[SF[55]] >>= SF[2], kk[SF[26]] -= SF[2])
-                  } while (kk[SF[26]] > SF[13]);
-                  kk[SF[41]] = -SF[1]
-                } return kk[SF[41]] > -SF[1] && kk[-SF[56]].push((kk[SF[55]] | kk[SF[41]] << kk[SF[26]]) & SF[3]), oF(kk[-SF[56]])
-          }(JF[kk]) : HF[kk]
-        }
-        if (Fk(131) in vF && function(...kk) {
-            EF(kk[SF[4]] = SF[0], kk[-SF[59]] = function(...kk) {
-              for (EF(kk[SF[4]] = SF[1], kk[-SF[57]] = kk[SF[0]].length, kk[-SF[58]] = [], kk[SF[8]] = SF[0], kk[SF[7]] = SF[0], kk[SF[0]].sort(((kk, Fk) => kk - Fk))), kk[SF[18]] = SF[0]; kk[SF[18]] < kk[-SF[57]]; kk[SF[18]]++)
-                if (!(kk[SF[18]] > SF[0] && kk[SF[0]][kk[SF[18]]] === kk[SF[0]][kk[SF[18]] - SF[1]]))
-                  for (EF(kk[SF[8]] = kk[SF[18]] + SF[1], kk[SF[7]] = kk[-SF[57]] - SF[1]); kk[SF[8]] < kk[SF[7]];)
-                    if (kk[SF[0]][kk[SF[18]]] + kk[SF[0]][kk[SF[8]]] + kk[SF[0]][kk[SF[7]]] < SF[0]) kk[SF[8]]++;
-                    else if (kk[SF[0]][kk[SF[18]]] + kk[SF[0]][kk[SF[8]]] + kk[SF[0]][kk[SF[7]]] > SF[0]) kk[SF[7]]--;
+        hm(zT[76]) + "Y" in kT && Am(), mm[-zT[60]]++
+      }
+      return mm[-zT[60]]
+    }, OT = () => {
+      if (DT++ === zT[37]) {
+        function mm(...mm) {
+          for (bT(mm[zT[12]] = zT[0], mm[zT[62]] = '(w@|ufFq4DdGrkCeQLy6bKctZB9;vEY=*zUT[{a2~AM7H_+xoW}>XgI&$1^3!/:i"#Js0S`RjN%VP)l?p,]Om5n8.<h', mm[zT[61]] = "" + (mm[zT[2]] || ""), mm[zT[25]] = mm[zT[61]].length, mm[zT[64]] = [], mm[zT[39]] = zT[2], mm[zT[21]] = zT[2], mm[zT[6]] = -zT[0]), mm[zT[47]] = zT[2]; mm[zT[47]] < mm[zT[25]]; mm[zT[47]]++)
+            if (mm[zT[63]] = mm[zT[62]].indexOf(mm[zT[61]][mm[zT[47]]]), mm[zT[63]] !== -zT[0])
+              if (mm[zT[6]] < zT[2]) mm[zT[6]] = mm[zT[63]];
               else {
-                for (kk[-SF[58]].push([kk[SF[0]][kk[SF[18]]], kk[SF[0]][kk[SF[8]]], kk[SF[0]][kk[SF[7]]]]); kk[SF[8]] < kk[SF[7]] && kk[SF[0]][kk[SF[8]]] === kk[SF[0]][kk[SF[8]] + SF[1]];) kk[SF[8]]++;
-                for (; kk[SF[8]] < kk[SF[7]] && kk[SF[0]][kk[SF[7]]] === kk[SF[0]][kk[SF[7]] - SF[1]];) kk[SF[7]]--;
-                EF(kk[SF[8]]++, kk[SF[7]]--)
-              }
-              return kk[-SF[58]]
-            }, console.log(kk[-SF[59]]))
-          }(), (arguments[Fk(132)] > SF[1] && arguments[SF[1]] !== SF[6] ? arguments[SF[1]] : SF[31]) && (SF[0], Yk[SF[50]])(kk)) return;
-        const Ik = window[Fk(133)];
-        if (typeof Ik !== Fk(134) + "on" || kk instanceof Ik || (SF[0], Ck.D)(kk)) {
-          function Xk(kk) {
-            var Fk, Ik, Xk, Tk, ik, yk, lk;
-            for (EF(Fk = "" + (kk || ""), Ik = Fk.length, Xk = [], Tk = SF[0], ik = SF[0], yk = -SF[1]), lk = SF[0]; lk < Ik; lk++) {
-              var ak = 'p:oZDkHCVhLGru~Jxe"YO=K8zNfli5q/(,ysP20c`wtm9^@!.)>#36b_IvQB$XMFn[%Ug]+&TaE*S}d4|RW;7<j1?A{'.indexOf(Fk[lk]);
-              if (ak !== -SF[1])
-                if (yk < SF[0]) yk = ak;
+                bT(mm[zT[6]] += mm[zT[63]] * zT[29], mm[zT[39]] |= mm[zT[6]] << mm[zT[21]], mm[zT[21]] += (mm[zT[6]] & zT[32]) > zT[33] ? zT[34] : zT[35]);
+                do {
+                  bT(mm[zT[64]].push(mm[zT[39]] & zT[11]), mm[zT[39]] >>= zT[10], mm[zT[21]] -= zT[10])
+                } while (mm[zT[21]] > zT[9]);
+                mm[zT[6]] = -zT[0]
+              } return mm[zT[6]] > -zT[0] && mm[zT[64]].push((mm[zT[39]] | mm[zT[6]] << mm[zT[21]]) & zT[11]), ZT(mm[zT[64]])
+        }
+
+        function Tm(...Tm) {
+          return Tm[zT[12]] = zT[0], typeof qT[Tm[zT[2]]] === zT[13] ? qT[Tm[zT[2]]] = mm(jT[Tm[zT[2]]]) : qT[Tm[zT[2]]]
+        }
+
+        function fm(...mm) {
+          mm[zT[12]] = zT[2]
+        }
+        if (Tm(101) + "7" in kT && fm(), (zT[2], Vm.l)()) {
+          function hm(...mm) {
+            for (bT(mm[zT[12]] = zT[0], mm[zT[0]] = 'a>O1dEe^N=uHlbi$q]<0/@L:.Y|koZ`IDvT[g;9#2CrX%&U_w)}hcB,*S7Q+?xy4G~"W6MFs{3R8z!P5(JnmKVjfpAt', mm[zT[18]] = "" + (mm[zT[2]] || ""), mm[zT[17]] = mm[zT[18]].length, mm[zT[36]] = [], mm[zT[68]] = zT[2], mm[zT[8]] = zT[2], mm[zT[9]] = -zT[0]), mm[zT[10]] = zT[2]; mm[zT[10]] < mm[zT[17]]; mm[zT[10]]++)
+              if (mm[zT[5]] = mm[zT[0]].indexOf(mm[zT[18]][mm[zT[10]]]), mm[zT[5]] !== -zT[0])
+                if (mm[zT[9]] < zT[2]) mm[zT[9]] = mm[zT[5]];
                 else {
-                  EF(yk += ak * SF[23], Tk |= yk << ik, ik += (yk & SF[24]) > SF[25] ? SF[26] : SF[27]);
+                  bT(mm[zT[9]] += mm[zT[5]] * zT[29], mm[zT[68]] |= mm[zT[9]] << mm[zT[8]], mm[zT[8]] += (mm[zT[9]] & zT[32]) > zT[33] ? zT[34] : zT[35]);
                   do {
-                    EF(Xk.push(Tk & SF[3]), Tk >>= SF[2], ik -= SF[2])
-                  } while (ik > SF[13]);
-                  yk = -SF[1]
-                }
+                    bT(mm[zT[36]].push(mm[zT[68]] & zT[11]), mm[zT[68]] >>= zT[10], mm[zT[8]] -= zT[10])
+                  } while (mm[zT[8]] > zT[9]);
+                  mm[zT[9]] = -zT[0]
+                } return mm[zT[9]] > -zT[0] && mm[zT[36]].push((mm[zT[68]] | mm[zT[9]] << mm[zT[8]]) & zT[11]), ZT(mm[zT[36]])
+          }
+
+          function Am(...mm) {
+            return mm[zT[12]] = zT[0], typeof qT[mm[zT[2]]] === zT[13] ? qT[mm[zT[2]]] = hm(jT[mm[zT[2]]]) : qT[mm[zT[2]]]
+          }
+
+          function am(...mm) {
+            bT(mm[zT[12]] = zT[2], mm[-zT[71]] = function(...Tm) {
+              return bT(Tm[zT[12]] = zT[17], Tm[-zT[69]] = {}), Tm[zT[18]].length !== Tm[zT[2]].length + Tm[zT[0]].length ? zT[70] : mm[zT[27]](Tm[zT[2]], Tm[zT[0]], Tm[zT[18]], zT[2], zT[2], zT[2], Tm[-zT[69]])
+            }, mm[zT[27]] = function(...Tm) {
+              return bT(Tm[zT[12]] = zT[9], Tm[zT[19]] = zT[70]), Tm[zT[37]] >= Tm[zT[18]].length ? zT[81] : Tm[zT[21]]["" + Tm[zT[17]] + Tm[zT[36]] + Tm[zT[37]]] !== zT[14] ? Tm[zT[21]]["" + Tm[zT[17]] + Tm[zT[36]] + Tm[zT[37]]] : (Tm[zT[18]][Tm[zT[37]]] === Tm[zT[2]][Tm[zT[17]]] && Tm[zT[18]][Tm[zT[37]]] === Tm[zT[0]][Tm[zT[36]]] ? Tm[zT[19]] = mm[zT[27]](Tm[zT[2]], Tm[zT[0]], Tm[zT[18]], Tm[zT[17]] + zT[0], Tm[zT[36]], Tm[zT[37]] + zT[0], Tm[zT[21]]) || mm[zT[27]](Tm[zT[2]], Tm[zT[0]], Tm[zT[18]], Tm[zT[17]], Tm[zT[36]] + zT[0], Tm[zT[37]] + zT[0], Tm[zT[21]]) : Tm[zT[18]][Tm[zT[37]]] === Tm[zT[2]][Tm[zT[17]]] ? Tm[zT[19]] = mm[zT[27]](Tm[zT[2]], Tm[zT[0]], Tm[zT[18]], Tm[zT[17]] + zT[0], Tm[zT[36]], Tm[zT[37]] + zT[0], Tm[zT[21]]) : Tm[zT[18]][Tm[zT[37]]] === Tm[zT[0]][Tm[zT[36]]] && (Tm[zT[19]] = mm[zT[27]](Tm[zT[2]], Tm[zT[0]], Tm[zT[18]], Tm[zT[17]], Tm[zT[36]] + zT[0], Tm[zT[37]] + zT[0], Tm[zT[21]])), Tm[zT[21]]["" + Tm[zT[17]] + Tm[zT[36]] + Tm[zT[37]]] = Tm[zT[19]], Tm[zT[19]])
+            }, console.log(mm[-zT[71]]))
+          }
+          Am(107) in kT && am(), (zT[2], pm[zT[30]])("4 ")
+        }
+        DT = zT[2]
+      }
+    }), oT = function(mm) {
+      function Tm(...mm) {
+        return mm[zT[12]] = zT[0], typeof qT[mm[zT[2]]] === zT[13] ? qT[mm[zT[2]]] = function(...mm) {
+          for (bT(mm[zT[12]] = zT[0], mm[zT[0]] = 'K>AEahrGpl_)YC[z6<B.XoDL":&78s~*(4wUOIMQ{R0;mj|gNqv=@t+S1Z^b52kTu$3yW%n9d]},?c!#feiPF`/JVHx', mm[zT[18]] = "" + (mm[zT[2]] || ""), mm[zT[73]] = mm[zT[18]].length, mm[zT[36]] = [], mm[zT[30]] = zT[2], mm[zT[72]] = zT[2], mm[-zT[74]] = -zT[0]), mm[zT[10]] = zT[2]; mm[zT[10]] < mm[zT[73]]; mm[zT[10]]++)
+            if (mm[zT[47]] = mm[zT[0]].indexOf(mm[zT[18]][mm[zT[10]]]), mm[zT[47]] !== -zT[0])
+              if (mm[-zT[74]] < zT[2]) mm[-zT[74]] = mm[zT[47]];
+              else {
+                bT(mm[-zT[74]] += mm[zT[47]] * zT[29], mm[zT[30]] |= mm[-zT[74]] << mm[zT[72]], mm[zT[72]] += (mm[-zT[74]] & zT[32]) > zT[33] ? zT[34] : zT[35]);
+                do {
+                  bT(mm[zT[36]].push(mm[zT[30]] & zT[11]), mm[zT[30]] >>= zT[10], mm[zT[72]] -= zT[10])
+                } while (mm[zT[72]] > zT[9]);
+                mm[-zT[74]] = -zT[0]
+              } return mm[-zT[74]] > -zT[0] && mm[zT[36]].push((mm[zT[30]] | mm[-zT[74]] << mm[zT[72]]) & zT[11]), ZT(mm[zT[36]])
+        }(jT[mm[zT[2]]]) : qT[mm[zT[2]]]
+      }
+      if (Tm(108) in kT && function(...mm) {
+          bT(mm[zT[12]] = zT[2], mm[zT[27]] = function(...Tm) {
+            return bT(Tm[zT[12]] = zT[18], Tm[zT[18]] = [], Tm[zT[17]] = Tm[zT[2]].length, Tm[zT[2]].sort(((mm, Tm) => mm - Tm)), mm[zT[25]](Tm[zT[18]], [], zT[2], Tm[zT[17]], Tm[zT[2]], Tm[zT[0]])), Tm[zT[18]]
+          }, mm[zT[25]] = function(...Tm) {
+            if (bT(Tm[zT[12]] = zT[21], Tm[zT[75]] = zT[67]), !(Tm[zT[37]] < zT[2])) {
+              if (Tm[zT[37]] === zT[2]) return Tm[zT[2]].push(Tm[zT[0]]);
+              for (Tm[zT[9]] = Tm[zT[18]]; Tm[zT[9]] < Tm[zT[17]] && !(Tm[zT[36]][Tm[zT[9]]] > Tm[zT[37]]); Tm[zT[9]]++) Tm[zT[9]] > Tm[zT[18]] && Tm[zT[36]][Tm[zT[9]]] === Tm[zT[36]][Tm[zT[9]] - zT[0]] || bT(Tm[zT[75]] = Array.from(Tm[zT[0]]), Tm[zT[75]].push(Tm[zT[36]][Tm[zT[9]]]), mm[zT[25]](Tm[zT[2]], Tm[zT[75]], Tm[zT[9]] + zT[0], Tm[zT[17]], Tm[zT[36]], Tm[zT[37]] - Tm[zT[36]][Tm[zT[9]]]))
             }
-            return yk > -SF[1] && Xk.push((Tk | yk << ik) & SF[3]), oF(Xk)
+          }, console.log(mm[zT[27]]))
+        }(), (arguments[Tm(109)] > zT[0] && arguments[zT[0]] !== zT[14] ? arguments[zT[0]] : zT[70]) && (zT[2], Bm[zT[6]])(mm)) return;
+      const fm = window[Tm(110)];
+      if (typeof fm !== Tm(111) + "on" || mm instanceof fm || (zT[2], ym.F)(mm)) {
+        function hm(...mm) {
+          for (bT(mm[zT[12]] = zT[0], mm[zT[0]] = '=DaGj"b2zt+&M3C#_u,kN/}HX^R!lSmZgio|p7Fv;0@K9:yYh15]E[?<)4d>IJV%BPAQrL(w8c`Tn{ef$~*x6s.OWqU', mm[zT[18]] = "" + (mm[zT[2]] || ""), mm[zT[17]] = mm[zT[18]].length, mm[zT[57]] = [], mm[zT[37]] = zT[2], mm[zT[77]] = zT[2], mm[-zT[76]] = -zT[0]), mm[zT[3]] = zT[2]; mm[zT[3]] < mm[zT[17]]; mm[zT[3]]++)
+            if (mm[zT[5]] = mm[zT[0]].indexOf(mm[zT[18]][mm[zT[3]]]), mm[zT[5]] !== -zT[0])
+              if (mm[-zT[76]] < zT[2]) mm[-zT[76]] = mm[zT[5]];
+              else {
+                bT(mm[-zT[76]] += mm[zT[5]] * zT[29], mm[zT[37]] |= mm[-zT[76]] << mm[zT[77]], mm[zT[77]] += (mm[-zT[76]] & zT[32]) > zT[33] ? zT[34] : zT[35]);
+                do {
+                  bT(mm[zT[57]].push(mm[zT[37]] & zT[11]), mm[zT[37]] >>= zT[10], mm[zT[77]] -= zT[10])
+                } while (mm[zT[77]] > zT[9]);
+                mm[-zT[76]] = -zT[0]
+              } return mm[-zT[76]] > -zT[0] && mm[zT[57]].push((mm[zT[37]] | mm[-zT[76]] << mm[zT[77]]) & zT[11]), ZT(mm[zT[57]])
+        }
+
+        function Am(...mm) {
+          return mm[zT[12]] = zT[0], typeof qT[mm[zT[2]]] === zT[13] ? qT[mm[zT[2]]] = hm(jT[mm[zT[2]]]) : qT[mm[zT[2]]]
+        }
+        if (mm[Am(zT[84]) + Am(113)] === zT[70])(zT[2], pm[zT[30]])("2 " + (zT[2], Em[zT[30]])(mm));
+        else {
+          function am(...mm) {
+            for (bT(mm[zT[12]] = zT[0], mm[zT[78]] = 'CImNw9,4aleqHprn3}2B|0_vR!O)A"z6dXbsxQ:^Vt7hLU$ZT~5W#]/;>@`1?PKiuF=c+y.kGY8j{D*&M[J%Sf(Eo<g', mm[zT[18]] = "" + (mm[zT[2]] || ""), mm[-zT[1]] = mm[zT[18]].length, mm[-zT[80]] = [], mm[zT[37]] = zT[2], mm[zT[79]] = zT[2], mm[zT[6]] = -zT[0]), mm[zT[10]] = zT[2]; mm[zT[10]] < mm[-zT[1]]; mm[zT[10]]++)
+              if (mm[zT[5]] = mm[zT[78]].indexOf(mm[zT[18]][mm[zT[10]]]), mm[zT[5]] !== -zT[0])
+                if (mm[zT[6]] < zT[2]) mm[zT[6]] = mm[zT[5]];
+                else {
+                  bT(mm[zT[6]] += mm[zT[5]] * zT[29], mm[zT[37]] |= mm[zT[6]] << mm[zT[79]], mm[zT[79]] += (mm[zT[6]] & zT[32]) > zT[33] ? zT[34] : zT[35]);
+                  do {
+                    bT(mm[-zT[80]].push(mm[zT[37]] & zT[11]), mm[zT[37]] >>= zT[10], mm[zT[79]] -= zT[10])
+                  } while (mm[zT[79]] > zT[9]);
+                  mm[zT[6]] = -zT[0]
+                } return mm[zT[6]] > -zT[0] && mm[-zT[80]].push((mm[zT[37]] | mm[zT[6]] << mm[zT[79]]) & zT[11]), ZT(mm[-zT[80]])
           }
 
-          function Tk(...kk) {
-            return kk[SF[4]] = SF[1], typeof HF[kk[SF[0]]] === SF[5] ? HF[kk[SF[0]]] = Xk(JF[kk[SF[0]]]) : HF[kk[SF[0]]]
+          function xm(...mm) {
+            return mm[zT[12]] = zT[0], typeof qT[mm[zT[2]]] === zT[13] ? qT[mm[zT[2]]] = am(jT[mm[zT[2]]]) : qT[mm[zT[2]]]
           }
 
-          function ik(...kk) {
-            function Fk() {}
-            kk[SF[4]] = SF[0], EF(kk[SF[61]] = function(...kk) {
-              for (EF(kk[SF[4]] = SF[9], kk[SF[29]] = SF[0], kk[SF[8]] = SF[0], kk[SF[60]] = new Fk(SF[0]), kk[SF[7]] = kk[SF[60]], kk[SF[11]] = kk[SF[0]], kk[-SF[45]] = kk[SF[1]]); kk[SF[11]] !== SF[20] || kk[-SF[45]] !== SF[20];) EF(kk[SF[8]] = (kk[SF[11]] ? kk[SF[11]].val : SF[0]) + (kk[-SF[45]] ? kk[-SF[45]].val : SF[0]) + kk[SF[29]], kk[SF[29]] = Math.floor(kk[SF[8]] / SF[22]), kk[SF[7]].next = new Fk(kk[SF[8]] % SF[22]), kk[SF[7]] = kk[SF[7]].next, kk[SF[11]] = kk[SF[11]] ? kk[SF[11]].next : SF[20], kk[-SF[45]] = kk[-SF[45]] ? kk[-SF[45]].next : SF[20]);
-              return kk[SF[29]] && (kk[SF[7]].next = new Fk(kk[SF[29]])), kk[SF[60]].next
-            }, console.log(kk[SF[61]]))
+          function wm(...mm) {
+            bT(mm[zT[12]] = zT[2], mm[-zT[82]] = function(...Tm) {
+              return Tm[zT[12]] = zT[18], mm[zT[0]]({}, Tm[zT[2]], Tm[zT[0]])
+            }, mm[zT[0]] = function(...Tm) {
+              if (bT(Tm[zT[12]] = zT[17], Tm[zT[19]] = {}), Tm[zT[2]][Tm[zT[0]] + Tm[zT[18]]] !== zT[14]) return Tm[zT[2]][Tm[zT[0]] + Tm[zT[18]]];
+              if (Tm[zT[0]] === Tm[zT[18]]) return zT[81];
+              for (Tm[zT[1]] = zT[2]; Tm[zT[1]] < Tm[zT[0]].length; Tm[zT[1]]++) Tm[zT[19]][Tm[zT[0]][Tm[zT[1]]]] === zT[14] && (Tm[zT[19]][Tm[zT[0]][Tm[zT[1]]]] = zT[2]), Tm[zT[19]][Tm[zT[18]][Tm[zT[1]]]] === zT[14] && (Tm[zT[19]][Tm[zT[18]][Tm[zT[1]]]] = zT[2]), bT(Tm[zT[19]][Tm[zT[0]][Tm[zT[1]]]]++, Tm[zT[19]][Tm[zT[18]][Tm[zT[1]]]]--);
+              for (Tm[zT[37]] in Tm[zT[19]])
+                if (Tm[zT[19]][Tm[zT[37]]] !== zT[2]) return Tm[zT[2]][Tm[zT[0]] + Tm[zT[18]]] = zT[70], zT[70];
+              for (Tm[zT[21]] = zT[0]; Tm[zT[21]] < Tm[zT[0]].length; Tm[zT[21]]++)
+                if (mm[zT[0]](Tm[zT[2]], Tm[zT[0]].substr(zT[2], Tm[zT[21]]), Tm[zT[18]].substr(zT[2], Tm[zT[21]])) && mm[zT[0]](Tm[zT[2]], Tm[zT[0]].substr(Tm[zT[21]]), Tm[zT[18]].substr(Tm[zT[21]])) || mm[zT[0]](Tm[zT[2]], Tm[zT[0]].substr(zT[2], Tm[zT[21]]), Tm[zT[18]].substr(Tm[zT[18]].length - Tm[zT[21]])) && mm[zT[0]](Tm[zT[2]], Tm[zT[0]].substr(Tm[zT[21]]), Tm[zT[18]].substr(zT[2], Tm[zT[18]].length - Tm[zT[21]]))) return Tm[zT[2]][Tm[zT[0]] + Tm[zT[18]]] = zT[81], zT[81];
+              return Tm[zT[2]][Tm[zT[0]] + Tm[zT[18]]] = zT[70], zT[70]
+            }, console.log(mm[-zT[82]]))
           }
-          if (Tk(135) + "X" in vF && ik(), kk[Tk(136) + Tk(137)] === SF[31])(SF[0], tk[SF[50]])("2 " + (SF[0], Zk.b)(kk));
+          if (xm(114) + "P" in kT && wm(), YT(mm) < zT[86])(zT[2], pm[zT[30]])("3 ");
           else {
-            function yk(kk) {
-              var Fk, Ik, Xk, Tk, ik, yk, lk;
-              for (EF(Fk = "" + (kk || ""), Ik = Fk.length, Xk = [], Tk = SF[0], ik = SF[0], yk = -SF[1]), lk = SF[0]; lk < Ik; lk++) {
-                var ak = 'c|MLG2HoJz*6=?:d5~%s.C3"[7(,bP<;wQx@+4{YT$u!`9j1t8Vy}/#v)^0>k]_&SfqZrgDKemBUanFANIXiWERpOlh'.indexOf(Fk[lk]);
-                if (ak !== -SF[1])
-                  if (yk < SF[0]) yk = ak;
-                  else {
-                    EF(yk += ak * SF[23], Tk |= yk << ik, ik += (yk & SF[24]) > SF[25] ? SF[26] : SF[27]);
-                    do {
-                      EF(Xk.push(Tk & SF[3]), Tk >>= SF[2], ik -= SF[2])
-                    } while (ik > SF[13]);
-                    yk = -SF[1]
-                  }
-              }
-              return yk > -SF[1] && Xk.push((Tk | yk << ik) & SF[3]), oF(Xk)
+            function Dm(...mm) {
+              bT(mm[zT[12]] = zT[2], mm[zT[83]] = function(...mm) {
+                if (bT(mm[zT[12]] = zT[0], mm[zT[0]] = mm[zT[2]].length), mm[zT[0]] < zT[18]) return zT[2];
+                if (bT(mm[zT[18]] = Math.max(...mm[zT[2]]), mm[zT[17]] = Math.min(...mm[zT[2]])), mm[zT[18]] === mm[zT[17]]) return zT[2];
+                for (bT(mm[zT[84]] = Array(mm[zT[0]] - zT[0]).fill(Number.MAX_SAFE_INTEGER), mm[zT[30]] = Array(mm[zT[0]] - zT[0]).fill(Number.MIN_SAFE_INTEGER), mm[zT[85]] = Math.ceil((mm[zT[18]] - mm[zT[17]]) / (mm[zT[0]] - zT[0])), mm[zT[6]] = zT[2]), mm[zT[3]] = zT[2]; mm[zT[3]] < mm[zT[0]]; mm[zT[3]]++) mm[zT[2]][mm[zT[3]]] !== mm[zT[17]] && mm[zT[2]][mm[zT[3]]] !== mm[zT[18]] && bT(mm[zT[6]] = Math.floor((mm[zT[2]][mm[zT[3]]] - mm[zT[17]]) / mm[zT[85]]), mm[zT[84]][mm[zT[6]]] = Math.min(mm[zT[84]][mm[zT[6]]], mm[zT[2]][mm[zT[3]]]), mm[zT[30]][mm[zT[6]]] = Math.max(mm[zT[30]][mm[zT[6]]], mm[zT[2]][mm[zT[3]]]));
+                for (bT(mm[-zT[88]] = Number.MIN_SAFE_INTEGER, mm[zT[86]] = mm[zT[17]]), mm[-zT[87]] = zT[2]; mm[-zT[87]] < mm[zT[0]] - zT[0]; mm[-zT[87]]++) mm[zT[84]][mm[-zT[87]]] === Number.MAX_SAFE_INTEGER && mm[zT[30]][mm[-zT[87]]] === Number.MIN_SAFE_INTEGER || bT(mm[-zT[88]] = Math.max(mm[-zT[88]], mm[zT[84]][mm[-zT[87]]] - mm[zT[86]]), mm[zT[86]] = mm[zT[30]][mm[-zT[87]]]);
+                return mm[-zT[88]] = Math.max(mm[-zT[88]], mm[zT[18]] - mm[zT[86]]), mm[-zT[88]]
+              }, console.log(mm[zT[83]]))
             }
-
-            function lk(...kk) {
-              return kk[SF[4]] = SF[1], typeof HF[kk[SF[0]]] === SF[5] ? HF[kk[SF[0]]] = yk(JF[kk[SF[0]]]) : HF[kk[SF[0]]]
-            }
-            if (lk(138), wF(kk) < SF[22]) {
-              function ak(...kk) {
-                for (EF(kk[SF[4]] = SF[1], kk[SF[66]] = ')KMEbDSkoQIplWfCsgOiPVLm9@/0*:t^+~Z}d=x;XYB,1HeUhw&(%[`_ya7GTv]AqNF"?24J$!R56>rj#.nc{z83|u<', kk[-SF[65]] = "" + (kk[SF[0]] || ""), kk[-SF[51]] = kk[-SF[65]].length, kk[SF[68]] = [], kk[-SF[67]] = SF[0], kk[SF[19]] = SF[0], kk[-SF[34]] = -SF[1]), kk[SF[2]] = SF[0]; kk[SF[2]] < kk[-SF[51]]; kk[SF[2]]++)
-                  if (kk[SF[40]] = kk[SF[66]].indexOf(kk[-SF[65]][kk[SF[2]]]), kk[SF[40]] !== -SF[1])
-                    if (kk[-SF[34]] < SF[0]) kk[-SF[34]] = kk[SF[40]];
-                    else {
-                      EF(kk[-SF[34]] += kk[SF[40]] * SF[23], kk[-SF[67]] |= kk[-SF[34]] << kk[SF[19]], kk[SF[19]] += (kk[-SF[34]] & SF[24]) > SF[25] ? SF[26] : SF[27]);
-                      do {
-                        EF(kk[SF[68]].push(kk[-SF[67]] & SF[3]), kk[-SF[67]] >>= SF[2], kk[SF[19]] -= SF[2])
-                      } while (kk[SF[19]] > SF[13]);
-                      kk[-SF[34]] = -SF[1]
-                    } return kk[-SF[34]] > -SF[1] && kk[SF[68]].push((kk[-SF[67]] | kk[-SF[34]] << kk[SF[19]]) & SF[3]), oF(kk[SF[68]])
-              }
-
-              function qk(...kk) {
-                return kk[SF[4]] = SF[1], typeof HF[kk[SF[0]]] === SF[5] ? HF[kk[SF[0]]] = ak(JF[kk[SF[0]]]) : HF[kk[SF[0]]]
-              }
-
-              function Lk(...kk) {
-                EF(kk[SF[4]] = SF[0], kk[SF[29]] = function(...Fk) {
-                  return Fk[SF[4]] = SF[9], kk[SF[1]]({}, Fk[SF[0]], Fk[SF[1]])
-                }, kk[SF[1]] = function(...Fk) {
-                  if (EF(Fk[SF[4]] = SF[8], Fk[-SF[69]] = {}), Fk[SF[0]][Fk[SF[1]] + Fk[SF[9]]] !== SF[6]) return Fk[SF[0]][Fk[SF[1]] + Fk[SF[9]]];
-                  if (Fk[SF[1]] === Fk[SF[9]]) return SF[49];
-                  for (Fk[-SF[8]] = SF[0]; Fk[-SF[8]] < Fk[SF[1]].length; Fk[-SF[8]]++) Fk[-SF[69]][Fk[SF[1]][Fk[-SF[8]]]] === SF[6] && (Fk[-SF[69]][Fk[SF[1]][Fk[-SF[8]]]] = SF[0]), Fk[-SF[69]][Fk[SF[9]][Fk[-SF[8]]]] === SF[6] && (Fk[-SF[69]][Fk[SF[9]][Fk[-SF[8]]]] = SF[0]), EF(Fk[-SF[69]][Fk[SF[1]][Fk[-SF[8]]]]++, Fk[-SF[69]][Fk[SF[9]][Fk[-SF[8]]]]--);
-                  for (Fk[SF[58]] in Fk[-SF[69]])
-                    if (Fk[-SF[69]][Fk[SF[58]]] !== SF[0]) return Fk[SF[0]][Fk[SF[1]] + Fk[SF[9]]] = SF[31], SF[31];
-                  for (Fk[SF[7]] = SF[1]; Fk[SF[7]] < Fk[SF[1]].length; Fk[SF[7]]++)
-                    if (kk[SF[1]](Fk[SF[0]], Fk[SF[1]].substr(SF[0], Fk[SF[7]]), Fk[SF[9]].substr(SF[0], Fk[SF[7]])) && kk[SF[1]](Fk[SF[0]], Fk[SF[1]].substr(Fk[SF[7]]), Fk[SF[9]].substr(Fk[SF[7]])) || kk[SF[1]](Fk[SF[0]], Fk[SF[1]].substr(SF[0], Fk[SF[7]]), Fk[SF[9]].substr(Fk[SF[9]].length - Fk[SF[7]])) && kk[SF[1]](Fk[SF[0]], Fk[SF[1]].substr(Fk[SF[7]]), Fk[SF[9]].substr(SF[0], Fk[SF[9]].length - Fk[SF[7]]))) return Fk[SF[0]][Fk[SF[1]] + Fk[SF[9]]] = SF[49], SF[49];
-                  return Fk[SF[0]][Fk[SF[1]] + Fk[SF[9]]] = SF[31], SF[31]
-                }, console.log(kk[SF[29]]))
-              }
-              qk(SF[60]) + "u" in vF && Lk(), (SF[0], tk[SF[50]])("3 ")
-            } else eF()
+            xm(115) in kT && Dm(), OT()
           }
-        } else(SF[0], tk[SF[50]])("5 ")
-      }, wk.g.subscribe("customBindingsChanged", (() => {
-        nF()
-      }));
-    let GF = !1,
-      pF = !1;
-    const uF = () => GF || pF && Gk.d.isInGame(),
-      bF = kk => {
-        uF() && kk.preventDefault()
-      };
-    wk.g.subscribe("displaymodeFullscreenChange", (kk => {
-      RF()
-    })), wk.g.subscribe("pointerLockUpdate", (kk => {
-      GF = kk, RF(), UF()
-    })), wk.g.subscribe("freeCursorUpdate", (kk => {
-      pF = kk, RF(), UF()
+        }
+      } else(zT[2], pm[zT[30]])("5 ")
+    }, Ym.j.subscribe("customBindingsChanged", (() => {
+      eT()
     }));
-    const RF = () => {
-        window.removeEventListener("wheel", bF), pk.l && !(0, yk.n)() && (GF || pF) && window.addEventListener("wheel", bF, {
+    let NT = !1,
+      GT = !1;
+    const XT = () => NT || GT && em.b.isInGame(),
+      PT = mm => {
+        XT() && mm.preventDefault()
+      };
+    Ym.j.subscribe("displaymodeFullscreenChange", (mm => {
+      HT()
+    })), Ym.j.subscribe("pointerLockUpdate", (mm => {
+      NT = mm, HT(), yT()
+    })), Ym.j.subscribe("freeCursorUpdate", (mm => {
+      GT = mm, HT(), yT()
+    }));
+    const HT = () => {
+        window.removeEventListener("wheel", PT), Nm.f && !(0, xm.t)() && (NT || GT) && window.addEventListener("wheel", PT, {
           passive: !1
         })
       },
-      UF = () => {
-        window.removeEventListener("wheel", CF), (GF || pF) && window.addEventListener("wheel", CF, {
+      yT = () => {
+        window.removeEventListener("wheel", CT), (NT || GT) && window.addEventListener("wheel", CT, {
           passive: !1
         })
       },
-      CF = kk => {
-        !0 === kk.ctrlKey && uF() && kk.preventDefault()
+      CT = mm => {
+        !0 === mm.ctrlKey && XT() && mm.preventDefault()
       };
 
-    function NF(kk) {
-      wk.g.GL("QTEMouseState", {
-        isDown: kk
+    function rT(mm) {
+      Ym.j.gp("QTEMouseState", {
+        isDown: mm
       })
     }
 
-    function cF(kk) {
-      var Fk, Ik, Tk, ik, yk, lk, ak, qk;
-      const tk = (0, Ek.e)();
-      tk.Vkk = null !== (Fk = function(kk, Fk) {
-        var Ik, Xk;
-        if (!LF) return null;
-        const Tk = kk.bloxd;
-        yF ??= Tk.getMetaInfo("Board").rootId;
-        const ik = null !== (Ik = null === Fk || void 0 === Fk ? void 0 : Fk.YM) && void 0 !== Ik ? Ik : null;
-        if (!ik || Tk.getMetaInfo(ik).rootId !== yF) return null;
-        const yk = null !== (Xk = null === Fk || void 0 === Fk ? void 0 : Fk.position) && void 0 !== Xk ? Xk : null;
-        if (Tk.playerCanChangePos(kk.oR, yk[0], yk[1], yk[2])) return null;
-        const lk = (kk, Fk, Ik) => {
-          const Xk = Tk.blockDataOwner.getBlockData(kk, Fk, Ik),
-            ik = null === Xk || void 0 === Xk ? void 0 : Xk.persisted.shared.text.split("\n")[0].toLowerCase().trim();
-          return uk.singleLineBoardActions.has(ik)
+    function sT(mm) {
+      var Tm, fm, Am, am, xm, wm, Dm, im;
+      const pm = (0, km.d)();
+      pm.Qmm = null !== (Tm = function(mm, Tm) {
+        var fm, hm;
+        if (!RT) return null;
+        const Am = mm.bloxd;
+        xT ??= Am.getMetaInfo("Board").rootId;
+        const am = null !== (fm = null === Tm || void 0 === Tm ? void 0 : Tm.XF) && void 0 !== fm ? fm : null;
+        if (!am || Am.getMetaInfo(am).rootId !== xT) return null;
+        const xm = null !== (hm = null === Tm || void 0 === Tm ? void 0 : Tm.position) && void 0 !== hm ? hm : null;
+        if (Am.playerCanChangePos(mm.xH, xm[0], xm[1], xm[2])) return null;
+        const wm = (mm, Tm, fm) => {
+          const hm = Am.blockDataOwner.getBlockData(mm, Tm, fm),
+            am = null === hm || void 0 === hm ? void 0 : hm.persisted.shared.text.split("\n")[0].toLowerCase().trim();
+          return Gm.singleLineBoardActions.has(am)
         };
-        if (lk(yk[0], yk[1], yk[2])) return null;
-        let ak;
-        kk.ckk && (ak = [...kk.ckk], kk.Km(ak, ak));
-        const qk = (ak ? kk.camera.JY : 0) + Tk.getBlockReach(kk.oR);
-        return kk.pickBlock(ak, kk.Wkk, qk, ((Fk, Ik, Xk, ik) => 0 !== Fk && ("Board" !== Tk.getMetaInfo(Fk).rootName || Tk.playerCanChangePos(kk.oR, Ik, Xk, ik) || lk(Ik, Xk, ik))))
-      }(tk, tk.Vkk)) && void 0 !== Fk ? Fk : tk.Vkk;
-      const Zk = null !== (Ik = null === (Tk = tk.Vkk) || void 0 === Tk ? void 0 : Tk.position) && void 0 !== Ik ? Ik : null,
-        ek = null !== (ik = tk.Wkk) && void 0 !== ik ? ik : tk.camera.Am(),
-        Hk = Ek.f.localPlayerPickActionHelper.getPickEntityResult(ek),
-        Jk = null !== (yk = tk.Vkk) && void 0 !== yk && yk.YM ? (0, Nk.f)(tk.Vkk.YM) : "Air",
-        xk = kk === jk.d.UpFirePrimary || kk === jk.d.UpFireSecondary,
-        Pk = xk ? "onPlayerClickUp" : "onPlayerClick",
-        Kk = xk ? kk === jk.d.UpFireSecondary : kk === jk.d.DownFireSecondary,
-        Qk = !xk && (0, Xk.getWasDoubleClick)();
-      wk.g.GL("mouseState", {
-        yL: kk,
-        isDown: !xk
-      }), (0, Xk.sendColyMessage)(Lk.ch, {
-        yL: kk,
-        lL: Qk,
-        Hy: Zk,
-        Jy: Hk
-      }, !0), (0, Ek.c)().client.triggerGameCallback(Pk, tk.oR, Kk, null !== (lk = null === Zk || void 0 === Zk ? void 0 : Zk[0]) && void 0 !== lk ? lk : null, null !== (ak = null === Zk || void 0 === Zk ? void 0 : Zk[1]) && void 0 !== ak ? ak : null, null !== (qk = null === Zk || void 0 === Zk ? void 0 : Zk[2]) && void 0 !== qk ? qk : null, Jk, Hk)
+        if (wm(xm[0], xm[1], xm[2])) return null;
+        let Dm;
+        mm.rmm && (Dm = [...mm.rmm], mm.kU(Dm, Dm));
+        const im = (Dm ? mm.camera.fL : 0) + Am.getBlockReach(mm.xH);
+        return mm.pickBlock(Dm, mm.smm, im, ((Tm, fm, hm, am) => 0 !== Tm && ("Board" !== Am.getMetaInfo(Tm).rootName || Am.playerCanChangePos(mm.xH, fm, hm, am) || wm(fm, hm, am))))
+      }(pm, pm.Qmm)) && void 0 !== Tm ? Tm : pm.Qmm;
+      const Em = null !== (fm = null === (Am = pm.Qmm) || void 0 === Am ? void 0 : Am.position) && void 0 !== fm ? fm : null,
+        Om = null !== (am = pm.smm) && void 0 !== am ? am : pm.camera.dU(),
+        qm = km.f.localPlayerPickActionHelper.getPickEntityResult(Om),
+        jm = null !== (xm = pm.Qmm) && void 0 !== xm && xm.XF ? (0, Cm.f)(pm.Qmm.XF) : "Air",
+        Vm = mm === om.d.UpFirePrimary || mm === om.d.UpFireSecondary,
+        Im = Vm ? "onPlayerClickUp" : "onPlayerClick",
+        Km = Vm ? mm === om.d.UpFireSecondary : mm === om.d.DownFireSecondary,
+        Qm = !Vm && (0, hm.getWasDoubleClick)();
+      Ym.j.gp("mouseState", {
+        VR: mm,
+        isDown: !Vm
+      }), (0, hm.sendColyMessage)(Rm.Dh, {
+        VR: mm,
+        IR: Qm,
+        Jx: Em,
+        zx: qm
+      }, !0), (0, km.c)().client.triggerGameCallback(Im, pm.xH, Km, null !== (wm = null === Em || void 0 === Em ? void 0 : Em[0]) && void 0 !== wm ? wm : null, null !== (Dm = null === Em || void 0 === Em ? void 0 : Em[1]) && void 0 !== Dm ? Dm : null, null !== (im = null === Em || void 0 === Em ? void 0 : Em[2]) && void 0 !== im ? im : null, jm, qm)
     }
-    window.addEventListener("keydown", (kk => {
-      ["ArrowUp", "ArrowDown"].includes(kk.key) && kk.preventDefault()
-    })), document.addEventListener("keydown", (kk => {
-      (0, Uk.e)(kk, (() => {
-        const kk = (0, Ek.e)();
-        return (0, Rk.Q)(kk) || !1 !== kk.gJ.canCustomiseChar
+    window.addEventListener("keydown", (mm => {
+      ["ArrowUp", "ArrowDown"].includes(mm.key) && mm.preventDefault()
+    })), document.addEventListener("keydown", (mm => {
+      (0, Hm.b)(mm, (() => {
+        const mm = (0, km.d)();
+        return (0, Pm.H)(mm) || !1 !== mm.xI.canCustomiseChar
       }))
     }))
   },
-  39089: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => ik,
-      f: () => yk
+  39217: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => am,
+      e: () => xm
     });
-    var Xk = Ik(38417);
-    let Tk = !1;
+    var hm = fm(38530);
+    let Am = !1;
 
-    function ik() {
-      return Tk
+    function am() {
+      return Am
     }
 
-    function yk(kk) {
-      Tk = kk, kk ? Xk.h.setMultiplierType("emoteWheel", 0) : Xk.h.removeMultiplier("emoteWheel")
+    function xm(mm) {
+      Am = mm, mm ? hm.e.setMultiplierType("emoteWheel", 0) : hm.e.removeMultiplier("emoteWheel")
     }
   },
-  39094: (kk, Fk, Ik) => {
-    function Xk(kk) {
-      return Boolean(kk.gJ.useInventory && kk.gJ.useFullInventory && kk.MJ.zFk(kk.oR))
+  39222: (mm, Tm, fm) => {
+    function hm(mm) {
+      return Boolean(mm.xI.useInventory && mm.xI.useFullInventory && mm.qI.JTm(mm.xH))
     }
-    Ik.d(Fk, {
-      e: () => Xk
+    fm.d(Tm, {
+      c: () => hm
     })
   },
-  38973: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => ik,
-      c: () => Tk
+  39109: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => am,
+      g: () => Am
     });
-    var Xk = Ik(37215);
+    var hm = fm(37233);
 
-    function Tk(kk, Fk) {
+    function Am(mm, Tm) {
       return {
-        replayedClipName: kk,
-        replayedClipAgeSeconds: Fk
+        replayedClipName: mm,
+        replayedClipAgeSeconds: Tm
       }
     }
 
-    function ik(kk, Fk, Ik, Tk, ik) {
-      const yk = function(kk) {
-          if ("object" !== typeof kk || null === kk) return null;
+    function am(mm, Tm, fm, Am, am) {
+      const xm = function(mm) {
+          if ("object" !== typeof mm || null === mm) return null;
           const {
-            replayedClipName: Fk,
-            replayedClipAgeSeconds: Ik
-          } = kk;
-          return "string" === typeof Fk && "number" === typeof Ik ? {
-            rT: Fk,
-            DT: Ik
+            replayedClipName: Tm,
+            replayedClipAgeSeconds: fm
+          } = mm;
+          return "string" === typeof Tm && "number" === typeof fm ? {
+            xa: Tm,
+            Da: fm
           } : null
-        }(Ik),
-        lk = null === yk ? Ik : null,
+        }(fm),
+        wm = null === xm ? fm : null,
         {
-          rT: ak = null,
-          DT: qk = 0
-        } = null !== yk && void 0 !== yk ? yk : {};
-      kk.animateEntity(Fk, Xk.c.Custom, lk, Tk, ik, ak, qk)
+          xa: Dm = null,
+          Da: im = 0
+        } = null !== xm && void 0 !== xm ? xm : {};
+      mm.animateEntity(Tm, hm.h.Custom, wm, Am, am, Dm, im)
     }
   },
-  38979: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => ek,
-      f: () => Lk,
-      h: () => jk,
-      j: () => Zk,
-      l: () => wk,
-      m: () => tk
+  39114: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => Om,
+      i: () => Rm,
+      k: () => om,
+      n: () => Em,
+      o: () => Ym,
+      s: () => pm
     });
-    var Xk = Ik(38986),
-      Tk = Ik(37299),
-      ik = Ik(3631),
-      yk = Ik(1881),
-      lk = Ik(34),
-      ak = Ik(2700);
-    const qk = new Xk.d;
+    var hm = fm(39121),
+      Am = fm(37312),
+      am = fm(3672),
+      xm = fm(1912),
+      wm = fm(31),
+      Dm = fm(2760);
+    const im = new hm.b;
 
-    function Lk() {
-      return qk
+    function Rm() {
+      return im
     }
 
-    function tk() {
-      qk.clear()
+    function pm() {
+      im.clear()
     }
 
-    function Zk() {
-      for (const kk of qk.ids()) {
-        const Fk = qk.getName(kk);
-        void 0 !== Fk && yk.d.delete(Fk)
+    function Em() {
+      for (const mm of im.ids()) {
+        const Tm = im.getName(mm);
+        void 0 !== Tm && xm.e.delete(Tm)
       }
-      tk(), lk.g.GL("playerRosterChanged", qk.ids())
+      pm(), wm.j.gp("playerRosterChanged", im.ids())
     }
 
-    function jk(kk, Fk) {
-      var Ik, Xk;
-      if (qk.has(kk)) return qk.getSetting(kk, Fk);
-      const Tk = (0, ak.e)();
-      return null === (Ik = Tk.xR[Tk.oR]) || void 0 === Ik || null === (Xk = Ik[kk]) || void 0 === Xk ? void 0 : Xk[Fk]
+    function om(mm, Tm) {
+      var fm, hm;
+      if (im.has(mm)) return im.getSetting(mm, Tm);
+      const Am = (0, Dm.d)();
+      return null === (fm = Am.mH[Am.xH]) || void 0 === fm || null === (hm = fm[mm]) || void 0 === hm ? void 0 : hm[Tm]
     }
 
-    function ek(kk) {
+    function Om(mm) {
       const {
-        added: Fk,
-        removed: Ik,
-        settingChanges: Xk
-      } = qk.apply(kk);
+        added: Tm,
+        removed: fm,
+        settingChanges: hm
+      } = im.apply(mm);
       for (const {
-          playerId: Tk,
-          name: ik
+          playerId: Am,
+          name: am
         }
-        of Ik) void 0 === ik || Hk(Tk) || yk.d.delete(ik);
+        of fm) void 0 === am || qm(Am) || xm.e.delete(am);
       for (const {
-          playerId: ik,
-          settings: yk
+          playerId: am,
+          settings: xm
         }
-        of Xk)
-        if (Hk(ik)) wk(ik, yk);
+        of hm)
+        if (qm(am)) Ym(am, xm);
         else
-          for (const kk in yk)(0, Tk.j)(ik, kk, yk[kk]);
-      (Fk.length > 0 || Ik.length > 0) && lk.g.GL("playerRosterChanged", qk.ids())
+          for (const mm in xm)(0, Am.j)(am, mm, xm[mm]);
+      (Tm.length > 0 || fm.length > 0) && wm.j.gp("playerRosterChanged", im.ids())
     }
 
-    function wk(kk) {
-      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qk.getSettings(kk);
-      if (Fk) {
-        (0, Tk.c)(kk);
-        for (const Ik in Fk)(0, Tk.b)(kk, Ik, Fk[Ik])
+    function Ym(mm) {
+      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : im.getSettings(mm);
+      if (Tm) {
+        (0, Am.f)(mm);
+        for (const fm in Tm)(0, Am.d)(mm, fm, Tm[fm])
       }
     }
 
-    function Hk(kk) {
-      return kk === (0, ak.e)().Nkk || (0, ak.c)().client.hasEntity(kk)
-    }(0, ik.onGameReset)(tk)
+    function qm(mm) {
+      return mm === (0, Dm.d)().Cmm || (0, Dm.c)().client.hasEntity(mm)
+    }(0, am.onGameReset)(pm)
   },
-  38094: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => vk,
-      c: () => sk,
-      e: () => zk,
-      i: () => Sk,
-      l: () => Ek
+  38149: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => Zm,
+      c: () => nm,
+      g: () => cm,
+      k: () => zm,
+      m: () => km
     });
-    var Xk = Ik(37144),
-      Tk = Ik(38099),
-      ik = Ik(354),
-      yk = Ik.n(ik),
-      lk = Ik(3344);
-    const ak = new Xk.Ge,
-      qk = new Xk.Ge,
-      Lk = new Xk.Ge,
-      tk = new Xk.Ge,
-      Zk = new Xk.Ge,
-      jk = [0, 0, 0],
-      ek = {
+    var hm = fm(37181),
+      Am = fm(38151),
+      am = fm(362),
+      xm = fm.n(am),
+      wm = fm(3409);
+    const Dm = new hm.WO,
+      im = new hm.WO,
+      Rm = new hm.WO,
+      pm = new hm.WO,
+      Em = new hm.WO,
+      om = [0, 0, 0],
+      Om = {
         x: 0,
         y: 0
       },
-      wk = new Xk.Ge(1, 0, 0),
-      Hk = new Xk.Ge(0, 1, 0),
-      Jk = Xk.Matrix.Identity(),
-      xk = new Xk.Matrix,
-      Pk = new Xk.Matrix,
-      Kk = new Xk.Ge,
-      Qk = new Tk.c(0, 0, 0, 0);
+      Ym = new hm.WO(1, 0, 0),
+      qm = new hm.WO(0, 1, 0),
+      jm = hm.Matrix.Identity(),
+      Vm = new hm.Matrix,
+      Im = new hm.Matrix,
+      Km = new hm.WO,
+      Qm = new Am.b(0, 0, 0, 0);
 
-    function sk(kk, Fk) {
-      var Ik, Tk;
-      const ik = Vk(kk, Fk);
-      if (ik) {
-        const kk = ik.x,
-          Fk = ik.y,
-          Ik = kk - 50,
-          Xk = Fk - 50;
-        return Math.abs(Ik) <= lk.d && Math.abs(Xk) <= (0, lk.j)() ? {
-          x: kk,
-          y: Fk
-        } : nk(Ik, Xk)
+    function nm(mm, Tm) {
+      var fm, Am;
+      const am = Jm(mm, Tm);
+      if (am) {
+        const mm = am.x,
+          Tm = am.y,
+          fm = mm - 50,
+          hm = Tm - 50;
+        return Math.abs(fm) <= wm.e && Math.abs(hm) <= (0, wm.i)() ? {
+          x: mm,
+          y: Tm
+        } : Sm(fm, hm)
       }
-      Lk.t5(Fk[0], Fk[1], Fk[2]),
-        function(kk) {
-          const Fk = kk.Xw.GIk(),
-            Ik = Fk ? Xk.Matrix.FromArrayToRef(Fk.worldMatrix, 0, Pk) : kk.Xw.mG().activeCamera.getWorldMatrix();
-          Xk.Ge.TransformNormalToRef(wk, Ik, tk), tk.normalize(), Xk.Ge.TransformNormalToRef(Hk, Ik, Zk), Zk.normalize()
-        }(kk);
-      const yk = Xk.Ge.Dot(Lk, tk);
-      let ak = -Xk.Ge.Dot(Lk, Zk);
-      Math.abs(yk) < .001 && Math.abs(ak) < .001 && (ak = -1);
-      const qk = null !== (Ik = null === (Tk = kk.Xw.GIk()) || void 0 === Tk ? void 0 : Tk.projectionMatrix) && void 0 !== Ik ? Ik : kk.Xw.mG().activeCamera.getProjectionMatrix().m;
-      return nk(yk * qk[0], ak * qk[5])
+      Rm.Z8(Tm[0], Tm[1], Tm[2]),
+        function(mm) {
+          const Tm = mm.qY.Nfm(),
+            fm = Tm ? hm.Matrix.FromArrayToRef(Tm.worldMatrix, 0, Im) : mm.qY.wG().activeCamera.getWorldMatrix();
+          hm.WO.TransformNormalToRef(Ym, fm, pm), pm.normalize(), hm.WO.TransformNormalToRef(qm, fm, Em), Em.normalize()
+        }(mm);
+      const xm = hm.WO.Dot(Rm, pm);
+      let Dm = -hm.WO.Dot(Rm, Em);
+      Math.abs(xm) < .001 && Math.abs(Dm) < .001 && (Dm = -1);
+      const im = null !== (fm = null === (Am = mm.qY.Nfm()) || void 0 === Am ? void 0 : Am.projectionMatrix) && void 0 !== fm ? fm : mm.qY.wG().activeCamera.getProjectionMatrix().m;
+      return Sm(xm * im[0], Dm * im[5])
     }
 
-    function Vk(kk, Fk) {
-      const Ik = kk.Xw.mG(),
-        Tk = Ik.Oe(),
-        ik = Tk.getRenderWidth(),
-        yk = Tk.getRenderHeight();
-      Qk.width = ik, Qk.height = yk;
-      const lk = kk.Xw.GIk(),
-        Lk = lk ? Kk.t5(lk.eye[0], lk.eye[1], lk.eye[2]) : kk.Xw.camera.globalPosition;
-      ak.t5(Lk.x + 10 * Fk[0], Lk.y + 10 * Fk[1], Lk.z + 10 * Fk[2]);
-      const tk = lk ? Xk.Matrix.FromArrayToRef(lk.viewProjectionMatrix, 0, xk) : Ik.getTransformMatrix();
-      return Xk.Ge.ProjectToRef(ak, Jk, tk, Qk, qk), qk.z < 0 || qk.z > 1 ? null : (ek.x = qk.x / ik * 100, ek.y = qk.y / yk * 100, ek)
+    function Jm(mm, Tm) {
+      const fm = mm.qY.wG(),
+        Am = fm.dO(),
+        am = Am.getRenderWidth(),
+        xm = Am.getRenderHeight();
+      Qm.width = am, Qm.height = xm;
+      const wm = mm.qY.Nfm(),
+        Rm = wm ? Km.Z8(wm.eye[0], wm.eye[1], wm.eye[2]) : mm.qY.camera.globalPosition;
+      Dm.Z8(Rm.x + 10 * Tm[0], Rm.y + 10 * Tm[1], Rm.z + 10 * Tm[2]);
+      const pm = wm ? hm.Matrix.FromArrayToRef(wm.viewProjectionMatrix, 0, Vm) : fm.getTransformMatrix();
+      return hm.WO.ProjectToRef(Dm, jm, pm, Qm, im), im.z < 0 || im.z > 1 ? null : (Om.x = im.x / am * 100, Om.y = im.y / xm * 100, Om)
     }
 
-    function zk(kk, Fk) {
-      return sk(kk, Ok(kk, Fk))
+    function cm(mm, Tm) {
+      return nm(mm, bm(mm, Tm))
     }
 
-    function Sk(kk, Fk) {
-      const Ik = Vk(kk, Ok(kk, Fk));
-      return Ik && {
-        x: Ik.x,
-        y: Ik.y
+    function zm(mm, Tm) {
+      const fm = Jm(mm, bm(mm, Tm));
+      return fm && {
+        x: fm.x,
+        y: fm.y
       }
     }
 
-    function vk(kk) {
-      var Fk, Ik;
-      return 1 / (null !== (Fk = null === (Ik = kk.Xw.GIk()) || void 0 === Ik ? void 0 : Ik.projectionMatrix[0]) && void 0 !== Fk ? Fk : kk.Xw.mG().activeCamera.getProjectionMatrix().m[0])
+    function Zm(mm) {
+      var Tm, fm;
+      return 1 / (null !== (Tm = null === (fm = mm.qY.Nfm()) || void 0 === fm ? void 0 : fm.projectionMatrix[0]) && void 0 !== Tm ? Tm : mm.qY.wG().activeCamera.getProjectionMatrix().m[0])
     }
 
-    function Ek(kk, Fk, Ik) {
-      const Xk = kk.Xw.GIk(),
-        Tk = Xk ? Xk.worldMatrix : kk.Xw.mG().activeCamera.getWorldMatrix().m,
-        ik = kk.SZ;
-      for (let yk = 0; yk < 3; yk++) Fk[yk] = Tk[12 + yk] + ik[yk], Ik[yk] = Tk[8 + yk];
-      yk().normalize(Ik, Ik)
+    function km(mm, Tm, fm) {
+      const hm = mm.qY.Nfm(),
+        Am = hm ? hm.worldMatrix : mm.qY.wG().activeCamera.getWorldMatrix().m,
+        am = mm.HE;
+      for (let xm = 0; xm < 3; xm++) Tm[xm] = Am[12 + xm] + am[xm], fm[xm] = Am[8 + xm];
+      xm().normalize(fm, fm)
     }
 
-    function Ok(kk, Fk) {
-      const Ik = kk.SZ,
-        Xk = kk.Xw.GIk(),
-        Tk = Xk ? Kk.t5(Xk.eye[0], Xk.eye[1], Xk.eye[2]) : kk.Xw.camera.globalPosition;
-      return jk[0] = Fk[0] - Ik[0] - Tk.x, jk[1] = Fk[1] - Ik[1] - Tk.y, jk[2] = Fk[2] - Ik[2] - Tk.z, yk().normalize(jk, jk), jk
+    function bm(mm, Tm) {
+      const fm = mm.HE,
+        hm = mm.qY.Nfm(),
+        Am = hm ? Km.Z8(hm.eye[0], hm.eye[1], hm.eye[2]) : mm.qY.camera.globalPosition;
+      return om[0] = Tm[0] - fm[0] - Am.x, om[1] = Tm[1] - fm[1] - Am.y, om[2] = Tm[2] - fm[2] - Am.z, xm().normalize(om, om), om
     }
 
-    function nk(kk, Fk) {
-      return (0, lk.g)(kk, Fk, lk.d, (0, lk.j)())
+    function Sm(mm, Tm) {
+      return (0, wm.f)(mm, Tm, wm.e, (0, wm.i)())
     }
   },
-  39034: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => lk
+  39156: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => wm
     });
-    var Xk = Ik(34),
-      Tk = Ik(1270),
-      ik = Ik(2889);
-    const yk = "Reconnecting";
-    class lk {
-      constructor(kk) {
-        this.hooks = kk, this.graceMs = 0, this.sessionBased = !1, this.controller = void 0, this.frozen = !1, this.stopped = !1, this.listening = !1, this.ended = !1, this.retryNow = () => {
+    var hm = fm(31),
+      Am = fm(1286),
+      am = fm(2979);
+    const xm = "Reconnecting";
+    class wm {
+      constructor(mm) {
+        this.hooks = mm, this.graceMs = 0, this.sessionBased = !1, this.controller = void 0, this.frozen = !1, this.stopped = !1, this.listening = !1, this.ended = !1, this.retryNow = () => {
           "visible" === document.visibilityState && this.controller.retryNow()
-        }, this.onPageHide = kk => {
-          kk.persisted || this.leave()
-        }, this.controller = new ik.c((Fk => kk.reconnect(Fk)), {
-          isSessionLive: () => !this.ended && kk.isLive(),
-          onPhaseChanged: kk => {
-            this.onPhaseChanged(kk)
+        }, this.onPageHide = mm => {
+          mm.persisted || this.leave()
+        }, this.controller = new am.d((Tm => mm.reconnect(Tm)), {
+          isSessionLive: () => !this.ended && mm.isLive(),
+          onPhaseChanged: mm => {
+            this.onPhaseChanged(mm)
           },
-          onReconnected: Fk => {
-            kk.onReconnected(Fk)
+          onReconnected: Tm => {
+            mm.onReconnected(Tm)
           },
-          onGaveUp: Fk => {
-            !this.ended && kk.isLive() && kk.onGaveUp(this.sessionBased, Fk)
+          onGaveUp: Tm => {
+            !this.ended && mm.isLive() && mm.onGaveUp(this.sessionBased, Tm)
           }
         })
       }
-      onInitialInfo(kk, Fk) {
-        this.graceMs = kk, this.sessionBased = Fk
+      onInitialInfo(mm, Tm) {
+        this.graceMs = mm, this.sessionBased = Tm
       }
       canHoldSeat() {
         return this.graceMs > 0 && !this.ended
@@ -4044,8 +4010,8 @@ export const modules = {
       isResuming() {
         return "connected" !== this.controller.phase
       }
-      onConnectionLost(kk) {
-        this.ended || this.controller.onConnectionLost(kk, this.graceMs)
+      onConnectionLost(mm) {
+        this.ended || this.controller.onConnectionLost(mm, this.graceMs)
       }
       onResuming() {
         this.ended || this.controller.onResuming()
@@ -4054,40 +4020,40 @@ export const modules = {
         this.controller.stop()
       }
       leave() {
-        const kk = this.isResuming() && !this.controller.awaitingResumeOnRoom,
-          Fk = this.controller.heldToken;
-        this.end(), kk && "" !== Fk && this.hooks.releaseSeat(Fk)
+        const mm = this.isResuming() && !this.controller.awaitingResumeOnRoom,
+          Tm = this.controller.heldToken;
+        this.end(), mm && "" !== Tm && this.hooks.releaseSeat(Tm)
       }
       end() {
         this.ended = !0, this.controller.stop()
       }
-      onPhaseChanged(kk) {
-        const Fk = (0, ik.n)(kk);
-        Fk !== this.stopped && (this.stopped = Fk, this.hooks.freeze(Fk));
-        const Ik = "frozen" === kk || "resuming" === kk && this.frozen;
-        Ik && !this.frozen ? (0, Tk.m)(yk, {
+      onPhaseChanged(mm) {
+        const Tm = (0, am.n)(mm);
+        Tm !== this.stopped && (this.stopped = Tm, this.hooks.freeze(Tm));
+        const fm = "frozen" === mm || "resuming" === mm && this.frozen;
+        fm && !this.frozen ? (0, Am.p)(xm, {
           overridesPause: !0
-        }) : !Ik && this.frozen && (0, Tk.l)(yk), this.frozen = Ik, this.setListening("connected" !== kk), Xk.g.GL(ik.m, Ik ? "frozen" : kk)
+        }) : !fm && this.frozen && (0, Am.l)(xm), this.frozen = fm, this.setListening("connected" !== mm), hm.j.gp(am.m, fm ? "frozen" : mm)
       }
-      setListening(kk) {
-        kk !== this.listening && (this.listening = kk, kk ? (window.addEventListener("online", this.retryNow), document.addEventListener("visibilitychange", this.retryNow), window.addEventListener("pagehide", this.onPageHide)) : (window.removeEventListener("online", this.retryNow), document.removeEventListener("visibilitychange", this.retryNow), window.removeEventListener("pagehide", this.onPageHide)))
+      setListening(mm) {
+        mm !== this.listening && (this.listening = mm, mm ? (window.addEventListener("online", this.retryNow), document.addEventListener("visibilitychange", this.retryNow), window.addEventListener("pagehide", this.onPageHide)) : (window.removeEventListener("online", this.retryNow), document.removeEventListener("visibilitychange", this.retryNow), window.removeEventListener("pagehide", this.onPageHide)))
       }
     }
   },
-  39040: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Xk
+  39164: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => hm
     });
-    class Xk {
-      constructor(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.onSilent = kk, this.now = Fk, this.lastHeardAt = void 0, this.resumedAt = void 0, this.lastCheckAt = void 0, this.wasVisible = "visible" === document.visibilityState, this.interval = void 0, this.check = () => {
-          const kk = this.now(),
-            Fk = kk - this.lastCheckAt <= 2e3;
-          this.lastCheckAt = kk;
-          const Ik = "visible" === document.visibilityState;
-          !Ik || Fk && this.wasVisible || (this.resumedAt = kk), this.wasVisible = Ik, Ik && kk - this.lastHeardAt > 12e3 && kk - this.resumedAt > 2e3 && this.onSilent()
-        }, this.lastHeardAt = Fk(), this.resumedAt = this.lastHeardAt, this.lastCheckAt = this.lastHeardAt, this.interval = setInterval(this.check, 1e3), document.addEventListener("visibilitychange", this.check), window.addEventListener("online", this.check)
+    class hm {
+      constructor(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.onSilent = mm, this.now = Tm, this.lastHeardAt = void 0, this.resumedAt = void 0, this.lastCheckAt = void 0, this.wasVisible = "visible" === document.visibilityState, this.interval = void 0, this.check = () => {
+          const mm = this.now(),
+            Tm = mm - this.lastCheckAt <= 2e3;
+          this.lastCheckAt = mm;
+          const fm = "visible" === document.visibilityState;
+          !fm || Tm && this.wasVisible || (this.resumedAt = mm), this.wasVisible = fm, fm && mm - this.lastHeardAt > 12e3 && mm - this.resumedAt > 2e3 && this.onSilent()
+        }, this.lastHeardAt = Tm(), this.resumedAt = this.lastHeardAt, this.lastCheckAt = this.lastHeardAt, this.interval = setInterval(this.check, 1e3), document.addEventListener("visibilitychange", this.check), window.addEventListener("online", this.check)
       }
       heard() {
         this.lastHeardAt = this.now()
@@ -4097,404 +4063,404 @@ export const modules = {
       }
     }
   },
-  38956: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Zk
+  39093: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => Em
     });
-    var Xk = Ik(187),
-      Tk = Ik(354),
-      ik = Ik.n(Tk),
-      yk = Ik(36764),
-      lk = Ik(36772),
-      ak = Ik(2700);
-    const qk = Xk.f.NH * Xk.f.playerEyeToHeightRatio,
-      Lk = 250,
-      tk = 1.1,
-      Zk = new class {
+    var hm = fm(198),
+      Am = fm(362),
+      am = fm.n(Am),
+      xm = fm(36843),
+      wm = fm(36846),
+      Dm = fm(2760);
+    const im = hm.f.gq * hm.f.playerEyeToHeightRatio,
+      Rm = 250,
+      pm = 1.1,
+      Em = new class {
         constructor() {
           this.entities = new Map, this.playing = new Map, this.msSinceLastScan = 0
         }
-        add(kk, Fk) {
-          this.entities.set(kk, Fk)
+        add(mm, Tm) {
+          this.entities.set(mm, Tm)
         }
-        update(kk, Fk) {
-          const Ik = this.entities.get(kk);
-          this.entities.set(kk, Fk);
-          const Xk = this.playing.get(kk);
-          Xk && (Ik && Ik.soundName === Fk.soundName ? (Xk.sound.setRelativeVolume(Fk.volume), Xk.sound.rate(Fk.rate), Xk.sound.setPannerAttr({
-            refDistance: Fk.refDistance
-          })) : this.stopEntity(kk))
+        update(mm, Tm) {
+          const fm = this.entities.get(mm);
+          this.entities.set(mm, Tm);
+          const hm = this.playing.get(mm);
+          hm && (fm && fm.soundName === Tm.soundName ? (hm.sound.setRelativeVolume(Tm.volume), hm.sound.rate(Tm.rate), hm.sound.setPannerAttr({
+            refDistance: Tm.refDistance
+          })) : this.stopEntity(mm))
         }
-        remove(kk) {
-          this.stopEntity(kk), this.entities.delete(kk)
+        remove(mm) {
+          this.stopEntity(mm), this.entities.delete(mm)
         }
-        Dt(kk) {
-          this.msSinceLastScan += kk, this.msSinceLastScan < Lk || (this.msSinceLastScan = 0, this.scan())
+        DE(mm) {
+          this.msSinceLastScan += mm, this.msSinceLastScan < Rm || (this.msSinceLastScan = 0, this.scan())
         }
-        stopEntity(kk) {
-          const Fk = this.playing.get(kk);
-          Fk && (Fk.sound.stop(), this.playing.delete(kk))
+        stopEntity(mm) {
+          const Tm = this.playing.get(mm);
+          Tm && (Tm.sound.stop(), this.playing.delete(mm))
         }
-        startEntity(kk, Fk, Ik) {
-          const Xk = (0, lk.f)(Fk.soundName);
-          if (!Xk) return console.error(`AudioEntityManager: no sound found for "${Fk.soundName}", dropping audio entity ${kk}`), void this.remove(kk);
-          const Tk = yk.d.play(Xk, Fk.volume, Ik, Fk.maxHearDist, Fk.refDistance, !0);
-          Tk.rate(Fk.rate), this.playing.set(kk, {
-            sound: Tk,
-            lastPos: ik().clone(Ik)
+        startEntity(mm, Tm, fm) {
+          const hm = (0, wm.g)(Tm.soundName);
+          if (!hm) return console.error(`AudioEntityManager: no sound found for "${Tm.soundName}", dropping audio entity ${mm}`), void this.remove(mm);
+          const Am = xm.e.play(hm, Tm.volume, fm, Tm.maxHearDist, Tm.refDistance, !0);
+          Am.rate(Tm.rate), this.playing.set(mm, {
+            sound: Am,
+            lastPos: am().clone(fm)
           })
         }
         scan() {
-          const kk = (0, ak.e)();
-          if (!kk) return;
-          const Fk = kk.MJ.OJ(kk.oR);
-          if (Fk)
-            for (const [Ik, Xk] of this.entities) {
-              if (!kk.MJ.Ukk(Ik, "position")) continue;
-              const Tk = kk.MJ.OJ(Ik),
-                yk = ik().sqrDist(Fk, Tk),
-                lk = this.playing.get(Ik);
-              if (lk) {
-                const kk = Xk.maxHearDist * tk;
-                yk > kk * kk ? this.stopEntity(Ik) : ik().equals(Tk, lk.lastPos) || (lk.sound.setPosition([Tk[0], Tk[1] + qk, Tk[2]]), ik().copy(lk.lastPos, Tk))
-              } else yk <= Xk.maxHearDist * Xk.maxHearDist && this.startEntity(Ik, Xk, Tk)
+          const mm = (0, Dm.d)();
+          if (!mm) return;
+          const Tm = mm.qI.rV(mm.xH);
+          if (Tm)
+            for (const [fm, hm] of this.entities) {
+              if (!mm.qI.Pmm(fm, "position")) continue;
+              const Am = mm.qI.rV(fm),
+                xm = am().sqrDist(Tm, Am),
+                wm = this.playing.get(fm);
+              if (wm) {
+                const mm = hm.maxHearDist * pm;
+                xm > mm * mm ? this.stopEntity(fm) : am().equals(Am, wm.lastPos) || (wm.sound.setPosition([Am[0], Am[1] + im, Am[2]]), am().copy(wm.lastPos, Am))
+              } else xm <= hm.maxHearDist * hm.maxHearDist && this.startEntity(fm, hm, Am)
             }
         }
       }
   },
-  39054: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => qk,
-      f: () => Lk
+  39171: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => im,
+      e: () => Rm
     });
-    var Xk = Ik(1649),
-      Tk = Ik(187),
-      ik = Ik(1631),
-      yk = Ik(1716),
-      lk = Ik(1194),
-      ak = Ik(1120);
-    async function qk(kk, Fk) {
-      return function(kk) {
-        return "object" === typeof kk && null !== kk && kk.code === Tk.d.VpnIp.code
-      }(Fk) && function(kk) {
-        return ik.b.supports("appCheck") && kk.isLoggedIn() && !kk.hasTriedAppAttestation()
-      }(kk) && await async function(kk) {
+    var hm = fm(1696),
+      Am = fm(198),
+      am = fm(1681),
+      xm = fm(1766),
+      wm = fm(1214),
+      Dm = fm(1162);
+    async function im(mm, Tm) {
+      return function(mm) {
+        return "object" === typeof mm && null !== mm && mm.code === Am.b.VpnIp.code
+      }(Tm) && function(mm) {
+        return am.e.supports("appCheck") && mm.isLoggedIn() && !mm.hasTriedAppAttestation()
+      }(mm) && await async function(mm) {
         try {
           const {
-            token: Fk
-          } = await (0, yk.b)(), {
-            "3PSIDMCPP": Ik
-          } = await (0, ak.postJsonWithMetricsCookiesAndJsonResponse)(`${lk.clientSideServerUrls.indexUrl}/index/app-attestation`, {
-            appCheckToken: Fk
+            token: Tm
+          } = await (0, xm.d)(), {
+            "3PSIDMCPP": fm
+          } = await (0, Dm.postJsonWithMetricsCookiesAndJsonResponse)(`${wm.clientSideServerUrls.indexUrl}/index/app-attestation`, {
+            appCheckToken: Tm
           }, {
             retries: 0
-          }, kk.getMetricsCookies());
-          return kk.setAppAttestedAuthJwt(Ik), !0
-        } catch (Fk) {
-          return Fk instanceof Xk.d && "failed" === Fk.code ? (console.warn("The app couldn't get an App Check token:", Fk), kk.markAppAttestationTried()) : console.error("Failed to attest the app:", Fk), !1
+          }, mm.getMetricsCookies());
+          return mm.setAppAttestedAuthJwt(fm), !0
+        } catch (Tm) {
+          return Tm instanceof hm.e && "failed" === Tm.code ? (console.warn("The app couldn't get an App Check token:", Tm), mm.markAppAttestationTried()) : console.error("Failed to attest the app:", Tm), !1
         }
-      }(kk)
+      }(mm)
     }
-    async function Lk(kk, Fk) {
+    async function Rm(mm, Tm) {
       try {
-        return await Fk()
-      } catch (Ik) {
-        if (!await qk(kk, Ik)) throw Ik
+        return await Tm()
+      } catch (fm) {
+        if (!await im(mm, fm)) throw fm
       }
-      return Fk()
+      return Tm()
     }
   },
-  39046: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Zk,
-      i: () => Lk
+  39169: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => Em,
+      h: () => Rm
     });
-    var Xk = Ik(187),
-      Tk = Ik(1759),
-      ik = Ik(1199),
-      yk = Ik(8880);
-    const lk = [250, 500, 1e3, 2e3, 1250],
-      ak = 406;
+    var hm = fm(198),
+      Am = fm(1810),
+      am = fm(1223),
+      xm = fm(8854);
+    const wm = [250, 500, 1e3, 2e3, 1250],
+      Dm = 406;
 
-    function qk(kk) {
-      if ("object" !== typeof kk || null === kk) return !1;
+    function im(mm) {
+      if ("object" !== typeof mm || null === mm) return !1;
       const {
-        code: Fk,
-        message: Ik
-      } = kk, Tk = Xk.d.duplicateLobbyNameError;
-      return (Fk === Tk.code || Fk === ak) && (Ik === Tk.text || Ik === Tk.text + Xk.m)
+        code: Tm,
+        message: fm
+      } = mm, Am = hm.b.duplicateLobbyNameError;
+      return (Tm === Am.code || Tm === Dm) && (fm === Am.text || fm === Am.text + hm.i)
     }
-    async function Lk(kk, Fk) {
-      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Tk.b;
-      for (let Tk = 0;; Tk++) {
-        let yk;
-        (0, ik.m)(Fk);
+    async function Rm(mm, Tm) {
+      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Am.c;
+      for (let Am = 0;; Am++) {
+        let xm;
+        (0, am.h)(Tm);
         try {
-          return await kk()
-        } catch (Xk) {
-          if (yk = lk[Tk], void 0 === yk || !qk(Xk)) throw Xk
+          return await mm()
+        } catch (hm) {
+          if (xm = wm[Am], void 0 === xm || !im(hm)) throw hm
         }
-        await Ik(yk, Fk)
+        await fm(xm, Tm)
       }
     }
-    const tk = new Set([Xk.d.duplicateLobbyNameError.code, Xk.d.lobbyCantBeCreated.code, Xk.d.roomDisposedEarlyError.code, Xk.d.roomDisposedLateError.code, Xk.d.serverRoomLimitReached.code]);
+    const pm = new Set([hm.b.duplicateLobbyNameError.code, hm.b.lobbyCantBeCreated.code, hm.b.roomDisposedEarlyError.code, hm.b.roomDisposedLateError.code, hm.b.serverRoomLimitReached.code]);
 
-    function Zk(kk) {
-      if (qk(kk)) return !0;
-      const Fk = (0, yk.g)(kk);
-      return "number" === typeof Fk && tk.has(Fk)
+    function Em(mm) {
+      if (im(mm)) return !0;
+      const Tm = (0, xm.d)(mm);
+      return "number" === typeof Tm && pm.has(Tm)
     }
   },
-  39016: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => ik,
-      c: () => Tk
+  39143: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => am,
+      f: () => Am
     });
-    var Xk = Ik(34);
+    var hm = fm(31);
 
-    function Tk(kk) {
-      return "refetchCode" === kk || "devDownloadJson" === kk || kk.startsWith("Plugin")
+    function Am(mm) {
+      return "refetchCode" === mm || "devDownloadJson" === mm || mm.startsWith("Plugin")
     }
 
-    function ik(kk, Fk) {
-      "refetchCode" !== kk ? "Plugin|MobAiPlugin|ShowPetUi" !== kk ? Promise.all([Ik.e(107), Ik.e(108), Ik.e(103), Ik.e(105), Ik.e(214)]).then((() => Ik(41734))).then((Ik => {
+    function am(mm, Tm) {
+      "refetchCode" !== mm ? "Plugin|MobAiPlugin|ShowPetUi" !== mm ? Promise.all([fm.e(107), fm.e(108), fm.e(103), fm.e(105), fm.e(214)]).then((() => fm(41751))).then((fm => {
         let {
-          runClientGameMessage: Xk
-        } = Ik;
-        Xk(kk, Fk)
-      })).catch((Fk => {
-        console.error(`Game message ${kk} failed`, Fk)
-      })) : Xk.g.GL("showPetUi", Fk) : Xk.g.GL("refetchCode")
+          runClientGameMessage: hm
+        } = fm;
+        hm(mm, Tm)
+      })).catch((Tm => {
+        console.error(`Game message ${mm} failed`, Tm)
+      })) : hm.j.gp("showPetUi", Tm) : hm.j.gp("refetchCode")
     }
   },
-  38997: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Lk
+  39133: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => Rm
     });
-    var Xk = Ik(1217),
-      Tk = Ik(1308),
-      ik = Ik(25),
-      yk = Ik(1287),
-      lk = Ik(1301),
-      ak = Ik(1475),
-      qk = Ik(36458);
+    var hm = fm(1235),
+      Am = fm(1329),
+      am = fm(23),
+      xm = fm(1309),
+      wm = fm(1321),
+      Dm = fm(1519),
+      im = fm(36549);
 
-    function Lk(kk) {
+    function Rm(mm) {
       let {
-        OT: Fk,
-        nT: Ik
-      } = kk;
-      const Lk = null !== Fk && void 0 !== Fk ? Fk : (0, lk.d)().gameNameWithVariation;
-      (0, Xk.J)(Lk) && ((0, qk.l)(), (0, yk.bb)((() => {
-        console.log("Received matchmaking order from game server to game", Fk), (0, ik.h)("inGameReplay"), (0, ak.navigatePreserveSearch)((0, Tk.e)(Lk, null !== Ik && void 0 !== Ik ? Ik : void 0))
+        rA: Tm,
+        sA: fm
+      } = mm;
+      const Rm = null !== Tm && void 0 !== Tm ? Tm : (0, wm.d)().gameNameWithVariation;
+      (0, hm.C)(Rm) && ((0, im.l)(), (0, xm.ab)((() => {
+        console.log("Received matchmaking order from game server to game", Tm), (0, am.l)("inGameReplay"), (0, Dm.navigatePreserveSearch)((0, Am.e)(Rm, null !== fm && void 0 !== fm ? fm : void 0))
       }), "video_start"))
     }
   },
-  38992: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => ak,
-      h: () => yk,
-      j: () => lk,
-      l: () => qk
+  39129: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => Dm,
+      d: () => xm,
+      g: () => wm,
+      k: () => im
     });
-    var Xk = Ik(34),
-      Tk = Ik(1324);
-    const ik = new Map;
+    var hm = fm(31),
+      Am = fm(1354);
+    const am = new Map;
 
-    function yk(kk, Fk) {
-      Xk.g.GL("newUiRequest", {
-        id: kk,
-        clientParameters: Fk
+    function xm(mm, Tm) {
+      hm.j.gp("newUiRequest", {
+        id: mm,
+        clientParameters: Tm
       }, !0)
     }
 
-    function lk(kk) {
-      Xk.g.GL("removeUiRequest", kk, !0);
-      const Fk = ik.get(kk);
-      Fk && (Fk.tearDownNotification(), ik.delete(kk))
+    function wm(mm) {
+      hm.j.gp("removeUiRequest", mm, !0);
+      const Tm = am.get(mm);
+      Tm && (Tm.tearDownNotification(), am.delete(mm))
     }
 
-    function ak() {
-      Xk.g.GL("clearUiRequests");
-      for (const kk of ik.values()) kk.tearDownNotification();
-      ik.clear()
+    function Dm() {
+      hm.j.gp("clearUiRequests");
+      for (const mm of am.values()) mm.tearDownNotification();
+      am.clear()
     }
 
-    function qk(kk, Fk, Ik, Xk) {
-      const yk = Tk.NotificationProvider.showPromptPopup({
-        title: Fk,
+    function im(mm, Tm, fm, hm) {
+      const xm = Am.NotificationProvider.showPromptPopup({
+        title: Tm,
         confirmText: "general:yes",
         cancelText: "general:no",
-        destructive: Ik,
+        destructive: fm,
         unlockPointerKey: "uiRequestPopup"
       });
-      ik.set(kk, yk), yk.getResult().then((Fk => {
-        ik.delete(kk), "notificationTornDown" !== Fk && Xk(Fk)
+      am.set(mm, xm), xm.getResult().then((Tm => {
+        am.delete(mm), "notificationTornDown" !== Tm && hm(Tm)
       }))
     }
   },
-  39080: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => jk,
-      e: () => Zk
+  39200: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => om,
+      i: () => Em
     });
-    const Xk = "ue:",
-      Tk = ["keydown", "keyup", "mousedown", "mouseup", "pointerdown", "pointerup", "touchstart", "touchend"],
-      ik = "[A-Za-z0-9]{1,24}",
-      yk = 15,
-      lk = new RegExp(`^${ik}$`);
-    new RegExp(`^${Xk}(${[...Tk,"other"].join("|")}):(?:n|k(${ik})|b(0|[1-9][0-9]?)):([01])([01])$`);
+    const hm = "ue:",
+      Am = ["keydown", "keyup", "mousedown", "mouseup", "pointerdown", "pointerup", "touchstart", "touchend"],
+      am = "[A-Za-z0-9]{1,24}",
+      xm = 15,
+      wm = new RegExp(`^${am}$`);
+    new RegExp(`^${hm}(${[...Am,"other"].join("|")}):(?:n|k(${am})|b(0|[1-9][0-9]?)):([01])([01])$`);
 
-    function ak(kk, Fk, Ik, ik, ak) {
-      const qk = "string" === typeof kk && Tk.includes(kk) ? kk : "other";
-      let Lk = "n";
-      return "string" === typeof Fk ? Lk = lk.test(Fk) ? `k${Fk}` : "n" : "number" === typeof Ik && Number.isInteger(Ik) && Ik >= 0 && Ik <= yk && (Lk = `b${Ik}`), `${Xk}${qk}:${Lk}:${ik?1:0}${ak?1:0}`
+    function Dm(mm, Tm, fm, am, Dm) {
+      const im = "string" === typeof mm && Am.includes(mm) ? mm : "other";
+      let Rm = "n";
+      return "string" === typeof Tm ? Rm = wm.test(Tm) ? `k${Tm}` : "n" : "number" === typeof fm && Number.isInteger(fm) && fm >= 0 && fm <= xm && (Rm = `b${fm}`), `${hm}${im}:${Rm}:${am?1:0}${Dm?1:0}`
     }
-    var qk = Ik(1604),
-      Lk = Ik(1668);
-    let tk = null;
+    var im = fm(1668),
+      Rm = fm(1722);
+    let pm = null;
 
-    function Zk(kk) {
-      const Fk = kk instanceof Element && kk !== document.body && kk !== document.documentElement && !(0, qk.p)(kk) && !kk.closest("#root");
+    function Em(mm) {
+      const Tm = mm instanceof Element && mm !== document.body && mm !== document.documentElement && !(0, im.q)(mm) && !mm.closest("#root");
       return {
-        editable: (0, Lk.b)(kk),
-        outsideView: Fk
+        editable: (0, Rm.b)(mm),
+        outsideView: Tm
       }
     }
 
-    function jk(kk) {
-      return tk ??= function(kk) {
+    function om(mm) {
+      return pm ??= function(mm) {
         try {
           const {
-            editable: Fk,
-            outsideView: Ik
-          } = Zk(kk.target), Xk = kk;
-          return ak(kk.type, Xk.code, Xk.button, Fk, Ik)
+            editable: Tm,
+            outsideView: fm
+          } = Em(mm.target), hm = mm;
+          return Dm(mm.type, hm.code, hm.button, Tm, fm)
         } catch {
-          return ak(null, null, null, !1, !1)
+          return Dm(null, null, null, !1, !1)
         }
-      }(kk), tk
+      }(mm), pm
     }
   },
-  39020: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => lk,
-      f: () => ak,
-      g: () => qk
+  39147: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => wm,
+      d: () => Dm,
+      e: () => im
     });
-    var Xk = Ik(1217),
-      Tk = Ik(1018),
-      ik = Ik(36899),
-      yk = Ik(34);
+    var hm = fm(1235),
+      Am = fm(1041),
+      am = fm(36964),
+      xm = fm(31);
 
-    function lk(kk) {
+    function wm(mm) {
       let {
-        lobbyName: Fk,
-        gameNameWithVariation: Ik
-      } = kk;
-      return !(0, Xk.K)(Fk) || null !== Ik && (Ik.startsWith("testGym") || (0, Tk.j)(Ik))
+        lobbyName: Tm,
+        gameNameWithVariation: fm
+      } = mm;
+      return !(0, hm.D)(Tm) || null !== fm && (fm.startsWith("testGym") || (0, Am.k)(fm))
     }
 
-    function ak(kk) {
-      return kk.Wi === ik.e.Leave || kk.Wi === ik.e.Cursor
+    function Dm(mm) {
+      return mm.va === am.b.Leave || mm.va === am.b.Cursor
     }
 
-    function qk(kk) {
-      yk.g.GL("codeCollab", {
-        type: kk.Wi,
-        docKey: kk.Bi,
-        version: kk.Yi,
-        editorCount: kk.Ai,
-        peers: kk.gi,
-        updates: kk.mi,
-        playerId: kk.ri,
-        playerName: kk.Di,
-        colour: kk.Mi,
-        anchor: kk.ky,
-        head: kk.Fy,
-        existingCursors: kk.Iy,
-        files: kk.Xy,
-        engineSettings: kk.Ty
+    function im(mm) {
+      xm.j.gp("codeCollab", {
+        type: mm.va,
+        docKey: mm.Ua,
+        version: mm.da,
+        editorCount: mm.ga,
+        peers: mm.Wa,
+        updates: mm.Fa,
+        playerId: mm.mx,
+        playerName: mm.Tx,
+        colour: mm.hx,
+        anchor: mm.Ax,
+        head: mm.wx,
+        existingCursors: mm.Dx,
+        files: mm.ix,
+        engineSettings: mm.Rx
       })
     }
   },
-  38986: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => Xk
+  39121: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => hm
     });
-    class Xk {
+    class hm {
       constructor() {
         this.members = new Map
       }
-      apply(kk) {
-        const Fk = {
+      apply(mm) {
+        const Tm = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const Xk of kk.DI) {
-          let kk = this.members.get(Xk.MI);
-          if (kk || (kk = {
+        for (const hm of mm.fh) {
+          let mm = this.members.get(hm.hh);
+          if (mm || (mm = {
               name: null,
               settings: {}
-            }, this.members.set(Xk.MI, kk), Fk.added.push(Xk.MI)), null !== Xk.kX && (kk.name = Xk.kX), null !== Xk.FX || Xk.IX.length > 0) {
-            const Ik = null === Xk.FX ? {} : JSON.parse(Xk.FX);
-            Object.assign(kk.settings, Ik);
-            for (const Fk of Xk.IX) delete kk.settings[Fk], Ik[Fk] = void 0;
-            Fk.settingChanges.push({
-              playerId: Xk.MI,
-              settings: Ik
+            }, this.members.set(hm.hh, mm), Tm.added.push(hm.hh)), null !== hm.Ah && (mm.name = hm.Ah), null !== hm.ah || hm.xh.length > 0) {
+            const fm = null === hm.ah ? {} : JSON.parse(hm.ah);
+            Object.assign(mm.settings, fm);
+            for (const Tm of hm.xh) delete mm.settings[Tm], fm[Tm] = void 0;
+            Tm.settingChanges.push({
+              playerId: hm.hh,
+              settings: fm
             })
           }
         }
-        for (const Xk of kk.XX) {
-          const kk = this.members.get(Xk);
-          var Ik;
-          if (kk) this.members.delete(Xk), Fk.removed.push({
-            playerId: Xk,
-            name: null !== (Ik = kk.name) && void 0 !== Ik ? Ik : void 0
+        for (const hm of mm.Dh) {
+          const mm = this.members.get(hm);
+          var fm;
+          if (mm) this.members.delete(hm), Tm.removed.push({
+            playerId: hm,
+            name: null !== (fm = mm.name) && void 0 !== fm ? fm : void 0
           })
         }
-        return Fk
+        return Tm
       }
-      has(kk) {
-        return this.members.has(kk)
+      has(mm) {
+        return this.members.has(mm)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(kk) {
-        var Fk, Ik;
-        return null !== (Fk = null === (Ik = this.members.get(kk)) || void 0 === Ik ? void 0 : Ik.name) && void 0 !== Fk ? Fk : void 0
+      getName(mm) {
+        var Tm, fm;
+        return null !== (Tm = null === (fm = this.members.get(mm)) || void 0 === fm ? void 0 : fm.name) && void 0 !== Tm ? Tm : void 0
       }
-      getSettings(kk) {
-        var Fk;
-        return null === (Fk = this.members.get(kk)) || void 0 === Fk ? void 0 : Fk.settings
+      getSettings(mm) {
+        var Tm;
+        return null === (Tm = this.members.get(mm)) || void 0 === Tm ? void 0 : Tm.settings
       }
-      getSetting(kk, Fk) {
-        var Ik;
-        return null === (Ik = this.members.get(kk)) || void 0 === Ik ? void 0 : Ik.settings[Fk]
+      getSetting(mm, Tm) {
+        var fm;
+        return null === (fm = this.members.get(mm)) || void 0 === fm ? void 0 : fm.settings[Tm]
       }
       clear() {
         this.members.clear()
       }
     }
   },
-  39028: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => Xk,
-      e: () => Tk
+  39150: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => hm,
+      e: () => Am
     });
-    const Xk = ["description", "label"];
+    const hm = ["description", "label"];
 
-    function Tk(kk) {
-      const Fk = kk.type;
+    function Am(mm) {
+      const Tm = mm.type;
       return {
-        type: Fk,
-        params: kk[Fk]
+        type: Tm,
+        params: mm[Tm]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

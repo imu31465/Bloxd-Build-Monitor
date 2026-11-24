@@ -1,303 +1,303 @@
 export const id = 27;
 export const ids = [27];
 export const modules = {
-  4837: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => bk,
-      e: () => uk
+  4784: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => Xm,
+      f: () => Gm
     });
-    var Xk = Ik(4843),
-      Tk = Ik(318);
-    const ik = 120,
-      yk = 260,
-      lk = 1.15,
-      ak = 1.2,
-      qk = 2,
-      Lk = 1.08,
-      tk = .8,
-      Zk = .95,
-      jk = 8,
-      ek = "[\"')\\]\u300d\u300f\uff09]*",
-      wk = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${ek}$`),
-      Hk = new RegExp(`[?\uff1f]${ek}$`),
-      Jk = new RegExp(`[!\uff01]${ek}$`),
-      xk = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      Pk = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      Kk = new RegExp(`[${Pk}]`),
-      Qk = new RegExp(`[${Pk}]|[^${Pk}]+`, "g"),
-      sk = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var hm = fm(4789),
+      Am = fm(339);
+    const am = 120,
+      xm = 260,
+      wm = 1.15,
+      Dm = 1.2,
+      im = 2,
+      Rm = 1.08,
+      pm = .8,
+      Em = .95,
+      om = 8,
+      Om = "[\"')\\]\u300d\u300f\uff09]*",
+      Ym = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Om}$`),
+      qm = new RegExp(`[?\uff1f]${Om}$`),
+      jm = new RegExp(`[!\uff01]${Om}$`),
+      Vm = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      Im = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      Km = new RegExp(`[${Im}]`),
+      Qm = new RegExp(`[${Im}]|[^${Im}]+`, "g"),
+      nm = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function Vk(kk) {
-      let Fk = 2166136261;
-      for (let Ik = 0; Ik < kk.length; Ik++) Fk ^= kk.charCodeAt(Ik), Fk = Math.imul(Fk, 16777619);
-      return (Fk >>> 0) / 4294967295 * 2 - 1
+    function Jm(mm) {
+      let Tm = 2166136261;
+      for (let fm = 0; fm < mm.length; fm++) Tm ^= mm.charCodeAt(fm), Tm = Math.imul(Tm, 16777619);
+      return (Tm >>> 0) / 4294967295 * 2 - 1
     }
 
-    function zk(kk) {
-      var Fk;
-      if (Kk.test(kk)) return 1;
-      const Ik = kk.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        Xk = Ik.replace(/[^0-9]/g, "");
-      if (Xk.length > 0 && !/\p{L}/u.test(Ik)) return Math.min(Xk.length, 4);
-      const Tk = null !== (Fk = Ik.match(sk)) && void 0 !== Fk ? Fk : [];
-      if (0 === Tk.length) {
-        var ik, yk;
-        const kk = null !== (ik = null === (yk = Ik.match(/\p{L}/gu)) || void 0 === yk ? void 0 : yk.length) && void 0 !== ik ? ik : 0;
-        return 0 === kk ? 0 : Math.min(Math.max(1, Math.round(kk / 2.5)), jk)
+    function cm(mm) {
+      var Tm;
+      if (Km.test(mm)) return 1;
+      const fm = mm.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        hm = fm.replace(/[^0-9]/g, "");
+      if (hm.length > 0 && !/\p{L}/u.test(fm)) return Math.min(hm.length, 4);
+      const Am = null !== (Tm = fm.match(nm)) && void 0 !== Tm ? Tm : [];
+      if (0 === Am.length) {
+        var am, xm;
+        const mm = null !== (am = null === (xm = fm.match(/\p{L}/gu)) || void 0 === xm ? void 0 : xm.length) && void 0 !== am ? am : 0;
+        return 0 === mm ? 0 : Math.min(Math.max(1, Math.round(mm / 2.5)), om)
       }
-      const lk = Ik.replace(/[^\p{L}]/gu, ""),
-        ak = Tk.length > 1 && "e" === Tk.at(-1) && lk.endsWith("e") && !lk.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(kk.replace(/[^\p{L}]/gu, ""));
-      return Math.min(Tk.length - (ak ? 1 : 0), jk)
+      const wm = fm.replace(/[^\p{L}]/gu, ""),
+        Dm = Am.length > 1 && "e" === Am.at(-1) && wm.endsWith("e") && !wm.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(mm.replace(/[^\p{L}]/gu, ""));
+      return Math.min(Am.length - (Dm ? 1 : 0), om)
     }
 
-    function Sk(kk) {
-      return kk.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function zm(mm) {
+      return mm.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function vk(kk) {
-      const Fk = kk.replace(/[^\p{L}]/gu, "");
-      return Fk.length >= 2 && Fk === Fk.toUpperCase() && Fk !== Fk.toLowerCase()
+    function Zm(mm) {
+      const Tm = mm.replace(/[^\p{L}]/gu, "");
+      return Tm.length >= 2 && Tm === Tm.toUpperCase() && Tm !== Tm.toLowerCase()
     }
 
-    function Ek(kk, Fk) {
-      var Ik;
-      const jk = Fk && (0, Xk.k)(Fk),
-        ek = null !== (Ik = null === jk || void 0 === jk ? void 0 : jk.syllableMs) && void 0 !== Ik ? Ik : Xk.b,
-        Pk = function(kk) {
-          const Fk = [];
-          for (const Xk of (0, Tk.oc)(kk))
-            if ("string" === typeof Xk)
-              for (const kk of Xk.split(/(\s+)/)) {
-                if ("" === kk) continue;
-                if (/^\s+$/.test(kk)) {
-                  Fk.push({
+    function km(mm, Tm) {
+      var fm;
+      const om = Tm && (0, hm.g)(Tm),
+        Om = null !== (fm = null === om || void 0 === om ? void 0 : om.syllableMs) && void 0 !== fm ? fm : hm.d,
+        Im = function(mm) {
+          const Tm = [];
+          for (const hm of (0, Am.Zb)(mm))
+            if ("string" === typeof hm)
+              for (const mm of hm.split(/(\s+)/)) {
+                if ("" === mm) continue;
+                if (/^\s+$/.test(mm)) {
+                  Tm.push({
                     kind: "space",
-                    text: kk
+                    text: mm
                   });
                   continue
                 }
-                if (!Kk.test(kk)) {
-                  Fk.push({
+                if (!Km.test(mm)) {
+                  Tm.push({
                     kind: "word",
-                    text: kk,
+                    text: mm,
                     delayMs: 0
                   });
                   continue
                 }
-                let Xk = !0;
-                for (const Tk of null !== (Ik = kk.match(Qk)) && void 0 !== Ik ? Ik : []) {
-                  var Ik;
-                  const kk = Fk.at(-1);
-                  Xk || "word" !== (null === kk || void 0 === kk ? void 0 : kk.kind) || Kk.test(Tk) || /[\p{L}\p{N}]/u.test(Tk) ? (Xk || Fk.push({
+                let hm = !0;
+                for (const Am of null !== (fm = mm.match(Qm)) && void 0 !== fm ? fm : []) {
+                  var fm;
+                  const mm = Tm.at(-1);
+                  hm || "word" !== (null === mm || void 0 === mm ? void 0 : mm.kind) || Km.test(Am) || /[\p{L}\p{N}]/u.test(Am) ? (hm || Tm.push({
                     kind: "space",
                     text: "\u200b"
-                  }), Fk.push({
+                  }), Tm.push({
                     kind: "word",
-                    text: Tk,
+                    text: Am,
                     delayMs: 0
-                  }), Xk = !1) : kk.text += Tk
+                  }), hm = !1) : mm.text += Am
                 }
-              } else Fk.push({
+              } else Tm.push({
                 kind: "icon",
-                text: Xk.icon,
+                text: hm.icon,
                 delayMs: 0
               });
-          return Fk
-        }(kk),
-        sk = [];
-      let Ek = [];
-      for (const Xk of Pk) "space" !== Xk.kind && (Ek.push(Xk), wk.test(Xk.text) && (sk.push(Ek), Ek = []));
-      sk.push(Ek);
-      const Ok = [];
-      let nk = 0;
-      for (const Xk of sk) {
-        var Gk, pk;
-        const kk = null !== (Gk = null === (pk = Xk.at(-1)) || void 0 === pk ? void 0 : pk.text) && void 0 !== Gk ? Gk : "",
-          Fk = Hk.test(kk),
-          Ik = Jk.test(kk),
-          Tk = Xk.map((kk => "word" === kk.kind ? zk(kk.text) : 1)),
-          Pk = Tk.findLastIndex((kk => kk > 0));
-        for (const [Hk, Jk] of Xk.entries()) {
-          const kk = "word" === Jk.kind,
-            Xk = Tk[Hk];
-          Jk.delayMs = nk;
-          for (let Tk = 0; jk && Tk < Xk; Tk++) {
+          return Tm
+        }(mm),
+        nm = [];
+      let km = [];
+      for (const hm of Im) "space" !== hm.kind && (km.push(hm), Ym.test(hm.text) && (nm.push(km), km = []));
+      nm.push(km);
+      const bm = [];
+      let Sm = 0;
+      for (const hm of nm) {
+        var em, Nm;
+        const mm = null !== (em = null === (Nm = hm.at(-1)) || void 0 === Nm ? void 0 : Nm.text) && void 0 !== em ? em : "",
+          Tm = qm.test(mm),
+          fm = jm.test(mm),
+          Am = hm.map((mm => "word" === mm.kind ? cm(mm.text) : 1)),
+          Im = Am.findLastIndex((mm => mm > 0));
+        for (const [qm, jm] of hm.entries()) {
+          const mm = "word" === jm.kind,
+            hm = Am[qm];
+          jm.delayMs = Sm;
+          for (let Am = 0; om && Am < hm; Am++) {
             const {
-              intonation: ik
-            } = jk;
-            let yk = Pk > 0 ? -ik.declineSemitones * (Hk / Pk) : 0;
-            yk += Vk(`${Sk(Jk.text)}|${Tk}`) * ik.variationSemitones;
-            const wk = Math.min(1, ik.variationSemitones);
-            let xk = jk.glideSemitones,
-              Kk = 1;
-            Ik && (yk += ik.exclaimLiftSemitones, Kk *= lk), Fk && Hk === Pk && (yk += ik.questionRiseSemitones * (Xk > 1 ? .5 + .5 * Tk / (Xk - 1) : 1), Tk === Xk - 1 && (xk = Math.abs(xk) + ik.questionRiseSemitones / 2)), kk && vk(Jk.text) && (yk += qk * wk, Kk *= ak), Xk > 1 && 0 === Tk && (yk += tk * wk, Kk *= Lk), Ok.push({
-              atMs: nk + Tk * ek,
-              semitones: yk,
-              glideSemitones: xk,
-              durationMs: Tk < Xk - 1 ? Math.min(jk.durationMs, ek * Zk) : jk.durationMs,
-              level: Kk
+              intonation: am
+            } = om;
+            let xm = Im > 0 ? -am.declineSemitones * (qm / Im) : 0;
+            xm += Jm(`${zm(jm.text)}|${Am}`) * am.variationSemitones;
+            const Ym = Math.min(1, am.variationSemitones);
+            let Vm = om.glideSemitones,
+              Km = 1;
+            fm && (xm += am.exclaimLiftSemitones, Km *= wm), Tm && qm === Im && (xm += am.questionRiseSemitones * (hm > 1 ? .5 + .5 * Am / (hm - 1) : 1), Am === hm - 1 && (Vm = Math.abs(Vm) + am.questionRiseSemitones / 2)), mm && Zm(jm.text) && (xm += im * Ym, Km *= Dm), hm > 1 && 0 === Am && (xm += pm * Ym, Km *= Rm), bm.push({
+              atMs: Sm + Am * Om,
+              semitones: xm,
+              glideSemitones: Vm,
+              durationMs: Am < hm - 1 ? Math.min(om.durationMs, Om * Em) : om.durationMs,
+              level: Km
             })
           }
-          nk += Xk * ek + (wk.test(Jk.text) ? yk : xk.test(Jk.text) ? ik : 0)
+          Sm += hm * Om + (Ym.test(jm.text) ? xm : Vm.test(jm.text) ? am : 0)
         }
       }
       return {
-        pieces: Pk.map((kk => "space" === kk.kind ? kk : "icon" === kk.kind ? {
+        pieces: Im.map((mm => "space" === mm.kind ? mm : "icon" === mm.kind ? {
           kind: "icon",
-          icon: kk.text,
-          delayMs: kk.delayMs
+          icon: mm.text,
+          delayMs: mm.delayMs
         } : {
           kind: "word",
-          text: kk.text,
-          delayMs: kk.delayMs
+          text: mm.text,
+          delayMs: mm.delayMs
         })),
-        blips: Ok
+        blips: bm
       }
     }
-    var Ok = Ik(1179),
-      nk = Ik(1241),
-      Gk = Ik(1881);
+    var bm = fm(1208),
+      Sm = fm(1259),
+      em = fm(1912);
 
-    function pk(kk) {
-      if ("string" === typeof kk) return kk;
-      const Fk = nk.d.get().getCurrentLanguageCode();
-      return (0, Ok.q)(Fk, kk.translationKey, (0, Ok.m)(kk.params, Gk.d.shown))
+    function Nm(mm) {
+      if ("string" === typeof mm) return mm;
+      const Tm = Sm.e.get().getCurrentLanguageCode();
+      return (0, bm.t)(Tm, mm.translationKey, (0, bm.r)(mm.params, em.e.shown))
     }
 
-    function uk(kk) {
-      const Fk = void 0 === kk.voice ? null : (0, Xk.n)(kk.voice),
-        Ik = Fk && (0, Xk.k)(Fk);
+    function Gm(mm) {
+      const Tm = void 0 === mm.voice ? null : (0, hm.k)(mm.voice),
+        fm = Tm && (0, hm.g)(Tm);
       return {
-        plan: Ek(pk(kk.line), Ik),
-        synth: Ik
+        plan: km(Nm(mm.line), fm),
+        synth: fm
       }
     }
 
-    function bk(kk) {
-      const Fk = [];
-      let Ik = [];
-      for (const [Tk, ik] of kk.entries()) {
-        var Xk;
-        "space" === ik.kind && (" " !== ik.text || "icon" !== (null === (Xk = kk[Tk + 1]) || void 0 === Xk ? void 0 : Xk.kind)) ? (Ik.length > 0 && Fk.push(Ik), Fk.push([ik]), Ik = []) : Ik.push(ik)
+    function Xm(mm) {
+      const Tm = [];
+      let fm = [];
+      for (const [Am, am] of mm.entries()) {
+        var hm;
+        "space" === am.kind && (" " !== am.text || "icon" !== (null === (hm = mm[Am + 1]) || void 0 === hm ? void 0 : hm.kind)) ? (fm.length > 0 && Tm.push(fm), Tm.push([am]), fm = []) : fm.push(am)
       }
-      return Ik.length > 0 && Fk.push(Ik), Fk
+      return fm.length > 0 && Tm.push(fm), Tm
     }
   },
-  4850: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Lk,
-      i: () => tk
+  4796: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => Rm,
+      e: () => pm
     });
-    var Xk = Ik(4857),
-      Tk = Ik(25);
-    const ik = .25,
-      yk = .85,
-      lk = .02,
-      ak = .01;
+    var hm = fm(4800),
+      Am = fm(23);
+    const am = .25,
+      xm = .85,
+      wm = .02,
+      Dm = .01;
 
-    function qk(kk, Fk, Ik, Xk, Tk, ik, lk) {
+    function im(mm, Tm, fm, hm, Am, am, wm) {
       const {
-        waveform: ak,
-        pitchHz: qk,
-        attackMs: Lk,
-        releaseMs: tk,
-        lowpassHz: Zk
-      } = Ik, jk = Tk + Xk.durationMs / 1e3, ek = qk * 2 ** (Xk.semitones / 12), wk = kk.createOscillator();
-      wk.type = ak, wk.frequency.setValueAtTime(ek, Tk), wk.frequency.exponentialRampToValueAtTime(ek * 2 ** (Xk.glideSemitones / 12), jk);
-      const Hk = Tk + Math.min(Lk, Xk.durationMs) / 1e3,
-        Jk = kk.createGain();
-      Jk.gain.setValueAtTime(0, Tk), Jk.gain.linearRampToValueAtTime(ik, Hk), Jk.gain.linearRampToValueAtTime(ik * yk, Math.max(Hk, jk - tk / 1e3)), Jk.gain.linearRampToValueAtTime(0, jk);
-      const xk = [wk];
-      if (null !== Zk) {
-        const Fk = kk.createBiquadFilter();
-        Fk.type = "lowpass", Fk.frequency.value = Zk, xk.push(Fk)
+        waveform: Dm,
+        pitchHz: im,
+        attackMs: Rm,
+        releaseMs: pm,
+        lowpassHz: Em
+      } = fm, om = Am + hm.durationMs / 1e3, Om = im * 2 ** (hm.semitones / 12), Ym = mm.createOscillator();
+      Ym.type = Dm, Ym.frequency.setValueAtTime(Om, Am), Ym.frequency.exponentialRampToValueAtTime(Om * 2 ** (hm.glideSemitones / 12), om);
+      const qm = Am + Math.min(Rm, hm.durationMs) / 1e3,
+        jm = mm.createGain();
+      jm.gain.setValueAtTime(0, Am), jm.gain.linearRampToValueAtTime(am, qm), jm.gain.linearRampToValueAtTime(am * xm, Math.max(qm, om - pm / 1e3)), jm.gain.linearRampToValueAtTime(0, om);
+      const Vm = [Ym];
+      if (null !== Em) {
+        const Tm = mm.createBiquadFilter();
+        Tm.type = "lowpass", Tm.frequency.value = Em, Vm.push(Tm)
       }
-      xk.push(Jk, Fk);
-      for (let yk = 1; yk < xk.length; yk++) xk[yk - 1].connect(xk[yk]);
-      return wk.onended = () => {
-        for (const kk of xk.slice(0, -1)) kk.disconnect();
-        lk()
-      }, wk.start(Tk), wk.stop(jk), wk
+      Vm.push(jm, Tm);
+      for (let xm = 1; xm < Vm.length; xm++) Vm[xm - 1].connect(Vm[xm]);
+      return Ym.onended = () => {
+        for (const mm of Vm.slice(0, -1)) mm.disconnect();
+        wm()
+      }, Ym.start(Am), Ym.stop(om), Ym
     }
 
-    function Lk(kk, Fk, Ik, Xk, Tk, yk) {
-      if (0 === Xk.length) return yk(), () => {};
-      const Lk = ik * Ik.volume * Tk,
-        tk = kk.createGain();
-      tk.connect(Fk);
-      const Zk = kk.currentTime + lk,
-        jk = new Set;
-      for (const ik of Xk) {
-        const Fk = qk(kk, tk, Ik, ik, Zk + ik.atMs / 1e3, Lk * ik.level, (() => {
-          jk.delete(Fk), 0 === jk.size && (tk.disconnect(), yk())
+    function Rm(mm, Tm, fm, hm, Am, xm) {
+      if (0 === hm.length) return xm(), () => {};
+      const Rm = am * fm.volume * Am,
+        pm = mm.createGain();
+      pm.connect(Tm);
+      const Em = mm.currentTime + wm,
+        om = new Set;
+      for (const am of hm) {
+        const Tm = im(mm, pm, fm, am, Em + am.atMs / 1e3, Rm * am.level, (() => {
+          om.delete(Tm), 0 === om.size && (pm.disconnect(), xm())
         }));
-        jk.add(Fk)
+        om.add(Tm)
       }
       return () => {
-        const Fk = kk.currentTime;
-        tk.gain.setTargetAtTime(0, Fk, ak);
-        for (const kk of jk) try {
-          kk.stop(Fk + 5 * ak)
+        const Tm = mm.currentTime;
+        pm.gain.setTargetAtTime(0, Tm, Dm);
+        for (const mm of om) try {
+          mm.stop(Tm + 5 * Dm)
         } catch {}
       }
     }
 
-    function tk(kk, Fk) {
-      var Ik;
-      const ik = Xk.Howler.ctx,
-        yk = Xk.Howler.masterGain;
-      if (!ik || !yk || !Tk.d.get("soundOnFromAd")) return () => {};
-      const lk = Xk.Howler;
-      return null === (Ik = lk._autoResume) || void 0 === Ik || Ik.call(lk), Lk(ik, yk, kk, Fk, Tk.d.get("soundVolume"), (() => {
-        var kk;
-        null === (kk = lk._autoSuspend) || void 0 === kk || kk.call(lk)
+    function pm(mm, Tm) {
+      var fm;
+      const am = hm.Howler.ctx,
+        xm = hm.Howler.masterGain;
+      if (!am || !xm || !Am.c.get("soundOnFromAd")) return () => {};
+      const wm = hm.Howler;
+      return null === (fm = wm._autoResume) || void 0 === fm || fm.call(wm), Rm(am, xm, mm, Tm, Am.c.get("soundVolume"), (() => {
+        var mm;
+        null === (mm = wm._autoSuspend) || void 0 === mm || mm.call(wm)
       }))
     }
   },
-  39149: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      closeClientGame: () => Rk,
-      createDefaultClientPlugins: () => bk
+  39273: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      closeClientGame: () => Pm,
+      createDefaultClientPlugins: () => Xm
     });
-    var Xk = Ik(337);
+    var hm = fm(354);
 
-    function Tk() {
-      let kk;
+    function Am() {
+      let mm;
       return {
-        onCreate(Fk) {
-          kk = Fk
+        onCreate(Tm) {
+          mm = Tm
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(Fk, Ik, Tk, ik, yk, lk) {
-          var ak, qk;
-          if ("Iron Chest" !== kk.getMetaInfo(yk).rootName) return;
-          if (!kk.hasEffect(Fk, "Thief")) return;
-          const Lk = kk.getBlockData(Ik, Tk, ik);
-          return kk.getPlayerDbId(Fk) !== (null === Lk || void 0 === Lk || null === (ak = Lk.persisted) || void 0 === ak || null === (qk = ak.shared) || void 0 === qk ? void 0 : qk.ownerDbId) ? (kk.sendMessage(Fk, [{
+        onPlayerAttemptAltAction(Tm, fm, Am, am, xm, wm) {
+          var Dm, im;
+          if ("Iron Chest" !== mm.getMetaInfo(xm).rootName) return;
+          if (!mm.hasEffect(Tm, "Thief")) return;
+          const Rm = mm.getBlockData(fm, Am, am);
+          return mm.getPlayerDbId(Tm) !== (null === Rm || void 0 === Rm || null === (Dm = Rm.persisted) || void 0 === Dm || null === (im = Dm.shared) || void 0 === im ? void 0 : im.ownerDbId) ? (mm.sendMessage(Tm, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: Xk.J.redUiText
+              color: hm.J.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var ik = Ik(4210),
-      yk = Ik(1231);
-    const lk = 8.4,
-      ak = 1e-4,
-      qk = .15,
-      Lk = .04,
-      tk = [.12, .04, .12],
-      Zk = 26,
-      jk = {
+    var am = fm(4171),
+      xm = fm(1247);
+    const wm = 8.4,
+      Dm = 1e-4,
+      im = .15,
+      Rm = .04,
+      pm = [.12, .04, .12],
+      Em = 26,
+      om = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        St: 1,
-        minLifeTime: ak,
-        maxLifeTime: ak,
+        yp: 1,
+        minLifeTime: Dm,
+        maxLifeTime: Dm,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -310,19 +310,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: ik.d.Standard
+        blendMode: am.g.Standard
       },
-      ek = {
+      Om = {
         texture: "bubble",
         mipmaps: !1,
-        St: 96,
+        yp: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: Zk,
+        emitRate: Em,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -336,159 +336,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: ik.d.Standard
+        blendMode: am.g.Standard
       },
-      wk = [0, 0, 0],
-      Hk = [0, 0, 0];
+      Ym = [0, 0, 0],
+      qm = [0, 0, 0];
 
-    function Jk(kk) {
-      const Fk = new Map;
-      let Ik = null;
+    function jm(mm) {
+      const Tm = new Map;
+      let fm = null;
 
-      function Xk(kk) {
-        var Fk, Ik;
-        null === (Fk = kk.bubbles) || void 0 === Fk || Fk.stop(), null === (Ik = kk.fish) || void 0 === Ik || Ik.stop()
+      function hm(mm) {
+        var Tm, fm;
+        null === (Tm = mm.bubbles) || void 0 === Tm || Tm.stop(), null === (fm = mm.fish) || void 0 === fm || fm.stop()
       }
 
-      function Tk(Ik) {
-        if (!Ik.readDrawnPosition(kk, Hk)) {
-          for (const kk of Fk.values()) {
-            var Xk;
-            null === (Xk = kk.bubbles) || void 0 === Xk || Xk.setEmitRate(0)
+      function Am(fm) {
+        if (!fm.readDrawnPosition(mm, qm)) {
+          for (const mm of Tm.values()) {
+            var hm;
+            null === (hm = mm.bubbles) || void 0 === hm || hm.setEmitRate(0)
           }
           return
         }
-        const Tk = performance.now();
-        for (const [kk, yk] of Fk) {
-          var ik;
-          if (null === (ik = yk.bubbles) || void 0 === ik || ik.setEmitRate(0), !Ik.readDrawnPosition(kk, wk)) continue;
-          if (!((wk[0] - Hk[0]) ** 2 + (wk[1] - Hk[1]) ** 2 + (wk[2] - Hk[2]) ** 2 < 900)) continue;
-          const Fk = Math.max(0, yk.biteAt - Tk),
-            Xk = yk.approachDurationMs > 0 ? Math.min(1, 1 - Fk / yk.approachDurationMs) : 1,
-            ak = (yk.approachDurationMs - Fk) / 1e3,
-            Jk = yk.phase + .25 * Math.sin(1.7 * ak + yk.phase),
-            xk = Math.min(yk.approachDurationMs / 3e3 * 2.8, lk) * (1 - Xk) * (1 + .15 * Math.sin(2.1 * ak + yk.phase)),
-            Pk = Math.min(1, 4 * (1 - Xk)),
-            Kk = (.45 * Math.sin(4.1 * ak + yk.phase) + .18 * Math.sin(9.7 * ak + 2 * yk.phase)) * Pk,
-            Qk = wk[0] + Math.cos(Jk) * xk - Math.sin(Jk) * Kk,
-            sk = Math.ceil(yk.surfaceY),
-            Vk = wk[2] + Math.sin(Jk) * xk + Math.cos(Jk) * Kk,
+        const Am = performance.now();
+        for (const [mm, xm] of Tm) {
+          var am;
+          if (null === (am = xm.bubbles) || void 0 === am || am.setEmitRate(0), !fm.readDrawnPosition(mm, Ym)) continue;
+          if (!((Ym[0] - qm[0]) ** 2 + (Ym[1] - qm[1]) ** 2 + (Ym[2] - qm[2]) ** 2 < 900)) continue;
+          const Tm = Math.max(0, xm.biteAt - Am),
+            hm = xm.approachDurationMs > 0 ? Math.min(1, 1 - Tm / xm.approachDurationMs) : 1,
+            Dm = (xm.approachDurationMs - Tm) / 1e3,
+            jm = xm.phase + .25 * Math.sin(1.7 * Dm + xm.phase),
+            Vm = Math.min(xm.approachDurationMs / 3e3 * 2.8, wm) * (1 - hm) * (1 + .15 * Math.sin(2.1 * Dm + xm.phase)),
+            Im = Math.min(1, 4 * (1 - hm)),
+            Km = (.45 * Math.sin(4.1 * Dm + xm.phase) + .18 * Math.sin(9.7 * Dm + 2 * xm.phase)) * Im,
+            Qm = Ym[0] + Math.cos(jm) * Vm - Math.sin(jm) * Km,
+            nm = Math.ceil(xm.surfaceY),
+            Jm = Ym[2] + Math.sin(jm) * Vm + Math.cos(jm) * Km,
             {
-              fishAt: zk,
-              bubblesAt: Sk
-            } = yk;
-          zk[0] = Sk[0] = Qk, zk[1] = sk + qk, Sk[1] = sk + Lk, zk[2] = Sk[2] = Vk, yk.fish ??= Ik.createParticles(jk, {
-            pos: zk
-          }), yk.fish.moveTo(zk), yk.fish.emit(1), yk.bubbles ??= Ik.createParticles(ek, {
-            pos: Sk,
-            half: tk
-          }), yk.bubbles.moveTo(Sk), yk.bubbles.setEmitRate(Zk + 32 * (.5 + .5 * Math.sin(9 * ak + yk.phase)) ** 4 + 13 * Xk)
+              fishAt: cm,
+              bubblesAt: zm
+            } = xm;
+          cm[0] = zm[0] = Qm, cm[1] = nm + im, zm[1] = nm + Rm, cm[2] = zm[2] = Jm, xm.fish ??= fm.createParticles(om, {
+            pos: cm
+          }), xm.fish.moveTo(cm), xm.fish.emit(1), xm.bubbles ??= fm.createParticles(Om, {
+            pos: zm,
+            half: pm
+          }), xm.bubbles.moveTo(zm), xm.bubbles.setEmitRate(Em + 32 * (.5 + .5 * Math.sin(9 * Dm + xm.phase)) ** 4 + 13 * hm)
         }
       }
       return {
-        onCreate(kk) {
-          Ik = kk
+        onCreate(mm) {
+          fm = mm
         },
         onAfterRender() {
-          Ik && Tk(Ik)
+          fm && Am(fm)
         },
         onClose() {
-          for (const kk of Fk.values()) Xk(kk);
-          Fk.clear(), Ik = null
+          for (const mm of Tm.values()) hm(mm);
+          Tm.clear(), fm = null
         },
-        onReceivedMessageFromServer(kk, Ik) {
-          if (kk !== yk.D) return;
+        onReceivedMessageFromServer(mm, fm) {
+          if (mm !== xm.t) return;
           const {
-            hookId: Tk,
-            waiting: ik
-          } = Ik;
-          if (ik) Fk.has(Tk) || Fk.set(Tk, {
+            hookId: Am,
+            waiting: am
+          } = fm;
+          if (am) Tm.has(Am) || Tm.set(Am, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + ik.remainingMs,
-            approachDurationMs: ik.durationMs,
-            surfaceY: ik.surfaceY,
+            biteAt: performance.now() + am.remainingMs,
+            approachDurationMs: am.durationMs,
+            surfaceY: am.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const kk = Fk.get(Tk);
-            kk && Xk(kk), Fk.delete(Tk)
+            const mm = Tm.get(Am);
+            mm && hm(mm), Tm.delete(Am)
           }
         }
       }
     }
-    var xk = Ik(4850),
-      Pk = Ik(4837);
+    var Vm = fm(4796),
+      Im = fm(4784);
 
-    function Kk(kk) {
-      let Fk, Ik = null,
-        Xk = null;
-      const Tk = () => {
-        var kk;
-        null === (kk = Xk) || void 0 === kk || kk(), Xk = null
+    function Km(mm) {
+      let Tm, fm = null,
+        hm = null;
+      const Am = () => {
+        var mm;
+        null === (mm = hm) || void 0 === mm || mm(), hm = null
       };
       return {
-        onCreate(Xk) {
-          Fk = Xk, Ik = Fk.getClientOption(kk, "dialogue")
+        onCreate(hm) {
+          Tm = hm, fm = Tm.getClientOption(mm, "dialogue")
         },
         onAfterRender() {
-          if (!Fk) return;
-          const ik = Fk.getClientOption(kk, "dialogue");
-          if (ik === Ik) return;
-          if (Ik = ik, Tk(), !ik || !1 === ik.animateIn) return;
+          if (!Tm) return;
+          const am = Tm.getClientOption(mm, "dialogue");
+          if (am === fm) return;
+          if (fm = am, Am(), !am || !1 === am.animateIn) return;
           const {
-            plan: yk,
-            synth: lk
-          } = (0, Pk.e)(ik);
-          lk && (Xk = (0, xk.i)(lk, yk.blips))
+            plan: xm,
+            synth: wm
+          } = (0, Im.f)(am);
+          wm && (hm = (0, Vm.e)(wm, xm.blips))
         },
-        onClose: Tk
+        onClose: Am
       }
     }
-    var Qk = Ik(39154);
-    const sk = [
+    var Qm = fm(39275);
+    const nm = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      Vk = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      zk = [0, 1, 2, 0, 2, 3];
+      Jm = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      cm = [0, 1, 2, 0, 2, 3];
 
-    function Sk(kk, Fk, Ik) {
-      var Xk;
-      let [Tk, ik, yk] = Fk;
-      if (kk.hasPackModel("Furnace")) return null;
-      const lk = ((null !== (Xk = kk.getMetaInfo(Ik).rot) && void 0 !== Xk ? Xk : 1) - 1) * Math.PI / 2,
-        ak = Math.PI + lk,
-        qk = Math.cos(ak),
-        Lk = Math.sin(ak),
-        tk = [];
-      for (const [ek, wk] of sk) tk.push(ek * qk, wk, -ek * Lk);
-      const Zk = {
-          positions: tk,
-          indices: zk,
-          uvs: Vk
+    function zm(mm, Tm, fm) {
+      var hm;
+      let [Am, am, xm] = Tm;
+      if (mm.hasPackModel("Furnace")) return null;
+      const wm = ((null !== (hm = mm.getMetaInfo(fm).rot) && void 0 !== hm ? hm : 1) - 1) * Math.PI / 2,
+        Dm = Math.PI + wm,
+        im = Math.cos(Dm),
+        Rm = Math.sin(Dm),
+        pm = [];
+      for (const [Om, Ym] of nm) pm.push(Om * im, Ym, -Om * Rm);
+      const Em = {
+          positions: pm,
+          indices: cm,
+          uvs: Jm
         },
-        jk = [Tk + .5 + .51 * Math.sin(lk), ik + .375, yk + .5 + .51 * Math.cos(lk)];
-      return kk.createGameMesh(Zk, {
+        om = [Am + .5 + .51 * Math.sin(wm), am + .375, xm + .5 + .51 * Math.cos(wm)];
+      return mm.createGameMesh(Em, {
         kind: "furnaceFire"
-      }, jk)
+      }, om)
     }
 
-    function vk(kk) {
-      return Math.floor(kk / 200) % 3
+    function Zm(mm) {
+      return Math.floor(mm / 200) % 3
     }
 
-    function Ek(kk, Fk, Ik) {
-      kk.setGameMesh(Fk, {
-        uvOffset: [0, Ik / 3]
+    function km(mm, Tm, fm) {
+      mm.setGameMesh(Tm, {
+        uvOffset: [0, fm / 3]
       })
     }
-    const Ok = [.12, .025, .12],
-      nk = [{
+    const bm = [.12, .025, .12],
+      Sm = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -501,7 +501,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: ik.d.Standard,
+          blendMode: am.g.Standard,
           soft: !0
         },
         perSecond: 7
@@ -518,196 +518,196 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: ik.d.Add,
+          blendMode: am.g.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class Gk {
+    class em {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(kk, Fk) {
-        const Ik = kk.getBlockId(Fk[0], Fk[1], Fk[2]);
-        if ("Furnace" !== kk.getMetaInfo(Ik).rootName) return;
-        const Xk = performance.now();
-        let Tk = this.smokes.find((kk => kk.pos[0] === Fk[0] && kk.pos[1] === Fk[1] && kk.pos[2] === Fk[2] && kk.iL === Ik));
-        if (Tk || (Tk = {
-            pos: [Fk[0], Fk[1], Fk[2]],
-            iL: Ik,
-            endMs: Xk,
+      start(mm, Tm) {
+        const fm = mm.getBlockId(Tm[0], Tm[1], Tm[2]);
+        if ("Furnace" !== mm.getMetaInfo(fm).rootName) return;
+        const hm = performance.now();
+        let Am = this.smokes.find((mm => mm.pos[0] === Tm[0] && mm.pos[1] === Tm[1] && mm.pos[2] === Tm[2] && mm.jR === fm));
+        if (Am || (Am = {
+            pos: [Tm[0], Tm[1], Tm[2]],
+            jR: fm,
+            endMs: hm,
             lastBurstMs: -1 / 0,
-            pending: new Array(nk.length).fill(0),
-            fire: Sk(kk, Fk, Ik)
-          }, this.smokes.push(Tk), null !== Tk.fire && (Ek(kk, Tk.fire, vk(Xk)), this.shownFireFrame = -1)), Tk.endMs = Xk + 6e3, this.smokes.length > 4) {
-          const Fk = this.smokes.reduce(((kk, Fk) => Fk.endMs < kk.endMs ? Fk : kk));
-          pk(kk, Fk), this.smokes.splice(this.smokes.indexOf(Fk), 1)
+            pending: new Array(Sm.length).fill(0),
+            fire: zm(mm, Tm, fm)
+          }, this.smokes.push(Am), null !== Am.fire && (km(mm, Am.fire, Zm(hm)), this.shownFireFrame = -1)), Am.endMs = hm + 6e3, this.smokes.length > 4) {
+          const Tm = this.smokes.reduce(((mm, Tm) => Tm.endMs < mm.endMs ? Tm : mm));
+          Nm(mm, Tm), this.smokes.splice(this.smokes.indexOf(Tm), 1)
         }
-        Xk - Tk.lastBurstMs >= 300 && (Tk.lastBurstMs = Xk, nk.forEach(((kk, Fk) => {
-          Tk.pending[Fk] += kk.style.count
+        hm - Am.lastBurstMs >= 300 && (Am.lastBurstMs = hm, Sm.forEach(((mm, Tm) => {
+          Am.pending[Tm] += mm.style.count
         })))
       }
-      onAfterRender(kk, Fk) {
+      onAfterRender(mm, Tm) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const Ik = performance.now();
-        this.smokes = this.smokes.filter((Fk => {
-          const [Xk, Tk, ik] = Fk.pos, yk = Ik < Fk.endMs && kk.getBlockId(Xk, Tk, ik) === Fk.iL;
-          return yk || pk(kk, Fk), yk
+        const fm = performance.now();
+        this.smokes = this.smokes.filter((Tm => {
+          const [hm, Am, am] = Tm.pos, xm = fm < Tm.endMs && mm.getBlockId(hm, Am, am) === Tm.jR;
+          return xm || Nm(mm, Tm), xm
         }));
-        const Xk = vk(Ik);
-        if (Xk !== this.shownFireFrame) {
-          this.shownFireFrame = Xk;
-          for (const Fk of this.smokes) null !== Fk.fire && Ek(kk, Fk.fire, Xk)
+        const hm = Zm(fm);
+        if (hm !== this.shownFireFrame) {
+          this.shownFireFrame = hm;
+          for (const Tm of this.smokes) null !== Tm.fire && km(mm, Tm.fire, hm)
         }
-        if (!kk.particlesEnabled()) {
-          for (const kk of this.smokes) kk.pending.fill(0);
+        if (!mm.particlesEnabled()) {
+          for (const mm of this.smokes) mm.pending.fill(0);
           return
         }
-        const Tk = Math.min(Fk, 250) / 1e3;
-        for (const ik of this.smokes) {
-          const [Fk, Xk, yk] = ik.pos;
-          if (0 !== kk.getBlockId(Fk, Xk + 1, yk)) {
-            ik.pending.fill(0);
+        const Am = Math.min(Tm, 250) / 1e3;
+        for (const am of this.smokes) {
+          const [Tm, hm, xm] = am.pos;
+          if (0 !== mm.getBlockId(Tm, hm + 1, xm)) {
+            am.pending.fill(0);
             continue
           }
-          const lk = (ik.endMs - Ik) / 6e3,
-            ak = this.centre;
-          ak[0] = Fk + .5, ak[1] = Xk + 1.275, ak[2] = yk + .5, nk.forEach(((Fk, Ik) => {
-            ik.pending[Ik] += Fk.perSecond * lk * Tk;
-            const Xk = Math.floor(ik.pending[Ik]);
-            Xk > 0 && this.emit(kk, Ik, ak, Xk) && (ik.pending[Ik] -= Xk)
+          const wm = (am.endMs - fm) / 6e3,
+            Dm = this.centre;
+          Dm[0] = Tm + .5, Dm[1] = hm + 1.275, Dm[2] = xm + .5, Sm.forEach(((Tm, fm) => {
+            am.pending[fm] += Tm.perSecond * wm * Am;
+            const hm = Math.floor(am.pending[fm]);
+            hm > 0 && this.emit(mm, fm, Dm, hm) && (am.pending[fm] -= hm)
           }))
         }
       }
-      dispose(kk) {
-        for (const Ik of this.smokes) pk(kk, Ik);
+      dispose(mm) {
+        for (const fm of this.smokes) Nm(mm, fm);
         this.smokes = [];
-        for (const Ik of null !== (Fk = this.puffers) && void 0 !== Fk ? Fk : []) {
-          var Fk;
-          Ik.dispose()
+        for (const fm of null !== (Tm = this.puffers) && void 0 !== Tm ? Tm : []) {
+          var Tm;
+          fm.dispose()
         }
         this.puffers = null
       }
-      emit(kk, Fk, Ik, Xk) {
-        return this.puffers ??= nk.map((kk => {
+      emit(mm, Tm, fm, hm) {
+        return this.puffers ??= Sm.map((mm => {
           let {
-            style: Fk,
-            perSecond: Ik
-          } = kk;
-          const Xk = (Fk.count / .3 + Ik) * Fk.life[1];
-          return new Qk.f(Fk, Math.ceil(4 * Xk), Ok)
-        })), this.puffers[Fk].emit(kk, Ik, this.renderFrame, Xk)
+            style: Tm,
+            perSecond: fm
+          } = mm;
+          const hm = (Tm.count / .3 + fm) * Tm.life[1];
+          return new Qm.g(Tm, Math.ceil(4 * hm), bm)
+        })), this.puffers[Tm].emit(mm, fm, this.renderFrame, hm)
       }
     }
 
-    function pk(kk, Fk) {
-      null !== Fk.fire && (kk.disposeGameMesh(Fk.fire), Fk.fire = null)
+    function Nm(mm, Tm) {
+      null !== Tm.fire && (mm.disposeGameMesh(Tm.fire), Tm.fire = null)
     }
 
-    function uk() {
-      let kk;
-      const Fk = new Gk;
+    function Gm() {
+      let mm;
+      const Tm = new em;
       return {
-        onCreate(Fk) {
-          kk = Fk
+        onCreate(Tm) {
+          mm = Tm
         },
-        onReceivedMessageFromServer(Ik, Xk) {
-          Ik === yk.G && Fk.start(kk, Xk)
+        onReceivedMessageFromServer(fm, hm) {
+          fm === xm.w && Tm.start(mm, hm)
         },
-        onAfterRender(Ik) {
-          Fk.onAfterRender(kk, Ik)
+        onAfterRender(fm) {
+          Tm.onAfterRender(mm, fm)
         },
         onClose() {
-          Fk.dispose(kk)
+          Tm.dispose(mm)
         }
       }
     }
 
-    function bk(kk, Fk, Ik, Xk) {
+    function Xm(mm, Tm, fm, hm) {
       return {
-        dialogue: Kk(Xk.localPlayerId),
-        fishing: Jk(Xk.localPlayerId),
-        furnaceSmoke: uk(),
-        ironChest: Tk()
+        dialogue: Km(hm.localPlayerId),
+        fishing: jm(hm.localPlayerId),
+        furnaceSmoke: Gm(),
+        ironChest: Am()
       }
     }
 
-    function Rk(kk, Fk) {
-      for (const Tk of [kk, ...null !== Fk && void 0 !== Fk ? Fk : []]) try {
-        var Ik;
-        null === Tk || void 0 === Tk || null === (Ik = Tk.onClose) || void 0 === Ik || Ik.call(Tk)
-      } catch (Xk) {
-        console.error("Error in client onClose callback", Xk)
+    function Pm(mm, Tm) {
+      for (const Am of [mm, ...null !== Tm && void 0 !== Tm ? Tm : []]) try {
+        var fm;
+        null === Am || void 0 === Am || null === (fm = Am.onClose) || void 0 === fm || fm.call(Am)
+      } catch (hm) {
+        console.error("Error in client onClose callback", hm)
       }
     }
   },
-  39154: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => Xk,
-      f: () => ik
+  39275: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => hm,
+      g: () => am
     });
-    const Xk = 1 / .6,
-      Tk = {
+    const hm = 1 / .6,
+      Am = {
         kind: "smokePuff"
       };
-    class ik {
-      constructor(kk, Fk, Ik) {
-        this.style = kk, this.St = Fk, this.half = Ik, this.particles = null, this.lastFrame = -1
+    class am {
+      constructor(mm, Tm, fm) {
+        this.style = mm, this.yp = Tm, this.half = fm, this.particles = null, this.lastFrame = -1
       }
-      emit(kk, Fk, Ik) {
-        let ik = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return Ik !== this.lastFrame && (this.lastFrame = Ik, this.particles || (this.particles = kk.createParticles(function(kk, Fk) {
+      emit(mm, Tm, fm) {
+        let am = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return fm !== this.lastFrame && (this.lastFrame = fm, this.particles || (this.particles = mm.createParticles(function(mm, Tm) {
           const [
-            [Ik, ik, yk],
-            [lk, ak, qk]
-          ] = kk.colours;
+            [fm, am, xm],
+            [wm, Dm, im]
+          ] = mm.colours;
           return {
-            texture: kk.soft ? Tk : "square_particle",
-            St: Fk,
-            minLifeTime: kk.life[0] / Xk,
-            maxLifeTime: kk.life[1] / Xk,
-            minEmitPower: kk.power[0] * Xk,
-            maxEmitPower: kk.power[1] * Xk,
-            minSize: kk.size[0],
-            maxSize: kk.size[1],
+            texture: mm.soft ? Am : "square_particle",
+            yp: Tm,
+            minLifeTime: mm.life[0] / hm,
+            maxLifeTime: mm.life[1] / hm,
+            minEmitPower: mm.power[0] * hm,
+            maxEmitPower: mm.power[1] * hm,
+            minSize: mm.size[0],
+            maxSize: mm.size[1],
             emitRate: 0,
-            gravity: [0, kk.lift * Xk * Xk, 0],
-            dir1: [-kk.spread, 1, -kk.spread],
-            dir2: [kk.spread, 1, kk.spread],
+            gravity: [0, mm.lift * hm * hm, 0],
+            dir1: [-mm.spread, 1, -mm.spread],
+            dir2: [mm.spread, 1, mm.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [Ik, ik, yk, kk.alpha],
-              maxColor: [lk, ak, qk, kk.alpha]
+              minColor: [fm, am, xm, mm.alpha],
+              maxColor: [wm, Dm, im, mm.alpha]
             }, {
               timeFraction: 1,
-              minColor: [Ik, ik, yk, 0],
-              maxColor: [lk, ak, qk, 0]
+              minColor: [fm, am, xm, 0],
+              maxColor: [wm, Dm, im, 0]
             }],
-            blendMode: kk.blendMode
+            blendMode: mm.blendMode
           }
-        }(this.style, this.St), {
-          pos: Fk,
+        }(this.style, this.yp), {
+          pos: Tm,
           half: this.half
-        })), this.particles.moveTo(Fk, this.half), this.particles.emit(ik), !0)
+        })), this.particles.moveTo(Tm, this.half), this.particles.emit(am), !0)
       }
       dispose() {
-        var kk;
-        null === (kk = this.particles) || void 0 === kk || kk.stop(), this.particles = null
+        var mm;
+        null === (mm = this.particles) || void 0 === mm || mm.stop(), this.particles = null
       }
     }
   },
-  4843: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => Tk,
-      d: () => Xk,
-      g: () => ik,
-      k: () => ak,
-      n: () => yk
+  4789: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => Am,
+      e: () => hm,
+      f: () => am,
+      g: () => Dm,
+      k: () => xm
     });
-    const Xk = ["sine", "triangle", "square", "sawtooth"],
-      Tk = 55,
-      ik = {
+    const hm = ["sine", "triangle", "square", "sawtooth"],
+      Am = 55,
+      am = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -846,39 +846,39 @@ export const modules = {
         }
       };
 
-    function yk(kk) {
-      return "string" !== typeof kk ? kk : Object.hasOwn(ik, kk) ? ik[kk] : null
+    function xm(mm) {
+      return "string" !== typeof mm ? mm : Object.hasOwn(am, mm) ? am[mm] : null
     }
 
-    function lk(kk, Fk, Ik) {
-      return Math.min(Ik, Math.max(Fk, kk))
+    function wm(mm, Tm, fm) {
+      return Math.min(fm, Math.max(Tm, mm))
     }
 
-    function ak(kk) {
-      const Fk = lk(kk.durationMs, 10, 500),
-        Ik = lk(kk.attackMs, 0, Fk),
+    function Dm(mm) {
+      const Tm = wm(mm.durationMs, 10, 500),
+        fm = wm(mm.attackMs, 0, Tm),
         {
-          intonation: Tk
-        } = kk;
+          intonation: Am
+        } = mm;
       return {
-        waveform: Xk.includes(kk.waveform) ? kk.waveform : "sine",
-        pitchHz: lk(kk.pitchHz, 20, 4e3),
-        glideSemitones: lk(kk.glideSemitones, -24, 24),
-        durationMs: Fk,
-        attackMs: Ik,
-        releaseMs: lk(kk.releaseMs, 0, Fk - Ik),
-        lowpassHz: null === kk.lowpassHz ? null : lk(kk.lowpassHz, 20, 2e4),
-        volume: lk(kk.volume, 0, 2),
+        waveform: hm.includes(mm.waveform) ? mm.waveform : "sine",
+        pitchHz: wm(mm.pitchHz, 20, 4e3),
+        glideSemitones: wm(mm.glideSemitones, -24, 24),
+        durationMs: Tm,
+        attackMs: fm,
+        releaseMs: wm(mm.releaseMs, 0, Tm - fm),
+        lowpassHz: null === mm.lowpassHz ? null : wm(mm.lowpassHz, 20, 2e4),
+        volume: wm(mm.volume, 0, 2),
         intonation: {
-          variationSemitones: lk(Tk.variationSemitones, 0, 6),
-          declineSemitones: lk(Tk.declineSemitones, 0, 12),
-          questionRiseSemitones: lk(Tk.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: lk(Tk.exclaimLiftSemitones, 0, 12)
+          variationSemitones: wm(Am.variationSemitones, 0, 6),
+          declineSemitones: wm(Am.declineSemitones, 0, 12),
+          questionRiseSemitones: wm(Am.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: wm(Am.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: lk(kk.syllableMs, 25, 200)
+        syllableMs: wm(mm.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

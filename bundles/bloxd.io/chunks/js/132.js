@@ -1,13 +1,13 @@
 export const id = 132;
 export const ids = [132, 136, 137];
 export const modules = {
-  6589: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => yk
+  6552: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => xm
     });
-    var Xk = Ik(5038),
-      Tk = Ik(1096);
-    const ik = {
+    var hm = fm(4980),
+      Am = fm(1135);
+    const am = {
       strict: "shaderPack:variantStrict",
       nonStrict: "shaderPack:variantNonStrict",
       terrain: "shaderPack:variantTerrain",
@@ -15,339 +15,339 @@ export const modules = {
       model: "shaderPack:variantModel"
     };
 
-    function yk(kk) {
+    function xm(mm) {
       let {
-        diagnostics: Fk,
-        more: Ik = 0,
-        t: yk
-      } = kk;
-      return (0, Tk.jsxs)("ul", {
+        diagnostics: Tm,
+        more: fm = 0,
+        t: xm
+      } = mm;
+      return (0, Am.jsxs)("ul", {
         className: "ShaderPackDiagnostics",
-        children: [Fk.map(((kk, Fk) => {
-          const Ik = (0, Xk.h)(kk),
-            lk = function(kk, Fk) {
-              const Ik = (0, Xk.e)(null !== kk && void 0 !== kk ? kk : []);
-              if (0 === Ik.length) return null;
-              return Ik.map((kk => kk.map((kk => Fk(ik[kk]))).join(", "))).join("; ")
-            }(kk.variants, yk);
-          return (0, Tk.jsxs)("li", {
-            children: [Ik && (0, Tk.jsx)("span", {
+        children: [Tm.map(((mm, Tm) => {
+          const fm = (0, hm.f)(mm),
+            wm = function(mm, Tm) {
+              const fm = (0, hm.c)(null !== mm && void 0 !== mm ? mm : []);
+              if (0 === fm.length) return null;
+              return fm.map((mm => mm.map((mm => Tm(am[mm]))).join(", "))).join("; ")
+            }(mm.variants, xm);
+          return (0, Am.jsxs)("li", {
+            children: [fm && (0, Am.jsx)("span", {
               className: "ShaderPackDiagnosticLocation",
-              children: Ik
-            }), kk.message, lk && (0, Tk.jsx)("span", {
+              children: fm
+            }), mm.message, wm && (0, Am.jsx)("span", {
               className: "ShaderPackDiagnosticVariants",
-              children: yk("shaderPack:onlyIn", {
-                variants: lk
+              children: xm("shaderPack:onlyIn", {
+                variants: wm
               })
             })]
-          }, Fk)
-        })), Ik > 0 && (0, Tk.jsx)("li", {
-          children: yk("shaderPack:moreErrors", {
-            count: String(Ik)
+          }, Tm)
+        })), fm > 0 && (0, Am.jsx)("li", {
+          children: xm("shaderPack:moreErrors", {
+            count: String(fm)
           })
         })]
       })
     }
   },
-  6591: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => sk,
-      h: () => Vk
+  6555: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => nm,
+      f: () => Jm
     });
-    var Xk = Ik(58),
-      Tk = Ik(1055),
-      ik = Ik.n(Tk),
-      yk = Ik(4944),
-      lk = Ik(1318),
-      ak = Ik(1066),
-      qk = Ik(1179),
-      Lk = Ik(5053),
-      tk = Ik(5047),
-      Zk = Ik(3103);
-    const jk = 33554432,
-      ek = 1024,
-      wk = 65536;
-    async function Hk(kk) {
-      const Fk = (0, Zk.o)(kk);
-      if (Fk) {
-        if (Fk.size > jk) throw new Zk.e("shaderPack:loadZipTooBig", {
-          megabytes: String(jk / 1048576)
+    var hm = fm(59),
+      Am = fm(1080),
+      am = fm.n(Am),
+      xm = fm(4904),
+      wm = fm(1345),
+      Dm = fm(1089),
+      im = fm(1208),
+      Rm = fm(4989),
+      pm = fm(4985),
+      Em = fm(3158);
+    const om = 33554432,
+      Om = 1024,
+      Ym = 65536;
+    async function qm(mm) {
+      const Tm = (0, Em.k)(mm);
+      if (Tm) {
+        if (Tm.size > om) throw new Em.c("shaderPack:loadZipTooBig", {
+          megabytes: String(om / 1048576)
         });
-        return async function(kk) {
-          return Jk((0, Zk.i)(kk, ek).map((Fk => ({
-            path: Fk.path,
-            read: Ik => (0, Zk.n)(kk, Fk, Ik)
+        return async function(mm) {
+          return jm((0, Em.g)(mm, Om).map((Tm => ({
+            path: Tm.path,
+            read: fm => (0, Em.j)(mm, Tm, fm)
           }))))
-        }(new Uint8Array(await Fk.arrayBuffer()))
+        }(new Uint8Array(await Tm.arrayBuffer()))
       }
-      return Jk(kk.map((kk => ({
-        path: (0, Zk.m)(kk),
-        read: Fk => async function(kk, Fk) {
-          return kk.size > Fk ? null : new Uint8Array(await kk.arrayBuffer())
-        }(kk, Fk)
+      return jm(mm.map((mm => ({
+        path: (0, Em.h)(mm),
+        read: Tm => async function(mm, Tm) {
+          return mm.size > Tm ? null : new Uint8Array(await mm.arrayBuffer())
+        }(mm, Tm)
       }))))
     }
-    async function Jk(kk) {
-      const Fk = function(kk) {
-          const Fk = kk.length > 0 ? kk[0].path.indexOf("/") : -1;
-          if (-1 === Fk) return kk;
-          const Ik = kk[0].path.slice(0, Fk + 1);
-          if (!kk.every((kk => kk.path.startsWith(Ik)))) return kk;
-          return kk.map((kk => ({
-            ...kk,
-            path: kk.path.slice(Ik.length)
+    async function jm(mm) {
+      const Tm = function(mm) {
+          const Tm = mm.length > 0 ? mm[0].path.indexOf("/") : -1;
+          if (-1 === Tm) return mm;
+          const fm = mm[0].path.slice(0, Tm + 1);
+          if (!mm.every((mm => mm.path.startsWith(fm)))) return mm;
+          return mm.map((mm => ({
+            ...mm,
+            path: mm.path.slice(fm.length)
           })))
-        }(kk.filter((kk => !(0, Zk.g)(kk.path)))),
-        Ik = Fk.filter((kk => "pack.json" === kk.path.toLowerCase()));
-      if (0 === Ik.length) throw new Zk.e("shaderPack:loadNoManifest");
-      if (Ik.length > 1) throw new Zk.e("shaderPack:loadDuplicateManifest");
-      const Xk = Ik[0],
-        Tk = await Xk.read(wk);
-      if (null === Tk) throw new Zk.e("shaderPack:loadManifestTooBig", {
-        kilobytes: String(wk / 1024)
+        }(mm.filter((mm => !(0, Em.f)(mm.path)))),
+        fm = Tm.filter((mm => "pack.json" === mm.path.toLowerCase()));
+      if (0 === fm.length) throw new Em.c("shaderPack:loadNoManifest");
+      if (fm.length > 1) throw new Em.c("shaderPack:loadDuplicateManifest");
+      const hm = fm[0],
+        Am = await hm.read(Ym);
+      if (null === Am) throw new Em.c("shaderPack:loadManifestTooBig", {
+        kilobytes: String(Ym / 1024)
       });
-      const ik = function(kk) {
-          let Fk;
+      const am = function(mm) {
+          let Tm;
           try {
-            Fk = JSON.parse(kk)
-          } catch (lk) {
-            throw new Zk.e("shaderPack:loadManifestNotJson", {
-              error: lk.message
+            Tm = JSON.parse(mm)
+          } catch (wm) {
+            throw new Em.c("shaderPack:loadManifestNotJson", {
+              error: wm.message
             }, {
-              cause: lk
+              cause: wm
             })
           }
-          if ("object" !== typeof Fk || null === Fk || Array.isArray(Fk)) throw new Zk.e("shaderPack:loadManifestNotObject");
+          if ("object" !== typeof Tm || null === Tm || Array.isArray(Tm)) throw new Em.c("shaderPack:loadManifestNotObject");
           const {
-            apiVersion: Ik,
-            name: Xk,
-            author: Tk,
-            description: ik,
-            keepCircleShadows: yk
-          } = Fk;
-          if (void 0 === Ik) throw new Zk.e("shaderPack:loadNoApiVersion", {
-            version: String(tk.b)
+            apiVersion: fm,
+            name: hm,
+            author: Am,
+            description: am,
+            keepCircleShadows: xm
+          } = Tm;
+          if (void 0 === fm) throw new Em.c("shaderPack:loadNoApiVersion", {
+            version: String(pm.c)
           });
-          if (!(0, tk.i)(Ik)) throw new Zk.e("shaderPack:loadWrongApiVersion", {
-            packVersion: JSON.stringify(Ik),
-            version: String(tk.b)
+          if (!(0, pm.e)(fm)) throw new Em.c("shaderPack:loadWrongApiVersion", {
+            packVersion: JSON.stringify(fm),
+            version: String(pm.c)
           });
-          if ("string" !== typeof Xk || "" === Xk.trim()) throw new Zk.e("shaderPack:loadNoName");
-          if (void 0 !== Tk && null !== Tk && "string" !== typeof Tk) throw new Zk.e("shaderPack:loadAuthorNotString");
-          if (void 0 !== ik && null !== ik && "string" !== typeof ik) throw new Zk.e("shaderPack:loadDescriptionNotString");
-          if (void 0 !== yk && "boolean" !== typeof yk) throw new Zk.e("shaderPack:loadKeepCircleShadowsNotBoolean");
+          if ("string" !== typeof hm || "" === hm.trim()) throw new Em.c("shaderPack:loadNoName");
+          if (void 0 !== Am && null !== Am && "string" !== typeof Am) throw new Em.c("shaderPack:loadAuthorNotString");
+          if (void 0 !== am && null !== am && "string" !== typeof am) throw new Em.c("shaderPack:loadDescriptionNotString");
+          if (void 0 !== xm && "boolean" !== typeof xm) throw new Em.c("shaderPack:loadKeepCircleShadowsNotBoolean");
           return {
-            apiVersion: Ik,
-            name: Xk,
-            author: "string" === typeof Tk ? Tk : null,
-            description: "string" === typeof ik && "" !== ik.trim() ? ik : null,
-            keepCircleShadows: !0 === yk
+            apiVersion: fm,
+            name: hm,
+            author: "string" === typeof Am ? Am : null,
+            description: "string" === typeof am && "" !== am.trim() ? am : null,
+            keepCircleShadows: !0 === xm
           }
-        }(xk(Tk, Xk.path)),
-        yk = Fk.filter((kk => kk.path.toLowerCase().endsWith(".wgsl"))).sort(((kk, Fk) => (0, Lk.k)(kk.path, Fk.path)));
-      if (0 === yk.length) throw new Zk.e("shaderPack:loadNoWgsl");
-      if (yk.length > Lk.b) throw new Zk.e("shaderPack:loadTooManyWgsl", {
-        count: String(Lk.b)
+        }(Vm(Am, hm.path)),
+        xm = Tm.filter((mm => mm.path.toLowerCase().endsWith(".wgsl"))).sort(((mm, Tm) => (0, Rm.i)(mm.path, Tm.path)));
+      if (0 === xm.length) throw new Em.c("shaderPack:loadNoWgsl");
+      if (xm.length > Rm.b) throw new Em.c("shaderPack:loadTooManyWgsl", {
+        count: String(Rm.b)
       });
-      const lk = yk.find(((kk, Fk) => Fk > 0 && kk.path === yk[Fk - 1].path));
-      if (lk) throw new Zk.e("shaderPack:loadDuplicatePath", {
-        path: lk.path
+      const wm = xm.find(((mm, Tm) => Tm > 0 && mm.path === xm[Tm - 1].path));
+      if (wm) throw new Em.c("shaderPack:loadDuplicatePath", {
+        path: wm.path
       });
-      const ak = [];
-      let qk = Lk.c;
-      for (const tk of yk) {
-        const kk = await tk.read(qk);
-        if (null === kk) throw new Zk.e("shaderPack:loadSourceTooBig", {
-          kilobytes: String(Lk.c / 1024)
+      const Dm = [];
+      let im = Rm.c;
+      for (const pm of xm) {
+        const mm = await pm.read(im);
+        if (null === mm) throw new Em.c("shaderPack:loadSourceTooBig", {
+          kilobytes: String(Rm.c / 1024)
         });
-        qk -= kk.byteLength, ak.push({
-          path: tk.path,
-          source: xk(kk, tk.path)
+        im -= mm.byteLength, Dm.push({
+          path: pm.path,
+          source: Vm(mm, pm.path)
         })
       }
       return {
-        manifest: ik,
-        files: ak
+        manifest: am,
+        files: Dm
       }
     }
 
-    function xk(kk, Fk) {
+    function Vm(mm, Tm) {
       try {
         return new TextDecoder("utf-8", {
           fatal: !0
-        }).decode(kk)
-      } catch (Ik) {
-        throw new Zk.e("shaderPack:loadNotUtf8", {
-          path: Fk
+        }).decode(mm)
+      } catch (fm) {
+        throw new Em.c("shaderPack:loadNotUtf8", {
+          path: Tm
         }, {
-          cause: Ik
+          cause: fm
         })
       }
     }
-    var Pk = Ik(5038),
-      Kk = Ik(5060),
-      Qk = Ik(1096);
+    var Im = fm(4980),
+      Km = fm(4993),
+      Qm = fm(1135);
 
-    function sk(kk) {
+    function nm(mm) {
       let {
-        busy: Fk,
-        disabled: Ik,
-        onFiles: Xk
-      } = kk;
+        busy: Tm,
+        disabled: fm,
+        onFiles: hm
+      } = mm;
       const {
-        t: Tk
-      } = (0, qk.y)(), {
-        getRootProps: Lk,
-        getInputProps: tk,
-        isDragActive: Zk,
-        open: jk
-      } = (0, yk.c)({
-        onDrop: Xk,
+        t: Am
+      } = (0, im.A)(), {
+        getRootProps: Rm,
+        getInputProps: pm,
+        isDragActive: Em,
+        open: om
+      } = (0, xm.e)({
+        onDrop: hm,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: Ik
+        disabled: fm
       });
-      return (0, Qk.jsxs)("div", {
-        ...Lk({
-          className: ik()("ShaderPackDropZone", {
-            ActiveDrag: Zk,
-            Disabled: Ik
+      return (0, Qm.jsxs)("div", {
+        ...Rm({
+          className: am()("ShaderPackDropZone", {
+            ActiveDrag: Em,
+            Disabled: fm
           })
         }),
-        children: [(0, Qk.jsx)("input", {
-          ...tk({
+        children: [(0, Qm.jsx)("input", {
+          ...pm({
             webkitdirectory: "true"
           })
-        }), Fk && (0, Qk.jsx)(lk.c, {}), !Fk && (0, Qk.jsxs)(Qk.Fragment, {
-          children: [(0, Qk.jsx)("div", {
+        }), Tm && (0, Qm.jsx)(wm.c, {}), !Tm && (0, Qm.jsxs)(Qm.Fragment, {
+          children: [(0, Qm.jsx)("div", {
             className: "ShaderPackDropZoneIcon",
-            children: (0, Qk.jsx)(ak.e, {
+            children: (0, Qm.jsx)(Dm.c, {
               name: "up-from-bracket"
             })
-          }), (0, Qk.jsx)("div", {
+          }), (0, Qm.jsx)("div", {
             className: "ShaderPackDropZoneInstructions",
-            children: Tk((0, Kk.d)() ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
-          }), (0, Qk.jsx)(Kk.c, {
-            disabled: Ik,
-            openFolderPicker: jk,
-            onFiles: Xk
+            children: Am((0, Km.h)() ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
+          }), (0, Qm.jsx)(Km.e, {
+            disabled: fm,
+            openFolderPicker: om,
+            onFiles: hm
           })]
         })]
       })
     }
 
-    function Vk(kk) {
+    function Jm(mm) {
       const {
-        t: Fk
-      } = (0, qk.y)(), [Ik, Tk] = (0, Xk.useState)(!1), [ik, yk] = (0, Xk.useState)(null), lk = (0, Xk.useRef)(!1);
+        t: Tm
+      } = (0, im.A)(), [fm, Am] = (0, hm.useState)(!1), [am, xm] = (0, hm.useState)(null), wm = (0, hm.useRef)(!1);
       return {
-        loading: Ik,
-        error: ik,
-        setError: yk,
-        onFiles: async function(Ik) {
-          if (!lk.current) {
-            lk.current = !0, Tk(!0), yk(null);
+        loading: fm,
+        error: am,
+        setError: xm,
+        onFiles: async function(fm) {
+          if (!wm.current) {
+            wm.current = !0, Am(!0), xm(null);
             try {
-              await kk(await Hk(Ik))
-            } catch (Xk) {
-              Xk instanceof Zk.e ? yk((0, Pk.k)(Fk, Xk.translationKey, Xk.params)) : (console.error("Failed to load the shader pack", Xk), yk(Fk("shaderPack:unexpectedError")))
+              await mm(await qm(fm))
+            } catch (hm) {
+              hm instanceof Em.c ? xm((0, Im.j)(Tm, hm.translationKey, hm.params)) : (console.error("Failed to load the shader pack", hm), xm(Tm("shaderPack:unexpectedError")))
             } finally {
-              lk.current = !1, Tk(!1)
+              wm.current = !1, Am(!1)
             }
           }
         }
       }
     }
   },
-  6639: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      forgetShaderPackActiveHint: () => Ok,
-      isOtherApiVersion: () => zk,
-      isShaderPackActive: () => Kk,
-      isShaderPackChangePending: () => Vk,
-      markShaderPackChangePending: () => sk,
-      pageShaderPackValidationVersion: () => Sk,
-      reconcileStoredShaderPackHint: () => Ek,
-      removeShaderPack: () => Pk,
-      replaceShaderPack: () => Hk,
-      saveShaderPack: () => wk,
-      shaderPackNeedsCheck: () => vk,
-      storedPackOutcome: () => Qk,
-      storedShaderPackFiles: () => Zk,
-      toStoredShaderPack: () => tk
+  6600: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      forgetShaderPackActiveHint: () => bm,
+      isOtherApiVersion: () => cm,
+      isShaderPackActive: () => Km,
+      isShaderPackChangePending: () => Jm,
+      markShaderPackChangePending: () => nm,
+      pageShaderPackValidationVersion: () => zm,
+      reconcileStoredShaderPackHint: () => km,
+      removeShaderPack: () => Im,
+      replaceShaderPack: () => qm,
+      saveShaderPack: () => Ym,
+      shaderPackNeedsCheck: () => Zm,
+      storedPackOutcome: () => Qm,
+      storedShaderPackFiles: () => Em,
+      toStoredShaderPack: () => pm
     });
-    var Xk = Ik(5053),
-      Tk = Ik(5047),
-      ik = Ik(41),
-      yk = Ik(3396),
-      lk = Ik(6644),
-      ak = Ik(6611);
-    const qk = "shaderPackChangePending";
-    let Lk = null;
+    var hm = fm(4989),
+      Am = fm(4985),
+      am = fm(37),
+      xm = fm(3461),
+      wm = fm(6609),
+      Dm = fm(6578);
+    const im = "shaderPackChangePending";
+    let Rm = null;
 
-    function tk(kk, Fk, Ik) {
+    function pm(mm, Tm, fm) {
       return {
-        manifest: kk.manifest,
-        files: (0, Xk.w)(kk.files),
-        validation: Fk,
-        ...Ik && {
-          listing: Ik
+        manifest: mm.manifest,
+        files: (0, hm.r)(mm.files),
+        validation: Tm,
+        ...fm && {
+          listing: fm
         }
       }
     }
 
-    function Zk(kk) {
-      return Object.keys(kk.files).map((Fk => ({
-        path: Fk,
-        source: kk.files[Fk]
+    function Em(mm) {
+      return Object.keys(mm.files).map((Tm => ({
+        path: Tm,
+        source: mm.files[Tm]
       })))
     }
-    let jk = Promise.resolve();
+    let om = Promise.resolve();
 
-    function ek(kk) {
-      const Fk = jk.then(kk);
-      return jk = Fk.catch((() => {})), Fk
-    }
-
-    function wk(kk, Fk) {
-      return ek((() => Jk(kk, Fk)))
+    function Om(mm) {
+      const Tm = om.then(mm);
+      return om = Tm.catch((() => {})), Tm
     }
 
-    function Hk(kk, Fk, Ik) {
-      return ek((async () => JSON.stringify(await (0, lk.i)()) === JSON.stringify(kk) && (null === Fk ? (await xk(), !0) : Jk(Fk, Ik))))
-    }
-    async function Jk(kk, Fk) {
-      const Ik = await ik.g.setItem(lk.e, kk);
-      return Ik && nk(kk, Fk), Ik
-    }
-    async function xk() {
-      await ik.g.removeItem(lk.e), ik.j.removeItem(yk.e)
+    function Ym(mm, Tm) {
+      return Om((() => jm(mm, Tm)))
     }
 
-    function Pk() {
-      return ek(xk)
+    function qm(mm, Tm, fm) {
+      return Om((async () => JSON.stringify(await (0, wm.e)()) === JSON.stringify(mm) && (null === Tm ? (await Vm(), !0) : jm(Tm, fm))))
+    }
+    async function jm(mm, Tm) {
+      const fm = await am.e.setItem(wm.c, mm);
+      return fm && Sm(mm, Tm), fm
+    }
+    async function Vm() {
+      await am.e.removeItem(wm.c), am.g.removeItem(xm.b)
     }
 
-    function Kk(kk, Fk) {
-      return "active" === Qk(kk, Fk).kind
+    function Im() {
+      return Om(Vm)
     }
 
-    function Qk(kk, Fk) {
-      var Ik;
-      return null === kk ? {
+    function Km(mm, Tm) {
+      return "active" === Qm(mm, Tm).kind
+    }
+
+    function Qm(mm, Tm) {
+      var fm;
+      return null === mm ? {
         kind: "none",
         reason: "nothingStored"
-      } : zk(kk) ? {
+      } : cm(mm) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (Ik = kk.validation) || void 0 === Ik ? void 0 : Ik.ok) || kk.validation.fromRecheck ? null === Fk ? {
+      } : !1 !== (null === (fm = mm.validation) || void 0 === fm ? void 0 : fm.ok) || mm.validation.fromRecheck ? null === Tm ? {
         kind: "none",
         reason: "noCompiler"
-      } : vk(kk, Fk) ? {
+      } : Zm(mm, Tm) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : kk.validation.ok ? {
+      } : mm.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -358,149 +358,149 @@ export const modules = {
       }
     }
 
-    function sk() {
-      ik.m.setItem(qk, performance.timeOrigin)
+    function nm() {
+      am.k.setItem(im, performance.timeOrigin)
     }
 
-    function Vk() {
-      return ik.m.getItem(qk) === performance.timeOrigin
+    function Jm() {
+      return am.k.getItem(im) === performance.timeOrigin
     }
 
-    function zk(kk) {
-      return !(0, Tk.i)(kk.manifest.apiVersion)
+    function cm(mm) {
+      return !(0, Am.e)(mm.manifest.apiVersion)
     }
 
-    function Sk(kk) {
-      return Lk ??= kk.nG((0, ak.shaderPackTextures)()), Lk
+    function zm(mm) {
+      return Rm ??= mm.mG((0, Dm.shaderPackTextures)()), Rm
     }
 
-    function vk(kk, Fk) {
-      var Ik;
-      return (null === (Ik = kk.validation) || void 0 === Ik ? void 0 : Ik.headerVersion) !== Sk(Fk)
+    function Zm(mm, Tm) {
+      var fm;
+      return (null === (fm = mm.validation) || void 0 === fm ? void 0 : fm.headerVersion) !== zm(Tm)
     }
 
-    function Ek(kk) {
-      return ek((async () => {
-        nk(await (0, lk.i)(!0), kk)
+    function km(mm) {
+      return Om((async () => {
+        Sm(await (0, wm.e)(!0), mm)
       }))
     }
 
-    function Ok() {
-      return ek((async () => {
-        ik.j.removeItem(yk.e)
+    function bm() {
+      return Om((async () => {
+        am.g.removeItem(xm.b)
       }))
     }
 
-    function nk(kk, Fk) {
-      Kk(kk, Fk) ? ik.j.setItem(yk.e, !0) : ik.j.removeItem(yk.e)
+    function Sm(mm, Tm) {
+      Km(mm, Tm) ? am.g.setItem(xm.b, !0) : am.g.removeItem(xm.b)
     }
   },
-  6611: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      loadShaderPackTextures: () => yk,
-      shaderPackTextures: () => lk
+  6578: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      loadShaderPackTextures: () => xm,
+      shaderPackTextures: () => wm
     });
-    var Xk = Ik(5053);
-    let Tk = null,
-      ik = null;
+    var hm = fm(4989);
+    let Am = null,
+      am = null;
 
-    function yk() {
-      return ik ??= Promise.all([Ik.e(72), Ik.e(188)]).then((() => Ik(40500))).then((kk => {
+    function xm() {
+      return am ??= Promise.all([fm.e(72), fm.e(188)]).then((() => fm(40597))).then((mm => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: Fk,
-          textureNameToIndex: Ik,
-          textureAnimationData: ik
-        } = kk;
-        return Tk ??= (0, Xk.g)(Ik, ik, Fk), Tk
-      })), ik
+          FORMER_BLOCK_IMAGE_NAMES: Tm,
+          textureNameToIndex: fm,
+          textureAnimationData: am
+        } = mm;
+        return Am ??= (0, hm.g)(fm, am, Tm), Am
+      })), am
     }
 
-    function lk() {
-      if (null === Tk) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return Tk
+    function wm() {
+      if (null === Am) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return Am
     }
   },
-  6631: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => ak,
-      f: () => lk
+  6595: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => Dm,
+      f: () => wm
     });
-    var Xk = Ik(6639),
-      Tk = Ik(6611),
-      ik = Ik(113);
-    const yk = 100;
-    async function lk(kk, Fk) {
-      var Ik;
-      let Xk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (Ik = navigator.gpu) && void 0 !== Ik ? Ik : null;
-      const yk = kk.N7(Fk, (0, Tk.shaderPackTextures)());
-      if (yk.errors.length > 0) return qk(kk, yk.errors, yk.offInStrict);
-      const lk = await async function(kk) {
-        if (!kk) return null;
+    var hm = fm(6600),
+      Am = fm(6578),
+      am = fm(118);
+    const xm = 100;
+    async function wm(mm, Tm) {
+      var fm;
+      let hm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (fm = navigator.gpu) && void 0 !== fm ? fm : null;
+      const xm = mm.Z6(Tm, (0, Am.shaderPackTextures)());
+      if (xm.errors.length > 0) return im(mm, xm.errors, xm.offInStrict);
+      const wm = await async function(mm) {
+        if (!mm) return null;
         try {
-          const Fk = await (0, ik.t)(kk);
-          return Fk ? await Fk.requestDevice() : null
-        } catch (Fk) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", Fk), null
+          const Tm = await (0, am.v)(mm);
+          return Tm ? await Tm.requestDevice() : null
+        } catch (Tm) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", Tm), null
         }
-      }(Xk);
-      if (!lk) return null;
-      let ak = !1;
-      lk.lost.then((() => {
-        ak = !0
+      }(hm);
+      if (!wm) return null;
+      let Dm = !1;
+      wm.lost.then((() => {
+        Dm = !0
       }));
       try {
-        const Fk = await Promise.all(yk.validationModules.map((Fk => async function(kk, Fk, Ik) {
-          Fk.pushErrorScope("validation");
-          const Xk = Fk.createShaderModule({
-              code: Ik.code
+        const Tm = await Promise.all(xm.validationModules.map((Tm => async function(mm, Tm, fm) {
+          Tm.pushErrorScope("validation");
+          const hm = Tm.createShaderModule({
+              code: fm.code
             }),
-            Tk = Fk.popErrorScope(),
+            Am = Tm.popErrorScope(),
             {
-              messages: ik
-            } = await Xk.getCompilationInfo(),
-            yk = ik.filter((kk => "error" === kk.type)).map((Fk => kk.mapValidationMessage(Ik, Fk))),
-            lk = await Tk;
-          lk && 0 === yk.length && yk.push({
+              messages: am
+            } = await hm.getCompilationInfo(),
+            xm = am.filter((mm => "error" === mm.type)).map((Tm => mm.mapValidationMessage(fm, Tm))),
+            wm = await Am;
+          wm && 0 === xm.length && xm.push({
             file: null,
             line: 0,
-            message: lk.message,
-            variants: [Ik.key]
+            message: wm.message,
+            variants: [fm.key]
           });
-          return yk
-        }(kk, lk, Fk))));
-        return ak ? null : qk(kk, kk.YIk(Fk.flat()), yk.offInStrict)
-      } catch (Lk) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", Lk), null
+          return xm
+        }(mm, wm, Tm))));
+        return Dm ? null : im(mm, mm.Lfm(Tm.flat()), xm.offInStrict)
+      } catch (Rm) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", Rm), null
       } finally {
-        lk.destroy()
+        wm.destroy()
       }
     }
-    async function ak(kk, Fk) {
-      var Ik;
-      if (!(0, Xk.shaderPackNeedsCheck)(kk, Fk) || (0, Xk.isOtherApiVersion)(kk)) return kk;
-      const Tk = await lk(Fk, (0, Xk.storedShaderPackFiles)(kk));
-      if (!Tk) return kk;
-      const ik = !1 === (null === (Ik = kk.validation) || void 0 === Ik ? void 0 : Ik.ok) && !kk.validation.fromRecheck,
-        yk = {
-          ...kk,
-          validation: ik ? Tk : {
-            ...Tk,
+    async function Dm(mm, Tm) {
+      var fm;
+      if (!(0, hm.shaderPackNeedsCheck)(mm, Tm) || (0, hm.isOtherApiVersion)(mm)) return mm;
+      const Am = await wm(Tm, (0, hm.storedShaderPackFiles)(mm));
+      if (!Am) return mm;
+      const am = !1 === (null === (fm = mm.validation) || void 0 === fm ? void 0 : fm.ok) && !mm.validation.fromRecheck,
+        xm = {
+          ...mm,
+          validation: am ? Am : {
+            ...Am,
             fromRecheck: !0
           }
         };
-      return await (0, Xk.replaceShaderPack)(kk, yk, Fk) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), yk
+      return await (0, hm.replaceShaderPack)(mm, xm, Tm) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), xm
     }
 
-    function qk(kk, Fk, Ik) {
+    function im(mm, Tm, fm) {
       return {
-        headerVersion: (0, Xk.pageShaderPackValidationVersion)(kk),
-        ok: 0 === Fk.length,
-        errors: Fk.slice(0, yk),
-        moreErrors: Math.max(0, Fk.length - yk),
-        offInStrict: Ik
+        headerVersion: (0, hm.pageShaderPackValidationVersion)(mm),
+        ok: 0 === Tm.length,
+        errors: Tm.slice(0, xm),
+        moreErrors: Math.max(0, Tm.length - xm),
+        offInStrict: fm
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

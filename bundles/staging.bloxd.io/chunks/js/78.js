@@ -1,272 +1,272 @@
 export const id = 78;
 export const ids = [78, 93];
 export const modules = {
-    4829: (kk, Fk, Ik) => {
-      Ik.d(Fk, {
-        e: () => Hk,
-        h: () => Jk
+    4773: (mm, Tm, fm) => {
+      fm.d(Tm, {
+        d: () => qm,
+        e: () => jm
       });
-      var Xk = Ik(1055),
-        Tk = Ik.n(Xk),
-        ik = Ik(58),
-        yk = Ik(1179),
-        lk = Ik(4833),
-        ak = Ik(1849),
-        qk = Ik(2349),
-        Lk = Ik(4837),
-        tk = Ik(1096);
-      const Zk = new WeakMap;
-      let jk = 0;
+      var hm = fm(1080),
+        Am = fm.n(hm),
+        am = fm(59),
+        xm = fm(1208),
+        wm = fm(4782),
+        Dm = fm(1884),
+        im = fm(2391),
+        Rm = fm(4784),
+        pm = fm(1135);
+      const Em = new WeakMap;
+      let om = 0;
 
-      function ek(kk) {
-        let Fk = Zk.get(kk);
-        return void 0 === Fk && (Fk = jk++, Zk.set(kk, Fk)), Fk
+      function Om(mm) {
+        let Tm = Em.get(mm);
+        return void 0 === Tm && (Tm = om++, Em.set(mm, Tm)), Tm
       }
 
-      function wk(kk) {
+      function Ym(mm) {
         let {
-          piece: Fk
-        } = kk;
-        return "space" === Fk.kind ? (0, tk.jsx)(tk.Fragment, {
-          children: Fk.text
-        }) : (0, tk.jsx)("span", {
+          piece: Tm
+        } = mm;
+        return "space" === Tm.kind ? (0, pm.jsx)(pm.Fragment, {
+          children: Tm.text
+        }) : (0, pm.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${Fk.delayMs}ms`
+            "--word-delay": `${Tm.delayMs}ms`
           },
-          children: (0, tk.jsx)(lk.b, {
-            text: "icon" === Fk.kind ? `[[${Fk.icon}]]` : Fk.text
+          children: (0, pm.jsx)(wm.e, {
+            text: "icon" === Tm.kind ? `[[${Tm.icon}]]` : Tm.text
           })
         })
       }
 
-      function Hk(kk) {
+      function qm(mm) {
         let {
-          display: Fk
-        } = kk;
+          display: Tm
+        } = mm;
         const {
-          selectedLanguage: Ik
-        } = (0, yk.y)(), Xk = (0, ik.useMemo)((() => (0, Lk.d)((0, Lk.e)(Fk).plan.pieces)), [Fk, Ik.code]);
-        return (0, tk.jsxs)("div", {
-          className: Tk()("Dialogue", {
-            DialogueAnimateIn: !1 !== Fk.animateIn
+          selectedLanguage: fm
+        } = (0, xm.A)(), hm = (0, am.useMemo)((() => (0, Rm.c)((0, Rm.f)(Tm).plan.pieces)), [Tm, fm.code]);
+        return (0, pm.jsxs)("div", {
+          className: Am()("Dialogue", {
+            DialogueAnimateIn: !1 !== Tm.animateIn
           }),
-          children: [Fk.speakerName && (0, tk.jsx)(ak.c, {
-            text: Fk.speakerName,
+          children: [Tm.speakerName && (0, pm.jsx)(Dm.b, {
+            text: Tm.speakerName,
             className: "DialogueSpeaker"
-          }), (0, tk.jsx)("p", {
+          }), (0, pm.jsx)("p", {
             className: "DialogueLine",
-            children: Xk.map(((kk, Fk) => 1 === kk.length && "space" === kk[0].kind ? kk[0].text : (0, tk.jsx)("span", {
+            children: hm.map(((mm, Tm) => 1 === mm.length && "space" === mm[0].kind ? mm[0].text : (0, pm.jsx)("span", {
               className: "DialogueGlue",
-              children: kk.map(((kk, Fk) => (0, tk.jsx)(wk, {
-                piece: kk
-              }, Fk)))
-            }, Fk)))
+              children: mm.map(((mm, Tm) => (0, pm.jsx)(Ym, {
+                piece: mm
+              }, Tm)))
+            }, Tm)))
           })]
         })
       }
-      const Jk = (0, ik.memo)((function() {
-        const kk = (0, qk.j)("dialogue");
-        return (0, tk.jsx)("div", {
+      const jm = (0, am.memo)((function() {
+        const mm = (0, im.g)("dialogue");
+        return (0, pm.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: kk && (0, tk.jsx)(Hk, {
-            display: kk
-          }, ek(kk))
+          children: mm && (0, pm.jsx)(qm, {
+            display: mm
+          }, Om(mm))
         })
       }))
     },
-    4707: (kk, Fk, Ik) => {
-        Ik.r(Fk), Ik.d(Fk, {
-          default: () => Fy
+    4654: (mm, Tm, fm) => {
+        fm.r(Tm), fm.d(Tm, {
+          default: () => Tx
         });
-        var Xk = Ik(58),
-          Tk = Ik(1055),
-          ik = Ik.n(Tk),
-          yk = Ik(1481),
-          lk = Ik(1485),
-          ak = Ik(25),
-          qk = Ik(74),
-          Lk = Ik(4714),
-          tk = Ik(4729),
-          Zk = Ik(4731),
-          jk = Ik(4335),
-          ek = Ik(1096);
-        const wk = "/textures/docs/icons";
+        var hm = fm(59),
+          Am = fm(1080),
+          am = fm.n(Am),
+          xm = fm(1528),
+          wm = fm(1537),
+          Dm = fm(23),
+          im = fm(77),
+          Rm = fm(4656),
+          pm = fm(4663),
+          Em = fm(4665),
+          om = fm(4296),
+          Om = fm(1135);
+        const Ym = "/textures/docs/icons";
 
-        function Hk(kk) {
+        function qm(mm) {
           let {
-            name: Fk,
-            isTinted: Ik,
-            className: Xk,
-            style: Tk
-          } = kk;
-          const yk = `${wk}/${Fk}.png`;
-          return Ik ? (0, ek.jsxs)("span", {
-            className: ik()("DocsPixelIcon", "Tinted", Xk),
+            name: Tm,
+            isTinted: fm,
+            className: hm,
+            style: Am
+          } = mm;
+          const xm = `${Ym}/${Tm}.png`;
+          return fm ? (0, Om.jsxs)("span", {
+            className: am()("DocsPixelIcon", "Tinted", hm),
             "aria-hidden": "true",
-            style: Tk,
-            children: [(0, ek.jsx)("span", {
+            style: Am,
+            children: [(0, Om.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${yk}")`,
-                WebkitMaskImage: `url("${yk}")`
+                maskImage: `url("${xm}")`,
+                WebkitMaskImage: `url("${xm}")`
               }
-            }), (0, ek.jsx)("img", {
-              src: yk,
+            }), (0, Om.jsx)("img", {
+              src: xm,
               alt: ""
             })]
-          }) : (0, ek.jsx)("img", {
-            className: ik()("DocsPixelIcon", Xk),
-            src: yk,
+          }) : (0, Om.jsx)("img", {
+            className: am()("DocsPixelIcon", hm),
+            src: xm,
             alt: "",
             "aria-hidden": "true",
-            style: Tk
+            style: Am
           })
         }
-        const Jk = 1500;
+        const jm = 1500;
 
-        function xk() {
-          const [kk, Fk] = (0, Xk.useState)(null);
-          (0, Xk.useEffect)((() => {
-            if (null === kk) return;
-            const Ik = setTimeout((() => {
-              Fk(null)
-            }), Jk);
+        function Vm() {
+          const [mm, Tm] = (0, hm.useState)(null);
+          (0, hm.useEffect)((() => {
+            if (null === mm) return;
+            const fm = setTimeout((() => {
+              Tm(null)
+            }), jm);
             return () => {
-              clearTimeout(Ik)
+              clearTimeout(fm)
             }
-          }), [kk]);
-          return [kk, kk => {
-            (0, jk.b)(kk).then((() => {
-              Fk({
-                text: kk,
+          }), [mm]);
+          return [mm, mm => {
+            (0, om.b)(mm).then((() => {
+              Tm({
+                text: mm,
                 failed: !1
               })
-            }), (Ik => {
-              console.error("Could not copy to the clipboard", Ik), Fk({
-                text: kk,
+            }), (fm => {
+              console.error("Could not copy to the clipboard", fm), Tm({
+                text: mm,
                 failed: !0
               })
             }))
           }]
         }
 
-        function Pk(kk) {
+        function Im(mm) {
           let {
-            text: Fk,
-            label: Ik,
-            className: Xk
-          } = kk;
-          const [Tk, yk] = xk(), lk = !1 === (null === Tk || void 0 === Tk ? void 0 : Tk.failed);
-          return (0, ek.jsxs)("button", {
+            text: Tm,
+            label: fm,
+            className: hm
+          } = mm;
+          const [Am, xm] = Vm(), wm = !1 === (null === Am || void 0 === Am ? void 0 : Am.failed);
+          return (0, Om.jsxs)("button", {
             type: "button",
-            className: ik()("DocsCopyButton", Xk, {
-              Copied: lk
+            className: am()("DocsCopyButton", hm, {
+              Copied: wm
             }),
-            title: `Copy ${Fk.length>40?"to clipboard":Fk}`,
-            "aria-label": Ik ? void 0 : `Copy ${Fk}`,
-            onClick: kk => {
-              kk.stopPropagation(), yk(Fk)
+            title: `Copy ${Tm.length>40?"to clipboard":Tm}`,
+            "aria-label": fm ? void 0 : `Copy ${Tm}`,
+            onClick: mm => {
+              mm.stopPropagation(), xm(Tm)
             },
-            children: [(0, ek.jsx)(Hk, {
-              name: lk ? "check" : "copy"
-            }), Ik && (0, ek.jsx)("span", {
-              children: lk ? "Copied" : null !== Tk && void 0 !== Tk && Tk.failed ? "Copy failed" : Ik
+            children: [(0, Om.jsx)(qm, {
+              name: wm ? "check" : "copy"
+            }), fm && (0, Om.jsx)("span", {
+              children: wm ? "Copied" : null !== Am && void 0 !== Am && Am.failed ? "Copy failed" : fm
             })]
           })
         }
-        Lk.c.registerLanguage("javascript", tk.b), Lk.c.registerLanguage("typescript", Zk.d);
-        const Kk = {
+        Rm.b.registerLanguage("javascript", pm.b), Rm.b.registerLanguage("typescript", Em.d);
+        const Km = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          Qk = {
+          Qm = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          sk = 24;
+          nm = 24;
 
-        function Vk(kk) {
+        function Jm(mm) {
           let {
-            code: Fk,
-            lang: Ik,
-            compact: Tk = !1
-          } = kk;
-          const yk = (0, Xk.useMemo)((() => function(kk, Fk) {
-              const Ik = Kk[Fk];
-              return Ik ? Lk.c.highlight(kk, {
-                language: Ik
-              }).value : kk.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(Fk, Ik)), [Fk, Ik]),
-            lk = Fk.split("\n").length,
-            ak = !Tk && lk > sk + 6,
-            [qk, tk] = (0, Xk.useState)(!1),
-            Zk = Kk[Ik];
-          return (0, ek.jsxs)("div", {
-            className: ik()("DocsCodeBlock", {
-              Compact: Tk,
-              Collapsed: ak && !qk
+            code: Tm,
+            lang: fm,
+            compact: Am = !1
+          } = mm;
+          const xm = (0, hm.useMemo)((() => function(mm, Tm) {
+              const fm = Km[Tm];
+              return fm ? Rm.b.highlight(mm, {
+                language: fm
+              }).value : mm.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(Tm, fm)), [Tm, fm]),
+            wm = Tm.split("\n").length,
+            Dm = !Am && wm > nm + 6,
+            [im, pm] = (0, hm.useState)(!1),
+            Em = Km[fm];
+          return (0, Om.jsxs)("div", {
+            className: am()("DocsCodeBlock", {
+              Compact: Am,
+              Collapsed: Dm && !im
             }),
-            children: [!Tk && (0, ek.jsxs)("div", {
+            children: [!Am && (0, Om.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, ek.jsx)("span", {
+              children: [(0, Om.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: Zk ? Qk[Zk] : "Text"
-              }), (0, ek.jsx)(Pk, {
-                text: Fk,
+                children: Em ? Qm[Em] : "Text"
+              }), (0, Om.jsx)(Im, {
+                text: Tm,
                 label: "Copy"
               })]
-            }), (0, ek.jsx)("pre", {
-              children: (0, ek.jsx)("code", {
+            }), (0, Om.jsx)("pre", {
+              children: (0, Om.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: yk
+                  __html: xm
                 }
               })
-            }), ak && (0, ek.jsxs)("button", {
+            }), Dm && (0, Om.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": qk,
+              "aria-expanded": im,
               onClick: () => {
-                tk(!qk)
+                pm(!im)
               },
-              children: [(0, ek.jsx)(Hk, {
-                name: qk ? "chevron-up" : "chevron-down"
-              }), qk ? "Show less" : `Show all ${lk} lines`]
+              children: [(0, Om.jsx)(qm, {
+                name: im ? "chevron-up" : "chevron-down"
+              }), im ? "Show less" : `Show all ${wm} lines`]
             })]
           })
         }
-        var zk = Ik(4739);
-        var Sk = Ik(4745);
-        const vk = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var cm = fm(4672);
+        var zm = fm(4674);
+        const Zm = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function Ek(kk) {
-          const Fk = new Map;
-          let Ik, Xk = [],
-            Tk = !1;
-          const ik = () => {
-            Ik && Fk.set(Ik.name, Ik.lines.join("\n").trimEnd())
+        function km(mm) {
+          const Tm = new Map;
+          let fm, hm = [],
+            Am = !1;
+          const am = () => {
+            fm && Tm.set(fm.name, fm.lines.join("\n").trimEnd())
           };
-          for (const yk of kk.split("\n")) {
-            const kk = yk.match(vk);
-            Tk || yk.startsWith("/*") ? (Tk || (ik(), Ik = void 0), Xk.push(yk), Tk = !yk.includes("*/")) : kk ? (ik(), Ik = {
-              name: kk[1],
-              lines: [...Xk, yk]
-            }, Xk = []) : Ik && (yk.startsWith(" ") || yk.startsWith("\t") || /^[}\])|]/.test(yk)) ? Ik.lines.push(yk) : Ik && "" !== yk.trim() && (ik(), Ik = void 0)
+          for (const xm of mm.split("\n")) {
+            const mm = xm.match(Zm);
+            Am || xm.startsWith("/*") ? (Am || (am(), fm = void 0), hm.push(xm), Am = !xm.includes("*/")) : mm ? (am(), fm = {
+              name: mm[1],
+              lines: [...hm, xm]
+            }, hm = []) : fm && (xm.startsWith(" ") || xm.startsWith("\t") || /^[}\])|]/.test(xm)) ? fm.lines.push(xm) : fm && "" !== xm.trim() && (am(), fm = void 0)
           }
-          return ik(), Fk
+          return am(), Tm
         }
 
-        function Ok(kk) {
-          return "methods" === kk || "callbacks" === kk || "settings" === kk
+        function bm(mm) {
+          return "methods" === mm || "callbacks" === mm || "settings" === mm
         }
-        const nk = {
+        const Sm = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (kk, Fk) => `api.setClientOption(playerId, "${kk}", ${Fk})`
+              setterSnippet: (mm, Tm) => `api.setClientOption(playerId, "${mm}", ${Tm})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (kk, Fk) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${kk}", ${Fk})`
+              setterSnippet: (mm, Tm) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${mm}", ${Tm})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (kk, Fk) => `api.setMobSetting(mobId, "${kk}", ${Fk})`
+              setterSnippet: (mm, Tm) => `api.setMobSetting(mobId, "${mm}", ${Tm})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (kk, Fk) => `api.setVehicleSetting(vehicleId, "${kk}", ${Fk})`
+              setterSnippet: (mm, Tm) => `api.setVehicleSetting(vehicleId, "${mm}", ${Tm})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          Gk = {
+          em = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function pk(kk) {
-          return kk.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function Nm(mm) {
+          return mm.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function uk(kk) {
-          let Fk = !1;
-          return kk.split("\n").map((kk => (kk.startsWith("```") && (Fk = !Fk), !Fk && /^#{3,} /.test(kk) ? kk.slice(1) : kk))).join("\n")
+        function Gm(mm) {
+          let Tm = !1;
+          return mm.split("\n").map((mm => (mm.startsWith("```") && (Tm = !Tm), !Tm && /^#{3,} /.test(mm) ? mm.slice(1) : mm))).join("\n")
         }
 
-        function bk(kk) {
-          return "readme" === kk ? "getting-started" : pk(kk)
+        function Xm(mm) {
+          return "readme" === mm ? "getting-started" : Nm(mm)
         }
-        const Rk = "## Glossary of Referenced Types";
-        const Uk = [{
+        const Pm = "## Glossary of Referenced Types";
+        const Hm = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...Sk.d.flatMap((kk => {
-            const Fk = {
-              id: kk.id,
-              slug: bk(kk.id),
-              title: kk.title,
-              markdown: kk.content,
-              ...nk[kk.id]
+          }, ...zm.b.flatMap((mm => {
+            const Tm = {
+              id: mm.id,
+              slug: Xm(mm.id),
+              title: mm.title,
+              markdown: mm.content,
+              ...Sm[mm.id]
             };
-            if ("readme" === kk.id) return function(kk) {
-              const Fk = kk.markdown.indexOf(Rk),
-                Ik = kk.markdown.indexOf("\n```", Fk),
-                Xk = kk.markdown.indexOf("\n```", Ik + 1);
-              if (-1 === Fk || -1 === Ik || -1 === Xk) throw new Error(`Getting started has no "${Rk}" section with a code block`);
-              const Tk = kk.markdown.slice(Fk + 31, Ik).trim(),
-                ik = [...Ek(kk.markdown.slice(kk.markdown.indexOf("\n", Ik + 1) + 1, Xk))].map((kk => {
-                  let [Fk, Ik] = kk;
-                  return `## ${Fk}\n\n\`\`\`ts\n${Ik}\n\`\`\`\n`
+            if ("readme" === mm.id) return function(mm) {
+              const Tm = mm.markdown.indexOf(Pm),
+                fm = mm.markdown.indexOf("\n```", Tm),
+                hm = mm.markdown.indexOf("\n```", fm + 1);
+              if (-1 === Tm || -1 === fm || -1 === hm) throw new Error(`Getting started has no "${Pm}" section with a code block`);
+              const Am = mm.markdown.slice(Tm + 31, fm).trim(),
+                am = [...km(mm.markdown.slice(mm.markdown.indexOf("\n", fm + 1) + 1, hm))].map((mm => {
+                  let [Tm, fm] = mm;
+                  return `## ${Tm}\n\n\`\`\`ts\n${fm}\n\`\`\`\n`
                 })),
-                yk = kk.markdown.slice(kk.markdown.indexOf("\n", Xk + 1) + 1);
+                xm = mm.markdown.slice(mm.markdown.indexOf("\n", hm + 1) + 1);
               return [{
-                ...kk,
-                markdown: `${kk.markdown.slice(0,Fk)}${yk}`
+                ...mm,
+                markdown: `${mm.markdown.slice(0,Tm)}${xm}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${Tk}\n\n${ik.join("\n")}`
+                markdown: `# Types\n\n${Am}\n\n${am.join("\n")}`
               }]
-            }(Fk);
-            if ("howTo" === kk.id) {
+            }(Tm);
+            if ("howTo" === mm.id) {
               const {
-                parent: kk,
-                guides: Ik
-              } = function(kk) {
-                const [Fk, ...Ik] = kk.markdown.split(/^(?=## )/m), Xk = [Fk], Tk = [];
-                for (const yk of Ik) {
-                  var ik;
-                  const Fk = yk.indexOf("\n"),
-                    Ik = yk.slice(3, Fk).trim(),
-                    lk = yk.slice(Fk + 1);
-                  if (!lk.includes("```")) {
-                    Xk.push(yk);
+                parent: mm,
+                guides: fm
+              } = function(mm) {
+                const [Tm, ...fm] = mm.markdown.split(/^(?=## )/m), hm = [Tm], Am = [];
+                for (const xm of fm) {
+                  var am;
+                  const Tm = xm.indexOf("\n"),
+                    fm = xm.slice(3, Tm).trim(),
+                    wm = xm.slice(Tm + 1);
+                  if (!wm.includes("```")) {
+                    hm.push(xm);
                     continue
                   }
-                  const ak = null !== (ik = Gk[Ik]) && void 0 !== ik ? ik : {
+                  const Dm = null !== (am = em[fm]) && void 0 !== am ? am : {
                     icon: "lightbulb",
-                    summary: `How to use ${Ik.toLowerCase()} in World Code.`
+                    summary: `How to use ${fm.toLowerCase()} in World Code.`
                   };
-                  Tk.push({
-                    id: `${kk.id}${Ik.split(/[^A-Za-z0-9]+/).map((kk=>kk.charAt(0).toUpperCase()+kk.slice(1))).join("")}`,
-                    slug: `${kk.slug}-${pk(Ik)}`,
-                    title: Ik,
+                  Am.push({
+                    id: `${mm.id}${fm.split(/[^A-Za-z0-9]+/).map((mm=>mm.charAt(0).toUpperCase()+mm.slice(1))).join("")}`,
+                    slug: `${mm.slug}-${Nm(fm)}`,
+                    title: fm,
                     layout: "article",
-                    sourceAnchor: (0, zk.t)(Ik),
-                    markdown: `# ${Ik}\n\n${uk(lk)}`,
-                    ...ak
+                    sourceAnchor: (0, cm.q)(fm),
+                    markdown: `# ${fm}\n\n${Gm(wm)}`,
+                    ...Dm
                   })
                 }
                 return {
                   parent: {
-                    ...kk,
-                    markdown: Xk.join(""),
-                    childPageIds: Tk.map((kk => kk.id))
+                    ...mm,
+                    markdown: hm.join(""),
+                    childPageIds: Am.map((mm => mm.id))
                   },
-                  guides: Tk
+                  guides: Am
                 }
-              }(Fk);
-              return [kk, ...Ik]
+              }(Tm);
+              return [mm, ...fm]
             }
-            return [Fk]
+            return [Tm]
           }))],
-          Ck = [{
+          ym = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...Uk.filter((kk => void 0 !== kk.sourceAnchor)).map((kk => kk.id))]
+            pageIds: ["howTo", ...Hm.filter((mm => void 0 !== mm.sourceAnchor)).map((mm => mm.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function Nk(kk) {
-          return Uk.find((Fk => Fk.id === kk))
+        function Cm(mm) {
+          return Hm.find((Tm => Tm.id === mm))
         }
-        const ck = new Map;
+        const rm = new Map;
 
-        function Wk(kk) {
-          let Fk = ck.get(kk.id);
-          return Fk || (Fk = (0, zk.w)(kk.markdown, "changelog" === kk.layout ? 3 : 2), ck.set(kk.id, Fk)), Fk
-        }
-
-        function fk(kk, Fk) {
-          return Wk(kk).sections.some((kk => kk.heading.anchor === Fk || kk.blocks.some((kk => "heading" === kk.kind && kk.anchor === Fk))))
+        function sm(mm) {
+          let Tm = rm.get(mm.id);
+          return Tm || (Tm = (0, cm.v)(mm.markdown, "changelog" === mm.layout ? 3 : 2), rm.set(mm.id, Tm)), Tm
         }
 
-        function Bk(kk) {
-          const [Fk, ...Ik] = kk.replace(/^#/, "").split("-"), Xk = Uk.find((kk => kk.id === Fk));
-          if (!Xk) return null;
-          const Tk = Ik.length > 0 ? (0, zk.t)(Ik.join("-")) : "";
-          for (const yk of null !== (ik = Xk.childPageIds) && void 0 !== ik ? ik : []) {
-            var ik;
-            const kk = Nk(yk);
-            if (kk.sourceAnchor === Tk) return {
-              page: kk,
+        function lm(mm, Tm) {
+          return sm(mm).sections.some((mm => mm.heading.anchor === Tm || mm.blocks.some((mm => "heading" === mm.kind && mm.anchor === Tm))))
+        }
+
+        function Mm(mm) {
+          const [Tm, ...fm] = mm.replace(/^#/, "").split("-"), hm = Hm.find((mm => mm.id === Tm));
+          if (!hm) return null;
+          const Am = fm.length > 0 ? (0, cm.q)(fm.join("-")) : "";
+          for (const xm of null !== (am = hm.childPageIds) && void 0 !== am ? am : []) {
+            var am;
+            const mm = Cm(xm);
+            if (mm.sourceAnchor === Am) return {
+              page: mm,
               anchor: ""
             };
-            if (fk(kk, Tk)) return {
-              page: kk,
-              anchor: Tk
+            if (lm(mm, Am)) return {
+              page: mm,
+              anchor: Am
             }
           }
           return {
-            page: Xk,
-            anchor: Tk
+            page: hm,
+            anchor: Am
           }
         }
-        const dk = {
+        const um = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function Yk(kk, Fk) {
-          let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const Xk = Fk.slug ? `${kk}/${Fk.slug}` : kk;
-          return Ik ? `${Xk}#${Ik}` : Xk
+        function Bm(mm, Tm) {
+          let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const hm = Tm.slug ? `${mm}/${Tm.slug}` : mm;
+          return fm ? `${hm}#${fm}` : hm
         }
-        var Ak = Ik(4761);
-        const gk = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          mk = new Set(["GameApi", "Console", "_TypeOf"]),
-          hk = 4;
+        var Lm = fm(4696);
+        const tm = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          Um = new Set(["GameApi", "Console", "_TypeOf"]),
+          dm = 4;
 
-        function rk(kk) {
-          let Fk = kk.length;
-          for (; Fk > 0 && "" === kk[Fk - 1].trim();) Fk--;
-          return kk.slice(0, Fk)
+        function gm(mm) {
+          let Tm = mm.length;
+          for (; Tm > 0 && "" === mm[Tm - 1].trim();) Tm--;
+          return mm.slice(0, Tm)
         }
 
-        function Dk(kk) {
-          var Fk;
-          const Ik = rk(kk);
-          if (null === (Fk = Ik.at(-1)) || void 0 === Fk || !Fk.trimEnd().endsWith("*/")) return {
-            lines: Ik,
+        function Wm(mm) {
+          var Tm;
+          const fm = gm(mm);
+          if (null === (Tm = fm.at(-1)) || void 0 === Tm || !Tm.trimEnd().endsWith("*/")) return {
+            lines: fm,
             doc: ""
           };
-          const Xk = Ik.findLastIndex((kk => kk.startsWith("/**")));
-          return -1 === Xk ? {
-            lines: Ik,
+          const hm = fm.findLastIndex((mm => mm.startsWith("/**")));
+          return -1 === hm ? {
+            lines: fm,
             doc: ""
           } : {
-            lines: rk(Ik.slice(0, Xk)),
-            doc: Ik.slice(Xk).join("\n")
+            lines: gm(fm.slice(0, hm)),
+            doc: fm.slice(hm).join("\n")
           }
         }
 
-        function Mk(kk) {
-          var Fk;
-          const Ik = kk.split("\n"),
-            Xk = Ik.flatMap(((kk, Fk) => gk.test(kk) ? [Fk] : []));
-          let Tk = Dk(Ik.slice(0, null !== (Fk = Xk[0]) && void 0 !== Fk ? Fk : Ik.length)).doc;
-          return Xk.map(((kk, Fk) => {
-            var ik;
-            const yk = Dk(Ik.slice(kk, null !== (ik = Xk[Fk + 1]) && void 0 !== ik ? ik : Ik.length)),
-              lk = {
-                name: Ik[kk].match(gk)[1],
-                doc: Tk,
-                lines: yk.lines
+        function Fm(mm) {
+          var Tm;
+          const fm = mm.split("\n"),
+            hm = fm.flatMap(((mm, Tm) => tm.test(mm) ? [Tm] : []));
+          let Am = Wm(fm.slice(0, null !== (Tm = hm[0]) && void 0 !== Tm ? Tm : fm.length)).doc;
+          return hm.map(((mm, Tm) => {
+            var am;
+            const xm = Wm(fm.slice(mm, null !== (am = hm[Tm + 1]) && void 0 !== am ? am : fm.length)),
+              wm = {
+                name: fm[mm].match(tm)[1],
+                doc: Am,
+                lines: xm.lines
               };
-            return Tk = yk.doc, lk
+            return Am = xm.doc, wm
           }))
         }
 
-        function kF(kk) {
-          var Fk;
-          const Ik = kk.match(/^readonly \[([\s\S]*)\]$/);
-          return Ik ? null !== (Fk = Ik[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== Fk ? Fk : [] : null
+        function mT(mm) {
+          var Tm;
+          const fm = mm.match(/^readonly \[([\s\S]*)\]$/);
+          return fm ? null !== (Tm = fm[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== Tm ? Tm : [] : null
         }
 
-        function FF(kk) {
-          if (!kk.startsWith("{") || !kk.endsWith("}")) return null;
-          const Fk = {
+        function TT(mm) {
+          if (!mm.startsWith("{") || !mm.endsWith("}")) return null;
+          const Tm = {
               keys: [],
               values: []
             },
-            Ik = kk => {
-              const Ik = kk.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              Ik && (Fk.keys.push(Ik[1].startsWith('"') ? Ik[1] : `"${Ik[1]}"`), Fk.values.push(Ik[2].trim()))
+            fm = mm => {
+              const fm = mm.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              fm && (Tm.keys.push(fm[1].startsWith('"') ? fm[1] : `"${fm[1]}"`), Tm.values.push(fm[2].trim()))
             };
-          let Xk = 0,
-            Tk = "";
-          for (const ik of kk.slice(1, -1)) "{[(".includes(ik) ? Xk++ : "}])".includes(ik) && Xk--, ";" === ik && 0 === Xk ? (Ik(Tk), Tk = "") : Tk += ik;
-          return Ik(Tk), Fk
+          let hm = 0,
+            Am = "";
+          for (const am of mm.slice(1, -1)) "{[(".includes(am) ? hm++ : "}])".includes(am) && hm--, ";" === am && 0 === hm ? (fm(Am), Am = "") : Am += am;
+          return fm(Am), Tm
         }
 
-        function IF(kk) {
-          return kk.length > hk ? `\n\t| ${kk.join("\n\t| ")}` : kk.join(" | ")
+        function fT(mm) {
+          return mm.length > dm ? `\n\t| ${mm.join("\n\t| ")}` : mm.join(" | ")
         }
 
-        function XF(kk, Fk) {
-          const Ik = function(kk, Fk) {
-            return kk.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((kk, Ik) => {
-              var Xk;
-              const Tk = null === (Xk = Fk.get(Ik)) || void 0 === Xk ? void 0 : Xk.object;
-              return Tk ? IF(Tk.values) : kk
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((kk, Ik) => {
-              var Xk, Tk;
-              const ik = null === (Xk = Fk.get(Ik)) || void 0 === Xk || null === (Tk = Xk.object) || void 0 === Tk ? void 0 : Tk.values.map(kF);
-              return null !== ik && void 0 !== ik && ik.every((kk => null !== kk)) ? IF([...new Set(ik.flat())]) : kk
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((kk, Ik) => {
-              var Xk;
-              const Tk = null === (Xk = Fk.get(Ik)) || void 0 === Xk ? void 0 : Xk.members;
-              return Tk ? IF(Tk) : kk
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((kk, Ik) => {
-              var Xk;
-              const Tk = null === (Xk = Fk.get(Ik)) || void 0 === Xk ? void 0 : Xk.object;
-              return Tk ? IF(Tk.keys) : kk
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((kk, Ik) => {
-              var Xk, Tk;
-              return null !== (Xk = null === (Tk = Fk.get(Ik)) || void 0 === Tk ? void 0 : Tk.text) && void 0 !== Xk ? Xk : kk
+        function hT(mm, Tm) {
+          const fm = function(mm, Tm) {
+            return mm.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((mm, fm) => {
+              var hm;
+              const Am = null === (hm = Tm.get(fm)) || void 0 === hm ? void 0 : hm.object;
+              return Am ? fT(Am.values) : mm
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((mm, fm) => {
+              var hm, Am;
+              const am = null === (hm = Tm.get(fm)) || void 0 === hm || null === (Am = hm.object) || void 0 === Am ? void 0 : Am.values.map(mT);
+              return null !== am && void 0 !== am && am.every((mm => null !== mm)) ? fT([...new Set(am.flat())]) : mm
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((mm, fm) => {
+              var hm;
+              const Am = null === (hm = Tm.get(fm)) || void 0 === hm ? void 0 : hm.members;
+              return Am ? fT(Am) : mm
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((mm, fm) => {
+              var hm;
+              const Am = null === (hm = Tm.get(fm)) || void 0 === hm ? void 0 : hm.object;
+              return Am ? fT(Am.keys) : mm
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((mm, fm) => {
+              var hm, Am;
+              return null !== (hm = null === (Am = Tm.get(fm)) || void 0 === Am ? void 0 : Am.text) && void 0 !== hm ? hm : mm
             }))
-          }(kk.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), Fk);
-          return [kk.doc, Ik].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(mm.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), Tm);
+          return [mm.doc, fm].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function TF(kk) {
-          const Fk = Mk(kk),
-            Ik = function(kk) {
-              const Fk = new Map,
-                Ik = kk.find((kk => "_TypeOf" === kk.name));
-              let Xk = null;
-              const Tk = () => {
-                if (Xk) {
-                  const kk = Xk.lines.join("\n");
-                  Fk.set(Xk.name, {
-                    text: kk,
-                    members: kF(kk),
-                    object: FF(kk)
+        function AT(mm) {
+          const Tm = Fm(mm),
+            fm = function(mm) {
+              const Tm = new Map,
+                fm = mm.find((mm => "_TypeOf" === mm.name));
+              let hm = null;
+              const Am = () => {
+                if (hm) {
+                  const mm = hm.lines.join("\n");
+                  Tm.set(hm.name, {
+                    text: mm,
+                    members: mT(mm),
+                    object: TT(mm)
                   })
                 }
               };
-              for (const ik of Ik.lines.slice(1, -1)) {
-                const kk = ik.match(/^\t([\w$]+): (.+)$/);
-                kk ? (Tk(), Xk = {
-                  name: kk[1],
-                  lines: [kk[2]]
-                }) : Xk && Xk.lines.push(ik.replace(/^\t/, ""))
+              for (const am of fm.lines.slice(1, -1)) {
+                const mm = am.match(/^\t([\w$]+): (.+)$/);
+                mm ? (Am(), hm = {
+                  name: mm[1],
+                  lines: [mm[2]]
+                }) : hm && hm.lines.push(am.replace(/^\t/, ""))
               }
-              return Tk(), Fk
-            }(Fk),
-            Xk = new Map;
-          for (const Tk of Fk) mk.has(Tk.name) || Xk.has(Tk.name) || Xk.set(Tk.name, XF(Tk, Ik));
-          return Xk
+              return Am(), Tm
+            }(Tm),
+            hm = new Map;
+          for (const Am of Tm) Um.has(Am.name) || hm.has(Am.name) || hm.set(Am.name, hT(Am, fm));
+          return hm
         }
-        let iF, yF, lF;
+        let aT, xT, wT;
 
-        function aF() {
-          return yF ??= function(kk) {
-            const Fk = Mk(kk).find((kk => "GameApi" === kk.name)),
-              Ik = new Map,
-              Xk = Fk.lines;
-            for (let ik = 0; ik < Xk.length; ik++) {
-              var Tk;
-              if (!Xk[ik].trimStart().startsWith("/**")) continue;
-              const kk = ik;
-              for (; ik < Xk.length && !Xk[ik].includes("*/");) ik++;
-              const Fk = null === (Tk = Xk[ik + 1]) || void 0 === Tk ? void 0 : Tk.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!Fk) continue;
-              let yk = null;
-              const lk = [];
-              let ak = "description",
-                qk = !1;
-              for (const Ik of Xk.slice(kk, ik + 1).join("\n").split("\n").map((kk => kk.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const kk = Ik.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                kk ? (yk = kk[1].trim(), ak = "deprecation") : Ik.startsWith("@") ? (ak = "otherTag", qk = !0) : "" === Ik.trim() ? qk || (ak = "description", lk.push(Ik)) : "deprecation" !== ak || /^[A-Z]/.test(Ik.trim()) ? "otherTag" !== ak && (ak = "description", lk.push(Ik)) : yk = `${yk} ${Ik.trim()}`.trim()
+        function DT() {
+          return xT ??= function(mm) {
+            const Tm = Fm(mm).find((mm => "GameApi" === mm.name)),
+              fm = new Map,
+              hm = Tm.lines;
+            for (let am = 0; am < hm.length; am++) {
+              var Am;
+              if (!hm[am].trimStart().startsWith("/**")) continue;
+              const mm = am;
+              for (; am < hm.length && !hm[am].includes("*/");) am++;
+              const Tm = null === (Am = hm[am + 1]) || void 0 === Am ? void 0 : Am.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!Tm) continue;
+              let xm = null;
+              const wm = [];
+              let Dm = "description",
+                im = !1;
+              for (const fm of hm.slice(mm, am + 1).join("\n").split("\n").map((mm => mm.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const mm = fm.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                mm ? (xm = mm[1].trim(), Dm = "deprecation") : fm.startsWith("@") ? (Dm = "otherTag", im = !0) : "" === fm.trim() ? im || (Dm = "description", wm.push(fm)) : "deprecation" !== Dm || /^[A-Z]/.test(fm.trim()) ? "otherTag" !== Dm && (Dm = "description", wm.push(fm)) : xm = `${xm} ${fm.trim()}`.trim()
               }
-              Ik.set(Fk[1], {
-                deprecation: yk,
-                description: lk.join("\n").trim()
+              fm.set(Tm[1], {
+                deprecation: xm,
+                description: wm.join("\n").trim()
               })
             }
-            return Ik
-          }(Ak.default), yF
+            return fm
+          }(Lm.default), xT
         }
 
-        function qF() {
-          if (!lF) {
-            lF = new Map;
-            for (const kk of Uk) {
-              const Fk = (0, zk.u)(Wk(kk)).flatMap((kk => kk.blocks));
-              for (const kk of (0, zk.n)(Fk))
-                if ("ts" === kk.lang || "typescript" === kk.lang)
-                  for (const [Fk, Ik] of Ek(kk.code)) lF.set(Fk, Ik)
+        function iT() {
+          if (!wT) {
+            wT = new Map;
+            for (const mm of Hm) {
+              const Tm = (0, cm.r)(sm(mm)).flatMap((mm => mm.blocks));
+              for (const mm of (0, cm.k)(Tm))
+                if ("ts" === mm.lang || "typescript" === mm.lang)
+                  for (const [Tm, fm] of km(mm.code)) wT.set(Tm, fm)
             }
-            for (const [kk, Fk] of(iF ??= TF(Ak.default), iF)) lF.has(kk) || lF.set(kk, Fk)
+            for (const [mm, Tm] of(aT ??= AT(Lm.default), aT)) wT.has(mm) || wT.set(mm, Tm)
           }
-          return lF
+          return wT
         }
-        const LF = {
+        const RT = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let tF;
+        let pT;
 
-        function ZF() {
-          if (!tF) {
-            tF = new Map;
-            for (const kk of Uk)
-              if (Ok(kk.layout))
-                for (const Fk of Wk(kk).sections) tF.has(Fk.heading.text) || tF.set(Fk.heading.text, {
-                  pageId: kk.id,
-                  anchor: Fk.heading.anchor
+        function ET() {
+          if (!pT) {
+            pT = new Map;
+            for (const mm of Hm)
+              if (bm(mm.layout))
+                for (const Tm of sm(mm).sections) pT.has(Tm.heading.text) || pT.set(Tm.heading.text, {
+                  pageId: mm.id,
+                  anchor: Tm.heading.anchor
                 })
           }
-          return tF
+          return pT
         }
 
-        function jF(kk) {
-          const Fk = kk.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return Fk ? ZF().get(Fk[1]) : void 0
+        function oT(mm) {
+          const Tm = mm.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return Tm ? ET().get(Tm[1]) : void 0
         }
-        const eF = (0, Xk.createContext)("/docs"),
-          wF = (0, Xk.createContext)(null),
-          HF = (0, Xk.createContext)(!1),
-          JF = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const OT = (0, hm.createContext)("/docs"),
+          YT = (0, hm.createContext)(null),
+          qT = (0, hm.createContext)(!1),
+          jT = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function xF(kk) {
-          const Fk = kk.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return Fk ? Fk[1] : null
+        function VT(mm) {
+          const Tm = mm.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return Tm ? Tm[1] : null
         }
 
-        function PF(kk) {
+        function IT(mm) {
           let {
-            colour: Fk
-          } = kk;
-          return (0, ek.jsx)("span", {
+            colour: Tm
+          } = mm;
+          return (0, Om.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: Fk
+              background: Tm
             },
             "aria-hidden": "true"
           })
         }
 
-        function KF(kk) {
-          const Fk = [];
-          let Ik = 0;
-          for (const Xk of kk.matchAll(JF)) Fk.push(kk.slice(Ik, Xk.index), (0, ek.jsx)(PF, {
-            colour: Xk[0]
-          }), Xk[0]), Ik = Xk.index + Xk[0].length;
-          return Fk.push(kk.slice(Ik)), Fk
+        function KT(mm) {
+          const Tm = [];
+          let fm = 0;
+          for (const hm of mm.matchAll(jT)) Tm.push(mm.slice(fm, hm.index), (0, Om.jsx)(IT, {
+            colour: hm[0]
+          }), hm[0]), fm = hm.index + hm[0].length;
+          return Tm.push(mm.slice(fm)), Tm
         }
 
-        function QF(kk) {
+        function QT(mm) {
           let {
-            href: Fk,
-            children: Ik
-          } = kk;
-          const Tk = (0, Xk.useContext)(eF);
-          if (Fk.startsWith("#")) {
-            const kk = Bk(Fk);
-            if (kk) return (0, ek.jsx)(yk.e, {
-              to: Yk(Tk, kk.page, kk.anchor),
-              children: (0, ek.jsx)(HF.Provider, {
+            href: Tm,
+            children: fm
+          } = mm;
+          const Am = (0, hm.useContext)(OT);
+          if (Tm.startsWith("#")) {
+            const mm = Mm(Tm);
+            if (mm) return (0, Om.jsx)(xm.d, {
+              to: Bm(Am, mm.page, mm.anchor),
+              children: (0, Om.jsx)(qT.Provider, {
                 value: !0,
-                children: Ik
+                children: fm
               })
             })
           }
-          return (0, ek.jsx)("a", {
-            href: Fk,
+          return (0, Om.jsx)("a", {
+            href: Tm,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, ek.jsx)(HF.Provider, {
+            children: (0, Om.jsx)(qT.Provider, {
               value: !0,
-              children: Ik
+              children: fm
             })
           })
         }
 
-        function sF(kk) {
+        function nT(mm) {
           let {
-            code: Fk
-          } = kk;
-          const Ik = (0, Xk.useContext)(eF);
-          if ((0, Xk.useContext)(HF)) return (0, ek.jsx)("code", {
+            code: Tm
+          } = mm;
+          const fm = (0, hm.useContext)(OT);
+          if ((0, hm.useContext)(qT)) return (0, Om.jsx)("code", {
             className: "DocsInlineCode",
-            children: Fk
+            children: Tm
           });
-          if (qF().has(Fk)) return (0, ek.jsx)(oF, {
-            type: Fk
+          if (iT().has(Tm)) return (0, Om.jsx)(ZT, {
+            type: Tm
           });
-          const Tk = jF(Fk);
-          if (Tk) return (0, ek.jsx)(yk.e, {
+          const Am = oT(Tm);
+          if (Am) return (0, Om.jsx)(xm.d, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: Yk(Ik, Nk(Tk.pageId), Tk.anchor),
-            children: Fk
+            to: Bm(fm, Cm(Am.pageId), Am.anchor),
+            children: Tm
           });
-          const ik = xF(Fk);
-          return (0, ek.jsxs)("code", {
+          const am = VT(Tm);
+          return (0, Om.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [ik && (0, ek.jsx)(PF, {
-              colour: ik
-            }), Fk]
+            children: [am && (0, Om.jsx)(IT, {
+              colour: am
+            }), Tm]
           })
         }
 
-        function VF(kk) {
+        function JT(mm) {
           let {
-            text: Fk
-          } = kk;
-          const Ik = [];
-          let Tk = 0;
-          for (const Xk of Fk.matchAll(zk.h)) {
-            Xk.index > Tk && Ik.push(...KF(Fk.slice(Tk, Xk.index)));
-            const [, kk, ik, yk, lk, ak] = Xk;
-            kk ? Ik.push((0, ek.jsx)(sF, {
-              code: (0, zk.p)(kk, ik)
-            })) : yk ? Ik.push((0, ek.jsx)("strong", {
-              children: (0, ek.jsx)(VF, {
-                text: yk
+            text: Tm
+          } = mm;
+          const fm = [];
+          let Am = 0;
+          for (const hm of Tm.matchAll(cm.f)) {
+            hm.index > Am && fm.push(...KT(Tm.slice(Am, hm.index)));
+            const [, mm, am, xm, wm, Dm] = hm;
+            mm ? fm.push((0, Om.jsx)(nT, {
+              code: (0, cm.n)(mm, am)
+            })) : xm ? fm.push((0, Om.jsx)("strong", {
+              children: (0, Om.jsx)(JT, {
+                text: xm
               })
-            })) : Ik.push((0, ek.jsx)(QF, {
-              href: ak,
-              children: (0, ek.jsx)(VF, {
-                text: lk
+            })) : fm.push((0, Om.jsx)(QT, {
+              href: Dm,
+              children: (0, Om.jsx)(JT, {
+                text: wm
               })
-            })), Tk = Xk.index + Xk[0].length
+            })), Am = hm.index + hm[0].length
           }
-          return Tk < Fk.length && Ik.push(...KF(Fk.slice(Tk))), (0, ek.jsx)(ek.Fragment, {
-            children: Ik.map(((kk, Fk) => (0, ek.jsx)(Xk.Fragment, {
-              children: kk
-            }, Fk)))
+          return Am < Tm.length && fm.push(...KT(Tm.slice(Am))), (0, Om.jsx)(Om.Fragment, {
+            children: fm.map(((mm, Tm) => (0, Om.jsx)(hm.Fragment, {
+              children: mm
+            }, Tm)))
           })
         }
-        const zF = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          SF = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const cT = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          zT = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function oF(kk) {
+        function ZT(mm) {
           let {
-            type: Fk
-          } = kk;
-          const Ik = qF(),
-            Tk = [];
-          for (const Xk of Fk.trim().matchAll(zF)) {
-            const [kk, Fk, ik, yk, lk] = Xk;
-            Fk ? Tk.push((0, ek.jsx)("span", {
+            type: Tm
+          } = mm;
+          const fm = iT(),
+            Am = [];
+          for (const hm of Tm.trim().matchAll(cT)) {
+            const [mm, Tm, am, xm, wm] = hm;
+            Tm ? Am.push((0, Om.jsx)("span", {
               className: "DocsTypeString",
-              children: kk
-            })) : ik && Ik.has(ik) ? Tk.push((0, ek.jsx)(GF, {
-              name: ik,
-              definition: Ik.get(ik)
-            })) : ik ? Tk.push((0, ek.jsx)("span", {
-              className: SF.has(ik) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: kk
-            })) : yk ? Tk.push((0, ek.jsx)("span", {
+              children: mm
+            })) : am && fm.has(am) ? Am.push((0, Om.jsx)(NT, {
+              name: am,
+              definition: fm.get(am)
+            })) : am ? Am.push((0, Om.jsx)("span", {
+              className: zT.has(am) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: mm
+            })) : xm ? Am.push((0, Om.jsx)("span", {
               className: "DocsTypeNumber",
-              children: kk
-            })) : lk ? Tk.push(" ") : Tk.push((0, ek.jsx)("span", {
+              children: mm
+            })) : wm ? Am.push(" ") : Am.push((0, Om.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: kk
+              children: mm
             }))
           }
-          return (0, ek.jsx)("code", {
+          return (0, Om.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: Tk.map(((kk, Fk) => (0, ek.jsx)(Xk.Fragment, {
-              children: kk
-            }, Fk)))
+            children: Am.map(((mm, Tm) => (0, Om.jsx)(hm.Fragment, {
+              children: mm
+            }, Tm)))
           })
         }
-        const vF = 480,
-          EF = 6,
-          OF = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let nF = 0;
+        const kT = 480,
+          bT = 6,
+          ST = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let eT = 0;
 
-        function GF(kk) {
+        function NT(mm) {
           let {
-            name: Fk,
-            definition: Ik
-          } = kk;
-          const Tk = (0, Xk.useContext)(eF),
-            ik = LF[Fk],
-            lk = (0, Xk.useRef)(null),
-            ak = (0, Xk.useRef)(null),
-            Lk = (0, Xk.useRef)(null),
-            [tk, Zk] = (0, Xk.useState)(!1),
-            [jk, wk] = (0, Xk.useState)(null),
-            Jk = (0, Xk.useRef)(),
-            xk = (0, Xk.useContext)(wF),
-            [Pk] = (0, Xk.useState)((() => "DocsTypePopover-" + nF++)),
-            Kk = () => {
-              clearTimeout(Jk.current), Zk(!0)
+            name: Tm,
+            definition: fm
+          } = mm;
+          const Am = (0, hm.useContext)(OT),
+            am = RT[Tm],
+            wm = (0, hm.useRef)(null),
+            Dm = (0, hm.useRef)(null),
+            Rm = (0, hm.useRef)(null),
+            [pm, Em] = (0, hm.useState)(!1),
+            [om, Ym] = (0, hm.useState)(null),
+            jm = (0, hm.useRef)(),
+            Vm = (0, hm.useContext)(YT),
+            [Im] = (0, hm.useState)((() => "DocsTypePopover-" + eT++)),
+            Km = () => {
+              clearTimeout(jm.current), Em(!0)
             },
-            Qk = () => {
-              clearTimeout(Jk.current), Jk.current = setTimeout((() => {
-                Zk(!1)
+            Qm = () => {
+              clearTimeout(jm.current), jm.current = setTimeout((() => {
+                Em(!1)
               }), 120)
             };
-          return (0, Xk.useEffect)((() => {
-            if (!tk) return;
-            const kk = kk => {
-              if ("Escape" === kk.key) {
-                var Fk, Ik;
-                if (null !== (Fk = ak.current) && void 0 !== Fk && Fk.contains(document.activeElement)) null === (Ik = lk.current) || void 0 === Ik || Ik.focus();
-                Zk(!1)
+          return (0, hm.useEffect)((() => {
+            if (!pm) return;
+            const mm = mm => {
+              if ("Escape" === mm.key) {
+                var Tm, fm;
+                if (null !== (Tm = Dm.current) && void 0 !== Tm && Tm.contains(document.activeElement)) null === (fm = wm.current) || void 0 === fm || fm.focus();
+                Em(!1)
               }
             };
-            return document.addEventListener("keydown", kk), () => {
-              document.removeEventListener("keydown", kk)
+            return document.addEventListener("keydown", mm), () => {
+              document.removeEventListener("keydown", mm)
             }
-          }), [tk]), (0, Xk.useEffect)((() => () => {
-            clearTimeout(Jk.current)
-          }), []), (0, Xk.useLayoutEffect)((() => {
-            if (!tk || !lk.current || !ak.current) return void wk(null);
-            const kk = lk.current.getBoundingClientRect(),
-              Fk = ak.current.offsetHeight,
-              Ik = Math.min(vF, window.innerWidth - 32),
-              Xk = Math.min(Math.max(16, kk.left), window.innerWidth - Ik - 16),
-              Tk = kk.bottom + EF + Fk < window.innerHeight;
-            wk({
-              left: Xk,
-              top: Tk ? kk.bottom + EF : Math.max(16, kk.top - EF - Fk)
+          }), [pm]), (0, hm.useEffect)((() => () => {
+            clearTimeout(jm.current)
+          }), []), (0, hm.useLayoutEffect)((() => {
+            if (!pm || !wm.current || !Dm.current) return void Ym(null);
+            const mm = wm.current.getBoundingClientRect(),
+              Tm = Dm.current.offsetHeight,
+              fm = Math.min(kT, window.innerWidth - 32),
+              hm = Math.min(Math.max(16, mm.left), window.innerWidth - fm - 16),
+              Am = mm.bottom + bT + Tm < window.innerHeight;
+            Ym({
+              left: hm,
+              top: Am ? mm.bottom + bT : Math.max(16, mm.top - bT - Tm)
             })
-          }), [tk]), (0, ek.jsxs)(ek.Fragment, {
-            children: [(0, ek.jsx)("button", {
+          }), [pm]), (0, Om.jsxs)(Om.Fragment, {
+            children: [(0, Om.jsx)("button", {
               type: "button",
-              ref: lk,
+              ref: wm,
               className: "DocsTypeLink",
-              "aria-expanded": tk,
-              "aria-describedby": tk ? Pk : void 0,
-              onMouseEnter: Kk,
-              onMouseLeave: Qk,
-              onFocus: Kk,
-              onBlur: Qk,
-              onKeyDown: kk => {
-                "Tab" === kk.key && !kk.shiftKey && Lk.current && (kk.preventDefault(), Lk.current.focus())
+              "aria-expanded": pm,
+              "aria-describedby": pm ? Im : void 0,
+              onMouseEnter: Km,
+              onMouseLeave: Qm,
+              onFocus: Km,
+              onBlur: Qm,
+              onKeyDown: mm => {
+                "Tab" === mm.key && !mm.shiftKey && Rm.current && (mm.preventDefault(), Rm.current.focus())
               },
-              onClick: Kk,
-              children: Fk
-            }), tk && (0, qk.createPortal)((0, ek.jsxs)("span", {
-              ref: ak,
-              id: Pk,
+              onClick: Km,
+              children: Tm
+            }), pm && (0, im.createPortal)((0, Om.jsxs)("span", {
+              ref: Dm,
+              id: Im,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: jk ? {
-                left: jk.left,
-                top: jk.top,
-                maxWidth: vF
+              style: om ? {
+                left: om.left,
+                top: om.top,
+                maxWidth: kT
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: Kk,
-              onMouseLeave: Qk,
-              onFocus: Kk,
-              onBlur: Qk,
-              children: [(0, ek.jsxs)("span", {
+              onMouseEnter: Km,
+              onMouseLeave: Qm,
+              onFocus: Km,
+              onBlur: Qm,
+              children: [(0, Om.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, ek.jsx)("span", {
+                children: [(0, Om.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: Fk
-                }), ik && (0, ek.jsxs)(yk.e, {
-                  ref: Lk,
+                  children: Tm
+                }), am && (0, Om.jsxs)(xm.d, {
+                  ref: Rm,
                   className: "DocsTypePopoverLink",
-                  to: Yk(Tk, Nk(ik)),
+                  to: Bm(Am, Cm(am)),
                   onClick: () => {
-                    Zk(!1)
+                    Em(!1)
                   },
-                  onKeyDown: kk => {
-                    if ("Tab" === kk.key) {
-                      var Fk;
-                      if (kk.preventDefault(), kk.shiftKey || !lk.current || ! function(kk, Fk) {
-                          const Ik = [...document.querySelectorAll(OF)],
-                            Xk = Ik.slice(Ik.indexOf(kk) + 1).find((kk => kk.getClientRects().length > 0 && !(null !== Fk && void 0 !== Fk && Fk.contains(kk))));
-                          return null === Xk || void 0 === Xk || Xk.focus(), void 0 !== Xk
-                        }(lk.current, ak.current)) null === (Fk = lk.current) || void 0 === Fk || Fk.focus();
-                      kk.shiftKey || Zk(!1)
+                  onKeyDown: mm => {
+                    if ("Tab" === mm.key) {
+                      var Tm;
+                      if (mm.preventDefault(), mm.shiftKey || !wm.current || ! function(mm, Tm) {
+                          const fm = [...document.querySelectorAll(ST)],
+                            hm = fm.slice(fm.indexOf(mm) + 1).find((mm => mm.getClientRects().length > 0 && !(null !== Tm && void 0 !== Tm && Tm.contains(mm))));
+                          return null === hm || void 0 === hm || hm.focus(), void 0 !== hm
+                        }(wm.current, Dm.current)) null === (Tm = wm.current) || void 0 === Tm || Tm.focus();
+                      mm.shiftKey || Em(!1)
                     }
                   },
-                  children: [Nk(ik).title, (0, ek.jsx)(Hk, {
+                  children: [Cm(am).title, (0, Om.jsx)(qm, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, ek.jsx)(Vk, {
+              }), (0, Om.jsx)(Jm, {
                 lang: "ts",
-                code: Ik,
+                code: fm,
                 compact: !0
               })]
-            }), null !== xk && void 0 !== xk ? xk : document.body)]
+            }), null !== Vm && void 0 !== Vm ? Vm : document.body)]
           })
         }
-        var pF = Ik(187),
-          uF = Ik(4767),
-          bF = Ik(4775),
-          RF = Ik(4784);
-        const UF = {
+        var GT = fm(198),
+          XT = fm(4704),
+          PT = fm(4711),
+          HT = fm(4717);
+        const yT = {
           progressBar: {
-            SI: 30,
-            oI: .075,
-            vI: 5,
-            EI: !1,
+            Sf: 30,
+            ef: .075,
+            Nf: 5,
+            Gf: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            GI: "fa-solid fa-computer-mouse",
+            Hf: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            uI: 3e3,
+            Cf: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            bI: !0,
+            rf: !0,
             scale: 3,
             rotation: 15,
-            RI: !1
+            sf: !1
           },
           gravityBar: {
-            SI: 30,
-            CI: .25,
-            NI: 3,
-            cI: .8,
+            Sf: 30,
+            Mf: .25,
+            uf: 3,
+            Bf: .8,
             gravity: 1,
-            WI: 1.5,
-            fI: 8,
-            BI: 4,
-            EI: !1,
+            Lf: 1.5,
+            vf: 8,
+            tf: 4,
+            Gf: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            YI: .15,
+            df: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            gI: 5,
-            mI: 1200,
-            hI: .15,
-            rI: 3,
+            Wf: 5,
+            Ff: 1200,
+            mh: .15,
+            Th: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var CF = Ik(318),
-          NF = Ik(1926);
+        var CT = fm(339),
+          rT = fm(1971);
 
-        function cF(kk) {
-          return kk.startsWith("fa-")
+        function sT(mm) {
+          return mm.startsWith("fa-")
         }
-        const WF = {
+        const lT = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          fF = {
+          MT = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function BF(kk) {
-          return "string" === typeof kk ? "text" : "entityName" in kk || "translationKey" in kk ? "other" : (0, CF.Db)(kk) ? "progressBar" : (0, CF.Ab)(kk) ? "keyBinding" : "icon" in kk ? "icon" : "str" in kk && "string" === typeof kk.str ? "text" : "other"
+        function uT(mm) {
+          return "string" === typeof mm ? "text" : "entityName" in mm || "translationKey" in mm ? "other" : (0, CT.tb)(mm) ? "progressBar" : (0, CT.pb)(mm) ? "keyBinding" : "icon" in mm ? "icon" : "str" in mm && "string" === typeof mm.str ? "text" : "other"
         }
-        const dF = [{
+        const BT = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          YF = {
+          LT = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...dF],
+            }, ...BT],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: NF.l
+                options: rT.h
               },
               isRequired: !0
-            }, ...dF],
+            }, ...BT],
             other: []
           };
 
-        function AF(kk) {
-          return "string" === typeof kk ? {
-            str: kk
-          } : kk
+        function vT(mm) {
+          return "string" === typeof mm ? {
+            str: mm
+          } : mm
         }
 
-        function gF(kk, Fk) {
-          let Ik = AF(kk);
-          for (const Xk of Fk) Ik = Ik && "object" === typeof Ik ? Ik[Xk] : void 0;
-          return Ik
+        function tT(mm, Tm) {
+          let fm = vT(mm);
+          for (const hm of Tm) fm = fm && "object" === typeof fm ? fm[hm] : void 0;
+          return fm
         }
 
-        function mF(kk, Fk, Ik) {
-          const Xk = (kk, Tk) => {
-            var ik;
-            const yk = Fk[Tk],
-              lk = {
-                ...kk
+        function UT(mm, Tm, fm) {
+          const hm = (mm, Am) => {
+            var am;
+            const xm = Tm[Am],
+              wm = {
+                ...mm
               };
-            if (Tk === Fk.length - 1) return void 0 === Ik ? delete lk[yk] : lk[yk] = Ik, lk;
-            const ak = Xk(null !== (ik = kk[yk]) && void 0 !== ik ? ik : {}, Tk + 1);
-            return 0 === Object.keys(ak).length ? delete lk[yk] : lk[yk] = ak, lk
+            if (Am === Tm.length - 1) return void 0 === fm ? delete wm[xm] : wm[xm] = fm, wm;
+            const Dm = hm(null !== (am = mm[xm]) && void 0 !== am ? am : {}, Am + 1);
+            return 0 === Object.keys(Dm).length ? delete wm[xm] : wm[xm] = Dm, wm
           };
-          return function(kk) {
-            const Fk = Object.keys(kk);
-            return "string" === typeof kk.str && 1 === Fk.length ? kk.str : kk
-          }(Xk(AF(kk), 0))
+          return function(mm) {
+            const Tm = Object.keys(mm);
+            return "string" === typeof mm.str && 1 === Tm.length ? mm.str : mm
+          }(hm(vT(mm), 0))
         }
 
-        function hF(kk, Fk) {
-          const Ik = BF(kk),
-            Xk = YF[Ik].find((kk => kk.path.join(".") === Fk.join("."))),
-            Tk = null !== Xk && void 0 !== Xk && Xk.isRequired && "other" !== Ik ? gF(fF[Ik], Fk) : void 0;
-          return mF(kk, Fk, Tk)
+        function dT(mm, Tm) {
+          const fm = uT(mm),
+            hm = LT[fm].find((mm => mm.path.join(".") === Tm.join("."))),
+            Am = null !== hm && void 0 !== hm && hm.isRequired && "other" !== fm ? tT(MT[fm], Tm) : void 0;
+          return UT(mm, Tm, Am)
         }
 
-        function rF(kk) {
-          switch (BF(kk)) {
+        function gT(mm) {
+          switch (uT(mm)) {
             case "text":
-              return String(gF(kk, ["str"]));
+              return String(tT(mm, ["str"]));
             case "icon":
-              return String(gF(kk, ["icon"]));
+              return String(tT(mm, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(gF(kk,["progress"])))}%`;
+              return `${Math.round(100*Number(tT(mm,["progress"])))}%`;
             case "keyBinding":
-              return String(gF(kk, ["action"]));
+              return String(tT(mm, ["action"]));
             case "other":
-              return JSON.stringify(kk)
+              return JSON.stringify(mm)
           }
         }
-        const DF = /^[A-Za-z_$][\w$]*$/;
+        const WT = /^[A-Za-z_$][\w$]*$/;
 
-        function MF(kk) {
-          if (Array.isArray(kk)) return `[${kk.map(MF).join(", ")}]`;
-          if (kk && "object" === typeof kk) {
-            const Fk = Object.entries(kk).map((kk => {
-              let [Fk, Ik] = kk;
-              return `${DF.test(Fk)?Fk:JSON.stringify(Fk)}: ${MF(Ik)}`
+        function FT(mm) {
+          if (Array.isArray(mm)) return `[${mm.map(FT).join(", ")}]`;
+          if (mm && "object" === typeof mm) {
+            const Tm = Object.entries(mm).map((mm => {
+              let [Tm, fm] = mm;
+              return `${WT.test(Tm)?Tm:JSON.stringify(Tm)}: ${FT(fm)}`
             }));
-            return 0 === Fk.length ? "{}" : `{ ${Fk.join(", ")} }`
+            return 0 === Tm.length ? "{}" : `{ ${Tm.join(", ")} }`
           }
-          return JSON.stringify(kk)
+          return JSON.stringify(mm)
         }
 
-        function kI(kk) {
-          const Fk = kk.map(MF),
-            Ik = `[${Fk.join(", ")}]`;
-          return Ik.length <= 60 ? Ik : `[\n${Fk.map((kk=>`    ${kk},`)).join("\n")}\n]`
+        function mf(mm) {
+          const Tm = mm.map(FT),
+            fm = `[${Tm.join(", ")}]`;
+          return fm.length <= 60 ? fm : `[\n${Tm.map((mm=>`    ${mm},`)).join("\n")}\n]`
         }
-        const FI = {
+        const Tf = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function II(kk) {
-          let Fk = "";
-          for (let Tk = 0; Tk < kk.length; Tk++) {
-            const ik = kk[Tk];
-            if ("\\" === ik) {
-              var Ik;
-              const Xk = null !== (Ik = kk[Tk + 1]) && void 0 !== Ik ? Ik : "";
-              Fk += "'" === Xk ? "'" : ik + Xk, Tk++
-            } else if ('"' === ik) Fk += '\\"';
+        function ff(mm) {
+          let Tm = "";
+          for (let Am = 0; Am < mm.length; Am++) {
+            const am = mm[Am];
+            if ("\\" === am) {
+              var fm;
+              const hm = null !== (fm = mm[Am + 1]) && void 0 !== fm ? fm : "";
+              Tm += "'" === hm ? "'" : am + hm, Am++
+            } else if ('"' === am) Tm += '\\"';
             else {
-              var Xk;
-              Fk += null !== (Xk = FI[ik]) && void 0 !== Xk ? Xk : ik
+              var hm;
+              Tm += null !== (hm = Tf[am]) && void 0 !== hm ? hm : am
             }
           }
-          return `"${Fk}"`
+          return `"${Tm}"`
         }
 
-        function XI(kk) {
-          if ("string" === typeof kk) return !0;
-          if (!kk || "object" !== typeof kk || Array.isArray(kk)) return !1;
-          const Fk = kk;
-          return "ProgressBar" === Fk.type ? "number" === typeof Fk.progress : "StyledKeyBinding" === Fk.type ? NF.l.includes(Fk.action) : "string" === typeof Fk.icon || "string" === typeof Fk.str || "string" === typeof Fk.entityName || "string" === typeof Fk.translationKey
+        function hf(mm) {
+          if ("string" === typeof mm) return !0;
+          if (!mm || "object" !== typeof mm || Array.isArray(mm)) return !1;
+          const Tm = mm;
+          return "ProgressBar" === Tm.type ? "number" === typeof Tm.progress : "StyledKeyBinding" === Tm.type ? rT.h.includes(Tm.action) : "string" === typeof Tm.icon || "string" === typeof Tm.str || "string" === typeof Tm.entityName || "string" === typeof Tm.translationKey
         }
 
-        function TI(kk) {
-          let Fk;
+        function Af(mm) {
+          let Tm;
           try {
-            Fk = function(kk) {
-              let Fk = "",
-                Ik = "",
-                Xk = 0;
-              const Tk = () => {
-                Fk += Ik.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), Ik = ""
+            Tm = function(mm) {
+              let Tm = "",
+                fm = "",
+                hm = 0;
+              const Am = () => {
+                Tm += fm.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), fm = ""
               };
-              for (; Xk < kk.length;) {
-                const ik = kk.slice(Xk).search(/["'`]|\/\//);
-                if (-1 === ik) {
-                  Ik += kk.slice(Xk);
+              for (; hm < mm.length;) {
+                const am = mm.slice(hm).search(/["'`]|\/\//);
+                if (-1 === am) {
+                  fm += mm.slice(hm);
                   break
                 }
-                Ik += kk.slice(Xk, Xk + ik);
-                const yk = Xk + ik,
-                  lk = kk[yk];
-                if ("/" === lk) {
-                  const Fk = kk.indexOf("\n", yk);
-                  Xk = -1 === Fk ? kk.length : Fk;
+                fm += mm.slice(hm, hm + am);
+                const xm = hm + am,
+                  wm = mm[xm];
+                if ("/" === wm) {
+                  const Tm = mm.indexOf("\n", xm);
+                  hm = -1 === Tm ? mm.length : Tm;
                   continue
                 }
-                if (Tk(), "`" === lk) throw new Error("Use quotes rather than template strings.");
-                let ak = yk + 1;
-                for (; ak < kk.length && kk[ak] !== lk;) ak += "\\" === kk[ak] ? 2 : 1;
-                if (ak >= kk.length) throw new Error("A string is missing its closing quote.");
-                const qk = kk.slice(yk + 1, ak);
-                Fk += II(qk), Xk = ak + 1
+                if (Am(), "`" === wm) throw new Error("Use quotes rather than template strings.");
+                let Dm = xm + 1;
+                for (; Dm < mm.length && mm[Dm] !== wm;) Dm += "\\" === mm[Dm] ? 2 : 1;
+                if (Dm >= mm.length) throw new Error("A string is missing its closing quote.");
+                const im = mm.slice(xm + 1, Dm);
+                Tm += ff(im), hm = Dm + 1
               }
-              return Tk(), JSON.parse(Fk)
-            }(kk.trim())
-          } catch (Xk) {
+              return Am(), JSON.parse(Tm)
+            }(mm.trim())
+          } catch (hm) {
             return {
               parts: null,
-              error: Xk instanceof SyntaxError ? "This isn't a valid array yet." : Xk.message
+              error: hm instanceof SyntaxError ? "This isn't a valid array yet." : hm.message
             }
           }
-          if (!Array.isArray(Fk)) return {
+          if (!Array.isArray(Tm)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const Ik = Fk.findIndex((kk => !XI(kk)));
-          return -1 !== Ik ? {
+          const fm = Tm.findIndex((mm => !hf(mm)));
+          return -1 !== fm ? {
             parts: null,
-            error: `Part ${Ik+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${fm+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: Fk,
+            parts: Tm,
             error: null
           }
         }
-        const iI = 1 / pF.f.clientTicksPerSecond,
-          yI = 700,
-          lI = {
+        const af = 1 / GT.f.clientTicksPerSecond,
+          xf = 700,
+          wf = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          aI = {
-            progressBar: UF.progressBar.GI,
-            timedClick: UF.timedClick.icon,
-            gravityBar: UF.gravityBar.icon,
-            precisionBar: UF.precisionBar.icon,
-            rhythmClick: UF.rhythmClick.icon
+          Df = {
+            progressBar: yT.progressBar.Hf,
+            timedClick: yT.timedClick.icon,
+            gravityBar: yT.gravityBar.icon,
+            precisionBar: yT.precisionBar.icon,
+            rhythmClick: yT.rhythmClick.icon
           };
 
-        function qI(kk) {
+        function Rf(mm) {
           let {
-            type: Fk
-          } = kk;
-          const [Ik, Tk] = (0, Xk.useState)("ready"), [yk, lk] = (0, Xk.useState)(1), [ak, qk] = (0, Xk.useState)(!0), Lk = (0, Xk.useRef)(null), tk = (0, Xk.useRef)(null), Zk = (0, Xk.useRef)(null), jk = (0, Xk.useRef)(new Set), wk = (0, Xk.useRef)(!1), Jk = aI[Fk], xk = (0, Xk.useMemo)((() => ({
+            type: Tm
+          } = mm;
+          const [fm, Am] = (0, hm.useState)("ready"), [xm, wm] = (0, hm.useState)(1), [Dm, im] = (0, hm.useState)(!0), Rm = (0, hm.useRef)(null), pm = (0, hm.useRef)(null), Em = (0, hm.useRef)(null), om = (0, hm.useRef)(new Set), Ym = (0, hm.useRef)(!1), jm = Df[Tm], Vm = (0, hm.useMemo)((() => ({
             getState: () => {
-              var kk, Fk;
-              return null !== (kk = null === (Fk = Zk.current) || void 0 === Fk ? void 0 : Fk.getState()) && void 0 !== kk ? kk : lI
+              var mm, Tm;
+              return null !== (mm = null === (Tm = Em.current) || void 0 === Tm ? void 0 : Tm.getState()) && void 0 !== mm ? mm : wf
             },
-            onFrame: kk => (jk.current.add(kk), () => {
-              jk.current.delete(kk)
+            onFrame: mm => (om.current.add(mm), () => {
+              om.current.delete(mm)
             })
           })), []);
-          (0, Xk.useEffect)((() => {
-            const kk = Lk.current,
-              Fk = tk.current;
-            if (!kk || !Fk) return;
-            const Ik = new ResizeObserver((() => {
-              lk(kk.clientWidth / Math.max(1, Fk.offsetWidth))
+          (0, hm.useEffect)((() => {
+            const mm = Rm.current,
+              Tm = pm.current;
+            if (!mm || !Tm) return;
+            const fm = new ResizeObserver((() => {
+              wm(mm.clientWidth / Math.max(1, Tm.offsetWidth))
             }));
-            return Ik.observe(kk), () => {
-              Ik.disconnect()
+            return fm.observe(mm), () => {
+              fm.disconnect()
             }
-          }), []), (0, Xk.useEffect)((() => {
-            var kk;
-            if ("playing" !== Ik) return;
-            let Xk = !1;
-            const ik = new RF.c[Fk](UF[Fk], (kk => {
-              Xk = !0, qk(!1), Tk(kk ? "succeeded" : "failed")
+          }), []), (0, hm.useEffect)((() => {
+            var mm;
+            if ("playing" !== fm) return;
+            let hm = !1;
+            const am = new HT.h[Tm](yT[Tm], (mm => {
+              hm = !0, im(!1), Am(mm ? "succeeded" : "failed")
             }), (() => {}));
-            Zk.current = ik;
-            let yk = 0,
-              lk = performance.now(),
-              ak = requestAnimationFrame((function kk(Fk) {
-                for (yk += Math.min(.25, (Fk - lk) / 1e3), lk = Fk; yk >= iI && !Xk;) yk -= iI, ik.handleTick(iI);
-                for (const Ik of jk.current) Ik();
-                Xk || (ak = requestAnimationFrame(kk))
+            Em.current = am;
+            let xm = 0,
+              wm = performance.now(),
+              Dm = requestAnimationFrame((function mm(Tm) {
+                for (xm += Math.min(.25, (Tm - wm) / 1e3), wm = Tm; xm >= af && !hm;) xm -= af, am.handleTick(af);
+                for (const fm of om.current) fm();
+                hm || (Dm = requestAnimationFrame(mm))
               }));
-            return null === (kk = Lk.current) || void 0 === kk || kk.focus({
+            return null === (mm = Rm.current) || void 0 === mm || mm.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(ak), ik.tearDown(), Zk.current = null, wk.current = !1
+              cancelAnimationFrame(Dm), am.tearDown(), Em.current = null, Ym.current = !1
             }
-          }), [Ik, Fk]), (0, Xk.useEffect)((() => {
-            if (ak) return;
-            const kk = setTimeout((() => {
-              qk(!0)
-            }), yI);
+          }), [fm, Tm]), (0, hm.useEffect)((() => {
+            if (Dm) return;
+            const mm = setTimeout((() => {
+              im(!0)
+            }), xf);
             return () => {
-              clearTimeout(kk)
+              clearTimeout(mm)
             }
-          }), [ak]);
-          const Pk = kk => {
-            var Fk;
-            "playing" === Ik && wk.current !== kk && (wk.current = kk, null === (Fk = Zk.current) || void 0 === Fk || Fk.handleMouseInput(kk))
+          }), [Dm]);
+          const Im = mm => {
+            var Tm;
+            "playing" === fm && Ym.current !== mm && (Ym.current = mm, null === (Tm = Em.current) || void 0 === Tm || Tm.handleMouseInput(mm))
           };
-          return (0, ek.jsxs)("div", {
+          return (0, Om.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, ek.jsxs)("div", {
-              ref: Lk,
-              className: ik()("DocsQteStage", {
-                Playing: "playing" === Ik
+            children: [(0, Om.jsxs)("div", {
+              ref: Rm,
+              className: am()("DocsQteStage", {
+                Playing: "playing" === fm
               }),
-              tabIndex: "playing" === Ik ? 0 : -1,
-              role: "playing" === Ik ? "button" : void 0,
-              "aria-label": "playing" === Ik ? `${Fk} quick time event: click or press Space` : void 0,
-              onPointerDown: kk => {
-                0 === kk.button && Pk(!0)
+              tabIndex: "playing" === fm ? 0 : -1,
+              role: "playing" === fm ? "button" : void 0,
+              "aria-label": "playing" === fm ? `${Tm} quick time event: click or press Space` : void 0,
+              onPointerDown: mm => {
+                0 === mm.button && Im(!0)
               },
               onPointerUp: () => {
-                Pk(!1)
+                Im(!1)
               },
               onPointerLeave: () => {
-                Pk(!1)
+                Im(!1)
               },
               onPointerCancel: () => {
-                Pk(!1)
+                Im(!1)
               },
-              onKeyDown: kk => {
-                "playing" !== Ik || " " !== kk.key && "Enter" !== kk.key || (kk.preventDefault(), Pk(!0))
+              onKeyDown: mm => {
+                "playing" !== fm || " " !== mm.key && "Enter" !== mm.key || (mm.preventDefault(), Im(!0))
               },
-              onKeyUp: kk => {
-                "playing" !== Ik || " " !== kk.key && "Enter" !== kk.key || Pk(!1)
+              onKeyUp: mm => {
+                "playing" !== fm || " " !== mm.key && "Enter" !== mm.key || Im(!1)
               },
-              children: [(0, ek.jsx)("div", {
-                ref: tk,
+              children: [(0, Om.jsx)("div", {
+                ref: pm,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${yk})`
+                  transform: `scale(${xm})`
                 },
-                children: "playing" === Ik && (0, ek.jsx)(bF.d.Provider, {
-                  value: xk,
-                  children: (0, ek.jsx)(uF.b, {
+                children: "playing" === fm && (0, Om.jsx)(PT.b.Provider, {
+                  value: Vm,
+                  children: (0, Om.jsx)(XT.c, {
                     qte: {
-                      type: Fk,
-                      parameters: UF[Fk]
+                      type: Tm,
+                      parameters: yT[Tm]
                     }
                   })
                 })
-              }), "playing" !== Ik && (0, ek.jsxs)("div", {
+              }), "playing" !== fm && (0, Om.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== Ik && (0, ek.jsxs)("div", {
-                  className: ik()("DocsQteResult", "succeeded" === Ik ? "Succeeded" : "Failed"),
-                  children: [(0, ek.jsx)(Hk, {
-                    name: "succeeded" === Ik ? "check" : "cross",
+                children: ["ready" !== fm && (0, Om.jsxs)("div", {
+                  className: am()("DocsQteResult", "succeeded" === fm ? "Succeeded" : "Failed"),
+                  children: [(0, Om.jsx)(qm, {
+                    name: "succeeded" === fm ? "check" : "cross",
                     isTinted: !0
-                  }), (0, ek.jsx)("span", {
-                    children: "succeeded" === Ik ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, Om.jsx)("span", {
+                    children: "succeeded" === fm ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, ek.jsxs)("button", {
+                }), (0, Om.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !ak,
+                  disabled: !Dm,
                   onClick: () => {
-                    Tk("playing")
+                    Am("playing")
                   },
-                  children: [(0, ek.jsx)(Hk, {
-                    name: "ready" === Ik ? "play" : "replay"
-                  }), (0, ek.jsx)("span", {
-                    children: "ready" === Ik ? `Try ${Fk}` : "Play again"
+                  children: [(0, Om.jsx)(qm, {
+                    name: "ready" === fm ? "play" : "replay"
+                  }), (0, Om.jsx)("span", {
+                    children: "ready" === fm ? `Try ${Tm}` : "Play again"
                   })]
                 })]
               })]
-            }), Jk && !cF(Jk) && (0, ek.jsxs)("p", {
+            }), jm && !sT(jm) && (0, Om.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, ek.jsx)("code", {
-                children: Jk
+              children: ["The ", (0, Om.jsx)("code", {
+                children: jm
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function LI(kk) {
+        function pf(mm) {
           let {
-            level: Fk,
-            text: Ik,
-            anchor: Xk,
-            className: Tk
-          } = kk;
-          const yk = `h${Math.min(Fk,6)}`;
-          return (0, ek.jsxs)(yk, {
-                id: Xk,
-                className: ik()("DocsHeading", Tk),
-                children: [(0, ek.jsx)(VF, {
-                      text: Ik
-                    }), (0, ek.jsx)("a", {
+            level: Tm,
+            text: fm,
+            anchor: hm,
+            className: Am
+          } = mm;
+          const xm = `h${Math.min(Tm,6)}`;
+          return (0, Om.jsxs)(xm, {
+                id: hm,
+                className: am()("DocsHeading", Am),
+                children: [(0, Om.jsx)(JT, {
+                      text: fm
+                    }), (0, Om.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${Xk}`,
-                        "aria-label": `Link to ${Ik.replace(/`/g,"")}`,children:"#"})]})}function tI(kk){let{items:Fk,ordered:Ik}=kk;const Xk=Ik?"ol":"ul";return(0,ek.jsx)(Xk,{className:"DocsList",children:Fk.map(((kk,Fk)=>(0,ek.jsxs)("li",{children:[(0,ek.jsx)(VF,{text:kk.text}),kk.children.length>0&&(0,ek.jsx)(tI,{items:kk.children,ordered:Ik})]},Fk)))})}function ZI(kk){const Fk=kk[0],Ik="paragraph"===(null===Fk||void 0===Fk?void 0:Fk.kind)?Fk.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(Ik)?"warning":/^\*\*(tip|prefer)/.test(Ik)?"tip":"note"}function jI(kk){let{block:Fk}=kk;switch(Fk.kind){case"heading":return(0,ek.jsx)(LI,{level:Fk.level,text:Fk.text,anchor:Fk.anchor});case"paragraph":return(0,ek.jsx)("p",{children:(0,ek.jsx)(VF,{text:Fk.text})});case"code":{const kk="ts"===Fk.lang?function(kk){const Fk=kk.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return Fk&&Object.hasOwn(UF,Fk[1])?Fk[1]:null}(Fk.code):null;return(0,ek.jsxs)(ek.Fragment,{children:[(0,ek.jsx)(Vk,{code:Fk.code,lang:Fk.lang}),kk&&(0,ek.jsx)(qI,{type:kk})]})}case"table":return(0,ek.jsx)("div",{className:"DocsTableScroll",children:(0,ek.jsxs)("table",{className:"DocsTable",children:[(0,ek.jsx)("thead",{children:(0,ek.jsx)("tr",{children:Fk.header.map(((kk,Fk)=>(0,ek.jsx)("th",{children:(0,ek.jsx)(VF,{text:kk})},Fk)))})}),(0,ek.jsx)("tbody",{children:Fk.rows.map(((kk,Fk)=>(0,ek.jsx)("tr",{children:kk.map(((kk,Fk)=>(0,ek.jsx)("td",{children:(0,ek.jsx)(VF,{text:kk})},Fk)))},Fk)))})]})});case"list":return(0,ek.jsx)(tI,{items:Fk.items,ordered:Fk.ordered});case"quote":return(0,ek.jsx)("aside",{className:ik()("DocsCallout",ZI(Fk.blocks)),children:(0,ek.jsx)(eI,{blocks:Fk.blocks})});case"rule":return(0,ek.jsx)("hr",{className:"DocsRule"})}}function eI(kk){let{blocks:Fk}=kk;return(0,ek.jsx)(ek.Fragment,{children:Fk.map(((kk,Fk)=>(0,ek.jsx)(jI,{block:kk},Fk)))})}var wI=Ik(4747),HI=Ik(4755);function JI(kk){return"blocks"===kk||"items"===kk}const xI=new Map;function PI(kk){let Fk=xI.get(kk);return Fk||(Fk=function(kk){const Fk={entries:[],legend:[],notes:[],examples:[]};let Ik=!1;for(const ik of kk.split(/\r?\n/).slice(1)){if(ik.startsWith("#")){const kk=ik.replace(/^# ?/,""),Xk=kk.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);Xk?Fk.legend.push({code:Xk[1],meaning:Xk[2],usage:Xk[3].trim()}):/^Examples:/.test(kk.trim())?Ik=!0:Ik&&kk.trim()?Fk.examples.push(kk.trim()):kk.trim()&&!/^\s/.test(kk)&&Fk.notes.push(kk.trim());continue}const kk=ik.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var Xk,Tk;kk&&Fk.entries.push({name:kk[1],variants:null!==(Xk=null===(Tk=kk[2])||void 0===Tk?void 0:Tk.split(","))&&void 0!==Xk?Xk:[]})}return Fk}("blocks"===kk?wI:HI),xI.set(kk,Fk)),Fk}function KI(kk){let{className:Fk,value:Ik,placeholder:Xk,label:Tk,onChange:ik,count:yk,children:lk}=kk;return(0,ek.jsxs)("div",{className:Fk,children:[(0,ek.jsx)(Hk,{name:"magnifying-glass"}),(0,ek.jsx)("input",{type:"search",value:Ik,placeholder:Xk,"aria-label":Tk,onChange:kk=>{ik(kk.target.value)}}),lk,yk&&(0,ek.jsxs)("span",{className:"DocsFilterCount",children:[yk.visible," of ",yk.total]})]})}var QI=Ik(1066);function sI(kk){const Fk=kk.trim().match(/^(` {
+                        href: `#${hm}`,
+                        "aria-label": `Link to ${fm.replace(/`/g,"")}`,children:"#"})]})}function Ef(mm){let{items:Tm,ordered:fm}=mm;const hm=fm?"ol":"ul";return(0,Om.jsx)(hm,{className:"DocsList",children:Tm.map(((mm,Tm)=>(0,Om.jsxs)("li",{children:[(0,Om.jsx)(JT,{text:mm.text}),mm.children.length>0&&(0,Om.jsx)(Ef,{items:mm.children,ordered:fm})]},Tm)))})}function of(mm){const Tm=mm[0],fm="paragraph"===(null===Tm||void 0===Tm?void 0:Tm.kind)?Tm.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(fm)?"warning":/^\*\*(tip|prefer)/.test(fm)?"tip":"note"}function Of(mm){let{block:Tm}=mm;switch(Tm.kind){case"heading":return(0,Om.jsx)(pf,{level:Tm.level,text:Tm.text,anchor:Tm.anchor});case"paragraph":return(0,Om.jsx)("p",{children:(0,Om.jsx)(JT,{text:Tm.text})});case"code":{const mm="ts"===Tm.lang?function(mm){const Tm=mm.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return Tm&&Object.hasOwn(yT,Tm[1])?Tm[1]:null}(Tm.code):null;return(0,Om.jsxs)(Om.Fragment,{children:[(0,Om.jsx)(Jm,{code:Tm.code,lang:Tm.lang}),mm&&(0,Om.jsx)(Rf,{type:mm})]})}case"table":return(0,Om.jsx)("div",{className:"DocsTableScroll",children:(0,Om.jsxs)("table",{className:"DocsTable",children:[(0,Om.jsx)("thead",{children:(0,Om.jsx)("tr",{children:Tm.header.map(((mm,Tm)=>(0,Om.jsx)("th",{children:(0,Om.jsx)(JT,{text:mm})},Tm)))})}),(0,Om.jsx)("tbody",{children:Tm.rows.map(((mm,Tm)=>(0,Om.jsx)("tr",{children:mm.map(((mm,Tm)=>(0,Om.jsx)("td",{children:(0,Om.jsx)(JT,{text:mm})},Tm)))},Tm)))})]})});case"list":return(0,Om.jsx)(Ef,{items:Tm.items,ordered:Tm.ordered});case"quote":return(0,Om.jsx)("aside",{className:am()("DocsCallout",of(Tm.blocks)),children:(0,Om.jsx)(Yf,{blocks:Tm.blocks})});case"rule":return(0,Om.jsx)("hr",{className:"DocsRule"})}}function Yf(mm){let{blocks:Tm}=mm;return(0,Om.jsx)(Om.Fragment,{children:Tm.map(((mm,Tm)=>(0,Om.jsx)(Of,{block:mm},Tm)))})}var qf=fm(4683),jf=fm(4691);function Vf(mm){return"blocks"===mm||"items"===mm}const If=new Map;function Kf(mm){let Tm=If.get(mm);return Tm||(Tm=function(mm){const Tm={entries:[],legend:[],notes:[],examples:[]};let fm=!1;for(const am of mm.split(/\r?\n/).slice(1)){if(am.startsWith("#")){const mm=am.replace(/^# ?/,""),hm=mm.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);hm?Tm.legend.push({code:hm[1],meaning:hm[2],usage:hm[3].trim()}):/^Examples:/.test(mm.trim())?fm=!0:fm&&mm.trim()?Tm.examples.push(mm.trim()):mm.trim()&&!/^\s/.test(mm)&&Tm.notes.push(mm.trim());continue}const mm=am.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var hm,Am;mm&&Tm.entries.push({name:mm[1],variants:null!==(hm=null===(Am=mm[2])||void 0===Am?void 0:Am.split(","))&&void 0!==hm?hm:[]})}return Tm}("blocks"===mm?qf:jf),If.set(mm,Tm)),Tm}function Qf(mm){let{className:Tm,value:fm,placeholder:hm,label:Am,onChange:am,count:xm,children:wm}=mm;return(0,Om.jsxs)("div",{className:Tm,children:[(0,Om.jsx)(qm,{name:"magnifying-glass"}),(0,Om.jsx)("input",{type:"search",value:fm,placeholder:hm,"aria-label":Am,onChange:mm=>{am(mm.target.value)}}),wm,xm&&(0,Om.jsxs)("span",{className:"DocsFilterCount",children:[xm.visible," of ",xm.total]})]})}var nf=fm(1089);function Jf(mm){const Tm=mm.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return Fk?Fk[2]:null}function VI(kk){return"paragraph"===kk.kind&&""===kk.text.trim()}function zI(kk){const Fk={name:kk.heading.text,description:[],params:[],returns:null};let Ik="description";for(const Tk of kk.blocks)if(!VI(Tk))if("heading"===Tk.kind&&/^Parameters:?$/.test(Tk.text))Ik="params";else if("heading"===Tk.kind&&/^Returns:?$/.test(Tk.text))Ik="returns",Fk.returns={type:"",description:[]};else if("params"!==Ik||"table"!==Tk.kind){if("returns"===Ik&&"paragraph"===Tk.kind&&""===Fk.returns.type){const kk=sI(Tk.text);if(null!==kk){Fk.returns.type=kk.replaceAll("\\|","|");continue}}"returns"===Ik?Fk.returns.description.push(Tk):Fk.description.push(Tk)}else for(const[kk,Ik,ik]of Tk.rows){var Xk;Fk.params.push({name:kk,type:null!==(Xk=sI(Ik))&&void 0!==Xk?Xk:Ik,description:null!==ik&&void 0!==ik?ik:""})}return Fk}const SI=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function oI(kk){return kk.filter((kk=>!VI(kk)))}const vI=/^[\w][\w .'&!:()-]*$/,EI=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function OI(kk){var Fk;if("code"===kk.kind&&"text"===kk.lang){const Fk=kk.code.split("\n").map((kk=>kk.trim())).filter(Boolean);return Fk.length>0&&Fk.every((kk=>vI.test(kk)))?Fk.map((kk=>({name:kk}))):null}return"paragraph"===kk.kind&&EI.test(kk.text.trim())?[...kk.text.matchAll(/`([ ^ `]+)` / g)].flatMap((kk => kk[1].split(/,\s*/).map((kk => ({
-                              name: kk.trim()
-                            }))))): "table" === kk.kind && null !== (Fk = kk.header[0]) && void 0 !== Fk && Fk.startsWith("Song") ? kk.rows.map((kk => {
-                              let [Fk, Ik] = kk;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return Tm?Tm[2]:null}function zf(mm){return"paragraph"===mm.kind&&""===mm.text.trim()}function Zf(mm){const Tm={name:mm.heading.text,description:[],params:[],returns:null};let fm="description";for(const Am of mm.blocks)if(!zf(Am))if("heading"===Am.kind&&/^Parameters:?$/.test(Am.text))fm="params";else if("heading"===Am.kind&&/^Returns:?$/.test(Am.text))fm="returns",Tm.returns={type:"",description:[]};else if("params"!==fm||"table"!==Am.kind){if("returns"===fm&&"paragraph"===Am.kind&&""===Tm.returns.type){const mm=Jf(Am.text);if(null!==mm){Tm.returns.type=mm.replaceAll("\\|","|");continue}}"returns"===fm?Tm.returns.description.push(Am):Tm.description.push(Am)}else for(const[mm,fm,am]of Am.rows){var hm;Tm.params.push({name:mm,type:null!==(hm=Jf(fm))&&void 0!==hm?hm:fm,description:null!==am&&void 0!==am?am:""})}return Tm}const kf=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function bf(mm){return mm.filter((mm=>!zf(mm)))}const Sf=/^[\w][\w .'&!:()-]*$/,ef=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function Nf(mm){var Tm;if("code"===mm.kind&&"text"===mm.lang){const Tm=mm.code.split("\n").map((mm=>mm.trim())).filter(Boolean);return Tm.length>0&&Tm.every((mm=>Sf.test(mm)))?Tm.map((mm=>({name:mm}))):null}return"paragraph"===mm.kind&&ef.test(mm.text.trim())?[...mm.text.matchAll(/`([ ^ `]+)` / g)].flatMap((mm => mm[1].split(/,\s*/).map((mm => ({
+                              name: mm.trim()
+                            }))))): "table" === mm.kind && null !== (Tm = mm.header[0]) && void 0 !== Tm && Tm.startsWith("Song") ? mm.rows.map((mm => {
+                              let [Tm, fm] = mm;
                               return {
-                                name: Fk.replace(/`/g, ""),
-                                caption: Ik
+                                name: Tm.replace(/`/g, ""),
+                                caption: fm
                               }
                             })) : null
                           }
 
-                          function nI(kk) {
-                            const Fk = [];
-                            for (const Ik of kk) {
-                              const kk = OI(Ik),
-                                Xk = Fk.at(-1),
-                                Tk = "table" === Ik.kind;
-                              kk ? "names" === (null === Xk || void 0 === Xk ? void 0 : Xk.kind) && Xk.isSongs === Tk ? Xk.names.push(...kk) : Fk.push({
+                          function Gf(mm) {
+                            const Tm = [];
+                            for (const fm of mm) {
+                              const mm = Nf(fm),
+                                hm = Tm.at(-1),
+                                Am = "table" === fm.kind;
+                              mm ? "names" === (null === hm || void 0 === hm ? void 0 : hm.kind) && hm.isSongs === Am ? hm.names.push(...mm) : Tm.push({
                                 kind: "names",
-                                names: kk,
-                                isSongs: Tk
-                              }) : Fk.push({
+                                names: mm,
+                                isSongs: Am
+                              }) : Tm.push({
                                 kind: "block",
-                                block: Ik
+                                block: fm
                               })
                             }
-                            return Fk
+                            return Tm
                           }
-                          const GI = {
+                          const Xf = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function pI(kk, Fk) {
-                            return `${GI[kk]}-${(0,zk.t)(Fk)}`
+                          function Pf(mm, Tm) {
+                            return `${Xf[mm]}-${(0,cm.q)(Tm)}`
                           }
-                          const uI = new WeakMap;
+                          const Hf = new WeakMap;
 
-                          function bI(kk, Fk, Ik) {
-                            let Xk = uI.get(Fk);
-                            if (!Xk) {
-                              Xk = new Map;
-                              const Ik = new Set;
-                              for (const Tk of (0, zk.u)(Fk)) {
-                                const Fk = nI(oI(Tk.blocks)).map((Fk => {
-                                  if ("block" === Fk.kind) return Fk;
+                          function yf(mm, Tm, fm) {
+                            let hm = Hf.get(Tm);
+                            if (!hm) {
+                              hm = new Map;
+                              const fm = new Set;
+                              for (const Am of (0, cm.r)(Tm)) {
+                                const Tm = Gf(bf(Am.blocks)).map((Tm => {
+                                  if ("block" === Tm.kind) return Tm;
                                   return {
                                     kind: "names",
-                                    names: Fk.names.map((Fk => {
-                                      var Xk, ik;
-                                      const yk = pI(kk, Fk.name);
-                                      let lk = yk;
-                                      for (let kk = 2; Ik.has(lk); kk++) lk = `${yk}-${kk}`;
-                                      return Ik.add(lk), {
-                                        ...Fk,
-                                        anchor: lk,
-                                        heading: null !== (Xk = null === (ik = Tk.heading) || void 0 === ik ? void 0 : ik.text) && void 0 !== Xk ? Xk : ""
+                                    names: Tm.names.map((Tm => {
+                                      var hm, am;
+                                      const xm = Pf(mm, Tm.name);
+                                      let wm = xm;
+                                      for (let mm = 2; fm.has(wm); mm++) wm = `${xm}-${mm}`;
+                                      return fm.add(wm), {
+                                        ...Tm,
+                                        anchor: wm,
+                                        heading: null !== (hm = null === (am = Am.heading) || void 0 === am ? void 0 : am.text) && void 0 !== hm ? hm : ""
                                       }
                                     })),
-                                    isSongs: Fk.isSongs
+                                    isSongs: Tm.isSongs
                                   }
                                 }));
-                                Xk.set(Tk.blocks, Fk)
+                                hm.set(Am.blocks, Tm)
                               }
-                              uI.set(Fk, Xk)
+                              Hf.set(Tm, hm)
                             }
-                            const Tk = Xk.get(Ik);
-                            if (!Tk) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return Tk
+                            const Am = hm.get(fm);
+                            if (!Am) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return Am
                           }
-                          const RI = "/textures/docs/skinPreviews",
-                            UI = [{
+                          const Cf = "/textures/docs/skinPreviews",
+                            rf = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var CI = Ik(4196),
-                            NI = Ik(4210);
+                          var sf = fm(4160),
+                            lf = fm(4171);
 
-                          function cI(kk) {
-                            return Object.hasOwn(CI.g, kk) ? CI.g[kk] : null
+                          function Mf(mm) {
+                            return Object.hasOwn(sf.g, mm) ? sf.g[mm] : null
                           }
-                          const WI = {
+                          const uf = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: NI.d.Standard
+                            blendMode: lf.g.Standard
                           };
 
-                          function fI(kk, Fk, Ik) {
-                            return Fk + (Ik - Fk) * kk()
+                          function Bf(mm, Tm, fm) {
+                            return Tm + (fm - Tm) * mm()
                           }
 
-                          function BI(kk, Fk, Ik) {
-                            return kk + (Fk - kk) * Ik
+                          function Lf(mm, Tm, fm) {
+                            return mm + (Tm - mm) * fm
                           }
 
-                          function dI(kk) {
-                            return kk.length > 0 && "timeFraction" in kk[0]
+                          function vf(mm) {
+                            return mm.length > 0 && "timeFraction" in mm[0]
                           }
 
-                          function YI(kk, Fk) {
-                            if (0 === kk.colorGradients.length) return [{
+                          function tf(mm, Tm) {
+                            if (0 === mm.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!dI(kk.colorGradients)) {
-                              const Ik = kk.colorGradients,
+                            if (!vf(mm.colorGradients)) {
+                              const fm = mm.colorGradients,
                                 {
-                                  color: Xk
-                                } = Ik[Math.floor(Fk() * Ik.length) % Ik.length];
+                                  color: hm
+                                } = fm[Math.floor(Tm() * fm.length) % fm.length];
                               return [{
                                 at: 0,
-                                colour: [Xk[0] / 255, Xk[1] / 255, Xk[2] / 255, 1]
+                                colour: [hm[0] / 255, hm[1] / 255, hm[2] / 255, 1]
                               }]
                             }
-                            return [...kk.colorGradients].sort(((kk, Fk) => kk.timeFraction - Fk.timeFraction)).map((kk => {
-                              var Ik, Xk, Tk;
-                              const ik = kk.minColor,
-                                yk = null !== (Ik = kk.maxColor) && void 0 !== Ik ? Ik : ik,
-                                lk = Fk(),
-                                ak = [BI(ik[0], yk[0], lk) / 255, BI(ik[1], yk[1], lk) / 255, BI(ik[2], yk[2], lk) / 255, BI(null !== (Xk = ik[3]) && void 0 !== Xk ? Xk : 1, null !== (Tk = yk[3]) && void 0 !== Tk ? Tk : 1, lk)];
+                            return [...mm.colorGradients].sort(((mm, Tm) => mm.timeFraction - Tm.timeFraction)).map((mm => {
+                              var fm, hm, Am;
+                              const am = mm.minColor,
+                                xm = null !== (fm = mm.maxColor) && void 0 !== fm ? fm : am,
+                                wm = Tm(),
+                                Dm = [Lf(am[0], xm[0], wm) / 255, Lf(am[1], xm[1], wm) / 255, Lf(am[2], xm[2], wm) / 255, Lf(null !== (hm = am[3]) && void 0 !== hm ? hm : 1, null !== (Am = xm[3]) && void 0 !== Am ? Am : 1, wm)];
                               return {
-                                at: kk.timeFraction,
-                                colour: ak
+                                at: mm.timeFraction,
+                                colour: Dm
                               }
                             }))
                           }
 
-                          function AI(kk, Fk, Ik, Xk) {
-                            const Tk = fI(Xk, kk.minEmitPower, kk.maxEmitPower),
-                              ik = Fk => fI(Xk, Math.min(kk.dir1[Fk], kk.dir2[Fk]), Math.max(kk.dir1[Fk], kk.dir2[Fk])) * Tk,
-                              yk = [...kk.velocityGradients].sort(((kk, Fk) => kk.timeFraction - Fk.timeFraction)).map((kk => ({
-                                at: kk.timeFraction,
-                                factor: fI(Xk, kk.factor, kk.factor2)
+                          function Uf(mm, Tm, fm, hm) {
+                            const Am = Bf(hm, mm.minEmitPower, mm.maxEmitPower),
+                              am = Tm => Bf(hm, Math.min(mm.dir1[Tm], mm.dir2[Tm]), Math.max(mm.dir1[Tm], mm.dir2[Tm])) * Am,
+                              xm = [...mm.velocityGradients].sort(((mm, Tm) => mm.timeFraction - Tm.timeFraction)).map((mm => ({
+                                at: mm.timeFraction,
+                                factor: Bf(hm, mm.factor, mm.factor2)
                               })));
                             return {
-                              pos: [fI(Xk, Fk[0], Ik[0]), fI(Xk, Fk[1], Ik[1]), fI(Xk, Fk[2], Ik[2])],
-                              dir: [ik(0), ik(1), ik(2)],
+                              pos: [Bf(hm, Tm[0], fm[0]), Bf(hm, Tm[1], fm[1]), Bf(hm, Tm[2], fm[2])],
+                              dir: [am(0), am(1), am(2)],
                               age: 0,
-                              life: fI(Xk, kk.minLifeTime, kk.maxLifeTime),
-                              size: fI(Xk, kk.minSize, kk.maxSize),
-                              colours: YI(kk, Xk),
-                              velocityFactors: yk
+                              life: Bf(hm, mm.minLifeTime, mm.maxLifeTime),
+                              size: Bf(hm, mm.minSize, mm.maxSize),
+                              colours: tf(mm, hm),
+                              velocityFactors: xm
                             }
                           }
 
-                          function gI(kk, Fk, Ik, Xk) {
-                            if (Fk < kk[0].at) return Ik(Math.min(1, kk.length - 1));
-                            for (let Tk = 0; Tk < kk.length - 1; Tk++)
-                              if (Fk <= kk[Tk + 1].at) {
-                                const ik = kk[Tk + 1].at - kk[Tk].at;
-                                return Xk(Ik(Tk), Ik(Tk + 1), ik > 0 ? (Fk - kk[Tk].at) / ik : 1)
-                              } return Ik(kk.length - 1)
+                          function df(mm, Tm, fm, hm) {
+                            if (Tm < mm[0].at) return fm(Math.min(1, mm.length - 1));
+                            for (let Am = 0; Am < mm.length - 1; Am++)
+                              if (Tm <= mm[Am + 1].at) {
+                                const am = mm[Am + 1].at - mm[Am].at;
+                                return hm(fm(Am), fm(Am + 1), am > 0 ? (Tm - mm[Am].at) / am : 1)
+                              } return fm(mm.length - 1)
                           }
 
-                          function mI(kk) {
-                            return gI(kk.colours, kk.age / kk.life, (Fk => kk.colours[Fk].colour), ((kk, Fk, Ik) => [BI(kk[0], Fk[0], Ik), BI(kk[1], Fk[1], Ik), BI(kk[2], Fk[2], Ik), BI(kk[3], Fk[3], Ik)]))
+                          function gf(mm) {
+                            return df(mm.colours, mm.age / mm.life, (Tm => mm.colours[Tm].colour), ((mm, Tm, fm) => [Lf(mm[0], Tm[0], fm), Lf(mm[1], Tm[1], fm), Lf(mm[2], Tm[2], fm), Lf(mm[3], Tm[3], fm)]))
                           }
 
-                          function hI(kk, Fk, Ik) {
-                            if (kk.age += Ik, kk.age >= kk.life) return !1;
-                            const Xk = function(kk) {
-                              return 0 === kk.velocityFactors.length ? 1 : gI(kk.velocityFactors, kk.age / kk.life, (Fk => kk.velocityFactors[Fk].factor), BI)
-                            }(kk) * Ik;
-                            for (let ik = 0; ik < 3; ik++) {
-                              var Tk;
-                              kk.pos[ik] += kk.dir[ik] * Xk, kk.dir[ik] += (null !== (Tk = Fk[ik]) && void 0 !== Tk ? Tk : 0) * Ik
+                          function Wf(mm, Tm, fm) {
+                            if (mm.age += fm, mm.age >= mm.life) return !1;
+                            const hm = function(mm) {
+                              return 0 === mm.velocityFactors.length ? 1 : df(mm.velocityFactors, mm.age / mm.life, (Tm => mm.velocityFactors[Tm].factor), Lf)
+                            }(mm) * fm;
+                            for (let am = 0; am < 3; am++) {
+                              var Am;
+                              mm.pos[am] += mm.dir[am] * hm, mm.dir[am] += (null !== (Am = Tm[am]) && void 0 !== Am ? Am : 0) * fm
                             }
                             return !0
                           }
 
-                          function rI(kk) {
-                            return String(Math.round(1e6 * kk) / 1e6)
+                          function Ff(mm) {
+                            return String(Math.round(1e6 * mm) / 1e6)
                           }
 
-                          function DI(kk) {
-                            return `[${kk.map(rI).join(", ")}]`
+                          function mh(mm) {
+                            return `[${mm.map(Ff).join(", ")}]`
                           }
 
-                          function MI(kk, Fk) {
-                            const Ik = `${Fk}    `;
-                            return `[\n${(dI(kk)?kk.map((kk=>{const Fk=[`${Ik}    timeFraction: ${rI(kk.timeFraction)},`,`${Ik}    minColor: ${DI(kk.minColor)},`];return kk.maxColor&&Fk.push(`${Ik}    maxColor: ${DI(kk.maxColor)},`),`${Ik}{\n${Fk.join("\n")}\n${Ik}},`})):kk.map((kk=>`
+                          function Th(mm, Tm) {
+                            const fm = `${Tm}    `;
+                            return `[\n${(vf(mm)?mm.map((mm=>{const Tm=[`${fm}    timeFraction: ${Ff(mm.timeFraction)},`,`${fm}    minColor: ${mh(mm.minColor)},`];return mm.maxColor&&Tm.push(`${fm}    maxColor: ${mh(mm.maxColor)},`),`${fm}{\n${Tm.join("\n")}\n${fm}},`})):mm.map((mm=>`
                             $ {
-                              Ik
+                              fm
                             } {
                               color: $ {
-                                DI(kk.color)
+                                mh(mm.color)
                               }
-                            }, `))).join("\n")}\n${Fk}]`
+                            }, `))).join("\n")}\n${Tm}]`
                           }
-                          const kX = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            FX = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const IX = .6;
+                          const fh = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            hh = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const Ah = .6;
 
-                          function XX(kk, Fk) {
-                            return `${Fk?"song":"sound"}:${kk}`
+                          function ah(mm, Tm) {
+                            return `${Tm?"song":"sound"}:${mm}`
                           }
-                          let TX = {
+                          let xh = {
                               track: null,
-                              volume: IX
+                              volume: Ah
                             },
-                            iX = null,
-                            yX = 0,
-                            lX = 0;
-                          const aX = new Set;
+                            wh = null,
+                            Dh = 0,
+                            ih = 0;
+                          const Rh = new Set;
 
-                          function qX(kk) {
-                            TX = {
-                              ...TX,
-                              ...kk
-                            }, aX.forEach((kk => {
-                              kk()
+                          function ph(mm) {
+                            xh = {
+                              ...xh,
+                              ...mm
+                            }, Rh.forEach((mm => {
+                              mm()
                             }))
                           }
 
-                          function LX(kk) {
-                            TX.track && qX({
+                          function Eh(mm) {
+                            xh.track && ph({
                               track: {
-                                ...TX.track,
-                                ...kk
+                                ...xh.track,
+                                ...mm
                               }
                             })
                           }
 
-                          function tX(kk) {
-                            const [Fk, Ik] = (0, Xk.useState)((() => kk(TX))), Tk = (0, Xk.useRef)(kk);
-                            return Tk.current = kk, (0, Xk.useEffect)((() => {
-                              const kk = () => {
-                                Ik((() => Tk.current(TX)))
+                          function oh(mm) {
+                            const [Tm, fm] = (0, hm.useState)((() => mm(xh))), Am = (0, hm.useRef)(mm);
+                            return Am.current = mm, (0, hm.useEffect)((() => {
+                              const mm = () => {
+                                fm((() => Am.current(xh)))
                               };
-                              return aX.add(kk), kk(), () => {
-                                aX.delete(kk)
+                              return Rh.add(mm), mm(), () => {
+                                Rh.delete(mm)
                               }
-                            }), []), Fk
+                            }), []), Tm
                           }
 
-                          function ZX() {
-                            yX++;
-                            const kk = iX;
-                            iX = null, null === kk || void 0 === kk || kk.stop()
+                          function Oh() {
+                            Dh++;
+                            const mm = wh;
+                            wh = null, null === mm || void 0 === mm || mm.stop()
                           }
 
-                          function jX(kk, Fk) {
-                            let Xk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            ZX();
-                            const Tk = yX,
+                          function Yh(mm, Tm) {
+                            let hm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            Oh();
+                            const Am = Dh,
                               {
-                                track: ik
-                              } = TX,
-                              yk = ik && ik.name === kk && ik.isSong === Fk ? ik.duration : 0;
-                            lX = Xk, qX({
+                                track: am
+                              } = xh,
+                              xm = am && am.name === mm && am.isSong === Tm ? am.duration : 0;
+                            ih = hm, ph({
                               track: {
-                                name: kk,
-                                isSong: Fk,
+                                name: mm,
+                                isSong: Tm,
                                 status: "loading",
-                                duration: yk
+                                duration: xm
                               }
-                            }), Promise.all([Ik.e(222), Ik.e(249)]).then((() => Ik(39792))).then((Ik => {
+                            }), Promise.all([fm.e(222), fm.e(249)]).then((() => fm(39909))).then((fm => {
                               let {
-                                playDocsSound: ik
-                              } = Ik;
-                              Tk === yX && (iX = ik(kk, Fk, TX.volume, Xk, {
-                                onPlay: kk => {
-                                  Tk === yX && LX({
+                                playDocsSound: am
+                              } = fm;
+                              Am === Dh && (wh = am(mm, Tm, xh.volume, hm, {
+                                onPlay: mm => {
+                                  Am === Dh && Eh({
                                     status: "playing",
-                                    duration: kk
+                                    duration: mm
                                   })
                                 },
-                                onEnd: kk => {
-                                  var Fk, Ik;
-                                  Tk === yX && (iX = null, kk ? qX({
+                                onEnd: mm => {
+                                  var Tm, fm;
+                                  Am === Dh && (wh = null, mm ? ph({
                                     track: null
-                                  }) : (lX = null !== (Fk = null === (Ik = TX.track) || void 0 === Ik ? void 0 : Ik.duration) && void 0 !== Fk ? Fk : 0, LX({
+                                  }) : (ih = null !== (Tm = null === (fm = xh.track) || void 0 === fm ? void 0 : fm.duration) && void 0 !== Tm ? Tm : 0, Eh({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((Fk => {
-                              console.error(`Could not play docs sound ${kk}`, Fk), Tk === yX && qX({
+                            })).catch((Tm => {
+                              console.error(`Could not play docs sound ${mm}`, Tm), Am === Dh && ph({
                                 track: null
                               })
                             }))
                           }
 
-                          function eX() {
+                          function qh() {
                             const {
-                              track: kk
-                            } = TX;
-                            if (!kk) return;
-                            if ("playing" === kk.status && iX) return lX = iX.OJ(), iX.pause(), void LX({
+                              track: mm
+                            } = xh;
+                            if (!mm) return;
+                            if ("playing" === mm.status && wh) return ih = wh.rV(), wh.pause(), void Eh({
                               status: "paused"
                             });
-                            if ("loading" === kk.status) return ZX(), void LX({
+                            if ("loading" === mm.status) return Oh(), void Eh({
                               status: "paused"
                             });
-                            if (iX) return void iX.resume();
-                            const Fk = kk.duration > 0 && lX >= kk.duration - .05;
-                            jX(kk.name, kk.isSong, Fk ? 0 : lX)
+                            if (wh) return void wh.resume();
+                            const Tm = mm.duration > 0 && ih >= mm.duration - .05;
+                            Yh(mm.name, mm.isSong, Tm ? 0 : ih)
                           }
 
-                          function wX() {
-                            var kk;
-                            return iX && "playing" === (null === (kk = TX.track) || void 0 === kk ? void 0 : kk.status) ? iX.OJ() : lX
+                          function jh() {
+                            var mm;
+                            return wh && "playing" === (null === (mm = xh.track) || void 0 === mm ? void 0 : mm.status) ? wh.rV() : ih
                           }
 
-                          function HX(kk) {
-                            var Fk;
-                            null === (Fk = iX) || void 0 === Fk || Fk.setVolume(kk), qX({
-                              volume: kk
+                          function Vh(mm) {
+                            var Tm;
+                            null === (Tm = wh) || void 0 === Tm || Tm.setVolume(mm), ph({
+                              volume: mm
                             })
                           }
 
-                          function JX() {
-                            ZX(), lX = 0, qX({
+                          function Ih() {
+                            Oh(), ih = 0, ph({
                               track: null
                             })
                           }
-                          const xX = (0, Xk.createContext)(null);
-                          let PX = null;
+                          const Kh = (0, hm.createContext)(null);
+                          let Qh = null;
 
-                          function KX() {
-                            const [kk, Fk] = (0, Xk.useState)(null);
-                            return (0, Xk.useEffect)((() => {
-                              let kk = !1;
-                              return PX ??= Promise.all([Ik.e(72), Ik.e(75), Ik.e(74), Ik.e(73), Ik.e(186), Ik.e(98), Ik.e(226)]).then((() => Ik(39784))), PX.then((Ik => {
-                                kk || Fk(Ik)
-                              }), (kk => {
-                                console.error("Could not load the docs gallery's textures", kk), PX = null
+                          function nh() {
+                            const [mm, Tm] = (0, hm.useState)(null);
+                            return (0, hm.useEffect)((() => {
+                              let mm = !1;
+                              return Qh ??= Promise.all([fm.e(72), fm.e(75), fm.e(74), fm.e(73), fm.e(186), fm.e(98), fm.e(226)]).then((() => fm(39901))), Qh.then((fm => {
+                                mm || Tm(fm)
+                              }), (mm => {
+                                console.error("Could not load the docs gallery's textures", mm), Qh = null
                               })), () => {
-                                kk = !0
+                                mm = !0
                               }
-                            }), []), kk
+                            }), []), mm
                           }
-                          const QX = 24,
-                            sX = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const Jh = 24,
+                            ch = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function VX(kk, Fk) {
-                            const Ik = "skins" === kk ? function(kk, Fk) {
-                              const Ik = UI.find((Fk => kk.startsWith(Fk.heading)));
-                              return Ik ? function(kk, Fk) {
-                                return `${kk}-${Fk}`
-                              }(Ik.prefix, Fk) : null
-                            }(Fk.heading, Fk.name) : null;
-                            return null === Ik ? null : `${RI}/${Ik}.webp`
+                          function zh(mm, Tm) {
+                            const fm = "skins" === mm ? function(mm, Tm) {
+                              const fm = rf.find((Tm => mm.startsWith(Tm.heading)));
+                              return fm ? function(mm, Tm) {
+                                return `${mm}-${Tm}`
+                              }(fm.prefix, Tm) : null
+                            }(Tm.heading, Tm.name) : null;
+                            return null === fm ? null : `${Cf}/${fm}.webp`
                           }
 
-                          function zX(kk) {
+                          function Zh(mm) {
                             let {
-                              kind: Fk,
-                              entry: Ik,
-                              assets: Tk,
-                              renderedUrl: yk
-                            } = kk;
+                              kind: Tm,
+                              entry: fm,
+                              assets: Am,
+                              renderedUrl: xm
+                            } = mm;
                             const {
-                              name: lk
-                            } = Ik, [ak, qk] = (0, Xk.useState)(!1);
-                            if ("icons" === Fk && cF(lk)) return (0, ek.jsx)(QI.e, {
+                              name: wm
+                            } = fm, [Dm, im] = (0, hm.useState)(!1);
+                            if ("icons" === Tm && sT(wm)) return (0, Om.jsx)(nf.c, {
                               className: "DocsTileIcon",
-                              name: lk
+                              name: wm
                             });
-                            let Lk = null;
-                            var tk;
-                            if ("icons" === Fk) Lk = null !== (tk = null === Tk || void 0 === Tk ? void 0 : Tk.getIngameIconUrl(lk)) && void 0 !== tk ? tk : null;
-                            else if ("particles" === Fk) {
-                              var Zk, jk, wk;
-                              Lk = null !== (Zk = null === Tk || void 0 === Tk ? void 0 : Tk.getParticleTextureUrl(null !== (jk = null === (wk = cI(lk)) || void 0 === wk ? void 0 : wk.texture) && void 0 !== jk ? jk : lk)) && void 0 !== Zk ? Zk : null
-                            } else "skins" === Fk && (Lk = null !== yk && void 0 !== yk ? yk : sX.test(lk) ? `/textures/charSkins/previews/${lk}_preview.png` : null);
-                            return !Lk || ak ? (0, ek.jsx)(Hk, {
+                            let Rm = null;
+                            var pm;
+                            if ("icons" === Tm) Rm = null !== (pm = null === Am || void 0 === Am ? void 0 : Am.getIngameIconUrl(wm)) && void 0 !== pm ? pm : null;
+                            else if ("particles" === Tm) {
+                              var Em, om, Ym;
+                              Rm = null !== (Em = null === Am || void 0 === Am ? void 0 : Am.getParticleTextureUrl(null !== (om = null === (Ym = Mf(wm)) || void 0 === Ym ? void 0 : Ym.texture) && void 0 !== om ? om : wm)) && void 0 !== Em ? Em : null
+                            } else "skins" === Tm && (Rm = null !== xm && void 0 !== xm ? xm : ch.test(wm) ? `/textures/charSkins/previews/${wm}_preview.png` : null);
+                            return !Rm || Dm ? (0, Om.jsx)(qm, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === Fk ? "person" : "image"
-                            }) : (0, ek.jsx)("img", {
-                              className: ik()("DocsTileImage", {
-                                Pixelated: "skins" !== Fk
+                              name: "skins" === Tm ? "person" : "image"
+                            }) : (0, Om.jsx)("img", {
+                              className: am()("DocsTileImage", {
+                                Pixelated: "skins" !== Tm
                               }),
-                              src: Lk,
-                              srcSet: Lk === yk ? `${Lk} 2x` : void 0,
+                              src: Rm,
+                              srcSet: Rm === xm ? `${Rm} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${Lk}`), qk(!0)
+                                console.warn(`Docs gallery: could not load ${Rm}`), im(!0)
                               }
                             })
                           }
 
-                          function SX(kk) {
+                          function kh(mm) {
                             let {
-                              entry: Fk,
-                              isSong: Ik
-                            } = kk;
-                            const Xk = tX((kk => {
+                              entry: Tm,
+                              isSong: fm
+                            } = mm;
+                            const hm = oh((mm => {
                                 let {
-                                  track: Xk
-                                } = kk;
-                                return (null === Xk || void 0 === Xk ? void 0 : Xk.name) === Fk.name && Xk.isSong === Ik ? Xk.status : null
+                                  track: hm
+                                } = mm;
+                                return (null === hm || void 0 === hm ? void 0 : hm.name) === Tm.name && hm.isSong === fm ? hm.status : null
                               })),
-                              Tk = null !== Xk && "paused" !== Xk;
-                            return (0, ek.jsxs)("button", {
+                              Am = null !== hm && "paused" !== hm;
+                            return (0, Om.jsxs)("button", {
                               type: "button",
-                              id: Fk.anchor,
-                              className: ik()("DocsSoundTile", {
-                                Playing: Tk
+                              id: Tm.anchor,
+                              className: am()("DocsSoundTile", {
+                                Playing: Am
                               }),
-                              "data-docs-track": XX(Fk.name, Ik),
-                              "aria-label": Tk ? `Pause ${Fk.name}` : `Play ${Fk.name}`,
+                              "data-docs-track": ah(Tm.name, fm),
+                              "aria-label": Am ? `Pause ${Tm.name}` : `Play ${Tm.name}`,
                               onClick: () => {
-                                null !== Xk ? eX() : jX(Fk.name, Ik)
+                                null !== hm ? qh() : Yh(Tm.name, fm)
                               },
-                              children: [(0, ek.jsx)("span", {
+                              children: [(0, Om.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, ek.jsx)(Hk, {
-                                  name: Tk ? "pause" : "play"
+                                children: (0, Om.jsx)(qm, {
+                                  name: Am ? "pause" : "play"
                                 })
-                              }), (0, ek.jsx)("code", {
+                              }), (0, Om.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: Fk.name
-                              }), Fk.caption && (0, ek.jsx)("span", {
+                                children: Tm.name
+                              }), Tm.caption && (0, Om.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: Fk.caption
+                                children: Tm.caption
                               })]
                             })
                           }
 
-                          function oX(kk) {
+                          function bh(mm) {
                             let {
-                              kind: Fk,
-                              names: Ik,
-                              isSongs: Tk
-                            } = kk;
-                            const yk = KX(),
-                              [lk, ak] = xk(),
-                              qk = !1 === (null === lk || void 0 === lk ? void 0 : lk.failed) ? lk.text : null,
-                              Lk = (0, Xk.useContext)(xX),
-                              [tk, Zk] = (0, Xk.useState)(""),
-                              jk = tk.trim().toLowerCase(),
-                              wk = jk ? Ik.filter((kk => kk.name.toLowerCase().includes(jk))) : Ik;
-                            return (0, ek.jsxs)("div", {
+                              kind: Tm,
+                              names: fm,
+                              isSongs: Am
+                            } = mm;
+                            const xm = nh(),
+                              [wm, Dm] = Vm(),
+                              im = !1 === (null === wm || void 0 === wm ? void 0 : wm.failed) ? wm.text : null,
+                              Rm = (0, hm.useContext)(Kh),
+                              [pm, Em] = (0, hm.useState)(""),
+                              om = pm.trim().toLowerCase(),
+                              Ym = om ? fm.filter((mm => mm.name.toLowerCase().includes(om))) : fm;
+                            return (0, Om.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [Ik.length > QX && (0, ek.jsx)(KI, {
+                              children: [fm.length > Jh && (0, Om.jsx)(Qf, {
                                 className: "DocsGalleryFilter",
-                                value: tk,
-                                placeholder: `Filter ${Ik.length} names\u2026`,
+                                value: pm,
+                                placeholder: `Filter ${fm.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: Zk,
-                                count: jk ? {
-                                  visible: wk.length,
-                                  total: Ik.length
+                                onChange: Em,
+                                count: om ? {
+                                  visible: Ym.length,
+                                  total: fm.length
                                 } : null
-                              }), (0, ek.jsx)("div", {
-                                className: ik()("DocsGalleryGrid", `Kind-${Fk}`, {
-                                  Songs: Tk
+                              }), (0, Om.jsx)("div", {
+                                className: am()("DocsGalleryGrid", `Kind-${Tm}`, {
+                                  Songs: Am
                                 }),
-                                children: wk.map((kk => {
-                                  if ("sounds" === Fk) return (0, ek.jsx)(SX, {
-                                    entry: kk,
-                                    isSong: Tk
-                                  }, kk.anchor);
-                                  if (Lk && "particles" === Fk && cI(kk.name)) return (0, ek.jsxs)("button", {
+                                children: Ym.map((mm => {
+                                  if ("sounds" === Tm) return (0, Om.jsx)(kh, {
+                                    entry: mm,
+                                    isSong: Am
+                                  }, mm.anchor);
+                                  if (Rm && "particles" === Tm && Mf(mm.name)) return (0, Om.jsxs)("button", {
                                     type: "button",
-                                    id: kk.anchor,
-                                    className: ik()("DocsTile Previewable", {
-                                      Copied: qk === kk.name
+                                    id: mm.anchor,
+                                    className: am()("DocsTile Previewable", {
+                                      Copied: im === mm.name
                                     }),
-                                    title: `Play "${kk.name}" in the playground and copy its name`,
+                                    title: `Play "${mm.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      Lk(kk.name), ak(kk.name)
+                                      Rm(mm.name), Dm(mm.name)
                                     },
-                                    children: [(0, ek.jsxs)("span", {
+                                    children: [(0, Om.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, ek.jsx)(zX, {
-                                        kind: Fk,
-                                        entry: kk,
-                                        assets: yk,
+                                      children: [(0, Om.jsx)(Zh, {
+                                        kind: Tm,
+                                        entry: mm,
+                                        assets: xm,
                                         renderedUrl: null
-                                      }), (0, ek.jsx)("span", {
+                                      }), (0, Om.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, ek.jsx)(Hk, {
+                                        children: (0, Om.jsx)(qm, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, ek.jsx)("span", {
+                                    }), (0, Om.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: qk === kk.name ? "Copied!" : kk.name
+                                      children: im === mm.name ? "Copied!" : mm.name
                                     })]
-                                  }, kk.anchor);
-                                  const Ik = VX(Fk, kk);
-                                  return (0, ek.jsxs)("button", {
+                                  }, mm.anchor);
+                                  const fm = zh(Tm, mm);
+                                  return (0, Om.jsxs)("button", {
                                     type: "button",
-                                    id: kk.anchor,
-                                    className: ik()("DocsTile", {
-                                      Copied: qk === kk.name
+                                    id: mm.anchor,
+                                    className: am()("DocsTile", {
+                                      Copied: im === mm.name
                                     }),
-                                    title: `Copy "${kk.name}"`,
+                                    title: `Copy "${mm.name}"`,
                                     onClick: () => {
-                                      ak(kk.name)
+                                      Dm(mm.name)
                                     },
-                                    children: [(0, ek.jsx)("span", {
-                                      className: ik()("DocsTilePreview", {
-                                        Rendered: null !== Ik
+                                    children: [(0, Om.jsx)("span", {
+                                      className: am()("DocsTilePreview", {
+                                        Rendered: null !== fm
                                       }),
-                                      children: (0, ek.jsx)(zX, {
-                                        kind: Fk,
-                                        entry: kk,
-                                        assets: yk,
-                                        renderedUrl: Ik
+                                      children: (0, Om.jsx)(Zh, {
+                                        kind: Tm,
+                                        entry: mm,
+                                        assets: xm,
+                                        renderedUrl: fm
                                       })
-                                    }), (0, ek.jsx)("span", {
+                                    }), (0, Om.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: qk === kk.name ? "Copied!" : kk.name
+                                      children: im === mm.name ? "Copied!" : mm.name
                                     })]
-                                  }, kk.anchor)
+                                  }, mm.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function vX(kk) {
+                          function Sh(mm) {
                             let {
-                              kind: Fk,
-                              content: Ik,
-                              blocks: Xk
-                            } = kk;
-                            return (0, ek.jsx)(ek.Fragment, {
-                              children: bI(Fk, Ik, Xk).map(((kk, Ik) => "block" === kk.kind ? (0, ek.jsx)(jI, {
-                                block: kk.block
-                              }, Ik) : (0, ek.jsx)(oX, {
-                                kind: Fk,
-                                names: kk.names,
-                                isSongs: kk.isSongs
-                              }, Ik)))
+                              kind: Tm,
+                              content: fm,
+                              blocks: hm
+                            } = mm;
+                            return (0, Om.jsx)(Om.Fragment, {
+                              children: yf(Tm, fm, hm).map(((mm, fm) => "block" === mm.kind ? (0, Om.jsx)(Of, {
+                                block: mm.block
+                              }, fm) : (0, Om.jsx)(bh, {
+                                kind: Tm,
+                                names: mm.names,
+                                isSongs: mm.isSongs
+                              }, fm)))
                             })
                           }
-                          const EX = [{
+                          const eh = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,420 +2161,420 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function OX(kk) {
+                          function Nh(mm) {
                             let {
-                              cards: Fk = EX,
-                              label: Ik = "Start here"
-                            } = kk;
-                            const Tk = (0, Xk.useContext)(eF);
-                            return (0, ek.jsx)("nav", {
+                              cards: Tm = eh,
+                              label: fm = "Start here"
+                            } = mm;
+                            const Am = (0, hm.useContext)(OT);
+                            return (0, Om.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": Ik,
-                              children: Fk.map((kk => {
+                              "aria-label": fm,
+                              children: Tm.map((mm => {
                                 let {
-                                  pageId: Fk,
-                                  countNoun: Ik
-                                } = kk;
-                                const Xk = Nk(Fk);
-                                return (0, ek.jsxs)(yk.e, {
-                                  to: Yk(Tk, Xk),
+                                  pageId: Tm,
+                                  countNoun: fm
+                                } = mm;
+                                const hm = Cm(Tm);
+                                return (0, Om.jsxs)(xm.d, {
+                                  to: Bm(Am, hm),
                                   className: "DocsLandingCard",
-                                  children: [(0, ek.jsx)("span", {
+                                  children: [(0, Om.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, ek.jsx)(Hk, {
-                                      name: Xk.icon
+                                    children: (0, Om.jsx)(qm, {
+                                      name: hm.icon
                                     })
-                                  }), (0, ek.jsx)("span", {
+                                  }), (0, Om.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: Xk.title
-                                  }), (0, ek.jsx)("span", {
+                                    children: hm.title
+                                  }), (0, Om.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: Xk.summary
-                                  }), Ik && (0, ek.jsxs)("span", {
+                                    children: hm.summary
+                                  }), fm && (0, Om.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [Wk(Xk).sections.length, " ", Ik]
+                                    children: [sm(hm).sections.length, " ", fm]
                                   })]
-                                }, Fk)
+                                }, Tm)
                               }))
                             })
                           }
-                          const nX = 240;
+                          const Gh = 240;
 
-                          function GX(kk) {
+                          function Xh(mm) {
                             let {
-                              faces: Fk
-                            } = kk;
-                            return (0, ek.jsxs)("span", {
+                              faces: Tm
+                            } = mm;
+                            return (0, Om.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, ek.jsx)("span", {
+                              children: [(0, Om.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${Fk.top}")`
+                                  backgroundImage: `url("${Tm.top}")`
                                 }
-                              }), (0, ek.jsx)("span", {
+                              }), (0, Om.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${Fk.left}")`
+                                  backgroundImage: `url("${Tm.left}")`
                                 }
-                              }), (0, ek.jsx)("span", {
+                              }), (0, Om.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${Fk.right}")`
+                                  backgroundImage: `url("${Tm.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function pX(kk) {
+                          function Ph(mm) {
                             let {
-                              src: Fk
-                            } = kk;
-                            const [Ik, Tk] = (0, Xk.useState)(!1);
-                            return Ik ? null : (0, ek.jsx)("img", {
-                              src: Fk,
+                              src: Tm
+                            } = mm;
+                            const [fm, Am] = (0, hm.useState)(!1);
+                            return fm ? null : (0, Om.jsx)("img", {
+                              src: Tm,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${Fk}`), Tk(!0)
+                                console.warn(`Docs catalogue: could not load ${Tm}`), Am(!0)
                               }
                             })
                           }
 
-                          function uX(kk) {
+                          function Hh(mm) {
                             let {
-                              kind: Fk
-                            } = kk;
-                            const Ik = PI(Fk),
-                              Tk = KX(),
-                              yk = (0, lk.q)(),
-                              [ak, qk] = (0, Xk.useState)(""),
-                              [Lk, tk] = (0, Xk.useState)(null),
-                              [Zk, jk] = (0, Xk.useState)(nX),
-                              [wk, Jk] = (0, Xk.useState)(null),
-                              xk = (0, Xk.useRef)(null),
-                              Kk = ak.trim().toLowerCase();
-                            (0, Xk.useEffect)((() => {
-                              const kk = (0, zk.s)(yk.hash),
-                                Xk = Ik.entries.find((Ik => pI(Fk, Ik.name) === kk));
-                              if (Xk) xk.current = Xk.name, qk(Xk.name), tk(null), Jk(Xk.name);
-                              else if (null !== xk.current) {
-                                const kk = xk.current;
-                                xk.current = null, qk((Fk => Fk === kk ? "" : Fk)), Jk(null)
+                              kind: Tm
+                            } = mm;
+                            const fm = Kf(Tm),
+                              Am = nh(),
+                              xm = (0, wm.w)(),
+                              [Dm, im] = (0, hm.useState)(""),
+                              [Rm, pm] = (0, hm.useState)(null),
+                              [Em, om] = (0, hm.useState)(Gh),
+                              [Ym, jm] = (0, hm.useState)(null),
+                              Vm = (0, hm.useRef)(null),
+                              Km = Dm.trim().toLowerCase();
+                            (0, hm.useEffect)((() => {
+                              const mm = (0, cm.o)(xm.hash),
+                                hm = fm.entries.find((fm => Pf(Tm, fm.name) === mm));
+                              if (hm) Vm.current = hm.name, im(hm.name), pm(null), jm(hm.name);
+                              else if (null !== Vm.current) {
+                                const mm = Vm.current;
+                                Vm.current = null, im((Tm => Tm === mm ? "" : Tm)), jm(null)
                               }
-                            }), [Ik, Fk, yk.hash, yk.key]), (0, Xk.useEffect)((() => {
-                              var kk;
-                              null !== wk && (null === (kk = document.getElementById(pI(Fk, wk))) || void 0 === kk || kk.scrollIntoView({
+                            }), [fm, Tm, xm.hash, xm.key]), (0, hm.useEffect)((() => {
+                              var mm;
+                              null !== Ym && (null === (mm = document.getElementById(Pf(Tm, Ym))) || void 0 === mm || mm.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [Fk, wk]);
-                            const Qk = Ik.entries.filter((kk => (!Kk || kk.name.toLowerCase().includes(Kk)) && (!Lk || kk.variants.includes(Lk))));
-                            return (0, ek.jsxs)("div", {
+                            }), [Tm, Ym]);
+                            const Qm = fm.entries.filter((mm => (!Km || mm.name.toLowerCase().includes(Km)) && (!Rm || mm.variants.includes(Rm))));
+                            return (0, Om.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [Ik.notes.length > 0 && (0, ek.jsx)("div", {
+                              children: [fm.notes.length > 0 && (0, Om.jsx)("div", {
                                 className: "DocsProse",
-                                children: Ik.notes.map((kk => (0, ek.jsx)("p", {
-                                  children: kk
-                                }, kk)))
-                              }), Ik.legend.length > 0 && (0, ek.jsx)("div", {
+                                children: fm.notes.map((mm => (0, Om.jsx)("p", {
+                                  children: mm
+                                }, mm)))
+                              }), fm.legend.length > 0 && (0, Om.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, ek.jsxs)("table", {
+                                children: (0, Om.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, ek.jsx)("thead", {
-                                    children: (0, ek.jsxs)("tr", {
-                                      children: [(0, ek.jsx)("th", {
+                                  children: [(0, Om.jsx)("thead", {
+                                    children: (0, Om.jsxs)("tr", {
+                                      children: [(0, Om.jsx)("th", {
                                         children: "Code"
-                                      }), (0, ek.jsx)("th", {
+                                      }), (0, Om.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, ek.jsx)("th", {
+                                      }), (0, Om.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, ek.jsx)("tbody", {
-                                    children: Ik.legend.map((kk => (0, ek.jsxs)("tr", {
-                                      children: [(0, ek.jsx)("td", {
-                                        children: (0, ek.jsx)("button", {
+                                  }), (0, Om.jsx)("tbody", {
+                                    children: fm.legend.map((mm => (0, Om.jsxs)("tr", {
+                                      children: [(0, Om.jsx)("td", {
+                                        children: (0, Om.jsx)("button", {
                                           type: "button",
-                                          className: ik()("DocsVariantChip", {
-                                            Active: Lk === kk.code
+                                          className: am()("DocsVariantChip", {
+                                            Active: Rm === mm.code
                                           }),
-                                          "aria-pressed": Lk === kk.code,
-                                          title: `Show only ${Fk} with ${kk.meaning} variants`,
+                                          "aria-pressed": Rm === mm.code,
+                                          title: `Show only ${Tm} with ${mm.meaning} variants`,
                                           onClick: () => {
-                                            tk(Lk === kk.code ? null : kk.code)
+                                            pm(Rm === mm.code ? null : mm.code)
                                           },
-                                          children: kk.code
+                                          children: mm.code
                                         })
-                                      }), (0, ek.jsx)("td", {
-                                        children: kk.meaning
-                                      }), (0, ek.jsx)("td", {
-                                        children: (0, ek.jsx)("code", {
+                                      }), (0, Om.jsx)("td", {
+                                        children: mm.meaning
+                                      }), (0, Om.jsx)("td", {
+                                        children: (0, Om.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: kk.usage
+                                          children: mm.usage
                                         })
                                       })]
-                                    }, kk.code)))
+                                    }, mm.code)))
                                   })]
                                 })
-                              }), Ik.examples.length > 0 && (0, ek.jsx)(Vk, {
+                              }), fm.examples.length > 0 && (0, Om.jsx)(Jm, {
                                 lang: "text",
-                                code: Ik.examples.join("\n")
-                              }), (0, ek.jsx)(KI, {
+                                code: fm.examples.join("\n")
+                              }), (0, Om.jsx)(Qf, {
                                 className: "DocsFilterBar",
-                                value: ak,
-                                placeholder: `Search ${Ik.entries.length} ${Fk}\u2026`,
-                                label: `Search ${Fk}`,
-                                onChange: kk => {
-                                  qk(kk), jk(nX)
+                                value: Dm,
+                                placeholder: `Search ${fm.entries.length} ${Tm}\u2026`,
+                                label: `Search ${Tm}`,
+                                onChange: mm => {
+                                  im(mm), om(Gh)
                                 },
-                                count: Kk || Lk ? {
-                                  visible: Qk.length,
-                                  total: Ik.entries.length
+                                count: Km || Rm ? {
+                                  visible: Qm.length,
+                                  total: fm.entries.length
                                 } : null,
-                                children: Lk && (0, ek.jsxs)("button", {
+                                children: Rm && (0, Om.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    tk(null)
+                                    pm(null)
                                   },
-                                  children: [Lk, " ", (0, ek.jsx)(Hk, {
+                                  children: [Rm, " ", (0, Om.jsx)(qm, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, ek.jsx)("div", {
+                              }), (0, Om.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: Qk.slice(0, Zk).map((kk => {
-                                  const Ik = "blocks" === Fk ? null === Tk || void 0 === Tk ? void 0 : Tk.getBlockFaces(kk.name) : null,
-                                    Xk = Tk && !Ik ? Tk.getItemTextureUrl(kk.name) : null;
-                                  return (0, ek.jsxs)("div", {
-                                    id: pI(Fk, kk.name),
-                                    className: ik()("DocsCatalogueTile", {
-                                      Linked: kk.name === wk
+                                children: Qm.slice(0, Em).map((mm => {
+                                  const fm = "blocks" === Tm ? null === Am || void 0 === Am ? void 0 : Am.getBlockFaces(mm.name) : null,
+                                    hm = Am && !fm ? Am.getItemTextureUrl(mm.name) : null;
+                                  return (0, Om.jsxs)("div", {
+                                    id: Pf(Tm, mm.name),
+                                    className: am()("DocsCatalogueTile", {
+                                      Linked: mm.name === Ym
                                     }),
-                                    children: [(0, ek.jsxs)("span", {
+                                    children: [(0, Om.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [Ik && (0, ek.jsx)(GX, {
-                                        faces: Ik
-                                      }), Xk && (0, ek.jsx)(pX, {
-                                        src: Xk
+                                      children: [fm && (0, Om.jsx)(Xh, {
+                                        faces: fm
+                                      }), hm && (0, Om.jsx)(Ph, {
+                                        src: hm
                                       })]
-                                    }), (0, ek.jsx)("span", {
+                                    }), (0, Om.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: kk.name
-                                    }), kk.variants.length > 0 && (0, ek.jsx)("span", {
+                                      children: mm.name
+                                    }), mm.variants.length > 0 && (0, Om.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: kk.variants.map((kk => (0, ek.jsx)("span", {
-                                        children: kk
-                                      }, kk)))
-                                    }), (0, ek.jsx)(Pk, {
-                                      text: kk.name,
+                                      children: mm.variants.map((mm => (0, Om.jsx)("span", {
+                                        children: mm
+                                      }, mm)))
+                                    }), (0, Om.jsx)(Im, {
+                                      text: mm.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, kk.name)
+                                  }, mm.name)
                                 }))
-                              }), Qk.length > Zk && (0, ek.jsxs)("button", {
+                              }), Qm.length > Em && (0, Om.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  jk(Qk.length)
+                                  om(Qm.length)
                                 },
-                                children: ["Show all ", Qk.length]
-                              }), 0 === Qk.length && (0, ek.jsxs)("p", {
+                                children: ["Show all ", Qm.length]
+                              }), 0 === Qm.length && (0, Om.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", Fk, " match."]
+                                children: ["No ", Tm, " match."]
                               })]
                             })
                           }
-                          var bX = Ik(4821),
-                            RX = Ik(1534);
-                          const UX = .95 * bX.d;
+                          var yh = fm(4767),
+                            Ch = fm(1589);
+                          const rh = .95 * yh.d;
 
-                          function CX(kk) {
-                            return /^\s*```/.test(kk)
+                          function sh(mm) {
+                            return /^\s*```/.test(mm)
                           }
 
-                          function NX(kk, Fk) {
-                            const Ik = [
+                          function lh(mm, Tm) {
+                            const fm = [
                               []
                             ];
-                            let Xk = !1;
-                            for (const Tk of kk.split("\n")) !Xk && Fk(Tk) && Ik.at(-1).length > 0 && Ik.push([]), CX(Tk) && (Xk = !Xk), Ik.at(-1).push(Tk);
-                            return Ik.map((kk => kk.join("\n").trim())).filter(Boolean)
+                            let hm = !1;
+                            for (const Am of mm.split("\n")) !hm && Tm(Am) && fm.at(-1).length > 0 && fm.push([]), sh(Am) && (hm = !hm), fm.at(-1).push(Am);
+                            return fm.map((mm => mm.join("\n").trim())).filter(Boolean)
                           }
 
-                          function cX(kk, Fk) {
-                            const Ik = `${"#".repeat(Fk)} `,
-                              Xk = [];
-                            let Tk = !1;
-                            for (const ik of kk.split("\n")) CX(ik) ? Tk = !Tk : !Tk && ik.startsWith(Ik) && Xk.push(ik.slice(Ik.length).trim());
-                            return Xk
+                          function Mh(mm, Tm) {
+                            const fm = `${"#".repeat(Tm)} `,
+                              hm = [];
+                            let Am = !1;
+                            for (const am of mm.split("\n")) sh(am) ? Am = !Am : !Am && am.startsWith(fm) && hm.push(am.slice(fm.length).trim());
+                            return hm
                           }
 
-                          function WX(kk) {
-                            return kk.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function uh(mm) {
+                            return mm.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class fX {
-                            constructor(kk, Fk) {
-                              this.origin = Fk, this.pages = void 0, this.partPaths = new Map;
-                              const Ik = kk.map((kk => {
-                                const Fk = Fk => this.resolveLinks(kk, Fk).length,
-                                  Ik = function(kk, Fk) {
-                                    const Ik = kk.map((kk => Fk(kk.markdown) + 2)),
-                                      Xk = Ik.reduce(((kk, Fk) => kk + Fk), 0),
-                                      Tk = Xk / Math.ceil(Xk / UX),
-                                      ik = [];
-                                    let yk = 0;
-                                    return kk.forEach(((kk, Fk) => {
-                                      const Xk = Ik[Fk];
-                                      (0 === ik.length || yk + Xk > UX || yk + Xk / 2 > Tk) && (ik.push([]), yk = 0), ik.at(-1).push(kk), yk += Xk
-                                    })), ik
-                                  }(function(kk, Fk) {
-                                    return NX(kk, (kk => kk.startsWith("## "))).flatMap((kk => {
-                                      var Ik;
-                                      const Xk = null !== (Ik = cX(kk, 2)[0]) && void 0 !== Ik ? Ik : "";
-                                      if (Fk(kk) <= UX) return [{
-                                        markdown: kk,
-                                        section: Xk
+                          class Bh {
+                            constructor(mm, Tm) {
+                              this.origin = Tm, this.pages = void 0, this.partPaths = new Map;
+                              const fm = mm.map((mm => {
+                                const Tm = Tm => this.resolveLinks(mm, Tm).length,
+                                  fm = function(mm, Tm) {
+                                    const fm = mm.map((mm => Tm(mm.markdown) + 2)),
+                                      hm = fm.reduce(((mm, Tm) => mm + Tm), 0),
+                                      Am = hm / Math.ceil(hm / rh),
+                                      am = [];
+                                    let xm = 0;
+                                    return mm.forEach(((mm, Tm) => {
+                                      const hm = fm[Tm];
+                                      (0 === am.length || xm + hm > rh || xm + hm / 2 > Am) && (am.push([]), xm = 0), am.at(-1).push(mm), xm += hm
+                                    })), am
+                                  }(function(mm, Tm) {
+                                    return lh(mm, (mm => mm.startsWith("## "))).flatMap((mm => {
+                                      var fm;
+                                      const hm = null !== (fm = Mh(mm, 2)[0]) && void 0 !== fm ? fm : "";
+                                      if (Tm(mm) <= rh) return [{
+                                        markdown: mm,
+                                        section: hm
                                       }];
-                                      let Tk = !1,
-                                        ik = "";
-                                      return NX(kk, (kk => {
-                                        const Fk = Tk && "" !== kk.trim();
-                                        return Tk = "" === kk.trim(), Fk
-                                      })).map((kk => {
-                                        var Fk;
-                                        const Ik = cX(kk, 3),
-                                          Tk = kk.startsWith("### ") ? Ik[0] : ik;
-                                        return ik = null !== (Fk = Ik.at(-1)) && void 0 !== Fk ? Fk : ik, {
-                                          markdown: kk,
-                                          section: Xk || Tk
+                                      let Am = !1,
+                                        am = "";
+                                      return lh(mm, (mm => {
+                                        const Tm = Am && "" !== mm.trim();
+                                        return Am = "" === mm.trim(), Tm
+                                      })).map((mm => {
+                                        var Tm;
+                                        const fm = Mh(mm, 3),
+                                          Am = mm.startsWith("### ") ? fm[0] : am;
+                                        return am = null !== (Tm = fm.at(-1)) && void 0 !== Tm ? Tm : am, {
+                                          markdown: mm,
+                                          section: hm || Am
                                         }
                                       }))
                                     }))
-                                  }(WX(kk), Fk), Fk);
+                                  }(uh(mm), Tm), Tm);
                                 return {
-                                  page: kk,
-                                  groups: Ik.length > 1 ? Ik : []
+                                  page: mm,
+                                  groups: fm.length > 1 ? fm : []
                                 }
                               }));
                               for (const {
-                                  page: Xk,
-                                  groups: Tk
+                                  page: hm,
+                                  groups: Am
                                 }
-                                of Ik) Tk.forEach(((kk, Fk) => {
-                                const Ik = (0, bX.t)(Xk.slug, Fk);
-                                for (const Tk of kk.flatMap((kk => [...cX(kk.markdown, 2), ...cX(kk.markdown, 3)]))) {
-                                  const kk = `${Xk.id}#${(0,zk.t)(Tk)}`;
-                                  this.partPaths.has(kk) || this.partPaths.set(kk, Ik)
+                                of fm) Am.forEach(((mm, Tm) => {
+                                const fm = (0, yh.t)(hm.slug, Tm);
+                                for (const Am of mm.flatMap((mm => [...Mh(mm.markdown, 2), ...Mh(mm.markdown, 3)]))) {
+                                  const mm = `${hm.id}#${(0,cm.q)(Am)}`;
+                                  this.partPaths.has(mm) || this.partPaths.set(mm, fm)
                                 }
                               }));
-                              this.pages = Ik.map((kk => {
+                              this.pages = fm.map((mm => {
                                 let {
-                                  page: Fk,
-                                  groups: Ik
-                                } = kk;
+                                  page: Tm,
+                                  groups: fm
+                                } = mm;
                                 return {
-                                  page: Fk,
-                                  path: (0, bX.r)(Fk.slug),
-                                  markdown: `# ${Fk.title}\n\n${this.resolveLinks(Fk,WX(Fk))}\n`,
-                                  parts: Ik.map(((kk, Xk) => this.renderPart(Fk, kk, Xk, Ik.length)))
+                                  page: Tm,
+                                  path: (0, yh.q)(Tm.slug),
+                                  markdown: `# ${Tm.title}\n\n${this.resolveLinks(Tm,uh(Tm))}\n`,
+                                  parts: fm.map(((mm, hm) => this.renderPart(Tm, mm, hm, fm.length)))
                                 }
                               }))
                             }
-                            url(kk) {
-                              return `${this.origin}${kk}`
+                            url(mm) {
+                              return `${this.origin}${mm}`
                             }
-                            getPage(kk) {
-                              return this.pages.find((Fk => Fk.page.id === kk))
+                            getPage(mm) {
+                              return this.pages.find((Tm => Tm.page.id === mm))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((kk => (kk.parts.length > 0 ? kk.parts : [{
-                                path: kk.path,
+                              return this.pages.flatMap((mm => (mm.parts.length > 0 ? mm.parts : [{
+                                path: mm.path,
                                 label: "",
-                                markdown: kk.markdown
-                              }]).filter((kk => kk.markdown.length > bX.d))))
+                                markdown: mm.markdown
+                              }]).filter((mm => mm.markdown.length > yh.d))))
                             }
-                            markdownUrl(kk, Fk) {
-                              const Ik = Fk && this.partPaths.get(`${kk.id}#${Fk}`) || (0, bX.r)(kk.slug);
-                              return this.url(Fk ? `${Ik}#${Fk}` : Ik)
+                            markdownUrl(mm, Tm) {
+                              const fm = Tm && this.partPaths.get(`${mm.id}#${Tm}`) || (0, yh.q)(mm.slug);
+                              return this.url(Tm ? `${fm}#${Tm}` : fm)
                             }
-                            resolveLinks(kk, Fk) {
-                              return Fk.replace(/\]\((#[^)]+)\)/g, ((Fk, Ik) => {
-                                var Xk;
-                                const Tk = null !== (Xk = Bk(Ik)) && void 0 !== Xk ? Xk : this.samePageTarget(kk, Ik);
-                                return Tk ? `](${this.markdownUrl(Tk.page,Tk.anchor)})` : Fk
+                            resolveLinks(mm, Tm) {
+                              return Tm.replace(/\]\((#[^)]+)\)/g, ((Tm, fm) => {
+                                var hm;
+                                const Am = null !== (hm = Mm(fm)) && void 0 !== hm ? hm : this.samePageTarget(mm, fm);
+                                return Am ? `](${this.markdownUrl(Am.page,Am.anchor)})` : Tm
                               }))
                             }
-                            samePageTarget(kk, Fk) {
-                              const Ik = (0, zk.t)(Fk.slice(1));
-                              return fk(kk, Ik) ? {
-                                page: kk,
-                                anchor: Ik
+                            samePageTarget(mm, Tm) {
+                              const fm = (0, cm.q)(Tm.slice(1));
+                              return lm(mm, fm) ? {
+                                page: mm,
+                                anchor: fm
                               } : null
                             }
-                            renderPart(kk, Fk, Ik, Xk) {
-                              const Tk = function(kk) {
-                                  const Fk = kk.map((kk => kk.section)).filter(Boolean);
-                                  if (0 === Fk.length) return "";
-                                  const Ik = Fk[0],
-                                    Xk = Fk.at(-1);
-                                  return Ik === Xk ? Ik : `${Ik} to ${Xk}`
-                                }(Fk),
-                                ik = Fk.map((kk => kk.markdown)).join("\n\n"),
-                                yk = Tk ? `It covers ${Tk}. ` : "",
-                                lk = `Part ${Ik+1} of ${Xk} of [${kk.title}](${this.url((0,bX.r)(kk.slug))}). ${yk}[llms.txt](${this.url(bX.g)}) lists every part.`;
+                            renderPart(mm, Tm, fm, hm) {
+                              const Am = function(mm) {
+                                  const Tm = mm.map((mm => mm.section)).filter(Boolean);
+                                  if (0 === Tm.length) return "";
+                                  const fm = Tm[0],
+                                    hm = Tm.at(-1);
+                                  return fm === hm ? fm : `${fm} to ${hm}`
+                                }(Tm),
+                                am = Tm.map((mm => mm.markdown)).join("\n\n"),
+                                xm = Am ? `It covers ${Am}. ` : "",
+                                wm = `Part ${fm+1} of ${hm} of [${mm.title}](${this.url((0,yh.q)(mm.slug))}). ${xm}[llms.txt](${this.url(yh.h)}) lists every part.`;
                               return {
-                                path: (0, bX.t)(kk.slug, Ik),
-                                label: Tk,
-                                markdown: `# ${kk.title}, part ${Ik+1} of ${Xk}\n\n${lk}\n\n${this.resolveLinks(kk,ik)}\n`
+                                path: (0, yh.t)(mm.slug, fm),
+                                label: Am,
+                                markdown: `# ${mm.title}, part ${fm+1} of ${hm}\n\n${wm}\n\n${this.resolveLinks(mm,am)}\n`
                               }
                             }
-                            llmsTxt(kk) {
-                              const Fk = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${BX(bX.d)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const Ik of Ck) {
-                                Fk.push("", `## ${Ik.title}`, "");
-                                for (const kk of Ik.pageIds) {
-                                  const Ik = this.getPage(kk),
+                            llmsTxt(mm) {
+                              const Tm = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${Lh(yh.d)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const fm of ym) {
+                                Tm.push("", `## ${fm.title}`, "");
+                                for (const mm of fm.pageIds) {
+                                  const fm = this.getPage(mm),
                                     {
-                                      page: Xk,
-                                      parts: Tk
-                                    } = Ik,
-                                    ik = `About ${BX(Ik.markdown.length)} tokens${Tk.length>0?`, in ${Tk.length} parts:`:"."}`;
-                                  Fk.push(`- [${Xk.title}](${this.url(Ik.path)}): ${Xk.summary} ${ik}`), Tk.forEach(((kk, Ik) => {
-                                    Fk.push(`  - [Part ${Ik+1}${kk.label?`: ${kk.label}`:""}](${this.url(kk.path)})`)
+                                      page: hm,
+                                      parts: Am
+                                    } = fm,
+                                    am = `About ${Lh(fm.markdown.length)} tokens${Am.length>0?`, in ${Am.length} parts:`:"."}`;
+                                  Tm.push(`- [${hm.title}](${this.url(fm.path)}): ${hm.summary} ${am}`), Am.forEach(((mm, fm) => {
+                                    Tm.push(`  - [Part ${fm+1}${mm.label?`: ${mm.label}`:""}](${this.url(mm.path)})`)
                                   }))
                                 }
                               }
-                              return Fk.push("", "## Optional", "", `- [Every page in one file](${this.url(bX.f)}): About ${BX(kk.length)} tokens, for a model with a large context window.`, ""), Fk.join("\n")
+                              return Tm.push("", "## Optional", "", `- [Every page in one file](${this.url(yh.e)}): About ${Lh(mm.length)} tokens, for a model with a large context window.`, ""), Tm.join("\n")
                             }
                             llmsFullTxt() {
-                              return Ck.flatMap((kk => kk.pageIds.map((kk => this.getPage(kk).markdown)))).join("\n---\n\n")
+                              return ym.flatMap((mm => mm.pageIds.map((mm => this.getPage(mm).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const kk = this.llmsFullTxt(),
-                                Fk = this.llmsTxt(kk),
-                                Ik = new Map([
-                                  [bX.k, Fk],
-                                  [bX.g, Fk],
-                                  [bX.f, kk]
+                              const mm = this.llmsFullTxt(),
+                                Tm = this.llmsTxt(mm),
+                                fm = new Map([
+                                  [yh.l, Tm],
+                                  [yh.h, Tm],
+                                  [yh.e, mm]
                                 ]);
-                              for (const Xk of this.pages) {
-                                Ik.set(Xk.path, Xk.markdown);
-                                for (const kk of Xk.parts) Ik.set(kk.path, kk.markdown)
+                              for (const hm of this.pages) {
+                                fm.set(hm.path, hm.markdown);
+                                for (const mm of hm.parts) fm.set(mm.path, mm.markdown)
                               }
-                              return Ik
+                              return fm
                             }
                           }
 
-                          function BX(kk) {
-                            return `${Math.max(1,Math.round(kk/4e3))}K`
+                          function Lh(mm) {
+                            return `${Math.max(1,Math.round(mm/4e3))}K`
                           }
-                          let dX = null;
+                          let vh = null;
 
-                          function YX() {
-                            return dX ??= new fX(Uk, RX.b), dX
+                          function th() {
+                            return vh ??= new Bh(Hm, Ch.b), vh
                           }
-                          const AX = [{
+                          const Uh = [{
                             name: "ChatGPT",
                             url: "https://chatgpt.com/?hints=search&q="
                           }, {
@@ -2582,373 +2582,373 @@ export const modules = {
                             url: "https://claude.ai/new?q="
                           }];
 
-                          function gX(kk) {
-                            return YX().getPage(kk.id).parts.length > 0 ? `Read ${bX.h}, then the parts of the Bloxd Code API's ${kk.title} page it lists, so I can ask questions about it.` : `Read ${RX.b}${(0,bX.r)(kk.slug)} so I can ask questions about it. ${bX.h} lists every page of the Bloxd Code API docs.`
+                          function dh(mm) {
+                            return th().getPage(mm.id).parts.length > 0 ? `Read ${yh.i}, then the parts of the Bloxd Code API's ${mm.title} page it lists, so I can ask questions about it.` : `Read ${Ch.b}${(0,yh.q)(mm.slug)} so I can ask questions about it. ${yh.i} lists every page of the Bloxd Code API docs.`
                           }
 
-                          function mX(kk) {
+                          function gh(mm) {
                             let {
-                              page: Fk
-                            } = kk;
-                            const [Ik, Xk] = xk();
-                            return (0, ek.jsxs)("div", {
+                              page: Tm
+                            } = mm;
+                            const [fm, hm] = Vm();
+                            return (0, Om.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, ek.jsxs)("button", {
+                              children: [(0, Om.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  Xk(YX().getPage(Fk.id).markdown)
+                                  hm(th().getPage(Tm.id).markdown)
                                 },
-                                children: [(0, ek.jsx)(Hk, {
-                                  name: !1 === (null === Ik || void 0 === Ik ? void 0 : Ik.failed) ? "check" : "copy"
-                                }), (0, ek.jsx)("span", {
-                                  children: Ik ? Ik.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, Om.jsx)(qm, {
+                                  name: !1 === (null === fm || void 0 === fm ? void 0 : fm.failed) ? "check" : "copy"
+                                }), (0, Om.jsx)("span", {
+                                  children: fm ? fm.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), AX.map((kk => (0, ek.jsxs)("a", {
+                              }), Uh.map((mm => (0, Om.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: `${kk.url}${encodeURIComponent(gX(Fk))}`,
+                                href: `${mm.url}${encodeURIComponent(dh(Tm))}`,
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, ek.jsx)(Hk, {
+                                children: [(0, Om.jsx)(qm, {
                                   name: "external-link"
-                                }), (0, ek.jsxs)("span", {
-                                  children: ["Open in ", kk.name]
+                                }), (0, Om.jsxs)("span", {
+                                  children: ["Open in ", mm.name]
                                 })]
-                              }, kk.name)))]
+                              }, mm.name)))]
                             })
                           }
 
-                          function hX(kk) {
-                            return `#${[0,1,2].map((Fk=>Math.round(Math.min(255,Math.max(0,kk[Fk]))).toString(16).padStart(2,"0"))).join("")}`
+                          function Wh(mm) {
+                            return `#${[0,1,2].map((Tm=>Math.round(Math.min(255,Math.max(0,mm[Tm]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function rX(kk) {
-                            return [parseInt(kk.slice(1, 3), 16), parseInt(kk.slice(3, 5), 16), parseInt(kk.slice(5, 7), 16)]
+                          function Fh(mm) {
+                            return [parseInt(mm.slice(1, 3), 16), parseInt(mm.slice(3, 5), 16), parseInt(mm.slice(5, 7), 16)]
                           }
 
-                          function DX(kk) {
+                          function mA(mm) {
                             let {
-                              label: Fk,
-                              min: Ik,
-                              max: Xk,
-                              step: Tk,
-                              low: ik,
-                              high: yk,
-                              onChange: lk
-                            } = kk;
-                            return (0, ek.jsxs)("div", {
+                              label: Tm,
+                              min: fm,
+                              max: hm,
+                              step: Am,
+                              low: am,
+                              high: xm,
+                              onChange: wm
+                            } = mm;
+                            return (0, Om.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, ek.jsxs)("div", {
+                              children: [(0, Om.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, ek.jsx)("span", {
-                                  children: Fk
-                                }), (0, ek.jsx)("span", {
+                                children: [(0, Om.jsx)("span", {
+                                  children: Tm
+                                }), (0, Om.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: ik === yk ? ik : `${ik}\u2013${yk}`
+                                  children: am === xm ? am : `${am}\u2013${xm}`
                                 })]
-                              }), (0, ek.jsxs)("div", {
+                              }), (0, Om.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, ek.jsx)("input", {
+                                children: [(0, Om.jsx)("input", {
                                   type: "range",
-                                  min: Ik,
-                                  max: Xk,
-                                  step: Tk,
-                                  value: Math.min(Xk, ik),
-                                  "aria-label": `Minimum ${Fk.toLowerCase()}`,
-                                  onChange: kk => {
-                                    const Fk = Number(kk.target.value);
-                                    lk(Fk, Math.max(Fk, yk))
+                                  min: fm,
+                                  max: hm,
+                                  step: Am,
+                                  value: Math.min(hm, am),
+                                  "aria-label": `Minimum ${Tm.toLowerCase()}`,
+                                  onChange: mm => {
+                                    const Tm = Number(mm.target.value);
+                                    wm(Tm, Math.max(Tm, xm))
                                   }
-                                }), (0, ek.jsx)("input", {
+                                }), (0, Om.jsx)("input", {
                                   type: "range",
-                                  min: Ik,
-                                  max: Xk,
-                                  step: Tk,
-                                  value: Math.min(Xk, yk),
-                                  "aria-label": `Maximum ${Fk.toLowerCase()}`,
-                                  onChange: kk => {
-                                    const Fk = Number(kk.target.value);
-                                    lk(Math.min(Fk, ik), Fk)
+                                  min: fm,
+                                  max: hm,
+                                  step: Am,
+                                  value: Math.min(hm, xm),
+                                  "aria-label": `Maximum ${Tm.toLowerCase()}`,
+                                  onChange: mm => {
+                                    const Tm = Number(mm.target.value);
+                                    wm(Math.min(Tm, am), Tm)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function MX(kk) {
+                          function TA(mm) {
                             let {
-                              label: Fk,
-                              min: Ik,
-                              max: Xk,
-                              step: Tk,
-                              value: ik,
-                              onChange: yk,
-                              format: lk = String
-                            } = kk;
-                            return (0, ek.jsxs)("div", {
+                              label: Tm,
+                              min: fm,
+                              max: hm,
+                              step: Am,
+                              value: am,
+                              onChange: xm,
+                              format: wm = String
+                            } = mm;
+                            return (0, Om.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, ek.jsxs)("div", {
+                              children: [(0, Om.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, ek.jsx)("span", {
-                                  children: Fk
-                                }), (0, ek.jsx)("span", {
+                                children: [(0, Om.jsx)("span", {
+                                  children: Tm
+                                }), (0, Om.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: lk(ik)
+                                  children: wm(am)
                                 })]
-                              }), (0, ek.jsx)("input", {
+                              }), (0, Om.jsx)("input", {
                                 type: "range",
-                                min: Ik,
-                                max: Xk,
-                                step: Tk,
-                                value: Math.min(Xk, Math.max(Ik, ik)),
-                                "aria-label": Fk,
-                                onChange: kk => {
-                                  yk(Number(kk.target.value))
+                                min: fm,
+                                max: hm,
+                                step: Am,
+                                value: Math.min(hm, Math.max(fm, am)),
+                                "aria-label": Tm,
+                                onChange: mm => {
+                                  xm(Number(mm.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function kT(kk) {
+                          function fA(mm) {
                             let {
-                              opts: Fk,
-                              onChange: Ik
-                            } = kk;
-                            const Xk = Fk.colorGradients;
-                            if (!dI(Xk)) return (0, ek.jsxs)("div", {
+                              opts: Tm,
+                              onChange: fm
+                            } = mm;
+                            const hm = Tm.colorGradients;
+                            if (!vf(hm)) return (0, Om.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, ek.jsx)("div", {
+                              children: [(0, Om.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, ek.jsx)("span", {
+                                children: (0, Om.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, ek.jsx)("div", {
+                              }), (0, Om.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: Xk.map(((kk, Fk) => (0, ek.jsx)("input", {
+                                children: hm.map(((mm, Tm) => (0, Om.jsx)("input", {
                                   type: "color",
-                                  value: hX(kk.color),
-                                  "aria-label": `Colour ${Fk+1}`,
-                                  onChange: kk => {
-                                    const Tk = [...Xk];
-                                    Tk[Fk] = {
-                                      color: rX(kk.target.value)
-                                    }, Ik(Tk)
+                                  value: Wh(mm.color),
+                                  "aria-label": `Colour ${Tm+1}`,
+                                  onChange: mm => {
+                                    const Am = [...hm];
+                                    Am[Tm] = {
+                                      color: Fh(mm.target.value)
+                                    }, fm(Am)
                                   }
-                                }, Fk)))
+                                }, Tm)))
                               })]
                             });
-                            const Tk = (kk, Fk) => {
-                              const Tk = [...Xk];
-                              Tk[kk] = Fk, Ik(Tk)
+                            const Am = (mm, Tm) => {
+                              const Am = [...hm];
+                              Am[mm] = Tm, fm(Am)
                             };
-                            return (0, ek.jsxs)("div", {
+                            return (0, Om.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, ek.jsxs)("div", {
+                              children: [(0, Om.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, ek.jsx)("span", {
+                                children: [(0, Om.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, ek.jsx)("span", {
+                                }), (0, Om.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), Xk.map(((kk, Fk) => {
-                                var Ik;
-                                const Xk = null !== (Ik = kk.maxColor) && void 0 !== Ik ? Ik : kk.minColor;
-                                return (0, ek.jsxs)("div", {
+                              }), hm.map(((mm, Tm) => {
+                                var fm;
+                                const hm = null !== (fm = mm.maxColor) && void 0 !== fm ? fm : mm.minColor;
+                                return (0, Om.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, ek.jsxs)("span", {
+                                  children: [(0, Om.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * kk.timeFraction), "%"]
-                                  }), (0, ek.jsx)("span", {
+                                    children: [Math.round(100 * mm.timeFraction), "%"]
+                                  }), (0, Om.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${hX(kk.minColor)}, ${hX(Xk)})`
+                                      background: `linear-gradient(90deg, ${Wh(mm.minColor)}, ${Wh(hm)})`
                                     }
-                                  }), (0, ek.jsx)("input", {
+                                  }), (0, Om.jsx)("input", {
                                     type: "color",
-                                    value: hX(kk.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*kk.timeFraction)}%`,
-                                    onChange: Ik => {
-                                      Tk(Fk, {
-                                        ...kk,
-                                        minColor: [...rX(Ik.target.value), kk.minColor[3]]
+                                    value: Wh(mm.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*mm.timeFraction)}%`,
+                                    onChange: fm => {
+                                      Am(Tm, {
+                                        ...mm,
+                                        minColor: [...Fh(fm.target.value), mm.minColor[3]]
                                       })
                                     }
-                                  }), (0, ek.jsx)("input", {
+                                  }), (0, Om.jsx)("input", {
                                     type: "color",
-                                    value: hX(Xk),
-                                    "aria-label": `Maximum colour at ${Math.round(100*kk.timeFraction)}%`,
-                                    onChange: Ik => {
-                                      Tk(Fk, {
-                                        ...kk,
-                                        maxColor: [...rX(Ik.target.value), Xk[3]]
+                                    value: Wh(hm),
+                                    "aria-label": `Maximum colour at ${Math.round(100*mm.timeFraction)}%`,
+                                    onChange: fm => {
+                                      Am(Tm, {
+                                        ...mm,
+                                        maxColor: [...Fh(fm.target.value), hm[3]]
                                       })
                                     }
                                   })]
-                                }, Fk)
+                                }, Tm)
                               }))]
                             })
                           }
-                          const FT = [-.5, -.5, -.5],
-                            IT = [.5, .5, .5],
-                            XT = [0, 1, 2, 3, 4, 5, 6, 7].map((kk => [1 & kk ? IT[0] : FT[0], 2 & kk ? IT[1] : FT[1], 4 & kk ? IT[2] : FT[2]]));class TT {
+                          const hA = [-.5, -.5, -.5],
+                            AA = [.5, .5, .5],
+                            aA = [0, 1, 2, 3, 4, 5, 6, 7].map((mm => [1 & mm ? AA[0] : hA[0], 2 & mm ? AA[1] : hA[1], 4 & mm ? AA[2] : hA[2]]));class xA {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(kk, Fk, Ik, Xk) {
-                              const Tk = Math.round(31 * Fk),
-                                ik = Math.round(31 * Ik),
-                                yk = Math.round(31 * Xk),
-                                lk = `${Tk}|${ik}|${yk}`;
-                              let ak = this.tints.get(kk);
-                              (!ak || ak.size > 2e3) && (ak = new Map, this.tints.set(kk, ak));
-                              let qk = ak.get(lk);
-                              if (qk) return qk;
-                              qk = document.createElement("canvas"), qk.width = kk.naturalWidth || 16, qk.height = kk.naturalHeight || 16;
-                              const Lk = qk.getContext("2d");
-                              return Lk ? (Lk.imageSmoothingEnabled = !1, Lk.drawImage(kk, 0, 0, qk.width, qk.height), Lk.globalCompositeOperation = "multiply", Lk.fillStyle = `rgb(${Tk/31*255}, ${ik/31*255}, ${yk/31*255})`, Lk.fillRect(0, 0, qk.width, qk.height), Lk.globalCompositeOperation = "destination-in", Lk.drawImage(kk, 0, 0, qk.width, qk.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), ak.set(lk, qk), qk
+                            get(mm, Tm, fm, hm) {
+                              const Am = Math.round(31 * Tm),
+                                am = Math.round(31 * fm),
+                                xm = Math.round(31 * hm),
+                                wm = `${Am}|${am}|${xm}`;
+                              let Dm = this.tints.get(mm);
+                              (!Dm || Dm.size > 2e3) && (Dm = new Map, this.tints.set(mm, Dm));
+                              let im = Dm.get(wm);
+                              if (im) return im;
+                              im = document.createElement("canvas"), im.width = mm.naturalWidth || 16, im.height = mm.naturalHeight || 16;
+                              const Rm = im.getContext("2d");
+                              return Rm ? (Rm.imageSmoothingEnabled = !1, Rm.drawImage(mm, 0, 0, im.width, im.height), Rm.globalCompositeOperation = "multiply", Rm.fillStyle = `rgb(${Am/31*255}, ${am/31*255}, ${xm/31*255})`, Rm.fillRect(0, 0, im.width, im.height), Rm.globalCompositeOperation = "destination-in", Rm.drawImage(mm, 0, 0, im.width, im.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), Dm.set(wm, im), im
                             }
                           }
 
-                          function iT(kk) {
+                          function wA(mm) {
                             let {
-                              opts: Fk,
-                              textureUrl: Ik,
-                              burst: Tk,
-                              paused: ik
-                            } = kk;
-                            const yk = (0, Xk.useRef)(null),
-                              lk = (0, Xk.useRef)(Fk);
-                            lk.current = Fk;
-                            const ak = (0, Xk.useRef)(ik);
-                            ak.current = ik;
-                            const qk = (0, Xk.useRef)(null),
-                              Lk = (0, Xk.useRef)(null),
-                              tk = (0, Xk.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(kk) {
-                                let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const Ik = [-.5, -.5, -.5],
-                                  Xk = [.5, .5, .5];
-                                let Tk = .5;
-                                for (let ik = 0; ik < 40; ik++) {
-                                  const ik = AI(kk, Ik, Xk, Fk),
-                                    yk = Math.max(ik.life / 30, .001);
-                                  for (; hI(ik, kk.gravity, yk);) Tk = Math.max(Tk, Math.hypot(ik.pos[0], ik.pos[1], ik.pos[2]) + ik.size / 2)
+                              opts: Tm,
+                              textureUrl: fm,
+                              burst: Am,
+                              paused: am
+                            } = mm;
+                            const xm = (0, hm.useRef)(null),
+                              wm = (0, hm.useRef)(Tm);
+                            wm.current = Tm;
+                            const Dm = (0, hm.useRef)(am);
+                            Dm.current = am;
+                            const im = (0, hm.useRef)(null),
+                              Rm = (0, hm.useRef)(null),
+                              pm = (0, hm.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(mm) {
+                                let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const fm = [-.5, -.5, -.5],
+                                  hm = [.5, .5, .5];
+                                let Am = .5;
+                                for (let am = 0; am < 40; am++) {
+                                  const am = Uf(mm, fm, hm, Tm),
+                                    xm = Math.max(am.life / 30, .001);
+                                  for (; Wf(am, mm.gravity, xm);) Am = Math.max(Am, Math.hypot(am.pos[0], am.pos[1], am.pos[2]) + am.size / 2)
                                 }
-                                return Tk
-                              }(Fk)))), [Fk]),
-                              Zk = (0, Xk.useRef)(tk);
-                            return Zk.current = tk, (0, Xk.useEffect)((() => {
-                              if (qk.current = null, !Ik) return;
-                              const kk = new Image;
-                              let Fk = !1;
-                              return kk.onload = () => {
-                                Fk || (qk.current = kk)
-                              }, kk.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${Ik}`)
-                              }, kk.src = Ik, () => {
-                                Fk = !0
+                                return Am
+                              }(Tm)))), [Tm]),
+                              Em = (0, hm.useRef)(pm);
+                            return Em.current = pm, (0, hm.useEffect)((() => {
+                              if (im.current = null, !fm) return;
+                              const mm = new Image;
+                              let Tm = !1;
+                              return mm.onload = () => {
+                                Tm || (im.current = mm)
+                              }, mm.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${fm}`)
+                              }, mm.src = fm, () => {
+                                Tm = !0
                               }
-                            }), [Ik]), (0, Xk.useEffect)((() => {
-                              var kk;
-                              null === (kk = Lk.current) || void 0 === kk || kk.call(Lk)
-                            }), [Fk, Tk]), (0, Xk.useEffect)((() => {
-                              const kk = yk.current,
-                                Fk = null === kk || void 0 === kk ? void 0 : kk.getContext("2d");
-                              if (!kk || !Fk) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const Ik = new TT;
-                              let Xk = [],
-                                Tk = 0,
-                                ik = -.7,
-                                tk = Zk.current,
-                                jk = performance.now(),
-                                ek = 0,
-                                wk = !0,
-                                Hk = null;
-                              const Jk = () => {
-                                const kk = lk.current,
-                                  Fk = Math.min(400, Math.max(0, Math.ceil(kk.manualEmitCount)));
-                                Xk = [];
-                                for (let Ik = 0; Ik < Fk; Ik++) Xk.push(AI(kk, FT, IT, Math.random));
-                                Tk = 0
+                            }), [fm]), (0, hm.useEffect)((() => {
+                              var mm;
+                              null === (mm = Rm.current) || void 0 === mm || mm.call(Rm)
+                            }), [Tm, Am]), (0, hm.useEffect)((() => {
+                              const mm = xm.current,
+                                Tm = null === mm || void 0 === mm ? void 0 : mm.getContext("2d");
+                              if (!mm || !Tm) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const fm = new xA;
+                              let hm = [],
+                                Am = 0,
+                                am = -.7,
+                                pm = Em.current,
+                                om = performance.now(),
+                                Om = 0,
+                                Ym = !0,
+                                qm = null;
+                              const jm = () => {
+                                const mm = wm.current,
+                                  Tm = Math.min(400, Math.max(0, Math.ceil(mm.manualEmitCount)));
+                                hm = [];
+                                for (let fm = 0; fm < Tm; fm++) hm.push(Uf(mm, hA, AA, Math.random));
+                                Am = 0
                               };
-                              Lk.current = Jk, Jk();
-                              const xk = yk => {
-                                ek = requestAnimationFrame(xk);
-                                const Lk = Math.min(.05, (yk - jk) / 1e3);
-                                if (jk = yk, !wk) return;
-                                const Pk = window.devicePixelRatio || 1,
-                                  Kk = Math.round(kk.clientWidth * Pk),
-                                  Qk = Math.round(kk.clientHeight * Pk);
-                                if (0 === Kk || 0 === Qk) return;
-                                kk.width === Kk && kk.height === Qk || (kk.width = Kk, kk.height = Qk);
-                                const sk = lk.current;
-                                null === Hk && (ik += .18 * Lk), tk += (Zk.current - tk) * Math.min(1, 4 * Lk);
-                                const Vk = .6 * Lk;
-                                Xk = Xk.filter((kk => hI(kk, sk.gravity, Vk))), 0 !== Xk.length || ak.current || (Tk += Lk, Tk > .6 && Jk());
-                                const zk = function(kk, Fk, Ik, Xk) {
-                                  const Tk = 3.2 * Xk,
-                                    ik = .44 * Math.min(kk, Fk) * Tk / Xk,
-                                    yk = Math.cos(Ik),
-                                    lk = Math.sin(Ik),
-                                    ak = Math.cos(.42),
-                                    qk = Math.sin(.42);
-                                  return (Ik, Xk, Lk) => {
-                                    const tk = Ik * lk + Lk * yk,
-                                      Zk = Tk - (Xk * qk + tk * ak);
-                                    if (Zk < .05) return null;
-                                    const jk = ik / Zk;
+                              Rm.current = jm, jm();
+                              const Vm = xm => {
+                                Om = requestAnimationFrame(Vm);
+                                const Rm = Math.min(.05, (xm - om) / 1e3);
+                                if (om = xm, !Ym) return;
+                                const Im = window.devicePixelRatio || 1,
+                                  Km = Math.round(mm.clientWidth * Im),
+                                  Qm = Math.round(mm.clientHeight * Im);
+                                if (0 === Km || 0 === Qm) return;
+                                mm.width === Km && mm.height === Qm || (mm.width = Km, mm.height = Qm);
+                                const nm = wm.current;
+                                null === qm && (am += .18 * Rm), pm += (Em.current - pm) * Math.min(1, 4 * Rm);
+                                const Jm = .6 * Rm;
+                                hm = hm.filter((mm => Wf(mm, nm.gravity, Jm))), 0 !== hm.length || Dm.current || (Am += Rm, Am > .6 && jm());
+                                const cm = function(mm, Tm, fm, hm) {
+                                  const Am = 3.2 * hm,
+                                    am = .44 * Math.min(mm, Tm) * Am / hm,
+                                    xm = Math.cos(fm),
+                                    wm = Math.sin(fm),
+                                    Dm = Math.cos(.42),
+                                    im = Math.sin(.42);
+                                  return (fm, hm, Rm) => {
+                                    const pm = fm * wm + Rm * xm,
+                                      Em = Am - (hm * im + pm * Dm);
+                                    if (Em < .05) return null;
+                                    const om = am / Em;
                                     return {
-                                      x: kk / 2 + (Ik * yk - Lk * lk) * jk,
-                                      y: Fk / 2 - (Xk * ak - tk * qk) * jk,
-                                      scale: jk,
-                                      depth: Zk
+                                      x: mm / 2 + (fm * xm - Rm * wm) * om,
+                                      y: Tm / 2 - (hm * Dm - pm * im) * om,
+                                      scale: om,
+                                      depth: Em
                                     }
                                   }
-                                }(Kk, Qk, ik, tk);
-                                ! function(kk, Fk, Ik, Xk, Tk) {
-                                  const ik = kk.createLinearGradient(0, 0, 0, Ik);
-                                  ik.addColorStop(0, "#23262d"), ik.addColorStop(1, "#16181c"), kk.globalCompositeOperation = "source-over", kk.globalAlpha = 1, kk.fillStyle = ik, kk.fillRect(0, 0, Fk, Ik);
-                                  const yk = (Fk, Ik) => {
-                                      const Tk = Xk(Fk[0], Fk[1], Fk[2]),
-                                        ik = Xk(Ik[0], Ik[1], Ik[2]);
-                                      Tk && ik && (kk.beginPath(), kk.moveTo(Tk.x, Tk.y), kk.lineTo(ik.x, ik.y), kk.stroke())
+                                }(Km, Qm, am, pm);
+                                ! function(mm, Tm, fm, hm, Am) {
+                                  const am = mm.createLinearGradient(0, 0, 0, fm);
+                                  am.addColorStop(0, "#23262d"), am.addColorStop(1, "#16181c"), mm.globalCompositeOperation = "source-over", mm.globalAlpha = 1, mm.fillStyle = am, mm.fillRect(0, 0, Tm, fm);
+                                  const xm = (Tm, fm) => {
+                                      const Am = hm(Tm[0], Tm[1], Tm[2]),
+                                        am = hm(fm[0], fm[1], fm[2]);
+                                      Am && am && (mm.beginPath(), mm.moveTo(Am.x, Am.y), mm.lineTo(am.x, am.y), mm.stroke())
                                     },
-                                    lk = Math.ceil(Tk) + 1,
-                                    ak = FT[1];
-                                  kk.lineWidth = 1, kk.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let qk = -lk; qk <= lk; qk++) yk([qk + .5, ak, .5 - lk], [qk + .5, ak, lk + .5]), yk([.5 - lk, ak, qk + .5], [lk + .5, ak, qk + .5]);
-                                  kk.strokeStyle = "rgba(255, 255, 255, 0.28)", kk.setLineDash([4, 4]);
-                                  for (const qk of XT)
-                                    for (const kk of XT) {
-                                      const Fk = [0, 1, 2].filter((Fk => qk[Fk] !== kk[Fk]));
-                                      1 === Fk.length && qk[Fk[0]] < kk[Fk[0]] && yk(qk, kk)
+                                    wm = Math.ceil(Am) + 1,
+                                    Dm = hA[1];
+                                  mm.lineWidth = 1, mm.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let im = -wm; im <= wm; im++) xm([im + .5, Dm, .5 - wm], [im + .5, Dm, wm + .5]), xm([.5 - wm, Dm, im + .5], [wm + .5, Dm, im + .5]);
+                                  mm.strokeStyle = "rgba(255, 255, 255, 0.28)", mm.setLineDash([4, 4]);
+                                  for (const im of aA)
+                                    for (const mm of aA) {
+                                      const Tm = [0, 1, 2].filter((Tm => im[Tm] !== mm[Tm]));
+                                      1 === Tm.length && im[Tm[0]] < mm[Tm[0]] && xm(im, mm)
                                     }
-                                  kk.setLineDash([])
-                                }(Fk, Kk, Qk, zk, tk);
-                                const Sk = qk.current,
-                                  vk = Xk.map((kk => ({
-                                    particle: kk,
-                                    at: zk(kk.pos[0], kk.pos[1], kk.pos[2])
-                                  }))).filter((kk => null !== kk.at)).sort(((kk, Fk) => Fk.at.depth - kk.at.depth));
-                                Fk.imageSmoothingEnabled = !1;
-                                for (const kk of function(kk) {
-                                    switch (kk) {
-                                      case NI.d.OneOne:
+                                  mm.setLineDash([])
+                                }(Tm, Km, Qm, cm, pm);
+                                const zm = im.current,
+                                  Zm = hm.map((mm => ({
+                                    particle: mm,
+                                    at: cm(mm.pos[0], mm.pos[1], mm.pos[2])
+                                  }))).filter((mm => null !== mm.at)).sort(((mm, Tm) => Tm.at.depth - mm.at.depth));
+                                Tm.imageSmoothingEnabled = !1;
+                                for (const mm of function(mm) {
+                                    switch (mm) {
+                                      case lf.g.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case NI.d.Add:
+                                      case lf.g.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case NI.d.Multiply:
+                                      case lf.g.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case NI.d.MultiplyAdd:
+                                      case lf.g.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2962,665 +2962,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(sk.blendMode)) {
-                                  Fk.globalCompositeOperation = kk.operation;
+                                  }(nm.blendMode)) {
+                                  Tm.globalCompositeOperation = mm.operation;
                                   for (const {
-                                      particle: Xk,
-                                      at: Tk
+                                      particle: hm,
+                                      at: Am
                                     }
-                                    of vk) {
-                                    const [ik, yk, lk, ak] = mI(Xk), qk = Math.max(1, Xk.size * Tk.scale);
-                                    Fk.globalAlpha = kk.usesAlpha ? Math.min(1, Math.max(0, ak)) : 1, Sk ? Fk.drawImage(Ik.get(Sk, ik, yk, lk), Tk.x - qk / 2, Tk.y - qk / 2, qk, qk) : (Fk.fillStyle = `rgb(${255*ik}, ${255*yk}, ${255*lk})`, Fk.fillRect(Tk.x - qk / 2, Tk.y - qk / 2, qk, qk))
+                                    of Zm) {
+                                    const [am, xm, wm, Dm] = gf(hm), im = Math.max(1, hm.size * Am.scale);
+                                    Tm.globalAlpha = mm.usesAlpha ? Math.min(1, Math.max(0, Dm)) : 1, zm ? Tm.drawImage(fm.get(zm, am, xm, wm), Am.x - im / 2, Am.y - im / 2, im, im) : (Tm.fillStyle = `rgb(${255*am}, ${255*xm}, ${255*wm})`, Tm.fillRect(Am.x - im / 2, Am.y - im / 2, im, im))
                                   }
                                 }
-                                Fk.globalCompositeOperation = "source-over", Fk.globalAlpha = 1
+                                Tm.globalCompositeOperation = "source-over", Tm.globalAlpha = 1
                               };
-                              ek = requestAnimationFrame(xk);
-                              const Pk = new IntersectionObserver((kk => {
-                                let [Fk] = kk;
-                                wk = Fk.isIntersecting
+                              Om = requestAnimationFrame(Vm);
+                              const Im = new IntersectionObserver((mm => {
+                                let [Tm] = mm;
+                                Ym = Tm.isIntersecting
                               }));
-                              Pk.observe(kk);
-                              const Kk = Fk => {
-                                  Hk = Fk.clientX, kk.setPointerCapture(Fk.pointerId)
+                              Im.observe(mm);
+                              const Km = Tm => {
+                                  qm = Tm.clientX, mm.setPointerCapture(Tm.pointerId)
                                 },
-                                Qk = kk => {
-                                  null !== Hk && (ik += .01 * (kk.clientX - Hk), Hk = kk.clientX)
+                                Qm = mm => {
+                                  null !== qm && (am += .01 * (mm.clientX - qm), qm = mm.clientX)
                                 },
-                                sk = () => {
-                                  Hk = null
+                                nm = () => {
+                                  qm = null
                                 };
-                              return kk.addEventListener("pointerdown", Kk), kk.addEventListener("pointermove", Qk), kk.addEventListener("pointerup", sk), kk.addEventListener("pointercancel", sk), () => {
-                                cancelAnimationFrame(ek), Pk.disconnect(), Lk.current = null, kk.removeEventListener("pointerdown", Kk), kk.removeEventListener("pointermove", Qk), kk.removeEventListener("pointerup", sk), kk.removeEventListener("pointercancel", sk)
+                              return mm.addEventListener("pointerdown", Km), mm.addEventListener("pointermove", Qm), mm.addEventListener("pointerup", nm), mm.addEventListener("pointercancel", nm), () => {
+                                cancelAnimationFrame(Om), Im.disconnect(), Rm.current = null, mm.removeEventListener("pointerdown", Km), mm.removeEventListener("pointermove", Qm), mm.removeEventListener("pointerup", nm), mm.removeEventListener("pointercancel", nm)
                               }
-                            }), []), (0, ek.jsx)("canvas", {
-                              ref: yk,
+                            }), []), (0, Om.jsx)("canvas", {
+                              ref: xm,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${Fk.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${Tm.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const yT = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            lT = [{
-                              mode: NI.d.OneOne,
+                          const DA = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            iA = [{
+                              mode: lf.g.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: NI.d.Standard,
+                              mode: lf.g.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: NI.d.Add,
+                              mode: lf.g.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: NI.d.Multiply,
+                              mode: lf.g.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: NI.d.MultiplyAdd,
+                              mode: lf.g.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            aT = (0, Xk.forwardRef)((function(kk, Fk) {
-                              var Ik, Tk;
+                            RA = (0, hm.forwardRef)((function(mm, Tm) {
+                              var fm, Am;
                               let {
-                                textures: yk
-                              } = kk;
-                              const lk = KX(),
-                                ak = (0, Xk.useRef)(null),
-                                [qk, Lk] = (0, Xk.useState)(WI),
-                                [tk, Zk] = (0, Xk.useState)("example"),
-                                [jk, wk] = (0, Xk.useState)(0),
-                                [Jk, xk] = (0, Xk.useState)(!1),
-                                Kk = kk => {
-                                  const Fk = "example" === kk ? WI : cI(kk);
-                                  Fk && (Lk(Fk), Zk(kk))
+                                textures: xm
+                              } = mm;
+                              const wm = nh(),
+                                Dm = (0, hm.useRef)(null),
+                                [im, Rm] = (0, hm.useState)(uf),
+                                [pm, Em] = (0, hm.useState)("example"),
+                                [om, Ym] = (0, hm.useState)(0),
+                                [jm, Vm] = (0, hm.useState)(!1),
+                                Km = mm => {
+                                  const Tm = "example" === mm ? uf : Mf(mm);
+                                  Tm && (Rm(Tm), Em(mm))
                                 };
-                              (0, Xk.useImperativeHandle)(Fk, (() => ({
-                                preview: kk => {
-                                  var Fk;
-                                  Kk(kk), null === (Fk = ak.current) || void 0 === Fk || Fk.scrollIntoView({
+                              (0, hm.useImperativeHandle)(Tm, (() => ({
+                                preview: mm => {
+                                  var Tm;
+                                  Km(mm), null === (Tm = Dm.current) || void 0 === Tm || Tm.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const Qk = kk => {
-                                  Lk({
-                                    ...qk,
-                                    ...kk
-                                  }), Zk(null)
+                              const Qm = mm => {
+                                  Rm({
+                                    ...im,
+                                    ...mm
+                                  }), Em(null)
                                 },
-                                sk = function(kk, Fk) {
-                                  if (null !== Fk) return `${kX}    presetId: "${Fk}",\n${FX}\n})`;
-                                  const Ik = kk.velocityGradients.map((kk => `        {\n            timeFraction: ${rI(kk.timeFraction)},\n            factor: ${rI(kk.factor)},\n            factor2: ${rI(kk.factor2)},\n        },`)),
-                                    Xk = [`    dir1: ${DI(kk.dir1)},`, `    dir2: ${DI(kk.dir2)},`, FX, `    texture: "${kk.texture}",`, `    minLifeTime: ${rI(kk.minLifeTime)},`, `    maxLifeTime: ${rI(kk.maxLifeTime)},`, `    minEmitPower: ${rI(kk.minEmitPower)},`, `    maxEmitPower: ${rI(kk.maxEmitPower)},`, `    minSize: ${rI(kk.minSize)},`, `    maxSize: ${rI(kk.maxSize)},`, `    manualEmitCount: ${rI(kk.manualEmitCount)},`, `    gravity: ${DI(kk.gravity)},`, `    colorGradients: ${MI(kk.colorGradients,"    ")},`, `    velocityGradients: ${Ik.length>0?`[\n${Ik.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${rI(kk.blendMode)},`];
-                                  return void 0 !== kk.hideDist && Xk.push(`    hideDist: ${rI(kk.hideDist)},`), `${kX}${Xk.join("\n")}\n})`
-                                }(qk, null === tk || "example" === tk ? null : tk),
-                                zk = yk.includes(qk.texture) ? yk : [...yk, qk.texture];
-                              return (0, ek.jsxs)("section", {
-                                ref: ak,
+                                nm = function(mm, Tm) {
+                                  if (null !== Tm) return `${fh}    presetId: "${Tm}",\n${hh}\n})`;
+                                  const fm = mm.velocityGradients.map((mm => `        {\n            timeFraction: ${Ff(mm.timeFraction)},\n            factor: ${Ff(mm.factor)},\n            factor2: ${Ff(mm.factor2)},\n        },`)),
+                                    hm = [`    dir1: ${mh(mm.dir1)},`, `    dir2: ${mh(mm.dir2)},`, hh, `    texture: "${mm.texture}",`, `    minLifeTime: ${Ff(mm.minLifeTime)},`, `    maxLifeTime: ${Ff(mm.maxLifeTime)},`, `    minEmitPower: ${Ff(mm.minEmitPower)},`, `    maxEmitPower: ${Ff(mm.maxEmitPower)},`, `    minSize: ${Ff(mm.minSize)},`, `    maxSize: ${Ff(mm.maxSize)},`, `    manualEmitCount: ${Ff(mm.manualEmitCount)},`, `    gravity: ${mh(mm.gravity)},`, `    colorGradients: ${Th(mm.colorGradients,"    ")},`, `    velocityGradients: ${fm.length>0?`[\n${fm.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${Ff(mm.blendMode)},`];
+                                  return void 0 !== mm.hideDist && hm.push(`    hideDist: ${Ff(mm.hideDist)},`), `${fh}${hm.join("\n")}\n})`
+                                }(im, null === pm || "example" === pm ? null : pm),
+                                cm = xm.includes(im.texture) ? xm : [...xm, im.texture];
+                              return (0, Om.jsxs)("section", {
+                                ref: Dm,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, ek.jsxs)("header", {
+                                children: [(0, Om.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, ek.jsxs)("div", {
-                                    children: [(0, ek.jsx)("div", {
+                                  children: [(0, Om.jsxs)("div", {
+                                    children: [(0, Om.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, ek.jsx)("div", {
+                                    }), (0, Om.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, ek.jsx)(Pk, {
-                                    text: sk,
+                                  }), (0, Om.jsx)(Im, {
+                                    text: nm,
                                     label: "Copy code"
                                   })]
-                                }), (0, ek.jsxs)("div", {
+                                }), (0, Om.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, ek.jsx)("button", {
+                                  children: [(0, Om.jsx)("button", {
                                     type: "button",
-                                    className: ik()("DocsVariantChip", {
-                                      Active: "example" === tk
+                                    className: am()("DocsVariantChip", {
+                                      Active: "example" === pm
                                     }),
                                     onClick: () => {
-                                      Kk("example")
+                                      Km("example")
                                     },
                                     children: "Example"
-                                  }), yT.filter((kk => null !== cI(kk))).map((kk => (0, ek.jsx)("button", {
+                                  }), DA.filter((mm => null !== Mf(mm))).map((mm => (0, Om.jsx)("button", {
                                     type: "button",
-                                    className: ik()("DocsVariantChip", {
-                                      Active: tk === kk
+                                    className: am()("DocsVariantChip", {
+                                      Active: pm === mm
                                     }),
                                     onClick: () => {
-                                      Kk(kk)
+                                      Km(mm)
                                     },
-                                    children: kk
-                                  }, kk))), (0, ek.jsxs)("select", {
+                                    children: mm
+                                  }, mm))), (0, Om.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== tk && void 0 !== tk ? tk : "custom",
+                                    value: null !== pm && void 0 !== pm ? pm : "custom",
                                     "aria-label": "Preset",
-                                    onChange: kk => {
-                                      Kk(kk.target.value)
+                                    onChange: mm => {
+                                      Km(mm.target.value)
                                     },
-                                    children: [(0, ek.jsx)("option", {
+                                    children: [(0, Om.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === tk && (0, ek.jsx)("option", {
+                                    }), null === pm && (0, Om.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), CI.e.map((kk => (0, ek.jsx)("option", {
-                                      value: kk,
-                                      children: kk
-                                    }, kk)))]
+                                    }), sf.e.map((mm => (0, Om.jsx)("option", {
+                                      value: mm,
+                                      children: mm
+                                    }, mm)))]
                                   })]
-                                }), (0, ek.jsxs)("div", {
+                                }), (0, Om.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, ek.jsxs)("div", {
+                                  children: [(0, Om.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, ek.jsx)(iT, {
-                                      opts: qk,
-                                      textureUrl: null !== (Ik = null === lk || void 0 === lk ? void 0 : lk.getParticleTextureUrl(qk.texture)) && void 0 !== Ik ? Ik : null,
-                                      burst: jk,
-                                      paused: Jk
-                                    }), (0, ek.jsxs)("div", {
+                                    children: [(0, Om.jsx)(wA, {
+                                      opts: im,
+                                      textureUrl: null !== (fm = null === wm || void 0 === wm ? void 0 : wm.getParticleTextureUrl(im.texture)) && void 0 !== fm ? fm : null,
+                                      burst: om,
+                                      paused: jm
+                                    }), (0, Om.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, ek.jsxs)("button", {
+                                      children: [(0, Om.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          wk(jk + 1)
+                                          Ym(om + 1)
                                         },
-                                        children: [(0, ek.jsx)(Hk, {
+                                        children: [(0, Om.jsx)(qm, {
                                           name: "replay"
-                                        }), (0, ek.jsx)("span", {
+                                        }), (0, Om.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, ek.jsxs)("button", {
+                                      }), (0, Om.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": Jk,
+                                        "aria-pressed": jm,
                                         onClick: () => {
-                                          xk(!Jk)
+                                          Vm(!jm)
                                         },
-                                        children: [(0, ek.jsx)(Hk, {
-                                          name: Jk ? "play" : "pause"
-                                        }), (0, ek.jsx)("span", {
-                                          children: Jk ? "Loop" : "Stop looping"
+                                        children: [(0, Om.jsx)(qm, {
+                                          name: jm ? "play" : "pause"
+                                        }), (0, Om.jsx)("span", {
+                                          children: jm ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, ek.jsxs)("div", {
+                                  }), (0, Om.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, ek.jsxs)("div", {
+                                    children: [(0, Om.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, ek.jsxs)("div", {
+                                      children: [(0, Om.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, ek.jsx)("span", {
+                                        children: [(0, Om.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, ek.jsx)("code", {
+                                        }), (0, Om.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: qk.texture
+                                          children: im.texture
                                         })]
-                                      }), (0, ek.jsx)("div", {
+                                      }), (0, Om.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: zk.map((kk => {
-                                          var Fk;
-                                          const Ik = null !== (Fk = null === lk || void 0 === lk ? void 0 : lk.getParticleTextureUrl(kk)) && void 0 !== Fk ? Fk : null;
-                                          return (0, ek.jsx)("button", {
+                                        children: cm.map((mm => {
+                                          var Tm;
+                                          const fm = null !== (Tm = null === wm || void 0 === wm ? void 0 : wm.getParticleTextureUrl(mm)) && void 0 !== Tm ? Tm : null;
+                                          return (0, Om.jsx)("button", {
                                             type: "button",
-                                            className: ik()("DocsParticleTexture", {
-                                              Active: qk.texture === kk
+                                            className: am()("DocsParticleTexture", {
+                                              Active: im.texture === mm
                                             }),
-                                            title: kk,
-                                            "aria-label": kk,
-                                            "aria-pressed": qk.texture === kk,
+                                            title: mm,
+                                            "aria-label": mm,
+                                            "aria-pressed": im.texture === mm,
                                             onClick: () => {
-                                              Qk({
-                                                texture: kk
+                                              Qm({
+                                                texture: mm
                                               })
                                             },
-                                            children: Ik ? (0, ek.jsx)("img", {
-                                              src: Ik,
+                                            children: fm ? (0, Om.jsx)("img", {
+                                              src: fm,
                                               alt: ""
-                                            }) : (0, ek.jsx)(Hk, {
+                                            }) : (0, Om.jsx)(qm, {
                                               name: "image"
                                             })
-                                          }, kk)
+                                          }, mm)
                                         }))
                                       })]
-                                    }), (0, ek.jsx)(MX, {
+                                    }), (0, Om.jsx)(TA, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: qk.manualEmitCount,
-                                      onChange: kk => {
-                                        Qk({
-                                          manualEmitCount: kk
+                                      value: im.manualEmitCount,
+                                      onChange: mm => {
+                                        Qm({
+                                          manualEmitCount: mm
                                         })
                                       }
-                                    }), (0, ek.jsx)(DX, {
+                                    }), (0, Om.jsx)(mA, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: qk.minLifeTime,
-                                      high: qk.maxLifeTime,
-                                      onChange: (kk, Fk) => {
-                                        Qk({
-                                          minLifeTime: kk,
-                                          maxLifeTime: Fk
+                                      low: im.minLifeTime,
+                                      high: im.maxLifeTime,
+                                      onChange: (mm, Tm) => {
+                                        Qm({
+                                          minLifeTime: mm,
+                                          maxLifeTime: Tm
                                         })
                                       }
-                                    }), (0, ek.jsx)(DX, {
+                                    }), (0, Om.jsx)(mA, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: qk.minEmitPower,
-                                      high: qk.maxEmitPower,
-                                      onChange: (kk, Fk) => {
-                                        Qk({
-                                          minEmitPower: kk,
-                                          maxEmitPower: Fk
+                                      low: im.minEmitPower,
+                                      high: im.maxEmitPower,
+                                      onChange: (mm, Tm) => {
+                                        Qm({
+                                          minEmitPower: mm,
+                                          maxEmitPower: Tm
                                         })
                                       }
-                                    }), (0, ek.jsx)(DX, {
+                                    }), (0, Om.jsx)(mA, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: qk.minSize,
-                                      high: qk.maxSize,
-                                      onChange: (kk, Fk) => {
-                                        Qk({
-                                          minSize: kk,
-                                          maxSize: Fk
+                                      low: im.minSize,
+                                      high: im.maxSize,
+                                      onChange: (mm, Tm) => {
+                                        Qm({
+                                          minSize: mm,
+                                          maxSize: Tm
                                         })
                                       }
-                                    }), (0, ek.jsx)(MX, {
+                                    }), (0, Om.jsx)(TA, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (Tk = qk.gravity[1]) && void 0 !== Tk ? Tk : 0,
-                                      onChange: kk => {
-                                        var Fk, Ik;
-                                        Qk({
-                                          gravity: [null !== (Fk = qk.gravity[0]) && void 0 !== Fk ? Fk : 0, kk, null !== (Ik = qk.gravity[2]) && void 0 !== Ik ? Ik : 0]
+                                      value: null !== (Am = im.gravity[1]) && void 0 !== Am ? Am : 0,
+                                      onChange: mm => {
+                                        var Tm, fm;
+                                        Qm({
+                                          gravity: [null !== (Tm = im.gravity[0]) && void 0 !== Tm ? Tm : 0, mm, null !== (fm = im.gravity[2]) && void 0 !== fm ? fm : 0]
                                         })
                                       }
-                                    }), (0, ek.jsxs)("div", {
+                                    }), (0, Om.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, ek.jsx)("div", {
+                                      children: [(0, Om.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, ek.jsx)("span", {
+                                        children: (0, Om.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, ek.jsx)("select", {
+                                      }), (0, Om.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: qk.blendMode,
+                                        value: im.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: kk => {
-                                          Qk({
-                                            blendMode: Number(kk.target.value)
+                                        onChange: mm => {
+                                          Qm({
+                                            blendMode: Number(mm.target.value)
                                           })
                                         },
-                                        children: lT.map((kk => {
+                                        children: iA.map((mm => {
                                           let {
-                                            mode: Fk,
-                                            label: Ik
-                                          } = kk;
-                                          return (0, ek.jsx)("option", {
-                                            value: Fk,
-                                            children: Ik
-                                          }, Fk)
+                                            mode: Tm,
+                                            label: fm
+                                          } = mm;
+                                          return (0, Om.jsx)("option", {
+                                            value: Tm,
+                                            children: fm
+                                          }, Tm)
                                         }))
                                       })]
-                                    }), (0, ek.jsx)(kT, {
-                                      opts: qk,
-                                      onChange: kk => {
-                                        Qk({
-                                          colorGradients: kk
+                                    }), (0, Om.jsx)(fA, {
+                                      opts: im,
+                                      onChange: mm => {
+                                        Qm({
+                                          colorGradients: mm
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, ek.jsx)(Vk, {
-                                  code: sk,
+                                }), (0, Om.jsx)(Jm, {
+                                  code: nm,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var qT = Ik(4466),
-                            LT = Ik(1849);
+                          var pA = fm(4405),
+                            EA = fm(1884);
 
-                          function tT(kk, Fk) {
-                            return kk ? qT.c.includes(Fk) ? kk.getIngameIconUrl(Fk) : kk.getItemIconUrl(Fk) : null
+                          function oA(mm, Tm) {
+                            return mm ? pA.e.includes(Tm) ? mm.getIngameIconUrl(Tm) : mm.getItemIconUrl(Tm) : null
                           }
 
-                          function ZT(kk) {
-                            var Fk, Ik, Xk;
+                          function OA(mm) {
+                            var Tm, fm, hm;
                             let {
-                              part: Tk,
-                              assets: yk
-                            } = kk;
-                            const lk = tT(yk, Tk.icon),
-                              ak = null !== (Fk = null === (Ik = Tk.style) || void 0 === Ik ? void 0 : Ik.fontSize) && void 0 !== Fk ? Fk : "1.8em",
-                              qk = (0, CF.fc)(Tk.style);
-                            return (0, ek.jsxs)("span", {
-                              className: ik()("DocsBloxdTextIcon", {
-                                Missing: !lk
+                              part: Am,
+                              assets: xm
+                            } = mm;
+                            const wm = oA(xm, Am.icon),
+                              Dm = null !== (Tm = null === (fm = Am.style) || void 0 === fm ? void 0 : fm.fontSize) && void 0 !== Tm ? Tm : "1.8em",
+                              im = (0, CT.Sb)(Am.style);
+                            return (0, Om.jsxs)("span", {
+                              className: am()("DocsBloxdTextIcon", {
+                                Missing: !wm
                               }),
                               style: {
-                                width: ak,
-                                height: ak,
-                                opacity: null === (Xk = Tk.style) || void 0 === Xk ? void 0 : Xk.opacity
+                                width: Dm,
+                                height: Dm,
+                                opacity: null === (hm = Am.style) || void 0 === hm ? void 0 : hm.opacity
                               },
-                              title: lk ? void 0 : `No Bloxd icon, item or block is called "${Tk.icon}"`,
-                              children: [lk && qk && (0, ek.jsx)("span", {
+                              title: wm ? void 0 : `No Bloxd icon, item or block is called "${Am.icon}"`,
+                              children: [wm && im && (0, Om.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: qk,
-                                  maskImage: `url("${lk}")`,
-                                  WebkitMaskImage: `url("${lk}")`
+                                  background: im,
+                                  maskImage: `url("${wm}")`,
+                                  WebkitMaskImage: `url("${wm}")`
                                 }
-                              }), lk ? (0, ek.jsx)("img", {
-                                src: lk,
+                              }), wm ? (0, Om.jsx)("img", {
+                                src: wm,
                                 alt: "",
-                                className: ik()({
-                                  Tinted: qk
+                                className: am()({
+                                  Tinted: im
                                 })
-                              }) : (0, ek.jsx)(Hk, {
+                              }) : (0, Om.jsx)(qm, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function jT(kk) {
+                          function YA(mm) {
                             let {
-                              parts: Fk,
-                              className: Ik
-                            } = kk;
-                            const Xk = KX(),
-                              Tk = [];
-                            let yk = [];
-                            const lk = kk => {
-                              yk.length > 0 && (Tk.push((0, ek.jsx)(LT.c, {
-                                text: yk
-                              }, `run-${kk}`)), yk = [])
+                              parts: Tm,
+                              className: fm
+                            } = mm;
+                            const hm = nh(),
+                              Am = [];
+                            let xm = [];
+                            const wm = mm => {
+                              xm.length > 0 && (Am.push((0, Om.jsx)(EA.b, {
+                                text: xm
+                              }, `run-${mm}`)), xm = [])
                             };
-                            return Fk.forEach(((kk, Fk) => {
-                              "icon" !== BF(kk) || cF(kk.icon) ? yk.push(kk) : (lk(Fk), Tk.push((0, ek.jsx)(ZT, {
-                                part: kk,
-                                assets: Xk
-                              }, `icon-${Fk}`)))
-                            })), lk(Fk.length), (0, ek.jsx)("div", {
-                              className: ik()("DocsStyledTextPreview", Ik),
-                              children: Tk
+                            return Tm.forEach(((mm, Tm) => {
+                              "icon" !== uT(mm) || sT(mm.icon) ? xm.push(mm) : (wm(Tm), Am.push((0, Om.jsx)(OA, {
+                                part: mm,
+                                assets: hm
+                              }, `icon-${Tm}`)))
+                            })), wm(Tm.length), (0, Om.jsx)("div", {
+                              className: am()("DocsStyledTextPreview", fm),
+                              children: Am
                             })
                           }
-                          const eT = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let wT = null;
+                          const qA = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let jA = null;
 
-                          function HT(kk) {
-                            if (wT ??= document.createElement("canvas").getContext("2d"), !wT) return "#000000";
-                            wT.fillStyle = "#000000", wT.fillStyle = kk;
-                            const Fk = wT.fillStyle;
-                            return Fk.startsWith("#") ? Fk : "#000000"
+                          function VA(mm) {
+                            if (jA ??= document.createElement("canvas").getContext("2d"), !jA) return "#000000";
+                            jA.fillStyle = "#000000", jA.fillStyle = mm;
+                            const Tm = jA.fillStyle;
+                            return Tm.startsWith("#") ? Tm : "#000000"
                           }
 
-                          function JT(kk) {
+                          function IA(mm) {
                             let {
-                              value: Fk,
-                              label: Ik,
-                              onChange: Xk
-                            } = kk;
-                            return (0, ek.jsxs)("span", {
+                              value: Tm,
+                              label: fm,
+                              onChange: hm
+                            } = mm;
+                            return (0, Om.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, ek.jsx)("input", {
+                              children: [(0, Om.jsx)("input", {
                                 type: "color",
-                                value: HT(Fk),
-                                "aria-label": `${Ik} picker`,
-                                onChange: kk => {
-                                  Xk(kk.target.value)
+                                value: VA(Tm),
+                                "aria-label": `${fm} picker`,
+                                onChange: mm => {
+                                  hm(mm.target.value)
                                 }
-                              }), (0, ek.jsx)("input", {
+                              }), (0, Om.jsx)("input", {
                                 type: "text",
-                                value: Fk,
+                                value: Tm,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": Ik,
+                                "aria-label": fm,
                                 spellCheck: !1,
-                                onChange: kk => {
-                                  Xk(kk.target.value)
+                                onChange: mm => {
+                                  hm(mm.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function xT(kk) {
+                          function KA(mm) {
                             let {
-                              value: Fk,
-                              fontAwesomeIcons: Ik,
-                              onChange: Tk
-                            } = kk;
-                            const yk = KX(),
-                              [lk, ak] = (0, Xk.useState)(cF(Fk) ? "fontAwesome" : "bloxd"),
-                              [qk, Lk] = (0, Xk.useState)(""),
-                              tk = qk.trim().toLowerCase(),
-                              Zk = "bloxd" === lk ? qT.c : Ik,
-                              jk = tk ? Zk.filter((kk => kk.toLowerCase().includes(tk))) : Zk;
-                            return (0, ek.jsxs)("div", {
+                              value: Tm,
+                              fontAwesomeIcons: fm,
+                              onChange: Am
+                            } = mm;
+                            const xm = nh(),
+                              [wm, Dm] = (0, hm.useState)(sT(Tm) ? "fontAwesome" : "bloxd"),
+                              [im, Rm] = (0, hm.useState)(""),
+                              pm = im.trim().toLowerCase(),
+                              Em = "bloxd" === wm ? pA.e : fm,
+                              om = pm ? Em.filter((mm => mm.toLowerCase().includes(pm))) : Em;
+                            return (0, Om.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, ek.jsx)("input", {
+                              children: [(0, Om.jsx)("input", {
                                 type: "text",
-                                value: Fk,
+                                value: Tm,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: kk => {
-                                  Tk(kk.target.value)
+                                onChange: mm => {
+                                  Am(mm.target.value)
                                 }
-                              }), (0, ek.jsx)("p", {
+                              }), (0, Om.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, ek.jsxs)("div", {
+                              }), (0, Om.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((kk => (0, ek.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((mm => (0, Om.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": lk === kk,
-                                    className: ik()("DocsVariantChip", {
-                                      Active: lk === kk
+                                    "aria-selected": wm === mm,
+                                    className: am()("DocsVariantChip", {
+                                      Active: wm === mm
                                     }),
                                     onClick: () => {
-                                      ak(kk)
+                                      Dm(mm)
                                     },
-                                    children: "bloxd" === kk ? `Bloxd icons (${qT.c.length})` : `Font Awesome (${Ik.length})`
-                                  }, kk))), (0, ek.jsx)("input", {
+                                    children: "bloxd" === mm ? `Bloxd icons (${pA.e.length})` : `Font Awesome (${fm.length})`
+                                  }, mm))), (0, Om.jsx)("input", {
                                     type: "search",
-                                    value: qk,
+                                    value: im,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: kk => {
-                                      Lk(kk.target.value)
+                                    onChange: mm => {
+                                      Rm(mm.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, ek.jsxs)("div", {
+                              }), (0, Om.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [jk.map((kk => {
-                                  const Ik = "bloxd" === lk ? tT(yk, kk) : null;
-                                  return (0, ek.jsx)("button", {
+                                children: [om.map((mm => {
+                                  const fm = "bloxd" === wm ? oA(xm, mm) : null;
+                                  return (0, Om.jsx)("button", {
                                     type: "button",
-                                    title: kk,
-                                    "aria-label": kk,
-                                    "aria-pressed": kk === Fk,
-                                    className: ik()("DocsIconPickerOption", {
-                                      Active: kk === Fk
+                                    title: mm,
+                                    "aria-label": mm,
+                                    "aria-pressed": mm === Tm,
+                                    className: am()("DocsIconPickerOption", {
+                                      Active: mm === Tm
                                     }),
                                     onClick: () => {
-                                      Tk(kk)
+                                      Am(mm)
                                     },
-                                    children: "fontAwesome" === lk ? (0, ek.jsx)(QI.e, {
-                                      name: kk
-                                    }) : Ik ? (0, ek.jsx)("img", {
-                                      src: Ik,
+                                    children: "fontAwesome" === wm ? (0, Om.jsx)(nf.c, {
+                                      name: mm
+                                    }) : fm ? (0, Om.jsx)("img", {
+                                      src: fm,
                                       alt: ""
-                                    }) : (0, ek.jsx)(Hk, {
+                                    }) : (0, Om.jsx)(qm, {
                                       name: "image"
                                     })
-                                  }, kk)
-                                })), 0 === jk.length && (0, ek.jsxs)("p", {
+                                  }, mm)
+                                })), 0 === om.length && (0, Om.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", qk, "\u201d."]
+                                  children: ["No icons match \u201c", im, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function PT(kk) {
+                          function QA(mm) {
                             let {
-                              property: Fk,
-                              value: Ik,
-                              fontAwesomeIcons: Xk,
-                              onChange: Tk
-                            } = kk;
+                              property: Tm,
+                              value: fm,
+                              fontAwesomeIcons: hm,
+                              onChange: Am
+                            } = mm;
                             const {
-                              field: ik,
-                              label: yk
-                            } = Fk, lk = kk => "" !== kk || Fk.isRequired ? kk : void 0;
-                            switch (ik.kind) {
+                              field: am,
+                              label: xm
+                            } = Tm, wm = mm => "" !== mm || Tm.isRequired ? mm : void 0;
+                            switch (am.kind) {
                               case "text":
-                                return ik.multiline ? (0, ek.jsx)("textarea", {
-                                  value: String(null !== Ik && void 0 !== Ik ? Ik : ""),
+                                return am.multiline ? (0, Om.jsx)("textarea", {
+                                  value: String(null !== fm && void 0 !== fm ? fm : ""),
                                   rows: 2,
-                                  "aria-label": yk,
-                                  onChange: kk => {
-                                    Tk(kk.target.value)
+                                  "aria-label": xm,
+                                  onChange: mm => {
+                                    Am(mm.target.value)
                                   }
-                                }) : (0, ek.jsx)("input", {
+                                }) : (0, Om.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== Ik && void 0 !== Ik ? Ik : ""),
-                                  "aria-label": yk,
-                                  onChange: kk => {
-                                    Tk(lk(kk.target.value))
+                                  value: String(null !== fm && void 0 !== fm ? fm : ""),
+                                  "aria-label": xm,
+                                  onChange: mm => {
+                                    Am(wm(mm.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, ek.jsx)("input", {
+                                return (0, Om.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== Ik && void 0 !== Ik ? Ik : ""),
-                                  placeholder: Fk.defaultText,
+                                  value: String(null !== fm && void 0 !== fm ? fm : ""),
+                                  placeholder: Tm.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": yk,
+                                  "aria-label": xm,
                                   spellCheck: !1,
-                                  onChange: kk => {
-                                    Tk(lk(kk.target.value.trim()))
+                                  onChange: mm => {
+                                    Am(wm(mm.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, ek.jsx)(JT, {
-                                  value: String(null !== Ik && void 0 !== Ik ? Ik : ""),
-                                  label: yk,
-                                  onChange: kk => {
-                                    Tk(lk(kk))
+                                return (0, Om.jsx)(IA, {
+                                  value: String(null !== fm && void 0 !== fm ? fm : ""),
+                                  label: xm,
+                                  onChange: mm => {
+                                    Am(wm(mm))
                                   }
                                 });
                               case "colours": {
-                                const kk = Array.isArray(Ik) ? Ik : [],
-                                  Fk = kk => {
-                                    Tk(kk.length > 0 ? kk : void 0)
+                                const mm = Array.isArray(fm) ? fm : [],
+                                  Tm = mm => {
+                                    Am(mm.length > 0 ? mm : void 0)
                                   };
-                                return (0, ek.jsxs)("div", {
+                                return (0, Om.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [kk.map(((Ik, Xk) => (0, ek.jsxs)("span", {
+                                  children: [mm.map(((fm, hm) => (0, Om.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, ek.jsx)(JT, {
-                                      value: Ik,
-                                      label: `${yk} ${Xk+1}`,
-                                      onChange: Ik => {
-                                        Fk(kk.map(((kk, Fk) => Fk === Xk ? Ik : kk)))
+                                    children: [(0, Om.jsx)(IA, {
+                                      value: fm,
+                                      label: `${xm} ${hm+1}`,
+                                      onChange: fm => {
+                                        Tm(mm.map(((mm, Tm) => Tm === hm ? fm : mm)))
                                       }
-                                    }), (0, ek.jsx)("button", {
+                                    }), (0, Om.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${Xk+1}`,
+                                      "aria-label": `Remove colour ${hm+1}`,
                                       onClick: () => {
-                                        Fk(kk.filter(((kk, Fk) => Fk !== Xk)))
+                                        Tm(mm.filter(((mm, Tm) => Tm !== hm)))
                                       },
-                                      children: (0, ek.jsx)(Hk, {
+                                      children: (0, Om.jsx)(qm, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, Xk))), (0, ek.jsxs)("button", {
+                                  }, hm))), (0, Om.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var Ik;
-                                      Fk([...kk, null !== (Ik = kk.at(-1)) && void 0 !== Ik ? Ik : "#ffffff"])
+                                      var fm;
+                                      Tm([...mm, null !== (fm = mm.at(-1)) && void 0 !== fm ? fm : "#ffffff"])
                                     },
-                                    children: [(0, ek.jsx)(Hk, {
+                                    children: [(0, Om.jsx)(qm, {
                                       name: "plus"
-                                    }), 0 === kk.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === mm.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var ak;
-                                const kk = "number" === typeof Ik ? Ik : Number(null !== (ak = Fk.defaultText) && void 0 !== ak ? ak : 0);
-                                return (0, ek.jsxs)("span", {
+                                var Dm;
+                                const mm = "number" === typeof fm ? fm : Number(null !== (Dm = Tm.defaultText) && void 0 !== Dm ? Dm : 0);
+                                return (0, Om.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, ek.jsx)("input", {
+                                  children: [(0, Om.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: kk,
-                                    "aria-label": yk,
-                                    onChange: kk => {
-                                      Tk(Number(kk.target.value))
+                                    value: mm,
+                                    "aria-label": xm,
+                                    onChange: mm => {
+                                      Am(Number(mm.target.value))
                                     }
-                                  }), (0, ek.jsx)("output", {
-                                    children: kk.toFixed(2)
+                                  }), (0, Om.jsx)("output", {
+                                    children: mm.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, ek.jsxs)("select", {
-                                  value: String(null !== Ik && void 0 !== Ik ? Ik : ""),
-                                  "aria-label": yk,
-                                  onChange: kk => {
-                                    Tk(lk(kk.target.value))
+                                return (0, Om.jsxs)("select", {
+                                  value: String(null !== fm && void 0 !== fm ? fm : ""),
+                                  "aria-label": xm,
+                                  onChange: mm => {
+                                    Am(wm(mm.target.value))
                                   },
-                                  children: [!Fk.isRequired && (0, ek.jsxs)("option", {
+                                  children: [!Tm.isRequired && (0, Om.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", Fk.defaultText, ")"]
-                                  }), ik.options.map((kk => (0, ek.jsx)("option", {
-                                    value: kk,
-                                    children: kk
-                                  }, kk)))]
+                                    children: ["Default (", Tm.defaultText, ")"]
+                                  }), am.options.map((mm => (0, Om.jsx)("option", {
+                                    value: mm,
+                                    children: mm
+                                  }, mm)))]
                                 });
                               case "icon":
-                                return (0, ek.jsx)(xT, {
-                                  value: String(null !== Ik && void 0 !== Ik ? Ik : ""),
-                                  fontAwesomeIcons: Xk,
-                                  onChange: Tk
+                                return (0, Om.jsx)(KA, {
+                                  value: String(null !== fm && void 0 !== fm ? fm : ""),
+                                  fontAwesomeIcons: hm,
+                                  onChange: Am
                                 })
                             }
                           }
 
-                          function KT(kk) {
-                            let Fk;
+                          function nA(mm) {
+                            let Tm;
                             try {
-                              Fk = JSON.parse(kk)
-                            } catch (Ik) {
+                              Tm = JSON.parse(mm)
+                            } catch (fm) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${Ik.message}`
+                                error: `Not valid JSON yet: ${fm.message}`
                               }
                             }
-                            return XI(Fk) ? {
-                              part: Fk,
+                            return hf(Tm) ? {
+                              part: Tm,
                               error: null
                             } : {
                               part: null,
@@ -3628,150 +3628,150 @@ export const modules = {
                             }
                           }
 
-                          function QT(kk) {
+                          function JA(mm) {
                             let {
-                              parts: Fk,
-                              index: Ik,
-                              fontAwesomeIcons: Tk,
-                              onChange: ik,
-                              iG: yk,
-                              onClose: lk
-                            } = kk;
-                            const ak = (0, Xk.useContext)(wF),
-                              Lk = (0, Xk.useRef)(null),
-                              tk = Fk[Ik],
-                              Zk = BF(tk),
-                              [jk, wk] = (0, Xk.useState)((() => JSON.stringify(tk, null, 2))),
-                              Jk = (0, Xk.useMemo)((() => "other" === Zk ? KT(jk).error : null), [Zk, jk]);
-                            (0, Xk.useEffect)((() => {
-                              var kk;
-                              null === (kk = Lk.current) || void 0 === kk || kk.focus()
+                              parts: Tm,
+                              index: fm,
+                              fontAwesomeIcons: Am,
+                              onChange: am,
+                              oN: xm,
+                              onClose: wm
+                            } = mm;
+                            const Dm = (0, hm.useContext)(YT),
+                              Rm = (0, hm.useRef)(null),
+                              pm = Tm[fm],
+                              Em = uT(pm),
+                              [om, Ym] = (0, hm.useState)((() => JSON.stringify(pm, null, 2))),
+                              jm = (0, hm.useMemo)((() => "other" === Em ? nA(om).error : null), [Em, om]);
+                            (0, hm.useEffect)((() => {
+                              var mm;
+                              null === (mm = Rm.current) || void 0 === mm || mm.focus()
                             }), []);
-                            const xk = (0, ek.jsx)("div", {
+                            const Vm = (0, Om.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: kk => {
-                                kk.target === kk.currentTarget && lk()
+                              onMouseDown: mm => {
+                                mm.target === mm.currentTarget && wm()
                               },
-                              children: (0, ek.jsxs)("div", {
-                                ref: Lk,
+                              children: (0, Om.jsxs)("div", {
+                                ref: Rm,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${Ik+1}: ${WF[Zk]}`,
+                                "aria-label": `Edit part ${fm+1}: ${lT[Em]}`,
                                 tabIndex: -1,
-                                onKeyDown: kk => {
-                                  "Escape" === kk.key ? (kk.stopPropagation(), lk()) : "Tab" === kk.key && Lk.current && function(kk, Fk) {
-                                    const Ik = Array.from(kk.querySelectorAll(OF)),
-                                      Xk = Ik[0],
-                                      Tk = Ik.at(-1);
-                                    if (!Xk || !Tk) return;
-                                    const ik = document.activeElement;
-                                    !Fk.shiftKey || ik !== Xk && ik !== kk ? Fk.shiftKey || ik !== Tk || (Fk.preventDefault(), Xk.focus()) : (Fk.preventDefault(), Tk.focus())
-                                  }(Lk.current, kk)
+                                onKeyDown: mm => {
+                                  "Escape" === mm.key ? (mm.stopPropagation(), wm()) : "Tab" === mm.key && Rm.current && function(mm, Tm) {
+                                    const fm = Array.from(mm.querySelectorAll(ST)),
+                                      hm = fm[0],
+                                      Am = fm.at(-1);
+                                    if (!hm || !Am) return;
+                                    const am = document.activeElement;
+                                    !Tm.shiftKey || am !== hm && am !== mm ? Tm.shiftKey || am !== Am || (Tm.preventDefault(), hm.focus()) : (Tm.preventDefault(), Am.focus())
+                                  }(Rm.current, mm)
                                 },
-                                children: [(0, ek.jsxs)("header", {
+                                children: [(0, Om.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, ek.jsxs)("div", {
-                                    children: [(0, ek.jsxs)("div", {
+                                  children: [(0, Om.jsxs)("div", {
+                                    children: [(0, Om.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", Ik + 1]
-                                    }), (0, ek.jsx)("div", {
+                                      children: ["Part ", fm + 1]
+                                    }), (0, Om.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: WF[Zk]
+                                      children: lT[Em]
                                     })]
-                                  }), (0, ek.jsx)("button", {
+                                  }), (0, Om.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: lk,
-                                    children: (0, ek.jsx)(Hk, {
+                                    onClick: wm,
+                                    children: (0, Om.jsx)(qm, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, ek.jsx)(jT, {
-                                  parts: Fk,
+                                }), (0, Om.jsx)(YA, {
+                                  parts: Tm,
                                   className: "DocsTextDialogPreview"
-                                }), (0, ek.jsx)("div", {
+                                }), (0, Om.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === Zk ? (0, ek.jsxs)("label", {
+                                  children: "other" === Em ? (0, Om.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, ek.jsx)("span", {
+                                    children: [(0, Om.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, ek.jsx)("textarea", {
+                                    }), (0, Om.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: jk,
+                                      value: om,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: kk => {
-                                        wk(kk.target.value);
-                                        const Fk = KT(kk.target.value);
-                                        null !== Fk.part && ik(Fk.part)
+                                      onChange: mm => {
+                                        Ym(mm.target.value);
+                                        const Tm = nA(mm.target.value);
+                                        null !== Tm.part && am(Tm.part)
                                       }
-                                    }), Jk && (0, ek.jsx)("span", {
+                                    }), jm && (0, Om.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: Jk
+                                      children: jm
                                     })]
-                                  }) : YF[Zk].map((kk => {
-                                    const Fk = gF(tk, kk.path),
-                                      Ik = kk.isRequired ? JSON.stringify(hF(tk, kk.path)) === JSON.stringify(tk) : void 0 === Fk;
-                                    return (0, ek.jsxs)("div", {
+                                  }) : LT[Em].map((mm => {
+                                    const Tm = tT(pm, mm.path),
+                                      fm = mm.isRequired ? JSON.stringify(dT(pm, mm.path)) === JSON.stringify(pm) : void 0 === Tm;
+                                    return (0, Om.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, ek.jsxs)("div", {
+                                      children: [(0, Om.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, ek.jsx)("span", {
-                                          children: kk.label
-                                        }), (0, ek.jsxs)("button", {
+                                        children: [(0, Om.jsx)("span", {
+                                          children: mm.label
+                                        }), (0, Om.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: Ik,
-                                          "aria-label": `Reset ${kk.label.toLowerCase()} to default`,
+                                          disabled: fm,
+                                          "aria-label": `Reset ${mm.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            ik(hF(tk, kk.path))
+                                            am(dT(pm, mm.path))
                                           },
-                                          children: [(0, ek.jsx)(Hk, {
+                                          children: [(0, Om.jsx)(qm, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, ek.jsx)(PT, {
-                                        property: kk,
-                                        value: Fk,
-                                        fontAwesomeIcons: Tk,
-                                        onChange: Fk => {
-                                          ik(mF(tk, kk.path, Fk))
+                                      }), (0, Om.jsx)(QA, {
+                                        property: mm,
+                                        value: Tm,
+                                        fontAwesomeIcons: Am,
+                                        onChange: Tm => {
+                                          am(UT(pm, mm.path, Tm))
                                         }
-                                      }), !kk.isRequired && (0, ek.jsxs)("span", {
+                                      }), !mm.isRequired && (0, Om.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", kk.defaultText]
+                                        children: ["Default: ", mm.defaultText]
                                       })]
-                                    }, kk.path.join("."))
+                                    }, mm.path.join("."))
                                   }))
-                                }), (0, ek.jsxs)("footer", {
+                                }), (0, Om.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, ek.jsxs)("button", {
+                                  children: [(0, Om.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: yk,
-                                    children: [(0, ek.jsx)(Hk, {
+                                    onClick: xm,
+                                    children: [(0, Om.jsx)(qm, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, ek.jsx)("button", {
+                                  }), (0, Om.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: lk,
+                                    onClick: wm,
                                     children: "Done"
                                   })]
-                                }), (0, ek.jsx)("datalist", {
+                                }), (0, Om.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: eT.map((kk => (0, ek.jsx)("option", {
-                                    value: kk
-                                  }, kk)))
+                                  children: qA.map((mm => (0, Om.jsx)("option", {
+                                    value: mm
+                                  }, mm)))
                                 })]
                               })
                             });
-                            return ak ? (0, qk.createPortal)(xk, ak) : xk
+                            return Dm ? (0, im.createPortal)(Vm, Dm) : Vm
                           }
-                          const sT = [{
+                          const cA = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3815,265 +3815,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            VT = Object.keys(fF);
+                            zA = Object.keys(MT);
 
-                          function zT(kk) {
+                          function ZA(mm) {
                             let {
-                              fontAwesomeIcons: Fk
-                            } = kk;
-                            const [Ik, Tk] = (0, Xk.useState)(sT[0].parts), [yk, lk] = (0, Xk.useState)((() => kI(sT[0].parts))), [ak, qk] = (0, Xk.useState)(null), [Lk, tk] = (0, Xk.useState)(!1), [Zk, jk] = (0, Xk.useState)(null), [wk, Jk] = (0, Xk.useState)(!1), [xk, Pk] = (0, Xk.useState)(null), Kk = (0, Xk.useRef)(null), Qk = kI(Ik);
-                            (0, Xk.useLayoutEffect)((() => {
-                              var kk;
-                              if (!xk) return;
-                              const Fk = kk => {
-                                  var Fk;
-                                  return null === (Fk = Kk.current) || void 0 === Fk ? void 0 : Fk.querySelector(`[data-focus-key="${kk}"]`)
+                              fontAwesomeIcons: Tm
+                            } = mm;
+                            const [fm, Am] = (0, hm.useState)(cA[0].parts), [xm, wm] = (0, hm.useState)((() => mf(cA[0].parts))), [Dm, im] = (0, hm.useState)(null), [Rm, pm] = (0, hm.useState)(!1), [Em, om] = (0, hm.useState)(null), [Ym, jm] = (0, hm.useState)(!1), [Vm, Im] = (0, hm.useState)(null), Km = (0, hm.useRef)(null), Qm = mf(fm);
+                            (0, hm.useLayoutEffect)((() => {
+                              var mm;
+                              if (!Vm) return;
+                              const Tm = mm => {
+                                  var Tm;
+                                  return null === (Tm = Km.current) || void 0 === Tm ? void 0 : Tm.querySelector(`[data-focus-key="${mm}"]`)
                                 },
-                                Ik = Fk(xk.key);
-                              null === (kk = Ik && !Ik.disabled ? Ik : Fk(xk.fallback)) || void 0 === kk || kk.focus(), Pk(null)
-                            }), [xk]);
-                            const sk = kk => {
-                                Tk(kk), lk(kI(kk)), qk(null)
+                                fm = Tm(Vm.key);
+                              null === (mm = fm && !fm.disabled ? fm : Tm(Vm.fallback)) || void 0 === mm || mm.focus(), Im(null)
+                            }), [Vm]);
+                            const nm = mm => {
+                                Am(mm), wm(mf(mm)), im(null)
                               },
-                              zk = kk => {
-                                sk(Ik.filter(((Fk, Ik) => Ik !== kk))), Pk({
-                                  key: `edit-${Math.min(kk,Ik.length-2)}`,
+                              cm = mm => {
+                                nm(fm.filter(((Tm, fm) => fm !== mm))), Im({
+                                  key: `edit-${Math.min(mm,fm.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              Sk = (kk, Fk) => {
-                                const Xk = [...Ik],
-                                  [Tk] = Xk.splice(kk, 1);
-                                Xk.splice(kk + Fk, 0, Tk), sk(Xk);
-                                Pk({
-                                  key: `${Fk<0?"up":"down"}-${kk+Fk}`,
-                                  fallback: `edit-${kk+Fk}`
+                              zm = (mm, Tm) => {
+                                const hm = [...fm],
+                                  [Am] = hm.splice(mm, 1);
+                                hm.splice(mm + Tm, 0, Am), nm(hm);
+                                Im({
+                                  key: `${Tm<0?"up":"down"}-${mm+Tm}`,
+                                  fallback: `edit-${mm+Tm}`
                                 })
                               };
-                            return (0, ek.jsxs)("section", {
-                              ref: Kk,
+                            return (0, Om.jsxs)("section", {
+                              ref: Km,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, ek.jsx)("header", {
+                              children: [(0, Om.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, ek.jsxs)("div", {
-                                  children: [(0, ek.jsx)("div", {
+                                children: (0, Om.jsxs)("div", {
+                                  children: [(0, Om.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, ek.jsx)("div", {
+                                  }), (0, Om.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, ek.jsx)("div", {
+                              }), (0, Om.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: sT.map((kk => (0, ek.jsx)("button", {
+                                children: cA.map((mm => (0, Om.jsx)("button", {
                                   type: "button",
-                                  className: ik()("DocsVariantChip", {
-                                    Active: Qk === kI(kk.parts)
+                                  className: am()("DocsVariantChip", {
+                                    Active: Qm === mf(mm.parts)
                                   }),
                                   onClick: () => {
-                                    sk(kk.parts)
+                                    nm(mm.parts)
                                   },
-                                  children: kk.label
-                                }, kk.label)))
-                              }), (0, ek.jsx)(jT, {
-                                parts: Ik,
+                                  children: mm.label
+                                }, mm.label)))
+                              }), (0, Om.jsx)(YA, {
+                                parts: fm,
                                 className: "DocsTextEditorPreview"
-                              }), (0, ek.jsxs)("div", {
+                              }), (0, Om.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, ek.jsxs)("div", {
+                                children: [(0, Om.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, ek.jsx)("div", {
+                                  children: [(0, Om.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, ek.jsxs)("ol", {
+                                  }), (0, Om.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [Ik.map(((kk, Fk) => {
-                                      const Xk = BF(kk);
-                                      return (0, ek.jsxs)("li", {
+                                    children: [fm.map(((mm, Tm) => {
+                                      const hm = uT(mm);
+                                      return (0, Om.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, ek.jsxs)("button", {
+                                        children: [(0, Om.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${Fk}`,
-                                          "aria-label": `Edit part ${Fk+1}, ${WF[Xk]}`,
+                                          "data-focus-key": `edit-${Tm}`,
+                                          "aria-label": `Edit part ${Tm+1}, ${lT[hm]}`,
                                           onClick: () => {
-                                            jk(Fk)
+                                            om(Tm)
                                           },
-                                          children: [(0, ek.jsx)("span", {
+                                          children: [(0, Om.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: WF[Xk]
-                                          }), (0, ek.jsx)(jT, {
-                                            parts: [kk],
+                                            children: lT[hm]
+                                          }), (0, Om.jsx)(YA, {
+                                            parts: [mm],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== Xk && (0, ek.jsx)("code", {
+                                          }), "text" !== hm && (0, Om.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: rF(kk)
+                                            children: gT(mm)
                                           })]
-                                        }), (0, ek.jsxs)("span", {
+                                        }), (0, Om.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, ek.jsx)("button", {
+                                          children: [(0, Om.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${Fk+1} up`,
-                                            "data-focus-key": `up-${Fk}`,
-                                            disabled: 0 === Fk,
+                                            "aria-label": `Move part ${Tm+1} up`,
+                                            "data-focus-key": `up-${Tm}`,
+                                            disabled: 0 === Tm,
                                             onClick: () => {
-                                              Sk(Fk, -1)
+                                              zm(Tm, -1)
                                             },
-                                            children: (0, ek.jsx)(Hk, {
+                                            children: (0, Om.jsx)(qm, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, ek.jsx)("button", {
+                                          }), (0, Om.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${Fk+1} down`,
-                                            "data-focus-key": `down-${Fk}`,
-                                            disabled: Fk === Ik.length - 1,
+                                            "aria-label": `Move part ${Tm+1} down`,
+                                            "data-focus-key": `down-${Tm}`,
+                                            disabled: Tm === fm.length - 1,
                                             onClick: () => {
-                                              Sk(Fk, 1)
+                                              zm(Tm, 1)
                                             },
-                                            children: (0, ek.jsx)(Hk, {
+                                            children: (0, Om.jsx)(qm, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, ek.jsx)("button", {
+                                          }), (0, Om.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${Fk+1}`,
+                                            "aria-label": `Remove part ${Tm+1}`,
                                             onClick: () => {
-                                              zk(Fk)
+                                              cm(Tm)
                                             },
-                                            children: (0, ek.jsx)(Hk, {
+                                            children: (0, Om.jsx)(qm, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, Fk)
-                                    })), 0 === Ik.length && (0, ek.jsx)("li", {
+                                      }, Tm)
+                                    })), 0 === fm.length && (0, Om.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, ek.jsxs)("div", {
+                                  }), (0, Om.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: kk => {
-                                      "Escape" === kk.key && wk && (kk.stopPropagation(), Jk(!1), Pk({
+                                    onKeyDown: mm => {
+                                      "Escape" === mm.key && Ym && (mm.stopPropagation(), jm(!1), Im({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, ek.jsxs)("button", {
+                                    children: [(0, Om.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": wk,
+                                      "aria-expanded": Ym,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        Jk(!wk)
+                                        jm(!Ym)
                                       },
-                                      children: [(0, ek.jsx)(Hk, {
+                                      children: [(0, Om.jsx)(qm, {
                                         name: "plus"
-                                      }), "Add a part", (0, ek.jsx)(Hk, {
-                                        name: wk ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, Om.jsx)(qm, {
+                                        name: Ym ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), wk && (0, ek.jsx)("ul", {
+                                    }), Ym && (0, Om.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: VT.map((kk => (0, ek.jsx)("li", {
-                                        children: (0, ek.jsx)("button", {
+                                      children: zA.map((mm => (0, Om.jsx)("li", {
+                                        children: (0, Om.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (kk => {
-                                              sk([...Ik, fF[kk]]), Jk(!1), jk(Ik.length)
-                                            })(kk)
+                                            (mm => {
+                                              nm([...fm, MT[mm]]), jm(!1), om(fm.length)
+                                            })(mm)
                                           },
-                                          children: WF[kk]
+                                          children: lT[mm]
                                         })
-                                      }, kk)))
+                                      }, mm)))
                                     })]
                                   })]
-                                }), (0, ek.jsxs)("div", {
+                                }), (0, Om.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, ek.jsxs)("div", {
+                                  children: [(0, Om.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, ek.jsxs)("button", {
+                                    children: ["Code", (0, Om.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": Lk,
+                                      "aria-pressed": Rm,
                                       onClick: () => {
-                                        tk(!Lk)
+                                        pm(!Rm)
                                       },
-                                      children: [(0, ek.jsx)(Hk, {
-                                        name: Lk ? "check" : "pencil"
-                                      }), Lk ? "Done" : "Edit"]
+                                      children: [(0, Om.jsx)(qm, {
+                                        name: Rm ? "check" : "pencil"
+                                      }), Rm ? "Done" : "Edit"]
                                     })]
-                                  }), Lk ? (0, ek.jsxs)(ek.Fragment, {
-                                    children: [(0, ek.jsx)("textarea", {
+                                  }), Rm ? (0, Om.jsxs)(Om.Fragment, {
+                                    children: [(0, Om.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: yk,
+                                      value: xm,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: kk => {
-                                        lk(kk.target.value);
-                                        const Fk = TI(kk.target.value);
-                                        qk(Fk.error), Fk.parts && Tk(Fk.parts)
+                                      onChange: mm => {
+                                        wm(mm.target.value);
+                                        const Tm = Af(mm.target.value);
+                                        im(Tm.error), Tm.parts && Am(Tm.parts)
                                       }
-                                    }), ak && (0, ek.jsx)("p", {
+                                    }), Dm && (0, Om.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: ak
+                                      children: Dm
                                     })]
-                                  }) : (0, ek.jsx)(Vk, {
+                                  }) : (0, Om.jsx)(Jm, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${Qk})`
+                                    code: `api.sendMessage(playerId, ${Qm})`
                                   })]
                                 })]
-                              }), null !== Zk && Zk < Ik.length && (0, ek.jsx)(QT, {
-                                parts: Ik,
-                                index: Zk,
-                                fontAwesomeIcons: Fk,
-                                onChange: kk => {
-                                  ((kk, Fk) => {
-                                    sk(Ik.map(((Ik, Xk) => Xk === kk ? Fk : Ik)))
-                                  })(Zk, kk)
+                              }), null !== Em && Em < fm.length && (0, Om.jsx)(JA, {
+                                parts: fm,
+                                index: Em,
+                                fontAwesomeIcons: Tm,
+                                onChange: mm => {
+                                  ((mm, Tm) => {
+                                    nm(fm.map(((fm, hm) => hm === mm ? Tm : fm)))
+                                  })(Em, mm)
                                 },
-                                iG: () => {
-                                  zk(Zk), jk(null)
+                                oN: () => {
+                                  cm(Em), om(null)
                                 },
                                 onClose: () => {
-                                  jk(null), Pk({
-                                    key: `edit-${Zk}`,
+                                  om(null), Im({
+                                    key: `edit-${Em}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var ST = Ik(4843),
-                            oT = Ik(4829),
-                            vT = Ik(4837),
-                            ET = Ik(4850);
-                          const OT = 40,
-                            nT = 800,
-                            GT = 150,
-                            pT = 8e3,
-                            uT = 2e3;
+                          var kA = fm(4789),
+                            bA = fm(4773),
+                            SA = fm(4784),
+                            eA = fm(4796);
+                          const NA = 40,
+                            GA = 800,
+                            XA = 150,
+                            PA = 8e3,
+                            HA = 2e3;
 
-                          function bT(kk, Fk) {
-                            return 12 * Math.log2(Fk / kk)
+                          function yA(mm, Tm) {
+                            return 12 * Math.log2(Tm / mm)
                           }
 
-                          function RT(kk, Fk) {
-                            return Math.round(kk * 2 ** (Fk / 12) * 10) / 10
+                          function CA(mm, Tm) {
+                            return Math.round(mm * 2 ** (Tm / 12) * 10) / 10
                           }
 
-                          function UT(kk) {
-                            return `${kk} ms`
+                          function rA(mm) {
+                            return `${mm} ms`
                           }
 
-                          function CT(kk) {
-                            return `${kk} st`
+                          function sA(mm) {
+                            return `${mm} st`
                           }
-                          const NT = [{
+                          const lA = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4091,769 +4091,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function cT(kk) {
+                          function MA(mm) {
                             let {
-                              synth: Fk,
-                              onChange: Ik
-                            } = kk;
-                            const Xk = (0, ST.k)(Fk);
-                            return (0, ek.jsxs)("div", {
+                              synth: Tm,
+                              onChange: fm
+                            } = mm;
+                            const hm = (0, kA.g)(Tm);
+                            return (0, Om.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, ek.jsxs)("div", {
+                              children: [(0, Om.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, ek.jsx)("div", {
+                                children: [(0, Om.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, ek.jsxs)("div", {
+                                }), (0, Om.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, ek.jsx)("div", {
+                                  children: [(0, Om.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, ek.jsx)("span", {
+                                    children: (0, Om.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, ek.jsx)("div", {
+                                  }), (0, Om.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: ST.d.map((kk => (0, ek.jsx)("button", {
+                                    children: kA.e.map((mm => (0, Om.jsx)("button", {
                                       type: "button",
-                                      className: ik()("DocsVariantChip", {
-                                        Active: Fk.waveform === kk
+                                      className: am()("DocsVariantChip", {
+                                        Active: Tm.waveform === mm
                                       }),
-                                      "aria-pressed": Fk.waveform === kk,
+                                      "aria-pressed": Tm.waveform === mm,
                                       onClick: () => {
-                                        Ik({
-                                          waveform: kk
+                                        fm({
+                                          waveform: mm
                                         })
                                       },
-                                      children: kk
-                                    }, kk)))
+                                      children: mm
+                                    }, mm)))
                                   })]
-                                }), (0, ek.jsx)(MX, {
+                                }), (0, Om.jsx)(TA, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: bT(OT, nT),
+                                  max: yA(NA, GA),
                                   step: .1,
-                                  value: bT(OT, Fk.pitchHz),
-                                  format: () => `${Fk.pitchHz} Hz`,
-                                  onChange: kk => {
-                                    Ik({
-                                      pitchHz: RT(OT, kk)
+                                  value: yA(NA, Tm.pitchHz),
+                                  format: () => `${Tm.pitchHz} Hz`,
+                                  onChange: mm => {
+                                    fm({
+                                      pitchHz: CA(NA, mm)
                                     })
                                   }
-                                }), (0, ek.jsx)(MX, {
+                                }), (0, Om.jsx)(TA, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: Fk.syllableMs,
-                                  format: UT,
-                                  onChange: kk => {
-                                    Ik({
-                                      syllableMs: kk
+                                  value: Tm.syllableMs,
+                                  format: rA,
+                                  onChange: mm => {
+                                    fm({
+                                      syllableMs: mm
                                     })
                                   }
-                                }), (0, ek.jsx)(MX, {
+                                }), (0, Om.jsx)(TA, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: Fk.volume,
-                                  onChange: kk => {
-                                    Ik({
-                                      volume: kk
+                                  value: Tm.volume,
+                                  onChange: mm => {
+                                    fm({
+                                      volume: mm
                                     })
                                   }
                                 })]
-                              }), (0, ek.jsxs)("div", {
+                              }), (0, Om.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, ek.jsx)("div", {
+                                children: [(0, Om.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, ek.jsx)(MX, {
+                                }), (0, Om.jsx)(TA, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: Fk.durationMs,
-                                  format: UT,
-                                  onChange: kk => {
-                                    Ik({
-                                      durationMs: kk
+                                  value: Tm.durationMs,
+                                  format: rA,
+                                  onChange: mm => {
+                                    fm({
+                                      durationMs: mm
                                     })
                                   }
-                                }), (0, ek.jsx)(MX, {
+                                }), (0, Om.jsx)(TA, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: Xk.durationMs,
+                                  max: hm.durationMs,
                                   step: 1,
-                                  value: Xk.attackMs,
-                                  format: UT,
-                                  onChange: kk => {
-                                    Ik({
-                                      attackMs: kk
+                                  value: hm.attackMs,
+                                  format: rA,
+                                  onChange: mm => {
+                                    fm({
+                                      attackMs: mm
                                     })
                                   }
-                                }), (0, ek.jsx)(MX, {
+                                }), (0, Om.jsx)(TA, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: Xk.durationMs - Xk.attackMs,
+                                  max: hm.durationMs - hm.attackMs,
                                   step: 1,
-                                  value: Xk.releaseMs,
-                                  format: UT,
-                                  onChange: kk => {
-                                    Ik({
-                                      releaseMs: kk
+                                  value: hm.releaseMs,
+                                  format: rA,
+                                  onChange: mm => {
+                                    fm({
+                                      releaseMs: mm
                                     })
                                   }
-                                }), (0, ek.jsx)(MX, {
+                                }), (0, Om.jsx)(TA, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: Fk.glideSemitones,
-                                  format: CT,
-                                  onChange: kk => {
-                                    Ik({
-                                      glideSemitones: kk
+                                  value: Tm.glideSemitones,
+                                  format: sA,
+                                  onChange: mm => {
+                                    fm({
+                                      glideSemitones: mm
                                     })
                                   }
-                                }), (0, ek.jsxs)("label", {
+                                }), (0, Om.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, ek.jsx)("input", {
+                                  children: [(0, Om.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== Fk.lowpassHz,
-                                    onChange: kk => {
-                                      Ik({
-                                        lowpassHz: kk.target.checked ? uT : null
+                                    checked: null !== Tm.lowpassHz,
+                                    onChange: mm => {
+                                      fm({
+                                        lowpassHz: mm.target.checked ? HA : null
                                       })
                                     }
-                                  }), (0, ek.jsx)("span", {
+                                  }), (0, Om.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== Fk.lowpassHz && (0, ek.jsx)(MX, {
+                                }), null !== Tm.lowpassHz && (0, Om.jsx)(TA, {
                                   label: "Filter",
                                   min: 0,
-                                  max: bT(GT, pT),
+                                  max: yA(XA, PA),
                                   step: .1,
-                                  value: bT(GT, Fk.lowpassHz),
-                                  format: () => `${Fk.lowpassHz} Hz`,
-                                  onChange: kk => {
-                                    Ik({
-                                      lowpassHz: RT(GT, kk)
+                                  value: yA(XA, Tm.lowpassHz),
+                                  format: () => `${Tm.lowpassHz} Hz`,
+                                  onChange: mm => {
+                                    fm({
+                                      lowpassHz: CA(XA, mm)
                                     })
                                   }
                                 })]
-                              }), (0, ek.jsxs)("div", {
+                              }), (0, Om.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, ek.jsx)("div", {
+                                children: [(0, Om.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), NT.map((kk => {
+                                }), lA.map((mm => {
                                   let {
-                                    key: Xk,
-                                    label: Tk,
-                                    max: ik
-                                  } = kk;
-                                  return (0, ek.jsx)(MX, {
-                                    label: Tk,
+                                    key: hm,
+                                    label: Am,
+                                    max: am
+                                  } = mm;
+                                  return (0, Om.jsx)(TA, {
+                                    label: Am,
                                     min: 0,
-                                    max: ik,
+                                    max: am,
                                     step: .1,
-                                    value: Fk.intonation[Xk],
-                                    format: CT,
-                                    onChange: kk => {
-                                      Ik({
+                                    value: Tm.intonation[hm],
+                                    format: sA,
+                                    onChange: mm => {
+                                      fm({
                                         intonation: {
-                                          ...Fk.intonation,
-                                          [Xk]: kk
+                                          ...Tm.intonation,
+                                          [hm]: mm
                                         }
                                       })
                                     }
-                                  }, Xk)
+                                  }, hm)
                                 }))]
                               })]
                             })
                           }
-                          const WT = Object.keys(ST.g),
-                            fT = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const uA = Object.keys(kA.f),
+                            BA = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function BT(kk) {
-                            var Fk;
-                            const Ik = JSON.stringify((0, ST.k)(kk));
-                            return null !== (Fk = WT.find((kk => JSON.stringify((0, ST.k)(ST.g[kk])) === Ik))) && void 0 !== Fk ? Fk : null
+                          function LA(mm) {
+                            var Tm;
+                            const fm = JSON.stringify((0, kA.g)(mm));
+                            return null !== (Tm = uA.find((mm => JSON.stringify((0, kA.g)(kA.f[mm])) === fm))) && void 0 !== Tm ? Tm : null
                           }
 
-                          function dT(kk) {
-                            let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof kk || null === kk) return JSON.stringify(kk);
-                            return `{\n${Object.entries(kk).map((kk=>{let[Ik,Xk]=kk;return`${Fk}    ${Ik}: ${dT(Xk,`${Fk}    `)},`})).join("\n")}\n${Fk}}`
+                          function vA(mm) {
+                            let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof mm || null === mm) return JSON.stringify(mm);
+                            return `{\n${Object.entries(mm).map((mm=>{let[fm,hm]=mm;return`${Tm}    ${fm}: ${vA(hm,`${Tm}    `)},`})).join("\n")}\n${Tm}}`
                           }
 
-                          function YT(kk, Fk, Ik) {
-                            const Xk = BT(kk),
-                              Tk = [`    line: ${JSON.stringify(Fk)},`];
-                            return Ik && Tk.push(`    speakerName: ${JSON.stringify(Ik)},`), Tk.push("    voice,"), `const voice = ${Xk?JSON.stringify(Xk):dT((0,ST.k)(kk))}\n\napi.setClientOption(playerId, "dialogue", {\n${Tk.join("\n")}\n})`
+                          function tA(mm, Tm, fm) {
+                            const hm = LA(mm),
+                              Am = [`    line: ${JSON.stringify(Tm)},`];
+                            return fm && Am.push(`    speakerName: ${JSON.stringify(fm)},`), Am.push("    voice,"), `const voice = ${hm?JSON.stringify(hm):vA((0,kA.g)(mm))}\n\napi.setClientOption(playerId, "dialogue", {\n${Am.join("\n")}\n})`
                           }
-                          const AT = 400,
-                            gT = 90;
-                          let mT = null;
+                          const UA = 400,
+                            dA = 90;
+                          let gA = null;
 
-                          function hT(kk, Fk, Ik) {
-                            return mT ??= new AudioContext, mT.resume(), (0, ET.e)(mT, mT.destination, kk, Fk, Ik, (() => {}))
+                          function WA(mm, Tm, fm) {
+                            return gA ??= new AudioContext, gA.resume(), (0, eA.c)(gA, gA.destination, mm, Tm, fm, (() => {}))
                           }
 
-                          function rT() {
-                            const [kk, Fk] = (0, Xk.useState)(ST.g.regular), [Ik, Tk] = (0, Xk.useState)(fT[0]), [yk, lk] = (0, Xk.useState)("Innkeeper"), [ak, qk] = (0, Xk.useState)(0), Lk = tX((kk => kk.volume)), tk = (0, Xk.useRef)(null), Zk = (0, Xk.useRef)(0), jk = (0, Xk.useRef)(0), wk = () => {
-                              var kk;
-                              null === (kk = tk.current) || void 0 === kk || kk.call(tk), tk.current = null
+                          function FA() {
+                            const [mm, Tm] = (0, hm.useState)(kA.f.regular), [fm, Am] = (0, hm.useState)(BA[0]), [xm, wm] = (0, hm.useState)("Innkeeper"), [Dm, im] = (0, hm.useState)(0), Rm = oh((mm => mm.volume)), pm = (0, hm.useRef)(null), Em = (0, hm.useRef)(0), om = (0, hm.useRef)(0), Ym = () => {
+                              var mm;
+                              null === (mm = pm.current) || void 0 === mm || mm.call(pm), pm.current = null
                             };
-                            (0, Xk.useEffect)((() => () => {
-                              var kk;
-                              null === (kk = tk.current) || void 0 === kk || kk.call(tk), window.clearTimeout(Zk.current)
+                            (0, hm.useEffect)((() => () => {
+                              var mm;
+                              null === (mm = pm.current) || void 0 === mm || mm.call(pm), window.clearTimeout(Em.current)
                             }), []);
-                            const Jk = (0, Xk.useMemo)((() => ({
-                                line: Ik,
-                                speakerName: yk || void 0,
-                                voice: kk
-                              })), [Ik, yk, kk]),
-                              xk = (0, Xk.useRef)(Jk);
-                            xk.current = Jk;
-                            const Kk = BT(kk),
-                              Qk = kk => {
-                                window.clearTimeout(Zk.current), wk();
+                            const jm = (0, hm.useMemo)((() => ({
+                                line: fm,
+                                speakerName: xm || void 0,
+                                voice: mm
+                              })), [fm, xm, mm]),
+                              Vm = (0, hm.useRef)(jm);
+                            Vm.current = jm;
+                            const Km = LA(mm),
+                              Qm = mm => {
+                                window.clearTimeout(Em.current), Ym();
                                 const {
-                                  plan: Fk,
-                                  synth: Ik
-                                } = (0, vT.e)(kk);
-                                Ik && (tk.current = hT(Ik, Fk.blips, Lk)), qk((kk => kk + 1))
+                                  plan: Tm,
+                                  synth: fm
+                                } = (0, SA.f)(mm);
+                                fm && (pm.current = WA(fm, Tm.blips, Rm)), im((mm => mm + 1))
                               },
-                              sk = YT(kk, Ik, yk);
-                            return (0, ek.jsxs)("section", {
+                              nm = tA(mm, fm, xm);
+                            return (0, Om.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, ek.jsxs)("header", {
+                              children: [(0, Om.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, ek.jsxs)("div", {
-                                  children: [(0, ek.jsx)("div", {
+                                children: [(0, Om.jsxs)("div", {
+                                  children: [(0, Om.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, ek.jsx)("div", {
+                                  }), (0, Om.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, ek.jsx)(Pk, {
-                                  text: sk,
+                                }), (0, Om.jsx)(Im, {
+                                  text: nm,
                                   label: "Copy code"
                                 })]
-                              }), (0, ek.jsxs)("div", {
+                              }), (0, Om.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [WT.map((kk => (0, ek.jsx)("button", {
+                                children: [uA.map((mm => (0, Om.jsx)("button", {
                                   type: "button",
-                                  className: ik()("DocsVariantChip", {
-                                    Active: Kk === kk
+                                  className: am()("DocsVariantChip", {
+                                    Active: Km === mm
                                   }),
-                                  "aria-pressed": Kk === kk,
+                                  "aria-pressed": Km === mm,
                                   onClick: () => {
-                                    (kk => {
-                                      const Ik = ST.g[kk];
-                                      Fk(Ik), Qk({
-                                        ...Jk,
-                                        voice: Ik
+                                    (mm => {
+                                      const fm = kA.f[mm];
+                                      Tm(fm), Qm({
+                                        ...jm,
+                                        voice: fm
                                       })
-                                    })(kk)
+                                    })(mm)
                                   },
-                                  children: kk
-                                }, kk))), !Kk && (0, ek.jsx)("span", {
+                                  children: mm
+                                }, mm))), !Km && (0, Om.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, ek.jsxs)("div", {
+                              }), (0, Om.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, ek.jsxs)("div", {
+                                children: [(0, Om.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, ek.jsx)("div", {
+                                  children: [(0, Om.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, ek.jsx)(oT.e, {
-                                      display: Jk
-                                    }, ak)
-                                  }), (0, ek.jsxs)("form", {
+                                    children: (0, Om.jsx)(bA.d, {
+                                      display: jm
+                                    }, Dm)
+                                  }), (0, Om.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: kk => {
-                                      kk.preventDefault(), Qk(Jk)
+                                    onSubmit: mm => {
+                                      mm.preventDefault(), Qm(jm)
                                     },
-                                    children: [(0, ek.jsx)("input", {
-                                      value: Ik,
+                                    children: [(0, Om.jsx)("input", {
+                                      value: fm,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: kk => {
-                                        Tk(kk.target.value)
+                                      onChange: mm => {
+                                        Am(mm.target.value)
                                       }
-                                    }), (0, ek.jsxs)("button", {
+                                    }), (0, Om.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, ek.jsx)(Hk, {
+                                      children: [(0, Om.jsx)(qm, {
                                         name: "play"
-                                      }), (0, ek.jsx)("span", {
+                                      }), (0, Om.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, ek.jsx)("div", {
+                                  }), (0, Om.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: fT.map((kk => (0, ek.jsx)("button", {
+                                    children: BA.map((mm => (0, Om.jsx)("button", {
                                       type: "button",
-                                      className: ik()("DocsVariantChip", {
-                                        Active: Ik === kk
+                                      className: am()("DocsVariantChip", {
+                                        Active: fm === mm
                                       }),
                                       onClick: () => {
-                                        var Fk;
-                                        Tk(Fk = kk), Qk({
-                                          ...Jk,
-                                          line: Fk
+                                        var Tm;
+                                        Am(Tm = mm), Qm({
+                                          ...jm,
+                                          line: Tm
                                         })
                                       },
-                                      children: kk
-                                    }, kk)))
-                                  }), (0, ek.jsxs)("label", {
+                                      children: mm
+                                    }, mm)))
+                                  }), (0, Om.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, ek.jsx)("span", {
+                                    children: [(0, Om.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, ek.jsx)("input", {
-                                      value: yk,
+                                    }), (0, Om.jsx)("input", {
+                                      value: xm,
                                       placeholder: "No name",
-                                      onChange: kk => {
-                                        lk(kk.target.value)
+                                      onChange: mm => {
+                                        wm(mm.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, ek.jsx)(cT, {
-                                  synth: kk,
-                                  onChange: Ik => {
-                                    const Xk = {
-                                      ...kk,
-                                      ...Ik
+                                }), (0, Om.jsx)(MA, {
+                                  synth: mm,
+                                  onChange: fm => {
+                                    const hm = {
+                                      ...mm,
+                                      ...fm
                                     };
-                                    Fk(Xk);
-                                    const Tk = {
-                                        ...Jk,
-                                        voice: Xk
+                                    Tm(hm);
+                                    const Am = {
+                                        ...jm,
+                                        voice: hm
                                       },
-                                      ik = performance.now();
-                                    if (ik - jk.current >= gT) {
-                                      jk.current = ik, wk();
-                                      const kk = (0, vT.e)(Tk).plan.blips[0];
-                                      kk && (tk.current = hT((0, ST.k)(Xk), [{
-                                        ...kk,
+                                      am = performance.now();
+                                    if (am - om.current >= dA) {
+                                      om.current = am, Ym();
+                                      const mm = (0, SA.f)(Am).plan.blips[0];
+                                      mm && (pm.current = WA((0, kA.g)(hm), [{
+                                        ...mm,
                                         atMs: 0
-                                      }], Lk))
+                                      }], Rm))
                                     }
-                                    window.clearTimeout(Zk.current), Zk.current = window.setTimeout((() => {
-                                      Qk(xk.current)
-                                    }), AT)
+                                    window.clearTimeout(Em.current), Em.current = window.setTimeout((() => {
+                                      Qm(Vm.current)
+                                    }), UA)
                                   }
                                 })]
-                              }), (0, ek.jsx)(Vk, {
-                                code: sk,
+                              }), (0, Om.jsx)(Jm, {
+                                code: nm,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var DT = Ik(4866);
-                          const MT = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            ki = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            Fi = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${ki}`, "g"), DT.l],
+                          var ma = fm(4809);
+                          const Ta = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            fa = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            ha = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${fa}`, "g"), ma.n],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, DT.l]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, ma.n]
                             ];
 
-                          function Ii(kk) {
-                            return `${kk.pageId}#${kk.anchor}`
+                          function Aa(mm) {
+                            return `${mm.pageId}#${mm.anchor}`
                           }
-                          let Xi, Ti, ii;
+                          let aa, xa, wa;
 
-                          function yi(kk) {
-                            const Fk = (0, zk.l)(kk),
-                              Ik = new Set;
-                            for (const [, , Xk] of Fk.matchAll(zk.d)) {
-                              const kk = Xk.startsWith("#") ? Bk(Xk) : null,
-                                Fk = kk ? Ii({
-                                  pageId: kk.page.id,
-                                  anchor: kk.anchor
+                          function Da(mm) {
+                            const Tm = (0, cm.j)(mm),
+                              fm = new Set;
+                            for (const [, , hm] of Tm.matchAll(cm.b)) {
+                              const mm = hm.startsWith("#") ? Mm(hm) : null,
+                                Tm = mm ? Aa({
+                                  pageId: mm.page.id,
+                                  anchor: mm.anchor
                                 }) : null;
-                              null !== Fk && (Xi || (Xi = new Set(Uk.flatMap((kk => Ok(kk.layout) ? Wk(kk).sections.map((Fk => Ii({
-                                pageId: kk.id,
-                                anchor: Fk.heading.anchor
-                              }))) : [])))), Xi).has(Fk) && Ik.add(Fk)
+                              null !== Tm && (aa || (aa = new Set(Hm.flatMap((mm => bm(mm.layout) ? sm(mm).sections.map((Tm => Aa({
+                                pageId: mm.id,
+                                anchor: Tm.heading.anchor
+                              }))) : [])))), aa).has(Tm) && fm.add(Tm)
                             }
-                            for (const [, , Xk] of Fk.matchAll(MT)) {
-                              const kk = jF(Xk);
-                              kk && Ik.add(Ii(kk))
+                            for (const [, , hm] of Tm.matchAll(Ta)) {
+                              const mm = oT(hm);
+                              mm && fm.add(Aa(mm))
                             }
-                            return Ik
+                            return fm
                           }
 
-                          function li(kk, Fk) {
-                            const Ik = new Set,
-                              Xk = function(kk) {
-                                return kk.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(kk);
-                            for (const [, Tk] of Xk.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) Ik.add(Tk);
-                            for (const [Tk, ik] of Fi)
-                              for (const [, kk] of(0, DT.e)(Xk, Tk, ik)) Fk.has(kk) && Ik.add(kk);
-                            return Ik
+                          function ia(mm, Tm) {
+                            const fm = new Set,
+                              hm = function(mm) {
+                                return mm.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(mm);
+                            for (const [, Am] of hm.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) fm.add(Am);
+                            for (const [Am, am] of ha)
+                              for (const [, mm] of(0, ma.g)(hm, Am, am)) Tm.has(mm) && fm.add(mm);
+                            return fm
                           }
 
-                          function ai(kk, Fk, Ik, Xk) {
-                            const Tk = kk.get(Fk);
-                            Tk ? !Xk && Tk.some((kk => kk.pageId === Ik.pageId)) || Tk.push(Ik) : kk.set(Fk, [Ik])
+                          function Ra(mm, Tm, fm, hm) {
+                            const Am = mm.get(Tm);
+                            Am ? !hm && Am.some((mm => mm.pageId === fm.pageId)) || Am.push(fm) : mm.set(Tm, [fm])
                           }
-                          const qi = /^[A-Za-z_$][\w$]*$/;
+                          const pa = /^[A-Za-z_$][\w$]*$/;
 
-                          function Li(kk) {
-                            return qi.test(kk.name) ? kk.name : "options"
-                          }
-
-                          function ti(kk, Fk) {
-                            const Ik = kk.params.map(Li).join(", ");
-                            return Fk ? `${kk.name} = (${Ik}) => {\n\t\n}` : `api.${kk.name}(${Ik})`
+                          function Ea(mm) {
+                            return pa.test(mm.name) ? mm.name : "options"
                           }
 
-                          function Zi(kk) {
+                          function oa(mm, Tm) {
+                            const fm = mm.params.map(Ea).join(", ");
+                            return Tm ? `${mm.name} = (${fm}) => {\n\t\n}` : `api.${mm.name}(${fm})`
+                          }
+
+                          function Oa(mm) {
                             let {
-                              method: Fk,
-                              isCallback: Ik
-                            } = kk;
-                            return (0, ek.jsxs)("div", {
+                              method: Tm,
+                              isCallback: fm
+                            } = mm;
+                            return (0, Om.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, ek.jsxs)("span", {
+                              children: [(0, Om.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [Ik ? (0, ek.jsxs)(ek.Fragment, {
-                                  children: [(0, ek.jsx)("span", {
+                                children: [fm ? (0, Om.jsxs)(Om.Fragment, {
+                                  children: [(0, Om.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: Fk.name
-                                  }), (0, ek.jsx)("span", {
+                                    children: Tm.name
+                                  }), (0, Om.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, ek.jsxs)(ek.Fragment, {
-                                  children: [(0, ek.jsx)("span", {
+                                }) : (0, Om.jsxs)(Om.Fragment, {
+                                  children: [(0, Om.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, ek.jsx)("span", {
+                                  }), (0, Om.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: Fk.name
-                                  }), (0, ek.jsx)("span", {
+                                    children: Tm.name
+                                  }), (0, Om.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), Fk.params.map(((kk, Ik) => (0, ek.jsxs)(Xk.Fragment, {
-                                  children: [Ik > 0 && (0, ek.jsx)("span", {
+                                }), Tm.params.map(((mm, fm) => (0, Om.jsxs)(hm.Fragment, {
+                                  children: [fm > 0 && (0, Om.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, ek.jsx)("a", {
+                                  }), (0, Om.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${Fk.name}-${Li(kk)}`,
-                                    children: kk.name
+                                    href: `#${Tm.name}-${Ea(mm)}`,
+                                    children: mm.name
                                   })]
-                                }, kk.name))), (0, ek.jsx)("span", {
+                                }, mm.name))), (0, Om.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: Ik ? ") => " : ")"
-                                }), Ik && !Fk.returns && (0, ek.jsx)("span", {
+                                  children: fm ? ") => " : ")"
+                                }), fm && !Tm.returns && (0, Om.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), Fk.returns && Fk.returns.type && (0, ek.jsxs)("span", {
+                              }), Tm.returns && Tm.returns.type && (0, Om.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!Ik && (0, ek.jsx)("span", {
+                                children: [!fm && (0, Om.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, ek.jsx)(oF, {
-                                  type: Fk.returns.type
+                                }), (0, Om.jsx)(ZT, {
+                                  type: Tm.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function ji(kk) {
+                          function Ya(mm) {
                             let {
-                              title: Fk,
-                              references: Ik
-                            } = kk;
-                            const Tk = (0, Xk.useContext)(eF);
-                            return (0, ek.jsxs)("div", {
+                              title: Tm,
+                              references: fm
+                            } = mm;
+                            const Am = (0, hm.useContext)(OT);
+                            return (0, Om.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, ek.jsx)("span", {
+                              children: [(0, Om.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: Fk
-                              }), Ik.map((kk => (0, ek.jsx)(yk.e, {
-                                to: Yk(Tk, Nk(kk.pageId), kk.anchor),
-                                children: kk.label
-                              }, `${kk.pageId}#${kk.anchor}`)))]
+                                children: Tm
+                              }), fm.map((mm => (0, Om.jsx)(xm.d, {
+                                to: Bm(Am, Cm(mm.pageId), mm.anchor),
+                                children: mm.label
+                              }, `${mm.pageId}#${mm.anchor}`)))]
                             })
                           }
 
-                          function ei(kk) {
-                            var Fk, Ik;
+                          function qa(mm) {
+                            var Tm, fm;
                             let {
-                              pageId: Xk,
-                              anchor: Tk
-                            } = kk;
-                            const ik = Ii({
-                                pageId: Xk,
-                                anchor: Tk
+                              pageId: hm,
+                              anchor: Am
+                            } = mm;
+                            const am = Aa({
+                                pageId: hm,
+                                anchor: Am
                               }),
-                              yk = null !== (Fk = function() {
-                                if (!ii) {
-                                  ii = new Map;
-                                  const Xk = new Set(Uk.filter((kk => "callbacks" === kk.layout)).flatMap((kk => Wk(kk).sections.map((kk => kk.heading.text)))));
-                                  for (const Tk of Uk)
-                                    if ("article" === Tk.layout || "snippets" === Tk.layout)
-                                      for (const ik of (0, zk.u)(Wk(Tk)))
+                              xm = null !== (Tm = function() {
+                                if (!wa) {
+                                  wa = new Map;
+                                  const hm = new Set(Hm.filter((mm => "callbacks" === mm.layout)).flatMap((mm => sm(mm).sections.map((mm => mm.heading.text)))));
+                                  for (const Am of Hm)
+                                    if ("article" === Am.layout || "snippets" === Am.layout)
+                                      for (const am of (0, cm.r)(sm(Am)))
                                         for (const {
-                                            code: yk
+                                            code: xm
                                           }
-                                          of(0, zk.n)(ik.blocks))
-                                          for (const lk of li(yk, Xk)) {
-                                            const Xk = ZF().get(lk);
-                                            if (Xk) {
-                                              var kk, Fk, Ik;
-                                              const yk = {
-                                                pageId: Tk.id,
-                                                anchor: null !== (kk = null === (Fk = ik.heading) || void 0 === Fk ? void 0 : Fk.anchor) && void 0 !== kk ? kk : "",
-                                                label: null !== (Ik = Tk.navTitle) && void 0 !== Ik ? Ik : Tk.title
+                                          of(0, cm.k)(am.blocks))
+                                          for (const wm of ia(xm, hm)) {
+                                            const hm = ET().get(wm);
+                                            if (hm) {
+                                              var mm, Tm, fm;
+                                              const xm = {
+                                                pageId: Am.id,
+                                                anchor: null !== (mm = null === (Tm = am.heading) || void 0 === Tm ? void 0 : Tm.anchor) && void 0 !== mm ? mm : "",
+                                                label: null !== (fm = Am.navTitle) && void 0 !== fm ? fm : Am.title
                                               };
-                                              ai(ii, Ii(Xk), yk, !1)
+                                              Ra(wa, Aa(hm), xm, !1)
                                             }
                                           }
                                 }
-                                return ii
-                              }().get(ik)) && void 0 !== Fk ? Fk : [],
-                              lk = null !== (Ik = function() {
-                                if (!Ti) {
-                                  Ti = new Map;
-                                  const kk = Nk("changelog");
-                                  for (const Fk of Wk(kk).sections) {
-                                    const Ik = new Set(Fk.blocks.flatMap((kk => [...yi(kk)])));
-                                    for (const Xk of Ik) {
-                                      const Ik = {
-                                        pageId: kk.id,
-                                        anchor: Fk.heading.anchor,
-                                        label: Fk.heading.text
+                                return wa
+                              }().get(am)) && void 0 !== Tm ? Tm : [],
+                              wm = null !== (fm = function() {
+                                if (!xa) {
+                                  xa = new Map;
+                                  const mm = Cm("changelog");
+                                  for (const Tm of sm(mm).sections) {
+                                    const fm = new Set(Tm.blocks.flatMap((mm => [...Da(mm)])));
+                                    for (const hm of fm) {
+                                      const fm = {
+                                        pageId: mm.id,
+                                        anchor: Tm.heading.anchor,
+                                        label: Tm.heading.text
                                       };
-                                      ai(Ti, Xk, Ik, !0)
+                                      Ra(xa, hm, fm, !0)
                                     }
                                   }
                                 }
-                                return Ti
-                              }().get(ik)) && void 0 !== Ik ? Ik : [];
-                            return 0 === yk.length && 0 === lk.length ? null : (0, ek.jsxs)("footer", {
+                                return xa
+                              }().get(am)) && void 0 !== fm ? fm : [];
+                            return 0 === xm.length && 0 === wm.length ? null : (0, Om.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [yk.length > 0 && (0, ek.jsx)(ji, {
+                              children: [xm.length > 0 && (0, Om.jsx)(Ya, {
                                 title: "Used in",
-                                references: yk
-                              }), lk.length > 0 && (0, ek.jsx)(ji, {
+                                references: xm
+                              }), wm.length > 0 && (0, Om.jsx)(Ya, {
                                 title: "Changelog",
-                                references: lk
+                                references: wm
                               })]
                             })
                           }
 
-                          function wi(kk) {
+                          function ja(mm) {
                             let {
-                              method: Fk,
-                              pageId: Ik,
-                              anchor: Xk,
-                              isCallback: Tk
-                            } = kk;
-                            const ik = Tk ? void 0 : aF().get(Fk.name),
-                              yk = Fk.description.length > 0 || null === ik || void 0 === ik || !ik.description ? Fk.description : (0, zk.A)(ik.description);
-                            return (0, ek.jsxs)("article", {
+                              method: Tm,
+                              pageId: fm,
+                              anchor: hm,
+                              isCallback: Am
+                            } = mm;
+                            const am = Am ? void 0 : DT().get(Tm.name),
+                              xm = Tm.description.length > 0 || null === am || void 0 === am || !am.description ? Tm.description : (0, cm.x)(am.description);
+                            return (0, Om.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, ek.jsxs)("header", {
+                              children: [(0, Om.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, ek.jsx)(LI, {
+                                children: [(0, Om.jsx)(pf, {
                                   level: 2,
-                                  text: Fk.name,
-                                  anchor: Xk,
+                                  text: Tm.name,
+                                  anchor: hm,
                                   className: "DocsCardTitle"
-                                }), (0, ek.jsx)(Pk, {
-                                  text: ti(Fk, Tk),
-                                  label: Tk ? "Copy handler" : "Copy call",
+                                }), (0, Om.jsx)(Im, {
+                                  text: oa(Tm, Am),
+                                  label: Am ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, ek.jsx)(Zi, {
-                                method: Fk,
-                                isCallback: Tk
-                              }), ik && null !== ik.deprecation && (0, ek.jsxs)("aside", {
+                              }), (0, Om.jsx)(Oa, {
+                                method: Tm,
+                                isCallback: Am
+                              }), am && null !== am.deprecation && (0, Om.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, ek.jsx)("strong", {
+                                children: [(0, Om.jsx)("strong", {
                                   children: "Deprecated"
-                                }), ik.deprecation && (0, ek.jsxs)(ek.Fragment, {
-                                  children: [": ", (0, ek.jsx)(VF, {
-                                    text: (lk = ik.deprecation, (0, DT.s)(lk, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, DT.j)("`\\w"), (kk => {
-                                      let [Fk] = kk;
-                                      return ZF().has(Fk) ? `\`${Fk}\`` : Fk
+                                }), am.deprecation && (0, Om.jsxs)(Om.Fragment, {
+                                  children: [": ", (0, Om.jsx)(JT, {
+                                    text: (wm = am.deprecation, (0, ma.s)(wm, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, ma.l)("`\\w"), (mm => {
+                                      let [Tm] = mm;
+                                      return ET().has(Tm) ? `\`${Tm}\`` : Tm
                                     })))
                                   })]
                                 })]
-                              }), yk.length > 0 && (0, ek.jsx)("div", {
+                              }), xm.length > 0 && (0, Om.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, ek.jsx)(eI, {
-                                  blocks: yk
+                                children: (0, Om.jsx)(Yf, {
+                                  blocks: xm
                                 })
-                              }), Fk.params.length > 0 && (0, ek.jsxs)("section", {
+                              }), Tm.params.length > 0 && (0, Om.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, ek.jsx)("h3", {
+                                children: [(0, Om.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, ek.jsx)("dl", {
+                                }), (0, Om.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: Fk.params.map((kk => (0, ek.jsxs)("div", {
-                                    id: `${Fk.name}-${Li(kk)}`,
+                                  children: Tm.params.map((mm => (0, Om.jsxs)("div", {
+                                    id: `${Tm.name}-${Ea(mm)}`,
                                     className: "DocsParam",
-                                    children: [(0, ek.jsxs)("dt", {
-                                      children: [(0, ek.jsx)("code", {
+                                    children: [(0, Om.jsxs)("dt", {
+                                      children: [(0, Om.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: kk.name
-                                      }), (0, ek.jsx)(oF, {
-                                        type: kk.type
+                                        children: mm.name
+                                      }), (0, Om.jsx)(ZT, {
+                                        type: mm.type
                                       })]
-                                    }), kk.description && (0, ek.jsx)("dd", {
-                                      children: (0, ek.jsx)(VF, {
-                                        text: kk.description
+                                    }), mm.description && (0, Om.jsx)("dd", {
+                                      children: (0, Om.jsx)(JT, {
+                                        text: mm.description
                                       })
                                     })]
-                                  }, kk.name)))
+                                  }, mm.name)))
                                 })]
-                              }), Fk.returns && (Fk.returns.type || Fk.returns.description.length > 0) && (0, ek.jsxs)("section", {
+                              }), Tm.returns && (Tm.returns.type || Tm.returns.description.length > 0) && (0, Om.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, ek.jsx)("h3", {
+                                children: [(0, Om.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, ek.jsxs)("div", {
+                                }), (0, Om.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [Fk.returns.type && (0, ek.jsx)(oF, {
-                                    type: Fk.returns.type
-                                  }), Fk.returns.description.length > 0 && (0, ek.jsx)("div", {
+                                  children: [Tm.returns.type && (0, Om.jsx)(ZT, {
+                                    type: Tm.returns.type
+                                  }), Tm.returns.description.length > 0 && (0, Om.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, ek.jsx)(eI, {
-                                      blocks: Fk.returns.description
+                                    children: (0, Om.jsx)(Yf, {
+                                      blocks: Tm.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, ek.jsx)(ei, {
-                                pageId: Ik,
-                                anchor: Xk
+                              }), (0, Om.jsx)(qa, {
+                                pageId: fm,
+                                anchor: hm
                               })]
                             });
-                            var lk
+                            var wm
                           }
 
-                          function Hi(kk) {
-                            var Fk;
-                            return null !== kk.defaultValue && "undefined" !== kk.defaultValue ? kk.defaultValue : null !== (Fk = kk.example) && void 0 !== Fk ? Fk : "value"
+                          function Va(mm) {
+                            var Tm;
+                            return null !== mm.defaultValue && "undefined" !== mm.defaultValue ? mm.defaultValue : null !== (Tm = mm.example) && void 0 !== Tm ? Tm : "value"
                           }
 
-                          function Ji(kk) {
+                          function Ia(mm) {
                             let {
-                              setting: Fk,
-                              pageId: Ik,
-                              anchor: Xk,
-                              setterSnippet: Tk
-                            } = kk;
-                            const ik = null === Fk.defaultValue ? null : xF(Fk.defaultValue);
-                            return (0, ek.jsxs)("article", {
+                              setting: Tm,
+                              pageId: fm,
+                              anchor: hm,
+                              setterSnippet: Am
+                            } = mm;
+                            const am = null === Tm.defaultValue ? null : VT(Tm.defaultValue);
+                            return (0, Om.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, ek.jsxs)("header", {
+                              children: [(0, Om.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, ek.jsx)(LI, {
+                                children: [(0, Om.jsx)(pf, {
                                   level: 2,
-                                  text: Fk.name,
-                                  anchor: Xk,
+                                  text: Tm.name,
+                                  anchor: hm,
                                   className: "DocsCardTitle"
-                                }), (0, ek.jsx)(Pk, {
-                                  text: Tk(Fk.name, Hi(Fk)),
+                                }), (0, Om.jsx)(Im, {
+                                  text: Am(Tm.name, Va(Tm)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, ek.jsxs)("dl", {
+                              }), (0, Om.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, ek.jsxs)("div", {
-                                  children: [(0, ek.jsx)("dt", {
+                                children: [(0, Om.jsxs)("div", {
+                                  children: [(0, Om.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, ek.jsx)("dd", {
-                                    children: (0, ek.jsx)(oF, {
-                                      type: Fk.type
+                                  }), (0, Om.jsx)("dd", {
+                                    children: (0, Om.jsx)(ZT, {
+                                      type: Tm.type
                                     })
                                   })]
-                                }), null !== Fk.defaultValue && (0, ek.jsxs)("div", {
-                                  children: [(0, ek.jsx)("dt", {
+                                }), null !== Tm.defaultValue && (0, Om.jsxs)("div", {
+                                  children: [(0, Om.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, ek.jsx)("dd", {
-                                    children: (0, ek.jsxs)("code", {
+                                  }), (0, Om.jsx)("dd", {
+                                    children: (0, Om.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [ik && (0, ek.jsx)(PF, {
-                                        colour: ik
-                                      }), Fk.defaultValue]
+                                      children: [am && (0, Om.jsx)(IT, {
+                                        colour: am
+                                      }), Tm.defaultValue]
                                     })
                                   })]
-                                }), null !== Fk.example && (0, ek.jsxs)("div", {
-                                  children: [(0, ek.jsx)("dt", {
+                                }), null !== Tm.example && (0, Om.jsxs)("div", {
+                                  children: [(0, Om.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, ek.jsx)("dd", {
-                                    children: (0, ek.jsx)("code", {
+                                  }), (0, Om.jsx)("dd", {
+                                    children: (0, Om.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: Fk.example
+                                      children: Tm.example
                                     })
                                   })]
                                 })]
-                              }), Fk.description.length > 0 && (0, ek.jsx)("div", {
+                              }), Tm.description.length > 0 && (0, Om.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, ek.jsx)(eI, {
-                                  blocks: Fk.description
+                                children: (0, Om.jsx)(Yf, {
+                                  blocks: Tm.description
                                 })
-                              }), (0, ek.jsx)(ei, {
-                                pageId: Ik,
-                                anchor: Xk
+                              }), (0, Om.jsx)(qa, {
+                                pageId: fm,
+                                anchor: hm
                               })]
                             })
                           }
 
-                          function xi(kk) {
+                          function Ka(mm) {
                             let {
-                              section: Fk
-                            } = kk;
-                            return (0, ek.jsxs)("article", {
+                              section: Tm
+                            } = mm;
+                            return (0, Om.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, ek.jsx)(LI, {
+                              children: [(0, Om.jsx)(pf, {
                                 level: 2,
-                                text: Fk.heading.text,
-                                anchor: Fk.heading.anchor,
+                                text: Tm.heading.text,
+                                anchor: Tm.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, ek.jsx)("div", {
+                              }), (0, Om.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, ek.jsx)(eI, {
-                                  blocks: Fk.blocks
+                                children: (0, Om.jsx)(Yf, {
+                                  blocks: Tm.blocks
                                 })
                               })]
                             })
                           }
 
-                          function Pi(kk) {
+                          function Qa(mm) {
                             let {
-                              section: Fk
-                            } = kk;
-                            return (0, ek.jsxs)("section", {
+                              section: Tm
+                            } = mm;
+                            return (0, Om.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, ek.jsx)(LI, {
-                                level: Fk.heading.level,
-                                text: Fk.heading.text,
-                                anchor: Fk.heading.anchor
-                              }), (0, ek.jsx)(eI, {
-                                blocks: Fk.blocks
+                              children: [(0, Om.jsx)(pf, {
+                                level: Tm.heading.level,
+                                text: Tm.heading.text,
+                                anchor: Tm.heading.anchor
+                              }), (0, Om.jsx)(Yf, {
+                                blocks: Tm.blocks
                               })]
                             })
                           }
-                          const Ki = {
+                          const na = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4862,337 +4862,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function Qi(kk) {
+                          function Ja(mm) {
                             let {
-                              page: Fk,
-                              section: Ik
-                            } = kk;
-                            if ("methods" === Fk.layout || "callbacks" === Fk.layout) return (0, ek.jsx)(wi, {
-                              method: zI(Ik),
-                              pageId: Fk.id,
-                              anchor: Ik.heading.anchor,
-                              isCallback: "callbacks" === Fk.layout
+                              page: Tm,
+                              section: fm
+                            } = mm;
+                            if ("methods" === Tm.layout || "callbacks" === Tm.layout) return (0, Om.jsx)(ja, {
+                              method: Zf(fm),
+                              pageId: Tm.id,
+                              anchor: fm.heading.anchor,
+                              isCallback: "callbacks" === Tm.layout
                             });
-                            if ("settings" === Fk.layout) {
-                              const kk = function(kk) {
-                                const Fk = {
-                                  name: kk.heading.text,
+                            if ("settings" === Tm.layout) {
+                              const mm = function(mm) {
+                                const Tm = {
+                                  name: mm.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const Xk of kk.blocks) {
-                                  var Ik;
-                                  if (VI(Xk)) continue;
-                                  const kk = "paragraph" === Xk.kind ? Xk.text.match(SI) : null;
-                                  if (!kk) {
-                                    Fk.description.push(Xk);
+                                for (const hm of mm.blocks) {
+                                  var fm;
+                                  if (zf(hm)) continue;
+                                  const mm = "paragraph" === hm.kind ? hm.text.match(kf) : null;
+                                  if (!mm) {
+                                    Tm.description.push(hm);
                                     continue
                                   }
-                                  const Tk = null !== (Ik = sI(kk[2])) && void 0 !== Ik ? Ik : kk[2];
-                                  "Type" === kk[1] ? Fk.type = Tk : "Default" === kk[1] ? Fk.defaultValue = Tk : "" !== Tk && (Fk.example = Tk)
+                                  const Am = null !== (fm = Jf(mm[2])) && void 0 !== fm ? fm : mm[2];
+                                  "Type" === mm[1] ? Tm.type = Am : "Default" === mm[1] ? Tm.defaultValue = Am : "" !== Am && (Tm.example = Am)
                                 }
-                                return Fk.type ? Fk : null
-                              }(Ik);
-                              if (kk) return (0, ek.jsx)(Ji, {
-                                setting: kk,
-                                pageId: Fk.id,
-                                anchor: Ik.heading.anchor,
-                                setterSnippet: Fk.setterSnippet
+                                return Tm.type ? Tm : null
+                              }(fm);
+                              if (mm) return (0, Om.jsx)(Ia, {
+                                setting: mm,
+                                pageId: Tm.id,
+                                anchor: fm.heading.anchor,
+                                setterSnippet: Tm.setterSnippet
                               })
                             }
-                            return "snippets" === Fk.layout ? (0, ek.jsx)(xi, {
-                              section: Ik
-                            }) : "changelog" === Fk.layout ? (0, ek.jsxs)("section", {
+                            return "snippets" === Tm.layout ? (0, Om.jsx)(Ka, {
+                              section: fm
+                            }) : "changelog" === Tm.layout ? (0, Om.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, ek.jsx)("div", {
+                              children: [(0, Om.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, ek.jsx)(LI, {
+                                children: (0, Om.jsx)(pf, {
                                   level: 2,
-                                  text: Ik.heading.text,
-                                  anchor: Ik.heading.anchor
+                                  text: fm.heading.text,
+                                  anchor: fm.heading.anchor
                                 })
-                              }), (0, ek.jsx)("div", {
+                              }), (0, Om.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, ek.jsx)(eI, {
-                                  blocks: oI(Ik.blocks)
+                                children: (0, Om.jsx)(Yf, {
+                                  blocks: bf(fm.blocks)
                                 })
                               })]
-                            }) : Fk.gallery ? (0, ek.jsxs)("section", {
+                            }) : Tm.gallery ? (0, Om.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, ek.jsx)(LI, {
-                                level: Ik.heading.level,
-                                text: Ik.heading.text,
-                                anchor: Ik.heading.anchor
-                              }), (0, ek.jsx)(vX, {
-                                kind: Fk.gallery,
-                                content: Wk(Fk),
-                                blocks: Ik.blocks
+                              children: [(0, Om.jsx)(pf, {
+                                level: fm.heading.level,
+                                text: fm.heading.text,
+                                anchor: fm.heading.anchor
+                              }), (0, Om.jsx)(Sh, {
+                                kind: Tm.gallery,
+                                content: sm(Tm),
+                                blocks: fm.blocks
                               })]
-                            }) : (0, ek.jsx)(Pi, {
-                              section: Ik
+                            }) : (0, Om.jsx)(Qa, {
+                              section: fm
                             })
                           }
 
-                          function si(kk) {
+                          function ca(mm) {
                             let {
-                              page: Fk,
-                              onTocChange: Ik
-                            } = kk;
-                            const Tk = Wk(Fk),
-                              [ik, yk] = (0, Xk.useState)(""),
-                              lk = "article" !== Fk.layout,
-                              ak = JI(Fk.gallery) ? Fk.gallery : null,
-                              qk = null !== ak,
-                              Lk = ik.trim().toLowerCase(),
-                              tk = (0, Xk.useRef)(null),
-                              Zk = (0, Xk.useCallback)((kk => {
-                                var Fk;
-                                null === (Fk = tk.current) || void 0 === Fk || Fk.preview(kk)
+                              page: Tm,
+                              onTocChange: fm
+                            } = mm;
+                            const Am = sm(Tm),
+                              [am, xm] = (0, hm.useState)(""),
+                              wm = "article" !== Tm.layout,
+                              Dm = Vf(Tm.gallery) ? Tm.gallery : null,
+                              im = null !== Dm,
+                              Rm = am.trim().toLowerCase(),
+                              pm = (0, hm.useRef)(null),
+                              Em = (0, hm.useCallback)((mm => {
+                                var Tm;
+                                null === (Tm = pm.current) || void 0 === Tm || Tm.preview(mm)
                               }), []),
-                              jk = (0, Xk.useMemo)((() => {
-                                if (!Fk.hasParticlePlayground) return [];
-                                const kk = nI(Tk.intro).find((kk => "names" === kk.kind && !kk.names.some((kk => null !== cI(kk.name)))));
-                                return "names" === (null === kk || void 0 === kk ? void 0 : kk.kind) ? kk.names.map((kk => kk.name)) : []
-                              }), [Fk, Tk]),
-                              wk = (0, Xk.useMemo)((() => {
-                                if (!Fk.hasTextPlayground) return [];
-                                const kk = Tk.sections.flatMap((kk => kk.blocks.flatMap((kk => {
-                                  var Fk;
-                                  return (null !== (Fk = OI(kk)) && void 0 !== Fk ? Fk : []).flatMap((kk => cF(kk.name) ? [kk.name] : []))
+                              om = (0, hm.useMemo)((() => {
+                                if (!Tm.hasParticlePlayground) return [];
+                                const mm = Gf(Am.intro).find((mm => "names" === mm.kind && !mm.names.some((mm => null !== Mf(mm.name)))));
+                                return "names" === (null === mm || void 0 === mm ? void 0 : mm.kind) ? mm.names.map((mm => mm.name)) : []
+                              }), [Tm, Am]),
+                              Ym = (0, hm.useMemo)((() => {
+                                if (!Tm.hasTextPlayground) return [];
+                                const mm = Am.sections.flatMap((mm => mm.blocks.flatMap((mm => {
+                                  var Tm;
+                                  return (null !== (Tm = Nf(mm)) && void 0 !== Tm ? Tm : []).flatMap((mm => sT(mm.name) ? [mm.name] : []))
                                 }))));
-                                return [...new Set(kk)]
-                              }), [Fk, Tk]),
-                              Hk = (0, Xk.useMemo)((() => Lk ? Tk.sections.filter((kk => function(kk, Fk) {
-                                return !!kk.heading.text.toLowerCase().includes(Fk) || kk.blocks.some((kk => (0, zk.l)(kk).toLowerCase().includes(Fk)))
-                              }(kk, Lk))) : Tk.sections), [Tk, Lk]),
-                              Jk = (0, Xk.useMemo)((() => function(kk, Fk) {
-                                return "article" !== kk.layout ? Fk.map((kk => ({
-                                  anchor: kk.heading.anchor,
-                                  text: kk.heading.text,
+                                return [...new Set(mm)]
+                              }), [Tm, Am]),
+                              qm = (0, hm.useMemo)((() => Rm ? Am.sections.filter((mm => function(mm, Tm) {
+                                return !!mm.heading.text.toLowerCase().includes(Tm) || mm.blocks.some((mm => (0, cm.j)(mm).toLowerCase().includes(Tm)))
+                              }(mm, Rm))) : Am.sections), [Am, Rm]),
+                              jm = (0, hm.useMemo)((() => function(mm, Tm) {
+                                return "article" !== mm.layout ? Tm.map((mm => ({
+                                  anchor: mm.heading.anchor,
+                                  text: mm.heading.text,
                                   level: 2
-                                }))) : Fk.flatMap((kk => {
-                                  const Fk = kk.blocks.flatMap((kk => "heading" === kk.kind && 3 === kk.level ? [{
-                                    anchor: kk.anchor,
-                                    text: kk.text,
+                                }))) : Tm.flatMap((mm => {
+                                  const Tm = mm.blocks.flatMap((mm => "heading" === mm.kind && 3 === mm.level ? [{
+                                    anchor: mm.anchor,
+                                    text: mm.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: kk.heading.anchor,
-                                    text: kk.heading.text,
+                                    anchor: mm.heading.anchor,
+                                    text: mm.heading.text,
                                     level: 2
-                                  }, ...Fk]
+                                  }, ...Tm]
                                 }))
-                              }(Fk, Hk)), [Fk, Hk]);
-                            return (0, Xk.useEffect)((() => {
-                              Ik(Jk)
-                            }), [Jk, Ik]), (0, ek.jsxs)("article", {
+                              }(Tm, qm)), [Tm, qm]);
+                            return (0, hm.useEffect)((() => {
+                              fm(jm)
+                            }), [jm, fm]), (0, Om.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, ek.jsxs)("header", {
+                              children: [(0, Om.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, ek.jsx)("h1", {
+                                children: [(0, Om.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: Tk.title || Fk.title
-                                }), (0, ek.jsx)("p", {
+                                  children: Am.title || Tm.title
+                                }), (0, Om.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: Fk.summary
-                                }), (0, ek.jsx)(mX, {
-                                  page: Fk
-                                }), lk && (0, ek.jsx)("div", {
+                                  children: Tm.summary
+                                }), (0, Om.jsx)(gh, {
+                                  page: Tm
+                                }), wm && (0, Om.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, ek.jsxs)("span", {
-                                    children: [(0, ek.jsx)("strong", {
-                                      children: Tk.sections.length
-                                    }), " ", Ki[Fk.layout]]
+                                  children: (0, Om.jsxs)("span", {
+                                    children: [(0, Om.jsx)("strong", {
+                                      children: Am.sections.length
+                                    }), " ", na[Tm.layout]]
                                   })
                                 })]
-                              }), "" === Fk.slug && (0, ek.jsx)(OX, {}), ak && (0, ek.jsx)(uX, {
-                                kind: ak
-                              }, ak), Fk.hasParticlePlayground && (0, ek.jsx)(aT, {
-                                ref: tk,
-                                textures: jk
-                              }), !qk && Tk.intro.length > 0 && (0, ek.jsx)("div", {
+                              }), "" === Tm.slug && (0, Om.jsx)(Nh, {}), Dm && (0, Om.jsx)(Hh, {
+                                kind: Dm
+                              }, Dm), Tm.hasParticlePlayground && (0, Om.jsx)(RA, {
+                                ref: pm,
+                                textures: om
+                              }), !im && Am.intro.length > 0 && (0, Om.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: Fk.gallery ? (0, ek.jsx)(xX.Provider, {
-                                  value: Fk.hasParticlePlayground ? Zk : null,
-                                  children: (0, ek.jsx)(vX, {
-                                    kind: Fk.gallery,
-                                    content: Tk,
-                                    blocks: Tk.intro
+                                children: Tm.gallery ? (0, Om.jsx)(Kh.Provider, {
+                                  value: Tm.hasParticlePlayground ? Em : null,
+                                  children: (0, Om.jsx)(Sh, {
+                                    kind: Tm.gallery,
+                                    content: Am,
+                                    blocks: Am.intro
                                   })
-                                }) : (0, ek.jsx)(eI, {
-                                  blocks: oI(Tk.intro)
+                                }) : (0, Om.jsx)(Yf, {
+                                  blocks: bf(Am.intro)
                                 })
-                              }), Fk.hasTextPlayground && (0, ek.jsx)(zT, {
-                                fontAwesomeIcons: wk
-                              }), Fk.hasVoicePlayground && (0, ek.jsx)(rT, {}), Fk.childPageIds && (0, ek.jsx)(OX, {
-                                cards: Fk.childPageIds.map((kk => ({
-                                  pageId: kk
+                              }), Tm.hasTextPlayground && (0, Om.jsx)(ZA, {
+                                fontAwesomeIcons: Ym
+                              }), Tm.hasVoicePlayground && (0, Om.jsx)(FA, {}), Tm.childPageIds && (0, Om.jsx)(Nh, {
+                                cards: Tm.childPageIds.map((mm => ({
+                                  pageId: mm
                                 }))),
-                                label: Fk.title
-                              }), lk && (0, ek.jsx)(KI, {
+                                label: Tm.title
+                              }), wm && (0, Om.jsx)(Qf, {
                                 className: "DocsFilterBar",
-                                value: ik,
-                                placeholder: `Filter ${Tk.sections.length} ${Ki[Fk.layout]}\u2026`,
-                                label: `Filter ${Ki[Fk.layout]}`,
-                                onChange: yk,
-                                count: Lk ? {
-                                  visible: Hk.length,
-                                  total: Tk.sections.length
+                                value: am,
+                                placeholder: `Filter ${Am.sections.length} ${na[Tm.layout]}\u2026`,
+                                label: `Filter ${na[Tm.layout]}`,
+                                onChange: xm,
+                                count: Rm ? {
+                                  visible: qm.length,
+                                  total: Am.sections.length
                                 } : null
-                              }), !qk && (0, ek.jsxs)("div", {
-                                className: `DocsSections Layout-${Fk.layout}`,
-                                children: [Hk.map((kk => (0, ek.jsx)(Qi, {
-                                  page: Fk,
-                                  section: kk
-                                }, kk.heading.anchor))), 0 === Hk.length && (0, ek.jsxs)("p", {
+                              }), !im && (0, Om.jsxs)("div", {
+                                className: `DocsSections Layout-${Tm.layout}`,
+                                children: [qm.map((mm => (0, Om.jsx)(Ja, {
+                                  page: Tm,
+                                  section: mm
+                                }, mm.heading.anchor))), 0 === qm.length && (0, Om.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", Ki[Fk.layout], " match \u201c", ik, "\u201d."]
+                                  children: ["No ", na[Tm.layout], " match \u201c", am, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const Vi = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const za = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function zi(kk) {
+                          function Za(mm) {
                             let {
-                              entry: Fk,
-                              isActive: Ik,
-                              onNavigate: Xk,
-                              label: Tk,
-                              children: yk
-                            } = kk;
-                            return (0, ek.jsx)("a", {
-                              href: `#${Fk.anchor}`,
-                              "aria-label": Tk,
-                              className: ik()(`Level${Fk.level}`, {
-                                Active: Ik
+                              entry: Tm,
+                              isActive: fm,
+                              onNavigate: hm,
+                              label: Am,
+                              children: xm
+                            } = mm;
+                            return (0, Om.jsx)("a", {
+                              href: `#${Tm.anchor}`,
+                              "aria-label": Am,
+                              className: am()(`Level${Tm.level}`, {
+                                Active: fm
                               }),
-                              "aria-current": Ik ? "location" : void 0,
-                              onClick: kk => {
-                                kk.preventDefault(), Xk(Fk.anchor)
+                              "aria-current": fm ? "location" : void 0,
+                              onClick: mm => {
+                                mm.preventDefault(), hm(Tm.anchor)
                               },
-                              children: yk
+                              children: xm
                             })
                           }
 
-                          function Si(kk) {
+                          function ka(mm) {
                             let {
-                              toc: Fk,
-                              activeAnchor: Ik,
-                              onNavigate: Tk
-                            } = kk;
-                            const yk = Math.max(0, Fk.findIndex((kk => kk.anchor === Ik))),
-                              lk = (0, Xk.useRef)(null),
-                              ak = (0, Xk.useRef)(!1);
-                            (0, Xk.useEffect)((() => {
-                              var kk, Ik;
-                              const Xk = null === (kk = lk.current) || void 0 === kk ? void 0 : kk.closest(".DocsToc"),
-                                Tk = null === (Ik = lk.current) || void 0 === Ik ? void 0 : Ik.querySelector(".DocsTimelineNotch.Active");
-                              if (!Xk || !Tk) return;
-                              let ik = 0;
-                              if (yk === Fk.length - 1) ik = Xk.scrollHeight;
-                              else if (yk > 0) {
-                                const kk = Xk.getBoundingClientRect(),
-                                  Fk = Tk.getBoundingClientRect();
-                                ik = Xk.scrollTop + Fk.top + Fk.height / 2 - (kk.top + Xk.clientHeight / 2)
+                              toc: Tm,
+                              activeAnchor: fm,
+                              onNavigate: Am
+                            } = mm;
+                            const xm = Math.max(0, Tm.findIndex((mm => mm.anchor === fm))),
+                              wm = (0, hm.useRef)(null),
+                              Dm = (0, hm.useRef)(!1);
+                            (0, hm.useEffect)((() => {
+                              var mm, fm;
+                              const hm = null === (mm = wm.current) || void 0 === mm ? void 0 : mm.closest(".DocsToc"),
+                                Am = null === (fm = wm.current) || void 0 === fm ? void 0 : fm.querySelector(".DocsTimelineNotch.Active");
+                              if (!hm || !Am) return;
+                              let am = 0;
+                              if (xm === Tm.length - 1) am = hm.scrollHeight;
+                              else if (xm > 0) {
+                                const mm = hm.getBoundingClientRect(),
+                                  Tm = Am.getBoundingClientRect();
+                                am = hm.scrollTop + Tm.top + Tm.height / 2 - (mm.top + hm.clientHeight / 2)
                               }
-                              Xk.scrollTo({
-                                top: ik,
-                                behavior: ak.current ? "smooth" : "auto"
-                              }), ak.current = !0
-                            }), [yk, Fk.length]);
-                            const qk = [];
-                            return Fk.forEach(((kk, Fk) => {
-                              var Ik, Xk, Tk;
-                              const ik = function(kk) {
-                                  const Fk = kk.trim().match(Vi);
-                                  return Fk ? {
-                                    day: Fk[1],
-                                    month: `${Fk[2]} ${Fk[3]}`
+                              hm.scrollTo({
+                                top: am,
+                                behavior: Dm.current ? "smooth" : "auto"
+                              }), Dm.current = !0
+                            }), [xm, Tm.length]);
+                            const im = [];
+                            return Tm.forEach(((mm, Tm) => {
+                              var fm, hm, Am;
+                              const am = function(mm) {
+                                  const Tm = mm.trim().match(za);
+                                  return Tm ? {
+                                    day: Tm[1],
+                                    month: `${Tm[2]} ${Tm[3]}`
                                   } : null
-                                }(kk.text),
-                                yk = null !== (Ik = null === ik || void 0 === ik ? void 0 : ik.month) && void 0 !== Ik ? Ik : null;
-                              null !== yk && (null === (Xk = qk.at(-1)) || void 0 === Xk ? void 0 : Xk.month) === yk || qk.push({
-                                month: yk,
+                                }(mm.text),
+                                xm = null !== (fm = null === am || void 0 === am ? void 0 : am.month) && void 0 !== fm ? fm : null;
+                              null !== xm && (null === (hm = im.at(-1)) || void 0 === hm ? void 0 : hm.month) === xm || im.push({
+                                month: xm,
                                 entries: []
-                              }), qk.at(-1).entries.push({
-                                entry: kk,
-                                day: null !== (Tk = null === ik || void 0 === ik ? void 0 : ik.day) && void 0 !== Tk ? Tk : null,
-                                index: Fk
+                              }), im.at(-1).entries.push({
+                                entry: mm,
+                                day: null !== (Am = null === am || void 0 === am ? void 0 : am.day) && void 0 !== Am ? Am : null,
+                                index: Tm
                               })
-                            })), (0, ek.jsx)("ol", {
-                              ref: lk,
+                            })), (0, Om.jsx)("ol", {
+                              ref: wm,
                               className: "DocsTimeline",
-                              children: qk.map((kk => {
+                              children: im.map((mm => {
                                 let {
-                                  month: Fk,
-                                  entries: Ik
-                                } = kk;
-                                return (0, ek.jsxs)("li", {
+                                  month: Tm,
+                                  entries: fm
+                                } = mm;
+                                return (0, Om.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [Fk && (0, ek.jsx)("span", {
+                                  children: [Tm && (0, Om.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: Fk
-                                  }), (0, ek.jsx)("ol", {
-                                    children: Ik.map((kk => {
+                                    children: Tm
+                                  }), (0, Om.jsx)("ol", {
+                                    children: fm.map((mm => {
                                       let {
-                                        entry: Fk,
-                                        day: Ik,
-                                        index: Xk
-                                      } = kk;
-                                      return (0, ek.jsx)("li", {
-                                        className: ik()("DocsTimelineNotch", {
-                                          Passed: Xk < yk,
-                                          Active: Xk === yk
+                                        entry: Tm,
+                                        day: fm,
+                                        index: hm
+                                      } = mm;
+                                      return (0, Om.jsx)("li", {
+                                        className: am()("DocsTimelineNotch", {
+                                          Passed: hm < xm,
+                                          Active: hm === xm
                                         }),
-                                        children: (0, ek.jsx)(zi, {
-                                          entry: Fk,
-                                          isActive: Xk === yk,
-                                          onNavigate: Tk,
-                                          label: Fk.text,
-                                          children: (0, ek.jsx)("span", {
+                                        children: (0, Om.jsx)(Za, {
+                                          entry: Tm,
+                                          isActive: hm === xm,
+                                          onNavigate: Am,
+                                          label: Tm.text,
+                                          children: (0, Om.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== Ik && void 0 !== Ik ? Ik : Fk.text
+                                            children: null !== fm && void 0 !== fm ? fm : Tm.text
                                           })
                                         })
-                                      }, Fk.anchor)
+                                      }, Tm.anchor)
                                     }))
                                   })]
-                                }, Ik[0].entry.anchor)
+                                }, fm[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function oi(kk) {
+                          function ba(mm) {
                             let {
-                              isChangelog: Fk,
-                              toc: Ik,
-                              activeAnchor: Xk,
-                              onNavigate: Tk
-                            } = kk;
-                            return 0 === Ik.length ? null : (0, ek.jsxs)(ek.Fragment, {
-                              children: [(0, ek.jsx)("div", {
+                              isChangelog: Tm,
+                              toc: fm,
+                              activeAnchor: hm,
+                              onNavigate: Am
+                            } = mm;
+                            return 0 === fm.length ? null : (0, Om.jsxs)(Om.Fragment, {
+                              children: [(0, Om.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: Fk ? "Updates" : "On this page"
-                              }), Fk ? (0, ek.jsx)(Si, {
-                                toc: Ik,
-                                activeAnchor: Xk,
-                                onNavigate: Tk
-                              }) : (0, ek.jsx)("ul", {
-                                children: Ik.map((kk => (0, ek.jsx)("li", {
-                                  children: (0, ek.jsx)(zi, {
-                                    entry: kk,
-                                    isActive: kk.anchor === Xk,
-                                    onNavigate: Tk,
-                                    children: kk.text.replace(/`/g, "")
+                                children: Tm ? "Updates" : "On this page"
+                              }), Tm ? (0, Om.jsx)(ka, {
+                                toc: fm,
+                                activeAnchor: hm,
+                                onNavigate: Am
+                              }) : (0, Om.jsx)("ul", {
+                                children: fm.map((mm => (0, Om.jsx)("li", {
+                                  children: (0, Om.jsx)(Za, {
+                                    entry: mm,
+                                    isActive: mm.anchor === hm,
+                                    onNavigate: Am,
+                                    children: mm.text.replace(/`/g, "")
                                   })
-                                }, kk.anchor)))
+                                }, mm.anchor)))
                               })]
                             })
                           }
-                          const vi = {
+                          const Sa = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5200,7 +5200,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            Ei = {
+                            ea = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5208,1086 +5208,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            Oi = 20,
-                            ni = 10,
-                            Gi = 40,
-                            ui = 120;
-                          let bi;
+                            Na = 20,
+                            Ga = 10,
+                            Xa = 40,
+                            Pa = 120;
+                          let Ha;
 
-                          function Ri(kk) {
-                            const Fk = kk.gallery;
-                            if (!Fk) return [];
-                            if (JI(Fk)) return function(kk) {
-                              return PI(kk).entries.map((kk => kk.name))
-                            }(Fk).map((Ik => ({
-                              page: kk,
-                              anchor: pI(Fk, Ik),
-                              title: Ik,
-                              kind: Ei[Fk],
+                          function ya(mm) {
+                            const Tm = mm.gallery;
+                            if (!Tm) return [];
+                            if (Vf(Tm)) return function(mm) {
+                              return Kf(mm).entries.map((mm => mm.name))
+                            }(Tm).map((fm => ({
+                              page: mm,
+                              anchor: Pf(Tm, fm),
+                              title: fm,
+                              kind: ea[Tm],
                               text: "",
-                              listedUnder: kk.title
+                              listedUnder: mm.title
                             })));
-                            const Ik = Wk(kk);
-                            return (0, zk.u)(Ik).flatMap((Xk => {
-                              const Tk = Xk.heading ? `${kk.title} \u203a ${Xk.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : kk.title;
-                              return bI(Fk, Ik, Xk.blocks).flatMap((Ik => "names" !== Ik.kind ? [] : Ik.names.map((Xk => {
-                                const ik = Ik.isSongs ? "Song" : Ei[Fk];
+                            const fm = sm(mm);
+                            return (0, cm.r)(fm).flatMap((hm => {
+                              const Am = hm.heading ? `${mm.title} \u203a ${hm.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : mm.title;
+                              return yf(Tm, fm, hm.blocks).flatMap((fm => "names" !== fm.kind ? [] : fm.names.map((hm => {
+                                const am = fm.isSongs ? "Song" : ea[Tm];
                                 return {
-                                  page: kk,
-                                  anchor: Xk.anchor,
-                                  title: Xk.name,
-                                  kind: ik,
+                                  page: mm,
+                                  anchor: hm.anchor,
+                                  title: hm.name,
+                                  kind: am,
                                   text: "",
-                                  listedUnder: Tk
+                                  listedUnder: Am
                                 }
                               }))))
                             }))
                           }
 
-                          function Ui(kk, Fk, Ik) {
-                            const Xk = kk.title.toLowerCase();
-                            let Tk = 0;
-                            if (Xk === Fk) Tk = 100;
-                            else if (Xk.startsWith(Fk)) Tk = 80;
-                            else if (Xk.includes(Fk)) Tk = 60;
-                            else if (Ik.every((kk => Xk.includes(kk)))) Tk = 45;
+                          function Ca(mm, Tm, fm) {
+                            const hm = mm.title.toLowerCase();
+                            let Am = 0;
+                            if (hm === Tm) Am = 100;
+                            else if (hm.startsWith(Tm)) Am = 80;
+                            else if (hm.includes(Tm)) Am = 60;
+                            else if (fm.every((mm => hm.includes(mm)))) Am = 45;
                             else {
-                              if (!kk.text.toLowerCase().includes(Fk)) return 0;
-                              Tk = 20
+                              if (!mm.text.toLowerCase().includes(Tm)) return 0;
+                              Am = 20
                             }
-                            return Tk - Math.min(Xk.length / 10, 9) + ("Page" === kk.kind ? 8 : "Method" === kk.kind ? 3 : 0) - (kk.listedUnder ? Oi : 0)
+                            return Am - Math.min(hm.length / 10, 9) + ("Page" === mm.kind ? 8 : "Method" === mm.kind ? 3 : 0) - (mm.listedUnder ? Na : 0)
                           }
 
-                          function Ci(kk, Fk) {
-                            const Ik = kk.toLowerCase().indexOf(Fk),
-                              Xk = Math.max(0, Ik - ui / 3);
-                            return `${Xk>0?"\u2026":""}${kk.slice(Xk,Xk+ui)}${Xk+ui<kk.length?"\u2026":""}`
+                          function ra(mm, Tm) {
+                            const fm = mm.toLowerCase().indexOf(Tm),
+                              hm = Math.max(0, fm - Pa / 3);
+                            return `${hm>0?"\u2026":""}${mm.slice(hm,hm+Pa)}${hm+Pa<mm.length?"\u2026":""}`
                           }
 
-                          function Ni(kk) {
+                          function sa(mm) {
                             let {
-                              text: Fk,
-                              query: Ik
-                            } = kk;
-                            const Xk = Ik ? Fk.toLowerCase().indexOf(Ik) : -1;
-                            return -1 === Xk ? (0, ek.jsx)(ek.Fragment, {
-                              children: Fk
-                            }) : (0, ek.jsxs)(ek.Fragment, {
-                              children: [Fk.slice(0, Xk), (0, ek.jsx)("mark", {
-                                children: Fk.slice(Xk, Xk + Ik.length)
-                              }), Fk.slice(Xk + Ik.length)]
+                              text: Tm,
+                              query: fm
+                            } = mm;
+                            const hm = fm ? Tm.toLowerCase().indexOf(fm) : -1;
+                            return -1 === hm ? (0, Om.jsx)(Om.Fragment, {
+                              children: Tm
+                            }) : (0, Om.jsxs)(Om.Fragment, {
+                              children: [Tm.slice(0, hm), (0, Om.jsx)("mark", {
+                                children: Tm.slice(hm, hm + fm.length)
+                              }), Tm.slice(hm + fm.length)]
                             })
                           }
 
-                          function ci(kk) {
+                          function la(mm) {
                             let {
-                              basePath: Fk,
-                              onClose: Ik
-                            } = kk;
-                            const Tk = (0, lk.u)(),
-                              [yk, ak] = (0, Xk.useState)(""),
-                              [qk, Lk] = (0, Xk.useState)(0),
-                              tk = (0, Xk.useRef)(null),
-                              Zk = (0, Xk.useRef)(null),
-                              jk = yk.trim().toLowerCase(),
-                              wk = (0, Xk.useMemo)((() => {
-                                const kk = (bi || (bi = Uk.flatMap((kk => {
-                                  const Fk = Wk(kk);
+                              basePath: Tm,
+                              onClose: fm
+                            } = mm;
+                            const Am = (0, wm.A)(),
+                              [xm, Dm] = (0, hm.useState)(""),
+                              [im, Rm] = (0, hm.useState)(0),
+                              pm = (0, hm.useRef)(null),
+                              Em = (0, hm.useRef)(null),
+                              om = xm.trim().toLowerCase(),
+                              Ym = (0, hm.useMemo)((() => {
+                                const mm = (Ha || (Ha = Hm.flatMap((mm => {
+                                  const Tm = sm(mm);
                                   return [{
-                                    page: kk,
+                                    page: mm,
                                     anchor: "",
-                                    title: kk.title,
+                                    title: mm.title,
                                     kind: "Page",
-                                    text: kk.summary
-                                  }, ...Fk.sections.flatMap((Fk => {
-                                    const Ik = Fk.blocks.filter((kk => "paragraph" === kk.kind)).map(zk.l).join(" ").replace(/[`*]/g, ""),
-                                      Xk = {
-                                        page: kk,
-                                        anchor: Fk.heading.anchor,
-                                        title: Fk.heading.text.replace(/`/g, ""),
-                                        kind: vi[kk.layout],
-                                        text: Ik
+                                    text: mm.summary
+                                  }, ...Tm.sections.flatMap((Tm => {
+                                    const fm = Tm.blocks.filter((mm => "paragraph" === mm.kind)).map(cm.j).join(" ").replace(/[`*]/g, ""),
+                                      hm = {
+                                        page: mm,
+                                        anchor: Tm.heading.anchor,
+                                        title: Tm.heading.text.replace(/`/g, ""),
+                                        kind: Sa[mm.layout],
+                                        text: fm
                                       },
-                                      Tk = Fk.blocks.flatMap((Fk => "article" === kk.layout && "heading" === Fk.kind && 3 === Fk.level ? [{
-                                        page: kk,
-                                        anchor: Fk.anchor,
-                                        title: Fk.text.replace(/`/g, ""),
+                                      Am = Tm.blocks.flatMap((Tm => "article" === mm.layout && "heading" === Tm.kind && 3 === Tm.level ? [{
+                                        page: mm,
+                                        anchor: Tm.anchor,
+                                        title: Tm.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: Xk.title
+                                        text: hm.title
                                       }] : []));
-                                    return [Xk, ...Tk]
-                                  })), ...Ri(kk)]
-                                }))), bi);
-                                if (!jk) return kk.filter((kk => "Page" === kk.kind));
-                                const Fk = jk.split(/\s+/);
-                                let Ik = 0;
-                                return kk.map((kk => ({
-                                  entry: kk,
-                                  score: Ui(kk, jk, Fk)
-                                }))).filter((kk => kk.score > 0)).sort(((kk, Fk) => Fk.score - kk.score)).filter((kk => !kk.entry.listedUnder || (Ik++, Ik <= ni))).slice(0, Gi).map((kk => kk.entry))
-                              }), [jk]);
-                            (0, Xk.useEffect)((() => {
-                              Lk(0)
-                            }), [jk]), (0, Xk.useEffect)((() => {
-                              const kk = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [hm, ...Am]
+                                  })), ...ya(mm)]
+                                }))), Ha);
+                                if (!om) return mm.filter((mm => "Page" === mm.kind));
+                                const Tm = om.split(/\s+/);
+                                let fm = 0;
+                                return mm.map((mm => ({
+                                  entry: mm,
+                                  score: Ca(mm, om, Tm)
+                                }))).filter((mm => mm.score > 0)).sort(((mm, Tm) => Tm.score - mm.score)).filter((mm => !mm.entry.listedUnder || (fm++, fm <= Ga))).slice(0, Xa).map((mm => mm.entry))
+                              }), [om]);
+                            (0, hm.useEffect)((() => {
+                              Rm(0)
+                            }), [om]), (0, hm.useEffect)((() => {
+                              const mm = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === kk || void 0 === kk || kk.focus()
+                                null === mm || void 0 === mm || mm.focus()
                               }
-                            }), []), (0, Xk.useEffect)((() => {
-                              var kk, Fk;
-                              null === (kk = tk.current) || void 0 === kk || null === (Fk = kk.querySelector(".Active")) || void 0 === Fk || Fk.scrollIntoView({
+                            }), []), (0, hm.useEffect)((() => {
+                              var mm, Tm;
+                              null === (mm = pm.current) || void 0 === mm || null === (Tm = mm.querySelector(".Active")) || void 0 === Tm || Tm.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [qk]);
-                            const Jk = kk => {
-                              Tk(Yk(Fk, kk.page, kk.anchor)), Ik()
+                            }), [im]);
+                            const jm = mm => {
+                              Am(Bm(Tm, mm.page, mm.anchor)), fm()
                             };
-                            return (0, ek.jsx)("div", {
+                            return (0, Om.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: kk => {
-                                kk.target === kk.currentTarget && Ik()
+                              onMouseDown: mm => {
+                                mm.target === mm.currentTarget && fm()
                               },
-                              children: (0, ek.jsxs)("div", {
+                              children: (0, Om.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: kk => {
-                                  kk.target !== Zk.current && kk.preventDefault()
+                                onMouseDown: mm => {
+                                  mm.target !== Em.current && mm.preventDefault()
                                 },
-                                onKeyDown: kk => {
-                                  if ("Escape" === kk.key) Ik();
-                                  else if ("Tab" === kk.key) {
-                                    var Fk;
-                                    kk.preventDefault(), null === (Fk = Zk.current) || void 0 === Fk || Fk.focus()
+                                onKeyDown: mm => {
+                                  if ("Escape" === mm.key) fm();
+                                  else if ("Tab" === mm.key) {
+                                    var Tm;
+                                    mm.preventDefault(), null === (Tm = Em.current) || void 0 === Tm || Tm.focus()
                                   }
                                 },
-                                children: [(0, ek.jsxs)("div", {
+                                children: [(0, Om.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, ek.jsx)(Hk, {
+                                  children: [(0, Om.jsx)(qm, {
                                     name: "magnifying-glass"
-                                  }), (0, ek.jsx)("input", {
-                                    ref: Zk,
+                                  }), (0, Om.jsx)("input", {
+                                    ref: Em,
                                     autoFocus: !0,
-                                    value: yk,
+                                    value: xm,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": wk.length > 0 ? `DocsSearchResult-${qk}` : void 0,
-                                    onChange: kk => {
-                                      ak(kk.target.value)
+                                    "aria-activedescendant": Ym.length > 0 ? `DocsSearchResult-${im}` : void 0,
+                                    onChange: mm => {
+                                      Dm(mm.target.value)
                                     },
-                                    onKeyDown: kk => {
-                                      if ("ArrowDown" === kk.key || "ArrowUp" === kk.key) {
-                                        kk.preventDefault();
-                                        const Fk = "ArrowDown" === kk.key ? 1 : -1;
-                                        Lk((qk + Fk + wk.length) % Math.max(wk.length, 1))
-                                      } else "Enter" === kk.key && wk[qk] && Jk(wk[qk])
+                                    onKeyDown: mm => {
+                                      if ("ArrowDown" === mm.key || "ArrowUp" === mm.key) {
+                                        mm.preventDefault();
+                                        const Tm = "ArrowDown" === mm.key ? 1 : -1;
+                                        Rm((im + Tm + Ym.length) % Math.max(Ym.length, 1))
+                                      } else "Enter" === mm.key && Ym[im] && jm(Ym[im])
                                     }
-                                  }), (0, ek.jsx)("kbd", {
+                                  }), (0, Om.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, ek.jsxs)("ul", {
+                                }), (0, Om.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: tk,
+                                  ref: pm,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!jk && (0, ek.jsx)("li", {
+                                  children: [!om && (0, Om.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), wk.map(((kk, Fk) => {
-                                    var Ik;
-                                    return (0, ek.jsxs)("li", {
-                                      id: `DocsSearchResult-${Fk}`,
+                                  }), Ym.map(((mm, Tm) => {
+                                    var fm;
+                                    return (0, Om.jsxs)("li", {
+                                      id: `DocsSearchResult-${Tm}`,
                                       role: "option",
-                                      "aria-selected": Fk === qk,
-                                      className: ik()("DocsSearchResult", {
-                                        Active: Fk === qk
+                                      "aria-selected": Tm === im,
+                                      className: am()("DocsSearchResult", {
+                                        Active: Tm === im
                                       }),
                                       onMouseMove: () => {
-                                        Lk(Fk)
+                                        Rm(Tm)
                                       },
                                       onClick: () => {
-                                        Jk(kk)
+                                        jm(mm)
                                       },
-                                      children: [(0, ek.jsx)(Hk, {
-                                        name: kk.page.icon
-                                      }), (0, ek.jsxs)("div", {
+                                      children: [(0, Om.jsx)(qm, {
+                                        name: mm.page.icon
+                                      }), (0, Om.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, ek.jsx)("div", {
+                                        children: [(0, Om.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, ek.jsx)(Ni, {
-                                            text: kk.title,
-                                            query: jk
+                                          children: (0, Om.jsx)(sa, {
+                                            text: mm.title,
+                                            query: om
                                           })
-                                        }), kk.text && (0, ek.jsx)("div", {
+                                        }), mm.text && (0, Om.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, ek.jsx)(Ni, {
-                                            text: Ci(kk.text, jk),
-                                            query: jk
+                                          children: (0, Om.jsx)(sa, {
+                                            text: ra(mm.text, om),
+                                            query: om
                                           })
                                         })]
-                                      }), (0, ek.jsx)("span", {
+                                      }), (0, Om.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === kk.kind ? "Page" : null !== (Ik = kk.listedUnder) && void 0 !== Ik ? Ik : `${kk.kind} \xb7 ${kk.page.title}`
+                                        children: "Page" === mm.kind ? "Page" : null !== (fm = mm.listedUnder) && void 0 !== fm ? fm : `${mm.kind} \xb7 ${mm.page.title}`
                                       })]
-                                    }, `${kk.page.id}#${kk.anchor}`)
-                                  })), jk && 0 === wk.length && (0, ek.jsxs)("li", {
+                                    }, `${mm.page.id}#${mm.anchor}`)
+                                  })), om && 0 === Ym.length && (0, Om.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", yk, "\u201d."]
+                                    children: ["Nothing matches \u201c", xm, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function Wi(kk, Fk) {
-                            if (Fk < 10) return `${kk.toFixed(1)}s`;
-                            const Ik = Math.floor(kk);
-                            return `${Math.floor(Ik/60)}:${String(Ik%60).padStart(2,"0")}`
+                          function Ma(mm, Tm) {
+                            if (Tm < 10) return `${mm.toFixed(1)}s`;
+                            const fm = Math.floor(mm);
+                            return `${Math.floor(fm/60)}:${String(fm%60).padStart(2,"0")}`
                           }
 
-                          function fi() {
-                            const kk = tX((kk => kk.track)),
-                              Fk = tX((kk => kk.volume)),
-                              [Ik, Tk] = (0, Xk.useState)(0),
-                              yk = (0, Xk.useRef)(IX);
-                            if ((0, Xk.useEffect)((() => {
-                                if (!kk) return;
-                                if (Tk(wX()), "playing" !== kk.status) return;
-                                let Fk = 0;
-                                const Ik = () => {
-                                  Tk(wX()), Fk = requestAnimationFrame(Ik)
+                          function ua() {
+                            const mm = oh((mm => mm.track)),
+                              Tm = oh((mm => mm.volume)),
+                              [fm, Am] = (0, hm.useState)(0),
+                              xm = (0, hm.useRef)(Ah);
+                            if ((0, hm.useEffect)((() => {
+                                if (!mm) return;
+                                if (Am(jh()), "playing" !== mm.status) return;
+                                let Tm = 0;
+                                const fm = () => {
+                                  Am(jh()), Tm = requestAnimationFrame(fm)
                                 };
-                                return Fk = requestAnimationFrame(Ik), () => {
-                                  cancelAnimationFrame(Fk)
+                                return Tm = requestAnimationFrame(fm), () => {
+                                  cancelAnimationFrame(Tm)
                                 }
-                              }), [kk]), !kk) return null;
-                            const lk = "paused" !== kk.status,
-                              ak = Math.min(Ik, kk.duration);
-                            return (0, ek.jsx)("div", {
+                              }), [mm]), !mm) return null;
+                            const wm = "paused" !== mm.status,
+                              Dm = Math.min(fm, mm.duration);
+                            return (0, Om.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, ek.jsxs)("section", {
+                              children: (0, Om.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, ek.jsx)("button", {
+                                children: [(0, Om.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": lk ? `Pause ${kk.name}` : `Play ${kk.name}`,
-                                  onClick: eX,
-                                  children: (0, ek.jsx)(Hk, {
-                                    name: lk ? "pause" : "play"
+                                  "aria-label": wm ? `Pause ${mm.name}` : `Play ${mm.name}`,
+                                  onClick: qh,
+                                  children: (0, Om.jsx)(qm, {
+                                    name: wm ? "pause" : "play"
                                   })
-                                }), (0, ek.jsxs)("div", {
+                                }), (0, Om.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, ek.jsxs)("div", {
+                                  children: [(0, Om.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, ek.jsx)("code", {
-                                      children: kk.name
-                                    }), (0, ek.jsx)("span", {
-                                      children: kk.isSong ? "Song" : "Sound"
+                                    children: [(0, Om.jsx)("code", {
+                                      children: mm.name
+                                    }), (0, Om.jsx)("span", {
+                                      children: mm.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, ek.jsxs)("div", {
+                                  }), (0, Om.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, ek.jsx)("span", {
-                                      children: Wi(ak, kk.duration)
-                                    }), (0, ek.jsx)("input", {
+                                    children: [(0, Om.jsx)("span", {
+                                      children: Ma(Dm, mm.duration)
+                                    }), (0, Om.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: kk.duration || 1,
+                                      max: mm.duration || 1,
                                       step: .01,
-                                      value: ak,
-                                      disabled: 0 === kk.duration,
+                                      value: Dm,
+                                      disabled: 0 === mm.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${Wi(ak,kk.duration)} of ${Wi(kk.duration,kk.duration)}`,
-                                      onChange: kk => {
-                                        const Fk = Number(kk.target.value);
-                                        ! function(kk) {
-                                          var Fk;
-                                          lX = kk, null === (Fk = iX) || void 0 === Fk || Fk.seek(kk)
-                                        }(Fk), Tk(Fk)
+                                      "aria-valuetext": `${Ma(Dm,mm.duration)} of ${Ma(mm.duration,mm.duration)}`,
+                                      onChange: mm => {
+                                        const Tm = Number(mm.target.value);
+                                        ! function(mm) {
+                                          var Tm;
+                                          ih = mm, null === (Tm = wh) || void 0 === Tm || Tm.seek(mm)
+                                        }(Tm), Am(Tm)
                                       }
-                                    }), (0, ek.jsx)("span", {
-                                      children: kk.duration > 0 ? Wi(kk.duration, kk.duration) : "\u2013"
+                                    }), (0, Om.jsx)("span", {
+                                      children: mm.duration > 0 ? Ma(mm.duration, mm.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, ek.jsxs)("div", {
+                                }), (0, Om.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, ek.jsx)("button", {
+                                  children: [(0, Om.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === Fk ? "Unmute" : "Mute",
+                                    "aria-label": 0 === Tm ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === Fk ? HX(yk.current) : (yk.current = Fk, HX(0))
+                                      0 === Tm ? Vh(xm.current) : (xm.current = Tm, Vh(0))
                                     },
-                                    children: (0, ek.jsx)(Hk, {
+                                    children: (0, Om.jsx)(qm, {
                                       name: "volume",
-                                      className: ik()({
-                                        Muted: 0 === Fk
+                                      className: am()({
+                                        Muted: 0 === Tm
                                       })
                                     })
-                                  }), (0, ek.jsx)("input", {
+                                  }), (0, Om.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: Fk,
+                                    value: Tm,
                                     "aria-label": "Volume",
-                                    onChange: kk => {
-                                      HX(Number(kk.target.value))
+                                    onChange: mm => {
+                                      Vh(Number(mm.target.value))
                                     }
                                   })]
-                                }), (0, ek.jsx)("button", {
+                                }), (0, Om.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var Fk;
-                                    null === (Fk = document.querySelector(`[data-docs-track="${CSS.escape(XX(kk.name,kk.isSong))}"]`)) || void 0 === Fk || Fk.focus(), JX()
+                                    var Tm;
+                                    null === (Tm = document.querySelector(`[data-docs-track="${CSS.escape(ah(mm.name,mm.isSong))}"]`)) || void 0 === Tm || Tm.focus(), Ih()
                                   },
-                                  children: (0, ek.jsx)(Hk, {
+                                  children: (0, Om.jsx)(qm, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var Bi = Ik(41);
-                          const di = "docsTheme",
-                            Yi = window.matchMedia("(prefers-color-scheme: light)");
+                          var Ba = fm(37);
+                          const La = "docsTheme",
+                            va = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function Ai(kk) {
+                          function ta(mm) {
                             let {
-                              theme: Fk,
-                              onChange: Ik
-                            } = kk;
-                            const Xk = "dark" === Fk ? "light" : "dark";
-                            return (0, ek.jsx)("button", {
+                              theme: Tm,
+                              onChange: fm
+                            } = mm;
+                            const hm = "dark" === Tm ? "light" : "dark";
+                            return (0, Om.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${Xk} theme`,
-                              title: `Switch to ${Xk} theme`,
+                              "aria-label": `Switch to ${hm} theme`,
+                              title: `Switch to ${hm} theme`,
                               onClick: () => {
-                                Ik(Xk)
+                                fm(hm)
                               },
-                              children: (0, ek.jsx)(Hk, {
-                                name: "dark" === Fk ? "moon" : "sun"
+                              children: (0, Om.jsx)(qm, {
+                                name: "dark" === Tm ? "moon" : "sun"
                               })
                             })
                           }
-                          const gi = "https://github.com/Bloxdy/code-api",
-                            mi = "https://discord.gg/playbloxd",
-                            ri = 180,
-                            Di = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const Ua = "https://github.com/Bloxdy/code-api",
+                            da = "https://discord.gg/playbloxd",
+                            ga = 180,
+                            Wa = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function Mi(kk) {
+                          function Fa(mm) {
                             let {
-                              basePath: Fk,
-                              activePageId: Ik,
-                              onNavigate: Xk
-                            } = kk;
-                            return (0, ek.jsx)("nav", {
+                              basePath: Tm,
+                              activePageId: fm,
+                              onNavigate: hm
+                            } = mm;
+                            return (0, Om.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: Ck.map((kk => (0, ek.jsxs)("div", {
+                              children: ym.map((mm => (0, Om.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, ek.jsx)("div", {
+                                children: [(0, Om.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: kk.title
-                                }), kk.pageIds.map((kk => {
-                                  var Tk;
-                                  const lk = Nk(kk);
-                                  return (0, ek.jsxs)(yk.e, {
-                                    to: Yk(Fk, lk),
-                                    className: ik()("DocsNavLink", {
-                                      Active: lk.id === Ik
+                                  children: mm.title
+                                }), mm.pageIds.map((mm => {
+                                  var Am;
+                                  const wm = Cm(mm);
+                                  return (0, Om.jsxs)(xm.d, {
+                                    to: Bm(Tm, wm),
+                                    className: am()("DocsNavLink", {
+                                      Active: wm.id === fm
                                     }),
-                                    "aria-current": lk.id === Ik ? "page" : void 0,
-                                    onClick: Xk,
-                                    children: [(0, ek.jsx)(Hk, {
-                                      name: lk.icon
-                                    }), (0, ek.jsx)("span", {
-                                      children: null !== (Tk = lk.navTitle) && void 0 !== Tk ? Tk : lk.title
+                                    "aria-current": wm.id === fm ? "page" : void 0,
+                                    onClick: hm,
+                                    children: [(0, Om.jsx)(qm, {
+                                      name: wm.icon
+                                    }), (0, Om.jsx)("span", {
+                                      children: null !== (Am = wm.navTitle) && void 0 !== Am ? Am : wm.title
                                     })]
-                                  }, lk.id)
+                                  }, wm.id)
                                 }))]
-                              }, kk.title)))
+                              }, mm.title)))
                             })
                           }
 
-                          function ky(kk) {
+                          function mx(mm) {
                             let {
-                              basePath: Fk,
-                              pageId: Ik
-                            } = kk;
-                            const Xk = Ck.flatMap((kk => kk.pageIds)),
-                              Tk = Xk.indexOf(Ik),
-                              ik = Tk > 0 ? Nk(Xk[Tk - 1]) : null,
-                              lk = Tk < Xk.length - 1 ? Nk(Xk[Tk + 1]) : null;
-                            return (0, ek.jsxs)("nav", {
+                              basePath: Tm,
+                              pageId: fm
+                            } = mm;
+                            const hm = ym.flatMap((mm => mm.pageIds)),
+                              Am = hm.indexOf(fm),
+                              am = Am > 0 ? Cm(hm[Am - 1]) : null,
+                              wm = Am < hm.length - 1 ? Cm(hm[Am + 1]) : null;
+                            return (0, Om.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [ik ? (0, ek.jsxs)(yk.e, {
+                              children: [am ? (0, Om.jsxs)(xm.d, {
                                 className: "DocsPagerLink Previous",
-                                to: Yk(Fk, ik),
-                                children: [(0, ek.jsx)("span", {
+                                to: Bm(Tm, am),
+                                children: [(0, Om.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, ek.jsx)("span", {
+                                }), (0, Om.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: ik.title
+                                  children: am.title
                                 })]
-                              }) : (0, ek.jsx)("span", {}), lk && (0, ek.jsxs)(yk.e, {
+                              }) : (0, Om.jsx)("span", {}), wm && (0, Om.jsxs)(xm.d, {
                                 className: "DocsPagerLink Next",
-                                to: Yk(Fk, lk),
-                                children: [(0, ek.jsx)("span", {
+                                to: Bm(Tm, wm),
+                                children: [(0, Om.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, ek.jsx)("span", {
+                                }), (0, Om.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: lk.title
+                                  children: wm.title
                                 })]
                               })]
                             })
                           }
 
-                          function Fy(kk) {
+                          function Tx(mm) {
                             let {
-                              basePath: Fk,
-                              embedded: Ik = !1
-                            } = kk;
+                              basePath: Tm,
+                              embedded: fm = !1
+                            } = mm;
                             const {
-                              pageSlug: Tk = ""
-                            } = (0, lk.A)(), qk = (0, lk.q)(), Lk = (0, lk.u)(), tk = (Zk = Tk, Uk.find((kk => kk.slug === Zk)));
-                            var Zk;
-                            const [jk, wk] = function() {
-                              const [kk, Fk] = (0, Xk.useState)((() => {
-                                const kk = Bi.j.getItem(di);
-                                return "dark" === kk || "light" === kk ? kk : null
-                              })), [Ik, Tk] = (0, Xk.useState)(Yi.matches ? "light" : "dark");
-                              return (0, Xk.useEffect)((() => {
-                                const kk = () => {
-                                  Tk(Yi.matches ? "light" : "dark")
+                              pageSlug: Am = ""
+                            } = (0, wm.G)(), im = (0, wm.w)(), Rm = (0, wm.A)(), pm = (Em = Am, Hm.find((mm => mm.slug === Em)));
+                            var Em;
+                            const [om, Ym] = function() {
+                              const [mm, Tm] = (0, hm.useState)((() => {
+                                const mm = Ba.g.getItem(La);
+                                return "dark" === mm || "light" === mm ? mm : null
+                              })), [fm, Am] = (0, hm.useState)(va.matches ? "light" : "dark");
+                              return (0, hm.useEffect)((() => {
+                                const mm = () => {
+                                  Am(va.matches ? "light" : "dark")
                                 };
-                                return Yi.addEventListener("change", kk), () => {
-                                  Yi.removeEventListener("change", kk)
+                                return va.addEventListener("change", mm), () => {
+                                  va.removeEventListener("change", mm)
                                 }
-                              }), []), [null !== kk && void 0 !== kk ? kk : Ik, kk => {
-                                Bi.j.setItem(di, kk), Fk(kk)
+                              }), []), [null !== mm && void 0 !== mm ? mm : fm, mm => {
+                                Ba.g.setItem(La, mm), Tm(mm)
                               }]
-                            }(), [Jk, xk] = (0, Xk.useState)(null), [Pk, Kk] = (0, Xk.useState)(!1), [Qk, sk] = (0, Xk.useState)(!1), [Vk, Sk] = (0, Xk.useState)([]), vk = function(kk, Fk) {
-                              const [Ik, Tk] = (0, Xk.useState)("");
-                              return (0, Xk.useEffect)((() => {
-                                if (!Fk) return;
-                                let Ik = 0;
-                                const Xk = () => {
-                                    var Xk, ik;
-                                    Ik = 0;
-                                    const yk = Fk.getBoundingClientRect().top + ri;
-                                    let lk = null !== (Xk = null === (ik = kk[0]) || void 0 === ik ? void 0 : ik.anchor) && void 0 !== Xk ? Xk : "";
-                                    for (const Fk of kk) {
-                                      const kk = document.getElementById(Fk.anchor);
-                                      kk && kk.getBoundingClientRect().top <= yk && (lk = Fk.anchor)
+                            }(), [jm, Vm] = (0, hm.useState)(null), [Im, Km] = (0, hm.useState)(!1), [Qm, nm] = (0, hm.useState)(!1), [Jm, zm] = (0, hm.useState)([]), Zm = function(mm, Tm) {
+                              const [fm, Am] = (0, hm.useState)("");
+                              return (0, hm.useEffect)((() => {
+                                if (!Tm) return;
+                                let fm = 0;
+                                const hm = () => {
+                                    var hm, am;
+                                    fm = 0;
+                                    const xm = Tm.getBoundingClientRect().top + ga;
+                                    let wm = null !== (hm = null === (am = mm[0]) || void 0 === am ? void 0 : am.anchor) && void 0 !== hm ? hm : "";
+                                    for (const Tm of mm) {
+                                      const mm = document.getElementById(Tm.anchor);
+                                      mm && mm.getBoundingClientRect().top <= xm && (wm = Tm.anchor)
                                     }
-                                    Fk.scrollTop + Fk.clientHeight >= Fk.scrollHeight - 2 && Fk.scrollTop > 0 && kk.length > 0 && (lk = kk[kk.length - 1].anchor), Tk(lk)
+                                    Tm.scrollTop + Tm.clientHeight >= Tm.scrollHeight - 2 && Tm.scrollTop > 0 && mm.length > 0 && (wm = mm[mm.length - 1].anchor), Am(wm)
                                   },
-                                  ik = () => {
-                                    Ik || (Ik = requestAnimationFrame(Xk))
+                                  am = () => {
+                                    fm || (fm = requestAnimationFrame(hm))
                                   };
-                                return Xk(), Fk.addEventListener("scroll", ik, {
+                                return hm(), Tm.addEventListener("scroll", am, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(Ik), Fk.removeEventListener("scroll", ik)
+                                  cancelAnimationFrame(fm), Tm.removeEventListener("scroll", am)
                                 }
-                              }), [kk, Fk]), Ik
-                            }(Vk, Jk), Ek = "" === Tk && qk.hash ? function(kk) {
-                              const Fk = (0, zk.s)(kk);
-                              if (fk(Nk("welcome"), Fk)) return null;
-                              const Ik = Object.hasOwn(dk, Fk) ? dk[Fk] : null;
-                              if (Ik) return {
-                                page: Nk(Ik.pageId),
-                                anchor: Ik.anchor
+                              }), [mm, Tm]), fm
+                            }(Jm, jm), km = "" === Am && im.hash ? function(mm) {
+                              const Tm = (0, cm.o)(mm);
+                              if (lm(Cm("welcome"), Tm)) return null;
+                              const fm = Object.hasOwn(um, Tm) ? um[Tm] : null;
+                              if (fm) return {
+                                page: Cm(fm.pageId),
+                                anchor: fm.anchor
                               };
-                              const Xk = Nk("readme");
-                              return fk(Xk, Fk) ? {
-                                page: Xk,
-                                anchor: Fk
-                              } : Bk(`#${Fk}`)
-                            }(qk.hash) : null;
-                            (0, Xk.useEffect)((() => (ak.d.set({
+                              const hm = Cm("readme");
+                              return lm(hm, Tm) ? {
+                                page: hm,
+                                anchor: Tm
+                              } : Mm(`#${Tm}`)
+                            }(im.hash) : null;
+                            (0, hm.useEffect)((() => (Dm.c.set({
                               musicOnFromPage: !1
                             }), () => {
-                              ak.d.set({
+                              Dm.c.set({
                                 musicOnFromPage: !0
-                              }), JX()
-                            })), []), (0, Xk.useEffect)((() => {
-                              const kk = kk => {
-                                const Fk = kk.target;
-                                if (Fk.closest(".DocsTextDialog")) return;
-                                const Ik = Fk.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(Fk.tagName);
-                                "k" === kk.key && (kk.metaKey || kk.ctrlKey) || "/" === kk.key && !Ik ? (kk.preventDefault(), sk(!0)) : "Escape" === kk.key && Kk(!1)
+                              }), Ih()
+                            })), []), (0, hm.useEffect)((() => {
+                              const mm = mm => {
+                                const Tm = mm.target;
+                                if (Tm.closest(".DocsTextDialog")) return;
+                                const fm = Tm.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(Tm.tagName);
+                                "k" === mm.key && (mm.metaKey || mm.ctrlKey) || "/" === mm.key && !fm ? (mm.preventDefault(), nm(!0)) : "Escape" === mm.key && Km(!1)
                               };
-                              return window.addEventListener("keydown", kk), () => {
-                                window.removeEventListener("keydown", kk)
+                              return window.addEventListener("keydown", mm), () => {
+                                window.removeEventListener("keydown", mm)
                               }
                             }), []);
-                            const Ok = (0, Xk.useRef)(null);
-                            (0, Xk.useLayoutEffect)((() => {
-                              var kk, Fk;
-                              if (!Jk) return;
-                              const Ik = Ok.current === qk.pathname;
-                              Ok.current = qk.pathname;
-                              const Xk = (0, zk.s)(qk.hash),
-                                Tk = Xk ? document.getElementById(Xk) : null;
-                              if (null === (kk = Jk.querySelector(".DocsTargeted")) || void 0 === kk || kk.classList.remove("DocsTargeted"), null === Tk || void 0 === Tk || null === (Fk = Tk.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === Fk || Fk.classList.add("DocsTargeted"), Tk) {
-                                var ik;
-                                const kk = Tk.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (ik = Tk.closest(".DocsChangelogEntry")) && void 0 !== ik ? ik : Tk).scrollIntoView({
-                                  block: kk ? "center" : "start",
-                                  behavior: Ik ? "smooth" : "auto"
+                            const bm = (0, hm.useRef)(null);
+                            (0, hm.useLayoutEffect)((() => {
+                              var mm, Tm;
+                              if (!jm) return;
+                              const fm = bm.current === im.pathname;
+                              bm.current = im.pathname;
+                              const hm = (0, cm.o)(im.hash),
+                                Am = hm ? document.getElementById(hm) : null;
+                              if (null === (mm = jm.querySelector(".DocsTargeted")) || void 0 === mm || mm.classList.remove("DocsTargeted"), null === Am || void 0 === Am || null === (Tm = Am.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === Tm || Tm.classList.add("DocsTargeted"), Am) {
+                                var am;
+                                const mm = Am.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (am = Am.closest(".DocsChangelogEntry")) && void 0 !== am ? am : Am).scrollIntoView({
+                                  block: mm ? "center" : "start",
+                                  behavior: fm ? "smooth" : "auto"
                                 })
-                              } else Ik || Jk.scrollTo({
+                              } else fm || jm.scrollTo({
                                 top: 0
                               })
-                            }), [Jk, qk.pathname, qk.hash, qk.key]);
-                            const nk = (0, Xk.useCallback)((() => {
-                                Kk(!1)
+                            }), [jm, im.pathname, im.hash, im.key]);
+                            const Sm = (0, hm.useCallback)((() => {
+                                Km(!1)
                               }), []),
-                              Gk = (0, Xk.useCallback)((kk => {
-                                Lk({
-                                  hash: kk
+                              em = (0, hm.useCallback)((mm => {
+                                Rm({
+                                  hash: mm
                                 })
-                              }), [Lk]);
-                            if (Ek) return (0, ek.jsx)(lk.d, {
+                              }), [Rm]);
+                            if (km) return (0, Om.jsx)(wm.e, {
                               replace: !0,
-                              to: Yk(Fk, Ek.page, Ek.anchor)
+                              to: Bm(Tm, km.page, km.anchor)
                             });
-                            if (!tk) return (0, ek.jsx)(lk.d, {
+                            if (!pm) return (0, Om.jsx)(wm.e, {
                               replace: !0,
-                              to: Fk
+                              to: Tm
                             });
-                            const pk = Ik ? "div" : "main";
-                            return (0, ek.jsx)(eF.Provider, {
-                              value: Fk,
-                              children: (0, ek.jsx)(wF.Provider, {
-                                value: Jk,
-                                children: (0, ek.jsxs)("div", {
-                                  ref: xk,
-                                  className: ik()("DocsSite", {
-                                    Embedded: Ik,
-                                    NavOpen: Pk
+                            const Nm = fm ? "div" : "main";
+                            return (0, Om.jsx)(OT.Provider, {
+                              value: Tm,
+                              children: (0, Om.jsx)(YT.Provider, {
+                                value: jm,
+                                children: (0, Om.jsxs)("div", {
+                                  ref: Vm,
+                                  className: am()("DocsSite", {
+                                    Embedded: fm,
+                                    NavOpen: Im
                                   }),
-                                  "data-theme": jk,
-                                  children: [(0, ek.jsxs)("header", {
+                                  "data-theme": om,
+                                  children: [(0, Om.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, ek.jsx)("button", {
+                                    children: [(0, Om.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": Pk ? "Close menu" : "Open menu",
-                                      "aria-expanded": Pk,
+                                      "aria-label": Im ? "Close menu" : "Open menu",
+                                      "aria-expanded": Im,
                                       onClick: () => {
-                                        Kk(!Pk)
+                                        Km(!Im)
                                       },
-                                      children: (0, ek.jsx)(Hk, {
-                                        name: Pk ? "cross" : "menu"
+                                      children: (0, Om.jsx)(qm, {
+                                        name: Im ? "cross" : "menu"
                                       })
-                                    }), (0, ek.jsxs)(yk.e, {
-                                      to: Fk,
+                                    }), (0, Om.jsxs)(xm.d, {
+                                      to: Tm,
                                       className: "DocsBrand",
-                                      children: [(0, ek.jsx)("img", {
+                                      children: [(0, Om.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, ek.jsx)("span", {
+                                      }), (0, Om.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, ek.jsx)("span", {
+                                      }), (0, Om.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, ek.jsxs)("button", {
+                                    }), (0, Om.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        sk(!0)
+                                        nm(!0)
                                       },
-                                      children: [(0, ek.jsx)(Hk, {
+                                      children: [(0, Om.jsx)(qm, {
                                         name: "magnifying-glass"
-                                      }), (0, ek.jsx)("span", {
+                                      }), (0, Om.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, ek.jsxs)("kbd", {
-                                        children: [Di ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, Om.jsxs)("kbd", {
+                                        children: [Wa ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, ek.jsxs)("div", {
+                                    }), (0, Om.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, ek.jsxs)("a", {
-                                        href: mi,
+                                      children: [(0, Om.jsxs)("a", {
+                                        href: da,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, ek.jsx)(Hk, {
+                                        children: [(0, Om.jsx)(qm, {
                                           name: "discord"
-                                        }), (0, ek.jsx)("span", {
+                                        }), (0, Om.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, ek.jsxs)("a", {
-                                        href: gi,
+                                      }), (0, Om.jsxs)("a", {
+                                        href: Ua,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, ek.jsx)(Hk, {
+                                        children: [(0, Om.jsx)(qm, {
                                           name: "external-link"
-                                        }), (0, ek.jsx)("span", {
+                                        }), (0, Om.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !Ik && (0, ek.jsxs)(yk.e, {
+                                      }), !fm && (0, Om.jsxs)(xm.d, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, ek.jsx)(Hk, {
+                                        children: [(0, Om.jsx)(qm, {
                                           name: "play"
-                                        }), (0, ek.jsx)("span", {
+                                        }), (0, Om.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, ek.jsx)(Ai, {
-                                        theme: jk,
-                                        onChange: wk
+                                      }), (0, Om.jsx)(ta, {
+                                        theme: om,
+                                        onChange: Ym
                                       })]
                                     })]
-                                  }), (0, ek.jsxs)("div", {
+                                  }), (0, Om.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, ek.jsx)("aside", {
+                                    children: [(0, Om.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, ek.jsx)(Mi, {
-                                        basePath: Fk,
-                                        activePageId: tk.id,
-                                        onNavigate: nk
+                                      children: (0, Om.jsx)(Fa, {
+                                        basePath: Tm,
+                                        activePageId: pm.id,
+                                        onNavigate: Sm
                                       })
-                                    }), (0, ek.jsx)("div", {
+                                    }), (0, Om.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: nk
-                                    }), (0, ek.jsxs)(pk, {
+                                      onClick: Sm
+                                    }), (0, Om.jsxs)(Nm, {
                                       className: "DocsMain",
-                                      children: [(0, ek.jsx)(si, {
-                                        page: tk,
-                                        onTocChange: Sk
-                                      }, tk.id), (0, ek.jsx)(ky, {
-                                        basePath: Fk,
-                                        pageId: tk.id
+                                      children: [(0, Om.jsx)(ca, {
+                                        page: pm,
+                                        onTocChange: zm
+                                      }, pm.id), (0, Om.jsx)(mx, {
+                                        basePath: Tm,
+                                        pageId: pm.id
                                       })]
-                                    }), (0, ek.jsx)("aside", {
-                                      className: ik()("DocsToc", {
-                                        Timeline: "changelog" === tk.layout
+                                    }), (0, Om.jsx)("aside", {
+                                      className: am()("DocsToc", {
+                                        Timeline: "changelog" === pm.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, ek.jsx)(oi, {
-                                        isChangelog: "changelog" === tk.layout,
-                                        toc: Vk,
-                                        activeAnchor: vk,
-                                        onNavigate: Gk
+                                      children: (0, Om.jsx)(ba, {
+                                        isChangelog: "changelog" === pm.layout,
+                                        toc: Jm,
+                                        activeAnchor: Zm,
+                                        onNavigate: em
                                       })
                                     })]
-                                  }), (0, ek.jsx)(fi, {}), Qk && (0, ek.jsx)(ci, {
-                                    basePath: Fk,
+                                  }), (0, Om.jsx)(ua, {}), Qm && (0, Om.jsx)(la, {
+                                    basePath: Tm,
                                     onClose: () => {
-                                      sk(!1)
+                                      nm(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 4739: (kk, Fk, Ik) => {
-                          Ik.d(Fk, {
-                            A: () => Zk,
-                            d: () => Xk,
-                            h: () => yk,
-                            l: () => Hk,
-                            n: () => wk,
-                            p: () => lk,
-                            s: () => Tk,
-                            t: () => ik,
-                            u: () => ek,
-                            w: () => jk
+                        }, 4672: (mm, Tm, fm) => {
+                          fm.d(Tm, {
+                            b: () => hm,
+                            f: () => xm,
+                            j: () => qm,
+                            k: () => Ym,
+                            n: () => wm,
+                            o: () => Am,
+                            q: () => am,
+                            r: () => Om,
+                            v: () => om,
+                            x: () => Em
                           });
-                          const Xk = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const hm = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function Tk(kk) {
+                          function Am(mm) {
                             try {
-                              return decodeURIComponent(kk.slice(1))
+                              return decodeURIComponent(mm.slice(1))
                             } catch {
-                              return kk.slice(1)
+                              return mm.slice(1)
                             }
                           }
 
-                          function ik(kk) {
-                            return kk.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function am(mm) {
+                            return mm.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const yk = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Xk.source}`, "g");
+                          const xm = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${hm.source}`, "g");
 
-                          function lk(kk, Fk) {
-                            return 2 === kk.length ? Fk.replace(/^ (.*) $/, "$1") : Fk
-                          }
-
-                          function ak(kk) {
-                            return "" === kk.trim()
+                          function wm(mm, Tm) {
+                            return 2 === mm.length ? Tm.replace(/^ (.*) $/, "$1") : Tm
                           }
 
-                          function qk(kk) {
-                            const Fk = [];
-                            for (const Ik of kk.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Fk.length > 0 && Fk[Fk.length - 1].endsWith("\\") ? Fk[Fk.length - 1] += `|${Ik}` : Fk.push(Ik);
-                            return Fk.map((kk => kk.trim().replaceAll("\\|", "|")))
+                          function Dm(mm) {
+                            return "" === mm.trim()
                           }
-                          const Lk = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function tk(kk) {
-                            const Fk = [],
-                              Ik = [{
+                          function im(mm) {
+                            const Tm = [];
+                            for (const fm of mm.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Tm.length > 0 && Tm[Tm.length - 1].endsWith("\\") ? Tm[Tm.length - 1] += `|${fm}` : Tm.push(fm);
+                            return Tm.map((mm => mm.trim().replaceAll("\\|", "|")))
+                          }
+                          const Rm = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function pm(mm) {
+                            const Tm = [],
+                              fm = [{
                                 indent: -1,
-                                items: Fk
+                                items: Tm
                               }];
-                            let Xk = null;
-                            for (const Tk of kk) {
-                              const kk = Tk.match(Lk);
-                              if (!kk) {
-                                Xk && (Xk.text += ` ${Tk.trim()}`);
+                            let hm = null;
+                            for (const Am of mm) {
+                              const mm = Am.match(Rm);
+                              if (!mm) {
+                                hm && (hm.text += ` ${Am.trim()}`);
                                 continue
                               }
-                              const Fk = kk[1].replace(/\t/g, "  ").length;
-                              for (; Fk <= Ik[Ik.length - 1].indent;) Ik.pop();
-                              Xk = {
-                                text: kk[3].trim(),
+                              const Tm = mm[1].replace(/\t/g, "  ").length;
+                              for (; Tm <= fm[fm.length - 1].indent;) fm.pop();
+                              hm = {
+                                text: mm[3].trim(),
                                 children: []
-                              }, Ik[Ik.length - 1].items.push(Xk), Ik.push({
-                                indent: Fk,
-                                items: Xk.children
+                              }, fm[fm.length - 1].items.push(hm), fm.push({
+                                indent: Tm,
+                                items: hm.children
                               })
                             }
-                            return Fk
+                            return Tm
                           }
 
-                          function Zk(kk) {
-                            const Fk = kk.replace(/\r\n/g, "\n").split("\n"),
-                              Ik = [];
-                            let Xk = 0;
-                            for (; Xk < Fk.length;) {
-                              const kk = Fk[Xk];
-                              if (ak(kk)) {
-                                Xk++;
+                          function Em(mm) {
+                            const Tm = mm.replace(/\r\n/g, "\n").split("\n"),
+                              fm = [];
+                            let hm = 0;
+                            for (; hm < Tm.length;) {
+                              const mm = Tm[hm];
+                              if (Dm(mm)) {
+                                hm++;
                                 continue
                               }
-                              const Tk = kk.match(/^\s*```\s*(\w*)\s*$/);
-                              if (Tk) {
-                                const kk = [];
-                                for (Xk++; Xk < Fk.length && !/^\s*```\s*$/.test(Fk[Xk]);) kk.push(Fk[Xk]), Xk++;
-                                Xk++, Ik.push({
+                              const Am = mm.match(/^\s*```\s*(\w*)\s*$/);
+                              if (Am) {
+                                const mm = [];
+                                for (hm++; hm < Tm.length && !/^\s*```\s*$/.test(Tm[hm]);) mm.push(Tm[hm]), hm++;
+                                hm++, fm.push({
                                   kind: "code",
-                                  lang: Tk[1] || "text",
-                                  code: kk.join("\n").replace(/\s+$/, "")
+                                  lang: Am[1] || "text",
+                                  code: mm.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const yk = kk.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (yk) {
-                                const kk = yk[2].trim();
-                                Ik.push({
+                              const xm = mm.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (xm) {
+                                const mm = xm[2].trim();
+                                fm.push({
                                   kind: "heading",
-                                  level: yk[1].length,
-                                  text: kk,
-                                  anchor: ik(kk)
-                                }), Xk++;
+                                  level: xm[1].length,
+                                  text: mm,
+                                  anchor: am(mm)
+                                }), hm++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(kk)) {
-                                Ik.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(mm)) {
+                                fm.push({
                                   kind: "rule"
-                                }), Xk++;
+                                }), hm++;
                                 continue
                               }
-                              if (kk.trim().startsWith("|") && Xk + 1 < Fk.length && /^\s*\|[\s:|-]+\|\s*$/.test(Fk[Xk + 1])) {
-                                const Tk = qk(kk),
-                                  ik = [];
-                                for (Xk += 2; Xk < Fk.length && Fk[Xk].trim().startsWith("|");) ik.push(qk(Fk[Xk])), Xk++;
-                                Ik.push({
+                              if (mm.trim().startsWith("|") && hm + 1 < Tm.length && /^\s*\|[\s:|-]+\|\s*$/.test(Tm[hm + 1])) {
+                                const Am = im(mm),
+                                  am = [];
+                                for (hm += 2; hm < Tm.length && Tm[hm].trim().startsWith("|");) am.push(im(Tm[hm])), hm++;
+                                fm.push({
                                   kind: "table",
-                                  header: Tk,
-                                  rows: ik
+                                  header: Am,
+                                  rows: am
                                 });
                                 continue
                               }
-                              if (kk.startsWith(">")) {
-                                const kk = [];
-                                for (; Xk < Fk.length && Fk[Xk].startsWith(">");) kk.push(Fk[Xk].replace(/^>\s?/, "")), Xk++;
-                                Ik.push({
+                              if (mm.startsWith(">")) {
+                                const mm = [];
+                                for (; hm < Tm.length && Tm[hm].startsWith(">");) mm.push(Tm[hm].replace(/^>\s?/, "")), hm++;
+                                fm.push({
                                   kind: "quote",
-                                  blocks: Zk(kk.join("\n"))
+                                  blocks: Em(mm.join("\n"))
                                 });
                                 continue
                               }
-                              if (Lk.test(kk)) {
-                                const Tk = [],
-                                  ik = /^\s*\d+\./.test(kk);
-                                for (; Xk < Fk.length && !ak(Fk[Xk]) && (Lk.test(Fk[Xk]) || /^\s+\S/.test(Fk[Xk]));) Tk.push(Fk[Xk]), Xk++;
-                                Ik.push({
+                              if (Rm.test(mm)) {
+                                const Am = [],
+                                  am = /^\s*\d+\./.test(mm);
+                                for (; hm < Tm.length && !Dm(Tm[hm]) && (Rm.test(Tm[hm]) || /^\s+\S/.test(Tm[hm]));) Am.push(Tm[hm]), hm++;
+                                fm.push({
                                   kind: "list",
-                                  ordered: ik,
-                                  items: tk(Tk)
+                                  ordered: am,
+                                  items: pm(Am)
                                 });
                                 continue
                               }
-                              const lk = [];
-                              for (; Xk < Fk.length && !ak(Fk[Xk]) && !/^\s*```/.test(Fk[Xk]) && !/^#{1,6}\s/.test(Fk[Xk]) && !Fk[Xk].startsWith(">") && !Lk.test(Fk[Xk]) && (!Fk[Xk].trim().startsWith("|") || 0 !== lk.length);) lk.push(Fk[Xk].trim()), Xk++;
-                              0 === lk.length && (lk.push(Fk[Xk].trim()), Xk++), Ik.push({
+                              const wm = [];
+                              for (; hm < Tm.length && !Dm(Tm[hm]) && !/^\s*```/.test(Tm[hm]) && !/^#{1,6}\s/.test(Tm[hm]) && !Tm[hm].startsWith(">") && !Rm.test(Tm[hm]) && (!Tm[hm].trim().startsWith("|") || 0 !== wm.length);) wm.push(Tm[hm].trim()), hm++;
+                              0 === wm.length && (wm.push(Tm[hm].trim()), hm++), fm.push({
                                 kind: "paragraph",
-                                text: lk.join(" ")
+                                text: wm.join(" ")
                               })
                             }
-                            return Ik
+                            return fm
                           }
 
-                          function jk(kk) {
-                            let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const Ik = Zk(kk);
-                            let Xk = "";
-                            const Tk = [],
-                              ik = [],
-                              yk = new Map;
-                            for (const qk of Ik) {
-                              if ("heading" === qk.kind) {
-                                var lk;
-                                const kk = (null !== (lk = yk.get(qk.anchor)) && void 0 !== lk ? lk : 0) + 1;
-                                yk.set(qk.anchor, kk), kk > 1 && (qk.anchor = `${qk.anchor}-${kk}`)
+                          function om(mm) {
+                            let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const fm = Em(mm);
+                            let hm = "";
+                            const Am = [],
+                              am = [],
+                              xm = new Map;
+                            for (const im of fm) {
+                              if ("heading" === im.kind) {
+                                var wm;
+                                const mm = (null !== (wm = xm.get(im.anchor)) && void 0 !== wm ? wm : 0) + 1;
+                                xm.set(im.anchor, mm), mm > 1 && (im.anchor = `${im.anchor}-${mm}`)
                               }
-                              if ("heading" === qk.kind && 1 === qk.level && !Xk) {
-                                Xk = qk.text;
+                              if ("heading" === im.kind && 1 === im.level && !hm) {
+                                hm = im.text;
                                 continue
                               }
-                              if ("heading" === qk.kind && qk.level <= Fk) {
-                                ik.push({
-                                  heading: qk,
+                              if ("heading" === im.kind && im.level <= Tm) {
+                                am.push({
+                                  heading: im,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const kk = ik.at(-1);
-                              kk ? kk.blocks.push(qk) : Tk.push(qk)
+                              const mm = am.at(-1);
+                              mm ? mm.blocks.push(im) : Am.push(im)
                             }
-                            const ak = kk => {
+                            const Dm = mm => {
                               for (;
-                                "rule" === (null === (Fk = kk.at(-1)) || void 0 === Fk ? void 0 : Fk.kind);) {
-                                var Fk;
-                                kk.pop()
+                                "rule" === (null === (Tm = mm.at(-1)) || void 0 === Tm ? void 0 : Tm.kind);) {
+                                var Tm;
+                                mm.pop()
                               }
                             };
-                            ak(Tk);
-                            for (const qk of ik) ak(qk.blocks);
+                            Dm(Am);
+                            for (const im of am) Dm(im.blocks);
                             return {
-                              title: Xk,
-                              intro: Tk,
-                              sections: ik
+                              title: hm,
+                              intro: Am,
+                              sections: am
                             }
                           }
 
-                          function ek(kk) {
+                          function Om(mm) {
                             return [{
                               heading: null,
-                              blocks: kk.intro
-                            }, ...kk.sections.map((kk => ({
-                              heading: kk.heading,
-                              blocks: kk.blocks
+                              blocks: mm.intro
+                            }, ...mm.sections.map((mm => ({
+                              heading: mm.heading,
+                              blocks: mm.blocks
                             })))]
                           }
 
-                          function wk(kk) {
-                            return kk.flatMap((kk => "code" === kk.kind ? [kk] : "quote" === kk.kind ? wk(kk.blocks) : []))
+                          function Ym(mm) {
+                            return mm.flatMap((mm => "code" === mm.kind ? [mm] : "quote" === mm.kind ? Ym(mm.blocks) : []))
                           }
 
-                          function Hk(kk) {
-                            switch (kk.kind) {
+                          function qm(mm) {
+                            switch (mm.kind) {
                               case "heading":
                               case "paragraph":
-                                return kk.text;
+                                return mm.text;
                               case "code":
-                                return kk.code;
+                                return mm.code;
                               case "table":
-                                return [kk.header, ...kk.rows].map((kk => kk.join(" "))).join(" ");
+                                return [mm.header, ...mm.rows].map((mm => mm.join(" "))).join(" ");
                               case "list": {
-                                const Fk = kk => kk.map((kk => `${kk.text} ${Fk(kk.children)}`)).join(" ");
-                                return Fk(kk.items)
+                                const Tm = mm => mm.map((mm => `${mm.text} ${Tm(mm.children)}`)).join(" ");
+                                return Tm(mm.items)
                               }
                               case "quote":
-                                return kk.blocks.map(Hk).join(" ");
+                                return mm.blocks.map(qm).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 4833: (kk, Fk, Ik) => {
-                          Ik.d(Fk, {
-                            b: () => lk
+                        }, 4782: (mm, Tm, fm) => {
+                          fm.d(Tm, {
+                            e: () => wm
                           });
-                          var Xk = Ik(58),
-                            Tk = Ik(318),
-                            ik = Ik(1864),
-                            yk = Ik(1096);
+                          var hm = fm(59),
+                            Am = fm(339),
+                            am = fm(1893),
+                            xm = fm(1135);
 
-                          function lk(kk) {
+                          function wm(mm) {
                             let {
-                              text: Fk
-                            } = kk;
-                            const Ik = [];
-                            let lk = "";
-                            return (0, Tk.oc)(Fk).forEach(((kk, Fk) => {
-                              if ("string" === typeof kk || !(0, ik.e)(kk.icon)) return void(lk += "string" === typeof kk ? kk : kk.icon);
-                              const Tk = Math.max(0, lk.trimEnd().search(/\S{1,12}$/));
-                              Ik.push((0, yk.jsxs)(Xk.Fragment, {
-                                children: [lk.slice(0, Tk), (0, yk.jsxs)("span", {
+                              text: Tm
+                            } = mm;
+                            const fm = [];
+                            let wm = "";
+                            return (0, Am.Zb)(Tm).forEach(((mm, Tm) => {
+                              if ("string" === typeof mm || !(0, am.f)(mm.icon)) return void(wm += "string" === typeof mm ? mm : mm.icon);
+                              const Am = Math.max(0, wm.trimEnd().search(/\S{1,12}$/));
+                              fm.push((0, xm.jsxs)(hm.Fragment, {
+                                children: [wm.slice(0, Am), (0, xm.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [lk.slice(Tk), (0, yk.jsx)("span", {
+                                  children: [wm.slice(Am), (0, xm.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": kk.icon,
-                                    children: (0, yk.jsx)(ik.d, {
-                                      itemName: kk.icon,
+                                    "aria-label": mm.icon,
+                                    children: (0, xm.jsx)(am.d, {
+                                      itemName: mm.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, Fk)), lk = ""
-                            })), Ik.push(lk), (0, yk.jsx)(yk.Fragment, {
-                              children: Ik
+                              }, Tm)), wm = ""
+                            })), fm.push(wm), (0, xm.jsx)(xm.Fragment, {
+                              children: fm
                             })
                           }
-                        }, 4767: (kk, Fk, Ik) => {
-                          Ik.d(Fk, {
-                            d: () => xk,
-                            b: () => Jk
+                        }, 4704: (mm, Tm, fm) => {
+                          fm.d(Tm, {
+                            f: () => Vm,
+                            c: () => jm
                           });
-                          var Xk = Ik(58),
-                            Tk = Ik(1402),
-                            ik = Ik(1849),
-                            yk = Ik(4775),
-                            lk = Ik(1096);
-                          const ak = (0, Xk.memo)((function(kk) {
+                          var hm = fm(59),
+                            Am = fm(1449),
+                            am = fm(1884),
+                            xm = fm(4711),
+                            wm = fm(1135);
+                          const Dm = (0, hm.memo)((function(mm) {
                             let {
-                              initialParameters: Fk
-                            } = kk;
-                            const Ik = (0, Xk.useRef)(null),
-                              Tk = (0, Xk.useRef)(null),
-                              ak = (0, Xk.useRef)(0),
-                              qk = (0, Xk.useRef)(null),
-                              Lk = Fk.description,
-                              tk = Fk.GI,
+                              initialParameters: Tm
+                            } = mm;
+                            const fm = (0, hm.useRef)(null),
+                              Am = (0, hm.useRef)(null),
+                              Dm = (0, hm.useRef)(0),
+                              im = (0, hm.useRef)(null),
+                              Rm = Tm.description,
+                              pm = Tm.Hf,
                               {
-                                scale: Zk,
-                                rotation: jk
-                              } = null !== Fk && void 0 !== Fk ? Fk : {},
-                              ek = (0, yk.g)();
-                            return (0, Xk.useEffect)((() => {
-                              const kk = ek.onFrame((() => {
-                                const kk = ek.getState();
-                                if (!kk.isActive || !Ik.current || !Tk.current) return;
-                                const Fk = kk.state;
-                                if (Ik.current.value = Fk.progress, Fk.clickCount > ak.current) {
-                                  ak.current = Fk.clickCount;
-                                  const kk = Tk.current;
-                                  kk.classList.add("pulse"), qk.current = setTimeout((() => {
-                                    kk.classList.remove("pulse")
+                                scale: Em,
+                                rotation: om
+                              } = null !== Tm && void 0 !== Tm ? Tm : {},
+                              Om = (0, xm.c)();
+                            return (0, hm.useEffect)((() => {
+                              const mm = Om.onFrame((() => {
+                                const mm = Om.getState();
+                                if (!mm.isActive || !fm.current || !Am.current) return;
+                                const Tm = mm.state;
+                                if (fm.current.value = Tm.progress, Tm.clickCount > Dm.current) {
+                                  Dm.current = Tm.clickCount;
+                                  const mm = Am.current;
+                                  mm.classList.add("pulse"), im.current = setTimeout((() => {
+                                    mm.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(qk.current), kk()
+                                clearTimeout(im.current), mm()
                               }
-                            }), [ek]), (0, lk.jsx)(lk.Fragment, {
-                              children: (0, lk.jsxs)("div", {
+                            }), [Om]), (0, wm.jsx)(wm.Fragment, {
+                              children: (0, wm.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== Zk && {
-                                    "--scale": Zk
+                                  ...null !== Em && {
+                                    "--scale": Em
                                   },
-                                  ...null !== jk && {
-                                    "--rotation": `${jk}deg`
+                                  ...null !== om && {
+                                    "--rotation": `${om}deg`
                                   }
                                 },
-                                children: [(0, lk.jsx)("progress", {
+                                children: [(0, wm.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: Ik
-                                }), (0, lk.jsx)("span", {
+                                  ref: fm
+                                }), (0, wm.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: Tk,
-                                  children: (0, lk.jsx)(ik.c, {
+                                  ref: Am,
+                                  children: (0, wm.jsx)(am.b, {
                                     text: [{
-                                      icon: tk
+                                      icon: pm
                                     }]
                                   })
-                                }), (0, lk.jsx)("div", {
+                                }), (0, wm.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, lk.jsx)(ik.c, {
-                                    text: Lk
+                                  children: (0, wm.jsx)(am.b, {
+                                    text: Rm
                                   })
                                 })]
                               })
                             })
                           }));
-                          var qk = Ik(1055),
-                            Lk = Ik.n(qk);
-                          const tk = 2 * Math.PI * 90,
-                            Zk = (0, Xk.memo)((function(kk) {
+                          var im = fm(1080),
+                            Rm = fm.n(im);
+                          const pm = 2 * Math.PI * 90,
+                            Em = (0, hm.memo)((function(mm) {
                               let {
-                                initialParameters: Fk
-                              } = kk;
-                              const Ik = (0, Xk.useRef)(null),
-                                Tk = (0, Xk.useRef)(null),
-                                ak = (0, Xk.useRef)(null),
-                                qk = Fk.label,
-                                Zk = Fk.icon,
-                                jk = Fk.bI,
+                                initialParameters: Tm
+                              } = mm;
+                              const fm = (0, hm.useRef)(null),
+                                Am = (0, hm.useRef)(null),
+                                Dm = (0, hm.useRef)(null),
+                                im = Tm.label,
+                                Em = Tm.icon,
+                                om = Tm.rf,
                                 {
-                                  scale: ek,
-                                  rotation: wk,
-                                  RI: Hk
-                                } = null !== Fk && void 0 !== Fk ? Fk : {},
-                                Jk = (0, yk.g)();
-                              return (0, Xk.useEffect)((() => {
-                                const kk = Jk.onFrame((() => {
-                                  var kk, Fk;
-                                  const Xk = Jk.getState();
-                                  if (!Xk.isActive || !Tk.current) return;
-                                  const ik = Xk.state,
-                                    yk = null !== (kk = ik.timeRemaining) && void 0 !== kk ? kk : 0,
-                                    lk = null !== (Fk = ik.uI) && void 0 !== Fk ? Fk : 1,
-                                    qk = tk * (1 - yk / lk);
-                                  Tk.current.style.strokeDashoffset = `${qk}`, Ik.current && (Ik.current.style.opacity = yk > 0 ? "1" : "0"), ak.current && jk && (ak.current.textContent = `${(yk/1e3).toFixed(1)}s`)
+                                  scale: Om,
+                                  rotation: Ym,
+                                  sf: qm
+                                } = null !== Tm && void 0 !== Tm ? Tm : {},
+                                jm = (0, xm.c)();
+                              return (0, hm.useEffect)((() => {
+                                const mm = jm.onFrame((() => {
+                                  var mm, Tm;
+                                  const hm = jm.getState();
+                                  if (!hm.isActive || !Am.current) return;
+                                  const am = hm.state,
+                                    xm = null !== (mm = am.timeRemaining) && void 0 !== mm ? mm : 0,
+                                    wm = null !== (Tm = am.Cf) && void 0 !== Tm ? Tm : 1,
+                                    im = pm * (1 - xm / wm);
+                                  Am.current.style.strokeDashoffset = `${im}`, fm.current && (fm.current.style.opacity = xm > 0 ? "1" : "0"), Dm.current && om && (Dm.current.textContent = `${(xm/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  kk()
+                                  mm()
                                 }
-                              }), [Jk, jk]), (0, lk.jsxs)("div", {
+                              }), [jm, om]), (0, wm.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: Ik,
+                                ref: fm,
                                 style: {
-                                  ...null !== ek && {
-                                    "--scale": ek
+                                  ...null !== Om && {
+                                    "--scale": Om
                                   },
-                                  ...null !== wk && {
-                                    "--rotation": `${wk}deg`
+                                  ...null !== Ym && {
+                                    "--rotation": `${Ym}deg`
                                   }
                                 },
-                                children: [(0, lk.jsxs)("div", {
+                                children: [(0, wm.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, lk.jsxs)("svg", {
+                                  children: [(0, wm.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, lk.jsx)("circle", {
+                                    children: [(0, wm.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, lk.jsx)("circle", {
+                                    }), (0, wm.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6295,80 +6295,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: tk,
-                                      ref: Tk
+                                      strokeDasharray: pm,
+                                      ref: Am
                                     })]
-                                  }), (0, lk.jsx)("div", {
+                                  }), (0, wm.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, lk.jsx)(ik.c, {
+                                    children: (0, wm.jsx)(am.b, {
                                       text: [{
-                                        icon: Zk
+                                        icon: Em
                                       }],
-                                      className: Lk()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: Hk
+                                      className: Rm()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: qm
                                       })
                                     })
                                   })]
-                                }), (0, lk.jsxs)("div", {
+                                }), (0, wm.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, lk.jsx)(ik.c, {
-                                    text: qk,
+                                  children: [(0, wm.jsx)(am.b, {
+                                    text: im,
                                     className: "QTETimedClickLabelText"
-                                  }), jk && (0, lk.jsx)("span", {
+                                  }), om && (0, wm.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: ak
+                                    ref: Dm
                                   })]
                                 })]
                               })
                             })),
-                            jk = (0, Xk.memo)((function(kk) {
+                            om = (0, hm.memo)((function(mm) {
                               let {
-                                initialParameters: Fk
-                              } = kk;
-                              const Ik = (0, Xk.useRef)(null),
-                                Tk = (0, Xk.useRef)(null),
-                                ak = (0, Xk.useRef)(null),
-                                qk = (0, Xk.useRef)(!1),
-                                Lk = Fk.description,
-                                tk = null === Fk || void 0 === Fk ? void 0 : Fk.icon,
-                                Zk = (0, yk.g)();
-                              return (0, Xk.useEffect)((() => {
-                                const kk = Zk.onFrame((() => {
-                                  const kk = Zk.getState();
-                                  if (!kk.isActive) return;
-                                  const Fk = kk.state;
-                                  if (Ik.current) {
-                                    const kk = 100 * (Fk.catchZonePosition - Fk.CI / 2);
-                                    Ik.current.style.left = `${kk}%`, Ik.current.style.width = 100 * Fk.CI + "%", Fk.isCatching !== qk.current && (qk.current = Fk.isCatching, Fk.isCatching ? Ik.current.classList.add("catching") : Ik.current.classList.remove("catching"))
+                                initialParameters: Tm
+                              } = mm;
+                              const fm = (0, hm.useRef)(null),
+                                Am = (0, hm.useRef)(null),
+                                Dm = (0, hm.useRef)(null),
+                                im = (0, hm.useRef)(!1),
+                                Rm = Tm.description,
+                                pm = null === Tm || void 0 === Tm ? void 0 : Tm.icon,
+                                Em = (0, xm.c)();
+                              return (0, hm.useEffect)((() => {
+                                const mm = Em.onFrame((() => {
+                                  const mm = Em.getState();
+                                  if (!mm.isActive) return;
+                                  const Tm = mm.state;
+                                  if (fm.current) {
+                                    const mm = 100 * (Tm.catchZonePosition - Tm.Mf / 2);
+                                    fm.current.style.left = `${mm}%`, fm.current.style.width = 100 * Tm.Mf + "%", Tm.isCatching !== im.current && (im.current = Tm.isCatching, Tm.isCatching ? fm.current.classList.add("catching") : fm.current.classList.remove("catching"))
                                   }
-                                  Tk.current && (Tk.current.style.left = 100 * Fk.moverPosition + "%"), ak.current && (ak.current.value = Fk.progress)
+                                  Am.current && (Am.current.style.left = 100 * Tm.moverPosition + "%"), Dm.current && (Dm.current.value = Tm.progress)
                                 }));
                                 return () => {
-                                  kk()
+                                  mm()
                                 }
-                              }), [Zk]), (0, lk.jsxs)("div", {
+                              }), [Em]), (0, wm.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, lk.jsx)("div", {
+                                children: [(0, wm.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, lk.jsx)(ik.c, {
-                                    text: Lk
+                                  children: (0, wm.jsx)(am.b, {
+                                    text: Rm
                                   })
-                                }), (0, lk.jsx)("progress", {
+                                }), (0, wm.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: ak
-                                }), (0, lk.jsxs)("div", {
+                                  ref: Dm
+                                }), (0, wm.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, lk.jsx)("div", {
+                                  children: [(0, wm.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: Ik
-                                  }), (0, lk.jsx)("div", {
+                                    ref: fm
+                                  }), (0, wm.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: Tk,
-                                    children: (0, lk.jsx)("span", {
-                                      children: tk && (0, lk.jsx)(ik.c, {
+                                    ref: Am,
+                                    children: (0, wm.jsx)("span", {
+                                      children: pm && (0, wm.jsx)(am.b, {
                                         text: [{
-                                          icon: tk,
+                                          icon: pm,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6379,749 +6379,749 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var ek = Ik(628);
-                          const wk = (0, Xk.memo)((function(kk) {
+                          var Om = fm(653);
+                          const Ym = (0, hm.memo)((function(mm) {
                               let {
-                                initialParameters: Fk
-                              } = kk;
-                              const Ik = (0, Xk.useRef)(null),
-                                Tk = Fk.label,
-                                ak = Fk.YI,
+                                initialParameters: Tm
+                              } = mm;
+                              const fm = (0, hm.useRef)(null),
+                                Am = Tm.label,
+                                Dm = Tm.df,
                                 {
-                                  icon: qk,
-                                  scale: Lk,
-                                  rotation: tk
-                                } = null !== Fk && void 0 !== Fk ? Fk : {},
-                                Zk = 100 * (.5 - ak / 2),
-                                jk = 100 * ak,
-                                wk = (0, yk.g)();
-                              return (0, Xk.useEffect)((() => {
-                                const kk = wk.onFrame((() => {
-                                  const kk = wk.getState();
-                                  if (!kk.isActive || !Ik.current) return;
-                                  const Fk = kk.state;
-                                  Ik.current.style.left = 100 * Fk.markerPosition + "%"
+                                  icon: im,
+                                  scale: Rm,
+                                  rotation: pm
+                                } = null !== Tm && void 0 !== Tm ? Tm : {},
+                                Em = 100 * (.5 - Dm / 2),
+                                om = 100 * Dm,
+                                Ym = (0, xm.c)();
+                              return (0, hm.useEffect)((() => {
+                                const mm = Ym.onFrame((() => {
+                                  const mm = Ym.getState();
+                                  if (!mm.isActive || !fm.current) return;
+                                  const Tm = mm.state;
+                                  fm.current.style.left = 100 * Tm.markerPosition + "%"
                                 }));
                                 return () => {
-                                  kk()
+                                  mm()
                                 }
-                              }), [wk]), (0, lk.jsxs)("div", {
+                              }), [Ym]), (0, wm.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, ek.Q)(Lk) && {
-                                    "--scale": Lk
+                                  ...!(0, Om.H)(Rm) && {
+                                    "--scale": Rm
                                   },
-                                  ...!(0, ek.Q)(tk) && {
-                                    "--rotation": `${tk}deg`
+                                  ...!(0, Om.H)(pm) && {
+                                    "--rotation": `${pm}deg`
                                   }
                                 },
-                                children: [qk && (0, lk.jsx)(ik.c, {
+                                children: [im && (0, wm.jsx)(am.b, {
                                   text: [{
-                                    icon: qk
+                                    icon: im
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, lk.jsxs)("div", {
+                                }), (0, wm.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, lk.jsx)("div", {
+                                  children: [(0, wm.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${Zk}%`,
-                                      width: `${jk}%`
+                                      left: `${Em}%`,
+                                      width: `${om}%`
                                     }
-                                  }), (0, lk.jsx)("div", {
+                                  }), (0, wm.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: Ik
+                                    ref: fm
                                   })]
-                                }), (0, lk.jsx)("div", {
+                                }), (0, wm.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, lk.jsx)(ik.c, {
-                                    text: Tk
+                                  children: (0, wm.jsx)(am.b, {
+                                    text: Am
                                   })
                                 })]
                               })
                             })),
-                            Hk = (0, Xk.memo)((function(kk) {
+                            qm = (0, hm.memo)((function(mm) {
                               let {
-                                initialParameters: Fk
-                              } = kk;
-                              const Ik = (0, Xk.useRef)(null),
-                                [Tk, ak] = (0, Xk.useState)((() => new Array(Fk.gI).fill("pending"))),
-                                [qk, Lk] = (0, Xk.useState)((() => {
-                                  const kk = Fk.rI;
-                                  return (0, ek.Q)(kk) || kk <= 0 ? [] : new Array(kk).fill("pending")
+                                initialParameters: Tm
+                              } = mm;
+                              const fm = (0, hm.useRef)(null),
+                                [Am, Dm] = (0, hm.useState)((() => new Array(Tm.Wf).fill("pending"))),
+                                [im, Rm] = (0, hm.useState)((() => {
+                                  const mm = Tm.Th;
+                                  return (0, Om.H)(mm) || mm <= 0 ? [] : new Array(mm).fill("pending")
                                 })),
-                                tk = Fk.label,
+                                pm = Tm.label,
                                 {
-                                  icon: Zk
-                                } = Fk,
-                                jk = (0, Xk.useRef)(0),
-                                wk = (0, Xk.useRef)(0),
-                                Hk = (0, Xk.useRef)([]),
-                                Jk = (0, yk.g)();
-                              return (0, Xk.useEffect)((() => {
-                                const kk = Jk.onFrame((() => {
-                                  const kk = Jk.getState();
-                                  if (!kk.isActive || !Ik.current) return;
-                                  const Fk = kk.state,
-                                    Xk = 30 + 60 * Fk.outerCircleProgress;
-                                  if (Ik.current.setAttribute("r", String(Xk)), !0 === Fk.lastClickResult && Fk.successes > jk.current) {
-                                    Ik.current.classList.remove("QTERhythmClickOuterCircle--miss"), Ik.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const kk = setTimeout((() => {
-                                      var kk;
-                                      null === (kk = Ik.current) || void 0 === kk || kk.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: Em
+                                } = Tm,
+                                om = (0, hm.useRef)(0),
+                                Ym = (0, hm.useRef)(0),
+                                qm = (0, hm.useRef)([]),
+                                jm = (0, xm.c)();
+                              return (0, hm.useEffect)((() => {
+                                const mm = jm.onFrame((() => {
+                                  const mm = jm.getState();
+                                  if (!mm.isActive || !fm.current) return;
+                                  const Tm = mm.state,
+                                    hm = 30 + 60 * Tm.outerCircleProgress;
+                                  if (fm.current.setAttribute("r", String(hm)), !0 === Tm.lastClickResult && Tm.successes > om.current) {
+                                    fm.current.classList.remove("QTERhythmClickOuterCircle--miss"), fm.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const mm = setTimeout((() => {
+                                      var mm;
+                                      null === (mm = fm.current) || void 0 === mm || mm.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    Hk.current.push(kk)
-                                  } else if (!1 === Fk.lastClickResult && Fk.misses > wk.current) {
-                                    Ik.current.classList.remove("QTERhythmClickOuterCircle--hit"), Ik.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const kk = setTimeout((() => {
-                                      var kk;
-                                      null === (kk = Ik.current) || void 0 === kk || kk.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    qm.current.push(mm)
+                                  } else if (!1 === Tm.lastClickResult && Tm.misses > Ym.current) {
+                                    fm.current.classList.remove("QTERhythmClickOuterCircle--hit"), fm.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const mm = setTimeout((() => {
+                                      var mm;
+                                      null === (mm = fm.current) || void 0 === mm || mm.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    Hk.current.push(kk)
+                                    qm.current.push(mm)
                                   }
-                                  Fk.successes === jk.current && Fk.misses === wk.current || (jk.current = Fk.successes, wk.current = Fk.misses, ak((kk => {
-                                    const Ik = [...kk];
-                                    for (let Xk = 0; Xk < Fk.gI; Xk++) Ik[Xk] = Xk < Fk.successes ? "success" : "pending";
-                                    return Ik
-                                  })), Lk((kk => {
-                                    if (0 === kk.length) return kk;
-                                    const Ik = [...kk];
-                                    for (let Xk = 0; Xk < Ik.length; Xk++) Ik[Xk] = Xk < Fk.misses ? "miss" : "pending";
-                                    return Ik
+                                  Tm.successes === om.current && Tm.misses === Ym.current || (om.current = Tm.successes, Ym.current = Tm.misses, Dm((mm => {
+                                    const fm = [...mm];
+                                    for (let hm = 0; hm < Tm.Wf; hm++) fm[hm] = hm < Tm.successes ? "success" : "pending";
+                                    return fm
+                                  })), Rm((mm => {
+                                    if (0 === mm.length) return mm;
+                                    const fm = [...mm];
+                                    for (let hm = 0; hm < fm.length; hm++) fm[hm] = hm < Tm.misses ? "miss" : "pending";
+                                    return fm
                                   })))
                                 }));
                                 return () => {
-                                  kk();
-                                  for (const kk of Hk.current) clearTimeout(kk);
-                                  Hk.current = []
+                                  mm();
+                                  for (const mm of qm.current) clearTimeout(mm);
+                                  qm.current = []
                                 }
-                              }), [Jk]), (0, lk.jsxs)("div", {
+                              }), [jm]), (0, wm.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, lk.jsx)("div", {
+                                children: [(0, wm.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: Tk.map(((kk, Fk) => (0, lk.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === kk ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, Fk)))
-                                }), (0, lk.jsxs)("div", {
+                                  children: Am.map(((mm, Tm) => (0, wm.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === mm ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, Tm)))
+                                }), (0, wm.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, lk.jsxs)("svg", {
+                                  children: [(0, wm.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, lk.jsx)("circle", {
+                                    children: [(0, wm.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, lk.jsx)("circle", {
+                                    }), (0, wm.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: Ik
+                                      ref: fm
                                     })]
-                                  }), Zk && (0, lk.jsx)("div", {
+                                  }), Em && (0, wm.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, lk.jsx)(ik.c, {
+                                    children: (0, wm.jsx)(am.b, {
                                       text: [{
-                                        icon: Zk
+                                        icon: Em
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), qk.length > 0 && (0, lk.jsx)("div", {
+                                }), im.length > 0 && (0, wm.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: qk.map(((kk, Fk) => (0, lk.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === kk ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, Fk)))
-                                }), (0, lk.jsx)("div", {
+                                  children: im.map(((mm, Tm) => (0, wm.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === mm ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, Tm)))
+                                }), (0, wm.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, lk.jsx)(ik.c, {
-                                    text: tk
+                                  children: (0, wm.jsx)(am.b, {
+                                    text: pm
                                   })
                                 })]
                               })
                             }));
 
-                          function Jk(kk) {
+                          function jm(mm) {
                             let {
-                              qte: Fk
-                            } = kk;
-                            switch (Fk.type) {
+                              qte: Tm
+                            } = mm;
+                            switch (Tm.type) {
                               case "progressBar":
-                                return (0, lk.jsx)(ak, {
-                                  initialParameters: Fk.parameters
+                                return (0, wm.jsx)(Dm, {
+                                  initialParameters: Tm.parameters
                                 });
                               case "timedClick":
-                                return (0, lk.jsx)(Zk, {
-                                  initialParameters: Fk.parameters
+                                return (0, wm.jsx)(Em, {
+                                  initialParameters: Tm.parameters
                                 });
                               case "gravityBar":
-                                return (0, lk.jsx)(jk, {
-                                  initialParameters: Fk.parameters
+                                return (0, wm.jsx)(om, {
+                                  initialParameters: Tm.parameters
                                 });
                               case "precisionBar":
-                                return (0, lk.jsx)(wk, {
-                                  initialParameters: Fk.parameters
+                                return (0, wm.jsx)(Ym, {
+                                  initialParameters: Tm.parameters
                                 });
                               case "rhythmClick":
-                                return (0, lk.jsx)(Hk, {
-                                  initialParameters: Fk.parameters
+                                return (0, wm.jsx)(qm, {
+                                  initialParameters: Tm.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const xk = (0, Xk.memo)((function() {
-                            const [kk, Fk] = (0, Xk.useState)({
+                          const Vm = (0, hm.memo)((function() {
+                            const [mm, Tm] = (0, hm.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, Tk.d)("qteStateUpdated", (kk => {
-                              Fk(kk)
-                            })), kk.isActive && kk.type ? (0, lk.jsx)("div", {
+                            return (0, Am.g)("qteStateUpdated", (mm => {
+                              Tm(mm)
+                            })), mm.isActive && mm.type ? (0, wm.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, lk.jsx)(Jk, {
-                                qte: kk
+                              children: (0, wm.jsx)(jm, {
+                                qte: mm
                               })
                             }) : null
                           }))
-                        }, 4775: (kk, Fk, Ik) => {
-                          Ik.d(Fk, {
-                            d: () => lk,
-                            g: () => ak
+                        }, 4711: (mm, Tm, fm) => {
+                          fm.d(Tm, {
+                            b: () => wm,
+                            c: () => Dm
                           });
-                          var Xk = Ik(58),
-                            Tk = Ik(1276),
-                            ik = Ik(4784);
-                          const yk = {
-                              getState: () => ik.b.getCurrentState(),
-                              onFrame: Tk.u
+                          var hm = fm(59),
+                            Am = fm(1296),
+                            am = fm(4717);
+                          const xm = {
+                              getState: () => am.d.getCurrentState(),
+                              onFrame: Am.l
                             },
-                            lk = (0, Xk.createContext)(yk);
+                            wm = (0, hm.createContext)(xm);
 
-                          function ak() {
-                            return (0, Xk.useContext)(lk)
+                          function Dm() {
+                            return (0, hm.useContext)(wm)
                           }
-                        }, 4837: (kk, Fk, Ik) => {
-                          Ik.d(Fk, {
-                            d: () => bk,
-                            e: () => uk
+                        }, 4784: (mm, Tm, fm) => {
+                          fm.d(Tm, {
+                            c: () => Xm,
+                            f: () => Gm
                           });
-                          var Xk = Ik(4843),
-                            Tk = Ik(318);
-                          const ik = 120,
-                            yk = 260,
-                            lk = 1.15,
-                            ak = 1.2,
-                            qk = 2,
-                            Lk = 1.08,
-                            tk = .8,
-                            Zk = .95,
-                            jk = 8,
-                            ek = "[\"')\\]\u300d\u300f\uff09]*",
-                            wk = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${ek}$`),
-                            Hk = new RegExp(`[?\uff1f]${ek}$`),
-                            Jk = new RegExp(`[!\uff01]${ek}$`),
-                            xk = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            Pk = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            Kk = new RegExp(`[${Pk}]`),
-                            Qk = new RegExp(`[${Pk}]|[^${Pk}]+`, "g"),
-                            sk = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var hm = fm(4789),
+                            Am = fm(339);
+                          const am = 120,
+                            xm = 260,
+                            wm = 1.15,
+                            Dm = 1.2,
+                            im = 2,
+                            Rm = 1.08,
+                            pm = .8,
+                            Em = .95,
+                            om = 8,
+                            Om = "[\"')\\]\u300d\u300f\uff09]*",
+                            Ym = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Om}$`),
+                            qm = new RegExp(`[?\uff1f]${Om}$`),
+                            jm = new RegExp(`[!\uff01]${Om}$`),
+                            Vm = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            Im = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            Km = new RegExp(`[${Im}]`),
+                            Qm = new RegExp(`[${Im}]|[^${Im}]+`, "g"),
+                            nm = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function Vk(kk) {
-                            let Fk = 2166136261;
-                            for (let Ik = 0; Ik < kk.length; Ik++) Fk ^= kk.charCodeAt(Ik), Fk = Math.imul(Fk, 16777619);
-                            return (Fk >>> 0) / 4294967295 * 2 - 1
+                          function Jm(mm) {
+                            let Tm = 2166136261;
+                            for (let fm = 0; fm < mm.length; fm++) Tm ^= mm.charCodeAt(fm), Tm = Math.imul(Tm, 16777619);
+                            return (Tm >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function zk(kk) {
-                            var Fk;
-                            if (Kk.test(kk)) return 1;
-                            const Ik = kk.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              Xk = Ik.replace(/[^0-9]/g, "");
-                            if (Xk.length > 0 && !/\p{L}/u.test(Ik)) return Math.min(Xk.length, 4);
-                            const Tk = null !== (Fk = Ik.match(sk)) && void 0 !== Fk ? Fk : [];
-                            if (0 === Tk.length) {
-                              var ik, yk;
-                              const kk = null !== (ik = null === (yk = Ik.match(/\p{L}/gu)) || void 0 === yk ? void 0 : yk.length) && void 0 !== ik ? ik : 0;
-                              return 0 === kk ? 0 : Math.min(Math.max(1, Math.round(kk / 2.5)), jk)
+                          function cm(mm) {
+                            var Tm;
+                            if (Km.test(mm)) return 1;
+                            const fm = mm.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              hm = fm.replace(/[^0-9]/g, "");
+                            if (hm.length > 0 && !/\p{L}/u.test(fm)) return Math.min(hm.length, 4);
+                            const Am = null !== (Tm = fm.match(nm)) && void 0 !== Tm ? Tm : [];
+                            if (0 === Am.length) {
+                              var am, xm;
+                              const mm = null !== (am = null === (xm = fm.match(/\p{L}/gu)) || void 0 === xm ? void 0 : xm.length) && void 0 !== am ? am : 0;
+                              return 0 === mm ? 0 : Math.min(Math.max(1, Math.round(mm / 2.5)), om)
                             }
-                            const lk = Ik.replace(/[^\p{L}]/gu, ""),
-                              ak = Tk.length > 1 && "e" === Tk.at(-1) && lk.endsWith("e") && !lk.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(kk.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(Tk.length - (ak ? 1 : 0), jk)
+                            const wm = fm.replace(/[^\p{L}]/gu, ""),
+                              Dm = Am.length > 1 && "e" === Am.at(-1) && wm.endsWith("e") && !wm.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(mm.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(Am.length - (Dm ? 1 : 0), om)
                           }
 
-                          function Sk(kk) {
-                            return kk.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function zm(mm) {
+                            return mm.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function vk(kk) {
-                            const Fk = kk.replace(/[^\p{L}]/gu, "");
-                            return Fk.length >= 2 && Fk === Fk.toUpperCase() && Fk !== Fk.toLowerCase()
+                          function Zm(mm) {
+                            const Tm = mm.replace(/[^\p{L}]/gu, "");
+                            return Tm.length >= 2 && Tm === Tm.toUpperCase() && Tm !== Tm.toLowerCase()
                           }
 
-                          function Ek(kk, Fk) {
-                            var Ik;
-                            const jk = Fk && (0, Xk.k)(Fk),
-                              ek = null !== (Ik = null === jk || void 0 === jk ? void 0 : jk.syllableMs) && void 0 !== Ik ? Ik : Xk.b,
-                              Pk = function(kk) {
-                                const Fk = [];
-                                for (const Xk of (0, Tk.oc)(kk))
-                                  if ("string" === typeof Xk)
-                                    for (const kk of Xk.split(/(\s+)/)) {
-                                      if ("" === kk) continue;
-                                      if (/^\s+$/.test(kk)) {
-                                        Fk.push({
+                          function km(mm, Tm) {
+                            var fm;
+                            const om = Tm && (0, hm.g)(Tm),
+                              Om = null !== (fm = null === om || void 0 === om ? void 0 : om.syllableMs) && void 0 !== fm ? fm : hm.d,
+                              Im = function(mm) {
+                                const Tm = [];
+                                for (const hm of (0, Am.Zb)(mm))
+                                  if ("string" === typeof hm)
+                                    for (const mm of hm.split(/(\s+)/)) {
+                                      if ("" === mm) continue;
+                                      if (/^\s+$/.test(mm)) {
+                                        Tm.push({
                                           kind: "space",
-                                          text: kk
+                                          text: mm
                                         });
                                         continue
                                       }
-                                      if (!Kk.test(kk)) {
-                                        Fk.push({
+                                      if (!Km.test(mm)) {
+                                        Tm.push({
                                           kind: "word",
-                                          text: kk,
+                                          text: mm,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let Xk = !0;
-                                      for (const Tk of null !== (Ik = kk.match(Qk)) && void 0 !== Ik ? Ik : []) {
-                                        var Ik;
-                                        const kk = Fk.at(-1);
-                                        Xk || "word" !== (null === kk || void 0 === kk ? void 0 : kk.kind) || Kk.test(Tk) || /[\p{L}\p{N}]/u.test(Tk) ? (Xk || Fk.push({
+                                      let hm = !0;
+                                      for (const Am of null !== (fm = mm.match(Qm)) && void 0 !== fm ? fm : []) {
+                                        var fm;
+                                        const mm = Tm.at(-1);
+                                        hm || "word" !== (null === mm || void 0 === mm ? void 0 : mm.kind) || Km.test(Am) || /[\p{L}\p{N}]/u.test(Am) ? (hm || Tm.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), Fk.push({
+                                        }), Tm.push({
                                           kind: "word",
-                                          text: Tk,
+                                          text: Am,
                                           delayMs: 0
-                                        }), Xk = !1) : kk.text += Tk
+                                        }), hm = !1) : mm.text += Am
                                       }
-                                    } else Fk.push({
+                                    } else Tm.push({
                                       kind: "icon",
-                                      text: Xk.icon,
+                                      text: hm.icon,
                                       delayMs: 0
                                     });
-                                return Fk
-                              }(kk),
-                              sk = [];
-                            let Ek = [];
-                            for (const Xk of Pk) "space" !== Xk.kind && (Ek.push(Xk), wk.test(Xk.text) && (sk.push(Ek), Ek = []));
-                            sk.push(Ek);
-                            const Ok = [];
-                            let nk = 0;
-                            for (const Xk of sk) {
-                              var Gk, pk;
-                              const kk = null !== (Gk = null === (pk = Xk.at(-1)) || void 0 === pk ? void 0 : pk.text) && void 0 !== Gk ? Gk : "",
-                                Fk = Hk.test(kk),
-                                Ik = Jk.test(kk),
-                                Tk = Xk.map((kk => "word" === kk.kind ? zk(kk.text) : 1)),
-                                Pk = Tk.findLastIndex((kk => kk > 0));
-                              for (const [Hk, Jk] of Xk.entries()) {
-                                const kk = "word" === Jk.kind,
-                                  Xk = Tk[Hk];
-                                Jk.delayMs = nk;
-                                for (let Tk = 0; jk && Tk < Xk; Tk++) {
+                                return Tm
+                              }(mm),
+                              nm = [];
+                            let km = [];
+                            for (const hm of Im) "space" !== hm.kind && (km.push(hm), Ym.test(hm.text) && (nm.push(km), km = []));
+                            nm.push(km);
+                            const bm = [];
+                            let Sm = 0;
+                            for (const hm of nm) {
+                              var em, Nm;
+                              const mm = null !== (em = null === (Nm = hm.at(-1)) || void 0 === Nm ? void 0 : Nm.text) && void 0 !== em ? em : "",
+                                Tm = qm.test(mm),
+                                fm = jm.test(mm),
+                                Am = hm.map((mm => "word" === mm.kind ? cm(mm.text) : 1)),
+                                Im = Am.findLastIndex((mm => mm > 0));
+                              for (const [qm, jm] of hm.entries()) {
+                                const mm = "word" === jm.kind,
+                                  hm = Am[qm];
+                                jm.delayMs = Sm;
+                                for (let Am = 0; om && Am < hm; Am++) {
                                   const {
-                                    intonation: ik
-                                  } = jk;
-                                  let yk = Pk > 0 ? -ik.declineSemitones * (Hk / Pk) : 0;
-                                  yk += Vk(`${Sk(Jk.text)}|${Tk}`) * ik.variationSemitones;
-                                  const wk = Math.min(1, ik.variationSemitones);
-                                  let xk = jk.glideSemitones,
-                                    Kk = 1;
-                                  Ik && (yk += ik.exclaimLiftSemitones, Kk *= lk), Fk && Hk === Pk && (yk += ik.questionRiseSemitones * (Xk > 1 ? .5 + .5 * Tk / (Xk - 1) : 1), Tk === Xk - 1 && (xk = Math.abs(xk) + ik.questionRiseSemitones / 2)), kk && vk(Jk.text) && (yk += qk * wk, Kk *= ak), Xk > 1 && 0 === Tk && (yk += tk * wk, Kk *= Lk), Ok.push({
-                                    atMs: nk + Tk * ek,
-                                    semitones: yk,
-                                    glideSemitones: xk,
-                                    durationMs: Tk < Xk - 1 ? Math.min(jk.durationMs, ek * Zk) : jk.durationMs,
-                                    level: Kk
+                                    intonation: am
+                                  } = om;
+                                  let xm = Im > 0 ? -am.declineSemitones * (qm / Im) : 0;
+                                  xm += Jm(`${zm(jm.text)}|${Am}`) * am.variationSemitones;
+                                  const Ym = Math.min(1, am.variationSemitones);
+                                  let Vm = om.glideSemitones,
+                                    Km = 1;
+                                  fm && (xm += am.exclaimLiftSemitones, Km *= wm), Tm && qm === Im && (xm += am.questionRiseSemitones * (hm > 1 ? .5 + .5 * Am / (hm - 1) : 1), Am === hm - 1 && (Vm = Math.abs(Vm) + am.questionRiseSemitones / 2)), mm && Zm(jm.text) && (xm += im * Ym, Km *= Dm), hm > 1 && 0 === Am && (xm += pm * Ym, Km *= Rm), bm.push({
+                                    atMs: Sm + Am * Om,
+                                    semitones: xm,
+                                    glideSemitones: Vm,
+                                    durationMs: Am < hm - 1 ? Math.min(om.durationMs, Om * Em) : om.durationMs,
+                                    level: Km
                                   })
                                 }
-                                nk += Xk * ek + (wk.test(Jk.text) ? yk : xk.test(Jk.text) ? ik : 0)
+                                Sm += hm * Om + (Ym.test(jm.text) ? xm : Vm.test(jm.text) ? am : 0)
                               }
                             }
                             return {
-                              pieces: Pk.map((kk => "space" === kk.kind ? kk : "icon" === kk.kind ? {
+                              pieces: Im.map((mm => "space" === mm.kind ? mm : "icon" === mm.kind ? {
                                 kind: "icon",
-                                icon: kk.text,
-                                delayMs: kk.delayMs
+                                icon: mm.text,
+                                delayMs: mm.delayMs
                               } : {
                                 kind: "word",
-                                text: kk.text,
-                                delayMs: kk.delayMs
+                                text: mm.text,
+                                delayMs: mm.delayMs
                               })),
-                              blips: Ok
+                              blips: bm
                             }
                           }
-                          var Ok = Ik(1179),
-                            nk = Ik(1241),
-                            Gk = Ik(1881);
+                          var bm = fm(1208),
+                            Sm = fm(1259),
+                            em = fm(1912);
 
-                          function pk(kk) {
-                            if ("string" === typeof kk) return kk;
-                            const Fk = nk.d.get().getCurrentLanguageCode();
-                            return (0, Ok.q)(Fk, kk.translationKey, (0, Ok.m)(kk.params, Gk.d.shown))
+                          function Nm(mm) {
+                            if ("string" === typeof mm) return mm;
+                            const Tm = Sm.e.get().getCurrentLanguageCode();
+                            return (0, bm.t)(Tm, mm.translationKey, (0, bm.r)(mm.params, em.e.shown))
                           }
 
-                          function uk(kk) {
-                            const Fk = void 0 === kk.voice ? null : (0, Xk.n)(kk.voice),
-                              Ik = Fk && (0, Xk.k)(Fk);
+                          function Gm(mm) {
+                            const Tm = void 0 === mm.voice ? null : (0, hm.k)(mm.voice),
+                              fm = Tm && (0, hm.g)(Tm);
                             return {
-                              plan: Ek(pk(kk.line), Ik),
-                              synth: Ik
+                              plan: km(Nm(mm.line), fm),
+                              synth: fm
                             }
                           }
 
-                          function bk(kk) {
-                            const Fk = [];
-                            let Ik = [];
-                            for (const [Tk, ik] of kk.entries()) {
-                              var Xk;
-                              "space" === ik.kind && (" " !== ik.text || "icon" !== (null === (Xk = kk[Tk + 1]) || void 0 === Xk ? void 0 : Xk.kind)) ? (Ik.length > 0 && Fk.push(Ik), Fk.push([ik]), Ik = []) : Ik.push(ik)
+                          function Xm(mm) {
+                            const Tm = [];
+                            let fm = [];
+                            for (const [Am, am] of mm.entries()) {
+                              var hm;
+                              "space" === am.kind && (" " !== am.text || "icon" !== (null === (hm = mm[Am + 1]) || void 0 === hm ? void 0 : hm.kind)) ? (fm.length > 0 && Tm.push(fm), Tm.push([am]), fm = []) : fm.push(am)
                             }
-                            return Ik.length > 0 && Fk.push(Ik), Fk
+                            return fm.length > 0 && Tm.push(fm), Tm
                           }
-                        }, 4850: (kk, Fk, Ik) => {
-                          Ik.d(Fk, {
-                            e: () => Lk,
-                            i: () => tk
+                        }, 4796: (mm, Tm, fm) => {
+                          fm.d(Tm, {
+                            c: () => Rm,
+                            e: () => pm
                           });
-                          var Xk = Ik(4857),
-                            Tk = Ik(25);
-                          const ik = .25,
-                            yk = .85,
-                            lk = .02,
-                            ak = .01;
+                          var hm = fm(4800),
+                            Am = fm(23);
+                          const am = .25,
+                            xm = .85,
+                            wm = .02,
+                            Dm = .01;
 
-                          function qk(kk, Fk, Ik, Xk, Tk, ik, lk) {
+                          function im(mm, Tm, fm, hm, Am, am, wm) {
                             const {
-                              waveform: ak,
-                              pitchHz: qk,
-                              attackMs: Lk,
-                              releaseMs: tk,
-                              lowpassHz: Zk
-                            } = Ik, jk = Tk + Xk.durationMs / 1e3, ek = qk * 2 ** (Xk.semitones / 12), wk = kk.createOscillator();
-                            wk.type = ak, wk.frequency.setValueAtTime(ek, Tk), wk.frequency.exponentialRampToValueAtTime(ek * 2 ** (Xk.glideSemitones / 12), jk);
-                            const Hk = Tk + Math.min(Lk, Xk.durationMs) / 1e3,
-                              Jk = kk.createGain();
-                            Jk.gain.setValueAtTime(0, Tk), Jk.gain.linearRampToValueAtTime(ik, Hk), Jk.gain.linearRampToValueAtTime(ik * yk, Math.max(Hk, jk - tk / 1e3)), Jk.gain.linearRampToValueAtTime(0, jk);
-                            const xk = [wk];
-                            if (null !== Zk) {
-                              const Fk = kk.createBiquadFilter();
-                              Fk.type = "lowpass", Fk.frequency.value = Zk, xk.push(Fk)
+                              waveform: Dm,
+                              pitchHz: im,
+                              attackMs: Rm,
+                              releaseMs: pm,
+                              lowpassHz: Em
+                            } = fm, om = Am + hm.durationMs / 1e3, Om = im * 2 ** (hm.semitones / 12), Ym = mm.createOscillator();
+                            Ym.type = Dm, Ym.frequency.setValueAtTime(Om, Am), Ym.frequency.exponentialRampToValueAtTime(Om * 2 ** (hm.glideSemitones / 12), om);
+                            const qm = Am + Math.min(Rm, hm.durationMs) / 1e3,
+                              jm = mm.createGain();
+                            jm.gain.setValueAtTime(0, Am), jm.gain.linearRampToValueAtTime(am, qm), jm.gain.linearRampToValueAtTime(am * xm, Math.max(qm, om - pm / 1e3)), jm.gain.linearRampToValueAtTime(0, om);
+                            const Vm = [Ym];
+                            if (null !== Em) {
+                              const Tm = mm.createBiquadFilter();
+                              Tm.type = "lowpass", Tm.frequency.value = Em, Vm.push(Tm)
                             }
-                            xk.push(Jk, Fk);
-                            for (let yk = 1; yk < xk.length; yk++) xk[yk - 1].connect(xk[yk]);
-                            return wk.onended = () => {
-                              for (const kk of xk.slice(0, -1)) kk.disconnect();
-                              lk()
-                            }, wk.start(Tk), wk.stop(jk), wk
+                            Vm.push(jm, Tm);
+                            for (let xm = 1; xm < Vm.length; xm++) Vm[xm - 1].connect(Vm[xm]);
+                            return Ym.onended = () => {
+                              for (const mm of Vm.slice(0, -1)) mm.disconnect();
+                              wm()
+                            }, Ym.start(Am), Ym.stop(om), Ym
                           }
 
-                          function Lk(kk, Fk, Ik, Xk, Tk, yk) {
-                            if (0 === Xk.length) return yk(), () => {};
-                            const Lk = ik * Ik.volume * Tk,
-                              tk = kk.createGain();
-                            tk.connect(Fk);
-                            const Zk = kk.currentTime + lk,
-                              jk = new Set;
-                            for (const ik of Xk) {
-                              const Fk = qk(kk, tk, Ik, ik, Zk + ik.atMs / 1e3, Lk * ik.level, (() => {
-                                jk.delete(Fk), 0 === jk.size && (tk.disconnect(), yk())
+                          function Rm(mm, Tm, fm, hm, Am, xm) {
+                            if (0 === hm.length) return xm(), () => {};
+                            const Rm = am * fm.volume * Am,
+                              pm = mm.createGain();
+                            pm.connect(Tm);
+                            const Em = mm.currentTime + wm,
+                              om = new Set;
+                            for (const am of hm) {
+                              const Tm = im(mm, pm, fm, am, Em + am.atMs / 1e3, Rm * am.level, (() => {
+                                om.delete(Tm), 0 === om.size && (pm.disconnect(), xm())
                               }));
-                              jk.add(Fk)
+                              om.add(Tm)
                             }
                             return () => {
-                              const Fk = kk.currentTime;
-                              tk.gain.setTargetAtTime(0, Fk, ak);
-                              for (const kk of jk) try {
-                                kk.stop(Fk + 5 * ak)
+                              const Tm = mm.currentTime;
+                              pm.gain.setTargetAtTime(0, Tm, Dm);
+                              for (const mm of om) try {
+                                mm.stop(Tm + 5 * Dm)
                               } catch {}
                             }
                           }
 
-                          function tk(kk, Fk) {
-                            var Ik;
-                            const ik = Xk.Howler.ctx,
-                              yk = Xk.Howler.masterGain;
-                            if (!ik || !yk || !Tk.d.get("soundOnFromAd")) return () => {};
-                            const lk = Xk.Howler;
-                            return null === (Ik = lk._autoResume) || void 0 === Ik || Ik.call(lk), Lk(ik, yk, kk, Fk, Tk.d.get("soundVolume"), (() => {
-                              var kk;
-                              null === (kk = lk._autoSuspend) || void 0 === kk || kk.call(lk)
+                          function pm(mm, Tm) {
+                            var fm;
+                            const am = hm.Howler.ctx,
+                              xm = hm.Howler.masterGain;
+                            if (!am || !xm || !Am.c.get("soundOnFromAd")) return () => {};
+                            const wm = hm.Howler;
+                            return null === (fm = wm._autoResume) || void 0 === fm || fm.call(wm), Rm(am, xm, mm, Tm, Am.c.get("soundVolume"), (() => {
+                              var mm;
+                              null === (mm = wm._autoSuspend) || void 0 === mm || mm.call(wm)
                             }))
                           }
-                        }, 4857: (kk, Fk, Ik) => {
-                          Ik.r(Fk), Ik.d(Fk, {
-                            Howl: () => Tk.Howl,
-                            Howler: () => Tk.Howler,
-                            musicOutput: () => Hk,
-                            readyAudioContext: () => Jk
+                        }, 4800: (mm, Tm, fm) => {
+                          fm.r(Tm), fm.d(Tm, {
+                            Howl: () => Am.Howl,
+                            Howler: () => Am.Howler,
+                            musicOutput: () => qm,
+                            readyAudioContext: () => jm
                           });
-                          var Xk, Tk = Ik(4863),
-                            ik = Ik(3378),
-                            yk = Ik(4636);
-                          const lk = Tk.Howler;
+                          var hm, Am = fm(4806),
+                            am = fm(3443),
+                            xm = fm(4588);
+                          const wm = Am.Howler;
 
-                          function ak() {
-                            var kk, Fk;
-                            if (lk.ctx || !lk.usingWebAudio || "undefined" === typeof AudioContext || !(0, yk.h)()) return;
-                            const Ik = navigator.audioSession;
-                            let Xk;
-                            "auto" === (null === Ik || void 0 === Ik ? void 0 : Ik.type) && (Ik.type = "ambient");
+                          function Dm() {
+                            var mm, Tm;
+                            if (wm.ctx || !wm.usingWebAudio || "undefined" === typeof AudioContext || !(0, xm.k)()) return;
+                            const fm = navigator.audioSession;
+                            let hm;
+                            "auto" === (null === fm || void 0 === fm ? void 0 : fm.type) && (fm.type = "ambient");
                             try {
-                              Xk = new AudioContext({
+                              hm = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const Tk = Xk.createGain();
-                            Tk.gain.setValueAtTime(lk._muted ? 0 : null !== (kk = lk._volume) && void 0 !== kk ? kk : 1, Xk.currentTime), Tk.connect(Xk.destination), lk.ctx = Xk, lk.masterGain = Tk, null === (Fk = lk._setup) || void 0 === Fk || Fk.call(lk)
+                            const Am = hm.createGain();
+                            Am.gain.setValueAtTime(wm._muted ? 0 : null !== (mm = wm._volume) && void 0 !== mm ? mm : 1, hm.currentTime), Am.connect(hm.destination), wm.ctx = hm, wm.masterGain = Am, null === (Tm = wm._setup) || void 0 === Tm || Tm.call(wm)
                           }
-                          lk._mobileUnloaded = !0;
-                          const qk = lk.volume.bind(Tk.Howler);
-                          lk.volume = function() {
-                            return ak(), qk(...arguments)
+                          wm._mobileUnloaded = !0;
+                          const im = wm.volume.bind(Am.Howler);
+                          wm.volume = function() {
+                            return Dm(), im(...arguments)
                           };
-                          const Lk = lk.mute.bind(Tk.Howler);
-                          lk.mute = kk => (ak(), Lk(kk));
-                          const tk = Tk.Howl.prototype,
-                            Zk = tk.init;
+                          const Rm = wm.mute.bind(Am.Howler);
+                          wm.mute = mm => (Dm(), Rm(mm));
+                          const pm = Am.Howl.prototype,
+                            Em = pm.init;
 
-                          function jk() {
-                            for (; lk._html5AudioPool.length < lk.html5PoolSize;) {
-                              const kk = new Audio;
-                              kk._unlocked = !0, lk._releaseHtml5Audio(kk)
+                          function om() {
+                            for (; wm._html5AudioPool.length < wm.html5PoolSize;) {
+                              const mm = new Audio;
+                              mm._unlocked = !0, wm._releaseHtml5Audio(mm)
                             }
-                            for (const Fk of lk._howls)
-                              if (!Fk._webAudio)
-                                for (const Ik of Fk._getSoundIds()) {
-                                  var kk;
-                                  const Xk = null === (kk = Fk._soundById(Ik)) || void 0 === kk ? void 0 : kk._node;
-                                  Xk && !Xk._unlocked && (Xk._unlocked = !0, Xk.load())
+                            for (const Tm of wm._howls)
+                              if (!Tm._webAudio)
+                                for (const fm of Tm._getSoundIds()) {
+                                  var mm;
+                                  const hm = null === (mm = Tm._soundById(fm)) || void 0 === mm ? void 0 : mm._node;
+                                  hm && !hm._unlocked && (hm._unlocked = !0, hm.load())
                                 }
                           }
-                          tk.init = function(kk) {
-                            return ak(), Zk.call(this, kk)
-                          }, (0, yk.h)() && (lk._unlockAudio = () => {
-                            const kk = lk.ctx;
-                            if (lk._audioUnlocked || !kk) return;
-                            lk.autoUnlock = !1;
-                            const Fk = kk.createBuffer(1, 1, 22050);
-                            lk._scratchBuffer = Fk;
-                            const Ik = new AbortController;
-                            let Xk = "afterPaint";
-                            const Tk = () => {
-                                var Xk;
-                                if (lk._audioUnlocked) return;
-                                null === (Xk = lk._autoResume) || void 0 === Xk || Xk.call(lk);
-                                const Tk = kk.createBufferSource();
-                                Tk.buffer = Fk, Tk.connect(kk.destination), Tk.start(0), kk.resume().catch((() => {})), Tk.onended = () => {
-                                  Tk.disconnect(0), lk._audioUnlocked = !0, Ik.abort();
-                                  for (const kk of lk._howls) kk._emit("unlock")
+                          pm.init = function(mm) {
+                            return Dm(), Em.call(this, mm)
+                          }, (0, xm.k)() && (wm._unlockAudio = () => {
+                            const mm = wm.ctx;
+                            if (wm._audioUnlocked || !mm) return;
+                            wm.autoUnlock = !1;
+                            const Tm = mm.createBuffer(1, 1, 22050);
+                            wm._scratchBuffer = Tm;
+                            const fm = new AbortController;
+                            let hm = "afterPaint";
+                            const Am = () => {
+                                var hm;
+                                if (wm._audioUnlocked) return;
+                                null === (hm = wm._autoResume) || void 0 === hm || hm.call(wm);
+                                const Am = mm.createBufferSource();
+                                Am.buffer = Tm, Am.connect(mm.destination), Am.start(0), mm.resume().catch((() => {})), Am.onended = () => {
+                                  Am.disconnect(0), wm._audioUnlocked = !0, fm.abort();
+                                  for (const mm of wm._howls) mm._emit("unlock")
                                 }
                               },
-                              ak = () => {
-                                jk(), Tk()
+                              Dm = () => {
+                                om(), Am()
                               },
-                              qk = Fk => {
-                                if (jk(), "inTap" === Xk) {
-                                  if ("running" === kk.state) return;
-                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), Tk()
-                                } else "afterPaint" === Xk && (Xk = "queued", (0, ik.b)(Fk.timeStamp, (() => {
-                                  Xk = "inTap", Tk()
+                              im = Tm => {
+                                if (om(), "inTap" === hm) {
+                                  if ("running" === mm.state) return;
+                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), Am()
+                                } else "afterPaint" === hm && (hm = "queued", (0, am.c)(Tm.timeStamp, (() => {
+                                  hm = "inTap", Am()
                                 })))
                               };
-                            for (const ik of ["touchstart", "touchend"]) document.addEventListener(ik, ak, {
+                            for (const am of ["touchstart", "touchend"]) document.addEventListener(am, Dm, {
                               capture: !0,
-                              signal: Ik.signal
+                              signal: fm.signal
                             });
-                            for (const ik of yk.b) document.addEventListener(ik, qk, {
+                            for (const am of xm.c) document.addEventListener(am, im, {
                               capture: !0,
-                              signal: Ik.signal
+                              signal: fm.signal
                             })
                           });
-                          let ek = 0;
-                          const wk = null === (Xk = lk._autoSuspend) || void 0 === Xk ? void 0 : Xk.bind(Tk.Howler);
+                          let Om = 0;
+                          const Ym = null === (hm = wm._autoSuspend) || void 0 === hm ? void 0 : hm.bind(Am.Howler);
 
-                          function Hk() {
-                            Jk();
+                          function qm() {
+                            jm();
                             const {
-                              ctx: kk,
-                              masterGain: Fk
-                            } = lk;
-                            return kk && Fk ? {
-                              ctx: kk,
-                              destination: Fk,
-                              holdAwake: kk => {
-                                var Fk, Ik;
-                                (ek += kk ? 1 : -1, kk) ? null === (Fk = lk._autoResume) || void 0 === Fk || Fk.call(lk): null === (Ik = lk._autoSuspend) || void 0 === Ik || Ik.call(lk)
+                              ctx: mm,
+                              masterGain: Tm
+                            } = wm;
+                            return mm && Tm ? {
+                              ctx: mm,
+                              destination: Tm,
+                              holdAwake: mm => {
+                                var Tm, fm;
+                                (Om += mm ? 1 : -1, mm) ? null === (Tm = wm._autoResume) || void 0 === Tm || Tm.call(wm): null === (fm = wm._autoSuspend) || void 0 === fm || fm.call(wm)
                               },
                               wake: () => {
-                                var Fk;
-                                "running" !== kk.state && (null === (Fk = lk._autoResume) || void 0 === Fk || Fk.call(lk), kk.resume().catch((() => {})))
+                                var Tm;
+                                "running" !== mm.state && (null === (Tm = wm._autoResume) || void 0 === Tm || Tm.call(wm), mm.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function Jk() {
-                            var kk;
-                            (lk.volume(), lk.ctx && lk.autoUnlock) && (null === (kk = lk._unlockAudio) || void 0 === kk || kk.call(lk))
+                          function jm() {
+                            var mm;
+                            (wm.volume(), wm.ctx && wm.autoUnlock) && (null === (mm = wm._unlockAudio) || void 0 === mm || mm.call(wm))
                           }
-                          wk && (lk._autoSuspend = () => ek > 0 ? Tk.Howler : wk())
-                        }, 4866: (kk, Fk, Ik) => {
-                          function Xk(kk) {
+                          Ym && (wm._autoSuspend = () => Om > 0 ? Am.Howler : Ym())
+                        }, 4809: (mm, Tm, fm) => {
+                          function hm(mm) {
                             return {
-                              notAfter: kk
+                              notAfter: mm
                             }
                           }
-                          Ik.d(Fk, {
-                            b: () => ak,
-                            e: () => qk,
-                            g: () => lk,
-                            j: () => Xk,
-                            l: () => Tk,
-                            m: () => ik,
-                            o: () => yk,
-                            s: () => Lk,
-                            u: () => tk
+                          fm.d(Tm, {
+                            c: () => Dm,
+                            g: () => im,
+                            j: () => wm,
+                            l: () => hm,
+                            n: () => Am,
+                            p: () => am,
+                            q: () => xm,
+                            s: () => Rm,
+                            w: () => pm
                           });
-                          const Tk = Xk("\\w$."),
-                            ik = Xk("\\w.,");
+                          const Am = hm("\\w$."),
+                            am = hm("\\w.,");
 
-                          function yk(kk) {
-                            return Fk => ak(Fk, kk)
+                          function xm(mm) {
+                            return Tm => Dm(Tm, mm)
                           }
 
-                          function lk(kk) {
-                            return Fk => !kk.test(Fk.input.slice(0, Fk.index))
+                          function wm(mm) {
+                            return Tm => !mm.test(Tm.input.slice(0, Tm.index))
                           }
 
-                          function ak(kk, Fk) {
-                            return kk.index > 0 && new RegExp(`[${Fk}]`).test(kk.input[kk.index - 1])
+                          function Dm(mm, Tm) {
+                            return mm.index > 0 && new RegExp(`[${Tm}]`).test(mm.input[mm.index - 1])
                           }
 
-                          function qk(kk, Fk, Ik) {
-                            return function(kk) {
-                              return void 0 !== kk && "function" !== typeof kk
-                            }(Ik) ? function(kk, Fk, Ik) {
-                              const Xk = Fk.flags.replace(/[gy]/g, ""),
-                                Tk = new RegExp(`[^${Ik}](?:${Fk.source})`, `${Xk}g`),
-                                ik = [],
-                                yk = Ik => {
-                                  const Xk = Ik.index + Ik[0].length;
-                                  return ("" === Ik[0] ? Zk(kk, Fk, Xk) : Xk) - 1
+                          function im(mm, Tm, fm) {
+                            return function(mm) {
+                              return void 0 !== mm && "function" !== typeof mm
+                            }(fm) ? function(mm, Tm, fm) {
+                              const hm = Tm.flags.replace(/[gy]/g, ""),
+                                Am = new RegExp(`[^${fm}](?:${Tm.source})`, `${hm}g`),
+                                am = [],
+                                xm = fm => {
+                                  const hm = fm.index + fm[0].length;
+                                  return ("" === fm[0] ? Em(mm, Tm, hm) : hm) - 1
                                 },
-                                lk = new RegExp(`(?:${Fk.source})`, `${Xk}y`).exec(kk);
-                              if (lk) {
-                                if (ik.push(lk), !Fk.global) return ik;
-                                Tk.lastIndex = yk(lk)
+                                wm = new RegExp(`(?:${Tm.source})`, `${hm}y`).exec(mm);
+                              if (wm) {
+                                if (am.push(wm), !Tm.global) return am;
+                                Am.lastIndex = xm(wm)
                               }
-                              for (let ak = Tk.exec(kk); ak; ak = Tk.exec(kk)) {
-                                const Ik = Zk(kk, Fk, ak.index) - ak.index;
-                                if (ak[0] = ak[0].slice(Ik), ak.index += Ik, ik.push(ak), !Fk.global) break;
-                                Tk.lastIndex = yk(ak)
+                              for (let Dm = Am.exec(mm); Dm; Dm = Am.exec(mm)) {
+                                const fm = Em(mm, Tm, Dm.index) - Dm.index;
+                                if (Dm[0] = Dm[0].slice(fm), Dm.index += fm, am.push(Dm), !Tm.global) break;
+                                Am.lastIndex = xm(Dm)
                               }
-                              return ik
-                            }(kk, Fk, Ik.notAfter) : function(kk, Fk, Ik) {
-                              const Xk = new RegExp(Fk.source, `${Fk.flags.replace(/[gy]/g,"")}g`),
-                                Tk = [];
-                              for (let ik = Xk.exec(kk); ik; ik = Xk.exec(kk))
-                                if (!Ik || Ik(ik)) {
-                                  if (Tk.push(ik), !Fk.global) break;
-                                  "" === ik[0] && (Xk.lastIndex = Zk(kk, Fk, Xk.lastIndex))
-                                } else Xk.lastIndex = Zk(kk, Fk, ik.index);
-                              return Tk
-                            }(kk, Fk, Ik)
+                              return am
+                            }(mm, Tm, fm.notAfter) : function(mm, Tm, fm) {
+                              const hm = new RegExp(Tm.source, `${Tm.flags.replace(/[gy]/g,"")}g`),
+                                Am = [];
+                              for (let am = hm.exec(mm); am; am = hm.exec(mm))
+                                if (!fm || fm(am)) {
+                                  if (Am.push(am), !Tm.global) break;
+                                  "" === am[0] && (hm.lastIndex = Em(mm, Tm, hm.lastIndex))
+                                } else hm.lastIndex = Em(mm, Tm, am.index);
+                              return Am
+                            }(mm, Tm, fm)
                           }
 
-                          function Lk(kk, Fk, Ik, Xk) {
-                            let Tk = "",
-                              ik = 0;
-                            for (const yk of qk(kk, Fk, Ik)) Tk += kk.slice(ik, yk.index) + Xk(yk), ik = yk.index + yk[0].length;
-                            return Tk + kk.slice(ik)
+                          function Rm(mm, Tm, fm, hm) {
+                            let Am = "",
+                              am = 0;
+                            for (const xm of im(mm, Tm, fm)) Am += mm.slice(am, xm.index) + hm(xm), am = xm.index + xm[0].length;
+                            return Am + mm.slice(am)
                           }
 
-                          function tk(kk, Fk, Ik) {
-                            const Xk = [];
-                            let Tk = 0;
-                            for (const ik of qk(kk, Fk, Ik)) Xk.push(kk.slice(Tk, ik.index)), Tk = ik.index + ik[0].length;
-                            return [...Xk, kk.slice(Tk)]
+                          function pm(mm, Tm, fm) {
+                            const hm = [];
+                            let Am = 0;
+                            for (const am of im(mm, Tm, fm)) hm.push(mm.slice(Am, am.index)), Am = am.index + am[0].length;
+                            return [...hm, mm.slice(Am)]
                           }
 
-                          function Zk(kk, Fk, Ik) {
-                            var Xk;
-                            return Ik + (Fk.unicode && (null !== (Xk = kk.codePointAt(Ik)) && void 0 !== Xk ? Xk : 0) > 65535 ? 2 : 1)
+                          function Em(mm, Tm, fm) {
+                            var hm;
+                            return fm + (Tm.unicode && (null !== (hm = mm.codePointAt(fm)) && void 0 !== hm ? hm : 0) > 65535 ? 2 : 1)
                           }
-                        }, 4821: (kk, Fk, Ik) => {
-                          Ik.d(Fk, {
-                            d: () => Tk,
-                            f: () => ak,
-                            g: () => ik,
-                            h: () => yk,
-                            k: () => lk,
-                            o: () => Hk,
-                            r: () => Lk,
-                            t: () => tk,
-                            w: () => wk,
-                            z: () => jk
+                        }, 4767: (mm, Tm, fm) => {
+                          fm.d(Tm, {
+                            d: () => Am,
+                            e: () => Dm,
+                            h: () => am,
+                            i: () => xm,
+                            l: () => wm,
+                            m: () => qm,
+                            q: () => Rm,
+                            t: () => pm,
+                            u: () => Ym,
+                            y: () => om
                           });
-                          var Xk = Ik(1534);
-                          const Tk = 24e3,
-                            ik = "/docs/llms.txt",
-                            yk = `${Xk.b}${ik}`,
-                            lk = "/llms.txt",
-                            ak = "/docs/llms-full.txt";
+                          var hm = fm(1589);
+                          const Am = 24e3,
+                            am = "/docs/llms.txt",
+                            xm = `${hm.b}${am}`,
+                            wm = "/llms.txt",
+                            Dm = "/docs/llms-full.txt";
 
-                          function qk(kk) {
-                            return kk || "index"
+                          function im(mm) {
+                            return mm || "index"
                           }
 
-                          function Lk(kk) {
-                            return `/docs/${qk(kk)}.md`
+                          function Rm(mm) {
+                            return `/docs/${im(mm)}.md`
                           }
 
-                          function tk(kk, Fk) {
-                            return `/docs/${qk(kk)}/${Fk+1}.md`
+                          function pm(mm, Tm) {
+                            return `/docs/${im(mm)}/${Tm+1}.md`
                           }
-                          const Zk = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const Em = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function jk(kk) {
-                            const Fk = Zk.exec(kk);
-                            return null === Fk ? null : {
-                              name: Fk[1],
-                              part: void 0 === Fk[2] ? null : Number(Fk[2])
+                          function om(mm) {
+                            const Tm = Em.exec(mm);
+                            return null === Tm ? null : {
+                              name: Tm[1],
+                              part: void 0 === Tm[2] ? null : Number(Tm[2])
                             }
                           }
-                          const ek = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const Om = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function wk(kk) {
-                            const Fk = ek.exec(kk);
-                            if (null === Fk) return null;
-                            const [, Ik = "", Xk] = Fk;
-                            return void 0 === Xk ? Lk(Ik) : tk(Ik, Number(Xk) - 1)
+                          function Ym(mm) {
+                            const Tm = Om.exec(mm);
+                            if (null === Tm) return null;
+                            const [, fm = "", hm] = Tm;
+                            return void 0 === hm ? Rm(fm) : pm(fm, Number(hm) - 1)
                           }
 
-                          function Hk(kk) {
-                            return `/docsHtml/${qk(kk)}.html`
+                          function qm(mm) {
+                            return `/docsHtml/${im(mm)}.html`
                           }
-                        }, 4843: (kk, Fk, Ik) => {
-                          Ik.d(Fk, {
-                            b: () => Tk,
-                            d: () => Xk,
-                            g: () => ik,
-                            k: () => ak,
-                            n: () => yk
+                        }, 4789: (mm, Tm, fm) => {
+                          fm.d(Tm, {
+                            d: () => Am,
+                            e: () => hm,
+                            f: () => am,
+                            g: () => Dm,
+                            k: () => xm
                           });
-                          const Xk = ["sine", "triangle", "square", "sawtooth"],
-                            Tk = 55,
-                            ik = {
+                          const hm = ["sine", "triangle", "square", "sawtooth"],
+                            Am = 55,
+                            am = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7260,38 +7260,38 @@ export const modules = {
                               }
                             };
 
-                          function yk(kk) {
-                            return "string" !== typeof kk ? kk : Object.hasOwn(ik, kk) ? ik[kk] : null
+                          function xm(mm) {
+                            return "string" !== typeof mm ? mm : Object.hasOwn(am, mm) ? am[mm] : null
                           }
 
-                          function lk(kk, Fk, Ik) {
-                            return Math.min(Ik, Math.max(Fk, kk))
+                          function wm(mm, Tm, fm) {
+                            return Math.min(fm, Math.max(Tm, mm))
                           }
 
-                          function ak(kk) {
-                            const Fk = lk(kk.durationMs, 10, 500),
-                              Ik = lk(kk.attackMs, 0, Fk),
+                          function Dm(mm) {
+                            const Tm = wm(mm.durationMs, 10, 500),
+                              fm = wm(mm.attackMs, 0, Tm),
                               {
-                                intonation: Tk
-                              } = kk;
+                                intonation: Am
+                              } = mm;
                             return {
-                              waveform: Xk.includes(kk.waveform) ? kk.waveform : "sine",
-                              pitchHz: lk(kk.pitchHz, 20, 4e3),
-                              glideSemitones: lk(kk.glideSemitones, -24, 24),
-                              durationMs: Fk,
-                              attackMs: Ik,
-                              releaseMs: lk(kk.releaseMs, 0, Fk - Ik),
-                              lowpassHz: null === kk.lowpassHz ? null : lk(kk.lowpassHz, 20, 2e4),
-                              volume: lk(kk.volume, 0, 2),
+                              waveform: hm.includes(mm.waveform) ? mm.waveform : "sine",
+                              pitchHz: wm(mm.pitchHz, 20, 4e3),
+                              glideSemitones: wm(mm.glideSemitones, -24, 24),
+                              durationMs: Tm,
+                              attackMs: fm,
+                              releaseMs: wm(mm.releaseMs, 0, Tm - fm),
+                              lowpassHz: null === mm.lowpassHz ? null : wm(mm.lowpassHz, 20, 2e4),
+                              volume: wm(mm.volume, 0, 2),
                               intonation: {
-                                variationSemitones: lk(Tk.variationSemitones, 0, 6),
-                                declineSemitones: lk(Tk.declineSemitones, 0, 12),
-                                questionRiseSemitones: lk(Tk.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: lk(Tk.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: wm(Am.variationSemitones, 0, 6),
+                                declineSemitones: wm(Am.declineSemitones, 0, 12),
+                                questionRiseSemitones: wm(Am.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: wm(Am.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: lk(kk.syllableMs, 25, 200)
+                              syllableMs: wm(mm.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const kk in modules) Object.freeze(modules[kk]);
+                      for (const mm in modules) Object.freeze(modules[mm]);

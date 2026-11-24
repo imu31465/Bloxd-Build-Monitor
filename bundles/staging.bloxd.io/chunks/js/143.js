@@ -1,16 +1,16 @@
 export const id = 143;
 export const ids = [143];
 export const modules = {
-  8065: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      encodeBinaryMessageWithMetricsCookies: () => Tk
+  7989: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      encodeBinaryMessageWithMetricsCookies: () => Am
     });
-    var Xk = Ik(3702);
+    var hm = fm(3729);
 
-    function Tk(kk) {
-      return Xk.j.toBuffer(kk)
+    function Am(mm) {
+      return hm.o.toBuffer(mm)
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

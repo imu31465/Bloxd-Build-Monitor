@@ -1,27 +1,27 @@
 export const id = 359;
 export const ids = [359];
 export const modules = {
-  61359: (kk, Fk, Ik) => {
-    function Xk(kk, Fk, Ik, Xk, Tk, ik, yk) {
-      const lk = Fk,
-        ak = Xk,
-        qk = Ik;
-      kk[qk + 0] = lk[ak + 0], kk[qk + 1] = lk[ak + 1], kk[qk + 2] = lk[ak + 2], kk[qk + 3] = lk[ak + 3], kk[qk + 4] = lk[ak + 4], kk[qk + 5] = lk[ak + 5], kk[qk + 6] = lk[ak + 6], kk[qk + 7] = lk[ak + 7], kk[qk + 8] = lk[ak + 8], kk[qk + 9] = lk[ak + 9], kk[qk + 10] = lk[ak + 10], kk[qk + 11] = lk[ak + 11], kk[qk + 12] = lk[ak + 12] - Tk, kk[qk + 13] = lk[ak + 13] - ik, kk[qk + 14] = lk[ak + 14] - yk, kk[qk + 15] = lk[ak + 15]
+  61422: (mm, Tm, fm) => {
+    function hm(mm, Tm, fm, hm, Am, am, xm) {
+      const wm = Tm,
+        Dm = hm,
+        im = fm;
+      mm[im + 0] = wm[Dm + 0], mm[im + 1] = wm[Dm + 1], mm[im + 2] = wm[Dm + 2], mm[im + 3] = wm[Dm + 3], mm[im + 4] = wm[Dm + 4], mm[im + 5] = wm[Dm + 5], mm[im + 6] = wm[Dm + 6], mm[im + 7] = wm[Dm + 7], mm[im + 8] = wm[Dm + 8], mm[im + 9] = wm[Dm + 9], mm[im + 10] = wm[Dm + 10], mm[im + 11] = wm[Dm + 11], mm[im + 12] = wm[Dm + 12] - Am, mm[im + 13] = wm[Dm + 13] - am, mm[im + 14] = wm[Dm + 14] - xm, mm[im + 15] = wm[Dm + 15]
     }
 
-    function Tk(kk) {
-      return (Fk, Ik, Tk, ik) => {
-        const yk = kk.camera;
-        if (!yk) return void Xk(Fk, Ik, Tk, ik, 0, 0, 0);
-        const lk = yk.worldMatrix;
-        Xk(Fk, Ik, Tk, ik, lk[12], lk[13], lk[14])
+    function Am(mm) {
+      return (Tm, fm, Am, am) => {
+        const xm = mm.camera;
+        if (!xm) return void hm(Tm, fm, Am, am, 0, 0, 0);
+        const wm = xm.worldMatrix;
+        hm(Tm, fm, Am, am, wm[12], wm[13], wm[14])
       }
     }
-    Ik.r(Fk), Ik.d(Fk, {
-      makePackMeshWorld: () => Tk,
-      packMat4IntoF32WithOffset: () => Xk
+    fm.r(Tm), fm.d(Tm, {
+      makePackMeshWorld: () => Am,
+      packMat4IntoF32WithOffset: () => hm
     })
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

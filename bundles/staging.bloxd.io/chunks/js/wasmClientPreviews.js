@@ -1,38 +1,38 @@
 export const id = 59;
 export const ids = [59];
 export const modules = {
-  38621: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => Tk,
-      f: () => ik
+  38730: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => Am,
+      g: () => am
     });
-    const Xk = new WeakMap;
+    const hm = new WeakMap;
 
-    function Tk(kk, Fk) {
-      return Xk.set(kk, Fk), kk
+    function Am(mm, Tm) {
+      return hm.set(mm, Tm), mm
     }
 
-    function ik(kk) {
-      var Fk;
-      return null !== (Fk = Xk.get(kk)) && void 0 !== Fk ? Fk : null
+    function am(mm) {
+      var Tm;
+      return null !== (Tm = hm.get(mm)) && void 0 !== Tm ? Tm : null
     }
   },
-  38649: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      b: () => lk
+  38750: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => wm
     });
-    var Xk = Ik(1217);
+    var hm = fm(1235);
 
-    function Tk(kk) {
-      const Fk = /(\d*\.?\d+)px/.exec(kk);
-      return Fk ? Number(Fk[1]) : null
+    function Am(mm) {
+      const Tm = /(\d*\.?\d+)px/.exec(mm);
+      return Tm ? Number(Tm[1]) : null
     }
 
-    function ik(kk) {
-      return kk.split(/[\s,]+/).pop()
+    function am(mm) {
+      return mm.split(/[\s,]+/).pop()
     }
-    let yk = !1;
-    const lk = {
+    let xm = !1;
+    const wm = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -43,603 +43,604 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(kk, Fk, Xk, lk, ak, qk) {
-        if (ak <= 0 || qk <= 0 || this.fontSize <= 0) return {
+      drawText: function(mm, Tm, hm, wm, Dm, im) {
+        if (Dm <= 0 || im <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: Lk,
-          fontVariant: tk,
-          fontWeight: Zk,
-          fontSize: jk,
-          font: ek
-        } = this, wk = [Lk, tk, Zk, `${jk}px`, ek].filter(Boolean).join(" "), Hk = [
-          [Zk, `${jk}px`, ik(ek)].filter(Boolean).join(" "), `${jk}px sans-serif`
-        ], Jk = kk.font, xk = function(kk, Fk, Ik) {
-          for (const Xk of Fk) {
-            kk.font = Xk;
-            const Fk = Tk(kk.font),
-              yk = ik(Xk);
-            if (null !== Fk && Math.abs(Fk - Ik) <= .5 && kk.font.toLowerCase().includes(yk.toLowerCase())) return Xk
+          fontStyle: Rm,
+          fontVariant: pm,
+          fontWeight: Em,
+          fontSize: om,
+          font: Om
+        } = this, Ym = [Rm, pm, Em, `${om}px`, Om].filter(Boolean).join(" "), qm = [
+          [Em, `${om}px`, am(Om)].filter(Boolean).join(" "), `${om}px sans-serif`
+        ], jm = mm.font, Vm = function(mm, Tm, fm) {
+          for (const hm of Tm) {
+            mm.font = hm;
+            const Tm = Am(mm.font),
+              xm = am(hm);
+            if (null !== Tm && Math.abs(Tm - fm) <= .5 && mm.font.toLowerCase().includes(xm.toLowerCase())) return hm
           }
           return null
-        }(kk, [wk, ...Hk], jk);
-        xk !== wk && function(kk, Fk, Xk) {
-          yk || (yk = !0, Promise.resolve().then((() => Ik(1076))).then((Ik => {
+        }(mm, [Ym, ...qm], om);
+        Vm !== Ym && function(mm, Tm, hm) {
+          xm || (xm = !0, Promise.resolve().then((() => fm(1103))).then((fm => {
             let {
-              ow: Tk
-            } = Ik;
-            Tk(new Error("A canvas didn't take canvasTxt's font"), {
-              font: kk,
-              Gj: Fk,
-              drawnWith: null !== Xk && void 0 !== Xk ? Xk : "the kept font, scaled"
+              lY: Am
+            } = fm;
+            Am(new Error("A canvas didn't take canvasTxt's font"), {
+              font: mm,
+              mO: Tm,
+              drawnWith: null !== hm && void 0 !== hm ? hm : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(wk, Jk, xk);
-        const Pk = Tk(kk.font);
-        if (null === xk && null !== Pk && Pk > 0) {
-          const Ik = jk / Pk;
-          kk.save();
+        }(Ym, jm, Vm);
+        const Im = Am(mm.font);
+        if (null === Vm && null !== Im && Im > 0) {
+          const fm = om / Im;
+          mm.save();
           try {
-            return kk.scale(Ik, Ik), {
-              height: this.drawLines(kk, Fk, Xk / Ik, lk / Ik, ak / Ik, qk / Ik, Pk).height * Ik
+            return mm.scale(fm, fm), {
+              height: this.drawLines(mm, Tm, hm / fm, wm / fm, Dm / fm, im / fm, Im).height * fm
             }
           } finally {
-            kk.restore()
+            mm.restore()
           }
         }
-        return this.drawLines(kk, Fk, Xk, lk, ak, qk, jk)
+        return this.drawLines(mm, Tm, hm, wm, Dm, im, om)
       },
-      drawLines: function(kk, Fk, Ik, Tk, ik, yk, lk) {
-        const ak = Ik + ik,
-          qk = Tk + yk;
-        let Lk, tk = Tk + yk / 2 + lk / 2;
-        "right" === this.align ? (Lk = ak, kk.textAlign = "right") : "left" === this.align ? (Lk = Ik, kk.textAlign = "left") : (Lk = Ik + ik / 2, kk.textAlign = "center");
-        for (const Xk of Fk) {
-          kk.measureText(Xk).width >= ik && (Fk = Fk.replace(Xk, ""))
+      drawLines: function(mm, Tm, fm, Am, am, xm, wm) {
+        const Dm = fm + am,
+          im = Am + xm;
+        let Rm, pm = Am + xm / 2 + wm / 2;
+        "right" === this.align ? (Rm = Dm, mm.textAlign = "right") : "left" === this.align ? (Rm = fm, mm.textAlign = "left") : (Rm = fm + am / 2, mm.textAlign = "center");
+        for (const hm of Tm) {
+          mm.measureText(hm).width >= am && (Tm = Tm.replace(hm, ""))
         }
-        Fk = (0, Xk.S)(Fk);
-        const Zk = [],
-          jk = Fk.split("\n"),
-          ek = this.justify ? kk.measureText("\u200a").width : 0;
-        jk.forEach((Fk => {
-          let Ik = kk.measureText(Fk).width;
-          if (Ik <= ik) Zk.push(Fk);
+        Tm = (0, hm.M)(Tm);
+        const Em = [],
+          om = Tm.split("\n"),
+          Om = this.justify ? mm.measureText("\u200a").width : 0;
+        om.forEach((Tm => {
+          let fm = mm.measureText(Tm).width;
+          if (fm <= am) Em.push(Tm);
           else {
-            let Xk = Fk;
-            const Tk = ik;
-            let yk, lk, ak;
-            for (Ik = kk.measureText(Xk).width; Ik > Tk;) {
-              for (yk = 0, lk = 0, ak = ""; lk < Tk;) yk++, ak = Xk.substr(0, yk), lk = kk.measureText(ak).width;
-              yk--, ak = ak.substr(0, yk);
-              const Fk = yk;
-              if (" " !== Xk.substr(yk, 1)) {
+            let hm = Tm;
+            const Am = am;
+            let xm, wm, Dm;
+            for (fm = mm.measureText(hm).width; fm > Am;) {
+              for (xm = 0, wm = 0, Dm = ""; wm < Am;) xm++, Dm = hm.substr(0, xm), wm = mm.measureText(Dm).width;
+              xm--, Dm = Dm.substr(0, xm);
+              const Tm = xm;
+              if (" " !== hm.substr(xm, 1)) {
                 for (;
-                  " " !== Xk.substr(yk, 1) && 0 !== yk;) yk--;
-                0 === yk && (yk = Fk), ak = Xk.substr(0, yk)
+                  " " !== hm.substr(xm, 1) && 0 !== xm;) xm--;
+                0 === xm && (xm = Tm), Dm = hm.substr(0, xm)
               }
-              ak = this.justify ? this.justifyLine(kk, ak, ek, "\u200a", ik) : ak, Xk = Xk.substr(yk), Ik = kk.measureText(Xk).width, Zk.push(ak)
+              Dm = this.justify ? this.justifyLine(mm, Dm, Om, "\u200a", am) : Dm, hm = hm.substr(xm), fm = mm.measureText(hm).width, Em.push(Dm)
             }
-            Ik > 0 && Zk.push(Xk)
+            fm > 0 && Em.push(hm)
           }
         }));
-        const wk = this.lineHeight ? this.lineHeight : this.getTextHeight(kk, Fk),
-          Hk = wk * (Zk.length - 1),
-          Jk = Hk / 2;
-        let xk = Tk;
-        "top" === this.vAlign ? tk = Tk + lk : "bottom" === this.vAlign ? (tk = qk - Hk, xk = qk) : (xk = Tk + yk / 2, tk -= Jk), Zk.forEach((Fk => {
-          Fk = Fk.trim(), kk.fillText(Fk, Lk, tk), tk += wk
-        })), this.debug && (kk.lineWidth = 3, kk.strokeStyle = "#00909e", kk.strokeRect(Ik, Tk, ik, yk), kk.lineWidth = 2, kk.strokeStyle = "#f6d743", kk.beginPath(), kk.moveTo(Lk, Tk), kk.lineTo(Lk, qk), kk.stroke(), kk.strokeStyle = "#ff6363", kk.beginPath(), kk.moveTo(Ik, xk), kk.lineTo(ak, xk), kk.stroke());
+        const Ym = this.lineHeight ? this.lineHeight : this.getTextHeight(mm, Tm),
+          qm = Ym * (Em.length - 1),
+          jm = qm / 2;
+        let Vm = Am;
+        "top" === this.vAlign ? pm = Am + wm : "bottom" === this.vAlign ? (pm = im - qm, Vm = im) : (Vm = Am + xm / 2, pm -= jm), Em.forEach((Tm => {
+          Tm = Tm.trim(), mm.fillText(Tm, Rm, pm), pm += Ym
+        })), this.debug && (mm.lineWidth = 3, mm.strokeStyle = "#00909e", mm.strokeRect(fm, Am, am, xm), mm.lineWidth = 2, mm.strokeStyle = "#f6d743", mm.beginPath(), mm.moveTo(Rm, Am), mm.lineTo(Rm, im), mm.stroke(), mm.strokeStyle = "#ff6363", mm.beginPath(), mm.moveTo(fm, Vm), mm.lineTo(Dm, Vm), mm.stroke());
         return {
-          height: Hk + wk
+          height: qm + Ym
         }
       },
-      getTextHeight: function(kk, Fk) {
-        const Ik = kk.textBaseline;
-        kk.textBaseline = "bottom";
+      getTextHeight: function(mm, Tm) {
+        const fm = mm.textBaseline;
+        mm.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: Xk
-        } = kk.measureText(Fk);
-        return kk.textBaseline = Ik, Xk
+          actualBoundingBoxAscent: hm
+        } = mm.measureText(Tm);
+        return mm.textBaseline = fm, hm
       },
-      justifyLine: function(kk, Fk, Ik, Xk, Tk) {
-        const ik = Fk.trim(),
-          yk = kk.measureText(ik).width,
-          lk = ik.split(/\s+/).length - 1,
-          ak = Math.floor((Tk - yk) / Ik);
-        if (lk <= 0 || ak <= 0) return ik;
-        const qk = Math.floor(ak / lk);
-        let Lk = ak - lk * qk,
-          tk = [];
-        for (let Zk = 0; Zk < qk; Zk++) tk.push(Xk);
-        tk = tk.join("");
-        return ik.replace(/\s+/g, (kk => {
-          const Fk = Lk > 0 ? tk + Xk : tk;
-          return Lk--, kk + Fk
+      justifyLine: function(mm, Tm, fm, hm, Am) {
+        const am = Tm.trim(),
+          xm = mm.measureText(am).width,
+          wm = am.split(/\s+/).length - 1,
+          Dm = Math.floor((Am - xm) / fm);
+        if (wm <= 0 || Dm <= 0) return am;
+        const im = Math.floor(Dm / wm);
+        let Rm = Dm - wm * im,
+          pm = [];
+        for (let Em = 0; Em < im; Em++) pm.push(hm);
+        pm = pm.join("");
+        return am.replace(/\s+/g, (mm => {
+          const Tm = Rm > 0 ? pm + hm : pm;
+          return Rm--, mm + Tm
         }))
       }
     }
   },
-  38656: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => wk,
-      d: () => ek,
-      h: () => Zk,
-      k: () => Lk,
-      n: () => tk
+  38756: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => Ym,
+      g: () => Om,
+      j: () => Em,
+      l: () => Rm,
+      p: () => pm
     });
-    var Xk = Ik(4210),
-      Tk = Ik(337);
-    const ik = 1024,
-      yk = 1536,
-      lk = 2 * Xk.i + 1,
-      ak = new Intl.NumberFormat("en", {
+    var hm = fm(4171),
+      Am = fm(354);
+    const am = 1024,
+      xm = 1536,
+      wm = 2 * hm.n + 1,
+      Dm = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      qk = 1.5;
+      im = 1.5;
 
-    function Lk(kk, Fk, Ik) {
-      if ("string" !== typeof kk) return Fk;
+    function Rm(mm, Tm, fm) {
+      if ("string" !== typeof mm) return Tm;
       try {
-        const Ik = JSON.parse(kk);
-        return Ik && "object" === typeof Ik ? Ik : Fk
-      } catch (Xk) {
-        return void 0 !== Ik && console.error(`Couldn't parse ${Ik}`, Xk), Fk
+        const fm = JSON.parse(mm);
+        return fm && "object" === typeof fm ? fm : Tm
+      } catch (hm) {
+        return void 0 !== fm && console.error(`Couldn't parse ${fm}`, hm), Tm
       }
     }
 
-    function tk(kk) {
-      return Lk(kk, null, "a leaderboard's rows")
+    function pm(mm) {
+      return Rm(mm, null, "a leaderboard's rows")
     }
 
-    function Zk(kk, Fk) {
-      var Ik, Xk;
-      return null !== Fk && void 0 !== Fk ? Fk : {
-        status: null !== (Ik = kk.status) && void 0 !== Ik ? Ik : "loading",
-        entries: null !== (Xk = kk.entries) && void 0 !== Xk ? Xk : []
+    function Em(mm, Tm) {
+      var fm, hm;
+      return null !== Tm && void 0 !== Tm ? Tm : {
+        status: null !== (fm = mm.status) && void 0 !== fm ? fm : "loading",
+        entries: null !== (hm = mm.entries) && void 0 !== hm ? hm : []
       }
     }
 
-    function jk(kk, Fk) {
-      return "number" === typeof kk && Number.isFinite(kk) && kk > 0 ? kk : Fk
+    function om(mm, Tm) {
+      return "number" === typeof mm && Number.isFinite(mm) && mm > 0 ? mm : Tm
     }
 
-    function ek(kk, Fk) {
-      const Ik = jk(kk.size, 1);
-      let Xk = jk(kk.width, jk(2.5 * Ik, 2.5)),
-        Tk = jk(kk.height, jk(3.75 * Ik, 3.75));
-      Number.isFinite(ik * Tk / Xk) && Number.isFinite(yk * Xk / Tk) || (Xk = 2.5, Tk = 3.75);
-      const lk = Tk / Xk,
-        ak = Math.max(1, Math.min(ik, Fk / lk));
+    function Om(mm, Tm) {
+      const fm = om(mm.size, 1);
+      let hm = om(mm.width, om(2.5 * fm, 2.5)),
+        Am = om(mm.height, om(3.75 * fm, 3.75));
+      Number.isFinite(am * Am / hm) && Number.isFinite(xm * hm / Am) || (hm = 2.5, Am = 3.75);
+      const wm = Am / hm,
+        Dm = Math.max(1, Math.min(am, Tm / wm));
       return {
-        width: Xk,
-        height: Tk,
-        layoutWidth: Math.max(ik, yk / lk),
-        layoutHeight: Math.max(yk, ik * lk),
-        pixelWidth: Math.round(ak),
-        pixelHeight: Math.round(Math.max(1, Math.min(Fk, ak * lk)))
+        width: hm,
+        height: Am,
+        layoutWidth: Math.max(am, xm / wm),
+        layoutHeight: Math.max(xm, am * wm),
+        pixelWidth: Math.round(Dm),
+        pixelHeight: Math.round(Math.max(1, Math.min(Tm, Dm * wm)))
       }
     }
 
-    function wk(kk, Fk, Ik, yk, Lk, tk) {
-      kk.setTransform(1, 0, 0, 1, 0, 0), kk.fillStyle = Tk.J.defaultNameTagBackground, kk.fillRect(0, 0, Fk, Ik), kk.scale(Fk / yk.layoutWidth, Ik / yk.layoutHeight), kk.translate((yk.layoutWidth - ik) / 2, 0),
-        function(kk, Fk, Ik, ik) {
-          var yk, Lk, tk, Zk;
+    function Ym(mm, Tm, fm, xm, Rm, pm) {
+      mm.setTransform(1, 0, 0, 1, 0, 0), mm.fillStyle = Am.J.defaultNameTagBackground, mm.fillRect(0, 0, Tm, fm), mm.scale(Tm / xm.layoutWidth, fm / xm.layoutHeight), mm.translate((xm.layoutWidth - am) / 2, 0),
+        function(mm, Tm, fm, am) {
+          var xm, Rm, pm, Em;
           const {
-            top: jk,
-            around: ek,
-            showPlayerText: wk,
-            localPlayerDbId: xk
-          } = Ik, {
-            whiteUiText: Pk,
-            grayUiText: Kk,
-            yellowUiText: Qk
-          } = Tk.J;
-          kk.textBaseline = "middle";
-          const sk = function(Fk, Ik, Xk, Tk, ik, yk) {
-              let lk = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              kk.font = `bold ${Tk}px 'Jetbrains Mono', monospace`, kk.fillStyle = ik, kk.textAlign = lk;
-              let ak = Fk.replace(/[\r\n\t]/g, " ");
-              if (kk.measureText(ak).width > yk) {
-                for (; ak.length > 0 && kk.measureText(`${ak}\u2026`).width > yk;) ak = ak.slice(0, -1);
-                ak += "\u2026"
+            top: om,
+            around: Om,
+            showPlayerText: Ym,
+            localPlayerDbId: Vm
+          } = fm, {
+            whiteUiText: Im,
+            grayUiText: Km,
+            yellowUiText: Qm
+          } = Am.J;
+          mm.textBaseline = "middle";
+          const nm = function(Tm, fm, hm, Am, am, xm) {
+              let wm = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              mm.font = `bold ${Am}px 'Jetbrains Mono', monospace`, mm.fillStyle = am, mm.textAlign = wm;
+              let Dm = Tm.replace(/[\r\n\t]/g, " ");
+              if (mm.measureText(Dm).width > xm) {
+                for (; Dm.length > 0 && mm.measureText(`${Dm}\u2026`).width > xm;) Dm = Dm.slice(0, -1);
+                Dm += "\u2026"
               }
-              kk.fillText(ak, Ik, Xk)
+              mm.fillText(Dm, fm, hm)
             },
-            Vk = Fk => {
-              kk.fillStyle = Pk, kk.globalAlpha = .15, kk.fillRect(24, Fk, 976, 2), kk.globalAlpha = 1
+            Jm = Tm => {
+              mm.fillStyle = Im, mm.globalAlpha = .15, mm.fillRect(24, Tm, 976, 2), mm.globalAlpha = 1
             },
-            zk = null === xk ? null : (0, Tk.yc)(xk),
-            Sk = kk => null !== zk && kk.playerHash === zk,
-            vk = Hk(jk.entries, Xk.k),
-            Ek = "ready" === jk.status && vk.length > 0,
-            Ok = null === ek ? [] : Hk(ek.entries, lk),
-            nk = vk.some(Sk),
-            Gk = null === ek ? null : function(kk) {
-              const Fk = kk;
-              if (!Fk || !Number.isFinite(Fk.rank) || !Number.isFinite(Fk.tied) || !Number.isFinite(Fk.total)) return null;
-              return Fk
-            }(ek.standing),
-            pk = Ok.find(Sk),
-            uk = vk.find(Sk),
-            bk = null === Gk || void 0 === pk ? null : {
-              value: pk.value,
-              rank: Gk.rank
+            cm = null === Vm ? null : (0, Am.jc)(Vm),
+            zm = mm => null !== cm && mm.playerHash === cm,
+            Zm = qm(om.entries, hm.r),
+            km = "ready" === om.status && Zm.length > 0,
+            bm = null === Om ? [] : qm(Om.entries, wm),
+            Sm = Zm.some(zm),
+            em = null === Om ? null : function(mm) {
+              const Tm = mm;
+              if (!Tm || !Number.isFinite(Tm.rank) || !Number.isFinite(Tm.tied) || !Number.isFinite(Tm.total)) return null;
+              return Tm
+            }(Om.standing),
+            Nm = bm.find(zm),
+            Gm = Zm.find(zm),
+            Xm = null === em || void 0 === Nm ? null : {
+              value: Nm.value,
+              rank: em.rank
             },
-            Rk = Jk(vk, void 0 === uk || uk.value === (null === bk || void 0 === bk ? void 0 : bk.value) ? bk : null),
-            Uk = Jk(Ok, bk),
-            Ck = (kk, Fk) => {
-              const Ik = kk.findIndex(Sk);
-              return Ik >= 0 ? Fk[Ik] : null
+            Pm = jm(Zm, void 0 === Gm || Gm.value === (null === Xm || void 0 === Xm ? void 0 : Xm.value) ? Xm : null),
+            Hm = jm(bm, Xm),
+            ym = (mm, Tm) => {
+              const fm = mm.findIndex(zm);
+              return fm >= 0 ? Tm[fm] : null
             },
-            Nk = null !== (yk = null !== (Lk = null === Gk || void 0 === Gk ? void 0 : Gk.rank) && void 0 !== Lk ? Lk : Ck(Ok, Uk)) && void 0 !== yk ? yk : Ck(vk, Rk);
-          kk.font = "bold 34px 'Jetbrains Mono', monospace";
-          const ck = [...Ek ? Rk : [], ...nk ? [] : Uk],
-            Wk = Math.min(280, Math.max(0, ...ck.map((Fk => kk.measureText(ak.format(Fk)).width)))),
-            fk = Wk <= 80,
-            Bk = fk ? 80 : 32 + Wk,
-            dk = fk ? 148 : Bk + 28,
-            Yk = 660 - dk;
-          sk(`TOP ${Xk.k}  /  ALL TIME`, 24, 52, 28, Kk, 976), sk(wk ? String(null !== (tk = Fk.title) && void 0 !== tk ? tk : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, Pk, 976), sk("RANK", 32, 174, 28, Kk, dk - 40), sk("PLAYER", dk, 174, 28, Kk, Yk), sk(wk ? String(null !== (Zk = Fk.scoreLabel) && void 0 !== Zk ? Zk : "Score").slice(0, 24) : "Score", 992, 174, 28, Kk, 304, "right"), Vk(202);
-          const Ak = (ik - 232) / (Xk.k + qk + lk),
-            gk = 208 + Xk.k * Ak,
-            mk = gk + qk * Ak,
-            hk = (Fk, Ik, Xk, Tk) => {
-              const ik = Sk(Fk);
-              kk.fillStyle = ik ? Qk : Pk, kk.globalAlpha = ik ? .15 : Tk ? .035 : 0, kk.fillRect(24, Xk - Ak / 2 + 1, 976, Ak - 2), kk.globalAlpha = 1;
-              const yk = ik ? Qk : Pk;
-              sk(ak.format(Ik), Bk, Xk, 34, yk, fk ? 80 : Wk, fk ? "center" : "right"), sk(wk ? String(Fk.name).slice(0, 64) : "Player", dk, Xk, 34, yk, Yk);
-              const lk = ak.format(Fk.value);
-              sk(kk.measureText(lk).width > 304 ? Fk.value.toExponential(6) : lk, 992, Xk, 34, yk, 304, "right")
+            Cm = null !== (xm = null !== (Rm = null === em || void 0 === em ? void 0 : em.rank) && void 0 !== Rm ? Rm : ym(bm, Hm)) && void 0 !== xm ? xm : ym(Zm, Pm);
+          mm.font = "bold 34px 'Jetbrains Mono', monospace";
+          const rm = [...km ? Pm : [], ...Sm ? [] : Hm],
+            sm = Math.min(280, Math.max(0, ...rm.map((Tm => mm.measureText(Dm.format(Tm)).width)))),
+            lm = sm <= 80,
+            Mm = lm ? 80 : 32 + sm,
+            um = lm ? 148 : Mm + 28,
+            Bm = 660 - um;
+          nm(`TOP ${hm.r}  /  ALL TIME`, 24, 52, 28, Km, 976), nm(Ym ? String(null !== (pm = Tm.title) && void 0 !== pm ? pm : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, Im, 976), nm("RANK", 32, 174, 28, Km, um - 40), nm("PLAYER", um, 174, 28, Km, Bm), nm(Ym ? String(null !== (Em = Tm.scoreLabel) && void 0 !== Em ? Em : "Score").slice(0, 24) : "Score", 992, 174, 28, Km, 304, "right"), Jm(202);
+          const Lm = (am - 232) / (hm.r + im + wm),
+            tm = 208 + hm.r * Lm,
+            Um = tm + im * Lm,
+            dm = (Tm, fm, hm, Am) => {
+              const am = zm(Tm);
+              mm.fillStyle = am ? Qm : Im, mm.globalAlpha = am ? .15 : Am ? .035 : 0, mm.fillRect(24, hm - Lm / 2 + 1, 976, Lm - 2), mm.globalAlpha = 1;
+              const xm = am ? Qm : Im;
+              nm(Dm.format(fm), Mm, hm, 34, xm, lm ? 80 : sm, lm ? "center" : "right"), nm(Ym ? String(Tm.name).slice(0, 64) : "Player", um, hm, 34, xm, Bm);
+              const wm = Dm.format(Tm.value);
+              nm(mm.measureText(wm).width > 304 ? Tm.value.toExponential(6) : wm, 992, hm, 34, xm, 304, "right")
             };
-          if (Ek)
-            for (const [Xk, Tk] of vk.entries()) hk(Tk, Rk[Xk], 208 + (Xk + .5) * Ak, Xk % 2 === 0);
+          if (km)
+            for (const [hm, Am] of Zm.entries()) dm(Am, Pm[hm], 208 + (hm + .5) * Lm, hm % 2 === 0);
           else {
-            const kk = "error" === jk.status,
-              Fk = kk ? "Couldn't load leaderboard" : "ready" === jk.status ? "No scores yet" : "Loading leaderboard\u2026",
-              Ik = kk ? "Trying again shortly" : "ready" === jk.status ? "Be the first on the board!" : "Fetching the top players",
-              Xk = (208 + gk) / 2;
-            sk(Fk, 512, Xk - 28, 40, kk ? Tk.J.redUiText : Pk, 960, "center"), sk(Ik, 512, Xk + 27, 30, Kk, 960, "center")
+            const mm = "error" === om.status,
+              Tm = mm ? "Couldn't load leaderboard" : "ready" === om.status ? "No scores yet" : "Loading leaderboard\u2026",
+              fm = mm ? "Trying again shortly" : "ready" === om.status ? "Be the first on the board!" : "Fetching the top players",
+              hm = (208 + tm) / 2;
+            nm(Tm, 512, hm - 28, 40, mm ? Am.J.redUiText : Im, 960, "center"), nm(fm, 512, hm + 27, 30, Km, 960, "center")
           }
-          const rk = gk + qk * Ak / 2;
-          if (null === Nk) Vk(rk);
+          const gm = tm + im * Lm / 2;
+          if (null === Cm) Jm(gm);
           else {
-            const Fk = null === Gk ? 0 : Gk.tied - 1,
-              Ik = `YOUR RANK #${ak.format(Nk)}${null===Gk?"":` of ${ak.format(Gk.total)}`}`;
-            kk.font = "bold 36px 'Jetbrains Mono', monospace";
-            const Xk = Math.max(20, Math.min(36, Math.floor(34560 / kk.measureText(Ik).width)));
-            sk(Ik, 512, rk - (Fk > 0 ? 15 : 0), Xk, Qk, 960, "center"), Fk > 0 && sk(`Tied with ${ak.format(Fk)} other${1===Fk?"":"s"}`, 512, rk + 24, 24, Kk, 960, "center")
+            const Tm = null === em ? 0 : em.tied - 1,
+              fm = `YOUR RANK #${Dm.format(Cm)}${null===em?"":` of ${Dm.format(em.total)}`}`;
+            mm.font = "bold 36px 'Jetbrains Mono', monospace";
+            const hm = Math.max(20, Math.min(36, Math.floor(34560 / mm.measureText(fm).width)));
+            nm(fm, 512, gm - (Tm > 0 ? 15 : 0), hm, Qm, 960, "center"), Tm > 0 && nm(`Tied with ${Dm.format(Tm)} other${1===Tm?"":"s"}`, 512, gm + 24, 24, Km, 960, "center")
           }
-          if (null === ek) return;
-          const Dk = mk + lk * Ak / 2;
-          if (nk) sk(`You're in the top ${Xk.k}!`, 512, Dk, 40, Qk, 960, "center");
-          else if (0 === Ok.length) sk("You're not on this board yet", 512, Dk, 34, Kk, 960, "center");
+          if (null === Om) return;
+          const Wm = Um + wm * Lm / 2;
+          if (Sm) nm(`You're in the top ${hm.r}!`, 512, Wm, 40, Qm, 960, "center");
+          else if (0 === bm.length) nm("You're not on this board yet", 512, Wm, 34, Km, 960, "center");
           else
-            for (const [Xk, Tk] of Ok.entries()) hk(Tk, Uk[Xk], mk + (Xk + .5) * Ak, Xk % 2 === 0)
-        }(kk, Lk, tk, yk.layoutHeight)
+            for (const [hm, Am] of bm.entries()) dm(Am, Hm[hm], Um + (hm + .5) * Lm, hm % 2 === 0)
+        }(mm, Rm, pm, xm.layoutHeight)
     }
 
-    function Hk(kk, Fk) {
-      return Array.isArray(kk) ? kk.slice(0, Fk).filter((kk => kk && Number.isFinite(kk.rank) && Number.isFinite(kk.value))) : []
+    function qm(mm, Tm) {
+      return Array.isArray(mm) ? mm.slice(0, Tm).filter((mm => mm && Number.isFinite(mm.rank) && Number.isFinite(mm.value))) : []
     }
 
-    function Jk(kk, Fk) {
-      const Ik = [];
-      let Xk = !1;
-      return kk.forEach(((Tk, ik) => {
-        if (null !== Fk && Tk.value === Fk.value) return void Ik.push(Fk.rank);
-        const yk = ik > 0 && Tk.value === kk[ik - 1].value;
-        yk || (Xk = 0 === ik && 1 !== Tk.rank), Ik.push(yk && !Xk ? Ik[ik - 1] : Tk.rank)
-      })), Ik
+    function jm(mm, Tm) {
+      const fm = [];
+      let hm = !1;
+      return mm.forEach(((Am, am) => {
+        if (null !== Tm && Am.value === Tm.value) return void fm.push(Tm.rank);
+        const xm = am > 0 && Am.value === mm[am - 1].value;
+        xm || (hm = 0 === am && 1 !== Am.rank), fm.push(xm && !hm ? fm[am - 1] : Am.rank)
+      })), fm
     }
   },
-  38868: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => Tk,
-      g: () => ik
+  38972: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => Am,
+      g: () => am
     });
-    const Xk = 32;
+    const hm = 32;
 
-    function Tk(kk) {
-      return Array.from(kk).length
+    function Am(mm) {
+      return Array.from(mm).length
     }
 
-    function ik(kk) {
-      const Fk = [""];
-      let Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        Tk = "";
-      const ik = () => {
-        Fk.push(""), Ik = 0, Tk = ""
+    function am(mm) {
+      const Tm = [""];
+      let fm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        Am = "";
+      const am = () => {
+        Tm.push(""), fm = 0, Am = ""
       };
-      for (const yk of kk.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(yk)) ik();
-        else if (/^\s+$/.test(yk)) Tk += yk;
-      else if (yk.length > 0) {
-        const kk = Array.from(yk);
-        Ik > 0 && Ik + Tk.length + kk.length > Xk && ik(), Fk[Fk.length - 1] += Tk, Ik += Tk.length, Tk = "";
-        for (const Tk of kk) Ik >= Xk && ik(), Fk[Fk.length - 1] += Tk, Ik++
+      for (const xm of mm.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(xm)) am();
+        else if (/^\s+$/.test(xm)) Am += xm;
+      else if (xm.length > 0) {
+        const mm = Array.from(xm);
+        fm > 0 && fm + Am.length + mm.length > hm && am(), Tm[Tm.length - 1] += Am, fm += Am.length, Am = "";
+        for (const Am of mm) fm >= hm && am(), Tm[Tm.length - 1] += Am, fm++
       }
-      return Fk[Fk.length - 1] += Tk, Fk
+      return Tm[Tm.length - 1] += Am, Tm
     }
   },
-  50939: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      WasmPreviewHost: () => vF,
-      pageBuiltInAnimationPack: () => Zk,
-      pagePreviews: () => yF,
-      previewModule: () => rk
+  50960: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      WasmPreviewHost: () => kT,
+      pageBuiltInAnimationPack: () => Em,
+      pagePreviews: () => xT,
+      previewModule: () => gm
     });
-    var Xk = Ik(2803),
-      Tk = Ik(633);
-    const ik = "[bloxd-wasm-client]";
+    var hm = fm(2876),
+      Am = fm(658);
+    const am = "[bloxd-wasm-client]";
 
-    function yk(kk) {
-      const Fk = {
+    function xm(mm) {
+      const Tm = {
         wasm: "unknown",
-        client: String(Tk.b)
+        client: String(Am.d)
       };
       try {
-        var Ik;
-        Fk.wasm = null !== (Ik = null === kk || void 0 === kk ? void 0 : kk.Qt()) && void 0 !== Ik ? Ik : Fk.wasm
+        var fm;
+        Tm.wasm = null !== (fm = null === mm || void 0 === mm ? void 0 : mm.Xp()) && void 0 !== fm ? fm : Tm.wasm
       } catch {}
-      return Fk
+      return Tm
     }
-    async function lk(kk) {
-      if (kk.length < 2 || 31 !== kk[0] || 139 !== kk[1]) return kk;
+    async function wm(mm) {
+      if (mm.length < 2 || 31 !== mm[0] || 139 !== mm[1]) return mm;
       if ("undefined" === typeof DecompressionStream) {
         const {
-          ungzip: Fk
-        } = await Promise.resolve().then((() => Ik(2758)));
-        return Fk(kk)
+          ungzip: Tm
+        } = await Promise.resolve().then((() => fm(2826)));
+        return Tm(mm)
       }
-      const Fk = new Blob([kk]).stream().pipeThrough(new DecompressionStream("gzip"));
-      return new Uint8Array(await new Response(Fk).arrayBuffer())
+      const Tm = new Blob([mm]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Uint8Array(await new Response(Tm).arrayBuffer())
     }
 
-    function ak(kk, Fk, Xk, Tk) {
-      Promise.resolve().then((() => Ik(40757))).then((Ik => {
+    function Dm(mm, Tm, hm, Am) {
+      Promise.resolve().then((() => fm(40821))).then((fm => {
         let {
-          reportDataLoadFailure: ik
-        } = Ik;
-        ik(kk, Fk, Xk, Tk)
-      }), (Fk => {
-        console.warn(`${ik} ${kk} didn't load, and the report couldn't be sent`, Xk.error, Fk)
+          reportDataLoadFailure: am
+        } = fm;
+        am(mm, Tm, hm, Am)
+      }), (Tm => {
+        console.warn(`${am} ${mm} didn't load, and the report couldn't be sent`, hm.error, Tm)
       }))
     }
-    const qk = [3e4, 12e4, 3e5];
-    class Lk {
-      constructor(kk) {
-        this.deps = kk, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((kk => {
-          this.resolveSet = kk
+    const im = [3e4, 12e4, 3e5];
+    class Rm {
+      constructor(mm) {
+        this.deps = mm, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((mm => {
+          this.resolveSet = mm
         }))
       }
-      provide(kk) {
-        return this.loading ??= this.load(kk), this.loading
+      provide(mm) {
+        return this.loading ??= this.load(mm), this.loading
       }
       whenSet() {
         return this.set
       }
-      async load(kk) {
-        const Fk = yk(kk),
-          Ik = await async function(kk, Fk) {
-            let Ik;
+      async load(mm) {
+        const Tm = xm(mm),
+          fm = await async function(mm, Tm) {
+            let fm;
             try {
-              Ik = await kk()
-            } catch (Xk) {
+              fm = await mm()
+            } catch (hm) {
               return {
                 stage: "fetch",
-                error: Xk
+                error: hm
               }
             }
             try {
-              return Fk(Ik) ? null : {
+              return Tm(fm) ? null : {
                 stage: "decode",
                 error: null
               }
-            } catch (Xk) {
+            } catch (hm) {
               return {
                 stage: "decode",
-                error: Xk
+                error: hm
               }
             }
-          }((() => this.deps.fetch()), (Fk => {
-            const Ik = kk.Zik(Fk);
-            return Ik && this.resolveSet(Fk), Ik
+          }((() => this.deps.fetch()), (Tm => {
+            const fm = mm.oam(Tm);
+            return fm && this.resolveSet(Tm), fm
           }));
-        if (null !== Ik) {
-          if ("fetch" === Ik.stage) {
+        if (null !== fm) {
+          if ("fetch" === fm.stage) {
             this.loading = null;
-            const Fk = qk[this.retries++];
-            void 0 !== Fk && this.deps.later((() => {
-              this.provide(kk)
-            }), Fk)
+            const Tm = im[this.retries++];
+            void 0 !== Tm && this.deps.later((() => {
+              this.provide(mm)
+            }), Tm)
           }
-          this.reported || (this.reported = !0, this.deps.onFailed(Ik, Fk))
+          this.reported || (this.reported = !0, this.deps.onFailed(fm, Tm))
         }
       }
     }
-    let tk = null;
+    let pm = null;
 
-    function Zk() {
-      return tk ??= new Lk({
-        fetch: async () => lk(await (0, Xk.K)(jk(), {
+    function Em() {
+      return pm ??= new Rm({
+        fetch: async () => wm(await (0, hm.I)(om(), {
           priority: "low"
         })),
-        onFailed: (kk, Fk) => {
-          ak("builtInAnimations", jk(), kk, Fk)
+        onFailed: (mm, Tm) => {
+          Dm("builtInAnimations", om(), mm, Tm)
         },
-        later: (kk, Fk) => {
-          setTimeout(kk, Fk)
+        later: (mm, Tm) => {
+          setTimeout(mm, Tm)
         }
-      }), tk
+      }), pm
     }
 
-    function jk() {
-      return Ik(50946)
+    function om() {
+      return fm(50962)
     }
-    var ek = Ik(2801),
-      wk = Ik(1194),
-      Hk = Ik(314),
-      Jk = Ik(309),
-      xk = Ik(646),
-      Pk = Ik(4797),
-      Kk = Ik(40726),
-      Qk = Ik(40946),
-      sk = (Ik(40779), Ik(40796)),
-      Vk = Ik(40799),
-      zk = Ik(40808),
-      Sk = Ik(40738),
-      vk = Ik(40966),
-      Ek = Ik(40971),
-      Ok = Ik(40721),
-      nk = Ik(40991),
-      Gk = Ik(40845),
-      pk = Ik(40834),
-      uk = Ik(40896),
-      bk = Ik(40957),
-      Rk = Ik(42590),
-      Uk = Ik(36249),
-      Ck = Ik(3652);
-    const Nk = "[bloxd-previews]",
-      ck = 4e5,
-      Wk = 0,
-      fk = 1,
-      Bk = 2,
-      dk = 1,
-      Yk = 2,
-      Ak = 3,
-      gk = 0,
-      mk = 1,
-      hk = 2;
+    var Om = fm(2873),
+      Ym = fm(1214),
+      qm = fm(336),
+      jm = fm(330),
+      Vm = fm(675),
+      Im = fm(4732),
+      Km = fm(40793),
+      Qm = fm(41019),
+      nm = (fm(40848), fm(40864)),
+      Jm = fm(40866),
+      cm = fm(40870),
+      zm = fm(40807),
+      Zm = fm(41032),
+      km = fm(41039),
+      bm = fm(40790),
+      Sm = fm(41052),
+      em = fm(40928),
+      Nm = fm(40913),
+      Gm = fm(40971),
+      Xm = fm(41024),
+      Pm = fm(42637),
+      Hm = fm(36363),
+      ym = fm(3696);
+    const Cm = "[bloxd-previews]",
+      rm = 4e5,
+      sm = 0,
+      lm = 1,
+      Mm = 2,
+      um = 1,
+      Bm = 2,
+      Lm = 3,
+      tm = 0,
+      Um = 1,
+      dm = 2;
 
-    function rk(kk) {
-      const Fk = kk,
-        Ik = (0, Kk.B)(kk),
-        Xk = (0, Kk.g)(kk);
-      return null !== Ik && null !== Xk && "function" === typeof Fk.aik && "function" === typeof Fk.qik && "function" === typeof Fk.Lik ? Fk : null
-    }
-
-    function Dk(kk, Fk, Ik) {
-      let [Xk, Tk] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [kk, Fk], ik = Math.min(Number.isFinite(Ik) && Ik > 0 ? Ik : 1, 2);
-      const yk = Math.max(0, Xk, kk) * Math.max(0, Tk, Fk) * ik * ik;
-      return yk > ck && (ik *= Math.sqrt(ck / yk)), [Math.max(1, Math.floor(Math.max(0, kk) * ik)), Math.max(1, Math.floor(Math.max(0, Fk) * ik))]
+    function gm(mm) {
+      const Tm = mm,
+        fm = (0, Km.L)(mm),
+        hm = (0, Km.k)(mm);
+      return null !== fm && null !== hm && "function" === typeof Tm.Ram && "function" === typeof Tm.pam && "function" === typeof Tm.Eam ? Tm : null
     }
 
-    function Mk() {
-      return Ik(50955)
+    function Wm(mm, Tm, fm) {
+      let [hm, Am] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [mm, Tm], am = Math.min(Number.isFinite(fm) && fm > 0 ? fm : 1, 2);
+      const xm = Math.max(0, hm, mm) * Math.max(0, Am, Tm) * am * am;
+      return xm > rm && (am *= Math.sqrt(rm / xm)), [Math.max(1, Math.floor(Math.max(0, mm) * am)), Math.max(1, Math.floor(Math.max(0, Tm) * am))]
     }
-    async function kF(kk, Fk, Xk) {
-      let Tk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      "lost" === kk && (0, Ok.z)();
-      const ik = await (0, Ok.Q)();
-      if (null === ik || (0, Kk.h)(ik) || (0, Ok.e)()) return;
-      const lk = "webgpu" === ik.backend;
-      if (!lk && "lost" !== kk) return;
-      const ak = lk && (0, Jk.p)(ik.adapter, null !== Xk && void 0 !== Xk ? Xk : null, "lost" === kk, Tk),
-        qk = lk ? (0, Kk.M)(kk) : null;
-      if (null === qk) {
-        lk || (0, xk.s)(), (0, Ok.r)();
+
+    function Fm() {
+      return fm(50964)
+    }
+    async function mT(mm, Tm, hm) {
+      let Am = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      "lost" === mm && (0, bm.D)();
+      const am = await (0, bm.X)();
+      if (null === am || (0, Km.o)(am) || (0, bm.e)()) return;
+      const wm = "webgpu" === am.backend;
+      if (!wm && "lost" !== mm) return;
+      const Dm = wm && (0, jm.m)(am.adapter, null !== hm && void 0 !== hm ? hm : null, "lost" === mm, Am),
+        im = wm ? (0, Km.W)(mm) : null;
+      if (null === im) {
+        wm || (0, Vm.u)(), (0, bm.t)();
         try {
-          await async function(kk, Fk, Xk, Tk, ik) {
+          await async function(mm, Tm, hm, Am, am) {
             let {
-              restoreLost: lk,
-              adapterRemembered: ak
-            } = ik;
-            const qk = (0, ek.K)(),
+              restoreLost: wm,
+              adapterRemembered: Dm
+            } = am;
+            const im = (0, Om.U)(),
               {
-                flushCrashReports: Lk,
-                reportRenderReload: tk
-              } = await Promise.resolve().then((() => Ik(40757)));
-            tk(kk.backend, Tk, yk(qk ? (0, ek.y)() : null), {
-              cause: Fk,
-              restoreLost: lk,
-              adapterRemembered: ak,
-              ...FF(kk, Fk, Xk)
-            }), await Lk(Gk.c)
-          }(ik, kk, Fk, null !== Xk && void 0 !== Xk ? Xk : "start_failed" === kk ? 0 : 1, {
-            restoreLost: Tk,
-            adapterRemembered: ak
+                flushCrashReports: Rm,
+                reportRenderReload: pm
+              } = await Promise.resolve().then((() => fm(40821)));
+            pm(mm.backend, Am, xm(im ? (0, Om.D)() : null), {
+              from: "home",
+              cause: Tm,
+              restoreLost: wm,
+              adapterRemembered: Dm,
+              ...TT(mm, Tm, hm)
+            }), await Rm(em.c)
+          }(am, mm, Tm, null !== hm && void 0 !== hm ? hm : "start_failed" === mm ? 0 : 1, {
+            restoreLost: Am,
+            adapterRemembered: Dm
           })
-        } catch (tk) {
-          console.warn(`${Nk} ${ik.backend} failed at home (${kk}), and its report couldn't be sent`, tk)
-        }(0, Gk.i)()
+        } catch (pm) {
+          console.warn(`${Cm} ${am.backend} failed at home (${mm}), and its report couldn't be sent`, pm)
+        }(0, em.h)()
       } else {
-        var Lk;
-        const Xk = FF(ik, kk, Fk),
-          Tk = `WebGPU failed at home (${kk}${void 0===Xk.error?"":`: ${Xk.error instanceof Error?Xk.error.message:(0,Uk.j)(Xk.error)}`}) and ${qk}`;
-        console.warn(`${Nk} ${Tk}: the previews stop`, null !== (Lk = Xk.error) && void 0 !== Lk ? Lk : ""), (0, Ok.v)(Tk);
+        var Rm;
+        const hm = TT(am, mm, Tm),
+          Am = `WebGPU failed at home (${mm}${void 0===hm.error?"":`: ${hm.error instanceof Error?hm.error.message:(0,Hm.l)(hm.error)}`}) and ${im}`;
+        console.warn(`${Cm} ${Am}: the previews stop`, null !== (Rm = hm.error) && void 0 !== Rm ? Rm : ""), (0, bm.x)(Am);
         try {
           const {
-            countRenderLost: Fk
-          } = await Promise.resolve().then((() => Ik(40757)));
-          Fk(kk, Xk.error, Xk.context)
-        } catch (Zk) {
-          console.warn(`${Nk} WebGPU failed at home (${kk}), and its count couldn't be sent`, Zk)
+            countRenderLost: Tm
+          } = await Promise.resolve().then((() => fm(40821)));
+          Tm(mm, hm.error, hm.context)
+        } catch (Em) {
+          console.warn(`${Cm} WebGPU failed at home (${mm}), and its count couldn't be sent`, Em)
         }
       }
     }
 
-    function FF(kk, Fk, Ik) {
-      var Xk;
+    function TT(mm, Tm, fm) {
+      var hm;
       let {
-        adapter: Tk
-      } = kk;
-      const ik = (0, ek.K)();
+        adapter: Am
+      } = mm;
+      const am = (0, Om.U)();
       return {
-        error: "lost" === Fk && null !== (Xk = (0, Kk.N)(ik ? (0, Kk.B)((0, ek.y)()) : null)) && void 0 !== Xk ? Xk : Ik,
+        error: "lost" === Tm && null !== (hm = (0, Km.Z)(am ? (0, Km.L)((0, Om.D)()) : null)) && void 0 !== hm ? hm : fm,
         context: {
-          adapter: Tk,
-          boundAtMs: "start_failed" === Fk ? null : (0, Ok.O)(),
-          indirectHangs: (0, Ok.C)(),
-          restoresSkipped: (0, Ok.P)()
+          adapter: Am,
+          boundAtMs: "start_failed" === Tm ? null : (0, bm.S)(),
+          indirectHangs: (0, bm.H)(),
+          restoresSkipped: (0, bm.T)()
         }
       }
     }
-    async function IF() {
-      if (!(0, ek.K)()) {
-        const kk = await (0, Ok.Q)();
-        if (null === kk || (0, Kk.h)(kk)) return null;
-        if (await (0, nk.b)(await kk.load()), !(0, ek.K)()) return null
+    async function fT() {
+      if (!(0, Om.U)()) {
+        const mm = await (0, bm.X)();
+        if (null === mm || (0, Km.o)(mm)) return null;
+        if (await (0, Sm.e)(await mm.load()), !(0, Om.U)()) return null
       }
-      return rk((0, ek.y)())
+      return gm((0, Om.D)())
     }
-    class XF {
-      constructor(kk, Fk, Ik, Xk, Tk, ik) {
-        this.page = kk, this.host = Fk, this.id = Ik, this.canvas = Xk, this.size = Tk, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
-        const yk = {
-            ...ik.images,
-            glbUrl: kk => {
-              var Fk;
-              return null !== (Fk = this.models.drawnUrl(kk)) && void 0 !== Fk ? Fk : ik.images.glbUrl(kk)
+    class hT {
+      constructor(mm, Tm, fm, hm, Am, am) {
+        this.page = mm, this.host = Tm, this.id = fm, this.canvas = hm, this.size = Am, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
+        const xm = {
+            ...am.images,
+            glbUrl: mm => {
+              var Tm;
+              return null !== (Tm = this.models.drawnUrl(mm)) && void 0 !== Tm ? Tm : am.images.glbUrl(mm)
             }
           },
-          lk = Fk => kk.modelFile(Fk);
-        this.images = new Qk.g(yk, (kk => {
-          console.warn(`${Nk} image ${kk.key.kind}:${kk.key.index}:${kk.key.word} failed`, kk.error)
+          wm = Tm => mm.modelFile(Tm);
+        this.images = new Qm.e(xm, (mm => {
+          console.warn(`${Cm} image ${mm.key.kind}:${mm.key.index}:${mm.key.word} failed`, mm.error)
         }), {
-          fetchFile: lk,
-          fetchImage: Fk => kk.imageFile(Fk)
-        }), kk.startModels(), this.models = new sk.h(ik.files, ((Fk, Ik) => kk.buildModel(Fk, Ik)), (kk => {
-          console.warn(`${Nk} model file ${kk.file} (${kk.url}) failed`, kk.error)
+          fetchFile: wm,
+          fetchImage: Tm => mm.imageFile(Tm)
+        }), mm.startModels(), this.models = new nm.i(am.files, ((Tm, fm) => mm.buildModel(Tm, fm)), (mm => {
+          console.warn(`${Cm} model file ${mm.file} (${mm.url}) failed`, mm.error)
         }), {
-          fetchFile: lk,
-          onWritten: (kk, Fk) => {
-            this.images.glbWritten(kk, Fk)
+          fetchFile: wm,
+          onWritten: (mm, Tm) => {
+            this.images.glbWritten(mm, Tm)
           },
-          onTaken: (kk, Fk) => {
-            this.images.glbTaken(kk, Fk)
+          onTaken: (mm, Tm) => {
+            this.images.glbTaken(mm, Tm)
           }
-        }), this.write = (kk, Fk, Ik) => {
+        }), this.write = (mm, Tm, fm) => {
           if (this.closed) return !0;
-          if (kk === sk.d) {
-            const kk = new DataView(Ik.buffer, Ik.byteOffset, zk.b),
-              Xk = kk.getUint32(0, !0),
-              Tk = kk.getUint32(zk.f, !0),
-              ik = this.page.hostCall(hk, (() => this.host.xyk(this.id, Xk, Fk, Ik.subarray(zk.b))));
-            return this.outcomes.push([Tk, ik]), !0
+          if (mm === nm.b) {
+            const mm = new DataView(fm.buffer, fm.byteOffset, cm.d),
+              hm = mm.getUint32(0, !0),
+              Am = mm.getUint32(cm.g, !0),
+              am = this.page.hostCall(dm, (() => this.host.cxm(this.id, hm, Tm, fm.subarray(cm.d))));
+            return this.outcomes.push([Am, am]), !0
           }
-          return kk === Qk.c && (this.page.hostCall(void 0, (() => {
-            this.host.Kyk(this.id, Ik)
+          return mm === Qm.b && (this.page.hostCall(void 0, (() => {
+            this.host.Zxm(this.id, fm)
           })), !0)
         }
       }
@@ -649,74 +650,74 @@ export const modules = {
       get isStopped() {
         return this.page.isStopped
       }
-      resize(kk, Fk, Ik) {
+      resize(mm, Tm, fm) {
         if (this.closed) return;
-        const [Xk, Tk] = Dk(kk, Fk, this.page.dpr(), Ik);
-        Xk === this.size[0] && Tk === this.size[1] || (this.size = [Xk, Tk], this.page.hostCall(void 0, (() => {
-          this.host.resize(this.id, Xk, Tk)
+        const [hm, Am] = Wm(mm, Tm, this.page.dpr(), fm);
+        hm === this.size[0] && Am === this.size[1] || (this.size = [hm, Am], this.page.hostCall(void 0, (() => {
+          this.host.resize(this.id, hm, Am)
         })))
       }
-      setMob(kk, Fk, Ik, Xk) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Syk(this.id, kk, Fk, Ik, Xk))))
+      setMob(mm, Tm, fm, hm) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Nxm(this.id, mm, Tm, fm, hm))))
       }
-      setPet(kk, Fk, Ik, Xk) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.vyk(this.id, kk, Fk, Ik, Xk))))
+      setPet(mm, Tm, fm, hm) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Xxm(this.id, mm, Tm, fm, hm))))
       }
-      setPlayer(kk, Fk, Ik) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.syk(this.id, kk, Fk, Ik))))
+      setPlayer(mm, Tm, fm) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.bxm(this.id, mm, Tm, fm))))
       }
-      setFigure(kk, Fk, Ik, Xk) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Vyk(this.id, kk, Fk, Ik, Xk))))
+      setFigure(mm, Tm, fm, hm) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Sxm(this.id, mm, Tm, fm, hm))))
       }
       replay() {
         return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.replay(this.id))))
       }
       get orbit() {
         if (this.closed) return null;
-        const kk = this.page.hostCall(null, (() => this.host.orbit(this.id)));
-        return null === kk || kk.length < 3 ? null : {
-          alpha: kk[0],
-          beta: kk[1],
-          radius: kk[2]
+        const mm = this.page.hostCall(null, (() => this.host.orbit(this.id)));
+        return null === mm || mm.length < 3 ? null : {
+          alpha: mm[0],
+          beta: mm[1],
+          radius: mm[2]
         }
       }
-      setOrbit(kk) {
+      setOrbit(mm) {
         let {
-          alpha: Fk,
-          beta: Ik,
-          radius: Xk
-        } = kk;
+          alpha: Tm,
+          beta: fm,
+          radius: hm
+        } = mm;
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.oyk(this.id, Fk, Ik, Xk)
+          this.host.Gxm(this.id, Tm, fm, hm)
         }))
       }
       untilSettled() {
-        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((kk => {
-          this.settled.push(kk)
+        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((mm => {
+          this.settled.push(mm)
         })))
       }
       packChanged() {
-        this.quiet = 0, this.models.refresh(), (0, vk.i)(this.images)
+        this.quiet = 0, this.models.refresh(), (0, Zm.j)(this.images)
       }
       feed() {
         this.models.drain(this.write);
-        for (const [kk, Fk] of this.outcomes) {
-          const Ik = Fk === gk ? [] : [Fk === mk ? kk : (kk | sk.g) >>> 0];
-          this.models.taken(kk, Ik)
+        for (const [mm, Tm] of this.outcomes) {
+          const fm = Tm === tm ? [] : [Tm === Um ? mm : (mm | nm.f) >>> 0];
+          this.models.taken(mm, fm)
         }
         this.outcomes.length = 0, this.images.drain(this.write)
       }
-      collect(kk) {
-        let Fk = !1;
-        if (kk) {
-          const kk = this.host.Gyk(this.id);
-          for (const Fk of kk) this.models.request(Fk);
-          const Ik = this.host.nyk(this.id);
-          Ik.length > 0 && this.images.onEvent(Ik), Fk = kk.length > 0 || Ik.length > 0
+      collect(mm) {
+        let Tm = !1;
+        if (mm) {
+          const mm = this.host.Cxm(this.id);
+          for (const Tm of mm) this.models.request(Tm);
+          const fm = this.host.yxm(this.id);
+          fm.length > 0 && this.images.onEvent(fm), Tm = mm.length > 0 || fm.length > 0
         }
-        const Ik = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
-          Xk = Fk || Ik > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
-        this.quiet = Xk ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
+        const fm = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
+          hm = Tm || fm > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
+        this.quiet = hm ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
       }
       close() {
         this.closed || (this.closed = !0, this.page.closePreview(this), this.resolveSettled())
@@ -724,314 +725,314 @@ export const modules = {
       abandon() {
         this.resolveSettled()
       }
-      dispose(kk) {
+      dispose(mm) {
         this.page.hostCall(void 0, (() => {
-          const Fk = this.host.close(this.id);
-          Fk.length > 0 && this.images.onEvent(Fk), this.page.isTrapped || kk.Lik(this.id)
+          const Tm = this.host.close(this.id);
+          Tm.length > 0 && this.images.onEvent(Tm), this.page.isTrapped || mm.Eam(this.id)
         })), this.images.dispose(), this.canvas.remove()
       }
       resolveSettled() {
-        const kk = this.settled;
+        const mm = this.settled;
         this.settled = [];
-        for (const Fk of kk) Fk()
+        for (const Tm of mm) Tm()
       }
     }
-    class TF {
-      constructor(kk) {
-        this.deps = kk, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
-          onUnavailable: kk => {
-            this.modelsFailed(kk)
+    class AT {
+      constructor(mm) {
+        this.deps = mm, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
+          onUnavailable: mm => {
+            this.modelsFailed(mm)
           },
-          onDecoderFailed: kk => {
-            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${Nk} the Draco decoder didn't load: models waiting on it won't draw`, kk))
+          onDecoderFailed: mm => {
+            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${Cm} the Draco decoder didn't load: models waiting on it won't draw`, mm))
           },
-          onWorkerLost: kk => {
-            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${Nk} a model worker was lost: ${kk}`))
+          onWorkerLost: mm => {
+            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${Cm} a model worker was lost: ${mm}`))
           },
           onModuleRetry: () => {}
-        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.ke = {
-          setShaderPack: (kk, Fk, Ik, Xk, Tk) => (this.shaderPackArgs = [kk, Fk, Ik, Xk, Tk], this.handOverShaderPack(), !0)
-        }, this.frame = kk => {
+        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.KO = {
+          setShaderPack: (mm, Tm, fm, hm, Am) => (this.shaderPackArgs = [mm, Tm, fm, hm, Am], this.handOverShaderPack(), !0)
+        }, this.frame = mm => {
           this.frameId = null;
-          const Fk = this.host;
-          if (null !== Fk && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
-            this.drawFrame(Fk, kk)
-          } catch (Ik) {
-            if (!this.stopIfTrapped(Ik) && (this.stop(), (0, Kk.j)(Ik))) return void this.deps.onRenderFailed("frames_refused", Ik);
-            console.warn(`${Nk} the previews stopped: their frame threw`, Ik)
+          const Tm = this.host;
+          if (null !== Tm && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
+            this.drawFrame(Tm, mm)
+          } catch (fm) {
+            if (!this.stopIfTrapped(fm) && (this.stop(), (0, Km.p)(fm))) return void this.deps.onRenderFailed("frames_refused", fm);
+            console.warn(`${Cm} the previews stopped: their frame threw`, fm)
           }
-        }, kk.pack.onChange((() => {
+        }, mm.pack.onChange((() => {
           this.packChanged()
-        })), kk.game.onGameChange((() => {
+        })), mm.game.onGameChange((() => {
           this.tellInGame()
         }))
       }
       packChanged() {
         if (!this.stopped)
-          for (const kk of this.previews.values()) kk.packChanged()
+          for (const mm of this.previews.values()) mm.packChanged()
       }
       dpr() {
         return this.deps.dpr()
       }
       get sessionBound() {
-        var kk, Fk;
-        return null !== (kk = null === (Fk = this.host) || void 0 === Fk ? void 0 : Fk.attached()) && void 0 !== kk && kk
+        var mm, Tm;
+        return null !== (mm = null === (Tm = this.host) || void 0 === Tm ? void 0 : Tm.attached()) && void 0 !== mm && mm
       }
       get open() {
         return this.previews.size
       }
       get frameCostMs() {
-        return 0 === this.costs.length ? 0 : this.costs.reduce(((kk, Fk) => kk + Fk), 0) / this.costs.length
+        return 0 === this.costs.length ? 0 : this.costs.reduce(((mm, Tm) => mm + Tm), 0) / this.costs.length
       }
-      async bindSession(kk, Fk, Ik) {
-        const Xk = this.binding,
-          Tk = this.sessionEnds;
+      async bindSession(mm, Tm, fm) {
+        const hm = this.binding,
+          Am = this.sessionEnds;
         try {
-          const ik = this.hostOf(kk);
-          if (!ik.Pyk()) {
-            const Fk = (0, uk.d)().sampleCount,
-              yk = await Ik(Fk);
-            if (this.sessionEnds !== Tk) return this.keepRendererOfEndedSession(kk, ik, yk, Fk, Xk), Fk;
-            if (!ik.Iyk(yk)) throw new Error("the page has a renderer already");
-            (0, Ok.y)(performance.now()), this.samples = Fk, (0, bk.f)((0, Kk.g)(kk))
+          const am = this.hostOf(mm);
+          if (!am.zxm()) {
+            const Tm = (0, Gm.e)().sampleCount,
+              xm = await fm(Tm);
+            if (this.sessionEnds !== Am) return this.keepRendererOfEndedSession(mm, am, xm, Tm, hm), Tm;
+            if (!am.ixm(xm)) throw new Error("the page has a renderer already");
+            (0, bm.z)(performance.now()), this.samples = Tm, (0, Xm.d)((0, Km.k)(mm))
           }
-          if (!ik.attach(Fk)) throw new Error("the page's renderer is lent to another session");
+          if (!am.attach(Tm)) throw new Error("the page's renderer is lent to another session");
           return this.samples
         } finally {
-          this.binding === Xk && this.endBinding()
+          this.binding === hm && this.endBinding()
         }
       }
-      keepRendererOfEndedSession(kk, Fk, Ik, Xk, Tk) {
-        if (!this.lastEndReturned || null !== this.binding && this.binding !== Tk) try {
-          Ik.free()
-        } catch (ik) {
-          console.warn(`${Nk} an ended session's renderer didn't free`, ik)
-        } else Fk.Iyk(Ik) && ((0, Ok.y)(performance.now()), this.samples = Xk, (0, bk.f)(this.registryOf(kk)))
+      keepRendererOfEndedSession(mm, Tm, fm, hm, Am) {
+        if (!this.lastEndReturned || null !== this.binding && this.binding !== Am) try {
+          fm.free()
+        } catch (am) {
+          console.warn(`${Cm} an ended session's renderer didn't free`, am)
+        } else Tm.ixm(fm) && ((0, bm.z)(performance.now()), this.samples = hm, (0, Xm.d)(this.registryOf(mm)))
       }
       async beginSession() {
-        var kk;
-        let Fk = () => {};
-        const Ik = new Promise((kk => {
-          Fk = kk
+        var mm;
+        let Tm = () => {};
+        const fm = new Promise((mm => {
+          Tm = mm
         }));
         this.binding = {
-          done: Ik,
-          release: Fk
-        }, await (null === (kk = this.opening) || void 0 === kk ? void 0 : kk.catch((() => null)));
-        const Xk = this.pageCanvas;
-        return this.pageCanvas = null, Xk
+          done: fm,
+          release: Tm
+        }, await (null === (mm = this.opening) || void 0 === mm ? void 0 : mm.catch((() => null)));
+        const hm = this.pageCanvas;
+        return this.pageCanvas = null, hm
       }
-      endSession(kk) {
-        var Fk, Ik;
-        if (this.sessionEnds++, this.lastEndReturned = kk, this.endBinding(), kk) {
+      endSession(mm) {
+        var Tm, fm;
+        if (this.sessionEnds++, this.lastEndReturned = mm, this.endBinding(), mm) {
           try {
-            var Xk;
-            null === (Xk = this.host) || void 0 === Xk || Xk.detach()
-          } catch (Tk) {
-            return void console.warn(`${Nk} the session's core kept the page's renderer`, Tk)
-          }!0 === (null === (Fk = this.host) || void 0 === Fk ? void 0 : Fk.attached()) && console.warn(`${Nk} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (Ik = this.host) || void 0 === Ik ? void 0 : Ik.Pyk()) && (0, bk.f)(this.registryOf(this.module))
+            var hm;
+            null === (hm = this.host) || void 0 === hm || hm.detach()
+          } catch (Am) {
+            return void console.warn(`${Cm} the session's core kept the page's renderer`, Am)
+          }!0 === (null === (Tm = this.host) || void 0 === Tm ? void 0 : Tm.attached()) && console.warn(`${Cm} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (fm = this.host) || void 0 === fm ? void 0 : fm.zxm()) && (0, Xm.d)(this.registryOf(this.module))
         }
       }
       endBinding() {
-        var kk;
-        null === (kk = this.binding) || void 0 === kk || kk.release(), this.binding = null
+        var mm;
+        null === (mm = this.binding) || void 0 === mm || mm.release(), this.binding = null
       }
-      async openPreview(kk, Fk, Ik, Xk) {
-        const Tk = await this.renderingHost(),
-          ik = this.module;
-        if (null === Tk || null === ik) throw new Error("this page can't draw previews: it has no renderer build");
-        if (this.animations ??= this.loadAnimations(Tk), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
+      async openPreview(mm, Tm, fm, hm) {
+        const Am = await this.renderingHost(),
+          am = this.module;
+        if (null === Am || null === am) throw new Error("this page can't draw previews: it has no renderer build");
+        if (this.animations ??= this.loadAnimations(Am), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
         this.guarded((() => {
-          this.deps.provideBuiltInAnimationPack(ik)
+          this.deps.provideBuiltInAnimationPack(am)
         }));
-        const yk = this.nextId++,
-          lk = this.deps.createCanvas(),
-          [ak, qk] = Dk(Fk, Ik, this.deps.dpr(), Xk);
-        lk.width = ak, lk.height = qk;
-        if (!this.guarded((() => (ik.qik(yk, lk), Tk.open(yk, ak, qk, kk))))) throw this.hostCall(void 0, (() => {
-          ik.Lik(yk)
+        const xm = this.nextId++,
+          wm = this.deps.createCanvas(),
+          [Dm, im] = Wm(Tm, fm, this.deps.dpr(), hm);
+        wm.width = Dm, wm.height = im;
+        if (!this.guarded((() => (am.pam(xm, wm), Am.open(xm, Dm, im, mm))))) throw this.hostCall(void 0, (() => {
+          am.Eam(xm)
         })), new Error("the page's renderer is lent to a session that is running");
         this.restartModelsIfFailed();
-        const Lk = new XF(this, Tk, yk, lk, [ak, qk], this.deps);
-        return this.previews.set(yk, Lk), this.startFrames(), Lk
+        const Rm = new hT(this, Am, xm, wm, [Dm, im], this.deps);
+        return this.previews.set(xm, Rm), this.startFrames(), Rm
       }
       prefetch() {
-        if (this.prefetched || this.isStopped || (0, Ok.e)() || null !== (0, Ok.N)()) return;
+        if (this.prefetched || this.isStopped || (0, bm.e)() || null !== (0, bm.P)()) return;
         this.prefetched = !0;
-        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((kk => {
-          null === kk || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
+        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((mm => {
+          null === mm || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
         }), (() => {}))
       }
-      modelFile(kk) {
-        return this.prefetchedOr(kk, this.deps.fetchModel)
+      modelFile(mm) {
+        return this.prefetchedOr(mm, this.deps.fetchModel)
       }
-      imageFile(kk) {
-        return this.prefetchedOr(kk, Xk.K)
+      imageFile(mm) {
+        return this.prefetchedOr(mm, hm.I)
       }
-      prefetchedOr(kk, Fk) {
-        const Ik = this.prefetchedFiles.get(kk);
-        return void 0 === Ik ? Fk(kk) : Ik.catch((() => Fk(kk)))
+      prefetchedOr(mm, Tm) {
+        const fm = this.prefetchedFiles.get(mm);
+        return void 0 === fm ? Tm(mm) : fm.catch((() => Tm(mm)))
       }
       async prefetchPlayerFiles() {
-        const kk = this.deps.playerFile().then((kk => this.deps.files.url(kk))),
-          Fk = await Promise.all([kk, this.deps.images.lifeformAtlasUrl(vk.c)]).catch((() => null));
-        if (null === Fk) return;
-        const [Ik, Xk] = Fk, Tk = (kk, Fk) => {
-          if (null === kk) return;
-          const Ik = Fk(kk);
-          this.prefetchedFiles.set(kk, Ik), Ik.catch((() => {
-            this.prefetchedFiles.delete(kk)
+        const mm = this.deps.playerFile().then((mm => this.deps.files.url(mm))),
+          Tm = await Promise.all([mm, this.deps.images.lifeformAtlasUrl(Zm.b)]).catch((() => null));
+        if (null === Tm) return;
+        const [fm, hm] = Tm, Am = (mm, Tm) => {
+          if (null === mm) return;
+          const fm = Tm(mm);
+          this.prefetchedFiles.set(mm, fm), fm.catch((() => {
+            this.prefetchedFiles.delete(mm)
           }))
         };
-        Tk(Ik, (kk => this.modelFile(kk))), Tk(Xk, (kk => this.imageFile(kk)))
+        Am(fm, (mm => this.modelFile(mm))), Am(hm, (mm => this.imageFile(mm)))
       }
       loadModule() {
-        return this.moduleLoad ??= this.deps.loadModule().then((kk => (null === kk && (this.moduleLoad = null), kk)), (kk => {
-          throw this.moduleLoad = null, kk
+        return this.moduleLoad ??= this.deps.loadModule().then((mm => (null === mm && (this.moduleLoad = null), mm)), (mm => {
+          throw this.moduleLoad = null, mm
         })), this.moduleLoad
       }
       fetchAnimationTable() {
-        return this.animationTable ??= this.deps.fetchAnimations().catch((kk => {
-          throw this.animationTable = null, kk
+        return this.animationTable ??= this.deps.fetchAnimations().catch((mm => {
+          throw this.animationTable = null, mm
         })), this.animationTable
       }
       get modelsUnavailable() {
         return this.unavailable
       }
       startModels() {
-        this.models ??= this.deps.startModels(this.modelsListener).catch((kk => (this.modelsFailed(kk), () => new Promise((() => {})))))
+        this.models ??= this.deps.startModels(this.modelsListener).catch((mm => (this.modelsFailed(mm), () => new Promise((() => {})))))
       }
-      buildModel(kk, Fk) {
-        return this.startModels(), this.models.then((Ik => Ik(kk, Fk))).then((kk => this.unavailable ? new Promise((() => {})) : kk))
+      buildModel(mm, Tm) {
+        return this.startModels(), this.models.then((fm => fm(mm, Tm))).then((mm => this.unavailable ? new Promise((() => {})) : mm))
       }
       restartModelsIfFailed() {
         this.unavailable && !this.modelsRestarted && 0 === this.previews.size && (this.modelsRestarted = !0, this.models = null, this.unavailable = !1, this.startModels())
       }
-      modelsFailed(kk) {
-        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${Nk} the model workers didn't start: models won't draw in the previews`, kk))
+      modelsFailed(mm) {
+        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${Cm} the model workers didn't start: models won't draw in the previews`, mm))
       }
-      called(kk) {
-        return 0 !== kk && this.logError(kk, 0), kk
+      called(mm) {
+        return 0 !== mm && this.logError(mm, 0), mm
       }
-      closePreview(kk) {
-        this.previews.delete(kk.id), null !== this.module && kk.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
+      closePreview(mm) {
+        this.previews.delete(mm.id), null !== this.module && mm.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
       }
-      hostOf(kk) {
-        if (null !== this.module && this.module !== kk) throw new Error("a second renderer module on one page");
-        return this.module = kk, null === this.host && (this.host = this.guarded((() => new kk.aik)), this.tellInGame(), this.handOverShaderPack()), this.host
+      hostOf(mm) {
+        if (null !== this.module && this.module !== mm) throw new Error("a second renderer module on one page");
+        return this.module = mm, null === this.host && (this.host = this.guarded((() => new mm.Ram)), this.tellInGame(), this.handOverShaderPack()), this.host
       }
       tellInGame() {
         const {
-          host: kk
+          host: mm
         } = this;
-        null !== kk && this.outsideCall("the game's start or end", (() => {
-          kk.zyk(this.deps.game.inGame())
+        null !== mm && this.outsideCall("the game's start or end", (() => {
+          mm.exm(this.deps.game.inGame())
         }))
       }
       handOverShaderPack() {
         const {
-          host: kk,
-          shaderPackArgs: Fk
+          host: mm,
+          shaderPackArgs: Tm
         } = this;
-        null !== kk && null !== Fk && this.outsideCall("the shader pack's hand-over", (() => {
-          kk.aXk(...Fk) || console.warn(`${Nk} the host refused the shader pack: previews draw without it at home`)
+        null !== mm && null !== Tm && this.outsideCall("the shader pack's hand-over", (() => {
+          mm.Dhm(...Tm) || console.warn(`${Cm} the host refused the shader pack: previews draw without it at home`)
         }))
       }
-      outsideCall(kk, Fk) {
+      outsideCall(mm, Tm) {
         try {
-          this.hostCall(void 0, Fk)
-        } catch (Ik) {
-          this.stop(), console.warn(`${Nk} the previews stopped: ${kk} threw`, Ik)
+          this.hostCall(void 0, Tm)
+        } catch (fm) {
+          this.stop(), console.warn(`${Cm} the previews stopped: ${mm} threw`, fm)
         }
       }
-      async loadAnimations(kk) {
-        const Fk = yk(null),
-          Ik = this.module;
+      async loadAnimations(mm) {
+        const Tm = xm(null),
+          fm = this.module;
         try {
-          Fk.wasm = null === Ik ? Fk.wasm : this.hostCall(Fk.wasm, (() => Ik.Qt()))
+          Tm.wasm = null === fm ? Tm.wasm : this.hostCall(Tm.wasm, (() => fm.Xp()))
         } catch {}
-        let Xk, Tk;
+        let hm, Am;
         try {
-          Xk = await this.fetchAnimationTable()
-        } catch (ik) {
+          hm = await this.fetchAnimationTable()
+        } catch (am) {
           return void this.deps.onAnimationsFailed({
             stage: "fetch",
-            error: ik
-          }, Fk)
+            error: am
+          }, Tm)
         }
         if (!this.settleIfTrapped()) {
           try {
-            Tk = kk.Qyk(Xk)
-          } catch (ik) {
-            if (this.stopIfTrapped(ik)) return;
+            Am = mm.kxm(hm)
+          } catch (am) {
+            if (this.stopIfTrapped(am)) return;
             return void this.deps.onAnimationsFailed({
               stage: "decode",
-              error: ik
-            }, Fk)
+              error: am
+            }, Tm)
           }
-          Tk || this.deps.onAnimationsFailed({
+          Am || this.deps.onAnimationsFailed({
             stage: "decode",
             error: null
-          }, Fk)
+          }, Tm)
         }
       }
       async renderingHost() {
         if (null !== this.binding && await this.binding.done, this.settleIfTrapped()) return null;
-        const kk = this.host;
-        return null !== kk && this.guarded((() => kk.Pyk())) ? kk : (this.opening ??= this.openAtHome().finally((() => {
+        const mm = this.host;
+        return null !== mm && this.guarded((() => mm.zxm())) ? mm : (this.opening ??= this.openAtHome().finally((() => {
           this.opening = null
         })), this.opening)
       }
       async openAtHome() {
-        var kk;
-        const Fk = null !== (kk = this.module) && void 0 !== kk ? kk : await this.loadModule();
-        if (null === Fk) return null;
-        const Ik = this.hostOf(Fk),
-          Xk = () => this.guarded((() => Ik.Pyk()));
-        if (Xk()) return Ik;
-        if (null !== (0, Ok.N)() || (0, Ok.e)()) return null;
-        const Tk = this.deps.createCanvas();
-        Tk.width = 1, Tk.height = 1;
-        const ik = await this.deps.openExtras();
+        var mm;
+        const Tm = null !== (mm = this.module) && void 0 !== mm ? mm : await this.loadModule();
+        if (null === Tm) return null;
+        const fm = this.hostOf(Tm),
+          hm = () => this.guarded((() => fm.zxm()));
+        if (hm()) return fm;
+        if (null !== (0, bm.P)() || (0, bm.e)()) return null;
+        const Am = this.deps.createCanvas();
+        Am.width = 1, Am.height = 1;
+        const am = await this.deps.openExtras();
         if (this.settleIfTrapped()) return null;
-        const yk = (0, uk.d)().sampleCount;
-        let lk;
+        const xm = (0, Gm.e)().sampleCount;
+        let wm;
         try {
-          lk = await (0, Kk.n)(Fk, "previewRenderer", Tk, yk, Rk.e, ik)
-        } catch (ak) {
-          throw ak instanceof Sk.c ? this.stopForTrap(ak) : (0, Kk.l)(ak) && await this.deps.onRenderFailed("start_failed", ak), ak
+          wm = await (0, Km.v)(Tm, "previewRenderer", Am, xm, Pm.e, am)
+        } catch (Dm) {
+          throw Dm instanceof zm.e ? this.stopForTrap(Dm) : (0, Km.t)(Dm) && await this.deps.onRenderFailed("start_failed", Dm), Dm
         }
-        return this.guarded((() => Ik.Iyk(lk))) ? ((0, Ok.y)(performance.now()), this.samples = yk, this.pageCanvas = Tk, (0, bk.f)(this.registryOf(Fk)), Ik) : Xk() ? Ik : null
+        return this.guarded((() => fm.ixm(wm))) ? ((0, bm.z)(performance.now()), this.samples = xm, this.pageCanvas = Am, (0, Xm.d)(this.registryOf(Tm)), fm) : hm() ? fm : null
       }
       startFrames() {
         null !== this.frameId || this.isStopped || (this.frameId = this.deps.requestFrame(this.frame))
       }
-      drawFrame(kk, Fk) {
-        for (const yk of this.previews.values()) yk.feed();
+      drawFrame(mm, Tm) {
+        for (const xm of this.previews.values()) xm.feed();
         if (this.stopped) return;
-        const Ik = this.deps.now(),
-          Xk = kk.frame(Fk);
-        this.costs.push(this.deps.now() - Ik), this.costs.length > 120 && this.costs.shift();
-        const Tk = 0 !== (256 & Xk),
-          ik = 255 & Xk;
-        for (const yk of this.previews.values()) {
+        const fm = this.deps.now(),
+          hm = mm.frame(Tm);
+        this.costs.push(this.deps.now() - fm), this.costs.length > 120 && this.costs.shift();
+        const Am = 0 !== (256 & hm),
+          am = 255 & hm;
+        for (const xm of this.previews.values()) {
           if (this.stopped) return;
-          yk.collect(Tk)
+          xm.collect(Am)
         }
         if (!this.stopped) {
-          if (0 !== (512 & Xk) && this.deps.onDrew(), Tk) {
-            const Fk = kk.Oyk();
-            for (let kk = 0; kk + 1 < Fk.length; kk += 2) Fk[kk] === Pk.N.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(Fk[kk], Fk[kk + 1])
+          if (0 !== (512 & hm) && this.deps.onDrew(), Am) {
+            const Tm = mm.Hxm();
+            for (let mm = 0; mm + 1 < Tm.length; mm += 2) Tm[mm] === Im.Q.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(Tm[mm], Tm[mm + 1])
           }
-          if (ik !== dk) {
-            if (ik === Yk) return this.stop(), void this.deps.onFatal(kk.wyk(), kk.Hyk());
-            if (ik === Ak) return this.stop(), void console.warn(`${Nk} the previews stopped: the page's renderer went with its session`);
-            (0, Hk.b)(Fk), this.startFrames()
+          if (am !== um) {
+            if (am === Bm) return this.stop(), void this.deps.onFatal(mm.Qxm(), mm.nxm());
+            if (am === Lm) return this.stop(), void console.warn(`${Cm} the previews stopped: the page's renderer went with its session`);
+            (0, qm.d)(Tm), this.startFrames()
           } else {
-            const Fk = kk.Jyk();
+            const Tm = mm.Jxm();
             this.stop();
-            const Ik = Fk[2] === Pk.Xc.PIPELINE_FAILED ? "pipeline_failed" : "lost";
-            this.deps.onRenderFailed(Ik, void 0, Fk[1], Fk[2] === Pk.Xc.RESTORE_LOST)
+            const fm = Tm[2] === Im.Wc.PIPELINE_FAILED ? "pipeline_failed" : "lost";
+            this.deps.onRenderFailed(fm, void 0, Tm[1], Tm[2] === Im.Wc.RESTORE_LOST)
           }
         }
       }
@@ -1039,115 +1040,115 @@ export const modules = {
         return this.stopped || this.isTrapped
       }
       get isTrapped() {
-        return null !== this.module && ((0, Sk.f)(this.module) || "failed" === (0, ek.w)())
+        return null !== this.module && ((0, zm.i)(this.module) || "failed" === (0, Om.A)())
       }
-      hostCall(kk, Fk) {
-        if (this.settleIfTrapped()) return kk;
+      hostCall(mm, Tm) {
+        if (this.settleIfTrapped()) return mm;
         try {
-          return Fk()
-        } catch (Ik) {
-          if (this.stopIfTrapped(Ik)) return kk;
-          throw Ik
+          return Tm()
+        } catch (fm) {
+          if (this.stopIfTrapped(fm)) return mm;
+          throw fm
         }
       }
-      guarded(kk) {
+      guarded(mm) {
         if (this.settleIfTrapped()) throw new Error("the previews stopped: their module trapped");
         try {
-          return kk()
-        } catch (Fk) {
-          throw this.stopIfTrapped(Fk), Fk
+          return mm()
+        } catch (Tm) {
+          throw this.stopIfTrapped(Tm), Tm
         }
       }
-      registryOf(kk) {
+      registryOf(mm) {
         return {
-          gIk: (Fk, Ik) => {
+          tfm: (Tm, fm) => {
             this.hostCall(void 0, (() => {
-              kk.gIk(Fk, Ik)
+              mm.tfm(Tm, fm)
             }))
           },
-          mIk: Fk => {
+          Ufm: Tm => {
             this.hostCall(void 0, (() => {
-              kk.mIk(Fk)
+              mm.Ufm(Tm)
             }))
           }
         }
       }
       settleIfTrapped() {
-        return !!this.isTrapped && (this.stopped || (this.stop(), (0, bk.f)(null)), !0)
+        return !!this.isTrapped && (this.stopped || (this.stop(), (0, Xm.d)(null)), !0)
       }
-      stopIfTrapped(kk) {
-        return !(null === this.module || !(0, Sk.g)(this.module, kk)) && (this.stopForTrap(kk), !0)
+      stopIfTrapped(mm) {
+        return !(null === this.module || !(0, zm.m)(this.module, mm)) && (this.stopForTrap(mm), !0)
       }
-      stopForTrap(kk) {
-        this.stop(), (0, bk.f)(null), (0, Ck.g)("previews", kk)
+      stopForTrap(mm) {
+        this.stop(), (0, Xm.d)(null), (0, ym.c)("previews", mm)
       }
       stop() {
         this.stopped = !0;
-        for (const kk of this.previews.values()) kk.abandon()
+        for (const mm of this.previews.values()) mm.abandon()
       }
-      logError(kk, Fk) {
-        const Ik = `${kk}:${Fk}`;
-        this.loggedErrors.has(Ik) || (this.loggedErrors.add(Ik), console.warn(`${Nk} error ${kk} (detail ${Fk})`))
+      logError(mm, Tm) {
+        const fm = `${mm}:${Tm}`;
+        this.loggedErrors.has(fm) || (this.loggedErrors.add(fm), console.warn(`${Cm} error ${mm} (detail ${Tm})`))
       }
     }
-    let iF = null;
+    let aT = null;
 
-    function yF() {
-      return iF ??= new TF(function() {
-        const kk = (0, Vk.j)(wk.clientSideServerUrls.staticUrl, {
-          packUrl: kk => {
-            var Fk, Ik;
-            return null !== (Fk = null === (Ik = vk.f.current) || void 0 === Ik ? void 0 : Ik.modelUrl(kk)) && void 0 !== Fk ? Fk : null
+    function xT() {
+      return aT ??= new AT(function() {
+        const mm = (0, Jm.s)(Ym.clientSideServerUrls.staticUrl, {
+          packUrl: mm => {
+            var Tm, fm;
+            return null !== (Tm = null === (fm = Zm.f.current) || void 0 === fm ? void 0 : fm.modelUrl(mm)) && void 0 !== Tm ? Tm : null
           }
         });
         return {
-          loadModule: IF,
-          startModels: async kk => {
+          loadModule: fT,
+          startModels: async mm => {
             const {
-              pageModelPool: Fk
-            } = await Ik.e(42).then((() => Ik(51022))), {
-              pool: Xk
-            } = Fk(kk);
-            return (kk, Fk) => Xk.build(kk, Fk)
+              pageModelPool: Tm
+            } = await fm.e(42).then((() => fm(51029))), {
+              pool: hm
+            } = Tm(mm);
+            return (mm, Tm) => hm.build(mm, Tm)
           },
-          fetchAnimations: async () => lk(await (0, Xk.K)(Mk())),
-          playerFile: async () => (await (0, Vk.i)()).PLAYER_FILE,
-          onAnimationsFailed: (kk, Fk) => {
-            ak("previewAnimations", Mk(), kk, Fk)
+          fetchAnimations: async () => wm(await (0, hm.I)(Fm())),
+          playerFile: async () => (await (0, Jm.p)()).PLAYER_FILE,
+          onAnimationsFailed: (mm, Tm) => {
+            Dm("previewAnimations", Fm(), mm, Tm)
           },
-          provideBuiltInAnimationPack: kk => {
-            Zk().provide(kk)
+          provideBuiltInAnimationPack: mm => {
+            Em().provide(mm)
           },
-          openExtras: Ok.F,
-          files: kk,
-          images: (0, vk.m)((0, Qk.o)(kk.url), (() => vk.f.current)),
-          pack: vk.f,
-          game: Ek.b,
-          fetchModel: kk => (0, Vk.f)(kk),
+          openExtras: bm.K,
+          files: mm,
+          images: (0, Zm.l)((0, Qm.o)(mm.url), (() => Zm.f.current)),
+          pack: Zm.f,
+          game: km.d,
+          fetchModel: mm => (0, Jm.l)(mm),
           createCanvas: () => document.createElement("canvas"),
           dpr: () => window.devicePixelRatio,
           now: () => performance.now(),
-          requestFrame: kk => requestAnimationFrame(kk),
-          cancelFrame: kk => {
-            cancelAnimationFrame(kk)
+          requestFrame: mm => requestAnimationFrame(mm),
+          cancelFrame: mm => {
+            cancelAnimationFrame(mm)
           },
-          onRenderFailed: kF,
-          onFatal: (kk, Fk) => {
-            console.error(`${Nk} the previews stopped: renderer error ${kk} (detail ${Fk})`)
+          onRenderFailed: mT,
+          onFatal: (mm, Tm) => {
+            console.error(`${Cm} the previews stopped: renderer error ${mm} (detail ${Tm})`)
           },
           onDeviceLost: () => {
-            (0, Ok.J)() === pk.e.webgpu && Jk.F.lost()
+            (0, bm.O)() === Nm.b.webgpu && jm.C.lost()
           },
           onDrew: () => {
-            Jk.F.drew()
+            jm.C.drew()
           }
         }
-      }()), iF
+      }()), aT
     }
-    var lF = Ik(614),
-      aF = Ik(38621),
-      qF = Ik(3229);
-    const LF = {
+    var wT = fm(645),
+      DT = fm(38730),
+      iT = fm(3301);
+    const RT = {
       wave: 0,
       clap: 1,
       point: 2,
@@ -1165,320 +1166,320 @@ export const modules = {
       gunReady: 14,
       gunAimed: 15
     };
-    const tF = "[bloxd-previews]",
-      ZF = new Uint32Array(5);
+    const pT = "[bloxd-previews]",
+      ET = new Uint32Array(5);
 
-    function jF(kk) {
-      return lF.m.indexOf(kk)
+    function oT(mm) {
+      return wT.n.indexOf(mm)
     }
-    const eF = new WeakSet;
+    const OT = new WeakSet;
 
-    function wF(kk) {
-      const Fk = (0, aF.f)(kk),
-        Ik = null === Fk ? -1 : HF(Fk);
-      return -1 !== Ik ? Ik : (eF.has(kk) || (eF.add(kk), console.warn(`${tF} an animation the previews' table lacks: the mob idles instead`)), -1)
-    }
-
-    function HF(kk) {
-      var Fk;
-      return null !== (Fk = LF[kk]) && void 0 !== Fk ? Fk : -1
+    function YT(mm) {
+      const Tm = (0, DT.g)(mm),
+        fm = null === Tm ? -1 : qT(Tm);
+      return -1 !== fm ? fm : (OT.has(mm) || (OT.add(mm), console.warn(`${pT} an animation the previews' table lacks: the mob idles instead`)), -1)
     }
 
-    function JF(kk, Fk) {
+    function qT(mm) {
+      var Tm;
+      return null !== (Tm = RT[mm]) && void 0 !== Tm ? Tm : -1
+    }
+
+    function jT(mm, Tm) {
       const {
-        canvas: Ik
-      } = Fk;
-      Ik.style.width = "100%", Ik.style.height = "100%", Ik.style.display = "block", kk.appendChild(Ik)
+        canvas: fm
+      } = Tm;
+      fm.style.width = "100%", fm.style.height = "100%", fm.style.display = "block", mm.appendChild(fm)
     }
 
-    function xF(kk) {
-      const Fk = kk.getBoundingClientRect();
-      return [Fk.width, Fk.height]
+    function VT(mm) {
+      const Tm = mm.getBoundingClientRect();
+      return [Tm.width, Tm.height]
     }
-    class PF {
-      constructor(kk, Fk) {
-        this.preview = kk, this.showView = Fk
+    class IT {
+      constructor(mm, Tm) {
+        this.preview = mm, this.showView = Tm
       }
-      show(kk) {
-        this.showView(this.preview, kk)
+      show(mm) {
+        this.showView(this.preview, mm)
       }
-      resize(kk, Fk) {
-        this.preview.resize(kk, Fk)
+      resize(mm, Tm) {
+        this.preview.resize(mm, Tm)
       }
       close() {
         this.preview.close()
       }
     }
-    class KF {
-      constructor(kk) {
-        this.preview = kk, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(kk) {
+    class KT {
+      constructor(mm) {
+        this.preview = mm, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(mm) {
           const {
-            canvas: Fk
-          } = kk;
-          let Ik = null;
-          const Xk = kk => {
-              var Xk;
-              Ik = {
-                pointer: kk.pointerId,
-                x: kk.clientX,
-                y: kk.clientY
-              }, null === (Xk = Fk.setPointerCapture) || void 0 === Xk || Xk.call(Fk, kk.pointerId)
+            canvas: Tm
+          } = mm;
+          let fm = null;
+          const hm = mm => {
+              var hm;
+              fm = {
+                pointer: mm.pointerId,
+                x: mm.clientX,
+                y: mm.clientY
+              }, null === (hm = Tm.setPointerCapture) || void 0 === hm || hm.call(Tm, mm.pointerId)
             },
-            Tk = Fk => {
-              var Xk;
-              const Tk = kk.orbit;
-              if ((null === (Xk = Ik) || void 0 === Xk ? void 0 : Xk.pointer) !== Fk.pointerId || null === Tk) return;
-              const ik = Fk.clientX - Ik.x,
-                yk = Fk.clientY - Ik.y;
-              Ik = {
-                ...Ik,
-                x: Fk.clientX,
-                y: Fk.clientY
-              }, kk.setOrbit({
-                alpha: Tk.alpha - .01 * ik,
-                beta: Math.min(Math.PI - .01, Math.max(.01, Tk.beta - .01 * yk)),
-                radius: Tk.radius
+            Am = Tm => {
+              var hm;
+              const Am = mm.orbit;
+              if ((null === (hm = fm) || void 0 === hm ? void 0 : hm.pointer) !== Tm.pointerId || null === Am) return;
+              const am = Tm.clientX - fm.x,
+                xm = Tm.clientY - fm.y;
+              fm = {
+                ...fm,
+                x: Tm.clientX,
+                y: Tm.clientY
+              }, mm.setOrbit({
+                alpha: Am.alpha - .01 * am,
+                beta: Math.min(Math.PI - .01, Math.max(.01, Am.beta - .01 * xm)),
+                radius: Am.radius
               })
             },
-            ik = kk => {
-              var Fk;
-              (null === (Fk = Ik) || void 0 === Fk ? void 0 : Fk.pointer) === kk.pointerId && (Ik = null)
+            am = mm => {
+              var Tm;
+              (null === (Tm = fm) || void 0 === Tm ? void 0 : Tm.pointer) === mm.pointerId && (fm = null)
             },
-            yk = Fk => {
-              const Ik = kk.orbit;
-              if (null === Ik) return;
-              Fk.preventDefault();
-              const Xk = Fk.deltaY * (Fk.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : Fk.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
-                Tk = Math.min(100, Math.max(5, Ik.radius + .08 * Xk));
-              kk.setOrbit({
-                ...Ik,
-                radius: Tk
+            xm = Tm => {
+              const fm = mm.orbit;
+              if (null === fm) return;
+              Tm.preventDefault();
+              const hm = Tm.deltaY * (Tm.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : Tm.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
+                Am = Math.min(100, Math.max(5, fm.radius + .08 * hm));
+              mm.setOrbit({
+                ...fm,
+                radius: Am
               })
             };
-          return Fk.style.touchAction = "none", Fk.addEventListener("pointerdown", Xk), Fk.addEventListener("pointermove", Tk), Fk.addEventListener("pointerup", ik), Fk.addEventListener("pointercancel", ik), Fk.addEventListener("wheel", yk, {
+          return Tm.style.touchAction = "none", Tm.addEventListener("pointerdown", hm), Tm.addEventListener("pointermove", Am), Tm.addEventListener("pointerup", am), Tm.addEventListener("pointercancel", am), Tm.addEventListener("wheel", xm, {
             passive: !1
           }), () => {
-            Fk.removeEventListener("pointerdown", Xk), Fk.removeEventListener("pointermove", Tk), Fk.removeEventListener("pointerup", ik), Fk.removeEventListener("pointercancel", ik), Fk.removeEventListener("wheel", yk)
+            Tm.removeEventListener("pointerdown", hm), Tm.removeEventListener("pointermove", Am), Tm.removeEventListener("pointerup", am), Tm.removeEventListener("pointercancel", am), Tm.removeEventListener("wheel", xm)
           }
-        }(kk), this.dev = {
-          canvas: () => kk.canvas,
+        }(mm), this.dev = {
+          canvas: () => mm.canvas,
           isolateHead: () => {
-            console.warn(`${tF} isolateHead: noa's character preview only`)
+            console.warn(`${pT} isolateHead: noa's character preview only`)
           }
-        }, this.apply(), this.ready = kk.untilSettled().then((() => {
-          if (kk.isStopped) throw new Error(`${tF} the previews stopped before the character drew`);
+        }, this.apply(), this.ready = mm.untilSettled().then((() => {
+          if (mm.isStopped) throw new Error(`${pT} the previews stopped before the character drew`);
           this.built = !0
         }))
       }
       isReady() {
         return this.built && !this.preview.isClosed
       }
-      setCosmetic(kk, Fk) {
-        this.cosmetics[kk] = Fk, this.apply()
+      setCosmetic(mm, Tm) {
+        this.cosmetics[mm] = Tm, this.apply()
       }
-      playEmote(kk) {
-        null === kk || kk !== this.emote ? (this.emote = kk, this.apply()) : this.preview.replay()
+      playEmote(mm) {
+        null === mm || mm !== this.emote ? (this.emote = mm, this.apply()) : this.preview.replay()
       }
-      untilDrawn(kk) {
+      untilDrawn(mm) {
         return this.preview.untilSettled()
       }
-      setOrbit(kk) {
+      setOrbit(mm) {
         let {
-          yaw: Fk,
-          pitch: Ik,
-          radius: Xk
-        } = kk;
-        const Tk = this.preview.orbit;
-        null !== Tk && this.preview.setOrbit({
-          alpha: Fk,
-          beta: Ik,
-          radius: null !== Xk && void 0 !== Xk ? Xk : Tk.radius
+          yaw: Tm,
+          pitch: fm,
+          radius: hm
+        } = mm;
+        const Am = this.preview.orbit;
+        null !== Am && this.preview.setOrbit({
+          alpha: Tm,
+          beta: fm,
+          radius: null !== hm && void 0 !== hm ? hm : Am.radius
         })
       }
       resetCamera() {}
-      resize(kk, Fk) {
-        this.preview.resize(kk, Fk)
+      resize(mm, Tm) {
+        this.preview.resize(mm, Tm)
       }
       close() {
         this.detachControls(), this.preview.close()
       }
       apply() {
-        var kk;
-        this.preview.setPlayer(JSON.stringify(this.cosmetics), ZF, null === (kk = this.emote) ? -1 : HF(kk))
+        var mm;
+        this.preview.setPlayer(JSON.stringify(this.cosmetics), ET, null === (mm = this.emote) ? -1 : qT(mm))
       }
     }
 
-    function QF(kk, Fk) {
+    function QT(mm, Tm) {
       let {
-        mobType: Ik,
-        variation: Xk,
-        animation: Tk
-      } = Fk;
-      kk.setMob(jF(Ik), null !== Xk && void 0 !== Xk ? Xk : "", 1, wF(Tk))
+        mobType: fm,
+        variation: hm,
+        animation: Am
+      } = Tm;
+      mm.setMob(oT(fm), null !== hm && void 0 !== hm ? hm : "", 1, YT(Am))
     }
 
-    function sF(kk, Fk) {
+    function nT(mm, Tm) {
       let {
-        mobType: Ik,
-        variation: Xk,
-        metaInfo: Tk,
-        tamed: ik
-      } = Fk;
-      kk.setPet(jF(Ik), Xk, Tk, ik)
+        mobType: fm,
+        variation: hm,
+        metaInfo: Am,
+        tamed: am
+      } = Tm;
+      mm.setPet(oT(fm), hm, Am, am)
     }
-    const VF = {
+    const JT = {
       aimed: .533 / 1.15 * 1.1,
       ready: .16 / .85 * 1.1
     };
-    class zF {
-      constructor(kk, Fk, Ik, Xk) {
+    class cT {
+      constructor(mm, Tm, fm, hm) {
         this.preview = null, this.closed = !1, this.figure = null, this.shown = !1, this.order = "", this.span = {
           left: 0,
           width: 0
-        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, kk(Ik.width, Xk[1], Xk).then((kk => {
-          if (this.closed) return void kk.close();
+        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, mm(fm.width, hm[1], hm).then((mm => {
+          if (this.closed) return void mm.close();
           const {
-            style: Ik
-          } = kk.canvas;
-          Ik.position = "absolute", Ik.top = "0", Ik.visibility = "hidden", JF(Fk, kk), this.preview = kk, this.apply()
-        })).catch((kk => {
-          console.error(`${tF} couldn't open a lineup figure`, kk)
+            style: fm
+          } = mm.canvas;
+          fm.position = "absolute", fm.top = "0", fm.visibility = "hidden", jT(Tm, mm), this.preview = mm, this.apply()
+        })).catch((mm => {
+          console.error(`${pT} couldn't open a lineup figure`, mm)
         }))
       }
-      update(kk, Fk, Ik, Xk, Tk) {
-        this.figure = kk, this.shown = Fk, this.order = Ik, this.span = Xk, this.lineup = Tk, this.apply()
+      update(mm, Tm, fm, hm, Am) {
+        this.figure = mm, this.shown = Tm, this.order = fm, this.span = hm, this.lineup = Am, this.apply()
       }
       close() {
-        var kk;
-        this.closed = !0, null === (kk = this.preview) || void 0 === kk || kk.close(), this.preview = null
+        var mm;
+        this.closed = !0, null === (mm = this.preview) || void 0 === mm || mm.close(), this.preview = null
       }
       apply() {
         const {
-          preview: kk,
-          figure: Fk,
-          lineup: Ik
+          preview: mm,
+          figure: Tm,
+          lineup: fm
         } = this;
-        if (null === kk || null === Fk) return;
-        if (this.given !== Fk) {
-          var Xk;
-          this.given = Fk, this.loaded = !1;
-          const Ik = null === Fk.VK ? 0 : null !== (Xk = (0, qF.e)(Fk.VK)) && void 0 !== Xk ? Xk : 0;
-          kk.setFigure(function(kk) {
-            return JSON.stringify(Object.fromEntries(kk.cosmetics))
-          }(Fk), Ik, wF(Fk.animation), Fk.size), kk.untilSettled().then((() => {
-            this.given === Fk && (this.loaded = !0, this.apply())
+        if (null === mm || null === Tm) return;
+        if (this.given !== Tm) {
+          var hm;
+          this.given = Tm, this.loaded = !1;
+          const fm = null === Tm.zK ? 0 : null !== (hm = (0, iT.c)(Tm.zK)) && void 0 !== hm ? hm : 0;
+          mm.setFigure(function(mm) {
+            return JSON.stringify(Object.fromEntries(mm.cosmetics))
+          }(Tm), fm, YT(Tm.animation), Tm.size), mm.untilSettled().then((() => {
+            this.given === Tm && (this.loaded = !0, this.apply())
           }))
         }
         const {
-          left: Tk,
-          width: ik
+          left: Am,
+          width: am
         } = this.span;
-        kk.resize(ik, Ik[1], Ik);
+        mm.resize(am, fm[1], fm);
         const {
-          style: yk
-        } = kk.canvas;
-        yk.left = `${Tk}px`, yk.width = `${ik}px`, yk.zIndex = this.order, yk.visibility = this.shown && this.loaded ? "visible" : "hidden"
+          style: xm
+        } = mm.canvas;
+        xm.left = `${Am}px`, xm.width = `${am}px`, xm.zIndex = this.order, xm.visibility = this.shown && this.loaded ? "visible" : "hidden"
       }
     }
-    class SF {
-      constructor(kk, Fk) {
-        this.open = Fk, this.layer = void 0, this.figures = [], this.view = {
+    class zT {
+      constructor(mm, Tm) {
+        this.open = Tm, this.layer = void 0, this.figures = [], this.view = {
           figures: [],
           shown: []
-        }, this.size = void 0, this.size = xF(kk), this.layer = document.createElement("div");
+        }, this.size = void 0, this.size = VT(mm), this.layer = document.createElement("div");
         const {
-          style: Ik
+          style: fm
         } = this.layer;
-        Ik.position = "relative", Ik.isolation = "isolate", Ik.overflow = "hidden", Ik.width = "100%", Ik.height = "100%", Ik.pointerEvents = "none", kk.appendChild(this.layer)
+        fm.position = "relative", fm.isolation = "isolate", fm.overflow = "hidden", fm.width = "100%", fm.height = "100%", fm.pointerEvents = "none", mm.appendChild(this.layer)
       }
-      show(kk) {
-        this.view = kk, this.place()
+      show(mm) {
+        this.view = mm, this.place()
       }
-      resize(kk, Fk) {
-        this.size = [kk, Fk], this.place()
+      resize(mm, Tm) {
+        this.size = [mm, Tm], this.place()
       }
       close() {
-        for (const kk of this.figures) kk.close();
+        for (const mm of this.figures) mm.close();
         this.figures = [], this.layer.remove()
       }
       place() {
         const {
-          figures: kk,
-          shown: Fk
+          figures: mm,
+          shown: Tm
         } = this.view;
-        for (const Xk of this.figures.splice(kk.length)) Xk.close();
+        for (const hm of this.figures.splice(mm.length)) hm.close();
         const {
-          size: Ik
+          size: fm
         } = this;
-        kk.forEach(((Xk, Tk) => {
-          var ik;
-          const yk = function(kk, Fk, Ik, Xk) {
-            let [Tk, ik] = Xk;
-            const yk = (kk + .5) * Tk / Fk,
-              lk = Math.min(Math.max(Tk / Fk, 2 * Ik * ik), 2 * Math.max(yk, Tk - yk));
+        mm.forEach(((hm, Am) => {
+          var am;
+          const xm = function(mm, Tm, fm, hm) {
+            let [Am, am] = hm;
+            const xm = (mm + .5) * Am / Tm,
+              wm = Math.min(Math.max(Am / Tm, 2 * fm * am), 2 * Math.max(xm, Am - xm));
             return {
-              left: yk - lk / 2,
-              width: lk
+              left: xm - wm / 2,
+              width: wm
             }
-          }(Tk, kk.length, function(kk) {
+          }(Am, mm.length, function(mm) {
             let {
-              animation: Fk,
-              size: Ik
-            } = kk;
+              animation: Tm,
+              size: fm
+            } = mm;
             const {
-              aimed: Xk,
-              ready: Tk
-            } = VF;
-            return (wF(Fk) === LF.gunAimed ? Xk : Tk) * Ik
-          }(Xk), Ik);
-          this.figures[Tk] ??= new zF(this.open, this.layer, yk, Ik), this.figures[Tk].update(Xk, null !== (ik = Fk[Tk]) && void 0 !== ik && ik, function(kk, Fk) {
-            return String(Math.round(1e3 * kk) + Fk)
-          }(Xk.size, Tk), yk, Ik)
+              aimed: hm,
+              ready: Am
+            } = JT;
+            return (YT(Tm) === RT.gunAimed ? hm : Am) * fm
+          }(hm), fm);
+          this.figures[Am] ??= new cT(this.open, this.layer, xm, fm), this.figures[Am].update(hm, null !== (am = Tm[Am]) && void 0 !== am && am, function(mm, Tm) {
+            return String(Math.round(1e3 * mm) + Tm)
+          }(hm.size, Am), xm, fm)
         }))
       }
     }
-    const oF = {
-      player: fk,
-      store: Bk
+    const ZT = {
+      player: lm,
+      store: Mm
     };
-    class vF {
-      constructor(kk) {
-        this.page = kk
+    class kT {
+      constructor(mm) {
+        this.page = mm
       }
-      async openMob(kk) {
-        return new PF(await this.open(kk, Wk), QF)
+      async openMob(mm) {
+        return new IT(await this.open(mm, sm), QT)
       }
-      async openPet(kk) {
-        return new PF(await this.open(kk, Wk), sF)
+      async openPet(mm) {
+        return new IT(await this.open(mm, sm), nT)
       }
-      openMobLineup(kk) {
-        return new SF(kk, ((kk, Fk, Ik) => this.page.openPreview(Wk, kk, Fk, Ik)))
+      openMobLineup(mm) {
+        return new zT(mm, ((mm, Tm, fm) => this.page.openPreview(sm, mm, Tm, fm)))
       }
-      async openCharacter(kk, Fk) {
-        return new KF(await this.open(kk, oF[Fk]))
+      async openCharacter(mm, Tm) {
+        return new KT(await this.open(mm, ZT[Tm]))
       }
-      async open(kk, Fk) {
-        const [Ik, Xk] = xF(kk), Tk = await this.page.openPreview(Fk, Ik, Xk);
-        return JF(kk, Tk), Tk
+      async open(mm, Tm) {
+        const [fm, hm] = VT(mm), Am = await this.page.openPreview(Tm, fm, hm);
+        return jT(mm, Am), Am
       }
     }
   },
-  36759: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      B: () => ek,
-      D: () => wk,
-      F: () => Jk,
-      e: () => Xk,
-      i: () => Tk,
-      k: () => Zk,
-      n: () => Hk,
-      p: () => Lk,
-      r: () => xk,
-      v: () => ak,
-      w: () => qk,
-      z: () => jk
+  36836: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      A: () => jm,
+      b: () => hm,
+      e: () => Am,
+      h: () => Em,
+      j: () => qm,
+      m: () => Rm,
+      q: () => Vm,
+      s: () => Dm,
+      u: () => im,
+      v: () => om,
+      w: () => Om,
+      z: () => Ym
     });
-    const Xk = [{
+    const hm = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -1495,64 +1496,64 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function Tk(kk, Fk) {
+    function Am(mm, Tm) {
       const {
-        numLines: Ik,
-        charsPerLine: Tk
-      } = Xk[Fk];
-      return Pk(kk, Ik, Tk, !1)
+        numLines: fm,
+        charsPerLine: Am
+      } = hm[Tm];
+      return Im(mm, fm, Am, !1)
     }
-    const ik = 7 / 8,
-      yk = .25,
-      lk = 8;
+    const am = 7 / 8,
+      xm = .25,
+      wm = 8;
 
-    function ak(kk, Fk) {
+    function Dm(mm, Tm) {
       return {
-        width: Math.min(kk, lk) - 2 * yk,
-        height: Math.min(Fk, lk) - 2 * yk
+        width: Math.min(mm, wm) - 2 * xm,
+        height: Math.min(Tm, wm) - 2 * xm
       }
     }
 
-    function qk(kk, Fk, Ik) {
-      const Tk = ak(kk, Fk),
+    function im(mm, Tm, fm) {
+      const Am = Dm(mm, Tm),
         {
-          numLines: yk,
-          charsPerLine: lk
-        } = Xk[Ik];
+          numLines: xm,
+          charsPerLine: wm
+        } = hm[fm];
       return {
-        numLines: Math.max(1, Math.floor(yk / ik * Tk.height)),
-        charsPerLine: Math.max(1, Math.floor(lk * Tk.width))
+        numLines: Math.max(1, Math.floor(xm / am * Am.height)),
+        charsPerLine: Math.max(1, Math.floor(wm * Am.width))
       }
     }
 
-    function Lk(kk, Fk, Ik, Xk) {
+    function Rm(mm, Tm, fm, hm) {
       const {
-        numLines: Tk,
-        charsPerLine: ik
-      } = qk(Ik, Xk, Fk);
-      return Pk(kk, Tk, ik, !1)
+        numLines: Am,
+        charsPerLine: am
+      } = im(fm, hm, Tm);
+      return Im(mm, Am, am, !1)
     }
-    const tk = 32e3;
+    const pm = 32e3;
 
-    function Zk(kk) {
-      return kk.slice(0, tk)
+    function Em(mm) {
+      return mm.slice(0, pm)
     }
-    const jk = 512e3,
-      ek = 64,
-      wk = jk;
+    const om = 512e3,
+      Om = 64,
+      Ym = om;
 
-    function Hk(kk, Fk) {
-      const Ik = Math.max(0, wk - Fk),
-        Xk = Math.min(jk, Ik);
-      return kk.slice(0, Xk)
+    function qm(mm, Tm) {
+      const fm = Math.max(0, Ym - Tm),
+        hm = Math.min(om, fm);
+      return mm.slice(0, hm)
     }
-    const Jk = {
+    const jm = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      Hq: {
+      zi: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -1564,31 +1565,31 @@ export const modules = {
       }
     };
 
-    function xk(kk, Fk) {
+    function Vm(mm, Tm) {
       const {
-        numLines: Ik,
-        charsPerLine: Xk
-      } = Jk[Fk];
-      return Pk(kk, Ik, Xk, !1)
+        numLines: fm,
+        charsPerLine: hm
+      } = jm[Tm];
+      return Im(mm, fm, hm, !1)
     }
 
-    function Pk(kk, Fk, Ik, Xk, Tk) {
-      (Tk || Xk) && (kk = kk.slice(0, null !== Tk && void 0 !== Tk ? Tk : Fk * Ik));
-      const ik = kk.split("\n");
-      if (ik.length > Fk && ik.splice(Fk, ik.length - Fk), !Xk)
-        for (let yk = 0; yk < ik.length; yk++) {
-          const kk = ik[yk];
-          kk.length > Ik && (ik[yk] = kk.substring(0, Ik), ik.length < Fk && ik.splice(yk + 1, 0, kk.substring(Ik)))
+    function Im(mm, Tm, fm, hm, Am) {
+      (Am || hm) && (mm = mm.slice(0, null !== Am && void 0 !== Am ? Am : Tm * fm));
+      const am = mm.split("\n");
+      if (am.length > Tm && am.splice(Tm, am.length - Tm), !hm)
+        for (let xm = 0; xm < am.length; xm++) {
+          const mm = am[xm];
+          mm.length > fm && (am[xm] = mm.substring(0, fm), am.length < Tm && am.splice(xm + 1, 0, mm.substring(fm)))
         }
-      return ik.join("\n")
+      return am.join("\n")
     }
   },
-  50946: (kk, Fk, Ik) => {
-    kk.exports = Ik.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
+  50962: (mm, Tm, fm) => {
+    mm.exports = fm.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
   },
-  50955: (kk, Fk, Ik) => {
-    kk.exports = Ik.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
+  50964: (mm, Tm, fm) => {
+    mm.exports = fm.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);

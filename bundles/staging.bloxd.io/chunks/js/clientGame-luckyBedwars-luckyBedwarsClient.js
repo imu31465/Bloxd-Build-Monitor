@@ -1,257 +1,257 @@
 export const id = 19;
 export const ids = [19];
 export const modules = {
-  36597: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => jk,
-      f: () => ek,
-      g: () => Zk,
-      j: () => tk
+  36681: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      b: () => om,
+      e: () => Om,
+      f: () => Em,
+      i: () => pm
     });
-    var Xk = Ik(34164),
-      Tk = Ik(36600),
-      ik = Ik(36607),
-      yk = Ik(8691),
-      lk = Ik(1402),
-      ak = Ik(58),
-      qk = Ik(74),
-      Lk = Ik(1096);
+    var hm = fm(34283),
+      Am = fm(36686),
+      am = fm(36689),
+      xm = fm(8654),
+      wm = fm(1449),
+      Dm = fm(59),
+      im = fm(77),
+      Rm = fm(1135);
 
-    function tk() {
-      var kk;
-      return (0, lk.f)(Tk.c, (0, Tk.m)()), (0, Lk.jsx)(Lk.Fragment, {
-        children: null === (kk = (0, Tk.m)()) || void 0 === kk ? void 0 : kk.content
+    function pm() {
+      var mm;
+      return (0, wm.i)(Am.e, (0, Am.p)()), (0, Rm.jsx)(Rm.Fragment, {
+        children: null === (mm = (0, Am.p)()) || void 0 === mm ? void 0 : mm.content
       })
     }
 
-    function Zk(kk) {
-      var Fk;
+    function Em(mm) {
+      var Tm;
       let {
-        show: Ik
-      } = kk;
-      (0, lk.f)(Tk.c, (0, Tk.m)());
-      const qk = null === (Fk = (0, Tk.m)()) || void 0 === Fk ? void 0 : Fk.menu;
-      return (0, ak.useEffect)((() => {
-        var kk;
-        Ik || (null === qk || void 0 === qk || null === (kk = qk.onClose) || void 0 === kk || kk.call(qk), (0, ik.r)())
-      }), [Ik, qk]), (0, ak.useEffect)((() => Ik ? (0, yk.f)(ik.y, ik.i) : void 0), [Ik]), (0, Lk.jsx)(Xk.e, {
-        showing: Ik,
+        show: fm
+      } = mm;
+      (0, wm.i)(Am.e, (0, Am.p)());
+      const im = null === (Tm = (0, Am.p)()) || void 0 === Tm ? void 0 : Tm.menu;
+      return (0, Dm.useEffect)((() => {
+        var mm;
+        fm || (null === im || void 0 === im || null === (mm = im.onClose) || void 0 === mm || mm.call(im), (0, am.m)())
+      }), [fm, im]), (0, Dm.useEffect)((() => fm ? (0, xm.h)(am.u, am.d) : void 0), [fm]), (0, Rm.jsx)(hm.c, {
+        showing: fm,
         globallyUniqueKey: "clientGameMenu",
-        children: null === qk || void 0 === qk ? void 0 : qk.content
+        children: null === im || void 0 === im ? void 0 : im.content
       })
     }
 
-    function jk(kk) {
+    function om(mm) {
       let {
-        placement: Fk = "bottom"
-      } = kk;
-      return (0, Lk.jsx)("div", {
-        id: `clientGameHud-${Fk}`,
+        placement: Tm = "bottom"
+      } = mm;
+      return (0, Rm.jsx)("div", {
+        id: `clientGameHud-${Tm}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function ek(kk) {
+    function Om(mm) {
       let {
-        children: Fk,
-        placement: Ik = "bottom"
-      } = kk;
-      const [Xk, Tk] = (0, ak.useState)(null);
-      return (0, ak.useEffect)((() => {
-        Tk(document.getElementById(`clientGameHud-${Ik}`))
-      }), [Ik]), Xk ? (0, qk.createPortal)(Fk, Xk) : null
+        children: Tm,
+        placement: fm = "bottom"
+      } = mm;
+      const [hm, Am] = (0, Dm.useState)(null);
+      return (0, Dm.useEffect)((() => {
+        Am(document.getElementById(`clientGameHud-${fm}`))
+      }), [fm]), hm ? (0, im.createPortal)(Tm, hm) : null
     }
   },
-  34164: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      e: () => ik
+  34283: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => am
     });
-    var Xk = Ik(4525),
-      Tk = Ik(4529);
+    var hm = fm(4477),
+      Am = fm(4481);
 
-    function ik(kk) {
+    function am(mm) {
       let {
-        children: Fk,
-        showing: Ik,
-        globallyUniqueKey: ik,
-        alwaysMountChildren: yk = !1,
-        doGameplayStartStopOnShow: lk = !0,
-        keepsMovement: ak = !1
-      } = kk;
-      return (0, Tk.e)(!0, Ik, ik, ak), (0, Xk.b)(lk, Ik), Ik || yk ? Fk : null
+        children: Tm,
+        showing: fm,
+        globallyUniqueKey: am,
+        alwaysMountChildren: xm = !1,
+        doGameplayStartStopOnShow: wm = !0,
+        keepsMovement: Dm = !1
+      } = mm;
+      return (0, Am.d)(!0, fm, am, Dm), (0, hm.c)(wm, fm), fm || xm ? Tm : null
     }
   },
-  8691: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      d: () => ik,
-      f: () => Tk
+  8654: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      d: () => am,
+      h: () => Am
     });
-    let Xk = null;
-    const Tk = function(kk) {
-        const Fk = {
-          cycle: kk,
+    let hm = null;
+    const Am = function(mm) {
+        const Tm = {
+          cycle: mm,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Xk = Fk, () => {
-          Xk === Fk && (Xk = null)
+        return hm = Tm, () => {
+          hm === Tm && (hm = null)
         }
       },
-      ik = () => {
-        var kk;
-        return null !== (kk = Xk) && void 0 !== kk && kk.canCycle() ? Xk.cycle : null
+      am = () => {
+        var mm;
+        return null !== (mm = hm) && void 0 !== mm && mm.canCycle() ? hm.cycle : null
       }
   },
-  36607: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      C: () => xk,
-      e: () => ik,
-      i: () => wk,
-      k: () => Hk,
-      o: () => lk,
-      q: () => Zk,
-      r: () => Jk,
-      v: () => tk,
-      x: () => Pk,
-      y: () => ek
+  36689: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      c: () => am,
+      d: () => Ym,
+      e: () => qm,
+      h: () => wm,
+      i: () => Em,
+      m: () => jm,
+      p: () => pm,
+      r: () => Im,
+      u: () => Om,
+      v: () => Vm
     });
-    var Xk = Ik(25),
-      Tk = Ik(34);
-    const ik = "clientGameInventoryButtonsChanged",
-      yk = new Map;
+    var hm = fm(23),
+      Am = fm(31);
+    const am = "clientGameInventoryButtonsChanged",
+      xm = new Map;
 
-    function lk() {
-      return [...yk.values()].sort(((kk, Fk) => {
-        var Ik, Xk;
-        return (null !== (Ik = kk.order) && void 0 !== Ik ? Ik : 0) - (null !== (Xk = Fk.order) && void 0 !== Xk ? Xk : 0)
+    function wm() {
+      return [...xm.values()].sort(((mm, Tm) => {
+        var fm, hm;
+        return (null !== (fm = mm.order) && void 0 !== fm ? fm : 0) - (null !== (hm = Tm.order) && void 0 !== hm ? hm : 0)
       }))
     }
-    let ak = null;
+    let Dm = null;
 
-    function qk(kk) {
-      ak = kk
+    function im(mm) {
+      Dm = mm
     }
-    let Lk = !1;
+    let Rm = !1;
 
-    function tk(kk) {
-      Lk = !0;
+    function pm(mm) {
+      Rm = !0;
       try {
-        kk.onClick()
+        mm.onClick()
       } finally {
-        Lk = !1
+        Rm = !1
       }
-      kk.panel && "clientGame" === Xk.d.get("openInGameMenuName") && qk(kk.id)
+      mm.panel && "clientGame" === hm.c.get("openInGameMenuName") && im(mm.id)
     }
 
-    function Zk() {
-      return Lk
+    function Em() {
+      return Rm
     }
 
-    function jk() {
-      return lk().filter((kk => kk.panel && !kk.disabled))
+    function om() {
+      return wm().filter((mm => mm.panel && !mm.disabled))
     }
 
-    function ek(kk) {
-      const Fk = jk(),
-        Ik = Fk.findIndex((kk => kk.id === ak));
-      return !(Ik < 0 || Fk.length < 2) && (tk(Fk[(Ik + kk + Fk.length) % Fk.length]), !0)
+    function Om(mm) {
+      const Tm = om(),
+        fm = Tm.findIndex((mm => mm.id === Dm));
+      return !(fm < 0 || Tm.length < 2) && (pm(Tm[(fm + mm + Tm.length) % Tm.length]), !0)
     }
 
-    function wk() {
-      return null !== ak && jk().length > 1
+    function Ym() {
+      return null !== Dm && om().length > 1
     }
 
-    function Hk() {
-      qk(null)
+    function qm() {
+      im(null)
     }
 
-    function Jk() {
-      "inventory" !== Xk.d.get("openInGameMenuName") && qk(null)
+    function jm() {
+      "inventory" !== hm.c.get("openInGameMenuName") && im(null)
     }
 
-    function xk() {
-      const kk = ak;
-      return qk(null), kk
+    function Vm() {
+      const mm = Dm;
+      return im(null), mm
     }
 
-    function Pk(kk) {
-      return yk.set(kk.id, kk), Tk.g.GL(ik, lk(), !0), () => {
-        yk.get(kk.id) === kk && (yk.delete(kk.id), Tk.g.GL(ik, lk()))
+    function Im(mm) {
+      return xm.set(mm.id, mm), Am.j.gp(am, wm(), !0), () => {
+        xm.get(mm.id) === mm && (xm.delete(mm.id), Am.j.gp(am, wm()))
       }
     }
   },
-  36600: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => lk,
-      e: () => Hk,
-      f: () => Jk,
-      j: () => Zk,
-      m: () => qk,
-      p: () => wk,
-      r: () => jk,
-      v: () => Lk
+  36686: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => wm,
+      h: () => qm,
+      j: () => jm,
+      m: () => Em,
+      p: () => im,
+      s: () => Ym,
+      u: () => om,
+      w: () => Rm
     });
-    var Xk = Ik(25),
-      Tk = Ik(34),
-      ik = Ik(1270),
-      yk = Ik(36607);
-    const lk = "clientGameUiChanged";
-    let ak = null;
+    var hm = fm(23),
+      Am = fm(31),
+      am = fm(1286),
+      xm = fm(36689);
+    const wm = "clientGameUiChanged";
+    let Dm = null;
 
-    function qk() {
-      return ak
+    function im() {
+      return Dm
     }
 
-    function Lk(kk, Fk) {
-      const Ik = {
-        content: kk,
-        menu: Fk
+    function Rm(mm, Tm) {
+      const fm = {
+        content: mm,
+        menu: Tm
       };
-      return ak = Ik, Tk.g.GL(lk, ak, !0), () => {
-        ak === Ik && (ak = null, ek = !1, Hk(), Tk.g.GL(lk, null))
+      return Dm = fm, Am.j.gp(wm, Dm, !0), () => {
+        Dm === fm && (Dm = null, Om = !1, qm(), Am.j.gp(wm, null))
       }
     }
-    let tk = null;
+    let pm = null;
 
-    function Zk() {
-      return tk
+    function Em() {
+      return pm
     }
 
-    function jk(kk) {
-      return tk = kk, () => {
-        tk === kk && (tk = null)
+    function om(mm) {
+      return pm = mm, () => {
+        pm === mm && (pm = null)
       }
     }
-    let ek = !1;
+    let Om = !1;
 
-    function wk() {
-      const kk = Xk.d.get("openInGameMenuName");
-      "clientGame" !== kk && (ek = "inventory" === kk), (0, yk.q)() || (0, yk.k)(), (0, ik.m)(ik.c), Xk.d.set({
+    function Ym() {
+      const mm = hm.c.get("openInGameMenuName");
+      "clientGame" !== mm && (Om = "inventory" === mm), (0, xm.i)() || (0, xm.e)(), (0, am.p)(am.c), hm.c.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function Hk() {
-      xk(!1)
+    function qm() {
+      Vm(!1)
     }
 
-    function Jk() {
-      xk(ek)
+    function jm() {
+      Vm(Om)
     }
 
-    function xk(kk) {
-      "clientGame" === Xk.d.get("openInGameMenuName") && Xk.d.set({
-        openInGameMenuName: kk ? "inventory" : null
-      }), kk || (0, yk.k)(), ek = !1
+    function Vm(mm) {
+      "clientGame" === hm.c.get("openInGameMenuName") && hm.c.set({
+        openInGameMenuName: mm ? "inventory" : null
+      }), mm || (0, xm.e)(), Om = !1
     }
   },
-  39453: (kk, Fk, Ik) => {
-    Ik.r(Fk), Ik.d(Fk, {
-      default: () => kF
+  39573: (mm, Tm, fm) => {
+    fm.r(Tm), fm.d(Tm, {
+      default: () => mT
     });
-    const Xk = {
+    const hm = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -261,270 +261,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var Tk = Ik(58),
-      ik = Ik(38038),
-      yk = Ik(337);
-    const lk = ["Basic", "Rare", "Super"];
+    var Am = fm(59),
+      am = fm(38096),
+      xm = fm(354);
+    const wm = ["Basic", "Rare", "Super"];
 
-    function ak(kk, Fk) {
-      return `${"Basic"===Fk?"":`${Fk} `}${"Simple"===kk?"":`${kk} `}Lucky Block`
+    function Dm(mm, Tm) {
+      return `${"Basic"===Tm?"":`${Tm} `}${"Simple"===mm?"":`${mm} `}Lucky Block`
     }
-    const qk = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((kk => lk.map((Fk => [ak(kk, Fk), {
-      category: kk,
-      rarity: Fk
+    const im = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((mm => wm.map((Tm => [Dm(mm, Tm), {
+      category: mm,
+      rarity: Tm
     }])))));
-    qk.keys();
+    im.keys();
 
-    function Lk(kk) {
-      return qk.get(kk)
+    function Rm(mm) {
+      return im.get(mm)
     }
-    const tk = "Obsidian",
-      Zk = ["Cobweb"],
-      jk = [...["Red", "Blue", "Green", "Yellow"].map((kk => `${(0,yk.$)(kk)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", tk, ...Zk];
+    const pm = "Obsidian",
+      Em = ["Cobweb"],
+      om = [...["Red", "Blue", "Green", "Yellow"].map((mm => `${(0,xm._)(mm)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", pm, ...Em];
 
-    function ek(kk) {
-      return jk.includes(kk)
+    function Om(mm) {
+      return om.includes(mm)
     }
-    var wk = Ik(628);
+    var Ym = fm(653);
 
-    function Hk(kk, Fk) {
-      const Ik = Lk(kk);
-      if (Ik) {
-        const kk = Lk(Fk);
-        if (!kk) return;
-        const Xk = lk.length - 1 - lk.indexOf(kk.rarity);
-        return (kk.category === Ik.category ? 0 : 1) * lk.length + Xk
+    function qm(mm, Tm) {
+      const fm = Rm(mm);
+      if (fm) {
+        const mm = Rm(Tm);
+        if (!mm) return;
+        const hm = wm.length - 1 - wm.indexOf(mm.rarity);
+        return (mm.category === fm.category ? 0 : 1) * wm.length + hm
       }
-      if (!ek(kk)) return;
-      if (Fk === kk) return 0;
-      const Xk = kk => ek(kk) && !Zk.includes(kk) && kk !== tk;
-      return Xk(kk) && Xk(Fk) ? 1 : void 0
+      if (!Om(mm)) return;
+      if (Tm === mm) return 0;
+      const hm = mm => Om(mm) && !Em.includes(mm) && mm !== pm;
+      return hm(mm) && hm(Tm) ? 1 : void 0
     }
-    const Jk = [...Array.from({
-      length: wk.o - wk.k
-    }, ((kk, Fk) => wk.k + Fk)), ...Array.from({
-      length: wk.k
-    }, ((kk, Fk) => Fk))];
-    class xk {
-      constructor(kk) {
-        this.inventory = kk, this.pending = new Map
+    const jm = [...Array.from({
+      length: Ym.o - Ym.n
+    }, ((mm, Tm) => Ym.n + Tm)), ...Array.from({
+      length: Ym.n
+    }, ((mm, Tm) => Tm))];
+    class Vm {
+      constructor(mm) {
+        this.inventory = mm, this.pending = new Map
       }
-      onPlace(kk) {
-        var Fk;
-        const Ik = this.inventory.selectedSlot(),
-          Xk = this.inventory.itemAt(Ik);
-        (null === Xk || void 0 === Xk ? void 0 : Xk.name) === kk && (null !== (Fk = Xk.amount) && void 0 !== Fk ? Fk : 1) <= 1 && Pk(kk) && this.pending.set(Ik, kk)
+      onPlace(mm) {
+        var Tm;
+        const fm = this.inventory.selectedSlot(),
+          hm = this.inventory.itemAt(fm);
+        (null === hm || void 0 === hm ? void 0 : hm.name) === mm && (null !== (Tm = hm.amount) && void 0 !== Tm ? Tm : 1) <= 1 && Im(mm) && this.pending.set(fm, mm)
       }
-      onDrop(kk, Fk) {
-        Fk < wk.k && null === this.inventory.itemAt(Fk) && Pk(kk) && this.refill(Fk, kk)
+      onDrop(mm, Tm) {
+        Tm < Ym.n && null === this.inventory.itemAt(Tm) && Im(mm) && this.refill(Tm, mm)
       }
-      Dt() {
-        const kk = [...this.pending];
+      DE() {
+        const mm = [...this.pending];
         this.pending.clear();
-        for (const [Fk, Ik] of kk) null === this.inventory.itemAt(Fk) && this.refill(Fk, Ik)
+        for (const [Tm, fm] of mm) null === this.inventory.itemAt(Tm) && this.refill(Tm, fm)
       }
-      refill(kk, Fk) {
-        const Ik = function(kk, Fk, Ik, Xk) {
-          let Tk, ik = 1 / 0;
-          for (const yk of Jk) {
-            if (yk === Fk) continue;
-            const lk = Xk(yk);
-            if (!lk || yk < wk.k && Fk !== Ik) continue;
-            const ak = Hk(kk, lk.name);
-            void 0 !== ak && ak < ik && (Tk = yk, ik = ak)
+      refill(mm, Tm) {
+        const fm = function(mm, Tm, fm, hm) {
+          let Am, am = 1 / 0;
+          for (const xm of jm) {
+            if (xm === Tm) continue;
+            const wm = hm(xm);
+            if (!wm || xm < Ym.n && Tm !== fm) continue;
+            const Dm = qm(mm, wm.name);
+            void 0 !== Dm && Dm < am && (Am = xm, am = Dm)
           }
-          return Tk
-        }(Fk, kk, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== Ik && this.inventory.swap(kk, Ik)
+          return Am
+        }(Tm, mm, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== fm && this.inventory.swap(mm, fm)
       }
     }
 
-    function Pk(kk) {
-      return !!Lk(kk) || ek(kk)
+    function Im(mm) {
+      return !!Rm(mm) || Om(mm)
     }
-    var Kk = Ik(36600),
-      Qk = Ik(74),
-      sk = Ik(1055),
-      Vk = Ik.n(sk);
-    const zk = "Lucky Clover",
-      Sk = {
+    var Km = fm(36686),
+      Qm = fm(77),
+      nm = fm(1080),
+      Jm = fm.n(nm);
+    const cm = "Lucky Clover",
+      zm = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function vk(kk) {
-      return Sk[kk][0]
+    function Zm(mm) {
+      return zm[mm][0]
     }
 
-    function Ek(kk) {
-      return lk.filter((Fk => kk >= vk(Fk)))
+    function km(mm) {
+      return wm.filter((Tm => mm >= Zm(Tm)))
     }
-    var Ok = Ik(318),
-      nk = Ik(2349),
-      Gk = Ik(25),
-      pk = Ik(2509),
-      uk = Ik(1864),
-      bk = Ik(36597),
-      Rk = Ik(1066);
-    var Uk = Ik(1096);
-    const Ck = {
-      Basic: yk.J.whiteUiText,
-      Rare: yk.J.goldUiText,
-      Super: yk.J.cyanUiText
+    var bm = fm(339),
+      Sm = fm(2391),
+      em = fm(23),
+      Nm = fm(2570),
+      Gm = fm(1893),
+      Xm = fm(36681),
+      Pm = fm(1089);
+    var Hm = fm(1135);
+    const ym = {
+      Basic: xm.J.whiteUiText,
+      Rare: xm.J.goldUiText,
+      Super: xm.J.cyanUiText
     };
-    let Nk = 1;
+    let Cm = 1;
 
-    function ck() {
-      const kk = (0, nk.j)("currencyAmounts"),
-        Fk = null === kk || void 0 === kk ? void 0 : kk.Clovers;
-      return !Fk || Fk.hidden ? null : (0, Uk.jsx)(bk.f, {
-        children: (0, Uk.jsx)(Wk, {
-          amount: Fk.amount
+    function rm() {
+      const mm = (0, Sm.g)("currencyAmounts"),
+        Tm = null === mm || void 0 === mm ? void 0 : mm.Clovers;
+      return !Tm || Tm.hidden ? null : (0, Hm.jsx)(Xm.e, {
+        children: (0, Hm.jsx)(sm, {
+          amount: Tm.amount
         })
       })
     }
 
-    function Wk(kk) {
-      var Fk, Ik, Xk;
+    function sm(mm) {
+      var Tm, fm, hm;
       let {
-        amount: ik
-      } = kk;
+        amount: am
+      } = mm;
       const {
-        openEverythingMenuName: ak
-      } = (0, Gk.j)(["openEverythingMenuName"]), qk = (0, pk.b)(), [Lk, tk] = (0, Tk.useState)(ik), [Zk, jk] = (0, Tk.useState)(null), [ek, wk] = (0, Tk.useState)(0), [Hk, Jk] = (0, Tk.useState)([]), xk = (0, Tk.useRef)(ik), Pk = (0, Tk.useRef)(!1), Kk = (0, Tk.useRef)(null), sk = ak === Ok.r.SHOP;
-      (0, Tk.useEffect)((() => {
-        const kk = xk.current;
-        if (xk.current = ik, ik <= kk || sk) return void tk(ik);
-        const Fk = qk || Hk.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (Ik = ik - kk, Xk = !Pk.current, Ik <= 0 || !Xk && Ik < 40 ? 0 : Math.min(4, Math.ceil(Ik / 30)));
-        var Ik, Xk;
-        if (Pk.current = !0, Ek(ik).length > Ek(kk).length && wk(Nk++), Fk > 0) {
-          const kk = [];
-          for (let Ik = 0; Ik < Fk; Ik++) kk.push({
-            id: Nk++,
+        openEverythingMenuName: Dm
+      } = (0, em.m)(["openEverythingMenuName"]), im = (0, Nm.c)(), [Rm, pm] = (0, Am.useState)(am), [Em, om] = (0, Am.useState)(null), [Om, Ym] = (0, Am.useState)(0), [qm, jm] = (0, Am.useState)([]), Vm = (0, Am.useRef)(am), Im = (0, Am.useRef)(!1), Km = (0, Am.useRef)(null), nm = Dm === bm.n.SHOP;
+      (0, Am.useEffect)((() => {
+        const mm = Vm.current;
+        if (Vm.current = am, am <= mm || nm) return void pm(am);
+        const Tm = im || qm.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (fm = am - mm, hm = !Im.current, fm <= 0 || !hm && fm < 40 ? 0 : Math.min(4, Math.ceil(fm / 30)));
+        var fm, hm;
+        if (Im.current = !0, km(am).length > km(mm).length && Ym(Cm++), Tm > 0) {
+          const mm = [];
+          for (let fm = 0; fm < Tm; fm++) mm.push({
+            id: Cm++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * Ik
+            delayMs: 70 * fm
           });
-          Jk((Fk => [...Fk, ...kk]))
+          jm((Tm => [...Tm, ...mm]))
         }
-        const Tk = Fk > 0 ? 600 : 0;
-        jk({
-          id: Nk++,
-          delayMs: Tk
+        const Am = Tm > 0 ? 600 : 0;
+        om({
+          id: Cm++,
+          delayMs: Am
         });
-        const lk = performance.now() + Tk;
-        let ak = 0;
-        const Lk = Fk => {
-          const Ik = yk.e.clamp((Fk - lk) / 600, 0, 1);
-          tk(Math.round(kk + (ik - kk) * Ik)), Ik < 1 && (ak = requestAnimationFrame(Lk))
+        const wm = performance.now() + Am;
+        let Dm = 0;
+        const Rm = Tm => {
+          const fm = xm.c.clamp((Tm - wm) / 600, 0, 1);
+          pm(Math.round(mm + (am - mm) * fm)), fm < 1 && (Dm = requestAnimationFrame(Rm))
         };
-        return ak = requestAnimationFrame(Lk), () => {
-          cancelAnimationFrame(ak)
+        return Dm = requestAnimationFrame(Rm), () => {
+          cancelAnimationFrame(Dm)
         }
-      }), [ik, sk]);
-      const Sk = function(kk) {
-          var Fk;
-          const Ik = null !== (Fk = lk.find((Fk => kk < vk(Fk)))) && void 0 !== Fk ? Fk : "Super";
+      }), [am, nm]);
+      const zm = function(mm) {
+          var Tm;
+          const fm = null !== (Tm = wm.find((Tm => mm < Zm(Tm)))) && void 0 !== Tm ? Tm : "Super";
           return {
-            rarity: Ik,
-            progress: yk.e.clamp(kk / vk(Ik), 0, 1)
+            rarity: fm,
+            progress: xm.c.clamp(mm / Zm(fm), 0, 1)
           }
-        }(Lk),
-        nk = Ek(Lk).at(-1);
-      return (0, Uk.jsxs)(Uk.Fragment, {
-        children: [(0, Uk.jsx)("div", {
+        }(Rm),
+        Sm = km(Rm).at(-1);
+      return (0, Hm.jsxs)(Hm.Fragment, {
+        children: [(0, Hm.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, Uk.jsxs)("div", {
-            className: Vk()("LuckyCloverWallet", {
-              Capped: nk && "Basic" !== nk
+          children: (0, Hm.jsxs)("div", {
+            className: Jm()("LuckyCloverWallet", {
+              Capped: Sm && "Basic" !== Sm
             }),
-            style: nk && {
-              "--luckyTierColour": Ck[nk]
+            style: Sm && {
+              "--luckyTierColour": ym[Sm]
             },
-            children: [(0, Uk.jsx)("div", {
+            children: [(0, Hm.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${Sk.progress})`
+                transform: `scaleX(${zm.progress})`
               }
-            }), ek > 0 && (0, Uk.jsx)("div", {
+            }), Om > 0 && (0, Hm.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(Fk=null===Zk||void 0===Zk?void 0:Zk.delayMs)&&void 0!==Fk?Fk:0}ms`
+                animationDelay: `${null!==(Tm=null===Em||void 0===Em?void 0:Em.delayMs)&&void 0!==Tm?Tm:0}ms`
               }
-            }, ek), (0, Uk.jsx)("div", {
-              ref: Kk,
-              className: Vk()("LuckyCloverWalletIcon", Zk && "Bounce"),
+            }, Om), (0, Hm.jsx)("div", {
+              ref: Km,
+              className: Jm()("LuckyCloverWalletIcon", Em && "Bounce"),
               style: {
-                animationDelay: `${null!==(Xk=null===Zk||void 0===Zk?void 0:Zk.delayMs)&&void 0!==Xk?Xk:0}ms`
+                animationDelay: `${null!==(hm=null===Em||void 0===Em?void 0:Em.delayMs)&&void 0!==hm?hm:0}ms`
               },
-              children: (0, Uk.jsx)(uk.d, {
-                itemName: zk,
+              children: (0, Hm.jsx)(Gm.d, {
+                itemName: cm,
                 amount: 0
               })
-            }, null !== (Ik = null === Zk || void 0 === Zk ? void 0 : Zk.id) && void 0 !== Ik ? Ik : 0), (0, Uk.jsx)("span", {
+            }, null !== (fm = null === Em || void 0 === Em ? void 0 : Em.id) && void 0 !== fm ? fm : 0), (0, Hm.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: Lk
-            }), nk && (0, Uk.jsx)(Rk.e, {
+              children: Rm
+            }), Sm && (0, Hm.jsx)(Pm.c, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, Qk.createPortal)(Hk.map((kk => (0, Uk.jsx)(fk, {
-          flyer: kk,
-          target: Kk,
+        }), (0, Qm.createPortal)(qm.map((mm => (0, Hm.jsx)(lm, {
+          flyer: mm,
+          target: Km,
           onDone: () => {
-            Jk((Fk => Fk.filter((Fk => Fk.id !== kk.id))))
+            jm((Tm => Tm.filter((Tm => Tm.id !== mm.id))))
           }
-        }, kk.id))), document.body)]
+        }, mm.id))), document.body)]
       })
     }
 
-    function fk(kk) {
+    function lm(mm) {
       let {
-        flyer: Fk,
-        target: Ik,
-        onDone: Xk
-      } = kk;
-      const ik = (0, Tk.useRef)(null);
-      return (0, Tk.useEffect)((() => {
-        var kk;
-        const Tk = null === (kk = Ik.current) || void 0 === kk ? void 0 : kk.getBoundingClientRect();
-        if (!ik.current || !Tk) return void Xk();
+        flyer: Tm,
+        target: fm,
+        onDone: hm
+      } = mm;
+      const am = (0, Am.useRef)(null);
+      return (0, Am.useEffect)((() => {
+        var mm;
+        const Am = null === (mm = fm.current) || void 0 === mm ? void 0 : mm.getBoundingClientRect();
+        if (!am.current || !Am) return void hm();
         const {
-          x: yk,
-          y: lk
-        } = Fk, ak = yk + 140 * (Math.random() - .5), qk = lk - 30 - 40 * Math.random(), Lk = ik.current.animate([{
-          transform: `translate(${yk}px, ${lk}px) scale(0.3)`,
+          x: xm,
+          y: wm
+        } = Tm, Dm = xm + 140 * (Math.random() - .5), im = wm - 30 - 40 * Math.random(), Rm = am.current.animate([{
+          transform: `translate(${xm}px, ${wm}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${ak}px, ${qk}px) scale(1.3)`,
+          transform: `translate(${Dm}px, ${im}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${Tk.left}px, ${Tk.top}px) scale(0.8)`,
+          transform: `translate(${Am.left}px, ${Am.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: Fk.delayMs,
+          delay: Tm.delayMs,
           fill: "backwards"
         });
-        return Lk.onfinish = Xk, () => {
-          Lk.cancel()
+        return Rm.onfinish = hm, () => {
+          Rm.cancel()
         }
-      }), []), (0, Uk.jsx)("div", {
-        ref: ik,
+      }), []), (0, Hm.jsx)("div", {
+        ref: am,
         className: "LuckyCloverFlying",
-        children: (0, Uk.jsx)(uk.d, {
-          itemName: zk,
+        children: (0, Hm.jsx)(Gm.d, {
+          itemName: cm,
           amount: 0
         })
       })
     }
-    var Bk = Ik(34);
-    const dk = "luckyGearUpgradeView",
-      Yk = {
+    var Mm = fm(31);
+    const um = "luckyGearUpgradeView",
+      Bm = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -532,13 +532,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function Ak(kk) {
-      var Fk;
-      return null !== (Fk = Yk[kk.split(" ")[0]]) && void 0 !== Fk ? Fk : "#e07bff"
+    function Lm(mm) {
+      var Tm;
+      return null !== (Tm = Bm[mm.split(" ")[0]]) && void 0 !== Tm ? Tm : "#e07bff"
     }
-    class gk {
-      constructor(kk, Fk) {
-        this.selectedSlot = kk, this.itemAt = Fk, this.rings = [], this.unseen = new Map, this.view = {
+    class tm {
+      constructor(mm, Tm) {
+        this.selectedSlot = mm, this.itemAt = Tm, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -546,200 +546,200 @@ export const modules = {
       getView() {
         return this.view
       }
-      Pe(kk) {
-        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [Ik, Xk, Tk] of kk) this.rings.push({
+      rO(mm) {
+        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [fm, hm, Am] of mm) this.rings.push({
           id: this.nextId++,
-          slot: Ik,
-          colour: Ak(Tk),
-          until: Fk + 1200
-        }), Ik !== this.selectedSlot() && this.unseen.set(Ik, {
-          from: Xk,
-          to: Tk
+          slot: fm,
+          colour: Lm(Am),
+          until: Tm + 1200
+        }), fm !== this.selectedSlot() && this.unseen.set(fm, {
+          from: hm,
+          to: Am
         });
-        this.GL()
+        this.gp()
       }
-      Dt() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
+      DE() {
+        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const Fk = this.rings.filter((Fk => Fk.until > kk));
-        let Ik = Fk.length !== this.rings.length;
-        this.rings = Fk;
-        for (const [Xk, {
-            from: Tk,
-            to: ik
+        const Tm = this.rings.filter((Tm => Tm.until > mm));
+        let fm = Tm.length !== this.rings.length;
+        this.rings = Tm;
+        for (const [hm, {
+            from: Am,
+            to: am
           }] of this.unseen) {
-          const kk = this.itemAt(Xk);
-          (Xk === this.selectedSlot() || kk !== ik && kk !== Tk) && (this.unseen.delete(Xk), Ik = !0)
+          const mm = this.itemAt(hm);
+          (hm === this.selectedSlot() || mm !== am && mm !== Am) && (this.unseen.delete(hm), fm = !0)
         }
-        Ik && this.GL()
+        fm && this.gp()
       }
-      GL() {
+      gp() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, Bk.g.GL(dk, this.view)
+        }, Mm.j.gp(um, this.view)
       }
     }
-    var mk = Ik(1402);
+    var Um = fm(1449);
 
-    function hk(kk) {
-      return document.querySelector(`.HotBar [data-inven-idx="${kk}"]`)
+    function dm(mm) {
+      return document.querySelector(`.HotBar [data-inven-idx="${mm}"]`)
     }
 
-    function rk(kk) {
+    function gm(mm) {
       let {
-        ring: Fk
-      } = kk;
-      const [Ik, Xk] = (0, Tk.useState)(null);
-      return (0, Tk.useLayoutEffect)((() => {
-        var kk, Ik;
-        Xk(null !== (kk = null === (Ik = hk(Fk.slot)) || void 0 === Ik ? void 0 : Ik.getBoundingClientRect()) && void 0 !== kk ? kk : null)
-      }), [Fk]), Ik ? (0, Uk.jsx)("div", {
+        ring: Tm
+      } = mm;
+      const [fm, hm] = (0, Am.useState)(null);
+      return (0, Am.useLayoutEffect)((() => {
+        var mm, fm;
+        hm(null !== (mm = null === (fm = dm(Tm.slot)) || void 0 === fm ? void 0 : fm.getBoundingClientRect()) && void 0 !== mm ? mm : null)
+      }), [Tm]), fm ? (0, Hm.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: Ik.left,
-          top: Ik.top,
-          width: Ik.width,
-          height: Ik.height,
-          "--ringColour": Fk.colour,
+          left: fm.left,
+          top: fm.top,
+          width: fm.width,
+          height: fm.height,
+          "--ringColour": Tm.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function Dk(kk) {
+    function Wm(mm) {
       let {
-        slot: Fk
-      } = kk;
-      const [Ik, Xk] = (0, Tk.useState)(null);
-      return (0, Tk.useLayoutEffect)((() => {
-        const kk = () => {
-          Xk(hk(Fk))
+        slot: Tm
+      } = mm;
+      const [fm, hm] = (0, Am.useState)(null);
+      return (0, Am.useLayoutEffect)((() => {
+        const mm = () => {
+          hm(dm(Tm))
         };
-        kk();
-        const Ik = new MutationObserver(kk),
-          Tk = document.querySelector(".BottomMiddleElements");
-        return Tk && Ik.observe(Tk, {
+        mm();
+        const fm = new MutationObserver(mm),
+          Am = document.querySelector(".BottomMiddleElements");
+        return Am && fm.observe(Am, {
           childList: !0,
           subtree: !0
         }), () => {
-          Ik.disconnect()
+          fm.disconnect()
         }
-      }), [Fk]), Ik ? (0, Qk.createPortal)((0, Uk.jsx)("div", {
+      }), [Tm]), fm ? (0, Qm.createPortal)((0, Hm.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), Ik) : null
+      }), fm) : null
     }
 
-    function Mk(kk) {
+    function Fm(mm) {
       let {
-        controller: Fk
-      } = kk;
-      const Ik = (0, mk.f)(dk, Fk.getView());
-      return (0, Uk.jsxs)(Uk.Fragment, {
-        children: [Ik.rings.map((kk => (0, Uk.jsx)(rk, {
-          ring: kk
-        }, kk.id))), Ik.unseenSlots.map((kk => (0, Uk.jsx)(Dk, {
-          slot: kk
-        }, kk)))]
+        controller: Tm
+      } = mm;
+      const fm = (0, Um.i)(um, Tm.getView());
+      return (0, Hm.jsxs)(Hm.Fragment, {
+        children: [fm.rings.map((mm => (0, Hm.jsx)(gm, {
+          ring: mm
+        }, mm.id))), fm.unseenSlots.map((mm => (0, Hm.jsx)(Wm, {
+          slot: mm
+        }, mm)))]
       })
     }
-    const kF = function(kk, Fk, Ik, yk) {
-      let lk, {
-          localPlayerId: ak
-        } = yk,
-        qk = null;
-      const Lk = new xk({
-          itemAt: kk => lk.getItemSlot(ak, kk),
-          selectedSlot: () => lk.getSelectedInventorySlotI(ak),
-          swap: (kk, Fk) => {
-            lk.swapInventorySlots(kk, Fk)
+    const mT = function(mm, Tm, fm, xm) {
+      let wm, {
+          localPlayerId: Dm
+        } = xm,
+        im = null;
+      const Rm = new Vm({
+          itemAt: mm => wm.getItemSlot(Dm, mm),
+          selectedSlot: () => wm.getSelectedInventorySlotI(Dm),
+          swap: (mm, Tm) => {
+            wm.swapInventorySlots(mm, Tm)
           }
         }),
-        tk = new gk((() => lk.getSelectedInventorySlotI(ak)), (kk => {
-          var Fk;
-          return null === (Fk = lk.getItemSlot(ak, kk)) || void 0 === Fk ? void 0 : Fk.name
+        pm = new tm((() => wm.getSelectedInventorySlotI(Dm)), (mm => {
+          var Tm;
+          return null === (Tm = wm.getItemSlot(Dm, mm)) || void 0 === Tm ? void 0 : Tm.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, ik.c)()
+          placeAgainstBeds: (0, am.e)()
         },
-        onCreate: kk => {
-          lk = kk, qk = (0, Kk.v)((0, Tk.createElement)(Tk.Fragment, null, (0, Tk.createElement)(ck), (0, Tk.createElement)(Mk, {
-            controller: tk
+        onCreate: mm => {
+          wm = mm, im = (0, Km.w)((0, Am.createElement)(Am.Fragment, null, (0, Am.createElement)(rm), (0, Am.createElement)(Fm, {
+            controller: pm
           })))
         },
         onClose: () => {
-          var kk;
-          null === (kk = qk) || void 0 === kk || kk()
+          var mm;
+          null === (mm = im) || void 0 === mm || mm()
         },
-        Dt: () => {
-          Lk.Dt(), tk.Dt()
+        DE: () => {
+          Rm.DE(), pm.DE()
         },
-        onReceivedMessageFromServer: (kk, Fk) => {
-          "luckyGearUpgrade" === kk && tk.Pe(Fk)
+        onReceivedMessageFromServer: (mm, Tm) => {
+          "luckyGearUpgrade" === mm && pm.rO(Tm)
         },
-        onPlayerChangeBlock: (kk, Fk, Ik, Xk, Tk, ik) => {
-          "Air" !== ik && Lk.onPlace(ik)
+        onPlayerChangeBlock: (mm, Tm, fm, hm, Am, am) => {
+          "Air" !== am && Rm.onPlace(am)
         },
-        onPlayerDropItem: (kk, Fk, Ik, Xk) => {
-          Lk.onDrop(Fk, Xk)
+        onPlayerDropItem: (mm, Tm, fm, hm) => {
+          Rm.onDrop(Tm, hm)
         },
-        onPlayerAltAction: (kk, Fk, Ik, Tk, ik, yk) => {
-          if (!yk || "Mesh" !== lk.getEntityType(yk)) return;
-          const ak = lk.getEntityName(yk),
-            qk = Object.values(Xk).find((kk => kk.name === ak));
-          qk && lk.openShop(kk, !1, qk.shopTab)
+        onPlayerAltAction: (mm, Tm, fm, Am, am, xm) => {
+          if (!xm || "Mesh" !== wm.getEntityType(xm)) return;
+          const Dm = wm.getEntityName(xm),
+            im = Object.values(hm).find((mm => mm.name === Dm));
+          im && wm.openShop(mm, !1, im.shopTab)
         }
       }
     }
   },
-  38038: (kk, Fk, Ik) => {
-    Ik.d(Fk, {
-      c: () => lk
+  38096: (mm, Tm, fm) => {
+    fm.d(Tm, {
+      e: () => wm
     });
-    var Xk = Ik(337),
-      Tk = Ik(36976),
-      ik = Ik(4475);
-    const yk = ["Leaf Bed", "_Leaf Bed Head", ...Xk.Mc.flatMap((kk => [`${kk} Bed`, `_${kk} Bed Head`, `${kk} Strongbed`, `_${kk} Strongbed Head`]))];
+    var hm = fm(354),
+      Am = fm(37039),
+      am = fm(4413);
+    const xm = ["Leaf Bed", "_Leaf Bed Head", ...hm.Bc.flatMap((mm => [`${mm} Bed`, `_${mm} Bed Head`, `${mm} Strongbed`, `_${mm} Strongbed Head`]))];
 
-    function lk() {
-      let kk;
+    function wm() {
+      let mm;
       return {
-        onCreate(Fk) {
-          kk = Fk
+        onCreate(Tm) {
+          mm = Tm
         },
-        altVetoBlocks: yk,
-        onPlayerAttemptAltAction(Fk, Ik, Xk, yk, lk, ak) {
-          var qk;
-          if ((0, Tk.e)(kk.getMetaInfo(lk).rootName) && !kk.isEntityInteractable(ak) && (0, ik.e)(null === (qk = kk.BFk(Fk)) || void 0 === qk ? void 0 : qk.typeObj.type)) return "preventAction"
+        altVetoBlocks: xm,
+        onPlayerAttemptAltAction(Tm, fm, hm, xm, wm, Dm) {
+          var im;
+          if ((0, Am.b)(mm.getMetaInfo(wm).rootName) && !mm.isEntityInteractable(Dm) && (0, am.e)(null === (im = mm.MTm(Tm)) || void 0 === im ? void 0 : im.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  36976: (kk, Fk, Ik) => {
-    function Xk(kk) {
-      return kk.includes("Leaf Bed")
+  37039: (mm, Tm, fm) => {
+    function hm(mm) {
+      return mm.includes("Leaf Bed")
     }
 
-    function Tk(kk) {
-      return / Bed(?: Head)?(?:\||$)/.test(kk) && !Xk(kk)
+    function Am(mm) {
+      return / Bed(?: Head)?(?:\||$)/.test(mm) && !hm(mm)
     }
 
-    function ik(kk) {
-      return kk.includes(" Strongbed")
+    function am(mm) {
+      return mm.includes(" Strongbed")
     }
 
-    function yk(kk) {
-      return Xk(kk) || Tk(kk) || ik(kk)
+    function xm(mm) {
+      return hm(mm) || Am(mm) || am(mm)
     }
-    Ik.d(Fk, {
-      e: () => yk,
-      h: () => Xk,
-      i: () => ik,
-      l: () => Tk
+    fm.d(Tm, {
+      b: () => xm,
+      f: () => hm,
+      j: () => am,
+      l: () => Am
     })
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const mm in modules) Object.freeze(modules[mm]);
