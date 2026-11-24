@@ -1,530 +1,530 @@
 export const id = 114;
 export const ids = [114];
 export const modules = {
-  5151: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => jT,
-      i: () => kT
+  5125: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => aB,
+      f: () => UB
     });
-    var WT = mT(63),
-      zT = mT(1569),
-      MT = mT(1288),
-      gT = mT(102),
-      nT = mT(3278),
-      HT = mT(1188);
+    var QB = zB(62),
+      nB = zB(1478),
+      dB = zB(1240),
+      IB = zB(106),
+      NB = zB(3258),
+      uB = zB(1148);
 
-    function kT() {
-      return !(0, gT.isMobile)()
+    function UB() {
+      return !(0, IB.isMobile)()
     }
 
-    function jT(TT) {
+    function aB(BB) {
       let {
-        disabled: UT,
-        openFolderPicker: mT,
-        onFiles: gT
-      } = TT;
+        disabled: jB,
+        openFolderPicker: zB,
+        onFiles: IB
+      } = BB;
       const {
-        t: jT
-      } = (0, MT.z)(), lT = (0, WT.useRef)(null);
-      return (0, HT.jsxs)("div", {
+        t: aB
+      } = (0, dB.D)(), pB = (0, QB.useRef)(null);
+      return (0, uB.jsxs)("div", {
         className: "PackPickButtons",
         "data-pad-mouse-only": !0,
-        children: [(0, HT.jsx)("input", {
-          ref: lT,
+        children: [(0, uB.jsx)("input", {
+          ref: pB,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(TT) {
-            const UT = Array.from(TT.target.files);
-            TT.target.value = "", gT(UT)
+          onChange: function(BB) {
+            const jB = Array.from(BB.target.files);
+            BB.target.value = "", IB(jB)
           }
-        }), kT() && (0, HT.jsx)(zT.e, {
-          disabled: UT,
-          onClick: mT,
-          children: jT("general:chooseFolder")
-        }), (0, HT.jsx)(zT.e, {
-          disabled: UT,
+        }), UB() && (0, uB.jsx)(nB.f, {
+          disabled: jB,
+          onClick: zB,
+          children: aB("general:chooseFolder")
+        }), (0, uB.jsx)(nB.f, {
+          disabled: jB,
           onClick: () => {
-            (0, nT.f)(lT.current)
+            (0, NB.f)(pB.current)
           },
-          children: jT("general:chooseZip")
+          children: aB("general:chooseZip")
         })]
       })
     }
   },
-  5136: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => nT,
-      c: () => gT,
-      f: () => MT
+  5110: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => NB,
+      g: () => IB,
+      h: () => dB
     });
-    var WT = mT(5139);
-    const zT = [TT => TT.strict ? "strict" : "nonStrict", TT => TT.program];
+    var QB = zB(5115);
+    const nB = [BB => BB.strict ? "strict" : "nonStrict", BB => BB.program];
 
-    function MT(TT, UT) {
-      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const WT = {};
-      for (const zT in mT) WT[zT] = `\0${zT}\0`;
-      return TT(UT, WT).replace(/\0(\w+)\0/g, ((TT, UT) => mT[UT]))
+    function dB(BB, jB) {
+      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const QB = {};
+      for (const nB in zB) QB[nB] = `\0${nB}\0`;
+      return BB(jB, QB).replace(/\0(\w+)\0/g, ((BB, jB) => zB[jB]))
     }
 
-    function gT(TT) {
-      return null === TT.file ? null : TT.line > 0 ? `${TT.file}:${TT.line}` : TT.file
+    function IB(BB) {
+      return null === BB.file ? null : BB.line > 0 ? `${BB.file}:${BB.line}` : BB.file
     }
 
-    function nT(TT) {
-      const UT = new Map(TT.map((TT => [HT(TT).join("."), TT])));
-      if (0 === UT.size) return [];
-      const mT = jT([...UT.values()]);
-      return 0 === mT[0].length ? [] : mT
+    function NB(BB) {
+      const jB = new Map(BB.map((BB => [uB(BB).join("."), BB])));
+      if (0 === jB.size) return [];
+      const zB = aB([...jB.values()]);
+      return 0 === zB[0].length ? [] : zB
     }
 
-    function HT(TT) {
-      return zT.map((UT => UT(TT)))
+    function uB(BB) {
+      return nB.map((jB => jB(BB)))
     }
-    const kT = zT.map((TT => new Set(WT.e.map(TT)).size));
+    const UB = nB.map((BB => new Set(QB.g.map(BB)).size));
 
-    function jT(TT) {
-      const UT = zT.map((UT => new Set(TT.map(UT)))),
-        mT = UT.reduce(((TT, UT) => TT * UT.size), 1),
-        WT = UT.every(((TT, UT) => 1 === TT.size || TT.size === kT[UT]));
-      if (mT === TT.length && WT) return [zT.filter(((TT, mT) => 1 === UT[mT].size)).map((UT => UT(TT[0])))];
-      let MT = null;
-      for (let gT = 0; gT < zT.length; gT++) {
-        if (1 === UT[gT].size) continue;
-        const mT = lT(TT, zT[gT]).flatMap(jT);
-        (null === MT || mT.length < MT.length) && (MT = mT)
+    function aB(BB) {
+      const jB = nB.map((jB => new Set(BB.map(jB)))),
+        zB = jB.reduce(((BB, jB) => BB * jB.size), 1),
+        QB = jB.every(((BB, jB) => 1 === BB.size || BB.size === UB[jB]));
+      if (zB === BB.length && QB) return [nB.filter(((BB, zB) => 1 === jB[zB].size)).map((jB => jB(BB[0])))];
+      let dB = null;
+      for (let IB = 0; IB < nB.length; IB++) {
+        if (1 === jB[IB].size) continue;
+        const zB = pB(BB, nB[IB]).flatMap(aB);
+        (null === dB || zB.length < dB.length) && (dB = zB)
       }
-      return MT
+      return dB
     }
 
-    function lT(TT, UT) {
-      const mT = new Map;
-      for (const zT of TT) {
-        var WT;
-        const TT = UT(zT);
-        mT.set(TT, [...null !== (WT = mT.get(TT)) && void 0 !== WT ? WT : [], zT])
+    function pB(BB, jB) {
+      const zB = new Map;
+      for (const nB of BB) {
+        var QB;
+        const BB = jB(nB);
+        zB.set(BB, [...null !== (QB = zB.get(BB)) && void 0 !== QB ? QB : [], nB])
       }
-      return [...mT.values()]
+      return [...zB.values()]
     }
   },
-  6668: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      ShaderPackPublishForm: () => qT
+  6562: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      ShaderPackPublishForm: () => LB
     });
-    var WT = mT(63),
-      zT = mT(6630),
-      MT = mT(212),
-      gT = mT(5142),
-      nT = mT(1135),
-      HT = mT(1569),
-      kT = mT(1792),
-      jT = mT(1225),
-      lT = mT(6674),
-      LT = mT(6680),
-      pT = mT(1613),
-      BT = mT(1288),
-      ZT = mT(6682),
-      cT = mT(6716),
-      vT = mT(6623),
-      fT = mT(1188);
+    var QB = zB(62),
+      nB = zB(6523),
+      dB = zB(221),
+      IB = zB(5120),
+      NB = zB(1108),
+      uB = zB(1478),
+      UB = zB(1710),
+      aB = zB(1169),
+      pB = zB(6567),
+      rB = zB(6572),
+      sB = zB(1532),
+      JB = zB(1240),
+      mB = zB(6574),
+      yB = zB(6598),
+      kB = zB(6515),
+      GB = zB(1148);
 
-    function qT(TT) {
-      var UT, mT, lT;
+    function LB(BB) {
+      var jB, zB, pB;
       let {
-        existing: qT,
-        onPublished: bT
-      } = TT;
+        existing: LB,
+        onPublished: tB
+      } = BB;
       const {
-        t: eT
-      } = (0, BT.z)(), {
-        userContext: YT,
-        isUserContextUpdating: JT
-      } = (0, jT.d)(), [xT, dT] = (0, WT.useState)(null), [wT, tT] = (0, WT.useState)(0), [aT, yT] = (0, WT.useState)(null !== (UT = null === qT || void 0 === qT ? void 0 : qT.name) && void 0 !== UT ? UT : ""), XT = (0, WT.useRef)(aT), IT = (0, WT.useRef)(""), QT = TT => {
-        XT.current = TT, yT(TT)
-      }, [sT, FT] = (0, WT.useState)(null !== (mT = null === qT || void 0 === qT ? void 0 : qT.description) && void 0 !== mT ? mT : ""), PT = (0, WT.useRef)(sT), VT = (0, WT.useRef)(""), uT = TT => {
-        PT.current = TT, FT(TT)
-      }, [CT, rT] = (0, WT.useState)(!1), {
-        loading: KT,
-        error: ST,
-        setError: GT,
-        onFiles: NT
-      } = (0, LT.d)((async TT => {
-        const UT = await (0, ZT.loadPageShaderPackCompiler)();
-        if (!UT) return void GT(eT("shaderPack:compilerUnavailable"));
-        const mT = await (0, cT.f)(UT, TT.files);
-        if (dT({
-            pack: TT,
-            validation: mT,
-            sourceBytes: (0, gT.x)(TT.files)
-          }), !qT) {
-          var WT;
-          if ("" !== XT.current.trim() && XT.current !== IT.current || (IT.current = (0, zT.T)(TT.manifest.name.trim(), zT.C), QT(IT.current)), "" === PT.current.trim() || PT.current === VT.current) VT.current = (0, zT.T)((null !== (WT = TT.manifest.description) && void 0 !== WT ? WT : "").trim(), zT.s), uT(VT.current);
-          tT((TT => TT + 1))
+        t: MB
+      } = (0, JB.D)(), {
+        userContext: EB,
+        isUserContextUpdating: iB
+      } = (0, aB.d)(), [qB, fB] = (0, QB.useState)(null), [oB, HB] = (0, QB.useState)(0), [DB, FB] = (0, QB.useState)(null !== (jB = null === LB || void 0 === LB ? void 0 : LB.name) && void 0 !== jB ? jB : ""), YB = (0, QB.useRef)(DB), VB = (0, QB.useRef)(""), hB = BB => {
+        YB.current = BB, FB(BB)
+      }, [XB, ZB] = (0, QB.useState)(null !== (zB = null === LB || void 0 === LB ? void 0 : LB.description) && void 0 !== zB ? zB : ""), AB = (0, QB.useRef)(XB), TB = (0, QB.useRef)(""), PB = BB => {
+        AB.current = BB, ZB(BB)
+      }, [WB, eB] = (0, QB.useState)(!1), {
+        loading: lB,
+        error: wB,
+        setError: xB,
+        onFiles: KB
+      } = (0, rB.e)((async BB => {
+        const jB = await (0, mB.loadPageShaderPackCompiler)();
+        if (!jB) return void xB(MB("shaderPack:compilerUnavailable"));
+        const zB = await (0, yB.f)(jB, BB.files);
+        if (fB({
+            pack: BB,
+            validation: zB,
+            sourceBytes: (0, IB.z)(BB.files)
+          }), !LB) {
+          var QB;
+          if ("" !== YB.current.trim() && YB.current !== VB.current || (VB.current = (0, nB.U)(BB.manifest.name.trim(), nB.B), hB(VB.current)), "" === AB.current.trim() || AB.current === TB.current) TB.current = (0, nB.U)((null !== (QB = BB.manifest.description) && void 0 !== QB ? QB : "").trim(), nB.o), PB(TB.current);
+          HB((BB => BB + 1))
         }
-      })), ET = !JT && !YT.isLoggedIn() && !MT.d.offlineMode, hT = aT.trim(), DT = hT.length < zT.F, oT = null !== xT && !1 !== (null === (lT = xT.validation) || void 0 === lT ? void 0 : lT.ok) && !KT && !DT && !ET && !JT;
-      return (0, fT.jsxs)("div", {
+      })), CB = !iB && !EB.isLoggedIn() && !dB.d.offlineMode, cB = DB.trim(), bB = cB.length < nB.D, vB = null !== qB && !1 !== (null === (pB = qB.validation) || void 0 === pB ? void 0 : pB.ok) && !lB && !bB && !CB && !iB;
+      return (0, GB.jsxs)("div", {
         className: "ShaderPackPublishForm",
-        children: [(0, fT.jsx)("p", {
+        children: [(0, GB.jsx)("p", {
           className: "ShaderPackPublishIntro",
-          children: qT ? eT("shaderPackListing:uploadIntro", {
-            minutes: String(zT.K / 6e4)
-          }) : eT("shaderPackListing:publishIntro")
-        }), (0, fT.jsx)(OT, {}), ET && (0, fT.jsx)("div", {
+          children: LB ? MB("shaderPackListing:uploadIntro", {
+            minutes: String(nB.L / 6e4)
+          }) : MB("shaderPackListing:publishIntro")
+        }), (0, GB.jsx)(SB, {}), CB && (0, GB.jsx)("div", {
           className: "ShaderPackPublishNote Warning",
-          children: eT("shaderPackListing:publishNeedsLogin")
-        }), (0, fT.jsx)(LT.b, {
-          busy: KT,
-          disabled: KT || CT,
-          onFiles: TT => {
-            dT(null), NT(TT)
+          children: MB("shaderPackListing:publishNeedsLogin")
+        }), (0, GB.jsx)(rB.d, {
+          busy: lB,
+          disabled: lB || WB,
+          onFiles: BB => {
+            fB(null), KB(BB)
           }
-        }), xT && (0, fT.jsxs)("div", {
+        }), qB && (0, GB.jsxs)("div", {
           className: "ShaderPackPublishSummary",
-          children: [(0, fT.jsx)("div", {
+          children: [(0, GB.jsx)("div", {
             className: "ShaderPackPublishPackName",
-            children: xT.pack.manifest.name
-          }), (0, fT.jsxs)("div", {
+            children: qB.pack.manifest.name
+          }), (0, GB.jsxs)("div", {
             className: "ShaderPackPublishPackSize",
-            children: [eT("shaderPackListing:sizeValue", {
-              kilobytes: String((0, vT.G)(xT.sourceBytes))
-            }), " \xb7", " ", eT("shaderPackListing:filesValue", {
-              files: String(xT.pack.files.length)
+            children: [MB("shaderPackListing:sizeValue", {
+              kilobytes: String((0, kB.N)(qB.sourceBytes))
+            }), " \xb7", " ", MB("shaderPackListing:filesValue", {
+              files: String(qB.pack.files.length)
             })]
-          }), (0, fT.jsx)(iT, {
-            picked: xT
+          }), (0, GB.jsx)(gB, {
+            picked: qB
           })]
-        }), !qT && (0, fT.jsxs)(fT.Fragment, {
-          children: [(0, fT.jsxs)("label", {
+        }), !LB && (0, GB.jsxs)(GB.Fragment, {
+          children: [(0, GB.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, fT.jsx)("span", {
-              children: eT("general:name")
-            }), (0, fT.jsx)(kT.e, {
+            children: [(0, GB.jsx)("span", {
+              children: MB("general:name")
+            }), (0, GB.jsx)(UB.d, {
               className: "ShaderPackPublishInput",
-              defaultValue: aT,
-              maxLength: zT.C,
-              onValueChange: QT
-            }, wT), xT && DT && (0, fT.jsx)("span", {
+              defaultValue: DB,
+              maxLength: nB.B,
+              onValueChange: hB
+            }, oB), qB && bB && (0, GB.jsx)("span", {
               className: "ShaderPackPublishHint",
-              children: eT("shaderPackListing:nameTooShort", {
-                min: String(zT.F)
+              children: MB("shaderPackListing:nameTooShort", {
+                min: String(nB.D)
               })
             })]
-          }), (0, fT.jsxs)("label", {
+          }), (0, GB.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, fT.jsx)("span", {
-              children: eT("general:description")
-            }), (0, fT.jsx)(kT.e, {
+            children: [(0, GB.jsx)("span", {
+              children: MB("general:description")
+            }), (0, GB.jsx)(UB.d, {
               className: "ShaderPackPublishInput ShaderPackPublishDescription",
-              defaultValue: sT,
-              maxLength: zT.s,
-              onValueChange: uT,
+              defaultValue: XB,
+              maxLength: nB.o,
+              onValueChange: PB,
               useTextarea: !0
-            }, wT)]
+            }, oB)]
           })]
-        }), ST && (0, fT.jsx)("div", {
+        }), wB && (0, GB.jsx)("div", {
           className: "ShaderPackPublishNote Error",
-          children: ST
-        }), (0, fT.jsxs)(HT.l, {
+          children: wB
+        }), (0, GB.jsxs)(uB.m, {
           className: "ShaderPackPublishButton",
-          disabled: !oT,
-          loading: CT,
+          disabled: !vB,
+          loading: WB,
           onClick: () => {
             !async function() {
-              var TT;
-              if (!xT) return;
+              var BB;
+              if (!qB) return;
               const {
-                name: UT,
-                description: mT
-              } = null !== qT && void 0 !== qT ? qT : {
-                name: hT,
-                description: sT.trim()
-              }, WT = {
-                packId: null !== (TT = null === qT || void 0 === qT ? void 0 : qT.packId) && void 0 !== TT ? TT : null,
-                name: UT,
-                description: mT,
-                apiVersion: xT.pack.manifest.apiVersion,
-                files: (0, gT.w)(xT.pack.files),
-                keepCircleShadows: !0 === xT.pack.manifest.keepCircleShadows
+                name: jB,
+                description: zB
+              } = null !== LB && void 0 !== LB ? LB : {
+                name: cB,
+                description: XB.trim()
+              }, QB = {
+                packId: null !== (BB = null === LB || void 0 === LB ? void 0 : LB.packId) && void 0 !== BB ? BB : null,
+                name: jB,
+                description: zB,
+                apiVersion: qB.pack.manifest.apiVersion,
+                files: (0, IB.w)(qB.pack.files),
+                keepCircleShadows: !0 === qB.pack.manifest.keepCircleShadows
               };
-              if ((new TextEncoder).encode(JSON.stringify(WT)).byteLength > 1024 * zT.S) GT(eT("shaderPackListing:publishTooBig", {
-                kilobytes: String(zT.S)
+              if ((new TextEncoder).encode(JSON.stringify(QB)).byteLength > 1024 * nB.T) xB(MB("shaderPackListing:publishTooBig", {
+                kilobytes: String(nB.T)
               }));
               else {
-                rT(!0), GT(null);
+                eB(!0), xB(null);
                 try {
-                  bT(await pT.b.publishShaderPack(YT, WT))
-                } catch (MT) {
-                  console.error("Failed to publish the shader pack", MT), GT((0, vT.s)(MT, eT, "shaderPackListing:publishFailed"))
+                  tB(await sB.b.publishShaderPack(EB, QB))
+                } catch (dB) {
+                  console.error("Failed to publish the shader pack", dB), xB((0, kB.z)(dB, MB, "shaderPackListing:publishFailed"))
                 } finally {
-                  rT(!1)
+                  eB(!1)
                 }
               }
             }()
           },
-          children: [(0, fT.jsx)(nT.c, {
+          children: [(0, GB.jsx)(NB.c, {
             name: "upload"
-          }), " ", eT(qT ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
+          }), " ", MB(LB ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
         })]
       })
     }
 
-    function iT(TT) {
+    function gB(BB) {
       let {
-        picked: UT
-      } = TT;
+        picked: jB
+      } = BB;
       const {
-        t: mT
-      } = (0, BT.z)(), {
-        validation: WT
-      } = UT;
-      return null === WT ? (0, fT.jsx)("div", {
+        t: zB
+      } = (0, JB.D)(), {
+        validation: QB
+      } = jB;
+      return null === QB ? (0, GB.jsx)("div", {
         className: "ShaderPackPublishNote",
-        children: mT("shaderPackListing:publishUnchecked")
-      }) : WT.ok ? (0, fT.jsxs)(fT.Fragment, {
-        children: [(0, fT.jsxs)("div", {
+        children: zB("shaderPackListing:publishUnchecked")
+      }) : QB.ok ? (0, GB.jsxs)(GB.Fragment, {
+        children: [(0, GB.jsxs)("div", {
           className: "ShaderPackPublishNote Ready",
-          children: [(0, fT.jsx)(nT.c, {
+          children: [(0, GB.jsx)(NB.c, {
             name: "circle-check"
-          }), " ", mT("shaderPackListing:publishReady")]
-        }), WT.offInStrict.length > 0 && (0, fT.jsxs)(fT.Fragment, {
-          children: [(0, fT.jsxs)("div", {
+          }), " ", zB("shaderPackListing:publishReady")]
+        }), QB.offInStrict.length > 0 && (0, GB.jsxs)(GB.Fragment, {
+          children: [(0, GB.jsxs)("div", {
             className: "ShaderPackPublishNote Warning",
-            children: [(0, fT.jsx)(nT.c, {
+            children: [(0, GB.jsx)(NB.c, {
               name: "triangle-exclamation"
-            }), " ", mT("shaderPack:offInStrict")]
-          }), (0, fT.jsx)(lT.b, {
-            diagnostics: WT.offInStrict,
-            t: mT
+            }), " ", zB("shaderPack:offInStrict")]
+          }), (0, GB.jsx)(pB.e, {
+            diagnostics: QB.offInStrict,
+            t: zB
           })]
         })]
-      }) : (0, fT.jsxs)(fT.Fragment, {
-        children: [(0, fT.jsxs)("div", {
+      }) : (0, GB.jsxs)(GB.Fragment, {
+        children: [(0, GB.jsxs)("div", {
           className: "ShaderPackPublishNote Error",
-          children: [(0, fT.jsx)(nT.c, {
+          children: [(0, GB.jsx)(NB.c, {
             name: "triangle-exclamation"
-          }), " ", mT("shaderPackListing:publishHasErrors")]
-        }), (0, fT.jsx)(lT.b, {
-          diagnostics: WT.errors,
-          more: WT.moreErrors,
-          t: mT
+          }), " ", zB("shaderPackListing:publishHasErrors")]
+        }), (0, GB.jsx)(pB.e, {
+          diagnostics: QB.errors,
+          more: QB.moreErrors,
+          t: zB
         })]
       })
     }
-    const bT = "\0";
+    const tB = "\0";
 
-    function OT() {
+    function SB() {
       const {
-        t: TT
-      } = (0, BT.z)(), [UT, mT] = TT("shaderPackListing:bloxdhubHelp", {
-        site: bT
-      }).split(bT);
-      return (0, fT.jsxs)("p", {
+        t: BB
+      } = (0, JB.D)(), [jB, zB] = BB("shaderPackListing:bloxdhubHelp", {
+        site: tB
+      }).split(tB);
+      return (0, GB.jsxs)("p", {
         className: "ShaderPackPublishIntro",
-        children: [UT, (0, fT.jsx)("a", {
+        children: [jB, (0, GB.jsx)("a", {
           className: "ShaderPackPublishLink",
-          href: zT.i,
+          href: nB.h,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: zT.e
-        }), mT]
+          children: nB.d
+        }), zB]
       })
     }
   },
-  5139: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => WT.j,
-      e: () => zT,
-      f: () => WT.q
+  5115: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => QB.f,
+      g: () => nB,
+      k: () => QB.n
     });
-    var WT = mT(5142);
-    const zT = [!1, !0].flatMap((TT => ["terrain", "liquid", "model"].map((UT => ({
-      strict: TT,
-      program: UT
+    var QB = zB(5120);
+    const nB = [!1, !0].flatMap((BB => ["terrain", "liquid", "model"].map((jB => ({
+      strict: BB,
+      program: jB
     })))))
   },
-  5142: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => nT,
-      f: () => gT,
-      j: () => WT,
-      l: () => ZT,
-      o: () => lT,
-      q: () => zT,
-      s: () => MT,
-      v: () => kT,
-      w: () => jT,
-      x: () => LT
+  5120: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => NB,
+      e: () => IB,
+      f: () => QB,
+      j: () => mB,
+      m: () => pB,
+      n: () => nB,
+      o: () => dB,
+      s: () => UB,
+      w: () => aB,
+      z: () => rB
     });
-    const WT = 5;
+    const QB = 5;
 
-    function zT(TT) {
-      return TT === WT
+    function nB(BB) {
+      return BB === QB
     }
 
-    function MT(TT) {
-      return [...TT.features]
+    function dB(BB) {
+      return [...BB.features]
     }
-    const gT = 262144,
-      nT = 256,
-      HT = 256;
+    const IB = 262144,
+      NB = 256,
+      uB = 256;
 
-    function kT(TT) {
-      if ("object" !== typeof TT || null === TT || Array.isArray(TT)) return "The pack has no files.";
-      const UT = [];
-      for (const [mT, WT] of Object.entries(TT)) {
-        if ("string" !== typeof WT) return `${mT} isn't text.`;
-        UT.push({
-          path: mT,
-          source: WT
+    function UB(BB) {
+      if ("object" !== typeof BB || null === BB || Array.isArray(BB)) return "The pack has no files.";
+      const jB = [];
+      for (const [zB, QB] of Object.entries(BB)) {
+        if ("string" !== typeof QB) return `${zB} isn't text.`;
+        jB.push({
+          path: zB,
+          source: QB
         })
       }
-      return UT.sort(((TT, UT) => lT(TT.path, UT.path))),
-        function(TT) {
-          if (0 === TT.length) return "The pack has no .wgsl files.";
-          if (TT.length > nT) return `The pack has more than ${nT} .wgsl files.`;
-          const UT = new Set;
+      return jB.sort(((BB, jB) => pB(BB.path, jB.path))),
+        function(BB) {
+          if (0 === BB.length) return "The pack has no .wgsl files.";
+          if (BB.length > NB) return `The pack has more than ${NB} .wgsl files.`;
+          const jB = new Set;
           for (const {
-              path: mT
+              path: zB
             }
-            of TT) {
-            const TT = pT(mT);
-            if (null !== TT) return TT;
-            if (UT.has(mT)) return `The pack has two files at ${mT}.`;
-            UT.add(mT)
+            of BB) {
+            const BB = sB(zB);
+            if (null !== BB) return BB;
+            if (jB.has(zB)) return `The pack has two files at ${zB}.`;
+            jB.add(zB)
           }
-          return LT(TT) > gT ? `The pack's .wgsl files are over ${gT/1024} KB in total.` : null
-        }(UT) ?? UT
+          return rB(BB) > IB ? `The pack's .wgsl files are over ${IB/1024} KB in total.` : null
+        }(jB) ?? jB
     }
 
-    function jT(TT) {
-      const UT = {};
-      for (const mT of TT) UT[mT.path] = mT.source;
-      return UT
+    function aB(BB) {
+      const jB = {};
+      for (const zB of BB) jB[zB.path] = zB.source;
+      return jB
     }
 
-    function lT(TT, UT) {
-      return TT < UT ? -1 : TT > UT ? 1 : 0
+    function pB(BB, jB) {
+      return BB < jB ? -1 : BB > jB ? 1 : 0
     }
 
-    function LT(TT) {
-      const UT = new TextEncoder;
-      let mT = 0;
+    function rB(BB) {
+      const jB = new TextEncoder;
+      let zB = 0;
       for (const {
-          source: WT
+          source: QB
         }
-        of TT) mT += UT.encode(WT).byteLength;
-      return mT
+        of BB) zB += jB.encode(QB).byteLength;
+      return zB
     }
 
-    function pT(TT) {
-      if (!TT.toLowerCase().endsWith(".wgsl")) return `${TT} isn't a .wgsl file.`;
-      if (TT.length > HT) return `A file path is over ${HT} characters.`;
-      if (TT.includes("\\") || /[\u0000-\u001f]/.test(TT)) return `${TT} isn't a valid file path.`;
-      return TT.split("/").some((TT => "" === TT || "." === TT || ".." === TT)) ? `${TT} isn't a valid file path.` : null
+    function sB(BB) {
+      if (!BB.toLowerCase().endsWith(".wgsl")) return `${BB} isn't a .wgsl file.`;
+      if (BB.length > uB) return `A file path is over ${uB} characters.`;
+      if (BB.includes("\\") || /[\u0000-\u001f]/.test(BB)) return `${BB} isn't a valid file path.`;
+      return BB.split("/").some((BB => "" === BB || "." === BB || ".." === BB)) ? `${BB} isn't a valid file path.` : null
     }
-    const BT = /^(.*)\[rot\[([1-4])$/;
+    const JB = /^(.*)\[rot\[([1-4])$/;
 
-    function ZT(TT, UT) {
-      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const WT = new Map;
-      UT.forEach(((TT, UT) => {
+    function mB(BB, jB) {
+      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const QB = new Map;
+      jB.forEach(((BB, jB) => {
         let {
-          numAnimStates: mT,
-          animStartIdx: zT
-        } = TT;
-        for (let MT = 1; MT < mT; MT++) WT.set(zT + MT - 1, UT)
+          numAnimStates: zB,
+          animStartIdx: nB
+        } = BB;
+        for (let dB = 1; dB < zB; dB++) QB.set(nB + dB - 1, jB)
       }));
-      const zT = Object.entries(TT),
-        MT = new Map;
-      for (const [ZT, cT] of zT) {
-        const TT = BT.exec(ZT);
-        "1" === TT?.[2] && MT.set(TT[1], cT + 1)
+      const nB = Object.entries(BB),
+        dB = new Map;
+      for (const [mB, yB] of nB) {
+        const BB = JB.exec(mB);
+        "1" === BB?.[2] && dB.set(BB[1], yB + 1)
       }
-      const gT = TT => {
-          const UT = BT.exec(TT);
-          return UT && MT.has(UT[1]) ? {
-            root: UT[1],
-            rotation: Number(UT[2]) - 1
+      const IB = BB => {
+          const jB = JB.exec(BB);
+          return jB && dB.has(jB[1]) ? {
+            root: jB[1],
+            rotation: Number(jB[2]) - 1
           } : null
         },
-        nT = new Set(zT.map((TT => {
-          let [UT] = TT;
-          return gT(UT)?.root ?? UT
+        NB = new Set(nB.map((BB => {
+          let [jB] = BB;
+          return IB(jB)?.root ?? jB
         }))),
-        HT = (TT, mT) => {
-          const WT = TT.replace(/_?0$/, "");
-          return (UT[mT]?.numAnimStates ?? 0) > 1 && !nT.has(WT) ? WT : TT
+        uB = (BB, zB) => {
+          const QB = BB.replace(/_?0$/, "");
+          return (jB[zB]?.numAnimStates ?? 0) > 1 && !NB.has(QB) ? QB : BB
         },
-        kT = new Map;
-      for (const [BT, ZT] of zT) kT.set(ZT, HT(gT(BT)?.root ?? BT, ZT));
-      const jT = zT.reduce(((TT, UT) => {
-          let [, mT] = UT;
-          return Math.max(TT, mT + 1)
+        UB = new Map;
+      for (const [JB, mB] of nB) UB.set(mB, uB(IB(JB)?.root ?? JB, mB));
+      const aB = nB.reduce(((BB, jB) => {
+          let [, zB] = jB;
+          return Math.max(BB, zB + 1)
         }), 0),
-        lT = Array.from({
-          length: jT
-        }, ((TT, UT) => ({
-          id: UT + 1,
+        pB = Array.from({
+          length: aB
+        }, ((BB, jB) => ({
+          id: jB + 1,
           rotation: 0
         }))),
-        LT = new Map,
-        pT = new Map;
-      for (const [BT, ZT] of zT) {
-        const TT = gT(BT),
-          UT = WT.get(ZT);
-        if (void 0 !== UT) {
-          const mT = kT.get(UT);
-          pT.set(BT, {
-            name: BT,
-            texture: mT,
+        rB = new Map,
+        sB = new Map;
+      for (const [JB, mB] of nB) {
+        const BB = IB(JB),
+          jB = QB.get(mB);
+        if (void 0 !== jB) {
+          const zB = UB.get(jB);
+          sB.set(JB, {
+            name: JB,
+            texture: zB,
             kind: "frame"
-          }), TT && !pT.has(TT.root) && pT.set(TT.root, {
-            name: TT.root,
-            texture: mT,
+          }), BB && !sB.has(BB.root) && sB.set(BB.root, {
+            name: BB.root,
+            texture: zB,
             kind: "frame"
           });
           continue
         }
-        const mT = kT.get(ZT),
-          zT = TT?.root ?? BT;
-        if (mT !== zT && pT.set(zT, {
-            name: zT,
-            texture: mT,
+        const zB = UB.get(mB),
+          nB = BB?.root ?? JB;
+        if (zB !== nB && sB.set(nB, {
+            name: nB,
+            texture: zB,
             kind: "frame"
-          }), TT) {
-          const UT = MT.get(TT.root);
-          lT[ZT] = {
-            id: UT,
-            rotation: TT.rotation
-          }, LT.set(mT, UT), pT.set(BT, {
-            name: BT,
-            texture: mT,
+          }), BB) {
+          const jB = dB.get(BB.root);
+          pB[mB] = {
+            id: jB,
+            rotation: BB.rotation
+          }, rB.set(zB, jB), sB.set(JB, {
+            name: JB,
+            texture: zB,
             kind: "rotation"
           })
-        } else LT.set(mT, ZT + 1)
+        } else rB.set(zB, mB + 1)
       }
-      for (const BT of LT.keys()) pT.delete(BT);
-      for (const [BT, ZT] of mT) {
-        const TT = LT.get(ZT);
-        void 0 === TT || LT.has(BT) || (LT.set(BT, TT), pT.delete(BT))
+      for (const JB of rB.keys()) sB.delete(JB);
+      for (const [JB, mB] of zB) {
+        const BB = rB.get(mB);
+        void 0 === BB || rB.has(JB) || (rB.set(JB, BB), sB.delete(JB))
       }
       return {
-        named: [...LT].sort(((TT, UT) => {
-          let [mT] = TT, [WT] = UT;
-          return mT < WT ? -1 : mT > WT ? 1 : 0
-        })).map((TT => {
-          let [UT, mT] = TT;
+        named: [...rB].sort(((BB, jB) => {
+          let [zB] = BB, [QB] = jB;
+          return zB < QB ? -1 : zB > QB ? 1 : 0
+        })).map((BB => {
+          let [jB, zB] = BB;
           return {
-            name: UT,
-            id: mT
+            name: jB,
+            id: zB
           }
         })),
-        aliases: [...pT.values()],
-        layers: lT
+        aliases: [...sB.values()],
+        layers: pB
       }
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

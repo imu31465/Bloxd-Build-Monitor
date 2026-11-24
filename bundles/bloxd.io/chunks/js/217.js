@@ -1,52 +1,52 @@
 export const id = 217;
 export const ids = [217];
 export const modules = {
-  36415: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      CreateCustomLobby: () => tT
+  36406: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      CreateCustomLobby: () => HB
     });
-    mT(36419);
-    var WT = mT(4719),
-      zT = mT(63),
-      MT = mT(1792),
-      gT = mT(1126),
-      nT = mT.n(gT),
-      HT = mT(3267),
-      kT = mT(1231),
-      jT = mT(1302),
-      lT = mT(4686),
-      LT = mT(1569),
-      pT = mT(36424),
-      BT = mT(1288),
-      ZT = mT(1437),
-      cT = mT(1633),
-      vT = mT(25),
-      fT = mT(1576),
-      qT = mT(653),
-      iT = mT(5041),
-      bT = mT(825),
-      OT = mT(1336),
-      eT = mT(1321),
-      YT = mT(5048),
-      JT = mT(1135),
-      xT = mT(36432),
-      dT = mT(36435),
-      wT = mT(1188);
+    zB(36409);
+    var QB = zB(4729),
+      nB = zB(62),
+      dB = zB(1710),
+      IB = zB(1091),
+      NB = zB.n(IB),
+      uB = zB(3252),
+      UB = zB(1173),
+      aB = zB(1244),
+      pB = zB(4696),
+      rB = zB(1478),
+      sB = zB(36418),
+      JB = zB(1240),
+      mB = zB(1359),
+      yB = zB(1543),
+      kB = zB(28),
+      GB = zB(1487),
+      LB = zB(658),
+      gB = zB(5029),
+      tB = zB(814),
+      SB = zB(1270),
+      MB = zB(1263),
+      EB = zB(5036),
+      iB = zB(1108),
+      qB = zB(36426),
+      fB = zB(36430),
+      oB = zB(1148);
 
-    function tT(TT) {
-      var UT, mT, gT, tT;
+    function HB(BB) {
+      var jB, zB, IB, HB;
       let {
-        gameNameWithVariation: aT,
-        close: yT,
-        initialDefaultGamemode: XT
-      } = TT;
+        gameNameWithVariation: DB,
+        close: FB,
+        initialDefaultGamemode: YB
+      } = BB;
       const {
-        t: IT
-      } = (0, BT.z)(), QT = (0, cT.useNavigatePreserveSearch)(), [sT, FT] = (0, zT.useState)("Enter"), [PT, VT] = (0, zT.useState)(""), uT = zT.useRef(null), CT = null === (UT = bT.d[aT]) || void 0 === UT ? void 0 : UT.showWorldsInsteadOfCustomLobbies, rT = CT ? 1 : null === (mT = bT.d[aT]) || void 0 === mT ? void 0 : mT.customLobbyCustomSchematicLimit, [KT, ST] = (0, zT.useState)(!CT);
-      XT || (XT = "classic_creative" === aT || "classic_creativeFlat" === aT ? "creative" : "classic" === aT ? "peaceful" : "survival");
-      const GT = {
+        t: VB
+      } = (0, JB.D)(), hB = (0, yB.useNavigatePreserveSearch)(), [XB, ZB] = (0, nB.useState)("Enter"), [AB, TB] = (0, nB.useState)(""), PB = nB.useRef(null), WB = null === (jB = tB.c[DB]) || void 0 === jB ? void 0 : jB.showWorldsInsteadOfCustomLobbies, eB = WB ? 1 : null === (zB = tB.c[DB]) || void 0 === zB ? void 0 : zB.customLobbyCustomSchematicLimit, [lB, wB] = (0, nB.useState)(!WB);
+      YB || (YB = "classic_creative" === DB || "classic_creativeFlat" === DB ? "creative" : "classic" === DB ? "peaceful" : "survival");
+      const xB = {
         baseOptions: {
-          gameNameWithVariation: CT ? "classic" : aT,
+          gameNameWithVariation: WB ? "classic" : DB,
           name: "",
           visibility: "unlisted"
         },
@@ -56,13 +56,13 @@ export const modules = {
           emojis: ""
         },
         mapOptions: {
-          mapType: "classic_creativeFlat" === aT ? "flat" : "default",
+          mapType: "classic_creativeFlat" === DB ? "flat" : "default",
           schematicIdList: []
         },
         worldOptions: null
       };
-      CT && (GT.worldOptions = {
-        defaultGamemode: XT,
+      WB && (xB.worldOptions = {
+        defaultGamemode: YB,
         disableProtectors: !1,
         spawnProtection: !0,
         disableTpRequests: !1,
@@ -78,631 +78,631 @@ export const modules = {
         enableSpawnReset: !1,
         enableDayNight: !0
       });
-      const [NT, ET] = (0, zT.useState)(GT), [hT, DT] = (0, zT.useState)(null);
+      const [KB, CB] = (0, nB.useState)(xB), [cB, bB] = (0, nB.useState)(null);
 
-      function oT(TT, UT) {
-        ET({
-          ...NT,
+      function vB(BB, jB) {
+        CB({
+          ...KB,
           baseOptions: {
-            ...NT.baseOptions,
-            [TT]: UT
+            ...KB.baseOptions,
+            [BB]: jB
           }
         })
       }
 
-      function AT(TT, UT) {
-        ET({
-          ...NT,
+      function RB(BB, jB) {
+        CB({
+          ...KB,
           listedOptions: {
-            ...NT.listedOptions,
-            [TT]: UT
+            ...KB.listedOptions,
+            [BB]: jB
           }
         })
       }
 
-      function RT(TT, UT) {
-        ET({
-          ...NT,
+      function OB(BB, jB) {
+        CB({
+          ...KB,
           worldOptions: {
-            ...NT.worldOptions,
-            [TT]: UT
+            ...KB.worldOptions,
+            [BB]: jB
           }
         })
       }
 
-      function TU(TT) {
-        ET({
-          ...NT,
+      function Bj(BB) {
+        CB({
+          ...KB,
           mapOptions: {
-            ...NT.mapOptions,
-            ...TT
+            ...KB.mapOptions,
+            ...BB
           }
         })
-      }(0, zT.useEffect)((() => {
-        lT.d.getNewStarterName().then((TT => {
-          ET((UT => "" !== UT.baseOptions.name ? UT : {
-            ...UT,
+      }(0, nB.useEffect)((() => {
+        pB.b.getNewStarterName().then((BB => {
+          CB((jB => "" !== jB.baseOptions.name ? jB : {
+            ...jB,
             baseOptions: {
-              ...UT.baseOptions,
-              name: TT
+              ...jB.baseOptions,
+              name: BB
             }
           }))
-        })).catch((TT => {
-          console.error("Error getting new starter name:", TT)
+        })).catch((BB => {
+          console.error("Error getting new starter name:", BB)
         }))
-      }), []), (0, zT.useEffect)((() => {
-        "customSchematic" === NT.mapOptions.mapType && null === hT && (0, kT.postJsonWithMetricsCookiesAndJsonResponse)(`${jT.clientSideServerUrls.indexUrl}/index/schematic/get-owned-schematics`, {}, {
+      }), []), (0, nB.useEffect)((() => {
+        "customSchematic" === KB.mapOptions.mapType && null === cB && (0, UB.postJsonWithMetricsCookiesAndJsonResponse)(`${aB.clientSideServerUrls.indexUrl}/index/schematic/get-owned-schematics`, {}, {
           retries: 0,
           minTimeout: 3e3
-        }).then((TT => {
-          DT(TT)
+        }).then((BB => {
+          bB(BB)
         }))
-      }), [NT.mapOptions.mapType, hT]);
-      const UU = {
+      }), [KB.mapOptions.mapType, cB]);
+      const jj = {
           tpRequests: {
-            isEnabled: () => !NT.worldOptions.disableTpRequests,
-            Qy: TT => {
-              RT("disableTpRequests", !TT)
+            isEnabled: () => !KB.worldOptions.disableTpRequests,
+            mH: BB => {
+              OB("disableTpRequests", !BB)
             }
           },
           spawnProtection: {
-            isEnabled: () => NT.worldOptions.spawnProtection,
-            Qy: TT => {
-              RT("spawnProtection", TT)
+            isEnabled: () => KB.worldOptions.spawnProtection,
+            mH: BB => {
+              OB("spawnProtection", BB)
             }
           },
           spawnReset: {
-            isEnabled: () => NT.worldOptions.enableSpawnReset,
-            Qy: TT => {
-              RT("enableSpawnReset", TT)
+            isEnabled: () => KB.worldOptions.enableSpawnReset,
+            mH: BB => {
+              OB("enableSpawnReset", BB)
             }
           },
           smpMarketplace: {
-            isEnabled: () => NT.worldOptions.enableSmpMarketplace,
-            Qy: TT => {
-              RT("enableSmpMarketplace", TT)
+            isEnabled: () => KB.worldOptions.enableSmpMarketplace,
+            mH: BB => {
+              OB("enableSmpMarketplace", BB)
             }
           },
           survivalGuns: {
-            isEnabled: () => NT.worldOptions.enableSurvivalGuns,
-            Qy: TT => {
-              RT("enableSurvivalGuns", TT)
+            isEnabled: () => KB.worldOptions.enableSurvivalGuns,
+            mH: BB => {
+              OB("enableSurvivalGuns", BB)
             }
           },
           fallDamage: {
-            isEnabled: () => !NT.worldOptions.disableFallDamage,
-            Qy: TT => {
-              RT("disableFallDamage", !TT)
+            isEnabled: () => !KB.worldOptions.disableFallDamage,
+            mH: BB => {
+              OB("disableFallDamage", !BB)
             }
           },
           dayNight: {
-            isEnabled: () => NT.worldOptions.enableDayNight,
-            Qy: TT => {
-              RT("enableDayNight", TT)
+            isEnabled: () => KB.worldOptions.enableDayNight,
+            mH: BB => {
+              OB("enableDayNight", BB)
             }
           }
         },
-        mU = "Enter" !== sT,
-        WU = (0, wT.jsx)(iT.f, {
+        zj = "Enter" !== XB,
+        Qj = (0, oB.jsx)(gB.f, {
           className: "NameInput",
           label: "general:name",
-          disabled: "Enter" !== sT,
-          children: (0, wT.jsx)(MT.e, {
-            domRef: uT,
-            onValueChange: (TT, UT) => {
-              const mT = (0, eT.Ab)(TT);
-              oT("name", mT), uT.current.value = mT
+          disabled: "Enter" !== XB,
+          children: (0, oB.jsx)(dB.d, {
+            domRef: PB,
+            onValueChange: (BB, jB) => {
+              const zB = (0, MB.db)(BB);
+              vB("name", zB), PB.current.value = zB
             },
-            maxLength: eT.U,
-            defaultValue: NT.baseOptions.name
+            maxLength: MB.H,
+            defaultValue: KB.baseOptions.name
           })
         });
-      return (0, wT.jsxs)("div", {
-        className: nT()("CreateCustomLobby", {
-          CreateCustomLobbySuccess: "Success" === sT,
-          AdvancedMode: KT
+      return (0, oB.jsxs)("div", {
+        className: NB()("CreateCustomLobby", {
+          CreateCustomLobbySuccess: "Success" === XB,
+          AdvancedMode: lB
         }),
-        children: ["Success" === sT && (0, wT.jsxs)("div", {
+        children: ["Success" === XB && (0, oB.jsxs)("div", {
           className: "CreateCustomLobbySuccessOverlay",
-          children: [(0, wT.jsxs)("div", {
+          children: [(0, oB.jsxs)("div", {
             className: "CreateCustomLobbySuccessTitle FullyFancyText AnimFadeInScaleUp",
-            children: [(0, wT.jsx)(JT.c, {
+            children: [(0, oB.jsx)(iB.c, {
               name: "check"
-            }), (0, wT.jsx)(fT.b, {})]
-          }), (0, wT.jsx)("div", {
+            }), (0, oB.jsx)(GB.b, {})]
+          }), (0, oB.jsx)("div", {
             className: "CreateCustomLobbySuccessButtons AnimFadeInScaleUp",
-            children: (0, wT.jsx)(LT.l, {
+            children: (0, oB.jsx)(rB.m, {
               padDefaultFocus: !0,
               onClick: () => {
-                (0, vT.e)("worldCreation"), QT((0, ZT.d)(aT, NT.baseOptions.name))
+                (0, kB.i)("worldCreation"), hB((0, mB.e)(DB, KB.baseOptions.name))
               },
-              children: IT("homePage:joinLobbyName", {
-                lobbyName: NT.baseOptions.name
+              children: VB("homePage:joinLobbyName", {
+                lobbyName: KB.baseOptions.name
               })
             })
           })]
-        }), (0, wT.jsx)("div", {
+        }), (0, oB.jsx)("div", {
           className: "CreateCustomLobbyTitleContainer",
-          children: (0, wT.jsx)("div", {
+          children: (0, oB.jsx)("div", {
             className: "CreateCustomLobbyTitle",
-            children: IT(CT ? "homePage:createWorld" : "homePage:createCustomLobby")
+            children: VB(WB ? "homePage:createWorld" : "homePage:createCustomLobby")
           })
-        }), (0, wT.jsx)(dT.b, {
-          locked: mU,
-          children: (0, wT.jsxs)("div", {
+        }), (0, oB.jsx)(fB.d, {
+          locked: zj,
+          children: (0, oB.jsxs)("div", {
             className: "CreateCustomLobbyFields",
-            children: [!KT && WU, KT && (0, wT.jsxs)("div", {
+            children: [!lB && Qj, lB && (0, oB.jsxs)("div", {
               className: "BloxdForm",
-              children: [(0, wT.jsx)("div", {
+              children: [(0, oB.jsx)("div", {
                 className: "SectionTitle",
-                children: IT("customLobby:generalOptions")
-              }), (0, wT.jsxs)("div", {
+                children: VB("customLobby:generalOptions")
+              }), (0, oB.jsxs)("div", {
                 className: "SectionBody",
-                children: [WU, (0, wT.jsx)(iT.f, {
+                children: [Qj, (0, oB.jsx)(gB.f, {
                   label: "customLobby:visibility",
-                  circleInfoText: IT("customLobby:visibilityDescription"),
-                  disabled: "Enter" !== sT,
-                  children: (0, wT.jsx)(HT.d, {
-                    options: WT.r.map((TT => ({
-                      value: TT,
-                      label: WT.e[TT]
+                  circleInfoText: VB("customLobby:visibilityDescription"),
+                  disabled: "Enter" !== XB,
+                  children: (0, oB.jsx)(uB.e, {
+                    options: QB.n.map((BB => ({
+                      value: BB,
+                      label: QB.c[BB]
                     }))),
-                    value: NT.baseOptions.visibility,
-                    onChange: TT => {
-                      oT("visibility", TT.value)
+                    value: KB.baseOptions.visibility,
+                    onChange: BB => {
+                      vB("visibility", BB.value)
                     }
                   })
                 })]
               })]
-            }), CT && (0, wT.jsx)(xT.c, {
-              value: NT.worldOptions.defaultGamemode,
-              onChange: TT => {
-                RT("defaultGamemode", TT)
+            }), WB && (0, oB.jsx)(qB.b, {
+              value: KB.worldOptions.defaultGamemode,
+              onChange: BB => {
+                OB("defaultGamemode", BB)
               },
-              showAll: KT,
-              disabled: mU
-            }), (CT || !(0, qT.E)(rT) && rT > 0) && (0, wT.jsx)(xT.d, {
-              mapTypes: CT ? WT.G : WT.p,
-              value: NT.mapOptions.mapType,
-              onChange: TT => {
-                const UT = {
-                  mapType: TT
+              showAll: lB,
+              disabled: zj
+            }), (WB || !(0, LB.I)(eB) && eB > 0) && (0, oB.jsx)(qB.f, {
+              mapTypes: WB ? QB.C : QB.j,
+              value: KB.mapOptions.mapType,
+              onChange: BB => {
+                const jB = {
+                  mapType: BB
                 };
-                "customSchematic" !== TT && (UT.schematicIdList = []), TU(UT)
+                "customSchematic" !== BB && (jB.schematicIdList = []), Bj(jB)
               },
-              showAll: KT,
-              disabled: mU,
-              children: "customSchematic" === NT.mapOptions.mapType && (0, wT.jsxs)(wT.Fragment, {
-                children: [(0, wT.jsxs)("div", {
+              showAll: lB,
+              disabled: zj,
+              children: "customSchematic" === KB.mapOptions.mapType && (0, oB.jsxs)(oB.Fragment, {
+                children: [(0, oB.jsxs)("div", {
                   className: "SchematicListTitle AnimFadeIn",
-                  children: [CT && IT("customLobby:selectWorldSchematic"), !CT && IT("customLobby:selectCustomLobbySchematics", {
-                    schematicLimit: rT
+                  children: [WB && VB("customLobby:selectWorldSchematic"), !WB && VB("customLobby:selectCustomLobbySchematics", {
+                    schematicLimit: eB
                   })]
-                }), (0, wT.jsx)("div", {
-                  className: nT()("SchematicListContainer AnimFadeIn", {
-                    SchematicListContainerDisabled: "Enter" !== sT
+                }), (0, oB.jsx)("div", {
+                  className: NB()("SchematicListContainer AnimFadeIn", {
+                    SchematicListContainerDisabled: "Enter" !== XB
                   }),
-                  children: (0, wT.jsx)(pT.b, {
-                    loading: null === hT,
-                    schematics: null !== hT && void 0 !== hT ? hT : [],
-                    onSchematicPicked: function(TT) {
-                      const UT = NT.mapOptions.schematicIdList;
-                      if (UT.includes(TT.schematicId)) TU({
-                        schematicIdList: UT.filter((UT => UT !== TT.schematicId))
+                  children: (0, oB.jsx)(sB.c, {
+                    loading: null === cB,
+                    schematics: null !== cB && void 0 !== cB ? cB : [],
+                    onSchematicPicked: function(BB) {
+                      const jB = KB.mapOptions.schematicIdList;
+                      if (jB.includes(BB.schematicId)) Bj({
+                        schematicIdList: jB.filter((jB => jB !== BB.schematicId))
                       });
                       else {
-                        if (rT && NT.mapOptions.schematicIdList.length >= rT) return;
-                        TU({
-                          schematicIdList: [...NT.mapOptions.schematicIdList, TT.schematicId]
+                        if (eB && KB.mapOptions.schematicIdList.length >= eB) return;
+                        Bj({
+                          schematicIdList: [...KB.mapOptions.schematicIdList, BB.schematicId]
                         })
                       }
                     },
-                    selectedSchematicIdList: NT.mapOptions.schematicIdList,
+                    selectedSchematicIdList: KB.mapOptions.schematicIdList,
                     disableAutoExport: !0
                   })
                 })]
               })
-            }), KT && (0, wT.jsxs)("div", {
+            }), lB && (0, oB.jsxs)("div", {
               className: "BloxdForm",
-              children: [(0, wT.jsx)("div", {
+              children: [(0, oB.jsx)("div", {
                 className: "SectionTitle",
-                children: IT("customLobby:listedOptions")
-              }), (0, wT.jsxs)("div", {
+                children: VB("customLobby:listedOptions")
+              }), (0, oB.jsxs)("div", {
                 className: "SectionBody",
-                children: [(0, wT.jsx)(iT.f, {
+                children: [(0, oB.jsx)(gB.f, {
                   label: "general:description",
                   className: "CustomLobbyDescription",
-                  disabled: "Enter" !== sT,
-                  children: (0, wT.jsx)(MT.e, {
-                    onValueChange: (TT, UT) => {
-                      AT("description", TT)
+                  disabled: "Enter" !== XB,
+                  children: (0, oB.jsx)(dB.d, {
+                    onValueChange: (BB, jB) => {
+                      RB("description", BB)
                     },
                     maxLength: 100,
-                    defaultValue: NT.listedOptions.description
+                    defaultValue: KB.listedOptions.description
                   })
-                }), (0, wT.jsx)(iT.f, {
+                }), (0, oB.jsx)(gB.f, {
                   label: "general:color",
                   circleInfoText: "customLobby:lobbyColorDescription",
-                  disabled: "Enter" !== sT,
-                  children: (0, wT.jsx)("div", {
+                  disabled: "Enter" !== XB,
+                  children: (0, oB.jsx)("div", {
                     className: "OtherInput",
-                    children: (0, wT.jsx)("input", {
+                    children: (0, oB.jsx)("input", {
                       type: "color",
-                      value: NT.listedOptions.color,
-                      onChange: TT => {
-                        AT("color", TT.target.value)
+                      value: KB.listedOptions.color,
+                      onChange: BB => {
+                        RB("color", BB.target.value)
                       }
                     })
                   })
-                }), (0, wT.jsx)(iT.f, {
+                }), (0, oB.jsx)(gB.f, {
                   label: "general:emojis",
                   circleInfoText: "customLobby:lobbyEmojisDescription",
-                  disabled: "Enter" !== sT,
-                  children: (0, wT.jsx)(MT.e, {
-                    onValueChange: (TT, UT) => {
-                      AT("emojis", TT)
+                  disabled: "Enter" !== XB,
+                  children: (0, oB.jsx)(dB.d, {
+                    onValueChange: (BB, jB) => {
+                      RB("emojis", BB)
                     },
                     maxLength: 6,
-                    defaultValue: NT.listedOptions.emojis
+                    defaultValue: KB.listedOptions.emojis
                   })
                 })]
               })]
-            }), KT && CT && (0, wT.jsxs)("div", {
+            }), lB && WB && (0, oB.jsxs)("div", {
               className: "BloxdForm",
-              children: [(0, wT.jsx)("div", {
+              children: [(0, oB.jsx)("div", {
                 className: "SectionTitle",
-                children: IT("customLobby:advancedOptions")
-              }), (0, wT.jsxs)("div", {
+                children: VB("customLobby:advancedOptions")
+              }), (0, oB.jsxs)("div", {
                 className: "SectionBody",
-                children: [(0, wT.jsx)(iT.f, {
+                children: [(0, oB.jsx)(gB.f, {
                   label: "classic:worldGenSeed",
-                  disabled: "Enter" !== sT,
-                  children: (0, wT.jsx)(MT.e, {
-                    onValueChange: (TT, UT) => {
-                      RT("worldGenSeed", TT)
+                  disabled: "Enter" !== XB,
+                  children: (0, oB.jsx)(dB.d, {
+                    onValueChange: (BB, jB) => {
+                      OB("worldGenSeed", BB)
                     },
-                    maxLength: eT.U
+                    maxLength: MB.H
                   })
-                }), (0, wT.jsx)(iT.f, {
+                }), (0, oB.jsx)(gB.f, {
                   label: "classic:disableProtectors",
-                  disabled: "Enter" !== sT,
-                  children: (0, wT.jsx)(iT.c, {
-                    checked: NT.worldOptions.disableProtectors,
-                    setChecked: TT => {
-                      RT("disableProtectors", TT)
+                  disabled: "Enter" !== XB,
+                  children: (0, oB.jsx)(gB.d, {
+                    checked: KB.worldOptions.disableProtectors,
+                    setChecked: BB => {
+                      OB("disableProtectors", BB)
                     }
                   })
-                }), (0, wT.jsx)(iT.f, {
+                }), (0, oB.jsx)(gB.f, {
                   label: "classic:disableTribeCreation",
-                  disabled: "Enter" !== sT,
-                  children: (0, wT.jsx)(iT.c, {
-                    checked: NT.worldOptions.disableTribeCreation,
-                    setChecked: TT => {
-                      RT("disableTribeCreation", TT)
+                  disabled: "Enter" !== XB,
+                  children: (0, oB.jsx)(gB.d, {
+                    checked: KB.worldOptions.disableTribeCreation,
+                    setChecked: BB => {
+                      OB("disableTribeCreation", BB)
                     }
                   })
-                }), (0, wT.jsx)(iT.f, {
+                }), (0, oB.jsx)(gB.f, {
                   label: "classic:voidDeathHeight",
                   circleInfoText: "classic:voidDeathHeightDescription",
-                  disabled: "Enter" !== sT,
-                  children: (0, wT.jsx)("input", {
+                  disabled: "Enter" !== XB,
+                  children: (0, oB.jsx)("input", {
                     type: "number",
-                    max: OT.E,
-                    value: null !== (gT = NT.worldOptions.voidDeathHeight) && void 0 !== gT ? gT : "",
-                    onChange: TT => {
-                      const UT = parseInt(TT.target.value);
-                      RT("voidDeathHeight", isNaN(UT) ? null : UT)
+                    max: SB.G,
+                    value: null !== (IB = KB.worldOptions.voidDeathHeight) && void 0 !== IB ? IB : "",
+                    onChange: BB => {
+                      const jB = parseInt(BB.target.value);
+                      OB("voidDeathHeight", isNaN(jB) ? null : jB)
                     }
                   })
-                }), (0, wT.jsx)(iT.f, {
+                }), (0, oB.jsx)(gB.f, {
                   label: "classic:disableLobbySpawn",
-                  disabled: "Enter" !== sT,
-                  children: (0, wT.jsx)(iT.c, {
-                    checked: NT.worldOptions.disableLobbySpawn,
-                    setChecked: TT => {
-                      RT("disableLobbySpawn", TT)
+                  disabled: "Enter" !== XB,
+                  children: (0, oB.jsx)(gB.d, {
+                    checked: KB.worldOptions.disableLobbySpawn,
+                    setChecked: BB => {
+                      OB("disableLobbySpawn", BB)
                     }
                   })
-                }), (0, wT.jsx)(iT.f, {
+                }), (0, oB.jsx)(gB.f, {
                   label: "classic:worldBorder",
                   circleInfoText: "classic:worldBorderDescription",
-                  disabled: "Enter" !== sT,
-                  children: (0, wT.jsx)("input", {
+                  disabled: "Enter" !== XB,
+                  children: (0, oB.jsx)("input", {
                     type: "number",
-                    min: OT.K,
-                    max: OT.F,
-                    value: null !== (tT = NT.worldOptions.worldBorder) && void 0 !== tT ? tT : "",
-                    onChange: TT => {
-                      const UT = parseInt(TT.target.value);
-                      RT("worldBorder", isNaN(UT) ? null : UT)
+                    min: SB.O,
+                    max: SB.K,
+                    value: null !== (HB = KB.worldOptions.worldBorder) && void 0 !== HB ? HB : "",
+                    onChange: BB => {
+                      const jB = parseInt(BB.target.value);
+                      OB("worldBorder", isNaN(jB) ? null : jB)
                     }
                   })
-                }), (0, wT.jsx)(iT.f, {
+                }), (0, oB.jsx)(gB.f, {
                   label: "classic:disableMobs",
-                  disabled: "Enter" !== sT,
-                  children: (0, wT.jsx)(iT.c, {
-                    checked: NT.worldOptions.disableMobs,
-                    setChecked: TT => {
-                      RT("disableMobs", TT)
+                  disabled: "Enter" !== XB,
+                  children: (0, oB.jsx)(gB.d, {
+                    checked: KB.worldOptions.disableMobs,
+                    setChecked: BB => {
+                      OB("disableMobs", BB)
                     }
                   })
                 })]
               })]
-            }), CT && (0, wT.jsx)(YT.c, {
-              callbacks: UU,
-              disabled: "Enter" !== sT,
-              advancedMode: KT
+            }), WB && (0, oB.jsx)(EB.b, {
+              callbacks: jj,
+              disabled: "Enter" !== XB,
+              advancedMode: lB
             })]
           })
-        }), (0, wT.jsxs)("div", {
+        }), (0, oB.jsxs)("div", {
           className: "CreateCustomLobbyFooter",
-          children: [(0, wT.jsx)(LT.l, {
+          children: [(0, oB.jsx)(rB.m, {
             className: "CreateCustomLobbyButton",
             padDefaultFocus: !0,
-            loading: "Enter" !== sT,
+            loading: "Enter" !== XB,
             onClick: () => {
               !async function() {
-                if ("Enter" === sT) {
-                  FT("Loading"), VT("");
+                if ("Enter" === XB) {
+                  ZB("Loading"), TB("");
                   try {
-                    await lT.d.createCustomLobby(NT), FT("Success")
-                  } catch (TT) {
-                    VT(TT.message), console.error(TT.message), FT("Enter")
+                    await pB.b.createCustomLobby(KB), ZB("Success")
+                  } catch (BB) {
+                    TB(BB.message), console.error(BB.message), ZB("Enter")
                   }
                 }
               }()
             },
-            children: IT("general:create")
-          }), CT && (0, wT.jsx)("div", {
+            children: VB("general:create")
+          }), WB && (0, oB.jsx)("div", {
             className: "CreateCustomLobbyAdvancedToggle",
-            "data-pad-ignore": mU || void 0,
-            children: (0, wT.jsx)(iT.f, {
+            "data-pad-ignore": zj || void 0,
+            children: (0, oB.jsx)(gB.f, {
               label: "customLobby:showAdvancedOptions",
-              disabled: mU,
+              disabled: zj,
               onLabelClick: () => {
-                ST(!KT)
+                wB(!lB)
               },
-              children: (0, wT.jsx)(iT.c, {
-                checked: KT,
-                setChecked: ST
+              children: (0, oB.jsx)(gB.d, {
+                checked: lB,
+                setChecked: wB
               })
             })
-          }), PT && (0, wT.jsx)("div", {
+          }), AB && (0, oB.jsx)("div", {
             className: "CreateCustomLobbyError AnimFadeInScaleUp",
-            children: PT
+            children: AB
           })]
         })]
       })
     }
   },
-  36435: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => HT
+  36430: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => uB
     });
-    var WT = mT(1126),
-      zT = mT.n(WT),
-      MT = mT(63),
-      gT = mT(4677),
-      nT = mT(1188);
+    var QB = zB(1091),
+      nB = zB.n(QB),
+      dB = zB(62),
+      IB = zB(4687),
+      NB = zB(1148);
 
-    function HT(TT) {
+    function uB(BB) {
       let {
-        locked: UT,
-        children: mT
-      } = TT;
-      const WT = (0, MT.useRef)(null),
-        HT = (0, gT.e)(WT, "y");
-      return (0, nT.jsx)("div", {
-        ref: WT,
-        className: zT()("CreateCustomLobbyBody", {
-          CreateCustomLobbyBodyMoreAbove: HT.before,
-          CreateCustomLobbyBodyMoreBelow: HT.after
+        locked: jB,
+        children: zB
+      } = BB;
+      const QB = (0, dB.useRef)(null),
+        uB = (0, IB.e)(QB, "y");
+      return (0, NB.jsx)("div", {
+        ref: QB,
+        className: nB()("CreateCustomLobbyBody", {
+          CreateCustomLobbyBodyMoreAbove: uB.before,
+          CreateCustomLobbyBodyMoreBelow: uB.after
         }),
-        "data-pad-ignore": UT || void 0,
-        children: mT
+        "data-pad-ignore": jB || void 0,
+        children: zB
       })
     }
   },
-  36424: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => jT,
-      e: () => LT
+  36418: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => aB,
+      e: () => rB
     });
-    var WT = mT(63),
-      zT = mT(1457),
-      MT = mT(1288),
-      gT = mT(1446),
-      nT = mT(3568),
-      HT = mT(5038),
-      kT = mT(1188);
+    var QB = zB(62),
+      nB = zB(1381),
+      dB = zB(1240),
+      IB = zB(1369),
+      NB = zB(3587),
+      uB = zB(5026),
+      UB = zB(1148);
 
-    function jT(TT) {
+    function aB(BB) {
       let {
-        loading: UT,
-        schematics: mT,
-        onSchematicPicked: WT,
-        selectedSchematicIdList: zT = [],
-        disableAutoExport: HT
-      } = TT;
+        loading: jB,
+        schematics: zB,
+        onSchematicPicked: QB,
+        selectedSchematicIdList: nB = [],
+        disableAutoExport: uB
+      } = BB;
       const {
-        t: jT
-      } = (0, MT.z)();
-      return (0, kT.jsxs)("div", {
+        t: aB
+      } = (0, dB.D)();
+      return (0, UB.jsxs)("div", {
         className: "SchematicList",
-        children: [UT && (0, kT.jsx)(gT.c, {}), !UT && 0 === mT.length && (0, kT.jsx)("div", {
+        children: [jB && (0, UB.jsx)(IB.e, {}), !jB && 0 === zB.length && (0, UB.jsx)("div", {
           className: "NoSchematicsText",
-          children: jT("worldBuilder:noSavedSchematic")
-        }), !UT && mT.map((TT => (0, kT.jsx)(nT.f, {
+          children: aB("worldBuilder:noSavedSchematic")
+        }), !jB && zB.map((BB => (0, UB.jsx)(NB.f, {
           source: {
             type: "schematic",
-            schematic: TT
+            schematic: BB
           },
           gameWidth: "25%",
           useLongRatio: !0,
           onClick: () => {
-            WT(TT)
+            QB(BB)
           },
-          isSelected: zT.includes(TT.schematicId),
+          isSelected: nB.includes(BB.schematicId),
           hideCcu: !0,
           hideFavourites: !0,
           showPublishedChip: !0,
           hideUnpublishedChip: !0,
-          disabled: TT.isAutoExported && HT,
+          disabled: BB.isAutoExported && uB,
           disabledReason: "worldBuilder:autoExportDisabled"
-        }, TT.schematicId)))]
+        }, BB.schematicId)))]
       })
     }
 
-    function lT(TT) {
+    function pB(BB) {
       let {
-        ownedSchematics: UT,
-        currentWorldSchematicId: mT,
-        onClose: zT
-      } = TT;
+        ownedSchematics: jB,
+        currentWorldSchematicId: zB,
+        onClose: nB
+      } = BB;
       const {
-        t: gT
-      } = (0, MT.z)(), [nT, lT] = (0, WT.useState)(null);
-      return (0, kT.jsxs)("div", {
+        t: IB
+      } = (0, dB.D)(), [NB, pB] = (0, QB.useState)(null);
+      return (0, UB.jsxs)("div", {
         className: "SchematicListWindow",
-        children: [null === nT && (0, kT.jsxs)(kT.Fragment, {
-          children: [(0, kT.jsx)("h1", {
+        children: [null === NB && (0, UB.jsxs)(UB.Fragment, {
+          children: [(0, UB.jsx)("h1", {
             className: "SchematicPopupTitle",
-            children: gT("worldBuilder:schematicList")
-          }), (0, kT.jsx)("h2", {
+            children: IB("worldBuilder:schematicList")
+          }), (0, UB.jsx)("h2", {
             className: "SchematicPopupSubtitle",
-            children: gT("worldBuilder:clickSchematicForOptions")
-          }), (0, kT.jsx)("div", {
+            children: IB("worldBuilder:clickSchematicForOptions")
+          }), (0, UB.jsx)("div", {
             className: "SchematicPopupSchematicListContainer",
-            children: (0, kT.jsx)(jT, {
+            children: (0, UB.jsx)(aB, {
               loading: !1,
-              schematics: UT,
-              onSchematicPicked: TT => {
-                lT(TT)
+              schematics: jB,
+              onSchematicPicked: BB => {
+                pB(BB)
               },
               disableAutoExport: !1
             })
           })]
-        }), null !== nT && (0, kT.jsx)(HT.f, {
-          schematic: nT,
-          inSourceWorld: nT.schematicId === mT,
-          onSchematicUpdate: TT => {
-            lT(TT)
+        }), null !== NB && (0, UB.jsx)(uB.h, {
+          schematic: NB,
+          inSourceWorld: NB.schematicId === zB,
+          onSchematicUpdate: BB => {
+            pB(BB)
           },
           onClose: () => {
-            lT(null), zT()
+            pB(null), nB()
           }
         })]
       })
     }
 
-    function LT(TT) {
+    function rB(BB) {
       let {
-        ownedSchematics: UT,
-        currentWorldSchematicId: mT,
-        onClose: WT
-      } = TT;
-      zT.NotificationProvider.showCustomPopup({
-        body: TT => (0, kT.jsx)(lT, {
-          ownedSchematics: UT,
-          currentWorldSchematicId: mT,
-          onClose: TT
+        ownedSchematics: jB,
+        currentWorldSchematicId: zB,
+        onClose: QB
+      } = BB;
+      nB.NotificationProvider.showCustomPopup({
+        body: BB => (0, UB.jsx)(pB, {
+          ownedSchematics: jB,
+          currentWorldSchematicId: zB,
+          onClose: BB
         }),
         middleScreenPopupClassName: "SchematicPopup",
-        onClose: WT,
+        onClose: QB,
         unlockPointerKey: "schematicListPopup"
       })
     }
   },
-  36432: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => kT,
-      d: () => jT
+  36426: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => UB,
+      f: () => aB
     });
-    mT(63);
-    var WT = mT(1126),
-      zT = mT.n(WT),
-      MT = mT(4719),
-      gT = mT(351),
-      nT = mT(1288),
-      HT = mT(1188);
+    zB(62);
+    var QB = zB(1091),
+      nB = zB.n(QB),
+      dB = zB(4729),
+      IB = zB(363),
+      NB = zB(1240),
+      uB = zB(1148);
 
-    function kT(TT) {
+    function UB(BB) {
       let {
-        value: UT,
-        onChange: mT,
-        showAll: WT,
-        disabled: kT = !1
-      } = TT;
+        value: jB,
+        onChange: zB,
+        showAll: QB,
+        disabled: UB = !1
+      } = BB;
       const {
-        t: jT
-      } = (0, nT.z)();
-      return (0, HT.jsxs)("div", {
-        className: zT()("BloxdForm GamemodeForm", {
-          BasicOptions: !WT
+        t: aB
+      } = (0, NB.D)();
+      return (0, uB.jsxs)("div", {
+        className: nB()("BloxdForm GamemodeForm", {
+          BasicOptions: !QB
         }),
-        children: [(0, HT.jsx)("div", {
+        children: [(0, uB.jsx)("div", {
           className: "SectionTitle",
-          children: jT("classic:defaultGamemode")
-        }), (0, HT.jsx)("div", {
+          children: aB("classic:defaultGamemode")
+        }), (0, uB.jsx)("div", {
           className: "SectionBody",
-          children: MT.C.map((TT => WT || (0, MT.v)(TT) ? (0, HT.jsx)("button", {
+          children: dB.y.map((BB => QB || (0, dB.u)(BB) ? (0, uB.jsx)("button", {
             type: "button",
-            className: zT()("WorldGamemode", {
-              Selected: UT === TT
+            className: nB()("WorldGamemode", {
+              Selected: jB === BB
             }),
-            disabled: kT,
+            disabled: UB,
             onClick: () => {
-              mT(TT)
+              zB(BB)
             },
             style: {
-              "--background-image": `url(${gT.p[TT]})`
+              "--background-image": `url(${IB.t[BB]})`
             },
-            children: gT.m[TT]
-          }, TT) : null))
+            children: IB.r[BB]
+          }, BB) : null))
         })]
       })
     }
 
-    function jT(TT) {
+    function aB(BB) {
       let {
-        mapTypes: UT,
-        value: mT,
-        onChange: WT,
-        showAll: kT,
-        disabled: jT = !1,
-        children: lT
-      } = TT;
+        mapTypes: jB,
+        value: zB,
+        onChange: QB,
+        showAll: UB,
+        disabled: aB = !1,
+        children: pB
+      } = BB;
       const {
-        t: LT
-      } = (0, nT.z)();
-      return (0, HT.jsxs)("div", {
-        className: zT()("BloxdForm MapTypeForm", {
-          BasicOptions: !kT
+        t: rB
+      } = (0, NB.D)();
+      return (0, uB.jsxs)("div", {
+        className: nB()("BloxdForm MapTypeForm", {
+          BasicOptions: !UB
         }),
-        children: [(0, HT.jsx)("div", {
+        children: [(0, uB.jsx)("div", {
           className: "SectionTitle",
-          children: LT("customLobby:mapType")
-        }), (0, HT.jsx)("div", {
+          children: rB("customLobby:mapType")
+        }), (0, uB.jsx)("div", {
           className: "SectionBody",
-          children: UT.map((TT => kT || (0, MT.w)(TT) ? (0, HT.jsx)("button", {
+          children: jB.map((BB => UB || (0, dB.v)(BB) ? (0, uB.jsx)("button", {
             type: "button",
-            className: zT()("MapType", {
-              Selected: mT === TT
+            className: nB()("MapType", {
+              Selected: zB === BB
             }),
-            disabled: jT,
+            disabled: aB,
             onClick: () => {
-              WT(TT)
+              QB(BB)
             },
             style: {
-              "--background-image": `url(${gT.h[TT]})`
+              "--background-image": `url(${IB.n[BB]})`
             },
-            children: gT.g[TT]
-          }, TT) : null))
-        }), lT]
+            children: IB.m[BB]
+          }, BB) : null))
+        }), pB]
       })
     }
   },
-  36419: () => {}
+  36409: () => {}
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

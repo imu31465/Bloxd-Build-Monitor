@@ -1,257 +1,257 @@
 export const id = 19;
 export const ids = [19];
 export const modules = {
-  36687: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => pT,
-      d: () => BT,
-      h: () => LT,
-      i: () => lT
+  36677: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => sB,
+      e: () => JB,
+      g: () => rB,
+      h: () => pB
     });
-    var WT = mT(34270),
-      zT = mT(36693),
-      MT = mT(36698),
-      gT = mT(8852),
-      nT = mT(1567),
-      HT = mT(63),
-      kT = mT(85),
-      jT = mT(1188);
+    var QB = zB(34242),
+      nB = zB(36682),
+      dB = zB(36687),
+      IB = zB(8722),
+      NB = zB(1471),
+      uB = zB(62),
+      UB = zB(83),
+      aB = zB(1148);
 
-    function lT() {
-      var TT;
-      return (0, nT.j)(zT.b, (0, zT.j)()), (0, jT.jsx)(jT.Fragment, {
-        children: null === (TT = (0, zT.j)()) || void 0 === TT ? void 0 : TT.content
+    function pB() {
+      var BB;
+      return (0, NB.h)(nB.c, (0, nB.n)()), (0, aB.jsx)(aB.Fragment, {
+        children: null === (BB = (0, nB.n)()) || void 0 === BB ? void 0 : BB.content
       })
     }
 
-    function LT(TT) {
-      var UT;
+    function rB(BB) {
+      var jB;
       let {
-        show: mT
-      } = TT;
-      (0, nT.j)(zT.b, (0, zT.j)());
-      const kT = null === (UT = (0, zT.j)()) || void 0 === UT ? void 0 : UT.menu;
-      return (0, HT.useEffect)((() => {
-        var TT;
-        mT || (null === kT || void 0 === kT || null === (TT = kT.onClose) || void 0 === TT || TT.call(kT), (0, MT.n)())
-      }), [mT, kT]), (0, HT.useEffect)((() => mT ? (0, gT.f)(MT.s, MT.d) : void 0), [mT]), (0, jT.jsx)(WT.e, {
-        showing: mT,
+        show: zB
+      } = BB;
+      (0, NB.h)(nB.c, (0, nB.n)());
+      const UB = null === (jB = (0, nB.n)()) || void 0 === jB ? void 0 : jB.menu;
+      return (0, uB.useEffect)((() => {
+        var BB;
+        zB || (null === UB || void 0 === UB || null === (BB = UB.onClose) || void 0 === BB || BB.call(UB), (0, dB.n)())
+      }), [zB, UB]), (0, uB.useEffect)((() => zB ? (0, IB.f)(dB.w, dB.f) : void 0), [zB]), (0, aB.jsx)(QB.b, {
+        showing: zB,
         globallyUniqueKey: "clientGameMenu",
-        children: null === kT || void 0 === kT ? void 0 : kT.content
+        children: null === UB || void 0 === UB ? void 0 : UB.content
       })
     }
 
-    function pT(TT) {
+    function sB(BB) {
       let {
-        placement: UT = "bottom"
-      } = TT;
-      return (0, jT.jsx)("div", {
-        id: `clientGameHud-${UT}`,
+        placement: jB = "bottom"
+      } = BB;
+      return (0, aB.jsx)("div", {
+        id: `clientGameHud-${jB}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function BT(TT) {
+    function JB(BB) {
       let {
-        children: UT,
-        placement: mT = "bottom"
-      } = TT;
-      const [WT, zT] = (0, HT.useState)(null);
-      return (0, HT.useEffect)((() => {
-        zT(document.getElementById(`clientGameHud-${mT}`))
-      }), [mT]), WT ? (0, kT.createPortal)(UT, WT) : null
+        children: jB,
+        placement: zB = "bottom"
+      } = BB;
+      const [QB, nB] = (0, uB.useState)(null);
+      return (0, uB.useEffect)((() => {
+        nB(document.getElementById(`clientGameHud-${zB}`))
+      }), [zB]), QB ? (0, UB.createPortal)(jB, QB) : null
     }
   },
-  34270: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => MT
+  34242: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => dB
     });
-    var WT = mT(4641),
-      zT = mT(4650);
+    var QB = zB(4657),
+      nB = zB(4664);
 
-    function MT(TT) {
+    function dB(BB) {
       let {
-        children: UT,
-        showing: mT,
-        globallyUniqueKey: MT,
-        alwaysMountChildren: gT = !1,
-        doGameplayStartStopOnShow: nT = !0,
-        keepsMovement: HT = !1
-      } = TT;
-      return (0, zT.d)(!0, mT, MT, HT), (0, WT.c)(nT, mT), mT || gT ? UT : null
+        children: jB,
+        showing: zB,
+        globallyUniqueKey: dB,
+        alwaysMountChildren: IB = !1,
+        doGameplayStartStopOnShow: NB = !0,
+        keepsMovement: uB = !1
+      } = BB;
+      return (0, nB.c)(!0, zB, dB, uB), (0, QB.d)(NB, zB), zB || IB ? jB : null
     }
   },
-  8852: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => MT,
-      f: () => zT
+  8722: (BB, jB, zB) => {
+    zB.d(jB, {
+      e: () => dB,
+      f: () => nB
     });
-    let WT = null;
-    const zT = function(TT) {
-        const UT = {
-          cycle: TT,
+    let QB = null;
+    const nB = function(BB) {
+        const jB = {
+          cycle: BB,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return WT = UT, () => {
-          WT === UT && (WT = null)
+        return QB = jB, () => {
+          QB === jB && (QB = null)
         }
       },
-      MT = () => {
-        var TT;
-        return null !== (TT = WT) && void 0 !== TT && TT.canCycle() ? WT.cycle : null
+      dB = () => {
+        var BB;
+        return null !== (BB = QB) && void 0 !== BB && BB.canCycle() ? QB.cycle : null
       }
   },
-  36698: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => MT,
-      d: () => ZT,
-      h: () => cT,
-      j: () => nT,
-      l: () => LT,
-      n: () => vT,
-      p: () => lT,
-      r: () => qT,
-      s: () => BT,
-      v: () => fT
+  36687: (BB, jB, zB) => {
+    zB.d(jB, {
+      A: () => GB,
+      e: () => dB,
+      f: () => mB,
+      i: () => yB,
+      l: () => NB,
+      m: () => rB,
+      n: () => kB,
+      r: () => pB,
+      t: () => LB,
+      w: () => JB
     });
-    var WT = mT(25),
-      zT = mT(31);
-    const MT = "clientGameInventoryButtonsChanged",
-      gT = new Map;
+    var QB = zB(28),
+      nB = zB(31);
+    const dB = "clientGameInventoryButtonsChanged",
+      IB = new Map;
 
-    function nT() {
-      return [...gT.values()].sort(((TT, UT) => {
-        var mT, WT;
-        return (null !== (mT = TT.order) && void 0 !== mT ? mT : 0) - (null !== (WT = UT.order) && void 0 !== WT ? WT : 0)
+    function NB() {
+      return [...IB.values()].sort(((BB, jB) => {
+        var zB, QB;
+        return (null !== (zB = BB.order) && void 0 !== zB ? zB : 0) - (null !== (QB = jB.order) && void 0 !== QB ? QB : 0)
       }))
     }
-    let HT = null;
+    let uB = null;
 
-    function kT(TT) {
-      HT = TT
+    function UB(BB) {
+      uB = BB
     }
-    let jT = !1;
+    let aB = !1;
 
-    function lT(TT) {
-      jT = !0;
+    function pB(BB) {
+      aB = !0;
       try {
-        TT.onClick()
+        BB.onClick()
       } finally {
-        jT = !1
+        aB = !1
       }
-      TT.panel && "clientGame" === WT.b.get("openInGameMenuName") && kT(TT.id)
+      BB.panel && "clientGame" === QB.c.get("openInGameMenuName") && UB(BB.id)
     }
 
-    function LT() {
-      return jT
+    function rB() {
+      return aB
     }
 
-    function pT() {
-      return nT().filter((TT => TT.panel && !TT.disabled))
+    function sB() {
+      return NB().filter((BB => BB.panel && !BB.disabled))
     }
 
-    function BT(TT) {
-      const UT = pT(),
-        mT = UT.findIndex((TT => TT.id === HT));
-      return !(mT < 0 || UT.length < 2) && (lT(UT[(mT + TT + UT.length) % UT.length]), !0)
+    function JB(BB) {
+      const jB = sB(),
+        zB = jB.findIndex((BB => BB.id === uB));
+      return !(zB < 0 || jB.length < 2) && (pB(jB[(zB + BB + jB.length) % jB.length]), !0)
     }
 
-    function ZT() {
-      return null !== HT && pT().length > 1
+    function mB() {
+      return null !== uB && sB().length > 1
     }
 
-    function cT() {
-      kT(null)
+    function yB() {
+      UB(null)
     }
 
-    function vT() {
-      "inventory" !== WT.b.get("openInGameMenuName") && kT(null)
+    function kB() {
+      "inventory" !== QB.c.get("openInGameMenuName") && UB(null)
     }
 
-    function fT() {
-      const TT = HT;
-      return kT(null), TT
+    function GB() {
+      const BB = uB;
+      return UB(null), BB
     }
 
-    function qT(TT) {
-      return gT.set(TT.id, TT), zT.j.EZ(MT, nT(), !0), () => {
-        gT.get(TT.id) === TT && (gT.delete(TT.id), zT.j.EZ(MT, nT()))
+    function LB(BB) {
+      return IB.set(BB.id, BB), nB.n.Ly(dB, NB(), !0), () => {
+        IB.get(BB.id) === BB && (IB.delete(BB.id), nB.n.Ly(dB, NB()))
       }
     }
   },
-  36693: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => nT,
-      d: () => cT,
-      f: () => vT,
-      i: () => LT,
-      j: () => kT,
-      l: () => ZT,
-      n: () => pT,
-      q: () => jT
+  36682: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => NB,
+      d: () => yB,
+      f: () => kB,
+      j: () => rB,
+      n: () => UB,
+      o: () => mB,
+      r: () => sB,
+      t: () => aB
     });
-    var WT = mT(25),
-      zT = mT(31),
-      MT = mT(1388),
-      gT = mT(36698);
-    const nT = "clientGameUiChanged";
-    let HT = null;
+    var QB = zB(28),
+      nB = zB(31),
+      dB = zB(1316),
+      IB = zB(36687);
+    const NB = "clientGameUiChanged";
+    let uB = null;
 
-    function kT() {
-      return HT
+    function UB() {
+      return uB
     }
 
-    function jT(TT, UT) {
-      const mT = {
-        content: TT,
-        menu: UT
+    function aB(BB, jB) {
+      const zB = {
+        content: BB,
+        menu: jB
       };
-      return HT = mT, zT.j.EZ(nT, HT, !0), () => {
-        HT === mT && (HT = null, BT = !1, cT(), zT.j.EZ(nT, null))
+      return uB = zB, nB.n.Ly(NB, uB, !0), () => {
+        uB === zB && (uB = null, JB = !1, yB(), nB.n.Ly(NB, null))
       }
     }
-    let lT = null;
+    let pB = null;
 
-    function LT() {
-      return lT
+    function rB() {
+      return pB
     }
 
-    function pT(TT) {
-      return lT = TT, () => {
-        lT === TT && (lT = null)
+    function sB(BB) {
+      return pB = BB, () => {
+        pB === BB && (pB = null)
       }
     }
-    let BT = !1;
+    let JB = !1;
 
-    function ZT() {
-      const TT = WT.b.get("openInGameMenuName");
-      "clientGame" !== TT && (BT = "inventory" === TT), (0, gT.l)() || (0, gT.h)(), (0, MT.s)(MT.d), WT.b.set({
+    function mB() {
+      const BB = QB.c.get("openInGameMenuName");
+      "clientGame" !== BB && (JB = "inventory" === BB), (0, IB.m)() || (0, IB.i)(), (0, dB.u)(dB.e), QB.c.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function cT() {
-      fT(!1)
+    function yB() {
+      GB(!1)
     }
 
-    function vT() {
-      fT(BT)
+    function kB() {
+      GB(JB)
     }
 
-    function fT(TT) {
-      "clientGame" === WT.b.get("openInGameMenuName") && WT.b.set({
-        openInGameMenuName: TT ? "inventory" : null
-      }), TT || (0, gT.h)(), BT = !1
+    function GB(BB) {
+      "clientGame" === QB.c.get("openInGameMenuName") && QB.c.set({
+        openInGameMenuName: BB ? "inventory" : null
+      }), BB || (0, IB.i)(), JB = !1
     }
   },
-  39567: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      default: () => RT
+  39521: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      default: () => OB
     });
-    const WT = {
+    const QB = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -261,270 +261,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var zT = mT(63),
-      MT = mT(38164),
-      gT = mT(366);
-    const nT = ["Basic", "Rare", "Super"];
+    var nB = zB(62),
+      dB = zB(38120),
+      IB = zB(376);
+    const NB = ["Basic", "Rare", "Super"];
 
-    function HT(TT, UT) {
-      return `${"Basic"===UT?"":`${UT} `}${"Simple"===TT?"":`${TT} `}Lucky Block`
+    function uB(BB, jB) {
+      return `${"Basic"===jB?"":`${jB} `}${"Simple"===BB?"":`${BB} `}Lucky Block`
     }
-    const kT = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((TT => nT.map((UT => [HT(TT, UT), {
-      category: TT,
-      rarity: UT
+    const UB = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((BB => NB.map((jB => [uB(BB, jB), {
+      category: BB,
+      rarity: jB
     }])))));
-    kT.keys();
+    UB.keys();
 
-    function jT(TT) {
-      return kT.get(TT)
+    function aB(BB) {
+      return UB.get(BB)
     }
-    const lT = "Obsidian",
-      LT = ["Cobweb"],
-      pT = [...["Red", "Blue", "Green", "Yellow"].map((TT => `${(0,gT.hb)(TT)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", lT, ...LT];
+    const pB = "Obsidian",
+      rB = ["Cobweb"],
+      sB = [...["Red", "Blue", "Green", "Yellow"].map((BB => `${(0,IB.Y)(BB)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", pB, ...rB];
 
-    function BT(TT) {
-      return pT.includes(TT)
+    function JB(BB) {
+      return sB.includes(BB)
     }
-    var ZT = mT(653);
+    var mB = zB(658);
 
-    function cT(TT, UT) {
-      const mT = jT(TT);
-      if (mT) {
-        const TT = jT(UT);
-        if (!TT) return;
-        const WT = nT.length - 1 - nT.indexOf(TT.rarity);
-        return (TT.category === mT.category ? 0 : 1) * nT.length + WT
+    function yB(BB, jB) {
+      const zB = aB(BB);
+      if (zB) {
+        const BB = aB(jB);
+        if (!BB) return;
+        const QB = NB.length - 1 - NB.indexOf(BB.rarity);
+        return (BB.category === zB.category ? 0 : 1) * NB.length + QB
       }
-      if (!BT(TT)) return;
-      if (UT === TT) return 0;
-      const WT = TT => BT(TT) && !LT.includes(TT) && TT !== lT;
-      return WT(TT) && WT(UT) ? 1 : void 0
+      if (!JB(BB)) return;
+      if (jB === BB) return 0;
+      const QB = BB => JB(BB) && !rB.includes(BB) && BB !== pB;
+      return QB(BB) && QB(jB) ? 1 : void 0
     }
-    const vT = [...Array.from({
-      length: ZT.q - ZT.n
-    }, ((TT, UT) => ZT.n + UT)), ...Array.from({
-      length: ZT.n
-    }, ((TT, UT) => UT))];
-    class fT {
-      constructor(TT) {
-        this.inventory = TT, this.pending = new Map
+    const kB = [...Array.from({
+      length: mB.o - mB.n
+    }, ((BB, jB) => mB.n + jB)), ...Array.from({
+      length: mB.n
+    }, ((BB, jB) => jB))];
+    class GB {
+      constructor(BB) {
+        this.inventory = BB, this.pending = new Map
       }
-      onPlace(TT) {
-        var UT;
-        const mT = this.inventory.selectedSlot(),
-          WT = this.inventory.itemAt(mT);
-        (null === WT || void 0 === WT ? void 0 : WT.name) === TT && (null !== (UT = WT.amount) && void 0 !== UT ? UT : 1) <= 1 && qT(TT) && this.pending.set(mT, TT)
+      onPlace(BB) {
+        var jB;
+        const zB = this.inventory.selectedSlot(),
+          QB = this.inventory.itemAt(zB);
+        (null === QB || void 0 === QB ? void 0 : QB.name) === BB && (null !== (jB = QB.amount) && void 0 !== jB ? jB : 1) <= 1 && LB(BB) && this.pending.set(zB, BB)
       }
-      onDrop(TT, UT) {
-        UT < ZT.n && null === this.inventory.itemAt(UT) && qT(TT) && this.refill(UT, TT)
+      onDrop(BB, jB) {
+        jB < mB.n && null === this.inventory.itemAt(jB) && LB(BB) && this.refill(jB, BB)
       }
-      Cl() {
-        const TT = [...this.pending];
+      vp() {
+        const BB = [...this.pending];
         this.pending.clear();
-        for (const [UT, mT] of TT) null === this.inventory.itemAt(UT) && this.refill(UT, mT)
+        for (const [jB, zB] of BB) null === this.inventory.itemAt(jB) && this.refill(jB, zB)
       }
-      refill(TT, UT) {
-        const mT = function(TT, UT, mT, WT) {
-          let zT, MT = 1 / 0;
-          for (const gT of vT) {
-            if (gT === UT) continue;
-            const nT = WT(gT);
-            if (!nT || gT < ZT.n && UT !== mT) continue;
-            const HT = cT(TT, nT.name);
-            void 0 !== HT && HT < MT && (zT = gT, MT = HT)
+      refill(BB, jB) {
+        const zB = function(BB, jB, zB, QB) {
+          let nB, dB = 1 / 0;
+          for (const IB of kB) {
+            if (IB === jB) continue;
+            const NB = QB(IB);
+            if (!NB || IB < mB.n && jB !== zB) continue;
+            const uB = yB(BB, NB.name);
+            void 0 !== uB && uB < dB && (nB = IB, dB = uB)
           }
-          return zT
-        }(UT, TT, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== mT && this.inventory.swap(TT, mT)
+          return nB
+        }(jB, BB, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== zB && this.inventory.swap(BB, zB)
       }
     }
 
-    function qT(TT) {
-      return !!jT(TT) || BT(TT)
+    function LB(BB) {
+      return !!aB(BB) || JB(BB)
     }
-    var iT = mT(36693),
-      bT = mT(85),
-      OT = mT(1126),
-      eT = mT.n(OT);
-    const YT = "Lucky Clover",
-      JT = {
+    var gB = zB(36682),
+      tB = zB(83),
+      SB = zB(1091),
+      MB = zB.n(SB);
+    const EB = "Lucky Clover",
+      iB = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function xT(TT) {
-      return JT[TT][0]
+    function qB(BB) {
+      return iB[BB][0]
     }
 
-    function dT(TT) {
-      return nT.filter((UT => TT >= xT(UT)))
+    function fB(BB) {
+      return NB.filter((jB => BB >= qB(jB)))
     }
-    var wT = mT(351),
-      tT = mT(2552),
-      aT = mT(25),
-      yT = mT(2698),
-      XT = mT(2034),
-      IT = mT(36687),
-      QT = mT(1135);
-    var sT = mT(1188);
-    const FT = {
-      Basic: gT.R.whiteUiText,
-      Rare: gT.R.goldUiText,
-      Super: gT.R.cyanUiText
+    var oB = zB(363),
+      HB = zB(2516),
+      DB = zB(28),
+      FB = zB(2690),
+      YB = zB(1971),
+      VB = zB(36677),
+      hB = zB(1108);
+    var XB = zB(1148);
+    const ZB = {
+      Basic: IB.E.whiteUiText,
+      Rare: IB.E.goldUiText,
+      Super: IB.E.cyanUiText
     };
-    let PT = 1;
+    let AB = 1;
 
-    function VT() {
-      const TT = (0, tT.f)("currencyAmounts"),
-        UT = null === TT || void 0 === TT ? void 0 : TT.Clovers;
-      return !UT || UT.hidden ? null : (0, sT.jsx)(IT.d, {
-        children: (0, sT.jsx)(uT, {
-          amount: UT.amount
+    function TB() {
+      const BB = (0, HB.i)("currencyAmounts"),
+        jB = null === BB || void 0 === BB ? void 0 : BB.Clovers;
+      return !jB || jB.hidden ? null : (0, XB.jsx)(VB.e, {
+        children: (0, XB.jsx)(PB, {
+          amount: jB.amount
         })
       })
     }
 
-    function uT(TT) {
-      var UT, mT, WT;
+    function PB(BB) {
+      var jB, zB, QB;
       let {
-        amount: MT
-      } = TT;
+        amount: dB
+      } = BB;
       const {
-        openEverythingMenuName: HT
-      } = (0, aT.h)(["openEverythingMenuName"]), kT = (0, yT.b)(), [jT, lT] = (0, zT.useState)(MT), [LT, pT] = (0, zT.useState)(null), [BT, ZT] = (0, zT.useState)(0), [cT, vT] = (0, zT.useState)([]), fT = (0, zT.useRef)(MT), qT = (0, zT.useRef)(!1), iT = (0, zT.useRef)(null), OT = HT === wT.k.SHOP;
-      (0, zT.useEffect)((() => {
-        const TT = fT.current;
-        if (fT.current = MT, MT <= TT || OT) return void lT(MT);
-        const UT = kT || cT.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (mT = MT - TT, WT = !qT.current, mT <= 0 || !WT && mT < 40 ? 0 : Math.min(4, Math.ceil(mT / 30)));
-        var mT, WT;
-        if (qT.current = !0, dT(MT).length > dT(TT).length && ZT(PT++), UT > 0) {
-          const TT = [];
-          for (let mT = 0; mT < UT; mT++) TT.push({
-            id: PT++,
+        openEverythingMenuName: uB
+      } = (0, DB.m)(["openEverythingMenuName"]), UB = (0, FB.c)(), [aB, pB] = (0, nB.useState)(dB), [rB, sB] = (0, nB.useState)(null), [JB, mB] = (0, nB.useState)(0), [yB, kB] = (0, nB.useState)([]), GB = (0, nB.useRef)(dB), LB = (0, nB.useRef)(!1), gB = (0, nB.useRef)(null), SB = uB === oB.o.SHOP;
+      (0, nB.useEffect)((() => {
+        const BB = GB.current;
+        if (GB.current = dB, dB <= BB || SB) return void pB(dB);
+        const jB = UB || yB.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (zB = dB - BB, QB = !LB.current, zB <= 0 || !QB && zB < 40 ? 0 : Math.min(4, Math.ceil(zB / 30)));
+        var zB, QB;
+        if (LB.current = !0, fB(dB).length > fB(BB).length && mB(AB++), jB > 0) {
+          const BB = [];
+          for (let zB = 0; zB < jB; zB++) BB.push({
+            id: AB++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * mT
+            delayMs: 70 * zB
           });
-          vT((UT => [...UT, ...TT]))
+          kB((jB => [...jB, ...BB]))
         }
-        const zT = UT > 0 ? 600 : 0;
-        pT({
-          id: PT++,
-          delayMs: zT
+        const nB = jB > 0 ? 600 : 0;
+        sB({
+          id: AB++,
+          delayMs: nB
         });
-        const nT = performance.now() + zT;
-        let HT = 0;
-        const jT = UT => {
-          const mT = gT.e.clamp((UT - nT) / 600, 0, 1);
-          lT(Math.round(TT + (MT - TT) * mT)), mT < 1 && (HT = requestAnimationFrame(jT))
+        const NB = performance.now() + nB;
+        let uB = 0;
+        const aB = jB => {
+          const zB = IB.b.clamp((jB - NB) / 600, 0, 1);
+          pB(Math.round(BB + (dB - BB) * zB)), zB < 1 && (uB = requestAnimationFrame(aB))
         };
-        return HT = requestAnimationFrame(jT), () => {
-          cancelAnimationFrame(HT)
+        return uB = requestAnimationFrame(aB), () => {
+          cancelAnimationFrame(uB)
         }
-      }), [MT, OT]);
-      const JT = function(TT) {
-          var UT;
-          const mT = null !== (UT = nT.find((UT => TT < xT(UT)))) && void 0 !== UT ? UT : "Super";
+      }), [dB, SB]);
+      const iB = function(BB) {
+          var jB;
+          const zB = null !== (jB = NB.find((jB => BB < qB(jB)))) && void 0 !== jB ? jB : "Super";
           return {
-            rarity: mT,
-            progress: gT.e.clamp(TT / xT(mT), 0, 1)
+            rarity: zB,
+            progress: IB.b.clamp(BB / qB(zB), 0, 1)
           }
-        }(jT),
-        tT = dT(jT).at(-1);
-      return (0, sT.jsxs)(sT.Fragment, {
-        children: [(0, sT.jsx)("div", {
+        }(aB),
+        HB = fB(aB).at(-1);
+      return (0, XB.jsxs)(XB.Fragment, {
+        children: [(0, XB.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, sT.jsxs)("div", {
-            className: eT()("LuckyCloverWallet", {
-              Capped: tT && "Basic" !== tT
+          children: (0, XB.jsxs)("div", {
+            className: MB()("LuckyCloverWallet", {
+              Capped: HB && "Basic" !== HB
             }),
-            style: tT && {
-              "--luckyTierColour": FT[tT]
+            style: HB && {
+              "--luckyTierColour": ZB[HB]
             },
-            children: [(0, sT.jsx)("div", {
+            children: [(0, XB.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${JT.progress})`
+                transform: `scaleX(${iB.progress})`
               }
-            }), BT > 0 && (0, sT.jsx)("div", {
+            }), JB > 0 && (0, XB.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(UT=null===LT||void 0===LT?void 0:LT.delayMs)&&void 0!==UT?UT:0}ms`
+                animationDelay: `${null!==(jB=null===rB||void 0===rB?void 0:rB.delayMs)&&void 0!==jB?jB:0}ms`
               }
-            }, BT), (0, sT.jsx)("div", {
-              ref: iT,
-              className: eT()("LuckyCloverWalletIcon", LT && "Bounce"),
+            }, JB), (0, XB.jsx)("div", {
+              ref: gB,
+              className: MB()("LuckyCloverWalletIcon", rB && "Bounce"),
               style: {
-                animationDelay: `${null!==(WT=null===LT||void 0===LT?void 0:LT.delayMs)&&void 0!==WT?WT:0}ms`
+                animationDelay: `${null!==(QB=null===rB||void 0===rB?void 0:rB.delayMs)&&void 0!==QB?QB:0}ms`
               },
-              children: (0, sT.jsx)(XT.b, {
-                itemName: YT,
+              children: (0, XB.jsx)(YB.c, {
+                itemName: EB,
                 amount: 0
               })
-            }, null !== (mT = null === LT || void 0 === LT ? void 0 : LT.id) && void 0 !== mT ? mT : 0), (0, sT.jsx)("span", {
+            }, null !== (zB = null === rB || void 0 === rB ? void 0 : rB.id) && void 0 !== zB ? zB : 0), (0, XB.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: jT
-            }), tT && (0, sT.jsx)(QT.c, {
+              children: aB
+            }), HB && (0, XB.jsx)(hB.c, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, bT.createPortal)(cT.map((TT => (0, sT.jsx)(CT, {
-          flyer: TT,
-          target: iT,
+        }), (0, tB.createPortal)(yB.map((BB => (0, XB.jsx)(WB, {
+          flyer: BB,
+          target: gB,
           onDone: () => {
-            vT((UT => UT.filter((UT => UT.id !== TT.id))))
+            kB((jB => jB.filter((jB => jB.id !== BB.id))))
           }
-        }, TT.id))), document.body)]
+        }, BB.id))), document.body)]
       })
     }
 
-    function CT(TT) {
+    function WB(BB) {
       let {
-        flyer: UT,
-        target: mT,
-        onDone: WT
-      } = TT;
-      const MT = (0, zT.useRef)(null);
-      return (0, zT.useEffect)((() => {
-        var TT;
-        const zT = null === (TT = mT.current) || void 0 === TT ? void 0 : TT.getBoundingClientRect();
-        if (!MT.current || !zT) return void WT();
+        flyer: jB,
+        target: zB,
+        onDone: QB
+      } = BB;
+      const dB = (0, nB.useRef)(null);
+      return (0, nB.useEffect)((() => {
+        var BB;
+        const nB = null === (BB = zB.current) || void 0 === BB ? void 0 : BB.getBoundingClientRect();
+        if (!dB.current || !nB) return void QB();
         const {
-          x: gT,
-          y: nT
-        } = UT, HT = gT + 140 * (Math.random() - .5), kT = nT - 30 - 40 * Math.random(), jT = MT.current.animate([{
-          transform: `translate(${gT}px, ${nT}px) scale(0.3)`,
+          x: IB,
+          y: NB
+        } = jB, uB = IB + 140 * (Math.random() - .5), UB = NB - 30 - 40 * Math.random(), aB = dB.current.animate([{
+          transform: `translate(${IB}px, ${NB}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${HT}px, ${kT}px) scale(1.3)`,
+          transform: `translate(${uB}px, ${UB}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${zT.left}px, ${zT.top}px) scale(0.8)`,
+          transform: `translate(${nB.left}px, ${nB.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: UT.delayMs,
+          delay: jB.delayMs,
           fill: "backwards"
         });
-        return jT.onfinish = WT, () => {
-          jT.cancel()
+        return aB.onfinish = QB, () => {
+          aB.cancel()
         }
-      }), []), (0, sT.jsx)("div", {
-        ref: MT,
+      }), []), (0, XB.jsx)("div", {
+        ref: dB,
         className: "LuckyCloverFlying",
-        children: (0, sT.jsx)(XT.b, {
-          itemName: YT,
+        children: (0, XB.jsx)(YB.c, {
+          itemName: EB,
           amount: 0
         })
       })
     }
-    var rT = mT(31);
-    const KT = "luckyGearUpgradeView",
-      ST = {
+    var eB = zB(31);
+    const lB = "luckyGearUpgradeView",
+      wB = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -532,13 +532,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function GT(TT) {
-      var UT;
-      return null !== (UT = ST[TT.split(" ")[0]]) && void 0 !== UT ? UT : "#e07bff"
+    function xB(BB) {
+      var jB;
+      return null !== (jB = wB[BB.split(" ")[0]]) && void 0 !== jB ? jB : "#e07bff"
     }
-    class NT {
-      constructor(TT, UT) {
-        this.selectedSlot = TT, this.itemAt = UT, this.rings = [], this.unseen = new Map, this.view = {
+    class KB {
+      constructor(BB, jB) {
+        this.selectedSlot = BB, this.itemAt = jB, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -546,200 +546,200 @@ export const modules = {
       getView() {
         return this.view
       }
-      pB(TT) {
-        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [mT, WT, zT] of TT) this.rings.push({
+      VJ(BB) {
+        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [zB, QB, nB] of BB) this.rings.push({
           id: this.nextId++,
-          slot: mT,
-          colour: GT(zT),
-          until: UT + 1200
-        }), mT !== this.selectedSlot() && this.unseen.set(mT, {
-          from: WT,
-          to: zT
+          slot: zB,
+          colour: xB(nB),
+          until: jB + 1200
+        }), zB !== this.selectedSlot() && this.unseen.set(zB, {
+          from: QB,
+          to: nB
         });
-        this.EZ()
+        this.Ly()
       }
-      Cl() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
+      vp() {
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const UT = this.rings.filter((UT => UT.until > TT));
-        let mT = UT.length !== this.rings.length;
-        this.rings = UT;
-        for (const [WT, {
-            from: zT,
-            to: MT
+        const jB = this.rings.filter((jB => jB.until > BB));
+        let zB = jB.length !== this.rings.length;
+        this.rings = jB;
+        for (const [QB, {
+            from: nB,
+            to: dB
           }] of this.unseen) {
-          const TT = this.itemAt(WT);
-          (WT === this.selectedSlot() || TT !== MT && TT !== zT) && (this.unseen.delete(WT), mT = !0)
+          const BB = this.itemAt(QB);
+          (QB === this.selectedSlot() || BB !== dB && BB !== nB) && (this.unseen.delete(QB), zB = !0)
         }
-        mT && this.EZ()
+        zB && this.Ly()
       }
-      EZ() {
+      Ly() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, rT.j.EZ(KT, this.view)
+        }, eB.n.Ly(lB, this.view)
       }
     }
-    var ET = mT(1567);
+    var CB = zB(1471);
 
-    function hT(TT) {
-      return document.querySelector(`.HotBar [data-inven-idx="${TT}"]`)
+    function cB(BB) {
+      return document.querySelector(`.HotBar [data-inven-idx="${BB}"]`)
     }
 
-    function DT(TT) {
+    function bB(BB) {
       let {
-        ring: UT
-      } = TT;
-      const [mT, WT] = (0, zT.useState)(null);
-      return (0, zT.useLayoutEffect)((() => {
-        var TT, mT;
-        WT(null !== (TT = null === (mT = hT(UT.slot)) || void 0 === mT ? void 0 : mT.getBoundingClientRect()) && void 0 !== TT ? TT : null)
-      }), [UT]), mT ? (0, sT.jsx)("div", {
+        ring: jB
+      } = BB;
+      const [zB, QB] = (0, nB.useState)(null);
+      return (0, nB.useLayoutEffect)((() => {
+        var BB, zB;
+        QB(null !== (BB = null === (zB = cB(jB.slot)) || void 0 === zB ? void 0 : zB.getBoundingClientRect()) && void 0 !== BB ? BB : null)
+      }), [jB]), zB ? (0, XB.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: mT.left,
-          top: mT.top,
-          width: mT.width,
-          height: mT.height,
-          "--ringColour": UT.colour,
+          left: zB.left,
+          top: zB.top,
+          width: zB.width,
+          height: zB.height,
+          "--ringColour": jB.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function oT(TT) {
+    function vB(BB) {
       let {
-        slot: UT
-      } = TT;
-      const [mT, WT] = (0, zT.useState)(null);
-      return (0, zT.useLayoutEffect)((() => {
-        const TT = () => {
-          WT(hT(UT))
+        slot: jB
+      } = BB;
+      const [zB, QB] = (0, nB.useState)(null);
+      return (0, nB.useLayoutEffect)((() => {
+        const BB = () => {
+          QB(cB(jB))
         };
-        TT();
-        const mT = new MutationObserver(TT),
-          zT = document.querySelector(".BottomMiddleElements");
-        return zT && mT.observe(zT, {
+        BB();
+        const zB = new MutationObserver(BB),
+          nB = document.querySelector(".BottomMiddleElements");
+        return nB && zB.observe(nB, {
           childList: !0,
           subtree: !0
         }), () => {
-          mT.disconnect()
+          zB.disconnect()
         }
-      }), [UT]), mT ? (0, bT.createPortal)((0, sT.jsx)("div", {
+      }), [jB]), zB ? (0, tB.createPortal)((0, XB.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), mT) : null
+      }), zB) : null
     }
 
-    function AT(TT) {
+    function RB(BB) {
       let {
-        controller: UT
-      } = TT;
-      const mT = (0, ET.j)(KT, UT.getView());
-      return (0, sT.jsxs)(sT.Fragment, {
-        children: [mT.rings.map((TT => (0, sT.jsx)(DT, {
-          ring: TT
-        }, TT.id))), mT.unseenSlots.map((TT => (0, sT.jsx)(oT, {
-          slot: TT
-        }, TT)))]
+        controller: jB
+      } = BB;
+      const zB = (0, CB.h)(lB, jB.getView());
+      return (0, XB.jsxs)(XB.Fragment, {
+        children: [zB.rings.map((BB => (0, XB.jsx)(bB, {
+          ring: BB
+        }, BB.id))), zB.unseenSlots.map((BB => (0, XB.jsx)(vB, {
+          slot: BB
+        }, BB)))]
       })
     }
-    const RT = function(TT, UT, mT, gT) {
-      let nT, {
-          localPlayerId: HT
-        } = gT,
-        kT = null;
-      const jT = new fT({
-          itemAt: TT => nT.getItemSlot(HT, TT),
-          selectedSlot: () => nT.getSelectedInventorySlotI(HT),
-          swap: (TT, UT) => {
-            nT.swapInventorySlots(TT, UT)
+    const OB = function(BB, jB, zB, IB) {
+      let NB, {
+          localPlayerId: uB
+        } = IB,
+        UB = null;
+      const aB = new GB({
+          itemAt: BB => NB.getItemSlot(uB, BB),
+          selectedSlot: () => NB.getSelectedInventorySlotI(uB),
+          swap: (BB, jB) => {
+            NB.swapInventorySlots(BB, jB)
           }
         }),
-        lT = new NT((() => nT.getSelectedInventorySlotI(HT)), (TT => {
-          var UT;
-          return null === (UT = nT.getItemSlot(HT, TT)) || void 0 === UT ? void 0 : UT.name
+        pB = new KB((() => NB.getSelectedInventorySlotI(uB)), (BB => {
+          var jB;
+          return null === (jB = NB.getItemSlot(uB, BB)) || void 0 === jB ? void 0 : jB.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, MT.b)()
+          placeAgainstBeds: (0, dB.b)()
         },
-        onCreate: TT => {
-          nT = TT, kT = (0, iT.q)((0, zT.createElement)(zT.Fragment, null, (0, zT.createElement)(VT), (0, zT.createElement)(AT, {
-            controller: lT
+        onCreate: BB => {
+          NB = BB, UB = (0, gB.t)((0, nB.createElement)(nB.Fragment, null, (0, nB.createElement)(TB), (0, nB.createElement)(RB, {
+            controller: pB
           })))
         },
         onClose: () => {
-          var TT;
-          null === (TT = kT) || void 0 === TT || TT()
+          var BB;
+          null === (BB = UB) || void 0 === BB || BB()
         },
-        Cl: () => {
-          jT.Cl(), lT.Cl()
+        vp: () => {
+          aB.vp(), pB.vp()
         },
-        onReceivedMessageFromServer: (TT, UT) => {
-          "luckyGearUpgrade" === TT && lT.pB(UT)
+        onReceivedMessageFromServer: (BB, jB) => {
+          "luckyGearUpgrade" === BB && pB.VJ(jB)
         },
-        onPlayerChangeBlock: (TT, UT, mT, WT, zT, MT) => {
-          "Air" !== MT && jT.onPlace(MT)
+        onPlayerChangeBlock: (BB, jB, zB, QB, nB, dB) => {
+          "Air" !== dB && aB.onPlace(dB)
         },
-        onPlayerDropItem: (TT, UT, mT, WT) => {
-          jT.onDrop(UT, WT)
+        onPlayerDropItem: (BB, jB, zB, QB) => {
+          aB.onDrop(jB, QB)
         },
-        onPlayerAltAction: (TT, UT, mT, zT, MT, gT) => {
-          if (!gT || "Mesh" !== nT.getEntityType(gT)) return;
-          const HT = nT.getEntityName(gT),
-            kT = Object.values(WT).find((TT => TT.name === HT));
-          kT && nT.openShop(TT, !1, kT.shopTab)
+        onPlayerAltAction: (BB, jB, zB, nB, dB, IB) => {
+          if (!IB || "Mesh" !== NB.getEntityType(IB)) return;
+          const uB = NB.getEntityName(IB),
+            UB = Object.values(QB).find((BB => BB.name === uB));
+          UB && NB.openShop(BB, !1, UB.shopTab)
         }
       }
     }
   },
-  38164: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => nT
+  38120: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => NB
     });
-    var WT = mT(366),
-      zT = mT(37032),
-      MT = mT(4594);
-    const gT = ["Leaf Bed", "_Leaf Bed Head", ...WT._c.flatMap((TT => [`${TT} Bed`, `_${TT} Bed Head`, `${TT} Strongbed`, `_${TT} Strongbed Head`]))];
+    var QB = zB(376),
+      nB = zB(37002),
+      dB = zB(4597);
+    const IB = ["Leaf Bed", "_Leaf Bed Head", ...QB.Kc.flatMap((BB => [`${BB} Bed`, `_${BB} Bed Head`, `${BB} Strongbed`, `_${BB} Strongbed Head`]))];
 
-    function nT() {
-      let TT;
+    function NB() {
+      let BB;
       return {
-        onCreate(UT) {
-          TT = UT
+        onCreate(jB) {
+          BB = jB
         },
-        altVetoBlocks: gT,
-        onPlayerAttemptAltAction(UT, mT, WT, gT, nT, HT) {
-          var kT;
-          if ((0, zT.c)(TT.getMetaInfo(nT).rootName) && !TT.isEntityInteractable(HT) && (0, MT.f)(null === (kT = TT.RUT(UT)) || void 0 === kT ? void 0 : kT.typeObj.type)) return "preventAction"
+        altVetoBlocks: IB,
+        onPlayerAttemptAltAction(jB, zB, QB, IB, NB, uB) {
+          var UB;
+          if ((0, nB.b)(BB.getMetaInfo(NB).rootName) && !BB.isEntityInteractable(uB) && (0, dB.c)(null === (UB = BB.ZjB(jB)) || void 0 === UB ? void 0 : UB.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  37032: (TT, UT, mT) => {
-    function WT(TT) {
-      return TT.includes("Leaf Bed")
+  37002: (BB, jB, zB) => {
+    function QB(BB) {
+      return BB.includes("Leaf Bed")
     }
 
-    function zT(TT) {
-      return / Bed(?: Head)?(?:\||$)/.test(TT) && !WT(TT)
+    function nB(BB) {
+      return / Bed(?: Head)?(?:\||$)/.test(BB) && !QB(BB)
     }
 
-    function MT(TT) {
-      return TT.includes(" Strongbed")
+    function dB(BB) {
+      return BB.includes(" Strongbed")
     }
 
-    function gT(TT) {
-      return WT(TT) || zT(TT) || MT(TT)
+    function IB(BB) {
+      return QB(BB) || nB(BB) || dB(BB)
     }
-    mT.d(UT, {
-      c: () => gT,
-      g: () => WT,
-      j: () => MT,
-      l: () => zT
+    zB.d(jB, {
+      b: () => IB,
+      f: () => QB,
+      h: () => dB,
+      i: () => nB
     })
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

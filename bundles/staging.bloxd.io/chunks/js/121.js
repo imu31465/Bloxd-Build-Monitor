@@ -1,66 +1,66 @@
 export const id = 121;
 export const ids = [121];
 export const modules = {
-  36707: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => ZT,
-      d: () => OT
+  36694: (BB, jB, zB) => {
+    zB.d(jB, {
+      e: () => mB,
+      f: () => SB
     });
-    mT(34243);
-    var WT = mT(63),
-      zT = mT(1567),
-      MT = mT(2046),
-      gT = mT(2089),
-      nT = mT(25),
-      HT = mT(2552),
-      kT = mT(36710),
-      jT = mT(36716),
-      lT = mT(34227),
-      LT = mT(34237),
-      pT = mT(34253),
-      BT = mT(1188);
-    const ZT = (0, WT.memo)((function() {
-      var TT;
+    zB(34219);
+    var QB = zB(62),
+      nB = zB(1471),
+      dB = zB(1982),
+      IB = zB(2025),
+      NB = zB(28),
+      uB = zB(2516),
+      UB = zB(36699),
+      aB = zB(36703),
+      pB = zB(34202),
+      rB = zB(34212),
+      sB = zB(34229),
+      JB = zB(1148);
+    const mB = (0, QB.memo)((function() {
+      var BB;
       const {
-        isTouchScreen: UT,
-        clientEscMenuOptions: mT,
-        scriptedCameraFacing: MT,
-        crosshairShownOverride: ZT,
-        crosshairGameView: vT
-      } = (0, nT.h)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride", "crosshairGameView"]), fT = (0, HT.f)("gunshotOrigin"), qT = (0, WT.useRef)(null), iT = (0, WT.useRef)(!1), [bT, eT] = (0, WT.useState)(cT);
-      (0, zT.g)("cameraZoomSet", eT), (0, WT.useEffect)((() => {
-        eT(cT())
+        isTouchScreen: jB,
+        clientEscMenuOptions: zB,
+        scriptedCameraFacing: dB,
+        crosshairShownOverride: mB,
+        crosshairGameView: kB
+      } = (0, NB.m)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride", "crosshairGameView"]), GB = (0, uB.i)("gunshotOrigin"), LB = (0, QB.useRef)(null), gB = (0, QB.useRef)(!1), [tB, MB] = (0, QB.useState)(yB);
+      (0, nB.f)("cameraZoomSet", MB), (0, QB.useEffect)((() => {
+        MB(yB())
       }), []);
-      const YT = (0, gT.i)("heldItemAim"),
-        xT = YT.gun,
-        dT = (0, pT.g)(),
-        wT = (0, WT.useRef)(dT);
-      wT.current = dT;
-      const [tT, aT] = (0, WT.useState)(!1);
-      (0, WT.useEffect)((() => (0, jT.e)("crosshairAccuracy", OT)), []), (0, zT.g)("mouseState", (TT => {
+      const EB = (0, IB.k)("heldItemAim"),
+        qB = EB.gun,
+        fB = (0, sB.e)(),
+        oB = (0, QB.useRef)(fB);
+      oB.current = fB;
+      const [HB, DB] = (0, QB.useState)(!1);
+      (0, QB.useEffect)((() => (0, aB.e)("crosshairAccuracy", SB)), []), (0, nB.f)("mouseState", (BB => {
         let {
-          isDown: UT
-        } = TT;
-        iT.current = UT, qT.current && (qT.current.style.transform = (0, LT.c)(UT, wT.current.growOnClick)), "shapes" === wT.current.style && aT(UT)
+          isDown: jB
+        } = BB;
+        gB.current = jB, LB.current && (LB.current.style.transform = (0, rB.d)(jB, oB.current.growOnClick)), "shapes" === oB.current.style && DB(jB)
       }));
-      const yT = (0, lT.h)(UT, mT.touchActionButtons);
-      return (null !== (TT = (0, kT.e)(vT, ZT)) && void 0 !== TT ? TT : (0, kT.i)(YT, bT > 1, yT, fT)) ? "movement" === MT || "cursor" === MT ? null : (0, BT.jsxs)(BT.Fragment, {
-        children: [xT && (0, BT.jsx)(JT, {
-          custom: dT.forGuns && "shapes" === dT.style ? dT : null,
-          touch: UT
-        }), !xT && (0, BT.jsx)(LT.b, {
-          settings: dT,
-          touch: UT,
-          pressRef: qT,
-          pressed: "shapes" === dT.style ? tT : iT.current
+      const FB = (0, pB.d)(jB, zB.touchActionButtons);
+      return (null !== (BB = (0, UB.e)(kB, mB)) && void 0 !== BB ? BB : (0, UB.l)(EB, tB > 1, FB, GB)) ? "movement" === dB || "cursor" === dB ? null : (0, JB.jsxs)(JB.Fragment, {
+        children: [qB && (0, JB.jsx)(iB, {
+          custom: fB.forGuns && "shapes" === fB.style ? fB : null,
+          touch: jB
+        }), !qB && (0, JB.jsx)(rB.b, {
+          settings: fB,
+          touch: jB,
+          pressRef: LB,
+          pressed: "shapes" === fB.style ? HB : gB.current
         })]
       }) : null
     }));
 
-    function cT() {
-      return MT.gameBridge.lookup("cameraZoom", null)
+    function yB() {
+      return dB.gameBridge.lookup("cameraZoom", null)
     }
-    const vT = [{
+    const kB = [{
         current: null
       }, {
         current: null
@@ -69,340 +69,340 @@ export const modules = {
       }, {
         current: null
       }],
-      fT = {
+      GB = {
         current: null
       },
-      qT = {
+      LB = {
         current: null
       };
-    let iT = 0,
-      bT = 0;
+    let gB = 0,
+      tB = 0;
 
-    function OT(TT) {
-      bT = TT, vT[0].current || fT.current || qT.current ? YT(TT) : iT = TT
+    function SB(BB) {
+      tB = BB, kB[0].current || GB.current || LB.current ? EB(BB) : gB = BB
     }
 
-    function eT(TT) {
-      return ((0, kT.h)(TT) - (0, kT.h)(0)) * window.innerHeight / 100
+    function MB(BB) {
+      return ((0, UB.h)(BB) - (0, UB.h)(0)) * window.innerHeight / 100
     }
 
-    function YT(TT) {
-      var UT;
-      if (null === (UT = qT.current) || void 0 === UT || UT.call(qT, eT(TT)), vT[0].current) {
-        const UT = `${(0,kT.h)(TT)}vh`;
-        vT[0].current.style.transform = `translateX(calc(0px - ${UT}))`, vT[1].current.style.transform = `translateX(calc(0px + ${UT}))`, vT[2].current.style.transform = `translateY(calc(0px - ${UT}))`, vT[3].current.style.transform = `translateY(calc(0px + ${UT}))`
+    function EB(BB) {
+      var jB;
+      if (null === (jB = LB.current) || void 0 === jB || jB.call(LB, MB(BB)), kB[0].current) {
+        const jB = `${(0,UB.h)(BB)}vh`;
+        kB[0].current.style.transform = `translateX(calc(0px - ${jB}))`, kB[1].current.style.transform = `translateX(calc(0px + ${jB}))`, kB[2].current.style.transform = `translateY(calc(0px - ${jB}))`, kB[3].current.style.transform = `translateY(calc(0px + ${jB}))`
       }
-      fT.current && (fT.current.style.filter = `blur(${Math.round(TT/10)}px)`)
+      GB.current && (GB.current.style.filter = `blur(${Math.round(BB/10)}px)`)
     }
 
-    function JT(TT) {
+    function iB(BB) {
       let {
-        custom: UT,
-        touch: mT
-      } = TT;
-      const MT = (0, zT.j)("aimingOverlay", "none"),
-        gT = "1.2vh",
-        nT = "0.3vh";
-      (0, WT.useEffect)((() => {
-        iT && YT(iT)
+        custom: jB,
+        touch: zB
+      } = BB;
+      const dB = (0, nB.h)("aimingOverlay", "none"),
+        IB = "1.2vh",
+        NB = "0.3vh";
+      (0, QB.useEffect)((() => {
+        gB && EB(gB)
       }), []);
-      const HT = (0, WT.useRef)(null !== UT);
-      return (0, WT.useLayoutEffect)((() => {
-        var TT;
-        UT ? null === (TT = qT.current) || void 0 === TT || TT.call(qT, eT(bT)) : HT.current && YT(bT);
-        HT.current = null !== UT
-      }), [UT]), (0, BT.jsxs)(BT.Fragment, {
-        children: ["sniper" === MT && (0, BT.jsxs)("div", {
-          ref: fT,
+      const uB = (0, QB.useRef)(null !== jB);
+      return (0, QB.useLayoutEffect)((() => {
+        var BB;
+        jB ? null === (BB = LB.current) || void 0 === BB || BB.call(LB, MB(tB)) : uB.current && EB(tB);
+        uB.current = null !== jB
+      }), [jB]), (0, JB.jsxs)(JB.Fragment, {
+        children: ["sniper" === dB && (0, JB.jsxs)("div", {
+          ref: GB,
           className: "GunCrosshairOverlayWrapper",
-          children: [(0, BT.jsx)("div", {
+          children: [(0, JB.jsx)("div", {
             className: "GunCrosshairOverlay"
-          }), (0, BT.jsx)("div", {
+          }), (0, JB.jsx)("div", {
             className: "GunCrosshairOverlayLine1"
-          }), (0, BT.jsx)("div", {
+          }), (0, JB.jsx)("div", {
             className: "GunCrosshairOverlayLine2"
-          }), (0, BT.jsx)("div", {
+          }), (0, JB.jsx)("div", {
             className: "GunCrosshairOverlayDot"
           })]
-        }), (0, BT.jsxs)("div", {
+        }), (0, JB.jsxs)("div", {
           className: "GunCrosshairWrapper",
           style: {
-            opacity: "sniper" === MT ? 0 : 1
+            opacity: "sniper" === dB ? 0 : 1
           },
-          children: [UT && (0, BT.jsx)(LT.b, {
-            settings: UT,
-            touch: mT,
-            spreadRef: qT
-          }), !UT && (0, BT.jsxs)(BT.Fragment, {
-            children: [(0, BT.jsx)("div", {
+          children: [jB && (0, JB.jsx)(rB.b, {
+            settings: jB,
+            touch: zB,
+            spreadRef: LB
+          }), !jB && (0, JB.jsxs)(JB.Fragment, {
+            children: [(0, JB.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: gT,
-                height: nT,
+                width: IB,
+                height: NB,
                 top: "49.85vh",
                 left: "calc(50vw - 0.6vh)"
               },
-              ref: vT[0]
-            }), (0, BT.jsx)("div", {
+              ref: kB[0]
+            }), (0, JB.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: gT,
-                height: nT,
+                width: IB,
+                height: NB,
                 top: "49.85vh",
                 left: "calc(50vw - 0.6vh)"
               },
-              ref: vT[1]
-            }), (0, BT.jsx)("div", {
+              ref: kB[1]
+            }), (0, JB.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: nT,
-                height: gT,
+                width: NB,
+                height: IB,
                 top: "49.4vh",
                 left: "calc(50vw - 0.15vh)"
               },
-              ref: vT[2]
-            }), (0, BT.jsx)("div", {
+              ref: kB[2]
+            }), (0, JB.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: nT,
-                height: gT,
+                width: NB,
+                height: IB,
                 top: "49.4vh",
                 left: "calc(50vw - 0.15vh)"
               },
-              ref: vT[3]
+              ref: kB[3]
             })]
           })]
         })]
       })
     }
   },
-  34237: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => ZT,
-      c: () => BT
+  34212: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => mB,
+      d: () => JB
     });
-    mT(34243);
-    var WT = mT(1126),
-      zT = mT.n(WT),
-      MT = mT(63),
-      gT = mT(34233);
+    zB(34219);
+    var QB = zB(1091),
+      nB = zB.n(QB),
+      dB = zB(62),
+      IB = zB(34208);
 
-    function nT(TT, UT) {
-      return Math.max(1, Math.round(TT * UT))
+    function NB(BB, jB) {
+      return Math.max(1, Math.round(BB * jB))
     }
 
-    function HT(TT, UT) {
-      const mT = UT * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        WT = function(TT, UT) {
-          if (TT.lines) return nT(TT.lineThickness, UT) % 2;
-          if (TT.dot) return nT(TT.dotSize, UT) % 2;
-          return kT(TT, UT) % 2
-        }(TT, UT),
-        zT = jT(TT.lineThickness * mT, WT),
-        MT = nT(TT.lineLength, mT),
-        gT = Math.round(TT.gap * mT),
-        HT = TT.outline > 0 ? nT(TT.outline, mT) : 0,
-        LT = [];
-      if (TT.lines && (LT.push({
-          x: zT + gT,
+    function uB(BB, jB) {
+      const zB = jB * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        QB = function(BB, jB) {
+          if (BB.lines) return NB(BB.lineThickness, jB) % 2;
+          if (BB.dot) return NB(BB.dotSize, jB) % 2;
+          return UB(BB, jB) % 2
+        }(BB, jB),
+        nB = aB(BB.lineThickness * zB, QB),
+        dB = NB(BB.lineLength, zB),
+        IB = Math.round(BB.gap * zB),
+        uB = BB.outline > 0 ? NB(BB.outline, zB) : 0,
+        rB = [];
+      if (BB.lines && (rB.push({
+          x: nB + IB,
           y: 0,
-          w: MT,
-          h: zT,
+          w: dB,
+          h: nB,
           arm: "right"
-        }), LT.push({
-          x: -gT - MT,
+        }), rB.push({
+          x: -IB - dB,
           y: 0,
-          w: MT,
-          h: zT,
+          w: dB,
+          h: nB,
           arm: "left"
-        }), LT.push({
+        }), rB.push({
           x: 0,
-          y: zT + gT,
-          w: zT,
-          h: MT,
+          y: nB + IB,
+          w: nB,
+          h: dB,
           arm: "down"
-        }), TT.tStyle || LT.push({
+        }), BB.tStyle || rB.push({
           x: 0,
-          y: -gT - MT,
-          w: zT,
-          h: MT,
+          y: -IB - dB,
+          w: nB,
+          h: dB,
           arm: "up"
-        }), 0 === gT && LT.push({
+        }), 0 === IB && rB.push({
           x: 0,
           y: 0,
-          w: zT,
-          h: zT
-        })), TT.dot) {
-        const UT = jT(TT.dotSize * mT, WT),
-          MT = TT.lines && 0 === gT && TT.dotSize > TT.lineThickness ? Math.max(UT, zT + 2) : UT,
-          nT = (zT - MT) / 2;
-        LT.push({
-          x: nT,
-          y: nT,
-          w: MT,
-          h: MT
+          w: nB,
+          h: nB
+        })), BB.dot) {
+        const jB = aB(BB.dotSize * zB, QB),
+          dB = BB.lines && 0 === IB && BB.dotSize > BB.lineThickness ? Math.max(jB, nB + 2) : jB,
+          NB = (nB - dB) / 2;
+        rB.push({
+          x: NB,
+          y: NB,
+          w: dB,
+          h: dB
         })
       }
-      const pT = LT.map((TT => ({
-        ...TT,
-        x: TT.x - HT,
-        y: TT.y - HT,
-        w: TT.w + 2 * HT,
-        h: TT.h + 2 * HT
+      const sB = rB.map((BB => ({
+        ...BB,
+        x: BB.x - uB,
+        y: BB.y - uB,
+        w: BB.w + 2 * uB,
+        h: BB.h + 2 * uB
       })));
-      let BT = null,
-        ZT = null;
-      if (TT.circle) {
-        const UT = nT(TT.circleThickness, mT),
-          MT = function(TT, UT) {
-            return TT + (TT % 2 === UT ? 0 : 1)
-          }(kT(TT, mT), WT),
-          gT = (zT - MT) / 2;
-        BT = lT(gT, MT, UT), HT > 0 && (ZT = lT(gT - HT, MT + 2 * HT, UT + 2 * HT))
+      let JB = null,
+        mB = null;
+      if (BB.circle) {
+        const jB = NB(BB.circleThickness, zB),
+          dB = function(BB, jB) {
+            return BB + (BB % 2 === jB ? 0 : 1)
+          }(UB(BB, zB), QB),
+          IB = (nB - dB) / 2;
+        JB = pB(IB, dB, jB), uB > 0 && (mB = pB(IB - uB, dB + 2 * uB, jB + 2 * uB))
       }
       return {
-        cell: zT,
-        fills: LT,
-        outlines: HT > 0 ? pT : [],
-        ring: BT,
-        ringOutline: ZT
+        cell: nB,
+        fills: rB,
+        outlines: uB > 0 ? sB : [],
+        ring: JB,
+        ringOutline: mB
       }
     }
 
-    function kT(TT, UT) {
-      return Math.round(TT.circleRadius * UT * 2 + nT(TT.circleThickness, UT))
+    function UB(BB, jB) {
+      return Math.round(BB.circleRadius * jB * 2 + NB(BB.circleThickness, jB))
     }
 
-    function jT(TT, UT) {
-      return Math.max(2 - UT, 2 * Math.round((TT - UT) / 2) + UT)
+    function aB(BB, jB) {
+      return Math.max(2 - jB, 2 * Math.round((BB - jB) / 2) + jB)
     }
 
-    function lT(TT, UT, mT) {
-      const WT = 2 * mT >= UT - 1;
+    function pB(BB, jB, zB) {
+      const QB = 2 * zB >= jB - 1;
       return {
-        x: TT,
-        y: TT,
-        size: UT,
-        border: Math.min(mT, Math.floor(UT / 2)),
-        filled: WT
+        x: BB,
+        y: BB,
+        size: jB,
+        border: Math.min(zB, Math.floor(jB / 2)),
+        filled: QB
       }
     }
-    var LT = mT(1188);
-    const pT = 1.4;
+    var rB = zB(1148);
+    const sB = 1.4;
 
-    function BT(TT, UT) {
-      return TT && UT ? `scale(${pT})` : "scale(1)"
+    function JB(BB, jB) {
+      return BB && jB ? `scale(${sB})` : "scale(1)"
     }
 
-    function ZT(TT) {
-      return "classic" === TT.settings.style ? (0, LT.jsx)(fT, {
-        ...TT
-      }) : (0, LT.jsx)(JT, {
-        ...TT
+    function mB(BB) {
+      return "classic" === BB.settings.style ? (0, rB.jsx)(GB, {
+        ...BB
+      }) : (0, rB.jsx)(iB, {
+        ...BB
       })
     }
-    const cT = .125;
+    const yB = .125;
 
-    function vT(TT, UT) {
-      const mT = {};
-      if (TT.color !== gT.e.color && (mT.color = (0, gT.i)(TT.color)), TT.opacity !== gT.e.opacity && (mT.opacity = TT.opacity / 100), TT.outline !== gT.e.outline || TT.outlineColor !== gT.e.outlineColor) {
-        const UT = TT.outline,
-          WT = (0, gT.i)(TT.outlineColor);
-        mT.textShadow = UT > 0 ? `-${UT}px 0 ${WT}, 0 ${UT}px ${WT}, ${UT}px 0 ${WT}, 0 -${UT}px ${WT}` : "none"
+    function kB(BB, jB) {
+      const zB = {};
+      if (BB.color !== IB.g.color && (zB.color = (0, IB.m)(BB.color)), BB.opacity !== IB.g.opacity && (zB.opacity = BB.opacity / 100), BB.outline !== IB.g.outline || BB.outlineColor !== IB.g.outlineColor) {
+        const jB = BB.outline,
+          QB = (0, IB.m)(BB.outlineColor);
+        zB.textShadow = jB > 0 ? `-${jB}px 0 ${QB}, 0 ${jB}px ${QB}, ${jB}px 0 ${QB}, 0 -${jB}px ${QB}` : "none"
       }
-      if (TT.size !== gT.e.size) {
-        const WT = TT.size / 100;
-        mT.fontSize = UT ? `calc(max(1.3rem, 18px) * ${WT})` : `calc(1.3rem * ${WT})`, mT.marginTop = `-${cT}em`, mT.transformOrigin = `50% calc(50% + ${cT}em)`
+      if (BB.size !== IB.g.size) {
+        const QB = BB.size / 100;
+        zB.fontSize = jB ? `calc(max(1.3rem, 18px) * ${QB})` : `calc(1.3rem * ${QB})`, zB.marginTop = `-${yB}em`, zB.transformOrigin = `50% calc(50% + ${yB}em)`
       }
-      return mT
+      return zB
     }
 
-    function fT(TT) {
+    function GB(BB) {
       let {
-        settings: UT,
-        touch: mT,
-        inPreview: WT,
-        inEditor: MT,
-        pressed: gT = !1,
-        pressRef: nT
-      } = TT;
-      return (0, LT.jsx)("div", {
-        className: zT()("Crosshair", {
-          Touch: mT,
-          CrosshairInPreview: WT,
-          CrosshairInEditor: MT || WT
+        settings: jB,
+        touch: zB,
+        inPreview: QB,
+        inEditor: dB,
+        pressed: IB = !1,
+        pressRef: NB
+      } = BB;
+      return (0, rB.jsx)("div", {
+        className: nB()("Crosshair", {
+          Touch: zB,
+          CrosshairInPreview: QB,
+          CrosshairInEditor: dB || QB
         }),
-        ref: nT,
+        ref: NB,
         style: {
-          transform: BT(gT, UT.growOnClick),
-          ...vT(UT, mT)
+          transform: JB(IB, jB.growOnClick),
+          ...kB(jB, zB)
         },
         children: "+"
       })
     }
 
-    function qT(TT, UT) {
-      return TT / UT + "px"
+    function LB(BB, jB) {
+      return BB / jB + "px"
     }
 
-    function iT(TT, UT, mT, WT) {
+    function gB(BB, jB, zB, QB) {
       return {
-        ...eT(TT, UT, mT),
-        width: qT(TT.w, mT),
-        height: qT(TT.h, mT),
-        background: WT
+        ...MB(BB, jB, zB),
+        width: LB(BB.w, zB),
+        height: LB(BB.h, zB),
+        background: QB
       }
     }
 
-    function bT(TT, UT, mT) {
+    function tB(BB, jB, zB) {
       return {
-        left: qT(TT.x, UT),
-        top: qT(TT.y, UT),
-        width: qT(TT.size, UT),
-        height: qT(TT.size, UT),
-        borderWidth: qT(TT.border, UT),
-        borderColor: mT,
-        background: TT.filled ? mT : void 0
+        left: LB(BB.x, jB),
+        top: LB(BB.y, jB),
+        width: LB(BB.size, jB),
+        height: LB(BB.size, jB),
+        borderWidth: LB(BB.border, jB),
+        borderColor: zB,
+        background: BB.filled ? zB : void 0
       }
     }
-    const OT = {
+    const SB = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function eT(TT, UT, mT) {
-      const [WT, zT] = TT.arm ? OT[TT.arm] : [0, 0], MT = Math.round(UT * mT);
+    function MB(BB, jB, zB) {
+      const [QB, nB] = BB.arm ? SB[BB.arm] : [0, 0], dB = Math.round(jB * zB);
       return {
-        left: qT(TT.x + WT * MT, mT),
-        top: qT(TT.y + zT * MT, mT)
+        left: LB(BB.x + QB * dB, zB),
+        top: LB(BB.y + nB * dB, zB)
       }
     }
 
-    function YT(TT) {
-      return TT.arm ? {
-        "data-arm": TT.arm,
-        "data-x": TT.x,
-        "data-y": TT.y
+    function EB(BB) {
+      return BB.arm ? {
+        "data-arm": BB.arm,
+        "data-x": BB.x,
+        "data-y": BB.y
       } : {}
     }
 
-    function JT(TT) {
+    function iB(BB) {
       let {
-        settings: UT,
-        inPreview: mT,
-        inEditor: WT,
-        pressed: nT = !1,
-        spread: kT,
-        spreadRef: jT
-      } = TT;
-      const lT = (0, MT.useRef)(null),
+        settings: jB,
+        inPreview: zB,
+        inEditor: QB,
+        pressed: NB = !1,
+        spread: UB,
+        spreadRef: aB
+      } = BB;
+      const pB = (0, dB.useRef)(null),
         {
-          box: BT,
-          dpr: ZT
-        } = function(TT) {
-          const [UT, mT] = (0, MT.useState)({
+          box: JB,
+          dpr: mB
+        } = function(BB) {
+          const [jB, zB] = (0, dB.useState)({
             box: {
               left: 0,
               top: 0,
@@ -411,200 +411,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, MT.useLayoutEffect)((() => {
-            const UT = TT.current;
-            if (!UT) return;
-            const WT = () => {
-              const TT = UT.getBoundingClientRect(),
-                WT = window.devicePixelRatio || 1;
-              mT((UT => UT.dpr === WT && UT.box.left === TT.left && UT.box.top === TT.top && UT.box.width === TT.width && UT.box.height === TT.height ? UT : {
+          return (0, dB.useLayoutEffect)((() => {
+            const jB = BB.current;
+            if (!jB) return;
+            const QB = () => {
+              const BB = jB.getBoundingClientRect(),
+                QB = window.devicePixelRatio || 1;
+              zB((jB => jB.dpr === QB && jB.box.left === BB.left && jB.box.top === BB.top && jB.box.width === BB.width && jB.box.height === BB.height ? jB : {
                 box: {
-                  left: TT.left,
-                  top: TT.top,
-                  width: TT.width,
-                  height: TT.height
+                  left: BB.left,
+                  top: BB.top,
+                  width: BB.width,
+                  height: BB.height
                 },
-                dpr: WT
+                dpr: QB
               }))
             };
-            WT();
-            const zT = new ResizeObserver(WT);
-            return zT.observe(UT), window.addEventListener("resize", WT), window.addEventListener("scroll", WT, !0), () => {
-              zT.disconnect(), window.removeEventListener("resize", WT), window.removeEventListener("scroll", WT, !0)
+            QB();
+            const nB = new ResizeObserver(QB);
+            return nB.observe(jB), window.addEventListener("resize", QB), window.addEventListener("scroll", QB, !0), () => {
+              nB.disconnect(), window.removeEventListener("resize", QB), window.removeEventListener("scroll", QB, !0)
             }
-          }), [TT]), UT
-        }(lT),
-        cT = (0, MT.useRef)(ZT);
-      cT.current = ZT;
-      const vT = HT(UT, ZT, nT && UT.growOnClick ? pT : 1),
-        fT = function(TT, UT, mT) {
-          const WT = Math.round((TT.left + TT.width / 2) * mT - UT / 2),
-            zT = Math.round((TT.top + TT.height / 2) * mT - UT / 2);
+          }), [BB]), jB
+        }(pB),
+        yB = (0, dB.useRef)(mB);
+      yB.current = mB;
+      const kB = uB(jB, mB, NB && jB.growOnClick ? sB : 1),
+        GB = function(BB, jB, zB) {
+          const QB = Math.round((BB.left + BB.width / 2) * zB - jB / 2),
+            nB = Math.round((BB.top + BB.height / 2) * zB - jB / 2);
           return {
-            x: WT / mT - TT.left,
-            y: zT / mT - TT.top
+            x: QB / zB - BB.left,
+            y: nB / zB - BB.top
           }
-        }(BT, vT.cell, ZT),
-        qT = (0, gT.i)(UT.color),
-        OT = (0, gT.i)(UT.outlineColor),
-        JT = (0, MT.useRef)(0);
-      (0, MT.useLayoutEffect)((() => {
-        if (jT) return jT.current = TT => {
-          var UT;
-          JT.current = TT, null === (UT = lT.current) || void 0 === UT || UT.querySelectorAll("[data-arm]").forEach((UT => {
-            Object.assign(UT.style, eT(function(TT) {
+        }(JB, kB.cell, mB),
+        LB = (0, IB.m)(jB.color),
+        SB = (0, IB.m)(jB.outlineColor),
+        iB = (0, dB.useRef)(0);
+      (0, dB.useLayoutEffect)((() => {
+        if (aB) return aB.current = BB => {
+          var jB;
+          iB.current = BB, null === (jB = pB.current) || void 0 === jB || jB.querySelectorAll("[data-arm]").forEach((jB => {
+            Object.assign(jB.style, MB(function(BB) {
               return {
-                x: Number(TT.dataset.x),
-                y: Number(TT.dataset.y),
-                arm: TT.dataset.arm
+                x: Number(BB.dataset.x),
+                y: Number(BB.dataset.y),
+                arm: BB.dataset.arm
               }
-            }(UT), TT, cT.current))
+            }(jB), BB, yB.current))
           }))
         }, () => {
-          jT.current = null
+          aB.current = null
         }
-      }), [jT]);
-      const xT = null !== kT && void 0 !== kT ? kT : JT.current;
-      return (0, LT.jsx)("div", {
-        ref: lT,
-        className: zT()("CrosshairShapes", {
-          CrosshairInPreview: mT,
-          CrosshairInEditor: WT || mT,
-          CrosshairSpreads: void 0 !== jT
+      }), [aB]);
+      const qB = null !== UB && void 0 !== UB ? UB : iB.current;
+      return (0, rB.jsx)("div", {
+        ref: pB,
+        className: nB()("CrosshairShapes", {
+          CrosshairInPreview: zB,
+          CrosshairInEditor: QB || zB,
+          CrosshairSpreads: void 0 !== aB
         }),
-        children: (0, LT.jsx)("div", {
+        children: (0, rB.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: fT.x,
-            top: fT.y,
-            opacity: UT.opacity / 100
+            left: GB.x,
+            top: GB.y,
+            opacity: jB.opacity / 100
           },
-          children: (0, LT.jsxs)("div", {
+          children: (0, rB.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [vT.ringOutline && (0, LT.jsx)("div", {
+            children: [kB.ringOutline && (0, rB.jsx)("div", {
               className: "CrosshairRing",
-              style: bT(vT.ringOutline, ZT, OT)
-            }), vT.outlines.map(((TT, UT) => (0, LT.jsx)("div", {
+              style: tB(kB.ringOutline, mB, SB)
+            }), kB.outlines.map(((BB, jB) => (0, rB.jsx)("div", {
               className: "CrosshairPart",
-              ...YT(TT),
-              style: iT(TT, xT, ZT, OT)
-            }, `o${UT}`))), vT.ring && (0, LT.jsx)("div", {
+              ...EB(BB),
+              style: gB(BB, qB, mB, SB)
+            }, `o${jB}`))), kB.ring && (0, rB.jsx)("div", {
               className: "CrosshairRing",
-              style: bT(vT.ring, ZT, qT)
-            }), vT.fills.map(((TT, UT) => (0, LT.jsx)("div", {
+              style: tB(kB.ring, mB, LB)
+            }), kB.fills.map(((BB, jB) => (0, rB.jsx)("div", {
               className: "CrosshairPart",
-              ...YT(TT),
-              style: iT(TT, xT, ZT, qT)
-            }, `f${UT}`)))]
+              ...EB(BB),
+              style: gB(BB, qB, mB, LB)
+            }, `f${jB}`)))]
           })
         })
       })
     }
   },
-  34245: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => jT,
-      f: () => cT,
-      h: () => ZT
+  34223: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => aB,
+      e: () => yB,
+      g: () => mB
     });
-    var WT = mT(34233);
-    const zT = "XH1-",
-      MT = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      gT = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      nT = ["color", "outlineColor"],
-      HT = 1 + 3 * nT.length + gT.length + 1,
-      kT = Math.ceil(8 * HT / Math.log2(62)),
-      jT = zT.length + kT;
+    var QB = zB(34208);
+    const nB = "XH1-",
+      dB = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      IB = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      NB = ["color", "outlineColor"],
+      uB = 1 + 3 * NB.length + IB.length + 1,
+      UB = Math.ceil(8 * uB / Math.log2(62)),
+      aB = nB.length + UB;
 
-    function lT(TT) {
-      let UT = 90;
-      for (const mT of TT) UT = 31 * UT + mT & 255;
-      return UT
+    function pB(BB) {
+      let jB = 90;
+      for (const zB of BB) jB = 31 * jB + zB & 255;
+      return jB
     }
-    const LT = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      pT = BigInt(LT.length);
+    const rB = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      sB = BigInt(rB.length);
 
-    function BT(TT, UT) {
-      let mT = 0n;
-      for (const zT of TT) {
-        const TT = LT.indexOf(zT);
-        if (TT < 0) return null;
-        mT = mT * pT + BigInt(TT)
+    function JB(BB, jB) {
+      let zB = 0n;
+      for (const nB of BB) {
+        const BB = rB.indexOf(nB);
+        if (BB < 0) return null;
+        zB = zB * sB + BigInt(BB)
       }
-      if (mT >> BigInt(8 * UT) !== 0n) return null;
-      const WT = [];
-      for (let zT = 0; zT < UT; zT++) WT.unshift(Number(0xffn & mT)), mT >>= 8n;
-      return WT
+      if (zB >> BigInt(8 * jB) !== 0n) return null;
+      const QB = [];
+      for (let nB = 0; nB < jB; nB++) QB.unshift(Number(0xffn & zB)), zB >>= 8n;
+      return QB
     }
 
-    function ZT(TT) {
-      let UT = "shapes" === TT.style ? 1 : 0;
-      MT.forEach(((mT, WT) => {
-        TT[mT] && (UT |= 1 << WT + 1)
+    function mB(BB) {
+      let jB = "shapes" === BB.style ? 1 : 0;
+      dB.forEach(((zB, QB) => {
+        BB[zB] && (jB |= 1 << QB + 1)
       }));
-      const mT = [UT];
-      for (const zT of nT) {
-        const UT = (0, WT.g)(zT, TT[zT]);
-        mT.push(UT >> 16 & 255, UT >> 8 & 255, 255 & UT)
+      const zB = [jB];
+      for (const nB of NB) {
+        const jB = (0, QB.i)(nB, BB[nB]);
+        zB.push(jB >> 16 & 255, jB >> 8 & 255, 255 & jB)
       }
-      for (const zT of gT) {
+      for (const nB of IB) {
         const {
-          min: UT,
-          step: MT
-        } = WT.b[zT];
-        mT.push(Math.round(((0, WT.g)(zT, TT[zT]) - UT) / MT))
+          min: jB,
+          step: dB
+        } = QB.d[nB];
+        zB.push(Math.round(((0, QB.i)(nB, BB[nB]) - jB) / dB))
       }
-      return mT.push(lT(mT)), zT + function(TT, UT) {
-        let mT = 0n;
-        for (const zT of TT) mT = mT << 8n | BigInt(zT);
-        let WT = "";
-        for (let zT = 0; zT < UT; zT++) WT = LT[Number(mT % pT)] + WT, mT /= pT;
-        return WT
-      }(mT, kT)
+      return zB.push(pB(zB)), nB + function(BB, jB) {
+        let zB = 0n;
+        for (const nB of BB) zB = zB << 8n | BigInt(nB);
+        let QB = "";
+        for (let nB = 0; nB < jB; nB++) QB = rB[Number(zB % sB)] + QB, zB /= sB;
+        return QB
+      }(zB, UB)
     }
 
-    function cT(TT) {
-      for (const UT of TT.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${kT}})`, "gi"))) {
-        const TT = vT(BT(UT[1], HT));
-        if (TT) return TT
+    function yB(BB) {
+      for (const jB of BB.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${UB}})`, "gi"))) {
+        const BB = kB(JB(jB[1], uB));
+        if (BB) return BB
       }
       return null
     }
 
-    function vT(TT) {
-      if (!TT || TT.length !== HT || lT(TT.slice(0, -1)) !== TT[TT.length - 1]) return null;
-      const UT = TT[0],
-        mT = {
-          ...WT.e,
-          style: 1 & UT ? "shapes" : "classic"
+    function kB(BB) {
+      if (!BB || BB.length !== uB || pB(BB.slice(0, -1)) !== BB[BB.length - 1]) return null;
+      const jB = BB[0],
+        zB = {
+          ...QB.g,
+          style: 1 & jB ? "shapes" : "classic"
         };
-      MT.forEach(((TT, WT) => {
-        mT[TT] = 0 !== (UT & 1 << WT + 1)
+      dB.forEach(((BB, QB) => {
+        zB[BB] = 0 !== (jB & 1 << QB + 1)
       }));
-      let zT = 1;
-      for (const WT of nT) mT[WT] = TT[zT] << 16 | TT[zT + 1] << 8 | TT[zT + 2], zT += 3;
-      for (const MT of gT) {
+      let nB = 1;
+      for (const QB of NB) zB[QB] = BB[nB] << 16 | BB[nB + 1] << 8 | BB[nB + 2], nB += 3;
+      for (const dB of IB) {
         const {
-          min: UT,
-          step: gT
-        } = WT.b[MT];
-        mT[MT] = (0, WT.g)(MT, UT + TT[zT] * gT), zT++
+          min: jB,
+          step: IB
+        } = QB.d[dB];
+        zB[dB] = (0, QB.i)(dB, jB + BB[nB] * IB), nB++
       }
-      return mT
+      return zB
     }
   },
-  34233: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => WT,
-      e: () => zT,
-      g: () => MT,
-      i: () => kT,
-      m: () => HT,
-      n: () => jT,
-      o: () => nT,
-      s: () => gT
+  34208: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => QB,
+      g: () => nB,
+      i: () => dB,
+      m: () => UB,
+      n: () => uB,
+      o: () => aB,
+      p: () => NB,
+      s: () => IB
     });
-    const WT = {
+    const QB = {
         opacity: {
           min: 5,
           max: 100,
@@ -661,7 +661,7 @@ export const modules = {
           step: 1
         }
       },
-      zT = Object.freeze({
+      nB = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -682,224 +682,224 @@ export const modules = {
         forGuns: !1
       });
 
-    function MT(TT, UT) {
-      var mT;
+    function dB(BB, jB) {
+      var zB;
       const {
-        min: MT,
-        max: gT,
-        step: nT
-      } = WT[TT];
-      if (!Number.isFinite(UT)) return zT[TT];
-      const HT = (null !== (mT = String(nT).split(".")[1]) && void 0 !== mT ? mT : "").length,
-        kT = Number((Math.round(UT / nT) * nT).toFixed(HT));
-      return Math.min(gT, Math.max(MT, kT))
+        min: dB,
+        max: IB,
+        step: NB
+      } = QB[BB];
+      if (!Number.isFinite(jB)) return nB[BB];
+      const uB = (null !== (zB = String(NB).split(".")[1]) && void 0 !== zB ? zB : "").length,
+        UB = Number((Math.round(jB / NB) * NB).toFixed(uB));
+      return Math.min(IB, Math.max(dB, UB))
     }
 
-    function gT(TT, UT, mT) {
-      const WT = "number" === typeof mT ? MT(UT, mT) : mT;
+    function IB(BB, jB, zB) {
+      const QB = "number" === typeof zB ? dB(jB, zB) : zB;
       return {
-        ...TT,
-        [UT]: WT
+        ...BB,
+        [jB]: QB
       }
     }
 
-    function nT(TT, UT) {
-      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(zT).every((WT => mT.includes(WT) || TT[WT] === UT[WT]))
+    function NB(BB, jB) {
+      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(nB).every((QB => zB.includes(QB) || BB[QB] === jB[QB]))
     }
 
-    function HT(TT) {
-      return nT(TT, zT)
+    function uB(BB) {
+      return NB(BB, nB)
     }
 
-    function kT(TT) {
-      return `#${TT.toString(16).padStart(6,"0")}`
+    function UB(BB) {
+      return `#${BB.toString(16).padStart(6,"0")}`
     }
 
-    function jT(TT) {
-      const UT = /^#?([0-9a-f]{6})$/i.exec(TT.trim());
-      return UT ? parseInt(UT[1], 16) : null
+    function aB(BB) {
+      const jB = /^#?([0-9a-f]{6})$/i.exec(BB.trim());
+      return jB ? parseInt(jB[1], 16) : null
     }
   },
-  34253: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => lT,
-      g: () => LT
+  34229: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => pB,
+      e: () => rB
     });
-    var WT = mT(63),
-      zT = mT(44),
-      MT = mT(34245),
-      gT = mT(34233);
-    const nT = "crosshairCode";
-    let HT = null;
-    const kT = new Set;
+    var QB = zB(62),
+      nB = zB(41),
+      dB = zB(34223),
+      IB = zB(34208);
+    const NB = "crosshairCode";
+    let uB = null;
+    const UB = new Set;
 
-    function jT() {
-      if (null === HT) {
-        var TT;
-        const UT = zT.l.getItem(nT);
-        HT = null !== (TT = "string" === typeof UT ? (0, MT.f)(UT) : null) && void 0 !== TT ? TT : gT.e
+    function aB() {
+      if (null === uB) {
+        var BB;
+        const jB = nB.j.getItem(NB);
+        uB = null !== (BB = "string" === typeof jB ? (0, dB.e)(jB) : null) && void 0 !== BB ? BB : IB.g
       }
-      return HT
+      return uB
     }
 
-    function lT(TT) {
-      HT = TT, (0, gT.m)(TT) ? zT.l.removeItem(nT) : zT.l.setItem(nT, (0, MT.h)(TT));
-      for (const UT of kT) UT()
+    function pB(BB) {
+      uB = BB, (0, IB.n)(BB) ? nB.j.removeItem(NB) : nB.j.setItem(NB, (0, dB.g)(BB));
+      for (const jB of UB) jB()
     }
 
-    function LT() {
-      const [TT, UT] = (0, WT.useState)(jT);
-      return (0, WT.useEffect)((() => {
-        const TT = () => {
-          UT(jT())
+    function rB() {
+      const [BB, jB] = (0, QB.useState)(aB);
+      return (0, QB.useEffect)((() => {
+        const BB = () => {
+          jB(aB())
         };
-        return TT(), mT = TT, kT.add(mT), () => {
-          kT.delete(mT)
+        return BB(), zB = BB, UB.add(zB), () => {
+          UB.delete(zB)
         };
-        var mT
-      }), []), TT
+        var zB
+      }), []), BB
     }
   },
-  36866: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => MT,
-      h: () => HT,
-      l: () => gT
+  36843: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => dB,
+      e: () => uB,
+      h: () => IB
     });
-    var WT = mT(653),
-      zT = mT(2875);
+    var QB = zB(658),
+      nB = zB(2863);
 
-    function MT(TT) {
-      return TT === (0, zT.h)().rTT ? (0, zT.h)().VV : TT
+    function dB(BB) {
+      return BB === (0, nB.g)().FBB ? (0, nB.g)().zV : BB
     }
 
-    function gT(TT) {
-      return !(0, WT.E)(TT) && MT(TT) === (0, zT.h)().VV
+    function IB(BB) {
+      return !(0, QB.I)(BB) && dB(BB) === (0, nB.g)().zV
     }
-    const nT = "gravity";
+    const NB = "gravity";
 
-    function HT() {
-      return (0, zT.h)().physics[nT][1]
+    function uB() {
+      return (0, nB.g)().physics[NB][1]
     }
   },
-  36851: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => eT
+  36828: (BB, jB, zB) => {
+    zB.d(jB, {
+      e: () => MB
     });
-    var WT = mT(36855),
-      zT = mT(208),
-      MT = mT(4959),
-      gT = mT(36862),
-      nT = mT(36513),
-      HT = mT(36904),
-      kT = mT(36866),
-      jT = mT(375),
-      lT = mT.n(jT),
-      LT = mT(1302),
-      pT = mT(2875),
-      BT = mT(36901),
-      ZT = mT(31),
-      cT = mT(25),
-      vT = mT(36875),
-      fT = mT(36882),
-      qT = mT(36889);
-    const iT = new Set(["note"]);
-    const bT = {
-      stop: () => bT,
-      fade: () => bT,
-      rate: () => bT,
+    var QB = zB(36830),
+      nB = zB(214),
+      dB = zB(4950),
+      IB = zB(36838),
+      NB = zB(36514),
+      uB = zB(36882),
+      UB = zB(36843),
+      aB = zB(386),
+      pB = zB.n(aB),
+      rB = zB(1244),
+      sB = zB(2863),
+      JB = zB(36873),
+      mB = zB(31),
+      yB = zB(28),
+      kB = zB(36848),
+      GB = zB(36856),
+      LB = zB(36864);
+    const gB = new Set(["note"]);
+    const tB = {
+      stop: () => tB,
+      fade: () => tB,
+      rate: () => tB,
       stopsAtOnce: () => !1,
       isAlive: () => !1,
       getDurationMs: () => 0,
       getVolume: () => 0,
       getRelativeVolume: () => 0,
-      setRelativeVolume: () => bT,
-      setPannerAttr: () => bT,
-      setPosition: () => bT
+      setRelativeVolume: () => tB,
+      setPannerAttr: () => tB,
+      setPosition: () => tB
     };
-    class OT {
-      constructor(TT) {
-        let UT, {
-          src: mT,
-          volumeScalar: zT,
-          isSoundSprite: gT
-        } = TT;
-        this._howl = void 0, this._volumeMultiplier = void 0, this._spriteTrackSrc = void 0, this._loadFailed = !1, this._unloaded = !1, gT ? (UT = (0, WT.h)(mT), this._spriteTrackSrc = UT) : UT = {
-          src: LT.clientSideServerUrls.staticUrl + mT
-        }, this._volumeMultiplier = new HT.f, this._volumeMultiplier.setMultiplierType("persistentScalar", zT), this._howl = (0, nT.countDecodesAs)(new MT.Howl({
-          ...UT,
+    class SB {
+      constructor(BB) {
+        let jB, {
+          src: zB,
+          volumeScalar: nB,
+          isSoundSprite: IB
+        } = BB;
+        this._howl = void 0, this._volumeMultiplier = void 0, this._spriteTrackSrc = void 0, this._loadFailed = !1, this._unloaded = !1, IB ? (jB = (0, QB.g)(zB), this._spriteTrackSrc = jB) : jB = {
+          src: rB.clientSideServerUrls.staticUrl + zB
+        }, this._volumeMultiplier = new uB.j, this._volumeMultiplier.setMultiplierType("persistentScalar", nB), this._howl = (0, NB.countDecodesAs)(new dB.Howl({
+          ...jB,
           pool: 15
         }), "sheet"), this._howl.once("loaderror", (() => {
           this._loadFailed = !0
         }))
       }
       play() {
-        let TT, UT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0,
-          mT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (UT) {
-          var WT;
-          if (null === (WT = this._spriteTrackSrc) || void 0 === WT || !WT.sprite[UT]) throw new Error("No such sprite in your spritetrack");
-          TT = this._howl.play(UT)
-        } else TT = this._howl.play();
-        mT && this._howl.loop(!0, TT);
-        let zT = 1;
-        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), TT);
-        const MT = {
+        let BB, jB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0,
+          zB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (jB) {
+          var QB;
+          if (null === (QB = this._spriteTrackSrc) || void 0 === QB || !QB.sprite[jB]) throw new Error("No such sprite in your spritetrack");
+          BB = this._howl.play(jB)
+        } else BB = this._howl.play();
+        zB && this._howl.loop(!0, BB);
+        let nB = 1;
+        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), BB);
+        const dB = {
           stop: () => {
-            var UT;
-            return null === (UT = this.liveHowl()) || void 0 === UT || UT.stop(TT), MT
+            var jB;
+            return null === (jB = this.liveHowl()) || void 0 === jB || jB.stop(BB), dB
           },
-          fade: (UT, mT, WT) => {
-            var zT;
-            return null === (zT = this.liveHowl()) || void 0 === zT || zT.fade(UT, mT, WT, TT), MT
+          fade: (jB, zB, QB) => {
+            var nB;
+            return null === (nB = this.liveHowl()) || void 0 === nB || nB.fade(jB, zB, QB, BB), dB
           },
-          rate: UT => {
-            var mT;
-            return null === (mT = this.liveHowl()) || void 0 === mT || mT.rate(UT, TT), MT
+          rate: jB => {
+            var zB;
+            return null === (zB = this.liveHowl()) || void 0 === zB || zB.rate(jB, BB), dB
           },
-          stopsAtOnce: () => this._howl.playing(TT) && !this._howl._playLock,
+          stopsAtOnce: () => this._howl.playing(BB) && !this._howl._playLock,
           isAlive: () => {
-            const UT = this._howl._soundById(TT);
-            return !this._loadFailed && !!UT && !UT._ended
+            const jB = this._howl._soundById(BB);
+            return !this._loadFailed && !!jB && !jB._ended
           },
-          getDurationMs: () => this._howl._soundById(TT) ? 1e3 * this._howl.duration(TT) / this._howl.rate(TT) : 0,
-          getVolume: () => zT * this._volumeMultiplier.getTotalMultipliedVal(),
-          getRelativeVolume: () => zT,
-          setRelativeVolume: UT => {
-            var mT;
-            if (UT > 1) throw new Error("Volume should be <= 1");
-            return zT = cT.b.get("soundOnFromAd") ? UT : 0, null === (mT = this.liveHowl()) || void 0 === mT || mT.volume(Math.min(1, zT * this._volumeMultiplier.getTotalMultipliedVal()), TT), MT
+          getDurationMs: () => this._howl._soundById(BB) ? 1e3 * this._howl.duration(BB) / this._howl.rate(BB) : 0,
+          getVolume: () => nB * this._volumeMultiplier.getTotalMultipliedVal(),
+          getRelativeVolume: () => nB,
+          setRelativeVolume: jB => {
+            var zB;
+            if (jB > 1) throw new Error("Volume should be <= 1");
+            return nB = yB.c.get("soundOnFromAd") ? jB : 0, null === (zB = this.liveHowl()) || void 0 === zB || zB.volume(Math.min(1, nB * this._volumeMultiplier.getTotalMultipliedVal()), BB), dB
           },
-          setPannerAttr: UT => {
+          setPannerAttr: jB => {
             let {
-              coneInnerAngle: mT,
-              coneOuterAngle: WT = 360,
-              coneOuterGain: zT,
-              distanceModel: gT,
-              maxDistance: nT,
-              panningModel: HT,
-              refDistance: kT,
-              rolloffFactor: jT
-            } = UT;
+              coneInnerAngle: zB,
+              coneOuterAngle: QB = 360,
+              coneOuterGain: nB,
+              distanceModel: IB,
+              maxDistance: NB,
+              panningModel: uB,
+              refDistance: UB,
+              rolloffFactor: aB
+            } = jB;
             return this._setPannerAttr({
-              id: TT,
-              coneInnerAngle: mT,
-              coneOuterAngle: WT,
-              coneOuterGain: zT,
-              distanceModel: gT,
-              maxDistance: nT,
-              panningModel: HT,
-              refDistance: kT,
-              rolloffFactor: jT
-            }), MT
+              id: BB,
+              coneInnerAngle: zB,
+              coneOuterAngle: QB,
+              coneOuterGain: nB,
+              distanceModel: IB,
+              maxDistance: NB,
+              panningModel: uB,
+              refDistance: UB,
+              rolloffFactor: aB
+            }), dB
           },
-          setPosition: UT => {
-            var mT;
-            return null === (mT = this.liveHowl()) || void 0 === mT || mT.pos(UT[2], UT[1], UT[0], TT), MT
+          setPosition: jB => {
+            var zB;
+            return null === (zB = this.liveHowl()) || void 0 === zB || zB.pos(jB[2], jB[1], jB[0], BB), dB
           }
         };
-        return MT
+        return dB
       }
       liveHowl() {
         return this._unloaded ? null : this._howl
@@ -908,199 +908,199 @@ export const modules = {
         return "loaded" === this._howl.state()
       }
       unloadOnceIdle() {
-        (0, gT.d)(this._howl, (() => {
+        (0, IB.c)(this._howl, (() => {
           this._unloaded = !0
         }))
       }
-      setGlobalVolume(TT) {
-        this._volumeMultiplier.setMultiplierType("globalVolume", TT), this._howl.volume(TT)
+      setGlobalVolume(BB) {
+        this._volumeMultiplier.setMultiplierType("globalVolume", BB), this._howl.volume(BB)
       }
-      _setPannerAttr(TT) {
+      _setPannerAttr(BB) {
         let {
-          id: UT,
-          coneInnerAngle: mT = 360,
-          coneOuterAngle: WT = 360,
-          coneOuterGain: zT = 0,
-          distanceModel: MT = "inverse",
-          maxDistance: gT = 1e3,
-          panningModel: nT = "HRTF",
-          refDistance: HT = BT.k,
-          rolloffFactor: kT = 1
-        } = TT;
-        const jT = this.liveHowl();
-        if (null === jT) return;
-        jT.pannerAttr({
-          coneOuterAngle: WT
-        }, UT);
-        const lT = {
-          coneInnerAngle: mT,
-          coneOuterAngle: WT,
-          coneOuterGain: zT,
-          distanceModel: MT,
-          maxDistance: gT,
-          panningModel: nT,
-          refDistance: HT,
-          rolloffFactor: kT
+          id: jB,
+          coneInnerAngle: zB = 360,
+          coneOuterAngle: QB = 360,
+          coneOuterGain: nB = 0,
+          distanceModel: dB = "inverse",
+          maxDistance: IB = 1e3,
+          panningModel: NB = "HRTF",
+          refDistance: uB = JB.k,
+          rolloffFactor: UB = 1
+        } = BB;
+        const aB = this.liveHowl();
+        if (null === aB) return;
+        aB.pannerAttr({
+          coneOuterAngle: QB
+        }, jB);
+        const pB = {
+          coneInnerAngle: zB,
+          coneOuterAngle: QB,
+          coneOuterGain: nB,
+          distanceModel: dB,
+          maxDistance: IB,
+          panningModel: NB,
+          refDistance: uB,
+          rolloffFactor: UB
         };
-        jT.pannerAttr(lT, UT)
+        aB.pannerAttr(pB, jB)
       }
     }
-    const eT = new class {
+    const MB = new class {
       constructor() {
-        this.stereoSheets = {}, this.spatialSheets = {}, this.spatialVoices = new vT.b, ZT.j.subscribe("appManagerUpdated|soundVolume", (TT => {
-          const UT = Object.values(this.stereoSheets).concat(Object.values(this.spatialSheets));
-          for (const mT of UT) mT.setGlobalVolume(TT)
+        this.stereoSheets = {}, this.spatialSheets = {}, this.spatialVoices = new kB.b, mB.n.subscribe("appManagerUpdated|soundVolume", (BB => {
+          const jB = Object.values(this.stereoSheets).concat(Object.values(this.spatialSheets));
+          for (const zB of jB) zB.setGlobalVolume(BB)
         }))
       }
-      play(TT, UT) {
-        var mT;
-        let MT, gT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (mT = (0, pT.h)()) || void 0 === mT ? void 0 : mT.VV,
-          nT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : BT.g,
-          HT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : BT.k,
-          jT = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        var LT;
-        (0, pT.h)() ? MT = !!Array.isArray(gT) || (0, kT.e)(gT) !== (null === (LT = (0, pT.h)()) || void 0 === LT ? void 0 : LT.VV): MT = !1;
-        const ZT = (0, WT.i)(TT),
-          cT = this.loadSheet(MT ? this.spatialSheets : this.stereoSheets, ZT);
-        if (!MT) {
-          const mT = cT.play(TT, jT);
-          return mT.setRelativeVolume(UT), mT
+      play(BB, jB) {
+        var zB;
+        let dB, IB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (zB = (0, sB.g)()) || void 0 === zB ? void 0 : zB.zV,
+          NB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : JB.g,
+          uB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : JB.k,
+          aB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        var rB;
+        (0, sB.g)() ? dB = !!Array.isArray(IB) || (0, UB.b)(IB) !== (null === (rB = (0, sB.g)()) || void 0 === rB ? void 0 : rB.zV): dB = !1;
+        const mB = (0, QB.k)(BB),
+          yB = this.loadSheet(dB ? this.spatialSheets : this.stereoSheets, mB);
+        if (!dB) {
+          const zB = yB.play(BB, aB);
+          return zB.setRelativeVolume(jB), zB
         }
-        const fT = (0, pT.h)(),
-          qT = Array.isArray(gT) ? gT : fT.pY.Aq(gT),
-          OT = fT.pY.Aq(fT.VV);
-        if (!qT || lT().sqrDist(qT, OT) > nT * nT) return bT;
-        let eT;
-        if (!jT) {
+        const GB = (0, sB.g)(),
+          LB = Array.isArray(IB) ? IB : GB.vG.iG(IB),
+          SB = GB.vG.iG(GB.zV);
+        if (!LB || pB().sqrDist(LB, SB) > NB * NB) return tB;
+        let MB;
+        if (!aB) {
           if (!this.spatialVoices.admit({
-              group: iT.has(ZT) ? null : (0, vT.h)(TT),
-              loudness: (0, vT.e)(UT, lT().sg(qT, OT), HT),
+              group: gB.has(mB) ? null : (0, kB.g)(BB),
+              loudness: (0, kB.f)(jB, pB().bI(LB, SB), uB),
               startMs: performance.now(),
               getDurationMs: () => {
-                var TT, UT;
-                return null !== (TT = null === (UT = eT) || void 0 === UT ? void 0 : UT.getDurationMs()) && void 0 !== TT ? TT : 0
+                var BB, jB;
+                return null !== (BB = null === (jB = MB) || void 0 === jB ? void 0 : jB.getDurationMs()) && void 0 !== BB ? BB : 0
               },
               isAlive: () => {
-                var TT, UT;
-                return null !== (TT = null === (UT = eT) || void 0 === UT ? void 0 : UT.isAlive()) && void 0 !== TT && TT
+                var BB, jB;
+                return null !== (BB = null === (jB = MB) || void 0 === jB ? void 0 : jB.isAlive()) && void 0 !== BB && BB
               },
               canStop: () => {
-                var TT, UT;
-                return null !== (TT = null === (UT = eT) || void 0 === UT ? void 0 : UT.stopsAtOnce()) && void 0 !== TT && TT
+                var BB, jB;
+                return null !== (BB = null === (jB = MB) || void 0 === jB ? void 0 : jB.stopsAtOnce()) && void 0 !== BB && BB
               },
               stop: () => {
-                var TT;
-                null === (TT = eT) || void 0 === TT || TT.stop()
+                var BB;
+                null === (BB = MB) || void 0 === BB || BB.stop()
               }
-            })) return bT
+            })) return tB
         }
-        return eT = cT.play(TT, jT), eT.setRelativeVolume(UT), eT.setPannerAttr({
-          refDistance: HT
-        }), eT.setPosition([qT[0], qT[1] + zT.f.Fc * zT.f.playerEyeToHeightRatio, qT[2]]), eT
+        return MB = yB.play(BB, aB), MB.setRelativeVolume(jB), MB.setPannerAttr({
+          refDistance: uB
+        }), MB.setPosition([LB[0], LB[1] + nB.e.Bk * nB.e.playerEyeToHeightRatio, LB[2]]), MB
       }
-      preload(TT) {
-        this.loadSheet(this.stereoSheets, (0, WT.i)(TT))
+      preload(BB) {
+        this.loadSheet(this.stereoSheets, (0, QB.k)(BB))
       }
-      loadSheet(TT, UT) {
-        let mT = TT[UT];
-        return mT || ((0, qT.d)(UT), mT = new OT({
-          src: UT,
+      loadSheet(BB, jB) {
+        let zB = BB[jB];
+        return zB || ((0, LB.d)(jB), zB = new SB({
+          src: jB,
           isSoundSprite: !0,
           volumeScalar: 1
-        }), mT.setGlobalVolume(cT.b.get("soundVolume")), TT[UT] = mT), mT
+        }), zB.setGlobalVolume(yB.c.get("soundVolume")), BB[jB] = zB), zB
       }
       freeSheetsAfterGame() {
-        for (const TT of [this.stereoSheets, this.spatialSheets])
-          for (const [UT, mT] of Object.entries(TT)) !fT.c.has(UT) && mT.loaded() && (mT.unloadOnceIdle(), delete TT[UT])
+        for (const BB of [this.stereoSheets, this.spatialSheets])
+          for (const [jB, zB] of Object.entries(BB)) !GB.d.has(jB) && zB.loaded() && (zB.unloadOnceIdle(), delete BB[jB])
       }
     }
   },
-  36937: (TT, UT, mT) => {
-    function WT(TT, UT) {
-      var mT, WT, zT, MT, gT, nT, HT, kT;
-      return TT.name === UT.name && ((null === (mT = TT.attributes) || void 0 === mT || null === (WT = mT.customAttributes) || void 0 === WT ? void 0 : WT.stackKey) === (null === (zT = UT.attributes) || void 0 === zT || null === (MT = zT.customAttributes) || void 0 === MT ? void 0 : MT.stackKey) && (!0 !== (null === (gT = TT.attributes) || void 0 === gT || null === (nT = gT.customAttributes) || void 0 === nT ? void 0 : nT.unstackable) && !0 !== (null === (HT = UT.attributes) || void 0 === HT || null === (kT = HT.customAttributes) || void 0 === kT ? void 0 : kT.unstackable)))
+  36920: (BB, jB, zB) => {
+    function QB(BB, jB) {
+      var zB, QB, nB, dB, IB, NB, uB, UB;
+      return BB.name === jB.name && ((null === (zB = BB.attributes) || void 0 === zB || null === (QB = zB.customAttributes) || void 0 === QB ? void 0 : QB.stackKey) === (null === (nB = jB.attributes) || void 0 === nB || null === (dB = nB.customAttributes) || void 0 === dB ? void 0 : dB.stackKey) && (!0 !== (null === (IB = BB.attributes) || void 0 === IB || null === (NB = IB.customAttributes) || void 0 === NB ? void 0 : NB.unstackable) && !0 !== (null === (uB = jB.attributes) || void 0 === uB || null === (UB = uB.customAttributes) || void 0 === UB ? void 0 : UB.unstackable)))
     }
-    mT.d(UT, {
-      d: () => WT
+    zB.d(jB, {
+      d: () => QB
     })
   },
-  37032: (TT, UT, mT) => {
-    function WT(TT) {
-      return TT.includes("Leaf Bed")
+  37002: (BB, jB, zB) => {
+    function QB(BB) {
+      return BB.includes("Leaf Bed")
     }
 
-    function zT(TT) {
-      return / Bed(?: Head)?(?:\||$)/.test(TT) && !WT(TT)
+    function nB(BB) {
+      return / Bed(?: Head)?(?:\||$)/.test(BB) && !QB(BB)
     }
 
-    function MT(TT) {
-      return TT.includes(" Strongbed")
+    function dB(BB) {
+      return BB.includes(" Strongbed")
     }
 
-    function gT(TT) {
-      return WT(TT) || zT(TT) || MT(TT)
+    function IB(BB) {
+      return QB(BB) || nB(BB) || dB(BB)
     }
-    mT.d(UT, {
-      c: () => gT,
-      g: () => WT,
-      j: () => MT,
-      l: () => zT
+    zB.d(jB, {
+      b: () => IB,
+      f: () => QB,
+      h: () => dB,
+      i: () => nB
     })
   },
-  37030: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => kT
+  36998: (BB, jB, zB) => {
+    zB.d(jB, {
+      e: () => UB
     });
-    var WT = mT(37032),
-      zT = mT(9330);
-    const MT = [],
-      gT = [],
-      nT = [],
-      HT = [];
-    for (const jT of Object.keys(zT.k))(0, WT.g)(jT) ? MT.push(jT) : (0, WT.l)(jT) && gT.push(jT), (0, WT.j)(jT) && nT.push(jT), (jT.includes(" Bed Head") || jT.includes(" Strongbed Head")) && HT.push(jT);
-    const kT = {
-      leafBeds: MT,
-      woolBeds: gT,
-      strongBeds: nT,
-      beds: [...MT, ...gT, ...nT],
-      bedHeads: HT,
+    var QB = zB(37002),
+      nB = zB(9266);
+    const dB = [],
+      IB = [],
+      NB = [],
+      uB = [];
+    for (const aB of Object.keys(nB.l))(0, QB.f)(aB) ? dB.push(aB) : (0, QB.i)(aB) && IB.push(aB), (0, QB.h)(aB) && NB.push(aB), (aB.includes(" Bed Head") || aB.includes(" Strongbed Head")) && uB.push(aB);
+    const UB = {
+      leafBeds: dB,
+      woolBeds: IB,
+      strongBeds: NB,
+      beds: [...dB, ...IB, ...NB],
+      bedHeads: uB,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  6542: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => gT,
-      g: () => zT,
-      i: () => HT,
-      l: () => MT,
-      p: () => kT,
-      q: () => WT,
-      u: () => nT
+  6428: (BB, jB, zB) => {
+    zB.d(jB, {
+      e: () => IB,
+      i: () => nB,
+      l: () => uB,
+      o: () => dB,
+      r: () => UB,
+      t: () => QB,
+      u: () => NB
     });
-    let WT = function(TT) {
-        return TT[TT.DEFAULT = 0] = "DEFAULT", TT[TT.BOAT = 1] = "BOAT", TT[TT.GLIDER = 2] = "GLIDER", TT[TT.BALLOON = 3] = "BALLOON", TT[TT.SLEEPING = 4] = "SLEEPING", TT[TT.RIDING_MOB = 5] = "RIDING_MOB", TT[TT.CAR = 6] = "CAR", TT[TT.HOVERCRAFT = 7] = "HOVERCRAFT", TT
+    let QB = function(BB) {
+        return BB[BB.DEFAULT = 0] = "DEFAULT", BB[BB.BOAT = 1] = "BOAT", BB[BB.GLIDER = 2] = "GLIDER", BB[BB.BALLOON = 3] = "BALLOON", BB[BB.SLEEPING = 4] = "SLEEPING", BB[BB.RIDING_MOB = 5] = "RIDING_MOB", BB[BB.CAR = 6] = "CAR", BB[BB.HOVERCRAFT = 7] = "HOVERCRAFT", BB
       }({}),
-      zT = function(TT) {
-        return TT[TT.WOOD = 0] = "WOOD", TT[TT.OBSIDIAN = 1] = "OBSIDIAN", TT[TT.SPEED = 2] = "SPEED", TT
+      nB = function(BB) {
+        return BB[BB.WOOD = 0] = "WOOD", BB[BB.OBSIDIAN = 1] = "OBSIDIAN", BB[BB.SPEED = 2] = "SPEED", BB
       }({}),
-      MT = function(TT) {
-        return TT[TT.WOOD = 0] = "WOOD", TT[TT.IRON = 1] = "IRON", TT[TT.GOLD = 2] = "GOLD", TT[TT.DIAMOND = 3] = "DIAMOND", TT
+      dB = function(BB) {
+        return BB[BB.WOOD = 0] = "WOOD", BB[BB.IRON = 1] = "IRON", BB[BB.GOLD = 2] = "GOLD", BB[BB.DIAMOND = 3] = "DIAMOND", BB
       }({}),
-      gT = function(TT) {
-        return TT[TT.YELLOW = 0] = "YELLOW", TT[TT.WHITE = 1] = "WHITE", TT[TT.RED = 2] = "RED", TT[TT.PURPLE = 3] = "PURPLE", TT[TT.PINK = 4] = "PINK", TT[TT.ORANGE = 5] = "ORANGE", TT[TT.MAGENTA = 6] = "MAGENTA", TT[TT.LIME = 7] = "LIME", TT[TT.LIGHT_GRAY = 8] = "LIGHT_GRAY", TT[TT.LIGHT_BLUE = 9] = "LIGHT_BLUE", TT[TT.GREEN = 10] = "GREEN", TT[TT.GRAY = 11] = "GRAY", TT[TT.CYAN = 12] = "CYAN", TT[TT.BROWN = 13] = "BROWN", TT[TT.BLUE = 14] = "BLUE", TT[TT.BLACK = 15] = "BLACK", TT
+      IB = function(BB) {
+        return BB[BB.YELLOW = 0] = "YELLOW", BB[BB.WHITE = 1] = "WHITE", BB[BB.RED = 2] = "RED", BB[BB.PURPLE = 3] = "PURPLE", BB[BB.PINK = 4] = "PINK", BB[BB.ORANGE = 5] = "ORANGE", BB[BB.MAGENTA = 6] = "MAGENTA", BB[BB.LIME = 7] = "LIME", BB[BB.LIGHT_GRAY = 8] = "LIGHT_GRAY", BB[BB.LIGHT_BLUE = 9] = "LIGHT_BLUE", BB[BB.GREEN = 10] = "GREEN", BB[BB.GRAY = 11] = "GRAY", BB[BB.CYAN = 12] = "CYAN", BB[BB.BROWN = 13] = "BROWN", BB[BB.BLUE = 14] = "BLUE", BB[BB.BLACK = 15] = "BLACK", BB
       }({}),
-      nT = function(TT) {
-        return TT[TT.ROTATION_1 = 0] = "ROTATION_1", TT[TT.ROTATION_2 = 1] = "ROTATION_2", TT[TT.ROTATION_3 = 2] = "ROTATION_3", TT[TT.ROTATION_4 = 3] = "ROTATION_4", TT
+      NB = function(BB) {
+        return BB[BB.ROTATION_1 = 0] = "ROTATION_1", BB[BB.ROTATION_2 = 1] = "ROTATION_2", BB[BB.ROTATION_3 = 2] = "ROTATION_3", BB[BB.ROTATION_4 = 3] = "ROTATION_4", BB
       }({}),
-      HT = function(TT) {
-        return TT[TT.KART = 0] = "KART", TT[TT.OFF_ROADER = 1] = "OFF_ROADER", TT[TT.CAR = 2] = "CAR", TT[TT.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", TT[TT.ARMORED_CAR = 4] = "ARMORED_CAR", TT[TT.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", TT[TT.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", TT[TT.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", TT
+      uB = function(BB) {
+        return BB[BB.KART = 0] = "KART", BB[BB.OFF_ROADER = 1] = "OFF_ROADER", BB[BB.CAR = 2] = "CAR", BB[BB.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", BB[BB.ARMORED_CAR = 4] = "ARMORED_CAR", BB[BB.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", BB[BB.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", BB[BB.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", BB
       }({});
-    WT.DEFAULT, WT.BOAT, zT.SPEED, WT.GLIDER, MT.DIAMOND, WT.BALLOON, gT.BLACK, WT.SLEEPING, nT.ROTATION_4, WT.RIDING_MOB, WT.CAR, HT.MOONSTONE_MINING_DRILL, WT.HOVERCRAFT;
-    let kT = function(TT) {
-      return TT[TT.NORMAL = 0] = "NORMAL", TT[TT.GLIDING = 1] = "GLIDING", TT[TT.FLOATING = 2] = "FLOATING", TT
+    QB.DEFAULT, QB.BOAT, nB.SPEED, QB.GLIDER, dB.DIAMOND, QB.BALLOON, IB.BLACK, QB.SLEEPING, NB.ROTATION_4, QB.RIDING_MOB, QB.CAR, uB.MOONSTONE_MINING_DRILL, QB.HOVERCRAFT;
+    let UB = function(BB) {
+      return BB[BB.NORMAL = 0] = "NORMAL", BB[BB.GLIDING = 1] = "GLIDING", BB[BB.FLOATING = 2] = "FLOATING", BB
     }({})
   },
-  34243: () => {}
+  34219: () => {}
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

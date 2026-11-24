@@ -1,243 +1,243 @@
 export const id = 123;
 export const ids = [123, 401];
 export const modules = {
-  36413: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      default: () => QU
+  36400: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      default: () => hj
     });
-    var WT = mT(351),
-      zT = mT(3599),
-      MT = mT(3644),
-      gT = mT(3635),
-      nT = mT(3627),
-      HT = mT(1288),
-      kT = mT(44),
-      jT = mT(1863),
-      lT = mT(1475),
-      LT = mT(1569),
-      pT = mT(1126),
-      BT = mT.n(pT),
-      ZT = mT(1792),
-      cT = mT(63),
-      vT = mT(85),
-      fT = mT(2490),
-      qT = mT(1437),
-      iT = mT(1731),
-      bT = mT(1225),
-      OT = mT(3518),
-      eT = mT(4655),
-      YT = mT(3577),
-      JT = mT(2023),
-      xT = mT(3593),
-      dT = mT(1872),
-      wT = mT(1613),
-      tT = mT(2286),
-      aT = mT(1446),
-      yT = mT(2713),
-      XT = mT(5116),
-      IT = mT(1188);
-    const QT = 15e3,
-      sT = 2500;
+    var QB = zB(363),
+      nB = zB(3606),
+      dB = zB(3645),
+      IB = zB(3637),
+      NB = zB(3634),
+      uB = zB(1240),
+      UB = zB(41),
+      aB = zB(1778),
+      pB = zB(1388),
+      rB = zB(1478),
+      sB = zB(1091),
+      JB = zB.n(sB),
+      mB = zB(1710),
+      yB = zB(62),
+      kB = zB(83),
+      GB = zB(2449),
+      LB = zB(1359),
+      gB = zB(1637),
+      tB = zB(1169),
+      SB = zB(3525),
+      MB = zB(4668),
+      EB = zB(3591),
+      iB = zB(1952),
+      qB = zB(3603),
+      fB = zB(1791),
+      oB = zB(1532),
+      HB = zB(2224),
+      DB = zB(1369),
+      FB = zB(2711),
+      YB = zB(5097),
+      VB = zB(1148);
+    const hB = 15e3,
+      XB = 2500;
 
-    function FT(TT) {
-      var UT;
+    function ZB(BB) {
+      var jB;
       let {
-        eventName: mT
-      } = TT;
+        eventName: zB
+      } = BB;
       const {
-        t: WT
-      } = (0, HT.z)(), zT = dT.e[mT], [MT, gT] = (0, cT.useState)((() => Date.now() >= zT.endsAt.getTime())), [nT, kT] = (0, cT.useState)("overall"), jT = function(TT, UT) {
+        t: QB
+      } = (0, uB.D)(), nB = fB.i[zB], [dB, IB] = (0, yB.useState)((() => Date.now() >= nB.endsAt.getTime())), [NB, UB] = (0, yB.useState)("overall"), aB = function(BB, jB) {
         const {
-          userContext: mT,
-          isUserContextUpdating: WT
-        } = (0, bT.d)(), zT = `${TT}:${UT}`, [MT, gT] = (0, cT.useState)({
-          requestKey: zT,
+          userContext: zB,
+          isUserContextUpdating: QB
+        } = (0, tB.d)(), nB = `${BB}:${jB}`, [dB, IB] = (0, yB.useState)({
+          requestKey: nB,
           leaderboard: {
             status: "loading"
           }
         });
-        return (0, cT.useEffect)((() => {
-          if (WT) return;
-          let MT, nT = !1;
-          const HT = async () => {
+        return (0, yB.useEffect)((() => {
+          if (QB) return;
+          let dB, NB = !1;
+          const uB = async () => {
             if ("visible" === document.visibilityState) try {
-              const WT = await wT.b.getGameEventLeaderboard(mT, {
-                event: TT,
-                scope: UT
+              const QB = await oB.b.getGameEventLeaderboard(zB, {
+                event: BB,
+                scope: jB
               });
-              nT || gT({
-                requestKey: zT,
+              NB || IB({
+                requestKey: nB,
                 leaderboard: {
                   status: "loaded",
-                  leaderboard: WT
+                  leaderboard: QB
                 }
               })
             } catch {
-              nT || gT((TT => TT.requestKey === zT && "loaded" === TT.leaderboard.status ? TT : {
-                requestKey: zT,
+              NB || IB((BB => BB.requestKey === nB && "loaded" === BB.leaderboard.status ? BB : {
+                requestKey: nB,
                 leaderboard: {
                   status: "unavailable"
                 }
               }))
             }
-            nT || (MT = setTimeout(HT, QT))
+            NB || (dB = setTimeout(uB, hB))
           };
-          return HT(), () => {
-            nT = !0, clearTimeout(MT)
+          return uB(), () => {
+            NB = !0, clearTimeout(dB)
           }
-        }), [TT, UT, zT, mT, WT]), MT.requestKey === zT ? MT.leaderboard : {
+        }), [BB, jB, nB, zB, QB]), dB.requestKey === nB ? dB.leaderboard : {
           status: "loading"
         }
-      }(mT, nT), lT = function(TT) {
-        const UT = (0, cT.useRef)(null),
-          mT = (0, cT.useRef)(0),
-          WT = (0, cT.useRef)(),
-          [zT, MT] = (0, cT.useState)({});
-        return (0, cT.useEffect)((() => {
-          const zT = null === TT || void 0 === TT ? void 0 : TT.entries;
-          if (!zT) return;
-          const gT = new Map(zT.map((TT => [TT.player.name, TT.value]))),
-            nT = UT.current;
-          if (UT.current = gT, null === nT) return;
-          const HT = {};
-          for (const [TT, UT] of gT) {
-            const WT = nT.get(TT);
-            void 0 !== WT && UT > WT && (HT[TT] = {
-              amount: UT - WT,
-              key: mT.current++
+      }(zB, NB), pB = function(BB) {
+        const jB = (0, yB.useRef)(null),
+          zB = (0, yB.useRef)(0),
+          QB = (0, yB.useRef)(),
+          [nB, dB] = (0, yB.useState)({});
+        return (0, yB.useEffect)((() => {
+          const nB = null === BB || void 0 === BB ? void 0 : BB.entries;
+          if (!nB) return;
+          const IB = new Map(nB.map((BB => [BB.player.name, BB.value]))),
+            NB = jB.current;
+          if (jB.current = IB, null === NB) return;
+          const uB = {};
+          for (const [BB, jB] of IB) {
+            const QB = NB.get(BB);
+            void 0 !== QB && jB > QB && (uB[BB] = {
+              amount: jB - QB,
+              key: zB.current++
             })
           }
-          0 !== Object.keys(HT).length && (MT(HT), clearTimeout(WT.current), WT.current = setTimeout((() => {
-            MT({})
-          }), sT))
-        }), [TT]), (0, cT.useEffect)((() => () => {
-          clearTimeout(WT.current)
-        }), []), zT
-      }("loaded" === jT.status ? jT.leaderboard : null), LT = function(TT) {
-        const [UT, mT] = (0, cT.useState)(null), WT = "loaded" === TT.status ? TT.leaderboard.goalProgress : void 0;
-        return (0, cT.useEffect)((() => {
-          WT && mT(WT)
-        }), [WT]), UT
-      }(jT), pT = tT.c[`profileEffect_${zT.prizePack}`];
-      if (MT) return null;
-      const ZT = "loaded" === jT.status ? jT.leaderboard : null,
-        vT = null !== (UT = null === ZT || void 0 === ZT ? void 0 : ZT.entries) && void 0 !== UT ? UT : null,
-        fT = null !== ZT && void 0 !== ZT && ZT.own && null !== vT && !vT.some((TT => TT.isOwn)) ? ZT.own : null;
-      return (0, IT.jsx)("section", {
+          0 !== Object.keys(uB).length && (dB(uB), clearTimeout(QB.current), QB.current = setTimeout((() => {
+            dB({})
+          }), XB))
+        }), [BB]), (0, yB.useEffect)((() => () => {
+          clearTimeout(QB.current)
+        }), []), nB
+      }("loaded" === aB.status ? aB.leaderboard : null), rB = function(BB) {
+        const [jB, zB] = (0, yB.useState)(null), QB = "loaded" === BB.status ? BB.leaderboard.goalProgress : void 0;
+        return (0, yB.useEffect)((() => {
+          QB && zB(QB)
+        }), [QB]), jB
+      }(aB), sB = HB.d[`profileEffect_${nB.prizePack}`];
+      if (dB) return null;
+      const mB = "loaded" === aB.status ? aB.leaderboard : null,
+        kB = null !== (jB = null === mB || void 0 === mB ? void 0 : mB.entries) && void 0 !== jB ? jB : null,
+        GB = null !== mB && void 0 !== mB && mB.own && null !== kB && !kB.some((BB => BB.isOwn)) ? mB.own : null;
+      return (0, VB.jsx)("section", {
         className: "GameEventPanel AnimFadeIn",
-        children: (0, IT.jsxs)("div", {
+        children: (0, VB.jsxs)("div", {
           className: "GameEventPanelCard",
-          children: [(0, IT.jsxs)("div", {
+          children: [(0, VB.jsxs)("div", {
             className: "GameEventPanelInfo",
-            children: [(0, IT.jsxs)("div", {
+            children: [(0, VB.jsxs)("div", {
               className: "GameEventPanelStatus",
-              children: [(0, IT.jsxs)("span", {
+              children: [(0, VB.jsxs)("span", {
                 className: "GameEventPanelLive",
-                children: [(0, IT.jsx)("span", {
+                children: [(0, VB.jsx)("span", {
                   className: "GameEventPanelLiveDot"
-                }), WT("gameEvents:live")]
-              }), (0, IT.jsxs)("span", {
+                }), QB("gameEvents:live")]
+              }), (0, VB.jsxs)("span", {
                 className: "GameEventPanelEndsIn",
-                children: [WT("gameEvents:endsIn"), (0, IT.jsx)(YT.e, {
-                  toTime: zT.endsAt,
+                children: [QB("gameEvents:endsIn"), (0, VB.jsx)(EB.e, {
+                  toTime: nB.endsAt,
                   onReachEndOfCountdown: () => {
-                    gT(!0)
+                    IB(!0)
                   }
                 })]
               })]
-            }), (0, IT.jsx)("h2", {
+            }), (0, VB.jsx)("h2", {
               className: "GameEventPanelTitle",
-              children: WT(zT.titleKey)
-            }), (0, IT.jsxs)("div", {
+              children: QB(nB.titleKey)
+            }), (0, VB.jsxs)("div", {
               className: "GameEventPanelPrize",
-              children: [(0, IT.jsxs)("div", {
+              children: [(0, VB.jsxs)("div", {
                 className: "GameEventPanelPrizeSummary",
-                children: [pT && (0, IT.jsx)("div", {
+                children: [sB && (0, VB.jsx)("div", {
                   className: "GameEventPanelPrizePreview",
-                  children: (0, IT.jsx)(pT, {})
-                }), (0, IT.jsxs)("div", {
+                  children: (0, VB.jsx)(sB, {})
+                }), (0, VB.jsxs)("div", {
                   className: "GameEventPanelPrizeText",
-                  children: [(0, IT.jsx)("div", {
+                  children: [(0, VB.jsx)("div", {
                     className: "GameEventPanelPrizeLabel",
-                    children: WT("gameEvents:prize")
-                  }), (0, IT.jsx)("div", {
+                    children: QB("gameEvents:prize")
+                  }), (0, VB.jsx)("div", {
                     className: "GameEventPanelPrizeName",
-                    children: WT(zT.prizeNameKey)
+                    children: QB(nB.prizeNameKey)
                   })]
                 })]
-              }), (0, IT.jsx)(PT, {
-                event: zT,
-                progress: LT
+              }), (0, VB.jsx)(AB, {
+                event: nB,
+                progress: rB
               })]
             })]
-          }), (0, IT.jsxs)("div", {
+          }), (0, VB.jsxs)("div", {
             className: "GameEventPanelLeaderboard",
-            children: [(0, IT.jsxs)("div", {
+            children: [(0, VB.jsxs)("div", {
               className: "GameEventPanelLeaderboardHeader",
-              children: [(0, IT.jsx)("h3", {
+              children: [(0, VB.jsx)("h3", {
                 className: "GameEventPanelLeaderboardTitle",
-                children: WT(zT.leaderboard.titleKey)
-              }), (0, IT.jsx)(XT.c, {
-                ariaLabel: WT("gameEvents:leaderboardScope"),
-                options: dT.d.map((TT => ({
-                  value: TT,
-                  label: WT(`gameEvents:${TT}Scope`)
+                children: QB(nB.leaderboard.titleKey)
+              }), (0, VB.jsx)(YB.e, {
+                ariaLabel: QB("gameEvents:leaderboardScope"),
+                options: fB.e.map((BB => ({
+                  value: BB,
+                  label: QB(`gameEvents:${BB}Scope`)
                 }))),
-                value: nT,
-                onChange: kT
+                value: NB,
+                onChange: UB
               })]
-            }), "loading" === jT.status && (0, IT.jsx)("div", {
+            }), "loading" === aB.status && (0, VB.jsx)("div", {
               className: "GameEventPanelLeaderboardLoader AnimFadeIn",
-              children: (0, IT.jsx)(aT.c, {})
-            }), ("unavailable" === jT.status || "loaded" === jT.status && null === vT) && (0, IT.jsx)("div", {
+              children: (0, VB.jsx)(DB.e, {})
+            }), ("unavailable" === aB.status || "loaded" === aB.status && null === kB) && (0, VB.jsx)("div", {
               className: "GameEventPanelLeaderboardMessage",
-              children: WT("gameEvents:leaderboardUnavailable")
-            }), null !== vT && 0 === vT.length && (0, IT.jsx)("div", {
+              children: QB("gameEvents:leaderboardUnavailable")
+            }), null !== kB && 0 === kB.length && (0, VB.jsx)("div", {
               className: "GameEventPanelLeaderboardMessage",
-              children: WT("friends" === nT ? "gameEvents:friendsLeaderboardEmpty" : "gameEvents:leaderboardEmpty")
-            }), null !== vT && vT.length > 0 && (0, IT.jsx)("ol", {
+              children: QB("friends" === NB ? "gameEvents:friendsLeaderboardEmpty" : "gameEvents:leaderboardEmpty")
+            }), null !== kB && kB.length > 0 && (0, VB.jsx)("ol", {
               className: "GameEventPanelRows",
-              children: vT.map((TT => {
-                const UT = lT[TT.player.name];
-                return (0, IT.jsxs)("li", {
-                  className: BT()("GameEventPanelRow", {
-                    GameEventPanelRowOwn: TT.isOwn,
-                    GameEventPanelRowTop: TT.rank <= 3
+              children: kB.map((BB => {
+                const jB = pB[BB.player.name];
+                return (0, VB.jsxs)("li", {
+                  className: JB()("GameEventPanelRow", {
+                    GameEventPanelRowOwn: BB.isOwn,
+                    GameEventPanelRowTop: BB.rank <= 3
                   }),
-                  children: [(0, IT.jsxs)("span", {
+                  children: [(0, VB.jsxs)("span", {
                     className: "GameEventPanelRank",
-                    children: ["#", TT.rank]
-                  }), (0, IT.jsx)("div", {
+                    children: ["#", BB.rank]
+                  }), (0, VB.jsx)("div", {
                     className: "GameEventPanelPlayer",
-                    children: (0, IT.jsx)(yT.i, {
+                    children: (0, VB.jsx)(FB.g, {
                       playerSocialPreview: {
-                        ...TT.player,
+                        ...BB.player,
                         location: {
                           status: "offline"
                         }
                       },
                       showLocation: !1
                     })
-                  }), void 0 !== UT && (0, IT.jsxs)("span", {
+                  }), void 0 !== jB && (0, VB.jsxs)("span", {
                     className: "GameEventPanelGain",
-                    children: ["+", UT.amount.toLocaleString()]
-                  }, UT.key), (0, IT.jsx)("span", {
+                    children: ["+", jB.amount.toLocaleString()]
+                  }, jB.key), (0, VB.jsx)("span", {
                     className: "GameEventPanelScore",
-                    children: TT.value.toLocaleString()
+                    children: BB.value.toLocaleString()
                   })]
-                }, TT.player.name)
+                }, BB.player.name)
               }))
-            }), fT && (0, IT.jsxs)("div", {
+            }), GB && (0, VB.jsxs)("div", {
               className: "GameEventPanelRow GameEventPanelRowOwn GameEventPanelOwnRow",
-              children: [(0, IT.jsxs)("span", {
+              children: [(0, VB.jsxs)("span", {
                 className: "GameEventPanelRank",
-                children: ["#", fT.rank.toLocaleString()]
-              }), (0, IT.jsx)("span", {
+                children: ["#", GB.rank.toLocaleString()]
+              }), (0, VB.jsx)("span", {
                 className: "GameEventPanelPlayer",
-                children: WT("gameEvents:yourPlace")
-              }), (0, IT.jsx)("span", {
+                children: QB("gameEvents:yourPlace")
+              }), (0, VB.jsx)("span", {
                 className: "GameEventPanelScore",
-                children: fT.value.toLocaleString()
+                children: GB.value.toLocaleString()
               })]
             })]
           })]
@@ -245,355 +245,355 @@ export const modules = {
       })
     }
 
-    function PT(TT) {
+    function AB(BB) {
       let {
-        event: UT,
-        progress: mT
-      } = TT;
+        event: jB,
+        progress: zB
+      } = BB;
       const {
-        t: WT
-      } = (0, HT.z)(), zT = null !== mT && UT.prizeGoals.some(((TT, UT) => mT[UT] >= TT.target));
-      return (0, IT.jsxs)("div", {
+        t: QB
+      } = (0, uB.D)(), nB = null !== zB && jB.prizeGoals.some(((BB, jB) => zB[jB] >= BB.target));
+      return (0, VB.jsxs)("div", {
         className: "GameEventPanelGoals",
-        children: [(0, IT.jsx)("div", {
+        children: [(0, VB.jsx)("div", {
           className: "GameEventPanelGoalsHeading",
-          children: WT(zT ? "gameEvents:prizeEarned" : "gameEvents:goalsHeading")
-        }), (0, IT.jsx)("div", {
+          children: QB(nB ? "gameEvents:prizeEarned" : "gameEvents:goalsHeading")
+        }), (0, VB.jsx)("div", {
           className: "GameEventPanelGoalRow",
-          children: UT.prizeGoals.map(((TT, UT) => {
-            const zT = null === mT ? null : Math.min(mT[UT], TT.target);
-            return (0, IT.jsxs)(cT.Fragment, {
-              children: [UT > 0 && (0, IT.jsx)("div", {
+          children: jB.prizeGoals.map(((BB, jB) => {
+            const nB = null === zB ? null : Math.min(zB[jB], BB.target);
+            return (0, VB.jsxs)(yB.Fragment, {
+              children: [jB > 0 && (0, VB.jsx)("div", {
                 className: "GameEventPanelGoalsOr",
-                children: WT("gameEvents:goalsOr")
-              }), (0, IT.jsxs)("div", {
-                className: BT()("GameEventPanelGoal", {
-                  GameEventPanelGoalDone: zT === TT.target
+                children: QB("gameEvents:goalsOr")
+              }), (0, VB.jsxs)("div", {
+                className: JB()("GameEventPanelGoal", {
+                  GameEventPanelGoalDone: nB === BB.target
                 }),
-                children: [(0, IT.jsx)("span", {
+                children: [(0, VB.jsx)("span", {
                   className: "GameEventPanelGoalLabel",
-                  children: WT(TT.labelKey)
-                }), (0, IT.jsxs)("div", {
+                  children: QB(BB.labelKey)
+                }), (0, VB.jsxs)("div", {
                   className: "GameEventPanelGoalBar",
-                  children: [(0, IT.jsx)("div", {
+                  children: [(0, VB.jsx)("div", {
                     className: "GameEventPanelGoalBarFill",
                     style: {
-                      width: (null !== zT && void 0 !== zT ? zT : 0) / TT.target * 100 + "%"
+                      width: (null !== nB && void 0 !== nB ? nB : 0) / BB.target * 100 + "%"
                     }
-                  }), null !== zT && (0, IT.jsxs)("span", {
+                  }), null !== nB && (0, VB.jsxs)("span", {
                     className: "GameEventPanelGoalCount",
-                    children: [zT.toLocaleString(), " / ", TT.target.toLocaleString()]
+                    children: [nB.toLocaleString(), " / ", BB.target.toLocaleString()]
                   })]
                 })]
               })]
-            }, TT.board)
+            }, BB.board)
           }))
         })]
       })
     }
-    var VT = mT(1667),
-      uT = mT(1717),
-      CT = mT(1113),
-      rT = mT(782),
-      KT = mT(3568);
+    var TB = zB(1570),
+      PB = zB(1621),
+      WB = zB(1082),
+      eB = zB(781),
+      lB = zB(3587);
 
-    function ST(TT) {
+    function wB(BB) {
       let {
-        gameNameWithVariation: UT
-      } = TT;
-      const mT = (0, VT.z)(UT),
-        [WT, zT] = (0, cT.useState)(null);
-      if ((0, cT.useEffect)((() => {
-          if (!mT) return;
-          let TT = !0;
-          return (0, uT.i)(mT).then((UT => {
-            TT && zT(UT)
-          })).catch((TT => {
-            console.error(`Failed to load the page copy for ${mT.name}`, TT)
+        gameNameWithVariation: jB
+      } = BB;
+      const zB = (0, TB.u)(jB),
+        [QB, nB] = (0, yB.useState)(null);
+      if ((0, yB.useEffect)((() => {
+          if (!zB) return;
+          let BB = !0;
+          return (0, PB.j)(zB).then((jB => {
+            BB && nB(jB)
+          })).catch((BB => {
+            console.error(`Failed to load the page copy for ${zB.name}`, BB)
           })), () => {
-            TT = !1
+            BB = !1
           }
-        }), [mT]), !mT || !WT || WT.name !== mT.name) return null;
-      const MT = (0, uT.e)(WT),
-        gT = new Set((0, CT.b)((0, rT.j)()).map((TT => (0, VT.r)(TT)))),
-        nT = WT.similarGames.filter((TT => gT.has((0, VT.r)(TT))));
-      return (0, IT.jsx)("div", {
+        }), [zB]), !zB || !QB || QB.name !== zB.name) return null;
+      const dB = (0, PB.h)(QB),
+        IB = new Set((0, WB.d)((0, eB.i)()).map((BB => (0, TB.o)(BB)))),
+        NB = QB.similarGames.filter((BB => IB.has((0, TB.o)(BB))));
+      return (0, VB.jsx)("div", {
         className: "GamePageContent",
-        children: (0, IT.jsxs)("div", {
+        children: (0, VB.jsxs)("div", {
           className: "GamePageContentColumns",
-          children: [(0, IT.jsxs)("section", {
+          children: [(0, VB.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, IT.jsx)("h2", {
-              children: MT.whatIs
-            }), WT.whatIs.map((TT => (0, IT.jsx)("p", {
-              children: TT
-            }, TT)))]
-          }), (0, IT.jsxs)("section", {
+            children: [(0, VB.jsx)("h2", {
+              children: dB.whatIs
+            }), QB.whatIs.map((BB => (0, VB.jsx)("p", {
+              children: BB
+            }, BB)))]
+          }), (0, VB.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, IT.jsx)("h2", {
-              children: MT.howToPlay
-            }), WT.howToPlay.map((TT => (0, IT.jsx)("p", {
-              children: TT
-            }, TT)))]
-          }), (0, IT.jsxs)("section", {
+            children: [(0, VB.jsx)("h2", {
+              children: dB.howToPlay
+            }), QB.howToPlay.map((BB => (0, VB.jsx)("p", {
+              children: BB
+            }, BB)))]
+          }), (0, VB.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, IT.jsx)("h2", {
-              children: MT.features
-            }), (0, IT.jsx)("ul", {
-              children: WT.features.map((TT => (0, IT.jsx)("li", {
-                children: TT
-              }, TT)))
+            children: [(0, VB.jsx)("h2", {
+              children: dB.features
+            }), (0, VB.jsx)("ul", {
+              children: QB.features.map((BB => (0, VB.jsx)("li", {
+                children: BB
+              }, BB)))
             })]
-          }), (0, IT.jsxs)("aside", {
+          }), (0, VB.jsxs)("aside", {
             className: "GamePageContentSection",
-            children: [(0, IT.jsx)("h2", {
-              children: MT.tips
-            }), (0, IT.jsx)("ul", {
-              children: WT.tips.map((TT => (0, IT.jsx)("li", {
-                children: TT
-              }, TT)))
+            children: [(0, VB.jsx)("h2", {
+              children: dB.tips
+            }), (0, VB.jsx)("ul", {
+              children: QB.tips.map((BB => (0, VB.jsx)("li", {
+                children: BB
+              }, BB)))
             })]
-          }), (0, IT.jsxs)("section", {
+          }), (0, VB.jsxs)("section", {
             className: "GamePageContentSection GamePageContentFaq",
-            children: [(0, IT.jsx)("h2", {
-              children: MT.faq
-            }), WT.faq.map((TT => {
+            children: [(0, VB.jsx)("h2", {
+              children: dB.faq
+            }), QB.faq.map((BB => {
               let {
-                question: UT,
-                answer: mT
-              } = TT;
-              return (0, IT.jsxs)("div", {
+                question: jB,
+                answer: zB
+              } = BB;
+              return (0, VB.jsxs)("div", {
                 className: "GamePageContentFaqItem",
-                children: [(0, IT.jsx)("h3", {
-                  children: UT
-                }), (0, IT.jsx)("p", {
-                  children: mT
+                children: [(0, VB.jsx)("h3", {
+                  children: jB
+                }), (0, VB.jsx)("p", {
+                  children: zB
                 })]
-              }, UT)
+              }, jB)
             }))]
-          }), nT.length > 0 && (0, IT.jsxs)("nav", {
+          }), NB.length > 0 && (0, VB.jsxs)("nav", {
             className: "GamePageContentSection GamePageContentSimilarGamesSection",
-            children: [(0, IT.jsx)("h2", {
-              children: MT.similarGames
-            }), (0, IT.jsx)("ul", {
+            children: [(0, VB.jsx)("h2", {
+              children: dB.similarGames
+            }), (0, VB.jsx)("ul", {
               className: "GamePageContentSimilarGames",
-              children: nT.map((TT => (0, IT.jsx)("li", {
-                children: (0, IT.jsx)(KT.f, {
+              children: NB.map((BB => (0, VB.jsx)("li", {
+                children: (0, VB.jsx)(lB.f, {
                   source: {
                     type: "game",
-                    gameNameWithVariation: TT
+                    gameNameWithVariation: BB
                   },
                   entrySource: "other",
                   gameWidth: "100%",
                   useLongRatio: !0
                 })
-              }, TT)))
+              }, BB)))
             })]
           })]
         })
       })
     }
-    var GT = mT(1135),
-      NT = mT(102),
-      ET = mT(1231),
-      hT = mT(34323),
-      DT = mT(1772),
-      oT = mT(1641),
-      AT = mT(1633),
-      RT = mT(1723),
-      TU = mT(1580),
-      UU = mT(1457),
-      mU = mT(36415),
-      WU = mT(1327),
-      zU = mT(1089),
-      MU = mT(366),
-      gU = mT(1099),
-      nU = mT(1658),
-      HU = mT(9039),
-      kU = mT(25),
-      jU = mT(2641),
-      lU = mT(825),
-      LU = mT(1321),
-      pU = mT(6569),
-      BU = mT(3582);
+    var xB = zB(1108),
+      KB = zB(106),
+      CB = zB(1173),
+      cB = zB(34292),
+      bB = zB(1679),
+      vB = zB(1547),
+      RB = zB(1543),
+      OB = zB(1630),
+      Bj = zB(1494),
+      jj = zB(1381),
+      zj = zB(36406),
+      Qj = zB(1268),
+      nj = zB(1067),
+      dj = zB(376),
+      Ij = zB(1073),
+      Nj = zB(1562),
+      uj = zB(8946),
+      Uj = zB(28),
+      aj = zB(2624),
+      pj = zB(814),
+      rj = zB(1263),
+      sj = zB(6451),
+      Jj = zB(3593);
 
-    function ZU(TT) {
+    function mj(BB) {
       let {
-        preview: UT,
-        isBroken: mT
-      } = TT;
-      const WT = null === UT ? null : (0, MT.e)(UT, "small"),
-        gT = (0, zT.e)(null !== WT && void 0 !== WT ? WT : MT.n);
-      return null === UT ? (0, IT.jsx)("div", {
-        className: BT()("FeaturedGamesPopupSlotThumbnail FeaturedGamesPopupSlotThumbnailEmpty", {
-          FeaturedGamesPopupSlotThumbnailBroken: mT
+        preview: jB,
+        isBroken: zB
+      } = BB;
+      const QB = null === jB ? null : (0, dB.e)(jB, "small"),
+        IB = (0, nB.f)(null !== QB && void 0 !== QB ? QB : dB.m);
+      return null === jB ? (0, VB.jsx)("div", {
+        className: JB()("FeaturedGamesPopupSlotThumbnail FeaturedGamesPopupSlotThumbnailEmpty", {
+          FeaturedGamesPopupSlotThumbnailBroken: zB
         }),
-        children: (0, IT.jsx)(GT.c, {
-          name: mT ? "triangle-exclamation" : "star"
+        children: (0, VB.jsx)(xB.c, {
+          name: zB ? "triangle-exclamation" : "star"
         })
-      }) : (0, IT.jsx)("div", {
-        className: BT()("FeaturedGamesPopupSlotThumbnail", nT.h),
-        style: (0, nT.e)(gT),
+      }) : (0, VB.jsx)("div", {
+        className: JB()("FeaturedGamesPopupSlotThumbnail", NB.h),
+        style: (0, NB.g)(IB),
         role: "img",
-        "aria-label": UT.name,
-        children: (0, IT.jsx)(nT.c, {
-          image: gT
+        "aria-label": jB.name,
+        children: (0, VB.jsx)(NB.c, {
+          image: IB
         })
       })
     }
 
-    function cU(TT) {
+    function yj(BB) {
       let {
-        schematicId: UT,
-        gameName: mT
-      } = TT;
+        schematicId: jB,
+        gameName: zB
+      } = BB;
       const {
-        userContext: zT
-      } = (0, bT.d)(), MT = (0, BU.c)(), [gT, nT] = (0, cT.useState)(null), [HT, kT] = (0, cT.useState)(null), [jT, lT] = (0, cT.useState)(!1), pT = (0, cT.useCallback)((() => {
-        kT(null), wT.b.getFeaturedGames(zT).then((TT => {
-          MT.current && nT(TT.slots)
-        })).catch((TT => {
-          console.error("Failed to get featured games", TT), MT.current && kT("Failed to load featured games")
+        userContext: nB
+      } = (0, tB.d)(), dB = (0, Jj.d)(), [IB, NB] = (0, yB.useState)(null), [uB, UB] = (0, yB.useState)(null), [aB, pB] = (0, yB.useState)(!1), sB = (0, yB.useCallback)((() => {
+        UB(null), oB.b.getFeaturedGames(nB).then((BB => {
+          dB.current && NB(BB.slots)
+        })).catch((BB => {
+          console.error("Failed to get featured games", BB), dB.current && UB("Failed to load featured games")
         }))
-      }), [zT, MT]);
-      (0, cT.useEffect)((() => {
-        pT()
-      }), [pT]);
-      const BT = (TT, UT) => {
-        jT || (lT(!0), wT.b.setFeaturedGame(zT, TT, UT).then((() => {
-          MT.current && pT()
-        })).catch((TT => {
-          console.error("Failed to set featured game", TT), MT.current && kT("Failed to update the featured slot")
+      }), [nB, dB]);
+      (0, yB.useEffect)((() => {
+        sB()
+      }), [sB]);
+      const JB = (BB, jB) => {
+        aB || (pB(!0), oB.b.setFeaturedGame(nB, BB, jB).then((() => {
+          dB.current && sB()
+        })).catch((BB => {
+          console.error("Failed to set featured game", BB), dB.current && UB("Failed to update the featured slot")
         })).finally((() => {
-          MT.current && lT(!1)
+          dB.current && pB(!1)
         })))
       };
-      return (0, IT.jsxs)("div", {
+      return (0, VB.jsxs)("div", {
         className: "FeaturedGamesPopupBody",
-        children: [(0, IT.jsx)("h1", {
+        children: [(0, VB.jsx)("h1", {
           className: "FeaturedGamesPopupTitle",
           children: "Featured Games"
-        }), !gT && !HT && (0, IT.jsx)("div", {
+        }), !IB && !uB && (0, VB.jsx)("div", {
           className: "FeaturedGamesPopupLoader",
-          children: (0, IT.jsx)(aT.c, {})
-        }), HT && (0, IT.jsx)("div", {
+          children: (0, VB.jsx)(DB.e, {})
+        }), uB && (0, VB.jsx)("div", {
           className: "FeaturedGamesPopupError",
-          children: HT
-        }), gT && (0, IT.jsxs)(IT.Fragment, {
-          children: [(0, IT.jsx)("div", {
+          children: uB
+        }), IB && (0, VB.jsxs)(VB.Fragment, {
+          children: [(0, VB.jsx)("div", {
             className: "FeaturedGamesPopupSlots",
-            children: gT.map((TT => {
-              const mT = TT.schematicId === UT,
-                zT = null === TT.schematicId,
+            children: IB.map((BB => {
+              const zB = BB.schematicId === jB,
+                nB = null === BB.schematicId,
                 {
-                  categoryGroup: MT
-                } = WT.F[TT.slotId];
-              return (0, IT.jsxs)("div", {
+                  categoryGroup: dB
+                } = QB.H[BB.slotId];
+              return (0, VB.jsxs)("div", {
                 className: "FeaturedGamesPopupSlot",
-                children: [(0, IT.jsx)(ZU, {
-                  preview: TT.preview,
-                  isBroken: !zT
-                }), (0, IT.jsxs)("div", {
+                children: [(0, VB.jsx)(mj, {
+                  preview: BB.preview,
+                  isBroken: !nB
+                }), (0, VB.jsxs)("div", {
                   className: "FeaturedGamesPopupSlotText",
-                  children: [(0, IT.jsxs)("div", {
+                  children: [(0, VB.jsxs)("div", {
                     className: "FeaturedGamesPopupSlotLabel",
-                    children: [(0, WT.ab)(MT), " \xb7 position", " ", (0, WT.I)(TT.slotId, WT.Fb) + 1, " of", " ", (0, WT.Bb)(MT, WT.Fb)]
-                  }), zT && (0, IT.jsx)("div", {
+                    children: [(0, QB.db)(dB), " \xb7 position", " ", (0, QB.K)(BB.slotId, QB.Ab) + 1, " of", " ", (0, QB.zb)(dB, QB.Ab)]
+                  }), nB && (0, VB.jsx)("div", {
                     className: "FeaturedGamesPopupSlotEmpty",
                     children: "Empty"
-                  }), !zT && null !== TT.preview && (0, IT.jsx)("div", {
+                  }), !nB && null !== BB.preview && (0, VB.jsx)("div", {
                     className: "FeaturedGamesPopupSlotGame",
-                    children: TT.preview.name
-                  }), !zT && null === TT.preview && (0, IT.jsxs)("div", {
+                    children: BB.preview.name
+                  }), !nB && null === BB.preview && (0, VB.jsxs)("div", {
                     className: "FeaturedGamesPopupSlotMissing",
-                    children: [(0, IT.jsx)(GT.c, {
+                    children: [(0, VB.jsx)(xB.c, {
                       name: "triangle-exclamation"
                     }), " Pinned game is no longer published"]
                   })]
-                }), (0, IT.jsxs)("div", {
+                }), (0, VB.jsxs)("div", {
                   className: "FeaturedGamesPopupSlotActions",
-                  children: [zT && (0, IT.jsxs)(LT.s, {
+                  children: [nB && (0, VB.jsxs)(rB.r, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      BT(TT.slotId, UT)
+                      JB(BB.slotId, jB)
                     },
-                    disabled: jT,
-                    children: [(0, IT.jsx)(GT.c, {
+                    disabled: aB,
+                    children: [(0, VB.jsx)(xB.c, {
                       name: "star"
                     }), " Feature here"]
-                  }), !zT && !mT && (0, IT.jsxs)(LT.L, {
+                  }), !nB && !zB && (0, VB.jsxs)(rB.M, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      BT(TT.slotId, UT)
+                      JB(BB.slotId, jB)
                     },
-                    disabled: jT,
-                    children: [(0, IT.jsx)(GT.c, {
+                    disabled: aB,
+                    children: [(0, VB.jsx)(xB.c, {
                       name: "star"
                     }), " Replace"]
-                  }), !zT && (0, IT.jsxs)(LT.I, {
+                  }), !nB && (0, VB.jsxs)(rB.G, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      BT(TT.slotId, null)
+                      JB(BB.slotId, null)
                     },
-                    disabled: jT,
-                    children: [(0, IT.jsx)(GT.c, {
+                    disabled: aB,
+                    children: [(0, VB.jsx)(xB.c, {
                       name: "xmark"
                     }), " Clear"]
                   })]
                 })]
-              }, TT.slotId)
+              }, BB.slotId)
             }))
-          }), (0, IT.jsx)("p", {
+          }), (0, VB.jsx)("p", {
             className: "FeaturedGamesPopupHint",
             children: "A game leaves its slot once it ranks higher on its own."
           })]
         })]
       })
     }
-    var vU = mT(4761),
-      fU = mT(4688),
-      qU = mT(3536);
-    const iU = 8,
-      bU = 12;
+    var kj = zB(4757),
+      Gj = zB(4703),
+      Lj = zB(3551);
+    const gj = 8,
+      tj = 12;
 
-    function OU(TT) {
+    function Sj(BB) {
       let {
-        customLobbies: UT,
-        favouriteLobbies: mT,
-        toggleLikeLobby: WT,
-        showReport: zT
-      } = TT;
-      const [MT, gT] = (0, cT.useState)(iU);
-      return (0, cT.useEffect)((() => {
-        if (MT >= UT.length) return;
-        let TT = !0;
-        return (0, qU.h)().then((() => {
-          TT && gT(MT + bU)
+        customLobbies: jB,
+        favouriteLobbies: zB,
+        toggleLikeLobby: QB,
+        showReport: nB
+      } = BB;
+      const [dB, IB] = (0, yB.useState)(gj);
+      return (0, yB.useEffect)((() => {
+        if (dB >= jB.length) return;
+        let BB = !0;
+        return (0, Lj.e)().then((() => {
+          BB && IB(dB + tj)
         })), () => {
-          TT = !1
+          BB = !1
         }
-      }), [MT, UT.length]), (0, IT.jsx)(IT.Fragment, {
-        children: UT.slice(0, MT).map((TT => (0, IT.jsx)(fU.e, {
-          customLobby: TT,
-          favouriteLobbies: mT,
-          toggleLikeLobby: WT,
-          showReport: zT
-        }, TT.name)))
+      }), [dB, jB.length]), (0, VB.jsx)(VB.Fragment, {
+        children: jB.slice(0, dB).map((BB => (0, VB.jsx)(Gj.c, {
+          customLobby: BB,
+          favouriteLobbies: zB,
+          toggleLikeLobby: QB,
+          showReport: nB
+        }, BB.name)))
       })
     }
-    var eU = mT(4696),
-      YU = mT(4707),
-      JU = mT(4673),
-      xU = mT(3674),
-      dU = mT(9036),
-      wU = mT(227);
-    const tU = {
-      skyblock: [mT(36437).c]
+    var Mj = zB(4709),
+      Ej = zB(4717),
+      ij = zB(4680),
+      qj = zB(3671),
+      fj = zB(8937),
+      oj = zB(230);
+    const Hj = {
+      skyblock: [zB(36439).d]
     };
-    var aU = mT(653);
-    const yU = {
+    var Dj = zB(658);
+    const Fj = {
       listedVariations: null,
-      backgroundImage: MT.n,
+      backgroundImage: dB.m,
       badges: [],
       category: null,
       title: null,
@@ -609,363 +609,363 @@ export const modules = {
       countdownInformation: null
     };
 
-    function XU(TT, UT) {
-      const mT = lU.h[TT.schematicId];
+    function Yj(BB, jB) {
+      const zB = pj.d[BB.schematicId];
       return {
         listedVariations: [],
-        backgroundImage: (0, MT.e)(TT, "large"),
+        backgroundImage: (0, dB.e)(BB, "large"),
         badges: [],
-        category: TT.gameCategory,
-        title: void 0 !== (null === mT || void 0 === mT ? void 0 : mT.title) ? UT(mT.title) : TT.name,
+        category: BB.gameCategory,
+        title: void 0 !== (null === zB || void 0 === zB ? void 0 : zB.title) ? jB(zB.title) : BB.name,
         variationTitle: null,
-        description: void 0 !== (null === mT || void 0 === mT ? void 0 : mT.description) ? UT(mT.description) : TT.description,
-        ownerSocialPreviewWithoutLocation: "owner" in TT ? TT.owner : null,
-        ccu: TT.ccu,
-        favourites: TT.favourites,
+        description: void 0 !== (null === zB || void 0 === zB ? void 0 : zB.description) ? jB(zB.description) : BB.description,
+        ownerSocialPreviewWithoutLocation: "owner" in BB ? BB.owner : null,
+        ccu: BB.ccu,
+        favourites: BB.favourites,
         isFavourite: null,
-        useRejoinLastLobbyButton: "persistWorld" in TT ? TT.persistWorld : null,
+        useRejoinLastLobbyButton: "persistWorld" in BB ? BB.persistWorld : null,
         showWorldsInsteadOfCustomLobbies: !1,
         canCreateCustomLobbies: !0,
         countdownInformation: null
       }
     }
 
-    function IU(TT) {
-      var UT, mT, WT;
-      return null !== (UT = null !== (mT = (0, wU.k)() ? function(TT) {
-        for (const [UT, mT] of Object.entries(tU)) {
-          const WT = [UT, ...mT.map((TT => (0, MU.ac)(UT, TT)))];
-          if (WT.includes(TT)) return WT
+    function Vj(BB) {
+      var jB, zB, QB;
+      return null !== (jB = null !== (zB = (0, oj.k)() ? function(BB) {
+        for (const [jB, zB] of Object.entries(Hj)) {
+          const QB = [jB, ...zB.map((BB => (0, dj.Pb)(jB, BB)))];
+          if (QB.includes(BB)) return QB
         }
         return null
-      }(TT) : null) && void 0 !== mT ? mT : null === (WT = lU.d[TT]) || void 0 === WT ? void 0 : WT.listedVariations) && void 0 !== UT ? UT : null
+      }(BB) : null) && void 0 !== zB ? zB : null === (QB = pj.c[BB]) || void 0 === QB ? void 0 : QB.listedVariations) && void 0 !== jB ? jB : null
     }
 
-    function QU() {
+    function hj() {
       const {
-        gameNameWithVariation: TT
-      } = (0, oT.y)();
-      if ((0, cT.useEffect)(xU.n, []), TT && (0, WU.u)(TT)) return (0, IT.jsx)(sU, {
-        urlId: TT
-      }, TT);
-      const UT = TT && (0, zU.k)(TT) ? TT : "firstParty";
-      return (0, IT.jsx)(FU, {}, UT)
+        gameNameWithVariation: BB
+      } = (0, vB.w)();
+      if ((0, yB.useEffect)(qj.s, []), BB && (0, Qj.l)(BB)) return (0, VB.jsx)(Xj, {
+        urlId: BB
+      }, BB);
+      const jB = BB && (0, nj.n)(BB) ? BB : "firstParty";
+      return (0, VB.jsx)(Zj, {}, jB)
     }
 
-    function sU(TT) {
+    function Xj(BB) {
       let {
-        urlId: UT
-      } = TT;
+        urlId: jB
+      } = BB;
       const {
-        userContext: mT,
-        isUserContextUpdating: WT
-      } = (0, bT.d)(), zT = (0, cT.useMemo)((() => (0, DT.j)(UT)), [UT]);
-      (0, cT.useMemo)((() => {
-        if (null === zT) return;
-        const TT = ET.userContextManager.peekCurrentUserContext();
-        (null !== TT ? wT.b.getGame(TT, zT.schematicId) : ET.userContextManager.getCurrentUserContext().then((TT => wT.b.getGame(TT, zT.schematicId)))).catch((TT => {
-          console.error(`Failed to get the custom game ${zT.schematicId}`, TT), (0, DT.f)(UT)
+        userContext: zB,
+        isUserContextUpdating: QB
+      } = (0, tB.d)(), nB = (0, yB.useMemo)((() => (0, bB.j)(jB)), [jB]);
+      (0, yB.useMemo)((() => {
+        if (null === nB) return;
+        const BB = CB.userContextManager.peekCurrentUserContext();
+        (null !== BB ? oB.b.getGame(BB, nB.schematicId) : CB.userContextManager.getCurrentUserContext().then((BB => oB.b.getGame(BB, nB.schematicId)))).catch((BB => {
+          console.error(`Failed to get the custom game ${nB.schematicId}`, BB), (0, bB.i)(jB)
         }))
-      }), [zT, UT]);
-      const [MT, gT] = (0, cT.useState)(null), nT = (0, hT.d)();
-      (0, cT.useEffect)((() => {
-        if (null !== zT || WT) return;
-        let TT = !0;
-        return wT.b.getGameByUrlId(mT, UT).then((mT => {
-          TT && gT({
-            urlId: UT,
-            game: mT
+      }), [nB, jB]);
+      const [dB, IB] = (0, yB.useState)(null), NB = (0, cB.d)();
+      (0, yB.useEffect)((() => {
+        if (null !== nB || QB) return;
+        let BB = !0;
+        return oB.b.getGameByUrlId(zB, jB).then((zB => {
+          BB && IB({
+            urlId: jB,
+            game: zB
           })
-        })).catch((mT => {
-          console.error(`Failed to find the custom game with urlId ${UT}`, mT), TT && (0, AT.navigateToHomePage)()
+        })).catch((zB => {
+          console.error(`Failed to find the custom game with urlId ${jB}`, zB), BB && (0, RB.navigateToHomePage)()
         })), () => {
-          TT = !1
+          BB = !1
         }
-      }), [UT, zT, WT, mT]);
-      const HT = null !== zT && void 0 !== zT ? zT : (null === MT || void 0 === MT ? void 0 : MT.urlId) === UT ? MT.game : null;
-      return null === HT ? (0, IT.jsx)(aT.c, {}) : nT ? (0, IT.jsx)(FU, {
-        gameNameWithVariation: (0, zU.s)(HT.schematicId),
-        knownCustomGame: HT
-      }, HT.schematicId) : null
+      }), [jB, nB, QB, zB]);
+      const uB = null !== nB && void 0 !== nB ? nB : (null === dB || void 0 === dB ? void 0 : dB.urlId) === jB ? dB.game : null;
+      return null === uB ? (0, VB.jsx)(DB.e, {}) : NB ? (0, VB.jsx)(Zj, {
+        gameNameWithVariation: (0, nj.y)(uB.schematicId),
+        knownCustomGame: uB
+      }, uB.schematicId) : null
     }
 
-    function FU(TT) {
-      var UT, mT, gT, pT, dT, tT, aT, XT;
+    function Zj(BB) {
+      var jB, zB, IB, sB, fB, HB, DB, YB;
       let {
-        gameNameWithVariation: QT,
-        knownCustomGame: sT = null
-      } = TT;
+        gameNameWithVariation: hB,
+        knownCustomGame: XB = null
+      } = BB;
       const {
-        t: PT
-      } = (0, HT.z)();
-      (0, jU.i)();
-      const uT = (0, jU.m)(),
+        t: AB
+      } = (0, uB.D)();
+      (0, aj.h)();
+      const PB = (0, aj.m)(),
         {
-          userContext: CT,
-          isUserContextUpdating: rT
-        } = (0, bT.d)(),
-        KT = (0, JU.e)(),
-        ET = (0, AT.useNavigatePreserveSearch)(),
-        hT = (0, oT.y)(),
-        DT = (0, cT.useMemo)((() => QT ? {
-          gameNameWithVariation: QT
-        } : hT), [QT, hT]),
-        TU = (0, HU.b)(DT),
-        WU = (0, cT.useMemo)((() => {
-          const TT = function(TT) {
-            var UT, mT;
-            const WT = IU(TT);
-            if (!WT || 0 === WT.length || WT.includes(TT)) return TT;
-            const zT = kT.l.getItem((0, fT.g)(TT));
-            if (zT && WT.includes(zT)) return zT;
-            return null !== (UT = null === (mT = lU.d[TT]) || void 0 === mT ? void 0 : mT.defaultListedVariation) && void 0 !== UT ? UT : WT[0]
-          }(TU.gameNameWithVariation);
-          return TT === TU.gameNameWithVariation ? TU : {
-            ...TU,
-            gameNameWithVariation: TT
+          userContext: WB,
+          isUserContextUpdating: eB
+        } = (0, tB.d)(),
+        lB = (0, ij.f)(),
+        CB = (0, RB.useNavigatePreserveSearch)(),
+        cB = (0, vB.w)(),
+        bB = (0, yB.useMemo)((() => hB ? {
+          gameNameWithVariation: hB
+        } : cB), [hB, cB]),
+        Bj = (0, uj.b)(bB),
+        Qj = (0, yB.useMemo)((() => {
+          const BB = function(BB) {
+            var jB, zB;
+            const QB = Vj(BB);
+            if (!QB || 0 === QB.length || QB.includes(BB)) return BB;
+            const nB = UB.j.getItem((0, GB.e)(BB));
+            if (nB && QB.includes(nB)) return nB;
+            return null !== (jB = null === (zB = pj.c[BB]) || void 0 === zB ? void 0 : zB.defaultListedVariation) && void 0 !== jB ? jB : QB[0]
+          }(Bj.gameNameWithVariation);
+          return BB === Bj.gameNameWithVariation ? Bj : {
+            ...Bj,
+            gameNameWithVariation: BB
           }
-        }), [TU]);
-      (0, cT.useEffect)((() => {
-        const TT = TU.gameNameWithVariation;
-        WU.gameNameWithVariation !== TT && TT !== (0, MU.dc)(TT) && ET((0, VT.v)(WU.gameNameWithVariation), {
+        }), [Bj]);
+      (0, yB.useEffect)((() => {
+        const BB = Bj.gameNameWithVariation;
+        Qj.gameNameWithVariation !== BB && BB !== (0, dj.Sb)(BB) && CB((0, TB.p)(Qj.gameNameWithVariation), {
           replace: !0
         })
-      }), [WU.gameNameWithVariation, TU.gameNameWithVariation, ET]);
-      const [BU, ZU] = (0, cT.useState)(""), qU = cT.useRef(null), [iU, bU] = (0, cT.useState)(), xU = (0, zU.k)(WU.gameNameWithVariation), wU = (0, cT.useMemo)((() => xU ? null : function(TT, UT, mT) {
-        var WT, zT;
-        const gT = lU.d[TT];
-        return (0, aU.E)(gT) ? null : {
-          listedVariations: IU(TT),
-          backgroundImage: (0, MT.j)(TT, (0, MT.d)(gT)),
-          badges: (0, jT.filterBadges)(gT.badges),
-          category: gT.type,
-          title: mT(gT.title),
-          variationTitle: gT.variationTitle ? mT(gT.variationTitle) : null,
-          description: mT(gT.description),
+      }), [Qj.gameNameWithVariation, Bj.gameNameWithVariation, CB]);
+      const [Jj, mj] = (0, yB.useState)(""), Lj = yB.useRef(null), [gj, tj] = (0, yB.useState)(), qj = (0, nj.n)(Qj.gameNameWithVariation), oj = (0, yB.useMemo)((() => qj ? null : function(BB, jB, zB) {
+        var QB, nB;
+        const IB = pj.c[BB];
+        return (0, Dj.I)(IB) ? null : {
+          listedVariations: Vj(BB),
+          backgroundImage: (0, dB.i)(BB, (0, dB.c)(IB)),
+          badges: (0, aB.filterBadges)(IB.badges),
+          category: IB.type,
+          title: zB(IB.title),
+          variationTitle: IB.variationTitle ? zB(IB.variationTitle) : null,
+          description: zB(IB.description),
           ownerSocialPreviewWithoutLocation: null,
-          ccu: null !== UT ? null !== (WT = UT[TT]) && void 0 !== WT ? WT : 0 : null,
+          ccu: null !== jB ? null !== (QB = jB[BB]) && void 0 !== QB ? QB : 0 : null,
           favourites: null,
           isFavourite: null,
-          useRejoinLastLobbyButton: gT.useRejoinLastLobbyButton,
-          showWorldsInsteadOfCustomLobbies: gT.showWorldsInsteadOfCustomLobbies,
-          canCreateCustomLobbies: null === (zT = gT.canCreateCustomLobbies) || void 0 === zT || zT,
-          countdownInformation: (0, fT.d)(TT)
+          useRejoinLastLobbyButton: IB.useRejoinLastLobbyButton,
+          showWorldsInsteadOfCustomLobbies: IB.showWorldsInsteadOfCustomLobbies,
+          canCreateCustomLobbies: null === (nB = IB.canCreateCustomLobbies) || void 0 === nB || nB,
+          countdownInformation: (0, GB.d)(BB)
         }
-      }(WU.gameNameWithVariation, uT, PT)), [xU, WU.gameNameWithVariation, uT, PT]), [tU, QU] = (0, cT.useState)(!1), [sU, FU] = (0, cT.useState)((() => sT ? XU(sT, PT) : yU)), VU = null !== wU && void 0 !== wU ? wU : sU, [uU] = (0, cT.useState)(VU === yU), CU = (0, zT.e)(VU.backgroundImage, {
+      }(Qj.gameNameWithVariation, PB, AB)), [qj, Qj.gameNameWithVariation, PB, AB]), [Hj, hj] = (0, yB.useState)(!1), [Xj, Zj] = (0, yB.useState)((() => XB ? Yj(XB, AB) : Fj)), Tj = null !== oj && void 0 !== oj ? oj : Xj, [Pj] = (0, yB.useState)(Tj === Fj), Wj = (0, nB.f)(Tj.backgroundImage, {
         keepPrevious: !0,
         decode: !0
       }), {
-        recentlyPlayedPublicLobbies: rU,
-        recentlyPlayedCustomLobbies: KU
-      } = (0, cT.useMemo)((() => function(TT, UT, mT, WT) {
-        var zT;
-        const MT = TT => {
-            const mT = (0, zU.q)(TT),
-              WT = UT.find((UT => "custom" === UT.type ? UT.schematicId === mT : UT.gameNameWithVariation === TT));
-            return WT ? [...WT.recentLobbies] : []
+        recentlyPlayedPublicLobbies: ej,
+        recentlyPlayedCustomLobbies: lj
+      } = (0, yB.useMemo)((() => function(BB, jB, zB, QB) {
+        var nB;
+        const dB = BB => {
+            const zB = (0, nj.q)(BB),
+              QB = jB.find((jB => "custom" === jB.type ? jB.schematicId === zB : jB.gameNameWithVariation === BB));
+            return QB ? [...QB.recentLobbies] : []
           },
-          gT = (0, jT.getRecentGameNameWithVariationLobbiesKey)(TT),
-          nT = null !== (zT = kT.l.getItem(gT)) && void 0 !== zT ? zT : [],
-          HT = [...MT(TT), ...nT],
-          lT = [];
-        for (const kT of HT)(0, LU.S)(kT) && !lT.includes(kT) && lT.push(kT);
-        let LT = HT;
-        if (mT) {
-          const TT = MT("classic_worlds"),
-            UT = HT.filter((UT => !TT.includes(UT)));
-          LT = [...TT, ...UT]
+          IB = (0, aB.getRecentGameNameWithVariationLobbiesKey)(BB),
+          NB = null !== (nB = UB.j.getItem(IB)) && void 0 !== nB ? nB : [],
+          uB = [...dB(BB), ...NB],
+          pB = [];
+        for (const UB of uB)(0, rj.E)(UB) && !pB.includes(UB) && pB.push(UB);
+        let rB = uB;
+        if (zB) {
+          const BB = dB("classic_worlds"),
+            jB = uB.filter((jB => !BB.includes(jB)));
+          rB = [...BB, ...jB]
         }
-        const pT = [],
-          BT = !1 === WT ? [] : LT;
-        for (const kT of BT)(0, LU.S)(kT) || pT.includes(kT) || pT.push(kT);
+        const sB = [],
+          JB = !1 === QB ? [] : rB;
+        for (const UB of JB)(0, rj.E)(UB) || sB.includes(UB) || sB.push(UB);
         return {
-          recentlyPlayedPublicLobbies: lT,
-          recentlyPlayedCustomLobbies: pT
+          recentlyPlayedPublicLobbies: pB,
+          recentlyPlayedCustomLobbies: sB
         }
-      }(WU.gameNameWithVariation, KT, VU.showWorldsInsteadOfCustomLobbies, VU.canCreateCustomLobbies)), [WU.gameNameWithVariation, KT, VU.showWorldsInsteadOfCustomLobbies, VU.canCreateCustomLobbies]), [SU, GU] = (0, cT.useState)(!0), [NU, EU] = (0, cT.useState)([]), [hU, DU] = (0, cT.useState)(null), [oU, AU] = (0, cT.useState)("explore"), RU = (0, cT.useRef)(!1), Tm = (0, cT.useCallback)((TT => {
-        (0, vT.unstable_batchedUpdates)((() => {
-          bU(TT), FU((UT => ({
-            ...XU(TT, PT),
-            isFavourite: UT.isFavourite
+      }(Qj.gameNameWithVariation, lB, Tj.showWorldsInsteadOfCustomLobbies, Tj.canCreateCustomLobbies)), [Qj.gameNameWithVariation, lB, Tj.showWorldsInsteadOfCustomLobbies, Tj.canCreateCustomLobbies]), [wj, xj] = (0, yB.useState)(!0), [Kj, Cj] = (0, yB.useState)([]), [cj, bj] = (0, yB.useState)(null), [vj, Rj] = (0, yB.useState)("explore"), Oj = (0, yB.useRef)(!1), Bz = (0, yB.useCallback)((BB => {
+        (0, kB.unstable_batchedUpdates)((() => {
+          tj(BB), Zj((jB => ({
+            ...Yj(BB, AB),
+            isFavourite: jB.isFavourite
           })))
         }))
-      }), [PT]);
-      (0, cT.useEffect)((() => {
-        null === kU.b.get("gameEntrySource") && (0, kU.e)("gameInformationPageDirect")
+      }), [AB]);
+      (0, yB.useEffect)((() => {
+        null === Uj.c.get("gameEntrySource") && (0, Uj.i)("gameInformationPageDirect")
       }), []);
-      const Um = (0, cT.useRef)(null);
-      (0, cT.useEffect)((() => {
-        const TT = TT => {
-            Um.current = TT.target instanceof Element ? TT.target.closest("a, button") : null
+      const jz = (0, yB.useRef)(null);
+      (0, yB.useEffect)((() => {
+        const BB = BB => {
+            jz.current = BB.target instanceof Element ? BB.target.closest("a, button") : null
           },
-          UT = TT => {
-            "Tab" === TT.key && (Um.current = null)
+          jB = BB => {
+            "Tab" === BB.key && (jz.current = null)
           };
-        return document.addEventListener("pointerdown", TT, !0), document.addEventListener("keydown", UT, !0), () => {
-          document.removeEventListener("pointerdown", TT, !0), document.removeEventListener("keydown", UT, !0)
+        return document.addEventListener("pointerdown", BB, !0), document.addEventListener("keydown", jB, !0), () => {
+          document.removeEventListener("pointerdown", BB, !0), document.removeEventListener("keydown", jB, !0)
         }
-      }), []), (0, OT.c)("Enter", (TT => {
-        const UT = TT.target instanceof Element ? TT.target : null;
-        if (TT.defaultPrevented || null !== UT && void 0 !== UT && UT.closest("input, textarea, select")) return;
-        const mT = null === UT || void 0 === UT ? void 0 : UT.closest("a, button");
-        mT && mT !== Um.current || (TT.preventDefault(), jm())
-      })), (0, eT.d)(AT.navigateToHomePage);
-      const mm = rU.length > 0 || KU.length > 0,
-        Wm = !VU.useRejoinLastLobbyButton || 0 === rU.length,
-        zm = xU && null === VU.ownerSocialPreviewWithoutLocation,
-        Mm = CT.getPlayerName() === (null === iU || void 0 === iU || null === (UT = iU.owner) || void 0 === UT ? void 0 : UT.name),
-        gm = null !== (mT = null === (gT = VU.badges.find((TT => "event" === TT.type))) || void 0 === gT ? void 0 : gT.event) && void 0 !== mT ? mT : null,
-        nm = Wm ? LT.l : LT.e,
-        Hm = (0, IT.jsx)(lT.e, {
-          tooltipInner: (0, IT.jsx)("div", {
-            children: PT("homePage:quickPlayInfo")
+      }), []), (0, SB.c)("Enter", (BB => {
+        const jB = BB.target instanceof Element ? BB.target : null;
+        if (BB.defaultPrevented || null !== jB && void 0 !== jB && jB.closest("input, textarea, select")) return;
+        const zB = null === jB || void 0 === jB ? void 0 : jB.closest("a, button");
+        zB && zB !== jz.current || (BB.preventDefault(), az())
+      })), (0, MB.b)(RB.navigateToHomePage);
+      const zz = ej.length > 0 || lj.length > 0,
+        Qz = !Tj.useRejoinLastLobbyButton || 0 === ej.length,
+        nz = qj && null === Tj.ownerSocialPreviewWithoutLocation,
+        dz = WB.getPlayerName() === (null === gj || void 0 === gj || null === (jB = gj.owner) || void 0 === jB ? void 0 : jB.name),
+        Iz = null !== (zB = null === (IB = Tj.badges.find((BB => "event" === BB.type))) || void 0 === IB ? void 0 : IB.event) && void 0 !== zB ? zB : null,
+        Nz = Qz ? rB.m : rB.f,
+        uz = (0, VB.jsx)(pB.g, {
+          tooltipInner: (0, VB.jsx)("div", {
+            children: AB("homePage:quickPlayInfo")
           }),
           hoverOnly: !0,
-          children: (0, IT.jsx)(nm, {
+          children: (0, VB.jsx)(Nz, {
             className: "GameInformationButton",
-            padDefaultFocus: Wm,
+            padDefaultFocus: Qz,
             showPress: !0,
             onClick: () => {
-              jm()
+              az()
             },
-            children: (0, IT.jsxs)("div", {
+            children: (0, VB.jsxs)("div", {
               className: "GameInformationButtonInner",
-              children: [Wm && (0, IT.jsxs)(IT.Fragment, {
-                children: [(0, IT.jsx)(GT.c, {
+              children: [Qz && (0, VB.jsxs)(VB.Fragment, {
+                children: [(0, VB.jsx)(xB.c, {
                   name: "play"
                 }), " "]
-              }), PT("homePage:quickPlay")]
+              }), AB("homePage:quickPlay")]
             })
           })
         });
-      (0, cT.useEffect)((() => {
-        if (!xU || rT) return;
-        let TT = !0;
-        const UT = (0, zU.q)(WU.gameNameWithVariation);
-        return wT.b.getGame(CT, UT).then((UT => {
-          TT && Tm(UT)
-        })).catch((UT => {
-          console.error("Failed to get Custom Game information", UT), TT && (0, AT.navigateToHomePage)()
-        })), wT.b.getFavouriteGames(CT).then((mT => {
-          TT && FU((TT => ({
-            ...TT,
-            isFavourite: mT.includes(UT)
+      (0, yB.useEffect)((() => {
+        if (!qj || eB) return;
+        let BB = !0;
+        const jB = (0, nj.q)(Qj.gameNameWithVariation);
+        return oB.b.getGame(WB, jB).then((jB => {
+          BB && Bz(jB)
+        })).catch((jB => {
+          console.error("Failed to get Custom Game information", jB), BB && (0, RB.navigateToHomePage)()
+        })), oB.b.getFavouriteGames(WB).then((zB => {
+          BB && Zj((BB => ({
+            ...BB,
+            isFavourite: zB.includes(jB)
           })))
-        })).catch((UT => {
-          console.error("Failed to get favourite games", UT), TT && QU(!0)
+        })).catch((jB => {
+          console.error("Failed to get favourite games", jB), BB && hj(!0)
         })), () => {
-          TT = !1
+          BB = !1
         }
-      }), [xU, rT, WU.gameNameWithVariation, Tm, CT]);
-      const km = !xU && null === wU;
+      }), [qj, eB, Qj.gameNameWithVariation, Bz, WB]);
+      const Uz = !qj && null === oj;
 
-      function jm(TT) {
-        (0, dU.c)(), ET((0, qT.d)(WU.gameNameWithVariation, TT))
-      }(0, cT.useEffect)((() => {
-        km && (0, AT.navigateToHomePage)()
-      }), [km]), (0, cT.useEffect)((() => {
-        if (!1 === VU.canCreateCustomLobbies) return;
-        let TT = !0;
-        return null !== VU.showWorldsInsteadOfCustomLobbies && !1 === rT && (GU(!0), wT.b.getFavouriteLobbies(CT).then((TT => {
-          DU(TT)
-        })), wT.b.getOpenCustomLobbies(CT, {
-          gameNameWithVariation: VU.showWorldsInsteadOfCustomLobbies ? "classic" : WU.gameNameWithVariation,
-          onlyOwnedLobbies: "owned" === oU,
-          onlyFavouriteLobbies: "favourite" === oU
-        }).then((UT => {
-          TT && (0, vT.unstable_batchedUpdates)((() => {
-            EU(UT), GU(!1)
+      function az(BB) {
+        (0, fj.f)(), CB((0, LB.e)(Qj.gameNameWithVariation, BB))
+      }(0, yB.useEffect)((() => {
+        Uz && (0, RB.navigateToHomePage)()
+      }), [Uz]), (0, yB.useEffect)((() => {
+        if (!1 === Tj.canCreateCustomLobbies) return;
+        let BB = !0;
+        return null !== Tj.showWorldsInsteadOfCustomLobbies && !1 === eB && (xj(!0), oB.b.getFavouriteLobbies(WB).then((BB => {
+          bj(BB)
+        })), oB.b.getOpenCustomLobbies(WB, {
+          gameNameWithVariation: Tj.showWorldsInsteadOfCustomLobbies ? "classic" : Qj.gameNameWithVariation,
+          onlyOwnedLobbies: "owned" === vj,
+          onlyFavouriteLobbies: "favourite" === vj
+        }).then((jB => {
+          BB && (0, kB.unstable_batchedUpdates)((() => {
+            Cj(jB), xj(!1)
           }))
-        })).catch((UT => {
-          console.error("Failed to get open custom lobbies", UT), TT && GU(!1)
+        })).catch((jB => {
+          console.error("Failed to get open custom lobbies", jB), BB && xj(!1)
         }))), () => {
-          TT = !1
+          BB = !1
         }
-      }), [rT, WU, oU, VU.showWorldsInsteadOfCustomLobbies, VU.canCreateCustomLobbies, CT]);
-      const lm = (0, cT.useCallback)((async TT => {
+      }), [eB, Qj, vj, Tj.showWorldsInsteadOfCustomLobbies, Tj.canCreateCustomLobbies, WB]);
+      const pz = (0, yB.useCallback)((async BB => {
           try {
-            if (!hU) return;
-            hU.includes(TT) ? (wT.b.unfavouriteLobby(CT, TT), DU(hU.filter((UT => UT !== TT)))) : (wT.b.favouriteLobby(CT, TT).catch((TT => {
-              console.error("Failed to favourite lobby", TT)
-            })), DU([...hU, TT]))
-          } catch (UT) {
-            console.error("Failed to like lobby", UT)
+            if (!cj) return;
+            cj.includes(BB) ? (oB.b.unfavouriteLobby(WB, BB), bj(cj.filter((jB => jB !== BB)))) : (oB.b.favouriteLobby(WB, BB).catch((BB => {
+              console.error("Failed to favourite lobby", BB)
+            })), bj([...cj, BB]))
+          } catch (jB) {
+            console.error("Failed to like lobby", jB)
           }
-        }), [CT, hU]),
-        Lm = (null === iU || void 0 === iU ? void 0 : iU.schematicId) === (0, zU.q)(TU.gameNameWithVariation) ? iU : null,
-        pm = Lm && (0, VT.C)(TU.gameNameWithVariation, (TT => PT(TT)), Lm);
-      (0, RT.i)(Lm && (0, VT.v)(TU.gameNameWithVariation, Lm));
-      const Bm = NT.featureFlags.canUseCustomLobbies && !0 === VU.canCreateCustomLobbies,
-        Zm = (0, IT.jsx)("div", {
+        }), [WB, cj]),
+        rz = (null === gj || void 0 === gj ? void 0 : gj.schematicId) === (0, nj.q)(Bj.gameNameWithVariation) ? gj : null,
+        sz = rz && (0, TB.y)(Bj.gameNameWithVariation, (BB => AB(BB)), rz);
+      (0, OB.d)(rz && (0, TB.p)(Bj.gameNameWithVariation, rz));
+      const Jz = KB.featureFlags.canUseCustomLobbies && !0 === Tj.canCreateCustomLobbies,
+        mz = (0, VB.jsx)("div", {
           className: "GameInformationPageContentAnchor",
-          children: (0, IT.jsx)(ST, {
-            gameNameWithVariation: WU.gameNameWithVariation
+          children: (0, VB.jsx)(wB, {
+            gameNameWithVariation: Qj.gameNameWithVariation
           })
         });
-      return (0, IT.jsx)(IT.Fragment, {
-        children: (0, IT.jsxs)("article", {
-          className: BT()("GameInformation", {
-            GameInformationFadeIn: uU,
-            GameInformationReleaseCountdown: "releaseCountdown" === (null === (pT = VU.countdownInformation) || void 0 === pT ? void 0 : pT.type)
+      return (0, VB.jsx)(VB.Fragment, {
+        children: (0, VB.jsxs)("article", {
+          className: JB()("GameInformation", {
+            GameInformationFadeIn: Pj,
+            GameInformationReleaseCountdown: "releaseCountdown" === (null === (sB = Tj.countdownInformation) || void 0 === sB ? void 0 : sB.type)
           }),
-          children: [pm && (0, IT.jsx)(iT.e, {
-            meta: pm
-          }), (0, IT.jsxs)("div", {
+          children: [sz && (0, VB.jsx)(gB.b, {
+            meta: sz
+          }), (0, VB.jsxs)("div", {
             className: "GameInformationInner",
-            children: [(0, IT.jsxs)("div", {
+            children: [(0, VB.jsxs)("div", {
               className: "GameInformationTop",
-              children: [(0, IT.jsxs)("div", {
+              children: [(0, VB.jsxs)("div", {
                 className: "GameInformationTopBackgroundContainer",
-                children: [(0, IT.jsx)("div", {
+                children: [(0, VB.jsx)("div", {
                   className: "GameInformationTopBackgroundColor"
-                }), (0, IT.jsx)("div", {
-                  className: BT()("GameInformationTopBackgroundImage", nT.h),
-                  style: (0, nT.e)(CU),
-                  children: (0, IT.jsx)(nT.c, {
-                    image: CU
+                }), (0, VB.jsx)("div", {
+                  className: JB()("GameInformationTopBackgroundImage", NB.h),
+                  style: (0, NB.g)(Wj),
+                  children: (0, VB.jsx)(NB.c, {
+                    image: Wj
                   })
                 })]
-              }), (0, IT.jsxs)("div", {
+              }), (0, VB.jsxs)("div", {
                 className: "GameInformationTopLeft",
-                children: [(0, IT.jsx)(vU.c, {}), (0, IT.jsxs)("div", {
+                children: [(0, VB.jsx)(kj.b, {}), (0, VB.jsxs)("div", {
                   className: "GameInformationTopLeftBody",
-                  children: [(0, IT.jsxs)("div", {
+                  children: [(0, VB.jsxs)("div", {
                     className: "GameInformationHeader",
-                    children: [(0, IT.jsxs)("div", {
-                      className: BT()("GameInformationHeaderTagList", {
-                        GameInformationHeaderTagListPending: zm
+                    children: [(0, VB.jsxs)("div", {
+                      className: JB()("GameInformationHeaderTagList", {
+                        GameInformationHeaderTagListPending: nz
                       }),
-                      children: [VU.badges.map((TT => (0, IT.jsx)("div", {
-                        className: `GameInformationHeaderTag AnimFadeInScaleUp ${TT.type}`,
-                        children: (0, IT.jsx)(xT.d, {
-                          badge: TT
+                      children: [Tj.badges.map((BB => (0, VB.jsx)("div", {
+                        className: `GameInformationHeaderTag AnimFadeInScaleUp ${BB.type}`,
+                        children: (0, VB.jsx)(qB.c, {
+                          badge: BB
                         })
-                      }, TT.type))), xU && (0, IT.jsx)("div", {
+                      }, BB.type))), qj && (0, VB.jsx)("div", {
                         className: "GameInformationHeaderTag playerCrafted AnimFadeInScaleUp",
-                        children: (0, IT.jsx)(JT.e, {
-                          text: (0, WT.Y)({
+                        children: (0, VB.jsx)(iB.e, {
+                          text: (0, QB.Z)({
                             type: "playerCrafted"
                           })
                         })
-                      }), VU.category && (0, IT.jsx)("div", {
+                      }), Tj.category && (0, VB.jsx)("div", {
                         className: "GameInformationHeaderTag CustomGameCategory AnimFadeInScaleUp",
-                        children: (0, IT.jsx)(JT.e, {
+                        children: (0, VB.jsx)(iB.e, {
                           text: [{
-                            str: (0, WT.Z)(VU.category).toUpperCase()
+                            str: (0, QB.$)(Tj.category).toUpperCase()
                           }]
                         })
-                      }), null !== VU.ccu && (0, IT.jsxs)("div", {
+                      }), null !== Tj.ccu && (0, VB.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipCcu AnimFadeIn",
-                        children: [(0, IT.jsx)(GT.c, {
+                        children: [(0, VB.jsx)(xB.c, {
                           name: "user"
-                        }), (0, LU.V)(VU.ccu), " online"]
-                      }), null !== VU.ownerSocialPreviewWithoutLocation && (0, IT.jsxs)("div", {
+                        }), (0, rj.J)(Tj.ccu), " online"]
+                      }), null !== Tj.ownerSocialPreviewWithoutLocation && (0, VB.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipOwner AnimFadeIn",
-                        children: [(0, IT.jsx)("span", {
+                        children: [(0, VB.jsx)("span", {
                           children: "Made by"
-                        }), (0, IT.jsx)(yT.i, {
+                        }), (0, VB.jsx)(FB.g, {
                           playerSocialPreview: {
-                            ...VU.ownerSocialPreviewWithoutLocation,
+                            ...Tj.ownerSocialPreviewWithoutLocation,
                             location: {
                               status: "offline"
                             }
@@ -973,402 +973,402 @@ export const modules = {
                           showLocation: !1,
                           linkToProfile: !0
                         })]
-                      }), zm && (0, IT.jsxs)("div", {
+                      }), nz && (0, VB.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipOwner",
-                        children: [(0, IT.jsx)("span", {
+                        children: [(0, VB.jsx)("span", {
                           children: "Made by"
-                        }), (0, IT.jsx)("div", {
+                        }), (0, VB.jsx)("div", {
                           className: "CustomGameChipOwnerPlaceholder"
                         })]
-                      }), null !== VU.favourites && (null !== VU.isFavourite || xU && !tU) && (0, IT.jsx)(LT.t, {
+                      }), null !== Tj.favourites && (null !== Tj.isFavourite || qj && !Hj) && (0, VB.jsx)(rB.t, {
                         onClick: () => {
                           ! function() {
-                            if (!0 !== RU.current && (RU.current = !0, null !== VU.isFavourite)) {
-                              const TT = (0, zU.q)(WU.gameNameWithVariation);
-                              let UT;
-                              VU.isFavourite ? (UT = -1, wT.b.unfavouriteGame(CT, TT).catch((TT => {
-                                console.error("Failed to get unfavourite game", TT)
+                            if (!0 !== Oj.current && (Oj.current = !0, null !== Tj.isFavourite)) {
+                              const BB = (0, nj.q)(Qj.gameNameWithVariation);
+                              let jB;
+                              Tj.isFavourite ? (jB = -1, oB.b.unfavouriteGame(WB, BB).catch((BB => {
+                                console.error("Failed to get unfavourite game", BB)
                               })).finally((() => {
-                                RU.current = !1
-                              }))) : (UT = 1, wT.b.favouriteGame(CT, TT).catch((TT => {
-                                console.error("Failed to get favourite game", TT)
+                                Oj.current = !1
+                              }))) : (jB = 1, oB.b.favouriteGame(WB, BB).catch((BB => {
+                                console.error("Failed to get favourite game", BB)
                               })).finally((() => {
-                                RU.current = !1
-                              }))), FU((TT => ({
-                                ...TT,
-                                isFavourite: !TT.isFavourite
-                              }))), FU((TT => ({
-                                ...TT,
-                                favourites: TT.favourites + UT
+                                Oj.current = !1
+                              }))), Zj((BB => ({
+                                ...BB,
+                                isFavourite: !BB.isFavourite
+                              }))), Zj((BB => ({
+                                ...BB,
+                                favourites: BB.favourites + jB
                               })))
                             }
                           }()
                         },
-                        isLiked: null !== (dT = VU.isFavourite) && void 0 !== dT && dT,
-                        disabled: null === VU.isFavourite,
-                        className: BT()("CustomGameChip AnimFadeIn", {
-                          CustomGameChipPending: null === VU.isFavourite
+                        isLiked: null !== (fB = Tj.isFavourite) && void 0 !== fB && fB,
+                        disabled: null === Tj.isFavourite,
+                        className: JB()("CustomGameChip AnimFadeIn", {
+                          CustomGameChipPending: null === Tj.isFavourite
                         })
-                      }, null === VU.isFavourite ? "pending" : "known"), xU && !zm && NT.featureFlags.useSocialFeatures && !Mm && (0, IT.jsx)(eU.c, {
+                      }, null === Tj.isFavourite ? "pending" : "known"), qj && !nz && KB.featureFlags.useSocialFeatures && !dz && (0, VB.jsx)(Mj.c, {
                         targetType: "customGame",
-                        targetId: (0, zU.q)(WU.gameNameWithVariation),
+                        targetId: (0, nj.q)(Qj.gameNameWithVariation),
                         className: "CustomGameChip AnimFadeIn"
-                      }), (CT.playerHasRank("developer") || CT.playerHasRank("admin") && Mm) && (0, IT.jsxs)(LT.l, {
+                      }), (WB.playerHasRank("developer") || WB.playerHasRank("admin") && dz) && (0, VB.jsxs)(rB.m, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          ET((0, nU.k)((0, gU.e)(WU.gameNameWithVariation, !0)))
+                          CB((0, Nj.s)((0, Ij.h)(Qj.gameNameWithVariation, !0)))
                         },
-                        children: [(0, IT.jsx)(GT.c, {
+                        children: [(0, VB.jsx)(xB.c, {
                           name: "star-christmas"
-                        }), " ", PT("studio:viewInStudio")]
-                      }), xU && CT.playerHasRank("developer") && (0, IT.jsxs)(LT.e, {
+                        }), " ", AB("studio:viewInStudio")]
+                      }), qj && WB.playerHasRank("developer") && (0, VB.jsxs)(rB.f, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          (0, pU.e)({
-                            schematicId: (0, zU.q)(WU.gameNameWithVariation),
+                          (0, sj.e)({
+                            schematicId: (0, nj.q)(Qj.gameNameWithVariation),
                             canOverride: !0
                           })
                         },
-                        children: [(0, IT.jsx)(GT.c, {
+                        children: [(0, VB.jsx)(xB.c, {
                           name: "circle-info"
                         }), " Approval Info"]
-                      }), xU && CT.playerHasRank("developer") && (0, IT.jsxs)(LT.e, {
+                      }), qj && WB.playerHasRank("developer") && (0, VB.jsxs)(rB.f, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          UU.NotificationProvider.showCustomPopup({
-                            body: () => (0, IT.jsx)(cU, {
-                              schematicId: (0, zU.q)(WU.gameNameWithVariation),
-                              gameName: VU.title
+                          jj.NotificationProvider.showCustomPopup({
+                            body: () => (0, VB.jsx)(yj, {
+                              schematicId: (0, nj.q)(Qj.gameNameWithVariation),
+                              gameName: Tj.title
                             }),
                             middleScreenPopupClassName: "FeaturedGamesPopup",
                             onClose: () => {},
                             unlockPointerKey: "featuredGamesPopup"
                           })
                         },
-                        children: [(0, IT.jsx)(GT.c, {
+                        children: [(0, VB.jsx)(xB.c, {
                           name: "star"
                         }), " Featured Games"]
-                      }), "updateCountdown" === (null === (tT = VU.countdownInformation) || void 0 === tT ? void 0 : tT.type) && (0, IT.jsxs)("div", {
+                      }), "updateCountdown" === (null === (HB = Tj.countdownInformation) || void 0 === HB ? void 0 : HB.type) && (0, VB.jsxs)("div", {
                         className: "CustomGameChip GameChipUpdateCountdown AnimFadeIn",
-                        children: [(0, IT.jsxs)("div", {
+                        children: [(0, VB.jsxs)("div", {
                           className: "GameChipUpdateCountdownTop",
-                          children: ["Update in ", (0, IT.jsx)(YT.e, {
-                            toTime: VU.countdownInformation.countdownToTime
+                          children: ["Update in ", (0, VB.jsx)(EB.e, {
+                            toTime: Tj.countdownInformation.countdownToTime
                           })]
-                        }), (0, IT.jsx)("div", {
+                        }), (0, VB.jsx)("div", {
                           className: "GameChipUpdateCountdownBottom",
-                          children: VU.countdownInformation.previewText
+                          children: Tj.countdownInformation.previewText
                         })]
                       })]
-                    }, zm ? "pending" : "shown"), (0, IT.jsxs)("header", {
+                    }, nz ? "pending" : "shown"), (0, VB.jsxs)("header", {
                       className: "GameInformationTitle",
-                      children: [(0, IT.jsx)("div", {
+                      children: [(0, VB.jsx)("div", {
                         className: "GameInformationTitleAndChips",
-                        children: (0, IT.jsxs)("h1", {
+                        children: (0, VB.jsxs)("h1", {
                           className: "GameInformationTitleText FullyFancyText",
-                          children: [VU.title, " ", VU.variationTitle && (null === (aT = lU.d[WU.gameNameWithVariation]) || void 0 === aT ? void 0 : aT.variationThumbnailUseBigRatio) && (0, IT.jsx)("span", {
+                          children: [Tj.title, " ", Tj.variationTitle && (null === (DB = pj.c[Qj.gameNameWithVariation]) || void 0 === DB ? void 0 : DB.variationThumbnailUseBigRatio) && (0, VB.jsx)("span", {
                             className: "GameInformationTitleVariation",
-                            children: VU.variationTitle
+                            children: Tj.variationTitle
                           })]
                         })
-                      }), VU.listedVariations && VU.listedVariations.length > 0 && (0, IT.jsx)("div", {
-                        className: BT()("GameInformationVariationList", {
-                          GameInformationVariationListBig: null === (XT = lU.d[WU.gameNameWithVariation]) || void 0 === XT ? void 0 : XT.variationThumbnailUseBigRatio
+                      }), Tj.listedVariations && Tj.listedVariations.length > 0 && (0, VB.jsx)("div", {
+                        className: JB()("GameInformationVariationList", {
+                          GameInformationVariationListBig: null === (YB = pj.c[Qj.gameNameWithVariation]) || void 0 === YB ? void 0 : YB.variationThumbnailUseBigRatio
                         }),
-                        children: VU.listedVariations.map((TT => {
-                          var UT, mT;
-                          return (0, IT.jsxs)(PU, {
-                            variation: TT,
-                            isSelected: WU.gameNameWithVariation === TT,
-                            children: [null !== uT && (0, IT.jsx)("div", {
+                        children: Tj.listedVariations.map((BB => {
+                          var jB, zB;
+                          return (0, VB.jsxs)(Aj, {
+                            variation: BB,
+                            isSelected: Qj.gameNameWithVariation === BB,
+                            children: [null !== PB && (0, VB.jsx)("div", {
                               className: "GameInformationVariationCCU AnimFadeIn",
-                              children: (0, IT.jsxs)("div", {
+                              children: (0, VB.jsxs)("div", {
                                 className: "GameInformationVariationCCUInner",
-                                children: [(0, IT.jsx)(GT.c, {
+                                children: [(0, VB.jsx)(xB.c, {
                                   name: "user"
-                                }), " ", (0, LU.V)(null !== (UT = uT[TT]) && void 0 !== UT ? UT : 0)]
+                                }), " ", (0, rj.J)(null !== (jB = PB[BB]) && void 0 !== jB ? jB : 0)]
                               })
-                            }), (0, IT.jsx)("div", {
+                            }), (0, VB.jsx)("div", {
                               className: "GameInformationVariationTitle SmallTextBold",
-                              children: PT(null !== (mT = lU.d[TT].variationTitle) && void 0 !== mT ? mT : lU.d[TT].title)
-                            }), (0, IT.jsx)("div", {
+                              children: AB(null !== (zB = pj.c[BB].variationTitle) && void 0 !== zB ? zB : pj.c[BB].title)
+                            }), (0, VB.jsx)("div", {
                               className: "ThumbnailBadgesContainer",
-                              children: (0, jT.filterBadges)(lU.d[TT].badges).map((TT => (0, IT.jsx)("div", {
-                                className: "ThumbnailBadgeContainer " + TT.type,
-                                children: (0, IT.jsx)("div", {
+                              children: (0, aB.filterBadges)(pj.c[BB].badges).map((BB => (0, VB.jsx)("div", {
+                                className: "ThumbnailBadgeContainer " + BB.type,
+                                children: (0, VB.jsx)("div", {
                                   className: "ThumbnailBadgeMain",
-                                  children: (0, IT.jsx)(xT.d, {
-                                    badge: TT
+                                  children: (0, VB.jsx)(qB.c, {
+                                    badge: BB
                                   })
                                 })
-                              }, TT.type)))
+                              }, BB.type)))
                             })]
-                          }, TT)
+                          }, BB)
                         }))
                       })]
-                    }), VU.description && (0, IT.jsx)("p", {
+                    }), Tj.description && (0, VB.jsx)("p", {
                       className: "GameInformationDescription",
-                      children: VU.description
+                      children: Tj.description
                     })]
-                  }), (0, IT.jsxs)("div", {
+                  }), (0, VB.jsxs)("div", {
                     className: "GameInformationButtonRows",
-                    children: [(0, IT.jsxs)("div", {
+                    children: [(0, VB.jsxs)("div", {
                       className: "GameInformationButtonRow GameInformationButtonRowPrimary",
-                      children: [!Wm && (0, IT.jsx)(lT.e, {
-                        tooltipInner: (0, IT.jsx)("div", {
-                          children: PT("homePage:rejoinLobbyNumberInfo")
+                      children: [!Qz && (0, VB.jsx)(pB.g, {
+                        tooltipInner: (0, VB.jsx)("div", {
+                          children: AB("homePage:rejoinLobbyNumberInfo")
                         }),
                         hoverOnly: !0,
-                        children: (0, IT.jsx)(LT.l, {
+                        children: (0, VB.jsx)(rB.m, {
                           className: "GameInformationButton",
                           padDefaultFocus: !0,
                           showPress: !0,
                           onClick: () => {
-                            jm(rU[0])
+                            az(ej[0])
                           },
-                          children: (0, IT.jsxs)("div", {
+                          children: (0, VB.jsxs)("div", {
                             className: "GameInformationButtonInner",
-                            children: [(0, IT.jsx)(GT.c, {
+                            children: [(0, VB.jsx)(xB.c, {
                               name: "play"
-                            }), " ", PT("homePage:rejoinLobbyNumber", {
-                              number: rU[0]
+                            }), " ", AB("homePage:rejoinLobbyNumber", {
+                              number: ej[0]
                             })]
                           })
                         })
-                      }), Wm && Hm]
-                    }), (0, IT.jsxs)("div", {
+                      }), Qz && uz]
+                    }), (0, VB.jsxs)("div", {
                       className: "GameInformationButtonRow GameInformationButtonRowSecondary",
-                      children: [!Wm && Hm, (0, IT.jsxs)("div", {
+                      children: [!Qz && uz, (0, VB.jsxs)("div", {
                         className: "JoinLobbyContainer",
-                        children: [(0, IT.jsx)(GT.c, {
+                        children: [(0, VB.jsx)(xB.c, {
                           name: "magnifying-glass",
                           className: "JoinLobbyInputIcon"
-                        }), (0, IT.jsx)(ZT.e, {
+                        }), (0, VB.jsx)(mB.d, {
                           className: "JoinLobbyInput",
-                          placeholderText: PT("homePage:lobbyName"),
-                          maxLength: LU.U,
-                          domRef: qU,
-                          onValueChange: TT => {
-                            TT = (0, LU.Ab)(TT), ZU(TT)
+                          placeholderText: AB("homePage:lobbyName"),
+                          maxLength: rj.H,
+                          domRef: Lj,
+                          onValueChange: BB => {
+                            BB = (0, rj.db)(BB), mj(BB)
                           },
                           onEnter: () => {
-                            0 === BU.length ? jm(rU[0]) : jm(BU)
+                            0 === Jj.length ? az(ej[0]) : az(Jj)
                           }
-                        }), (0, IT.jsx)(LT.e, {
+                        }), (0, VB.jsx)(rB.f, {
                           className: "JoinLobbyButton",
                           showPress: !0,
                           onClick: () => {
-                            0 === BU.length ? jm(rU[0]) : jm(BU)
+                            0 === Jj.length ? az(ej[0]) : az(Jj)
                           },
-                          children: PT("general:join")
+                          children: AB("general:join")
                         })]
                       })]
-                    }), (0, IT.jsxs)("section", {
-                      className: BT()("LobbyCollection RecentLobbyCollection", {
-                        LobbyCollectionHidden: !mm
+                    }), (0, VB.jsxs)("section", {
+                      className: JB()("LobbyCollection RecentLobbyCollection", {
+                        LobbyCollectionHidden: !zz
                       }),
-                      children: [(0, IT.jsx)("div", {
+                      children: [(0, VB.jsx)("div", {
                         className: "LobbyCollectionHeader RecentLobbyCollectionHeader",
-                        children: (0, IT.jsxs)("div", {
+                        children: (0, VB.jsxs)("div", {
                           className: "LobbyCollectionTitle",
-                          children: [(0, IT.jsx)(GT.c, {
+                          children: [(0, VB.jsx)(xB.c, {
                             name: "clock-rotate-left"
-                          }), mm && (0, IT.jsx)("h2", {
+                          }), zz && (0, VB.jsx)("h2", {
                             className: "VisuallyHidden",
-                            children: PT("homePage:recentlyPlayedLobbies")
+                            children: AB("homePage:recentlyPlayedLobbies")
                           })]
                         })
-                      }), (0, IT.jsx)(YU.d, {
-                        lobbyGroups: [rU, KU],
-                        onLobbyClick: TT => {
-                          jm(TT)
+                      }), (0, VB.jsx)(Ej.e, {
+                        lobbyGroups: [ej, lj],
+                        onLobbyClick: BB => {
+                          az(BB)
                         },
-                        keyPrefix: WU.gameNameWithVariation
+                        keyPrefix: Qj.gameNameWithVariation
                       })]
                     })]
                   })]
                 })]
-              }), null !== gm && (0, IT.jsx)(FT, {
-                eventName: gm
+              }), null !== Iz && (0, VB.jsx)(ZB, {
+                eventName: Iz
               })]
-            }), Bm && (0, IT.jsx)("div", {
+            }), Jz && (0, VB.jsx)("div", {
               className: "GameInformationBottom",
-              children: (0, IT.jsxs)("section", {
+              children: (0, VB.jsxs)("section", {
                 className: "LobbyCollection",
-                children: [(0, IT.jsxs)("div", {
-                  className: BT()("LobbyCollectionHeader", {
-                    SandboxWorldsLobbyCollectionHeader: !0 === VU.showWorldsInsteadOfCustomLobbies
+                children: [(0, VB.jsxs)("div", {
+                  className: JB()("LobbyCollectionHeader", {
+                    SandboxWorldsLobbyCollectionHeader: !0 === Tj.showWorldsInsteadOfCustomLobbies
                   }),
-                  children: [!0 === VU.showWorldsInsteadOfCustomLobbies && (0, IT.jsxs)("h2", {
+                  children: [!0 === Tj.showWorldsInsteadOfCustomLobbies && (0, VB.jsxs)("h2", {
                     className: "LobbyCollectionTitle",
-                    children: [(0, IT.jsx)(GT.c, {
+                    children: [(0, VB.jsx)(xB.c, {
                       name: "planet-ringed",
                       kit: "duotone"
-                    }), (0, IT.jsxs)("div", {
+                    }), (0, VB.jsxs)("div", {
                       className: "LobbyCollectionTitleText",
-                      children: [(0, IT.jsx)("div", {
+                      children: [(0, VB.jsx)("div", {
                         className: "LobbyCollectionTitleTextBackground"
-                      }), PT("game:worlds")]
+                      }), AB("game:worlds")]
                     })]
-                  }), !1 === VU.showWorldsInsteadOfCustomLobbies && (0, IT.jsxs)("h2", {
+                  }), !1 === Tj.showWorldsInsteadOfCustomLobbies && (0, VB.jsxs)("h2", {
                     className: "LobbyCollectionTitle",
-                    children: [(0, IT.jsx)(GT.c, {
+                    children: [(0, VB.jsx)(xB.c, {
                       name: "joystick"
-                    }), (0, IT.jsxs)("div", {
+                    }), (0, VB.jsxs)("div", {
                       className: "LobbyCollectionTitleText",
-                      children: [(0, IT.jsx)("div", {
+                      children: [(0, VB.jsx)("div", {
                         className: "LobbyCollectionTitleTextBackground"
-                      }), PT("homePage:customLobbies")]
+                      }), AB("homePage:customLobbies")]
                     })]
-                  }), (0, IT.jsx)(LT.L, {
+                  }), (0, VB.jsx)(rB.M, {
                     onClick: () => {
-                      AU("explore")
+                      Rj("explore")
                     },
-                    active: "explore" === oU,
-                    children: PT("general:explore")
-                  }), (0, IT.jsx)(LT.L, {
+                    active: "explore" === vj,
+                    children: AB("general:explore")
+                  }), (0, VB.jsx)(rB.M, {
                     onClick: () => {
-                      AU("favourite")
+                      Rj("favourite")
                     },
-                    active: "favourite" === oU,
-                    children: PT("homePage:favouriteLobbies")
-                  }), (0, IT.jsx)(LT.L, {
+                    active: "favourite" === vj,
+                    children: AB("homePage:favouriteLobbies")
+                  }), (0, VB.jsx)(rB.M, {
                     onClick: () => {
-                      AU("owned")
+                      Rj("owned")
                     },
-                    active: "owned" === oU,
-                    children: PT("homePage:ownedLobbies")
+                    active: "owned" === vj,
+                    children: AB("homePage:ownedLobbies")
                   })]
-                }), (0, IT.jsxs)("div", {
+                }), (0, VB.jsxs)("div", {
                   className: "CustomLobbyList",
-                  children: [(0, IT.jsxs)("div", {
+                  children: [(0, VB.jsxs)("div", {
                     className: "CustomLobbyListInner",
-                    children: [(0, IT.jsx)(fU.b, {
+                    children: [(0, VB.jsx)(Gj.b, {
                       label: "Create",
                       onClick: () => {
-                        UU.NotificationProvider.showCustomPopup({
-                          body: TT => (0, IT.jsx)(mU.CreateCustomLobby, {
-                            gameNameWithVariation: WU.gameNameWithVariation,
-                            close: TT
+                        jj.NotificationProvider.showCustomPopup({
+                          body: BB => (0, VB.jsx)(zj.CreateCustomLobby, {
+                            gameNameWithVariation: Qj.gameNameWithVariation,
+                            close: BB
                           }),
                           middleScreenPopupClassName: "CreateCustomLobbyPopup"
                         })
                       }
-                    }), !0 === SU && (0, IT.jsx)(fU.g, {}), !1 === SU && (0, IT.jsx)(OU, {
-                      customLobbies: NU,
-                      favouriteLobbies: hU,
-                      toggleLikeLobby: lm,
-                      showReport: NT.featureFlags.useSocialFeatures && "owned" !== oU
+                    }), !0 === wj && (0, VB.jsx)(Gj.e, {}), !1 === wj && (0, VB.jsx)(Sj, {
+                      customLobbies: Kj,
+                      favouriteLobbies: cj,
+                      toggleLikeLobby: pz,
+                      showReport: KB.featureFlags.useSocialFeatures && "owned" !== vj
                     })]
-                  }), Zm]
+                  }), mz]
                 })]
               })
             })]
-          }), !Bm && Zm]
+          }), !Jz && mz]
         })
       })
     }
 
-    function PU(TT) {
+    function Aj(BB) {
       let {
-        variation: UT,
-        isSelected: mT,
-        children: WT
-      } = TT;
-      const HT = lU.d[UT],
-        jT = (0, MT.j)(UT, (0, MT.m)(HT)),
-        lT = (0, zT.e)(jT),
-        LT = (0, gT.d)([(0, MT.f)(UT, (0, MT.d)(HT))]);
-      return (0, IT.jsxs)(AT.LinkPreserveSearch, {
-        to: (0, VT.v)(UT),
+        variation: jB,
+        isSelected: zB,
+        children: QB
+      } = BB;
+      const uB = pj.c[jB],
+        aB = (0, dB.i)(jB, (0, dB.k)(uB)),
+        pB = (0, nB.f)(aB),
+        rB = (0, IB.f)([(0, dB.f)(jB, (0, dB.c)(uB))]);
+      return (0, VB.jsxs)(RB.LinkPreserveSearch, {
+        to: (0, TB.p)(jB),
         replace: !0,
-        className: BT()("GameInformationVariation", nT.h, {
-          SelectedGameInformationVariation: mT
+        className: JB()("GameInformationVariation", NB.h, {
+          SelectedGameInformationVariation: zB
         }),
-        onClick: TT => {
-          if (!(0, TU.e)(TT)) return;
-          const mT = (0, fT.g)(UT);
-          kT.l.setItem(mT, UT)
+        onClick: BB => {
+          if (!(0, Bj.d)(BB)) return;
+          const zB = (0, GB.e)(jB);
+          UB.j.setItem(zB, jB)
         },
-        onMouseEnter: LT.start,
-        onMouseLeave: LT.cancel,
-        onFocus: LT.start,
-        onBlur: LT.cancel,
-        style: (0, nT.e)(lT),
-        children: [(0, IT.jsx)(nT.c, {
-          image: lT
-        }), WT]
+        onMouseEnter: rB.start,
+        onMouseLeave: rB.cancel,
+        onFocus: rB.start,
+        onBlur: rB.cancel,
+        style: (0, NB.g)(pB),
+        children: [(0, VB.jsx)(NB.c, {
+          image: pB
+        }), QB]
       })
     }
   },
-  6569: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => fT
+  6451: (BB, jB, zB) => {
+    zB.d(jB, {
+      e: () => GB
     });
-    var WT = mT(63),
-      zT = mT(1569),
-      MT = mT(1613),
-      gT = mT(3582),
-      nT = mT(1225),
-      HT = mT(1446),
-      kT = mT(1475),
-      jT = mT(1135),
-      lT = mT(1126),
-      LT = mT.n(lT),
-      pT = mT(6565),
-      BT = mT(1188);
+    var QB = zB(62),
+      nB = zB(1478),
+      dB = zB(1532),
+      IB = zB(3593),
+      NB = zB(1169),
+      uB = zB(1369),
+      UB = zB(1388),
+      aB = zB(1108),
+      pB = zB(1091),
+      rB = zB.n(pB),
+      sB = zB(6446),
+      JB = zB(1148);
 
-    function ZT(TT) {
+    function mB(BB) {
       let {
-        info: UT,
-        className: mT
-      } = TT;
+        info: jB,
+        className: zB
+      } = BB;
       const {
-        statusText: WT,
-        rowText: zT
-      } = (0, pT.f)();
-      return (0, BT.jsxs)("div", {
-        className: LT()("GameApprovalInfoDetails", mT),
-        children: [(0, BT.jsxs)("div", {
-          className: LT()("GameApprovalInfoSummary", UT.overallPassed ? "Passed" : "Failed"),
-          children: [(0, BT.jsx)(jT.c, {
-            name: UT.overallPassed ? "circle-check" : "circle-xmark"
-          }), (0, BT.jsx)("span", {
-            children: WT(UT.status)
+        statusText: QB,
+        rowText: nB
+      } = (0, sB.f)();
+      return (0, JB.jsxs)("div", {
+        className: rB()("GameApprovalInfoDetails", zB),
+        children: [(0, JB.jsxs)("div", {
+          className: rB()("GameApprovalInfoSummary", jB.overallPassed ? "Passed" : "Failed"),
+          children: [(0, JB.jsx)(aB.c, {
+            name: jB.overallPassed ? "circle-check" : "circle-xmark"
+          }), (0, JB.jsx)("span", {
+            children: QB(jB.status)
           })]
-        }), UT.rows.length > 0 && (0, BT.jsx)("div", {
+        }), jB.rows.length > 0 && (0, JB.jsx)("div", {
           className: "GameApprovalInfoRows",
-          children: UT.rows.map((TT => {
+          children: jB.rows.map((BB => {
             const {
-              label: UT,
-              value: mT
-            } = zT(TT);
-            return (0, BT.jsxs)("div", {
-              className: LT()("GameApprovalInfoRow", TT.passed ? "Passed" : "Failed"),
-              children: [(0, BT.jsx)(jT.c, {
-                name: TT.passed ? "check" : "xmark"
-              }), (0, BT.jsxs)("div", {
+              label: jB,
+              value: zB
+            } = nB(BB);
+            return (0, JB.jsxs)("div", {
+              className: rB()("GameApprovalInfoRow", BB.passed ? "Passed" : "Failed"),
+              children: [(0, JB.jsx)(aB.c, {
+                name: BB.passed ? "check" : "xmark"
+              }), (0, JB.jsxs)("div", {
                 className: "GameApprovalInfoRowText",
-                children: [(0, BT.jsx)("div", {
+                children: [(0, JB.jsx)("div", {
                   className: "GameApprovalInfoRowLabel",
-                  children: UT
-                }), null !== mT && (0, BT.jsx)("div", {
+                  children: jB
+                }), null !== zB && (0, JB.jsx)("div", {
                   className: "GameApprovalInfoRowValue",
-                  children: mT
+                  children: zB
                 })]
               })]
-            }, TT.kind)
+            }, BB.kind)
           }))
         })]
       })
     }
-    var cT = mT(1288),
-      vT = mT(1457);
+    var yB = zB(1240),
+      kB = zB(1381);
 
-    function fT(TT) {
-      vT.NotificationProvider.showCustomPopup({
-        body: () => (0, BT.jsx)(qT, {
-          ...TT
+    function GB(BB) {
+      kB.NotificationProvider.showCustomPopup({
+        body: () => (0, JB.jsx)(LB, {
+          ...BB
         }),
         middleScreenPopupClassName: "ApprovalInfoPopup",
         onClose: () => {},
@@ -1376,92 +1376,92 @@ export const modules = {
       })
     }
 
-    function qT(TT) {
+    function LB(BB) {
       let {
-        schematicId: UT,
-        canOverride: mT,
-        onApprovalChanged: lT
-      } = TT;
+        schematicId: jB,
+        canOverride: zB,
+        onApprovalChanged: pB
+      } = BB;
       const {
-        t: LT
-      } = (0, cT.z)(), {
-        userContext: pT
-      } = (0, nT.d)(), vT = (0, gT.c)(), [fT, qT] = (0, WT.useState)(null), [iT, bT] = (0, WT.useState)(null), [OT, eT] = (0, WT.useState)(!1), YT = (0, WT.useCallback)((() => {
-        bT(null), MT.b.getGameApprovalInfo(pT, UT).then((TT => {
-          vT.current && qT(TT)
-        })).catch((TT => {
-          console.error("Failed to get game approval info", TT), vT.current && bT(LT("studio:approvalLoadFailed"))
+        t: rB
+      } = (0, yB.D)(), {
+        userContext: sB
+      } = (0, NB.d)(), kB = (0, IB.d)(), [GB, LB] = (0, QB.useState)(null), [gB, tB] = (0, QB.useState)(null), [SB, MB] = (0, QB.useState)(!1), EB = (0, QB.useCallback)((() => {
+        tB(null), dB.b.getGameApprovalInfo(sB, jB).then((BB => {
+          kB.current && LB(BB)
+        })).catch((BB => {
+          console.error("Failed to get game approval info", BB), kB.current && tB(rB("studio:approvalLoadFailed"))
         }))
-      }), [pT, UT, vT, LT]);
-      (0, WT.useEffect)((() => {
-        YT()
-      }), [YT]);
-      const JT = TT => {
-        OT || (eT(!0), MT.b.setGameApproval(pT, UT, TT).then((() => {
-          null === lT || void 0 === lT || lT(), vT.current && YT()
-        })).catch((TT => {
-          console.error("Failed to set game approval", TT)
+      }), [sB, jB, kB, rB]);
+      (0, QB.useEffect)((() => {
+        EB()
+      }), [EB]);
+      const iB = BB => {
+        SB || (MB(!0), dB.b.setGameApproval(sB, jB, BB).then((() => {
+          null === pB || void 0 === pB || pB(), kB.current && EB()
+        })).catch((BB => {
+          console.error("Failed to set game approval", BB)
         })).finally((() => {
-          vT.current && eT(!1)
+          kB.current && MB(!1)
         })))
       };
-      return (0, BT.jsxs)("div", {
+      return (0, JB.jsxs)("div", {
         className: "ApprovalInfoPopupBody",
-        children: [(0, BT.jsx)("h1", {
+        children: [(0, JB.jsx)("h1", {
           className: "ApprovalInfoPopupTitle",
-          children: LT("studio:approvalTitle")
-        }), !fT && !iT && (0, BT.jsx)("div", {
+          children: rB("studio:approvalTitle")
+        }), !GB && !gB && (0, JB.jsx)("div", {
           className: "ApprovalInfoPopupLoader",
-          children: (0, BT.jsx)(HT.c, {})
-        }), iT && (0, BT.jsx)("div", {
+          children: (0, JB.jsx)(uB.e, {})
+        }), gB && (0, JB.jsx)("div", {
           className: "ApprovalInfoPopupError",
-          children: iT
-        }), fT && (0, BT.jsxs)(BT.Fragment, {
-          children: [(0, BT.jsx)(ZT, {
-            info: fT
-          }), mT && (0, BT.jsxs)("div", {
+          children: gB
+        }), GB && (0, JB.jsxs)(JB.Fragment, {
+          children: [(0, JB.jsx)(mB, {
+            info: GB
+          }), zB && (0, JB.jsxs)("div", {
             className: "ApprovalInfoPopupActions",
-            children: [!0 !== fT.manualOverride && (0, BT.jsx)(kT.e, {
-              tooltipInner: (0, BT.jsx)("div", {
-                children: LT("studio:approvalApproveTooltip")
+            children: [!0 !== GB.manualOverride && (0, JB.jsx)(UB.g, {
+              tooltipInner: (0, JB.jsx)("div", {
+                children: rB("studio:approvalApproveTooltip")
               }),
-              children: (0, BT.jsxs)(zT.l, {
+              children: (0, JB.jsxs)(nB.m, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  JT(!0)
+                  iB(!0)
                 },
-                disabled: OT,
-                children: [(0, BT.jsx)(jT.c, {
+                disabled: SB,
+                children: [(0, JB.jsx)(aB.c, {
                   name: "check"
-                }), " ", LT("studio:approvalApprove")]
+                }), " ", rB("studio:approvalApprove")]
               })
-            }), !1 !== fT.manualOverride && (0, BT.jsx)(kT.e, {
-              tooltipInner: (0, BT.jsx)("div", {
-                children: LT("studio:approvalDenyTooltip")
+            }), !1 !== GB.manualOverride && (0, JB.jsx)(UB.g, {
+              tooltipInner: (0, JB.jsx)("div", {
+                children: rB("studio:approvalDenyTooltip")
               }),
-              children: (0, BT.jsxs)(zT.I, {
+              children: (0, JB.jsxs)(nB.G, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  JT(!1)
+                  iB(!1)
                 },
-                disabled: OT,
-                children: [(0, BT.jsx)(jT.c, {
+                disabled: SB,
+                children: [(0, JB.jsx)(aB.c, {
                   name: "xmark"
-                }), " ", LT("studio:approvalDeny")]
+                }), " ", rB("studio:approvalDeny")]
               })
-            }), null !== fT.manualOverride && (0, BT.jsx)(kT.e, {
-              tooltipInner: (0, BT.jsx)("div", {
-                children: LT("studio:approvalClearOverrideTooltip")
+            }), null !== GB.manualOverride && (0, JB.jsx)(UB.g, {
+              tooltipInner: (0, JB.jsx)("div", {
+                children: rB("studio:approvalClearOverrideTooltip")
               }),
-              children: (0, BT.jsxs)(zT.e, {
+              children: (0, JB.jsxs)(nB.f, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  JT(null)
+                  iB(null)
                 },
-                disabled: OT,
-                children: [(0, BT.jsx)(jT.c, {
+                disabled: SB,
+                children: [(0, JB.jsx)(aB.c, {
                   name: "arrows-rotate"
-                }), " ", LT("studio:approvalClearOverride")]
+                }), " ", rB("studio:approvalClearOverride")]
               })
             })]
           })]
@@ -1469,14 +1469,14 @@ export const modules = {
       })
     }
   },
-  6565: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => nT,
-      f: () => gT
+  6446: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => NB,
+      f: () => IB
     });
-    var WT = mT(366),
-      zT = mT(1288);
-    const MT = {
+    var QB = zB(376),
+      nB = zB(1240);
+    const dB = {
       manuallyApproved: "studio:approvalStatusManuallyApproved",
       manuallyAndAutoApproved: "studio:approvalStatusManuallyAndAutoApproved",
       manuallyDenied: "studio:approvalStatusManuallyDenied",
@@ -1485,60 +1485,60 @@ export const modules = {
       notIndexed: "studio:approvalStatusNotIndexed"
     };
 
-    function gT() {
+    function IB() {
       const {
-        t: TT,
-        selectedLanguage: UT
-      } = (0, zT.z)();
+        t: BB,
+        selectedLanguage: jB
+      } = (0, nB.D)();
       return {
-        statusText: UT => TT(MT[UT]),
-        rowText: mT => {
-          const MT = (TT, mT) => (0, WT.nb)((0, zT.m)(UT.code, TT), 0, mT);
-          switch (mT.kind) {
+        statusText: jB => BB(dB[jB]),
+        rowText: zB => {
+          const dB = (BB, zB) => (0, QB.$)((0, nB.n)(jB.code, BB), 0, zB);
+          switch (zB.kind) {
             case "ownerAccountAge": {
-              const UT = mT.ownerIsLoggedIn ? "studio:approvalAccountAgeLoggedIn" : "studio:approvalAccountAgeNotLoggedIn";
+              const jB = zB.ownerIsLoggedIn ? "studio:approvalAccountAgeLoggedIn" : "studio:approvalAccountAgeNotLoggedIn";
               return {
-                label: TT("studio:approvalAccountAgeLabel"),
-                value: TT(UT, {
-                  age: MT(UT, mT.accountAgeMs),
-                  days: mT.minAccountAgeDays
+                label: BB("studio:approvalAccountAgeLabel"),
+                value: BB(jB, {
+                  age: dB(jB, zB.accountAgeMs),
+                  days: zB.minAccountAgeDays
                 })
               }
             }
             case "sinceUnbannedOrUnmuted":
               return {
-                label: TT("studio:approvalSinceUnbannedLabel"), value: TT("studio:approvalSinceUnbannedValue", {
-                  time: MT("studio:approvalSinceUnbannedValue", mT.sinceMs),
-                  days: mT.minDays
+                label: BB("studio:approvalSinceUnbannedLabel"), value: BB("studio:approvalSinceUnbannedValue", {
+                  time: dB("studio:approvalSinceUnbannedValue", zB.sinceMs),
+                  days: zB.minDays
                 })
               };
             case "reportHold": {
               const {
-                detail: UT
-              } = mT;
-              if (null === UT) return {
-                label: TT("studio:approvalUnderInvestigation"),
+                detail: jB
+              } = zB;
+              if (null === jB) return {
+                label: BB("studio:approvalUnderInvestigation"),
                 value: null
               };
-              const WT = UT.weightedReporters.toFixed(1),
-                zT = UT.threshold.toFixed(1),
-                gT = TT("studio:approvalReportHoldLabel", {
-                  hours: UT.windowHours
+              const QB = jB.weightedReporters.toFixed(1),
+                nB = jB.threshold.toFixed(1),
+                IB = BB("studio:approvalReportHoldLabel", {
+                  hours: jB.windowHours
                 });
-              if (null === UT.heldUntil) return {
-                label: gT,
-                value: TT("studio:approvalReportHoldValue", {
-                  weightedReporters: WT,
-                  threshold: zT
+              if (null === jB.heldUntil) return {
+                label: IB,
+                value: BB("studio:approvalReportHoldValue", {
+                  weightedReporters: QB,
+                  threshold: nB
                 })
               };
-              const nT = "studio:approvalReportHoldValueHeld";
+              const NB = "studio:approvalReportHoldValueHeld";
               return {
-                label: gT,
-                value: TT(nT, {
-                  weightedReporters: WT,
-                  threshold: zT,
-                  time: MT(nT, UT.heldUntil - Date.now())
+                label: IB,
+                value: BB(NB, {
+                  weightedReporters: QB,
+                  threshold: nB,
+                  time: dB(NB, jB.heldUntil - Date.now())
                 })
               }
             }
@@ -1547,85 +1547,85 @@ export const modules = {
       }
     }
 
-    function nT(TT) {
-      return null === TT.manualOverride && TT.rows.some((TT => "reportHold" === TT.kind && !TT.passed))
+    function NB(BB) {
+      return null === BB.manualOverride && BB.rows.some((BB => "reportHold" === BB.kind && !BB.passed))
     }
   },
-  34323: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => MT
+  34292: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => dB
     });
-    var WT = mT(63),
-      zT = mT(3536);
+    var QB = zB(62),
+      nB = zB(3551);
 
-    function MT() {
-      const [TT, UT] = (0, WT.useState)(!1);
-      return (0, WT.useLayoutEffect)((() => {
-        let TT = !0;
-        return (0, zT.h)().then((() => {
-          TT && UT(!0)
+    function dB() {
+      const [BB, jB] = (0, QB.useState)(!1);
+      return (0, QB.useLayoutEffect)((() => {
+        let BB = !0;
+        return (0, nB.e)().then((() => {
+          BB && jB(!0)
         })), () => {
-          TT = !1
+          BB = !1
         }
-      }), []), TT
+      }), []), BB
     }
   },
-  9039: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => gT
+  8946: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => IB
     });
-    var WT = mT(1437),
-      zT = mT(1321),
-      MT = mT(653);
+    var QB = zB(1359),
+      nB = zB(1263),
+      dB = zB(658);
 
-    function gT(TT) {
-      return TT = function(TT, UT) {
-        var mT;
-        const WT = new URLSearchParams(UT),
-          zT = WT.get("lobby"),
-          MT = WT.get("vm"),
-          gT = null !== (mT = zT) && void 0 !== mT ? mT : TT.lobbyName,
-          nT = null !== MT && void 0 !== MT ? MT : TT.directJoinVmUrl;
-        if (gT === TT.lobbyName && nT === TT.directJoinVmUrl) return TT;
+    function IB(BB) {
+      return BB = function(BB, jB) {
+        var zB;
+        const QB = new URLSearchParams(jB),
+          nB = QB.get("lobby"),
+          dB = QB.get("vm"),
+          IB = null !== (zB = nB) && void 0 !== zB ? zB : BB.lobbyName,
+          NB = null !== dB && void 0 !== dB ? dB : BB.directJoinVmUrl;
+        if (IB === BB.lobbyName && NB === BB.directJoinVmUrl) return BB;
         return {
-          ...TT,
-          lobbyName: gT,
-          directJoinVmUrl: nT
+          ...BB,
+          lobbyName: IB,
+          directJoinVmUrl: NB
         }
-      }(TT, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), TT = function(TT) {
-        if ((0, MT.E)(TT.directJoinVmUrl)) return TT;
-        const UT = (0, zT.gb)(TT.directJoinVmUrl);
-        null === UT && (TT.directJoinVmUrl = void 0);
-        return TT
-      }(TT = function(TT) {
-        if ((0, MT.E)(TT.gameNameWithVariation)) return TT;
-        return TT.gameNameWithVariation = (0, WT.i)(TT.gameNameWithVariation), TT
-      }(TT))
+      }(BB, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), BB = function(BB) {
+        if ((0, dB.I)(BB.directJoinVmUrl)) return BB;
+        const jB = (0, nB.O)(BB.directJoinVmUrl);
+        null === jB && (BB.directJoinVmUrl = void 0);
+        return BB
+      }(BB = function(BB) {
+        if ((0, dB.I)(BB.gameNameWithVariation)) return BB;
+        return BB.gameNameWithVariation = (0, QB.o)(BB.gameNameWithVariation), BB
+      }(BB))
     }
   },
-  9036: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => MT,
-      c: () => zT
+  8937: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => dB,
+      f: () => nB
     });
-    let WT = !1;
+    let QB = !1;
 
-    function zT() {
-      WT = !0
+    function nB() {
+      QB = !0
     }
 
-    function MT() {
-      return WT
+    function dB() {
+      return QB
     }
   },
-  36437: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => zT,
-      e: () => WT
+  36439: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => nB,
+      e: () => QB
     });
-    const WT = "skyblockSkills",
-      zT = "skills_test_gym"
+    const QB = "skyblockSkills",
+      nB = "skills_test_gym"
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

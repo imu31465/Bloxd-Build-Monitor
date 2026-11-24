@@ -1,106 +1,106 @@
 export const id = 189;
 export const ids = [189];
 export const modules = {
-  37857: (TT, UT, mT) => {
-    var WT = mT(37866);
+  37821: (BB, jB, zB) => {
+    var QB = zB(37826);
 
-    function zT(TT) {
-      for (var UT, mT, zT = 0, MT = TT.length, gT = 0; gT < TT.length;) {
-        for (UT = TT[gT], mT = 0; gT < MT && TT[gT] === UT;) ++gT, ++mT;
-        zT += WT.log2(mT) / 7 | 0, zT += WT.log2(UT >>> 0) / 7 | 0, zT += 2
+    function nB(BB) {
+      for (var jB, zB, nB = 0, dB = BB.length, IB = 0; IB < BB.length;) {
+        for (jB = BB[IB], zB = 0; IB < dB && BB[IB] === jB;) ++IB, ++zB;
+        nB += QB.log2(zB) / 7 | 0, nB += QB.log2(jB >>> 0) / 7 | 0, nB += 2
       }
-      return zT
+      return nB
     }
-    UT.size = zT, UT.encode = function(TT, UT) {
-      UT || (UT = new Uint8Array(zT(TT)));
-      for (var mT, WT, MT = 0, gT = UT.length, nT = 0; nT < TT.length;) {
-        for (mT = TT[nT], WT = 0; nT < TT.length && TT[nT] === mT;) ++nT, ++WT;
-        for (; MT < gT && WT >= 128;) UT[MT++] = 128 + (127 & WT), WT >>>= 7;
-        if (MT >= gT) throw new Error("RLE buffer overflow");
-        for (UT[MT++] = WT, mT >>>= 0; MT < gT && mT >= 128;) UT[MT++] = 128 + (127 & mT), mT >>>= 7;
-        if (MT >= gT) throw new Error("RLE buffer overflow");
-        UT[MT++] = mT
+    jB.size = nB, jB.encode = function(BB, jB) {
+      jB || (jB = new Uint8Array(nB(BB)));
+      for (var zB, QB, dB = 0, IB = jB.length, NB = 0; NB < BB.length;) {
+        for (zB = BB[NB], QB = 0; NB < BB.length && BB[NB] === zB;) ++NB, ++QB;
+        for (; dB < IB && QB >= 128;) jB[dB++] = 128 + (127 & QB), QB >>>= 7;
+        if (dB >= IB) throw new Error("RLE buffer overflow");
+        for (jB[dB++] = QB, zB >>>= 0; dB < IB && zB >= 128;) jB[dB++] = 128 + (127 & zB), zB >>>= 7;
+        if (dB >= IB) throw new Error("RLE buffer overflow");
+        jB[dB++] = zB
       }
-      return UT
-    }, UT.decode = function(TT, UT) {
-      for (var mT, WT, zT, MT, gT = UT.length, nT = TT.length, HT = 0, kT = 0; kT < nT;) {
-        for (mT = 0, WT = 0; kT < nT && TT[kT] >= 128;) mT += (127 & TT[kT++]) << WT, WT += 7;
-        if (mT += TT[kT++] << WT, kT >= nT) throw new Error("RLE buffer underrun");
-        if (HT + mT > gT) throw new Error("Chunk buffer overflow");
-        for (zT = 0, WT = 0; kT < nT && TT[kT] >= 128;) zT += (127 & TT[kT++]) << WT, WT += 7;
-        if (kT >= nT) throw new Error("RLE buffer underrun");
-        for (zT += TT[kT++] << WT, MT = 0; MT < mT; ++MT) UT[HT++] = zT
+      return jB
+    }, jB.decode = function(BB, jB) {
+      for (var zB, QB, nB, dB, IB = jB.length, NB = BB.length, uB = 0, UB = 0; UB < NB;) {
+        for (zB = 0, QB = 0; UB < NB && BB[UB] >= 128;) zB += (127 & BB[UB++]) << QB, QB += 7;
+        if (zB += BB[UB++] << QB, UB >= NB) throw new Error("RLE buffer underrun");
+        if (uB + zB > IB) throw new Error("Chunk buffer overflow");
+        for (nB = 0, QB = 0; UB < NB && BB[UB] >= 128;) nB += (127 & BB[UB++]) << QB, QB += 7;
+        if (UB >= NB) throw new Error("RLE buffer underrun");
+        for (nB += BB[UB++] << QB, dB = 0; dB < zB; ++dB) jB[uB++] = nB
       }
-      return UT
+      return jB
     }
   },
-  37866: (TT, UT) => {
-    function mT(TT) {
-      var UT = 32;
-      return (TT &= -TT) && UT--, 65535 & TT && (UT -= 16), 16711935 & TT && (UT -= 8), 252645135 & TT && (UT -= 4), 858993459 & TT && (UT -= 2), 1431655765 & TT && (UT -= 1), UT
+  37826: (BB, jB) => {
+    function zB(BB) {
+      var jB = 32;
+      return (BB &= -BB) && jB--, 65535 & BB && (jB -= 16), 16711935 & BB && (jB -= 8), 252645135 & BB && (jB -= 4), 858993459 & BB && (jB -= 2), 1431655765 & BB && (jB -= 1), jB
     }
-    UT.INT_BITS = 32, UT.INT_MAX = 2147483647, UT.INT_MIN = -1 << 31, UT.sign = function(TT) {
-      return (TT > 0) - (TT < 0)
-    }, UT.abs = function(TT) {
-      var UT = TT >> 31;
-      return (TT ^ UT) - UT
-    }, UT.min = function(TT, UT) {
-      return UT ^ (TT ^ UT) & -(TT < UT)
-    }, UT.max = function(TT, UT) {
-      return TT ^ (TT ^ UT) & -(TT < UT)
-    }, UT.isPow2 = function(TT) {
-      return !(TT & TT - 1) && !!TT
-    }, UT.log2 = function(TT) {
-      var UT, mT;
-      return UT = (TT > 65535) << 4, UT |= mT = ((TT >>>= UT) > 255) << 3, UT |= mT = ((TT >>>= mT) > 15) << 2, (UT |= mT = ((TT >>>= mT) > 3) << 1) | (TT >>>= mT) >> 1
-    }, UT.log10 = function(TT) {
-      return TT >= 1e9 ? 9 : TT >= 1e8 ? 8 : TT >= 1e7 ? 7 : TT >= 1e6 ? 6 : TT >= 1e5 ? 5 : TT >= 1e4 ? 4 : TT >= 1e3 ? 3 : TT >= 100 ? 2 : TT >= 10 ? 1 : 0
-    }, UT.popCount = function(TT) {
-      return 16843009 * ((TT = (858993459 & (TT -= TT >>> 1 & 1431655765)) + (TT >>> 2 & 858993459)) + (TT >>> 4) & 252645135) >>> 24
-    }, UT.countTrailingZeros = mT, UT.nextPow2 = function(TT) {
-      return TT += 0 === TT, --TT, TT |= TT >>> 1, TT |= TT >>> 2, TT |= TT >>> 4, TT |= TT >>> 8, (TT |= TT >>> 16) + 1
-    }, UT.prevPow2 = function(TT) {
-      return TT |= TT >>> 1, TT |= TT >>> 2, TT |= TT >>> 4, TT |= TT >>> 8, (TT |= TT >>> 16) - (TT >>> 1)
-    }, UT.parity = function(TT) {
-      return TT ^= TT >>> 16, TT ^= TT >>> 8, TT ^= TT >>> 4, 27030 >>> (TT &= 15) & 1
+    jB.INT_BITS = 32, jB.INT_MAX = 2147483647, jB.INT_MIN = -1 << 31, jB.sign = function(BB) {
+      return (BB > 0) - (BB < 0)
+    }, jB.abs = function(BB) {
+      var jB = BB >> 31;
+      return (BB ^ jB) - jB
+    }, jB.min = function(BB, jB) {
+      return jB ^ (BB ^ jB) & -(BB < jB)
+    }, jB.max = function(BB, jB) {
+      return BB ^ (BB ^ jB) & -(BB < jB)
+    }, jB.isPow2 = function(BB) {
+      return !(BB & BB - 1) && !!BB
+    }, jB.log2 = function(BB) {
+      var jB, zB;
+      return jB = (BB > 65535) << 4, jB |= zB = ((BB >>>= jB) > 255) << 3, jB |= zB = ((BB >>>= zB) > 15) << 2, (jB |= zB = ((BB >>>= zB) > 3) << 1) | (BB >>>= zB) >> 1
+    }, jB.log10 = function(BB) {
+      return BB >= 1e9 ? 9 : BB >= 1e8 ? 8 : BB >= 1e7 ? 7 : BB >= 1e6 ? 6 : BB >= 1e5 ? 5 : BB >= 1e4 ? 4 : BB >= 1e3 ? 3 : BB >= 100 ? 2 : BB >= 10 ? 1 : 0
+    }, jB.popCount = function(BB) {
+      return 16843009 * ((BB = (858993459 & (BB -= BB >>> 1 & 1431655765)) + (BB >>> 2 & 858993459)) + (BB >>> 4) & 252645135) >>> 24
+    }, jB.countTrailingZeros = zB, jB.nextPow2 = function(BB) {
+      return BB += 0 === BB, --BB, BB |= BB >>> 1, BB |= BB >>> 2, BB |= BB >>> 4, BB |= BB >>> 8, (BB |= BB >>> 16) + 1
+    }, jB.prevPow2 = function(BB) {
+      return BB |= BB >>> 1, BB |= BB >>> 2, BB |= BB >>> 4, BB |= BB >>> 8, (BB |= BB >>> 16) - (BB >>> 1)
+    }, jB.parity = function(BB) {
+      return BB ^= BB >>> 16, BB ^= BB >>> 8, BB ^= BB >>> 4, 27030 >>> (BB &= 15) & 1
     };
-    var WT = new Array(256);
-    ! function(TT) {
-      for (var UT = 0; UT < 256; ++UT) {
-        var mT = UT,
-          WT = UT,
-          zT = 7;
-        for (mT >>>= 1; mT; mT >>>= 1) WT <<= 1, WT |= 1 & mT, --zT;
-        TT[UT] = WT << zT & 255
+    var QB = new Array(256);
+    ! function(BB) {
+      for (var jB = 0; jB < 256; ++jB) {
+        var zB = jB,
+          QB = jB,
+          nB = 7;
+        for (zB >>>= 1; zB; zB >>>= 1) QB <<= 1, QB |= 1 & zB, --nB;
+        BB[jB] = QB << nB & 255
       }
-    }(WT), UT.reverse = function(TT) {
-      return WT[255 & TT] << 24 | WT[TT >>> 8 & 255] << 16 | WT[TT >>> 16 & 255] << 8 | WT[TT >>> 24 & 255]
-    }, UT.interleave2 = function(TT, UT) {
-      return (TT = 1431655765 & ((TT = 858993459 & ((TT = 252645135 & ((TT = 16711935 & ((TT &= 65535) | TT << 8)) | TT << 4)) | TT << 2)) | TT << 1)) | (UT = 1431655765 & ((UT = 858993459 & ((UT = 252645135 & ((UT = 16711935 & ((UT &= 65535) | UT << 8)) | UT << 4)) | UT << 2)) | UT << 1)) << 1
-    }, UT.deinterleave2 = function(TT, UT) {
-      return (TT = 65535 & ((TT = 16711935 & ((TT = 252645135 & ((TT = 858993459 & ((TT = TT >>> UT & 1431655765) | TT >>> 1)) | TT >>> 2)) | TT >>> 4)) | TT >>> 16)) << 16 >> 16
-    }, UT.interleave3 = function(TT, UT, mT) {
-      return TT = 1227133513 & ((TT = 3272356035 & ((TT = 251719695 & ((TT = 4278190335 & ((TT &= 1023) | TT << 16)) | TT << 8)) | TT << 4)) | TT << 2), (TT |= (UT = 1227133513 & ((UT = 3272356035 & ((UT = 251719695 & ((UT = 4278190335 & ((UT &= 1023) | UT << 16)) | UT << 8)) | UT << 4)) | UT << 2)) << 1) | (mT = 1227133513 & ((mT = 3272356035 & ((mT = 251719695 & ((mT = 4278190335 & ((mT &= 1023) | mT << 16)) | mT << 8)) | mT << 4)) | mT << 2)) << 2
-    }, UT.deinterleave3 = function(TT, UT) {
-      return (TT = 1023 & ((TT = 4278190335 & ((TT = 251719695 & ((TT = 3272356035 & ((TT = TT >>> UT & 1227133513) | TT >>> 2)) | TT >>> 4)) | TT >>> 8)) | TT >>> 16)) << 22 >> 22
-    }, UT.nextCombination = function(TT) {
-      var UT = TT | TT - 1;
-      return UT + 1 | (~UT & -~UT) - 1 >>> mT(TT) + 1
+    }(QB), jB.reverse = function(BB) {
+      return QB[255 & BB] << 24 | QB[BB >>> 8 & 255] << 16 | QB[BB >>> 16 & 255] << 8 | QB[BB >>> 24 & 255]
+    }, jB.interleave2 = function(BB, jB) {
+      return (BB = 1431655765 & ((BB = 858993459 & ((BB = 252645135 & ((BB = 16711935 & ((BB &= 65535) | BB << 8)) | BB << 4)) | BB << 2)) | BB << 1)) | (jB = 1431655765 & ((jB = 858993459 & ((jB = 252645135 & ((jB = 16711935 & ((jB &= 65535) | jB << 8)) | jB << 4)) | jB << 2)) | jB << 1)) << 1
+    }, jB.deinterleave2 = function(BB, jB) {
+      return (BB = 65535 & ((BB = 16711935 & ((BB = 252645135 & ((BB = 858993459 & ((BB = BB >>> jB & 1431655765) | BB >>> 1)) | BB >>> 2)) | BB >>> 4)) | BB >>> 16)) << 16 >> 16
+    }, jB.interleave3 = function(BB, jB, zB) {
+      return BB = 1227133513 & ((BB = 3272356035 & ((BB = 251719695 & ((BB = 4278190335 & ((BB &= 1023) | BB << 16)) | BB << 8)) | BB << 4)) | BB << 2), (BB |= (jB = 1227133513 & ((jB = 3272356035 & ((jB = 251719695 & ((jB = 4278190335 & ((jB &= 1023) | jB << 16)) | jB << 8)) | jB << 4)) | jB << 2)) << 1) | (zB = 1227133513 & ((zB = 3272356035 & ((zB = 251719695 & ((zB = 4278190335 & ((zB &= 1023) | zB << 16)) | zB << 8)) | zB << 4)) | zB << 2)) << 2
+    }, jB.deinterleave3 = function(BB, jB) {
+      return (BB = 1023 & ((BB = 4278190335 & ((BB = 251719695 & ((BB = 3272356035 & ((BB = BB >>> jB & 1227133513) | BB >>> 2)) | BB >>> 4)) | BB >>> 8)) | BB >>> 16)) << 22 >> 22
+    }, jB.nextCombination = function(BB) {
+      var jB = BB | BB - 1;
+      return jB + 1 | (~jB & -~jB) - 1 >>> zB(BB) + 1
     }
   },
-  39898: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      emptyColumnHeight: () => iT,
-      loadHeatmapSchematic: () => bT,
-      readSchematicBlocks: () => OT
+  39885: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      emptyColumnHeight: () => gB,
+      loadHeatmapSchematic: () => tB,
+      readSchematicBlocks: () => SB
     });
-    var WT = mT(3850),
-      zT = mT.n(WT),
-      MT = mT(3823),
-      gT = mT(37857),
-      nT = mT(208),
-      HT = mT(9330);
-    const kT = [{
+    var QB = zB(3855),
+      nB = zB.n(QB),
+      dB = zB(3836),
+      IB = zB(37821),
+      NB = zB(214),
+      uB = zB(9266);
+    const UB = [{
         name: "x",
         type: "int"
       }, {
@@ -110,20 +110,20 @@ export const modules = {
         name: "z",
         type: "int"
       }],
-      jT = [{
+      aB = [{
         name: "name",
         type: "string"
       }, {
         name: "startOffset",
         type: {
           type: "record",
-          fields: kT
+          fields: UB
         }
       }, {
         name: "dimensions",
         type: {
           type: "record",
-          fields: kT
+          fields: UB
         }
       }, {
         name: "chunkData",
@@ -131,26 +131,26 @@ export const modules = {
           type: "array",
           items: {
             type: "record",
-            fields: [...kT, {
+            fields: [...UB, {
               name: "rle",
               type: "bytes"
             }]
           }
         }
       }],
-      lT = zT().Type.forSchema({
+      pB = nB().Type.forSchema({
         type: "record",
-        fields: jT
+        fields: aB
       }),
-      LT = zT().Type.forSchema({
+      rB = nB().Type.forSchema({
         type: "record",
-        fields: [...jT, {
+        fields: [...aB, {
           name: "blockData",
           type: {
             type: "array",
             items: {
               type: "record",
-              fields: [...kT, {
+              fields: [...UB, {
                 name: "data",
                 type: "bytes"
               }]
@@ -160,187 +160,187 @@ export const modules = {
           name: "pasteOffset",
           type: {
             type: "record",
-            fields: kT
+            fields: UB
           }
         }]
       }),
-      pT = 2,
-      BT = 6,
-      ZT = {
+      sB = 2,
+      JB = 6,
+      mB = {
         Water: [63, 118, 228],
         Lava: [232, 110, 30]
       },
-      cT = [150, 150, 150],
-      vT = 16,
-      fT = 4096,
-      qT = nT.f.cB,
-      iT = -2147483648;
-    async function bT(TT) {
-      const UT = await OT(new Uint8Array(await TT.arrayBuffer()), await async function() {
+      yB = [150, 150, 150],
+      kB = 16,
+      GB = 4096,
+      LB = NB.e.ZJ,
+      gB = -2147483648;
+    async function tB(BB) {
+      const jB = await SB(new Uint8Array(await BB.arrayBuffer()), await async function() {
         const {
-          averageColors: TT
-        } = await mT.e(207).then((() => mT(34366))), UT = new Map;
-        return mT => {
-          var WT, zT, MT, gT, nT;
-          const kT = UT.get(mT);
-          if (void 0 !== kT) return kT;
-          const jT = null !== (WT = null === (zT = HT.g[mT]) || void 0 === zT ? void 0 : zT.name) && void 0 !== WT ? WT : "",
-            lT = null !== (MT = TT[jT]) && void 0 !== MT ? MT : TT[jT.split("|")[0]],
-            LT = ZT[jT.split("|")[0]],
-            pT = null !== (gT = null !== (nT = null === lT || void 0 === lT ? void 0 : lT[0]) && void 0 !== nT ? nT : LT) && void 0 !== gT ? gT : 0 === (null === lT || void 0 === lT ? void 0 : lT.length) ? null : cT;
-          return UT.set(mT, pT), pT
+          averageColors: BB
+        } = await zB.e(207).then((() => zB(34335))), jB = new Map;
+        return zB => {
+          var QB, nB, dB, IB, NB;
+          const UB = jB.get(zB);
+          if (void 0 !== UB) return UB;
+          const aB = null !== (QB = null === (nB = uB.i[zB]) || void 0 === nB ? void 0 : nB.name) && void 0 !== QB ? QB : "",
+            pB = null !== (dB = BB[aB]) && void 0 !== dB ? dB : BB[aB.split("|")[0]],
+            rB = mB[aB.split("|")[0]],
+            sB = null !== (IB = null !== (NB = null === pB || void 0 === pB ? void 0 : pB[0]) && void 0 !== NB ? NB : rB) && void 0 !== IB ? IB : 0 === (null === pB || void 0 === pB ? void 0 : pB.length) ? null : yB;
+          return jB.set(zB, sB), sB
         }
       }());
       return {
-        surface: UT.surface,
-        topDown: YT(UT.columnTops)
+        surface: jB.surface,
+        topDown: EB(jB.columnTops)
       }
     }
-    async function OT(TT, UT) {
-      var mT;
-      if (TT.byteLength < 4) throw new Error("The file is too short to be a schematic.");
-      const WT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength).getUint32(0, !0);
-      if (WT > BT) throw new Error("The file isn't a schematic this version of Bloxd can read.");
-      const zT = (WT >= pT ? LT : lT).decode(MT.HB.from(TT.subarray(4)), 0).value;
-      if (!zT) throw new Error("The file isn't a schematic.");
-      if (0 === zT.chunkData.length) throw new Error("The schematic has no blocks in it.");
-      const nT = null !== (mT = zT.pasteOffset) && void 0 !== mT ? mT : {
+    async function SB(BB, jB) {
+      var zB;
+      if (BB.byteLength < 4) throw new Error("The file is too short to be a schematic.");
+      const QB = new DataView(BB.buffer, BB.byteOffset, BB.byteLength).getUint32(0, !0);
+      if (QB > JB) throw new Error("The file isn't a schematic this version of Bloxd can read.");
+      const nB = (QB >= sB ? rB : pB).decode(dB.oJ.from(BB.subarray(4)), 0).value;
+      if (!nB) throw new Error("The file isn't a schematic.");
+      if (0 === nB.chunkData.length) throw new Error("The schematic has no blocks in it.");
+      const NB = null !== (zB = nB.pasteOffset) && void 0 !== zB ? zB : {
           x: 0,
           y: 0,
           z: 0
         },
-        HT = [nT.x, nT.y, nT.z].map((TT => Math.floor(TT / qT))),
-        kT = zT.chunkData.map((TT => ({
-          x: TT.x + HT[0],
-          y: TT.y + HT[1],
-          z: TT.z + HT[2],
-          rle: TT.rle
+        uB = [NB.x, NB.y, NB.z].map((BB => Math.floor(BB / LB))),
+        UB = nB.chunkData.map((BB => ({
+          x: BB.x + uB[0],
+          y: BB.y + uB[1],
+          z: BB.z + uB[2],
+          rle: BB.rle
         }))),
-        jT = new Map;
-      for (const [MT, lT] of kT.entries()) {
-        const TT = new Uint16Array(qT ** 3);
-        gT.decode(lT.rle, TT), jT.set(`${lT.x},${lT.y},${lT.z}`, TT), MT % vT === vT - 1 && await JT()
+        aB = new Map;
+      for (const [dB, pB] of UB.entries()) {
+        const BB = new Uint16Array(LB ** 3);
+        IB.decode(pB.rle, BB), aB.set(`${pB.x},${pB.y},${pB.z}`, BB), dB % kB === kB - 1 && await iB()
       }
-      const ZT = (TT, UT, mT) => TT * qT * qT + UT * qT + mT,
-        cT = (TT, UT, mT) => {
-          var WT, zT;
-          const MT = Math.floor(TT / qT),
-            gT = Math.floor(UT / qT),
-            nT = Math.floor(mT / qT);
-          return null !== (WT = null === (zT = jT.get(`${MT},${gT},${nT}`)) || void 0 === zT ? void 0 : zT[ZT(TT - MT * qT, UT - gT * qT, mT - nT * qT)]) && void 0 !== WT ? WT : 0
+      const mB = (BB, jB, zB) => BB * LB * LB + jB * LB + zB,
+        yB = (BB, jB, zB) => {
+          var QB, nB;
+          const dB = Math.floor(BB / LB),
+            IB = Math.floor(jB / LB),
+            NB = Math.floor(zB / LB);
+          return null !== (QB = null === (nB = aB.get(`${dB},${IB},${NB}`)) || void 0 === nB ? void 0 : nB[mB(BB - dB * LB, jB - IB * LB, zB - NB * LB)]) && void 0 !== QB ? QB : 0
         },
-        fT = new Map,
-        bT = [],
-        OT = [];
-      for (const [MT, gT] of kT.entries()) {
-        const TT = jT.get(`${gT.x},${gT.y},${gT.z}`),
-          mT = [gT.x * qT, gT.y * qT, gT.z * qT],
-          WT = (UT, WT, zT) => UT < 0 || WT < 0 || zT < 0 || UT >= qT || WT >= qT || zT >= qT ? cT(mT[0] + UT, mT[1] + WT, mT[2] + zT) : TT[ZT(UT, WT, zT)],
-          zT = `${gT.x},${gT.z}`;
-        let nT = fT.get(zT);
-        void 0 === nT && (nT = {
-          chunkX: gT.x,
-          chunkZ: gT.z,
-          heights: new Int32Array(qT * qT).fill(iT),
-          colours: new Uint8Array(qT * qT * 3)
-        }, fT.set(zT, nT));
-        for (let MT = 0; MT < qT; MT++)
-          for (let zT = 0; zT < qT; zT++)
-            for (let gT = 0; gT < qT; gT++) {
-              const HT = TT[ZT(MT, zT, gT)];
-              if (0 === HT) continue;
-              const kT = mT[0] + MT,
-                jT = mT[1] + zT,
-                lT = mT[2] + gT,
-                LT = UT(HT);
-              if (null === LT) continue;
-              const pT = gT * qT + MT;
-              jT > nT.heights[pT] && (nT.heights[pT] = jT, nT.colours.set(LT, 3 * pT));
-              !eT(HT) && (eT(WT(MT + 1, zT, gT)) || eT(WT(MT - 1, zT, gT)) || eT(WT(MT, zT + 1, gT)) || eT(WT(MT, zT - 1, gT)) || eT(WT(MT, zT, gT + 1)) || eT(WT(MT, zT, gT - 1))) && (bT.push(kT, jT, lT), OT.push(LT[0], LT[1], LT[2]))
+        GB = new Map,
+        tB = [],
+        SB = [];
+      for (const [dB, IB] of UB.entries()) {
+        const BB = aB.get(`${IB.x},${IB.y},${IB.z}`),
+          zB = [IB.x * LB, IB.y * LB, IB.z * LB],
+          QB = (jB, QB, nB) => jB < 0 || QB < 0 || nB < 0 || jB >= LB || QB >= LB || nB >= LB ? yB(zB[0] + jB, zB[1] + QB, zB[2] + nB) : BB[mB(jB, QB, nB)],
+          nB = `${IB.x},${IB.z}`;
+        let NB = GB.get(nB);
+        void 0 === NB && (NB = {
+          chunkX: IB.x,
+          chunkZ: IB.z,
+          heights: new Int32Array(LB * LB).fill(gB),
+          colours: new Uint8Array(LB * LB * 3)
+        }, GB.set(nB, NB));
+        for (let dB = 0; dB < LB; dB++)
+          for (let nB = 0; nB < LB; nB++)
+            for (let IB = 0; IB < LB; IB++) {
+              const uB = BB[mB(dB, nB, IB)];
+              if (0 === uB) continue;
+              const UB = zB[0] + dB,
+                aB = zB[1] + nB,
+                pB = zB[2] + IB,
+                rB = jB(uB);
+              if (null === rB) continue;
+              const sB = IB * LB + dB;
+              aB > NB.heights[sB] && (NB.heights[sB] = aB, NB.colours.set(rB, 3 * sB));
+              !MB(uB) && (MB(QB(dB + 1, nB, IB)) || MB(QB(dB - 1, nB, IB)) || MB(QB(dB, nB + 1, IB)) || MB(QB(dB, nB - 1, IB)) || MB(QB(dB, nB, IB + 1)) || MB(QB(dB, nB, IB - 1))) && (tB.push(UB, aB, pB), SB.push(rB[0], rB[1], rB[2]))
             }
-        MT % vT === vT - 1 && await JT()
+        dB % kB === kB - 1 && await iB()
       }
-      if (0 === bT.length) throw new Error("The schematic has no blocks in it.");
+      if (0 === tB.length) throw new Error("The schematic has no blocks in it.");
       return {
-        name: zT.name,
+        name: nB.name,
         surface: {
-          positions: Int32Array.from(bT),
-          colours: Uint8Array.from(OT),
-          count: bT.length / 3
+          positions: Int32Array.from(tB),
+          colours: Uint8Array.from(SB),
+          count: tB.length / 3
         },
-        columnTops: [...fT.values()]
+        columnTops: [...GB.values()]
       }
     }
 
-    function eT(TT) {
-      if (0 === TT) return !0;
-      const UT = HT.g[TT];
-      return void 0 === UT || UT.RL || UT.transTex || !1 === UT.solid
+    function MB(BB) {
+      if (0 === BB) return !0;
+      const jB = uB.i[BB];
+      return void 0 === jB || jB.Ss || jB.transTex || !1 === jB.solid
     }
 
-    function YT(TT) {
-      let UT = 1 / 0,
-        mT = -1 / 0,
-        WT = 1 / 0,
-        zT = -1 / 0;
+    function EB(BB) {
+      let jB = 1 / 0,
+        zB = -1 / 0,
+        QB = 1 / 0,
+        nB = -1 / 0;
       for (const {
-          chunkX: BT,
-          chunkZ: ZT,
-          heights: cT
+          chunkX: JB,
+          chunkZ: mB,
+          heights: yB
         }
-        of TT) cT.forEach(((TT, MT) => {
-        if (TT === iT) return;
-        const gT = BT * qT + MT % qT,
-          nT = ZT * qT + Math.floor(MT / qT);
-        UT = Math.min(UT, gT), mT = Math.max(mT, gT), WT = Math.min(WT, nT), zT = Math.max(zT, nT)
+        of BB) yB.forEach(((BB, dB) => {
+        if (BB === gB) return;
+        const IB = JB * LB + dB % LB,
+          NB = mB * LB + Math.floor(dB / LB);
+        jB = Math.min(jB, IB), zB = Math.max(zB, IB), QB = Math.min(QB, NB), nB = Math.max(nB, NB)
       }));
-      const MT = mT - UT + 1,
-        gT = zT - WT + 1,
-        nT = Math.max(1, Math.ceil(MT / fT), Math.ceil(gT / fT)),
-        HT = Math.ceil(MT / nT),
-        kT = Math.ceil(gT / nT),
-        jT = document.createElement("canvas");
-      jT.width = HT, jT.height = kT;
-      const lT = jT.getContext("2d");
-      if (!lT) throw new Error("Couldn't draw the schematic from above.");
-      const LT = lT.createImageData(HT, kT),
-        pT = new Int32Array(HT * kT).fill(iT);
+      const dB = zB - jB + 1,
+        IB = nB - QB + 1,
+        NB = Math.max(1, Math.ceil(dB / GB), Math.ceil(IB / GB)),
+        uB = Math.ceil(dB / NB),
+        UB = Math.ceil(IB / NB),
+        aB = document.createElement("canvas");
+      aB.width = uB, aB.height = UB;
+      const pB = aB.getContext("2d");
+      if (!pB) throw new Error("Couldn't draw the schematic from above.");
+      const rB = pB.createImageData(uB, UB),
+        sB = new Int32Array(uB * UB).fill(gB);
       for (const {
-          chunkX: BT,
-          chunkZ: ZT,
-          heights: cT,
-          colours: vT
+          chunkX: JB,
+          chunkZ: mB,
+          heights: yB,
+          colours: kB
         }
-        of TT) cT.forEach(((TT, UT) => {
-        const zT = BT * qT + UT % qT,
-          MT = ZT * qT + Math.floor(UT / qT),
-          gT = Math.floor((MT - WT) / nT) * HT + Math.floor((mT - zT) / nT);
-        TT === iT || TT <= pT[gT] || (pT[gT] = TT, LT.data.set(vT.subarray(3 * UT, 3 * UT + 3), 4 * gT), LT.data[4 * gT + 3] = 255)
+        of BB) yB.forEach(((BB, jB) => {
+        const nB = JB * LB + jB % LB,
+          dB = mB * LB + Math.floor(jB / LB),
+          IB = Math.floor((dB - QB) / NB) * uB + Math.floor((zB - nB) / NB);
+        BB === gB || BB <= sB[IB] || (sB[IB] = BB, rB.data.set(kB.subarray(3 * jB, 3 * jB + 3), 4 * IB), rB.data[4 * IB + 3] = 255)
       }));
-      return lT.putImageData(LT, 0, 0), {
-        maxX: mT,
-        minZ: WT,
-        width: HT * nT,
-        depth: kT * nT,
-        canvas: jT
+      return pB.putImageData(rB, 0, 0), {
+        maxX: zB,
+        minZ: QB,
+        width: uB * NB,
+        depth: UB * NB,
+        canvas: aB
       }
     }
 
-    function JT() {
-      return new Promise((TT => {
-        setTimeout(TT, 0)
+    function iB() {
+      return new Promise((BB => {
+        setTimeout(BB, 0)
       }))
     }
   },
-  9411: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => zT,
-      i: () => MT
+  9366: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => nB,
+      e: () => dB
     });
-    var WT = mT(9369);
-    const zT = "Air",
-      MT = Object.freeze(new WT.g(zT, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var QB = zB(9311);
+    const nB = "Air",
+      dB = Object.freeze(new QB.h(nB, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

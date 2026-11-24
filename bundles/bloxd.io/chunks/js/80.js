@@ -1,99 +1,99 @@
 export const id = 80;
 export const ids = [80];
 export const modules = {
-  4816: TT => {
-    function UT(TT) {
-      return TT instanceof Map ? TT.clear = TT.delete = TT.set = function() {
+  4813: BB => {
+    function jB(BB) {
+      return BB instanceof Map ? BB.clear = BB.delete = BB.set = function() {
         throw new Error("map is read-only")
-      } : TT instanceof Set && (TT.add = TT.clear = TT.delete = function() {
+      } : BB instanceof Set && (BB.add = BB.clear = BB.delete = function() {
         throw new Error("set is read-only")
-      }), Object.freeze(TT), Object.getOwnPropertyNames(TT).forEach((mT => {
-        const WT = TT[mT],
-          zT = typeof WT;
-        "object" !== zT && "function" !== zT || Object.isFrozen(WT) || UT(WT)
-      })), TT
+      }), Object.freeze(BB), Object.getOwnPropertyNames(BB).forEach((zB => {
+        const QB = BB[zB],
+          nB = typeof QB;
+        "object" !== nB && "function" !== nB || Object.isFrozen(QB) || jB(QB)
+      })), BB
     }
-    class mT {
-      constructor(TT) {
-        void 0 === TT.data && (TT.data = {}), this.data = TT.data, this.isMatchIgnored = !1
+    class zB {
+      constructor(BB) {
+        void 0 === BB.data && (BB.data = {}), this.data = BB.data, this.isMatchIgnored = !1
       }
       ignoreMatch() {
         this.isMatchIgnored = !0
       }
     }
 
-    function WT(TT) {
-      return TT.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
+    function QB(BB) {
+      return BB.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
     }
 
-    function zT(TT) {
-      const UT = Object.create(null);
-      for (const MT in TT) UT[MT] = TT[MT];
-      for (var mT = arguments.length, WT = new Array(mT > 1 ? mT - 1 : 0), zT = 1; zT < mT; zT++) WT[zT - 1] = arguments[zT];
-      return WT.forEach((function(TT) {
-        for (const mT in TT) UT[mT] = TT[mT]
-      })), UT
+    function nB(BB) {
+      const jB = Object.create(null);
+      for (const dB in BB) jB[dB] = BB[dB];
+      for (var zB = arguments.length, QB = new Array(zB > 1 ? zB - 1 : 0), nB = 1; nB < zB; nB++) QB[nB - 1] = arguments[nB];
+      return QB.forEach((function(BB) {
+        for (const zB in BB) jB[zB] = BB[zB]
+      })), jB
     }
-    const MT = TT => !!TT.scope;
-    class gT {
-      constructor(TT, UT) {
-        this.buffer = "", this.classPrefix = UT.classPrefix, TT.walk(this)
+    const dB = BB => !!BB.scope;
+    class IB {
+      constructor(BB, jB) {
+        this.buffer = "", this.classPrefix = jB.classPrefix, BB.walk(this)
       }
-      addText(TT) {
-        this.buffer += WT(TT)
+      addText(BB) {
+        this.buffer += QB(BB)
       }
-      openNode(TT) {
-        if (!MT(TT)) return;
-        const UT = ((TT, UT) => {
+      openNode(BB) {
+        if (!dB(BB)) return;
+        const jB = ((BB, jB) => {
           let {
-            prefix: mT
-          } = UT;
-          if (TT.startsWith("language:")) return TT.replace("language:", "language-");
-          if (TT.includes(".")) {
-            const UT = TT.split(".");
-            return [`${mT}${UT.shift()}`, ...UT.map(((TT, UT) => `${TT}${"_".repeat(UT+1)}`))].join(" ")
+            prefix: zB
+          } = jB;
+          if (BB.startsWith("language:")) return BB.replace("language:", "language-");
+          if (BB.includes(".")) {
+            const jB = BB.split(".");
+            return [`${zB}${jB.shift()}`, ...jB.map(((BB, jB) => `${BB}${"_".repeat(jB+1)}`))].join(" ")
           }
-          return `${mT}${TT}`
-        })(TT.scope, {
+          return `${zB}${BB}`
+        })(BB.scope, {
           prefix: this.classPrefix
         });
-        this.span(UT)
+        this.span(jB)
       }
-      closeNode(TT) {
-        MT(TT) && (this.buffer += "</span>")
+      closeNode(BB) {
+        dB(BB) && (this.buffer += "</span>")
       }
       value() {
         return this.buffer
       }
-      span(TT) {
-        this.buffer += `<span class="${TT}">`
+      span(BB) {
+        this.buffer += `<span class="${BB}">`
       }
     }
-    const nT = function() {
-      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const UT = {
+    const NB = function() {
+      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const jB = {
         children: []
       };
-      return Object.assign(UT, TT), UT
+      return Object.assign(jB, BB), jB
     };
-    class HT {
+    class uB {
       constructor() {
-        this.oq = nT(), this.stack = [this.oq]
+        this.yG = NB(), this.stack = [this.yG]
       }
       get top() {
         return this.stack[this.stack.length - 1]
       }
       get root() {
-        return this.oq
+        return this.yG
       }
-      add(TT) {
-        this.top.children.push(TT)
+      add(BB) {
+        this.top.children.push(BB)
       }
-      openNode(TT) {
-        const UT = nT({
-          scope: TT
+      openNode(BB) {
+        const jB = NB({
+          scope: BB
         });
-        this.add(UT), this.stack.push(UT)
+        this.add(jB), this.stack.push(jB)
       }
       closeNode() {
         if (this.stack.length > 1) return this.stack.pop()
@@ -102,391 +102,391 @@ export const modules = {
         for (; this.closeNode(););
       }
       toJSON() {
-        return JSON.stringify(this.oq, null, 4)
+        return JSON.stringify(this.yG, null, 4)
       }
-      walk(TT) {
-        return this.constructor._walk(TT, this.oq)
+      walk(BB) {
+        return this.constructor._walk(BB, this.yG)
       }
-      static _walk(TT, UT) {
-        return "string" === typeof UT ? TT.addText(UT) : UT.children && (TT.openNode(UT), UT.children.forEach((UT => this._walk(TT, UT))), TT.closeNode(UT)), TT
+      static _walk(BB, jB) {
+        return "string" === typeof jB ? BB.addText(jB) : jB.children && (BB.openNode(jB), jB.children.forEach((jB => this._walk(BB, jB))), BB.closeNode(jB)), BB
       }
-      static _collapse(TT) {
-        "string" !== typeof TT && TT.children && (TT.children.every((TT => "string" === typeof TT)) ? TT.children = [TT.children.join("")] : TT.children.forEach((TT => {
-          HT._collapse(TT)
+      static _collapse(BB) {
+        "string" !== typeof BB && BB.children && (BB.children.every((BB => "string" === typeof BB)) ? BB.children = [BB.children.join("")] : BB.children.forEach((BB => {
+          uB._collapse(BB)
         })))
       }
     }
-    class kT extends HT {
-      constructor(TT) {
-        super(), this.options = TT
+    class UB extends uB {
+      constructor(BB) {
+        super(), this.options = BB
       }
-      addText(TT) {
-        "" !== TT && this.add(TT)
+      addText(BB) {
+        "" !== BB && this.add(BB)
       }
-      startScope(TT) {
-        this.openNode(TT)
+      startScope(BB) {
+        this.openNode(BB)
       }
       endScope() {
         this.closeNode()
       }
-      __addSublanguage(TT, UT) {
-        const mT = TT.root;
-        UT && (mT.scope = `language:${UT}`), this.add(mT)
+      __addSublanguage(BB, jB) {
+        const zB = BB.root;
+        jB && (zB.scope = `language:${jB}`), this.add(zB)
       }
       toHTML() {
-        return new gT(this, this.options).value()
+        return new IB(this, this.options).value()
       }
       finalize() {
         return this.closeAllNodes(), !0
       }
     }
 
-    function jT(TT) {
-      return TT ? "string" === typeof TT ? TT : TT.source : null
+    function aB(BB) {
+      return BB ? "string" === typeof BB ? BB : BB.source : null
     }
 
-    function lT(TT) {
-      return BT("(?=", TT, ")")
+    function pB(BB) {
+      return JB("(?=", BB, ")")
     }
 
-    function LT(TT) {
-      return BT("(?:", TT, ")*")
+    function rB(BB) {
+      return JB("(?:", BB, ")*")
     }
 
-    function pT(TT) {
-      return BT("(?:", TT, ")?")
+    function sB(BB) {
+      return JB("(?:", BB, ")?")
     }
 
-    function BT() {
-      for (var TT = arguments.length, UT = new Array(TT), mT = 0; mT < TT; mT++) UT[mT] = arguments[mT];
-      return UT.map((TT => jT(TT))).join("")
+    function JB() {
+      for (var BB = arguments.length, jB = new Array(BB), zB = 0; zB < BB; zB++) jB[zB] = arguments[zB];
+      return jB.map((BB => aB(BB))).join("")
     }
 
-    function ZT() {
-      for (var TT = arguments.length, UT = new Array(TT), mT = 0; mT < TT; mT++) UT[mT] = arguments[mT];
-      const WT = function(TT) {
-        const UT = TT[TT.length - 1];
-        return "object" === typeof UT && UT.constructor === Object ? (TT.splice(TT.length - 1, 1), UT) : {}
-      }(UT);
-      return "(" + (WT.capture ? "" : "?:") + UT.map((TT => jT(TT))).join("|") + ")"
+    function mB() {
+      for (var BB = arguments.length, jB = new Array(BB), zB = 0; zB < BB; zB++) jB[zB] = arguments[zB];
+      const QB = function(BB) {
+        const jB = BB[BB.length - 1];
+        return "object" === typeof jB && jB.constructor === Object ? (BB.splice(BB.length - 1, 1), jB) : {}
+      }(jB);
+      return "(" + (QB.capture ? "" : "?:") + jB.map((BB => aB(BB))).join("|") + ")"
     }
 
-    function cT(TT) {
-      return new RegExp(TT.toString() + "|").exec("").length - 1
+    function yB(BB) {
+      return new RegExp(BB.toString() + "|").exec("").length - 1
     }
-    const vT = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
+    const kB = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
 
-    function fT(TT, UT) {
+    function GB(BB, jB) {
       let {
-        joinWith: mT
-      } = UT, WT = 0;
-      return TT.map((TT => {
-        WT += 1;
-        const UT = WT;
-        let mT = jT(TT),
-          zT = "";
-        for (; mT.length > 0;) {
-          const TT = vT.exec(mT);
-          if (!TT) {
-            zT += mT;
+        joinWith: zB
+      } = jB, QB = 0;
+      return BB.map((BB => {
+        QB += 1;
+        const jB = QB;
+        let zB = aB(BB),
+          nB = "";
+        for (; zB.length > 0;) {
+          const BB = kB.exec(zB);
+          if (!BB) {
+            nB += zB;
             break
           }
-          zT += mT.substring(0, TT.index), mT = mT.substring(TT.index + TT[0].length), "\\" === TT[0][0] && TT[1] ? zT += "\\" + String(Number(TT[1]) + UT) : (zT += TT[0], "(" === TT[0] && WT++)
+          nB += zB.substring(0, BB.index), zB = zB.substring(BB.index + BB[0].length), "\\" === BB[0][0] && BB[1] ? nB += "\\" + String(Number(BB[1]) + jB) : (nB += BB[0], "(" === BB[0] && QB++)
         }
-        return zT
-      })).map((TT => `(${TT})`)).join(mT)
+        return nB
+      })).map((BB => `(${BB})`)).join(zB)
     }
-    const qT = "[a-zA-Z]\\w*",
-      iT = "[a-zA-Z_]\\w*",
-      bT = "\\b\\d+(\\.\\d+)?",
-      OT = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
-      eT = "\\b(0b[01]+)",
-      YT = {
-        np: "\\\\[\\s\\S]",
+    const LB = "[a-zA-Z]\\w*",
+      gB = "[a-zA-Z_]\\w*",
+      tB = "\\b\\d+(\\.\\d+)?",
+      SB = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
+      MB = "\\b(0b[01]+)",
+      EB = {
+        Ds: "\\\\[\\s\\S]",
         relevance: 0
       },
-      JT = {
+      iB = {
         scope: "string",
-        np: "'",
+        Ds: "'",
         end: "'",
         illegal: "\\n",
-        contains: [YT]
+        contains: [EB]
       },
-      xT = {
+      qB = {
         scope: "string",
-        np: '"',
+        Ds: '"',
         end: '"',
         illegal: "\\n",
-        contains: [YT]
+        contains: [EB]
       },
-      dT = function(TT, UT) {
-        const mT = zT({
+      fB = function(BB, jB) {
+        const zB = nB({
           scope: "comment",
-          np: TT,
-          end: UT,
+          Ds: BB,
+          end: jB,
           contains: []
         }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {});
-        mT.contains.push({
+        zB.contains.push({
           scope: "doctag",
-          np: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
+          Ds: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
           end: /(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):/,
           excludeBegin: !0,
           relevance: 0
         });
-        const WT = ZT("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
-        return mT.contains.push({
-          np: BT(/[ ]+/, "(", WT, /[.]?[:]?([.][ ]|[ ])/, "){3}")
-        }), mT
+        const QB = mB("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
+        return zB.contains.push({
+          Ds: JB(/[ ]+/, "(", QB, /[.]?[:]?([.][ ]|[ ])/, "){3}")
+        }), zB
       },
-      wT = dT("//", "$"),
-      tT = dT("/\\*", "\\*/"),
-      aT = dT("#", "$"),
-      yT = {
+      oB = fB("//", "$"),
+      HB = fB("/\\*", "\\*/"),
+      DB = fB("#", "$"),
+      FB = {
         scope: "number",
-        np: bT,
+        Ds: tB,
         relevance: 0
       },
-      XT = {
+      YB = {
         scope: "number",
-        np: OT,
+        Ds: SB,
         relevance: 0
       },
-      IT = {
+      VB = {
         scope: "number",
-        np: eT,
+        Ds: MB,
         relevance: 0
       },
-      QT = {
+      hB = {
         scope: "regexp",
-        np: /\/(?=[^/\n]*\/)/,
+        Ds: /\/(?=[^/\n]*\/)/,
         end: /\/[gimuy]*/,
-        contains: [YT, {
-          np: /\[/,
+        contains: [EB, {
+          Ds: /\[/,
           end: /\]/,
           relevance: 0,
-          contains: [YT]
+          contains: [EB]
         }]
       },
-      sT = {
+      XB = {
         scope: "title",
-        np: qT,
+        Ds: LB,
         relevance: 0
       },
-      FT = {
+      ZB = {
         scope: "title",
-        np: iT,
+        Ds: gB,
         relevance: 0
       },
-      PT = {
-        np: "\\.\\s*" + iT,
+      AB = {
+        Ds: "\\.\\s*" + gB,
         relevance: 0
       };
-    var VT = Object.freeze({
+    var TB = Object.freeze({
       __proto__: null,
-      APOS_STRING_MODE: JT,
-      BACKSLASH_ESCAPE: YT,
-      BINARY_NUMBER_MODE: IT,
-      BINARY_NUMBER_RE: eT,
-      COMMENT: dT,
-      C_BLOCK_COMMENT_MODE: tT,
-      C_LINE_COMMENT_MODE: wT,
-      C_NUMBER_MODE: XT,
-      C_NUMBER_RE: OT,
-      END_SAME_AS_BEGIN: function(TT) {
-        return Object.assign(TT, {
-          "on:begin": (TT, UT) => {
-            UT.data._beginMatch = TT[1]
+      APOS_STRING_MODE: iB,
+      BACKSLASH_ESCAPE: EB,
+      BINARY_NUMBER_MODE: VB,
+      BINARY_NUMBER_RE: MB,
+      COMMENT: fB,
+      C_BLOCK_COMMENT_MODE: HB,
+      C_LINE_COMMENT_MODE: oB,
+      C_NUMBER_MODE: YB,
+      C_NUMBER_RE: SB,
+      END_SAME_AS_BEGIN: function(BB) {
+        return Object.assign(BB, {
+          "on:begin": (BB, jB) => {
+            jB.data._beginMatch = BB[1]
           },
-          "on:end": (TT, UT) => {
-            UT.data._beginMatch !== TT[1] && UT.ignoreMatch()
+          "on:end": (BB, jB) => {
+            jB.data._beginMatch !== BB[1] && jB.ignoreMatch()
           }
         })
       },
-      HASH_COMMENT_MODE: aT,
-      IDENT_RE: qT,
+      HASH_COMMENT_MODE: DB,
+      IDENT_RE: LB,
       MATCH_NOTHING_RE: /\b\B/,
-      METHOD_GUARD: PT,
-      NUMBER_MODE: yT,
-      NUMBER_RE: bT,
+      METHOD_GUARD: AB,
+      NUMBER_MODE: FB,
+      NUMBER_RE: tB,
       PHRASAL_WORDS_MODE: {
-        np: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
+        Ds: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
       },
-      QUOTE_STRING_MODE: xT,
-      REGEXP_MODE: QT,
+      QUOTE_STRING_MODE: qB,
+      REGEXP_MODE: hB,
       RE_STARTERS_RE: "!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~",
       SHEBANG: function() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        const UT = /^#![ ]*\//;
-        return TT.binary && (TT.np = BT(UT, /.*\b/, TT.binary, /\b.*/)), zT({
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        const jB = /^#![ ]*\//;
+        return BB.binary && (BB.Ds = JB(jB, /.*\b/, BB.binary, /\b.*/)), nB({
           scope: "meta",
-          np: UT,
+          Ds: jB,
           end: /$/,
           relevance: 0,
-          "on:begin": (TT, UT) => {
-            0 !== TT.index && UT.ignoreMatch()
+          "on:begin": (BB, jB) => {
+            0 !== BB.index && jB.ignoreMatch()
           }
-        }, TT)
+        }, BB)
       },
-      TITLE_MODE: sT,
-      UNDERSCORE_IDENT_RE: iT,
-      UNDERSCORE_TITLE_MODE: FT
+      TITLE_MODE: XB,
+      UNDERSCORE_IDENT_RE: gB,
+      UNDERSCORE_TITLE_MODE: ZB
     });
 
-    function uT(TT, UT) {
-      "." === TT.input[TT.index - 1] && UT.ignoreMatch()
+    function PB(BB, jB) {
+      "." === BB.input[BB.index - 1] && jB.ignoreMatch()
     }
 
-    function CT(TT, UT) {
-      void 0 !== TT.className && (TT.scope = TT.className, delete TT.className)
+    function WB(BB, jB) {
+      void 0 !== BB.className && (BB.scope = BB.className, delete BB.className)
     }
 
-    function rT(TT, UT) {
-      UT && TT.beginKeywords && (TT.np = "\\b(" + TT.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", TT.__beforeBegin = uT, TT.keywords = TT.keywords || TT.beginKeywords, delete TT.beginKeywords, void 0 === TT.relevance && (TT.relevance = 0))
+    function eB(BB, jB) {
+      jB && BB.beginKeywords && (BB.Ds = "\\b(" + BB.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", BB.__beforeBegin = PB, BB.keywords = BB.keywords || BB.beginKeywords, delete BB.beginKeywords, void 0 === BB.relevance && (BB.relevance = 0))
     }
 
-    function KT(TT, UT) {
-      Array.isArray(TT.illegal) && (TT.illegal = ZT(...TT.illegal))
+    function lB(BB, jB) {
+      Array.isArray(BB.illegal) && (BB.illegal = mB(...BB.illegal))
     }
 
-    function ST(TT, UT) {
-      if (TT.match) {
-        if (TT.np || TT.end) throw new Error("begin & end are not supported with match");
-        TT.np = TT.match, delete TT.match
+    function wB(BB, jB) {
+      if (BB.match) {
+        if (BB.Ds || BB.end) throw new Error("begin & end are not supported with match");
+        BB.Ds = BB.match, delete BB.match
       }
     }
 
-    function GT(TT, UT) {
-      void 0 === TT.relevance && (TT.relevance = 1)
+    function xB(BB, jB) {
+      void 0 === BB.relevance && (BB.relevance = 1)
     }
-    const NT = (TT, UT) => {
-        if (!TT.beforeMatch) return;
-        if (TT.starts) throw new Error("beforeMatch cannot be used with starts");
-        const mT = Object.assign({}, TT);
-        Object.keys(TT).forEach((UT => {
-          delete TT[UT]
-        })), TT.keywords = mT.keywords, TT.np = BT(mT.beforeMatch, lT(mT.np)), TT.starts = {
+    const KB = (BB, jB) => {
+        if (!BB.beforeMatch) return;
+        if (BB.starts) throw new Error("beforeMatch cannot be used with starts");
+        const zB = Object.assign({}, BB);
+        Object.keys(BB).forEach((jB => {
+          delete BB[jB]
+        })), BB.keywords = zB.keywords, BB.Ds = JB(zB.beforeMatch, pB(zB.Ds)), BB.starts = {
           relevance: 0,
-          contains: [Object.assign(mT, {
+          contains: [Object.assign(zB, {
             endsParent: !0
           })]
-        }, TT.relevance = 0, delete mT.beforeMatch
+        }, BB.relevance = 0, delete zB.beforeMatch
       },
-      ET = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
+      CB = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
 
-    function hT(TT, UT) {
-      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
-      const WT = Object.create(null);
-      return "string" === typeof TT ? zT(mT, TT.split(" ")) : Array.isArray(TT) ? zT(mT, TT) : Object.keys(TT).forEach((function(mT) {
-        Object.assign(WT, hT(TT[mT], UT, mT))
-      })), WT;
+    function cB(BB, jB) {
+      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
+      const QB = Object.create(null);
+      return "string" === typeof BB ? nB(zB, BB.split(" ")) : Array.isArray(BB) ? nB(zB, BB) : Object.keys(BB).forEach((function(zB) {
+        Object.assign(QB, cB(BB[zB], jB, zB))
+      })), QB;
 
-      function zT(TT, mT) {
-        UT && (mT = mT.map((TT => TT.toLowerCase()))), mT.forEach((function(UT) {
-          const mT = UT.split("|");
-          WT[mT[0]] = [TT, DT(mT[0], mT[1])]
+      function nB(BB, zB) {
+        jB && (zB = zB.map((BB => BB.toLowerCase()))), zB.forEach((function(jB) {
+          const zB = jB.split("|");
+          QB[zB[0]] = [BB, bB(zB[0], zB[1])]
         }))
       }
     }
 
-    function DT(TT, UT) {
-      return UT ? Number(UT) : function(TT) {
-        return ET.includes(TT.toLowerCase())
-      }(TT) ? 0 : 1
+    function bB(BB, jB) {
+      return jB ? Number(jB) : function(BB) {
+        return CB.includes(BB.toLowerCase())
+      }(BB) ? 0 : 1
     }
-    const oT = {},
-      AT = TT => {
-        console.error(TT)
+    const vB = {},
+      RB = BB => {
+        console.error(BB)
       },
-      RT = function(TT) {
-        for (var UT = arguments.length, mT = new Array(UT > 1 ? UT - 1 : 0), WT = 1; WT < UT; WT++) mT[WT - 1] = arguments[WT];
-        console.log(`WARN: ${TT}`, ...mT)
+      OB = function(BB) {
+        for (var jB = arguments.length, zB = new Array(jB > 1 ? jB - 1 : 0), QB = 1; QB < jB; QB++) zB[QB - 1] = arguments[QB];
+        console.log(`WARN: ${BB}`, ...zB)
       },
-      TU = (TT, UT) => {
-        oT[`${TT}/${UT}`] || (console.log(`Deprecated as of ${TT}. ${UT}`), oT[`${TT}/${UT}`] = !0)
+      Bj = (BB, jB) => {
+        vB[`${BB}/${jB}`] || (console.log(`Deprecated as of ${BB}. ${jB}`), vB[`${BB}/${jB}`] = !0)
       },
-      UU = new Error;
+      jj = new Error;
 
-    function mU(TT, UT, mT) {
+    function zj(BB, jB, zB) {
       let {
-        key: WT
-      } = mT, zT = 0;
-      const MT = TT[WT],
-        gT = {},
-        nT = {};
-      for (let HT = 1; HT <= UT.length; HT++) nT[HT + zT] = MT[HT], gT[HT + zT] = !0, zT += cT(UT[HT - 1]);
-      TT[WT] = nT, TT[WT]._emit = gT, TT[WT]._multi = !0
+        key: QB
+      } = zB, nB = 0;
+      const dB = BB[QB],
+        IB = {},
+        NB = {};
+      for (let uB = 1; uB <= jB.length; uB++) NB[uB + nB] = dB[uB], IB[uB + nB] = !0, nB += yB(jB[uB - 1]);
+      BB[QB] = NB, BB[QB]._emit = IB, BB[QB]._multi = !0
     }
 
-    function WU(TT) {
-      ! function(TT) {
-        TT.scope && "object" === typeof TT.scope && null !== TT.scope && (TT.beginScope = TT.scope, delete TT.scope)
-      }(TT), "string" === typeof TT.beginScope && (TT.beginScope = {
-          _wrap: TT.beginScope
-        }), "string" === typeof TT.endScope && (TT.endScope = {
-          _wrap: TT.endScope
+    function Qj(BB) {
+      ! function(BB) {
+        BB.scope && "object" === typeof BB.scope && null !== BB.scope && (BB.beginScope = BB.scope, delete BB.scope)
+      }(BB), "string" === typeof BB.beginScope && (BB.beginScope = {
+          _wrap: BB.beginScope
+        }), "string" === typeof BB.endScope && (BB.endScope = {
+          _wrap: BB.endScope
         }),
-        function(TT) {
-          if (Array.isArray(TT.np)) {
-            if (TT.skip || TT.excludeBegin || TT.returnBegin) throw AT("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), UU;
-            if ("object" !== typeof TT.beginScope || null === TT.beginScope) throw AT("beginScope must be object"), UU;
-            mU(TT, TT.np, {
+        function(BB) {
+          if (Array.isArray(BB.Ds)) {
+            if (BB.skip || BB.excludeBegin || BB.returnBegin) throw RB("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), jj;
+            if ("object" !== typeof BB.beginScope || null === BB.beginScope) throw RB("beginScope must be object"), jj;
+            zj(BB, BB.Ds, {
               key: "beginScope"
-            }), TT.np = fT(TT.np, {
+            }), BB.Ds = GB(BB.Ds, {
               joinWith: ""
             })
           }
-        }(TT),
-        function(TT) {
-          if (Array.isArray(TT.end)) {
-            if (TT.skip || TT.excludeEnd || TT.returnEnd) throw AT("skip, excludeEnd, returnEnd not compatible with endScope: {}"), UU;
-            if ("object" !== typeof TT.endScope || null === TT.endScope) throw AT("endScope must be object"), UU;
-            mU(TT, TT.end, {
+        }(BB),
+        function(BB) {
+          if (Array.isArray(BB.end)) {
+            if (BB.skip || BB.excludeEnd || BB.returnEnd) throw RB("skip, excludeEnd, returnEnd not compatible with endScope: {}"), jj;
+            if ("object" !== typeof BB.endScope || null === BB.endScope) throw RB("endScope must be object"), jj;
+            zj(BB, BB.end, {
               key: "endScope"
-            }), TT.end = fT(TT.end, {
+            }), BB.end = GB(BB.end, {
               joinWith: ""
             })
           }
-        }(TT)
+        }(BB)
     }
 
-    function zU(TT) {
-      function UT(UT, mT) {
-        return new RegExp(jT(UT), "m" + (TT.case_insensitive ? "i" : "") + (TT.unicodeRegex ? "u" : "") + (mT ? "g" : ""))
+    function nj(BB) {
+      function jB(jB, zB) {
+        return new RegExp(aB(jB), "m" + (BB.case_insensitive ? "i" : "") + (BB.unicodeRegex ? "u" : "") + (zB ? "g" : ""))
       }
-      class mT {
+      class zB {
         constructor() {
           this.matchIndexes = {}, this.regexes = [], this.matchAt = 1, this.position = 0
         }
-        addRule(TT, UT) {
-          UT.position = this.position++, this.matchIndexes[this.matchAt] = UT, this.regexes.push([UT, TT]), this.matchAt += cT(TT) + 1
+        addRule(BB, jB) {
+          jB.position = this.position++, this.matchIndexes[this.matchAt] = jB, this.regexes.push([jB, BB]), this.matchAt += yB(BB) + 1
         }
         compile() {
           0 === this.regexes.length && (this.exec = () => null);
-          const TT = this.regexes.map((TT => TT[1]));
-          this.matcherRe = UT(fT(TT, {
+          const BB = this.regexes.map((BB => BB[1]));
+          this.matcherRe = jB(GB(BB, {
             joinWith: "|"
           }), !0), this.lastIndex = 0
         }
-        exec(TT) {
+        exec(BB) {
           this.matcherRe.lastIndex = this.lastIndex;
-          const UT = this.matcherRe.exec(TT);
-          if (!UT) return null;
-          const mT = UT.findIndex(((TT, UT) => UT > 0 && void 0 !== TT)),
-            WT = this.matchIndexes[mT];
-          return UT.splice(0, mT), Object.assign(UT, WT)
+          const jB = this.matcherRe.exec(BB);
+          if (!jB) return null;
+          const zB = jB.findIndex(((BB, jB) => jB > 0 && void 0 !== BB)),
+            QB = this.matchIndexes[zB];
+          return jB.splice(0, zB), Object.assign(jB, QB)
         }
       }
-      class WT {
+      class QB {
         constructor() {
           this.rules = [], this.multiRegexes = [], this.count = 0, this.lastIndex = 0, this.regexIndex = 0
         }
-        getMatcher(TT) {
-          if (this.multiRegexes[TT]) return this.multiRegexes[TT];
-          const UT = new mT;
-          return this.rules.slice(TT).forEach((TT => {
-            let [mT, WT] = TT;
-            return UT.addRule(mT, WT)
-          })), UT.compile(), this.multiRegexes[TT] = UT, UT
+        getMatcher(BB) {
+          if (this.multiRegexes[BB]) return this.multiRegexes[BB];
+          const jB = new zB;
+          return this.rules.slice(BB).forEach((BB => {
+            let [zB, QB] = BB;
+            return jB.addRule(zB, QB)
+          })), jB.compile(), this.multiRegexes[BB] = jB, jB
         }
         resumingScanAtSamePosition() {
           return 0 !== this.regexIndex
@@ -494,81 +494,81 @@ export const modules = {
         considerAll() {
           this.regexIndex = 0
         }
-        addRule(TT, UT) {
-          this.rules.push([TT, UT]), "np" === UT.type && this.count++
+        addRule(BB, jB) {
+          this.rules.push([BB, jB]), "Ds" === jB.type && this.count++
         }
-        exec(TT) {
-          const UT = this.getMatcher(this.regexIndex);
-          UT.lastIndex = this.lastIndex;
-          let mT = UT.exec(TT);
+        exec(BB) {
+          const jB = this.getMatcher(this.regexIndex);
+          jB.lastIndex = this.lastIndex;
+          let zB = jB.exec(BB);
           if (this.resumingScanAtSamePosition())
-            if (mT && mT.index === this.lastIndex);
+            if (zB && zB.index === this.lastIndex);
             else {
-              const UT = this.getMatcher(0);
-              UT.lastIndex = this.lastIndex + 1, mT = UT.exec(TT)
-            } return mT && (this.regexIndex += mT.position + 1, this.regexIndex === this.count && this.considerAll()), mT
+              const jB = this.getMatcher(0);
+              jB.lastIndex = this.lastIndex + 1, zB = jB.exec(BB)
+            } return zB && (this.regexIndex += zB.position + 1, this.regexIndex === this.count && this.considerAll()), zB
         }
       }
-      if (TT.compilerExtensions || (TT.compilerExtensions = []), TT.contains && TT.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
-      return TT.classNameAliases = zT(TT.classNameAliases || {}),
-        function mT(MT, gT) {
-          const nT = MT;
-          if (MT.isCompiled) return nT;
-          [CT, ST, WU, NT].forEach((TT => TT(MT, gT))), TT.compilerExtensions.forEach((TT => TT(MT, gT))), MT.__beforeBegin = null, [rT, KT, GT].forEach((TT => TT(MT, gT))), MT.isCompiled = !0;
-          let HT = null;
-          return "object" === typeof MT.keywords && MT.keywords.$pattern && (MT.keywords = Object.assign({}, MT.keywords), HT = MT.keywords.$pattern, delete MT.keywords.$pattern), HT = HT || /\w+/, MT.keywords && (MT.keywords = hT(MT.keywords, TT.case_insensitive)), nT.keywordPatternRe = UT(HT, !0), gT && (MT.np || (MT.np = /\B|\b/), nT.beginRe = UT(nT.np), MT.end || MT.endsWithParent || (MT.end = /\B|\b/), MT.end && (nT.endRe = UT(nT.end)), nT.terminatorEnd = jT(nT.end) || "", MT.endsWithParent && gT.terminatorEnd && (nT.terminatorEnd += (MT.end ? "|" : "") + gT.terminatorEnd)), MT.illegal && (nT.illegalRe = UT(MT.illegal)), MT.contains || (MT.contains = []), MT.contains = [].concat(...MT.contains.map((function(TT) {
-            return function(TT) {
-              TT.variants && !TT.cachedVariants && (TT.cachedVariants = TT.variants.map((function(UT) {
-                return zT(TT, {
+      if (BB.compilerExtensions || (BB.compilerExtensions = []), BB.contains && BB.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
+      return BB.classNameAliases = nB(BB.classNameAliases || {}),
+        function zB(dB, IB) {
+          const NB = dB;
+          if (dB.isCompiled) return NB;
+          [WB, wB, Qj, KB].forEach((BB => BB(dB, IB))), BB.compilerExtensions.forEach((BB => BB(dB, IB))), dB.__beforeBegin = null, [eB, lB, xB].forEach((BB => BB(dB, IB))), dB.isCompiled = !0;
+          let uB = null;
+          return "object" === typeof dB.keywords && dB.keywords.$pattern && (dB.keywords = Object.assign({}, dB.keywords), uB = dB.keywords.$pattern, delete dB.keywords.$pattern), uB = uB || /\w+/, dB.keywords && (dB.keywords = cB(dB.keywords, BB.case_insensitive)), NB.keywordPatternRe = jB(uB, !0), IB && (dB.Ds || (dB.Ds = /\B|\b/), NB.beginRe = jB(NB.Ds), dB.end || dB.endsWithParent || (dB.end = /\B|\b/), dB.end && (NB.endRe = jB(NB.end)), NB.terminatorEnd = aB(NB.end) || "", dB.endsWithParent && IB.terminatorEnd && (NB.terminatorEnd += (dB.end ? "|" : "") + IB.terminatorEnd)), dB.illegal && (NB.illegalRe = jB(dB.illegal)), dB.contains || (dB.contains = []), dB.contains = [].concat(...dB.contains.map((function(BB) {
+            return function(BB) {
+              BB.variants && !BB.cachedVariants && (BB.cachedVariants = BB.variants.map((function(jB) {
+                return nB(BB, {
                   variants: null
-                }, UT)
+                }, jB)
               })));
-              if (TT.cachedVariants) return TT.cachedVariants;
-              if (MU(TT)) return zT(TT, {
-                starts: TT.starts ? zT(TT.starts) : null
+              if (BB.cachedVariants) return BB.cachedVariants;
+              if (dj(BB)) return nB(BB, {
+                starts: BB.starts ? nB(BB.starts) : null
               });
-              if (Object.isFrozen(TT)) return zT(TT);
-              return TT
-            }("self" === TT ? MT : TT)
-          }))), MT.contains.forEach((function(TT) {
-            mT(TT, nT)
-          })), MT.starts && mT(MT.starts, gT), nT.matcher = function(TT) {
-            const UT = new WT;
-            return TT.contains.forEach((TT => UT.addRule(TT.np, {
-              rule: TT,
-              type: "np"
-            }))), TT.terminatorEnd && UT.addRule(TT.terminatorEnd, {
+              if (Object.isFrozen(BB)) return nB(BB);
+              return BB
+            }("self" === BB ? dB : BB)
+          }))), dB.contains.forEach((function(BB) {
+            zB(BB, NB)
+          })), dB.starts && zB(dB.starts, IB), NB.matcher = function(BB) {
+            const jB = new QB;
+            return BB.contains.forEach((BB => jB.addRule(BB.Ds, {
+              rule: BB,
+              type: "Ds"
+            }))), BB.terminatorEnd && jB.addRule(BB.terminatorEnd, {
               type: "end"
-            }), TT.illegal && UT.addRule(TT.illegal, {
+            }), BB.illegal && jB.addRule(BB.illegal, {
               type: "illegal"
-            }), UT
-          }(nT), nT
-        }(TT)
+            }), jB
+          }(NB), NB
+        }(BB)
     }
 
-    function MU(TT) {
-      return !!TT && (TT.endsWithParent || MU(TT.starts))
+    function dj(BB) {
+      return !!BB && (BB.endsWithParent || dj(BB.starts))
     }
-    class gU extends Error {
-      constructor(TT, UT) {
-        super(TT), this.name = "HTMLInjectionError", this.html = UT
+    class Ij extends Error {
+      constructor(BB, jB) {
+        super(BB), this.name = "HTMLInjectionError", this.html = jB
       }
     }
-    const nU = WT,
-      HU = zT,
-      kU = Symbol("nomatch"),
-      jU = function(TT) {
-        const WT = Object.create(null),
-          zT = Object.create(null),
-          MT = [];
-        let gT = !0;
-        const nT = "Could not find the language '{}', did you forget to load/include a language module?",
-          HT = {
+    const Nj = QB,
+      uj = nB,
+      Uj = Symbol("nomatch"),
+      aj = function(BB) {
+        const QB = Object.create(null),
+          nB = Object.create(null),
+          dB = [];
+        let IB = !0;
+        const NB = "Could not find the language '{}', did you forget to load/include a language module?",
+          uB = {
             disableAutodetect: !0,
             name: "Plain text",
             contains: []
           };
-        let jT = {
+        let aB = {
           ignoreUnescapedHTML: !1,
           throwUnescapedHTML: !1,
           noHighlightRe: /^(no-?highlight)$/i,
@@ -576,575 +576,575 @@ export const modules = {
           classPrefix: "hljs-",
           cssSelector: "pre code",
           languages: null,
-          __emitter: kT
+          __emitter: UB
         };
 
-        function cT(TT) {
-          return jT.noHighlightRe.test(TT)
+        function yB(BB) {
+          return aB.noHighlightRe.test(BB)
         }
 
-        function vT(TT, UT, mT) {
-          let WT = "",
-            zT = "";
-          "object" === typeof UT ? (WT = TT, mT = UT.ignoreIllegals, zT = UT.language) : (TU("10.7.0", "highlight(lang, code, ...args) has been deprecated."), TU("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), zT = TT, WT = UT), void 0 === mT && (mT = !0);
-          const MT = {
-            code: WT,
-            language: zT
+        function kB(BB, jB, zB) {
+          let QB = "",
+            nB = "";
+          "object" === typeof jB ? (QB = BB, zB = jB.ignoreIllegals, nB = jB.language) : (Bj("10.7.0", "highlight(lang, code, ...args) has been deprecated."), Bj("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), nB = BB, QB = jB), void 0 === zB && (zB = !0);
+          const dB = {
+            code: QB,
+            language: nB
           };
-          xT("before:highlight", MT);
-          const gT = MT.result ? MT.result : fT(MT.language, MT.code, mT);
-          return gT.code = MT.code, xT("after:highlight", gT), gT
+          qB("before:highlight", dB);
+          const IB = dB.result ? dB.result : GB(dB.language, dB.code, zB);
+          return IB.code = dB.code, qB("after:highlight", IB), IB
         }
 
-        function fT(TT, UT, zT, MT) {
-          const HT = Object.create(null);
+        function GB(BB, jB, nB, dB) {
+          const uB = Object.create(null);
 
-          function kT() {
-            if (!xT.keywords) return void wT.addText(tT);
-            let TT = 0;
-            xT.keywordPatternRe.lastIndex = 0;
-            let UT = xT.keywordPatternRe.exec(tT),
-              mT = "";
-            for (; UT;) {
-              mT += tT.substring(TT, UT.index);
-              const zT = OT.case_insensitive ? UT[0].toLowerCase() : UT[0],
-                MT = (WT = zT, xT.keywords[WT]);
-              if (MT) {
-                const [TT, WT] = MT;
-                if (wT.addText(mT), mT = "", HT[zT] = (HT[zT] || 0) + 1, HT[zT] <= 7 && (aT += WT), TT.startsWith("_")) mT += UT[0];
+          function UB() {
+            if (!qB.keywords) return void oB.addText(HB);
+            let BB = 0;
+            qB.keywordPatternRe.lastIndex = 0;
+            let jB = qB.keywordPatternRe.exec(HB),
+              zB = "";
+            for (; jB;) {
+              zB += HB.substring(BB, jB.index);
+              const nB = SB.case_insensitive ? jB[0].toLowerCase() : jB[0],
+                dB = (QB = nB, qB.keywords[QB]);
+              if (dB) {
+                const [BB, QB] = dB;
+                if (oB.addText(zB), zB = "", uB[nB] = (uB[nB] || 0) + 1, uB[nB] <= 7 && (DB += QB), BB.startsWith("_")) zB += jB[0];
                 else {
-                  const mT = OT.classNameAliases[TT] || TT;
-                  LT(UT[0], mT)
+                  const zB = SB.classNameAliases[BB] || BB;
+                  rB(jB[0], zB)
                 }
-              } else mT += UT[0];
-              TT = xT.keywordPatternRe.lastIndex, UT = xT.keywordPatternRe.exec(tT)
+              } else zB += jB[0];
+              BB = qB.keywordPatternRe.lastIndex, jB = qB.keywordPatternRe.exec(HB)
             }
-            var WT;
-            mT += tT.substring(TT), wT.addText(mT)
+            var QB;
+            zB += HB.substring(BB), oB.addText(zB)
           }
 
-          function lT() {
-            null != xT.subLanguage ? function() {
-              if ("" === tT) return;
-              let TT = null;
-              if ("string" === typeof xT.subLanguage) {
-                if (!WT[xT.subLanguage]) return void wT.addText(tT);
-                TT = fT(xT.subLanguage, tT, !0, dT[xT.subLanguage]), dT[xT.subLanguage] = TT._top
-              } else TT = qT(tT, xT.subLanguage.length ? xT.subLanguage : null);
-              xT.relevance > 0 && (aT += TT.relevance), wT.__addSublanguage(TT._emitter, TT.language)
-            }() : kT(), tT = ""
+          function pB() {
+            null != qB.subLanguage ? function() {
+              if ("" === HB) return;
+              let BB = null;
+              if ("string" === typeof qB.subLanguage) {
+                if (!QB[qB.subLanguage]) return void oB.addText(HB);
+                BB = GB(qB.subLanguage, HB, !0, fB[qB.subLanguage]), fB[qB.subLanguage] = BB._top
+              } else BB = LB(HB, qB.subLanguage.length ? qB.subLanguage : null);
+              qB.relevance > 0 && (DB += BB.relevance), oB.__addSublanguage(BB._emitter, BB.language)
+            }() : UB(), HB = ""
           }
 
-          function LT(TT, UT) {
-            "" !== TT && (wT.startScope(UT), wT.addText(TT), wT.endScope())
+          function rB(BB, jB) {
+            "" !== BB && (oB.startScope(jB), oB.addText(BB), oB.endScope())
           }
 
-          function pT(TT, UT) {
-            let mT = 1;
-            const WT = UT.length - 1;
-            for (; mT <= WT;) {
-              if (!TT._emit[mT]) {
-                mT++;
+          function sB(BB, jB) {
+            let zB = 1;
+            const QB = jB.length - 1;
+            for (; zB <= QB;) {
+              if (!BB._emit[zB]) {
+                zB++;
                 continue
               }
-              const WT = OT.classNameAliases[TT[mT]] || TT[mT],
-                zT = UT[mT];
-              WT ? LT(zT, WT) : (tT = zT, kT(), tT = ""), mT++
+              const QB = SB.classNameAliases[BB[zB]] || BB[zB],
+                nB = jB[zB];
+              QB ? rB(nB, QB) : (HB = nB, UB(), HB = ""), zB++
             }
           }
 
-          function BT(TT, UT) {
-            return TT.scope && "string" === typeof TT.scope && wT.openNode(OT.classNameAliases[TT.scope] || TT.scope), TT.beginScope && (TT.beginScope._wrap ? (LT(tT, OT.classNameAliases[TT.beginScope._wrap] || TT.beginScope._wrap), tT = "") : TT.beginScope._multi && (pT(TT.beginScope, UT), tT = "")), xT = Object.create(TT, {
+          function JB(BB, jB) {
+            return BB.scope && "string" === typeof BB.scope && oB.openNode(SB.classNameAliases[BB.scope] || BB.scope), BB.beginScope && (BB.beginScope._wrap ? (rB(HB, SB.classNameAliases[BB.beginScope._wrap] || BB.beginScope._wrap), HB = "") : BB.beginScope._multi && (sB(BB.beginScope, jB), HB = "")), qB = Object.create(BB, {
               parent: {
-                value: xT
+                value: qB
               }
-            }), xT
+            }), qB
           }
 
-          function ZT(TT, UT, WT) {
-            let zT = function(TT, UT) {
-              const mT = TT && TT.exec(UT);
-              return mT && 0 === mT.index
-            }(TT.endRe, WT);
-            if (zT) {
-              if (TT["on:end"]) {
-                const WT = new mT(TT);
-                TT["on:end"](UT, WT), WT.isMatchIgnored && (zT = !1)
+          function mB(BB, jB, QB) {
+            let nB = function(BB, jB) {
+              const zB = BB && BB.exec(jB);
+              return zB && 0 === zB.index
+            }(BB.endRe, QB);
+            if (nB) {
+              if (BB["on:end"]) {
+                const QB = new zB(BB);
+                BB["on:end"](jB, QB), QB.isMatchIgnored && (nB = !1)
               }
-              if (zT) {
-                for (; TT.endsParent && TT.parent;) TT = TT.parent;
-                return TT
+              if (nB) {
+                for (; BB.endsParent && BB.parent;) BB = BB.parent;
+                return BB
               }
             }
-            if (TT.endsWithParent) return ZT(TT.parent, UT, WT)
+            if (BB.endsWithParent) return mB(BB.parent, jB, QB)
           }
 
-          function cT(TT) {
-            return 0 === xT.matcher.regexIndex ? (tT += TT[0], 1) : (IT = !0, 0)
+          function yB(BB) {
+            return 0 === qB.matcher.regexIndex ? (HB += BB[0], 1) : (VB = !0, 0)
           }
 
-          function vT(TT) {
-            const mT = TT[0],
-              WT = UT.substring(TT.index),
-              zT = ZT(xT, TT, WT);
-            if (!zT) return kU;
-            const MT = xT;
-            xT.endScope && xT.endScope._wrap ? (lT(), LT(mT, xT.endScope._wrap)) : xT.endScope && xT.endScope._multi ? (lT(), pT(xT.endScope, TT)) : MT.skip ? tT += mT : (MT.returnEnd || MT.excludeEnd || (tT += mT), lT(), MT.excludeEnd && (tT = mT));
+          function kB(BB) {
+            const zB = BB[0],
+              QB = jB.substring(BB.index),
+              nB = mB(qB, BB, QB);
+            if (!nB) return Uj;
+            const dB = qB;
+            qB.endScope && qB.endScope._wrap ? (pB(), rB(zB, qB.endScope._wrap)) : qB.endScope && qB.endScope._multi ? (pB(), sB(qB.endScope, BB)) : dB.skip ? HB += zB : (dB.returnEnd || dB.excludeEnd || (HB += zB), pB(), dB.excludeEnd && (HB = zB));
             do {
-              xT.scope && wT.closeNode(), xT.skip || xT.subLanguage || (aT += xT.relevance), xT = xT.parent
-            } while (xT !== zT.parent);
-            return zT.starts && BT(zT.starts, TT), MT.returnEnd ? 0 : mT.length
+              qB.scope && oB.closeNode(), qB.skip || qB.subLanguage || (DB += qB.relevance), qB = qB.parent
+            } while (qB !== nB.parent);
+            return nB.starts && JB(nB.starts, BB), dB.returnEnd ? 0 : zB.length
           }
-          let iT = {};
+          let gB = {};
 
-          function bT(WT, MT) {
-            const nT = MT && MT[0];
-            if (tT += WT, null == nT) return lT(), 0;
-            if ("np" === iT.type && "end" === MT.type && iT.index === MT.index && "" === nT) {
-              if (tT += UT.slice(MT.index, MT.index + 1), !gT) {
-                const UT = new Error(`0 width match regex (${TT})`);
-                throw UT.languageName = TT, UT.badRule = iT.rule, UT
+          function tB(QB, dB) {
+            const NB = dB && dB[0];
+            if (HB += QB, null == NB) return pB(), 0;
+            if ("Ds" === gB.type && "end" === dB.type && gB.index === dB.index && "" === NB) {
+              if (HB += jB.slice(dB.index, dB.index + 1), !IB) {
+                const jB = new Error(`0 width match regex (${BB})`);
+                throw jB.languageName = BB, jB.badRule = gB.rule, jB
               }
               return 1
             }
-            if (iT = MT, "np" === MT.type) return function(TT) {
-              const UT = TT[0],
-                WT = TT.rule,
-                zT = new mT(WT),
-                MT = [WT.__beforeBegin, WT["on:begin"]];
-              for (const mT of MT)
-                if (mT && (mT(TT, zT), zT.isMatchIgnored)) return cT(UT);
-              return WT.skip ? tT += UT : (WT.excludeBegin && (tT += UT), lT(), WT.returnBegin || WT.excludeBegin || (tT = UT)), BT(WT, TT), WT.returnBegin ? 0 : UT.length
-            }(MT);
-            if ("illegal" === MT.type && !zT) {
-              const TT = new Error('Illegal lexeme "' + nT + '" for mode "' + (xT.scope || "<unnamed>") + '"');
-              throw TT.mode = xT, TT
+            if (gB = dB, "Ds" === dB.type) return function(BB) {
+              const jB = BB[0],
+                QB = BB.rule,
+                nB = new zB(QB),
+                dB = [QB.__beforeBegin, QB["on:begin"]];
+              for (const zB of dB)
+                if (zB && (zB(BB, nB), nB.isMatchIgnored)) return yB(jB);
+              return QB.skip ? HB += jB : (QB.excludeBegin && (HB += jB), pB(), QB.returnBegin || QB.excludeBegin || (HB = jB)), JB(QB, BB), QB.returnBegin ? 0 : jB.length
+            }(dB);
+            if ("illegal" === dB.type && !nB) {
+              const BB = new Error('Illegal lexeme "' + NB + '" for mode "' + (qB.scope || "<unnamed>") + '"');
+              throw BB.mode = qB, BB
             }
-            if ("end" === MT.type) {
-              const TT = vT(MT);
-              if (TT !== kU) return TT
+            if ("end" === dB.type) {
+              const BB = kB(dB);
+              if (BB !== Uj) return BB
             }
-            if ("illegal" === MT.type && "" === nT) return tT += "\n", 1;
-            if (XT > 1e5 && XT > 3 * MT.index) {
+            if ("illegal" === dB.type && "" === NB) return HB += "\n", 1;
+            if (YB > 1e5 && YB > 3 * dB.index) {
               throw new Error("potential infinite loop, way more iterations than matches")
             }
-            return tT += nT, nT.length
+            return HB += NB, NB.length
           }
-          const OT = eT(TT);
-          if (!OT) throw AT(nT.replace("{}", TT)), new Error('Unknown language: "' + TT + '"');
-          const YT = zU(OT);
-          let JT = "",
-            xT = MT || YT;
-          const dT = {},
-            wT = new jT.__emitter(jT);
+          const SB = MB(BB);
+          if (!SB) throw RB(NB.replace("{}", BB)), new Error('Unknown language: "' + BB + '"');
+          const EB = nj(SB);
+          let iB = "",
+            qB = dB || EB;
+          const fB = {},
+            oB = new aB.__emitter(aB);
           ! function() {
-            const TT = [];
-            for (let UT = xT; UT !== OT; UT = UT.parent) UT.scope && TT.unshift(UT.scope);
-            TT.forEach((TT => wT.openNode(TT)))
+            const BB = [];
+            for (let jB = qB; jB !== SB; jB = jB.parent) jB.scope && BB.unshift(jB.scope);
+            BB.forEach((BB => oB.openNode(BB)))
           }();
-          let tT = "",
-            aT = 0,
-            yT = 0,
-            XT = 0,
-            IT = !1;
+          let HB = "",
+            DB = 0,
+            FB = 0,
+            YB = 0,
+            VB = !1;
           try {
-            if (OT.__emitTokens) OT.__emitTokens(UT, wT);
+            if (SB.__emitTokens) SB.__emitTokens(jB, oB);
             else {
-              for (xT.matcher.considerAll();;) {
-                XT++, IT ? IT = !1 : xT.matcher.considerAll(), xT.matcher.lastIndex = yT;
-                const TT = xT.matcher.exec(UT);
-                if (!TT) break;
-                const mT = bT(UT.substring(yT, TT.index), TT);
-                yT = TT.index + mT
+              for (qB.matcher.considerAll();;) {
+                YB++, VB ? VB = !1 : qB.matcher.considerAll(), qB.matcher.lastIndex = FB;
+                const BB = qB.matcher.exec(jB);
+                if (!BB) break;
+                const zB = tB(jB.substring(FB, BB.index), BB);
+                FB = BB.index + zB
               }
-              bT(UT.substring(yT))
+              tB(jB.substring(FB))
             }
-            return wT.finalize(), JT = wT.toHTML(), {
-              language: TT,
-              value: JT,
-              relevance: aT,
+            return oB.finalize(), iB = oB.toHTML(), {
+              language: BB,
+              value: iB,
+              relevance: DB,
               illegal: !1,
-              _emitter: wT,
-              _top: xT
+              _emitter: oB,
+              _top: qB
             }
-          } catch (QT) {
-            if (QT.message && QT.message.includes("Illegal")) return {
-              language: TT,
-              value: nU(UT),
+          } catch (hB) {
+            if (hB.message && hB.message.includes("Illegal")) return {
+              language: BB,
+              value: Nj(jB),
               illegal: !0,
               relevance: 0,
               _illegalBy: {
-                message: QT.message,
-                index: yT,
-                context: UT.slice(yT - 100, yT + 100),
-                mode: QT.mode,
-                resultSoFar: JT
+                message: hB.message,
+                index: FB,
+                context: jB.slice(FB - 100, FB + 100),
+                mode: hB.mode,
+                resultSoFar: iB
               },
-              _emitter: wT
+              _emitter: oB
             };
-            if (gT) return {
-              language: TT,
-              value: nU(UT),
+            if (IB) return {
+              language: BB,
+              value: Nj(jB),
               illegal: !1,
               relevance: 0,
-              errorRaised: QT,
-              _emitter: wT,
-              _top: xT
+              errorRaised: hB,
+              _emitter: oB,
+              _top: qB
             };
-            throw QT
+            throw hB
           }
         }
 
-        function qT(TT, UT) {
-          UT = UT || jT.languages || Object.keys(WT);
-          const mT = function(TT) {
-              const UT = {
-                value: nU(TT),
+        function LB(BB, jB) {
+          jB = jB || aB.languages || Object.keys(QB);
+          const zB = function(BB) {
+              const jB = {
+                value: Nj(BB),
                 illegal: !1,
                 relevance: 0,
-                _top: HT,
-                _emitter: new jT.__emitter(jT)
+                _top: uB,
+                _emitter: new aB.__emitter(aB)
               };
-              return UT._emitter.addText(TT), UT
-            }(TT),
-            zT = UT.filter(eT).filter(JT).map((UT => fT(UT, TT, !1)));
-          zT.unshift(mT);
-          const MT = zT.sort(((TT, UT) => {
-              if (TT.relevance !== UT.relevance) return UT.relevance - TT.relevance;
-              if (TT.language && UT.language) {
-                if (eT(TT.language).supersetOf === UT.language) return 1;
-                if (eT(UT.language).supersetOf === TT.language) return -1
+              return jB._emitter.addText(BB), jB
+            }(BB),
+            nB = jB.filter(MB).filter(iB).map((jB => GB(jB, BB, !1)));
+          nB.unshift(zB);
+          const dB = nB.sort(((BB, jB) => {
+              if (BB.relevance !== jB.relevance) return jB.relevance - BB.relevance;
+              if (BB.language && jB.language) {
+                if (MB(BB.language).supersetOf === jB.language) return 1;
+                if (MB(jB.language).supersetOf === BB.language) return -1
               }
               return 0
             })),
-            [gT, nT] = MT,
-            kT = gT;
-          return kT.secondBest = nT, kT
+            [IB, NB] = dB,
+            UB = IB;
+          return UB.secondBest = NB, UB
         }
 
-        function iT(TT) {
-          let UT = null;
-          const mT = function(TT) {
-            let UT = TT.className + " ";
-            UT += TT.parentNode ? TT.parentNode.className : "";
-            const mT = jT.languageDetectRe.exec(UT);
-            if (mT) {
-              const UT = eT(mT[1]);
-              return UT || (RT(nT.replace("{}", mT[1])), RT("Falling back to no-highlight mode for this block.", TT)), UT ? mT[1] : "no-highlight"
+        function gB(BB) {
+          let jB = null;
+          const zB = function(BB) {
+            let jB = BB.className + " ";
+            jB += BB.parentNode ? BB.parentNode.className : "";
+            const zB = aB.languageDetectRe.exec(jB);
+            if (zB) {
+              const jB = MB(zB[1]);
+              return jB || (OB(NB.replace("{}", zB[1])), OB("Falling back to no-highlight mode for this block.", BB)), jB ? zB[1] : "no-highlight"
             }
-            return UT.split(/\s+/).find((TT => cT(TT) || eT(TT)))
-          }(TT);
-          if (cT(mT)) return;
-          if (xT("before:highlightElement", {
-              el: TT,
-              language: mT
-            }), TT.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", TT);
-          if (TT.children.length > 0 && (jT.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(TT)), jT.throwUnescapedHTML)) {
-            throw new gU("One of your code blocks includes unescaped HTML.", TT.innerHTML)
+            return jB.split(/\s+/).find((BB => yB(BB) || MB(BB)))
+          }(BB);
+          if (yB(zB)) return;
+          if (qB("before:highlightElement", {
+              el: BB,
+              language: zB
+            }), BB.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", BB);
+          if (BB.children.length > 0 && (aB.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(BB)), aB.throwUnescapedHTML)) {
+            throw new Ij("One of your code blocks includes unescaped HTML.", BB.innerHTML)
           }
-          UT = TT;
-          const WT = UT.textContent,
-            MT = mT ? vT(WT, {
-              language: mT,
+          jB = BB;
+          const QB = jB.textContent,
+            dB = zB ? kB(QB, {
+              language: zB,
               ignoreIllegals: !0
-            }) : qT(WT);
-          TT.innerHTML = MT.value, TT.dataset.highlighted = "yes",
-            function(TT, UT, mT) {
-              const WT = UT && zT[UT] || mT;
-              TT.classList.add("hljs"), TT.classList.add(`language-${WT}`)
-            }(TT, mT, MT.language), TT.result = {
-              language: MT.language,
-              re: MT.relevance,
-              relevance: MT.relevance
-            }, MT.secondBest && (TT.secondBest = {
-              language: MT.secondBest.language,
-              relevance: MT.secondBest.relevance
-            }), xT("after:highlightElement", {
-              el: TT,
-              result: MT,
-              text: WT
+            }) : LB(QB);
+          BB.innerHTML = dB.value, BB.dataset.highlighted = "yes",
+            function(BB, jB, zB) {
+              const QB = jB && nB[jB] || zB;
+              BB.classList.add("hljs"), BB.classList.add(`language-${QB}`)
+            }(BB, zB, dB.language), BB.result = {
+              language: dB.language,
+              re: dB.relevance,
+              relevance: dB.relevance
+            }, dB.secondBest && (BB.secondBest = {
+              language: dB.secondBest.language,
+              relevance: dB.secondBest.relevance
+            }), qB("after:highlightElement", {
+              el: BB,
+              result: dB,
+              text: QB
             })
         }
-        let bT = !1;
+        let tB = !1;
 
-        function OT() {
-          if ("loading" === document.readyState) return bT || window.addEventListener("DOMContentLoaded", (function() {
-            OT()
-          }), !1), void(bT = !0);
-          document.querySelectorAll(jT.cssSelector).forEach(iT)
+        function SB() {
+          if ("loading" === document.readyState) return tB || window.addEventListener("DOMContentLoaded", (function() {
+            SB()
+          }), !1), void(tB = !0);
+          document.querySelectorAll(aB.cssSelector).forEach(gB)
         }
 
-        function eT(TT) {
-          return TT = (TT || "").toLowerCase(), WT[TT] || WT[zT[TT]]
+        function MB(BB) {
+          return BB = (BB || "").toLowerCase(), QB[BB] || QB[nB[BB]]
         }
 
-        function YT(TT, UT) {
+        function EB(BB, jB) {
           let {
-            languageName: mT
-          } = UT;
-          "string" === typeof TT && (TT = [TT]), TT.forEach((TT => {
-            zT[TT.toLowerCase()] = mT
+            languageName: zB
+          } = jB;
+          "string" === typeof BB && (BB = [BB]), BB.forEach((BB => {
+            nB[BB.toLowerCase()] = zB
           }))
         }
 
-        function JT(TT) {
-          const UT = eT(TT);
-          return UT && !UT.disableAutodetect
+        function iB(BB) {
+          const jB = MB(BB);
+          return jB && !jB.disableAutodetect
         }
 
-        function xT(TT, UT) {
-          const mT = TT;
-          MT.forEach((function(TT) {
-            TT[mT] && TT[mT](UT)
+        function qB(BB, jB) {
+          const zB = BB;
+          dB.forEach((function(BB) {
+            BB[zB] && BB[zB](jB)
           }))
         }
-        Object.assign(TT, {
-          highlight: vT,
-          highlightAuto: qT,
-          highlightAll: OT,
-          highlightElement: iT,
-          highlightBlock: function(TT) {
-            return TU("10.7.0", "highlightBlock will be removed entirely in v12.0"), TU("10.7.0", "Please use highlightElement now."), iT(TT)
+        Object.assign(BB, {
+          highlight: kB,
+          highlightAuto: LB,
+          highlightAll: SB,
+          highlightElement: gB,
+          highlightBlock: function(BB) {
+            return Bj("10.7.0", "highlightBlock will be removed entirely in v12.0"), Bj("10.7.0", "Please use highlightElement now."), gB(BB)
           },
-          configure: function(TT) {
-            jT = HU(jT, TT)
+          configure: function(BB) {
+            aB = uj(aB, BB)
           },
           initHighlighting: () => {
-            OT(), TU("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
+            SB(), Bj("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
           },
           initHighlightingOnLoad: function() {
-            OT(), TU("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
+            SB(), Bj("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
           },
-          registerLanguage: function(UT, mT) {
-            let zT = null;
+          registerLanguage: function(jB, zB) {
+            let nB = null;
             try {
-              zT = mT(TT)
-            } catch (MT) {
-              if (AT("Language definition for '{}' could not be registered.".replace("{}", UT)), !gT) throw MT;
-              AT(MT), zT = HT
+              nB = zB(BB)
+            } catch (dB) {
+              if (RB("Language definition for '{}' could not be registered.".replace("{}", jB)), !IB) throw dB;
+              RB(dB), nB = uB
             }
-            zT.name || (zT.name = UT), WT[UT] = zT, zT.rawDefinition = mT.bind(null, TT), zT.aliases && YT(zT.aliases, {
-              languageName: UT
+            nB.name || (nB.name = jB), QB[jB] = nB, nB.rawDefinition = zB.bind(null, BB), nB.aliases && EB(nB.aliases, {
+              languageName: jB
             })
           },
-          unregisterLanguage: function(TT) {
-            delete WT[TT];
-            for (const UT of Object.keys(zT)) zT[UT] === TT && delete zT[UT]
+          unregisterLanguage: function(BB) {
+            delete QB[BB];
+            for (const jB of Object.keys(nB)) nB[jB] === BB && delete nB[jB]
           },
           listLanguages: function() {
-            return Object.keys(WT)
+            return Object.keys(QB)
           },
-          getLanguage: eT,
-          registerAliases: YT,
-          autoDetection: JT,
-          inherit: HU,
-          addPlugin: function(TT) {
-            ! function(TT) {
-              TT["before:highlightBlock"] && !TT["before:highlightElement"] && (TT["before:highlightElement"] = UT => {
-                TT["before:highlightBlock"](Object.assign({
-                  block: UT.el
-                }, UT))
-              }), TT["after:highlightBlock"] && !TT["after:highlightElement"] && (TT["after:highlightElement"] = UT => {
-                TT["after:highlightBlock"](Object.assign({
-                  block: UT.el
-                }, UT))
+          getLanguage: MB,
+          registerAliases: EB,
+          autoDetection: iB,
+          inherit: uj,
+          addPlugin: function(BB) {
+            ! function(BB) {
+              BB["before:highlightBlock"] && !BB["before:highlightElement"] && (BB["before:highlightElement"] = jB => {
+                BB["before:highlightBlock"](Object.assign({
+                  block: jB.el
+                }, jB))
+              }), BB["after:highlightBlock"] && !BB["after:highlightElement"] && (BB["after:highlightElement"] = jB => {
+                BB["after:highlightBlock"](Object.assign({
+                  block: jB.el
+                }, jB))
               })
-            }(TT), MT.push(TT)
+            }(BB), dB.push(BB)
           },
-          removePlugin: function(TT) {
-            const UT = MT.indexOf(TT); - 1 !== UT && MT.splice(UT, 1)
+          removePlugin: function(BB) {
+            const jB = dB.indexOf(BB); - 1 !== jB && dB.splice(jB, 1)
           }
-        }), TT.debugMode = function() {
-          gT = !1
-        }, TT.safeMode = function() {
-          gT = !0
-        }, TT.versionString = "11.11.1", TT.regex = {
-          concat: BT,
-          lookahead: lT,
-          either: ZT,
-          optional: pT,
-          anyNumberOfTimes: LT
+        }), BB.debugMode = function() {
+          IB = !1
+        }, BB.safeMode = function() {
+          IB = !0
+        }, BB.versionString = "11.11.1", BB.regex = {
+          concat: JB,
+          lookahead: pB,
+          either: mB,
+          optional: sB,
+          anyNumberOfTimes: rB
         };
-        for (const mT in VT) "object" === typeof VT[mT] && UT(VT[mT]);
-        return Object.assign(TT, VT), TT
+        for (const zB in TB) "object" === typeof TB[zB] && jB(TB[zB]);
+        return Object.assign(BB, TB), BB
       },
-      lU = jU({});
-    lU.newInstance = () => jU({}), TT.exports = lU, lU.HighlightJS = lU, lU.default = lU
+      pj = aj({});
+    pj.newInstance = () => aj({}), BB.exports = pj, pj.HighlightJS = pj, pj.default = pj
   },
-  4808: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => WT
+  4808: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => QB
     });
-    const WT = mT(4816)
+    const QB = zB(4813)
   },
-  4825: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => lT
+  4817: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => pB
     });
-    const WT = "[A-Za-z$_][0-9A-Za-z$_]*",
-      zT = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      MT = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      gT = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      nT = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      HT = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      kT = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      jT = [].concat(HT, gT, nT);
+    const QB = "[A-Za-z$_][0-9A-Za-z$_]*",
+      nB = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      dB = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      IB = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      NB = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      uB = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      UB = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      aB = [].concat(uB, IB, NB);
 
-    function lT(TT) {
-      const UT = TT.regex,
-        mT = WT,
-        lT = "<>",
-        LT = "</>",
-        pT = {
-          np: /<[A-Za-z0-9\\._:-]+/,
+    function pB(BB) {
+      const jB = BB.regex,
+        zB = QB,
+        pB = "<>",
+        rB = "</>",
+        sB = {
+          Ds: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (TT, UT) => {
-            const mT = TT[0].length + TT.index,
-              WT = TT.input[mT];
-            if ("<" === WT || "," === WT) return void UT.ignoreMatch();
-            let zT;
-            ">" === WT && (((TT, UT) => {
+          isTrulyOpeningTag: (BB, jB) => {
+            const zB = BB[0].length + BB.index,
+              QB = BB.input[zB];
+            if ("<" === QB || "," === QB) return void jB.ignoreMatch();
+            let nB;
+            ">" === QB && (((BB, jB) => {
               let {
-                after: mT
-              } = UT;
-              const WT = "</" + TT[0].slice(1);
-              return -1 !== TT.input.indexOf(WT, mT)
-            })(TT, {
-              after: mT
-            }) || UT.ignoreMatch());
-            const MT = TT.input.substring(mT);
-            ((zT = MT.match(/^\s*=/)) || (zT = MT.match(/^\s+extends\s+/)) && 0 === zT.index) && UT.ignoreMatch()
+                after: zB
+              } = jB;
+              const QB = "</" + BB[0].slice(1);
+              return -1 !== BB.input.indexOf(QB, zB)
+            })(BB, {
+              after: zB
+            }) || jB.ignoreMatch());
+            const dB = BB.input.substring(zB);
+            ((nB = dB.match(/^\s*=/)) || (nB = dB.match(/^\s+extends\s+/)) && 0 === nB.index) && jB.ignoreMatch()
           }
         },
-        BT = {
-          $pattern: WT,
-          keyword: zT,
-          literal: MT,
-          built_in: jT,
-          "variable.language": kT
+        JB = {
+          $pattern: QB,
+          keyword: nB,
+          literal: dB,
+          built_in: aB,
+          "variable.language": UB
         },
-        ZT = "[0-9](_?[0-9])*",
-        cT = `\\.(${ZT})`,
-        vT = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        fT = {
+        mB = "[0-9](_?[0-9])*",
+        yB = `\\.(${mB})`,
+        kB = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        GB = {
           className: "number",
           variants: [{
-            np: `(\\b(${vT})((${cT})|\\.)?|(${cT}))[eE][+-]?(${ZT})\\b`
+            Ds: `(\\b(${kB})((${yB})|\\.)?|(${yB}))[eE][+-]?(${mB})\\b`
           }, {
-            np: `\\b(${vT})\\b((${cT})\\b|\\.)?|(${cT})\\b`
+            Ds: `\\b(${kB})\\b((${yB})\\b|\\.)?|(${yB})\\b`
           }, {
-            np: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            Ds: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            np: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            Ds: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            np: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            Ds: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            np: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            Ds: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            np: "\\b0[0-7]+n?\\b"
+            Ds: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        qT = {
+        LB = {
           className: "subst",
-          np: "\\$\\{",
+          Ds: "\\$\\{",
           end: "\\}",
-          keywords: BT,
+          keywords: JB,
           contains: []
         },
-        iT = {
-          np: ".?html`",
+        gB = {
+          Ds: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [TT.BACKSLASH_ESCAPE, qT],
+            contains: [BB.BACKSLASH_ESCAPE, LB],
             subLanguage: "xml"
           }
         },
-        bT = {
-          np: ".?css`",
+        tB = {
+          Ds: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [TT.BACKSLASH_ESCAPE, qT],
+            contains: [BB.BACKSLASH_ESCAPE, LB],
             subLanguage: "css"
           }
         },
-        OT = {
-          np: ".?gql`",
+        SB = {
+          Ds: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [TT.BACKSLASH_ESCAPE, qT],
+            contains: [BB.BACKSLASH_ESCAPE, LB],
             subLanguage: "graphql"
           }
         },
-        eT = {
+        MB = {
           className: "string",
-          np: "`",
+          Ds: "`",
           end: "`",
-          contains: [TT.BACKSLASH_ESCAPE, qT]
+          contains: [BB.BACKSLASH_ESCAPE, LB]
         },
-        YT = {
+        EB = {
           className: "comment",
-          variants: [TT.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [BB.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              np: "(?=@[A-Za-z]+)",
+              Ds: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                np: "@[A-Za-z]+"
+                Ds: "@[A-Za-z]+"
               }, {
                 className: "type",
-                np: "\\{",
+                Ds: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                np: mT + "(?=\\s*(-)|$)",
+                Ds: zB + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                np: /(?=[^\n])\s/,
+                Ds: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), TT.C_BLOCK_COMMENT_MODE, TT.C_LINE_COMMENT_MODE]
+          }), BB.C_BLOCK_COMMENT_MODE, BB.C_LINE_COMMENT_MODE]
         },
-        JT = [TT.APOS_STRING_MODE, TT.QUOTE_STRING_MODE, iT, bT, OT, eT, {
+        iB = [BB.APOS_STRING_MODE, BB.QUOTE_STRING_MODE, gB, tB, SB, MB, {
           match: /\$\d+/
-        }, fT];
-      qT.contains = JT.concat({
-        np: /\{/,
+        }, GB];
+      LB.contains = iB.concat({
+        Ds: /\{/,
         end: /\}/,
-        keywords: BT,
-        contains: ["self"].concat(JT)
+        keywords: JB,
+        contains: ["self"].concat(iB)
       });
-      const xT = [].concat(YT, qT.contains),
-        dT = xT.concat([{
-          np: /(\s*)\(/,
+      const qB = [].concat(EB, LB.contains),
+        fB = qB.concat([{
+          Ds: /(\s*)\(/,
           end: /\)/,
-          keywords: BT,
-          contains: ["self"].concat(xT)
+          keywords: JB,
+          contains: ["self"].concat(qB)
         }]),
-        wT = {
+        oB = {
           className: "params",
-          np: /(\s*)\(/,
+          Ds: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: BT,
-          contains: dT
+          keywords: JB,
+          contains: fB
         },
-        tT = {
+        HB = {
           variants: [{
-            match: [/class/, /\s+/, mT, /\s+/, /extends/, /\s+/, UT.concat(mT, "(", UT.concat(/\./, mT), ")*")],
+            match: [/class/, /\s+/, zB, /\s+/, /extends/, /\s+/, jB.concat(zB, "(", jB.concat(/\./, zB), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1152,24 +1152,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, mT],
+            match: [/class/, /\s+/, zB],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        aT = {
+        DB = {
           relevance: 0,
-          match: UT.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: jB.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...gT, ...nT]
+            _: [...IB, ...NB]
           }
         },
-        yT = {
+        FB = {
           variants: [{
-            match: [/function/, /\s+/, mT, /(?=\s*\()/]
+            match: [/function/, /\s+/, zB, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1178,53 +1178,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [wT],
+          contains: [oB],
           illegal: /%/
         };
-      const XT = {
-        match: UT.concat(/\b/, (IT = [...HT, "super", "import"].map((TT => `${TT}\\s*\\(`)), UT.concat("(?!", IT.join("|"), ")")), mT, UT.lookahead(/\s*\(/)),
+      const YB = {
+        match: jB.concat(/\b/, (VB = [...uB, "super", "import"].map((BB => `${BB}\\s*\\(`)), jB.concat("(?!", VB.join("|"), ")")), zB, jB.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var IT;
-      const QT = {
-          np: UT.concat(/\./, UT.lookahead(UT.concat(mT, /(?![0-9A-Za-z$_(])/))),
-          end: mT,
+      var VB;
+      const hB = {
+          Ds: jB.concat(/\./, jB.lookahead(jB.concat(zB, /(?![0-9A-Za-z$_(])/))),
+          end: zB,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        sT = {
-          match: [/get|set/, /\s+/, mT, /(?=\()/],
+        XB = {
+          match: [/get|set/, /\s+/, zB, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            np: /\(\)/
-          }, wT]
+            Ds: /\(\)/
+          }, oB]
         },
-        FT = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + TT.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        PT = {
-          match: [/const|var|let/, /\s+/, mT, /\s*/, /=\s*/, /(async\s*)?/, UT.lookahead(FT)],
+        ZB = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + BB.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        AB = {
+          match: [/const|var|let/, /\s+/, zB, /\s*/, /=\s*/, /(async\s*)?/, jB.lookahead(ZB)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [wT]
+          contains: [oB]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: BT,
+        keywords: JB,
         exports: {
-          PARAMS_CONTAINS: dT,
-          CLASS_REFERENCE: aT
+          PARAMS_CONTAINS: fB,
+          CLASS_REFERENCE: DB
         },
         illegal: /#(?![$_A-z])/,
-        contains: [TT.SHEBANG({
+        contains: [BB.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1232,265 +1232,265 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          np: /^\s*['"]use (strict|asm)['"]/
-        }, TT.APOS_STRING_MODE, TT.QUOTE_STRING_MODE, iT, bT, OT, eT, YT, {
+          Ds: /^\s*['"]use (strict|asm)['"]/
+        }, BB.APOS_STRING_MODE, BB.QUOTE_STRING_MODE, gB, tB, SB, MB, EB, {
           match: /\$\d+/
-        }, fT, aT, {
+        }, GB, DB, {
           scope: "attr",
-          match: mT + UT.lookahead(":"),
+          match: zB + jB.lookahead(":"),
           relevance: 0
-        }, PT, {
-          np: "(" + TT.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, AB, {
+          Ds: "(" + BB.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [YT, TT.REGEXP_MODE, {
+          contains: [EB, BB.REGEXP_MODE, {
             className: "function",
-            np: FT,
+            Ds: ZB,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                np: TT.UNDERSCORE_IDENT_RE,
+                Ds: BB.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                np: /\(\s*\)/,
+                Ds: /\(\s*\)/,
                 skip: !0
               }, {
-                np: /(\s*)\(/,
+                Ds: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: BT,
-                contains: dT
+                keywords: JB,
+                contains: fB
               }]
             }]
           }, {
-            np: /,/,
+            Ds: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              np: lT,
-              end: LT
+              Ds: pB,
+              end: rB
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              np: pT.np,
-              "on:begin": pT.isTrulyOpeningTag,
-              end: pT.end
+              Ds: sB.Ds,
+              "on:begin": sB.isTrulyOpeningTag,
+              end: sB.end
             }],
             subLanguage: "xml",
             contains: [{
-              np: pT.np,
-              end: pT.end,
+              Ds: sB.Ds,
+              end: sB.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, yT, {
+        }, FB, {
           beginKeywords: "while if switch catch for"
         }, {
-          np: "\\b(?!function)" + TT.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          Ds: "\\b(?!function)" + BB.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [wT, TT.inherit(TT.TITLE_MODE, {
-            np: mT,
+          contains: [oB, BB.inherit(BB.TITLE_MODE, {
+            Ds: zB,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, QT, {
-          match: "\\$" + mT,
+        }, hB, {
+          match: "\\$" + zB,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [wT]
-        }, XT, {
+          contains: [oB]
+        }, YB, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, tT, sT, {
+        }, HB, XB, {
           match: /\$[(.]/
         }]
       }
     }
   },
-  4833: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => LT
+  4821: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => rB
     });
-    const WT = "[A-Za-z$_][0-9A-Za-z$_]*",
-      zT = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      MT = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      gT = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      nT = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      HT = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      kT = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      jT = [].concat(HT, gT, nT);
+    const QB = "[A-Za-z$_][0-9A-Za-z$_]*",
+      nB = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      dB = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      IB = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      NB = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      uB = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      UB = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      aB = [].concat(uB, IB, NB);
 
-    function lT(TT) {
-      const UT = TT.regex,
-        mT = WT,
-        lT = "<>",
-        LT = "</>",
-        pT = {
-          np: /<[A-Za-z0-9\\._:-]+/,
+    function pB(BB) {
+      const jB = BB.regex,
+        zB = QB,
+        pB = "<>",
+        rB = "</>",
+        sB = {
+          Ds: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (TT, UT) => {
-            const mT = TT[0].length + TT.index,
-              WT = TT.input[mT];
-            if ("<" === WT || "," === WT) return void UT.ignoreMatch();
-            let zT;
-            ">" === WT && (((TT, UT) => {
+          isTrulyOpeningTag: (BB, jB) => {
+            const zB = BB[0].length + BB.index,
+              QB = BB.input[zB];
+            if ("<" === QB || "," === QB) return void jB.ignoreMatch();
+            let nB;
+            ">" === QB && (((BB, jB) => {
               let {
-                after: mT
-              } = UT;
-              const WT = "</" + TT[0].slice(1);
-              return -1 !== TT.input.indexOf(WT, mT)
-            })(TT, {
-              after: mT
-            }) || UT.ignoreMatch());
-            const MT = TT.input.substring(mT);
-            ((zT = MT.match(/^\s*=/)) || (zT = MT.match(/^\s+extends\s+/)) && 0 === zT.index) && UT.ignoreMatch()
+                after: zB
+              } = jB;
+              const QB = "</" + BB[0].slice(1);
+              return -1 !== BB.input.indexOf(QB, zB)
+            })(BB, {
+              after: zB
+            }) || jB.ignoreMatch());
+            const dB = BB.input.substring(zB);
+            ((nB = dB.match(/^\s*=/)) || (nB = dB.match(/^\s+extends\s+/)) && 0 === nB.index) && jB.ignoreMatch()
           }
         },
-        BT = {
-          $pattern: WT,
-          keyword: zT,
-          literal: MT,
-          built_in: jT,
-          "variable.language": kT
+        JB = {
+          $pattern: QB,
+          keyword: nB,
+          literal: dB,
+          built_in: aB,
+          "variable.language": UB
         },
-        ZT = "[0-9](_?[0-9])*",
-        cT = `\\.(${ZT})`,
-        vT = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        fT = {
+        mB = "[0-9](_?[0-9])*",
+        yB = `\\.(${mB})`,
+        kB = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        GB = {
           className: "number",
           variants: [{
-            np: `(\\b(${vT})((${cT})|\\.)?|(${cT}))[eE][+-]?(${ZT})\\b`
+            Ds: `(\\b(${kB})((${yB})|\\.)?|(${yB}))[eE][+-]?(${mB})\\b`
           }, {
-            np: `\\b(${vT})\\b((${cT})\\b|\\.)?|(${cT})\\b`
+            Ds: `\\b(${kB})\\b((${yB})\\b|\\.)?|(${yB})\\b`
           }, {
-            np: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            Ds: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            np: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            Ds: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            np: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            Ds: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            np: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            Ds: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            np: "\\b0[0-7]+n?\\b"
+            Ds: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        qT = {
+        LB = {
           className: "subst",
-          np: "\\$\\{",
+          Ds: "\\$\\{",
           end: "\\}",
-          keywords: BT,
+          keywords: JB,
           contains: []
         },
-        iT = {
-          np: ".?html`",
+        gB = {
+          Ds: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [TT.BACKSLASH_ESCAPE, qT],
+            contains: [BB.BACKSLASH_ESCAPE, LB],
             subLanguage: "xml"
           }
         },
-        bT = {
-          np: ".?css`",
+        tB = {
+          Ds: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [TT.BACKSLASH_ESCAPE, qT],
+            contains: [BB.BACKSLASH_ESCAPE, LB],
             subLanguage: "css"
           }
         },
-        OT = {
-          np: ".?gql`",
+        SB = {
+          Ds: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [TT.BACKSLASH_ESCAPE, qT],
+            contains: [BB.BACKSLASH_ESCAPE, LB],
             subLanguage: "graphql"
           }
         },
-        eT = {
+        MB = {
           className: "string",
-          np: "`",
+          Ds: "`",
           end: "`",
-          contains: [TT.BACKSLASH_ESCAPE, qT]
+          contains: [BB.BACKSLASH_ESCAPE, LB]
         },
-        YT = {
+        EB = {
           className: "comment",
-          variants: [TT.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [BB.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              np: "(?=@[A-Za-z]+)",
+              Ds: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                np: "@[A-Za-z]+"
+                Ds: "@[A-Za-z]+"
               }, {
                 className: "type",
-                np: "\\{",
+                Ds: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                np: mT + "(?=\\s*(-)|$)",
+                Ds: zB + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                np: /(?=[^\n])\s/,
+                Ds: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), TT.C_BLOCK_COMMENT_MODE, TT.C_LINE_COMMENT_MODE]
+          }), BB.C_BLOCK_COMMENT_MODE, BB.C_LINE_COMMENT_MODE]
         },
-        JT = [TT.APOS_STRING_MODE, TT.QUOTE_STRING_MODE, iT, bT, OT, eT, {
+        iB = [BB.APOS_STRING_MODE, BB.QUOTE_STRING_MODE, gB, tB, SB, MB, {
           match: /\$\d+/
-        }, fT];
-      qT.contains = JT.concat({
-        np: /\{/,
+        }, GB];
+      LB.contains = iB.concat({
+        Ds: /\{/,
         end: /\}/,
-        keywords: BT,
-        contains: ["self"].concat(JT)
+        keywords: JB,
+        contains: ["self"].concat(iB)
       });
-      const xT = [].concat(YT, qT.contains),
-        dT = xT.concat([{
-          np: /(\s*)\(/,
+      const qB = [].concat(EB, LB.contains),
+        fB = qB.concat([{
+          Ds: /(\s*)\(/,
           end: /\)/,
-          keywords: BT,
-          contains: ["self"].concat(xT)
+          keywords: JB,
+          contains: ["self"].concat(qB)
         }]),
-        wT = {
+        oB = {
           className: "params",
-          np: /(\s*)\(/,
+          Ds: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: BT,
-          contains: dT
+          keywords: JB,
+          contains: fB
         },
-        tT = {
+        HB = {
           variants: [{
-            match: [/class/, /\s+/, mT, /\s+/, /extends/, /\s+/, UT.concat(mT, "(", UT.concat(/\./, mT), ")*")],
+            match: [/class/, /\s+/, zB, /\s+/, /extends/, /\s+/, jB.concat(zB, "(", jB.concat(/\./, zB), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1498,24 +1498,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, mT],
+            match: [/class/, /\s+/, zB],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        aT = {
+        DB = {
           relevance: 0,
-          match: UT.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: jB.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...gT, ...nT]
+            _: [...IB, ...NB]
           }
         },
-        yT = {
+        FB = {
           variants: [{
-            match: [/function/, /\s+/, mT, /(?=\s*\()/]
+            match: [/function/, /\s+/, zB, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1524,53 +1524,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [wT],
+          contains: [oB],
           illegal: /%/
         };
-      const XT = {
-        match: UT.concat(/\b/, (IT = [...HT, "super", "import"].map((TT => `${TT}\\s*\\(`)), UT.concat("(?!", IT.join("|"), ")")), mT, UT.lookahead(/\s*\(/)),
+      const YB = {
+        match: jB.concat(/\b/, (VB = [...uB, "super", "import"].map((BB => `${BB}\\s*\\(`)), jB.concat("(?!", VB.join("|"), ")")), zB, jB.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var IT;
-      const QT = {
-          np: UT.concat(/\./, UT.lookahead(UT.concat(mT, /(?![0-9A-Za-z$_(])/))),
-          end: mT,
+      var VB;
+      const hB = {
+          Ds: jB.concat(/\./, jB.lookahead(jB.concat(zB, /(?![0-9A-Za-z$_(])/))),
+          end: zB,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        sT = {
-          match: [/get|set/, /\s+/, mT, /(?=\()/],
+        XB = {
+          match: [/get|set/, /\s+/, zB, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            np: /\(\)/
-          }, wT]
+            Ds: /\(\)/
+          }, oB]
         },
-        FT = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + TT.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        PT = {
-          match: [/const|var|let/, /\s+/, mT, /\s*/, /=\s*/, /(async\s*)?/, UT.lookahead(FT)],
+        ZB = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + BB.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        AB = {
+          match: [/const|var|let/, /\s+/, zB, /\s*/, /=\s*/, /(async\s*)?/, jB.lookahead(ZB)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [wT]
+          contains: [oB]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: BT,
+        keywords: JB,
         exports: {
-          PARAMS_CONTAINS: dT,
-          CLASS_REFERENCE: aT
+          PARAMS_CONTAINS: fB,
+          CLASS_REFERENCE: DB
         },
         illegal: /#(?![$_A-z])/,
-        contains: [TT.SHEBANG({
+        contains: [BB.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1578,151 +1578,151 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          np: /^\s*['"]use (strict|asm)['"]/
-        }, TT.APOS_STRING_MODE, TT.QUOTE_STRING_MODE, iT, bT, OT, eT, YT, {
+          Ds: /^\s*['"]use (strict|asm)['"]/
+        }, BB.APOS_STRING_MODE, BB.QUOTE_STRING_MODE, gB, tB, SB, MB, EB, {
           match: /\$\d+/
-        }, fT, aT, {
+        }, GB, DB, {
           scope: "attr",
-          match: mT + UT.lookahead(":"),
+          match: zB + jB.lookahead(":"),
           relevance: 0
-        }, PT, {
-          np: "(" + TT.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, AB, {
+          Ds: "(" + BB.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [YT, TT.REGEXP_MODE, {
+          contains: [EB, BB.REGEXP_MODE, {
             className: "function",
-            np: FT,
+            Ds: ZB,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                np: TT.UNDERSCORE_IDENT_RE,
+                Ds: BB.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                np: /\(\s*\)/,
+                Ds: /\(\s*\)/,
                 skip: !0
               }, {
-                np: /(\s*)\(/,
+                Ds: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: BT,
-                contains: dT
+                keywords: JB,
+                contains: fB
               }]
             }]
           }, {
-            np: /,/,
+            Ds: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              np: lT,
-              end: LT
+              Ds: pB,
+              end: rB
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              np: pT.np,
-              "on:begin": pT.isTrulyOpeningTag,
-              end: pT.end
+              Ds: sB.Ds,
+              "on:begin": sB.isTrulyOpeningTag,
+              end: sB.end
             }],
             subLanguage: "xml",
             contains: [{
-              np: pT.np,
-              end: pT.end,
+              Ds: sB.Ds,
+              end: sB.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, yT, {
+        }, FB, {
           beginKeywords: "while if switch catch for"
         }, {
-          np: "\\b(?!function)" + TT.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          Ds: "\\b(?!function)" + BB.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [wT, TT.inherit(TT.TITLE_MODE, {
-            np: mT,
+          contains: [oB, BB.inherit(BB.TITLE_MODE, {
+            Ds: zB,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, QT, {
-          match: "\\$" + mT,
+        }, hB, {
+          match: "\\$" + zB,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [wT]
-        }, XT, {
+          contains: [oB]
+        }, YB, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, tT, sT, {
+        }, HB, XB, {
           match: /\$[(.]/
         }]
       }
     }
 
-    function LT(TT) {
-      const UT = TT.regex,
-        mT = lT(TT),
-        gT = WT,
-        nT = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
-        HT = {
-          np: [/namespace/, /\s+/, TT.IDENT_RE],
+    function rB(BB) {
+      const jB = BB.regex,
+        zB = pB(BB),
+        IB = QB,
+        NB = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
+        uB = {
+          Ds: [/namespace/, /\s+/, BB.IDENT_RE],
           beginScope: {
             1: "keyword",
             3: "title.class"
           }
         },
-        LT = {
+        rB = {
           beginKeywords: "interface",
           end: /\{/,
           excludeEnd: !0,
           keywords: {
             keyword: "interface extends",
-            built_in: nT
+            built_in: NB
           },
-          contains: [mT.exports.CLASS_REFERENCE]
+          contains: [zB.exports.CLASS_REFERENCE]
         },
-        pT = {
-          $pattern: WT,
-          keyword: zT.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
-          literal: MT,
-          built_in: jT.concat(nT),
-          "variable.language": kT
+        sB = {
+          $pattern: QB,
+          keyword: nB.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
+          literal: dB,
+          built_in: aB.concat(NB),
+          "variable.language": UB
         },
-        BT = {
+        JB = {
           className: "meta",
-          np: "@" + gT
+          Ds: "@" + IB
         },
-        ZT = (TT, UT, mT) => {
-          const WT = TT.contains.findIndex((TT => TT.label === UT));
-          if (-1 === WT) throw new Error("can not find mode to replace");
-          TT.contains.splice(WT, 1, mT)
+        mB = (BB, jB, zB) => {
+          const QB = BB.contains.findIndex((BB => BB.label === jB));
+          if (-1 === QB) throw new Error("can not find mode to replace");
+          BB.contains.splice(QB, 1, zB)
         };
-      Object.assign(mT.keywords, pT), mT.exports.PARAMS_CONTAINS.push(BT);
-      const cT = mT.contains.find((TT => "attr" === TT.scope)),
-        vT = Object.assign({}, cT, {
-          match: UT.concat(gT, UT.lookahead(/\s*\?:/))
+      Object.assign(zB.keywords, sB), zB.exports.PARAMS_CONTAINS.push(JB);
+      const yB = zB.contains.find((BB => "attr" === BB.scope)),
+        kB = Object.assign({}, yB, {
+          match: jB.concat(IB, jB.lookahead(/\s*\?:/))
         });
-      mT.exports.PARAMS_CONTAINS.push([mT.exports.CLASS_REFERENCE, cT, vT]), mT.contains = mT.contains.concat([BT, HT, LT, vT]), ZT(mT, "shebang", TT.SHEBANG()), ZT(mT, "use_strict", {
+      zB.exports.PARAMS_CONTAINS.push([zB.exports.CLASS_REFERENCE, yB, kB]), zB.contains = zB.contains.concat([JB, uB, rB, kB]), mB(zB, "shebang", BB.SHEBANG()), mB(zB, "use_strict", {
         className: "meta",
         relevance: 10,
-        np: /^\s*['"]use strict['"]/
+        Ds: /^\s*['"]use strict['"]/
       });
-      return mT.contains.find((TT => "func.def" === TT.label)).relevance = 0, Object.assign(mT, {
+      return zB.contains.find((BB => "func.def" === BB.label)).relevance = 0, Object.assign(zB, {
         name: "TypeScript",
         aliases: ["ts", "tsx", "mts", "cts"]
-      }), mT
+      }), zB
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

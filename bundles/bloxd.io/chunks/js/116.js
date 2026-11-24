@@ -1,106 +1,106 @@
 export const id = 116;
 export const ids = [116, 118, 138, 139];
 export const modules = {
-  5139: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => WT.j,
-      e: () => zT,
-      f: () => WT.q
+  5115: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => QB.f,
+      g: () => nB,
+      k: () => QB.n
     });
-    var WT = mT(5142);
-    const zT = [!1, !0].flatMap((TT => ["terrain", "liquid", "model"].map((UT => ({
-      strict: TT,
-      program: UT
+    var QB = zB(5120);
+    const nB = [!1, !0].flatMap((BB => ["terrain", "liquid", "model"].map((jB => ({
+      strict: BB,
+      program: jB
     })))))
   },
-  6719: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      forgetShaderPackActiveHint: () => wT,
-      isOtherApiVersion: () => YT,
-      isShaderPackActive: () => iT,
-      isShaderPackChangePending: () => eT,
-      markShaderPackChangePending: () => OT,
-      pageShaderPackValidationVersion: () => JT,
-      reconcileStoredShaderPackHint: () => dT,
-      removeShaderPack: () => qT,
-      replaceShaderPack: () => cT,
-      saveShaderPack: () => ZT,
-      shaderPackNeedsCheck: () => xT,
-      storedPackOutcome: () => bT,
-      storedShaderPackFiles: () => LT,
-      toStoredShaderPack: () => lT
+  6601: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      forgetShaderPackActiveHint: () => oB,
+      isOtherApiVersion: () => EB,
+      isShaderPackActive: () => gB,
+      isShaderPackChangePending: () => MB,
+      markShaderPackChangePending: () => SB,
+      pageShaderPackValidationVersion: () => iB,
+      reconcileStoredShaderPackHint: () => fB,
+      removeShaderPack: () => LB,
+      replaceShaderPack: () => yB,
+      saveShaderPack: () => mB,
+      shaderPackNeedsCheck: () => qB,
+      storedPackOutcome: () => tB,
+      storedShaderPackFiles: () => rB,
+      toStoredShaderPack: () => pB
     });
-    var WT = mT(5142),
-      zT = mT(5139),
-      MT = mT(44),
-      gT = mT(3551),
-      nT = mT(6723),
-      HT = mT(6698);
-    const kT = "shaderPackChangePending";
-    let jT = null;
+    var QB = zB(5120),
+      nB = zB(5115),
+      dB = zB(41),
+      IB = zB(3572),
+      NB = zB(6606),
+      uB = zB(6585);
+    const UB = "shaderPackChangePending";
+    let aB = null;
 
-    function lT(TT, UT, mT) {
+    function pB(BB, jB, zB) {
       return {
-        manifest: TT.manifest,
-        files: (0, WT.w)(TT.files),
-        validation: UT,
-        ...mT && {
-          listing: mT
+        manifest: BB.manifest,
+        files: (0, QB.w)(BB.files),
+        validation: jB,
+        ...zB && {
+          listing: zB
         }
       }
     }
 
-    function LT(TT) {
-      return Object.keys(TT.files).map((UT => ({
-        path: UT,
-        source: TT.files[UT]
+    function rB(BB) {
+      return Object.keys(BB.files).map((jB => ({
+        path: jB,
+        source: BB.files[jB]
       })))
     }
-    let pT = Promise.resolve();
+    let sB = Promise.resolve();
 
-    function BT(TT) {
-      const UT = pT.then(TT);
-      return pT = UT.catch((() => {})), UT
-    }
-
-    function ZT(TT, UT) {
-      return BT((() => vT(TT, UT)))
+    function JB(BB) {
+      const jB = sB.then(BB);
+      return sB = jB.catch((() => {})), jB
     }
 
-    function cT(TT, UT, mT) {
-      return BT((async () => JSON.stringify(await (0, nT.h)()) === JSON.stringify(TT) && (null === UT ? (await fT(), !0) : vT(UT, mT))))
-    }
-    async function vT(TT, UT) {
-      const mT = await MT.h.setItem(nT.d, TT);
-      return mT && tT(TT, UT), mT
-    }
-    async function fT() {
-      await MT.h.removeItem(nT.d), MT.l.removeItem(gT.e)
+    function mB(BB, jB) {
+      return JB((() => kB(BB, jB)))
     }
 
-    function qT() {
-      return BT(fT)
+    function yB(BB, jB, zB) {
+      return JB((async () => JSON.stringify(await (0, NB.h)()) === JSON.stringify(BB) && (null === jB ? (await GB(), !0) : kB(jB, zB))))
+    }
+    async function kB(BB, jB) {
+      const zB = await dB.g.setItem(NB.d, BB);
+      return zB && HB(BB, jB), zB
+    }
+    async function GB() {
+      await dB.g.removeItem(NB.d), dB.j.removeItem(IB.e)
     }
 
-    function iT(TT, UT) {
-      return "active" === bT(TT, UT).kind
+    function LB() {
+      return JB(GB)
     }
 
-    function bT(TT, UT) {
-      var mT;
-      return null === TT ? {
+    function gB(BB, jB) {
+      return "active" === tB(BB, jB).kind
+    }
+
+    function tB(BB, jB) {
+      var zB;
+      return null === BB ? {
         kind: "none",
         reason: "nothingStored"
-      } : YT(TT) ? {
+      } : EB(BB) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (mT = TT.validation) || void 0 === mT ? void 0 : mT.ok) || TT.validation.fromRecheck ? null === UT ? {
+      } : !1 !== (null === (zB = BB.validation) || void 0 === zB ? void 0 : zB.ok) || BB.validation.fromRecheck ? null === jB ? {
         kind: "none",
         reason: "noCompiler"
-      } : xT(TT, UT) ? {
+      } : qB(BB, jB) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : TT.validation.ok ? {
+      } : BB.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -111,263 +111,263 @@ export const modules = {
       }
     }
 
-    function OT() {
-      MT.m.setItem(kT, performance.timeOrigin)
+    function SB() {
+      dB.k.setItem(UB, performance.timeOrigin)
     }
 
-    function eT() {
-      return MT.m.getItem(kT) === performance.timeOrigin
+    function MB() {
+      return dB.k.getItem(UB) === performance.timeOrigin
     }
 
-    function YT(TT) {
-      return !(0, zT.f)(TT.manifest.apiVersion)
+    function EB(BB) {
+      return !(0, nB.k)(BB.manifest.apiVersion)
     }
 
-    function JT(TT) {
-      return jT ??= TT.JF((0, HT.shaderPackTextures)()), jT
+    function iB(BB) {
+      return aB ??= BB.ZF((0, uB.shaderPackTextures)()), aB
     }
 
-    function xT(TT, UT) {
-      var mT;
-      return (null === (mT = TT.validation) || void 0 === mT ? void 0 : mT.headerVersion) !== JT(UT)
+    function qB(BB, jB) {
+      var zB;
+      return (null === (zB = BB.validation) || void 0 === zB ? void 0 : zB.headerVersion) !== iB(jB)
     }
 
-    function dT(TT) {
-      return BT((async () => {
-        tT(await (0, nT.h)(!0), TT)
+    function fB(BB) {
+      return JB((async () => {
+        HB(await (0, NB.h)(!0), BB)
       }))
     }
 
-    function wT() {
-      return BT((async () => {
-        MT.l.removeItem(gT.e)
+    function oB() {
+      return JB((async () => {
+        dB.j.removeItem(IB.e)
       }))
     }
 
-    function tT(TT, UT) {
-      iT(TT, UT) ? MT.l.setItem(gT.e, !0) : MT.l.removeItem(gT.e)
+    function HB(BB, jB) {
+      gB(BB, jB) ? dB.j.setItem(IB.e, !0) : dB.j.removeItem(IB.e)
     }
   },
-  6723: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => zT,
-      h: () => MT
+  6606: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => nB,
+      h: () => dB
     });
-    var WT = mT(44);
-    const zT = "shaderPack";
-    async function MT() {
-      var TT;
-      let UT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (TT = await WT.h.getItem(zT, UT)) && void 0 !== TT ? TT : null
+    var QB = zB(41);
+    const nB = "shaderPack";
+    async function dB() {
+      var BB;
+      let jB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (BB = await QB.g.getItem(nB, jB)) && void 0 !== BB ? BB : null
     }
   },
-  6698: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      loadShaderPackTextures: () => gT,
-      shaderPackTextures: () => nT
+  6585: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      loadShaderPackTextures: () => IB,
+      shaderPackTextures: () => NB
     });
-    var WT = mT(5142);
-    let zT = null,
-      MT = null;
+    var QB = zB(5120);
+    let nB = null,
+      dB = null;
 
-    function gT() {
-      return MT ??= Promise.all([mT.e(73), mT.e(190)]).then((() => mT(40614))).then((TT => {
+    function IB() {
+      return dB ??= Promise.all([zB.e(73), zB.e(190)]).then((() => zB(40588))).then((BB => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: UT,
-          textureNameToIndex: mT,
-          textureAnimationData: MT
-        } = TT;
-        return zT ??= (0, WT.l)(mT, MT, UT), zT
-      })), MT
+          FORMER_BLOCK_IMAGE_NAMES: jB,
+          textureNameToIndex: zB,
+          textureAnimationData: dB
+        } = BB;
+        return nB ??= (0, QB.j)(zB, dB, jB), nB
+      })), dB
     }
 
-    function nT() {
-      if (null === zT) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return zT
+    function NB() {
+      if (null === nB) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return nB
     }
   },
-  5142: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => nT,
-      f: () => gT,
-      j: () => WT,
-      l: () => ZT,
-      o: () => lT,
-      q: () => zT,
-      s: () => MT,
-      v: () => kT,
-      w: () => jT,
-      x: () => LT
+  5120: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => NB,
+      e: () => IB,
+      f: () => QB,
+      j: () => mB,
+      m: () => pB,
+      n: () => nB,
+      o: () => dB,
+      s: () => UB,
+      w: () => aB,
+      z: () => rB
     });
-    const WT = 5;
+    const QB = 5;
 
-    function zT(TT) {
-      return TT === WT
+    function nB(BB) {
+      return BB === QB
     }
 
-    function MT(TT) {
-      return [...TT.features]
+    function dB(BB) {
+      return [...BB.features]
     }
-    const gT = 262144,
-      nT = 256,
-      HT = 256;
+    const IB = 262144,
+      NB = 256,
+      uB = 256;
 
-    function kT(TT) {
-      if ("object" !== typeof TT || null === TT || Array.isArray(TT)) return "The pack has no files.";
-      const UT = [];
-      for (const [mT, WT] of Object.entries(TT)) {
-        if ("string" !== typeof WT) return `${mT} isn't text.`;
-        UT.push({
-          path: mT,
-          source: WT
+    function UB(BB) {
+      if ("object" !== typeof BB || null === BB || Array.isArray(BB)) return "The pack has no files.";
+      const jB = [];
+      for (const [zB, QB] of Object.entries(BB)) {
+        if ("string" !== typeof QB) return `${zB} isn't text.`;
+        jB.push({
+          path: zB,
+          source: QB
         })
       }
-      return UT.sort(((TT, UT) => lT(TT.path, UT.path))),
-        function(TT) {
-          if (0 === TT.length) return "The pack has no .wgsl files.";
-          if (TT.length > nT) return `The pack has more than ${nT} .wgsl files.`;
-          const UT = new Set;
+      return jB.sort(((BB, jB) => pB(BB.path, jB.path))),
+        function(BB) {
+          if (0 === BB.length) return "The pack has no .wgsl files.";
+          if (BB.length > NB) return `The pack has more than ${NB} .wgsl files.`;
+          const jB = new Set;
           for (const {
-              path: mT
+              path: zB
             }
-            of TT) {
-            const TT = pT(mT);
-            if (null !== TT) return TT;
-            if (UT.has(mT)) return `The pack has two files at ${mT}.`;
-            UT.add(mT)
+            of BB) {
+            const BB = sB(zB);
+            if (null !== BB) return BB;
+            if (jB.has(zB)) return `The pack has two files at ${zB}.`;
+            jB.add(zB)
           }
-          return LT(TT) > gT ? `The pack's .wgsl files are over ${gT/1024} KB in total.` : null
-        }(UT) ?? UT
+          return rB(BB) > IB ? `The pack's .wgsl files are over ${IB/1024} KB in total.` : null
+        }(jB) ?? jB
     }
 
-    function jT(TT) {
-      const UT = {};
-      for (const mT of TT) UT[mT.path] = mT.source;
-      return UT
+    function aB(BB) {
+      const jB = {};
+      for (const zB of BB) jB[zB.path] = zB.source;
+      return jB
     }
 
-    function lT(TT, UT) {
-      return TT < UT ? -1 : TT > UT ? 1 : 0
+    function pB(BB, jB) {
+      return BB < jB ? -1 : BB > jB ? 1 : 0
     }
 
-    function LT(TT) {
-      const UT = new TextEncoder;
-      let mT = 0;
+    function rB(BB) {
+      const jB = new TextEncoder;
+      let zB = 0;
       for (const {
-          source: WT
+          source: QB
         }
-        of TT) mT += UT.encode(WT).byteLength;
-      return mT
+        of BB) zB += jB.encode(QB).byteLength;
+      return zB
     }
 
-    function pT(TT) {
-      if (!TT.toLowerCase().endsWith(".wgsl")) return `${TT} isn't a .wgsl file.`;
-      if (TT.length > HT) return `A file path is over ${HT} characters.`;
-      if (TT.includes("\\") || /[\u0000-\u001f]/.test(TT)) return `${TT} isn't a valid file path.`;
-      return TT.split("/").some((TT => "" === TT || "." === TT || ".." === TT)) ? `${TT} isn't a valid file path.` : null
+    function sB(BB) {
+      if (!BB.toLowerCase().endsWith(".wgsl")) return `${BB} isn't a .wgsl file.`;
+      if (BB.length > uB) return `A file path is over ${uB} characters.`;
+      if (BB.includes("\\") || /[\u0000-\u001f]/.test(BB)) return `${BB} isn't a valid file path.`;
+      return BB.split("/").some((BB => "" === BB || "." === BB || ".." === BB)) ? `${BB} isn't a valid file path.` : null
     }
-    const BT = /^(.*)\[rot\[([1-4])$/;
+    const JB = /^(.*)\[rot\[([1-4])$/;
 
-    function ZT(TT, UT) {
-      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const WT = new Map;
-      UT.forEach(((TT, UT) => {
+    function mB(BB, jB) {
+      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const QB = new Map;
+      jB.forEach(((BB, jB) => {
         let {
-          numAnimStates: mT,
-          animStartIdx: zT
-        } = TT;
-        for (let MT = 1; MT < mT; MT++) WT.set(zT + MT - 1, UT)
+          numAnimStates: zB,
+          animStartIdx: nB
+        } = BB;
+        for (let dB = 1; dB < zB; dB++) QB.set(nB + dB - 1, jB)
       }));
-      const zT = Object.entries(TT),
-        MT = new Map;
-      for (const [ZT, cT] of zT) {
-        const TT = BT.exec(ZT);
-        "1" === TT?.[2] && MT.set(TT[1], cT + 1)
+      const nB = Object.entries(BB),
+        dB = new Map;
+      for (const [mB, yB] of nB) {
+        const BB = JB.exec(mB);
+        "1" === BB?.[2] && dB.set(BB[1], yB + 1)
       }
-      const gT = TT => {
-          const UT = BT.exec(TT);
-          return UT && MT.has(UT[1]) ? {
-            root: UT[1],
-            rotation: Number(UT[2]) - 1
+      const IB = BB => {
+          const jB = JB.exec(BB);
+          return jB && dB.has(jB[1]) ? {
+            root: jB[1],
+            rotation: Number(jB[2]) - 1
           } : null
         },
-        nT = new Set(zT.map((TT => {
-          let [UT] = TT;
-          return gT(UT)?.root ?? UT
+        NB = new Set(nB.map((BB => {
+          let [jB] = BB;
+          return IB(jB)?.root ?? jB
         }))),
-        HT = (TT, mT) => {
-          const WT = TT.replace(/_?0$/, "");
-          return (UT[mT]?.numAnimStates ?? 0) > 1 && !nT.has(WT) ? WT : TT
+        uB = (BB, zB) => {
+          const QB = BB.replace(/_?0$/, "");
+          return (jB[zB]?.numAnimStates ?? 0) > 1 && !NB.has(QB) ? QB : BB
         },
-        kT = new Map;
-      for (const [BT, ZT] of zT) kT.set(ZT, HT(gT(BT)?.root ?? BT, ZT));
-      const jT = zT.reduce(((TT, UT) => {
-          let [, mT] = UT;
-          return Math.max(TT, mT + 1)
+        UB = new Map;
+      for (const [JB, mB] of nB) UB.set(mB, uB(IB(JB)?.root ?? JB, mB));
+      const aB = nB.reduce(((BB, jB) => {
+          let [, zB] = jB;
+          return Math.max(BB, zB + 1)
         }), 0),
-        lT = Array.from({
-          length: jT
-        }, ((TT, UT) => ({
-          id: UT + 1,
+        pB = Array.from({
+          length: aB
+        }, ((BB, jB) => ({
+          id: jB + 1,
           rotation: 0
         }))),
-        LT = new Map,
-        pT = new Map;
-      for (const [BT, ZT] of zT) {
-        const TT = gT(BT),
-          UT = WT.get(ZT);
-        if (void 0 !== UT) {
-          const mT = kT.get(UT);
-          pT.set(BT, {
-            name: BT,
-            texture: mT,
+        rB = new Map,
+        sB = new Map;
+      for (const [JB, mB] of nB) {
+        const BB = IB(JB),
+          jB = QB.get(mB);
+        if (void 0 !== jB) {
+          const zB = UB.get(jB);
+          sB.set(JB, {
+            name: JB,
+            texture: zB,
             kind: "frame"
-          }), TT && !pT.has(TT.root) && pT.set(TT.root, {
-            name: TT.root,
-            texture: mT,
+          }), BB && !sB.has(BB.root) && sB.set(BB.root, {
+            name: BB.root,
+            texture: zB,
             kind: "frame"
           });
           continue
         }
-        const mT = kT.get(ZT),
-          zT = TT?.root ?? BT;
-        if (mT !== zT && pT.set(zT, {
-            name: zT,
-            texture: mT,
+        const zB = UB.get(mB),
+          nB = BB?.root ?? JB;
+        if (zB !== nB && sB.set(nB, {
+            name: nB,
+            texture: zB,
             kind: "frame"
-          }), TT) {
-          const UT = MT.get(TT.root);
-          lT[ZT] = {
-            id: UT,
-            rotation: TT.rotation
-          }, LT.set(mT, UT), pT.set(BT, {
-            name: BT,
-            texture: mT,
+          }), BB) {
+          const jB = dB.get(BB.root);
+          pB[mB] = {
+            id: jB,
+            rotation: BB.rotation
+          }, rB.set(zB, jB), sB.set(JB, {
+            name: JB,
+            texture: zB,
             kind: "rotation"
           })
-        } else LT.set(mT, ZT + 1)
+        } else rB.set(zB, mB + 1)
       }
-      for (const BT of LT.keys()) pT.delete(BT);
-      for (const [BT, ZT] of mT) {
-        const TT = LT.get(ZT);
-        void 0 === TT || LT.has(BT) || (LT.set(BT, TT), pT.delete(BT))
+      for (const JB of rB.keys()) sB.delete(JB);
+      for (const [JB, mB] of zB) {
+        const BB = rB.get(mB);
+        void 0 === BB || rB.has(JB) || (rB.set(JB, BB), sB.delete(JB))
       }
       return {
-        named: [...LT].sort(((TT, UT) => {
-          let [mT] = TT, [WT] = UT;
-          return mT < WT ? -1 : mT > WT ? 1 : 0
-        })).map((TT => {
-          let [UT, mT] = TT;
+        named: [...rB].sort(((BB, jB) => {
+          let [zB] = BB, [QB] = jB;
+          return zB < QB ? -1 : zB > QB ? 1 : 0
+        })).map((BB => {
+          let [jB, zB] = BB;
           return {
-            name: UT,
-            id: mT
+            name: jB,
+            id: zB
           }
         })),
-        aliases: [...pT.values()],
-        layers: lT
+        aliases: [...sB.values()],
+        layers: pB
       }
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

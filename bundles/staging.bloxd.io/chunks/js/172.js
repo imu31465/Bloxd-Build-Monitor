@@ -1,11 +1,11 @@
 export const id = 172;
 export const ids = [172];
 export const modules = {
-  9108: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      pageBody: () => WT
+  9017: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      pageBody: () => QB
     });
-    const WT = {
+    const QB = {
       whatIs: ["It all starts on one tiny island floating high in the sky. In Bloxd Skyblock, that little island becomes a full RPG. You'll level up skills, take on quests, beat dungeon bosses and trade at the auction house, and bit by bit your island turns into something special. There's nothing to install, so you can be standing on it in seconds. Fancy starting from a single block instead? Try One Block. After island PvP? That's Sky Islands."],
       howToPlay: ["Your first quest is an easy one. Gather logs on your island, craft a bridge and cross to the portal to get to the Hub. That's where everyone hangs out. Up Dog the auctioneer runs the Open Market, so you can buy and sell items with other players there. The Banker looks after your Gold Coins, and the quest givers always have something for you to do. From the Hub, portals take you to Manor Farm, the Dungeons and Cragrock Mines (a meteor has just crashed there).", "You've got five skills to level: Foraging, Combat, Mining, Farming and Fishing. Each one goes up by doing the thing. Chop wood and pick flowers for Foraging. Beat creatures for Combat. Break ores for Mining, harvest fully grown crops for Farming and catch fish for Fishing. Every skill has a starter quest that hands you a tool to speed things up, and each Combat level adds a bit more damage. Got Gold Coins to spare? Spend them on decorative blocks in the Instant Buy shop and make your island look exactly how you want."],
       features: ["Your Own Private Sky Island to Grow and Decorate", "5 Skills to Level Up: Foraging, Combat, Mining, Farming and Fishing", "Quests That Give You an Axe, Sword, Pickaxe, Hoe and Fishing Rod", "Explore the Hub, Manor Farm, Cragrock Mines and the Dungeons", "Timed Dungeons with Boss Fights on Easy, Medium, Hard and Insane", "Buy and Sell Items with Other Players at the Auction House", "Visit Other Players' Islands", "Daily Rewards, Streaks and Leaderboards"],
@@ -40,4 +40,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

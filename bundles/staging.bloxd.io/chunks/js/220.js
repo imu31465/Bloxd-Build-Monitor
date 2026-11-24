@@ -1,83 +1,83 @@
 export const id = 220;
 export const ids = [220, 296];
 export const modules = {
-  41433: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      CharacterCustomisationUI: () => zU
+  41373: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      CharacterCustomisationUI: () => nj
     });
-    var WT = mT(63),
-      zT = mT(3137),
-      MT = mT(1225),
-      gT = mT(1126),
-      nT = mT.n(gT),
-      HT = mT(1336),
-      kT = mT(641),
-      jT = mT(1288),
-      lT = mT(2348),
-      LT = mT(1688),
-      pT = mT(2685);
-    const BT = HT.t.filter((TT => !LT.f.includes(TT)));
+    var QB = zB(62),
+      nB = zB(3116),
+      dB = zB(1169),
+      IB = zB(1091),
+      NB = zB.n(IB),
+      uB = zB(1270),
+      UB = zB(635),
+      aB = zB(1240),
+      pB = zB(2302),
+      rB = zB(1585),
+      sB = zB(2667);
+    const JB = uB.v.filter((BB => !rB.g.includes(BB)));
 
-    function ZT(TT, UT) {
-      return BT.includes(TT) && "string" === typeof UT && (0, pT.h)(TT, UT)
+    function mB(BB, jB) {
+      return JB.includes(BB) && "string" === typeof jB && (0, sB.g)(BB, jB)
     }
 
-    function cT(TT) {
-      const UT = {};
-      for (const mT of BT) {
-        const WT = TT[mT];
-        void 0 !== WT && ZT(mT, WT) && (UT[mT] = WT)
+    function yB(BB) {
+      const jB = {};
+      for (const zB of JB) {
+        const QB = BB[zB];
+        void 0 !== QB && mB(zB, QB) && (jB[zB] = QB)
       }
-      return UT
+      return jB
     }
 
-    function vT(TT) {
-      return 0 === Object.keys(TT).length
+    function kB(BB) {
+      return 0 === Object.keys(BB).length
     }
 
-    function fT(TT, UT) {
-      return Object.entries(TT).every((TT => {
-        let [mT, WT] = TT;
-        return UT[mT] === WT
+    function GB(BB, jB) {
+      return Object.entries(BB).every((BB => {
+        let [zB, QB] = BB;
+        return jB[zB] === QB
       }))
     }
-    var qT = mT(2355),
-      iT = mT(3219),
-      bT = mT(2089),
-      OT = mT(1569),
-      eT = mT(2391),
-      YT = mT(25),
-      JT = mT(2805),
-      xT = mT(1613),
-      dT = mT(1231),
-      wT = mT(1976);
-    class tT {
+    var LB = zB(2304),
+      gB = zB(3201),
+      tB = zB(2025),
+      SB = zB(1478),
+      MB = zB(2338),
+      EB = zB(28),
+      iB = zB(2807),
+      qB = zB(1532),
+      fB = zB(1173),
+      oB = zB(1901);
+    class HB {
       constructor() {
         this.slots = new Map, this.before = new Map, this.accountId = null
       }
-      moveTo(TT) {
-        null !== TT && TT !== this.accountId && (null !== this.accountId && this.slots.size > 0 && (console.warn("saved_outfits_dropped_on_account_switch", this.slots.size), this.slots.clear()), null !== this.accountId && this.before.clear(), this.accountId = TT)
+      moveTo(BB) {
+        null !== BB && BB !== this.accountId && (null !== this.accountId && this.slots.size > 0 && (console.warn("saved_outfits_dropped_on_account_switch", this.slots.size), this.slots.clear()), null !== this.accountId && this.before.clear(), this.accountId = BB)
       }
-      isFor(TT) {
-        return null === this.accountId || this.accountId === TT
+      isFor(BB) {
+        return null === this.accountId || this.accountId === BB
       }
-      overlay(TT) {
-        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-        return TT.map(((TT, mT) => {
-          var WT, zT;
-          return null !== (WT = null !== (zT = this.slots.get(mT)) && void 0 !== zT ? zT : UT.get(mT)) && void 0 !== WT ? WT : TT
+      overlay(BB) {
+        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+        return BB.map(((BB, zB) => {
+          var QB, nB;
+          return null !== (QB = null !== (nB = this.slots.get(zB)) && void 0 !== nB ? nB : jB.get(zB)) && void 0 !== QB ? QB : BB
         }))
       }
     }
-    class aT extends JT.d {
+    class DB extends iB.d {
       constructor() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new tT;
-        super("saved outfits", (async UT => {
-          const mT = TT.isFor(UT.whamm),
-            WT = new Map(TT.slots),
-            zT = await xT.b.getSavedOutfits(UT);
-          return mT ? TT.overlay(zT, WT) : zT
-        })), this.unsaved = TT, this.started = !1, this.sending = !1
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new HB;
+        super("saved outfits", (async jB => {
+          const zB = BB.isFor(jB.whamm),
+            QB = new Map(BB.slots),
+            nB = await qB.b.getSavedOutfits(jB);
+          return zB ? BB.overlay(nB, QB) : nB
+        })), this.unsaved = BB, this.started = !1, this.sending = !1
       }
       ensureLoaded() {
         if (this.started) {
@@ -85,994 +85,994 @@ export const modules = {
         } else this.started = !0, this.watchAccount();
         this.refresh()
       }
-      save(TT, UT) {
-        var mT, WT;
-        (this.unsaved.moveTo(this.getState().accountId), this.unsaved.before.has(TT)) || this.unsaved.before.set(TT, null !== (mT = null === (WT = this.getState().data) || void 0 === WT ? void 0 : WT[TT]) && void 0 !== mT ? mT : {});
-        this.unsaved.slots.set(TT, UT), this.update((mT => mT.map(((mT, WT) => WT === TT ? UT : mT)))), this.sending || this.sendUnsaved()
+      save(BB, jB) {
+        var zB, QB;
+        (this.unsaved.moveTo(this.getState().accountId), this.unsaved.before.has(BB)) || this.unsaved.before.set(BB, null !== (zB = null === (QB = this.getState().data) || void 0 === QB ? void 0 : QB[BB]) && void 0 !== zB ? zB : {});
+        this.unsaved.slots.set(BB, jB), this.update((zB => zB.map(((zB, QB) => QB === BB ? jB : zB)))), this.sending || this.sendUnsaved()
       }
-      clear(TT) {
-        this.save(TT, {})
+      clear(BB) {
+        this.save(BB, {})
       }
       async sendUnsaved() {
         this.sending = !0;
-        let TT = !1;
+        let BB = !1;
         for (; this.unsaved.slots.size > 0;) {
-          const mT = new Map(this.unsaved.slots);
-          let WT = this.getState().accountId;
+          const zB = new Map(this.unsaved.slots);
+          let QB = this.getState().accountId;
           try {
-            const TT = await dT.userContextManager.getCurrentUserContext();
-            if (WT = TT.whamm, this.unsaved.moveTo(TT.whamm), 0 === this.unsaved.slots.size) {
+            const BB = await fB.userContextManager.getCurrentUserContext();
+            if (QB = BB.whamm, this.unsaved.moveTo(BB.whamm), 0 === this.unsaved.slots.size) {
               this.refresh();
               break
             }
             const {
-              accountId: UT,
-              data: zT
+              accountId: jB,
+              data: nB
             } = this.getState();
-            let MT = zT;
-            UT === TT.whamm && null !== MT || (MT = this.unsaved.overlay(await xT.b.getSavedOutfits(TT)), this.refresh()), await xT.b.setSavedOutfits(TT, MT), this.unsaved.isFor(TT.whamm) && MT.forEach(((TT, UT) => {
-              const WT = this.unsaved.slots.get(UT);
-              void 0 === WT || WT === mT.get(UT) ? this.unsaved.before.delete(UT) : this.unsaved.before.set(UT, TT)
+            let dB = nB;
+            jB === BB.whamm && null !== dB || (dB = this.unsaved.overlay(await qB.b.getSavedOutfits(BB)), this.refresh()), await qB.b.setSavedOutfits(BB, dB), this.unsaved.isFor(BB.whamm) && dB.forEach(((BB, jB) => {
+              const QB = this.unsaved.slots.get(jB);
+              void 0 === QB || QB === zB.get(jB) ? this.unsaved.before.delete(jB) : this.unsaved.before.set(jB, BB)
             }))
-          } catch (UT) {
-            if (console.error("Failed to save outfits", UT), this.getState().accountId === WT && [...this.unsaved.slots].every((TT => {
-                let [UT, WT] = TT;
-                return mT.get(UT) === WT
+          } catch (jB) {
+            if (console.error("Failed to save outfits", jB), this.getState().accountId === QB && [...this.unsaved.slots].every((BB => {
+                let [jB, QB] = BB;
+                return zB.get(jB) === QB
               }))) {
-              const UT = [...mT.values()].every(vT);
-              wT.i.showMessage({
-                translationKey: UT ? "homePage:deleteOutfitFailed" : "homePage:saveOutfitFailed"
+              const jB = [...zB.values()].every(kB);
+              oB.f.showMessage({
+                translationKey: jB ? "homePage:deleteOutfitFailed" : "homePage:saveOutfitFailed"
               });
-              const WT = new Map(this.unsaved.before);
-              this.unsaved.before.clear(), this.update((TT => TT.map(((TT, UT) => {
-                var mT;
-                return null !== (mT = WT.get(UT)) && void 0 !== mT ? mT : TT
-              })))), TT = !0
+              const QB = new Map(this.unsaved.before);
+              this.unsaved.before.clear(), this.update((BB => BB.map(((BB, jB) => {
+                var zB;
+                return null !== (zB = QB.get(jB)) && void 0 !== zB ? zB : BB
+              })))), BB = !0
             }
           }
-          for (const [TT, UT] of mT) this.unsaved.slots.get(TT) === UT && this.unsaved.slots.delete(TT)
+          for (const [BB, jB] of zB) this.unsaved.slots.get(BB) === jB && this.unsaved.slots.delete(BB)
         }
-        this.sending = !1, TT && this.refresh()
+        this.sending = !1, BB && this.refresh()
       }
     }
-    const yT = new aT;
-    var XT = mT(366),
-      IT = mT(41439),
-      QT = mT(1685),
-      sT = mT(2446),
-      FT = mT(3130),
-      PT = mT(2286),
-      VT = mT(2713),
-      uT = mT(1135);
-    mT(34311), mT(3226);
+    const FB = new DB;
+    var YB = zB(376),
+      VB = zB(41379),
+      hB = zB(1583),
+      XB = zB(2397),
+      ZB = zB(3109),
+      AB = zB(2224),
+      TB = zB(2711),
+      PB = zB(1108);
+    zB(34283), zB(3210);
     Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI;
-    var CT = mT(2395),
-      rT = mT(1475),
-      KT = mT(2493),
-      ST = mT(1457),
-      GT = mT(1188);
+    var WB = zB(2346),
+      eB = zB(1388),
+      lB = zB(2458),
+      wB = zB(1381),
+      xB = zB(1148);
 
-    function NT(TT) {
+    function KB(BB) {
       let {
-        wornOutfit: UT,
-        onApply: mT,
-        onOverwrite: zT,
-        onDelete: gT
-      } = TT;
+        wornOutfit: jB,
+        onApply: zB,
+        onOverwrite: nB,
+        onDelete: IB
+      } = BB;
       const {
-        t: HT
-      } = (0, jT.z)(), {
-        accountId: kT,
-        data: lT
-      } = (0, JT.h)(yT, !1), {
-        userContext: LT
-      } = (0, MT.d)();
-      async function pT(TT, UT) {
-        const mT = await ST.NotificationProvider.showPromptPopup({
+        t: uB
+      } = (0, aB.D)(), {
+        accountId: UB,
+        data: pB
+      } = (0, iB.k)(FB, !1), {
+        userContext: rB
+      } = (0, dB.d)();
+      async function sB(BB, jB) {
+        const zB = await wB.NotificationProvider.showPromptPopup({
             title: "homePage:deleteOutfitConfirm",
             confirmText: "general:delete",
             cancelText: "general:cancel",
             destructive: !0
           }).getResult(),
           {
-            accountId: WT,
-            data: zT
-          } = yT.getState();
-        var MT, nT;
-        !0 === mT && WT === kT && null !== zT && (fT(MT = zT[TT], nT = UT) && fT(nT, MT)) && (yT.clear(TT), gT(TT))
+            accountId: QB,
+            data: nB
+          } = FB.getState();
+        var dB, NB;
+        !0 === zB && QB === UB && null !== nB && (GB(dB = nB[BB], NB = jB) && GB(NB, dB)) && (FB.clear(BB), IB(BB))
       }
-      return (0, WT.useEffect)((() => {
-        yT.ensureLoaded()
-      }), []), null === lT || kT !== LT.whamm ? null : (0, GT.jsxs)("div", {
+      return (0, QB.useEffect)((() => {
+        FB.ensureLoaded()
+      }), []), null === pB || UB !== rB.whamm ? null : (0, xB.jsxs)("div", {
         className: "CosmeticPackGroup SavedOutfits",
-        children: [(0, GT.jsx)("div", {
+        children: [(0, xB.jsx)("div", {
           className: "CosmeticPackGroupLabel",
-          children: (0, GT.jsx)("span", {
+          children: (0, xB.jsx)("span", {
             className: "CosmeticPackGroupLabelName",
-            children: HT("homePage:myOutfits")
+            children: uB("homePage:myOutfits")
           })
-        }), (0, GT.jsx)("div", {
+        }), (0, xB.jsx)("div", {
           className: "CharacterPresetsGrid SavedOutfitsGrid",
-          children: lT.map(((TT, WT) => {
-            const MT = vT(TT);
-            return (0, GT.jsxs)("div", {
-              className: nT()("SavedOutfitSlot", {
-                SavedOutfitSlotFilled: !MT
+          children: pB.map(((BB, QB) => {
+            const dB = kB(BB);
+            return (0, xB.jsxs)("div", {
+              className: NB()("SavedOutfitSlot", {
+                SavedOutfitSlotFilled: !dB
               }),
-              children: [(0, GT.jsxs)("div", {
-                ...(0, OT.R)(),
-                role: MT ? "button" : "link",
+              children: [(0, xB.jsxs)("div", {
+                ...(0, SB.S)(),
+                role: dB ? "button" : "link",
                 "data-pad-focusable": !0,
-                className: nT()("CharacterPresetCard SavedOutfitCard", {
-                  SavedOutfitCardEmpty: MT,
-                  CharacterPresetCardActive: !MT && fT(TT, UT)
+                className: NB()("CharacterPresetCard SavedOutfitCard", {
+                  SavedOutfitCardEmpty: dB,
+                  CharacterPresetCardActive: !dB && GB(BB, jB)
                 }),
                 onClick: () => {
-                  MT ? yT.save(WT, UT) : mT(TT)
+                  dB ? FB.save(QB, jB) : zB(BB)
                 },
-                children: [MT && (0, GT.jsxs)(GT.Fragment, {
-                  children: [(0, GT.jsx)(uT.c, {
+                children: [dB && (0, xB.jsxs)(xB.Fragment, {
+                  children: [(0, xB.jsx)(PB.c, {
                     name: "plus"
-                  }), HT("homePage:saveOutfit")]
-                }), !MT && (0, GT.jsxs)(GT.Fragment, {
-                  children: [(0, GT.jsx)("div", {
+                  }), uB("homePage:saveOutfit")]
+                }), !dB && (0, xB.jsxs)(xB.Fragment, {
+                  children: [(0, xB.jsx)("div", {
                     className: "SavedOutfitCardPicture",
-                    children: (0, GT.jsx)(KT.e, {
-                      cosmetics: TT
+                    children: (0, xB.jsx)(lB.c, {
+                      cosmetics: BB
                     })
-                  }), (0, GT.jsx)(OT.L, {
+                  }), (0, xB.jsx)(SB.M, {
                     padSecondaryLabelKey: "homePage:saveOutfit",
                     stopPropagation: !0,
                     onClick: () => {
-                      fT(UT, TT) || (yT.save(WT, UT), zT(WT, TT))
+                      GB(jB, BB) || (FB.save(QB, jB), nB(QB, BB))
                     },
-                    children: HT("general:save")
+                    children: uB("general:save")
                   })]
                 })]
-              }), !MT && (0, GT.jsx)(OT.I, {
+              }), !dB && (0, xB.jsx)(SB.G, {
                 className: "SavedOutfitDeleteButton",
-                ariaLabel: HT("general:delete"),
+                ariaLabel: uB("general:delete"),
                 onClick: () => {
-                  pT(WT, TT)
+                  sB(QB, BB)
                 },
-                children: (0, GT.jsx)(uT.c, {
+                children: (0, xB.jsx)(PB.c, {
                   name: "trash-can"
                 })
               })]
-            }, WT)
+            }, QB)
           }))
         })]
       })
     }
-    var ET = mT(36465),
-      hT = mT(2676),
-      DT = mT(2682);
+    var CB = zB(36467),
+      cB = zB(2656),
+      bB = zB(2660);
 
-    function oT(TT, UT, mT) {
-      return null !== TT && !(0, hT.j)(DT.e, UT, mT, TT.collected, TT.ownedPacks)
+    function vB(BB, jB, zB) {
+      return null !== BB && !(0, cB.m)(bB.c, jB, zB, BB.collected, BB.ownedPacks)
     }
 
-    function AT(TT) {
+    function RB(BB) {
       let {
-        locked: UT,
-        children: mT
-      } = TT;
-      return UT ? (0, GT.jsx)(RT, {
-        children: mT
-      }) : mT
+        locked: jB,
+        children: zB
+      } = BB;
+      return jB ? (0, xB.jsx)(OB, {
+        children: zB
+      }) : zB
     }
 
-    function RT(TT) {
-      var UT;
+    function OB(BB) {
+      var jB;
       let {
-        children: mT
-      } = TT;
+        children: zB
+      } = BB;
       const {
-        t: WT
-      } = (0, jT.z)(), {
-        userContext: zT
-      } = (0, MT.d)(), gT = null !== (UT = zT.dailyDrop) && void 0 !== UT && UT.hidden ? WT("dailyDrop:lockedFromHidden") : WT("dailyDrop:lockedFrom");
-      return (0, GT.jsx)(rT.e, {
-        tooltipInner: (0, GT.jsx)(GT.Fragment, {
-          children: gT
+        t: QB
+      } = (0, aB.D)(), {
+        userContext: nB
+      } = (0, dB.d)(), IB = null !== (jB = nB.dailyDrop) && void 0 !== jB && jB.hidden ? QB("dailyDrop:lockedFromHidden") : QB("dailyDrop:lockedFrom");
+      return (0, xB.jsx)(eB.g, {
+        tooltipInner: (0, xB.jsx)(xB.Fragment, {
+          children: IB
         }),
-        children: mT
+        children: zB
       })
     }
 
-    function TU(TT, UT, mT) {
-      return (0, lT.m)(TT, UT).purchasable && !(0, sT.u)(TT, UT, mT)
+    function Bj(BB, jB, zB) {
+      return (0, pB.l)(BB, jB).purchasable && !(0, XB.m)(BB, jB, zB)
     }
 
-    function UU(TT, UT) {
-      return Object.entries(TT).some((TT => {
-        let [mT, WT] = TT;
-        return TU(mT, WT, UT)
+    function jj(BB, jB) {
+      return Object.entries(BB).some((BB => {
+        let [zB, QB] = BB;
+        return Bj(zB, QB, jB)
       }))
     }
 
-    function mU(TT) {
-      var UT;
+    function zj(BB) {
+      var jB;
       let {
-        pack: mT,
-        ownedPacks: WT,
-        showStoreLink: zT = !1,
-        children: MT
-      } = TT;
+        pack: zB,
+        ownedPacks: QB,
+        showStoreLink: nB = !1,
+        children: dB
+      } = BB;
       const {
-        t: gT
-      } = (0, jT.z)(), HT = QT.b[mT], kT = HT.purchasable && !WT.includes(mT) && QT.s.includes(mT), lT = FT.l[mT];
-      return (0, GT.jsxs)("div", {
-        className: nT()("CosmeticPackGroup", {
-          CosmeticPackGroupLocked: kT
+        t: IB
+      } = (0, aB.D)(), uB = hB.e[zB], UB = uB.purchasable && !QB.includes(zB) && hB.r.includes(zB), pB = ZB.g[zB];
+      return (0, xB.jsxs)("div", {
+        className: NB()("CosmeticPackGroup", {
+          CosmeticPackGroupLocked: UB
         }),
-        children: [lT && (0, GT.jsx)(lT, {}), (0, GT.jsxs)("div", {
+        children: [pB && (0, xB.jsx)(pB, {}), (0, xB.jsxs)("div", {
           className: "CosmeticPackGroupLabel",
-          children: [(0, GT.jsx)("span", {
+          children: [(0, xB.jsx)("span", {
             className: "CosmeticPackGroupLabelName",
-            children: null !== (UT = HT.displayName) && void 0 !== UT ? UT : mT
-          }), (kT || zT) && (0, GT.jsxs)(OT.B, {
+            children: null !== (jB = uB.displayName) && void 0 !== jB ? jB : zB
+          }), (UB || nB) && (0, xB.jsxs)(SB.B, {
             onClick: () => {
-              kT ? (0, FT.j)(mT) : (0, eT.p)({
+              UB ? (0, ZB.f)(zB) : (0, MB.p)({
                 mode: "self",
                 source: "characterCustomisation"
               })
             },
-            children: [(0, GT.jsx)(uT.c, {
+            children: [(0, xB.jsx)(PB.c, {
               name: "store"
-            }), " ", gT("general:viewInShop")]
+            }), " ", IB("general:viewInShop")]
           })]
-        }), kT && "bee" === mT && (0, GT.jsx)(FT.e, {}), MT]
+        }), UB && "bee" === zB && (0, xB.jsx)(ZB.b, {}), dB]
       })
     }
 
-    function WU(TT) {
+    function Qj(BB) {
       let {
-        equippedEmoteIds: UT,
-        ownedPacks: mT,
-        canBuy: WT,
-        onUpdateLoadout: zT,
-        onEmoteSelected: MT,
-        onEquipPreviewSkin: gT
-      } = TT;
+        equippedEmoteIds: jB,
+        ownedPacks: zB,
+        canBuy: QB,
+        onUpdateLoadout: nB,
+        onEmoteSelected: dB,
+        onEquipPreviewSkin: IB
+      } = BB;
       const {
-        t: kT
-      } = (0, jT.z)(), LT = new Set(UT), pT = new Map, BT = Object.keys(lT.f.emote).sort(((TT, UT) => {
-        var mT, WT, zT, MT;
-        return (null !== (mT = null === (WT = (0, lT.j)("emote", TT)) || void 0 === WT ? void 0 : WT.clientIdx) && void 0 !== mT ? mT : 0) - (null !== (zT = null === (MT = (0, lT.j)("emote", UT)) || void 0 === MT ? void 0 : MT.clientIdx) && void 0 !== zT ? zT : 0)
-      })).filter((TT => {
-        const UT = (0, lT.m)("emote", TT),
-          zT = (0, sT.u)("emote", TT, mT);
-        return !(UT.purchasable && !zT && !WT) && (UT.clientSelectable || zT)
+        t: UB
+      } = (0, aB.D)(), rB = new Set(jB), sB = new Map, JB = Object.keys(pB.d.emote).sort(((BB, jB) => {
+        var zB, QB, nB, dB;
+        return (null !== (zB = null === (QB = (0, pB.j)("emote", BB)) || void 0 === QB ? void 0 : QB.clientIdx) && void 0 !== zB ? zB : 0) - (null !== (nB = null === (dB = (0, pB.j)("emote", jB)) || void 0 === dB ? void 0 : dB.clientIdx) && void 0 !== nB ? nB : 0)
+      })).filter((BB => {
+        const jB = (0, pB.l)("emote", BB),
+          nB = (0, XB.m)("emote", BB, zB);
+        return !(jB.purchasable && !nB && !QB) && (jB.clientSelectable || nB)
       }));
-      for (const nT of BT) {
-        const TT = (0, lT.j)("emote", nT).cosmeticPack;
-        pT.has(TT) || pT.set(TT, []), pT.get(TT).push(nT)
+      for (const NB of JB) {
+        const BB = (0, pB.j)("emote", NB).cosmeticPack;
+        sB.has(BB) || sB.set(BB, []), sB.get(BB).push(NB)
       }
-      const ZT = Array.from(pT.keys());
-      return (0, GT.jsxs)("div", {
+      const mB = Array.from(sB.keys());
+      return (0, xB.jsxs)("div", {
         className: "CharCustomisPartSelectorWrapper",
-        children: [!1, (0, GT.jsxs)("div", {
+        children: [!1, (0, xB.jsxs)("div", {
           className: "EmoteLoadoutSummary",
-          children: [(0, GT.jsx)("span", {
+          children: [(0, xB.jsx)("span", {
             className: "EmoteLoadoutSummaryText SmallTextBold",
-            children: kT("emotes:equippedCount", {
-              count: UT.length,
-              max: HT.j
+            children: UB("emotes:equippedCount", {
+              count: jB.length,
+              max: uB.n
             })
-          }), (0, GT.jsx)("span", {
+          }), (0, xB.jsx)("span", {
             className: "EmoteLoadoutSummaryHint SmallTextLight",
-            children: kT("emotes:loadoutHint")
+            children: UB("emotes:loadoutHint")
           })]
-        }), ZT.map((TT => {
-          const WT = pT.get(TT);
-          return (0, GT.jsx)(mU, {
-            pack: TT,
-            ownedPacks: mT,
-            children: (0, GT.jsx)("div", {
+        }), mB.map((BB => {
+          const QB = sB.get(BB);
+          return (0, xB.jsx)(zj, {
+            pack: BB,
+            ownedPacks: zB,
+            children: (0, xB.jsx)("div", {
               className: "CosmeticPackGroupItems",
-              children: WT.map((TT => {
-                var WT;
-                const gT = UT.indexOf(TT),
-                  jT = -1 !== gT,
-                  lT = UT.length >= HT.j,
-                  pT = TU("emote", TT, mT),
-                  BT = pT || !jT && lT,
-                  ZT = (0, qT.h)(TT);
-                return (0, GT.jsxs)("div", {
-                  className: nT()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
-                    SelectedCharCustomPartWrapper: jT
+              children: QB.map((BB => {
+                var QB;
+                const IB = jB.indexOf(BB),
+                  aB = -1 !== IB,
+                  pB = jB.length >= uB.n,
+                  sB = Bj("emote", BB, zB),
+                  JB = sB || !aB && pB,
+                  mB = (0, LB.f)(BB);
+                return (0, xB.jsxs)("div", {
+                  className: NB()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
+                    SelectedCharCustomPartWrapper: aB
                   }),
                   onClick: () => {
-                    MT(TT)
+                    dB(BB)
                   },
-                  children: [(0, GT.jsxs)("div", {
+                  children: [(0, xB.jsxs)("div", {
                     className: "CharCustomPart EmoteCustomPart",
-                    children: [(0, GT.jsx)("div", {
+                    children: [(0, xB.jsx)("div", {
                       className: "EmoteCustomPartIcon",
                       style: {
-                        backgroundImage: `url(/textures/charSkins/previews/emote_${TT}_preview.png)`
+                        backgroundImage: `url(/textures/charSkins/previews/emote_${BB}_preview.png)`
                       },
                       "aria-hidden": !0
-                    }), (0, GT.jsx)("span", {
+                    }), (0, xB.jsx)("span", {
                       className: "EmoteCustomPartLabel SmallTextBold",
-                      children: null !== (WT = null === ZT || void 0 === ZT ? void 0 : ZT.displayName) && void 0 !== WT ? WT : TT
+                      children: null !== (QB = null === mB || void 0 === mB ? void 0 : mB.displayName) && void 0 !== QB ? QB : BB
                     })]
-                  }), (0, GT.jsxs)("div", {
+                  }), (0, xB.jsxs)("div", {
                     className: "EmoteCustomPartToggleContainer",
-                    children: [jT && (0, GT.jsx)("span", {
+                    children: [aB && (0, xB.jsx)("span", {
                       className: "EmoteCustomPartSlotBadge",
-                      children: gT + 1
-                    }), pT && (0, GT.jsx)(uT.c, {
+                      children: IB + 1
+                    }), sB && (0, xB.jsx)(PB.c, {
                       name: "lock",
                       className: "LockedCosmeticIcon"
-                    }), (0, GT.jsx)(rT.e, {
-                      tooltipInner: (0, GT.jsx)(GT.Fragment, {
-                        children: kT(jT ? "general:remove" : "general:add")
+                    }), (0, xB.jsx)(eB.g, {
+                      tooltipInner: (0, xB.jsx)(xB.Fragment, {
+                        children: UB(aB ? "general:remove" : "general:add")
                       }),
                       delayShow: 0,
                       delayHide: 0,
-                      children: (0, GT.jsx)("div", {
-                        className: nT()("EmoteCustomPartToggle", {
-                          EmoteCustomPartToggleDisabled: BT,
-                          EmoteCustomPartToggleEquipped: jT
+                      children: (0, xB.jsx)("div", {
+                        className: NB()("EmoteCustomPartToggle", {
+                          EmoteCustomPartToggleDisabled: JB,
+                          EmoteCustomPartToggleEquipped: aB
                         }),
-                        onClick: mT => {
-                          mT.stopPropagation(), BT || function(TT) {
-                            LT.has(TT) ? zT(UT.filter((UT => UT !== TT))) : UT.length >= HT.j || zT([...UT, TT])
-                          }(TT)
+                        onClick: zB => {
+                          zB.stopPropagation(), JB || function(BB) {
+                            rB.has(BB) ? nB(jB.filter((jB => jB !== BB))) : jB.length >= uB.n || nB([...jB, BB])
+                          }(BB)
                         },
-                        children: (0, GT.jsx)(uT.c, {
-                          name: jT ? "minus" : "plus",
+                        children: (0, xB.jsx)(PB.c, {
+                          name: aB ? "minus" : "plus",
                           "aria-hidden": !0
                         })
                       })
                     })]
                   })]
-                }, TT)
+                }, BB)
               }))
             })
-          }, TT)
+          }, BB)
         }))]
       })
     }
-    const zU = (0, WT.memo)((function(TT) {
+    const nj = (0, QB.memo)((function(BB) {
       let {
-        selectedTab: UT
-      } = TT;
-      const mT = "characters" === UT ? "skin" : UT,
+        selectedTab: jB
+      } = BB;
+      const zB = "characters" === jB ? "skin" : jB,
         {
-          t: gT
-        } = (0, jT.z)(),
+          t: IB
+        } = (0, aB.D)(),
         {
-          userContext: BT,
-          isUserContextUpdating: ZT
-        } = (0, MT.d)(),
-        vT = (0, zT.d)(),
+          userContext: JB,
+          isUserContextUpdating: mB
+        } = (0, dB.d)(),
+        kB = (0, nB.d)(),
         {
-          gameState: qT
-        } = (0, YT.h)(["gameState"]),
-        [JT, xT] = (0, WT.useState)({}),
-        [dT, wT] = (0, WT.useState)({}),
-        [tT, aT] = (0, WT.useState)(null),
+          gameState: LB
+        } = (0, EB.m)(["gameState"]),
+        [iB, qB] = (0, QB.useState)({}),
+        [fB, oB] = (0, QB.useState)({}),
+        [HB, DB] = (0, QB.useState)(null),
         {
-          previewEmote: FT,
-          triggerEmote: rT
-        } = (0, iT.c)(),
-        KT = (0, WT.useRef)(HT.t.reduce(((TT, UT) => (TT[UT] = (0, pT.e)(UT), TT)), {})),
-        ST = (0, WT.useRef)(!1),
-        hT = (0, WT.useRef)(null),
-        DT = (0, WT.useRef)(null),
-        RT = (0, WT.useRef)(null);
+          previewEmote: ZB,
+          triggerEmote: eB
+        } = (0, gB.e)(),
+        lB = (0, QB.useRef)(uB.v.reduce(((BB, jB) => (BB[jB] = (0, sB.d)(jB), BB)), {})),
+        wB = (0, QB.useRef)(!1),
+        cB = (0, QB.useRef)(null),
+        bB = (0, QB.useRef)(null),
+        OB = (0, QB.useRef)(null);
 
-      function zU() {
-        null !== DT.current && (clearTimeout(DT.current), DT.current = null);
-        const TT = RT.current;
-        null !== TT && (RT.current = null, (0, ET.b)(BT, [
-          ["emote", TT]
+      function nj() {
+        null !== bB.current && (clearTimeout(bB.current), bB.current = null);
+        const BB = OB.current;
+        null !== BB && (OB.current = null, (0, CB.b)(JB, [
+          ["emote", BB]
         ]))
       }
 
-      function MU(TT, UT, mT) {
-        var WT, zT, MT;
-        KT.current = {
-          ...KT.current,
-          [TT]: UT
-        }, vT(), mT && ((0, ET.b)(BT, [
-          [TT, UT]
-        ]), aT(null));
-        const gT = (0, lT.j)(TT, UT);
-        if (null !== gT && void 0 !== gT && gT.colourGroup && null !== (WT = QT.b[gT.cosmeticPack].colourGroups) && void 0 !== WT && null !== (zT = WT[gT.colourGroup]) && void 0 !== zT && zT.showSwatchSelector) {
-          const mT = (0, lT.i)(UT);
-          mT && wT((UT => ({
-            ...UT,
-            [`${gT.cosmeticPack}_${TT}_${gT.colourGroup}`]: parseInt(mT[1])
+      function dj(BB, jB, zB) {
+        var QB, nB, dB;
+        lB.current = {
+          ...lB.current,
+          [BB]: jB
+        }, kB(), zB && ((0, CB.b)(JB, [
+          [BB, jB]
+        ]), DB(null));
+        const IB = (0, pB.j)(BB, jB);
+        if (null !== IB && void 0 !== IB && IB.colourGroup && null !== (QB = hB.e[IB.cosmeticPack].colourGroups) && void 0 !== QB && null !== (nB = QB[IB.colourGroup]) && void 0 !== nB && nB.showSwatchSelector) {
+          const zB = (0, pB.f)(jB);
+          zB && oB((jB => ({
+            ...jB,
+            [`${IB.cosmeticPack}_${BB}_${IB.colourGroup}`]: parseInt(zB[1])
           })))
         }
-        null !== (MT = hT.current) && void 0 !== MT && MT.isReady() && hT.current.updateCosmetic(TT, UT)
+        null !== (dB = cB.current) && void 0 !== dB && dB.isReady() && cB.current.updateCosmetic(BB, jB)
       }
 
-      function gU(TT) {
-        xT((UT => {
-          const mT = {
-            ...UT
+      function Ij(BB) {
+        qB((jB => {
+          const zB = {
+            ...jB
           };
-          return delete mT[TT], mT
+          return delete zB[BB], zB
         }))
       }
 
-      function nU(TT, UT) {
+      function Nj(BB, jB) {
         let {
-          undoable: mT
-        } = UT;
-        Object.keys(JT).length > 0 && xT({});
-        const WT = Object.entries(TT).filter((TT => {
-          let [UT, mT] = TT;
-          return KT.current[UT] !== mT && !TU(UT, mT, HU) && !oT(kU, UT, mT)
+          undoable: zB
+        } = jB;
+        Object.keys(iB).length > 0 && qB({});
+        const QB = Object.entries(BB).filter((BB => {
+          let [jB, zB] = BB;
+          return lB.current[jB] !== zB && !Bj(jB, zB, uj) && !vB(Uj, jB, zB)
         }));
-        mT ? WT.length > 0 && aT({
+        zB ? QB.length > 0 && DB({
           kind: "worn",
-          outfit: cT(KT.current)
-        }) : aT(null);
-        for (const [zT, MT] of WT) MU(zT, MT, !1);
-        WT.length > 0 && (0, ET.b)(BT, WT)
-      }(0, bT.e)("cosmeticsUpdated", (TT => {
-        let UT = !1;
+          outfit: yB(lB.current)
+        }) : DB(null);
+        for (const [nB, dB] of QB) dj(nB, dB, !1);
+        QB.length > 0 && (0, CB.b)(JB, QB)
+      }(0, tB.d)("cosmeticsUpdated", (BB => {
+        let jB = !1;
         for (const {
-            local: mT,
-            wM: WT,
-            tM: zT
+            local: zB,
+            Wd: QB,
+            ld: nB
           }
-          of TT) {
-          if (!mT) return;
-          UT = !0, ST.current || MU(WT, zT, !1), vT()
+          of BB) {
+          if (!zB) return;
+          jB = !0, wB.current || dj(QB, nB, !1), kB()
         }
-        UT && (ST.current = !0)
-      })), (0, WT.useEffect)((() => {
-        if (!ZT) {
-          for (const [TT, UT] of Object.entries(BT.getPlayerCosmetics())) MU(TT, UT, !1);
-          vT()
+        jB && (wB.current = !0)
+      })), (0, QB.useEffect)((() => {
+        if (!mB) {
+          for (const [BB, jB] of Object.entries(JB.getPlayerCosmetics())) dj(BB, jB, !1);
+          kB()
         }
-      }), [ZT]), (0, WT.useEffect)((() => () => {
-        zU()
+      }), [mB]), (0, QB.useEffect)((() => () => {
+        nj()
       }), []);
-      const HU = BT.getOwnedCosmeticPacks(),
-        kU = function(TT, UT) {
-          return null === TT ? null : {
-            collected: new Set(TT.collected),
-            ownedPacks: UT
+      const uj = JB.getOwnedCosmeticPacks(),
+        Uj = function(BB, jB) {
+          return null === BB ? null : {
+            collected: new Set(BB.collected),
+            ownedPacks: jB
           }
-        }(BT.dailyDrop, HU),
-        jU = (0, CT.usePurchasesAllowed)(),
-        lU = Object.keys(lT.f[mT]).filter((TT => {
-          const UT = (0, lT.m)(mT, TT),
-            WT = (0, sT.u)(mT, TT, HU);
-          return !(UT.purchasable && !WT && !jU) && (UT.clientSelectable || WT)
-        })).sort(((TT, UT) => {
-          var WT, zT, MT, gT;
-          return (null !== (WT = null === (zT = (0, lT.j)(mT, TT)) || void 0 === zT ? void 0 : zT.clientIdx) && void 0 !== WT ? WT : 0) - (null !== (MT = null === (gT = (0, lT.j)(mT, UT)) || void 0 === gT ? void 0 : gT.clientIdx) && void 0 !== MT ? MT : 0)
+        }(JB.dailyDrop, uj),
+        aj = (0, WB.usePurchasesAllowed)(),
+        pj = Object.keys(pB.d[zB]).filter((BB => {
+          const jB = (0, pB.l)(zB, BB),
+            QB = (0, XB.m)(zB, BB, uj);
+          return !(jB.purchasable && !QB && !aj) && (jB.clientSelectable || QB)
+        })).sort(((BB, jB) => {
+          var QB, nB, dB, IB;
+          return (null !== (QB = null === (nB = (0, pB.j)(zB, BB)) || void 0 === nB ? void 0 : nB.clientIdx) && void 0 !== QB ? QB : 0) - (null !== (dB = null === (IB = (0, pB.j)(zB, jB)) || void 0 === IB ? void 0 : IB.clientIdx) && void 0 !== dB ? dB : 0)
         })),
-        LU = new Map;
-      for (const WT of lU) {
-        var pU;
-        const TT = null === (pU = (0, lT.j)(mT, WT)) || void 0 === pU ? void 0 : pU.cosmeticPack;
-        LU.has(TT) || LU.set(TT, []), LU.get(TT).push(WT)
+        rj = new Map;
+      for (const QB of pj) {
+        var sj;
+        const BB = null === (sj = (0, pB.j)(zB, QB)) || void 0 === sj ? void 0 : sj.cosmeticPack;
+        rj.has(BB) || rj.set(BB, []), rj.get(BB).push(QB)
       }
-      const BU = function(TT, UT) {
-          const mT = new Set,
-            WT = new Set;
-          for (const [zT, MT] of Object.entries(lT.f[TT])) {
-            if (void 0 === MT.colourGroup) continue;
-            const gT = `${MT.cosmeticPack}_${MT.colourGroup}`;
-            (TU(TT, zT, UT) ? WT : mT).add(gT)
+      const Jj = function(BB, jB) {
+          const zB = new Set,
+            QB = new Set;
+          for (const [nB, dB] of Object.entries(pB.d[BB])) {
+            if (void 0 === dB.colourGroup) continue;
+            const IB = `${dB.cosmeticPack}_${dB.colourGroup}`;
+            (Bj(BB, nB, jB) ? QB : zB).add(IB)
           }
-          return new Set([...mT].filter((TT => WT.has(TT))))
-        }(mT, HU),
-        ZU = new Map;
-      for (const [WT, zT] of LU) {
-        const TT = [],
-          UT = new Map;
-        for (const WT of zT) {
-          var cU, vU;
-          const zT = null !== (cU = null === (vU = (0, lT.j)(mT, WT)) || void 0 === vU ? void 0 : vU.colourGroup) && void 0 !== cU ? cU : null;
-          UT.has(zT) || (UT.set(zT, []), TT.push(zT)), UT.get(zT).push(WT)
+          return new Set([...zB].filter((BB => QB.has(BB))))
+        }(zB, uj),
+        mj = new Map;
+      for (const [QB, nB] of rj) {
+        const BB = [],
+          jB = new Map;
+        for (const QB of nB) {
+          var yj, kj;
+          const nB = null !== (yj = null === (kj = (0, pB.j)(zB, QB)) || void 0 === kj ? void 0 : kj.colourGroup) && void 0 !== yj ? yj : null;
+          jB.has(nB) || (jB.set(nB, []), BB.push(nB)), jB.get(nB).push(QB)
         }
-        const MT = TT.map((TT => {
-          var zT;
-          const MT = UT.get(TT),
-            gT = TT ? null === (zT = QT.b[WT].colourGroups) || void 0 === zT ? void 0 : zT[TT] : void 0,
-            nT = !0 === (null === gT || void 0 === gT ? void 0 : gT.showSwatchSelector) && !BU.has(`${WT}_${TT}`);
-          if (nT && gT) {
-            var HT;
-            const UT = null !== (HT = dT[`${WT}_${mT}_${TT}`]) && void 0 !== HT ? HT : (0, QT.i)(gT.colours);
+        const dB = BB.map((BB => {
+          var nB;
+          const dB = jB.get(BB),
+            IB = BB ? null === (nB = hB.e[QB].colourGroups) || void 0 === nB ? void 0 : nB[BB] : void 0,
+            NB = !0 === (null === IB || void 0 === IB ? void 0 : IB.showSwatchSelector) && !Jj.has(`${QB}_${BB}`);
+          if (NB && IB) {
+            var uB;
+            const jB = null !== (uB = fB[`${QB}_${zB}_${BB}`]) && void 0 !== uB ? uB : (0, hB.i)(IB.colours);
             return {
-              groupName: TT,
-              showSwatch: nT,
-              cosmetics: MT.filter((TT => {
-                const mT = (0, lT.i)(TT);
-                return !mT || UT.toString() === mT[1].toString()
+              groupName: BB,
+              showSwatch: NB,
+              cosmetics: dB.filter((BB => {
+                const zB = (0, pB.f)(BB);
+                return !zB || jB.toString() === zB[1].toString()
               }))
             }
           }
           return {
-            groupName: TT,
-            cosmetics: MT,
-            showSwatch: nT
+            groupName: BB,
+            cosmetics: dB,
+            showSwatch: NB
           }
         }));
-        ZU.set(WT, MT)
+        mj.set(QB, dB)
       }
-      const fU = Array.from(LU.keys()),
-        qU = new Map;
-      for (const [WT, zT] of Object.entries(LT.e)) {
-        const TT = QT.b[zT.cosmeticPack],
-          UT = !UU(zT.cosmetics, HU),
-          mT = QT.n.some((TT => (0, QT.f)(TT) === WT));
-        (TT.clientSelectable || mT || UT) && ((!TT.purchasable || UT || jU) && (qU.has(zT.cosmeticPack) || qU.set(zT.cosmeticPack, []), qU.get(zT.cosmeticPack).push([WT, zT])))
+      const Gj = Array.from(rj.keys()),
+        Lj = new Map;
+      for (const [QB, nB] of Object.entries(rB.d)) {
+        const BB = hB.e[nB.cosmeticPack],
+          jB = !jj(nB.cosmetics, uj),
+          zB = hB.o.some((BB => (0, hB.g)(BB) === QB));
+        (BB.clientSelectable || zB || jB) && ((!BB.purchasable || jB || aj) && (Lj.has(nB.cosmeticPack) || Lj.set(nB.cosmeticPack, []), Lj.get(nB.cosmeticPack).push([QB, nB])))
       }
-      const iU = Array.from(qU.keys());
-      return (0, GT.jsxs)("div", {
+      const gj = Array.from(Lj.keys());
+      return (0, xB.jsxs)("div", {
         className: "CharCustomisationBody",
-        children: [("cape" === mT || "nameColour" === mT) && !BT.playerHasRank("super") && (0, GT.jsxs)("div", {
+        children: [("cape" === zB || "nameColour" === zB) && !JB.playerHasRank("super") && (0, xB.jsxs)("div", {
           className: "CharCustomisationBodyHeader",
-          children: [(0, GT.jsx)(uT.c, {
+          children: [(0, xB.jsx)(PB.c, {
             name: "bolt"
-          }), gT("homePage:unlockWithSuperRank"), jU && (0, GT.jsx)(OT.l, {
+          }), IB("homePage:unlockWithSuperRank"), aj && (0, xB.jsx)(SB.m, {
             onClick: () => {
-              (0, eT.p)({
+              (0, MB.p)({
                 mode: "self",
                 source: "characterCustomisation",
                 openItem: "superRank"
               })
             },
-            children: gT("general:getItNow")
+            children: IB("general:getItNow")
           })]
-        }), (0, GT.jsxs)("div", {
+        }), (0, xB.jsxs)("div", {
           className: "CharCustomisationBodyInner",
-          children: ["characters" === UT && (0, GT.jsxs)("div", {
+          children: ["characters" === jB && (0, xB.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, (0, GT.jsx)(NT, {
-              wornOutfit: cT(KT.current),
-              onApply: TT => {
-                nU(TT, {
+            children: [!1, (0, xB.jsx)(KB, {
+              wornOutfit: yB(lB.current),
+              onApply: BB => {
+                Nj(BB, {
                   undoable: !0
                 })
               },
-              onOverwrite: (TT, UT) => {
-                aT({
+              onOverwrite: (BB, jB) => {
+                DB({
                   kind: "slot",
-                  slot: TT,
-                  outfit: UT
+                  slot: BB,
+                  outfit: jB
                 })
               },
-              onDelete: TT => {
-                aT((UT => "slot" === (null === UT || void 0 === UT ? void 0 : UT.kind) && UT.slot === TT ? null : UT))
+              onDelete: BB => {
+                DB((jB => "slot" === (null === jB || void 0 === jB ? void 0 : jB.kind) && jB.slot === BB ? null : jB))
               }
-            }), iU.map((TT => {
-              const UT = qU.get(TT);
-              return (0, GT.jsx)(mU, {
-                pack: TT,
-                ownedPacks: HU,
-                showStoreLink: !QT.r.includes(TT) && UT.some((TT => {
+            }), gj.map((BB => {
+              const jB = Lj.get(BB);
+              return (0, xB.jsx)(zj, {
+                pack: BB,
+                ownedPacks: uj,
+                showStoreLink: !hB.p.includes(BB) && jB.some((BB => {
                   let [, {
-                    cosmetics: UT
-                  }] = TT;
-                  return UU(UT, HU)
+                    cosmetics: jB
+                  }] = BB;
+                  return jj(jB, uj)
                 })),
-                children: (0, GT.jsx)("div", {
+                children: (0, xB.jsx)("div", {
                   className: "CharacterPresetsGrid",
-                  children: UT.map((TT => {
-                    let [UT, {
-                      cosmetics: mT
-                    }] = TT;
-                    const WT = UU(mT, HU),
-                      zT = !WT && function(TT, UT) {
-                        return Object.entries(UT).some((UT => {
-                          let [mT, WT] = UT;
-                          return oT(TT, mT, WT)
+                  children: jB.map((BB => {
+                    let [jB, {
+                      cosmetics: zB
+                    }] = BB;
+                    const QB = jj(zB, uj),
+                      nB = !QB && function(BB, jB) {
+                        return Object.entries(jB).some((jB => {
+                          let [zB, QB] = jB;
+                          return vB(BB, zB, QB)
                         }))
-                      }(kU, mT),
-                      MT = WT || zT,
-                      gT = fT(mT, JT),
-                      HT = !gT && fT(mT, KT.current);
-                    return (0, GT.jsx)(AT, {
-                      locked: zT,
-                      children: (0, GT.jsxs)("div", {
+                      }(Uj, zB),
+                      dB = QB || nB,
+                      IB = GB(zB, iB),
+                      uB = !IB && GB(zB, lB.current);
+                    return (0, xB.jsx)(RB, {
+                      locked: nB,
+                      children: (0, xB.jsxs)("div", {
                         "data-pad-focusable": !0,
-                        className: nT()("CharacterPresetCard", {
-                          CharacterPresetCardActive: HT,
-                          CharacterPresetCardTryingOn: gT
+                        className: NB()("CharacterPresetCard", {
+                          CharacterPresetCardActive: uB,
+                          CharacterPresetCardTryingOn: IB
                         }),
                         onClick: () => {
-                          MT ? function(TT) {
-                            fT(TT, JT) ? xT({}) : xT({
-                              ...TT
+                          dB ? function(BB) {
+                            GB(BB, iB) ? qB({}) : qB({
+                              ...BB
                             })
-                          }(mT) : nU(mT, {
+                          }(zB) : Nj(zB, {
                             undoable: !0
                           })
                         },
-                        children: [(0, GT.jsx)("div", {
+                        children: [(0, xB.jsx)("div", {
                           className: "CharacterPresetCardPreview",
                           style: {
-                            backgroundImage: `url(/textures/charSkins/previews/character_${UT}_preview.png)`
+                            backgroundImage: `url(/textures/charSkins/previews/character_${jB}_preview.png)`
                           }
-                        }), MT && (0, GT.jsx)(uT.c, {
+                        }), dB && (0, xB.jsx)(PB.c, {
                           name: "lock",
                           className: "LockedCosmeticIcon"
                         })]
                       })
-                    }, UT)
+                    }, jB)
                   }))
                 })
-              }, TT)
+              }, BB)
             }))]
-          }), "emote" === UT && (0, GT.jsx)(WU, {
-            equippedEmoteIds: (0, pT.l)(KT.current.emote),
-            ownedPacks: HU,
-            canBuy: jU,
-            onUpdateLoadout: TT => {
-              const UT = (0, pT.n)(TT);
-              var mT;
-              KT.current = {
-                ...KT.current,
-                emote: UT
-              }, BT.setPlayerCosmetics("emote", UT), vT(), mT = UT, RT.current = mT, null !== DT.current && clearTimeout(DT.current), DT.current = setTimeout(zU, 350)
+          }), "emote" === jB && (0, xB.jsx)(Qj, {
+            equippedEmoteIds: (0, sB.j)(lB.current.emote),
+            ownedPacks: uj,
+            canBuy: aj,
+            onUpdateLoadout: BB => {
+              const jB = (0, sB.k)(BB);
+              var zB;
+              lB.current = {
+                ...lB.current,
+                emote: jB
+              }, JB.setPlayerCosmetics("emote", jB), kB(), zB = jB, OB.current = zB, null !== bB.current && clearTimeout(bB.current), bB.current = setTimeout(nj, 350)
             },
-            onEmoteSelected: rT,
+            onEmoteSelected: eB,
             onEquipPreviewSkin: () => {
-              ! function(TT, UT) {
-                for (const mT of HT.t) "cape" !== mT && "nameColour" !== mT && "emote" !== mT && TT(mT, "skin" === mT ? "skin_preview" : `${mT}_none`, !1);
-                UT()
-              }(MU, vT)
+              ! function(BB, jB) {
+                for (const zB of uB.v) "cape" !== zB && "nameColour" !== zB && "emote" !== zB && BB(zB, "skin" === zB ? "skin_preview" : `${zB}_none`, !1);
+                jB()
+              }(dj, kB)
             }
-          }), "characters" !== UT && "emote" !== UT && (0, GT.jsxs)("div", {
+          }), "characters" !== jB && "emote" !== jB && (0, xB.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, fU.map((TT => {
-              const UT = ZU.get(TT);
-              return (0, GT.jsx)(mU, {
-                pack: TT,
-                ownedPacks: HU,
-                children: UT.map((UT => {
-                  var WT;
+            children: [!1, Gj.map((BB => {
+              const jB = mj.get(BB);
+              return (0, xB.jsx)(zj, {
+                pack: BB,
+                ownedPacks: uj,
+                children: jB.map((jB => {
+                  var QB;
                   let {
-                    groupName: zT,
-                    cosmetics: MT,
-                    showSwatch: gT
-                  } = UT;
-                  const HT = zT ? null === (WT = QT.b[TT].colourGroups) || void 0 === WT ? void 0 : WT[zT] : void 0,
-                    jT = `${TT}_${mT}_${zT}`;
-                  return (0, GT.jsxs)("div", {
+                    groupName: nB,
+                    cosmetics: dB,
+                    showSwatch: IB
+                  } = jB;
+                  const uB = nB ? null === (QB = hB.e[BB].colourGroups) || void 0 === QB ? void 0 : QB[nB] : void 0,
+                    aB = `${BB}_${zB}_${nB}`;
+                  return (0, xB.jsxs)("div", {
                     className: "CosmeticPackGroupItems",
-                    children: [gT && HT && (0, GT.jsx)("div", {
+                    children: [IB && uB && (0, xB.jsx)("div", {
                       className: "CosmeticColorSwatchCell",
-                      children: [...HT.colours.map(((TT, UT) => ({
-                        color: TT,
-                        index: UT
-                      })))].sort(((TT, UT) => TT.color.order - UT.color.order)).map((UT => {
-                        var WT;
+                      children: [...uB.colours.map(((BB, jB) => ({
+                        color: BB,
+                        index: jB
+                      })))].sort(((BB, jB) => BB.color.order - jB.color.order)).map((jB => {
+                        var QB;
                         let {
-                          color: MT,
-                          index: gT
-                        } = UT;
-                        return (0, GT.jsx)("div", {
-                          className: nT()("CosmeticColorOption", {
-                            CosmeticColorOptionSelected: (null !== (WT = dT[jT]) && void 0 !== WT ? WT : (0, QT.i)(HT.colours)) === gT
+                          color: dB,
+                          index: IB
+                        } = jB;
+                        return (0, xB.jsx)("div", {
+                          className: NB()("CosmeticColorOption", {
+                            CosmeticColorOptionSelected: (null !== (QB = fB[aB]) && void 0 !== QB ? QB : (0, hB.i)(uB.colours)) === IB
                           }),
                           style: {
-                            backgroundColor: `rgb(${MT.rbg.join(",")})`
+                            backgroundColor: `rgb(${dB.rbg.join(",")})`
                           },
                           onClick: () => {
-                            var UT;
-                            wT((TT => ({
-                              ...TT,
-                              [jT]: gT
+                            var jB;
+                            oB((BB => ({
+                              ...BB,
+                              [aB]: IB
                             })));
-                            const WT = JT[mT],
-                              MT = WT ? (0, lT.j)(mT, WT) : null,
-                              nT = (null === MT || void 0 === MT ? void 0 : MT.cosmeticPack) === TT,
-                              HT = nT ? WT : KT.current[mT],
-                              kT = nT ? MT : (0, lT.j)(mT, HT);
-                            if ((null === kT || void 0 === kT ? void 0 : kT.cosmeticPack) !== TT) return;
-                            if ((null !== (UT = null === kT || void 0 === kT ? void 0 : kT.colourGroup) && void 0 !== UT ? UT : null) !== zT) return;
-                            const LT = (0, lT.i)(HT);
-                            if (LT) {
-                              const TT = `${mT}_${LT[0]}_${gT}`;
-                              TU(mT, TT, HU) || oT(kU, mT, TT) ? xT((UT => ({
-                                ...UT,
-                                [mT]: TT
-                              }))) : (nT && gU(mT), MU(mT, TT, !0))
+                            const QB = iB[zB],
+                              dB = QB ? (0, pB.j)(zB, QB) : null,
+                              NB = (null === dB || void 0 === dB ? void 0 : dB.cosmeticPack) === BB,
+                              uB = NB ? QB : lB.current[zB],
+                              UB = NB ? dB : (0, pB.j)(zB, uB);
+                            if ((null === UB || void 0 === UB ? void 0 : UB.cosmeticPack) !== BB) return;
+                            if ((null !== (jB = null === UB || void 0 === UB ? void 0 : UB.colourGroup) && void 0 !== jB ? jB : null) !== nB) return;
+                            const rB = (0, pB.f)(uB);
+                            if (rB) {
+                              const BB = `${zB}_${rB[0]}_${IB}`;
+                              Bj(zB, BB, uj) || vB(Uj, zB, BB) ? qB((jB => ({
+                                ...jB,
+                                [zB]: BB
+                              }))) : (NB && Ij(zB), dj(zB, BB, !0))
                             }
                           }
-                        }, MT.rbg.join())
+                        }, dB.rbg.join())
                       }))
-                    }), MT.map((TT => {
-                      const UT = TT === KT.current[mT],
-                        WT = JT[mT] === TT,
-                        zT = TU(mT, TT, HU),
-                        MT = !zT && oT(kU, mT, TT),
-                        gT = zT || MT;
-                      let HT = !0;
-                      return gT || UT || ("cape" !== mT || (0, XT.de)(BT.getPlayerRanks(), TT)) && ("nameColour" !== mT || BT.playerHasRank("super")) || (HT = !1), (0, GT.jsx)(AT, {
-                        locked: MT,
-                        children: (0, GT.jsxs)("div", {
-                          className: nT()("CharCustomPartWrapper", {
-                            SelectedCharCustomPartWrapper: UT && !WT,
-                            TryingOnCharCustomPartWrapper: WT,
-                            DisabledCharCustomPartWrapper: !HT,
-                            CharCustomPartWrapperProfileEffect: "profileEffect" === mT
+                    }), dB.map((BB => {
+                      const jB = BB === lB.current[zB],
+                        QB = iB[zB] === BB,
+                        nB = Bj(zB, BB, uj),
+                        dB = !nB && vB(Uj, zB, BB),
+                        IB = nB || dB;
+                      let uB = !0;
+                      return IB || jB || ("cape" !== zB || (0, YB.Xd)(JB.getPlayerRanks(), BB)) && ("nameColour" !== zB || JB.playerHasRank("super")) || (uB = !1), (0, xB.jsx)(RB, {
+                        locked: dB,
+                        children: (0, xB.jsxs)("div", {
+                          className: NB()("CharCustomPartWrapper", {
+                            SelectedCharCustomPartWrapper: jB && !QB,
+                            TryingOnCharCustomPartWrapper: QB,
+                            DisabledCharCustomPartWrapper: !uB,
+                            CharCustomPartWrapperProfileEffect: "profileEffect" === zB
                           }),
                           onClick: () => {
-                            if (HT)
-                              if (gT) xT((UT => {
-                                if (UT[mT] === TT) {
-                                  const TT = {
-                                    ...UT
+                            if (uB)
+                              if (IB) qB((jB => {
+                                if (jB[zB] === BB) {
+                                  const BB = {
+                                    ...jB
                                   };
-                                  return delete TT[mT], TT
+                                  return delete BB[zB], BB
                                 }
                                 return {
-                                  ...UT,
-                                  [mT]: TT
+                                  ...jB,
+                                  [zB]: BB
                                 }
                               }));
                               else {
-                                var UT;
-                                if (JT[mT] && gU(mT), TT === KT.current[mT]) return;
-                                null !== (UT = hT.current) && void 0 !== UT && UT.isReady() && MU(mT, TT, !0)
+                                var jB;
+                                if (iB[zB] && Ij(zB), BB === lB.current[zB]) return;
+                                null !== (jB = cB.current) && void 0 !== jB && jB.isReady() && dj(zB, BB, !0)
                               }
                           },
-                          children: ["profileEffect" === mT ? (0, GT.jsx)("div", {
+                          children: ["profileEffect" === zB ? (0, xB.jsx)("div", {
                             className: "CharCustomPart CharCustomProfileEffect",
-                            children: (0, GT.jsx)(VT.i, {
-                              playerSocialPreview: (0, PT.b)(TT, {
-                                name: BT.getPlayerName(),
-                                cosmetics: BT.getPlayerCosmetics()
+                            children: (0, xB.jsx)(TB.g, {
+                              playerSocialPreview: (0, AB.c)(BB, {
+                                name: JB.getPlayerName(),
+                                cosmetics: JB.getPlayerCosmetics()
                               }),
                               showLocation: !1,
                               opensProfileCard: !1
                             })
-                          }) : (0, GT.jsx)("div", {
-                            className: nT()("CharCustomPart", {
-                              PixelatedImage: "cape" === mT
+                          }) : (0, xB.jsx)("div", {
+                            className: NB()("CharCustomPart", {
+                              PixelatedImage: "cape" === zB
                             }),
-                            style: (0, lT.j)(mT, TT).previewTex ? {
-                              backgroundImage: `url(/textures/charSkins/previews/${(0,lT.j)(mT,TT).previewTex}.png)`
+                            style: (0, pB.j)(zB, BB).previewTex ? {
+                              backgroundImage: `url(/textures/charSkins/previews/${(0,pB.j)(zB,BB).previewTex}.png)`
                             } : {
-                              backgroundColor: kT.u[TT]
+                              backgroundColor: UB.n[BB]
                             }
-                          }), gT && (0, GT.jsx)(uT.c, {
+                          }), IB && (0, xB.jsx)(PB.c, {
                             name: "lock",
                             className: "LockedCosmeticIcon"
                           })]
                         })
-                      }, TT)
+                      }, BB)
                     }))]
-                  }, null !== zT && void 0 !== zT ? zT : "ungrouped")
+                  }, null !== nB && void 0 !== nB ? nB : "ungrouped")
                 }))
-              }, TT)
+              }, BB)
             }))]
-          }), tT && (0, GT.jsxs)(OT.e, {
+          }), HB && (0, xB.jsxs)(SB.f, {
             className: "CharCustomisationUndo",
             onClick: () => {
-              "worn" === tT.kind ? nU(tT.outfit, {
+              "worn" === HB.kind ? Nj(HB.outfit, {
                 undoable: !1
-              }) : (yT.save(tT.slot, tT.outfit), aT(null))
+              }) : (FB.save(HB.slot, HB.outfit), DB(null))
             },
-            children: [(0, GT.jsx)(uT.c, {
+            children: [(0, xB.jsx)(PB.c, {
               name: "rotate-left"
-            }), gT("general:undo")]
-          }), (0, GT.jsx)(IT.CharacterPreview, {
-            ref: hT,
-            forcedCosmetics: JT,
-            tn: FT.id,
-            emotePlaySeq: FT.seq,
+            }), IB("general:undo")]
+          }), (0, xB.jsx)(VB.CharacterPreview, {
+            ref: cB,
+            forcedCosmetics: iB,
+            TN: ZB.id,
+            emotePlaySeq: ZB.seq,
             onReady: () => {
-              for (const TT of HT.t) MU(TT, KT.current[TT], !1)
+              for (const BB of uB.v) dj(BB, lB.current[BB], !1)
             }
           })]
         })]
       })
     }))
   },
-  41439: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      CharacterPreview: () => lT
+  41379: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      CharacterPreview: () => pB
     });
-    var WT = mT(63),
-      zT = mT(2856),
-      MT = mT(1336),
-      gT = mT(2685),
-      nT = mT(34311),
-      HT = mT(3746),
-      kT = mT(1188);
-    const jT = .6 * Math.PI,
-      lT = (0, WT.memo)((0, WT.forwardRef)((function(TT, UT) {
+    var QB = zB(62),
+      nB = zB(2853),
+      dB = zB(1270),
+      IB = zB(2667),
+      NB = zB(34283),
+      uB = zB(3742),
+      UB = zB(1148);
+    const aB = .6 * Math.PI,
+      pB = (0, QB.memo)((0, QB.forwardRef)((function(BB, jB) {
         let {
-          onReady: mT,
-          onDrawn: lT,
-          owner: LT = "other",
-          framing: pT = "player",
-          forcedCosmetics: BT,
-          tn: ZT,
-          emotePlaySeq: cT,
-          turntableFromYaw: vT = null
-        } = TT;
-        const fT = (0, WT.useRef)(null),
+          onReady: zB,
+          onDrawn: pB,
+          owner: rB = "other",
+          framing: sB = "player",
+          forcedCosmetics: JB,
+          TN: mB,
+          emotePlaySeq: yB,
+          turntableFromYaw: kB = null
+        } = BB;
+        const GB = (0, QB.useRef)(null),
           {
-            width: qT,
-            height: iT
-          } = (0, zT.b)(fT),
-          bT = (0, WT.useRef)(null),
-          OT = (0, WT.useRef)({}),
-          eT = (0, WT.useRef)({}),
-          [YT, JT] = (0, WT.useState)(!1),
-          xT = (0, WT.useRef)(mT);
-        xT.current = mT;
-        const dT = (0, WT.useRef)(lT);
-        dT.current = lT;
-        const wT = (0, WT.useRef)(null),
-          tT = (0, WT.useRef)(!1),
-          aT = (0, WT.useRef)(!1),
-          yT = (0, WT.useCallback)((() => {
-            const TT = bT.current;
-            if (!TT || !dT.current || tT.current || !aT.current) return;
-            const UT = {};
-            wT.current = UT, queueMicrotask((() => {
-              if (wT.current !== UT) return;
-              const mT = Promise.all(MT.t.map((UT => TT.untilDrawn(UT)))).catch((TT => {
-                  console.error("Failed to draw the character preview", TT)
+            width: LB,
+            height: gB
+          } = (0, nB.b)(GB),
+          tB = (0, QB.useRef)(null),
+          SB = (0, QB.useRef)({}),
+          MB = (0, QB.useRef)({}),
+          [EB, iB] = (0, QB.useState)(!1),
+          qB = (0, QB.useRef)(zB);
+        qB.current = zB;
+        const fB = (0, QB.useRef)(pB);
+        fB.current = pB;
+        const oB = (0, QB.useRef)(null),
+          HB = (0, QB.useRef)(!1),
+          DB = (0, QB.useRef)(!1),
+          FB = (0, QB.useCallback)((() => {
+            const BB = tB.current;
+            if (!BB || !fB.current || HB.current || !DB.current) return;
+            const jB = {};
+            oB.current = jB, queueMicrotask((() => {
+              if (oB.current !== jB) return;
+              const zB = Promise.all(dB.v.map((jB => BB.untilDrawn(jB)))).catch((BB => {
+                  console.error("Failed to draw the character preview", BB)
                 })),
-                WT = new Promise((TT => {
-                  setTimeout(TT, 1e4)
+                QB = new Promise((BB => {
+                  setTimeout(BB, 1e4)
                 }));
-              Promise.race([mT, WT]).then((() => {
-                var mT;
-                bT.current !== TT || wT.current !== UT || tT.current || (tT.current = !0, null === (mT = dT.current) || void 0 === mT || mT.call(dT))
+              Promise.race([zB, QB]).then((() => {
+                var zB;
+                tB.current !== BB || oB.current !== jB || HB.current || (HB.current = !0, null === (zB = fB.current) || void 0 === zB || zB.call(fB))
               }))
             }))
           }), []);
-        return (0, WT.useImperativeHandle)(UT, (() => {
-          const TT = (TT, UT) => {
-            var mT;
-            (OT.current[TT] = UT, null !== BT && void 0 !== BT && BT[TT]) || (null === (mT = bT.current) || void 0 === mT || mT.setCosmetic(TT, UT), yT())
+        return (0, QB.useImperativeHandle)(jB, (() => {
+          const BB = (BB, jB) => {
+            var zB;
+            (SB.current[BB] = jB, null !== JB && void 0 !== JB && JB[BB]) || (null === (zB = tB.current) || void 0 === zB || zB.setCosmetic(BB, jB), FB())
           };
           return {
-            updateCosmetic: TT,
-            setAllCosmetics(UT) {
-              for (const WT of MT.t) {
-                var mT;
-                TT(WT, null !== (mT = UT[WT]) && void 0 !== mT ? mT : (0, gT.e)(WT))
+            updateCosmetic: BB,
+            setAllCosmetics(jB) {
+              for (const QB of dB.v) {
+                var zB;
+                BB(QB, null !== (zB = jB[QB]) && void 0 !== zB ? zB : (0, IB.d)(QB))
               }
             },
             isReady() {
-              var TT, UT;
-              return null !== (TT = null === (UT = bT.current) || void 0 === UT ? void 0 : UT.isReady()) && void 0 !== TT && TT
+              var BB, jB;
+              return null !== (BB = null === (jB = tB.current) || void 0 === jB ? void 0 : jB.isReady()) && void 0 !== BB && BB
             },
             resetCamera() {
-              var TT;
-              null === (TT = bT.current) || void 0 === TT || TT.resetCamera()
+              var BB;
+              null === (BB = tB.current) || void 0 === BB || BB.resetCamera()
             },
-            setOrbit(TT) {
-              var UT;
-              null === (UT = bT.current) || void 0 === UT || UT.setOrbit(TT)
+            setOrbit(BB) {
+              var jB;
+              null === (jB = tB.current) || void 0 === jB || jB.setOrbit(BB)
             },
-            async ensureReadyForCapture(TT) {
-              var UT;
-              await (null === (UT = bT.current) || void 0 === UT ? void 0 : UT.untilDrawn(TT))
+            async ensureReadyForCapture(BB) {
+              var jB;
+              await (null === (jB = tB.current) || void 0 === jB ? void 0 : jB.untilDrawn(BB))
             },
             getDevTools() {
-              var TT;
-              return null !== (TT = bT.current) && void 0 !== TT && TT.isReady() ? bT.current.dev : null
+              var BB;
+              return null !== (BB = tB.current) && void 0 !== BB && BB.isReady() ? tB.current.dev : null
             }
           }
-        }), [BT, yT]), (0, WT.useEffect)((() => {
-          const TT = HT.c.register(LT),
-            UT = nT.g.openCharacter(fT.current, pT);
-          bT.current = UT;
-          let mT = !0;
-          return UT.ready.then((() => {
-            mT && (JT(!0), xT.current())
-          })).catch((TT => {
-            console.error("Failed to set up the character preview", TT)
+        }), [JB, FB]), (0, QB.useEffect)((() => {
+          const BB = uB.e.register(rB),
+            jB = NB.i.openCharacter(GB.current, sB);
+          tB.current = jB;
+          let zB = !0;
+          return jB.ready.then((() => {
+            zB && (iB(!0), qB.current())
+          })).catch((BB => {
+            console.error("Failed to set up the character preview", BB)
           })), () => {
-            mT = !1, TT(), UT.resetCamera(), UT.close(), bT.current = null
+            zB = !1, BB(), jB.resetCamera(), jB.close(), tB.current = null
           }
-        }), []), (0, WT.useEffect)((() => {
-          qT <= 0 || iT <= 0 || bT.current.resize(qT, iT)
-        }), [qT, iT]), (0, WT.useEffect)((() => {
-          if (!YT) return;
-          const TT = eT.current;
-          for (const UT of MT.t) {
-            const mT = null === BT || void 0 === BT ? void 0 : BT[UT],
-              WT = TT[UT];
-            mT && mT !== WT ? bT.current.setCosmetic(UT, mT) : !mT && WT && OT.current[UT] && bT.current.setCosmetic(UT, OT.current[UT])
+        }), []), (0, QB.useEffect)((() => {
+          LB <= 0 || gB <= 0 || tB.current.resize(LB, gB)
+        }), [LB, gB]), (0, QB.useEffect)((() => {
+          if (!EB) return;
+          const BB = MB.current;
+          for (const jB of dB.v) {
+            const zB = null === JB || void 0 === JB ? void 0 : JB[jB],
+              QB = BB[jB];
+            zB && zB !== QB ? tB.current.setCosmetic(jB, zB) : !zB && QB && SB.current[jB] && tB.current.setCosmetic(jB, SB.current[jB])
           }
-          eT.current = {
-            ...BT
-          }, aT.current = !0, yT()
-        }), [BT, YT, yT]), (0, WT.useEffect)((() => {
-          YT && bT.current.playEmote(null !== ZT && void 0 !== ZT ? ZT : null)
-        }), [ZT, cT, YT]), (0, WT.useEffect)((() => {
-          if (!YT || null === vT) return;
-          const TT = bT.current,
+          MB.current = {
+            ...JB
+          }, DB.current = !0, FB()
+        }), [JB, EB, FB]), (0, QB.useEffect)((() => {
+          EB && tB.current.playEmote(null !== mB && void 0 !== mB ? mB : null)
+        }), [mB, yB, EB]), (0, QB.useEffect)((() => {
+          if (!EB || null === kB) return;
+          const BB = tB.current,
             {
-              pitch: UT,
-              radius: mT
-            } = nT.c[pT];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return TT.setOrbit({
-            yaw: vT + jT,
-            pitch: UT,
-            radius: mT
+              pitch: jB,
+              radius: zB
+            } = NB.d[sB];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return BB.setOrbit({
+            yaw: kB + aB,
+            pitch: jB,
+            radius: zB
           }), () => {
-            TT.resetCamera()
+            BB.resetCamera()
           };
-          const WT = performance.now();
-          let zT = 0;
-          const MT = gT => {
-            TT.setOrbit({
-              yaw: vT + (gT - WT) / 6e3 * 2 * Math.PI,
-              pitch: UT,
-              radius: mT
-            }), zT = requestAnimationFrame(MT)
+          const QB = performance.now();
+          let nB = 0;
+          const dB = IB => {
+            BB.setOrbit({
+              yaw: kB + (IB - QB) / 6e3 * 2 * Math.PI,
+              pitch: jB,
+              radius: zB
+            }), nB = requestAnimationFrame(dB)
           };
-          return zT = requestAnimationFrame(MT), () => {
-            cancelAnimationFrame(zT), TT.resetCamera()
+          return nB = requestAnimationFrame(dB), () => {
+            cancelAnimationFrame(nB), BB.resetCamera()
           }
-        }), [YT, vT]), (0, kT.jsx)("div", {
+        }), [EB, kB]), (0, UB.jsx)("div", {
           className: "CharCustomisationPreview",
-          ref: fT
+          ref: GB
         })
       })))
   },
-  36465: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => gT
+  36467: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => IB
     });
-    var WT = mT(2046),
-      zT = mT(1613);
-    const MT = new class {
+    var QB = zB(1982),
+      nB = zB(1532);
+    const dB = new class {
       constructor() {
         this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
       }
-      save(TT, UT) {
-        TT !== this.userContext && this.sendHeld(), this.userContext = TT;
-        for (const [WT, zT] of UT) this.pending.set(WT, zT);
+      save(BB, jB) {
+        BB !== this.userContext && this.sendHeld(), this.userContext = BB;
+        for (const [QB, nB] of jB) this.pending.set(QB, nB);
         if (null !== this.timer) return;
-        const mT = this.lastSentAt + 1100 - Date.now();
-        mT <= 0 ? this.send(TT) : (this.timer = setTimeout((() => {
+        const zB = this.lastSentAt + 1100 - Date.now();
+        zB <= 0 ? this.send(BB) : (this.timer = setTimeout((() => {
           this.sendHeld()
-        }), mT), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
+        }), zB), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.sendHeld()
         }))))
       }
       sendHeld() {
         null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
       }
-      send(TT) {
-        const UT = Array.from(this.pending, (TT => {
-          let [UT, mT] = TT;
+      send(BB) {
+        const jB = Array.from(this.pending, (BB => {
+          let [jB, zB] = BB;
           return {
-            wM: UT,
-            tM: mT
+            Wd: jB,
+            ld: zB
           }
         }));
-        this.pending.clear(), this.lastSentAt = Date.now(), zT.b.updateCosmetics(TT, UT).catch((TT => {
-          console.error("Failed to update cosmetics", TT)
+        this.pending.clear(), this.lastSentAt = Date.now(), nB.b.updateCosmetics(BB, jB).catch((BB => {
+          console.error("Failed to update cosmetics", BB)
         }))
       }
     };
 
-    function gT(TT, UT) {
-      for (const [mT, WT] of UT) TT.setPlayerCosmetics(mT, WT);
-      if (null === WT.gameBridge.latest("connectedGame").websocketUrl) MT.save(TT, UT);
+    function IB(BB, jB) {
+      for (const [zB, QB] of jB) BB.setPlayerCosmetics(zB, QB);
+      if (null === QB.gameBridge.latest("connectedGame").websocketUrl) dB.save(BB, jB);
       else
-        for (const [mT, zT] of UT) WT.gameBridge.send("updateMyCosmetic", {
-          wM: mT,
-          tM: zT
+        for (const [zB, nB] of jB) QB.gameBridge.send("updateMyCosmetic", {
+          Wd: zB,
+          ld: nB
         })
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

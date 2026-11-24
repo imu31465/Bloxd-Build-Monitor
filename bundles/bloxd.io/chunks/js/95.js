@@ -1,126 +1,126 @@
 export const id = 95;
 export const ids = [95];
 export const modules = {
-  4959: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      Howl: () => zT.Howl,
-      Howler: () => zT.Howler,
-      musicOutput: () => cT,
-      readyAudioContext: () => vT
+  4950: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      Howl: () => nB.Howl,
+      Howler: () => nB.Howler,
+      musicOutput: () => yB,
+      readyAudioContext: () => kB
     });
-    var WT, zT = mT(4966),
-      MT = mT(3536),
-      gT = mT(4741);
-    const nT = zT.Howler;
+    var QB, nB = zB(4958),
+      dB = zB(3551),
+      IB = zB(4741);
+    const NB = nB.Howler;
 
-    function HT() {
-      var TT, UT;
-      if (nT.ctx || !nT.usingWebAudio || "undefined" === typeof AudioContext || !(0, gT.j)()) return;
-      const mT = navigator.audioSession;
-      let WT;
-      "auto" === (null === mT || void 0 === mT ? void 0 : mT.type) && (mT.type = "ambient");
+    function uB() {
+      var BB, jB;
+      if (NB.ctx || !NB.usingWebAudio || "undefined" === typeof AudioContext || !(0, IB.h)()) return;
+      const zB = navigator.audioSession;
+      let QB;
+      "auto" === (null === zB || void 0 === zB ? void 0 : zB.type) && (zB.type = "ambient");
       try {
-        WT = new AudioContext({
+        QB = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const zT = WT.createGain();
-      zT.gain.setValueAtTime(nT._muted ? 0 : null !== (TT = nT._volume) && void 0 !== TT ? TT : 1, WT.currentTime), zT.connect(WT.destination), nT.ctx = WT, nT.masterGain = zT, null === (UT = nT._setup) || void 0 === UT || UT.call(nT)
+      const nB = QB.createGain();
+      nB.gain.setValueAtTime(NB._muted ? 0 : null !== (BB = NB._volume) && void 0 !== BB ? BB : 1, QB.currentTime), nB.connect(QB.destination), NB.ctx = QB, NB.masterGain = nB, null === (jB = NB._setup) || void 0 === jB || jB.call(NB)
     }
-    nT._mobileUnloaded = !0;
-    const kT = nT.volume.bind(zT.Howler);
-    nT.volume = function() {
-      return HT(), kT(...arguments)
+    NB._mobileUnloaded = !0;
+    const UB = NB.volume.bind(nB.Howler);
+    NB.volume = function() {
+      return uB(), UB(...arguments)
     };
-    const jT = nT.mute.bind(zT.Howler);
-    nT.mute = TT => (HT(), jT(TT));
-    const lT = zT.Howl.prototype,
-      LT = lT.init;
+    const aB = NB.mute.bind(nB.Howler);
+    NB.mute = BB => (uB(), aB(BB));
+    const pB = nB.Howl.prototype,
+      rB = pB.init;
 
-    function pT() {
-      for (; nT._html5AudioPool.length < nT.html5PoolSize;) {
-        const TT = new Audio;
-        TT._unlocked = !0, nT._releaseHtml5Audio(TT)
+    function sB() {
+      for (; NB._html5AudioPool.length < NB.html5PoolSize;) {
+        const BB = new Audio;
+        BB._unlocked = !0, NB._releaseHtml5Audio(BB)
       }
-      for (const UT of nT._howls)
-        if (!UT._webAudio)
-          for (const mT of UT._getSoundIds()) {
-            var TT;
-            const WT = null === (TT = UT._soundById(mT)) || void 0 === TT ? void 0 : TT._node;
-            WT && !WT._unlocked && (WT._unlocked = !0, WT.load())
+      for (const jB of NB._howls)
+        if (!jB._webAudio)
+          for (const zB of jB._getSoundIds()) {
+            var BB;
+            const QB = null === (BB = jB._soundById(zB)) || void 0 === BB ? void 0 : BB._node;
+            QB && !QB._unlocked && (QB._unlocked = !0, QB.load())
           }
     }
-    lT.init = function(TT) {
-      return HT(), LT.call(this, TT)
-    }, (0, gT.j)() && (nT._unlockAudio = () => {
-      const TT = nT.ctx;
-      if (nT._audioUnlocked || !TT) return;
-      nT.autoUnlock = !1;
-      const UT = TT.createBuffer(1, 1, 22050);
-      nT._scratchBuffer = UT;
-      const mT = new AbortController;
-      let WT = "afterPaint";
-      const zT = () => {
-          var WT;
-          if (nT._audioUnlocked) return;
-          null === (WT = nT._autoResume) || void 0 === WT || WT.call(nT);
-          const zT = TT.createBufferSource();
-          zT.buffer = UT, zT.connect(TT.destination), zT.start(0), TT.resume().catch((() => {})), zT.onended = () => {
-            zT.disconnect(0), nT._audioUnlocked = !0, mT.abort();
-            for (const TT of nT._howls) TT._emit("unlock")
+    pB.init = function(BB) {
+      return uB(), rB.call(this, BB)
+    }, (0, IB.h)() && (NB._unlockAudio = () => {
+      const BB = NB.ctx;
+      if (NB._audioUnlocked || !BB) return;
+      NB.autoUnlock = !1;
+      const jB = BB.createBuffer(1, 1, 22050);
+      NB._scratchBuffer = jB;
+      const zB = new AbortController;
+      let QB = "afterPaint";
+      const nB = () => {
+          var QB;
+          if (NB._audioUnlocked) return;
+          null === (QB = NB._autoResume) || void 0 === QB || QB.call(NB);
+          const nB = BB.createBufferSource();
+          nB.buffer = jB, nB.connect(BB.destination), nB.start(0), BB.resume().catch((() => {})), nB.onended = () => {
+            nB.disconnect(0), NB._audioUnlocked = !0, zB.abort();
+            for (const BB of NB._howls) BB._emit("unlock")
           }
         },
-        HT = () => {
-          pT(), zT()
+        uB = () => {
+          sB(), nB()
         },
-        kT = UT => {
-          if (pT(), "inTap" === WT) {
-            if ("running" === TT.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), zT()
-          } else "afterPaint" === WT && (WT = "queued", (0, MT.e)(UT.timeStamp, (() => {
-            WT = "inTap", zT()
+        UB = jB => {
+          if (sB(), "inTap" === QB) {
+            if ("running" === BB.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), nB()
+          } else "afterPaint" === QB && (QB = "queued", (0, dB.b)(jB.timeStamp, (() => {
+            QB = "inTap", nB()
           })))
         };
-      for (const MT of ["touchstart", "touchend"]) document.addEventListener(MT, HT, {
+      for (const dB of ["touchstart", "touchend"]) document.addEventListener(dB, uB, {
         capture: !0,
-        signal: mT.signal
+        signal: zB.signal
       });
-      for (const MT of gT.c) document.addEventListener(MT, kT, {
+      for (const dB of IB.d) document.addEventListener(dB, UB, {
         capture: !0,
-        signal: mT.signal
+        signal: zB.signal
       })
     });
-    let BT = 0;
-    const ZT = null === (WT = nT._autoSuspend) || void 0 === WT ? void 0 : WT.bind(zT.Howler);
+    let JB = 0;
+    const mB = null === (QB = NB._autoSuspend) || void 0 === QB ? void 0 : QB.bind(nB.Howler);
 
-    function cT() {
-      vT();
+    function yB() {
+      kB();
       const {
-        ctx: TT,
-        masterGain: UT
-      } = nT;
-      return TT && UT ? {
-        ctx: TT,
-        destination: UT,
-        holdAwake: TT => {
-          var UT, mT;
-          (BT += TT ? 1 : -1, TT) ? null === (UT = nT._autoResume) || void 0 === UT || UT.call(nT): null === (mT = nT._autoSuspend) || void 0 === mT || mT.call(nT)
+        ctx: BB,
+        masterGain: jB
+      } = NB;
+      return BB && jB ? {
+        ctx: BB,
+        destination: jB,
+        holdAwake: BB => {
+          var jB, zB;
+          (JB += BB ? 1 : -1, BB) ? null === (jB = NB._autoResume) || void 0 === jB || jB.call(NB): null === (zB = NB._autoSuspend) || void 0 === zB || zB.call(NB)
         },
         wake: () => {
-          var UT;
-          "running" !== TT.state && (null === (UT = nT._autoResume) || void 0 === UT || UT.call(nT), TT.resume().catch((() => {})))
+          var jB;
+          "running" !== BB.state && (null === (jB = NB._autoResume) || void 0 === jB || jB.call(NB), BB.resume().catch((() => {})))
         }
       } : null
     }
 
-    function vT() {
-      var TT;
-      (nT.volume(), nT.ctx && nT.autoUnlock) && (null === (TT = nT._unlockAudio) || void 0 === TT || TT.call(nT))
+    function kB() {
+      var BB;
+      (NB.volume(), NB.ctx && NB.autoUnlock) && (null === (BB = NB._unlockAudio) || void 0 === BB || BB.call(NB))
     }
-    ZT && (nT._autoSuspend = () => BT > 0 ? zT.Howler : ZT())
+    mB && (NB._autoSuspend = () => JB > 0 ? nB.Howler : mB())
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

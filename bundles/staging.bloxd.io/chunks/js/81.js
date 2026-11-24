@@ -1,377 +1,377 @@
 export const id = 81;
 export const ids = [81];
 export const modules = {
-  4842: (TT, UT, mT) => {
-    mT.d(UT, {
-      A: () => BT,
-      E: () => pT,
-      I: () => LT,
-      e: () => WT,
-      h: () => gT,
-      l: () => cT,
-      n: () => ZT,
-      p: () => nT,
-      t: () => zT,
-      w: () => MT
+  4824: (BB, jB, zB) => {
+    zB.d(jB, {
+      B: () => rB,
+      c: () => QB,
+      f: () => IB,
+      i: () => yB,
+      m: () => mB,
+      q: () => NB,
+      s: () => nB,
+      t: () => dB,
+      x: () => JB,
+      y: () => sB
     });
-    const WT = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+    const QB = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-    function zT(TT) {
+    function nB(BB) {
       try {
-        return decodeURIComponent(TT.slice(1))
+        return decodeURIComponent(BB.slice(1))
       } catch {
-        return TT.slice(1)
+        return BB.slice(1)
       }
     }
 
-    function MT(TT) {
-      return TT.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+    function dB(BB) {
+      return BB.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
     }
-    const gT = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${WT.source}`, "g");
+    const IB = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${QB.source}`, "g");
 
-    function nT(TT, UT) {
-      return 2 === TT.length ? UT.replace(/^ (.*) $/, "$1") : UT
-    }
-
-    function HT(TT) {
-      return "" === TT.trim()
+    function NB(BB, jB) {
+      return 2 === BB.length ? jB.replace(/^ (.*) $/, "$1") : jB
     }
 
-    function kT(TT) {
-      const UT = [];
-      for (const mT of TT.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) UT.length > 0 && UT[UT.length - 1].endsWith("\\") ? UT[UT.length - 1] += `|${mT}` : UT.push(mT);
-      return UT.map((TT => TT.trim().replaceAll("\\|", "|")))
+    function uB(BB) {
+      return "" === BB.trim()
     }
-    const jT = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-    function lT(TT) {
-      const UT = [],
-        mT = [{
+    function UB(BB) {
+      const jB = [];
+      for (const zB of BB.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) jB.length > 0 && jB[jB.length - 1].endsWith("\\") ? jB[jB.length - 1] += `|${zB}` : jB.push(zB);
+      return jB.map((BB => BB.trim().replaceAll("\\|", "|")))
+    }
+    const aB = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+    function pB(BB) {
+      const jB = [],
+        zB = [{
           indent: -1,
-          items: UT
+          items: jB
         }];
-      let WT = null;
-      for (const zT of TT) {
-        const TT = zT.match(jT);
-        if (!TT) {
-          WT && (WT.text += ` ${zT.trim()}`);
+      let QB = null;
+      for (const nB of BB) {
+        const BB = nB.match(aB);
+        if (!BB) {
+          QB && (QB.text += ` ${nB.trim()}`);
           continue
         }
-        const UT = TT[1].replace(/\t/g, "  ").length;
-        for (; UT <= mT[mT.length - 1].indent;) mT.pop();
-        WT = {
-          text: TT[3].trim(),
+        const jB = BB[1].replace(/\t/g, "  ").length;
+        for (; jB <= zB[zB.length - 1].indent;) zB.pop();
+        QB = {
+          text: BB[3].trim(),
           children: []
-        }, mT[mT.length - 1].items.push(WT), mT.push({
-          indent: UT,
-          items: WT.children
+        }, zB[zB.length - 1].items.push(QB), zB.push({
+          indent: jB,
+          items: QB.children
         })
       }
-      return UT
+      return jB
     }
 
-    function LT(TT) {
-      const UT = TT.replace(/\r\n/g, "\n").split("\n"),
-        mT = [];
-      let WT = 0;
-      for (; WT < UT.length;) {
-        const TT = UT[WT];
-        if (HT(TT)) {
-          WT++;
+    function rB(BB) {
+      const jB = BB.replace(/\r\n/g, "\n").split("\n"),
+        zB = [];
+      let QB = 0;
+      for (; QB < jB.length;) {
+        const BB = jB[QB];
+        if (uB(BB)) {
+          QB++;
           continue
         }
-        const zT = TT.match(/^\s*```\s*(\w*)\s*$/);
-        if (zT) {
-          const TT = [];
-          for (WT++; WT < UT.length && !/^\s*```\s*$/.test(UT[WT]);) TT.push(UT[WT]), WT++;
-          WT++, mT.push({
+        const nB = BB.match(/^\s*```\s*(\w*)\s*$/);
+        if (nB) {
+          const BB = [];
+          for (QB++; QB < jB.length && !/^\s*```\s*$/.test(jB[QB]);) BB.push(jB[QB]), QB++;
+          QB++, zB.push({
             kind: "code",
-            lang: zT[1] || "text",
-            code: TT.join("\n").replace(/\s+$/, "")
+            lang: nB[1] || "text",
+            code: BB.join("\n").replace(/\s+$/, "")
           });
           continue
         }
-        const gT = TT.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-        if (gT) {
-          const TT = gT[2].trim();
-          mT.push({
+        const IB = BB.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+        if (IB) {
+          const BB = IB[2].trim();
+          zB.push({
             kind: "heading",
-            level: gT[1].length,
-            text: TT,
-            anchor: MT(TT)
-          }), WT++;
+            level: IB[1].length,
+            text: BB,
+            anchor: dB(BB)
+          }), QB++;
           continue
         }
-        if (/^\s*(-{3,}|\*{3,})\s*$/.test(TT)) {
-          mT.push({
+        if (/^\s*(-{3,}|\*{3,})\s*$/.test(BB)) {
+          zB.push({
             kind: "rule"
-          }), WT++;
+          }), QB++;
           continue
         }
-        if (TT.trim().startsWith("|") && WT + 1 < UT.length && /^\s*\|[\s:|-]+\|\s*$/.test(UT[WT + 1])) {
-          const zT = kT(TT),
-            MT = [];
-          for (WT += 2; WT < UT.length && UT[WT].trim().startsWith("|");) MT.push(kT(UT[WT])), WT++;
-          mT.push({
+        if (BB.trim().startsWith("|") && QB + 1 < jB.length && /^\s*\|[\s:|-]+\|\s*$/.test(jB[QB + 1])) {
+          const nB = UB(BB),
+            dB = [];
+          for (QB += 2; QB < jB.length && jB[QB].trim().startsWith("|");) dB.push(UB(jB[QB])), QB++;
+          zB.push({
             kind: "table",
-            header: zT,
-            rows: MT
+            header: nB,
+            rows: dB
           });
           continue
         }
-        if (TT.startsWith(">")) {
-          const TT = [];
-          for (; WT < UT.length && UT[WT].startsWith(">");) TT.push(UT[WT].replace(/^>\s?/, "")), WT++;
-          mT.push({
+        if (BB.startsWith(">")) {
+          const BB = [];
+          for (; QB < jB.length && jB[QB].startsWith(">");) BB.push(jB[QB].replace(/^>\s?/, "")), QB++;
+          zB.push({
             kind: "quote",
-            blocks: LT(TT.join("\n"))
+            blocks: rB(BB.join("\n"))
           });
           continue
         }
-        if (jT.test(TT)) {
-          const zT = [],
-            MT = /^\s*\d+\./.test(TT);
-          for (; WT < UT.length && !HT(UT[WT]) && (jT.test(UT[WT]) || /^\s+\S/.test(UT[WT]));) zT.push(UT[WT]), WT++;
-          mT.push({
+        if (aB.test(BB)) {
+          const nB = [],
+            dB = /^\s*\d+\./.test(BB);
+          for (; QB < jB.length && !uB(jB[QB]) && (aB.test(jB[QB]) || /^\s+\S/.test(jB[QB]));) nB.push(jB[QB]), QB++;
+          zB.push({
             kind: "list",
-            ordered: MT,
-            items: lT(zT)
+            ordered: dB,
+            items: pB(nB)
           });
           continue
         }
-        const nT = [];
-        for (; WT < UT.length && !HT(UT[WT]) && !/^\s*```/.test(UT[WT]) && !/^#{1,6}\s/.test(UT[WT]) && !UT[WT].startsWith(">") && !jT.test(UT[WT]) && (!UT[WT].trim().startsWith("|") || 0 !== nT.length);) nT.push(UT[WT].trim()), WT++;
-        0 === nT.length && (nT.push(UT[WT].trim()), WT++), mT.push({
+        const NB = [];
+        for (; QB < jB.length && !uB(jB[QB]) && !/^\s*```/.test(jB[QB]) && !/^#{1,6}\s/.test(jB[QB]) && !jB[QB].startsWith(">") && !aB.test(jB[QB]) && (!jB[QB].trim().startsWith("|") || 0 !== NB.length);) NB.push(jB[QB].trim()), QB++;
+        0 === NB.length && (NB.push(jB[QB].trim()), QB++), zB.push({
           kind: "paragraph",
-          text: nT.join(" ")
+          text: NB.join(" ")
         })
       }
-      return mT
+      return zB
     }
 
-    function pT(TT) {
-      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const mT = LT(TT);
-      let WT = "";
-      const zT = [],
-        MT = [],
-        gT = new Map;
-      for (const kT of mT) {
-        if ("heading" === kT.kind) {
-          var nT;
-          const TT = (null !== (nT = gT.get(kT.anchor)) && void 0 !== nT ? nT : 0) + 1;
-          gT.set(kT.anchor, TT), TT > 1 && (kT.anchor = `${kT.anchor}-${TT}`)
+    function sB(BB) {
+      let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const zB = rB(BB);
+      let QB = "";
+      const nB = [],
+        dB = [],
+        IB = new Map;
+      for (const UB of zB) {
+        if ("heading" === UB.kind) {
+          var NB;
+          const BB = (null !== (NB = IB.get(UB.anchor)) && void 0 !== NB ? NB : 0) + 1;
+          IB.set(UB.anchor, BB), BB > 1 && (UB.anchor = `${UB.anchor}-${BB}`)
         }
-        if ("heading" === kT.kind && 1 === kT.level && !WT) {
-          WT = kT.text;
+        if ("heading" === UB.kind && 1 === UB.level && !QB) {
+          QB = UB.text;
           continue
         }
-        if ("heading" === kT.kind && kT.level <= UT) {
-          MT.push({
-            heading: kT,
+        if ("heading" === UB.kind && UB.level <= jB) {
+          dB.push({
+            heading: UB,
             blocks: []
           });
           continue
         }
-        const TT = MT.at(-1);
-        TT ? TT.blocks.push(kT) : zT.push(kT)
+        const BB = dB.at(-1);
+        BB ? BB.blocks.push(UB) : nB.push(UB)
       }
-      const HT = TT => {
+      const uB = BB => {
         for (;
-          "rule" === (null === (UT = TT.at(-1)) || void 0 === UT ? void 0 : UT.kind);) {
-          var UT;
-          TT.pop()
+          "rule" === (null === (jB = BB.at(-1)) || void 0 === jB ? void 0 : jB.kind);) {
+          var jB;
+          BB.pop()
         }
       };
-      HT(zT);
-      for (const kT of MT) HT(kT.blocks);
+      uB(nB);
+      for (const UB of dB) uB(UB.blocks);
       return {
-        title: WT,
-        intro: zT,
-        sections: MT
+        title: QB,
+        intro: nB,
+        sections: dB
       }
     }
 
-    function BT(TT) {
+    function JB(BB) {
       return [{
         heading: null,
-        blocks: TT.intro
-      }, ...TT.sections.map((TT => ({
-        heading: TT.heading,
-        blocks: TT.blocks
+        blocks: BB.intro
+      }, ...BB.sections.map((BB => ({
+        heading: BB.heading,
+        blocks: BB.blocks
       })))]
     }
 
-    function ZT(TT) {
-      return TT.flatMap((TT => "code" === TT.kind ? [TT] : "quote" === TT.kind ? ZT(TT.blocks) : []))
+    function mB(BB) {
+      return BB.flatMap((BB => "code" === BB.kind ? [BB] : "quote" === BB.kind ? mB(BB.blocks) : []))
     }
 
-    function cT(TT) {
-      switch (TT.kind) {
+    function yB(BB) {
+      switch (BB.kind) {
         case "heading":
         case "paragraph":
-          return TT.text;
+          return BB.text;
         case "code":
-          return TT.code;
+          return BB.code;
         case "table":
-          return [TT.header, ...TT.rows].map((TT => TT.join(" "))).join(" ");
+          return [BB.header, ...BB.rows].map((BB => BB.join(" "))).join(" ");
         case "list": {
-          const UT = TT => TT.map((TT => `${TT.text} ${UT(TT.children)}`)).join(" ");
-          return UT(TT.items)
+          const jB = BB => BB.map((BB => `${BB.text} ${jB(BB.children)}`)).join(" ");
+          return jB(BB.items)
         }
         case "quote":
-          return TT.blocks.map(cT).join(" ");
+          return BB.blocks.map(yB).join(" ");
         case "rule":
           return ""
       }
     }
   },
-  6562: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => lT,
-      d: () => gT,
-      h: () => nT
+  6444: (BB, jB, zB) => {
+    zB.d(jB, {
+      e: () => pB,
+      g: () => IB,
+      h: () => NB
     });
-    mT(6559);
-    var WT = mT(63),
-      zT = mT(4842),
-      MT = mT(1188);
-    const gT = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
+    zB(6436);
+    var QB = zB(62),
+      nB = zB(4824),
+      dB = zB(1148);
+    const IB = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
 
-    function nT(TT, UT) {
-      return TT === UT ? TT : `${TT} (${UT})`
+    function NB(BB, jB) {
+      return BB === jB ? BB : `${BB} (${jB})`
     }
 
-    function HT(TT) {
-      const UT = [];
-      let mT = 0;
-      for (const WT of TT.matchAll(gT)) {
-        WT.index > mT && UT.push(TT.slice(mT, WT.index));
-        const [, zT, gT, HT, kT, jT, lT] = WT;
-        void 0 !== zT ? UT.push(nT(zT, gT)) : void 0 !== HT || void 0 !== kT ? UT.push((0, MT.jsx)("strong", {
-          children: null !== HT && void 0 !== HT ? HT : kT
-        }, WT.index)) : void 0 !== jT ? UT.push((0, MT.jsx)("em", {
-          children: jT
-        }, WT.index)) : UT.push((0, MT.jsx)("code", {
-          children: lT
-        }, WT.index)), mT = WT.index + WT[0].length
+    function uB(BB) {
+      const jB = [];
+      let zB = 0;
+      for (const QB of BB.matchAll(IB)) {
+        QB.index > zB && jB.push(BB.slice(zB, QB.index));
+        const [, nB, IB, uB, UB, aB, pB] = QB;
+        void 0 !== nB ? jB.push(NB(nB, IB)) : void 0 !== uB || void 0 !== UB ? jB.push((0, dB.jsx)("strong", {
+          children: null !== uB && void 0 !== uB ? uB : UB
+        }, QB.index)) : void 0 !== aB ? jB.push((0, dB.jsx)("em", {
+          children: aB
+        }, QB.index)) : jB.push((0, dB.jsx)("code", {
+          children: pB
+        }, QB.index)), zB = QB.index + QB[0].length
       }
-      return mT < TT.length && UT.push(TT.slice(mT)), UT
+      return zB < BB.length && jB.push(BB.slice(zB)), jB
     }
 
-    function kT(TT, UT) {
-      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      const WT = TT.map(((TT, UT) => (0, MT.jsxs)("li", {
-        children: [HT(TT.text), TT.children.length > 0 && kT(TT.children, !1)]
-      }, UT)));
-      return UT ? (0, MT.jsx)("ol", {
-        start: mT,
-        children: WT
-      }) : (0, MT.jsx)("ul", {
-        children: WT
+    function UB(BB, jB) {
+      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      const QB = BB.map(((BB, jB) => (0, dB.jsxs)("li", {
+        children: [uB(BB.text), BB.children.length > 0 && UB(BB.children, !1)]
+      }, jB)));
+      return jB ? (0, dB.jsx)("ol", {
+        start: zB,
+        children: QB
+      }) : (0, dB.jsx)("ul", {
+        children: QB
       })
     }
 
-    function jT(TT, UT) {
-      switch (TT.kind) {
+    function aB(BB, jB) {
+      switch (BB.kind) {
         case "heading":
-          return TT.level <= 2 ? (0, MT.jsx)("h3", {
-            children: HT(TT.text)
-          }, UT) : (0, MT.jsx)("h4", {
-            children: HT(TT.text)
-          }, UT);
+          return BB.level <= 2 ? (0, dB.jsx)("h3", {
+            children: uB(BB.text)
+          }, jB) : (0, dB.jsx)("h4", {
+            children: uB(BB.text)
+          }, jB);
         case "paragraph":
-          return (0, MT.jsx)("p", {
-            children: HT(TT.text)
-          }, UT);
+          return (0, dB.jsx)("p", {
+            children: uB(BB.text)
+          }, jB);
         case "list":
-          return (0, MT.jsx)(WT.Fragment, {
-            children: kT(TT.items, TT.ordered)
-          }, UT);
+          return (0, dB.jsx)(QB.Fragment, {
+            children: UB(BB.items, BB.ordered)
+          }, jB);
         case "quote":
-          return (0, MT.jsx)("blockquote", {
-            children: TT.blocks.map(((TT, UT) => jT(TT, UT)))
-          }, UT);
+          return (0, dB.jsx)("blockquote", {
+            children: BB.blocks.map(((BB, jB) => aB(BB, jB)))
+          }, jB);
         case "code":
-          return (0, MT.jsx)("pre", {
-            children: (0, MT.jsx)("code", {
-              children: TT.code
+          return (0, dB.jsx)("pre", {
+            children: (0, dB.jsx)("code", {
+              children: BB.code
             })
-          }, UT);
+          }, jB);
         case "table":
-          return (0, MT.jsxs)("table", {
-            children: [(0, MT.jsx)("thead", {
-              children: (0, MT.jsx)("tr", {
-                children: TT.header.map(((TT, UT) => (0, MT.jsx)("th", {
-                  children: HT(TT)
-                }, UT)))
+          return (0, dB.jsxs)("table", {
+            children: [(0, dB.jsx)("thead", {
+              children: (0, dB.jsx)("tr", {
+                children: BB.header.map(((BB, jB) => (0, dB.jsx)("th", {
+                  children: uB(BB)
+                }, jB)))
               })
-            }), (0, MT.jsx)("tbody", {
-              children: TT.rows.map(((TT, UT) => (0, MT.jsx)("tr", {
-                children: TT.map(((TT, UT) => (0, MT.jsx)("td", {
-                  children: HT(TT)
-                }, UT)))
-              }, UT)))
+            }), (0, dB.jsx)("tbody", {
+              children: BB.rows.map(((BB, jB) => (0, dB.jsx)("tr", {
+                children: BB.map(((BB, jB) => (0, dB.jsx)("td", {
+                  children: uB(BB)
+                }, jB)))
+              }, jB)))
             })]
-          }, UT);
+          }, jB);
         case "rule":
-          return (0, MT.jsx)("hr", {}, UT)
+          return (0, dB.jsx)("hr", {}, jB)
       }
     }
 
-    function lT(TT) {
+    function pB(BB) {
       let {
-        markdown: UT
-      } = TT, mT = 0;
-      return (0, MT.jsx)("div", {
+        markdown: jB
+      } = BB, zB = 0;
+      return (0, dB.jsx)("div", {
         className: "StudioAiAnswerText",
-        children: (0, zT.I)(UT).map(((TT, UT) => {
-          if ("list" !== TT.kind || !TT.ordered) return mT = 0, jT(TT, UT);
-          const zT = mT + 1;
-          return mT += TT.items.length, (0, MT.jsx)(WT.Fragment, {
-            children: kT(TT.items, !0, zT)
-          }, UT)
+        children: (0, nB.B)(jB).map(((BB, jB) => {
+          if ("list" !== BB.kind || !BB.ordered) return zB = 0, aB(BB, jB);
+          const nB = zB + 1;
+          return zB += BB.items.length, (0, dB.jsx)(QB.Fragment, {
+            children: UB(BB.items, !0, nB)
+          }, jB)
         }))
       })
     }
   },
-  6552: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => fT,
-      g: () => qT,
-      d: () => bT,
-      j: () => BT
+  6433: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => GB,
+      j: () => LB,
+      f: () => tB,
+      n: () => JB
     });
-    var WT = mT(1308),
-      zT = mT(6515),
-      MT = mT(4972);
-    const gT = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
+    var QB = zB(1253),
+      nB = zB(6410),
+      dB = zB(4965);
+    const IB = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
 
-    function nT(TT) {
-      return (0, MT.e)(TT, gT, (UT => !/^my/i.test(UT[0]) || !/follow $/i.test(TT.slice(0, UT.index)))).length > 0
+    function NB(BB) {
+      return (0, dB.h)(BB, IB, (jB => !/^my/i.test(jB[0]) || !/follow $/i.test(BB.slice(0, jB.index)))).length > 0
     }
-    const HT = /\byou(?:r|'re|'ll)?\b/i,
-      kT = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
-      jT = 2;
+    const uB = /\byou(?:r|'re|'ll)?\b/i,
+      UB = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
+      aB = 2;
 
-    function lT(TT) {
-      return function(TT) {
-        const UT = [];
-        let mT = !1;
-        for (const WT of TT.split("\n")) {
-          if (/^\s*(```|~~~)/.test(WT)) {
-            mT = !mT;
+    function pB(BB) {
+      return function(BB) {
+        const jB = [];
+        let zB = !1;
+        for (const QB of BB.split("\n")) {
+          if (/^\s*(```|~~~)/.test(QB)) {
+            zB = !zB;
             continue
           }
-          if (mT || /^\s*>/.test(WT)) continue;
-          const TT = WT.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
-          UT.push(...(0, zT.q)(TT))
+          if (zB || /^\s*>/.test(QB)) continue;
+          const BB = QB.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
+          jB.push(...(0, nB.o)(BB))
         }
-        return UT
-      }(TT).filter((TT => nT(TT) || kT.test(TT) && !HT.test(TT)))
+        return jB
+      }(BB).filter((BB => NB(BB) || UB.test(BB) && !uB.test(BB)))
     }
-    const LT = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      pT = [{
+    const rB = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      sB = [{
         name: "Qwen3.6-27B",
         temperature: .7,
         reasoningEffort: "none"
@@ -384,317 +384,317 @@ export const modules = {
         temperature: .15
       }];
 
-    function BT(TT) {
-      const UT = pT.findIndex((UT => UT.name === TT));
-      return -1 === UT ? pT.length : UT
+    function JB(BB) {
+      const jB = sB.findIndex((jB => jB.name === BB));
+      return -1 === jB ? sB.length : jB
     }
-    const ZT = 2500,
-      cT = 12e4;
-    class vT extends Error {
-      constructor(TT) {
-        super(`Studio AI chat ${TT}`), this.reason = TT
+    const mB = 2500,
+      yB = 12e4;
+    class kB extends Error {
+      constructor(BB) {
+        super(`Studio AI chat ${BB}`), this.reason = BB
       }
     }
 
-    function fT(TT, UT) {
-      const mT = new AbortController,
-        WT = () => {
-          mT.abort()
+    function GB(BB, jB) {
+      const zB = new AbortController,
+        QB = () => {
+          zB.abort()
         },
-        zT = setTimeout(WT, TT);
-      return null !== UT && void 0 !== UT && UT.aborted && WT(), null === UT || void 0 === UT || UT.addEventListener("abort", WT, {
+        nB = setTimeout(QB, BB);
+      return null !== jB && void 0 !== jB && jB.aborted && QB(), null === jB || void 0 === jB || jB.addEventListener("abort", QB, {
         once: !0
       }), {
-        signal: mT.signal,
+        signal: zB.signal,
         clear: () => {
-          clearTimeout(zT), null === UT || void 0 === UT || UT.removeEventListener("abort", WT)
+          clearTimeout(nB), null === jB || void 0 === jB || jB.removeEventListener("abort", QB)
         }
       }
     }
 
-    function qT(TT, UT, mT) {
-      return new Promise(((zT, MT) => {
-        const gT = new AbortController,
-          nT = () => {
-            gT.abort(), MT((0, WT.i)(mT))
+    function LB(BB, jB, zB) {
+      return new Promise(((nB, dB) => {
+        const IB = new AbortController,
+          NB = () => {
+            IB.abort(), dB((0, QB.f)(zB))
           };
-        if (null !== mT && void 0 !== mT && mT.aborted) return void nT();
-        null === mT || void 0 === mT || mT.addEventListener("abort", nT, {
+        if (null !== zB && void 0 !== zB && zB.aborted) return void NB();
+        null === zB || void 0 === zB || zB.addEventListener("abort", NB, {
           once: !0
         });
-        const HT = pT.map((() => !1));
-        let kT = null;
-        const jT = pT.map((() => !1)),
-          lT = pT.map((() => !1));
-        pT.forEach(((WT, LT) => {
-          const BT = fT(cT, gT.signal);
-          OT(WT, [{
+        const uB = sB.map((() => !1));
+        let UB = null;
+        const aB = sB.map((() => !1)),
+          pB = sB.map((() => !1));
+        sB.forEach(((QB, rB) => {
+          const JB = GB(yB, IB.signal);
+          SB(QB, [{
             role: "user",
-            content: TT
-          }], BT.signal).then((TT => {
-            gT.signal.aborted || ("busy" === TT || "failed" === TT ? (jT[LT] = "busy" === TT, lT[LT] = !0) : null !== TT && (null === kT || LT < kT.rank) && (kT = {
-              rank: LT,
+            content: BB
+          }], JB.signal).then((BB => {
+            IB.signal.aborted || ("busy" === BB || "failed" === BB ? (aB[rB] = "busy" === BB, pB[rB] = !0) : null !== BB && (null === UB || rB < UB.rank) && (UB = {
+              rank: rB,
               answer: {
-                text: TT.text,
-                model: WT.name
+                text: BB.text,
+                model: QB.name
               }
-            }, UT(kT.answer)))
-          }), (TT => {
-            gT.signal.aborted || (lT[LT] = !0, console.warn(`Studio AI: ${WT.name} couldn't be reached`, TT))
+            }, jB(UB.answer)))
+          }), (BB => {
+            IB.signal.aborted || (pB[rB] = !0, console.warn(`Studio AI: ${QB.name} couldn't be reached`, BB))
           })).finally((() => {
-            BT.clear(), HT[LT] = !0, gT.signal.aborted || (() => {
-              var TT, UT;
-              const WT = null !== (TT = null === (UT = kT) || void 0 === UT ? void 0 : UT.rank) && void 0 !== TT ? TT : pT.length;
-              HT.slice(0, WT).includes(!1) || (null === mT || void 0 === mT || mT.removeEventListener("abort", nT), gT.abort(), null !== kT ? zT({
-                ...kT.answer,
-                isFinal: !lT.slice(0, kT.rank).includes(!0)
-              }) : MT(new vT(jT.includes(!0) ? "busy" : "failed")))
+            JB.clear(), uB[rB] = !0, IB.signal.aborted || (() => {
+              var BB, jB;
+              const QB = null !== (BB = null === (jB = UB) || void 0 === jB ? void 0 : jB.rank) && void 0 !== BB ? BB : sB.length;
+              uB.slice(0, QB).includes(!1) || (null === zB || void 0 === zB || zB.removeEventListener("abort", NB), IB.abort(), null !== UB ? nB({
+                ...UB.answer,
+                isFinal: !pB.slice(0, UB.rank).includes(!0)
+              }) : dB(new kB(aB.includes(!0) ? "busy" : "failed")))
             })()
-          })).catch((TT => {
-            console.error("Studio AI: showing an answer failed", TT)
+          })).catch((BB => {
+            console.error("Studio AI: showing an answer failed", BB)
           }))
         }))
       }))
     }
 
-    function iT(TT) {
-      var UT, mT;
-      return "length" === (null === TT || void 0 === TT || null === (UT = TT.choices) || void 0 === UT || null === (mT = UT[0]) || void 0 === mT ? void 0 : mT.finish_reason)
+    function gB(BB) {
+      var jB, zB;
+      return "length" === (null === BB || void 0 === BB || null === (jB = BB.choices) || void 0 === jB || null === (zB = jB[0]) || void 0 === zB ? void 0 : zB.finish_reason)
     }
-    async function bT(TT, UT, mT) {
-      const WT = pT.find((UT => UT.name === TT));
-      if (void 0 === WT) return "failed";
-      const zT = fT(cT, mT);
+    async function tB(BB, jB, zB) {
+      const QB = sB.find((jB => jB.name === BB));
+      if (void 0 === QB) return "failed";
+      const nB = GB(yB, zB);
       try {
-        const TT = await OT(WT, UT, zT.signal);
-        return null !== TT && "object" === typeof TT ? TT.isCutOff ? (console.warn(`Studio AI: ${WT.name}'s answer was cut off at the token limit`), null) : {
-          text: TT.text
-        } : TT
+        const BB = await SB(QB, jB, nB.signal);
+        return null !== BB && "object" === typeof BB ? BB.isCutOff ? (console.warn(`Studio AI: ${QB.name}'s answer was cut off at the token limit`), null) : {
+          text: BB.text
+        } : BB
       } finally {
-        zT.clear()
+        nB.clear()
       }
     }
-    async function OT(TT, UT, mT) {
-      const WT = await fetch(LT, {
+    async function SB(BB, jB, zB) {
+      const QB = await fetch(rB, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: TT.name,
-          messages: UT,
-          max_tokens: ZT,
-          temperature: TT.temperature,
-          reasoning_effort: TT.reasoningEffort
+          model: BB.name,
+          messages: jB,
+          max_tokens: mB,
+          temperature: BB.temperature,
+          reasoning_effort: BB.reasoningEffort
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: mT
+        signal: zB
       });
-      if (429 === WT.status) return "busy";
-      if (!WT.ok) return console.warn(`Studio AI: ${TT.name} answered ${WT.status}`), "failed";
-      const zT = await WT.json().catch((() => null)),
-        MT = function(TT) {
-          var UT, mT, WT;
-          const zT = null === TT || void 0 === TT || null === (UT = TT.choices) || void 0 === UT || null === (mT = UT[0]) || void 0 === mT || null === (WT = mT.message) || void 0 === WT ? void 0 : WT.content;
-          if ("string" !== typeof zT) return null;
-          const MT = zT.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-          return "" === MT ? null : MT
-        }(zT);
-      return null !== MT && function(TT) {
-        const UT = lT(TT);
-        return UT.length >= jT || UT.some((TT => nT(TT)))
-      }(MT) ? (console.warn(`Studio AI: ${TT.name} thought out loud instead of answering`), "failed") : null === MT ? null : {
-        text: MT,
-        isCutOff: iT(zT)
+      if (429 === QB.status) return "busy";
+      if (!QB.ok) return console.warn(`Studio AI: ${BB.name} answered ${QB.status}`), "failed";
+      const nB = await QB.json().catch((() => null)),
+        dB = function(BB) {
+          var jB, zB, QB;
+          const nB = null === BB || void 0 === BB || null === (jB = BB.choices) || void 0 === jB || null === (zB = jB[0]) || void 0 === zB || null === (QB = zB.message) || void 0 === QB ? void 0 : QB.content;
+          if ("string" !== typeof nB) return null;
+          const dB = nB.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+          return "" === dB ? null : dB
+        }(nB);
+      return null !== dB && function(BB) {
+        const jB = pB(BB);
+        return jB.length >= aB || jB.some((BB => NB(BB)))
+      }(dB) ? (console.warn(`Studio AI: ${BB.name} thought out loud instead of answering`), "failed") : null === dB ? null : {
+        text: dB,
+        isCutOff: gB(nB)
       }
     }
   },
-  6515: (TT, UT, mT) => {
-    mT.d(UT, {
-      A: () => qT,
-      B: () => bT,
-      E: () => fT,
-      I: () => lT,
-      M: () => kT,
-      N: () => pT,
-      c: () => BT,
-      f: () => nT,
-      j: () => gT,
-      n: () => ZT,
-      p: () => LT,
-      q: () => jT,
-      r: () => MT,
-      s: () => zT,
-      t: () => iT,
-      w: () => OT,
-      y: () => cT
+  6410: (BB, jB, zB) => {
+    zB.d(jB, {
+      C: () => LB,
+      F: () => tB,
+      I: () => GB,
+      J: () => pB,
+      K: () => UB,
+      M: () => sB,
+      b: () => JB,
+      c: () => NB,
+      e: () => IB,
+      i: () => mB,
+      l: () => rB,
+      o: () => aB,
+      p: () => dB,
+      s: () => nB,
+      t: () => gB,
+      v: () => SB,
+      y: () => yB
     });
-    var WT = mT(4972);
-    const zT = 2e3,
-      MT = 2e4;
+    var QB = zB(4965);
+    const nB = 2e3,
+      dB = 2e4;
 
-    function gT(TT) {
-      return TT.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    function IB(BB) {
+      return BB.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     }
 
-    function nT(TT) {
-      return TT.replace(/\$/g, "\\$")
+    function NB(BB) {
+      return BB.replace(/\$/g, "\\$")
     }
-    const HT = /[.!?](?=\s|\*|_|$)|\n|$/g;
+    const uB = /[.!?](?=\s|\*|_|$)|\n|$/g;
 
-    function kT(TT, UT) {
-      HT.lastIndex = UT;
-      const mT = HT.exec(TT);
-      return mT.index + mT[0].length
-    }
-
-    function jT(TT) {
-      return (0, WT.v)(TT, /\s+/g, (0, WT.p)(".!?")).flatMap((TT => TT.split("\n")))
+    function UB(BB, jB) {
+      uB.lastIndex = jB;
+      const zB = uB.exec(BB);
+      return zB.index + zB[0].length
     }
 
-    function lT(TT, UT) {
-      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : UT;
-      const WT = [...TT.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((TT => TT.index)),
-        zT = WT.filter((TT => TT < UT)),
-        MT = WT.find((TT => TT >= mT));
-      return [0 === zT.length ? 0 : zT.at(-1) + 1, void 0 === MT ? TT.length : MT + 1]
+    function aB(BB) {
+      return (0, QB.x)(BB, /\s+/g, (0, QB.s)(".!?")).flatMap((BB => BB.split("\n")))
     }
 
-    function LT(TT, UT) {
-      const mT = TT.charCodeAt(UT - 1);
-      return TT.slice(0, UT > 0 && UT < TT.length && mT >= 55296 && mT <= 56319 ? UT - 1 : UT)
+    function pB(BB, jB) {
+      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : jB;
+      const QB = [...BB.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((BB => BB.index)),
+        nB = QB.filter((BB => BB < jB)),
+        dB = QB.find((BB => BB >= zB));
+      return [0 === nB.length ? 0 : nB.at(-1) + 1, void 0 === dB ? BB.length : dB + 1]
     }
 
-    function pT(TT, UT) {
-      return `${UT}${TT.replace(/\\/g,"\\\\").split(UT).join(`\\${UT}`)}${UT}`
+    function rB(BB, jB) {
+      const zB = BB.charCodeAt(jB - 1);
+      return BB.slice(0, jB > 0 && jB < BB.length && zB >= 55296 && zB <= 56319 ? jB - 1 : jB)
     }
 
-    function BT(TT) {
-      return TT.charAt(0).toUpperCase() + TT.slice(1)
+    function sB(BB, jB) {
+      return `${jB}${BB.replace(/\\/g,"\\\\").split(jB).join(`\\${jB}`)}${jB}`
     }
 
-    function ZT(TT) {
-      return Math.round(TT).toLocaleString("en-US")
+    function JB(BB) {
+      return BB.charAt(0).toUpperCase() + BB.slice(1)
     }
 
-    function cT(TT) {
-      return TT.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((TT => "" !== TT))
-    }
-    const vT = 3;
-
-    function fT(TT, UT) {
-      return cT(TT).filter((TT => TT.length >= vT && !/\d/.test(TT))).map((TT => `${TT} ${UT}`))
+    function mB(BB) {
+      return Math.round(BB).toLocaleString("en-US")
     }
 
-    function qT(TT) {
-      return TT.split(/[\s:_]+/).filter((TT => "" !== TT)).map(gT).join("[`:_\\s]+")
+    function yB(BB) {
+      return BB.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((BB => "" !== BB))
+    }
+    const kB = 3;
+
+    function GB(BB, jB) {
+      return yB(BB).filter((BB => BB.length >= kB && !/\d/.test(BB))).map((BB => `${BB} ${jB}`))
     }
 
-    function iT(TT) {
-      return cT(TT.split(".").pop())
+    function LB(BB) {
+      return BB.split(/[\s:_]+/).filter((BB => "" !== BB)).map(IB).join("[`:_\\s]+")
     }
 
-    function bT(TT) {
-      return TT.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    function gB(BB) {
+      return yB(BB.split(".").pop())
     }
 
-    function OT(TT) {
-      let UT = null;
+    function tB(BB) {
+      return BB.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    }
+
+    function SB(BB) {
+      let jB = null;
       return () => {
-        const mT = UT ??= TT();
-        return mT.catch((() => {
-          UT === mT && (UT = null)
-        })), mT
+        const zB = jB ??= BB();
+        return zB.catch((() => {
+          jB === zB && (jB = null)
+        })), zB
       }
     }
   },
-  4972: (TT, UT, mT) => {
-    function WT(TT) {
+  4965: (BB, jB, zB) => {
+    function QB(BB) {
       return {
-        notAfter: TT
+        notAfter: BB
       }
     }
-    mT.d(UT, {
-      d: () => HT,
-      e: () => kT,
-      f: () => nT,
-      j: () => WT,
-      n: () => zT,
-      o: () => MT,
-      p: () => gT,
-      s: () => jT,
-      v: () => lT
+    zB.d(jB, {
+      e: () => uB,
+      h: () => UB,
+      i: () => NB,
+      k: () => QB,
+      m: () => nB,
+      p: () => dB,
+      s: () => IB,
+      u: () => aB,
+      x: () => pB
     });
-    const zT = WT("\\w$."),
-      MT = WT("\\w.,");
+    const nB = QB("\\w$."),
+      dB = QB("\\w.,");
 
-    function gT(TT) {
-      return UT => HT(UT, TT)
+    function IB(BB) {
+      return jB => uB(jB, BB)
     }
 
-    function nT(TT) {
-      return UT => !TT.test(UT.input.slice(0, UT.index))
+    function NB(BB) {
+      return jB => !BB.test(jB.input.slice(0, jB.index))
     }
 
-    function HT(TT, UT) {
-      return TT.index > 0 && new RegExp(`[${UT}]`).test(TT.input[TT.index - 1])
+    function uB(BB, jB) {
+      return BB.index > 0 && new RegExp(`[${jB}]`).test(BB.input[BB.index - 1])
     }
 
-    function kT(TT, UT, mT) {
-      return function(TT) {
-        return void 0 !== TT && "function" !== typeof TT
-      }(mT) ? function(TT, UT, mT) {
-        const WT = UT.flags.replace(/[gy]/g, ""),
-          zT = new RegExp(`[^${mT}](?:${UT.source})`, `${WT}g`),
-          MT = [],
-          gT = mT => {
-            const WT = mT.index + mT[0].length;
-            return ("" === mT[0] ? LT(TT, UT, WT) : WT) - 1
+    function UB(BB, jB, zB) {
+      return function(BB) {
+        return void 0 !== BB && "function" !== typeof BB
+      }(zB) ? function(BB, jB, zB) {
+        const QB = jB.flags.replace(/[gy]/g, ""),
+          nB = new RegExp(`[^${zB}](?:${jB.source})`, `${QB}g`),
+          dB = [],
+          IB = zB => {
+            const QB = zB.index + zB[0].length;
+            return ("" === zB[0] ? rB(BB, jB, QB) : QB) - 1
           },
-          nT = new RegExp(`(?:${UT.source})`, `${WT}y`).exec(TT);
-        if (nT) {
-          if (MT.push(nT), !UT.global) return MT;
-          zT.lastIndex = gT(nT)
+          NB = new RegExp(`(?:${jB.source})`, `${QB}y`).exec(BB);
+        if (NB) {
+          if (dB.push(NB), !jB.global) return dB;
+          nB.lastIndex = IB(NB)
         }
-        for (let HT = zT.exec(TT); HT; HT = zT.exec(TT)) {
-          const mT = LT(TT, UT, HT.index) - HT.index;
-          if (HT[0] = HT[0].slice(mT), HT.index += mT, MT.push(HT), !UT.global) break;
-          zT.lastIndex = gT(HT)
+        for (let uB = nB.exec(BB); uB; uB = nB.exec(BB)) {
+          const zB = rB(BB, jB, uB.index) - uB.index;
+          if (uB[0] = uB[0].slice(zB), uB.index += zB, dB.push(uB), !jB.global) break;
+          nB.lastIndex = IB(uB)
         }
-        return MT
-      }(TT, UT, mT.notAfter) : function(TT, UT, mT) {
-        const WT = new RegExp(UT.source, `${UT.flags.replace(/[gy]/g,"")}g`),
-          zT = [];
-        for (let MT = WT.exec(TT); MT; MT = WT.exec(TT))
-          if (!mT || mT(MT)) {
-            if (zT.push(MT), !UT.global) break;
-            "" === MT[0] && (WT.lastIndex = LT(TT, UT, WT.lastIndex))
-          } else WT.lastIndex = LT(TT, UT, MT.index);
-        return zT
-      }(TT, UT, mT)
+        return dB
+      }(BB, jB, zB.notAfter) : function(BB, jB, zB) {
+        const QB = new RegExp(jB.source, `${jB.flags.replace(/[gy]/g,"")}g`),
+          nB = [];
+        for (let dB = QB.exec(BB); dB; dB = QB.exec(BB))
+          if (!zB || zB(dB)) {
+            if (nB.push(dB), !jB.global) break;
+            "" === dB[0] && (QB.lastIndex = rB(BB, jB, QB.lastIndex))
+          } else QB.lastIndex = rB(BB, jB, dB.index);
+        return nB
+      }(BB, jB, zB)
     }
 
-    function jT(TT, UT, mT, WT) {
-      let zT = "",
-        MT = 0;
-      for (const gT of kT(TT, UT, mT)) zT += TT.slice(MT, gT.index) + WT(gT), MT = gT.index + gT[0].length;
-      return zT + TT.slice(MT)
+    function aB(BB, jB, zB, QB) {
+      let nB = "",
+        dB = 0;
+      for (const IB of UB(BB, jB, zB)) nB += BB.slice(dB, IB.index) + QB(IB), dB = IB.index + IB[0].length;
+      return nB + BB.slice(dB)
     }
 
-    function lT(TT, UT, mT) {
-      const WT = [];
-      let zT = 0;
-      for (const MT of kT(TT, UT, mT)) WT.push(TT.slice(zT, MT.index)), zT = MT.index + MT[0].length;
-      return [...WT, TT.slice(zT)]
+    function pB(BB, jB, zB) {
+      const QB = [];
+      let nB = 0;
+      for (const dB of UB(BB, jB, zB)) QB.push(BB.slice(nB, dB.index)), nB = dB.index + dB[0].length;
+      return [...QB, BB.slice(nB)]
     }
 
-    function LT(TT, UT, mT) {
-      var WT;
-      return mT + (UT.unicode && (null !== (WT = TT.codePointAt(mT)) && void 0 !== WT ? WT : 0) > 65535 ? 2 : 1)
+    function rB(BB, jB, zB) {
+      var QB;
+      return zB + (jB.unicode && (null !== (QB = BB.codePointAt(zB)) && void 0 !== QB ? QB : 0) > 65535 ? 2 : 1)
     }
   },
-  6559: () => {}
+  6436: () => {}
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,19 +1,19 @@
 export const id = 215;
 export const ids = [215];
 export const modules = {
-  36565: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => gT,
-      d: () => zT,
-      g: () => MT
+  36568: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => IB,
+      h: () => nB,
+      j: () => dB
     });
-    var WT = mT(1926);
-    class zT extends Error {
-      constructor(TT) {
-        super("The game server didn't answer in time"), this.leg = TT, this.name = "SeatRequestTimedOut"
+    var QB = zB(1842);
+    class nB extends Error {
+      constructor(BB) {
+        super("The game server didn't answer in time"), this.leg = BB, this.name = "SeatRequestTimedOut"
       }
     }
-    const MT = new class {
+    const dB = new class {
       constructor() {
         this.count = 0, this.answers = 0, this.waiting = new Set
       }
@@ -25,505 +25,505 @@ export const modules = {
       }
       add() {
         this.count++;
-        for (const TT of this.waiting) TT()
+        for (const BB of this.waiting) BB()
       }
       remove() {
         this.count--
       }
-      whenSlow(TT) {
-        return this.count > 0 || TT.aborted ? Promise.resolve(!TT.aborted) : new Promise((UT => {
-          const mT = () => {
-            this.waiting.delete(mT), UT(!TT.aborted)
+      whenSlow(BB) {
+        return this.count > 0 || BB.aborted ? Promise.resolve(!BB.aborted) : new Promise((jB => {
+          const zB = () => {
+            this.waiting.delete(zB), jB(!BB.aborted)
           };
-          this.waiting.add(mT), TT.addEventListener("abort", mT, {
+          this.waiting.add(zB), BB.addEventListener("abort", zB, {
             once: !0
           })
         }))
       }
     };
-    class gT {
-      constructor(TT) {
-        this.timeout = void 0, this.slow = void 0, this.countedSlow = !1, this.timeout = new WT.c(45e3, TT), this.slow = new WT.c(8e3, (() => {
-          this.countedSlow = !0, MT.add()
+    class IB {
+      constructor(BB) {
+        this.timeout = void 0, this.slow = void 0, this.countedSlow = !1, this.timeout = new QB.e(45e3, BB), this.slow = new QB.e(8e3, (() => {
+          this.countedSlow = !0, dB.add()
         }))
       }
       restart() {
-        MT.answer(), this.uncountSlow(), this.timeout.restart(), this.slow.restart()
+        dB.answer(), this.uncountSlow(), this.timeout.restart(), this.slow.restart()
       }
       stop() {
         this.timeout.stop(), this.slow.stop(), this.uncountSlow()
       }
       answered() {
-        this.stop(), MT.answer()
+        this.stop(), dB.answer()
       }
       socketOpened() {
-        this.slow.stop(), this.uncountSlow(), MT.answer()
+        this.slow.stop(), this.uncountSlow(), dB.answer()
       }
       uncountSlow() {
-        this.countedSlow && (this.countedSlow = !1, MT.remove())
+        this.countedSlow && (this.countedSlow = !1, dB.remove())
       }
     }
   },
-  36356: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => WT,
-      d: () => zT,
-      e: () => MT,
-      f: () => gT
+  36344: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => QB,
+      f: () => nB,
+      i: () => dB,
+      m: () => IB
     });
-    const WT = 1024,
-      zT = 1024 * WT;
+    const QB = 1024,
+      nB = 1024 * QB;
 
-    function MT(TT) {
-      return 2 ** Math.floor(Math.log2(Math.max(1, TT / zT)))
+    function dB(BB) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, BB / nB)))
     }
 
-    function gT(TT) {
-      return (TT / zT).toFixed(1)
+    function IB(BB) {
+      return (BB / nB).toFixed(1)
     }
   },
-  36550: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => MT,
-      g: () => HT,
-      h: () => nT,
-      j: () => gT,
-      n: () => kT,
-      p: () => jT,
-      t: () => LT
+  36552: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => dB,
+      d: () => uB,
+      e: () => NB,
+      f: () => IB,
+      h: () => UB,
+      j: () => aB,
+      m: () => rB
     });
-    var WT = mT(208);
-    const zT = 32 * mT(36356).d,
-      MT = 6144,
-      gT = 4608,
-      nT = 512,
-      HT = function() {
-        const TT = LT(WT.f.maxChunkHorizAddDistance + 1, WT.f.maxChunkVertAddDistance + 1);
-        let UT = TT;
-        for (; lT(UT) < TT;) UT++;
-        return UT
+    var QB = zB(214);
+    const nB = 32 * zB(36344).f,
+      dB = 6144,
+      IB = 4608,
+      NB = 512,
+      uB = function() {
+        const BB = rB(QB.e.maxChunkHorizAddDistance + 1, QB.e.maxChunkVertAddDistance + 1);
+        let jB = BB;
+        for (; pB(jB) < BB;) jB++;
+        return jB
       }();
 
-    function kT(TT) {
-      return Math.floor(zT * TT / MT)
+    function UB(BB) {
+      return Math.floor(nB * BB / dB)
     }
 
-    function jT(TT) {
-      const UT = lT(TT);
-      let mT = WT.f.maxChunkHorizAddDistance,
-        zT = WT.f.maxChunkVertAddDistance;
-      if (LT(mT + 1, zT + 1) <= UT) return null;
-      for (; LT(mT + 1, zT + 1) > UT && (mT > 0 || zT > 0);) mT > zT ? mT-- : zT--;
+    function aB(BB) {
+      const jB = pB(BB);
+      let zB = QB.e.maxChunkHorizAddDistance,
+        nB = QB.e.maxChunkVertAddDistance;
+      if (rB(zB + 1, nB + 1) <= jB) return null;
+      for (; rB(zB + 1, nB + 1) > jB && (zB > 0 || nB > 0);) zB > nB ? zB-- : nB--;
       return {
-        horizontal: mT,
-        vertical: zT
+        horizontal: zB,
+        vertical: nB
       }
     }
 
-    function lT(TT) {
-      return TT - Math.floor(TT / 6)
+    function pB(BB) {
+      return BB - Math.floor(BB / 6)
     }
 
-    function LT(TT, UT) {
-      const mT = Math.max(TT, UT);
-      let WT = 0;
-      for (let zT = -mT; zT <= mT; zT++)
-        for (let MT = -mT; MT <= mT; MT++)
-          for (let gT = -mT; gT <= mT; gT++) pT(TT, UT, zT, MT, gT) && WT++;
-      return WT
+    function rB(BB, jB) {
+      const zB = Math.max(BB, jB);
+      let QB = 0;
+      for (let nB = -zB; nB <= zB; nB++)
+        for (let dB = -zB; dB <= zB; dB++)
+          for (let IB = -zB; IB <= zB; IB++) sB(BB, jB, nB, dB, IB) && QB++;
+      return QB
     }
 
-    function pT(TT, UT, mT, WT, zT) {
-      const MT = mT * mT + zT * zT;
-      return TT === UT ? MT + WT * WT <= TT * TT : TT > UT ? Math.abs(WT) <= UT && MT + WT * WT <= TT * TT : MT <= TT * TT && MT + WT * WT <= UT * UT
+    function sB(BB, jB, zB, QB, nB) {
+      const dB = zB * zB + nB * nB;
+      return BB === jB ? dB + QB * QB <= BB * BB : BB > jB ? Math.abs(QB) <= jB && dB + QB * QB <= BB * BB : dB <= BB * BB && dB + QB * QB <= jB * jB
     }
   },
-  36546: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => iT,
-      e: () => aT,
-      g: () => tT,
-      k: () => wT,
-      n: () => dT
+  36547: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => gB,
+      h: () => DB,
+      i: () => HB,
+      k: () => oB,
+      m: () => fB
     });
-    var WT = mT(208),
-      zT = mT(102),
-      MT = mT(133),
-      gT = mT(305),
-      nT = mT(4506),
-      HT = mT(684),
-      kT = mT(36550),
-      jT = mT(36557);
-    const lT = 1048576,
-      LT = 1024 * lT,
-      pT = 400 * lT,
-      BT = 147456,
-      ZT = .5,
-      cT = 1.5 * LT,
-      vT = 768 * lT;
+    var QB = zB(214),
+      nB = zB(106),
+      dB = zB(145),
+      IB = zB(313),
+      NB = zB(4508),
+      uB = zB(694),
+      UB = zB(36552),
+      aB = zB(36560);
+    const pB = 1048576,
+      rB = 1024 * pB,
+      sB = 400 * pB,
+      JB = 147456,
+      mB = .5,
+      yB = 1.5 * rB,
+      kB = 768 * pB;
 
-    function fT(TT) {
+    function GB(BB) {
       const {
-        os: UT,
-        deviceMemory: mT
-      } = TT;
-      if ("ios" === UT) switch ((0, gT.f)(TT)) {
+        os: jB,
+        deviceMemory: zB
+      } = BB;
+      if ("ios" === jB) switch ((0, IB.g)(BB)) {
         case "ipad_m":
           return {
-            footprintBytes: qT(kT.c), basis: "ipad-m", namesLimit: !1
+            footprintBytes: LB(UB.b), basis: "ipad-m", namesLimit: !1
           };
         case "ipad":
           return {
-            footprintBytes: vT, basis: "ipad", namesLimit: !0
+            footprintBytes: kB, basis: "ipad", namesLimit: !0
           };
         case "iphone_6gb":
           return {
-            footprintBytes: cT, basis: "iphone-6gb", namesLimit: !0
+            footprintBytes: yB, basis: "iphone-6gb", namesLimit: !0
           };
         case "iphone":
           return {
-            footprintBytes: vT, basis: "iphone", namesLimit: !0
+            footprintBytes: kB, basis: "iphone", namesLimit: !0
           }
       }
-      return "number" === typeof mT && Number.isFinite(mT) && mT > 0 ? {
-        footprintBytes: mT * LT * ZT,
-        basis: `memory-${mT}`,
+      return "number" === typeof zB && Number.isFinite(zB) && zB > 0 ? {
+        footprintBytes: zB * rB * mB,
+        basis: `memory-${zB}`,
         namesLimit: !0
-      } : "android" === UT ? {
-        footprintBytes: vT,
+      } : "android" === jB ? {
+        footprintBytes: kB,
         basis: "android",
         namesLimit: !0
       } : {
-        footprintBytes: qT(kT.j),
+        footprintBytes: LB(UB.f),
         basis: "unreported",
         namesLimit: !1
       }
     }
 
-    function qT(TT) {
-      return pT + TT * BT
+    function LB(BB) {
+      return sB + BB * JB
     }
 
-    function iT() {
-      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : JT(),
-        UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : MT.siteUsed;
-      if ("android" !== TT.os || "mobileAndroid" === UT) return !0;
+    function gB() {
+      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : iB(),
+        jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dB.siteUsed;
+      if ("android" !== BB.os || "mobileAndroid" === jB) return !0;
       const {
-        footprintBytes: mT,
-        basis: WT
-      } = fT(TT);
-      return "android" === WT || mT > 2 * LT
+        footprintBytes: zB,
+        basis: QB
+      } = GB(BB);
+      return "android" === QB || zB > 2 * rB
     }
 
-    function bT(TT, UT, mT) {
-      var zT, MT;
+    function tB(BB, jB, zB) {
+      var nB, dB;
       let {
-        footprintBytes: gT,
-        basis: nT,
-        namesLimit: HT
-      } = fT(TT);
-      if (mT) {
-        const TT = Math.min(gT, qT(kT.c));
-        gT = pT + Math.max(0, TT - pT) / 2, nT += "+killed", HT = !0
+        footprintBytes: IB,
+        basis: NB,
+        namesLimit: uB
+      } = GB(BB);
+      if (zB) {
+        const BB = Math.min(IB, LB(UB.b));
+        IB = sB + Math.max(0, BB - sB) / 2, NB += "+killed", uB = !0
       }
-      null !== UT && qT(UT) < gT && (gT = qT(UT), nT += "+learned", HT = !0);
-      const jT = function(TT) {
-          const UT = Math.floor((TT - pT) / BT);
-          return Math.min(kT.c, Math.max(kT.h, UT))
-        }(gT),
-        lT = HT && jT < kT.c ? Math.min(jT, kT.g) : jT,
-        LT = (0, kT.p)(lT);
+      null !== jB && LB(jB) < IB && (IB = LB(jB), NB += "+learned", uB = !0);
+      const aB = function(BB) {
+          const jB = Math.floor((BB - sB) / JB);
+          return Math.min(UB.b, Math.max(UB.e, jB))
+        }(IB),
+        pB = uB && aB < UB.b ? Math.min(aB, UB.d) : aB,
+        rB = (0, UB.j)(pB);
       return {
-        footprintBytes: gT,
-        shedFootprintBytes: HT ? Math.max(gT, qT(lT)) : null,
-        chunkCap: lT,
-        maxHorizDistance: null !== (zT = null === LT || void 0 === LT ? void 0 : LT.horizontal) && void 0 !== zT ? zT : WT.f.maxChunkHorizAddDistance,
-        maxVertDistance: null !== (MT = null === LT || void 0 === LT ? void 0 : LT.vertical) && void 0 !== MT ? MT : WT.f.maxChunkVertAddDistance,
-        basis: nT
+        footprintBytes: IB,
+        shedFootprintBytes: uB ? Math.max(IB, LB(pB)) : null,
+        chunkCap: pB,
+        maxHorizDistance: null !== (nB = null === rB || void 0 === rB ? void 0 : rB.horizontal) && void 0 !== nB ? nB : QB.e.maxChunkHorizAddDistance,
+        maxVertDistance: null !== (dB = null === rB || void 0 === rB ? void 0 : rB.vertical) && void 0 !== dB ? dB : QB.e.maxChunkVertAddDistance,
+        basis: NB
       }
     }
-    let OT = null,
-      eT = null,
-      YT = null;
+    let SB = null,
+      MB = null,
+      EB = null;
 
-    function JT() {
-      return OT ??= {
-        os: (0, zT.getOperatingSystem)(),
+    function iB() {
+      return SB ??= {
+        os: (0, nB.getOperatingSystem)(),
         deviceMemory: navigator.deviceMemory,
-        ...(0, gT.i)()
-      }, OT
+        ...(0, IB.k)()
+      }, SB
     }
 
-    function xT() {
-      return bT(JT(), (0, nT.g)(), (0, HT.B)("wasm").length > 0)
+    function qB() {
+      return tB(iB(), (0, NB.g)(), (0, uB.H)("wasm").length > 0)
     }
 
-    function dT() {
-      return YT ??= (0, jT.t)(bT(JT(), null, !1).chunkCap), YT
+    function fB() {
+      return EB ??= (0, aB.q)(tB(iB(), null, !1).chunkCap), EB
     }
 
-    function wT() {
-      return eT ??= xT(), eT
+    function oB() {
+      return MB ??= qB(), MB
     }
 
-    function tT() {
-      var TT;
-      return (null !== (TT = eT) && void 0 !== TT ? TT : xT()).basis
+    function HB() {
+      var BB;
+      return (null !== (BB = MB) && void 0 !== BB ? BB : qB()).basis
     }
 
-    function aT(TT, UT) {
-      return TT.setChunkCap(UT.chunkCap)
+    function DB(BB, jB) {
+      return BB.setChunkCap(jB.chunkCap)
     }
   },
-  36557: (TT, UT, mT) => {
-    mT.d(UT, {
-      F: () => YT,
-      e: () => JT,
-      k: () => iT,
-      o: () => lT,
-      p: () => bT,
-      t: () => vT,
-      x: () => eT
+  36560: (BB, jB, zB) => {
+    zB.d(jB, {
+      A: () => EB,
+      e: () => iB,
+      k: () => gB,
+      m: () => pB,
+      o: () => tB,
+      q: () => kB,
+      t: () => MB
     });
-    var WT = mT(36356),
-      zT = mT(36550);
-    const MT = 64 * WT.b,
-      gT = 40 * WT.d,
-      nT = 36 * WT.d,
-      HT = 20 * WT.d,
-      kT = 2 * WT.d,
-      jT = 5 * WT.d;
+    var QB = zB(36344),
+      nB = zB(36552);
+    const dB = 64 * QB.d,
+      IB = 40 * QB.f,
+      NB = 36 * QB.f,
+      uB = 20 * QB.f,
+      UB = 2 * QB.f,
+      aB = 5 * QB.f;
 
-    function lT(TT) {
-      return "footprint" !== TT
+    function pB(BB) {
+      return "footprint" !== BB
     }
-    const LT = 2 * WT.d,
-      pT = 4 * WT.d,
-      BT = 35 * WT.d + LT + pT,
-      ZT = 6.5 * WT.d,
-      cT = 132.5 * WT.b;
+    const rB = 2 * QB.f,
+      sB = 4 * QB.f,
+      JB = 35 * QB.f + rB + sB,
+      mB = 6.5 * QB.f,
+      yB = 132.5 * QB.d;
 
-    function vT(TT) {
-      const UT = ZT + (0, zT.n)(TT) + TT * cT;
-      return Math.ceil((2 * BT + UT) / MT) * MT
+    function kB(BB) {
+      const jB = mB + (0, nB.h)(BB) + BB * yB;
+      return Math.ceil((2 * JB + jB) / dB) * dB
     }
-    vT(zT.c), WT.d, WT.d, WT.d;
-    const fT = {
-        targetBytes: gT,
-        leastBytes: HT
+    kB(nB.b), QB.f, QB.f, QB.f;
+    const GB = {
+        targetBytes: IB,
+        leastBytes: uB
       },
-      qT = {
-        targetBytes: nT,
-        leastBytes: HT
+      LB = {
+        targetBytes: NB,
+        leastBytes: uB
       };
 
-    function iT(TT) {
+    function gB(BB) {
       return {
-        targetBytes: TT,
+        targetBytes: BB,
         leastBytes: 0
       }
     }
 
-    function bT(TT) {
-      return TT >= zT.c ? fT : qT
+    function tB(BB) {
+      return BB >= nB.b ? GB : LB
     }
-    const OT = 2 * MT;
+    const SB = 2 * dB;
 
-    function eT(TT, UT, mT) {
-      return TT + UT + OT > mT
+    function MB(BB, jB, zB) {
+      return BB + jB + SB > zB
     }
-    const YT = {
+    const EB = {
       now: () => performance.now(),
-      requestIdle: "function" === typeof requestIdleCallback ? TT => {
-        requestIdleCallback(TT)
+      requestIdle: "function" === typeof requestIdleCallback ? BB => {
+        requestIdleCallback(BB)
       } : null
     };
-    class JT {
-      constructor(TT, UT, mT) {
-        let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : YT;
-        this.memory = TT, this.readPeakStoredChunks = UT, this.onError = mT, this.clock = WT, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
+    class iB {
+      constructor(BB, jB, zB) {
+        let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : EB;
+        this.memory = BB, this.readPeakStoredChunks = jB, this.onError = zB, this.clock = QB, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
           reserves: 0,
           allocations: 0
         }, this.joinReserveTaken = null, this.ceilingBytes = null, this.ballastCheckAt = -1 / 0, this.ballastPeakBytes = 0, this.distanceInUse = null, this.footprint = null
       }
-      setShed(TT, UT, mT) {
+      setShed(BB, jB, zB) {
         this.shedding = {
-          shed: TT,
-          Gp: UT,
-          readDistanceInUse: mT
+          shed: BB,
+          JJ: jB,
+          readDistanceInUse: zB
         }
       }
       shedDistanceInUse() {
         return this.distanceInUse
       }
-      setFootprint(TT) {
-        this.footprint = TT
+      setFootprint(BB) {
+        this.footprint = BB
       }
-      setCeiling(TT) {
-        this.ceilingBytes = TT, this.call((() => {
-          this.memory.setCeiling(TT)
+      setCeiling(BB) {
+        this.ceilingBytes = BB, this.call((() => {
+          this.memory.setCeiling(BB)
         }), void 0)
       }
-      ceilingMayRefuse(TT, UT) {
-        var mT;
-        return eT(this.memory.memoryBytes(), TT, null !== (mT = this.ceilingBytes) && void 0 !== mT ? mT : UT)
+      ceilingMayRefuse(BB, jB) {
+        var zB;
+        return MB(this.memory.memoryBytes(), BB, null !== (zB = this.ceilingBytes) && void 0 !== zB ? zB : jB)
       }
-      reserveAtJoin(TT) {
+      reserveAtJoin(BB) {
         let {
-          targetBytes: UT,
-          leastBytes: mT
-        } = TT;
-        const WT = this.memory.memoryBytes(),
-          zT = WT + mT,
-          MT = Math.max(UT + (this.ballastOn() ? jT : 0), zT),
-          gT = this.call((() => this.memory.reserveUpFront(MT) ? "target" : MT > zT && this.memory.reserveUpFront(zT) ? "least" : "none"), "none");
+          targetBytes: jB,
+          leastBytes: zB
+        } = BB;
+        const QB = this.memory.memoryBytes(),
+          nB = QB + zB,
+          dB = Math.max(jB + (this.ballastOn() ? aB : 0), nB),
+          IB = this.call((() => this.memory.reserveUpFront(dB) ? "target" : dB > nB && this.memory.reserveUpFront(nB) ? "least" : "none"), "none");
         if (this.stopped) return !1;
-        if ("target" !== gT) {
-          const TT = "least" === gT ? `took ${zT} bytes instead` : "frames grow it in steps";
-          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${MT} bytes was refused at ${WT} bytes; ${TT}`)
+        if ("target" !== IB) {
+          const BB = "least" === IB ? `took ${nB} bytes instead` : "frames grow it in steps";
+          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${dB} bytes was refused at ${QB} bytes; ${BB}`)
         }
-        return this.joinReserveTaken = gT, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== gT && this.shedFor("joinReserve"), "none" !== gT
+        return this.joinReserveTaken = IB, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== IB && this.shedFor("joinReserve"), "none" !== IB
       }
       afterFrame() {
         if (this.stopped) return;
-        const TT = this.clock.now(),
-          UT = null !== this.stepsHeldUntil && TT >= this.stepsHeldUntil;
-        if (UT && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
-        if (null === this.stepsHeldUntil && TT >= this.ballastCheckAt && (this.takeBallast(TT), this.stopped)) return;
-        const mT = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
-          WT = UT && "now" === mT ? "none" : mT,
+        const BB = this.clock.now(),
+          jB = null !== this.stepsHeldUntil && BB >= this.stepsHeldUntil;
+        if (jB && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
+        if (null === this.stepsHeldUntil && BB >= this.ballastCheckAt && (this.takeBallast(BB), this.stopped)) return;
+        const zB = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
+          QB = jB && "now" === zB ? "none" : zB,
           {
-            requestIdle: zT
+            requestIdle: nB
           } = this.clock;
-        "now" === WT || null !== this.pendingSince && TT - this.pendingSince >= 500 ? this.step() : "idle" === WT && null === this.pendingSince && (null === zT ? this.step() : (this.pendingSince = TT, zT((() => {
+        "now" === QB || null !== this.pendingSince && BB - this.pendingSince >= 500 ? this.step() : "idle" === QB && null === this.pendingSince && (null === nB ? this.step() : (this.pendingSince = BB, nB((() => {
           null !== this.pendingSince && this.step()
-        })))), TT - this.statsAt >= 1e3 && (this.statsAt = TT, this.refreshStats(), this.checkFootprint())
+        })))), BB - this.statsAt >= 1e3 && (this.statsAt = BB, this.refreshStats(), this.checkFootprint())
       }
       refreshStats() {
         this.call((() => {
-          var TT, UT;
-          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (UT = this.shedding.readDistanceInUse()) && void 0 !== UT ? UT : this.distanceInUse);
-          null === (TT = this.footprint) || void 0 === TT || TT.read(this.memory.memoryBytes() + this.workersMemoryBytes())
+          var BB, jB;
+          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (jB = this.shedding.readDistanceInUse()) && void 0 !== jB ? jB : this.distanceInUse);
+          null === (BB = this.footprint) || void 0 === BB || BB.read(this.memory.memoryBytes() + this.workersMemoryBytes())
         }), void 0)
       }
       stop() {
         this.stopped = !0, this.pendingSince = null
       }
-      noteMeshWorker(TT, UT) {
-        this.noteWorker(`Mesh${TT}`, UT)
+      noteMeshWorker(BB, jB) {
+        this.noteWorker(`Mesh${BB}`, jB)
       }
-      meshWorkerGone(TT) {
-        this.workerGone(`Mesh${TT}`)
+      meshWorkerGone(BB) {
+        this.workerGone(`Mesh${BB}`)
       }
-      noteWorldgen(TT) {
-        this.noteWorker("Worldgen", TT)
+      noteWorldgen(BB) {
+        this.noteWorker("Worldgen", BB)
       }
       worldgenGone() {
         this.workerGone("Worldgen")
       }
-      noteWorker(TT, UT) {
-        const mT = this.workers.get(TT);
-        null !== mT && void 0 !== mT && mT.gone && (this.replacedRefusals.reserves += mT.stats.reservesRefused, this.replacedRefusals.allocations += mT.stats.allocationsRefused), this.workers.set(TT, {
-          stats: UT,
+      noteWorker(BB, jB) {
+        const zB = this.workers.get(BB);
+        null !== zB && void 0 !== zB && zB.gone && (this.replacedRefusals.reserves += zB.stats.reservesRefused, this.replacedRefusals.allocations += zB.stats.allocationsRefused), this.workers.set(BB, {
+          stats: jB,
           gone: !1
         })
       }
-      workerGone(TT) {
-        const UT = this.workers.get(TT);
-        UT && (UT.gone = !0)
+      workerGone(BB) {
+        const jB = this.workers.get(BB);
+        jB && (jB.gone = !0)
       }
       details() {
-        var TT, UT;
-        const mT = {
-          wasmMemoryNow: `${(0,WT.f)(this.memory.memoryBytes())} MiB`
+        var BB, jB;
+        const zB = {
+          wasmMemoryNow: `${(0,QB.m)(this.memory.memoryBytes())} MiB`
         };
-        null !== this.joinReserveTaken && (mT.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (mT.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
-        const zT = this.main;
-        if (zT) {
-          mT.wasmMemoryMain = xT(zT);
-          const TT = Math.max(0, zT.peakLiveBytes - this.ballastPeakBytes),
-            UT = 0 === this.peakStoredChunks ? "-" : (TT / this.peakStoredChunks / WT.b).toFixed(1);
-          mT.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${UT} KiB`
+        null !== this.joinReserveTaken && (zB.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (zB.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
+        const nB = this.main;
+        if (nB) {
+          zB.wasmMemoryMain = qB(nB);
+          const BB = Math.max(0, nB.peakLiveBytes - this.ballastPeakBytes),
+            jB = 0 === this.peakStoredChunks ? "-" : (BB / this.peakStoredChunks / QB.d).toFixed(1);
+          zB.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${jB} KiB`
         }
-        for (const [WT, {
-            stats: gT,
-            gone: nT
-          }] of this.workers) mT[`wasmMemory${WT}`] = xT(gT) + (nT ? " (gone)" : "");
-        const MT = null !== (TT = null === (UT = this.footprint) || void 0 === UT ? void 0 : UT.describe()) && void 0 !== TT ? TT : null;
-        return null !== MT && (mT.wasmMemoryFootprint = MT), mT
+        for (const [QB, {
+            stats: IB,
+            gone: NB
+          }] of this.workers) zB[`wasmMemory${QB}`] = qB(IB) + (NB ? " (gone)" : "");
+        const dB = null !== (BB = null === (jB = this.footprint) || void 0 === jB ? void 0 : jB.describe()) && void 0 !== BB ? BB : null;
+        return null !== dB && (zB.wasmMemoryFootprint = dB), zB
       }
       pageKillSnapshot() {
-        var TT, UT, mT, zT, MT;
-        let gT = (null !== (TT = null === (UT = this.main) || void 0 === UT ? void 0 : UT.reservesRefused) && void 0 !== TT ? TT : 0) + this.replacedRefusals.reserves,
-          nT = (null !== (mT = null === (zT = this.main) || void 0 === zT ? void 0 : zT.allocationsRefused) && void 0 !== mT ? mT : 0) + this.replacedRefusals.allocations;
+        var BB, jB, zB, nB, dB;
+        let IB = (null !== (BB = null === (jB = this.main) || void 0 === jB ? void 0 : jB.reservesRefused) && void 0 !== BB ? BB : 0) + this.replacedRefusals.reserves,
+          NB = (null !== (zB = null === (nB = this.main) || void 0 === nB ? void 0 : nB.allocationsRefused) && void 0 !== zB ? zB : 0) + this.replacedRefusals.allocations;
         for (const {
-            stats: WT
+            stats: QB
           }
-          of this.workers.values()) gT += WT.reservesRefused, nT += WT.allocationsRefused;
+          of this.workers.values()) IB += QB.reservesRefused, NB += QB.allocationsRefused;
         return {
-          wasmMainMiB: Number((0, WT.f)(this.memory.memoryBytes())),
-          wasmWorkersMiB: Number((0, WT.f)(this.workersMemoryBytes())),
+          wasmMainMiB: Number((0, QB.m)(this.memory.memoryBytes())),
+          wasmWorkersMiB: Number((0, QB.m)(this.workersMemoryBytes())),
           peakStoredChunks: this.peakStoredChunks,
-          refusedReserves: gT,
-          refusedAllocations: nT,
+          refusedReserves: IB,
+          refusedAllocations: NB,
           sheds: this.sheds,
-          ...null === (MT = this.footprint) || void 0 === MT ? void 0 : MT.snapshot()
+          ...null === (dB = this.footprint) || void 0 === dB ? void 0 : dB.snapshot()
         }
       }
       workersMemoryBytes() {
-        let TT = 0;
+        let BB = 0;
         for (const {
-            stats: UT,
-            gone: mT
+            stats: jB,
+            gone: zB
           }
-          of this.workers.values()) TT += mT ? 0 : UT.memoryBytes;
-        return TT
+          of this.workers.values()) BB += zB ? 0 : jB.memoryBytes;
+        return BB
       }
       checkFootprint() {
         null === this.footprint || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil || this.footprint.takeShed() && this.shedFor("footprint")
       }
       step() {
-        this.pendingSince = null, this.call((() => this.memory.reserveAhead(kT)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
+        this.pendingSince = null, this.call((() => this.memory.reserveAhead(UB)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
       }
       ballastOn() {
         return null !== this.shedding
       }
-      takeBallast(TT) {
+      takeBallast(BB) {
         if (!this.ballastOn() || null === this.joinReserveTaken) return;
-        this.ballastCheckAt = TT + 1e3;
-        const UT = this.call((() => this.memory.takeBallast()), 0);
-        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, UT)
+        this.ballastCheckAt = BB + 1e3;
+        const jB = this.call((() => this.memory.takeBallast()), 0);
+        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, jB)
       }
       takePressure() {
         return this.ballastOn() && this.call((() => this.memory.takePressure()), !1)
       }
-      stopSteps(TT) {
-        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${TT}: frames grow on demand from here`)
+      stopSteps(BB) {
+        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${BB}: frames grow on demand from here`)
       }
-      shedFor(TT) {
+      shedFor(BB) {
         const {
-          shedding: UT
+          shedding: jB
         } = this;
-        if (null === UT) return;
+        if (null === jB) return;
         this.pendingSince = null;
-        const mT = this.call((() => UT.shed(TT)), null);
-        this.stopped || (null !== mT ? (this.sheds++, this.shedCap = mT, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats(), UT.Gp(TT, this.sheds, this.details())) : lT(TT) && this.stopSteps("nothing is left to shed"))
+        const zB = this.call((() => jB.shed(BB)), null);
+        this.stopped || (null !== zB ? (this.sheds++, this.shedCap = zB, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats(), jB.JJ(BB, this.sheds, this.details())) : pB(BB) && this.stopSteps("nothing is left to shed"))
       }
-      call(TT, UT) {
-        if (this.stopped) return UT;
+      call(BB, jB) {
+        if (this.stopped) return jB;
         try {
-          return TT()
-        } catch (mT) {
-          return this.stop(), this.onError(mT), UT
+          return BB()
+        } catch (zB) {
+          return this.stop(), this.onError(zB), jB
         }
       }
     }
 
-    function xT(TT) {
-      const UT = (TT, UT) => `${TT}/${(0,WT.f)(UT)}`;
-      return `memory ${(0,WT.f)(TT.memoryBytes)} live ${(0,WT.f)(TT.liveBytes)} peak ${(0,WT.f)(TT.peakLiveBytes)} unused ${(0,WT.f)(TT.unusedBytes)} ceiling ${(0,WT.f)(TT.ceilingBytes)} MiB; grows upFront ${UT(TT.grows.upFront,TT.grownBytes.upFront)} ahead ${UT(TT.grows.ahead,TT.grownBytes.ahead)} inFrame ${UT(TT.grows.onDemandInFrame,TT.grownBytes.onDemandInFrame)} other ${UT(TT.grows.onDemand,TT.grownBytes.onDemand)}; refused reserves ${TT.reservesRefused} allocations ${TT.allocationsRefused}`
+    function qB(BB) {
+      const jB = (BB, jB) => `${BB}/${(0,QB.m)(jB)}`;
+      return `memory ${(0,QB.m)(BB.memoryBytes)} live ${(0,QB.m)(BB.liveBytes)} peak ${(0,QB.m)(BB.peakLiveBytes)} unused ${(0,QB.m)(BB.unusedBytes)} ceiling ${(0,QB.m)(BB.ceilingBytes)} MiB; grows upFront ${jB(BB.grows.upFront,BB.grownBytes.upFront)} ahead ${jB(BB.grows.ahead,BB.grownBytes.ahead)} inFrame ${jB(BB.grows.onDemandInFrame,BB.grownBytes.onDemandInFrame)} other ${jB(BB.grows.onDemand,BB.grownBytes.onDemand)}; refused reserves ${BB.reservesRefused} allocations ${BB.allocationsRefused}`
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

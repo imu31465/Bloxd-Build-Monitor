@@ -1,38 +1,38 @@
 export const id = 64;
 export const ids = [64, 117, 118, 138];
 export const modules = {
-  39752: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => WT,
-      f: () => zT
+  39716: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => QB,
+      e: () => nB
     });
-    const WT = "The world isn't loaded, so no blocks can be seen.",
-      zT = "The world isn't loaded, so nothing in it can be seen."
+    const QB = "The world isn't loaded, so no blocks can be seen.",
+      nB = "The world isn't loaded, so nothing in it can be seen."
   },
-  4778: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => jT
+  4779: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => aB
     });
-    var WT = mT(25),
-      zT = mT(31),
-      MT = mT(1388),
-      gT = mT(2929);
-    const nT = 3e4,
-      HT = 1e3;
+    var QB = zB(28),
+      nB = zB(31),
+      dB = zB(1316),
+      IB = zB(2912);
+    const NB = 3e4,
+      uB = 1e3;
 
-    function kT() {
-      return "visible" === document.visibilityState && "inGame" === WT.b.get("gameState") && (0, MT.u)()
+    function UB() {
+      return "visible" === document.visibilityState && "inGame" === QB.c.get("gameState") && (0, dB.y)()
     }
 
-    function jT(TT, UT) {
-      (0, gT.v)() || function(TT, UT, mT) {
-        let WT = 0;
-        const zT = setInterval((() => {
-          UT() && (WT += HT, WT >= TT && (clearInterval(zT), mT()))
-        }), HT)
-      }(nT, kT, (() => {
-        UT().then((() => {
-          TT(`saved for the player after ${nT/1e3} s of play`), (0, gT.M)(), zT.j.EZ("chat", {
+    function aB(BB, jB) {
+      (0, IB.t)() || function(BB, jB, zB) {
+        let QB = 0;
+        const nB = setInterval((() => {
+          jB() && (QB += uB, QB >= BB && (clearInterval(nB), zB()))
+        }), uB)
+      }(NB, UB, (() => {
+        jB().then((() => {
+          BB(`saved for the player after ${NB/1e3} s of play`), (0, IB.E)(), nB.n.Ly("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -44,320 +44,320 @@ export const modules = {
       }))
     }
   },
-  34123: (TT, UT, mT) => {
-    function WT(TT, UT) {
-      return 0 === TT.length ? 0 : TT[Math.min(TT.length - 1, Math.floor(UT * TT.length))]
+  34101: (BB, jB, zB) => {
+    function QB(BB, jB) {
+      return 0 === BB.length ? 0 : BB[Math.min(BB.length - 1, Math.floor(jB * BB.length))]
     }
 
-    function zT(TT) {
-      return TT.toFixed(1)
+    function nB(BB) {
+      return BB.toFixed(1)
     }
-    mT.d(UT, {
-      d: () => zT,
-      h: () => WT
+    zB.d(jB, {
+      e: () => nB,
+      f: () => QB
     })
   },
-  38089: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => kT,
-      h: () => jT,
-      l: () => iT,
-      n: () => qT,
-      r: () => fT
+  38032: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => UB,
+      g: () => aB,
+      h: () => gB,
+      j: () => LB,
+      k: () => GB
     });
-    var WT = mT(4778),
-      zT = mT(34123),
-      MT = mT(2929);
-    const gT = 20,
-      nT = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "fl", "jobMs"];
+    var QB = zB(4779),
+      nB = zB(34101),
+      dB = zB(2912);
+    const IB = 20,
+      NB = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "Ep", "jobMs"];
 
-    function HT(TT) {
-      return [...TT].sort(((TT, UT) => TT - UT))
+    function uB(BB) {
+      return [...BB].sort(((BB, jB) => BB - jB))
     }
-    const kT = [];
+    const UB = [];
 
-    function jT(TT, UT, mT) {
-      return `${TT},${UT},${mT}`
+    function aB(BB, jB, zB) {
+      return `${BB},${jB},${zB}`
     }
-    class lT {
+    class pB {
       constructor() {
         this.pending = new Map, this.jobs = new Map, this.edits = [], this.nextEdit = 0, this.reported = 0, this.windowStart = performance.now(), this.frames = 0, this.lastFrameAt = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
-      edit(TT, UT) {
-        var mT;
-        const WT = null !== (mT = this.pending.get(TT)) && void 0 !== mT ? mT : [];
-        WT.push({
-          editAt: UT,
+      edit(BB, jB) {
+        var zB;
+        const QB = null !== (zB = this.pending.get(BB)) && void 0 !== zB ? zB : [];
+        QB.push({
+          editAt: jB,
           meshJobId: 0
-        }), this.pending.set(TT, WT)
+        }), this.pending.set(BB, QB)
       }
-      frame(TT) {
-        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, TT - this.lastFrameAt)), this.lastFrameAt = TT, this.frames++, TT - this.windowStart >= 1e3 && this.summarise(TT)
+      frame(BB) {
+        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, BB - this.lastFrameAt)), this.lastFrameAt = BB, this.frames++, BB - this.windowStart >= 1e3 && this.summarise(BB)
       }
-      sent(TT, UT, mT, WT, zT, MT, gT) {
-        this.jobs.set(UT, {
-          sentAt: gT,
+      sent(BB, jB, zB, QB, nB, dB, IB) {
+        this.jobs.set(jB, {
+          sentAt: IB,
           receivedAt: 0,
-          ahead: mT,
-          inFlight: WT,
-          fl: zT,
+          ahead: zB,
+          inFlight: QB,
+          Ep: nB,
           jobMs: 0
-        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, mT), this.maxCapacity = Math.max(this.maxCapacity, zT);
-        for (const HT of null !== (nT = this.pending.get(TT)) && void 0 !== nT ? nT : []) {
-          var nT;
-          MT.includes(HT.meshJobId) || (HT.meshJobId = UT)
+        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, zB), this.maxCapacity = Math.max(this.maxCapacity, nB);
+        for (const uB of null !== (NB = this.pending.get(BB)) && void 0 !== NB ? NB : []) {
+          var NB;
+          dB.includes(uB.meshJobId) || (uB.meshJobId = jB)
         }
       }
-      received(TT, UT, mT) {
-        const WT = this.jobs.get(TT);
-        void 0 !== WT && (this.roundTrips.push(mT - WT.sentAt), WT.receivedAt = mT, WT.jobMs = UT)
+      received(BB, jB, zB) {
+        const QB = this.jobs.get(BB);
+        void 0 !== QB && (this.roundTrips.push(zB - QB.sentAt), QB.receivedAt = zB, QB.jobMs = jB)
       }
-      failed(TT) {
-        this.jobs.delete(TT)
+      failed(BB) {
+        this.jobs.delete(BB)
       }
-      reassign(TT, UT, mT) {
-        this.jobs.delete(UT);
-        for (const zT of null !== (WT = this.pending.get(TT)) && void 0 !== WT ? WT : []) {
-          var WT;
-          zT.meshJobId === UT && (zT.meshJobId = mT)
+      reassign(BB, jB, zB) {
+        this.jobs.delete(jB);
+        for (const nB of null !== (QB = this.pending.get(BB)) && void 0 !== QB ? QB : []) {
+          var QB;
+          nB.meshJobId === jB && (nB.meshJobId = zB)
         }
       }
-      applied(TT, UT, mT) {
-        const WT = this.jobs.get(UT);
-        this.jobs.delete(UT), void 0 !== WT && this.show(TT, WT, mT, (TT => TT.meshJobId === UT))
+      applied(BB, jB, zB) {
+        const QB = this.jobs.get(jB);
+        this.jobs.delete(jB), void 0 !== QB && this.show(BB, QB, zB, (BB => BB.meshJobId === jB))
       }
-      emptied(TT, UT) {
-        const mT = {
-          sentAt: UT,
-          receivedAt: UT,
+      emptied(BB, jB) {
+        const zB = {
+          sentAt: jB,
+          receivedAt: jB,
           ahead: 0,
           inFlight: 0,
-          fl: 0,
+          Ep: 0,
           jobMs: 0
         };
-        this.show(TT, mT, UT, (() => !0))
+        this.show(BB, zB, jB, (() => !0))
       }
-      show(TT, UT, mT, WT) {
-        const zT = this.pending.get(TT);
-        if (!zT) return;
-        const MT = zT.filter((zT => !WT(zT) || (this.record(TT, zT.editAt, UT, mT), !1)));
-        MT.length > 0 ? this.pending.set(TT, MT) : this.pending.delete(TT)
+      show(BB, jB, zB, QB) {
+        const nB = this.pending.get(BB);
+        if (!nB) return;
+        const dB = nB.filter((nB => !QB(nB) || (this.record(BB, nB.editAt, jB, zB), !1)));
+        dB.length > 0 ? this.pending.set(BB, dB) : this.pending.delete(BB)
       }
-      Gp(TT) {
-        this.reported += TT, this === pT && this.reported >= gT && null !== BT && (BT(), BT = null)
+      JJ(BB) {
+        this.reported += BB, this === sB && this.reported >= IB && null !== JB && (JB(), JB = null)
       }
-      record(TT, UT, mT, WT) {
-        const zT = {
-          totalMs: WT - UT,
-          slotMs: mT.sentAt - UT,
-          workerMs: mT.receivedAt - mT.sentAt,
-          applyMs: WT - mT.receivedAt,
-          ahead: mT.ahead,
-          inFlight: mT.inFlight,
-          fl: mT.fl,
-          jobMs: mT.jobMs
+      record(BB, jB, zB, QB) {
+        const nB = {
+          totalMs: QB - jB,
+          slotMs: zB.sentAt - jB,
+          workerMs: zB.receivedAt - zB.sentAt,
+          applyMs: QB - zB.receivedAt,
+          ahead: zB.ahead,
+          inFlight: zB.inFlight,
+          Ep: zB.Ep,
+          jobMs: zB.jobMs
         };
-        if (this.edits[this.nextEdit] = zT, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(zT.totalMs), this.Gp(1), zT.totalMs < 100 || ++this.outliers > 5) return;
-        const gT = TT => Math.round(TT);
-        (0, MT.m)("remesh", `slow edit (${TT}) shown in ${gT(zT.totalMs)} ms: slot ${gT(zT.slotMs)}, worker ${gT(zT.workerMs)} (${zT.ahead} ahead, ${zT.inFlight}/${zT.fl} in flight; job ${gT(zT.jobMs)}), apply ${gT(zT.applyMs)}`)
+        if (this.edits[this.nextEdit] = nB, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(nB.totalMs), this.JJ(1), nB.totalMs < 100 || ++this.outliers > 5) return;
+        const IB = BB => Math.round(BB);
+        (0, dB.n)("remesh", `slow edit (${BB}) shown in ${IB(nB.totalMs)} ms: slot ${IB(nB.slotMs)}, worker ${IB(nB.workerMs)} (${nB.ahead} ahead, ${nB.inFlight}/${nB.Ep} in flight; job ${IB(nB.jobMs)}), apply ${IB(nB.applyMs)}`)
       }
-      summarise(TT) {
-        const UT = (TT - this.windowStart) / 1e3;
-        for (const [mT, WT] of this.pending) {
-          const UT = WT.filter((UT => TT - UT.editAt <= 1e4));
-          this.gaveUp += WT.length - UT.length, this.Gp(WT.length - UT.length), UT.length > 0 ? this.pending.set(mT, UT) : this.pending.delete(mT)
+      summarise(BB) {
+        const jB = (BB - this.windowStart) / 1e3;
+        for (const [zB, QB] of this.pending) {
+          const jB = QB.filter((jB => BB - jB.editAt <= 1e4));
+          this.gaveUp += QB.length - jB.length, this.JJ(QB.length - jB.length), jB.length > 0 ? this.pending.set(zB, jB) : this.pending.delete(zB)
         }
-        for (const [mT, WT] of this.jobs) TT - WT.sentAt > (WT.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(mT);
+        for (const [zB, QB] of this.jobs) BB - QB.sentAt > (QB.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(zB);
         if (this.jobsSent > 0 || this.roundTrips.length > 0 || this.windowEdits.length > 0 || this.gaveUp > 0) {
-          const TT = HT(this.roundTrips),
-            mT = HT(this.windowEdits),
-            WT = Math.max(0, this.outliers - 5);
-          (0, MT.m)("remesh", `${Math.round(this.frames/UT)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,zT.h)(TT,.5))} max ${Math.round((0,zT.h)(TT,1))} ms | ${mT.length} edits shown, p50 ${Math.round((0,zT.h)(mT,.5))} max ${Math.round((0,zT.h)(mT,1))} ms${WT>0?`, ${WT} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
+          const BB = uB(this.roundTrips),
+            zB = uB(this.windowEdits),
+            QB = Math.max(0, this.outliers - 5);
+          (0, dB.n)("remesh", `${Math.round(this.frames/jB)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,nB.f)(BB,.5))} max ${Math.round((0,nB.f)(BB,1))} ms | ${zB.length} edits shown, p50 ${Math.round((0,nB.f)(zB,.5))} max ${Math.round((0,nB.f)(zB,1))} ms${QB>0?`, ${QB} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
         }
-        this.windowStart = TT, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
+        this.windowStart = BB, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
       stats() {
-        const TT = nT.map((TT => {
-          const UT = HT(this.edits.map((UT => UT[TT])));
-          return `${TT}: p50 ${Math.round((0,zT.h)(UT,.5))} p90 ${Math.round((0,zT.h)(UT,.9))} max ${Math.round((0,zT.h)(UT,1))}`
+        const BB = NB.map((BB => {
+          const jB = uB(this.edits.map((jB => jB[BB])));
+          return `${BB}: p50 ${Math.round((0,nB.f)(jB,.5))} p90 ${Math.round((0,nB.f)(jB,.9))} max ${Math.round((0,nB.f)(jB,1))}`
         }));
-        return [`${this.edits.length} edits`, ...TT].join("\n")
+        return [`${this.edits.length} edits`, ...BB].join("\n")
       }
       dump() {
-        const TT = this.edits.map((TT => nT.map((UT => Math.round(10 * TT[UT]) / 10)).join(",")));
-        return [this.stats(), nT.join(","), ...TT].join("\n")
+        const BB = this.edits.map((BB => NB.map((jB => Math.round(10 * BB[jB]) / 10)).join(",")));
+        return [this.stats(), NB.join(","), ...BB].join("\n")
       }
     }
-    class LT {
-      constructor(TT, UT) {
-        this.log = TT, this.Rl = UT
+    class rB {
+      constructor(BB, jB) {
+        this.log = BB, this.ur = jB
       }
-      edit(TT, UT, mT) {
-        const [WT, zT, MT] = this.Rl.Nl.zWT(TT, UT, mT), gT = this.Rl.Nl.lZ.LZ(WT, zT, MT);
-        gT && gT.kZ && this.log.edit(jT(WT, zT, MT), performance.now())
+      edit(BB, jB, zB) {
+        const [QB, nB, dB] = this.ur.zr.xzB(BB, jB, zB), IB = this.ur.zr.Fm.Ym(QB, nB, dB);
+        IB && IB.Hm && this.log.edit(aB(QB, nB, dB), performance.now())
       }
-      sent(TT, UT, mT, WT, zT) {
-        this.log.sent(jT(TT.i, TT.j, TT.k), UT, mT, WT, zT, kT, performance.now())
+      sent(BB, jB, zB, QB, nB) {
+        this.log.sent(aB(BB.i, BB.j, BB.k), jB, zB, QB, nB, UB, performance.now())
       }
-      received(TT) {
-        this.log.received(TT.meshJobId, TT.jobMs, performance.now())
+      received(BB) {
+        this.log.received(BB.meshJobId, BB.jobMs, performance.now())
       }
-      failed(TT) {
-        this.log.failed(TT)
+      failed(BB) {
+        this.log.failed(BB)
       }
-      applied(TT, UT) {
-        this.log.applied(jT(TT.i, TT.j, TT.k), UT, performance.now())
+      applied(BB, jB) {
+        this.log.applied(aB(BB.i, BB.j, BB.k), jB, performance.now())
       }
     }
-    let pT = null,
-      BT = null,
-      ZT = !1,
-      cT = null;
+    let sB = null,
+      JB = null,
+      mB = !1,
+      yB = null;
 
-    function vT() {
-      return new Promise((TT => {
-        null !== pT && pT.reported >= gT ? TT() : BT = TT
+    function kB() {
+      return new Promise((BB => {
+        null !== sB && sB.reported >= IB ? BB() : JB = BB
       }))
     }
 
-    function fT() {
-      const TT = new lT;
-      return pT = TT, (0, MT.j)("remesh", (() => TT.dump())), (0, MT.b)("remeshStats", (() => {
-        console.log(TT.stats())
-      })), ZT || (ZT = !0, (0, WT.e)((TT => {
-        (0, MT.m)("remesh", TT)
-      }), vT)), TT
+    function GB() {
+      const BB = new pB;
+      return sB = BB, (0, dB.j)("remesh", (() => BB.dump())), (0, dB.d)("remeshStats", (() => {
+        console.log(BB.stats())
+      })), mB || (mB = !0, (0, QB.d)((BB => {
+        (0, dB.n)("remesh", BB)
+      }), kB)), BB
     }
 
-    function qT(TT) {
-      const UT = fT();
-      cT = new LT(UT, TT), TT.JY.meshProbe = cT, TT.on("beforeRender", (() => {
-        UT.frame(performance.now())
+    function LB(BB) {
+      const jB = GB();
+      yB = new rB(jB, BB), BB.fL.meshProbe = yB, BB.on("beforeRender", (() => {
+        jB.frame(performance.now())
       }))
     }
 
-    function iT(TT, UT, mT) {
-      var WT;
-      null === (WT = cT) || void 0 === WT || WT.edit(TT, UT, mT)
+    function gB(BB, jB, zB) {
+      var QB;
+      null === (QB = yB) || void 0 === QB || QB.edit(BB, jB, zB)
     }
   },
-  34156: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => WT
+  34132: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => QB
     });
-    const WT = new Set(["chunkBorders"])
+    const QB = new Set(["chunkBorders"])
   },
-  34315: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => gT,
-      e: () => zT,
-      i: () => jT
+  34289: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => IB,
+      g: () => nB,
+      i: () => aB
     });
-    var WT = mT(1688);
+    var QB = zB(1585);
 
-    function zT(TT) {
-      var UT;
+    function nB(BB) {
+      var jB;
       return {
-        ...gT.store,
-        yaw: gT.store.yaw + (null !== (UT = WT.e[TT].previewYaw) && void 0 !== UT ? UT : 0)
+        ...IB.store,
+        yaw: IB.store.yaw + (null !== (jB = QB.d[BB].previewYaw) && void 0 !== jB ? jB : 0)
       }
     }
-    const MT = {
+    const dB = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      gT = {
-        player: MT,
+      IB = {
+        player: dB,
         store: {
-          ...MT,
+          ...dB,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function nT(TT, UT) {
-      TT instanceof Promise ? TT.then(UT).catch((TT => {
-        console.error("Couldn't open the preview", TT)
-      })) : UT(TT)
+    function NB(BB, jB) {
+      BB instanceof Promise ? BB.then(jB).catch((BB => {
+        console.error("Couldn't open the preview", BB)
+      })) : jB(BB)
     }
-    class HT {
-      constructor(TT) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, nT(TT, (TT => {
-          this.closed ? TT.close() : (this.opened = TT, null !== this.size && TT.resize(this.size.width, this.size.height), null !== this.view && TT.show(this.view))
+    class uB {
+      constructor(BB) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, NB(BB, (BB => {
+          this.closed ? BB.close() : (this.opened = BB, null !== this.size && BB.resize(this.size.width, this.size.height), null !== this.view && BB.show(this.view))
         }))
       }
-      show(TT) {
-        var UT;
-        this.view = TT, null === (UT = this.opened) || void 0 === UT || UT.show(TT)
+      show(BB) {
+        var jB;
+        this.view = BB, null === (jB = this.opened) || void 0 === jB || jB.show(BB)
       }
-      resize(TT, UT) {
-        var mT;
+      resize(BB, jB) {
+        var zB;
         this.size = {
-          width: TT,
-          height: UT
-        }, null === (mT = this.opened) || void 0 === mT || mT.resize(TT, UT)
+          width: BB,
+          height: jB
+        }, null === (zB = this.opened) || void 0 === zB || zB.resize(BB, jB)
       }
       close() {
-        var TT;
-        this.closed = !0, null === (TT = this.opened) || void 0 === TT || TT.close(), this.opened = null
+        var BB;
+        this.closed = !0, null === (BB = this.opened) || void 0 === BB || BB.close(), this.opened = null
       }
     }
-    class kT {
-      constructor(TT) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(TT).then((TT => TT.ready)), nT(TT, (TT => {
-          this.closed ? TT.close() : (this.opened = TT, null !== this.size && TT.resize(this.size.width, this.size.height))
+    class UB {
+      constructor(BB) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(BB).then((BB => BB.ready)), NB(BB, (BB => {
+          this.closed ? BB.close() : (this.opened = BB, null !== this.size && BB.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var TT, UT;
-        return null !== (TT = null === (UT = this.opened) || void 0 === UT ? void 0 : UT.isReady()) && void 0 !== TT && TT
+        var BB, jB;
+        return null !== (BB = null === (jB = this.opened) || void 0 === jB ? void 0 : jB.isReady()) && void 0 !== BB && BB
       }
-      setCosmetic(TT, UT) {
-        var mT;
-        null === (mT = this.opened) || void 0 === mT || mT.setCosmetic(TT, UT)
+      setCosmetic(BB, jB) {
+        var zB;
+        null === (zB = this.opened) || void 0 === zB || zB.setCosmetic(BB, jB)
       }
-      playEmote(TT) {
-        var UT;
-        null === (UT = this.opened) || void 0 === UT || UT.playEmote(TT)
+      playEmote(BB) {
+        var jB;
+        null === (jB = this.opened) || void 0 === jB || jB.playEmote(BB)
       }
-      setOrbit(TT) {
-        var UT;
-        null === (UT = this.opened) || void 0 === UT || UT.setOrbit(TT)
+      setOrbit(BB) {
+        var jB;
+        null === (jB = this.opened) || void 0 === jB || jB.setOrbit(BB)
       }
       resetCamera() {
-        var TT;
-        null === (TT = this.opened) || void 0 === TT || TT.resetCamera()
+        var BB;
+        null === (BB = this.opened) || void 0 === BB || BB.resetCamera()
       }
-      async untilDrawn(TT) {
-        var UT;
-        await this.ready, await (null === (UT = this.opened) || void 0 === UT ? void 0 : UT.untilDrawn(TT))
+      async untilDrawn(BB) {
+        var jB;
+        await this.ready, await (null === (jB = this.opened) || void 0 === jB ? void 0 : jB.untilDrawn(BB))
       }
-      resize(TT, UT) {
-        var mT;
+      resize(BB, jB) {
+        var zB;
         this.size = {
-          width: TT,
-          height: UT
-        }, null === (mT = this.opened) || void 0 === mT || mT.resize(TT, UT)
+          width: BB,
+          height: jB
+        }, null === (zB = this.opened) || void 0 === zB || zB.resize(BB, jB)
       }
       close() {
-        var TT;
-        this.closed = !0, null === (TT = this.opened) || void 0 === TT || TT.close(), this.opened = null
+        var BB;
+        this.closed = !0, null === (BB = this.opened) || void 0 === BB || BB.close(), this.opened = null
       }
     }
-    const jT = new class {
+    const aB = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(TT) {
-        this.host = TT
+      setHost(BB) {
+        this.host = BB
       }
-      setDefaultHost(TT) {
-        this.makeDefault = TT
+      setDefaultHost(BB) {
+        this.makeDefault = BB
       }
       current() {
         if (null === this.host) {
@@ -366,202 +366,202 @@ export const modules = {
         }
         return this.host
       }
-      openMob(TT) {
-        return new HT(this.current().openMob(TT))
+      openMob(BB) {
+        return new uB(this.current().openMob(BB))
       }
-      openPet(TT) {
-        return new HT(this.current().openPet(TT))
+      openPet(BB) {
+        return new uB(this.current().openPet(BB))
       }
-      openMobLineup(TT) {
-        return new HT(this.current().openMobLineup(TT))
+      openMobLineup(BB) {
+        return new uB(this.current().openMobLineup(BB))
       }
-      openCharacter(TT, UT) {
-        return new kT(this.current().openCharacter(TT, UT))
+      openCharacter(BB, jB) {
+        return new UB(this.current().openCharacter(BB, jB))
       }
     }
   },
-  5139: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => WT.j,
-      e: () => zT,
-      f: () => WT.q
+  5115: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => QB.f,
+      g: () => nB,
+      k: () => QB.n
     });
-    var WT = mT(5142);
-    const zT = [!1, !0].flatMap((TT => ["terrain", "liquid", "model"].map((UT => ({
-      strict: TT,
-      program: UT
+    var QB = zB(5120);
+    const nB = [!1, !0].flatMap((BB => ["terrain", "liquid", "model"].map((jB => ({
+      strict: BB,
+      program: jB
     })))))
   },
-  39343: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      ShaderPackPage: () => HT,
-      harnessShaderPackMode: () => LT,
-      setHarnessUrlShaderPack: () => lT,
-      shaderPackPage: () => jT
+  39307: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      ShaderPackPage: () => uB,
+      harnessShaderPackMode: () => rB,
+      setHarnessUrlShaderPack: () => pB,
+      shaderPackPage: () => aB
     });
-    var WT = mT(102),
-      zT = mT(44),
-      MT = (mT(3559), mT(5139), mT(3551)),
-      gT = mT(6723);
-    mT(6698);
-    const nT = {
+    var QB = zB(106),
+      nB = zB(41),
+      dB = (zB(3577), zB(5115), zB(3572)),
+      IB = zB(6606);
+    zB(6585);
+    const NB = {
       status: "none"
     };
-    class HT {
+    class uB {
       constructor() {
         this.stored = null, this.compiling = null, this.pagePack = null, this.resolved = null
       }
       preload() {
         if (null === this.stored) {
-          if ((0, MT.m)(WT.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), kT().then((TT => {
-            TT && zT.l.removeItem(MT.e)
+          if ((0, dB.k)(QB.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), UB().then((BB => {
+            BB && nB.j.removeItem(dB.e)
           })), this.stored;
           this.prefetchHint() && this.compiler().catch((() => {})), this.stored = this.readStored()
         }
         return this.stored
       }
       prefetchHint() {
-        return (0, MT.i)(WT.featureFlags.settings.canUseShaderPacks)
+        return (0, dB.g)(QB.featureFlags.settings.canUseShaderPacks)
       }
       async loadActive() {
-        const TT = await this.load();
-        return "active" === TT.status ? TT.pack : null
+        const BB = await this.load();
+        return "active" === BB.status ? BB.pack : null
       }
       load() {
-        return this.pagePack ??= this.read().catch((TT => (console.error("Failed to load the shader pack", TT), nT))).then((TT => (this.resolved ??= TT, TT))), this.pagePack
+        return this.pagePack ??= this.read().catch((BB => (console.error("Failed to load the shader pack", BB), NB))).then((BB => (this.resolved ??= BB, BB))), this.pagePack
       }
       hasNone() {
-        var TT;
-        return "none" === (null === (TT = this.resolved) || void 0 === TT ? void 0 : TT.status)
+        var BB;
+        return "none" === (null === (BB = this.resolved) || void 0 === BB ? void 0 : BB.status)
       }
-      block(TT) {
+      block(BB) {
         this.resolved = {
           status: "blocked",
-          messageKey: TT,
+          messageKey: BB,
           variants: null
         }, this.pagePack = Promise.resolve(this.resolved)
       }
       compiler() {
-        return this.compiling ??= Promise.all([mT.e(78), mT.e(136), mT.e(142)]).then((() => mT(41880))).then((TT => (TT.prefetchCompiler(), TT))), this.compiling
+        return this.compiling ??= Promise.all([zB.e(78), zB.e(136), zB.e(142)]).then((() => zB(41831))).then((BB => (BB.prefetchCompiler(), BB))), this.compiling
       }
       async readStored() {
-        const TT = await kT();
-        return TT && this.compiler().then((TT => TT.reconcileHint())).catch((TT => {
-          console.error("Failed to correct the shader pack hint", TT)
-        })), TT
+        const BB = await UB();
+        return BB && this.compiler().then((BB => BB.reconcileHint())).catch((BB => {
+          console.error("Failed to correct the shader pack hint", BB)
+        })), BB
       }
       async read() {
-        const TT = await this.preload();
-        return TT ? (await this.compiler()).compilePagePack(TT) : nT
+        const BB = await this.preload();
+        return BB ? (await this.compiler()).compilePagePack(BB) : NB
       }
     }
-    async function kT() {
-      if (!(0, MT.q)(WT.featureFlags.settings.canUseShaderPacks)) return null;
+    async function UB() {
+      if (!(0, dB.o)(QB.featureFlags.settings.canUseShaderPacks)) return null;
       try {
-        const TT = await (0, gT.h)(!0);
-        return TT || zT.l.setItem(MT.e, !1), TT
-      } catch (TT) {
-        return console.error("Failed to read the stored shader pack", TT), zT.l.removeItem(MT.e), null
+        const BB = await (0, IB.h)(!0);
+        return BB || nB.j.setItem(dB.e, !1), BB
+      } catch (BB) {
+        return console.error("Failed to read the stored shader pack", BB), nB.j.removeItem(dB.e), null
       }
     }
-    const jT = new HT;
+    const aB = new uB;
 
-    function lT(TT, UT) {}
+    function pB(BB, jB) {}
 
-    function LT() {
+    function rB() {
       return null
     }
   },
-  39379: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => lT,
-      h: () => LT
+  39352: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => pB,
+      d: () => rB
     });
-    var WT = mT(166),
-      zT = mT(193),
-      MT = mT(1605),
-      gT = mT(3068),
-      nT = mT(1613),
-      HT = mT(36539),
-      kT = mT(696),
-      jT = mT(39343);
+    var QB = zB(174),
+      nB = zB(201),
+      dB = zB(1523),
+      IB = zB(3036),
+      NB = zB(1532),
+      uB = zB(36538),
+      UB = zB(701),
+      aB = zB(39307);
 
-    function lT(TT) {
-      (0, gT.reportClientError)("matchmake_failed", TT, WT.j[WT.j.SHADER_PACK])
+    function pB(BB) {
+      (0, IB.reportClientError)("matchmake_failed", BB, QB.j[QB.j.SHADER_PACK])
     }
-    async function LT(TT, UT) {
-      var mT;
-      const WT = null === (mT = await jT.shaderPackPage.preload()) || void 0 === mT ? void 0 : mT.listing,
-        gT = (0, HT.e)();
-      WT && null !== gT && await nT.b.reportShaderPackSession(TT, {
-        packId: WT.packId,
-        sourceHash: WT.sourceHash,
-        game: (0, MT.i)(UT, zT.z, "other"),
-        playSessionId: gT,
-        visitSessionId: (0, kT.d)()
+    async function rB(BB, jB) {
+      var zB;
+      const QB = null === (zB = await aB.shaderPackPage.preload()) || void 0 === zB ? void 0 : zB.listing,
+        IB = (0, uB.b)();
+      QB && null !== IB && await NB.b.reportShaderPackSession(BB, {
+        packId: QB.packId,
+        sourceHash: QB.sourceHash,
+        game: (0, dB.c)(jB, nB.u, "other"),
+        playSessionId: IB,
+        visitSessionId: (0, UB.h)()
       })
     }
   },
-  6723: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => zT,
-      h: () => MT
+  6606: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => nB,
+      h: () => dB
     });
-    var WT = mT(44);
-    const zT = "shaderPack";
-    async function MT() {
-      var TT;
-      let UT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (TT = await WT.h.getItem(zT, UT)) && void 0 !== TT ? TT : null
+    var QB = zB(41);
+    const nB = "shaderPack";
+    async function dB() {
+      var BB;
+      let jB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (BB = await QB.g.getItem(nB, jB)) && void 0 !== BB ? BB : null
     }
   },
-  6698: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      loadShaderPackTextures: () => gT,
-      shaderPackTextures: () => nT
+  6585: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      loadShaderPackTextures: () => IB,
+      shaderPackTextures: () => NB
     });
-    var WT = mT(5142);
-    let zT = null,
-      MT = null;
+    var QB = zB(5120);
+    let nB = null,
+      dB = null;
 
-    function gT() {
-      return MT ??= Promise.all([mT.e(73), mT.e(190)]).then((() => mT(40614))).then((TT => {
+    function IB() {
+      return dB ??= Promise.all([zB.e(73), zB.e(190)]).then((() => zB(40588))).then((BB => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: UT,
-          textureNameToIndex: mT,
-          textureAnimationData: MT
-        } = TT;
-        return zT ??= (0, WT.l)(mT, MT, UT), zT
-      })), MT
+          FORMER_BLOCK_IMAGE_NAMES: jB,
+          textureNameToIndex: zB,
+          textureAnimationData: dB
+        } = BB;
+        return nB ??= (0, QB.j)(zB, dB, jB), nB
+      })), dB
     }
 
-    function nT() {
-      if (null === zT) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return zT
+    function NB() {
+      if (null === nB) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return nB
     }
   },
-  34215: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => MT
+  34188: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => dB
     });
-    var WT = mT(1153);
+    var QB = zB(1121);
 
-    function zT() {
-      var TT, UT;
-      return null !== (TT = null === (UT = screen.orientation) || void 0 === UT ? void 0 : UT.type) && void 0 !== TT ? TT : innerWidth > innerHeight ? "landscape" : "portrait"
+    function nB() {
+      var BB, jB;
+      return null !== (BB = null === (jB = screen.orientation) || void 0 === jB ? void 0 : jB.type) && void 0 !== BB ? BB : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const MT = new class {
+    const dB = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && zT() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && nB() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = zT(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, WT.cZ)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = nB(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, QB.Zm)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -569,171 +569,171 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const TT of this.resizers) TT()
+            for (const BB of this.resizers) BB()
           }
         }), 1e3)
       }
-      heldSizer(TT) {
-        let UT = !1;
+      heldSizer(BB) {
+        let jB = !1;
         return () => {
-          if (UT && this.isHeld()) return null;
-          const mT = TT();
-          return UT ||= null !== mT, mT
+          if (jB && this.isHeld()) return null;
+          const zB = BB();
+          return jB ||= null !== zB, zB
         }
       }
-      onRelease(TT) {
-        return this.resizers.add(TT), () => {
-          this.resizers.delete(TT)
+      onRelease(BB) {
+        return this.resizers.add(BB), () => {
+          this.resizers.delete(BB)
         }
       }
     }
   },
-  39368: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => zT
+  39337: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => nB
     });
-    let WT = !1;
-    async function zT(TT, UT) {
-      if (!WT) {
-        WT = !0;
+    let QB = !1;
+    async function nB(BB, jB) {
+      if (!QB) {
+        QB = !0;
         try {
           const [{
-            reloadBloxd: WT
+            reloadBloxd: QB
           }, {
-            NotificationProvider: zT
-          }] = await Promise.all([Promise.resolve().then((() => mT(1863))), Promise.resolve().then((() => mT(1457)))]);
-          if (!TT || !0 === await zT.showPromptPopup({
+            NotificationProvider: nB
+          }] = await Promise.all([Promise.resolve().then((() => zB(1778))), Promise.resolve().then((() => zB(1381)))]);
+          if (!BB || !0 === await nB.showPromptPopup({
               title: "Unsaved changes",
               subtitle: "Exit and lose your unsaved changes?",
               confirmText: "Exit",
               destructive: !0,
               cancelText: "Cancel",
               unlockPointerKey: "replayExitUnsavedChanges"
-            }).getResult()) return void WT(UT)
-        } catch (zT) {
-          console.error("Leaving the replay failed", zT)
+            }).getResult()) return void QB(jB)
+        } catch (nB) {
+          console.error("Leaving the replay failed", nB)
         }
-        WT = !1
+        QB = !1
       }
     }
   },
-  41110: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => nT,
-      g: () => HT
+  41052: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => NB,
+      h: () => uB
     });
-    var WT = mT(1876);
-    const zT = 33177600,
-      MT = 3e4;
-    let gT = !1;
+    var QB = zB(1794);
+    const nB = 33177600,
+      dB = 3e4;
+    let IB = !1;
 
-    function nT(TT, UT, mT) {
-      let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    function NB(BB, jB, zB) {
+      let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        scale: nT = 1,
-        type: HT = "image/png",
-        quality: kT
-      } = WT;
-      if (!TT.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (gT) return Promise.reject(new Error("A screenshot is already being taken"));
-      gT = !0;
-      const jT = function(TT, UT, mT) {
-        const WT = Math.max(1, TT),
-          MT = Math.max(1, UT),
-          gT = Math.min(1, mT / Math.max(WT, MT), Math.sqrt(zT / (WT * MT)));
+        scale: NB = 1,
+        type: uB = "image/png",
+        quality: UB
+      } = QB;
+      if (!BB.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
+      if (IB) return Promise.reject(new Error("A screenshot is already being taken"));
+      IB = !0;
+      const aB = function(BB, jB, zB) {
+        const QB = Math.max(1, BB),
+          dB = Math.max(1, jB),
+          IB = Math.min(1, zB / Math.max(QB, dB), Math.sqrt(nB / (QB * dB)));
         return {
-          width: Math.max(1, Math.floor(WT * gT)),
-          height: Math.max(1, Math.floor(MT * gT))
+          width: Math.max(1, Math.floor(QB * IB)),
+          height: Math.max(1, Math.floor(dB * IB))
         }
-      }(UT, mT, TT.maxTextureSize);
-      return TT.resize(jT.width, jT.height, nT * jT.width / Math.max(1, UT)), new Promise(((UT, mT) => {
-        let WT, zT = 2,
-          nT = null;
-        const jT = () => {
-          var UT;
-          gT = !1, null === (UT = nT) || void 0 === UT || UT(), clearTimeout(WT), TT.restoreSize()
+      }(jB, zB, BB.maxTextureSize);
+      return BB.resize(aB.width, aB.height, NB * aB.width / Math.max(1, jB)), new Promise(((jB, zB) => {
+        let QB, nB = 2,
+          NB = null;
+        const aB = () => {
+          var jB;
+          IB = !1, null === (jB = NB) || void 0 === jB || jB(), clearTimeout(QB), BB.restoreSize()
         };
-        WT = setTimeout((() => {
-          jT(), mT(new Error("No frame was drawn to capture"))
-        }), MT), nT = TT.onFrameDrawn((() => {
-          if (zT--, zT > 0) return;
+        QB = setTimeout((() => {
+          aB(), zB(new Error("No frame was drawn to capture"))
+        }), dB), NB = BB.onFrameDrawn((() => {
+          if (nB--, nB > 0) return;
           const {
-            canvas: WT
-          } = TT, MT = {
-            width: WT.width,
-            height: WT.height
+            canvas: QB
+          } = BB, dB = {
+            width: QB.width,
+            height: QB.height
           };
           try {
-            WT.toBlob((TT => {
-              TT ? UT({
-                blob: TT,
-                ...MT
-              }) : mT(new Error("The canvas gave no image"))
-            }), HT, kT)
-          } catch (gT) {
-            mT(gT)
+            QB.toBlob((BB => {
+              BB ? jB({
+                blob: BB,
+                ...dB
+              }) : zB(new Error("The canvas gave no image"))
+            }), uB, UB)
+          } catch (IB) {
+            zB(IB)
           } finally {
-            jT()
+            aB()
           }
         }))
       }))
     }
-    async function HT(TT, UT, mT) {
+    async function uB(BB, jB, zB) {
       try {
-        const zT = await nT(TT, UT, mT);
-        (0, WT.c)(zT.blob, `bloxd-screenshot-${zT.width}x${zT.height}-${Date.now()}.png`)
-      } catch (zT) {
-        console.error("Error taking screenshot:", zT)
+        const nB = await NB(BB, jB, zB);
+        (0, QB.e)(nB.blob, `bloxd-screenshot-${nB.width}x${nB.height}-${Date.now()}.png`)
+      } catch (nB) {
+        console.error("Error taking screenshot:", nB)
       }
     }
   },
-  37822: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => WT
+  37787: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => QB
     });
-    const WT = {
+    const QB = {
       noaReady: null,
       chunkRequested: null,
       beforeServerListeners: null,
       wasmNetReady: null
     }
   },
-  39289: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => gT
+  39262: (BB, jB, zB) => {
+    zB.d(jB, {
+      e: () => IB
     });
-    var WT = mT(351),
-      zT = mT(133),
-      MT = mT(44);
+    var QB = zB(363),
+      nB = zB(145),
+      dB = zB(41);
 
-    function gT() {
-      MT.l.setItem(WT.zb, MT.l.getItem(WT.zb) + 1), (0, zT.is99NightsCrazyGamesBundle)() && MT.l.setItem(WT.xb, MT.l.getItem(WT.xb) + 1)
+    function IB() {
+      dB.j.setItem(QB.yb, dB.j.getItem(QB.yb) + 1), (0, nB.is99NightsCrazyGamesBundle)() && dB.j.setItem(QB.ub, dB.j.getItem(QB.ub) + 1)
     }
   },
-  40798: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => nT
+  40744: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => NB
     });
-    var WT = mT(39752);
+    var QB = zB(39716);
 
-    function zT(TT) {
+    function nB(BB) {
       return {
-        current: () => TT,
+        current: () => BB,
         watch: () => () => {}
       }
     }
 
-    function MT() {}
-    const gT = Object.freeze([0, 0, 0]),
-      nT = {
+    function dB() {}
+    const IB = Object.freeze([0, 0, 0]),
+      NB = {
         states: {
-          health: zT({
+          health: nB({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: zT({
+          inventory: nB({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -741,63 +741,63 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: zT({
+          hotbar: nB({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: zT({
+          stationItems: nB({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: zT({}),
-          creativeVisibility: zT({
+          itemInfo: nB({}),
+          creativeVisibility: nB({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: zT(null),
-          heldItemAim: zT({
+          aura: nB(null),
+          heldItemAim: nB({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: zT(!1),
-          gliderBoostFuel: zT(0),
-          flight: zT({
+          crouching: nB(!1),
+          gliderBoostFuel: nB(0),
+          flight: nB({
             canFly: !1,
             flying: !1
           }),
-          crafting: zT({
+          crafting: nB({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: zT({
+          players: nB({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: zT({}),
-          fullInventory: zT(!1),
-          crosshairTarget: zT({
+          lobbyLeaderboardRows: nB({}),
+          fullInventory: nB(!1),
+          crosshairTarget: nB({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: zT(!0),
-          freeCamera: zT({
+          localPlayerAlive: nB(!0),
+          freeCamera: nB({
             allowed: !1,
             movesFly: !1
           }),
-          replay: zT(null),
-          replayEdits: zT(null),
-          replayRecorder: zT({
+          replay: nB(null),
+          replayEdits: nB(null),
+          replayRecorder: nB({
             recording: !1,
             clipping: !1,
             hasClipBuffer: !1,
             seconds: 0
           }),
-          replayVideoExporting: zT(!1)
+          replayVideoExporting: nB(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -859,87 +859,87 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: MT,
+          selectHotbarSlot: dB,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: MT,
-          setInventoryOpen: MT,
-          changeIronChestPasskey: MT,
-          dragReplayCamera: MT,
-          applyTemporaryThirdPerson: MT,
-          holdEmoteWheel: MT,
-          recordFlyingMiddleText: MT,
-          focusCrafting: MT,
+          closeChest: dB,
+          setInventoryOpen: dB,
+          changeIronChestPasskey: dB,
+          dragReplayCamera: dB,
+          applyTemporaryThirdPerson: dB,
+          holdEmoteWheel: dB,
+          recordFlyingMiddleText: dB,
+          focusCrafting: dB,
           craftRecipe: () => ({
-            Yj: 0,
-            Dn: null,
+            fa: 0,
+            zu: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: MT,
-          setShopOpen: MT,
-          buyShopItem: MT,
-          lobbyManage: MT,
-          sendChatMessage: MT,
-          ignorePlayer: MT,
-          reportPlayer: MT,
-          reportWorldCodeChat: MT,
-          requestDiscordReportKey: MT,
-          reportLobbyOrGame: MT,
-          playEmote: MT,
-          updateMyCosmetic: MT,
-          writeOnBoard: MT,
-          writeBook: MT,
-          writeNameTag: MT,
-          setCustomLobbyBlock: MT,
-          openIronChest: MT,
-          sendCodeCollab: MT,
-          clickCodeBlock: MT,
-          bindCustomButtonKeys: MT,
-          pressCustomButton: MT,
-          moveReplayFreecam: MT,
-          holdReplayFreecamVertical: MT,
-          respawn: MT,
-          wakeUp: MT,
-          requestLeaderboard: MT,
-          completeTask: MT,
-          setServerCookie: MT,
-          answerUiRequest: MT,
-          chooseRewardedAd: MT,
-          setCameraZoom: MT,
-          setFreeCameraMovesFly: MT,
-          setBlockHighlight: MT,
-          setCrosshairInteractPrompt: MT,
-          setLookSensitivity: MT,
-          replayAction: MT,
-          setReplayPlaying: MT,
-          seekReplay: MT,
-          setReplayCameraMode: MT,
-          syncReplayCameraMode: MT,
-          setReplayCameraKeyframe: MT,
-          moveReplayCameraKeyframe: MT,
-          deleteReplayCameraKeyframes: MT,
-          setReplayPlaybackMark: MT,
+          enchantItem: dB,
+          setShopOpen: dB,
+          buyShopItem: dB,
+          lobbyManage: dB,
+          sendChatMessage: dB,
+          ignorePlayer: dB,
+          reportPlayer: dB,
+          reportWorldCodeChat: dB,
+          requestDiscordReportKey: dB,
+          reportLobbyOrGame: dB,
+          playEmote: dB,
+          updateMyCosmetic: dB,
+          writeOnBoard: dB,
+          writeBook: dB,
+          writeNameTag: dB,
+          setCustomLobbyBlock: dB,
+          openIronChest: dB,
+          sendCodeCollab: dB,
+          clickCodeBlock: dB,
+          bindCustomButtonKeys: dB,
+          pressCustomButton: dB,
+          moveReplayFreecam: dB,
+          holdReplayFreecamVertical: dB,
+          respawn: dB,
+          wakeUp: dB,
+          requestLeaderboard: dB,
+          completeTask: dB,
+          setServerCookie: dB,
+          answerUiRequest: dB,
+          chooseRewardedAd: dB,
+          setCameraZoom: dB,
+          setFreeCameraMovesFly: dB,
+          setBlockHighlight: dB,
+          setCrosshairInteractPrompt: dB,
+          setLookSensitivity: dB,
+          replayAction: dB,
+          setReplayPlaying: dB,
+          seekReplay: dB,
+          setReplayCameraMode: dB,
+          syncReplayCameraMode: dB,
+          setReplayCameraKeyframe: dB,
+          moveReplayCameraKeyframe: dB,
+          deleteReplayCameraKeyframes: dB,
+          setReplayPlaybackMark: dB,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: MT,
-          exportReplayVideo: MT,
-          toggleRecording: MT,
-          saveClip: MT,
-          setRecorderPrefs: MT,
-          setReplayViewerOpen: MT
+          holdReplayForShaderPackFailure: dB,
+          exportReplayVideo: dB,
+          toggleRecording: dB,
+          saveClip: dB,
+          setRecorderPrefs: dB,
+          setReplayViewerOpen: dB
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => WT.b,
-          worldCodeAiGameState: () => WT.f
+          worldCodeAiChunk: () => QB.b,
+          worldCodeAiGameState: () => QB.e
         },
         lookups: {
-          localPos: () => gT,
+          localPos: () => IB,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -957,113 +957,113 @@ export const modules = {
         }
       }
   },
-  41104: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => gT,
-      f: () => MT
+  41050: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => IB,
+      e: () => dB
     });
-    var WT = mT(2273),
-      zT = mT(1089);
+    var QB = zB(2206),
+      nB = zB(1067);
 
-    function MT(TT, UT) {
-      return null !== TT.gameSource && (0, WT.k)(UT, TT.gameSource)
+    function dB(BB, jB) {
+      return null !== BB.gameSource && (0, QB.l)(jB, BB.gameSource)
     }
 
-    function gT(TT, UT) {
-      if (null === TT.gameSource || "" === TT.gameSource || null === UT) return !0;
-      const mT = (0, zT.k)(UT) ? (0, zT.q)(UT) : null;
-      return null !== mT && MT(TT, mT)
+    function IB(BB, jB) {
+      if (null === BB.gameSource || "" === BB.gameSource || null === jB) return !0;
+      const zB = (0, nB.n)(jB) ? (0, nB.q)(jB) : null;
+      return null !== zB && dB(BB, zB)
     }
   },
-  41072: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => nT
+  41022: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => NB
     });
-    var WT = mT(643),
-      zT = mT(41080),
-      MT = mT(40951);
-    async function gT(TT) {
-      const UT = await (0, zT.j)({
-        Helmet: mT(38108),
-        Chestplate: mT(38114),
-        Gauntlets: mT(38122),
-        Leggings: mT(38117),
-        Boots: mT(38120)
-      } [WT.b[TT]]);
+    var QB = zB(644),
+      nB = zB(41028),
+      dB = zB(40889);
+    async function IB(BB) {
+      const jB = await (0, nB.i)({
+        Helmet: zB(38044),
+        Chestplate: zB(38049),
+        Gauntlets: zB(38072),
+        Leggings: zB(38056),
+        Boots: zB(38063)
+      } [QB.c[BB]]);
       try {
-        return (0, MT.o)(UT)
+        return (0, dB.s)(jB)
       } finally {
-        UT.close()
+        jB.close()
       }
     }
-    const nT = new class {
+    const NB = new class {
       constructor() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : gT,
-          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zT.o;
-        this.decode = TT, this.register = UT, this.decoded = new Map
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : IB,
+          jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nB.m;
+        this.decode = BB, this.register = jB, this.decoded = new Map
       }
       warm() {
-        for (let TT = 0; TT < WT.b.length; TT++) this.part(TT).catch((UT => {
-          console.warn(`The grayscale armour ${WT.b[TT]} image didn't decode ahead of use`, UT)
+        for (let BB = 0; BB < QB.c.length; BB++) this.part(BB).catch((jB => {
+          console.warn(`The grayscale armour ${QB.c[BB]} image didn't decode ahead of use`, jB)
         }))
       }
-      async load(TT, UT) {
+      async load(BB, jB) {
         const {
-          width: mT,
-          height: MT,
-          pixels: gT
-        } = await this.part(TT), nT = new ImageData(function(TT, UT) {
-          const mT = new Uint8ClampedArray(TT.length);
-          for (let WT = 0; WT < TT.length; WT += 4) mT[WT] = Math.round(TT[WT] * UT[0] / 255), mT[WT + 1] = Math.round(TT[WT + 1] * UT[1] / 255), mT[WT + 2] = Math.round(TT[WT + 2] * UT[2] / 255), mT[WT + 3] = TT[WT + 3];
-          return mT
-        }(gT, function(TT) {
-          return [TT >>> 16 & 255, TT >>> 8 & 255, 255 & TT]
-        }(UT)), mT, MT);
-        let HT;
+          width: zB,
+          height: dB,
+          pixels: IB
+        } = await this.part(BB), NB = new ImageData(function(BB, jB) {
+          const zB = new Uint8ClampedArray(BB.length);
+          for (let QB = 0; QB < BB.length; QB += 4) zB[QB] = Math.round(BB[QB] * jB[0] / 255), zB[QB + 1] = Math.round(BB[QB + 1] * jB[1] / 255), zB[QB + 2] = Math.round(BB[QB + 2] * jB[2] / 255), zB[QB + 3] = BB[QB + 3];
+          return zB
+        }(IB, function(BB) {
+          return [BB >>> 16 & 255, BB >>> 8 & 255, 255 & BB]
+        }(jB)), zB, dB);
+        let uB;
         try {
-          HT = await createImageBitmap(nT, {
+          uB = await createImageBitmap(NB, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none"
           })
-        } catch (kT) {
-          throw new zT.d("decode", `grayscale armour ${WT.b[TT]}`, {
-            cause: kT
+        } catch (UB) {
+          throw new nB.d("decode", `grayscale armour ${QB.c[BB]}`, {
+            cause: UB
           })
         }
         return {
-          id: this.register(HT),
-          width: mT,
-          height: MT
+          id: this.register(uB),
+          width: zB,
+          height: dB
         }
       }
-      part(TT) {
-        const UT = this.decoded.get(TT);
-        if (void 0 !== UT) return UT;
-        const mT = this.decode(TT).catch((UT => {
-          throw this.decoded.delete(TT), UT instanceof zT.d ? UT : new zT.d("decode", `grayscale armour ${WT.b[TT]}`, {
-            cause: UT
+      part(BB) {
+        const jB = this.decoded.get(BB);
+        if (void 0 !== jB) return jB;
+        const zB = this.decode(BB).catch((jB => {
+          throw this.decoded.delete(BB), jB instanceof nB.d ? jB : new nB.d("decode", `grayscale armour ${QB.c[BB]}`, {
+            cause: jB
           })
         }));
-        return this.decoded.set(TT, mT), mT
+        return this.decoded.set(BB, zB), zB
       }
     }
   },
-  41066: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => gT,
-      h: () => cT,
-      k: () => jT,
-      o: () => lT,
-      r: () => ZT
+  41019: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => IB,
+      d: () => yB,
+      h: () => aB,
+      i: () => pB,
+      k: () => mB
     });
-    var WT = mT(40929),
-      zT = mT(41072),
-      MT = mT(41080);
-    const gT = 396,
-      nT = 1,
-      HT = 2,
-      kT = 3,
-      jT = {
+    var QB = zB(40881),
+      nB = zB(41022),
+      dB = zB(41028);
+    const IB = 396,
+      NB = 1,
+      uB = 2,
+      UB = 3,
+      aB = {
         Glb: 1,
         LifeformAtlas: 2,
         ArmourAtlas: 3,
@@ -1074,37 +1074,37 @@ export const modules = {
         BlockImage: 8,
         GreyscaleArmour: 9
       },
-      lT = {
+      pB = {
         File: 0,
         Item: 1
       },
-      LT = 0,
-      pT = 1,
-      BT = 2;
+      rB = 0,
+      sB = 1,
+      JB = 2;
 
-    function ZT(TT) {
-      const UT = (0, WT.q)();
-      UT.catch((() => {}));
-      let zT = null;
+    function mB(BB) {
+      const jB = (0, QB.p)();
+      jB.catch((() => {}));
+      let nB = null;
       return {
-        glbUrl: TT,
-        lifeformAtlasUrl: async TT => (await UT).lifeformAtlasUrl(TT),
-        armourAtlasUrl: async () => (await mT.e(207).then((() => mT(34366)))).armourAtlasUrl,
-        capeUrl: async TT => (await UT).capeUrl(TT),
-        attachmentImageUrl: async TT => (await UT).attachmentImageUrl(TT),
-        blockImageUrl: async TT => (await UT).blockImageUrl(TT),
-        groupAtlasUrl: async TT => (await UT).groupAtlasUrl(TT),
-        particleTextureUrl: async TT => (await UT).particleTextureUrl(TT),
-        particleItemUrl: async TT => (zT ??= mT.e(38).then((() => mT(51184))).catch((TT => {
-          throw zT = null, TT
-        })), (await zT).particleItemUrl(TT))
+        glbUrl: BB,
+        lifeformAtlasUrl: async BB => (await jB).lifeformAtlasUrl(BB),
+        armourAtlasUrl: async () => (await zB.e(207).then((() => zB(34335)))).armourAtlasUrl,
+        capeUrl: async BB => (await jB).capeUrl(BB),
+        attachmentImageUrl: async BB => (await jB).attachmentImageUrl(BB),
+        blockImageUrl: async BB => (await jB).blockImageUrl(BB),
+        groupAtlasUrl: async BB => (await jB).groupAtlasUrl(BB),
+        particleTextureUrl: async BB => (await jB).particleTextureUrl(BB),
+        particleItemUrl: async BB => (nB ??= zB.e(38).then((() => zB(51207))).catch((BB => {
+          throw nB = null, BB
+        })), (await nB).particleItemUrl(BB))
       }
     }
-    class cT {
-      constructor(TT, UT) {
-        var mT, gT, nT, HT;
-        let kT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.sources = TT, this.onFailure = UT, this.loading = new Map, this.glbImages = new Map, this.glbWrittenImages = new Map, this.glbTakenCount = new Map, this.answered = new Map, this.ready = [], this.load = void 0, this.release = void 0, this.fetchFile = void 0, this.greyscaleArmour = void 0, this.kB = !1, this.load = null !== (mT = kT.load) && void 0 !== mT ? mT : (TT, UT) => (0, MT.l)(TT, kT.fetchImage, UT), this.release = null !== (gT = kT.release) && void 0 !== gT ? gT : MT.s, this.fetchFile = null !== (nT = kT.fetchFile) && void 0 !== nT ? nT : TT => (0, WT.j)(TT), this.greyscaleArmour = null !== (HT = kT.greyscaleArmour) && void 0 !== HT ? HT : zT.b
+    class yB {
+      constructor(BB, jB) {
+        var zB, IB, NB, uB;
+        let UB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        this.sources = BB, this.onFailure = jB, this.loading = new Map, this.glbImages = new Map, this.glbWrittenImages = new Map, this.glbTakenCount = new Map, this.answered = new Map, this.ready = [], this.load = void 0, this.release = void 0, this.fetchFile = void 0, this.greyscaleArmour = void 0, this.HJ = !1, this.load = null !== (zB = UB.load) && void 0 !== zB ? zB : (BB, jB) => (0, dB.j)(BB, UB.fetchImage, jB), this.release = null !== (IB = UB.release) && void 0 !== IB ? IB : dB.q, this.fetchFile = null !== (NB = UB.fetchFile) && void 0 !== NB ? NB : BB => (0, QB.j)(BB), this.greyscaleArmour = null !== (uB = UB.greyscaleArmour) && void 0 !== uB ? uB : nB.d
       }
       get waiting() {
         return this.ready.length
@@ -1112,238 +1112,238 @@ export const modules = {
       get inFlight() {
         return this.loading.size
       }
-      glbWritten(TT, UT) {
-        this.glbWrittenImages.set(TT, eT(UT))
+      glbWritten(BB, jB) {
+        this.glbWrittenImages.set(BB, MB(jB))
       }
-      glbTaken(TT, UT) {
-        const mT = this.glbWrittenImages.get(TT);
-        this.glbWrittenImages.delete(TT), UT && this.setGlbImages(TT, void 0 !== mT && mT.length > 0 ? mT : void 0)
+      glbTaken(BB, jB) {
+        const zB = this.glbWrittenImages.get(BB);
+        this.glbWrittenImages.delete(BB), jB && this.setGlbImages(BB, void 0 !== zB && zB.length > 0 ? zB : void 0)
       }
-      setGlbImages(TT, UT) {
-        var mT;
-        this.glbTakenCount.set(TT, (null !== (mT = this.glbTakenCount.get(TT)) && void 0 !== mT ? mT : 0) + 1), void 0 === UT ? this.glbImages.delete(TT) : this.glbImages.set(TT, UT);
-        const WT = [];
+      setGlbImages(BB, jB) {
+        var zB;
+        this.glbTakenCount.set(BB, (null !== (zB = this.glbTakenCount.get(BB)) && void 0 !== zB ? zB : 0) + 1), void 0 === jB ? this.glbImages.delete(BB) : this.glbImages.set(BB, jB);
+        const QB = [];
         for (const {
-            key: zT
+            key: nB
           }
-          of this.loading.values()) zT.kind === jT.Glb && zT.word === TT && WT.push(zT);
-        for (let zT = this.ready.length - 1; zT >= 0; zT--) {
+          of this.loading.values()) nB.kind === aB.Glb && nB.word === BB && QB.push(nB);
+        for (let nB = this.ready.length - 1; nB >= 0; nB--) {
           const {
-            key: UT,
-            id: mT
-          } = this.ready[zT];
-          UT.kind === jT.Glb && UT.word === TT && (this.ready.splice(zT, 1), null !== mT && (this.answered.delete(mT), this.release(mT)), WT.push(UT))
+            key: jB,
+            id: zB
+          } = this.ready[nB];
+          jB.kind === aB.Glb && jB.word === BB && (this.ready.splice(nB, 1), null !== zB && (this.answered.delete(zB), this.release(zB)), QB.push(jB))
         }
-        this.loadAgain(WT)
+        this.loadAgain(QB)
       }
-      onEvent(TT) {
-        if (this.kB) return;
-        const UT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength);
-        for (let mT = 0; mT + 8 <= TT.byteLength; mT += 8) {
-          const TT = UT.getUint8(mT),
-            WT = UT.getUint32(mT + 4, !0);
-          if (TT === kT) {
-            this.answered.delete(WT), this.release(WT);
+      onEvent(BB) {
+        if (this.HJ) return;
+        const jB = new DataView(BB.buffer, BB.byteOffset, BB.byteLength);
+        for (let zB = 0; zB + 8 <= BB.byteLength; zB += 8) {
+          const BB = jB.getUint8(zB),
+            QB = jB.getUint32(zB + 4, !0);
+          if (BB === UB) {
+            this.answered.delete(QB), this.release(QB);
             continue
           }
-          const zT = {
-            kind: UT.getUint8(mT + 1),
-            index: UT.getUint8(mT + 2),
-            word: WT
+          const nB = {
+            kind: jB.getUint8(zB + 1),
+            index: jB.getUint8(zB + 2),
+            word: QB
           };
-          TT === nT ? this.want(zT) : TT === HT && this.loading.delete(vT(zT))
+          BB === NB ? this.want(nB) : BB === uB && this.loading.delete(kB(nB))
         }
       }
-      reload(TT, UT) {
-        const mT = mT => TT.includes(mT.kind) && (void 0 === UT || UT(mT)),
-          WT = new Map;
-        for (const zT of this.answered.values()) mT(zT) && WT.set(vT(zT), zT);
-        for (const [zT, {
-            key: MT
-          }] of this.loading) mT(MT) && WT.set(zT, MT);
-        this.loadAgain(WT.values())
+      reload(BB, jB) {
+        const zB = zB => BB.includes(zB.kind) && (void 0 === jB || jB(zB)),
+          QB = new Map;
+        for (const nB of this.answered.values()) zB(nB) && QB.set(kB(nB), nB);
+        for (const [nB, {
+            key: dB
+          }] of this.loading) zB(dB) && QB.set(nB, dB);
+        this.loadAgain(QB.values())
       }
-      loadAgain(TT) {
-        for (const UT of TT) this.loading.delete(vT(UT)), this.want(UT)
+      loadAgain(BB) {
+        for (const jB of BB) this.loading.delete(kB(jB)), this.want(jB)
       }
-      drain(TT) {
-        if (null !== TT)
+      drain(BB) {
+        if (null !== BB)
           for (; this.ready.length > 0;) {
-            if (!TT(gT, 0, this.ready[0].record)) return;
+            if (!BB(IB, 0, this.ready[0].record)) return;
             this.ready.shift()
           }
       }
       dispose() {
-        this.kB = !0, this.loading.clear(), this.ready.length = 0;
-        for (const TT of this.answered.keys()) this.release(TT);
+        this.HJ = !0, this.loading.clear(), this.ready.length = 0;
+        for (const BB of this.answered.keys()) this.release(BB);
         this.answered.clear()
       }
-      want(TT) {
-        const UT = vT(TT);
-        if (this.loading.has(UT)) return;
-        const mT = {
-          key: TT
+      want(BB) {
+        const jB = kB(BB);
+        if (this.loading.has(jB)) return;
+        const zB = {
+          key: BB
         };
-        this.loading.set(UT, mT), this.loadKey(TT).then((WT => {
-          this.kB || this.loading.get(UT) !== mT ? this.release(WT.id) : (this.loading.delete(UT), this.answered.set(WT.id, TT), this.ready.push({
-            record: qT(TT, LT, WT),
-            key: TT,
-            id: WT.id
+        this.loading.set(jB, zB), this.loadKey(BB).then((QB => {
+          this.HJ || this.loading.get(jB) !== zB ? this.release(QB.id) : (this.loading.delete(jB), this.answered.set(QB.id, BB), this.ready.push({
+            record: LB(BB, rB, QB),
+            key: BB,
+            id: QB.id
           }))
-        }), (WT => {
-          if (this.kB || this.loading.get(UT) !== mT) return;
-          this.loading.delete(UT), this.onFailure({
-            key: TT,
-            error: WT
+        }), (QB => {
+          if (this.HJ || this.loading.get(jB) !== zB) return;
+          this.loading.delete(jB), this.onFailure({
+            key: BB,
+            error: QB
           });
-          const zT = WT instanceof MT.d && "decode" === WT.stage ? pT : BT;
+          const nB = QB instanceof dB.d && "decode" === QB.stage ? sB : JB;
           this.ready.push({
-            record: qT(TT, zT, null),
-            key: TT,
+            record: LB(BB, nB, null),
+            key: BB,
             id: null
           })
         }))
       }
-      async loadKey(TT) {
-        switch (TT.kind) {
-          case jT.Glb:
-            return this.load(await this.glbImage(TT), "none");
-          case jT.LifeformAtlas:
-            return this.load(fT(await this.sources.lifeformAtlasUrl(TT.word), TT), "none");
-          case jT.ArmourAtlas:
-            return this.load(fT(await this.sources.armourAtlasUrl(), TT), "none");
-          case jT.Cape:
-            return this.load(fT(await this.sources.capeUrl(TT.word), TT), "none");
-          case jT.AttachmentImage:
-            return this.load(fT(await this.sources.attachmentImageUrl(TT.word), TT), "none");
-          case jT.GroupAtlas:
-            return this.load(fT(await this.sources.groupAtlasUrl(TT.word), TT), "none");
-          case jT.BlockImage:
-            return this.load(fT(await this.sources.blockImageUrl(TT.word), TT), "none");
-          case jT.Particle: {
-            const UT = await (TT.index === lT.Item ? this.sources.particleItemUrl(TT.word) : this.sources.particleTextureUrl(TT.word));
-            return this.load(fT(UT, TT), "flipY")
+      async loadKey(BB) {
+        switch (BB.kind) {
+          case aB.Glb:
+            return this.load(await this.glbImage(BB), "none");
+          case aB.LifeformAtlas:
+            return this.load(GB(await this.sources.lifeformAtlasUrl(BB.word), BB), "none");
+          case aB.ArmourAtlas:
+            return this.load(GB(await this.sources.armourAtlasUrl(), BB), "none");
+          case aB.Cape:
+            return this.load(GB(await this.sources.capeUrl(BB.word), BB), "none");
+          case aB.AttachmentImage:
+            return this.load(GB(await this.sources.attachmentImageUrl(BB.word), BB), "none");
+          case aB.GroupAtlas:
+            return this.load(GB(await this.sources.groupAtlasUrl(BB.word), BB), "none");
+          case aB.BlockImage:
+            return this.load(GB(await this.sources.blockImageUrl(BB.word), BB), "none");
+          case aB.Particle: {
+            const jB = await (BB.index === pB.Item ? this.sources.particleItemUrl(BB.word) : this.sources.particleTextureUrl(BB.word));
+            return this.load(GB(jB, BB), "flipY")
           }
-          case jT.GreyscaleArmour:
-            return this.greyscaleArmour.load(TT.index, TT.word);
+          case aB.GreyscaleArmour:
+            return this.greyscaleArmour.load(BB.index, BB.word);
           default:
-            throw new MT.d("fetch", `image kind ${TT.kind}`, {
+            throw new dB.d("fetch", `image kind ${BB.kind}`, {
               cause: null
             })
         }
       }
-      async glbImage(TT) {
-        var UT;
-        let mT = this.glbImages.get(TT.word);
-        if (void 0 === mT) {
-          const UT = this.glbTakenCount.get(TT.word),
-            WT = fT(await this.sources.glbUrl(TT.word), TT);
+      async glbImage(BB) {
+        var jB;
+        let zB = this.glbImages.get(BB.word);
+        if (void 0 === zB) {
+          const jB = this.glbTakenCount.get(BB.word),
+            QB = GB(await this.sources.glbUrl(BB.word), BB);
           try {
-            mT = eT(await this.fetchFile(WT))
-          } catch (zT) {
-            throw new MT.d("fetch", WT, {
-              cause: zT
+            zB = MB(await this.fetchFile(QB))
+          } catch (nB) {
+            throw new dB.d("fetch", QB, {
+              cause: nB
             })
           }
-          this.glbTakenCount.get(TT.word) === UT && this.glbImages.set(TT.word, mT)
+          this.glbTakenCount.get(BB.word) === jB && this.glbImages.set(BB.word, zB)
         }
-        const WT = null === (UT = mT) || void 0 === UT ? void 0 : UT[TT.index];
-        if (!WT) throw new MT.d("decode", `image ${TT.index} of file ${2147483647&TT.word}`, {
+        const QB = null === (jB = zB) || void 0 === jB ? void 0 : jB[BB.index];
+        if (!QB) throw new dB.d("decode", `image ${BB.index} of file ${2147483647&BB.word}`, {
           cause: null
         });
-        return WT
+        return QB
       }
     }
 
-    function vT(TT) {
+    function kB(BB) {
       let {
-        kind: UT,
-        index: mT,
-        word: WT
-      } = TT;
-      return `${UT}:${mT}:${WT}`
+        kind: jB,
+        index: zB,
+        word: QB
+      } = BB;
+      return `${jB}:${zB}:${QB}`
     }
 
-    function fT(TT, UT) {
-      if (null === TT) throw new MT.d("fetch", `no URL for image ${vT(UT)}`, {
+    function GB(BB, jB) {
+      if (null === BB) throw new dB.d("fetch", `no URL for image ${kB(jB)}`, {
         cause: null
       });
-      return TT
+      return BB
     }
 
-    function qT(TT, UT, mT) {
-      var WT, zT, MT;
-      const gT = new Uint8Array(16),
-        nT = new DataView(gT.buffer);
-      return nT.setUint8(0, TT.kind), nT.setUint8(1, TT.index), nT.setUint8(2, UT), nT.setUint32(4, TT.word, !0), nT.setUint32(8, null !== (WT = null === mT || void 0 === mT ? void 0 : mT.id) && void 0 !== WT ? WT : 0, !0), nT.setUint16(12, Math.min(null !== (zT = null === mT || void 0 === mT ? void 0 : mT.width) && void 0 !== zT ? zT : 0, 65535), !0), nT.setUint16(14, Math.min(null !== (MT = null === mT || void 0 === mT ? void 0 : mT.height) && void 0 !== MT ? MT : 0, 65535), !0), gT
+    function LB(BB, jB, zB) {
+      var QB, nB, dB;
+      const IB = new Uint8Array(16),
+        NB = new DataView(IB.buffer);
+      return NB.setUint8(0, BB.kind), NB.setUint8(1, BB.index), NB.setUint8(2, jB), NB.setUint32(4, BB.word, !0), NB.setUint32(8, null !== (QB = null === zB || void 0 === zB ? void 0 : zB.id) && void 0 !== QB ? QB : 0, !0), NB.setUint16(12, Math.min(null !== (nB = null === zB || void 0 === zB ? void 0 : zB.width) && void 0 !== nB ? nB : 0, 65535), !0), NB.setUint16(14, Math.min(null !== (dB = null === zB || void 0 === zB ? void 0 : zB.height) && void 0 !== dB ? dB : 0, 65535), !0), IB
     }
-    const iT = 1179937895,
-      bT = 1313821514,
-      OT = 5130562;
+    const gB = 1179937895,
+      tB = 1313821514,
+      SB = 5130562;
 
-    function eT(TT) {
-      var UT;
-      const mT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength);
-      if (TT.byteLength < 20 || mT.getUint32(0, !0) !== iT || mT.getUint32(16, !0) !== bT) return [];
-      let WT, zT = 20 + mT.getUint32(12, !0);
+    function MB(BB) {
+      var jB;
+      const zB = new DataView(BB.buffer, BB.byteOffset, BB.byteLength);
+      if (BB.byteLength < 20 || zB.getUint32(0, !0) !== gB || zB.getUint32(16, !0) !== tB) return [];
+      let QB, nB = 20 + zB.getUint32(12, !0);
       try {
-        WT = JSON.parse((new TextDecoder).decode(TT.subarray(20, zT)))
+        QB = JSON.parse((new TextDecoder).decode(BB.subarray(20, nB)))
       } catch {
         return []
       }
-      for (; zT + 8 <= TT.byteLength && mT.getUint32(zT + 4, !0) !== OT;) zT += 8 + mT.getUint32(zT, !0);
-      const MT = null !== (UT = WT.images) && void 0 !== UT ? UT : [];
-      if (0 === MT.length || zT + 8 > TT.byteLength) return MT.map((() => null));
-      const gT = TT.subarray(zT + 8, Math.min(TT.byteLength, zT + 8 + mT.getUint32(zT, !0)));
-      return MT.map((TT => {
-        var UT, mT, zT;
-        const MT = void 0 === TT.bufferView || null === (UT = WT.bufferViews) || void 0 === UT ? void 0 : UT[TT.bufferView];
-        if (!MT || 0 !== (null !== (mT = MT.buffer) && void 0 !== mT ? mT : 0) || void 0 === MT.byteLength) return null;
-        const nT = null !== (zT = MT.byteOffset) && void 0 !== zT ? zT : 0,
-          HT = nT + MT.byteLength;
-        return HT <= gT.byteLength ? gT.slice(nT, HT) : null
+      for (; nB + 8 <= BB.byteLength && zB.getUint32(nB + 4, !0) !== SB;) nB += 8 + zB.getUint32(nB, !0);
+      const dB = null !== (jB = QB.images) && void 0 !== jB ? jB : [];
+      if (0 === dB.length || nB + 8 > BB.byteLength) return dB.map((() => null));
+      const IB = BB.subarray(nB + 8, Math.min(BB.byteLength, nB + 8 + zB.getUint32(nB, !0)));
+      return dB.map((BB => {
+        var jB, zB, nB;
+        const dB = void 0 === BB.bufferView || null === (jB = QB.bufferViews) || void 0 === jB ? void 0 : jB[BB.bufferView];
+        if (!dB || 0 !== (null !== (zB = dB.buffer) && void 0 !== zB ? zB : 0) || void 0 === dB.byteLength) return null;
+        const NB = null !== (nB = dB.byteOffset) && void 0 !== nB ? nB : 0,
+          uB = NB + dB.byteLength;
+        return uB <= IB.byteLength ? IB.slice(NB, uB) : null
       }))
     }
   },
-  40802: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => gT,
-      d: () => MT,
-      e: () => zT
+  40753: (BB, jB, zB) => {
+    zB.d(jB, {
+      e: () => IB,
+      h: () => dB,
+      l: () => nB
     });
-    let WT = null;
+    let QB = null;
 
-    function zT(TT) {
-      WT = TT
+    function nB(BB) {
+      QB = BB
     }
 
-    function MT(TT) {
-      WT === TT && (WT = null)
+    function dB(BB) {
+      QB === BB && (QB = null)
     }
 
-    function gT() {
-      var TT;
-      null === (TT = WT) || void 0 === TT || TT()
+    function IB() {
+      var BB;
+      null === (BB = QB) || void 0 === BB || BB()
     }
   },
-  36674: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => jT,
-      g: () => LT,
-      i: () => vT,
-      l: () => kT
+  36665: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => aB,
+      f: () => rB,
+      h: () => kB,
+      k: () => UB
     });
-    var WT = mT(25),
-      zT = mT(2522),
-      MT = mT(2525),
-      gT = mT(2534),
-      nT = mT(2608),
-      HT = mT(31);
+    var QB = zB(28),
+      nB = zB(2482),
+      dB = zB(2491),
+      IB = zB(2493),
+      NB = zB(2585),
+      uB = zB(31);
 
-    function kT(TT, UT) {
-      return (!(0, gT.c)() || 0 === TT && 0 === UT) && (0, MT.v)(zT.g.Joystick, 0, TT, UT, 0)
+    function UB(BB, jB) {
+      return (!(0, IB.b)() || 0 === BB && 0 === jB) && (0, dB.w)(nB.j.Joystick, 0, BB, jB, 0)
     }
-    const jT = {
+    const aB = {
       Action1: 1,
       Action2: 2,
       Action3: 3,
@@ -1353,571 +1353,571 @@ export const modules = {
       Boost: 7
     };
 
-    function lT(TT) {
-      return TT.classList.contains("TouchKeyHit") && pT() ? null : TT.firstElementChild
+    function pB(BB) {
+      return BB.classList.contains("TouchKeyHit") && sB() ? null : BB.firstElementChild
     }
 
-    function LT(TT) {
-      return TT.classList.contains("TouchKeyHit") && !TT.classList.contains("CanvasZone") ? {
-        whole: !pT(),
+    function rB(BB) {
+      return BB.classList.contains("TouchKeyHit") && !BB.classList.contains("CanvasZone") ? {
+        whole: !sB(),
         keyBox: null
       } : {
         whole: !1,
-        keyBox: BT(lT(TT))
+        keyBox: JB(pB(BB))
       }
     }
 
-    function pT() {
-      return document.documentElement.classList.contains(nT.g)
+    function sB() {
+      return document.documentElement.classList.contains(NB.j)
     }
 
-    function BT(TT) {
-      return !(TT instanceof HTMLElement) || TT.offsetWidth <= 0 || TT.offsetHeight <= 0 ? null : {
-        width: TT.offsetWidth,
-        height: TT.offsetHeight
+    function JB(BB) {
+      return !(BB instanceof HTMLElement) || BB.offsetWidth <= 0 || BB.offsetHeight <= 0 ? null : {
+        width: BB.offsetWidth,
+        height: BB.offsetHeight
       }
     }
 
-    function ZT(TT, UT) {
-      const mT = TT => Math.min(65535, Math.round(4 * TT));
-      return (mT(TT) | mT(UT) << 16) >>> 0
+    function mB(BB, jB) {
+      const zB = BB => Math.min(65535, Math.round(4 * BB));
+      return (zB(BB) | zB(jB) << 16) >>> 0
     }
 
-    function cT(TT) {
+    function yB(BB) {
       return {
-        x: TT.left + TT.width / 2,
-        y: TT.top + TT.height / 2,
-        radius: Math.min(TT.width, TT.height) / 2
+        x: BB.left + BB.width / 2,
+        y: BB.top + BB.height / 2,
+        radius: Math.min(BB.width, BB.height) / 2
       }
     }
-    const vT = new class {
-      constructor(TT) {
-        this.write = TT, this.elements = new Map, this.canvasLeft = 0, this.canvasTop = 0
+    const kB = new class {
+      constructor(BB) {
+        this.write = BB, this.elements = new Map, this.canvasLeft = 0, this.canvasTop = 0
       }
-      set(TT, UT) {
-        let mT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        UT ? this.elements.set(TT, {
-          element: UT,
-          hidden: mT
-        }) : this.elements.delete(TT), this.measureOne(TT)
+      set(BB, jB) {
+        let zB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        jB ? this.elements.set(BB, {
+          element: jB,
+          hidden: zB
+        }) : this.elements.delete(BB), this.measureOne(BB)
       }
       measure() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
           left: this.canvasLeft,
           top: this.canvasTop
         };
-        this.canvasLeft = TT.left, this.canvasTop = TT.top;
-        for (const UT of this.elements.keys()) this.measureOne(UT)
+        this.canvasLeft = BB.left, this.canvasTop = BB.top;
+        for (const jB of this.elements.keys()) this.measureOne(jB)
       }
-      hitZone(TT, UT) {
-        let mT = null,
-          WT = 1;
-        for (const zT of this.elements.keys()) {
-          const MT = this.shown(zT);
-          if (!MT) continue;
+      hitZone(BB, jB) {
+        let zB = null,
+          QB = 1;
+        for (const nB of this.elements.keys()) {
+          const dB = this.shown(nB);
+          if (!dB) continue;
           const {
-            rect: gT,
-            element: nT
-          } = MT, HT = cT(gT), kT = Math.max(0, gT.width / 2 - HT.radius), jT = Math.max(0, gT.height / 2 - HT.radius), LT = Math.max(0, Math.abs(TT - HT.x) - kT), pT = Math.max(0, Math.abs(UT - HT.y) - jT), ZT = nT.firstElementChild;
-          let vT = Math.hypot(LT, pT) / HT.radius;
-          const fT = BT(lT(nT));
-          fT && (vT = Math.min(vT, Math.max(2 * Math.abs(TT - HT.x) / fT.width, 2 * Math.abs(UT - HT.y) / fT.height))), vT < WT && (mT = {
-            code: zT,
-            element: nT,
-            key: ZT,
-            ...HT
-          }, WT = vT)
+            rect: IB,
+            element: NB
+          } = dB, uB = yB(IB), UB = Math.max(0, IB.width / 2 - uB.radius), aB = Math.max(0, IB.height / 2 - uB.radius), rB = Math.max(0, Math.abs(BB - uB.x) - UB), sB = Math.max(0, Math.abs(jB - uB.y) - aB), mB = NB.firstElementChild;
+          let kB = Math.hypot(rB, sB) / uB.radius;
+          const GB = JB(pB(NB));
+          GB && (kB = Math.min(kB, Math.max(2 * Math.abs(BB - uB.x) / GB.width, 2 * Math.abs(jB - uB.y) / GB.height))), kB < QB && (zB = {
+            code: nB,
+            element: NB,
+            key: mB,
+            ...uB
+          }, QB = kB)
         }
-        return mT
+        return zB
       }
-      measureOne(TT) {
-        const UT = this.shown(TT);
-        if (!UT) return void this.write(zT.g.TouchZone, TT, 0, 0, 0);
+      measureOne(BB) {
+        const jB = this.shown(BB);
+        if (!jB) return void this.write(nB.j.TouchZone, BB, 0, 0, 0);
         const {
-          rect: mT,
-          element: WT
-        } = UT, MT = cT(mT);
-        this.write(zT.g.TouchZone, TT, MT.x - this.canvasLeft, MT.y - this.canvasTop, ZT(mT.width, mT.height));
-        const gT = BT(lT(WT));
-        this.write(zT.g.TouchZone, 256 | TT, 0, 0, gT ? ZT(gT.width, gT.height) : 0)
+          rect: zB,
+          element: QB
+        } = jB, dB = yB(zB);
+        this.write(nB.j.TouchZone, BB, dB.x - this.canvasLeft, dB.y - this.canvasTop, mB(zB.width, zB.height));
+        const IB = JB(pB(QB));
+        this.write(nB.j.TouchZone, 256 | BB, 0, 0, IB ? mB(IB.width, IB.height) : 0)
       }
-      shown(TT) {
-        const UT = this.elements.get(TT),
-          mT = WT.b.get("worldPanelHud");
-        if (!UT || UT.hidden || "none" === mT) return null;
-        const zT = UT.element.getBoundingClientRect();
-        return zT.width <= 0 || zT.height <= 0 ? null : {
-          rect: zT,
-          element: UT.element
+      shown(BB) {
+        const jB = this.elements.get(BB),
+          zB = QB.c.get("worldPanelHud");
+        if (!jB || jB.hidden || "none" === zB) return null;
+        const nB = jB.element.getBoundingClientRect();
+        return nB.width <= 0 || nB.height <= 0 ? null : {
+          rect: nB,
+          element: jB.element
         }
       }
-    }(MT.v);
-    (0, HT.k)(nT.d, (() => {
-      vT.measure()
+    }(dB.w);
+    (0, uB.q)(NB.f, (() => {
+      kB.measure()
     }))
   },
-  40848: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => HT,
-      c: () => kT
+  40791: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => uB,
+      c: () => UB
     });
-    var WT = mT(40979),
-      zT = mT(39204),
-      MT = mT(36534),
-      gT = mT(40855),
-      nT = mT(40824);
-    const HT = WT.e.timeForPlayerToConnect - 1e4;
-    async function kT(TT, UT, mT, WT) {
-      let HT;
+    var QB = zB(40916),
+      nB = zB(39158),
+      dB = zB(36533),
+      IB = zB(40796),
+      NB = zB(40770);
+    const uB = QB.d.timeForPlayerToConnect - 1e4;
+    async function UB(BB, jB, zB, QB) {
+      let uB;
       try {
-        HT = await TT.getTrafficCode()
-      } catch (BT) {
-        throw console.error("[bloxd-wasm-client] could not get a traffic code", BT), new nT.s(BT)
+        uB = await BB.getTrafficCode()
+      } catch (JB) {
+        throw console.error("[bloxd-wasm-client] could not get a traffic code", JB), new NB.u(JB)
       }
       const {
-        gameNameWithVariation: kT,
-        lobbyName: jT
-      } = UT, lT = () => {
-        const UT = (0, MT.f)(TT, kT, jT, HT, (TT => {
-          var UT;
-          return null !== (UT = null === mT || void 0 === mT ? void 0 : mT.isUsingCustomGameTexturePack(TT)) && void 0 !== UT && UT
+        gameNameWithVariation: UB,
+        lobbyName: aB
+      } = jB, pB = () => {
+        const jB = (0, dB.i)(BB, UB, aB, uB, (BB => {
+          var jB;
+          return null !== (jB = null === zB || void 0 === zB ? void 0 : zB.isUsingCustomGameTexturePack(BB)) && void 0 !== jB && jB
         }));
-        UT.joinOptions.wasmClient = !0;
-        const zT = (0, gT.F)();
-        return null !== zT && (UT.joinOptions.renderBackend = zT), UT.joinOptions.joinAdHold = WT, UT
+        jB.joinOptions.wasmClient = !0;
+        const nB = (0, IB.D)();
+        return null !== nB && (jB.joinOptions.renderBackend = nB), jB.joinOptions.joinAdHold = QB, jB
       }, {
-        roomName: LT,
-        joinOptions: pT
-      } = lT();
+        roomName: rB,
+        joinOptions: sB
+      } = pB();
       return {
-        endpoint: UT.endpoint,
-        roomName: LT,
-        joinOptions: pT,
+        endpoint: jB.endpoint,
+        roomName: rB,
+        joinOptions: sB,
         session: {
-          gameNameWithVariation: kT,
-          lobbyName: jT,
-          playerDbId: TT.whamm
+          gameNameWithVariation: UB,
+          lobbyName: aB,
+          playerDbId: BB.whamm
         },
-        optionsAfterRefusal: async UT => await (0, zT.d)(TT, UT) ? lT().joinOptions : null
+        optionsAfterRefusal: async jB => await (0, nB.d)(BB, jB) ? pB().joinOptions : null
       }
     }
   },
-  41093: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => jT,
-      e: () => MT,
-      h: () => lT,
-      l: () => gT
+  41038: (BB, jB, zB) => {
+    zB.d(jB, {
+      e: () => aB,
+      h: () => dB,
+      i: () => pB,
+      m: () => IB
     });
-    var WT = mT(41066),
-      zT = mT(40929);
-    const MT = new class {
+    var QB = zB(41019),
+      nB = zB(40881);
+    const dB = new class {
       constructor() {
         this.page = null, this.session = void 0, this.follower = null, this.isWanted = !1, this.listeners = new Set, this.pageListeners = new Set, this.wantedListeners = new Set
       }
       get current() {
         return void 0 === this.session ? this.page : this.session
       }
-      setPageFiles(TT) {
+      setPageFiles(BB) {
         this.change((() => {
-          this.page = TT
+          this.page = BB
         }))
       }
-      setSessionFiles(TT) {
-        const UT = void 0 !== this.session && void 0 === TT;
+      setSessionFiles(BB) {
+        const jB = void 0 !== this.session && void 0 === BB;
         if (this.change((() => {
-            this.session = TT
-          })), UT)
-          for (const mT of [...this.pageListeners]) mT()
+            this.session = BB
+          })), jB)
+          for (const zB of [...this.pageListeners]) zB()
       }
       showsPage() {
         return void 0 === this.session
       }
-      onPageShown(TT) {
-        return this.pageListeners.add(TT), () => {
-          this.pageListeners.delete(TT)
+      onPageShown(BB) {
+        return this.pageListeners.add(BB), () => {
+          this.pageListeners.delete(BB)
         }
       }
-      setFollower(TT) {
-        this.follower = TT, this.startFollower()
+      setFollower(BB) {
+        this.follower = BB, this.startFollower()
       }
       wanted() {
         this.isWanted = !0;
-        for (const TT of [...this.wantedListeners]) TT();
+        for (const BB of [...this.wantedListeners]) BB();
         this.startFollower()
       }
-      onWanted(TT) {
-        return this.wantedListeners.add(TT), () => {
-          this.wantedListeners.delete(TT)
+      onWanted(BB) {
+        return this.wantedListeners.add(BB), () => {
+          this.wantedListeners.delete(BB)
         }
       }
-      onChange(TT) {
-        return this.listeners.add(TT), () => {
-          this.listeners.delete(TT)
+      onChange(BB) {
+        return this.listeners.add(BB), () => {
+          this.listeners.delete(BB)
         }
       }
       startFollower() {
-        const TT = this.follower;
-        this.isWanted && null !== TT && (this.follower = null, TT((() => {
-          this.follower = TT
+        const BB = this.follower;
+        this.isWanted && null !== BB && (this.follower = null, BB((() => {
+          this.follower = BB
         })))
       }
-      change(TT) {
-        const UT = this.current;
-        if (TT(), this.current !== UT)
-          for (const mT of this.listeners) mT()
+      change(BB) {
+        const jB = this.current;
+        if (BB(), this.current !== jB)
+          for (const zB of this.listeners) zB()
       }
     };
 
-    function gT(TT, UT) {
+    function IB(BB, jB) {
       return {
-        ...TT,
+        ...BB,
         armourAtlasUrl: () => {
-          var mT, WT;
-          return null !== (mT = null === (WT = UT()) || void 0 === WT ? void 0 : WT.armourAtlasUrl()) && void 0 !== mT ? mT : TT.armourAtlasUrl()
+          var zB, QB;
+          return null !== (zB = null === (QB = jB()) || void 0 === QB ? void 0 : QB.armourAtlasUrl()) && void 0 !== zB ? zB : BB.armourAtlasUrl()
         },
-        lifeformAtlasUrl: mT => HT(UT(), (TT => TT.LIFEFORM_ATLAS_PATHS[mT]), (() => TT.lifeformAtlasUrl(mT))),
-        groupAtlasUrl: mT => HT(UT(), (TT => TT.GROUP_ATLAS_PATHS[mT]), (() => TT.groupAtlasUrl(mT))),
-        particleItemUrl: WT => kT(UT(), (async () => {
-          const TT = await mT.e(38).then((() => mT(51184))).catch((() => null));
-          return (null === TT || void 0 === TT ? void 0 : TT.particleItemSprite(WT)) || null
-        }), (() => TT.particleItemUrl(WT))),
-        blockImageUrl: mT => kT(UT(), (async () => {
-          var TT, UT;
-          return null !== (TT = null === (UT = await nT()) || void 0 === UT ? void 0 : UT.blockImageName(mT)) && void 0 !== TT ? TT : null
-        }), (() => TT.blockImageUrl(mT)))
+        lifeformAtlasUrl: zB => uB(jB(), (BB => BB.LIFEFORM_ATLAS_PATHS[zB]), (() => BB.lifeformAtlasUrl(zB))),
+        groupAtlasUrl: zB => uB(jB(), (BB => BB.GROUP_ATLAS_PATHS[zB]), (() => BB.groupAtlasUrl(zB))),
+        particleItemUrl: QB => UB(jB(), (async () => {
+          const BB = await zB.e(38).then((() => zB(51207))).catch((() => null));
+          return (null === BB || void 0 === BB ? void 0 : BB.particleItemSprite(QB)) || null
+        }), (() => BB.particleItemUrl(QB))),
+        blockImageUrl: zB => UB(jB(), (async () => {
+          var BB, jB;
+          return null !== (BB = null === (jB = await NB()) || void 0 === jB ? void 0 : jB.blockImageName(zB)) && void 0 !== BB ? BB : null
+        }), (() => BB.blockImageUrl(zB)))
       }
     }
 
-    function nT() {
-      return (0, zT.q)().catch((() => null))
+    function NB() {
+      return (0, nB.p)().catch((() => null))
     }
 
-    function HT(TT, UT, mT) {
-      return kT(TT, (async () => {
-        var TT;
-        const mT = await nT(),
-          WT = null === mT ? null : UT(mT),
-          zT = null !== (TT = null === WT || void 0 === WT ? void 0 : WT.slice(WT.lastIndexOf("/") + 1)) && void 0 !== TT ? TT : null;
-        return "Player_Atlas" === zT ? null : zT
-      }), mT)
+    function uB(BB, jB, zB) {
+      return UB(BB, (async () => {
+        var BB;
+        const zB = await NB(),
+          QB = null === zB ? null : jB(zB),
+          nB = null !== (BB = null === QB || void 0 === QB ? void 0 : QB.slice(QB.lastIndexOf("/") + 1)) && void 0 !== BB ? BB : null;
+        return "Player_Atlas" === nB ? null : nB
+      }), zB)
     }
-    async function kT(TT, UT, mT) {
-      if (null !== TT) {
-        const mT = await UT(),
-          WT = null === mT ? null : TT.textureUrl(mT);
-        if (null !== WT) return WT
+    async function UB(BB, jB, zB) {
+      if (null !== BB) {
+        const zB = await jB(),
+          QB = null === zB ? null : BB.textureUrl(zB);
+        if (null !== QB) return QB
       }
-      return mT()
+      return zB()
     }
-    const jT = 0;
+    const aB = 0;
 
-    function lT(TT) {
-      const UT = [WT.k.ArmourAtlas, WT.k.LifeformAtlas, WT.k.GroupAtlas, WT.k.BlockImage, WT.k.Particle];
-      TT.reload(UT, (TT => {
-        switch (TT.kind) {
-          case WT.k.Particle:
-            return TT.index === WT.o.Item;
-          case WT.k.LifeformAtlas:
-            return TT.word !== jT;
+    function pB(BB) {
+      const jB = [QB.h.ArmourAtlas, QB.h.LifeformAtlas, QB.h.GroupAtlas, QB.h.BlockImage, QB.h.Particle];
+      BB.reload(jB, (BB => {
+        switch (BB.kind) {
+          case QB.h.Particle:
+            return BB.index === QB.i.Item;
+          case QB.h.LifeformAtlas:
+            return BB.word !== aB;
           default:
             return !0
         }
       }))
     }
   },
-  40987: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => WT,
-      d: () => nT,
-      h: () => gT,
-      k: () => zT,
-      o: () => MT
+  40925: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => QB,
+      g: () => NB,
+      h: () => IB,
+      k: () => nB,
+      m: () => dB
     });
-    const WT = 1e3;
+    const QB = 1e3;
 
-    function zT() {
-      HT((() => {
+    function nB() {
+      uB((() => {
         window.location.reload()
       }))
     }
 
-    function MT() {
+    function dB() {
       return new Promise((() => {}))
     }
 
-    function gT(TT) {
-      HT((() => {
-        window.location.replace(TT(window.location.href))
+    function IB(BB) {
+      uB((() => {
+        window.location.replace(BB(window.location.href))
       }))
     }
 
-    function nT(TT) {
-      Promise.resolve().then((() => mT(108))).then((UT => {
+    function NB(BB) {
+      Promise.resolve().then((() => zB(121))).then((jB => {
         let {
-          currentUrl: mT
-        } = UT;
-        gT((() => mT.mergeSearchParamsInto(TT)))
+          currentUrl: zB
+        } = jB;
+        IB((() => zB.mergeSearchParamsInto(BB)))
       }), (() => {
-        gT((() => TT))
+        IB((() => BB))
       }))
     }
 
-    function HT(TT) {
-      null !== window.onbeforeunload ? Promise.resolve().then((() => mT(1863))).then((UT => {
+    function uB(BB) {
+      null !== window.onbeforeunload ? Promise.resolve().then((() => zB(1778))).then((jB => {
         let {
-          prepareForUnloadWithoutConfirmation: mT
-        } = UT;
+          prepareForUnloadWithoutConfirmation: zB
+        } = jB;
         try {
-          mT()
-        } catch (WT) {
-          console.warn("[bloxd-wasm-client] prepareForUnloadWithoutConfirmation threw: leaving plainly", WT), window.onbeforeunload = null
+          zB()
+        } catch (QB) {
+          console.warn("[bloxd-wasm-client] prepareForUnloadWithoutConfirmation threw: leaving plainly", QB), window.onbeforeunload = null
         }
-        TT()
+        BB()
       }), (() => {
-        window.onbeforeunload = null, TT()
-      })) : TT()
+        window.onbeforeunload = null, BB()
+      })) : BB()
     }
   },
-  5158: (TT, UT, mT) => {
-    function WT(TT, UT) {
-      return zT(TT, UT)
+  5134: (BB, jB, zB) => {
+    function QB(BB, jB) {
+      return nB(BB, jB)
     }
 
-    function zT(TT, UT) {
-      if (TT === UT) return !0;
-      if ("object" !== typeof TT || "object" !== typeof UT || null === TT || null === UT || Array.isArray(TT) !== Array.isArray(UT)) return !1;
-      const mT = TT,
-        WT = UT,
-        MT = Object.keys(mT);
-      return MT.length === Object.keys(WT).length && MT.every((TT => Object.prototype.hasOwnProperty.call(WT, TT) && zT(mT[TT], WT[TT])))
+    function nB(BB, jB) {
+      if (BB === jB) return !0;
+      if ("object" !== typeof BB || "object" !== typeof jB || null === BB || null === jB || Array.isArray(BB) !== Array.isArray(jB)) return !1;
+      const zB = BB,
+        QB = jB,
+        dB = Object.keys(zB);
+      return dB.length === Object.keys(QB).length && dB.every((BB => Object.prototype.hasOwnProperty.call(QB, BB) && nB(zB[BB], QB[BB])))
     }
-    mT.d(UT, {
-      c: () => WT
+    zB.d(jB, {
+      d: () => QB
     })
   },
-  41042: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => OT,
-      i: () => iT,
-      j: () => ZT,
-      l: () => BT
+  40983: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => SB,
+      h: () => gB,
+      i: () => mB,
+      m: () => JB
     });
-    var WT = mT(1944),
-      zT = mT(1308),
-      MT = mT(39198),
-      gT = mT(36565),
-      nT = mT(39216),
-      HT = mT(40824);
-    const kT = {
+    var QB = zB(1867),
+      nB = zB(1253),
+      dB = zB(39156),
+      IB = zB(36568),
+      NB = zB(39169),
+      uB = zB(40770);
+    const UB = {
         "X-Requested-With": "XMLHtttpRequest"
       },
-      jT = 3,
-      lT = [500, 1500];
+      aB = 3,
+      pB = [500, 1500];
 
-    function LT(TT) {
-      const UT = new URL(TT);
+    function rB(BB) {
+      const jB = new URL(BB);
       return {
-        secure: "https:" === UT.protocol || "wss:" === UT.protocol,
-        host: UT.host,
-        pathname: UT.pathname.replace(/\/+$/, ""),
-        search: UT.searchParams.toString()
+        secure: "https:" === jB.protocol || "wss:" === jB.protocol,
+        host: jB.host,
+        pathname: jB.pathname.replace(/\/+$/, ""),
+        search: jB.searchParams.toString()
       }
     }
 
-    function pT(TT, UT, mT) {
+    function sB(BB, jB, zB) {
       const {
-        secure: WT,
-        host: zT,
-        pathname: MT,
-        search: gT
-      } = LT(TT);
-      return `${WT?"https":"http"}://${zT}${MT}/matchmake/${UT}/${encodeURIComponent(mT)}${gT?`?${gT}`:""}`
+        secure: QB,
+        host: nB,
+        pathname: dB,
+        search: IB
+      } = rB(BB);
+      return `${QB?"https":"http"}://${nB}${dB}/matchmake/${jB}/${encodeURIComponent(zB)}${IB?`?${IB}`:""}`
     }
 
-    function BT(TT, UT) {
-      var mT;
-      const WT = null !== (mT = UT.protocol) && void 0 !== mT ? mT : "ws";
-      if ("ws" !== WT) throw new Error(`seat reservation asks for the ${WT} transport`);
+    function JB(BB, jB) {
+      var zB;
+      const QB = null !== (zB = jB.protocol) && void 0 !== zB ? zB : "ws";
+      if ("ws" !== QB) throw new Error(`seat reservation asks for the ${QB} transport`);
       const {
-        secure: zT,
-        host: MT,
-        pathname: gT,
-        search: nT
-      } = LT(TT), HT = new URLSearchParams(nT);
-      HT.append("sessionId", UT.sessionId), UT.reconnectionToken && HT.append("reconnectionToken", UT.reconnectionToken);
-      return `${zT?"wss":"ws"}://${UT.room.publicAddress||`${MT}${gT}`}/${UT.room.processId}/${UT.room.roomId}?${HT.toString()}`
+        secure: nB,
+        host: dB,
+        pathname: IB,
+        search: NB
+      } = rB(BB), uB = new URLSearchParams(NB);
+      uB.append("sessionId", jB.sessionId), jB.reconnectionToken && uB.append("reconnectionToken", jB.reconnectionToken);
+      return `${nB?"wss":"ws"}://${jB.room.publicAddress||`${dB}${IB}`}/${jB.room.processId}/${jB.room.roomId}?${uB.toString()}`
     }
-    async function ZT(TT, UT, mT) {
-      var nT;
-      let kT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const LT = null !== (nT = kT.sleep) && void 0 !== nT ? nT : WT.d,
-        BT = new zT.e(kT.signal),
-        ZT = new gT.b((() => {
-          (0, zT.k)(BT.controller, new gT.d("seat"))
+    async function mB(BB, jB, zB) {
+      var NB;
+      let UB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const rB = null !== (NB = UB.sleep) && void 0 !== NB ? NB : QB.b,
+        JB = new nB.c(UB.signal),
+        mB = new IB.d((() => {
+          (0, nB.i)(JB.controller, new IB.h("seat"))
         })),
         {
-          signal: qT
-        } = BT;
+          signal: LB
+        } = JB;
       try {
-        const WT = await (0, MT.g)((() => async function(TT, UT, mT, WT) {
-          var MT;
+        const QB = await (0, dB.f)((() => async function(BB, jB, zB, QB) {
+          var dB;
           const {
-            signal: gT,
-            sleep: nT
-          } = WT, kT = pT(TT, "joinOrCreate", UT), LT = JSON.stringify(mT);
-          let BT = null;
-          for (let pT = 0; pT < jT; pT++) {
-            var ZT;
-            if (pT > 0) await nT(null !== (ZT = lT[pT - 1]) && void 0 !== ZT ? ZT : 1500, gT);
-            let TT;
-            (0, zT.m)(gT);
+            signal: IB,
+            sleep: NB
+          } = QB, UB = sB(BB, "joinOrCreate", jB), rB = JSON.stringify(zB);
+          let JB = null;
+          for (let sB = 0; sB < aB; sB++) {
+            var mB;
+            if (sB > 0) await NB(null !== (mB = pB[sB - 1]) && void 0 !== mB ? mB : 1500, IB);
+            let BB;
+            (0, nB.q)(IB);
             try {
-              TT = await vT(kT, LT, WT)
-            } catch (qT) {
-              (0, zT.m)(gT), BT = cT(qT);
+              BB = await kB(UB, rB, QB)
+            } catch (LB) {
+              (0, nB.q)(IB), JB = yB(LB);
               continue
             }
             const {
-              response: UT,
-              answer: mT,
-              refusal: MT,
-              lost: jT
-            } = TT;
-            if (null === jT) {
-              if (null !== MT) throw fT(MT, mT);
-              if (UT.ok && null !== mT && eT(mT)) return mT;
-              BT = new HT.r(`seat request answered HTTP ${UT.status}${null===mT?" without JSON":" without a seat"}`, !1, void 0, UT.status)
-            } else BT = cT(jT.error)
+              response: jB,
+              answer: zB,
+              refusal: dB,
+              lost: aB
+            } = BB;
+            if (null === aB) {
+              if (null !== dB) throw GB(dB, zB);
+              if (jB.ok && null !== zB && MB(zB)) return zB;
+              JB = new uB.r(`seat request answered HTTP ${jB.status}${null===zB?" without JSON":" without a seat"}`, !1, void 0, jB.status)
+            } else JB = yB(aB.error)
           }
-          throw null !== (MT = BT) && void 0 !== MT ? MT : new HT.r("seat request made no attempt", !1)
-        }(TT, UT, mT, {
-          ...kT,
-          signal: qT,
-          sleep: LT
-        })), qT, LT);
-        return ZT.answered(), WT
+          throw null !== (dB = JB) && void 0 !== dB ? dB : new uB.r("seat request made no attempt", !1)
+        }(BB, jB, zB, {
+          ...UB,
+          signal: LB,
+          sleep: rB
+        })), LB, rB);
+        return mB.answered(), QB
       } finally {
-        ZT.stop(), BT.unfollow()
+        mB.stop(), JB.unfollow()
       }
     }
 
-    function cT(TT) {
-      return new HT.r(TT instanceof Error ? TT.message : String(TT), !0, TT)
+    function yB(BB) {
+      return new uB.r(BB instanceof Error ? BB.message : String(BB), !0, BB)
     }
-    async function vT(TT, UT, mT) {
-      var WT;
+    async function kB(BB, jB, zB) {
+      var QB;
       const {
-        signal: MT
-      } = mT, gT = null !== (WT = mT.fetch) && void 0 !== WT ? WT : fetch, nT = await gT(TT, {
+        signal: dB
+      } = zB, IB = null !== (QB = zB.fetch) && void 0 !== QB ? QB : fetch, NB = await IB(BB, {
         method: "POST",
         headers: {
-          ...kT,
+          ...UB,
           Accept: "application/json",
           "Content-Type": "application/json"
         },
-        body: UT,
+        body: jB,
         credentials: "include",
-        signal: MT
+        signal: dB
       }), {
-        answer: HT,
-        lost: jT
-      } = await async function(TT) {
+        answer: uB,
+        lost: aB
+      } = await async function(BB) {
         try {
-          const UT = await TT.json();
+          const jB = await BB.json();
           return {
-            answer: "object" === typeof UT && null !== UT ? UT : null,
+            answer: "object" === typeof jB && null !== jB ? jB : null,
             lost: null
           }
-        } catch (UT) {
+        } catch (jB) {
           return {
             answer: null,
-            lost: UT instanceof SyntaxError ? null : {
-              error: UT
+            lost: jB instanceof SyntaxError ? null : {
+              error: jB
             }
           }
         }
-      }(nT), lT = null !== HT && "string" === typeof HT.error ? HT.error : null;
-      var LT;
-      null !== lT && (null === (LT = mT.onRefusal) || void 0 === LT || LT.call(mT));
-      return (0, zT.m)(MT), {
-        response: nT,
-        answer: HT,
-        refusal: lT,
-        lost: jT
+      }(NB), pB = null !== uB && "string" === typeof uB.error ? uB.error : null;
+      var rB;
+      null !== pB && (null === (rB = zB.onRefusal) || void 0 === rB || rB.call(zB));
+      return (0, nB.q)(dB), {
+        response: NB,
+        answer: uB,
+        refusal: pB,
+        lost: aB
       }
     }
 
-    function fT(TT, UT) {
-      return new HT.n(TT, "number" === typeof(null === UT || void 0 === UT ? void 0 : UT.code) ? UT.code : 0, (0, nT.s)(TT).text)
+    function GB(BB, jB) {
+      return new uB.j(BB, "number" === typeof(null === jB || void 0 === jB ? void 0 : jB.code) ? jB.code : 0, (0, NB.t)(BB).text)
     }
-    class qT extends Error {
-      constructor(TT, UT) {
-        super(TT), this.code = UT, this.name = "SeatHttpError"
+    class LB extends Error {
+      constructor(BB, jB) {
+        super(BB), this.code = jB, this.name = "SeatHttpError"
       }
     }
-    async function iT(TT, UT, mT) {
-      let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    async function gB(BB, jB, zB) {
+      let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        response: zT,
-        answer: MT,
-        refusal: gT,
-        lost: nT
-      } = await vT(pT(TT, "reconnect", UT), JSON.stringify({
-        reconnectionToken: mT
-      }), WT);
-      if (null !== nT) throw nT.error;
-      if (!zT.ok) {
-        const TT = null !== MT && "number" === typeof MT.code && 0 !== MT.code ? MT.code : zT.status;
-        throw new qT(`the seat's reconnect was refused: ${null!==gT&&void 0!==gT?gT:`HTTP ${zT.status}`}`, TT)
+        response: nB,
+        answer: dB,
+        refusal: IB,
+        lost: NB
+      } = await kB(sB(BB, "reconnect", jB), JSON.stringify({
+        reconnectionToken: zB
+      }), QB);
+      if (null !== NB) throw NB.error;
+      if (!nB.ok) {
+        const BB = null !== dB && "number" === typeof dB.code && 0 !== dB.code ? dB.code : nB.status;
+        throw new LB(`the seat's reconnect was refused: ${null!==IB&&void 0!==IB?IB:`HTTP ${nB.status}`}`, BB)
       }
-      if (null !== gT) throw fT(gT, MT);
-      if (null === MT || !eT(MT)) throw new Error("the seat's reconnect answered " + (null === MT ? "without JSON" : "without a seat"));
+      if (null !== IB) throw GB(IB, dB);
+      if (null === dB || !MB(dB)) throw new Error("the seat's reconnect answered " + (null === dB ? "without JSON" : "without a seat"));
       return {
-        ...MT,
-        reconnectionToken: mT
+        ...dB,
+        reconnectionToken: zB
       }
     }
-    const bT = 10;
+    const tB = 10;
 
-    function OT(TT) {
-      if (TT.byteLength < 2 || TT[0] !== bT) return null;
-      const UT = 2 + TT[1];
-      return UT > TT.byteLength ? null : (new TextDecoder).decode(TT.subarray(2, UT))
+    function SB(BB) {
+      if (BB.byteLength < 2 || BB[0] !== tB) return null;
+      const jB = 2 + BB[1];
+      return jB > BB.byteLength ? null : (new TextDecoder).decode(BB.subarray(2, jB))
     }
 
-    function eT(TT) {
-      const UT = TT.room;
-      return "string" === typeof TT.sessionId && "object" === typeof UT && null !== UT && "string" === typeof UT.roomId && "string" === typeof UT.processId && "string" === typeof UT.name
+    function MB(BB) {
+      const jB = BB.room;
+      return "string" === typeof BB.sessionId && "object" === typeof jB && null !== jB && "string" === typeof jB.roomId && "string" === typeof jB.processId && "string" === typeof jB.name
     }
   },
-  40731: (TT, UT, mT) => {
-    mT.d(UT, {
-      $: () => IT,
-      A: () => JT,
-      D: () => eT,
-      H: () => tT,
-      J: () => iT,
-      N: () => bT,
-      Q: () => cT,
-      S: () => xT,
-      V: () => yT,
-      Z: () => BT,
-      db: () => fT,
-      e: () => zT,
-      f: () => XT,
-      gb: () => vT,
-      h: () => aT,
-      ib: () => qT,
-      l: () => pT,
-      mb: () => OT,
-      p: () => ZT,
-      t: () => wT,
-      u: () => YT,
-      w: () => dT
+  40697: (BB, jB, zB) => {
+    zB.d(jB, {
+      B: () => HB,
+      C: () => gB,
+      E: () => tB,
+      G: () => yB,
+      J: () => qB,
+      M: () => FB,
+      Q: () => JB,
+      S: () => VB,
+      T: () => GB,
+      X: () => kB,
+      Z: () => LB,
+      _: () => SB,
+      e: () => nB,
+      f: () => YB,
+      j: () => DB,
+      l: () => sB,
+      n: () => mB,
+      p: () => oB,
+      q: () => EB,
+      s: () => fB,
+      w: () => iB,
+      y: () => MB
     });
-    var WT = mT(3124);
-    const zT = {
+    var QB = zB(3099);
+    const nB = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -1946,259 +1946,259 @@ export const modules = {
       LobbyManage: 96
     };
 
-    function MT(TT, UT) {
-      return !ArrayBuffer.isView(TT) || TT instanceof DataView ? Array.isArray(TT) ? TT.map((TT => UT(TT))) : TT : Array.from(TT, (TT => UT(TT)))
+    function dB(BB, jB) {
+      return !ArrayBuffer.isView(BB) || BB instanceof DataView ? Array.isArray(BB) ? BB.map((BB => jB(BB))) : BB : Array.from(BB, (BB => jB(BB)))
     }
 
-    function gT(TT) {
-      if ("string" !== typeof TT) return TT;
-      for (let UT = 0; UT < TT.length; UT++) {
-        const mT = TT.charCodeAt(UT);
-        if (mT >= 55296 && mT <= 57343) return HT.decode(nT.encode(TT))
+    function IB(BB) {
+      if ("string" !== typeof BB) return BB;
+      for (let jB = 0; jB < BB.length; jB++) {
+        const zB = BB.charCodeAt(jB);
+        if (zB >= 55296 && zB <= 57343) return uB.decode(NB.encode(BB))
       }
-      return TT
+      return BB
     }
-    const nT = new TextEncoder,
-      HT = new TextDecoder;
+    const NB = new TextEncoder,
+      uB = new TextDecoder;
 
-    function kT(TT) {
-      return TT
+    function UB(BB) {
+      return BB
     }
-    let jT;
+    let aB;
 
-    function lT(TT) {
-      return null === TT || "object" !== typeof TT ? TT : [gT(TT.Tn), gT(TT.Un)]
-    }
-
-    function LT(TT) {
-      return null === TT || "object" !== typeof TT ? TT : [MT(TT.Kz, kT), MT(TT.cn, kT)]
+    function pB(BB) {
+      return null === BB || "object" !== typeof BB ? BB : [IB(BB.sN), IB(BB.JN)]
     }
 
-    function pT(TT) {
-      return null === (UT = TT) || "object" !== typeof UT ? UT : [gT(UT.Xj), gT(UT.Ij)];
-      var UT
+    function rB(BB) {
+      return null === BB || "object" !== typeof BB ? BB : [dB(BB.vn, UB), dB(BB.oN, UB)]
     }
 
-    function BT(TT) {
-      return null === (UT = TT) || "object" !== typeof UT ? UT : [UT.id, UT.qj];
-      var UT
+    function sB(BB) {
+      return null === (jB = BB) || "object" !== typeof jB ? jB : [IB(jB.ha), IB(jB.Xa)];
+      var jB
     }
 
-    function ZT(TT) {
-      return null === (UT = TT) || "object" !== typeof UT ? UT : [UT.Rz, gT(UT.TM), UT.UM, gT(UT.zM), UT.HM, UT.kM, UT.tj, gT(UT.aj), gT(UT.yj)];
-      var UT
+    function JB(BB) {
+      return null === (jB = BB) || "object" !== typeof jB ? jB : [jB.id, jB.Sa];
+      var jB
     }
 
-    function cT(TT) {
-      return null === (UT = TT) || "object" !== typeof UT ? UT : [MT(UT.Sg, kT), UT.Gg];
-      var UT
+    function mB(BB) {
+      return null === (jB = BB) || "object" !== typeof jB ? jB : [jB.Nd, IB(jB.ud), jB.Ud, IB(jB.sd), jB.Gd, jB.Ld, jB.Fa, IB(jB.Ya), IB(jB.Va)];
+      var jB
     }
 
-    function vT(TT) {
-      return null === (UT = TT) || "object" !== typeof UT ? UT : [MT(UT.Cg, (TT => gT(TT))), gT(UT.rg), UT.Kg];
-      var UT
+    function yB(BB) {
+      return null === (jB = BB) || "object" !== typeof jB ? jB : [dB(jB.nN, UB), jB.dN];
+      var jB
     }
 
-    function fT(TT) {
-      return null === (UT = TT) || "object" !== typeof UT ? UT : [MT(UT.qH, kT), gT(UT.iH), UT.bH];
-      var UT
+    function kB(BB) {
+      return null === (jB = BB) || "object" !== typeof jB ? jB : [dB(jB.jN, (BB => IB(BB))), IB(jB.zN), jB.QN];
+      var jB
     }
 
-    function qT(TT) {
-      return null === (UT = TT) || "object" !== typeof UT ? UT : [gT(UT.wM), gT(UT.tM)];
-      var UT
+    function GB(BB) {
+      return null === (jB = BB) || "object" !== typeof jB ? jB : [dB(jB.iu, UB), IB(jB.qu), jB.fu];
+      var jB
     }
 
-    function iT(TT) {
-      return null === (UT = TT) || "object" !== typeof UT ? UT : [gT(UT.tn)];
-      var UT
+    function LB(BB) {
+      return null === (jB = BB) || "object" !== typeof jB ? jB : [IB(jB.Wd), IB(jB.ld)];
+      var jB
     }
 
-    function bT(TT) {
-      return gT(TT)
+    function gB(BB) {
+      return null === (jB = BB) || "object" !== typeof jB ? jB : [IB(jB.TN)];
+      var jB
     }
 
-    function OT(TT) {
-      return null === (UT = TT) || "object" !== typeof UT ? UT : [gT(UT.Zj), gT(UT.vj), gT(UT.Tn), gT(UT.Un)];
-      var UT
+    function tB(BB) {
+      return IB(BB)
     }
 
-    function eT(TT) {
-      return lT(TT)
+    function SB(BB) {
+      return null === (jB = BB) || "object" !== typeof jB ? jB : [IB(jB.Ga), IB(jB.La), IB(jB.sN), IB(jB.JN)];
+      var jB
     }
 
-    function YT(TT) {
-      return lT(TT)
+    function MB(BB) {
+      return pB(BB)
     }
 
-    function JT(TT) {
-      return null === (UT = TT) || "object" !== typeof UT ? UT : [gT(UT.lH)];
-      var UT
+    function EB(BB) {
+      return pB(BB)
     }
 
-    function xT(TT) {
-      return TT
+    function iB(BB) {
+      return null === (jB = BB) || "object" !== typeof jB ? jB : [IB(jB.ku)];
+      var jB
     }
 
-    function dT(TT) {
-      return null === (UT = TT) || "object" !== typeof UT ? UT : [gT(UT.Ag), gT(UT.Rg)];
-      var UT
+    function qB(BB) {
+      return BB
     }
 
-    function wT(TT) {
-      return gT(TT)
+    function fB(BB) {
+      return null === (jB = BB) || "object" !== typeof jB ? jB : [IB(jB.pN), IB(jB.rN)];
+      var jB
     }
 
-    function tT(TT) {
-      return LT(TT)
+    function oB(BB) {
+      return IB(BB)
     }
 
-    function aT(TT) {
-      return LT(TT)
+    function HB(BB) {
+      return rB(BB)
     }
 
-    function yT(TT) {
-      return null === (UT = TT) || "object" !== typeof UT ? UT : [gT(UT.OH)];
-      var UT
+    function DB(BB) {
+      return rB(BB)
     }
 
-    function XT(TT) {
-      return (jT ??= (0, WT.i)().map((TT => TT.name)), jT).map((UT => {
-        return "string" === typeof(mT = TT[UT]) ? gT(mT) : MT(mT, kT);
-        var mT
+    function FB(BB) {
+      return null === (jB = BB) || "object" !== typeof jB ? jB : [IB(jB.ou)];
+      var jB
+    }
+
+    function YB(BB) {
+      return (aB ??= (0, QB.f)().map((BB => BB.name)), aB).map((jB => {
+        return "string" === typeof(zB = BB[jB]) ? IB(zB) : dB(zB, UB);
+        var zB
       }))
     }
 
-    function IT(TT) {
-      return null === (UT = TT) || "object" !== typeof UT ? UT : [UT.HH, UT.kH, UT.jH];
-      var UT
+    function VB(BB) {
+      return null === (jB = BB) || "object" !== typeof jB ? jB : [jB.Ju, jB.mu, jB.yu];
+      var jB
     }
   },
-  41096: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => MT
+  41044: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => dB
     });
-    var WT = mT(41104),
-      zT = mT(41093);
-    const MT = new class {
-      constructor(TT) {
-        this.pack = TT, this.game = void 0, this.settle = null, this.hold = null, this.endedWhileHeld = !1, this.gameListeners = new Set, TT.onWanted((() => {
+    var QB = zB(41050),
+      nB = zB(41038);
+    const dB = new class {
+      constructor(BB) {
+        this.pack = BB, this.game = void 0, this.settle = null, this.hold = null, this.endedWhileHeld = !1, this.gameListeners = new Set, BB.onWanted((() => {
           this.release()
         }))
       }
-      setGame(TT) {
-        if (void 0 === TT && null !== this.hold) return void(this.endedWhileHeld = !0);
+      setGame(BB) {
+        if (void 0 === BB && null !== this.hold) return void(this.endedWhileHeld = !0);
         this.hold = null, this.endedWhileHeld = !1;
-        const UT = this.inGame();
-        if (this.game = TT, this.update(), this.inGame() !== UT)
-          for (const mT of this.gameListeners) mT()
+        const jB = this.inGame();
+        if (this.game = BB, this.update(), this.inGame() !== jB)
+          for (const zB of this.gameListeners) zB()
       }
       inGame() {
         return void 0 !== this.game
       }
-      onGameChange(TT) {
-        return this.gameListeners.add(TT), () => {
-          this.gameListeners.delete(TT)
+      onGameChange(BB) {
+        return this.gameListeners.add(BB), () => {
+          this.gameListeners.delete(BB)
         }
       }
-      unwantedLeave(TT) {
-        TT && void 0 !== this.game ? this.hold = {
+      unwantedLeave(BB) {
+        BB && void 0 !== this.game ? this.hold = {
           game: this.game
         } : this.release()
       }
       rejoinHold() {
         return this.hold
       }
-      releaseHold(TT) {
-        null !== TT && TT === this.hold && this.release()
+      releaseHold(BB) {
+        null !== BB && BB === this.hold && this.release()
       }
       release() {
         if (null === this.hold) return;
-        const TT = this.endedWhileHeld;
-        this.hold = null, this.endedWhileHeld = !1, TT && this.setGame(void 0)
+        const BB = this.endedWhileHeld;
+        this.hold = null, this.endedWhileHeld = !1, BB && this.setGame(void 0)
       }
-      setSettled(TT) {
-        this.settle = TT, this.update()
+      setSettled(BB) {
+        this.settle = BB, this.update()
       }
       update() {
-        void 0 === this.game ? this.pack.setSessionFiles(void 0) : null !== this.settle && (0, WT.c)(this.settle.state, this.game) && this.pack.setSessionFiles(this.settle.files)
+        void 0 === this.game ? this.pack.setSessionFiles(void 0) : null !== this.settle && (0, QB.b)(this.settle.state, this.game) && this.pack.setSessionFiles(this.settle.files)
       }
-    }(zT.e)
+    }(nB.h)
   },
-  5154: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => gT,
-      h: () => nT
+  5132: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => IB,
+      d: () => NB
     });
-    var WT = mT(2273),
-      zT = mT(5158);
-    let MT = null;
+    var QB = zB(2206),
+      nB = zB(5134);
+    let dB = null;
 
-    function gT(TT) {
-      MT = {
-        pack: TT.metaData.id === WT.e ? null : TT
+    function IB(BB) {
+      dB = {
+        pack: BB.metaData.id === QB.d ? null : BB
       }
     }
 
-    function nT(TT) {
-      return !(null === MT || !(0, zT.c)(MT.pack, TT)) && (MT = null, !0)
+    function NB(BB) {
+      return !(null === dB || !(0, nB.d)(dB.pack, BB)) && (dB = null, !0)
     }
   },
-  40817: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      followPageUiPack: () => tj,
-      packForGame: () => wj,
-      playWasmGame: () => rj,
-      prefetchWasmPreviews: () => tH,
-      setGamePackConfirm: () => Ck,
-      startWasmPlay: () => Qj,
-      startWasmPreviews: () => wH
+  40763: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      followPageUiPack: () => Ha,
+      packForGame: () => oa,
+      playWasmGame: () => ea,
+      prefetchWasmPreviews: () => Du,
+      setGamePackConfirm: () => eU,
+      startWasmPlay: () => ha,
+      startWasmPreviews: () => Hu
     });
-    var WT = mT(208),
-      zT = mT(1341),
-      MT = mT(166),
-      gT = mT(39233),
-      nT = mT(2046),
-      HT = mT(31),
-      kT = mT(4768),
-      jT = mT(1416),
-      lT = mT(1843),
-      LT = mT(1429),
-      pT = mT(39368),
-      BT = mT(1398),
-      ZT = mT(1932),
-      cT = mT(3058);
-    let vT = null,
-      fT = null,
-      qT = null,
-      iT = !1;
+    var QB = zB(214),
+      nB = zB(1277),
+      dB = zB(174),
+      IB = zB(39179),
+      NB = zB(1982),
+      uB = zB(31),
+      UB = zB(4766),
+      aB = zB(1343),
+      pB = zB(1760),
+      rB = zB(1357),
+      sB = zB(39337),
+      JB = zB(1325),
+      mB = zB(1859),
+      yB = zB(3028);
+    let kB = null,
+      GB = null,
+      LB = null,
+      gB = !1;
 
-    function bT() {
-      vT ??= performance.now()
+    function tB() {
+      kB ??= performance.now()
     }
-    const OT = {
+    const SB = {
       ready: () => {
-        ZT.c.markAdmissionAwaited()
+        mB.b.markAdmissionAwaited()
       },
       adEnded: () => {
-        ZT.c.markJoinAdEnded()
+        mB.b.markJoinAdEnded()
       },
       admitted: () => {
-        ZT.c.markAdmitted()
+        mB.b.markAdmitted()
       }
     };
-    var eT = mT(39379),
-      YT = mT(39289),
-      JT = mT(36539),
-      xT = mT(39198),
-      dT = mT(9025),
-      wT = mT(36565),
-      tT = mT(40820),
-      aT = mT(4883),
-      yT = mT(40724),
-      XT = mT(40798),
-      IT = mT(40731);
-    const QT = {
+    var MB = zB(39352),
+      EB = zB(39262),
+      iB = zB(36538),
+      qB = zB(39156),
+      fB = zB(8923),
+      oB = zB(36568),
+      HB = zB(40766),
+      DB = zB(4873),
+      FB = zB(40695),
+      YB = zB(40744),
+      VB = zB(40697);
+    const hB = {
       states: {
         health: !0,
         aura: !0,
@@ -2321,354 +2321,354 @@ export const modules = {
       }
     };
 
-    function sT(TT) {
-      const UT = {
-        ...XT.e[TT]
+    function XB(BB) {
+      const jB = {
+        ...YB.d[BB]
       };
-      for (const mT of Object.keys(QT[TT])) delete UT[mT];
-      return UT
+      for (const zB of Object.keys(hB[BB])) delete jB[zB];
+      return jB
     }
 
-    function FT() {
-      var TT, UT;
-      return null === (TT = null === (UT = (0, yT.i)()) || void 0 === UT ? void 0 : UT.localPlayerAlive()) || void 0 === TT || TT
+    function ZB() {
+      var BB, jB;
+      return null === (BB = null === (jB = (0, FB.g)()) || void 0 === jB ? void 0 : jB.localPlayerAlive()) || void 0 === BB || BB
     }
 
-    function PT() {
-      var TT, UT;
-      return null !== (TT = null === (UT = (0, yT.i)()) || void 0 === UT ? void 0 : UT.localDeaths()) && void 0 !== TT ? TT : null
+    function AB() {
+      var BB, jB;
+      return null !== (BB = null === (jB = (0, FB.g)()) || void 0 === jB ? void 0 : jB.localDeaths()) && void 0 !== BB ? BB : null
     }
-    const VT = {
-        current: FT,
-        watch: TT => {
-          let UT = FT(),
-            mT = PT();
-          return (0, aT.C)((() => {
-            const WT = FT(),
-              zT = PT(),
-              MT = null !== zT && null !== mT && zT !== mT;
-            mT = zT, MT ? (UT || TT(!0), TT(!1), WT && TT(!0), UT = WT) : WT !== UT && (UT = WT, TT(WT))
+    const TB = {
+        current: ZB,
+        watch: BB => {
+          let jB = ZB(),
+            zB = AB();
+          return (0, DB.y)((() => {
+            const QB = ZB(),
+              nB = AB(),
+              dB = null !== nB && null !== zB && nB !== zB;
+            zB = nB, dB ? (jB || BB(!0), BB(!1), QB && BB(!0), jB = QB) : QB !== jB && (jB = QB, BB(QB))
           }))
         }
       },
-      uT = {
+      PB = {
         states: {
-          ...sT("states"),
-          localPlayerAlive: VT
+          ...XB("states"),
+          localPlayerAlive: TB
         },
         events: {
-          ...sT("events"),
+          ...XB("events"),
           localPlayerAliveSet: {
-            watch: VT.watch
+            watch: TB.watch
           }
         },
         commands: {
-          ...sT("commands"),
+          ...XB("commands"),
           respawn: () => {
-            var TT;
-            null === (TT = (0, yT.i)()) || void 0 === TT || TT.respawn()
+            var BB;
+            null === (BB = (0, FB.g)()) || void 0 === BB || BB.respawn()
           },
-          playEmote: TT => {
-            var UT;
-            null === (UT = (0, yT.i)()) || void 0 === UT || UT.send(IT.e.PlayEmote, (0, IT.J)({
-              tn: TT
+          playEmote: BB => {
+            var jB;
+            null === (jB = (0, FB.g)()) || void 0 === jB || jB.send(VB.e.PlayEmote, (0, VB.C)({
+              TN: BB
             }))
           },
-          applyTemporaryThirdPerson: TT => {
-            var UT;
+          applyTemporaryThirdPerson: BB => {
+            var jB;
             let {
-              durationMs: mT
-            } = TT;
-            null === (UT = (0, yT.i)()) || void 0 === UT || UT.thirdPersonFor(mT)
+              durationMs: zB
+            } = BB;
+            null === (jB = (0, FB.g)()) || void 0 === jB || jB.thirdPersonFor(zB)
           },
-          bindCustomButtonKeys: TT => {
-            var UT;
-            null === (UT = (0, yT.i)()) || void 0 === UT || UT.bindCustomButtonKeys(TT)
+          bindCustomButtonKeys: BB => {
+            var jB;
+            null === (jB = (0, FB.g)()) || void 0 === jB || jB.bindCustomButtonKeys(BB)
           },
-          pressCustomButton: TT => {
-            var UT;
+          pressCustomButton: BB => {
+            var jB;
             let {
-              id: mT,
-              down: WT
-            } = TT;
-            null === (UT = (0, yT.i)()) || void 0 === UT || UT.pressCustomButton(mT, WT)
+              id: zB,
+              down: QB
+            } = BB;
+            null === (jB = (0, FB.g)()) || void 0 === jB || jB.pressCustomButton(zB, QB)
           },
           setLookSensitivity: () => {},
-          wakeUp: TT => {
-            const UT = (0, IT.V)({
-                OH: TT
+          wakeUp: BB => {
+            const jB = (0, VB.M)({
+                ou: BB
               }),
-              mT = () => {
-                const TT = (0, yT.i)();
-                return !(null !== TT && void 0 !== TT && TT.isSessionLive) || TT.send(IT.e.StopSleeping, UT)
+              zB = () => {
+                const BB = (0, FB.g)();
+                return !(null !== BB && void 0 !== BB && BB.isSessionLive) || BB.send(VB.e.StopSleeping, jB)
               };
-            if (!mT()) {
-              const TT = (0, aT.C)((() => {
-                mT() && TT()
+            if (!zB()) {
+              const BB = (0, DB.y)((() => {
+                zB() && BB()
               }))
             }
           },
-          setCameraZoom: TT => {
-            var UT;
-            null === (UT = (0, yT.i)()) || void 0 === UT || UT.setCameraZoom(TT)
+          setCameraZoom: BB => {
+            var jB;
+            null === (jB = (0, FB.g)()) || void 0 === jB || jB.setCameraZoom(BB)
           }
         },
-        queries: sT("queries"),
+        queries: XB("queries"),
         lookups: {
-          ...sT("lookups"),
+          ...XB("lookups"),
           cameraZoom: () => {
-            var TT, UT;
-            return null !== (TT = null === (UT = (0, yT.i)()) || void 0 === UT ? void 0 : UT.cameraZoom()) && void 0 !== TT ? TT : 0
+            var BB, jB;
+            return null !== (BB = null === (jB = (0, FB.g)()) || void 0 === jB ? void 0 : jB.cameraZoom()) && void 0 !== BB ? BB : 0
           }
         }
       };
-    var CT = mT(39216),
-      rT = mT(40824),
-      KT = mT(40827),
-      ST = mT(40848),
-      GT = mT(1354),
-      NT = mT(108),
-      ET = mT(4629),
-      hT = mT(3812),
-      DT = mT(1268);
-    const oT = {
-      bg: () => (0, GT.f)(),
-      inbuiltOverwritten: () => ET.h,
-      reflectApplyHit: () => DT.b,
-      definerHit: () => NT.currentUrl.c,
-      emitReplaced: () => (0, HT.d)(),
-      confirmMesh: () => (0, hT.b)(),
-      confirmMeshHitStack: () => (0, hT.c)()
+    var WB = zB(39169),
+      eB = zB(40770),
+      lB = zB(40775),
+      wB = zB(40791),
+      xB = zB(1289),
+      KB = zB(121),
+      CB = zB(4644),
+      cB = zB(3829),
+      bB = zB(1218);
+    const vB = {
+      hI: () => (0, xB.g)(),
+      inbuiltOverwritten: () => CB.g,
+      reflectApplyHit: () => bB.b,
+      definerHit: () => KB.currentUrl.c,
+      emitReplaced: () => (0, uB.e)(),
+      confirmMesh: () => (0, cB.d)(),
+      confirmMeshHitStack: () => (0, cB.f)()
     };
-    var AT = mT(40832),
-      RT = mT(40987);
-    var TU = mT(25),
-      UU = mT(2054),
-      mU = mT(2104),
-      WU = mT(1758),
-      zU = mT(2137),
-      MU = mT(1288),
-      gU = mT(1345),
-      nU = mT(40991);
+    var RB = zB(40780),
+      OB = zB(40925);
+    var Bj = zB(28),
+      jj = zB(1991),
+      zj = zB(2033),
+      Qj = zB(1668),
+      nj = zB(2087),
+      dj = zB(1240),
+      Ij = zB(1284),
+      Nj = zB(40929);
 
-    function HU() {
-      return gU.f.get().getCurrentLanguageCode()
+    function uj() {
+      return Ij.c.get().getCurrentLanguageCode()
     }
 
-    function kU(TT) {
-      const UT = () => {
-        TT({
-          translate: (TT, UT) => (0, MU.t)(HU(), TT, UT),
-          keyBindingText: TT => {
-            const UT = (0, mU.u)(TT, TU.b.get("isTouchScreen"));
-            return null !== UT ? (0, MU.v)(HU(), UT.translationKey, UT.params) : (0, mU.n)((0, mU.r)(TT))
+    function Uj(BB) {
+      const jB = () => {
+        BB({
+          translate: (BB, jB) => (0, dj.w)(uj(), BB, jB),
+          keyBindingText: BB => {
+            const jB = (0, zj.s)(BB, Bj.c.get("isTouchScreen"));
+            return null !== jB ? (0, dj.z)(uj(), jB.translationKey, jB.params) : (0, zj.m)((0, zj.q)(BB))
           },
-          isFriend: zU.d,
-          hiddenNames: UU.d.shown,
-          loadsFontRest: (0, nU.e)(HU())
+          isFriend: nj.h,
+          hiddenNames: jj.b.shown,
+          loadsFontRest: (0, Nj.c)(uj())
         })
       };
-      let mT = !1;
-      const WT = () => {
-          const TT = HU();
-          (0, MU.l)(TT).then((() => {
-            mT || TT !== HU() || UT()
+      let zB = !1;
+      const QB = () => {
+          const BB = uj();
+          (0, dj.j)(BB).then((() => {
+            zB || BB !== uj() || jB()
           }))
         },
-        zT = () => WU.e.getSocialState().friends.map((TT => TT.name.toLowerCase())).sort().join(" ");
-      let MT = zT();
-      UT(), WT();
-      const gT = [(0, gU.g)((() => {
-        UT(), WT()
-      })), (0, HT.k)("customBindingsChanged", UT), (0, HT.k)("appManagerUpdated|isTouchScreen", UT), (0, zU.b)((() => {
-        const TT = zT();
-        TT !== MT && (MT = TT, UT())
-      })), UU.d.subscribe(UT)];
+        nB = () => Qj.d.getSocialState().friends.map((BB => BB.name.toLowerCase())).sort().join(" ");
+      let dB = nB();
+      jB(), QB();
+      const IB = [(0, Ij.e)((() => {
+        jB(), QB()
+      })), (0, uB.q)("customBindingsChanged", jB), (0, uB.q)("appManagerUpdated|isTouchScreen", jB), (0, nj.d)((() => {
+        const BB = nB();
+        BB !== dB && (dB = BB, jB())
+      })), jj.b.subscribe(jB)];
       return () => {
-        mT = !0;
-        for (const TT of gT) TT()
+        zB = !0;
+        for (const BB of IB) BB()
       }
     }
-    var jU = mT(662),
-      lU = mT(1089),
-      LU = mT(2076),
-      pU = mT(351),
-      BU = mT(193),
-      ZU = mT(2992),
-      cU = mT(3001),
-      vU = mT(38848),
-      fU = mT(4780),
-      qU = mT(41009),
-      iU = mT(712),
-      bU = mT(681),
-      OU = mT(3092),
-      eU = mT(2067),
-      YU = mT(3818),
-      JU = mT(3406);
-    let xU = null;
-    var dU = mT(1302),
-      wU = mT(1308),
-      tU = mT(4546),
-      aU = mT(3545),
-      yU = mT(56),
-      XU = mT(344),
-      IU = mT(340),
-      QU = mT(41023),
-      sU = mT(4890);
-    var FU = mT(37822),
-      PU = mT(41025);
-    class VU {
-      constructor(TT, UT) {
-        this.showView = TT, this.holdForAd = UT
+    var aj = zB(667),
+      pj = zB(1067),
+      rj = zB(2015),
+      sj = zB(363),
+      Jj = zB(201),
+      mj = zB(2967),
+      yj = zB(2974),
+      kj = zB(38836),
+      Gj = zB(4782),
+      Lj = zB(40948),
+      gj = zB(722),
+      tj = zB(690),
+      Sj = zB(3057),
+      Mj = zB(2006),
+      Ej = zB(3834),
+      ij = zB(3396);
+    let qj = null;
+    var fj = zB(1244),
+      oj = zB(1253),
+      Hj = zB(4548),
+      Dj = zB(3565),
+      Fj = zB(55),
+      Yj = zB(355),
+      Vj = zB(348),
+      hj = zB(40956),
+      Xj = zB(4879);
+    var Zj = zB(37787),
+      Aj = zB(40963);
+    class Tj {
+      constructor(BB, jB) {
+        this.showView = BB, this.holdForAd = jB
       }
       pointerUnlockRequestsChanged() {
-        (0, QU.A)()
+        (0, hj.E)()
       }
       pointerLockDebugEntries() {
         return [{
           label: "Locked to the canvas",
-          value: String((0, QU.s)())
+          value: String((0, hj.w)())
         }]
       }
-      setGameViewShown(TT) {
-        this.showView(TT)
+      setGameViewShown(BB) {
+        this.showView(BB)
       }
-      setGameView(TT) {
-        (0, PU.m)(TT)
+      setGameView(BB) {
+        (0, Aj.k)(BB)
       }
-      videoAdHold(TT, UT) {
-        this.holdForAd(TT, UT)
+      videoAdHold(BB, jB) {
+        this.holdForAd(BB, jB)
       }
     }
-    class uU {
-      leave(TT) {
-        ! function(TT) {
-          if (null !== (0, LT.c)().websocketUrl) try {
-            (0, aT.N)().leaveGame(TT)
+    class Pj {
+      leave(BB) {
+        ! function(BB) {
+          if (null !== (0, rB.d)().websocketUrl) try {
+            (0, DB.I)().leaveGame(BB)
           } finally {
-            (0, LT.m)({
+            (0, rB.q)({
               websocketUrl: null
             })
           }
-        }(TT)
+        }(BB)
       }
       isReplay() {
         return !1
       }
     }
-    class CU {
-      watchFrameStarts(TT) {
-        return (0, aT.x)(TT)
+    class Wj {
+      watchFrameStarts(BB) {
+        return (0, DB.t)(BB)
       }
-      watchFrames(TT) {
-        return (0, aT.u)(TT)
+      watchFrames(BB) {
+        return (0, DB.r)(BB)
       }
-      watchTicks(TT) {
-        return (0, aT.C)(TT)
+      watchTicks(BB) {
+        return (0, DB.y)(BB)
       }
     }
-    var rU = mT(41030);
+    var ej = zB(40965);
 
-    function KU(TT) {
-      return TT >= 0 ? Math.min(1, TT) : 0
+    function lj(BB) {
+      return BB >= 0 ? Math.min(1, BB) : 0
     }
 
-    function SU(TT, UT) {
+    function wj(BB, jB) {
       const {
-        fade: mT
-      } = TT;
-      return null === mT || UT - mT.at >= mT.ms ? TT.volume : mT.from + (TT.volume - mT.from) * Math.max(0, (UT - mT.at) / mT.ms)
+        fade: zB
+      } = BB;
+      return null === zB || jB - zB.at >= zB.ms ? BB.volume : zB.from + (BB.volume - zB.from) * Math.max(0, (jB - zB.at) / zB.ms)
     }
 
-    function GU(TT) {
-      const UT = Object.entries(TT),
-        mT = new Uint32Array(UT.length);
-      let WT = 0;
-      for (const [gT, [, nT]] of UT.entries()) mT[gT] = nT.length, WT += nT.length;
-      const zT = new Float64Array(3 * WT);
-      let MT = 0;
-      for (const [, gT] of UT)
-        for (const TT of gT) zT.set(TT, MT), MT += 3;
+    function xj(BB) {
+      const jB = Object.entries(BB),
+        zB = new Uint32Array(jB.length);
+      let QB = 0;
+      for (const [IB, [, NB]] of jB.entries()) zB[IB] = NB.length, QB += NB.length;
+      const nB = new Float64Array(3 * QB);
+      let dB = 0;
+      for (const [, IB] of jB)
+        for (const BB of IB) nB.set(BB, dB), dB += 3;
       return {
-        blocks: UT.map((TT => {
-          let [UT] = TT;
-          return UT
+        blocks: jB.map((BB => {
+          let [jB] = BB;
+          return jB
         })).join("\0"),
-        counts: mT,
-        values: zT
+        counts: zB,
+        values: nB
       }
     }
-    class NU {
-      constructor(TT, UT) {
-        this.core = TT, this.warn = UT, this.latest = 0
+    class Kj {
+      constructor(BB, jB) {
+        this.core = BB, this.warn = jB, this.latest = 0
       }
       async feed() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : EU;
-        const UT = ++this.latest;
-        let mT;
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Cj;
+        const jB = ++this.latest;
+        let zB;
         try {
-          mT = await TT()
-        } catch (WT) {
-          return void(this.core.isStopped || UT !== this.latest || this.warn("the block colours didn't load, so block particles draw grey", WT))
+          zB = await BB()
+        } catch (QB) {
+          return void(this.core.isStopped || jB !== this.latest || this.warn("the block colours didn't load, so block particles draw grey", QB))
         }
-        UT === this.latest && (this.core.setBlockColours(mT) || this.core.isStopped || this.warn("the core refused the block colours: block particles draw grey"))
+        jB === this.latest && (this.core.setBlockColours(zB) || this.core.isStopped || this.warn("the core refused the block colours: block particles draw grey"))
       }
     }
-    async function EU() {
-      return GU((await mT.e(207).then((() => mT(34366)))).averageColors)
+    async function Cj() {
+      return xj((await zB.e(207).then((() => zB(34335)))).averageColors)
     }
-    var hU = mT(4895),
-      DU = mT(4904),
-      oU = mT(40786),
-      AU = mT(3350),
-      RU = mT(36349),
-      Tm = mT(40883),
-      Um = mT(649),
-      mm = mT(37152),
-      Wm = mT(643),
-      zm = mT(366),
-      Mm = mT(40871);
-    const gm = [3e4, 12e4, 3e5];
-    class nm extends Error {}
-    const Hm = {
-      mobTypes: Um.m,
-      vehicleTypes: mm.e,
-      mobAiStates: Um.l,
-      playerPoses: Wm.l
+    var cj = zB(4887),
+      bj = zB(4893),
+      vj = zB(40730),
+      Rj = zB(3336),
+      Oj = zB(36340),
+      Bz = zB(40826),
+      jz = zB(652),
+      zz = zB(37131),
+      Qz = zB(644),
+      nz = zB(376),
+      dz = zB(40822);
+    const Iz = [3e4, 12e4, 3e5];
+    class Nz extends Error {}
+    const uz = {
+      mobTypes: jz.p,
+      vehicleTypes: zz.c,
+      mobAiStates: jz.l,
+      playerPoses: Qz.n
     };
-    var km = mT(40860),
-      jm = mT(40879),
-      lm = mT(40907),
-      Lm = mT(1153),
-      pm = mT(41034),
-      Bm = mT(41036),
-      Zm = mT(3116),
-      cm = mT(39180),
-      fm = mT(4915),
-      qm = mT(2522);
-    const im = qm.y.KeysDisabled | qm.y.LookFrozen | qm.y.ClicksSuppressed,
-      bm = Zm.h;
-    var Om = (0, Bm.c)("resumingConn");
-    class em {
-      constructor(TT) {
-        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.shell = TT, this.now = UT, this.session = void 0, this.attempt = null, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, Object.defineProperty(this, Om, {
+    var Uz = zB(40805),
+      az = zB(40824),
+      pz = zB(40854),
+      rz = zB(1121),
+      sz = zB(40974),
+      Jz = zB(40977),
+      mz = zB(3084),
+      yz = zB(39151),
+      kz = zB(4909),
+      Gz = zB(2482);
+    const Lz = Gz.t.KeysDisabled | Gz.t.LookFrozen | Gz.t.ClicksSuppressed,
+      gz = mz.c;
+    var tz = (0, Jz.b)("resumingConn");
+    class Sz {
+      constructor(BB) {
+        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.shell = BB, this.now = jB, this.session = void 0, this.attempt = null, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, Object.defineProperty(this, tz, {
           writable: !0,
           value: 0
-        }), this.drops = 0, this.session = new cm.e({
-          reconnect: TT => this.reconnect(TT),
-          isLive: () => TT.isLive(),
-          onReconnected: UT => {
-            this.landed = UT, TT.onReconnected(UT), this.landIfResumed()
+        }), this.drops = 0, this.session = new yz.b({
+          reconnect: BB => this.reconnect(BB),
+          isLive: () => BB.isLive(),
+          onReconnected: jB => {
+            this.landed = jB, BB.onReconnected(jB), this.landIfResumed()
           },
-          onGaveUp: (UT, mT) => {
-            this.abortAttempt(), TT.onGaveUp(UT, mT)
+          onGaveUp: (jB, zB) => {
+            this.abortAttempt(), BB.onGaveUp(jB, zB)
           },
-          freeze: UT => {
-            TT.MI(UT), (0, fm.g)(im, UT ? im : 0, "reconnectFreeze")
+          freeze: jB => {
+            BB.nD(jB), (0, kz.l)(Lz, jB ? Lz : 0, "reconnectFreeze")
           },
-          releaseSeat: TT => {
-            this.releaseSeat(TT)
+          releaseSeat: BB => {
+            this.releaseSeat(BB)
           }
         })
       }
@@ -2676,154 +2676,154 @@ export const modules = {
         return this.session.isResuming()
       }
       get resumingConn() {
-        return (0, pm.c)(this, Om)[Om]
+        return (0, sz.d)(this, tz)[tz]
       }
       canHoldSeat() {
         return this.session.canHoldSeat()
       }
-      onInitialInfo(TT) {
+      onInitialInfo(BB) {
         let {
-          conn: UT,
-          graceMs: mT,
-          sessionBased: WT,
-          replayOffer: zT
-        } = TT;
-        this.session.onInitialInfo(mT, WT), this.isResuming() && (this.initialInfoConn = UT, this.initialInfoOffer = zT, this.landIfResumed())
+          conn: jB,
+          graceMs: zB,
+          sessionBased: QB,
+          replayOffer: nB
+        } = BB;
+        this.session.onInitialInfo(zB, QB), this.isResuming() && (this.initialInfoConn = jB, this.initialInfoOffer = nB, this.landIfResumed())
       }
-      onResumeComplete(TT) {
-        0 !== TT && (TT === (0, pm.c)(this, Om)[Om] ? ((0, pm.c)(this, Om)[Om] = 0, this.session.onResumed()) : this.isResuming() && (this.completedEarlyConn = TT))
+      onResumeComplete(BB) {
+        0 !== BB && (BB === (0, sz.d)(this, tz)[tz] ? ((0, sz.d)(this, tz)[tz] = 0, this.session.onResumed()) : this.isResuming() && (this.completedEarlyConn = BB))
       }
-      onDropped(TT) {
-        this.drops++, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, (0, pm.c)(this, Om)[Om] = 0, this.session.onConnectionLost(TT)
+      onDropped(BB) {
+        this.drops++, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, (0, sz.d)(this, tz)[tz] = 0, this.session.onConnectionLost(BB)
       }
       leave() {
         this.session.leave(), this.dispose()
       }
       dispose() {
-        this.abortAttempt(), this.landed = null, this.completedEarlyConn = 0, (0, pm.c)(this, Om)[Om] = 0, this.session.end()
+        this.abortAttempt(), this.landed = null, this.completedEarlyConn = 0, (0, sz.d)(this, tz)[tz] = 0, this.session.end()
       }
-      reconnect(TT) {
-        const UT = this.attempt;
-        if (null !== UT && this.awaitingJoinRoom(UT)) return UT.result;
+      reconnect(BB) {
+        const jB = this.attempt;
+        if (null !== jB && this.awaitingJoinRoom(jB)) return jB.result;
         this.abortAttempt();
-        const mT = new AbortController,
-          WT = this.drops,
-          zT = {
+        const zB = new AbortController,
+          QB = this.drops,
+          nB = {
             attachedAt: null
           },
-          MT = this.shell.reconnect(TT, mT.signal, (() => {
-            zT.attachedAt = this.now()
-          })).then((TT => {
-            if (this.clearAttempt(gT), this.drops !== WT) throw new Error("the resumed room dropped before its attempt settled");
-            return TT
-          }), (TT => {
-            throw this.clearAttempt(gT), TT
+          dB = this.shell.reconnect(BB, zB.signal, (() => {
+            nB.attachedAt = this.now()
+          })).then((BB => {
+            if (this.clearAttempt(IB), this.drops !== QB) throw new Error("the resumed room dropped before its attempt settled");
+            return BB
+          }), (BB => {
+            throw this.clearAttempt(IB), BB
           })),
-          gT = {
-            abort: mT,
-            socket: zT,
-            result: MT
+          IB = {
+            abort: zB,
+            socket: nB,
+            result: dB
           };
-        return this.attempt = gT, MT
+        return this.attempt = IB, dB
       }
-      clearAttempt(TT) {
-        this.attempt === TT && (this.attempt = null)
+      clearAttempt(BB) {
+        this.attempt === BB && (this.attempt = null)
       }
       abortAttempt() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new DOMException("the reconnect attempt was given up", "AbortError");
-        const UT = this.attempt;
-        this.attempt = null, null === UT || void 0 === UT || UT.abort.abort(TT)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new DOMException("the reconnect attempt was given up", "AbortError");
+        const jB = this.attempt;
+        this.attempt = null, null === jB || void 0 === jB || jB.abort.abort(BB)
       }
-      awaitingJoinRoom(TT) {
-        const UT = TT.socket.attachedAt;
-        return null !== UT && this.now() - UT < bm
+      awaitingJoinRoom(BB) {
+        const jB = BB.socket.attachedAt;
+        return null !== jB && this.now() - jB < gz
       }
-      releaseSeat(TT) {
-        const UT = this.attempt,
-          mT = null !== UT && this.awaitingJoinRoom(UT);
-        this.abortAttempt(new rT.p), mT || this.shell.releaseSeat(TT)
+      releaseSeat(BB) {
+        const jB = this.attempt,
+          zB = null !== jB && this.awaitingJoinRoom(jB);
+        this.abortAttempt(new eB.p), zB || this.shell.releaseSeat(BB)
       }
       landIfResumed() {
-        const TT = this.landed;
-        if (null !== TT && TT.conn === this.initialInfoConn) {
-          const UT = this.initialInfoOffer && this.completedEarlyConn !== TT.conn;
-          if (this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, this.abortAttempt(), !UT) return void this.session.onResumed();
-          (0, pm.c)(this, Om)[Om] = TT.conn, this.session.onResuming()
+        const BB = this.landed;
+        if (null !== BB && BB.conn === this.initialInfoConn) {
+          const jB = this.initialInfoOffer && this.completedEarlyConn !== BB.conn;
+          if (this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, this.abortAttempt(), !jB) return void this.session.onResumed();
+          (0, sz.d)(this, tz)[tz] = BB.conn, this.session.onResuming()
         }
       }
     }
-    var Ym = mT(39189),
-      Jm = mT(41042),
-      xm = mT(36550),
-      dm = mT(36546),
-      wm = mT(2273),
-      tm = mT(2014),
-      am = mT(4399),
-      ym = mT(40887),
-      Xm = mT(5154);
+    var Mz = zB(39153),
+      Ez = zB(40983),
+      iz = zB(36552),
+      qz = zB(36547),
+      fz = zB(2206),
+      oz = zB(1948),
+      Hz = zB(4410),
+      Dz = zB(40830),
+      Fz = zB(5132);
 
-    function Im(TT) {
+    function Yz(BB) {
       let {
-        pack: UT,
-        gameSource: mT
-      } = TT;
-      if (null !== mT && "" !== mT) return `game:${mT}`;
-      if (null === UT) return "default";
+        pack: jB,
+        gameSource: zB
+      } = BB;
+      if (null !== zB && "" !== zB) return `game:${zB}`;
+      if (null === jB) return "default";
       const {
-        id: WT,
-        version: zT
-      } = UT.metaData;
-      if (WT !== wm.n.CUSTOM) return `${WT}@${zT}`;
-      const MT = [];
-      for (const gT of [UT.textureOverrides, UT.modelOverrides, UT.animations])
-        for (const [TT, UT] of Object.entries(null !== gT && void 0 !== gT ? gT : {})) MT.push(`${TT}:${UT.length}`);
-      return `${WT}:${(0,tm.v)(MT.join())}`
+        id: QB,
+        version: nB
+      } = jB.metaData;
+      if (QB !== fz.o.CUSTOM) return `${QB}@${nB}`;
+      const dB = [];
+      for (const IB of [jB.textureOverrides, jB.modelOverrides, jB.animations])
+        for (const [BB, jB] of Object.entries(null !== IB && void 0 !== IB ? IB : {})) dB.push(`${BB}:${jB.length}`);
+      return `${QB}:${(0,oz.y)(dB.join())}`
     }
-    var Qm = mT(4531),
-      sm = mT(3368),
-      Fm = mT(41049),
-      Pm = mT(684),
-      Vm = mT(3371),
-      um = mT(102),
-      Cm = mT(4608),
-      rm = mT(44),
-      Km = mT(4409),
-      Sm = mT(40944),
-      Gm = mT(4560),
-      Nm = mT(2525),
-      Em = mT(1752),
-      hm = mT(1783),
-      Dm = mT(1388),
-      om = mT(115),
-      Am = mT(321),
-      Rm = mT(39228),
-      TW = mT(2534),
-      UW = mT(4912);
-    const mW = new Set([hU.Gb.KeyDown, hU.Gb.MouseMove, hU.Gb.MouseDown, hU.Gb.Wheel, hU.Gb.TouchStart, hU.Gb.TouchMove]);
+    var Vz = zB(4539),
+      hz = zB(3353),
+      Xz = zB(40992),
+      Zz = zB(694),
+      Az = zB(3357),
+      Tz = zB(106),
+      Pz = zB(4626),
+      Wz = zB(41),
+      ez = zB(4420),
+      lz = zB(40887),
+      wz = zB(4569),
+      xz = zB(2491),
+      Kz = zB(1664),
+      Cz = zB(1694),
+      cz = zB(1316),
+      bz = zB(125),
+      vz = zB(328),
+      Rz = zB(39177),
+      Oz = zB(2493),
+      BQ = zB(4906);
+    const jQ = new Set([cj.pb.KeyDown, cj.pb.MouseMove, cj.pb.MouseDown, cj.pb.Wheel, cj.pb.TouchStart, cj.pb.TouchMove]);
 
-    function WW(TT) {
-      return (TT.shiftKey ? hU.Ub.Shift : 0) | (TT.ctrlKey ? hU.Ub.Ctrl : 0) | (TT.altKey ? hU.Ub.Alt : 0) | (TT.metaKey ? hU.Ub.Meta : 0) | ("repeat" in TT && TT.repeat ? hU.Ub.Repeat : 0) | (TT.isTrusted ? 0 : hU.Ub.Untrusted | function(TT) {
+    function zQ(BB) {
+      return (BB.shiftKey ? cj.Hb.Shift : 0) | (BB.ctrlKey ? cj.Hb.Ctrl : 0) | (BB.altKey ? cj.Hb.Alt : 0) | (BB.metaKey ? cj.Hb.Meta : 0) | ("repeat" in BB && BB.repeat ? cj.Hb.Repeat : 0) | (BB.isTrusted ? 0 : cj.Hb.Untrusted | function(BB) {
         try {
           const {
-            editable: UT,
-            outsideView: mT
-          } = (0, Rm.c)(TT.target);
-          return (UT ? hU.Ub.UntrustedEditable : 0) | (mT ? hU.Ub.UntrustedOutsideView : 0)
+            editable: jB,
+            outsideView: zB
+          } = (0, Rz.g)(BB.target);
+          return (jB ? cj.Hb.UntrustedEditable : 0) | (zB ? cj.Hb.UntrustedOutsideView : 0)
         } catch {
           return 0
         }
-      }(TT))
+      }(BB))
     }
 
-    function zW(TT) {
-      return "touchOnly" !== (0, om.b)() && "function" === typeof TT.requestPointerLock
+    function QQ(BB) {
+      return "touchOnly" !== (0, bz.c)() && "function" === typeof BB.requestPointerLock
     }
 
-    function MW(TT) {
-      return 0 === TT.button ? TT.altKey ? UW.g["Alt+Left Click"] : UW.g.Mouse1 : 1 === TT.button ? UW.g.Mouse2 : UW.g.Mouse3
+    function nQ(BB) {
+      return 0 === BB.button ? BB.altKey ? BQ.n["Alt+Left Click"] : BQ.n.Mouse1 : 1 === BB.button ? BQ.n.Mouse2 : BQ.n.Mouse3
     }
-    const gW = new Set(["AltLeft", "AltRight", "ArrowUp", "ArrowDown"]),
-      nW = new Map([
+    const dQ = new Set(["AltLeft", "AltRight", "ArrowUp", "ArrowDown"]),
+      IQ = new Map([
         ["AltLeft", "altKey"],
         ["AltRight", "altKey"],
         ["ControlLeft", "ctrlKey"],
@@ -2833,370 +2833,370 @@ export const modules = {
         ["MetaLeft", "metaKey"],
         ["MetaRight", "metaKey"]
       ]),
-      HW = 32768,
-      kW = 1;
+      NQ = 32768,
+      uQ = 1;
 
-    function jW(TT) {
-      return Math.min(Math.max(Math.round(TT), 0), 65535)
+    function UQ(BB) {
+      return Math.min(Math.max(Math.round(BB), 0), 65535)
     }
 
-    function lW(TT, UT, mT) {
-      const WT = [],
-        zT = (TT, UT, mT, zT) => {
-          const MT = TT => {
-            (0, hm.x)(TT) || mT(TT)
+    function aQ(BB, jB, zB) {
+      const QB = [],
+        nB = (BB, jB, zB, nB) => {
+          const dB = BB => {
+            (0, Cz.t)(BB) || zB(BB)
           };
-          TT.addEventListener(UT, MT, zT), WT.push((() => {
-            TT.removeEventListener(UT, MT, zT)
+          BB.addEventListener(jB, dB, nB), QB.push((() => {
+            BB.removeEventListener(jB, dB, nB)
           }))
         },
-        MT = {
+        dB = {
           capture: !0,
           passive: !0
         },
-        gT = (TT, mT, WT, zT, MT) => (!(0, TW.c)() || !mW.has(TT)) && (UT(TT, mT, WT, zT, MT), !0),
-        nT = () => document.pointerLockElement === TT,
-        HT = (0, Am.d)(),
-        kT = TT => {
-          TT.ctrlKey && mT.ctrlCombosAreGames() && !(0, fm.e)(TT.target) && TT.preventDefault()
+        IB = (BB, zB, QB, nB, dB) => (!(0, Oz.b)() || !jQ.has(BB)) && (jB(BB, zB, QB, nB, dB), !0),
+        NB = () => document.pointerLockElement === BB,
+        uB = (0, vz.e)(),
+        UB = BB => {
+          BB.ctrlKey && zB.ctrlCombosAreGames() && !(0, kz.h)(BB.target) && BB.preventDefault()
         },
-        jT = (TT, WT, zT) => {
-          mT.inspect(TT, WT, !1), UT(hU.Gb.KeyUp, WT, 0, 0, (0, Nm.r)(zT, TT.timeStamp)), mT.keyReleased(WT)
+        aB = (BB, QB, nB) => {
+          zB.inspect(BB, QB, !1), jB(cj.pb.KeyUp, QB, 0, 0, (0, xz.r)(nB, BB.timeStamp)), zB.keyReleased(QB)
         },
-        lT = new Map,
-        LT = (TT, UT, mT) => TT[mT] || ("AltRight" === UT || "ControlLeft" === UT) && TT.getModifierState("AltGraph"),
-        pT = new Map,
-        BT = () => {
-          lT.clear(), pT.clear()
+        pB = new Map,
+        rB = (BB, jB, zB) => BB[zB] || ("AltRight" === jB || "ControlLeft" === jB) && BB.getModifierState("AltGraph"),
+        sB = new Map,
+        JB = () => {
+          pB.clear(), sB.clear()
         },
-        ZT = TT => {
-          if (TT.isTrusted && document.hasFocus())
-            for (const [UT, mT] of pT) pT.delete(UT), LT(TT, UT, mT) || (lT.delete(UT), jT(TT, UW.g[UT], WW(TT)))
+        mB = BB => {
+          if (BB.isTrusted && document.hasFocus())
+            for (const [jB, zB] of sB) sB.delete(jB), rB(BB, jB, zB) || (pB.delete(jB), aB(BB, BQ.n[jB], zQ(BB)))
         };
-      TT.tabIndex = -1;
-      let cT = 0,
-        vT = 0;
-      const fT = () => {
-        const UT = TT.getBoundingClientRect();
-        cT = UT.left, vT = UT.top
+      BB.tabIndex = -1;
+      let yB = 0,
+        kB = 0;
+      const GB = () => {
+        const jB = BB.getBoundingClientRect();
+        yB = jB.left, kB = jB.top
       };
-      let qT = "mouse";
-      const iT = () => !nT() && ("mouse" === qT || !mT.touchUiShown()),
-        bT = (TT, UT, mT) => {
-          const WT = (jW(TT.clientX - cT) | jW(TT.clientY - vT) << 16) >>> 0;
-          gT(hU.Gb.MouseMove, hU.Yb.Point, UT, mT, WT)
+      let LB = "mouse";
+      const gB = () => !NB() && ("mouse" === LB || !zB.touchUiShown()),
+        tB = (BB, jB, zB) => {
+          const QB = (UQ(BB.clientX - yB) | UQ(BB.clientY - kB) << 16) >>> 0;
+          IB(cj.pb.MouseMove, cj.Lb.Point, jB, zB, QB)
         };
-      let OT = !1,
-        eT = 0;
-      const YT = () => {
-        OT && (OT = !1, mT.viewShown() && (0, QU.N)())
+      let SB = !1,
+        MB = 0;
+      const EB = () => {
+        SB && (SB = !1, zB.viewShown() && (0, hj.S)())
       };
-      WT.push((() => {
-        clearTimeout(eT)
-      })), zT(window, "keydown", (TT => {
-        "Escape" === TT.key ? (0, QU.E)(!0) : TT.repeat || (0, fm.e)(TT.target) || (OT = !0, clearTimeout(eT), eT = window.setTimeout(YT, 0))
-      }), MT), zT(window, "keydown", (TT => {
-        YT(), kT(TT), ZT(TT);
-        const UT = UW.g[TT.code];
-        if ("number" !== typeof UT || !mT.viewShown()) return;
-        const WT = (0, fm.e)(TT.target);
-        WT || !mT.prevents(UT) && !gW.has(TT.code) || TT.preventDefault(), TT.repeat || mT.inspect(TT, UT, !0), gT(hU.Gb.KeyDown, UT, 0, 0, (0, Nm.r)(WW(TT), TT.timeStamp)) && lT.set(TT.code, UT), WT || mT.keyPressed(UT)
+      QB.push((() => {
+        clearTimeout(MB)
+      })), nB(window, "keydown", (BB => {
+        "Escape" === BB.key ? (0, hj.K)(!0) : BB.repeat || (0, kz.h)(BB.target) || (SB = !0, clearTimeout(MB), MB = window.setTimeout(EB, 0))
+      }), dB), nB(window, "keydown", (BB => {
+        EB(), UB(BB), mB(BB);
+        const jB = BQ.n[BB.code];
+        if ("number" !== typeof jB || !zB.viewShown()) return;
+        const QB = (0, kz.h)(BB.target);
+        QB || !zB.prevents(jB) && !dQ.has(BB.code) || BB.preventDefault(), BB.repeat || zB.inspect(BB, jB, !0), IB(cj.pb.KeyDown, jB, 0, 0, (0, xz.r)(zQ(BB), BB.timeStamp)) && pB.set(BB.code, jB), QB || zB.keyPressed(jB)
       }), {
         capture: !1,
         passive: !1
-      }), zT(window, "keyup", (TT => {
-        "Escape" === TT.key && (0, QU.E)(!1), kT(TT), lT.delete(TT.code), pT.delete(TT.code), ZT(TT);
-        const UT = UW.g[TT.code];
-        "number" === typeof UT && jT(TT, UT, WW(TT))
+      }), nB(window, "keyup", (BB => {
+        "Escape" === BB.key && (0, hj.K)(!1), UB(BB), pB.delete(BB.code), sB.delete(BB.code), mB(BB);
+        const jB = BQ.n[BB.code];
+        "number" === typeof jB && aB(BB, jB, zQ(BB))
       }), {
         capture: !0,
         passive: !1
-      }), zT(window, "mousemove", (TT => {
-        "mouse" === qT && iT() ? bT(TT, TT.movementX, TT.movementY) : nT() ? gT(hU.Gb.MouseMove, hU.Yb.Stamped, TT.movementX, TT.movementY, (0, Nm.r)(0, TT.timeStamp)) : gT(hU.Gb.MouseMove, 0, TT.movementX, TT.movementY, 0)
-      }), MT);
-      let JT = 0,
-        xT = 0;
-      const dT = [];
-      let wT = !1,
-        tT = !1;
-      zT(TT, "mousedown", (TT => {
-        if ((0, TW.c)()) return;
-        ZT(TT);
-        const WT = 1 << TT.button;
-        if (!nT() && (0, QU.L)() && (0, QU.f)() && (tT = !0, !wT)) return void(JT |= WT);
-        JT &= ~WT;
-        const zT = TT.button <= 2 ? MW(TT) : void 0;
-        void 0 !== zT && (dT[TT.button] = zT, mT.inspect(TT, zT, !0)), iT() && bT(TT, 0, 0), UT(hU.Gb.MouseDown, TT.button, TT.clientX, TT.clientY, (0, Nm.r)(WW(TT), TT.timeStamp)), xT |= WT, void 0 !== zT && mT.keyPressed(zT)
-      }), MT), zT(window, "mouseup", (TT => {
-        var WT;
-        ZT(TT);
-        const zT = 1 << TT.button,
-          MT = 0 !== (JT & ~xT & zT);
-        if (JT &= ~zT, xT &= ~zT, MT) return;
-        const gT = TT.button <= 2 ? null !== (WT = dT[TT.button]) && void 0 !== WT ? WT : MW(TT) : void 0;
-        void 0 !== gT && mT.inspect(TT, gT, !1), UT(hU.Gb.MouseUp, TT.button, TT.clientX, TT.clientY, (0, Nm.r)(WW(TT), TT.timeStamp)), void 0 !== gT && mT.keyReleased(gT)
-      }), MT), zT(TT, "contextmenu", (TT => {
-        TT.preventDefault()
+      }), nB(window, "mousemove", (BB => {
+        "mouse" === LB && gB() ? tB(BB, BB.movementX, BB.movementY) : NB() ? IB(cj.pb.MouseMove, cj.Lb.Stamped, BB.movementX, BB.movementY, (0, xz.r)(0, BB.timeStamp)) : IB(cj.pb.MouseMove, 0, BB.movementX, BB.movementY, 0)
+      }), dB);
+      let iB = 0,
+        qB = 0;
+      const fB = [];
+      let oB = !1,
+        HB = !1;
+      nB(BB, "mousedown", (BB => {
+        if ((0, Oz.b)()) return;
+        mB(BB);
+        const QB = 1 << BB.button;
+        if (!NB() && (0, hj.R)() && (0, hj.i)() && (HB = !0, !oB)) return void(iB |= QB);
+        iB &= ~QB;
+        const nB = BB.button <= 2 ? nQ(BB) : void 0;
+        void 0 !== nB && (fB[BB.button] = nB, zB.inspect(BB, nB, !0)), gB() && tB(BB, 0, 0), jB(cj.pb.MouseDown, BB.button, BB.clientX, BB.clientY, (0, xz.r)(zQ(BB), BB.timeStamp)), qB |= QB, void 0 !== nB && zB.keyPressed(nB)
+      }), dB), nB(window, "mouseup", (BB => {
+        var QB;
+        mB(BB);
+        const nB = 1 << BB.button,
+          dB = 0 !== (iB & ~qB & nB);
+        if (iB &= ~nB, qB &= ~nB, dB) return;
+        const IB = BB.button <= 2 ? null !== (QB = fB[BB.button]) && void 0 !== QB ? QB : nQ(BB) : void 0;
+        void 0 !== IB && zB.inspect(BB, IB, !1), jB(cj.pb.MouseUp, BB.button, BB.clientX, BB.clientY, (0, xz.r)(zQ(BB), BB.timeStamp)), void 0 !== IB && zB.keyReleased(IB)
+      }), dB), nB(BB, "contextmenu", (BB => {
+        BB.preventDefault()
       }), {
         passive: !1
       });
-      const aT = TT => {
-        (nT() || (0, QU.p)() && (0, Dm.u)()) && (TT.ctrlKey || HT && !document.fullscreenElement) && TT.preventDefault()
+      const DB = BB => {
+        (NB() || (0, hj.s)() && (0, cz.y)()) && (BB.ctrlKey || uB && !document.fullscreenElement) && BB.preventDefault()
       };
-      zT(TT, "wheel", (TT => {
-        aT(TT), ZT(TT), gT(hU.Gb.Wheel, TT.deltaMode, TT.deltaX, TT.deltaY, 0)
+      nB(BB, "wheel", (BB => {
+        DB(BB), mB(BB), IB(cj.pb.Wheel, BB.deltaMode, BB.deltaX, BB.deltaY, 0)
       }), {
         capture: !0,
         passive: !1
       });
-      const yT = {
+      const FB = {
           capture: !0,
           passive: !1
         },
-        XT = TT => {
-          TT ? window.addEventListener("wheel", aT, yT) : window.removeEventListener("wheel", aT, yT)
+        YB = BB => {
+          BB ? window.addEventListener("wheel", DB, FB) : window.removeEventListener("wheel", DB, FB)
         };
-      XT((0, QU.p)()), WT.push((0, QU.w)(XT)), WT.push((() => {
-        XT(!1)
+      YB((0, hj.s)()), QB.push((0, hj.A)(YB)), QB.push((() => {
+        YB(!1)
       }));
-      const IT = new Map,
-        QT = new Set,
-        sT = TT => {
-          const UT = "stylus" === TT.touchType;
-          for (const mT of IT.values())
-            if (!mT.touched && (UT || Math.abs(TT.clientX - mT.x) <= kW && Math.abs(TT.clientY - mT.y) <= kW)) return mT.touched = !0, !0;
+      const VB = new Map,
+        hB = new Set,
+        XB = BB => {
+          const jB = "stylus" === BB.touchType;
+          for (const zB of VB.values())
+            if (!zB.touched && (jB || Math.abs(BB.clientX - zB.x) <= uQ && Math.abs(BB.clientY - zB.y) <= uQ)) return zB.touched = !0, !0;
           return !1
         },
-        FT = TT => 32767 & TT,
-        PT = new Set,
-        VT = TT => mT => {
-          const WT = (0, Nm.r)(WW(mT), mT.timeStamp);
-          TT !== hU.Gb.TouchStart && TT !== hU.Gb.TouchMove || ((TT, mT) => {
-            const WT = TT.touches;
-            if (WT)
-              for (const zT of PT) {
-                let TT = !1;
-                for (let UT = 0; UT < WT.length && !TT; UT++) TT = FT(WT[UT].identifier) === zT;
-                TT || (PT.delete(zT), UT(hU.Gb.TouchCancel, zT, 0, 0, mT))
+        ZB = BB => 32767 & BB,
+        AB = new Set,
+        TB = BB => zB => {
+          const QB = (0, xz.r)(zQ(zB), zB.timeStamp);
+          BB !== cj.pb.TouchStart && BB !== cj.pb.TouchMove || ((BB, zB) => {
+            const QB = BB.touches;
+            if (QB)
+              for (const nB of AB) {
+                let BB = !1;
+                for (let jB = 0; jB < QB.length && !BB; jB++) BB = ZB(QB[jB].identifier) === nB;
+                BB || (AB.delete(nB), jB(cj.pb.TouchCancel, nB, 0, 0, zB))
               }
-          })(mT, WT);
-          const zT = mT.changedTouches;
-          for (let UT = 0; UT < zT.length; UT++) {
-            const mT = zT[UT];
-            if (TT === hU.Gb.TouchStart && sT(mT) && QT.add(mT.identifier), QT.has(mT.identifier)) {
-              TT !== hU.Gb.TouchEnd && TT !== hU.Gb.TouchCancel || QT.delete(mT.identifier);
+          })(zB, QB);
+          const nB = zB.changedTouches;
+          for (let jB = 0; jB < nB.length; jB++) {
+            const zB = nB[jB];
+            if (BB === cj.pb.TouchStart && XB(zB) && hB.add(zB.identifier), hB.has(zB.identifier)) {
+              BB !== cj.pb.TouchEnd && BB !== cj.pb.TouchCancel || hB.delete(zB.identifier);
               continue
             }
-            const MT = FT(mT.identifier),
-              nT = gT(TT, MT, mT.clientX - cT, mT.clientY - vT, WT);
-            TT === hU.Gb.TouchStart ? nT && PT.add(MT) : TT !== hU.Gb.TouchMove && PT.delete(MT)
+            const dB = ZB(zB.identifier),
+              NB = IB(BB, dB, zB.clientX - yB, zB.clientY - kB, QB);
+            BB === cj.pb.TouchStart ? NB && AB.add(dB) : BB !== cj.pb.TouchMove && AB.delete(dB)
           }
         },
-        uT = VT(hU.Gb.TouchStart);
-      zT(TT, "touchstart", (TT => {
-        TT.preventDefault(), (0, TW.c)() || (mT.touchStarting(), uT(TT))
+        PB = TB(cj.pb.TouchStart);
+      nB(BB, "touchstart", (BB => {
+        BB.preventDefault(), (0, Oz.b)() || (zB.touchStarting(), PB(BB))
       }), {
         passive: !1
-      }), zT(TT, "touchmove", VT(hU.Gb.TouchMove), MT), zT(TT, "touchend", VT(hU.Gb.TouchEnd), MT), zT(TT, "touchcancel", VT(hU.Gb.TouchCancel), MT);
-      const CT = TT => HW | 32767 & TT,
-        rT = (TT, UT) => {
-          gT(TT, CT(UT.pointerId), UT.clientX - cT, UT.clientY - vT, (0, Nm.r)(WW(UT), UT.timeStamp))
+      }), nB(BB, "touchmove", TB(cj.pb.TouchMove), dB), nB(BB, "touchend", TB(cj.pb.TouchEnd), dB), nB(BB, "touchcancel", TB(cj.pb.TouchCancel), dB);
+      const WB = BB => NQ | 32767 & BB,
+        eB = (BB, jB) => {
+          IB(BB, WB(jB.pointerId), jB.clientX - yB, jB.clientY - kB, (0, xz.r)(zQ(jB), jB.timeStamp))
         };
-      zT(window, "pointerdown", (UT => {
-        qT = UT.pointerType, "mouse" === UT.pointerType && UT.target !== TT && mT.viewShown() && (0, QU.Q)()
-      }), MT), zT(TT, "pointerdown", (TT => {
-        "pen" === TT.pointerType && 0 === TT.button && (0, QU.p)() && (0, Dm.u)() && (TT.preventDefault(), (0, TW.c)() || (IT.set(TT.pointerId, {
-          x: TT.clientX,
-          y: TT.clientY,
+      nB(window, "pointerdown", (jB => {
+        LB = jB.pointerType, "mouse" === jB.pointerType && jB.target !== BB && zB.viewShown() && (0, hj.T)()
+      }), dB), nB(BB, "pointerdown", (BB => {
+        "pen" === BB.pointerType && 0 === BB.button && (0, hj.s)() && (0, cz.y)() && (BB.preventDefault(), (0, Oz.b)() || (VB.set(BB.pointerId, {
+          x: BB.clientX,
+          y: BB.clientY,
           touched: !1
-        }), mT.touchStarting(), rT(hU.Gb.TouchStart, TT)))
+        }), zB.touchStarting(), eB(cj.pb.TouchStart, BB)))
       }), {
         passive: !1
-      }), zT(window, "pointermove", (TT => {
-        qT = TT.pointerType, IT.has(TT.pointerId) && rT(hU.Gb.TouchMove, TT), "mouse" !== TT.pointerType && iT() && bT(TT, 0, 0)
-      }), MT);
-      const KT = TT => UT => {
-        IT.delete(UT.pointerId) && rT(TT, UT)
+      }), nB(window, "pointermove", (BB => {
+        LB = BB.pointerType, VB.has(BB.pointerId) && eB(cj.pb.TouchMove, BB), "mouse" !== BB.pointerType && gB() && tB(BB, 0, 0)
+      }), dB);
+      const lB = BB => jB => {
+        VB.delete(jB.pointerId) && eB(BB, jB)
       };
-      zT(window, "pointerup", KT(hU.Gb.TouchEnd), MT), zT(window, "pointercancel", KT(hU.Gb.TouchCancel), MT);
-      let ST = 0;
-      const GT = () => {
-          ST = 0, fT(), mT.resized()
+      nB(window, "pointerup", lB(cj.pb.TouchEnd), dB), nB(window, "pointercancel", lB(cj.pb.TouchCancel), dB);
+      let wB = 0;
+      const xB = () => {
+          wB = 0, GB(), zB.resized()
         },
-        NT = () => {
-          const TT = mT.sizeCanvas();
-          null !== TT && UT(hU.Gb.Resize, 0, TT.cssWidth, TT.cssHeight, (0, Nm.k)(TT.renderScale)), fT(), mT.resized(), 0 === ST && (ST = requestAnimationFrame(GT))
+        KB = () => {
+          const BB = zB.sizeCanvas();
+          null !== BB && jB(cj.pb.Resize, 0, BB.cssWidth, BB.cssHeight, (0, xz.j)(BB.renderScale)), GB(), zB.resized(), 0 === wB && (wB = requestAnimationFrame(xB))
         };
-      zT(window, "resize", NT, MT), WT.push(mT.watchRenderScale(NT)), WT.push((() => {
-        cancelAnimationFrame(ST)
-      })), zT(window, "focus", (TT => {
-        TT.isTrusted && (UT(hU.Gb.Focus, 0, 0, 0, 0), mT.viewShown() && (0, QU.Q)())
+      nB(window, "resize", KB, dB), QB.push(zB.watchRenderScale(KB)), QB.push((() => {
+        cancelAnimationFrame(wB)
+      })), nB(window, "focus", (BB => {
+        BB.isTrusted && (jB(cj.pb.Focus, 0, 0, 0, 0), zB.viewShown() && (0, hj.T)())
       }), {
         passive: !0
       });
-      const ET = () => {
-          (0, QU.E)(!1), JT = 0
+      const CB = () => {
+          (0, hj.K)(!1), iB = 0
         },
-        hT = () => {
-          PT.clear(), IT.clear(), QT.clear()
+        cB = () => {
+          AB.clear(), VB.clear(), hB.clear()
         };
-      let DT = 0,
-        oT = 0;
-      zT(window, "blur", (WT => {
-        ET(), (0, QU.l)();
-        for (const TT of lT.keys()) {
-          const UT = nW.get(TT);
-          void 0 !== UT && pT.set(TT, UT)
+      let bB = 0,
+        vB = 0;
+      nB(window, "blur", (QB => {
+        CB(), (0, hj.o)();
+        for (const BB of pB.keys()) {
+          const jB = IQ.get(BB);
+          void 0 !== jB && sB.set(BB, jB)
         }
-        WT.isTrusted && ((TT => {
-          for (const [mT, WT] of IT) UT(hU.Gb.TouchCancel, CT(mT), WT.x, WT.y, (0, Nm.r)(0, TT));
-          IT.clear()
-        })(WT.timeStamp), UT(hU.Gb.Blur, hU.s.KeepTouches, 0, 0, 0)), HT && WT.isTrusted && (clearTimeout(oT), oT = window.setTimeout((() => {
+        QB.isTrusted && ((BB => {
+          for (const [zB, QB] of VB) jB(cj.pb.TouchCancel, WB(zB), QB.x, QB.y, (0, xz.r)(0, BB));
+          VB.clear()
+        })(QB.timeStamp), jB(cj.pb.Blur, cj.s.KeepTouches, 0, 0, 0)), uB && QB.isTrusted && (clearTimeout(vB), vB = window.setTimeout((() => {
           if (!document.hasFocus()) {
-            for (const TT of lT.values()) jT(WT, TT, 0);
-            BT()
+            for (const BB of pB.values()) aB(QB, BB, 0);
+            JB()
           }
-        }), 0)), clearTimeout(DT), DT = window.setTimeout((() => {
-          document.activeElement instanceof HTMLIFrameElement && (0, Dm.u)() && mT.viewShown() && TT.focus({
+        }), 0)), clearTimeout(bB), bB = window.setTimeout((() => {
+          document.activeElement instanceof HTMLIFrameElement && (0, cz.y)() && zB.viewShown() && BB.focus({
             preventScroll: !0
           })
         }), 0)
       }), {
         passive: !0
-      }), WT.push((() => {
-        clearTimeout(DT), clearTimeout(oT)
-      })), zT(window, "mousedown", (UT => {
-        HT && UT.isTrusted && !document.hasFocus() && (0, Dm.u)() && mT.viewShown() && (window.focus(), TT.focus({
+      }), QB.push((() => {
+        clearTimeout(bB), clearTimeout(vB)
+      })), nB(window, "mousedown", (jB => {
+        uB && jB.isTrusted && !document.hasFocus() && (0, cz.y)() && zB.viewShown() && (window.focus(), BB.focus({
           preventScroll: !0
         }))
-      }), MT), zT(document, "visibilitychange", (() => {
-        document.hidden ? (UT(hU.Gb.Blur, 0, 0, 0, 0), hT()) : document.hasFocus() && UT(hU.Gb.Focus, 0, 0, 0, 0)
+      }), dB), nB(document, "visibilitychange", (() => {
+        document.hidden ? (jB(cj.pb.Blur, 0, 0, 0, 0), cB()) : document.hasFocus() && jB(cj.pb.Focus, 0, 0, 0, 0)
       }), {
         passive: !0
-      }), WT.push((0, TW.h)((() => {
-        ET(), UT(hU.Gb.Blur, hU.s.Release, 0, 0, 0), mT.keysReleased(), BT(), xT = 0, hT(), UT(hU.Gb.Joystick, 0, 0, 0, 0), document.hasFocus() && UT(hU.Gb.Focus, 0, 0, 0, 0)
+      }), QB.push((0, Oz.g)((() => {
+        CB(), jB(cj.pb.Blur, cj.s.Release, 0, 0, 0), zB.keysReleased(), JB(), qB = 0, cB(), jB(cj.pb.Joystick, 0, 0, 0, 0), document.hasFocus() && jB(cj.pb.Focus, 0, 0, 0, 0)
       })));
-      const AT = !mT.canLock(),
-        RT = () => AT && !(0, QU.p)() ? hU.oc.Lockless : hU.oc.Released,
-        TU = () => {
-          nT() && (wT = !1, tT = !1), UT(hU.Gb.PointerLock, nT() ? hU.oc.Locked : RT(), 0, 0, 0), (0, QU.J)(nT())
+      const RB = !zB.canLock(),
+        OB = () => RB && !(0, hj.s)() ? cj.jc.Lockless : cj.jc.Released,
+        Bj = () => {
+          NB() && (oB = !1, HB = !1), jB(cj.pb.PointerLock, NB() ? cj.jc.Locked : OB(), 0, 0, 0), (0, hj.O)(NB())
         };
-      return zT(document, "pointerlockchange", TU, {
+      return nB(document, "pointerlockchange", Bj, {
         passive: !0
-      }), zT(document, "pointerlockerror", (() => {
-        wT ||= tT, tT = !1, (0, QU.v)()
+      }), nB(document, "pointerlockerror", (() => {
+        oB ||= HB, HB = !1, (0, hj.z)()
       }), {
         passive: !0
-      }), AT && WT.push((0, QU.w)((() => {
-        UT(hU.Gb.PointerLock, RT(), 0, 0, 0)
-      }))), NT(), UT(document.hasFocus() ? hU.Gb.Focus : hU.Gb.Blur, 0, 0, 0, 0), TU(), () => {
-        for (const TT of WT.splice(0)) TT()
+      }), RB && QB.push((0, hj.A)((() => {
+        jB(cj.pb.PointerLock, OB(), 0, 0, 0)
+      }))), KB(), jB(document.hasFocus() ? cj.pb.Focus : cj.pb.Blur, 0, 0, 0, 0), Bj(), () => {
+        for (const BB of QB.splice(0)) BB()
       }
     }
-    var LW = mT(34215),
-      pW = mT(34206),
-      BW = mT(2106);
-    const ZW = new Map(UW.c.map(((TT, UT) => [TT, UT]))),
-      cW = ["jump", "primary-fire", "alt-fire"],
-      vW = ["primary-fire", "alt-fire"];
+    var pQ = zB(34188),
+      rQ = zB(34179),
+      sQ = zB(2042);
+    const JQ = new Map(BQ.e.map(((BB, jB) => [BB, jB]))),
+      mQ = ["jump", "primary-fire", "alt-fire"],
+      yQ = ["primary-fire", "alt-fire"];
 
-    function fW(TT) {
-      return `${BW.c}${TT}`
+    function kQ(BB) {
+      return `${sQ.d}${BB}`
     }
-    const qW = ["forward", "backward", "left", "right", "sprint", "jump"];
+    const GQ = ["forward", "backward", "left", "right", "sprint", "jump"];
 
-    function iW(TT) {
-      const UT = [];
-      for (const mT of TT) {
-        const TT = "string" === typeof mT ? UW.g[mT] : void 0;
-        "number" === typeof TT && UT.push(TT)
+    function LQ(BB) {
+      const jB = [];
+      for (const zB of BB) {
+        const BB = "string" === typeof zB ? BQ.n[zB] : void 0;
+        "number" === typeof BB && jB.push(BB)
       }
-      return UT
+      return jB
     }
-    class bW {
+    class gQ {
       constructor() {
         this.keys = new Map, this.preventKeys = new Set, this.movementKeys = new Set, this.checkedDown = new Set, this.checkedUp = new Set;
-        for (const [TT, UT] of Object.entries(UW.e)) this.keys.set(TT, UT);
+        for (const [BB, jB] of Object.entries(BQ.i)) this.keys.set(BB, jB);
         this.updateKeySets()
       }
-      prevents(TT) {
-        return this.preventKeys.has(TT)
+      prevents(BB) {
+        return this.preventKeys.has(BB)
       }
-      moves(TT) {
-        return this.movementKeys.has(TT)
+      moves(BB) {
+        return this.movementKeys.has(BB)
       }
-      checks(TT, UT) {
-        return (UT ? this.checkedDown : this.checkedUp).has(TT)
+      checks(BB, jB) {
+        return (jB ? this.checkedDown : this.checkedUp).has(BB)
       }
-      sync(TT, UT) {
-        for (const [mT, WT] of this.keys) {
-          const zT = TT(fW(mT)),
-            MT = Array.isArray(zT) ? iW(zT) : UW.e[mT];
-          (MT.length !== WT.length || MT.some(((TT, UT) => TT !== WT[UT]))) && this.bind(mT, MT, UT)
+      sync(BB, jB) {
+        for (const [zB, QB] of this.keys) {
+          const nB = BB(kQ(zB)),
+            dB = Array.isArray(nB) ? LQ(nB) : BQ.i[zB];
+          (dB.length !== QB.length || dB.some(((BB, jB) => BB !== QB[jB]))) && this.bind(zB, dB, jB)
         }
       }
-      bind(TT, UT, mT) {
-        const WT = ZW.get(TT);
-        if (void 0 !== WT) {
-          mT(hU.Gb.Binding, 0, 0, 0, WT | hU.o.Clear << 8);
-          for (const MT of [...UT, ...null !== (zT = UW.f[TT]) && void 0 !== zT ? zT : []]) {
-            var zT;
-            mT(hU.Gb.Binding, MT, 0, 0, WT | hU.o.Add << 8)
+      bind(BB, jB, zB) {
+        const QB = JQ.get(BB);
+        if (void 0 !== QB) {
+          zB(cj.pb.Binding, 0, 0, 0, QB | cj.p.Clear << 8);
+          for (const dB of [...jB, ...null !== (nB = BQ.m[BB]) && void 0 !== nB ? nB : []]) {
+            var nB;
+            zB(cj.pb.Binding, dB, 0, 0, QB | cj.p.Add << 8)
           }
-          this.keys.set(TT, UT), this.updateKeySets()
+          this.keys.set(BB, jB), this.updateKeySets()
         }
       }
       updateKeySets() {
         this.preventKeys.clear();
-        for (const WT of UW.i)
-          for (const UT of null !== (TT = this.keys.get(UW.c[WT])) && void 0 !== TT ? TT : []) {
-            var TT;
-            this.preventKeys.add(UT)
+        for (const QB of BQ.r)
+          for (const jB of null !== (BB = this.keys.get(BQ.e[QB])) && void 0 !== BB ? BB : []) {
+            var BB;
+            this.preventKeys.add(jB)
           }
         this.movementKeys.clear();
-        for (const WT of qW)
-          for (const TT of null !== (UT = this.keys.get(WT)) && void 0 !== UT ? UT : []) {
-            var UT;
-            this.movementKeys.add(TT)
+        for (const QB of GQ)
+          for (const BB of null !== (jB = this.keys.get(QB)) && void 0 !== jB ? jB : []) {
+            var jB;
+            this.movementKeys.add(BB)
           }
-        for (const [WT, zT] of [
-            [this.checkedDown, cW],
-            [this.checkedUp, vW]
+        for (const [QB, nB] of [
+            [this.checkedDown, mQ],
+            [this.checkedUp, yQ]
           ]) {
-          WT.clear();
-          for (const TT of zT)
-            for (const UT of null !== (mT = this.keys.get(TT)) && void 0 !== mT ? mT : []) {
-              var mT;
-              WT.add(UT)
+          QB.clear();
+          for (const BB of nB)
+            for (const jB of null !== (zB = this.keys.get(BB)) && void 0 !== zB ? zB : []) {
+              var zB;
+              QB.add(jB)
             }
         }
       }
     }
-    var OW = mT(4906),
-      eW = mT(36674);
-    const YW = "[bloxd-wasm-client]";
+    var tQ = zB(4897),
+      SQ = zB(36665);
+    const MQ = "[bloxd-wasm-client]";
 
-    function JW() {
-      return "inGame" === TU.b.get("gameState") && !(0, Em.m)()
+    function EQ() {
+      return "inGame" === Bj.c.get("gameState") && !(0, Kz.q)()
     }
-    let xW = null;
+    let iQ = null;
 
-    function dW(TT, UT) {
-      xW && UT.writePendingInput() && xW.push(function(TT, UT) {
-        let mT = "";
-        for (const WT of UT) mT += WT.toString(16).padStart(2, "0");
-        return mT ? `${TT} ${mT}` : String(TT)
-      }(TT, UT.rings.input.written()))
+    function qQ(BB, jB) {
+      iQ && jB.writePendingInput() && iQ.push(function(BB, jB) {
+        let zB = "";
+        for (const QB of jB) zB += QB.toString(16).padStart(2, "0");
+        return zB ? `${BB} ${zB}` : String(BB)
+      }(BB, jB.rings.input.written()))
     }
-    const wW = [];
+    const fQ = [];
 
-    function tW(TT, UT, mT, WT) {
-      TT === hU.hb.InputAction && WT === hU.Eb && wW.push(UT.getUint32(mT, !0))
+    function oQ(BB, jB, zB, QB) {
+      BB === cj.U.InputAction && QB === cj.mb && fQ.push(jB.getUint32(zB, !0))
     }
-    var aW = mT(41053),
-      yW = mT(1295),
-      XW = mT(36945);
-    const IW = {
+    var HQ = zB(41e3),
+      DQ = zB(1242),
+      FQ = zB(36926);
+    const YQ = {
       general: {
         ok: "OK",
         tryAgain: "Try Again",
@@ -3204,256 +3204,477 @@ export const modules = {
         reload: "Reload",
         reconnect: "Rejoin"
       },
-      wasmScreens: yW.wasmScreens
+      wasmScreens: DQ.wasmScreens
     };
 
-    function QW(TT) {
-      var UT, mT;
-      let WT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const [zT, MT] = TT.split(":");
-      return (null !== (UT = null === (mT = IW[zT]) || void 0 === mT ? void 0 : mT[MT]) && void 0 !== UT ? UT : TT).replace(/\{\{(\w+)\}\}/g, ((TT, UT) => {
-        var mT;
-        return null !== (mT = WT[UT]) && void 0 !== mT ? mT : TT
+    function VQ(BB) {
+      var jB, zB;
+      let QB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const [nB, dB] = BB.split(":");
+      return (null !== (jB = null === (zB = YQ[nB]) || void 0 === zB ? void 0 : zB[dB]) && void 0 !== jB ? jB : BB).replace(/\{\{(\w+)\}\}/g, ((BB, jB) => {
+        var zB;
+        return null !== (zB = QB[jB]) && void 0 !== zB ? zB : BB
       }))
     }
 
-    function sW(TT, UT) {
-      (0, Gm.d)();
-      const mT = document.createElement("div");
-      mT.setAttribute("role", "alertdialog"), mT.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);font:16px sans-serif;color:#fff";
-      const WT = document.createElement("div");
-      WT.style.cssText = "max-width:28rem;padding:1.5rem;background:#1c2333;text-align:center";
-      const zT = document.createElement("h2");
-      zT.textContent = QW(TT.title);
-      const MT = document.createElement("p");
-      if (MT.textContent = QW(TT.help, TT.helpValues), MT.style.whiteSpace = "pre-line", WT.append(zT, MT), TT.discordLink) {
-        const TT = document.createElement("a");
-        TT.href = XW.b, TT.target = "_blank", TT.rel = "noreferrer", TT.style.color = "#8ab4ff", TT.textContent = QW("wasmScreens:reportOnDiscord"), WT.append(TT)
+    function hQ(BB, jB) {
+      (0, wz.e)();
+      const zB = document.createElement("div");
+      zB.setAttribute("role", "alertdialog"), zB.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);font:16px sans-serif;color:#fff";
+      const QB = document.createElement("div");
+      QB.style.cssText = "max-width:28rem;padding:1.5rem;background:#1c2333;text-align:center";
+      const nB = document.createElement("h2");
+      nB.textContent = VQ(BB.title);
+      const dB = document.createElement("p");
+      if (dB.textContent = VQ(BB.help, BB.helpValues), dB.style.whiteSpace = "pre-line", QB.append(nB, dB), BB.discordLink) {
+        const BB = document.createElement("a");
+        BB.href = FQ.c, BB.target = "_blank", BB.rel = "noreferrer", BB.style.color = "#8ab4ff", BB.textContent = VQ("wasmScreens:reportOnDiscord"), QB.append(BB)
       }
-      const gT = document.createElement("div");
-      return gT.style.cssText = "display:flex;gap:1rem;justify-content:center;margin-top:1.5rem", WT.append(gT), mT.append(WT), document.body.append(mT), new Promise((WT => {
-        const zT = TT => {
-            null === UT || void 0 === UT || UT.removeEventListener("abort", MT), mT.remove(), WT(TT)
+      const IB = document.createElement("div");
+      return IB.style.cssText = "display:flex;gap:1rem;justify-content:center;margin-top:1.5rem", QB.append(IB), zB.append(QB), document.body.append(zB), new Promise((QB => {
+        const nB = BB => {
+            null === jB || void 0 === jB || jB.removeEventListener("abort", dB), zB.remove(), QB(BB)
           },
-          MT = () => {
-            zT(!1)
+          dB = () => {
+            nB(!1)
           };
-        null === UT || void 0 === UT || UT.addEventListener("abort", MT, {
+        null === jB || void 0 === jB || jB.addEventListener("abort", dB, {
           once: !0
         });
-        const nT = (TT, UT) => {
-          const mT = document.createElement("button");
-          mT.textContent = QW(TT), mT.style.cssText = "padding:0.5rem 1.25rem;font:inherit", mT.addEventListener("click", (() => {
-            zT(UT)
-          })), gT.append(mT)
+        const NB = (BB, jB) => {
+          const zB = document.createElement("button");
+          zB.textContent = VQ(BB), zB.style.cssText = "padding:0.5rem 1.25rem;font:inherit", zB.addEventListener("click", (() => {
+            nB(jB)
+          })), IB.append(zB)
         };
-        null !== TT.cancel && nT(TT.cancel, !1), nT(TT.confirm, !0)
+        null !== BB.cancel && NB(BB.cancel, !1), NB(BB.confirm, !0)
       }))
     }
-    var FW = mT(280),
-      PW = mT(130);
-    const VW = new Set(["android", "ios"]);
-    let uW = null;
+    var XQ = zB(283),
+      ZQ = zB(140);
+    const AQ = new Set(["android", "ios"]);
+    let TQ = null;
 
-    function CW() {
-      return uW ??= function() {
-        let TT = null;
+    function PQ() {
+      return TQ ??= function() {
+        let BB = null;
         try {
-          var UT, mT, WT;
-          const zT = document.createElement("canvas"),
-            MT = {
-              powerPreference: PW.c
+          var jB, zB, QB;
+          const nB = document.createElement("canvas"),
+            dB = {
+              powerPreference: ZQ.e
             };
-          if (TT = null !== (UT = zT.getContext("webgl2", MT)) && void 0 !== UT ? UT : zT.getContext("webgl", MT), !TT) return null;
-          const gT = TT.getExtension("WEBGL_debug_renderer_info");
-          if (!gT) return "unknown";
-          const nT = String(null !== (mT = TT.getParameter(gT.UNMASKED_RENDERER_WEBGL)) && void 0 !== mT ? mT : "");
-          return "" === nT ? "unknown" : (0, FW.i)(String(null !== (WT = TT.getParameter(gT.UNMASKED_VENDOR_WEBGL)) && void 0 !== WT ? WT : ""), nT)
+          if (BB = null !== (jB = nB.getContext("webgl2", dB)) && void 0 !== jB ? jB : nB.getContext("webgl", dB), !BB) return null;
+          const IB = BB.getExtension("WEBGL_debug_renderer_info");
+          if (!IB) return "unknown";
+          const NB = String(null !== (zB = BB.getParameter(IB.UNMASKED_RENDERER_WEBGL)) && void 0 !== zB ? zB : "");
+          return "" === NB ? "unknown" : (0, XQ.g)(String(null !== (QB = BB.getParameter(IB.UNMASKED_VENDOR_WEBGL)) && void 0 !== QB ? QB : ""), NB)
         } catch {
           return null
         } finally {
           try {
-            var zT, MT;
-            null === (zT = TT) || void 0 === zT || null === (MT = zT.getExtension("WEBGL_lose_context")) || void 0 === MT || MT.loseContext()
+            var nB, dB;
+            null === (nB = BB) || void 0 === nB || null === (dB = nB.getExtension("WEBGL_lose_context")) || void 0 === dB || dB.loseContext()
           } catch {}
         }
-      }(), uW
+      }(), TQ
     }
 
-    function rW(TT) {
-      const UT = (0, um.pageOperatingSystem)();
-      return null === UT ? null : function(TT, UT, mT) {
-        const WT = "software_adapter" === TT.reason ? null : TT.adapter,
-          zT = null === WT || "" === WT.vendor ? null : (0, FW.g)(WT.vendor, WT.architecture);
-        return null !== zT && "other_intel" !== zT ? zT : VW.has(UT) ? null : mT()
-      }(TT, UT, CW)
+    function WQ(BB) {
+      const jB = (0, Tz.pageOperatingSystem)();
+      return null === jB ? null : function(BB, jB, zB) {
+        const QB = "software_adapter" === BB.reason ? null : BB.adapter,
+          nB = null === QB || "" === QB.vendor ? null : (0, XQ.f)(QB.vendor, QB.architecture);
+        return null !== nB && "other_intel" !== nB ? nB : AQ.has(jB) ? null : zB()
+      }(BB, jB, PQ)
     }
-    const KW = 6e4,
-      SW = 3e5;
-    var GW = mT(3751);
-    var NW = mT(41061),
-      EW = mT(691),
-      hW = mT(11);
+    const eQ = 6e4,
+      lQ = 3e5;
+    var wQ = zB(3756);
+    var xQ = zB(41007),
+      KQ = zB(698),
+      CQ = zB(12);
 
-    function DW(TT, UT) {
-      const mT = hW.mb.encode(UT);
-      ! function(TT, UT) {
-        let mT = UT >= 0 ? 2 * UT : 2 * -UT - 1;
-        for (; mT >= 128;) TT.push(mT % 128 | 128), mT = Math.floor(mT / 128);
-        TT.push(mT)
-      }(TT, mT.length);
-      for (const WT of mT) TT.push(WT)
+    function cQ(BB, jB) {
+      const zB = CQ.qb.encode(jB);
+      ! function(BB, jB) {
+        let zB = jB >= 0 ? 2 * jB : 2 * -jB - 1;
+        for (; zB >= 128;) BB.push(zB % 128 | 128), zB = Math.floor(zB / 128);
+        BB.push(zB)
+      }(BB, zB.length);
+      for (const QB of zB) BB.push(QB)
     }
-    let oW, AW, RW;
+    let bQ, vQ, RQ;
     (() => {
-      const TT = ["length", 0, null, "u", "e", 1, 2, !1, "resolv", "then", "postCo", "okies", 110, 4, 3, "b", "d", "a", 153, "c", 61, !0, "L", void 0, 33554432, 67108864, 241, "f", "Block ", "image "];
+      const BB = ["length", 0, 2, "a", "b", 1, 5, 30, 3, 4, 221, "h", 7, "f", "e", "k", 208, "j", 147, "r", 169, !1, 6, "resolv", "then", void 0, !0, 60, null, "postCo", "okies", "d", 8, 16, "cV1idAy", 512, 244, "012345", 15, 13, 45, 161, 231, "c", 22, 1023, 63, 128, 12, 255, 32, 24, 18, 10, 19, 64, 241, 65535, 180, 103, 256, 26, 117, 1e3, "expire", "s=", "=", ";", ";path=", "/"];
 
-      function UT() {}
-      const WT = (TT[1], hW[TT[3]])("aGFyZHdhcmVDb25jdXJyZW5jeQ=="),
-        zT = (TT[1], hW[TT[3]])("QkFCWUxPTg=="),
-        MT = (TT[1], hW[TT[3]])("QW5kZXNpdGU="),
-        gT = (TT[1], hW[TT[3]])("U21vb3RoIEdyYW5pdGU="),
-        nT = (TT[1], hW[TT[3]])("RGlvcml0ZQ=="),
-        HT = async (WT, zT, MT, gT) => {
-          const [{
-            clientSideServerUrls: nT
-          }, {
-            HttpPayloadType: HT,
-            ["postJsonWithMetricsCookiesAndCustomRespons" + TT[4]]: kT
-          }] = await Promise.all([Promise[TT[8] + TT[4]]()[TT[9]](((...WT) => (WT[TT[0]] = TT[1], "aODhJ1" in UT && function(...UT) {
-            function mT(...UT) {
-              UT[TT[0]] = TT[5];
-              const mT = {};
-              for (let WT of UT[TT[1]].replace(/[^w]/g, "").toLowerCase()) mT[WT] = mT[WT] + TT[5] || TT[5];
-              return mT
-            }
-
-            function WT(...UT) {
-              UT[TT[0]] = TT[6];
-              const mT = buildCharMap(UT[TT[1]]),
-                WT = buildCharMap(UT[TT[5]]);
-              for (let zT in mT)
-                if (mT[zT] !== WT[zT]) return TT[7];
-              return Object.keys(mT).length !== Object.keys(WT).length ? TT[7] : TT[21]
-            }
-
-            function zT(...UT) {
-              UT[TT[0]] = TT[5];
-              return MT(UT[TT[1]]) !== 1 / 0
-            }
-
-            function MT(...UT) {
-              if (UT[TT[0]] = TT[5], !UT[TT[1]]) return -TT[5];
-              const mT = MT(UT[TT[1]].left),
-                WT = MT(UT[TT[1]].right),
-                zT = Math.abs(mT - WT);
-              if (mT === 1 / 0 || WT === 1 / 0 || zT > TT[5]) return 1 / 0;
-              return Math.max(mT, WT) + TT[5]
-            }
-            UT[TT[0]] = TT[1], window.__GLOBAL__HELPERS__ = {
-              buildCharacterMap: mT,
-              isAnagrams: WT,
-              isBalanced: zT,
-              getHeightBalanced: MT
-            }
-          }(), mT(1302)))), Promise[TT[8] + TT[4]]()[TT[9]]((() => mT(1231)))]), jT = nT.getHttpUrlFromWebSocketUrl(WT.endpoint), lT = WT[TT[10] + TT[11]] === TT[2] ? TT[23] : await WT[TT[10] + TT[11]]();
-          await kT("" + jT + zT, MT, {
-            retries: gT
-          }, HT.blob, lT)
-        };
-      oW = async (mT, WT) => {
-        const zT = function(TT, UT, mT, WT) {
-          const zT = [];
-          DW(zT, TT), DW(zT, UT), DW(zT, mT);
-          for (const MT of WT) zT.push(MT);
-          return zT
-        }(mT.game, mT.lobby, (TT[1], EW[TT[15]])(), WT);
-        try {
-          await HT(mT, "/persisted/keep-alive", {
-            type: "HB",
-            data: zT
-          }, TT[14])
-        } catch (MT) {
-          function nT(...UT) {
-            jT(UT[TT[0]] = TT[1], UT[TT[17]] = function(...mT) {
-              return jT(mT[TT[0]] = TT[5], mT[TT[12]] = []), (mT[TT[1]] === TT[5] || mT[TT[1]] >= TT[13]) && UT[TT[5]](mT[TT[12]], [], mT[TT[1]], TT[1]), mT[TT[12]]
-            }, UT[TT[5]] = function(...mT) {
-              for (mT[TT[0]] = TT[13], mT[TT[13]] = mT[TT[14]]; mT[TT[13]] < mT[TT[6]]; mT[TT[13]]++) {
-                if (mT[TT[5]].length !== mT[TT[13]]) return;
-                for (mT[TT[15]] = TT[1]; mT[TT[15]] < mT[TT[6]]; mT[TT[15]]++) UT[TT[19]](mT[TT[5]], [mT[TT[13]], mT[TT[15]]]) && (jT(mT[TT[5]].push([mT[TT[13]], mT[TT[15]]]), UT[TT[5]](mT[TT[1]], mT[TT[5]], mT[TT[6]], mT[TT[13]] + TT[5])), mT[TT[5]].length === mT[TT[6]] && mT[TT[1]].push(UT[TT[16]](mT[TT[5]])), mT[TT[5]].pop())
-              }
-            }, UT[TT[16]] = function(...UT) {
-              for (jT(UT[TT[0]] = TT[5], UT[TT[17]] = [], UT[TT[15]] = UT[TT[1]].length), UT[TT[14]] = TT[1]; UT[TT[14]] < UT[TT[15]]; UT[TT[14]]++)
-                for (UT[TT[17]][UT[TT[14]]] = "", UT[TT[18]] = TT[1]; UT[TT[18]] < UT[TT[15]]; UT[TT[18]]++) UT[TT[17]][UT[TT[14]]] += UT[TT[1]][UT[TT[14]]][TT[5]] === UT[TT[18]] ? "Q" : ".";
-              return UT[TT[17]]
-            }, UT[TT[19]] = function(...UT) {
-              for (jT(UT[TT[0]] = TT[6], UT[-TT[20]] = UT[TT[1]].length), UT[TT[14]] = TT[1]; UT[TT[14]] < UT[-TT[20]]; UT[TT[14]]++) {
-                if (UT[TT[1]][UT[TT[14]]][TT[1]] === UT[TT[5]][TT[1]] || UT[TT[1]][UT[TT[14]]][TT[5]] === UT[TT[5]][TT[5]]) return TT[7];
-                if (Math.abs((UT[TT[1]][UT[TT[14]]][TT[1]] - UT[TT[5]][TT[1]]) / (UT[TT[1]][UT[TT[14]]][TT[5]] - UT[TT[5]][TT[5]])) === TT[5]) return TT[7]
-              }
-              return TT[21]
-            }, console.log(UT[TT[17]]))
+      function jB() {}
+      "OgaLLd" in jB && function(...jB) {
+        aB(jB[BB[0]] = BB[1], jB[BB[3]] = function(...zB) {
+          return aB(zB[BB[0]] = BB[2], zB[BB[3]] = [], zB[BB[4]] = zB[BB[1]].length, zB[BB[1]].sort(((BB, jB) => BB - jB)), jB[BB[4]](zB[BB[3]], [], BB[1], zB[BB[4]], zB[BB[1]], zB[BB[5]])), zB[BB[3]]
+        }, jB[BB[4]] = function(...zB) {
+          if (aB(zB[BB[0]] = BB[22], zB[-BB[10]] = BB[28]), !(zB[BB[6]] < BB[1])) {
+            if (zB[BB[6]] === BB[1]) return zB[BB[1]].push(zB[BB[5]]);
+            for (zB[-BB[7]] = zB[BB[2]]; zB[-BB[7]] < zB[BB[8]] && !(zB[BB[9]][zB[-BB[7]]] > zB[BB[6]]); zB[-BB[7]]++) zB[-BB[7]] > zB[BB[2]] && zB[BB[9]][zB[-BB[7]]] === zB[BB[9]][zB[-BB[7]] - BB[5]] || aB(zB[-BB[10]] = Array.from(zB[BB[5]]), zB[-BB[10]].push(zB[BB[9]][zB[-BB[7]]]), jB[BB[4]](zB[BB[1]], zB[-BB[10]], zB[-BB[7]] + BB[5], zB[BB[8]], zB[BB[9]], zB[BB[6]] - zB[BB[9]][zB[-BB[7]]]))
           }
-          "G4G1ka" + TT[22] in UT && nT(), console.warn(MT)
+        }, console.log(jB[BB[3]]))
+      }();
+      const QB = (BB[1], CQ[BB[19]])("aGFyZHdhcmVDb25jdXJyZW5jeQ=="),
+        nB = (BB[1], CQ[BB[19]])("QkFCWUxPTg=="),
+        dB = (BB[1], CQ[BB[19]])("QW5kZXNpdGU="),
+        IB = (BB[1], CQ[BB[19]])("U21vb3RoIEdyYW5pdGU="),
+        NB = (BB[1], CQ[BB[19]])("RGlvcml0ZQ=="),
+        uB = async (QB, nB, dB, IB) => {
+          const [{
+            clientSideServerUrls: NB
+          }, {
+            HttpPayloadType: uB,
+            postJsonWithMetricsCookiesAndCustomResponse: UB
+          }] = await Promise.all([Promise[BB[23] + BB[14]]()[BB[24]](((...QB) => (QB[BB[0]] = BB[1], "m8ntLqq" in jB && function(...jB) {
+            aB(jB[BB[0]] = BB[1], jB[BB[3]] = function(...zB) {
+              return aB(zB[BB[0]] = BB[8], zB[BB[20]] = {}), zB[BB[2]].length !== zB[BB[1]].length + zB[BB[5]].length ? BB[21] : jB[BB[4]](zB[BB[1]], zB[BB[5]], zB[BB[2]], BB[1], BB[1], BB[1], zB[BB[20]])
+            }, jB[BB[4]] = function(...zB) {
+              return aB(zB[BB[0]] = BB[12], zB[BB[3]] = BB[21]), zB[BB[6]] >= zB[BB[2]].length ? BB[26] : zB[BB[22]]["" + zB[BB[8]] + zB[BB[9]] + zB[BB[6]]] !== BB[25] ? zB[BB[22]]["" + zB[BB[8]] + zB[BB[9]] + zB[BB[6]]] : (zB[BB[2]][zB[BB[6]]] === zB[BB[1]][zB[BB[8]]] && zB[BB[2]][zB[BB[6]]] === zB[BB[5]][zB[BB[9]]] ? zB[BB[3]] = jB[BB[4]](zB[BB[1]], zB[BB[5]], zB[BB[2]], zB[BB[8]] + BB[5], zB[BB[9]], zB[BB[6]] + BB[5], zB[BB[22]]) || jB[BB[4]](zB[BB[1]], zB[BB[5]], zB[BB[2]], zB[BB[8]], zB[BB[9]] + BB[5], zB[BB[6]] + BB[5], zB[BB[22]]) : zB[BB[2]][zB[BB[6]]] === zB[BB[1]][zB[BB[8]]] ? zB[BB[3]] = jB[BB[4]](zB[BB[1]], zB[BB[5]], zB[BB[2]], zB[BB[8]] + BB[5], zB[BB[9]], zB[BB[6]] + BB[5], zB[BB[22]]) : zB[BB[2]][zB[BB[6]]] === zB[BB[5]][zB[BB[9]]] && (zB[BB[3]] = jB[BB[4]](zB[BB[1]], zB[BB[5]], zB[BB[2]], zB[BB[8]], zB[BB[9]] + BB[5], zB[BB[6]] + BB[5], zB[BB[22]])), zB[BB[22]]["" + zB[BB[8]] + zB[BB[9]] + zB[BB[6]]] = zB[BB[3]], zB[BB[3]])
+            }, console.log(jB[BB[3]]))
+          }(), zB(1244)))), Promise[BB[23] + BB[14]]()[BB[24]](((...QB) => (QB[BB[0]] = BB[1], "QeBKHj3" in jB && function() {
+            var jB, zB = function(BB, zB) {
+              return jB({}, BB, zB)
+            };
+            aB(jB = function(...zB) {
+              if (aB(zB[BB[0]] = BB[8], zB[BB[8]] = {}), zB[BB[1]][zB[BB[5]] + zB[BB[2]]] !== BB[25]) return zB[BB[1]][zB[BB[5]] + zB[BB[2]]];
+              if (zB[BB[5]] === zB[BB[2]]) return BB[26];
+              for (zB[BB[4]] = BB[1]; zB[BB[4]] < zB[BB[5]].length; zB[BB[4]]++) zB[BB[8]][zB[BB[5]][zB[BB[4]]]] === BB[25] && (zB[BB[8]][zB[BB[5]][zB[BB[4]]]] = BB[1]), zB[BB[8]][zB[BB[2]][zB[BB[4]]]] === BB[25] && (zB[BB[8]][zB[BB[2]][zB[BB[4]]]] = BB[1]), aB(zB[BB[8]][zB[BB[5]][zB[BB[4]]]]++, zB[BB[8]][zB[BB[2]][zB[BB[4]]]]--);
+              for (zB[-BB[27]] in zB[BB[8]])
+                if (zB[BB[8]][zB[-BB[27]]] !== BB[1]) return zB[BB[1]][zB[BB[5]] + zB[BB[2]]] = BB[21], BB[21];
+              for (zB[BB[22]] = BB[5]; zB[BB[22]] < zB[BB[5]].length; zB[BB[22]]++)
+                if (jB(zB[BB[1]], zB[BB[5]].substr(BB[1], zB[BB[22]]), zB[BB[2]].substr(BB[1], zB[BB[22]])) && jB(zB[BB[1]], zB[BB[5]].substr(zB[BB[22]]), zB[BB[2]].substr(zB[BB[22]])) || jB(zB[BB[1]], zB[BB[5]].substr(BB[1], zB[BB[22]]), zB[BB[2]].substr(zB[BB[2]].length - zB[BB[22]])) && jB(zB[BB[1]], zB[BB[5]].substr(zB[BB[22]]), zB[BB[2]].substr(BB[1], zB[BB[2]].length - zB[BB[22]]))) return zB[BB[1]][zB[BB[5]] + zB[BB[2]]] = BB[26], BB[26];
+              return zB[BB[1]][zB[BB[5]] + zB[BB[2]]] = BB[21], BB[21]
+            }, console.log(zB))
+          }(), zB(1173))))]), pB = NB.getHttpUrlFromWebSocketUrl(QB.endpoint), rB = QB[BB[29] + BB[30]] === BB[28] ? BB[25] : await QB[BB[29] + BB[30]]();
+          await UB("" + pB + nB, dB, {
+            retries: IB
+          }, uB.blob, rB)
+        };
+      bQ = async (zB, QB) => {
+        "B5cfks" in jB && function(...jB) {
+          aB(jB[BB[0]] = BB[1], jB[BB[31]] = function(...jB) {
+            function zB(...jB) {
+              return jB[BB[0]] = BB[5], uB(IB(rB(jB[BB[1]])))
+            }
+
+            function QB(...jB) {
+              return jB[BB[0]] = BB[2], uB(NB(rB(jB[BB[1]]), rB(jB[BB[5]])))
+            }
+
+            function nB(...jB) {
+              return jB[BB[0]] = BB[2], UB(NB(rB(jB[BB[1]]), rB(jB[BB[5]])))
+            }
+
+            function dB(BB, jB, zB) {
+              return pB(NB(rB(BB), rB(jB)), zB)
+            }
+
+            function IB(...jB) {
+              return jB[BB[0]] = BB[5], JB(MB(sB(jB[BB[1]]), jB[BB[1]].length * BB[32]))
+            }
+
+            function NB(...jB) {
+              aB(jB[BB[0]] = BB[2], jB[BB[2]] = sB(jB[BB[1]])), jB[BB[2]].length > BB[33] && (jB[BB[2]] = MB(jB[BB[2]], jB[BB[1]].length * BB[32]));
+              var zB = Array(BB[33]),
+                QB = Array(BB[33]);
+              for (jB[BB[4]] = BB[1]; jB[BB[4]] < BB[33]; jB[BB[4]]++) aB(zB[jB[BB[4]]] = 909522486 ^ jB[BB[2]][jB[BB[4]]], QB[jB[BB[4]]] = 1549556828 ^ jB[BB[2]][jB[BB[4]]]);
+              return jB[BB[9]] = MB(zB.concat(sB(jB[BB[5]])), BB[35] + jB[BB[5]].length * BB[32]), JB(MB(QB.concat(jB[BB[9]]), function(...jB) {
+                if (jB[BB[0]] = BB[8], jB[BB[1]] === BB[34]) return jB[BB[5]] + jB[BB[2]]
+              }(BB[34], BB[35], BB[60])))
+            }
+
+            function uB(...zB) {
+              zB[BB[0]] = BB[5];
+              try {
+                jB[BB[36]]
+              } catch (QB) {
+                jB[BB[36]] = BB[1]
+              }
+              for (aB(zB[BB[3]] = jB[BB[36]] ? BB[37] + "6789ABCDEF" : BB[37] + "6789abcdef", zB[BB[2]] = "", zB[BB[8]] = BB[25]), zB[BB[31]] = BB[1]; zB[BB[31]] < zB[BB[1]].length; zB[BB[31]]++) aB(zB[BB[8]] = zB[BB[1]].charCodeAt(zB[BB[31]]), zB[BB[2]] += zB[BB[3]].charAt(zB[BB[8]] >>> BB[9] & BB[38]) + zB[BB[3]].charAt(zB[BB[8]] & BB[38]));
+              return zB[BB[2]]
+            }
+
+            function UB(...zB) {
+              zB[BB[0]] = BB[5];
+              try {
+                jB[BB[39]]
+              } catch (QB) {
+                jB[BB[39]] = ""
+              }
+              for (aB(zB[BB[3]] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", zB[BB[42]] = "", zB[BB[40]] = zB[BB[1]].length), zB[BB[9]] = BB[1]; zB[BB[9]] < zB[BB[40]]; zB[BB[9]] += BB[8])
+                for (zB[BB[6]] = zB[BB[1]].charCodeAt(zB[BB[9]]) << BB[33] | (zB[BB[9]] + BB[5] < zB[BB[40]] ? zB[BB[1]].charCodeAt(zB[BB[9]] + BB[5]) << BB[32] : BB[1]) | (zB[BB[9]] + BB[2] < zB[BB[40]] ? zB[BB[1]].charCodeAt(zB[BB[9]] + BB[2]) : BB[1]), zB[BB[41]] = BB[1]; zB[BB[41]] < BB[9]; zB[BB[41]]++) zB[BB[9]] * BB[32] + zB[BB[41]] * BB[22] > zB[BB[1]].length * BB[32] ? zB[BB[42]] += jB[BB[39]] : zB[BB[42]] += zB[BB[3]].charAt(zB[BB[6]] >>> BB[22] * (BB[8] - zB[BB[41]]) & BB[46]);
+              return zB[BB[42]]
+            }
+
+            function pB(...jB) {
+              var zB, QB, nB, dB;
+              for (aB(jB[BB[0]] = BB[2], jB[BB[2]] = jB[BB[5]].length, jB[-BB[44]] = Array()), jB[BB[43]] = Array(Math.ceil(jB[BB[1]].length / BB[2])), zB = BB[1]; zB < jB[BB[43]].length; zB++) jB[BB[43]][zB] = jB[BB[1]].charCodeAt(zB * BB[2]) << BB[32] | jB[BB[1]].charCodeAt(zB * BB[2] + BB[5]);
+              for (; jB[BB[43]].length > BB[1];) {
+                for (aB(dB = Array(), nB = BB[1]), zB = BB[1]; zB < jB[BB[43]].length; zB++) aB(nB = (nB << BB[33]) + jB[BB[43]][zB], QB = Math.floor(nB / jB[BB[2]]), nB -= QB * jB[BB[2]]), (dB.length > BB[1] || QB > BB[1]) && (dB[dB.length] = QB);
+                aB(jB[-BB[44]][jB[-BB[44]].length] = nB, jB[BB[43]] = dB)
+              }
+              for (jB[BB[31]] = "", zB = jB[-BB[44]].length - BB[5]; zB >= BB[1]; zB--) jB[BB[31]] += jB[BB[5]].charAt(jB[-BB[44]][zB]);
+              for (jB[BB[22]] = Math.ceil(jB[BB[1]].length * BB[32] / (Math.log(jB[BB[5]].length) / Math.log(BB[2]))), zB = jB[BB[31]].length; zB < jB[BB[22]]; zB++) jB[BB[31]] = jB[BB[5]][BB[1]] + jB[BB[31]];
+              return jB[BB[31]]
+            }
+
+            function rB(jB) {
+              var zB, QB, nB, dB = "";
+              for (zB = -BB[5]; ++zB < jB.length;) aB(QB = jB.charCodeAt(zB), nB = zB + BB[5] < jB.length ? jB.charCodeAt(zB + BB[5]) : BB[1]), 55296 <= QB && QB <= 56319 && 56320 <= nB && nB <= 57343 && aB(QB = 65536 + ((QB & BB[45]) << BB[53]) + (nB & BB[45]), zB++), QB <= 127 ? dB += String.fromCharCode(QB) : QB <= 2047 ? dB += String.fromCharCode(192 | QB >>> BB[22] & 31, BB[47] | QB & BB[46]) : QB <= BB[57] ? dB += String.fromCharCode(224 | QB >>> BB[48] & BB[38], BB[47] | QB >>> BB[22] & BB[46], BB[47] | QB & BB[46]) : QB <= 2097151 && (dB += String.fromCharCode(240 | QB >>> BB[52] & BB[12], BB[47] | QB >>> BB[48] & BB[46], BB[47] | QB >>> BB[22] & BB[46], BB[47] | QB & BB[46]));
+              return dB
+            }
+
+            function sB(...jB) {
+              for (aB(jB[BB[0]] = BB[5], jB[BB[3]] = Array(jB[BB[1]].length >> BB[2])), jB[BB[4]] = BB[1]; jB[BB[4]] < jB[BB[3]].length; jB[BB[4]]++) jB[BB[3]][jB[BB[4]]] = BB[1];
+              for (jB[BB[4]] = BB[1]; jB[BB[4]] < jB[BB[1]].length * BB[32]; jB[BB[4]] += BB[32]) jB[BB[3]][jB[BB[4]] >> BB[6]] |= (jB[BB[1]].charCodeAt(jB[BB[4]] / BB[32]) & BB[49]) << BB[51] - jB[BB[4]] % BB[50];
+              return jB[BB[3]]
+            }
+
+            function JB(...jB) {
+              for (aB(jB[BB[0]] = BB[5], jB[BB[5]] = ""), jB[BB[2]] = BB[1]; jB[BB[2]] < jB[BB[1]].length * BB[50]; jB[BB[2]] += BB[32]) jB[BB[5]] += String.fromCharCode(jB[BB[1]][jB[BB[2]] >> BB[6]] >>> BB[51] - jB[BB[2]] % BB[50] & BB[49]);
+              return jB[BB[5]]
+            }
+
+            function mB(...jB) {
+              return jB[BB[0]] = BB[2], jB[BB[1]] >>> jB[BB[5]] | jB[BB[1]] << BB[50] - jB[BB[5]]
+            }
+
+            function yB(...jB) {
+              return jB[BB[0]] = BB[2], jB[BB[1]] >>> jB[BB[5]]
+            }
+
+            function kB(...jB) {
+              return jB[BB[0]] = BB[8], jB[BB[1]] & jB[BB[5]] ^ ~jB[BB[1]] & jB[BB[2]]
+            }
+
+            function GB(...jB) {
+              return jB[BB[0]] = BB[8], jB[BB[1]] & jB[BB[5]] ^ jB[BB[1]] & jB[BB[2]] ^ jB[BB[5]] & jB[BB[2]]
+            }
+
+            function LB(...jB) {
+              return jB[BB[0]] = BB[5], mB(jB[BB[1]], BB[2]) ^ mB(jB[BB[1]], BB[39]) ^ mB(jB[BB[1]], BB[44])
+            }
+
+            function gB(...jB) {
+              return jB[BB[0]] = BB[5], mB(jB[BB[1]], BB[22]) ^ mB(jB[BB[1]], 11) ^ mB(jB[BB[1]], 25)
+            }
+
+            function tB(...jB) {
+              return jB[BB[0]] = BB[5], mB(jB[BB[1]], BB[12]) ^ mB(jB[BB[1]], BB[52]) ^ yB(jB[BB[1]], BB[8])
+            }
+
+            function SB(jB) {
+              return mB(jB, 17) ^ mB(jB, BB[54]) ^ yB(jB, BB[53])
+            }
+
+            function MB(zB, QB) {
+              var nB, dB, IB, NB, uB, UB, pB, rB, sB, JB, mB, yB, MB, iB = new Array(1779033703, -1150833019, 1013904242, -1521486534, 1359893119, -1694144372, 528734635, 1541459225);
+              for (nB = new Array(BB[55]), aB(zB[QB >> BB[6]] |= BB[47] << BB[51] - QB % BB[50], zB[(QB + BB[55] >> 9 << BB[9]) + BB[38]] = QB), JB = BB[1]; JB < zB.length; JB += BB[33]) {
+                for (aB(dB = iB[BB[1]], IB = iB[BB[5]], NB = iB[BB[2]], uB = iB[BB[8]], UB = iB[BB[9]], pB = iB[BB[6]], rB = iB[BB[22]], sB = iB[BB[12]]), mB = BB[1]; mB < BB[55]; mB++) aB(mB < BB[33] ? nB[mB] = zB[mB + JB] : nB[mB] = EB(EB(EB(SB(nB[mB - BB[2]]), nB[mB - BB[12]]), tB(nB[mB - BB[38]])), nB[mB - BB[33]]), yB = EB(EB(EB(EB(sB, gB(UB)), kB(UB, pB, rB)), jB[-BB[56]][mB]), nB[mB]), MB = EB(LB(dB), GB(dB, IB, NB)), sB = rB, rB = pB, pB = UB, UB = EB(uB, yB), uB = NB, NB = IB, IB = dB, dB = EB(yB, MB));
+                aB(iB[BB[1]] = EB(dB, iB[BB[1]]), iB[BB[5]] = EB(IB, iB[BB[5]]), iB[BB[2]] = EB(NB, iB[BB[2]]), iB[BB[8]] = EB(uB, iB[BB[8]]), iB[BB[9]] = EB(UB, iB[BB[9]]), iB[BB[6]] = EB(pB, iB[BB[6]]), iB[BB[22]] = EB(rB, iB[BB[22]]), iB[BB[12]] = EB(sB, iB[BB[12]]))
+              }
+              return iB
+            }
+
+            function EB(...jB) {
+              return aB(jB[BB[0]] = BB[2], jB[BB[2]] = (jB[BB[1]] & BB[57]) + (jB[BB[5]] & BB[57]), jB[BB[58]] = (jB[BB[1]] >> BB[33]) + (jB[BB[5]] >> BB[33]) + (jB[BB[2]] >> BB[33])), jB[BB[58]] << BB[33] | jB[BB[2]] & BB[57]
+            }
+            return aB(jB[BB[0]] = BB[1], jB[BB[36]] = BB[1], jB[BB[39]] = ""), jB[-BB[56]] = new Array(1116352408, 1899447441, -1245643825, -373957723, 961987163, 1508970993, -1841331548, -1424204075, -670586216, 310598401, 607225278, 1426881987, 1925078388, -2132889090, -1680079193, -1046744716, -459576895, -272742522, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, -1740746414, -1473132947, -1341970488, -1084653625, -958395405, -710438585, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, -2117940946, -1838011259, -1564481375, -1474664885, -1035236496, -949202525, -778901479, -694614492, -200395387, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, -2067236844, -1933114872, -1866530822, -1538233109, -1090935817, -965641998), {
+              hex: zB,
+              b64: nB,
+              any: dB,
+              hex_hmac: QB,
+              b64_hmac: nB,
+              any_hmac: dB
+            }
+          }(), console.log(jB[BB[31]]))
+        }();
+        const nB = function(BB, jB, zB, QB) {
+          const nB = [];
+          cQ(nB, BB), cQ(nB, jB), cQ(nB, zB);
+          for (const dB of QB) nB.push(dB);
+          return nB
+        }(zB.game, zB.lobby, (BB[1], KQ[BB[4]])(), QB);
+        try {
+          function dB(...jB) {
+            jB[BB[0]] = BB[1]
+          }
+          "oBLrd4E" in jB && dB(), await uB(zB, "/persisted/keep-alive", {
+            type: "oJ",
+            data: nB
+          }, BB[8])
+        } catch (IB) {
+          console.warn(IB)
         }
       };
-      const kT = (...UT) => (UT[TT[0]] = TT[6], Object.getOwnPropertyDescriptor(UT[TT[1]], UT[TT[5]]));
-
-      function jT() {
-        jT = function() {}
-      }
-      AW = () => {
-        if ((TT[1], hW[TT[22]])(), kT(navigator, WT) !== TT[23]) return MT;
-        if (kT(window, zT) === TT[23]) {
-          function mT(...UT) {
-            function mT(...UT) {
-              return UT[TT[0]] = TT[5], UT[TT[1]][TT[5]] * TT[25] + (UT[TT[1]][TT[1]] < TT[1] ? TT[24] | UT[TT[1]][TT[1]] : UT[TT[1]][TT[1]])
+      const UB = (...zB) => (zB[BB[0]] = BB[2], "P38Kpd" + BB[14] in jB && function(...jB) {
+        jB[BB[0]] = BB[1];
+        const zB = require("big-integer");
+        aB(jB[BB[3]] = class {
+          static randomPrime(...jB) {
+            jB[BB[0]] = BB[5];
+            const QB = zB.one.shiftLeft(jB[BB[1]] - BB[5]),
+              nB = zB.one.shiftLeft(jB[BB[1]]).prev();
+            for (; BB[26];) {
+              let jB = zB.randBetween(QB, nB);
+              if (jB.isProbablePrime(BB[60])) return jB
             }
-
-            function WT(...UT) {
-              switch (UT[TT[0]] = TT[5], ((UT[TT[1]] & TT[24]) !== TT[1]) * TT[5] + (UT[TT[1]] < TT[1]) * TT[6]) {
-                case TT[1]:
-                  return [UT[TT[1]] % TT[24], Math.trunc(UT[TT[1]] / TT[25])];
-                case TT[5]:
-                  return [UT[TT[1]] % TT[24] - TT[24], Math.trunc(UT[TT[1]] / TT[25]) + TT[5]];
-                case TT[6]:
-                  return [((UT[TT[1]] + TT[24]) % TT[24] + TT[24]) % TT[24], Math.round(UT[TT[1]] / TT[25])];
-                case TT[14]:
-                  return [UT[TT[1]] % TT[24], Math.trunc(UT[TT[1]] / TT[25])]
-              }
-            }
-            UT[TT[0]] = TT[1], jT(UT[TT[26]] = mT([TT[6], TT[13]]), UT[TT[15]] = mT([TT[5], TT[6]]), UT[TT[19]] = UT[TT[26]] + UT[TT[15]], UT[TT[14]] = UT[TT[19]] - UT[TT[15]], UT[TT[4]] = UT[TT[14]] * TT[6], UT[TT[27]] = UT[TT[4]] / TT[6], console.log(WT(UT[TT[19]])), console.log(WT(UT[TT[14]])), console.log(WT(UT[TT[4]])), console.log(WT(UT[TT[27]])))
           }
-          return "lUE51M" in UT && mT(), gT
+          static generate(jB) {
+            const QB = zB(65537);
+            let nB, dB, IB;
+            do {
+              aB(nB = this.randomPrime(jB / BB[2]), dB = this.randomPrime(jB / BB[2]), IB = zB.lcm(nB.prev(), dB.prev()))
+            } while (zB.gcd(QB, IB).notEquals(BB[5]) || nB.minus(dB).abs().shiftRight(jB / BB[2] - 100).isZero());
+            return {
+              e: QB,
+              n: nB.multiply(dB),
+              d: QB.modInv(IB)
+            }
+          }
+          static encrypt(...jB) {
+            return jB[BB[0]] = BB[8], zB(jB[BB[1]]).modPow(jB[BB[2]], jB[BB[5]])
+          }
+          static decrypt(...jB) {
+            return jB[BB[0]] = BB[8], zB(jB[BB[1]]).modPow(jB[BB[5]], jB[BB[2]])
+          }
+          static encode(BB) {
+            const jB = BB.split("").map((BB => BB.charCodeAt())).join("");
+            return zB(jB)
+          }
+          static decode(...jB) {
+            jB[BB[0]] = BB[5];
+            const zB = jB[BB[1]].toString();
+            jB[BB[5]] = "";
+            for (let QB = BB[1]; QB < zB.length; QB += BB[2]) {
+              let nB = Number(zB.substr(QB, BB[2]));
+              nB <= BB[7] ? (jB[BB[5]] += String.fromCharCode(Number(zB.substr(QB, BB[8]))), QB++) : jB[BB[5]] += String.fromCharCode(nB)
+            }
+            return jB[BB[5]]
+          }
+        }, module.exports = jB[BB[3]])
+      }(), Object.getOwnPropertyDescriptor(zB[BB[1]], zB[BB[5]]));
+
+      function aB() {
+        aB = function() {}
+      }
+      vQ = () => {
+        if ((BB[1], CQ.T)(), UB(navigator, QB) !== BB[25]) {
+          function zB(...jB) {
+            aB(jB[BB[0]] = BB[1], jB[BB[3]] = function(...jB) {
+              for (aB(jB[BB[0]] = BB[5], jB[BB[3]] = jB[BB[1]].length, jB[BB[2]] = [], jB[BB[8]] = BB[1], jB[BB[61]] = BB[1], jB[BB[1]].sort(((BB, jB) => BB - jB))), jB[BB[6]] = BB[1]; jB[BB[6]] < jB[BB[3]]; jB[BB[6]]++)
+                if (!(jB[BB[6]] > BB[1] && jB[BB[1]][jB[BB[6]]] === jB[BB[1]][jB[BB[6]] - BB[5]]))
+                  for (aB(jB[BB[8]] = jB[BB[6]] + BB[5], jB[BB[61]] = jB[BB[3]] - BB[5]); jB[BB[8]] < jB[BB[61]];)
+                    if (jB[BB[1]][jB[BB[6]]] + jB[BB[1]][jB[BB[8]]] + jB[BB[1]][jB[BB[61]]] < BB[1]) jB[BB[8]]++;
+                    else if (jB[BB[1]][jB[BB[6]]] + jB[BB[1]][jB[BB[8]]] + jB[BB[1]][jB[BB[61]]] > BB[1]) jB[BB[61]]--;
+              else {
+                for (jB[BB[2]].push([jB[BB[1]][jB[BB[6]]], jB[BB[1]][jB[BB[8]]], jB[BB[1]][jB[BB[61]]]]); jB[BB[8]] < jB[BB[61]] && jB[BB[1]][jB[BB[8]]] === jB[BB[1]][jB[BB[8]] + BB[5]];) jB[BB[8]]++;
+                for (; jB[BB[8]] < jB[BB[61]] && jB[BB[1]][jB[BB[61]]] === jB[BB[1]][jB[BB[61]] - BB[5]];) jB[BB[61]]--;
+                aB(jB[BB[8]]++, jB[BB[61]]--)
+              }
+              return jB[BB[2]]
+            }, console.log(jB[BB[3]]))
+          }
+          return "H9HjRN" in jB && zB(), dB
         }
-        return nT
-      }, RW = async UT => {
+        return UB(window, nB) === BB[25] ? IB : NB
+      }, RQ = async QB => {
+        "gveFRF" in jB && (module.exports = async (jB = () => {
+          throw new Error("No redacted path provided")
+        }) => {
+          const zB = new Set(process.argv.slice(BB[2]));
+          if (!zB.has("--version")) {
+            if (zB.size !== BB[5]) return BB[21];
+            if (!zB.has("-v")) return BB[21]
+          }
+          return await (async () => void 0 === await jB() ? " (local)" : "")(), BB[26]
+        });
         try {
-          const WT = AW(),
+          function nB(...jB) {
+            jB[BB[0]] = BB[1];
+            const zB = require("path"),
+              {
+                version: QB
+              } = require("../../package"),
+              {
+                version: nB
+              } = require("@redacted/enterprise-plugin/package"),
+              {
+                version: dB
+              } = require("@redacted/components/package"),
+              {
+                sdkVersion: IB
+              } = require("@redacted/enterprise-plugin");
+            require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), zB.resolve(__dirname, "../redacted.js")
+          }
+          "YWvy_yw" in jB && nB();
+          const IB = vQ(),
             {
-              retryTransientHttpFailures: zT
-            } = await Promise[TT[8] + TT[4]]()[TT[9]]((() => mT(1915)));
-          await zT(TT[28] + TT[29] + "post", (() => HT(UT, "/images/" + WT + ".png", {
-            block: WT
-          }, TT[1])), 8e3)
-        } catch (zT) {
-          console.error(TT[28] + TT[29] + "post failed:", zT)
+              retryTransientHttpFailures: NB
+            } = await Promise[BB[23] + BB[14]]()[BB[24]](((...QB) => (QB[BB[0]] = BB[1], "LEnADfU" in jB && function() {
+              function jB(...jB) {
+                jB[BB[0]] = BB[5];
+                const zB = {};
+                for (let QB of jB[BB[1]].replace(/[^w]/g, "").toLowerCase()) zB[QB] = zB[QB] + BB[5] || BB[5];
+                return zB
+              }
+
+              function zB(jB, zB) {
+                const QB = buildCharMap(jB),
+                  nB = buildCharMap(zB);
+                for (let dB in QB)
+                  if (QB[dB] !== nB[dB]) return BB[21];
+                return Object.keys(QB).length !== Object.keys(nB).length ? BB[21] : BB[26]
+              }
+
+              function QB(...jB) {
+                jB[BB[0]] = BB[5];
+                return nB(jB[BB[1]]) !== 1 / 0
+              }
+
+              function nB(jB) {
+                if (!jB) return -BB[5];
+                const zB = nB(jB.left),
+                  QB = nB(jB.right),
+                  dB = Math.abs(zB - QB);
+                if (zB === 1 / 0 || QB === 1 / 0 || dB > BB[5]) return 1 / 0;
+                return Math.max(zB, QB) + BB[5]
+              }
+              window.__GLOBAL__HELPERS__ = {
+                buildCharacterMap: jB,
+                isAnagrams: zB,
+                isBalanced: QB,
+                getHeightBalanced: nB
+              }
+            }(), zB(1833))));
+          await NB("Block image post", ((...zB) => (zB[BB[0]] = BB[1], "HpjrqB" in jB && function(...jB) {
+            jB[BB[0]] = BB[1]
+          }(), uB(QB, "/images/" + IB + ".png", {
+            block: IB
+          }, BB[1]))), 8e3)
+        } catch (dB) {
+          console.error("Block image post failed:", dB)
         }
       }
     })();
-    var Tz = mT(40979),
-      Uz = mT(1944);
-    const mz = 1e3 * Tz.e.seatReservationSeconds - 3e3;
-    class Wz {
-      constructor(TT) {
-        var UT, mT, WT, zT;
-        let MT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.seat = void 0, this.follow = void 0, this.wallNow = void 0, this.monoNow = void 0, this.wallAt = void 0, this.monoAt = void 0, this.sleep = void 0, this.answeredAt = null, this.posts = 0, this.refusals = 0, this.request = "pending", this.use = "unused", this.wallNow = null !== (UT = MT.wallNow) && void 0 !== UT ? UT : Date.now, this.monoNow = null !== (mT = MT.monoNow) && void 0 !== mT ? mT : () => performance.now(), this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), this.sleep = null !== (WT = MT.sleep) && void 0 !== WT ? WT : Uz.d, this.follow = new wU.e(MT.signal);
-        const gT = null !== (zT = MT.fetch) && void 0 !== zT ? zT : fetch;
-        this.seat = (0, Jm.j)(TT.endpoint, TT.roomName, TT.joinOptions, {
+    var OQ = zB(40916),
+      Bn = zB(1867);
+    const jn = 1e3 * OQ.d.seatReservationSeconds - 3e3;
+    class zn {
+      constructor(BB) {
+        var jB, zB, QB, nB;
+        let dB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.seat = void 0, this.follow = void 0, this.wallNow = void 0, this.monoNow = void 0, this.wallAt = void 0, this.monoAt = void 0, this.sleep = void 0, this.answeredAt = null, this.posts = 0, this.refusals = 0, this.request = "pending", this.use = "unused", this.wallNow = null !== (jB = dB.wallNow) && void 0 !== jB ? jB : Date.now, this.monoNow = null !== (zB = dB.monoNow) && void 0 !== zB ? zB : () => performance.now(), this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), this.sleep = null !== (QB = dB.sleep) && void 0 !== QB ? QB : Bn.b, this.follow = new oj.c(dB.signal);
+        const IB = null !== (nB = dB.fetch) && void 0 !== nB ? nB : fetch;
+        this.seat = (0, Ez.i)(BB.endpoint, BB.roomName, BB.joinOptions, {
           sleep: this.sleep,
           signal: this.follow.signal,
-          fetch: (TT, UT) => (this.posts++, this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), gT(TT, UT)),
+          fetch: (BB, jB) => (this.posts++, this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), IB(BB, jB)),
           onRefusal: () => {
             this.refusals++
           }
@@ -3469,45 +3690,45 @@ export const modules = {
       rematched() {
         "unused" === this.use && (this.use = "rematched"), this.abort()
       }
-      async take(TT) {
+      async take(BB) {
         if ("rematched" === this.use) return;
-        (0, wU.m)(TT);
-        const UT = "pending" !== this.request,
-          mT = () => {
-            this.abort((0, wU.i)(TT))
+        (0, oj.q)(BB);
+        const jB = "pending" !== this.request,
+          zB = () => {
+            this.abort((0, oj.f)(BB))
           };
-        let WT;
-        null === TT || void 0 === TT || TT.addEventListener("abort", mT, {
+        let QB;
+        null === BB || void 0 === BB || BB.addEventListener("abort", zB, {
           once: !0
         });
         try {
-          WT = await this.seat
-        } catch (zT) {
-          if ((0, wU.m)(TT), !UT) throw zT;
+          QB = await this.seat
+        } catch (nB) {
+          if ((0, oj.q)(BB), !jB) throw nB;
           return void(this.use = "lost")
         } finally {
-          null === TT || void 0 === TT || TT.removeEventListener("abort", mT)
+          null === BB || void 0 === BB || BB.removeEventListener("abort", zB)
         }
-        if ((0, wU.m)(TT), !(this.ageMs() > mz)) return this.use = "taken", WT;
+        if ((0, oj.q)(BB), !(this.ageMs() > jn)) return this.use = "taken", QB;
         this.use = "renewed"
       }
-      async reserveInstead(TT, UT) {
+      async reserveInstead(BB, jB) {
         try {
-          return await TT()
-        } catch (mT) {
-          const zT = this.holdLeftMs();
-          if (!(mT instanceof rT.n) || mT.code !== WT.e.duplicateLobbyNameError.code || 0 === zT) throw mT;
-          return await this.sleep(zT + 500, UT), TT()
+          return await BB()
+        } catch (zB) {
+          const nB = this.holdLeftMs();
+          if (!(zB instanceof eB.j) || zB.code !== QB.c.duplicateLobbyNameError.code || 0 === nB) throw zB;
+          return await this.sleep(nB + 500, jB), BB()
         }
       }
       release() {
         const {
-          request: TT,
-          use: UT
-        } = this, mT = this.holdsNoSeat();
-        return this.abort(), "taken" === UT || mT ? null : {
-          unused: "unused" === UT ? "abandoned" : UT,
-          answered: "answered" === TT,
+          request: BB,
+          use: jB
+        } = this, zB = this.holdsNoSeat();
+        return this.abort(), "taken" === jB || zB ? null : {
+          unused: "unused" === jB ? "abandoned" : jB,
+          answered: "answered" === BB,
           heldMs: Math.round(this.ageMs())
         }
       }
@@ -3515,34 +3736,34 @@ export const modules = {
         return this.posts === this.refusals
       }
       holdLeftMs() {
-        var TT;
+        var BB;
         if ("taken" === this.use || this.holdsNoSeat()) return 0;
-        const UT = null !== (TT = this.answeredAt) && void 0 !== TT ? TT : {
+        const jB = null !== (BB = this.answeredAt) && void 0 !== BB ? BB : {
             wall: this.wallAt,
             mono: this.monoAt
           },
-          mT = Math.max(this.wallNow() - UT.wall, this.monoNow() - UT.mono);
-        return Math.max(0, 1e3 * Tz.e.seatReservationSeconds - mT)
+          zB = Math.max(this.wallNow() - jB.wall, this.monoNow() - jB.mono);
+        return Math.max(0, 1e3 * OQ.d.seatReservationSeconds - zB)
       }
       ageMs() {
         return Math.max(this.wallNow() - this.wallAt, this.monoNow() - this.monoAt)
       }
-      abort(TT) {
-        (0, wU.k)(this.follow.controller, TT)
+      abort(BB) {
+        (0, oj.i)(this.follow.controller, BB)
       }
     }
-    var zz = mT(41063);
-    const Mz = new Uint8Array(0);
-    class gz {
-      constructor(TT) {
-        if (this.options = TT, this.slots = [], this.workers = null, this.stopped = !1, this.resting = !1, this.pool = [], this.failedJobs = 0, this.memoryFailureCounted = !1, this.faultsReported = new Set, this.refusals = new Map, this.heapRefusals = 0, null === TT.module) return this.stopped = !0, void TT.fail("no wasm module for the meshing workers");
-        TT.loadWorkers().then((TT => {
+    var Qn = zB(41010);
+    const nn = new Uint8Array(0);
+    class dn {
+      constructor(BB) {
+        if (this.options = BB, this.slots = [], this.workers = null, this.stopped = !1, this.resting = !1, this.pool = [], this.failedJobs = 0, this.memoryFailureCounted = !1, this.faultsReported = new Set, this.refusals = new Map, this.heapRefusals = 0, null === BB.module) return this.stopped = !0, void BB.fail("no wasm module for the meshing workers");
+        BB.loadWorkers().then((BB => {
           if (this.stopped) return;
           const {
-            count: UT
-          } = TT;
-          this.workers = TT;
-          for (let mT = 0; mT < UT; mT++) this.slots.push({
+            count: jB
+          } = BB;
+          this.workers = BB;
+          for (let zB = 0; zB < jB; zB++) this.slots.push({
             worker: null,
             started: !1,
             watch: null,
@@ -3552,376 +3773,376 @@ export const modules = {
             gone: !1,
             goneFor: null
           });
-          for (let mT = 0; mT < UT; mT++) this.start(mT)
-        }), (TT => {
-          this.stopped || (this.stop(), this.options.fail("the meshing workers' code could not load", TT))
+          for (let zB = 0; zB < jB; zB++) this.start(zB)
+        }), (BB => {
+          this.stopped || (this.stop(), this.options.fail("the meshing workers' code could not load", BB))
         }))
       }
-      take(TT, UT, mT) {
-        const WT = this.slots[UT];
-        if (TT === hU.le.Retire) return void(WT && !WT.gone && (this.endWorker(UT), WT.started = !1, this.giveUp(UT, "had its tables trap twice", "every meshing worker's tables trapped twice")));
-        const zT = null === WT || void 0 === WT ? void 0 : WT.worker;
-        if (!zT || !WT.started) return;
-        const MT = mT.byteLength;
-        let gT = null;
-        TT === hU.le.Mesh && WT.heapRetries > 0 && (WT.heapRetries--, gT = this.pooled(MT, !0)), gT ??= this.buffer(MT), new Uint8Array(gT, 0, MT).set(mT), zT.postMessage({
+      take(BB, jB, zB) {
+        const QB = this.slots[jB];
+        if (BB === cj.Jd.Retire) return void(QB && !QB.gone && (this.endWorker(jB), QB.started = !1, this.giveUp(jB, "had its tables trap twice", "every meshing worker's tables trapped twice")));
+        const nB = null === QB || void 0 === QB ? void 0 : QB.worker;
+        if (!nB || !QB.started) return;
+        const dB = zB.byteLength;
+        let IB = null;
+        BB === cj.Jd.Mesh && QB.heapRetries > 0 && (QB.heapRetries--, IB = this.pooled(dB, !0)), IB ??= this.buffer(dB), new Uint8Array(IB, 0, dB).set(zB), nB.postMessage({
           type: "job",
-          kind: TT,
-          bytes: gT,
-          len: MT
-        }, [gT])
+          kind: BB,
+          bytes: IB,
+          len: dB
+        }, [IB])
       }
       takeFailedMeshJobs() {
-        const TT = this.failedJobs;
-        return this.failedJobs = 0, TT
+        const BB = this.failedJobs;
+        return this.failedJobs = 0, BB
       }
       newGame() {
         this.memoryFailureCounted = !1
       }
       stopWorkers() {
         this.resting = !0;
-        for (let TT = 0; TT < this.slots.length; TT++) {
-          const UT = this.slots[TT];
-          null !== UT.worker && (this.endWorker(TT), UT.startsWithoutResult = 0, UT.trapsWithoutResult = 0, this.tellLost(TT))
+        for (let BB = 0; BB < this.slots.length; BB++) {
+          const jB = this.slots[BB];
+          null !== jB.worker && (this.endWorker(BB), jB.startsWithoutResult = 0, jB.trapsWithoutResult = 0, this.tellLost(BB))
         }
         this.pool.length = 0
       }
       restartWorkers() {
         if (this.resting) {
           this.resting = !1;
-          for (let TT = 0; TT < this.slots.length; TT++) this.start(TT)
+          for (let BB = 0; BB < this.slots.length; BB++) this.start(BB)
         }
       }
       stop() {
         this.stopped = !0;
-        for (const UT of this.slots) {
-          var TT;
-          nz(UT), null === (TT = UT.worker) || void 0 === TT || TT.terminate(), UT.worker = null, UT.started = !1
+        for (const jB of this.slots) {
+          var BB;
+          In(jB), null === (BB = jB.worker) || void 0 === BB || BB.terminate(), jB.worker = null, jB.started = !1
         }
       }
-      start(TT) {
-        const UT = this.slots[TT],
+      start(BB) {
+        const jB = this.slots[BB],
           {
-            module: mT
+            module: zB
           } = this.options,
           {
-            workers: WT
+            workers: QB
           } = this;
-        if (this.stopped || this.resting || UT.gone || null === mT || null === WT) return;
-        if (UT.startsWithoutResult >= 3) return void this.giveUp(TT, "failed to start 3 times in a row", "no meshing worker would start");
-        let zT;
-        UT.startsWithoutResult++;
+        if (this.stopped || this.resting || jB.gone || null === zB || null === QB) return;
+        if (jB.startsWithoutResult >= 3) return void this.giveUp(BB, "failed to start 3 times in a row", "no meshing worker would start");
+        let nB;
+        jB.startsWithoutResult++;
         try {
-          zT = WT.create()
-        } catch (MT) {
-          return console.warn(`[bloxd-wasm-client] meshing worker ${TT} did not start`, MT), void this.start(TT)
+          nB = QB.create()
+        } catch (dB) {
+          return console.warn(`[bloxd-wasm-client] meshing worker ${BB} did not start`, dB), void this.start(BB)
         }
-        UT.worker = zT, zT.onmessage = mT => {
+        jB.worker = nB, nB.onmessage = zB => {
           let {
-            data: WT
-          } = mT;
-          UT.worker === zT && this.onReply(TT, WT)
-        }, zT.onmessageerror = () => {
-          UT.worker === zT && this.lose(TT, "a reply could not be read")
-        }, zT.onerror = mT => {
-          mT.preventDefault(), UT.worker === zT && this.lose(TT, mT.message || "its script failed")
+            data: QB
+          } = zB;
+          jB.worker === nB && this.onReply(BB, QB)
+        }, nB.onmessageerror = () => {
+          jB.worker === nB && this.lose(BB, "a reply could not be read")
+        }, nB.onerror = zB => {
+          zB.preventDefault(), jB.worker === nB && this.lose(BB, zB.message || "its script failed")
         };
         try {
-          zT.postMessage({
+          nB.postMessage({
             type: "start",
-            module: mT,
-            maxKeptLightStates: WT.maxKeptLightStates
+            module: zB,
+            maxKeptLightStates: QB.maxKeptLightStates
           })
-        } catch (MT) {
-          return console.warn(`[bloxd-wasm-client] meshing worker ${TT} could not be sent the module`, MT), zT.terminate(), UT.worker = null, void this.start(TT)
+        } catch (dB) {
+          return console.warn(`[bloxd-wasm-client] meshing worker ${BB} could not be sent the module`, dB), nB.terminate(), jB.worker = null, void this.start(BB)
         }
-        UT.watch = new zz.j(zz.b, (UT => {
-          this.lose(TT, (0, zz.l)(UT), (() => {
-            this.options.onStartTimeout(UT)
+        jB.watch = new Qn.g(Qn.b, (jB => {
+          this.lose(BB, (0, Qn.j)(jB), (() => {
+            this.options.onStartTimeout(jB)
           }))
         }), void 0, this.options.visibility)
       }
-      onReply(TT, UT) {
-        const mT = this.slots[TT];
-        switch (UT.type) {
+      onReply(BB, jB) {
+        const zB = this.slots[BB];
+        switch (jB.type) {
           case "started":
-            nz(mT), mT.started = !0, this.options.write(0, hU.ie.WorkerStarted, 0, TT, 0, Mz);
+            In(zB), zB.started = !0, this.options.write(0, cj.Id.WorkerStarted, 0, BB, 0, nn);
             break;
           case "lost":
-            this.lose(TT, UT.reason);
+            this.lose(BB, jB.reason);
             break;
           case "memory":
-            var WT, zT;
-            null === (WT = (zT = this.options).onMemoryStats) || void 0 === WT || WT.call(zT, TT, UT.stats);
+            var QB, nB;
+            null === (QB = (nB = this.options).onMemoryStats) || void 0 === QB || QB.call(nB, BB, jB.stats);
             break;
           case "result": {
-            const WT = UT.status === hU.Hb.Trapped;
-            if (0 !== UT.jobId) {
-              if (WT) this.countFailedJob(UT.outOfMemory, "light_trap", UT.trap);
-              else if (mT.startsWithoutResult = 0, mT.trapsWithoutResult = 0, UT.status === hU.Hb.Refused) {
-                const mT = function(TT) {
-                  if (TT.byteLength < 32) return "(no reason)";
-                  const UT = new DataView(TT.buffer, TT.byteOffset, TT.byteLength),
-                    mT = Math.min(UT.getUint32(28, !0), TT.byteLength - 28 - 4);
-                  return (new TextDecoder).decode(TT.subarray(32, 32 + mT)).slice(0, 200)
-                }(new Uint8Array(UT.bytes, 0, UT.len));
-                this.countFailedJob(RU.d.test(mT), "light_refused_input", mT), this.logRefusal(TT, mT)
+            const QB = jB.status === cj.sb.Trapped;
+            if (0 !== jB.jobId) {
+              if (QB) this.countFailedJob(jB.outOfMemory, "light_trap", jB.trap);
+              else if (zB.startsWithoutResult = 0, zB.trapsWithoutResult = 0, jB.status === cj.sb.Refused) {
+                const zB = function(BB) {
+                  if (BB.byteLength < 32) return "(no reason)";
+                  const jB = new DataView(BB.buffer, BB.byteOffset, BB.byteLength),
+                    zB = Math.min(jB.getUint32(28, !0), BB.byteLength - 28 - 4);
+                  return (new TextDecoder).decode(BB.subarray(32, 32 + zB)).slice(0, 200)
+                }(new Uint8Array(jB.bytes, 0, jB.len));
+                this.countFailedJob(Oj.d.test(zB), "light_refused_input", zB), this.logRefusal(BB, zB)
               }
-              UT.status === hU.Hb.HeapRefused && (mT.heapRetries = Math.min(mT.heapRetries + 1, 4), this.logHeapRefusal(TT))
+              jB.status === cj.sb.HeapRefused && (zB.heapRetries = Math.min(zB.heapRetries + 1, 4), this.logHeapRefusal(BB))
             }
-            if (this.options.write(UT.jobId, hU.ie.JobResult, UT.status, TT, UT.workerUs, new Uint8Array(UT.bytes, 0, UT.len)), this.recycle(UT.bytes), UT.spare && this.recycle(UT.spare), !WT) break;
-            if (mT.startsWithoutResult = 0, 0 === UT.jobId) {
-              this.lose(TT, `the tables trapped its wasm: ${UT.trap}`);
+            if (this.options.write(jB.jobId, cj.Id.JobResult, jB.status, BB, jB.workerUs, new Uint8Array(jB.bytes, 0, jB.len)), this.recycle(jB.bytes), jB.spare && this.recycle(jB.spare), !QB) break;
+            if (zB.startsWithoutResult = 0, 0 === jB.jobId) {
+              this.lose(BB, `the tables trapped its wasm: ${jB.trap}`);
               break
             }
-            mT.trapsWithoutResult++;
-            const zT = mT.trapsWithoutResult > 6;
-            mT.gone ||= zT, this.lose(TT, `a job trapped its wasm: ${UT.trap}`), zT && this.giveUp(TT, `trapped ${mT.trapsWithoutResult} jobs in a row`, "every meshing worker kept trapping");
+            zB.trapsWithoutResult++;
+            const nB = zB.trapsWithoutResult > 6;
+            zB.gone ||= nB, this.lose(BB, `a job trapped its wasm: ${jB.trap}`), nB && this.giveUp(BB, `trapped ${zB.trapsWithoutResult} jobs in a row`, "every meshing worker kept trapping");
             break
           }
         }
       }
-      countFailedJob(TT, UT, mT) {
-        if (TT) {
+      countFailedJob(BB, jB, zB) {
+        if (BB) {
           if (this.memoryFailureCounted) return;
           this.memoryFailureCounted = !0
-        } else this.faultsReported.has(UT) || (this.faultsReported.add(UT), this.options.onLightFault(UT, mT));
+        } else this.faultsReported.has(jB) || (this.faultsReported.add(jB), this.options.onLightFault(jB, zB));
         this.failedJobs++
       }
-      logRefusal(TT, UT) {
-        var mT;
-        !this.refusals.has(UT) && this.refusals.size >= 16 && (UT = "(other reasons)");
-        const WT = (null !== (mT = this.refusals.get(UT)) && void 0 !== mT ? mT : 0) + 1;
-        this.refusals.set(UT, WT), (0, tm.C)(WT) && console.warn(`[bloxd-wasm-client] meshing worker ${TT} refused a chunk (${WT} so far for this reason): ${UT}`)
+      logRefusal(BB, jB) {
+        var zB;
+        !this.refusals.has(jB) && this.refusals.size >= 16 && (jB = "(other reasons)");
+        const QB = (null !== (zB = this.refusals.get(jB)) && void 0 !== zB ? zB : 0) + 1;
+        this.refusals.set(jB, QB), (0, oz.C)(QB) && console.warn(`[bloxd-wasm-client] meshing worker ${BB} refused a chunk (${QB} so far for this reason): ${jB}`)
       }
-      logHeapRefusal(TT) {
-        this.heapRefusals++, (0, tm.C)(this.heapRefusals) && console.warn(`[bloxd-wasm-client] meshing worker ${TT} was refused memory for a chunk's mesh (${this.heapRefusals} so far)`)
+      logHeapRefusal(BB) {
+        this.heapRefusals++, (0, oz.C)(this.heapRefusals) && console.warn(`[bloxd-wasm-client] meshing worker ${BB} was refused memory for a chunk's mesh (${this.heapRefusals} so far)`)
       }
-      giveUp(TT, UT, mT) {
-        const WT = this.slots[TT];
-        if (WT.gone = !0, WT.goneFor = {
-            why: UT,
-            failure: mT
-          }, console.warn(`[bloxd-wasm-client] meshing worker ${TT} ${UT}: giving up on it`), this.slots.every((TT => TT.gone))) {
+      giveUp(BB, jB, zB) {
+        const QB = this.slots[BB];
+        if (QB.gone = !0, QB.goneFor = {
+            why: jB,
+            failure: zB
+          }, console.warn(`[bloxd-wasm-client] meshing worker ${BB} ${jB}: giving up on it`), this.slots.every((BB => BB.gone))) {
           this.stop();
-          const TT = new Set(this.slots.map((TT => {
-              var UT;
-              return null === (UT = TT.goneFor) || void 0 === UT ? void 0 : UT.failure
+          const BB = new Set(this.slots.map((BB => {
+              var jB;
+              return null === (jB = BB.goneFor) || void 0 === jB ? void 0 : jB.failure
             }))),
-            UT = this.slots.map(((TT, UT) => {
-              var mT, WT;
-              return `worker ${UT} ${null!==(mT=null===(WT=TT.goneFor)||void 0===WT?void 0:WT.why)&&void 0!==mT?mT:"went"}`
+            jB = this.slots.map(((BB, jB) => {
+              var zB, QB;
+              return `worker ${jB} ${null!==(zB=null===(QB=BB.goneFor)||void 0===QB?void 0:QB.why)&&void 0!==zB?zB:"went"}`
             }));
-          this.options.fail(1 === TT.size ? mT : `no meshing worker is left (${UT.join(", ")})`)
+          this.options.fail(1 === BB.size ? zB : `no meshing worker is left (${jB.join(", ")})`)
         }
       }
-      lose(TT, UT, mT) {
-        console.warn(`[bloxd-wasm-client] meshing worker ${TT} was lost: ${UT}`), this.endWorker(TT), this.stopped || (mT ? mT() : this.options.onWorkerLost(UT), this.tellLost(TT), this.start(TT))
+      lose(BB, jB, zB) {
+        console.warn(`[bloxd-wasm-client] meshing worker ${BB} was lost: ${jB}`), this.endWorker(BB), this.stopped || (zB ? zB() : this.options.onWorkerLost(jB), this.tellLost(BB), this.start(BB))
       }
-      endWorker(TT) {
-        var UT, mT, WT;
-        const zT = this.slots[TT];
-        nz(zT), null === (UT = zT.worker) || void 0 === UT || UT.terminate(), zT.worker = null, zT.heapRetries = 0, null === (mT = (WT = this.options).onMemoryGone) || void 0 === mT || mT.call(WT, TT)
+      endWorker(BB) {
+        var jB, zB, QB;
+        const nB = this.slots[BB];
+        In(nB), null === (jB = nB.worker) || void 0 === jB || jB.terminate(), nB.worker = null, nB.heapRetries = 0, null === (zB = (QB = this.options).onMemoryGone) || void 0 === zB || zB.call(QB, BB)
       }
-      tellLost(TT) {
-        const UT = this.slots[TT];
-        UT.started && (UT.started = !1, this.options.write(0, hU.ie.WorkerLost, 0, TT, 0, Mz))
+      tellLost(BB) {
+        const jB = this.slots[BB];
+        jB.started && (jB.started = !1, this.options.write(0, cj.Id.WorkerLost, 0, BB, 0, nn))
       }
-      buffer(TT) {
-        var UT;
-        return null !== (UT = this.pooled(TT)) && void 0 !== UT ? UT : new ArrayBuffer(Math.max(16384, TT))
+      buffer(BB) {
+        var jB;
+        return null !== (jB = this.pooled(BB)) && void 0 !== jB ? jB : new ArrayBuffer(Math.max(16384, BB))
       }
-      pooled(TT) {
-        let UT = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          mT = -1;
-        for (let zT = 0; zT < this.pool.length; zT++) {
-          const WT = this.pool[zT].byteLength;
-          WT >= TT && (mT < 0 || (UT ? WT > this.pool[mT].byteLength : WT < this.pool[mT].byteLength)) && (mT = zT)
+      pooled(BB) {
+        let jB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          zB = -1;
+        for (let nB = 0; nB < this.pool.length; nB++) {
+          const QB = this.pool[nB].byteLength;
+          QB >= BB && (zB < 0 || (jB ? QB > this.pool[zB].byteLength : QB < this.pool[zB].byteLength)) && (zB = nB)
         }
-        if (mT < 0) return null;
-        const WT = this.pool[mT];
-        return this.pool[mT] = this.pool[this.pool.length - 1], this.pool.pop(), WT
+        if (zB < 0) return null;
+        const QB = this.pool[zB];
+        return this.pool[zB] = this.pool[this.pool.length - 1], this.pool.pop(), QB
       }
-      recycle(TT) {
-        this.pool.length < 4 * this.slots.length && TT.byteLength > 0 && TT.byteLength <= 1048576 && this.pool.push(TT)
+      recycle(BB) {
+        this.pool.length < 4 * this.slots.length && BB.byteLength > 0 && BB.byteLength <= 1048576 && this.pool.push(BB)
       }
     }
 
-    function nz(TT) {
-      var UT;
-      null === (UT = TT.watch) || void 0 === UT || UT.cancel(), TT.watch = null
+    function In(BB) {
+      var jB;
+      null === (jB = BB.watch) || void 0 === jB || jB.cancel(), BB.watch = null
     }
-    var Hz = mT(36557),
-      kz = mT(40893),
-      jz = mT(41066),
-      lz = mT(41072),
-      Lz = (mT(40912), mT(41080)),
-      pz = mT(40951);
+    var Nn = zB(36560),
+      un = zB(40835),
+      Un = zB(41019),
+      an = zB(41022),
+      pn = (zB(40856), zB(41028)),
+      rn = zB(40889);
 
-    function Bz(TT) {
-      const UT = new Uint8Array(TT.length >> 2);
-      for (let mT = 0; mT < UT.length; mT++) UT[mT] = TT[4 * mT + 3];
-      return UT
+    function sn(BB) {
+      const jB = new Uint8Array(BB.length >> 2);
+      for (let zB = 0; zB < jB.length; zB++) jB[zB] = BB[4 * zB + 3];
+      return jB
     }
-    async function Zz(TT) {
-      const UT = await (0, Lz.j)(TT);
+    async function Jn(BB) {
+      const jB = await (0, pn.i)(BB);
       try {
         const {
-          width: TT,
-          height: mT,
-          pixels: WT
-        } = (0, pz.o)(UT);
+          width: BB,
+          height: zB,
+          pixels: QB
+        } = (0, rn.s)(jB);
         return {
-          width: TT,
-          height: mT,
-          alpha: Bz(WT)
+          width: BB,
+          height: zB,
+          alpha: sn(QB)
         }
       } finally {
-        UT.close()
+        jB.close()
       }
     }
-    class cz {
-      constructor(TT, UT, mT) {
-        let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Zz;
-        this.session = TT, this.sources = UT, this.warn = mT, this.load = WT, this.nextPoll = 0, this.kB = !1, this.warned = new Set
+    class mn {
+      constructor(BB, jB, zB) {
+        let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Jn;
+        this.session = BB, this.sources = jB, this.warn = zB, this.load = QB, this.nextPoll = 0, this.HJ = !1, this.warned = new Set
       }
-      drain(TT) {
-        if (TT < this.nextPoll) return;
-        this.nextPoll = TT + 250;
-        const UT = this.session.sunShadowWantedTextures();
-        if (UT)
-          for (let mT = 0; mT + 1 < UT.length; mT += 2) this.hand(UT[mT], UT[mT + 1]);
-        for (const mT of this.session.takeSunShadowWarnings()) this.warn(mT)
+      drain(BB) {
+        if (BB < this.nextPoll) return;
+        this.nextPoll = BB + 250;
+        const jB = this.session.sunShadowWantedTextures();
+        if (jB)
+          for (let zB = 0; zB + 1 < jB.length; zB += 2) this.hand(jB[zB], jB[zB + 1]);
+        for (const zB of this.session.takeSunShadowWarnings()) this.warn(zB)
       }
       dispose() {
-        this.kB = !0
+        this.HJ = !0
       }
-      async hand(TT, UT) {
-        var mT, WT, zT, MT, gT;
-        let nT, HT = null;
+      async hand(BB, jB) {
+        var zB, QB, nB, dB, IB;
+        let NB, uB = null;
         try {
-          if (HT = await this.sources.blockImageUrl(TT), null === HT) throw new Error(`block image ${TT} has no URL`);
-          nT = await this.load(HT)
-        } catch (jT) {
-          var kT;
-          const UT = null !== (kT = HT) && void 0 !== kT ? kT : `block image ${TT}`;
-          this.warned.has(UT) || (this.warned.add(UT), this.warn(`sun shadow plane texture ${UT} didn't load: its blocks cast no shadow`, jT))
+          if (uB = await this.sources.blockImageUrl(BB), null === uB) throw new Error(`block image ${BB} has no URL`);
+          NB = await this.load(uB)
+        } catch (aB) {
+          var UB;
+          const jB = null !== (UB = uB) && void 0 !== UB ? UB : `block image ${BB}`;
+          this.warned.has(jB) || (this.warned.add(jB), this.warn(`sun shadow plane texture ${jB} didn't load: its blocks cast no shadow`, aB))
         }
-        this.kB || this.session.setSunShadowTexture(TT, UT, null !== (mT = null === (WT = nT) || void 0 === WT ? void 0 : WT.width) && void 0 !== mT ? mT : 0, null !== (zT = null === (MT = nT) || void 0 === MT ? void 0 : MT.height) && void 0 !== zT ? zT : 0, null === (gT = nT) || void 0 === gT ? void 0 : gT.alpha)
+        this.HJ || this.session.setSunShadowTexture(BB, jB, null !== (zB = null === (QB = NB) || void 0 === QB ? void 0 : QB.width) && void 0 !== zB ? zB : 0, null !== (nB = null === (dB = NB) || void 0 === dB ? void 0 : dB.height) && void 0 !== nB ? nB : 0, null === (IB = NB) || void 0 === IB ? void 0 : IB.alpha)
       }
     }
-    var vz = mT(41085),
-      fz = mT(40926),
-      qz = mT(41093),
-      iz = mT(41096),
-      bz = mT(40929),
-      Oz = mT(40935),
-      ez = mT(34315),
-      Yz = mT(34156),
-      Jz = mT(41110);
-    const xz = 8192,
-      dz = new Set;
-    const wz = new Set([...Yz.e, "sceneDownload"]);
-    var tz = mT(40855),
-      az = mT(41117),
-      yz = mT(41121);
-    const Xz = new Uint8Array(0);
-    let Iz = null;
+    var yn = zB(41034),
+      kn = zB(40872),
+      Gn = zB(41038),
+      Ln = zB(41044),
+      gn = zB(40881),
+      tn = zB(40883),
+      Sn = zB(34289),
+      Mn = zB(34132),
+      En = zB(41052);
+    const qn = 8192,
+      fn = new Set;
+    const Hn = new Set([...Mn.d, "sceneDownload"]);
+    var Dn = zB(40796),
+      Fn = zB(41054),
+      Yn = zB(41061);
+    const Vn = new Uint8Array(0);
+    let hn = null;
 
-    function Qz(TT) {
+    function Xn(BB) {
       return {
-        aux: hU.gc.AdStart | (TT ? hU.gc.PreventMovement : 0),
-        payload: Xz
+        aux: cj.Zb.AdStart | (BB ? cj.Zb.PreventMovement : 0),
+        payload: Vn
       }
     }
-    var sz = mT(3032),
-      Fz = mT(314);
-    const Pz = "__bloxdSceneCapture";
-    var Vz = mT(41127);
-    class uz {
-      constructor(TT) {
-        var UT, mT;
-        this.host = TT, this.requested = null, this.landed = null, this.confirm = null, this.channel = void 0, this.oneShotStored = !0, this.startRead = void 0, this.landRequest = () => {}, this.landing = new Promise((TT => {
-          this.landRequest = TT
-        })), this.follow = TT => {
-          let UT = TT;
+    var Zn = zB(3004),
+      An = zB(321);
+    const Tn = "__bloxdSceneCapture";
+    var Pn = zB(41070);
+    class Wn {
+      constructor(BB) {
+        var jB, zB;
+        this.host = BB, this.requested = null, this.landed = null, this.confirm = null, this.channel = void 0, this.oneShotStored = !0, this.startRead = void 0, this.landRequest = () => {}, this.landing = new Promise((BB => {
+          this.landRequest = BB
+        })), this.follow = BB => {
+          let jB = BB;
           return Promise.race([this.startRead, this.landing]).then((async () => {
-            const TT = null === this.requested && null !== UT;
-            var mT;
-            TT && (null === (mT = UT) || void 0 === mT || mT(null));
-            const WT = await this.landing;
-            var zT;
-            null === WT && TT || (null === (zT = UT) || void 0 === zT || zT(WT))
+            const BB = null === this.requested && null !== jB;
+            var zB;
+            BB && (null === (zB = jB) || void 0 === zB || zB(null));
+            const QB = await this.landing;
+            var nB;
+            null === QB && BB || (null === (nB = jB) || void 0 === nB || nB(QB))
           })), () => {
-            UT = null
+            jB = null
           }
-        }, this.startRead = (mT = TT.store, mT.keys().then((TT => ({
-          own: TT.includes(sm.d),
-          oneShot: TT.includes(sm.f)
+        }, this.startRead = (zB = BB.store, zB.keys().then((BB => ({
+          own: BB.includes(hz.b),
+          oneShot: BB.includes(hz.e)
         })), (() => ({
           own: !0,
           oneShot: !0
-        })))).then((TT => {
+        })))).then((BB => {
           let {
-            own: UT,
-            oneShot: mT
-          } = TT;
-          this.oneShotStored = mT, (UT || mT) && this.request()
-        })), this.channel = (null !== (UT = TT.openChannel) && void 0 !== UT ? UT : sm.v)(), null !== this.channel && (this.channel.onmessage = () => {
+            own: jB,
+            oneShot: zB
+          } = BB;
+          this.oneShotStored = zB, (jB || zB) && this.request()
+        })), this.channel = (null !== (jB = BB.openChannel) && void 0 !== jB ? jB : hz.u)(), null !== this.channel && (this.channel.onmessage = () => {
           this.request()
         })
       }
       request() {
-        var TT;
+        var BB;
         if (null !== this.requested) return this.requested;
-        null === (TT = this.channel) || void 0 === TT || TT.close(), this.channel = null;
-        const UT = this.oneShotStored;
-        return this.requested = function(TT, UT, mT) {
-          return new Promise((UT => {
-            UT(TT())
-          })).catch((TT => (null !== UT && (0, sm.r)(UT), mT(TT), null)))
-        }((() => this.host.load(UT).then((TT => (TT.setGamePackConfirm(this.confirm), this.landed = TT, TT)))), UT ? this.host.store : null, this.host.Gp), this.landRequest(this.requested), this.requested
+        null === (BB = this.channel) || void 0 === BB || BB.close(), this.channel = null;
+        const jB = this.oneShotStored;
+        return this.requested = function(BB, jB, zB) {
+          return new Promise((jB => {
+            jB(BB())
+          })).catch((BB => (null !== jB && (0, hz.q)(jB), zB(BB), null)))
+        }((() => this.host.load(jB).then((BB => (BB.setGamePackConfirm(this.confirm), this.landed = BB, BB)))), jB ? this.host.store : null, this.host.JJ), this.landRequest(this.requested), this.requested
       }
       loaded() {
         return this.landed
       }
       forJoin() {
         return null !== this.requested ? this.requested : Promise.race([this.startRead, this.landing]).then((() => {
-          var TT;
-          return null !== (TT = this.requested) && void 0 !== TT ? TT : null
+          var BB;
+          return null !== (BB = this.requested) && void 0 !== BB ? BB : null
         }))
       }
-      setGamePackConfirm(TT) {
-        var UT;
-        this.confirm = TT, null === (UT = this.landed) || void 0 === UT || UT.setGamePackConfirm(TT)
+      setGamePackConfirm(BB) {
+        var jB;
+        this.confirm = BB, null === (jB = this.landed) || void 0 === jB || jB.setGamePackConfirm(BB)
       }
     }
-    var Cz = mT(36356);
-    const rz = 216 * Cz.d,
-      Kz = 92 * Cz.b,
-      Sz = 64 * Cz.d,
-      Gz = 16 * Cz.d;
+    var en = zB(36344);
+    const wn = 216 * en.f,
+      xn = 92 * en.d,
+      Kn = 64 * en.f,
+      Cn = 16 * en.f;
 
-    function Nz() {
-      var TT, UT;
-      return null !== (TT = null === (UT = performance.memory) || void 0 === UT ? void 0 : UT.wq) && void 0 !== TT ? TT : null
+    function cn() {
+      var BB, jB;
+      return null !== (BB = null === (jB = performance.memory) || void 0 === jB ? void 0 : jB.aG) && void 0 !== BB ? BB : null
     }
-    class Ez {
-      constructor(TT, UT) {
-        this.budgetBytes = TT, this.reads = UT, this.estimate = null, this.shedAt = null
+    class bn {
+      constructor(BB, jB) {
+        this.budgetBytes = BB, this.reads = jB, this.estimate = null, this.shedAt = null
       }
-      read(TT) {
-        var UT;
-        const mT = this.reads.storedChunks(),
-          WT = this.reads.gpuBytes(),
-          zT = Math.max(null !== (UT = this.reads.jsHeapBytes()) && void 0 !== UT ? UT : 0, Sz),
-          MT = rz + TT + zT + WT + mT * Kz;
+      read(BB) {
+        var jB;
+        const zB = this.reads.storedChunks(),
+          QB = this.reads.gpuBytes(),
+          nB = Math.max(null !== (jB = this.reads.jsHeapBytes()) && void 0 !== jB ? jB : 0, Kn),
+          dB = wn + BB + nB + QB + zB * xn;
         this.estimate = {
-          wasmBytes: TT,
-          jsHeapBytes: zT,
-          gpuBytes: WT,
-          storedChunks: mT,
-          totalBytes: MT
+          wasmBytes: BB,
+          jsHeapBytes: nB,
+          gpuBytes: QB,
+          storedChunks: zB,
+          totalBytes: dB
         }
       }
       last() {
@@ -3929,289 +4150,289 @@ export const modules = {
       }
       takeShed() {
         const {
-          estimate: TT,
-          budgetBytes: UT,
-          shedAt: mT
+          estimate: BB,
+          budgetBytes: jB,
+          shedAt: zB
         } = this;
-        return !(null === TT || null === UT || TT.totalBytes < UT || null !== mT && TT.totalBytes < mT + Gz) && (this.shedAt = TT.totalBytes, !0)
+        return !(null === BB || null === jB || BB.totalBytes < jB || null !== zB && BB.totalBytes < zB + Cn) && (this.shedAt = BB.totalBytes, !0)
       }
       describe() {
         const {
-          estimate: TT,
-          budgetBytes: UT
+          estimate: BB,
+          budgetBytes: jB
         } = this;
-        return null === TT ? null : `estimate ${(0,Cz.f)(TT.totalBytes)} MiB of budget ${null===UT?"none":(0,Cz.f)(UT)}: wasm ${(0,Cz.f)(TT.wasmBytes)} js ${(0,Cz.f)(TT.jsHeapBytes)} gpu ${(0,Cz.f)(TT.gpuBytes)} chunks ${TT.storedChunks}`
+        return null === BB ? null : `estimate ${(0,en.m)(BB.totalBytes)} MiB of budget ${null===jB?"none":(0,en.m)(jB)}: wasm ${(0,en.m)(BB.wasmBytes)} js ${(0,en.m)(BB.jsHeapBytes)} gpu ${(0,en.m)(BB.gpuBytes)} chunks ${BB.storedChunks}`
       }
       snapshot() {
         const {
-          estimate: TT,
-          budgetBytes: UT
+          estimate: BB,
+          budgetBytes: jB
         } = this;
         return {
-          ...null === TT ? {} : {
-            footprintMiB: Number((0, Cz.f)(TT.totalBytes)),
-            gpuMiB: Number((0, Cz.f)(TT.gpuBytes)),
-            storedChunks: TT.storedChunks
+          ...null === BB ? {} : {
+            footprintMiB: Number((0, en.m)(BB.totalBytes)),
+            gpuMiB: Number((0, en.m)(BB.gpuBytes)),
+            storedChunks: BB.storedChunks
           },
-          footprintBudgetMiB: null === UT ? -1 : Number((0, Cz.f)(UT))
+          footprintBudgetMiB: null === jB ? -1 : Number((0, en.m)(jB))
         }
       }
     }
-    var hz = mT(2929),
-      Dz = mT(4627),
-      oz = mT(36447),
-      Az = mT(38089);
-    const Rz = DU.$ + 1,
-      TM = 4096 * Rz;
-    class UM {
-      constructor(TT, UT) {
-        this.log = TT, this.take = UT, this.fn = [], this.unshown = new Map, this.latest = new Map
+    var vn = zB(2912),
+      Rn = zB(4640),
+      On = zB(36451),
+      Bd = zB(38032);
+    const jd = bj.U + 1,
+      zd = 4096 * jd;
+    class Qd {
+      constructor(BB, jB) {
+        this.log = BB, this.take = jB, this.DN = [], this.unshown = new Map, this.latest = new Map
       }
-      afterFrame(TT, UT) {
-        const mT = this.take();
-        mT.length >= DU._ && mT[0] > 0 && (0, hz.m)("remesh", `${mT[0]} core records lost to a full log`);
-        const WT = this.fn;
-        for (let zT = DU._; zT + DU.$ <= mT.length; zT += DU.$) {
-          for (let TT = zT; TT < zT + DU.$; TT++) WT.push(mT[TT]);
-          WT.push(TT)
+      afterFrame(BB, jB) {
+        const zB = this.take();
+        zB.length >= bj.T && zB[0] > 0 && (0, vn.n)("remesh", `${zB[0]} core records lost to a full log`);
+        const QB = this.DN;
+        for (let nB = bj.T; nB + bj.U <= zB.length; nB += bj.U) {
+          for (let BB = nB; BB < nB + bj.U; BB++) QB.push(zB[BB]);
+          QB.push(BB)
         }
-        if (UT || !(WT.length < TM)) {
-          for (let UT = 0; UT < WT.length; UT += Rz) this.feed(UT, TT);
-          WT.length = 0, UT && this.log.frame(TT)
+        if (jB || !(QB.length < zd)) {
+          for (let jB = 0; jB < QB.length; jB += jd) this.feed(jB, BB);
+          QB.length = 0, jB && this.log.frame(BB)
         }
       }
-      feed(TT, UT) {
-        var mT;
-        const WT = this.fn,
-          zT = (0, Az.h)(WT[TT + 1], WT[TT + 2], WT[TT + 3]),
-          MT = WT[TT + 4],
-          gT = WT[TT + DU.$];
-        switch (WT[TT]) {
-          case DU.yb.Edit:
-            this.log.edit(zT, gT);
+      feed(BB, jB) {
+        var zB;
+        const QB = this.DN,
+          nB = (0, Bd.g)(QB[BB + 1], QB[BB + 2], QB[BB + 3]),
+          dB = QB[BB + 4],
+          IB = QB[BB + bj.U];
+        switch (QB[BB]) {
+          case bj.ob.Edit:
+            this.log.edit(nB, IB);
             break;
-          case DU.yb.Sent:
-            this.latest.set(zT, MT), this.log.sent(zT, MT, WT[TT + 5], WT[TT + 6], WT[TT + 7], null !== (mT = this.unshown.get(zT)) && void 0 !== mT ? mT : Az.e, gT);
+          case bj.ob.Sent:
+            this.latest.set(nB, dB), this.log.sent(nB, dB, QB[BB + 5], QB[BB + 6], QB[BB + 7], null !== (zB = this.unshown.get(nB)) && void 0 !== zB ? zB : Bd.d, IB);
             break;
-          case DU.yb.Done: {
-            this.log.received(MT, WT[TT + 5] / 1e3, gT);
-            const UT = this.unshown.get(zT);
-            void 0 === UT ? this.unshown.set(zT, [MT]) : UT.push(MT);
+          case bj.ob.Done: {
+            this.log.received(dB, QB[BB + 5] / 1e3, IB);
+            const jB = this.unshown.get(nB);
+            void 0 === jB ? this.unshown.set(nB, [dB]) : jB.push(dB);
             break
           }
-          case DU.yb.Failed: {
-            const TT = this.latest.get(zT);
-            void 0 !== TT && TT !== MT ? this.log.reassign(zT, MT, TT) : this.log.failed(MT), this.ended(zT, MT);
+          case bj.ob.Failed: {
+            const BB = this.latest.get(nB);
+            void 0 !== BB && BB !== dB ? this.log.reassign(nB, dB, BB) : this.log.failed(dB), this.ended(nB, dB);
             break
           }
-          case DU.yb.Shown:
-            this.log.applied(zT, MT, UT), this.ended(zT, MT);
+          case bj.ob.Shown:
+            this.log.applied(nB, dB, jB), this.ended(nB, dB);
             break;
-          case DU.yb.Replaced:
-            this.log.reassign(zT, MT, WT[TT + 5]), this.ended(zT, MT);
+          case bj.ob.Replaced:
+            this.log.reassign(nB, dB, QB[BB + 5]), this.ended(nB, dB);
             break;
-          case DU.yb.Emptied:
-            this.log.emptied(zT, UT);
+          case bj.ob.Emptied:
+            this.log.emptied(nB, jB);
             break;
           default:
-            console.warn(`[debug:remesh] unknown core record kind ${WT[TT]}`)
+            console.warn(`[debug:remesh] unknown core record kind ${QB[BB]}`)
         }
       }
-      ended(TT, UT) {
-        this.latest.get(TT) === UT && this.latest.delete(TT);
-        const mT = this.unshown.get(TT);
-        if (void 0 === mT) return;
-        const WT = mT.indexOf(UT);
-        WT >= 0 && mT.splice(WT, 1), 0 === mT.length && this.unshown.delete(TT)
+      ended(BB, jB) {
+        this.latest.get(BB) === jB && this.latest.delete(BB);
+        const zB = this.unshown.get(BB);
+        if (void 0 === zB) return;
+        const QB = zB.indexOf(jB);
+        QB >= 0 && zB.splice(QB, 1), 0 === zB.length && this.unshown.delete(BB)
       }
     }
-    let mM = null;
-    var WM = mT(3342),
-      zM = mT(39760);
-    const MM = new Uint8Array(0);
-    class gM {
-      constructor(TT) {
-        this.options = TT, this.worker = null, this.watch = null, this.createWorker = null, this.loading = !1, this.wanted = !1, this.fn = [], this.startsWithoutResult = 0, this.coreWaits = !1, this.lastLoss = "", this.seed = null, this.gone = !1, this.pool = [], null !== TT.module ? TT.write(0, hU.ie.WorldgenStarted, 0, 0, MM) : this.giveUp()
+    let nd = null;
+    var dd = zB(3334),
+      Id = zB(39722);
+    const Nd = new Uint8Array(0);
+    class ud {
+      constructor(BB) {
+        this.options = BB, this.worker = null, this.watch = null, this.createWorker = null, this.loading = !1, this.wanted = !1, this.DN = [], this.startsWithoutResult = 0, this.coreWaits = !1, this.lastLoss = "", this.seed = null, this.gone = !1, this.pool = [], null !== BB.module ? BB.write(0, cj.Id.WorldgenStarted, 0, 0, Nd) : this.giveUp()
       }
-      take(TT, UT) {
-        if (!(this.gone || null === this.worker && null === this.fn))
-          if (TT === hU.le.WorldgenSeed) {
-            const TT = 0 === UT.byteLength ? null : this.options.decodeSettings(UT);
-            null === TT ? this.release() : function(TT, UT) {
-              if ((null === TT || void 0 === TT ? void 0 : TT.byteLength) !== UT.byteLength) return !1;
-              for (let mT = 0; mT < TT.byteLength; mT++)
-                if (TT[mT] !== UT[mT]) return !1;
+      take(BB, jB) {
+        if (!(this.gone || null === this.worker && null === this.DN))
+          if (BB === cj.Jd.WorldgenSeed) {
+            const BB = 0 === jB.byteLength ? null : this.options.decodeSettings(jB);
+            null === BB ? this.release() : function(BB, jB) {
+              if ((null === BB || void 0 === BB ? void 0 : BB.byteLength) !== jB.byteLength) return !1;
+              for (let zB = 0; zB < BB.byteLength; zB++)
+                if (BB[zB] !== jB[zB]) return !1;
               return !0
-            }(this.seed, UT) || (this.seed = UT.slice(), this.startsWithoutResult = null === this.worker ? 0 : 1), this.dropHeld(), this.post({
+            }(this.seed, jB) || (this.seed = jB.slice(), this.startsWithoutResult = null === this.worker ? 0 : 1), this.dropHeld(), this.post({
               type: "seed",
-              settings: TT
-            }, []), null !== TT ? this.want() : this.loading || this.options.onMapWithoutWorldgen()
-          } else if (TT === hU.le.Generate) {
-          var mT;
-          const TT = new DataView(UT.buffer, UT.byteOffset, hU.be),
-            WT = null !== (mT = this.pool.pop()) && void 0 !== mT ? mT : new ArrayBuffer(8192);
+              settings: BB
+            }, []), null !== BB ? this.want() : this.loading || this.options.onMapWithoutWorldgen()
+          } else if (BB === cj.Jd.Generate) {
+          var zB;
+          const BB = new DataView(jB.buffer, jB.byteOffset, cj.Dd),
+            QB = null !== (zB = this.pool.pop()) && void 0 !== zB ? zB : new ArrayBuffer(8192);
           this.post({
             type: "generate",
-            ticket: TT.getUint32(0, !0),
-            x: TT.getInt32(4, !0),
-            y: TT.getInt32(8, !0),
-            z: TT.getInt32(12, !0),
-            bytes: WT
-          }, [WT])
+            ticket: BB.getUint32(0, !0),
+            x: BB.getInt32(4, !0),
+            y: BB.getInt32(8, !0),
+            z: BB.getInt32(12, !0),
+            bytes: QB
+          }, [QB])
         }
       }
       prestart() {
         this.gone || this.want()
       }
       stopWorker() {
-        this.gone || (this.release(), this.dropHeld(), this.pool.length = 0, this.coreWaits && (this.coreWaits = !1, this.options.write(0, hU.ie.WorldgenStarted, 0, 0, MM)))
+        this.gone || (this.release(), this.dropHeld(), this.pool.length = 0, this.coreWaits && (this.coreWaits = !1, this.options.write(0, cj.Id.WorldgenStarted, 0, 0, Nd)))
       }
       stop() {
-        var TT;
-        this.gone = !0, this.dropHeld(), this.endWatch(), null === (TT = this.worker) || void 0 === TT || TT.terminate(), this.worker = null
+        var BB;
+        this.gone = !0, this.dropHeld(), this.endWatch(), null === (BB = this.worker) || void 0 === BB || BB.terminate(), this.worker = null
       }
-      post(TT, UT) {
-        var mT;
-        null !== this.fn ? this.fn.push({
-          message: TT,
-          transfer: UT
-        }) : null === (mT = this.worker) || void 0 === mT || mT.postMessage(TT, UT)
+      post(BB, jB) {
+        var zB;
+        null !== this.DN ? this.DN.push({
+          message: BB,
+          transfer: jB
+        }) : null === (zB = this.worker) || void 0 === zB || zB.postMessage(BB, jB)
       }
       want() {
         this.wanted = !0, null === this.worker && (null === this.createWorker ? this.load() : this.start())
       }
       release() {
-        this.wanted = !1, null !== this.worker && (this.endWorker(), this.startsWithoutResult = 0, this.fn ??= [])
+        this.wanted = !1, null !== this.worker && (this.endWorker(), this.startsWithoutResult = 0, this.DN ??= [])
       }
       endWorker() {
-        var TT, UT, mT;
-        this.endWatch(), null === (TT = this.worker) || void 0 === TT || TT.terminate(), this.worker = null, null === (UT = (mT = this.options).onMemoryGone) || void 0 === UT || UT.call(mT)
+        var BB, jB, zB;
+        this.endWatch(), null === (BB = this.worker) || void 0 === BB || BB.terminate(), this.worker = null, null === (jB = (zB = this.options).onMemoryGone) || void 0 === jB || jB.call(zB)
       }
       load() {
-        this.loading || (this.loading = !0, this.options.loadWorker().then((TT => {
-          this.createWorker = TT, this.wanted && this.start()
-        }), (TT => {
-          this.gone || (this.giveUp(), this.options.onLoadFailed(TT))
+        this.loading || (this.loading = !0, this.options.loadWorker().then((BB => {
+          this.createWorker = BB, this.wanted && this.start()
+        }), (BB => {
+          this.gone || (this.giveUp(), this.options.onLoadFailed(BB))
         })))
       }
       start() {
         const {
-          module: TT
-        } = this.options, UT = this.createWorker;
-        if (this.gone || null === TT || null === UT) return;
+          module: BB
+        } = this.options, jB = this.createWorker;
+        if (this.gone || null === BB || null === jB) return;
         if (this.startsWithoutResult >= 3) return this.giveUp(), void this.options.onGaveUp(this.lastLoss);
-        let mT;
+        let zB;
         this.startsWithoutResult++;
         try {
-          mT = UT()
-        } catch (zT) {
-          return console.warn("[bloxd-wasm-client] the world-gen worker did not start", zT), this.lastLoss = `it did not start (${String(zT)})`, void this.start()
+          zB = jB()
+        } catch (nB) {
+          return console.warn("[bloxd-wasm-client] the world-gen worker did not start", nB), this.lastLoss = `it did not start (${String(nB)})`, void this.start()
         }
-        this.worker = mT, mT.onmessage = TT => {
+        this.worker = zB, zB.onmessage = BB => {
           let {
-            data: UT
-          } = TT;
-          this.worker === mT && this.onReply(mT, UT)
-        }, mT.onerror = TT => {
-          TT.preventDefault(), this.worker === mT && this.lose(TT.message || "its script failed")
+            data: jB
+          } = BB;
+          this.worker === zB && this.onReply(zB, jB)
+        }, zB.onerror = BB => {
+          BB.preventDefault(), this.worker === zB && this.lose(BB.message || "its script failed")
         };
         try {
-          mT.postMessage({
+          zB.postMessage({
             type: "start",
-            module: TT,
-            cB: WT.f.cB
+            module: BB,
+            ZJ: QB.e.ZJ
           })
-        } catch (zT) {
-          return console.warn("[bloxd-wasm-client] the world-gen worker could not be sent the module", zT), this.lastLoss = `it could not be sent the module (${String(zT)})`, mT.terminate(), this.worker = null, void this.start()
+        } catch (nB) {
+          return console.warn("[bloxd-wasm-client] the world-gen worker could not be sent the module", nB), this.lastLoss = `it could not be sent the module (${String(nB)})`, zB.terminate(), this.worker = null, void this.start()
         }
-        this.watch = new zz.j(zz.f, (TT => {
-          this.lose((0, zz.l)(TT), (() => {
-            this.options.onStartTimeout(TT)
+        this.watch = new Qn.g(Qn.c, (BB => {
+          this.lose((0, Qn.j)(BB), (() => {
+            this.options.onStartTimeout(BB)
           }))
         }), void 0, this.options.visibility)
       }
-      onReply(TT, UT) {
-        switch (UT.type) {
+      onReply(BB, jB) {
+        switch (jB.type) {
           case "started": {
             this.endWatch();
-            const UT = this.fn;
-            if (null === UT) {
-              this.coreWaits = !1, this.options.write(0, hU.ie.WorldgenStarted, 0, 0, MM);
+            const jB = this.DN;
+            if (null === jB) {
+              this.coreWaits = !1, this.options.write(0, cj.Id.WorldgenStarted, 0, 0, Nd);
               break
             }
-            this.fn = null;
+            this.DN = null;
             for (const {
-                message: mT,
-                transfer: WT
+                message: zB,
+                transfer: QB
               }
-              of UT) TT.postMessage(mT, WT);
+              of jB) BB.postMessage(zB, QB);
             break
           }
           case "lost":
-            this.lose(UT.reason);
+            this.lose(jB.reason);
             break;
           case "memory":
-            var mT, WT;
-            null === (mT = (WT = this.options).onMemoryStats) || void 0 === mT || mT.call(WT, UT.stats);
+            var zB, QB;
+            null === (zB = (QB = this.options).onMemoryStats) || void 0 === zB || zB.call(QB, jB.stats);
             break;
           case "result":
-            UT.status !== hU.Hb.Trapped && (this.startsWithoutResult = 0), this.options.write(UT.ticket, hU.ie.WorldgenResult, UT.status, UT.workerUs, new Uint8Array(UT.bytes, 0, UT.len)), this.recycle(UT.bytes), UT.spare && this.recycle(UT.spare)
+            jB.status !== cj.sb.Trapped && (this.startsWithoutResult = 0), this.options.write(jB.ticket, cj.Id.WorldgenResult, jB.status, jB.workerUs, new Uint8Array(jB.bytes, 0, jB.len)), this.recycle(jB.bytes), jB.spare && this.recycle(jB.spare)
         }
       }
-      lose(TT, UT) {
-        console.warn(`[bloxd-wasm-client] the world-gen worker was lost: ${TT}`), this.lastLoss = TT, this.endWorker(), this.gone || (UT ? UT() : this.options.onWorkerLost(TT), this.dropHeld(), this.fn = null, this.options.write(0, hU.ie.WorldgenLost, hU.me.Lost, 0, MM), this.coreWaits = !0, this.start())
+      lose(BB, jB) {
+        console.warn(`[bloxd-wasm-client] the world-gen worker was lost: ${BB}`), this.lastLoss = BB, this.endWorker(), this.gone || (jB ? jB() : this.options.onWorkerLost(BB), this.dropHeld(), this.DN = null, this.options.write(0, cj.Id.WorldgenLost, cj.Ld.Lost, 0, Nd), this.coreWaits = !0, this.start())
       }
       giveUp() {
-        this.gone = !0, this.dropHeld(), this.options.write(0, hU.ie.WorldgenLost, hU.me.Gone, 0, MM)
+        this.gone = !0, this.dropHeld(), this.options.write(0, cj.Id.WorldgenLost, cj.Ld.Gone, 0, Nd)
       }
       endWatch() {
-        var TT;
-        null === (TT = this.watch) || void 0 === TT || TT.cancel(), this.watch = null
+        var BB;
+        null === (BB = this.watch) || void 0 === BB || BB.cancel(), this.watch = null
       }
       dropHeld() {
-        if (null !== this.fn) {
+        if (null !== this.DN) {
           for (const {
-              message: TT
+              message: BB
             }
-            of this.fn) "generate" === TT.type && this.recycle(TT.bytes);
-          this.fn.length = 0
+            of this.DN) "generate" === BB.type && this.recycle(BB.bytes);
+          this.DN.length = 0
         }
       }
-      recycle(TT) {
-        this.pool.length < 16 && TT.byteLength > 0 && TT.byteLength <= 16384 && this.pool.push(TT)
+      recycle(BB) {
+        this.pool.length < 16 && BB.byteLength > 0 && BB.byteLength <= 16384 && this.pool.push(BB)
       }
     }
-    var nM = mT(37868),
-      HM = mT(3810),
-      kM = mT(40802),
-      jM = mT(41130),
-      lM = mT(40919);
-    const LM = /[(@\s]([^\s(@]+)$/,
-      pM = /:\d/;
+    var Ud = zB(37835),
+      pd = zB(3821),
+      rd = zB(40753),
+      sd = zB(41078),
+      Jd = zB(40867);
+    const md = /[(@\s]([^\s(@]+)$/,
+      yd = /:\d/;
 
-    function BM(TT, UT) {
-      for (let mT = 0; mT + UT.length <= TT.length; mT++) {
-        let WT = 0;
-        for (; WT < UT.length && TT[mT + WT] === UT[WT];) WT++;
-        if (WT === UT.length) return mT
+    function kd(BB, jB) {
+      for (let zB = 0; zB + jB.length <= BB.length; zB++) {
+        let QB = 0;
+        for (; QB < jB.length && BB[zB + QB] === jB[QB];) QB++;
+        if (QB === jB.length) return zB
       }
       return -1
     }
 
-    function ZM(TT) {
-      return "(" === TT || ")" === TT || "@" === TT || "," === TT || " " === TT || "\t" === TT
+    function Gd(BB) {
+      return "(" === BB || ")" === BB || "@" === BB || "," === BB || " " === BB || "\t" === BB
     }
 
-    function cM(TT, UT) {
-      let mT = UT;
-      for (; mT > 0 && !ZM(TT[mT - 1]);) mT--;
-      let WT = UT;
-      for (; WT < TT.length && !ZM(TT[WT]);) WT++;
-      let zT = "";
-      for (let MT = mT; MT < WT; MT++) zT += TT[MT];
-      return zT
+    function Ld(BB, jB) {
+      let zB = jB;
+      for (; zB > 0 && !Gd(BB[zB - 1]);) zB--;
+      let QB = jB;
+      for (; QB < BB.length && !Gd(BB[QB]);) QB++;
+      let nB = "";
+      for (let dB = zB; dB < QB; dB++) nB += BB[dB];
+      return nB
     }
-    const vM = [{
+    const gd = [{
         origin: "chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo",
         tag: "TM"
       }, {
@@ -4221,194 +4442,194 @@ export const modules = {
         origin: "chrome-extension://gcalenpjmijncebpfijmoaglllgpjagf",
         tag: "TM-Beta"
       }],
-      fM = /^\/[^\s?#]*\?(?:[^\s&#]*&)*?name=([^\s&#]*?)(?::\d+)*(?:[\s&#]|\)(?:[,\s]|$)|$)/,
-      qM = ".user.js";
+      td = /^\/[^\s?#]*\?(?:[^\s&#]*&)*?name=([^\s&#]*?)(?::\d+)*(?:[\s&#]|\)(?:[,\s]|$)|$)/,
+      Sd = ".user.js";
 
-    function iM(TT, UT) {
-      let mT = 0;
-      for (; mT < vM.length && vM[mT].origin !== UT[0];) mT++;
-      if (mT === vM.length) return UT[0];
-      let WT = "";
-      for (let gT = UT.index + UT[0].length; gT < TT.length; gT++) WT += TT[gT];
-      const zT = (0, hW.q)(hW.X, fM, [WT]),
-        MT = null === zT ? "" : function(TT) {
-          let UT = TT.length,
-            mT = 0;
-          for (; mT < 8 && UT > 8 && TT[UT - 8 + mT] === qM[mT];) mT++;
-          8 === mT && (UT -= 8);
-          let WT = "",
-            zT = !1;
-          for (let MT = 0; MT < UT; MT++) {
-            let UT = TT[MT];
-            "+" === UT ? UT = " " : "%" === UT && (UT = "2" === TT[MT + 1] && "0" === TT[MT + 2] ? " " : "_", MT += 2), -1 !== BM("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 .-", UT) ? (WT += UT, zT = !1) : zT || (WT += "_", zT = !0)
+    function Md(BB, jB) {
+      let zB = 0;
+      for (; zB < gd.length && gd[zB].origin !== jB[0];) zB++;
+      if (zB === gd.length) return jB[0];
+      let QB = "";
+      for (let IB = jB.index + jB[0].length; IB < BB.length; IB++) QB += BB[IB];
+      const nB = (0, CQ.l)(CQ.gb, td, [QB]),
+        dB = null === nB ? "" : function(BB) {
+          let jB = BB.length,
+            zB = 0;
+          for (; zB < 8 && jB > 8 && BB[jB - 8 + zB] === Sd[zB];) zB++;
+          8 === zB && (jB -= 8);
+          let QB = "",
+            nB = !1;
+          for (let dB = 0; dB < jB; dB++) {
+            let jB = BB[dB];
+            "+" === jB ? jB = " " : "%" === jB && (jB = "2" === BB[dB + 1] && "0" === BB[dB + 2] ? " " : "_", dB += 2), -1 !== kd("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 .-", jB) ? (QB += jB, nB = !1) : nB || (QB += "_", nB = !0)
           }
-          return WT
-        }(zT[1]);
-      return "" === MT ? UT[0] : vM[mT].tag + " " + MT
+          return QB
+        }(nB[1]);
+      return "" === dB ? jB[0] : gd[zB].tag + " " + dB
     }
 
-    function bM(TT, UT) {
-      var mT;
-      const WT = /[^\n]+/g,
-        zT = /\b(?!wasm:)[a-z][\w+.-]*:\/\/[\w.:%~+[\]-]*/i,
-        MT = /^([^?#)]*?)(?::\d+)*(?:[?#)]|$)/;
-      let gT = null,
-        nT = null,
-        HT = (0, hW.q)(hW.X, WT, [TT]);
-      for (; null !== HT;) {
-        const mT = (0, hW.q)(hW.X, zT, [HT[0]]),
-          kT = null === UT ? -1 : BM(HT[0], UT);
-        if (-1 !== kT) {
-          if (null !== mT) return iM(HT[0], mT);
-          const TT = cM(HT[0], kT),
-            UT = (0, hW.q)(hW.X, LM, [HT[0]]),
-            WT = null !== (0, hW.q)(hW.X, pM, [TT]) ? TT : null === UT ? null : UT[1],
-            zT = null === WT ? null : (0, hW.q)(hW.X, MT, [WT]);
-          if (null !== zT && "" !== zT[1]) return zT[1]
+    function Ed(BB, jB) {
+      var zB;
+      const QB = /[^\n]+/g,
+        nB = /\b(?!wasm:)[a-z][\w+.-]*:\/\/[\w.:%~+[\]-]*/i,
+        dB = /^([^?#)]*?)(?::\d+)*(?:[?#)]|$)/;
+      let IB = null,
+        NB = null,
+        uB = (0, CQ.l)(CQ.gb, QB, [BB]);
+      for (; null !== uB;) {
+        const zB = (0, CQ.l)(CQ.gb, nB, [uB[0]]),
+          UB = null === jB ? -1 : kd(uB[0], jB);
+        if (-1 !== UB) {
+          if (null !== zB) return Md(uB[0], zB);
+          const BB = Ld(uB[0], UB),
+            jB = (0, CQ.l)(CQ.gb, md, [uB[0]]),
+            QB = null !== (0, CQ.l)(CQ.gb, yd, [BB]) ? BB : null === jB ? null : jB[1],
+            nB = null === QB ? null : (0, CQ.l)(CQ.gb, dB, [QB]);
+          if (null !== nB && "" !== nB[1]) return nB[1]
         }
-        null !== mT && (null === gT ? gT = mT[0] : null === nT && mT[0] !== gT && (nT = mT[0])), HT = (0, hW.q)(hW.X, WT, [TT])
+        null !== zB && (null === IB ? IB = zB[0] : null === NB && zB[0] !== IB && (NB = zB[0])), uB = (0, CQ.l)(CQ.gb, QB, [BB])
       }
-      return null !== (mT = nT) && void 0 !== mT ? mT : null === gT ? "none" : "own"
+      return null !== (zB = NB) && void 0 !== zB ? zB : null === IB ? "none" : "own"
     }
-    const OM = /:(\d+):(\d+)\)?$/;
+    const qd = /:(\d+):(\d+)\)?$/;
 
-    function eM(TT, UT) {
-      const mT = (0, hW.q)(hW.X, OM, [UT]);
-      return null === mT ? TT : TT + ":" + mT[1] + ":" + mT[2]
+    function fd(BB, jB) {
+      const zB = (0, CQ.l)(CQ.gb, qd, [jB]);
+      return null === zB ? BB : BB + ":" + zB[1] + ":" + zB[2]
     }
 
-    function YM(TT) {
-      const UT = /[^\n]+/g,
-        mT = /\b(?!wasm:)((?:blob:)?)(([a-z][\w+.-]*):\/\/[\w.:%~+[\]-]*)((?:[^\s()@?#]*\/)?)([^\s()@?#:]*)/i;
-      let WT = null,
-        zT = "",
-        MT = !1,
-        gT = (0, hW.q)(hW.X, UT, [TT]);
-      for (; null !== gT;) {
-        const nT = (0, hW.q)(hW.X, mT, [gT[0]]),
-          HT = null === nT ? (0, hW.q)(hW.X, LM, [gT[0]]) : null,
-          kT = null !== HT && null !== (0, hW.q)(hW.X, pM, [HT[1]]) && 0 !== BM(HT[1], "wasm:") ? HT[1] : null;
-        if (null === WT) null !== nT ? (WT = nT[2], zT = nT[4]) : null !== kT && (WT = "");
-        else if (null !== nT) {
-          if (MT = !0, "" !== nT[1]) return {
+    function od(BB) {
+      const jB = /[^\n]+/g,
+        zB = /\b(?!wasm:)((?:blob:)?)(([a-z][\w+.-]*):\/\/[\w.:%~+[\]-]*)((?:[^\s()@?#]*\/)?)([^\s()@?#:]*)/i;
+      let QB = null,
+        nB = "",
+        dB = !1,
+        IB = (0, CQ.l)(CQ.gb, jB, [BB]);
+      for (; null !== IB;) {
+        const NB = (0, CQ.l)(CQ.gb, zB, [IB[0]]),
+          uB = null === NB ? (0, CQ.l)(CQ.gb, md, [IB[0]]) : null,
+          UB = null !== uB && null !== (0, CQ.l)(CQ.gb, yd, [uB[1]]) && 0 !== kd(uB[1], "wasm:") ? uB[1] : null;
+        if (null === QB) null !== NB ? (QB = NB[2], nB = NB[4]) : null !== UB && (QB = "");
+        else if (null !== NB) {
+          if (dB = !0, "" !== NB[1]) return {
             reader: "inline",
-            frame: eM("blob", gT[0])
+            frame: fd("blob", IB[0])
           };
-          if (nT[2] !== WT) {
-            const TT = "moz-extension" === nT[3] || "safari-web-extension" === nT[3];
-            let UT = "";
-            for (let mT = 0; mT < nT[5].length && mT < 20; mT++) UT += nT[5][mT];
+          if (NB[2] !== QB) {
+            const BB = "moz-extension" === NB[3] || "safari-web-extension" === NB[3];
+            let jB = "";
+            for (let zB = 0; zB < NB[5].length && zB < 20; zB++) jB += NB[5][zB];
             return {
-              reader: TT ? nT[3] : nT[2],
-              frame: eM("" === UT ? "-" : UT, gT[0])
+              reader: BB ? NB[3] : NB[2],
+              frame: fd("" === jB ? "-" : jB, IB[0])
             }
           }
-          if (nT[4] !== zT) return {
+          if (NB[4] !== nB) return {
             reader: "inline",
-            frame: eM("inline", gT[0])
+            frame: fd("inline", IB[0])
           }
-        } else if (null !== kT) {
-          const TT = -1 !== BM(gT[0], "userscript") || -1 !== BM(gT[0], ".user.js");
+        } else if (null !== UB) {
+          const BB = -1 !== kd(IB[0], "userscript") || -1 !== kd(IB[0], ".user.js");
           return {
-            reader: TT ? "userscript" : "inline",
-            frame: eM(TT ? "userscript" : "eval", gT[0])
+            reader: BB ? "userscript" : "inline",
+            frame: fd(BB ? "userscript" : "eval", IB[0])
           }
         }
-        gT = (0, hW.q)(hW.X, UT, [TT])
+        IB = (0, CQ.l)(CQ.gb, jB, [BB])
       }
-      const nT = MT ? "own" : "unknown";
+      const NB = dB ? "own" : "unknown";
       return {
-        reader: nT,
-        frame: nT
+        reader: NB,
+        frame: NB
       }
     }
 
-    function JM(TT, UT) {
-      return (0, nM.g)(function(TT) {
-        if ("string" !== typeof TT || 0 === TT.length) return "-";
-        let UT = 2166136261;
-        const mT = TT.length < 4096 ? TT.length : 4096;
-        for (let zT = 0; zT <= mT; zT++) UT ^= zT === mT ? TT.length : (0, hW.q)(hW.hb, TT, [zT]), UT = UT + (UT << 1) + (UT << 4) + (UT << 7) + (UT << 8) + (UT << 24) >>> 0;
-        let WT = "";
-        for (let zT = 28; zT >= 0; zT -= 4) WT += "0123456789abcdef" [UT >>> zT & 15];
-        return WT
-      }(UT), YM(TT).frame)
+    function Hd(BB, jB) {
+      return (0, Ud.f)(function(BB) {
+        if ("string" !== typeof BB || 0 === BB.length) return "-";
+        let jB = 2166136261;
+        const zB = BB.length < 4096 ? BB.length : 4096;
+        for (let nB = 0; nB <= zB; nB++) jB ^= nB === zB ? BB.length : (0, CQ.l)(CQ.ob, BB, [nB]), jB = jB + (jB << 1) + (jB << 4) + (jB << 7) + (jB << 8) + (jB << 24) >>> 0;
+        let QB = "";
+        for (let nB = 28; nB >= 0; nB -= 4) QB += "0123456789abcdef" [jB >>> nB & 15];
+        return QB
+      }(jB), od(BB).frame)
     }
-    const xM = (TT, UT) => TT.includes(UT),
-      dM = TT => {
+    const Dd = (BB, jB) => BB.includes(jB),
+      Fd = BB => {
         try {
-          return TT()
+          return BB()
         } catch {
           return !1
         }
       },
-      wM = -1,
-      tM = TT => {
+      Yd = -1,
+      Vd = BB => {
         try {
-          return TT()
+          return BB()
         } catch {
-          return wM
+          return Yd
         }
       };
 
-    function aM(TT, UT) {
+    function hd(BB, jB) {
       return {
-        probe: (mT, WT, zT) => {
+        probe: (zB, QB, nB) => {
           try {
-            return ((mT, WT, zT) => {
-              switch (mT) {
-                case hU.sc.StackCheck:
-                  return UT.stackCheck() ? 1 : 0;
-                case hU.sc.ConfirmMesh:
-                  return UT.confirmMesh();
-                case hU.sc.IndexPassReplaced:
-                  return UT.indexPassReplaced() ? 1 : 0;
-                case hU.sc.ProductSubChanged:
-                  return UT.productSubChanged() ? 1 : 0;
-                case hU.sc.RenderStatus:
-                  return UT.og();
-                case hU.sc.Held:
-                  return UT.fn();
-                case hU.sc.PlayerKilledSubs:
-                  return UT.playerKilledSubs();
-                case hU.rb: {
-                  const mT = UT.getComplete();
-                  return null === mT ? 0 : (0, hW.q)(hW.z, hW.mb, [mT, new hW.e((0, hW.H)(TT()), WT, zT)]).written
+            return ((zB, QB, nB) => {
+              switch (zB) {
+                case cj.nc.StackCheck:
+                  return jB.stackCheck() ? 1 : 0;
+                case cj.nc.ConfirmMesh:
+                  return jB.confirmMesh();
+                case cj.nc.IndexPassReplaced:
+                  return jB.indexPassReplaced() ? 1 : 0;
+                case cj.nc.ProductSubChanged:
+                  return jB.productSubChanged() ? 1 : 0;
+                case cj.nc.RenderStatus:
+                  return jB.aN();
+                case cj.nc.Held:
+                  return jB.DN();
+                case cj.nc.PlayerKilledSubs:
+                  return jB.playerKilledSubs();
+                case cj.cb: {
+                  const zB = jB.getComplete();
+                  return null === zB ? 0 : (0, CQ.l)(CQ.z, CQ.qb, [zB, new CQ.d((0, CQ.P)(BB()), QB, nB)]).written
                 }
                 default:
                   return 0
               }
-            })(mT, WT, zT)
+            })(zB, QB, nB)
           } catch {
-            return hU.kc
+            return cj.ec
           }
         }
       }
     }
-    class yM {
-      constructor(TT) {
-        this.write = TT, this.flagsWritten = 0, this.written = (0, hW.r)(null)
+    class Xd {
+      constructor(BB) {
+        this.write = BB, this.flagsWritten = 0, this.written = (0, CQ.n)(null)
       }
-      Cl(TT) {
+      vp(BB) {
         let {
-          flags: UT,
-          values: mT
-        } = TT;
-        for (let WT = 0; WT < mT.length; WT++) this.value(mT[WT][0], mT[WT][1]);
-        this.setFlags(UT | hU.e.Ready)
+          flags: jB,
+          values: zB
+        } = BB;
+        for (let QB = 0; QB < zB.length; QB++) this.value(zB[QB][0], zB[QB][1]);
+        this.setFlags(jB | cj.g.Ready)
       }
-      value(TT, UT) {
-        this.written[TT] !== UT && this.write(TT, UT, 0) && (this.written[TT] = UT)
+      value(BB, jB) {
+        this.written[BB] !== jB && this.write(BB, jB, 0) && (this.written[BB] = jB)
       }
-      setFlags(TT) {
-        const UT = TT & ~this.flagsWritten;
-        0 !== UT && this.write(hU.i.Flags, UT, UT) && (this.flagsWritten |= UT)
+      setFlags(BB) {
+        const jB = BB & ~this.flagsWritten;
+        0 !== jB && this.write(cj.h.Flags, jB, jB) && (this.flagsWritten |= jB)
       }
       originStackHit() {
-        return this.write(hU.i.Flags, hU.e.OriginStackHit, hU.e.OriginStackHit)
+        return this.write(cj.h.Flags, cj.g.OriginStackHit, cj.g.OriginStackHit)
       }
     }
-    const XM = {
+    const Zd = {
         InputListeners: 0,
         InputWriter: 1,
         CoreFrame: 2,
@@ -4420,888 +4641,809 @@ export const modules = {
         PerformanceNow: 8,
         DateNow: 9
       },
-      IM = 1e3;
-    let QM;
-    const sM = ["length", 0, 1, 2, 53, 3, "a", "b", void 0, 6, 5, 7, 4, null, "u", "c3RhY2", "cw==", !0, 256, 65537, 100, 30, 93, 58, 1e5, 28, 8, 16, "c", "IkuRy2", 512, "012345", 238, 15, 160, 1023, 63, 128, 12, 255, 241, 112, 32, 24, 18, 10, 19, 64, 9, 65535, !1, "stack", "name", 31, 190, "e", 246, 250, 61, 55296, 56319, 56320, 198, 65536, "d", 135, 57343, 200, 192, 224, 240, 139, 45, "Invalid byte index", 115, 199, 116, "Invalid continuation byte", 229, 179, 42, 147, 64512, 67, "Lone s", "urroga", "te U+", " is no", "t a sc", "alar v", "alue", 4294967168, 4294965248, 4294901760, 4292870144, 183, 236, 123, 105, 2048, 248, 1114111, "Invalid UTF-8 detected", 35, "3.0.0", "undefi", "ned", 237, 180, "No redacted path provided", "--version", "-v", " (stan", "dalone", ")", " (loca", "l)", "g", 210, "k", "j", 122, "r", 33554432, 67108864, 156, 106, 77, 140, "string", "t", "q", "functi", "on", 151, "protot", "ype", "decode", "2", "I=", "eTR5bm", "v", "C", "Pd", "s", "chEven", "dispat", "now", 143, "confir", "mMesh", "produc", "n", "player", "Killed", "number", "toString", "get", "f", "i", 40, 148, "x", "None", 11, 38, 13, "En", "tOverw", "ritten", "plete", "p"];
+      Ad = 1e3;
+    let Td;
+    const Pd = [1, "length", 0, !1, 2, void 0, null, 3, "r", "c3RhY2", "cw==", "g", 6, 81, "d", 214, "e", "a", 191, 1e5, !0, 20, "b", "c", 151, "h", 5, 205, 234, "stack", "name", 4, 73, 161, 121, 8, 10, "T", 63, 90, 220, "string", 39, "N", 33554432, 67108864, 113, 212, 256, 65537, 100, 30, "v", "__GLOB", "AL__HE", "LPERS_", "_", "n", 69, 167, 47, 138, 137, 130, 193, "l", "functi", "on", 79, "protot", "ype", "decode", "I=", "p", "eTR5bm", "o", "q", 189, "t", "H", "ud", "s", "chEven", "dispat", "now", "confir", "mMesh", 7, "produc", "player", "Killed", "number", 65535, "toString", "get", "f", "k", "i", 80, "None", 61, 11, 37, "En", "tOverw", "ritten", "plete"];
 
-    function FM() {}
+    function Wd() {}
 
-    function PM() {
-      PM = function() {}
+    function ed() {
+      ed = function() {}
     }
-    QM = function(TT) {
-      let UT = arguments[sM[0]] > sM[2] && arguments[sM[2]] !== sM[8] ? arguments[sM[2]] : () => ("iyWaj2" + sM[159] in FM && function() {
-          var TT, UT = function(UT, mT) {
-            var WT, zT = [];
-            return PM(WT = UT.length, UT.sort(((TT, UT) => TT - UT)), TT(zT, [], sM[1], WT, UT, mT)), zT
-          };
-          PM(TT = function(...UT) {
-            if (PM(UT[sM[0]] = sM[9], UT[sM[9]] = sM[13]), !(UT[sM[10]] < sM[1])) {
-              if (UT[sM[10]] === sM[1]) return UT[sM[1]].push(UT[sM[2]]);
-              for (UT[sM[11]] = UT[sM[3]]; UT[sM[11]] < UT[sM[5]] && !(UT[sM[12]][UT[sM[11]]] > UT[sM[10]]); UT[sM[11]]++) UT[sM[11]] > UT[sM[3]] && UT[sM[12]][UT[sM[11]]] === UT[sM[12]][UT[sM[11]] - sM[2]] || PM(UT[sM[9]] = Array.from(UT[sM[2]]), UT[sM[9]].push(UT[sM[12]][UT[sM[11]]]), TT(UT[sM[1]], UT[sM[9]], UT[sM[11]] + sM[2], UT[sM[5]], UT[sM[12]], UT[sM[10]] - UT[sM[12]][UT[sM[11]]]))
+    Td = function(BB) {
+      let jB = arguments[Pd[1]] > Pd[0] && arguments[Pd[0]] !== Pd[5] ? arguments[Pd[0]] : (...BB) => (BB[Pd[1]] = Pd[2], "zZ7mqS" in Wd && function(...BB) {
+          function jB(...BB) {
+            BB[Pd[1]] = Pd[0];
+            const jB = {};
+            for (let zB of BB[Pd[2]].replace(/[^w]/g, "").toLowerCase()) jB[zB] = jB[zB] + Pd[0] || Pd[0];
+            return jB
+          }
+
+          function zB(...BB) {
+            BB[Pd[1]] = Pd[4];
+            const jB = buildCharMap(BB[Pd[2]]),
+              zB = buildCharMap(BB[Pd[0]]);
+            for (let QB in jB)
+              if (jB[QB] !== zB[QB]) return Pd[3];
+            return Object.keys(jB).length !== Object.keys(zB).length ? Pd[3] : Pd[20]
+          }
+
+          function QB(...BB) {
+            BB[Pd[1]] = Pd[0];
+            return nB(BB[Pd[2]]) !== 1 / 0
+          }
+
+          function nB(...BB) {
+            if (BB[Pd[1]] = Pd[0], !BB[Pd[2]]) return -Pd[0];
+            const jB = nB(BB[Pd[2]].left),
+              zB = nB(BB[Pd[2]].right),
+              QB = Math.abs(jB - zB);
+            if (jB === 1 / 0 || zB === 1 / 0 || QB > Pd[0]) return 1 / 0;
+            return Math.max(jB, zB) + Pd[0]
+          }
+          BB[Pd[1]] = Pd[2], window[Pd[53] + Pd[54] + Pd[55] + Pd[56]] = {
+            buildCharacterMap: jB,
+            isAnagrams: zB,
+            isBalanced: QB,
+            getHeightBalanced: nB
+          }
+        }(), Pd[6]),
+        zB = arguments[Pd[1]] > Pd[4] && arguments[Pd[4]] !== Pd[5] ? arguments[Pd[4]] : Pd[6],
+        QB = arguments[Pd[1]] > Pd[7] && arguments[Pd[7]] !== Pd[5] ? arguments[Pd[7]] : "";
+      const nB = window,
+        dB = (Pd[2], CQ[Pd[8]])("RXJyb3" + Pd[72]),
+        IB = (Pd[2], CQ[Pd[8]])(Pd[9] + "s="),
+        NB = (Pd[2], CQ[Pd[8]])("Y2FwdHVyZVN0YWNrVHJhY2U="),
+        UB = (Pd[2], CQ[Pd[8]])(Pd[9] + "tUcmFjZUxpbWl0"),
+        aB = (Pd[2], CQ[Pd[8]])("bmF0aXZl"),
+        pB = [(Pd[2], CQ[Pd[8]])("bWFpbi5qcw=="), (Pd[2], CQ[Pd[8]])("aW5kZXguanM="), (Pd[2], CQ[Pd[8]])("dXNlcnNjcmlwdA=="), (Pd[2], CQ[Pd[8]])("Y29udGVudC5q" + Pd[10]), (Pd[2], CQ[Pd[8]])("b3B0aW9ucy5q" + Pd[10]), (Pd[2], CQ[Pd[8]])("cG9wdXAuanM="), (Pd[2], CQ[Pd[8]])("LnVzZXIuanM="), (Pd[2], CQ[Pd[8]])("Y2hyb21lLWV4dGVuc2lvbg==")],
+        rB = (...BB) => {
+          BB[Pd[1]] = Pd[0], "f3GL2Y" in Wd && function(...BB) {
+            BB[Pd[1]] = Pd[2]
+          }();
+          const jB = nB[dB],
+            zB = jB;
+          if (zB[UB] < Pd[19]) {
+            function mB(...BB) {
+              ed(BB[Pd[1]] = Pd[2], BB[-Pd[18]] = function(...BB) {
+                for (ed(BB[Pd[1]] = Pd[0], BB[Pd[17]] = Pd[2], BB[Pd[4]] = {}, BB[-Pd[13]] = Pd[2], BB[Pd[14]] = Pd[2], BB[Pd[16]] = Pd[2], BB[Pd[12]] = BB[Pd[2]].length), BB[Pd[11]] = Pd[2]; BB[Pd[11]] < BB[Pd[12]]; BB[Pd[11]]++) {
+                  for (ed(BB[Pd[4]] = {}, BB[-Pd[13]] = Pd[2], BB[Pd[14]] = Pd[0]), BB[-Pd[15]] = BB[Pd[11]] + Pd[0]; BB[-Pd[15]] < BB[Pd[12]]; BB[-Pd[15]]++) BB[Pd[2]][BB[Pd[11]]].x !== BB[Pd[2]][BB[-Pd[15]]].x || BB[Pd[2]][BB[Pd[11]]].y !== BB[Pd[2]][BB[-Pd[15]]].y ? (BB[Pd[2]][BB[Pd[11]]].y === BB[Pd[2]][BB[-Pd[15]]].y ? BB[Pd[16]] = Number.MAX_SAFE_INTEGER : BB[Pd[16]] = (BB[Pd[2]][BB[Pd[11]]].x - BB[Pd[2]][BB[-Pd[15]]].x) / (BB[Pd[2]][BB[Pd[11]]].y - BB[Pd[2]][BB[-Pd[15]]].y), BB[Pd[4]][BB[Pd[16]]] || (BB[Pd[4]][BB[Pd[16]]] = Pd[2]), ed(BB[Pd[4]][BB[Pd[16]]]++, BB[-Pd[13]] = Math.max(BB[-Pd[13]], BB[Pd[4]][BB[Pd[16]]]))) : BB[Pd[14]]++;
+                  ed(BB[-Pd[13]] += BB[Pd[14]], BB[Pd[17]] = Math.max(BB[Pd[17]], BB[-Pd[13]]))
+                }
+                return BB[Pd[17]]
+              }, console.log(BB[-Pd[18]]))
             }
-          }, console.log(UT))
-        }(), sM[13]),
-        mT = arguments[sM[0]] > sM[3] && arguments[sM[3]] !== sM[8] ? arguments[sM[3]] : sM[13],
-        WT = arguments[sM[0]] > sM[5] && arguments[sM[5]] !== sM[8] ? arguments[sM[5]] : "";
-      const zT = window,
-        MT = (0, hW[sM[14]])("RXJyb3" + sM[139]),
-        gT = (0, hW[sM[14]])(sM[15] + "s="),
-        nT = (0, hW[sM[14]])("Y2FwdHVyZVN0YWNrVHJhY2U="),
-        kT = (0, hW[sM[14]])(sM[15] + "tUcmFjZUxpbWl0"),
-        jT = (0, hW[sM[14]])("bmF0aXZl"),
-        lT = [(0, hW[sM[14]])("bWFpbi5qcw=="), (0, hW[sM[14]])("aW5kZXguanM="), (0, hW[sM[14]])("dXNlcnNjcmlwdA=="), (0, hW[sM[14]])("Y29udGVudC5q" + sM[16]), (0, hW[sM[14]])("b3B0aW9ucy5q" + sM[16]), (0, hW[sM[14]])("cG9wdXAuanM="), (0, hW[sM[14]])("LnVzZXIuanM="), (0, hW[sM[14]])("Y2hyb21lLWV4dGVuc2lvbg==")],
-        LT = (...TT) => {
-          TT[sM[0]] = sM[2];
-          const UT = zT[MT],
-            mT = UT;
-          if (mT[kT] < sM[24]) {
-            function ZT(...TT) {
-              TT[sM[0]] = sM[1];
-              const UT = require("big-integer");
-              PM(TT[-sM[23]] = class {
-                static randomPrime(...TT) {
-                  TT[sM[0]] = sM[2];
-                  const mT = UT.one.shiftLeft(TT[sM[1]] - sM[2]),
-                    WT = UT.one.shiftLeft(TT[sM[1]]).prev();
-                  for (; sM[17];) {
-                    let TT = UT.randBetween(mT, WT);
-                    if (TT.isProbablePrime(sM[18])) return TT
+            "tHOwnq" in Wd && mB(), zB[UB] = Pd[19]
+          }
+          const QB = "string" === typeof(rB = (new jB)[IB]) ? rB : `${rB}`,
+            uB = {},
+            aB = zB[NB];
+          var rB;
+          if (typeof aB === Pd[66] + Pd[67]) {
+            function yB(...BB) {
+              BB[Pd[1]] = Pd[2];
+              const jB = require("big-integer");
+              ed(BB[Pd[17]] = class {
+                static randomPrime(...BB) {
+                  BB[Pd[1]] = Pd[0];
+                  const zB = jB.one.shiftLeft(BB[Pd[2]] - Pd[0]),
+                    QB = jB.one.shiftLeft(BB[Pd[2]]).prev();
+                  for (; Pd[20];) {
+                    let BB = jB.randBetween(zB, QB);
+                    if (BB.isProbablePrime(Pd[48])) return BB
                   }
                 }
-                static generate(TT) {
-                  const mT = UT(sM[19]);
-                  let WT, zT, MT;
+                static generate(...BB) {
+                  BB[Pd[1]] = Pd[0];
+                  const zB = jB(Pd[49]);
+                  let QB, nB;
+                  BB[Pd[0]] = Pd[5];
                   do {
-                    PM(WT = this.randomPrime(TT / sM[3]), zT = this.randomPrime(TT / sM[3]), MT = UT.lcm(WT.prev(), zT.prev()))
-                  } while (UT.gcd(mT, MT).notEquals(sM[2]) || WT.minus(zT).abs().shiftRight(TT / sM[3] - sM[20]).isZero());
+                    ed(QB = this.randomPrime(BB[Pd[2]] / Pd[4]), nB = this.randomPrime(BB[Pd[2]] / Pd[4]), BB[Pd[0]] = jB.lcm(QB.prev(), nB.prev()))
+                  } while (jB.gcd(zB, BB[Pd[0]]).notEquals(Pd[0]) || QB.minus(nB).abs().shiftRight(BB[Pd[2]] / Pd[4] - Pd[50]).isZero());
                   return {
-                    e: mT,
-                    n: WT.multiply(zT),
-                    d: mT.modInv(MT)
+                    e: zB,
+                    n: QB.multiply(nB),
+                    d: zB.modInv(BB[Pd[0]])
                   }
                 }
-                static encrypt(...TT) {
-                  return TT[sM[0]] = sM[5], UT(TT[sM[1]]).modPow(TT[sM[3]], TT[sM[2]])
+                static encrypt(...BB) {
+                  return BB[Pd[1]] = Pd[7], jB(BB[Pd[2]]).modPow(BB[Pd[4]], BB[Pd[0]])
                 }
-                static decrypt(...TT) {
-                  return TT[sM[0]] = sM[5], UT(TT[sM[1]]).modPow(TT[sM[2]], TT[sM[3]])
+                static decrypt(BB, zB, QB) {
+                  return jB(BB).modPow(zB, QB)
                 }
-                static encode(...TT) {
-                  TT[sM[0]] = sM[2];
-                  const mT = TT[sM[1]].split("").map((TT => TT.charCodeAt())).join("");
-                  return UT(mT)
+                static encode(...BB) {
+                  BB[Pd[1]] = Pd[0];
+                  const zB = BB[Pd[2]].split("").map((BB => BB.charCodeAt())).join("");
+                  return jB(zB)
                 }
-                static decode(...TT) {
-                  TT[sM[0]] = sM[2];
-                  const UT = TT[sM[1]].toString();
-                  TT[-sM[22]] = "";
-                  for (let mT = sM[1]; mT < UT.length; mT += sM[3]) {
-                    let WT = Number(UT.substr(mT, sM[3]));
-                    WT <= sM[21] ? (TT[-sM[22]] += String.fromCharCode(Number(UT.substr(mT, sM[5]))), mT++) : TT[-sM[22]] += String.fromCharCode(WT)
+                static decode(...BB) {
+                  BB[Pd[1]] = Pd[0];
+                  const jB = BB[Pd[2]].toString();
+                  BB[Pd[0]] = "";
+                  for (let zB = Pd[2]; zB < jB.length; zB += Pd[4]) {
+                    let QB = Number(jB.substr(zB, Pd[4]));
+                    QB <= Pd[51] ? (BB[Pd[0]] += String.fromCharCode(Number(jB.substr(zB, Pd[7]))), zB++) : BB[Pd[0]] += String.fromCharCode(QB)
                   }
-                  return TT[-sM[22]]
+                  return BB[Pd[0]]
                 }
-              }, module.exports = TT[-sM[23]])
+              }, module.exports = BB[Pd[17]])
             }
-            "zl7EUE" in FM && ZT(), mT[kT] = sM[24]
+            "qy1Soh9" in Wd && yB(), (Pd[2], CQ[Pd[65]])(aB, jB, [uB])
           }
-          const WT = "string" === typeof(LT = (new UT)[gT]) ? LT : `${LT}`,
-            HT = {},
-            jT = mT[nT];
-          var LT;
-          if (typeof jT === sM[132] + sM[133]) {
-            function cT(...TT) {
-              PM(TT[sM[0]] = sM[1], TT[sM[6]] = function(...TT) {
-                function UT(...TT) {
-                  return TT[sM[0]] = sM[3], gT(zT(nT(TT[sM[1]]), nT(TT[sM[2]])))
+          const sB = uB[IB],
+            JB = BB[Pd[2]] ? pB[Pd[1]] : pB[Pd[1]] - Pd[0];
+          for (let kB = Pd[2]; kB < JB; kB++) {
+            function GB(...BB) {
+              ed(BB[Pd[1]] = Pd[2], BB[Pd[17]] = function(...BB) {
+                for (ed(BB[Pd[1]] = Pd[0], BB[-Pd[27]] = Pd[2], BB[Pd[22]] = {}, BB[Pd[23]] = Pd[2], BB[-Pd[24]] = Pd[2], BB[Pd[26]] = Pd[2], BB[Pd[12]] = BB[Pd[2]].length), BB[Pd[21]] = Pd[2]; BB[Pd[21]] < BB[Pd[12]]; BB[Pd[21]]++) {
+                  for (ed(BB[Pd[22]] = {}, BB[Pd[23]] = Pd[2], BB[-Pd[24]] = Pd[0]), BB[Pd[25]] = BB[Pd[21]] + Pd[0]; BB[Pd[25]] < BB[Pd[12]]; BB[Pd[25]]++) BB[Pd[2]][BB[Pd[21]]].x !== BB[Pd[2]][BB[Pd[25]]].x || BB[Pd[2]][BB[Pd[21]]].y !== BB[Pd[2]][BB[Pd[25]]].y ? (BB[Pd[2]][BB[Pd[21]]].y === BB[Pd[2]][BB[Pd[25]]].y ? BB[Pd[26]] = Number.MAX_SAFE_INTEGER : BB[Pd[26]] = (BB[Pd[2]][BB[Pd[21]]].x - BB[Pd[2]][BB[Pd[25]]].x) / (BB[Pd[2]][BB[Pd[21]]].y - BB[Pd[2]][BB[Pd[25]]].y), BB[Pd[22]][BB[Pd[26]]] || (BB[Pd[22]][BB[Pd[26]]] = Pd[2]), ed(BB[Pd[22]][BB[Pd[26]]]++, BB[Pd[23]] = Math.max(BB[Pd[23]], BB[Pd[22]][BB[Pd[26]]]))) : BB[-Pd[24]]++;
+                  ed(BB[Pd[23]] += BB[-Pd[24]], BB[-Pd[27]] = Math.max(BB[-Pd[27]], BB[Pd[23]]))
                 }
-
-                function WT(...TT) {
-                  return TT[sM[0]] = sM[5],
-                    function(...TT) {
-                      var UT, mT, WT, zT;
-                      for (PM(TT[sM[0]] = sM[3], TT[sM[6]] = TT[sM[2]].length, TT[sM[5]] = Array()), TT[sM[28]] = Array(Math.ceil(TT[sM[1]].length / sM[3])), UT = sM[1]; UT < TT[sM[28]].length; UT++) TT[sM[28]][UT] = TT[sM[1]].charCodeAt(UT * sM[3]) << sM[26] | TT[sM[1]].charCodeAt(UT * sM[3] + sM[2]);
-                      for (; TT[sM[28]].length > sM[1];) {
-                        for (PM(zT = Array(), WT = sM[1]), UT = sM[1]; UT < TT[sM[28]].length; UT++) PM(WT = (WT << sM[27]) + TT[sM[28]][UT], mT = Math.floor(WT / TT[sM[6]]), WT -= mT * TT[sM[6]]), (zT.length > sM[1] || mT > sM[1]) && (zT[zT.length] = mT);
-                        PM(TT[sM[5]][TT[sM[5]].length] = WT, TT[sM[28]] = zT)
-                      }
-                      for (TT[sM[10]] = "", UT = TT[sM[5]].length - sM[2]; UT >= sM[1]; UT--) TT[sM[10]] += TT[sM[2]].charAt(TT[sM[5]][UT]);
-                      for (TT[-sM[34]] = Math.ceil(TT[sM[1]].length * sM[26] / (Math.log(TT[sM[2]].length) / Math.log(sM[3]))), UT = TT[sM[10]].length; UT < TT[-sM[34]]; UT++) TT[sM[10]] = TT[sM[2]][sM[1]] + TT[sM[10]];
-                      return TT[sM[10]]
-                    }(zT(nT(TT[sM[1]]), nT(TT[sM[2]])), TT[sM[3]])
-                }
-
-                function zT(...TT) {
-                  PM(TT[sM[0]] = sM[3], TT[-sM[25]] = HT(TT[sM[1]])), TT[-sM[25]].length > sM[27] && (TT[-sM[25]] = fT(TT[-sM[25]], TT[sM[1]].length * sM[26]));
-                  var UT = Array(sM[27]),
-                    mT = Array(sM[27]);
-                  for (TT[sM[7]] = sM[1]; TT[sM[7]] < sM[27]; TT[sM[7]]++) PM(UT[TT[sM[7]]] = 909522486 ^ TT[-sM[25]][TT[sM[7]]], mT[TT[sM[7]]] = 1549556828 ^ TT[-sM[25]][TT[sM[7]]]);
-                  return TT[sM[28]] = fT(UT.concat(HT(TT[sM[2]])), sM[30] + TT[sM[2]].length * sM[26]), kT(fT(mT.concat(TT[sM[28]]), function(...TT) {
-                    if (TT[sM[0]] = sM[5], TT[sM[1]] === sM[29]) return TT[sM[2]] + TT[sM[3]]
-                  }(sM[29], sM[30], sM[18])))
-                }
-
-                function MT(...UT) {
-                  UT[sM[0]] = sM[2];
-                  try {
-                    TT[sM[28]]
-                  } catch (mT) {
-                    TT[sM[28]] = sM[1]
-                  }
-                  for (PM(UT[sM[6]] = TT[sM[28]] ? sM[31] + "6789ABCDEF" : sM[31] + "6789abcdef", UT[sM[3]] = "", UT[sM[28]] = sM[8]), UT[sM[32]] = sM[1]; UT[sM[32]] < UT[sM[1]].length; UT[sM[32]]++) PM(UT[sM[28]] = UT[sM[1]].charCodeAt(UT[sM[32]]), UT[sM[3]] += UT[sM[6]].charAt(UT[sM[28]] >>> sM[12] & sM[33]) + UT[sM[6]].charAt(UT[sM[28]] & sM[33]));
-                  return UT[sM[3]]
-                }
-
-                function gT(...UT) {
-                  UT[sM[0]] = sM[2];
-                  try {
-                    TT[sM[2]]
-                  } catch (mT) {
-                    TT[sM[2]] = ""
-                  }
-                  for (PM(UT[sM[2]] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", UT[sM[3]] = "", UT[sM[5]] = UT[sM[1]].length), UT[sM[12]] = sM[1]; UT[sM[12]] < UT[sM[5]]; UT[sM[12]] += sM[5])
-                    for (UT[sM[10]] = UT[sM[1]].charCodeAt(UT[sM[12]]) << sM[27] | (UT[sM[12]] + sM[2] < UT[sM[5]] ? UT[sM[1]].charCodeAt(UT[sM[12]] + sM[2]) << sM[26] : sM[1]) | (UT[sM[12]] + sM[3] < UT[sM[5]] ? UT[sM[1]].charCodeAt(UT[sM[12]] + sM[3]) : sM[1]), UT[sM[9]] = sM[1]; UT[sM[9]] < sM[12]; UT[sM[9]]++) UT[sM[12]] * sM[26] + UT[sM[9]] * sM[9] > UT[sM[1]].length * sM[26] ? UT[sM[3]] += TT[sM[2]] : UT[sM[3]] += UT[sM[2]].charAt(UT[sM[10]] >>> sM[9] * (sM[5] - UT[sM[9]]) & sM[36]);
-                  return UT[sM[3]]
-                }
-
-                function nT(...TT) {
-                  var UT, mT;
-                  for (PM(TT[sM[0]] = sM[2], TT[sM[2]] = "", TT[sM[7]] = -sM[2]); ++TT[sM[7]] < TT[sM[1]].length;) PM(UT = TT[sM[1]].charCodeAt(TT[sM[7]]), mT = TT[sM[7]] + sM[2] < TT[sM[1]].length ? TT[sM[1]].charCodeAt(TT[sM[7]] + sM[2]) : sM[1]), sM[59] <= UT && UT <= sM[60] && sM[61] <= mT && mT <= sM[66] && PM(UT = sM[63] + ((UT & sM[35]) << sM[45]) + (mT & sM[35]), TT[sM[7]]++), UT <= 127 ? TT[sM[2]] += String.fromCharCode(UT) : UT <= 2047 ? TT[sM[2]] += String.fromCharCode(sM[68] | UT >>> sM[9] & sM[53], sM[37] | UT & sM[36]) : UT <= sM[49] ? TT[sM[2]] += String.fromCharCode(sM[69] | UT >>> sM[38] & sM[33], sM[37] | UT >>> sM[9] & sM[36], sM[37] | UT & sM[36]) : UT <= 2097151 && (TT[sM[2]] += String.fromCharCode(sM[70] | UT >>> sM[44] & sM[11], sM[37] | UT >>> sM[38] & sM[36], sM[37] | UT >>> sM[9] & sM[36], sM[37] | UT & sM[36]));
-                  return TT[sM[2]]
-                }
-
-                function HT(...TT) {
-                  for (PM(TT[sM[0]] = sM[2], TT[sM[2]] = Array(TT[sM[1]].length >> sM[3])), TT[sM[7]] = sM[1]; TT[sM[7]] < TT[sM[2]].length; TT[sM[7]]++) TT[sM[2]][TT[sM[7]]] = sM[1];
-                  for (TT[sM[7]] = sM[1]; TT[sM[7]] < TT[sM[1]].length * sM[26]; TT[sM[7]] += sM[26]) TT[sM[2]][TT[sM[7]] >> sM[10]] |= (TT[sM[1]].charCodeAt(TT[sM[7]] / sM[26]) & sM[39]) << sM[43] - TT[sM[7]] % sM[42];
-                  return TT[sM[2]]
-                }
-
-                function kT(...TT) {
-                  for (PM(TT[sM[0]] = sM[2], TT[sM[6]] = ""), TT[sM[41]] = sM[1]; TT[sM[41]] < TT[sM[1]].length * sM[42]; TT[sM[41]] += sM[26]) TT[sM[6]] += String.fromCharCode(TT[sM[1]][TT[sM[41]] >> sM[10]] >>> sM[43] - TT[sM[41]] % sM[42] & sM[39]);
-                  return TT[sM[6]]
-                }
-
-                function jT(...TT) {
-                  return TT[sM[0]] = sM[3], TT[sM[1]] >>> TT[sM[2]] | TT[sM[1]] << sM[42] - TT[sM[2]]
-                }
-
-                function lT(...TT) {
-                  return TT[sM[0]] = sM[3], TT[sM[1]] >>> TT[sM[2]]
-                }
-
-                function LT(...TT) {
-                  return TT[sM[0]] = sM[5], TT[sM[1]] & TT[sM[2]] ^ ~TT[sM[1]] & TT[sM[3]]
-                }
-
-                function pT(...TT) {
-                  return TT[sM[0]] = sM[5], TT[sM[1]] & TT[sM[2]] ^ TT[sM[1]] & TT[sM[3]] ^ TT[sM[2]] & TT[sM[3]]
-                }
-
-                function BT(...TT) {
-                  return TT[sM[0]] = sM[2], jT(TT[sM[1]], sM[3]) ^ jT(TT[sM[1]], sM[166]) ^ jT(TT[sM[1]], 22)
-                }
-
-                function ZT(...TT) {
-                  return TT[sM[0]] = sM[2], jT(TT[sM[1]], sM[9]) ^ jT(TT[sM[1]], sM[164]) ^ jT(TT[sM[1]], 25)
-                }
-
-                function cT(...TT) {
-                  return TT[sM[0]] = sM[2], jT(TT[sM[1]], sM[11]) ^ jT(TT[sM[1]], sM[44]) ^ lT(TT[sM[1]], sM[5])
-                }
-
-                function vT(...TT) {
-                  return TT[sM[0]] = sM[2], jT(TT[sM[1]], 17) ^ jT(TT[sM[1]], sM[46]) ^ lT(TT[sM[1]], sM[45])
-                }
-
-                function fT(...UT) {
-                  var mT, WT, zT, MT, gT, nT, HT, kT, jT, lT, fT, iT;
-                  for (PM(UT[sM[0]] = sM[3], UT[sM[3]] = new Array(1779033703, -1150833019, 1013904242, -1521486534, 1359893119, -1694144372, 528734635, 1541459225), UT[sM[5]] = new Array(sM[47])), PM(UT[sM[1]][UT[sM[2]] >> sM[10]] |= sM[37] << sM[43] - UT[sM[2]] % sM[42], UT[sM[1]][(UT[sM[2]] + sM[47] >> sM[48] << sM[12]) + sM[33]] = UT[sM[2]]), jT = sM[1]; jT < UT[sM[1]].length; jT += sM[27]) {
-                    for (PM(mT = UT[sM[3]][sM[1]], WT = UT[sM[3]][sM[2]], zT = UT[sM[3]][sM[3]], MT = UT[sM[3]][sM[5]], gT = UT[sM[3]][sM[12]], nT = UT[sM[3]][sM[10]], HT = UT[sM[3]][sM[9]], kT = UT[sM[3]][sM[11]]), lT = sM[1]; lT < sM[47]; lT++) PM(UT[sM[5]][lT] = lT < sM[27] ? UT[sM[1]][lT + jT] : qT(qT(qT(vT(UT[sM[5]][lT - sM[3]]), UT[sM[5]][lT - sM[11]]), cT(UT[sM[5]][lT - sM[33]])), UT[sM[5]][lT - sM[27]]), fT = qT(qT(qT(qT(kT, ZT(gT)), LT(gT, nT, HT)), TT[-sM[48]][lT]), UT[sM[5]][lT]), iT = qT(BT(mT), pT(mT, WT, zT)), kT = HT, HT = nT, nT = gT, gT = qT(MT, fT), MT = zT, zT = WT, WT = mT, mT = qT(fT, iT));
-                    PM(UT[sM[3]][sM[1]] = qT(mT, UT[sM[3]][sM[1]]), UT[sM[3]][sM[2]] = qT(WT, UT[sM[3]][sM[2]]), UT[sM[3]][sM[3]] = qT(zT, UT[sM[3]][sM[3]]), UT[sM[3]][sM[5]] = qT(MT, UT[sM[3]][sM[5]]), UT[sM[3]][sM[12]] = qT(gT, UT[sM[3]][sM[12]]), UT[sM[3]][sM[10]] = qT(nT, UT[sM[3]][sM[10]]), UT[sM[3]][sM[9]] = qT(HT, UT[sM[3]][sM[9]]), UT[sM[3]][sM[11]] = qT(kT, UT[sM[3]][sM[11]]))
-                  }
-                  return UT[sM[3]]
-                }
-
-                function qT(...TT) {
-                  return PM(TT[sM[0]] = sM[3], TT[sM[6]] = (TT[sM[1]] & sM[49]) + (TT[sM[2]] & sM[49]), TT[sM[7]] = (TT[sM[1]] >> sM[27]) + (TT[sM[2]] >> sM[27]) + (TT[sM[6]] >> sM[27])), TT[sM[7]] << sM[27] | TT[sM[6]] & sM[49]
-                }
-                return PM(TT[sM[0]] = sM[1], TT[sM[28]] = sM[1], TT[sM[2]] = ""), TT[-sM[48]] = new Array(1116352408, 1899447441, -1245643825, -373957723, 961987163, 1508970993, -1841331548, -1424204075, -670586216, 310598401, 607225278, 1426881987, 1925078388, -2132889090, -1680079193, -1046744716, -459576895, -272742522, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, -1740746414, -1473132947, -1341970488, -1084653625, -958395405, -710438585, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, -2117940946, -1838011259, -1564481375, -1474664885, -1035236496, -949202525, -778901479, -694614492, -200395387, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, -2067236844, -1933114872, -1866530822, -1538233109, -1090935817, -965641998), {
-                  hex: function(...TT) {
-                    return TT[sM[0]] = sM[2], MT(function(...TT) {
-                      return TT[sM[0]] = sM[2], kT(fT(HT(TT[sM[1]]), TT[sM[1]].length * sM[26]))
-                    }(nT(TT[sM[1]])))
-                  },
-                  b64: UT,
-                  any: WT,
-                  hex_hmac: function(...TT) {
-                    return TT[sM[0]] = sM[3], MT(zT(nT(TT[sM[1]]), nT(TT[sM[2]])))
-                  },
-                  b64_hmac: UT,
-                  any_hmac: WT
-                }
-              }(), console.log(TT[sM[6]]))
+                return BB[-Pd[27]]
+              }, console.log(BB[Pd[17]]))
             }
-            "i0YAsF" + sM[158] in FM && cT(), (0, hW[sM[131]])(jT, UT, [HT])
-          }
-          const pT = HT[gT],
-            BT = TT[sM[1]] ? lT[sM[0]] : lT[sM[0]] - sM[2];
-          for (let vT = sM[1]; vT < BT; vT++) {
-            if (xM(WT, lT[vT])) {
-              return "ewDu6w" in FM && (module.exports = async (TT = () => {
-                throw new Error(sM[109])
-              }) => {
-                const UT = new Set(process.argv.slice(sM[3]));
-                if (!UT.has(sM[110])) {
-                  if (UT.size !== sM[2]) return sM[50];
-                  if (!UT.has(sM[111])) return sM[50]
-                }
-                return await (async () => void 0 === await TT() ? sM[115] + sM[116] : "")(), sM[17]
-              }), {
-                [sM[51]]: WT,
-                [sM[52]]: lT[vT]
+            if ("LIEPgT" in Wd && GB(), Dd(QB, pB[kB])) return {
+              [Pd[29]]: QB,
+              [Pd[30]]: pB[kB]
+            };
+            if (typeof sB === Pd[41] && Dd(sB, pB[kB])) {
+              function LB(...BB) {
+                var jB;
+                ed(BB[Pd[1]] = Pd[2], jB = function(BB) {
+                  ed(this.Ep = BB, this.length = Pd[2], this.map = {}, this.head = Pd[6], this.tail = Pd[6])
+                }, jB.prototype.get = function(...BB) {
+                  var jB;
+                  return ed(BB[Pd[1]] = Pd[0], jB = this.map[BB[Pd[2]]]), jB ? (this.remove(jB), this.insert(jB.key, jB.val), jB.val) : -Pd[0]
+                }, jB.prototype.put = function(...BB) {
+                  ed(BB[Pd[1]] = Pd[4], this.map[BB[Pd[2]]] ? (this.remove(this.map[BB[Pd[2]]]), this.insert(BB[Pd[2]], BB[Pd[0]])) : this.length === this.Ep ? (this.remove(this.head), this.insert(BB[Pd[2]], BB[Pd[0]])) : (this.insert(BB[Pd[2]], BB[Pd[0]]), this.length++))
+                }, jB.prototype.remove = function(...BB) {
+                  ed(BB[Pd[1]] = Pd[0], BB[Pd[17]] = BB[Pd[2]].prev, BB[Pd[28]] = BB[Pd[2]].next), BB[Pd[28]] && (BB[Pd[28]].prev = BB[Pd[17]]), BB[Pd[17]] && (BB[Pd[17]].next = BB[Pd[28]]), this.head === BB[Pd[2]] && (this.head = BB[Pd[28]]), this.tail === BB[Pd[2]] && (this.tail = BB[Pd[17]]), delete this.map[BB[Pd[2]].key]
+                }, jB.prototype.insert = function(...BB) {
+                  ed(BB[Pd[1]] = Pd[4], BB[Pd[4]] = new List(BB[Pd[2]], BB[Pd[0]]), this.tail ? (this.tail.next = BB[Pd[4]], BB[Pd[4]].prev = this.tail, this.tail = BB[Pd[4]]) : (this.tail = BB[Pd[4]], this.head = BB[Pd[4]]), this.map[BB[Pd[2]]] = BB[Pd[4]])
+                }, console.log(jB))
+              }
+              return "Bn3RNh" in Wd && LB(), {
+                [Pd[29]]: sB,
+                [Pd[30]]: pB[kB]
               }
             }
-            if (typeof pT === sM[129] && xM(pT, lT[vT])) return {
-              [sM[51]]: pT,
-              [sM[52]]: lT[vT]
-            }
           }
-          return sM[13]
+          return Pd[6]
         },
-        pT = (...TT) => (TT[sM[0]] = sM[2], LT(TT[sM[1]]) !== sM[13]);
-      let BT = sM[13],
-        ZT = sM[13],
-        cT = sM[13],
-        vT = sM[13];
-      const fT = TT => {
+        sB = (...BB) => (BB[Pd[1]] = Pd[0], "WJlU8q1" in Wd && function(...BB) {
+          ed(BB[Pd[1]] = Pd[2], BB[Pd[14]] = function(...jB) {
+            return ed(jB[Pd[1]] = Pd[7], jB[Pd[17]] = {}), jB[Pd[4]].length !== jB[Pd[2]].length + jB[Pd[0]].length ? Pd[3] : BB[Pd[0]](jB[Pd[2]], jB[Pd[0]], jB[Pd[4]], Pd[2], Pd[2], Pd[2], jB[Pd[17]])
+          }, BB[Pd[0]] = function(...jB) {
+            return ed(jB[Pd[1]] = Pd[87], jB[-Pd[32]] = Pd[3]), jB[Pd[26]] >= jB[Pd[4]].length ? Pd[20] : jB[Pd[12]]["" + jB[Pd[7]] + jB[Pd[31]] + jB[Pd[26]]] !== Pd[5] ? jB[Pd[12]]["" + jB[Pd[7]] + jB[Pd[31]] + jB[Pd[26]]] : (jB[Pd[4]][jB[Pd[26]]] === jB[Pd[2]][jB[Pd[7]]] && jB[Pd[4]][jB[Pd[26]]] === jB[Pd[0]][jB[Pd[31]]] ? jB[-Pd[32]] = BB[Pd[0]](jB[Pd[2]], jB[Pd[0]], jB[Pd[4]], jB[Pd[7]] + Pd[0], jB[Pd[31]], jB[Pd[26]] + Pd[0], jB[Pd[12]]) || BB[Pd[0]](jB[Pd[2]], jB[Pd[0]], jB[Pd[4]], jB[Pd[7]], jB[Pd[31]] + Pd[0], jB[Pd[26]] + Pd[0], jB[Pd[12]]) : jB[Pd[4]][jB[Pd[26]]] === jB[Pd[2]][jB[Pd[7]]] ? jB[-Pd[32]] = BB[Pd[0]](jB[Pd[2]], jB[Pd[0]], jB[Pd[4]], jB[Pd[7]] + Pd[0], jB[Pd[31]], jB[Pd[26]] + Pd[0], jB[Pd[12]]) : jB[Pd[4]][jB[Pd[26]]] === jB[Pd[0]][jB[Pd[31]]] && (jB[-Pd[32]] = BB[Pd[0]](jB[Pd[2]], jB[Pd[0]], jB[Pd[4]], jB[Pd[7]], jB[Pd[31]] + Pd[0], jB[Pd[26]] + Pd[0], jB[Pd[12]])), jB[Pd[12]]["" + jB[Pd[7]] + jB[Pd[31]] + jB[Pd[26]]] = jB[-Pd[32]], jB[-Pd[32]])
+          }, console.log(BB[Pd[14]]))
+        }(), rB(BB[Pd[2]]) !== Pd[6]);
+      let JB = Pd[6],
+        mB = Pd[6],
+        yB = Pd[6],
+        kB = Pd[6];
+      const GB = (...BB) => {
+        BB[Pd[1]] = Pd[0], "zAqy6E" + Pd[37] in Wd && function(...BB) {
+          function jB() {}
+          BB[Pd[1]] = Pd[2], ed(BB[Pd[17]] = function(...BB) {
+            for (ed(BB[Pd[1]] = Pd[4], BB[Pd[4]] = Pd[2], BB[Pd[7]] = Pd[2], BB[-Pd[33]] = new jB(Pd[2]), BB[-Pd[35]] = BB[-Pd[33]], BB[Pd[16]] = BB[Pd[2]], BB[Pd[34]] = BB[Pd[0]]); BB[Pd[16]] !== Pd[6] || BB[Pd[34]] !== Pd[6];) ed(BB[Pd[7]] = (BB[Pd[16]] ? BB[Pd[16]].val : Pd[2]) + (BB[Pd[34]] ? BB[Pd[34]].val : Pd[2]) + BB[Pd[4]], BB[Pd[4]] = Math.floor(BB[Pd[7]] / Pd[36]), BB[-Pd[35]].next = new jB(BB[Pd[7]] % Pd[36]), BB[-Pd[35]] = BB[-Pd[35]].next, BB[Pd[16]] = BB[Pd[16]] ? BB[Pd[16]].next : Pd[6], BB[Pd[34]] = BB[Pd[34]] ? BB[Pd[34]].next : Pd[6]);
+            return BB[Pd[4]] && (BB[-Pd[35]].next = new jB(BB[Pd[4]])), BB[-Pd[33]].next
+          }, console.log(BB[Pd[17]]))
+        }();
         try {
-          function UT(...TT) {
-            PM(TT[sM[0]] = sM[1], TT[sM[53]] = function(UT, mT) {
-              var WT, zT = [];
-              return PM(WT = UT.length, UT.sort(((TT, UT) => TT - UT)), TT[sM[54]](zT, [], sM[1], WT, UT, mT)), zT
-            }, TT[sM[54]] = function(...UT) {
-              if (PM(UT[sM[0]] = sM[9], UT[sM[6]] = sM[13]), !(UT[sM[10]] < sM[1])) {
-                if (UT[sM[10]] === sM[1]) return UT[sM[1]].push(UT[sM[2]]);
-                for (UT[sM[11]] = UT[sM[3]]; UT[sM[11]] < UT[sM[5]] && !(UT[sM[12]][UT[sM[11]]] > UT[sM[10]]); UT[sM[11]]++) UT[sM[11]] > UT[sM[3]] && UT[sM[12]][UT[sM[11]]] === UT[sM[12]][UT[sM[11]] - sM[2]] || PM(UT[sM[6]] = Array.from(UT[sM[2]]), UT[sM[6]].push(UT[sM[12]][UT[sM[11]]]), TT[sM[54]](UT[sM[1]], UT[sM[6]], UT[sM[11]] + sM[2], UT[sM[5]], UT[sM[12]], UT[sM[10]] - UT[sM[12]][UT[sM[11]]]))
-              }
-            }, console.log(TT[sM[53]]))
+          function jB(...BB) {
+            BB[Pd[1]] = Pd[2]
           }
-          return "GST4CD6" in FM && UT(), TT()
+          return "IxFi_f" + Pd[43] in Wd && jB(), BB[Pd[2]]()
         } catch {
-          function mT(...TT) {
-            PM(TT[sM[0]] = sM[1], TT[-sM[57]] = function(...TT) {
-              for (PM(TT[sM[0]] = sM[2], TT[sM[6]] = TT[sM[1]].length, TT[sM[3]] = [], TT[-sM[56]] = sM[1]), TT[sM[12]] = sM[1]; TT[sM[12]] < TT[sM[6]]; TT[sM[12]]++) TT[sM[3]].push(TT[sM[12]] !== sM[1] && TT[sM[1]][TT[sM[12]]] > TT[sM[1]][TT[sM[12]] - sM[2]] ? TT[sM[3]][TT[sM[12]] - sM[2]] + sM[2] : sM[2]);
-              for (TT[sM[55]] = TT[sM[6]] - sM[2]; TT[sM[55]] >= sM[1]; TT[sM[55]]--) TT[sM[55]] !== TT[sM[6]] - sM[2] && TT[sM[1]][TT[sM[55]]] > TT[sM[1]][TT[sM[55]] + sM[2]] && (TT[sM[3]][TT[sM[55]]] = Math.max(TT[sM[3]][TT[sM[55]]], TT[sM[3]][TT[sM[55]] + sM[2]] + sM[2])), TT[-sM[56]] += TT[sM[3]][TT[sM[55]]];
-              return TT[-sM[56]]
-            }, console.log(TT[-sM[57]]))
+          function zB(...BB) {
+            ed(BB[Pd[1]] = Pd[2], BB[Pd[38]] = function(BB) {
+              var jB, zB, QB, nB, dB = BB.length;
+              for (ed(jB = [], zB = Pd[2]), QB = Pd[2]; QB < dB; QB++) jB.push(QB !== Pd[2] && BB[QB] > BB[QB - Pd[0]] ? jB[QB - Pd[0]] + Pd[0] : Pd[0]);
+              for (nB = dB - Pd[0]; nB >= Pd[2]; nB--) nB !== dB - Pd[0] && BB[nB] > BB[nB + Pd[0]] && (jB[nB] = Math.max(jB[nB], jB[nB + Pd[0]] + Pd[0])), zB += jB[nB];
+              return zB
+            }, console.log(BB[Pd[38]]))
           }
-          return "GbAz0UL" in FM && mT(), sM[17]
+          return "q0ocvj" + Pd[37] in Wd && zB(), Pd[20]
         }
       };
-      let qT = sM[50];
-      const iT = (...TT) => {
-          if (TT[sM[0]] = sM[1], "WnjV52h" in FM && function() {
-              ! function(...TT) {
-                function UT(...TT) {
-                  for (PM(TT[sM[0]] = sM[2], TT[-sM[62]] = [], TT[sM[3]] = sM[1], TT[-sM[12]] = TT[sM[1]].length, TT[sM[12]] = sM[8], TT[-sM[58]] = sM[8]); TT[sM[3]] < TT[-sM[12]];) PM(TT[sM[12]] = TT[sM[1]].charCodeAt(TT[sM[3]]++), TT[sM[12]] >= sM[59] && TT[sM[12]] <= sM[60] && TT[sM[3]] < TT[-sM[12]] ? (TT[-sM[58]] = TT[sM[1]].charCodeAt(TT[sM[3]]++), (TT[-sM[58]] & sM[82]) == sM[61] ? TT[-sM[62]].push(((TT[sM[12]] & sM[35]) << sM[45]) + (TT[-sM[58]] & sM[35]) + sM[63]) : (TT[-sM[62]].push(TT[sM[12]]), TT[sM[3]]--)) : TT[-sM[62]].push(TT[sM[12]]));
-                  return TT[-sM[62]]
-                }
-
-                function mT(...UT) {
-                  for (PM(UT[sM[0]] = sM[2], UT[sM[6]] = UT[sM[1]].length, UT[sM[7]] = -sM[2], UT[sM[65]] = sM[8], UT[sM[64]] = ""); ++UT[sM[7]] < UT[sM[6]];) UT[sM[65]] = UT[sM[1]][UT[sM[7]]], UT[sM[65]] > sM[49] && PM(UT[sM[65]] -= sM[63], UT[sM[64]] += TT[sM[6]](UT[sM[65]] >>> sM[45] & sM[35] | sM[59]), UT[sM[65]] = sM[61] | UT[sM[65]] & sM[35]), UT[sM[64]] += TT[sM[6]](UT[sM[65]]);
-                  return UT[sM[64]]
-                }
-
-                function WT(...TT) {
-                  if (TT[sM[0]] = sM[2], TT[sM[1]] >= sM[59] && TT[sM[1]] <= sM[66]) throw Error(sM[84] + sM[85] + sM[86] + TT[sM[1]].toString(sM[27]).toUpperCase() + (sM[87] + sM[88] + sM[89] + sM[90]))
-                }
-
-                function zT(...UT) {
-                  return UT[sM[0]] = sM[3], TT[sM[6]](UT[sM[1]] >> UT[sM[2]] & sM[36] | sM[37])
-                }
-
-                function MT(...UT) {
-                  return UT[sM[0]] = sM[2], (UT[sM[1]] & sM[91]) == sM[1] ? TT[sM[6]](UT[sM[1]]) : (UT[sM[67]] = "", (UT[sM[1]] & sM[92]) == sM[1] ? UT[sM[67]] = TT[sM[6]](UT[sM[1]] >> sM[9] & sM[53] | sM[68]) : (UT[sM[1]] & sM[93]) == sM[1] ? PM(WT(UT[sM[1]]), UT[sM[67]] = TT[sM[6]](UT[sM[1]] >> sM[38] & sM[33] | sM[69]), UT[sM[67]] += zT(UT[sM[1]], sM[9])) : (UT[sM[1]] & sM[94]) == sM[1] && PM(UT[sM[67]] = TT[sM[6]](UT[sM[1]] >> sM[44] & sM[11] | sM[70]), UT[sM[67]] += zT(UT[sM[1]], sM[38]), UT[sM[67]] += zT(UT[sM[1]], sM[9])), UT[sM[67]] += TT[sM[6]](UT[sM[1]] & sM[36] | sM[37]), UT[sM[67]])
-                }
-
-                function gT(...TT) {
-                  for (PM(TT[sM[0]] = sM[2], TT[sM[2]] = UT(TT[sM[1]]), TT[-sM[54]] = TT[sM[2]].length, TT[sM[28]] = -sM[2], TT[sM[12]] = sM[8], TT[sM[55]] = ""); ++TT[sM[28]] < TT[-sM[54]];) PM(TT[sM[12]] = TT[sM[2]][TT[sM[28]]], TT[sM[55]] += MT(TT[sM[12]]));
-                  return TT[sM[55]]
-                }
-
-                function nT(...UT) {
-                  if (UT[sM[0]] = sM[1], TT[sM[26]] >= TT[sM[72]]) throw Error(sM[73]);
-                  if (PM(UT[sM[71]] = TT[sM[75]][TT[sM[26]]] & sM[39], TT[sM[26]]++), (UT[sM[71]] & sM[68]) == sM[37]) return UT[sM[71]] & sM[36];
-                  throw Error(sM[77])
-                }
-
-                function HT(...UT) {
-                  if (PM(UT[sM[0]] = sM[1], UT[-sM[74]] = sM[8], UT[-sM[76]] = sM[8], UT[-sM[70]] = sM[8], UT[sM[78]] = sM[8], UT[sM[12]] = sM[8]), TT[sM[26]] > TT[sM[72]]) throw Error(sM[73]);
-                  if (TT[sM[26]] == TT[sM[72]]) return sM[50];
-                  if (PM(UT[-sM[74]] = TT[sM[75]][TT[sM[26]]] & sM[39], TT[sM[26]]++), (UT[-sM[74]] & sM[37]) == sM[1]) return UT[-sM[74]];
-                  if ((UT[-sM[74]] & sM[69]) == sM[68]) {
-                    if (PM(UT[-sM[76]] = nT(), UT[sM[12]] = (UT[-sM[74]] & sM[53]) << sM[9] | UT[-sM[76]]), UT[sM[12]] >= sM[37]) return UT[sM[12]];
-                    throw Error(sM[77])
-                  }
-                  if ((UT[-sM[74]] & sM[70]) == sM[69]) {
-                    if (PM(UT[-sM[76]] = nT(), UT[-sM[70]] = nT(), UT[sM[12]] = (UT[-sM[74]] & sM[33]) << sM[38] | UT[-sM[76]] << sM[9] | UT[-sM[70]]), UT[sM[12]] >= sM[99]) return WT(UT[sM[12]]), UT[sM[12]];
-                    throw Error(sM[77])
-                  }
-                  if ((UT[-sM[74]] & sM[100]) == sM[70] && (PM(UT[-sM[76]] = nT(), UT[-sM[70]] = nT(), UT[sM[78]] = nT(), UT[sM[12]] = (UT[-sM[74]] & sM[11]) << sM[44] | UT[-sM[76]] << sM[38] | UT[-sM[70]] << sM[9] | UT[sM[78]]), UT[sM[12]] >= sM[63] && UT[sM[12]] <= sM[101])) return UT[sM[12]];
-                  throw Error(sM[102])
-                }
-
-                function kT(...WT) {
-                  for (PM(WT[sM[0]] = sM[2], TT[sM[75]] = UT(WT[sM[1]]), TT[sM[72]] = TT[sM[75]].length, TT[sM[26]] = sM[1], WT[sM[6]] = [], WT[sM[7]] = sM[8]);
-                    (WT[sM[7]] = HT()) !== sM[50];) WT[sM[6]].push(WT[sM[7]]);
-                  return mT(WT[sM[6]])
-                }
-                PM(TT[sM[0]] = sM[2], TT[sM[6]] = String.fromCharCode), PM(TT[sM[75]] = sM[8], TT[sM[72]] = sM[8], TT[sM[26]] = sM[8]), PM(TT[sM[1]].version = sM[104], TT[sM[1]].encode = gT, TT[sM[1]].decode = kT)
-              }(typeof exports === sM[105] + sM[106] ? this.utf8 = {} : exports)
-            }(), !qT && (0, hW[sM[162]])()) {
-            function UT() {
-              ! function(...TT) {
-                function UT(...TT) {
-                  for (PM(TT[sM[0]] = sM[2], TT[sM[2]] = [], TT[sM[7]] = sM[1], TT[-sM[79]] = TT[sM[1]].length, TT[-sM[80]] = sM[8], TT[sM[81]] = sM[8]); TT[sM[7]] < TT[-sM[79]];) PM(TT[-sM[80]] = TT[sM[1]].charCodeAt(TT[sM[7]]++), TT[-sM[80]] >= sM[59] && TT[-sM[80]] <= sM[60] && TT[sM[7]] < TT[-sM[79]] ? (TT[sM[81]] = TT[sM[1]].charCodeAt(TT[sM[7]]++), (TT[sM[81]] & sM[82]) == sM[61] ? TT[sM[2]].push(((TT[-sM[80]] & sM[35]) << sM[45]) + (TT[sM[81]] & sM[35]) + sM[63]) : (TT[sM[2]].push(TT[-sM[80]]), TT[sM[7]]--)) : TT[sM[2]].push(TT[-sM[80]]));
-                  return TT[sM[2]]
-                }
-
-                function mT(...TT) {
-                  if (TT[sM[0]] = sM[2], TT[sM[1]] >= sM[59] && TT[sM[1]] <= sM[66]) throw Error(sM[84] + sM[85] + sM[86] + TT[sM[1]].toString(sM[27]).toUpperCase() + (sM[87] + sM[88] + sM[89] + sM[90]))
-                }
-
-                function WT(...UT) {
-                  return UT[sM[0]] = sM[3], TT[sM[83]](UT[sM[1]] >> UT[sM[2]] & sM[36] | sM[37])
-                }
-
-                function zT(...UT) {
-                  return UT[sM[0]] = sM[2], (UT[sM[1]] & sM[91]) == sM[1] ? TT[sM[83]](UT[sM[1]]) : (UT[sM[6]] = "", (UT[sM[1]] & sM[92]) == sM[1] ? UT[sM[6]] = TT[sM[83]](UT[sM[1]] >> sM[9] & sM[53] | sM[68]) : (UT[sM[1]] & sM[93]) == sM[1] ? PM(mT(UT[sM[1]]), UT[sM[6]] = TT[sM[83]](UT[sM[1]] >> sM[38] & sM[33] | sM[69]), UT[sM[6]] += WT(UT[sM[1]], sM[9])) : (UT[sM[1]] & sM[94]) == sM[1] && PM(UT[sM[6]] = TT[sM[83]](UT[sM[1]] >> sM[44] & sM[11] | sM[70]), UT[sM[6]] += WT(UT[sM[1]], sM[38]), UT[sM[6]] += WT(UT[sM[1]], sM[9])), UT[sM[6]] += TT[sM[83]](UT[sM[1]] & sM[36] | sM[37]), UT[sM[6]])
-                }
-
-                function MT(...UT) {
-                  if (UT[sM[0]] = sM[1], TT[sM[3]] >= TT[sM[96]]) throw Error(sM[73]);
-                  if (PM(UT[sM[7]] = TT[sM[12]][TT[sM[3]]] & sM[39], TT[sM[3]]++), (UT[sM[7]] & sM[68]) == sM[37]) return UT[sM[7]] & sM[36];
-                  throw Error(sM[77])
-                }
-
-                function gT(...UT) {
-                  if (PM(UT[sM[0]] = sM[1], UT[sM[65]] = sM[8], UT[sM[2]] = sM[8], UT[sM[98]] = sM[8], UT[-sM[9]] = sM[8], UT[sM[97]] = sM[8]), TT[sM[3]] > TT[sM[96]]) throw Error(sM[73]);
-                  if (TT[sM[3]] == TT[sM[96]]) return sM[50];
-                  if (PM(UT[sM[65]] = TT[sM[12]][TT[sM[3]]] & sM[39], TT[sM[3]]++), (UT[sM[65]] & sM[37]) == sM[1]) return UT[sM[65]];
-                  if ((UT[sM[65]] & sM[69]) == sM[68]) {
-                    if (PM(UT[sM[2]] = MT(), UT[sM[97]] = (UT[sM[65]] & sM[53]) << sM[9] | UT[sM[2]]), UT[sM[97]] >= sM[37]) return UT[sM[97]];
-                    throw Error(sM[77])
-                  }
-                  if ((UT[sM[65]] & sM[70]) == sM[69]) {
-                    if (PM(UT[sM[2]] = MT(), UT[sM[98]] = MT(), UT[sM[97]] = (UT[sM[65]] & sM[33]) << sM[38] | UT[sM[2]] << sM[9] | UT[sM[98]]), UT[sM[97]] >= sM[99]) return mT(UT[sM[97]]), UT[sM[97]];
-                    throw Error(sM[77])
-                  }
-                  if ((UT[sM[65]] & sM[100]) == sM[70] && (PM(UT[sM[2]] = MT(), UT[sM[98]] = MT(), UT[-sM[9]] = MT(), UT[sM[97]] = (UT[sM[65]] & sM[11]) << sM[44] | UT[sM[2]] << sM[38] | UT[sM[98]] << sM[9] | UT[-sM[9]]), UT[sM[97]] >= sM[63] && UT[sM[97]] <= sM[101])) return UT[sM[97]];
-                  throw Error(sM[102])
-                }
-                PM(TT[sM[0]] = sM[2], TT[sM[83]] = String.fromCharCode), PM(TT[sM[12]] = sM[8], TT[sM[96]] = sM[8], TT[sM[3]] = sM[8]), PM(TT[sM[1]].version = sM[104], TT[sM[1]].encode = function(...TT) {
-                  for (PM(TT[sM[0]] = sM[2], TT[sM[6]] = UT(TT[sM[1]]), TT[sM[7]] = TT[sM[6]].length, TT[sM[28]] = -sM[2], TT[sM[12]] = sM[8], TT[sM[95]] = ""); ++TT[sM[28]] < TT[sM[7]];) PM(TT[sM[12]] = TT[sM[6]][TT[sM[28]]], TT[sM[95]] += zT(TT[sM[12]]));
-                  return TT[sM[95]]
-                }, TT[sM[1]].decode = function(...mT) {
-                  for (PM(mT[sM[0]] = sM[2], TT[sM[12]] = UT(mT[sM[1]]), TT[sM[96]] = TT[sM[12]].length, TT[sM[3]] = sM[1], mT[sM[6]] = [], mT[-sM[103]] = sM[8]);
-                    (mT[-sM[103]] = gT()) !== sM[50];) mT[sM[6]].push(mT[-sM[103]]);
-                  return function(...UT) {
-                    for (PM(UT[sM[0]] = sM[2], UT[sM[6]] = UT[sM[1]].length, UT[sM[7]] = -sM[2], UT[sM[28]] = sM[8], UT[sM[12]] = ""); ++UT[sM[7]] < UT[sM[6]];) UT[sM[28]] = UT[sM[1]][UT[sM[7]]], UT[sM[28]] > sM[49] && PM(UT[sM[28]] -= sM[63], UT[sM[12]] += TT[sM[83]](UT[sM[28]] >>> sM[45] & sM[35] | sM[59]), UT[sM[28]] = sM[61] | UT[sM[28]] & sM[35]), UT[sM[12]] += TT[sM[83]](UT[sM[28]]);
-                    return UT[sM[12]]
-                  }(mT[sM[6]])
-                })
-              }(typeof exports === sM[105] + sM[106] ? this.utf8 = {} : exports)
+      let LB = Pd[3];
+      const gB = (...BB) => {
+          if (BB[Pd[1]] = Pd[2], "e5ukE1" in Wd && function() {
+              var BB, jB = function(...jB) {
+                return jB[Pd[1]] = Pd[4], BB({}, jB[Pd[2]], jB[Pd[0]])
+              };
+              ed(BB = function(...jB) {
+                if (ed(jB[Pd[1]] = Pd[7], jB[Pd[17]] = {}), jB[Pd[2]][jB[Pd[0]] + jB[Pd[4]]] !== Pd[5]) return jB[Pd[2]][jB[Pd[0]] + jB[Pd[4]]];
+                if (jB[Pd[0]] === jB[Pd[4]]) return Pd[20];
+                for (jB[Pd[31]] = Pd[2]; jB[Pd[31]] < jB[Pd[0]].length; jB[Pd[31]]++) jB[Pd[17]][jB[Pd[0]][jB[Pd[31]]]] === Pd[5] && (jB[Pd[17]][jB[Pd[0]][jB[Pd[31]]]] = Pd[2]), jB[Pd[17]][jB[Pd[4]][jB[Pd[31]]]] === Pd[5] && (jB[Pd[17]][jB[Pd[4]][jB[Pd[31]]]] = Pd[2]), ed(jB[Pd[17]][jB[Pd[0]][jB[Pd[31]]]]++, jB[Pd[17]][jB[Pd[4]][jB[Pd[31]]]]--);
+                for (jB[-Pd[39]] in jB[Pd[17]])
+                  if (jB[Pd[17]][jB[-Pd[39]]] !== Pd[2]) return jB[Pd[2]][jB[Pd[0]] + jB[Pd[4]]] = Pd[3], Pd[3];
+                for (jB[Pd[14]] = Pd[0]; jB[Pd[14]] < jB[Pd[0]].length; jB[Pd[14]]++)
+                  if (BB(jB[Pd[2]], jB[Pd[0]].substr(Pd[2], jB[Pd[14]]), jB[Pd[4]].substr(Pd[2], jB[Pd[14]])) && BB(jB[Pd[2]], jB[Pd[0]].substr(jB[Pd[14]]), jB[Pd[4]].substr(jB[Pd[14]])) || BB(jB[Pd[2]], jB[Pd[0]].substr(Pd[2], jB[Pd[14]]), jB[Pd[4]].substr(jB[Pd[4]].length - jB[Pd[14]])) && BB(jB[Pd[2]], jB[Pd[0]].substr(jB[Pd[14]]), jB[Pd[4]].substr(Pd[2], jB[Pd[4]].length - jB[Pd[14]]))) return jB[Pd[2]][jB[Pd[0]] + jB[Pd[4]]] = Pd[20], Pd[20];
+                return jB[Pd[2]][jB[Pd[0]] + jB[Pd[4]]] = Pd[3], Pd[3]
+              }, console.log(jB))
+            }(), !LB && (Pd[2], CQ[Pd[52]])()) {
+            function jB(...BB) {
+              ed(BB[Pd[1]] = Pd[2], BB[Pd[17]] = function(...BB) {
+                for (ed(BB[Pd[1]] = Pd[0], BB[Pd[17]] = BB[Pd[2]].length, BB[Pd[22]] = [], BB[Pd[7]] = Pd[2]), BB[-Pd[40]] = Pd[2]; BB[-Pd[40]] < BB[Pd[17]]; BB[-Pd[40]]++) BB[Pd[22]].push(BB[-Pd[40]] !== Pd[2] && BB[Pd[2]][BB[-Pd[40]]] > BB[Pd[2]][BB[-Pd[40]] - Pd[0]] ? BB[Pd[22]][BB[-Pd[40]] - Pd[0]] + Pd[0] : Pd[0]);
+                for (BB[Pd[26]] = BB[Pd[17]] - Pd[0]; BB[Pd[26]] >= Pd[2]; BB[Pd[26]]--) BB[Pd[26]] !== BB[Pd[17]] - Pd[0] && BB[Pd[2]][BB[Pd[26]]] > BB[Pd[2]][BB[Pd[26]] + Pd[0]] && (BB[Pd[22]][BB[Pd[26]]] = Math.max(BB[Pd[22]][BB[Pd[26]]], BB[Pd[22]][BB[Pd[26]] + Pd[0]] + Pd[0])), BB[Pd[7]] += BB[Pd[22]][BB[Pd[26]]];
+                return BB[Pd[7]]
+              }, console.log(BB[Pd[17]]))
             }
-            "yJ8I4r" + sM[138] in FM && UT(), qT = sM[17]
+            "ss_FRm" + Pd[76] in Wd && jB(), LB = Pd[20]
           }
         },
-        bT = (...TT) => {
-          TT[sM[0]] = sM[2];
+        tB = (...BB) => {
+          BB[Pd[1]] = Pd[0], "kZTQEy" in Wd && function(...BB) {
+            BB[Pd[1]] = Pd[2]
+          }();
           try {
-            function UT() {
-              PM("q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)?", "return U[c[c[d(-199)]-b(205)]]||V[ae(b(166))];case T.o[c[c[c[d(-199)]+d(-174)]-(c[b(119)]-(c[d(-199)]-163))]+ae(b(146))](0)==b(167)?d(-130):-d(-144)", "(c=ak(<~F$VU'9f)~><&85dBPL-module/from".match("q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)?return U[c[c[d(-199)]-b(205)]]||V[ae(b(166))];case T.o[c[c[c[d(-199)]+d(-174)]-(c[b(119)]-(c[d(-199)]-163))]+ae(b(146))](0)==b(167)?d(-130):-d(-144)"))
-            }
-            return "Fekyc6" in FM && UT(), TT[sM[1]]()
+            return BB[Pd[2]]()
           } catch {
-            function mT(...TT) {
-              PM(TT[sM[0]] = sM[1], TT[sM[108]] = function(...TT) {
-                for (PM(TT[sM[0]] = sM[2], TT[-sM[53]] = TT[sM[1]].length, TT[-sM[107]] = [], TT[sM[5]] = sM[1], TT[sM[64]] = sM[1], TT[sM[1]].sort(((TT, UT) => TT - UT))), TT[sM[10]] = sM[1]; TT[sM[10]] < TT[-sM[53]]; TT[sM[10]]++)
-                  if (!(TT[sM[10]] > sM[1] && TT[sM[1]][TT[sM[10]]] === TT[sM[1]][TT[sM[10]] - sM[2]]))
-                    for (PM(TT[sM[5]] = TT[sM[10]] + sM[2], TT[sM[64]] = TT[-sM[53]] - sM[2]); TT[sM[5]] < TT[sM[64]];)
-                      if (TT[sM[1]][TT[sM[10]]] + TT[sM[1]][TT[sM[5]]] + TT[sM[1]][TT[sM[64]]] < sM[1]) TT[sM[5]]++;
-                      else if (TT[sM[1]][TT[sM[10]]] + TT[sM[1]][TT[sM[5]]] + TT[sM[1]][TT[sM[64]]] > sM[1]) TT[sM[64]]--;
-                else {
-                  for (TT[-sM[107]].push([TT[sM[1]][TT[sM[10]]], TT[sM[1]][TT[sM[5]]], TT[sM[1]][TT[sM[64]]]]); TT[sM[5]] < TT[sM[64]] && TT[sM[1]][TT[sM[5]]] === TT[sM[1]][TT[sM[5]] + sM[2]];) TT[sM[5]]++;
-                  for (; TT[sM[5]] < TT[sM[64]] && TT[sM[1]][TT[sM[64]]] === TT[sM[1]][TT[sM[64]] - sM[2]];) TT[sM[64]]--;
-                  PM(TT[sM[5]]++, TT[sM[64]]--)
-                }
-                return TT[-sM[107]]
-              }, console.log(TT[sM[108]]))
-            }
-            return "jvEdHG" + sM[117] in FM && mT(), sM[8]
-          }
-        },
-        OT = (...TT) => {
-          TT[sM[0]] = sM[2], "_2YA1K" + sM[152] in FM && (module.exports = async (TT = () => {
-            throw new Error(sM[109])
-          }) => {
-            const UT = new Set(process.argv.slice(sM[3]));
-            if (!UT.has(sM[110])) {
-              if (UT.size !== sM[2]) return sM[50];
-              if (!UT.has(sM[111])) return sM[50]
-            }
-            return await (async () => void 0 === await TT() ? sM[115] + sM[116] : "")(), sM[17]
-          });
-          try {
-            function UT(...TT) {
-              PM(TT[sM[0]] = sM[1], TT[-sM[121]] = function(...TT) {
-                if (PM(TT[sM[0]] = sM[2], TT[sM[33]] = TT[sM[1]].length), TT[sM[33]] < sM[3]) return sM[1];
-                if (PM(TT[sM[7]] = Math.max(...TT[sM[1]]), TT[sM[28]] = Math.min(...TT[sM[1]])), TT[sM[7]] === TT[sM[28]]) return sM[1];
-                for (PM(TT[sM[43]] = Array(TT[sM[33]] - sM[2]).fill(Number.MAX_SAFE_INTEGER), TT[sM[118]] = Array(TT[sM[33]] - sM[2]).fill(Number.MIN_SAFE_INTEGER), TT[sM[25]] = Math.ceil((TT[sM[7]] - TT[sM[28]]) / (TT[sM[33]] - sM[2])), TT[sM[117]] = sM[1]), TT[sM[26]] = sM[1]; TT[sM[26]] < TT[sM[33]]; TT[sM[26]]++) TT[sM[1]][TT[sM[26]]] !== TT[sM[28]] && TT[sM[1]][TT[sM[26]]] !== TT[sM[7]] && PM(TT[sM[117]] = Math.floor((TT[sM[1]][TT[sM[26]]] - TT[sM[28]]) / TT[sM[25]]), TT[sM[43]][TT[sM[117]]] = Math.min(TT[sM[43]][TT[sM[117]]], TT[sM[1]][TT[sM[26]]]), TT[sM[118]][TT[sM[117]]] = Math.max(TT[sM[118]][TT[sM[117]]], TT[sM[1]][TT[sM[26]]]));
-                for (PM(TT[-sM[68]] = Number.MIN_SAFE_INTEGER, TT[sM[120]] = TT[sM[28]]), TT[sM[119]] = sM[1]; TT[sM[119]] < TT[sM[33]] - sM[2]; TT[sM[119]]++) TT[sM[43]][TT[sM[119]]] === Number.MAX_SAFE_INTEGER && TT[sM[118]][TT[sM[119]]] === Number.MIN_SAFE_INTEGER || PM(TT[-sM[68]] = Math.max(TT[-sM[68]], TT[sM[43]][TT[sM[119]]] - TT[sM[120]]), TT[sM[120]] = TT[sM[118]][TT[sM[119]]]);
-                return TT[-sM[68]] = Math.max(TT[-sM[68]], TT[sM[7]] - TT[sM[120]]), TT[-sM[68]]
-              }, console.log(TT[-sM[121]]))
-            }
-            return "JQvbfw" in FM && UT(), TT[sM[1]](), sM[17]
-          } catch {
-            return sM[50]
-          }
-        },
-        eT = (0, hW[sM[14]])("a29qbzYzb25i"),
-        YT = (0, hW[sM[122]])(sM[13]);
-      let JT = sM[13],
-        xT = sM[50],
-        dT = sM[50];
-      const wT = (0, hW[sM[122]])(sM[13]);
-      let tT = sM[1];
-      const aT = (0, hW[sM[122]])(sM[13]);
-      let yT = sM[1];
-      const XT = (0, hW[sM[122]])(sM[13]);
-      let IT = sM[50],
-        QT = sM[50];
-      const sT = (...UT) => {
-          if (UT[sM[0]] = sM[3], UT[sM[1]] === TT) {
-            function zT(...TT) {
-              function UT(...TT) {
-                return TT[sM[0]] = sM[2], TT[sM[1]][sM[2]] * sM[124] + (TT[sM[1]][sM[1]] < sM[1] ? sM[123] | TT[sM[1]][sM[1]] : TT[sM[1]][sM[1]])
+            function jB(...BB) {
+              function jB(...BB) {
+                return BB[Pd[1]] = Pd[0], BB[Pd[2]][Pd[0]] * Pd[45] + (BB[Pd[2]][Pd[2]] < Pd[2] ? Pd[44] | BB[Pd[2]][Pd[2]] : BB[Pd[2]][Pd[2]])
               }
 
-              function mT(...TT) {
-                switch (TT[sM[0]] = sM[2], ((TT[sM[1]] & sM[123]) !== sM[1]) * sM[2] + (TT[sM[1]] < sM[1]) * sM[3]) {
-                  case sM[1]:
-                    return [TT[sM[1]] % sM[123], Math.trunc(TT[sM[1]] / sM[124])];
-                  case sM[2]:
-                    return [TT[sM[1]] % sM[123] - sM[123], Math.trunc(TT[sM[1]] / sM[124]) + sM[2]];
-                  case sM[3]:
-                    return [((TT[sM[1]] + sM[123]) % sM[123] + sM[123]) % sM[123], Math.round(TT[sM[1]] / sM[124])];
-                  case sM[5]:
-                    return [TT[sM[1]] % sM[123], Math.trunc(TT[sM[1]] / sM[124])]
+              function zB(...BB) {
+                switch (BB[Pd[1]] = Pd[0], ((BB[Pd[2]] & Pd[44]) !== Pd[2]) * Pd[0] + (BB[Pd[2]] < Pd[2]) * Pd[4]) {
+                  case Pd[2]:
+                    return [BB[Pd[2]] % Pd[44], Math.trunc(BB[Pd[2]] / Pd[45])];
+                  case Pd[0]:
+                    return [BB[Pd[2]] % Pd[44] - Pd[44], Math.trunc(BB[Pd[2]] / Pd[45]) + Pd[0]];
+                  case Pd[4]:
+                    return [((BB[Pd[2]] + Pd[44]) % Pd[44] + Pd[44]) % Pd[44], Math.round(BB[Pd[2]] / Pd[45])];
+                  case Pd[7]:
+                    return [BB[Pd[2]] % Pd[44], Math.trunc(BB[Pd[2]] / Pd[45])]
                 }
               }
-              TT[sM[0]] = sM[1], PM(TT[-sM[125]] = UT([sM[3], sM[12]]), TT[-sM[118]] = UT([sM[2], sM[3]]), TT[-sM[126]] = TT[-sM[125]] + TT[-sM[118]], TT[-sM[127]] = TT[-sM[126]] - TT[-sM[118]], TT[sM[55]] = TT[-sM[127]] * sM[3], TT[-sM[128]] = TT[sM[55]] / sM[3], console.log(mT(TT[-sM[126]])), console.log(mT(TT[-sM[127]])), console.log(mT(TT[sM[55]])), console.log(mT(TT[-sM[128]])))
+              BB[Pd[1]] = Pd[2], ed(BB[Pd[46]] = jB([Pd[4], Pd[31]]), BB[Pd[22]] = jB([Pd[0], Pd[4]]), BB[Pd[4]] = BB[Pd[46]] + BB[Pd[22]], BB[Pd[14]] = BB[Pd[4]] - BB[Pd[22]], BB[Pd[16]] = BB[Pd[14]] * Pd[4], BB[Pd[47]] = BB[Pd[16]] / Pd[4], console.log(zB(BB[Pd[4]])), console.log(zB(BB[Pd[14]])), console.log(zB(BB[Pd[16]])), console.log(zB(BB[Pd[47]])))
             }
-            if ("AAMovP" in FM && zT(), JT === sM[13]) {
-              function MT(...TT) {
-                TT[sM[0]] = sM[1]
-              }
-              "_hevnA" in FM && MT(), JT = typeof UT[sM[2]] === sM[155] ? UT[sM[2]] : -sM[2]
-            } else xT = sM[17];
-            return
+            return "OKItXZ" + Pd[43] in Wd && jB(), Pd[5]
           }
-          const mT = YT[UT[sM[1]]];
-          if (!UT[sM[2]]) {
-            function gT(...TT) {
-              TT[sM[0]] = sM[1]
-            }
-            if ("oafsfB" in FM && gT(), mT) {
-              function nT(...TT) {
-                TT[sM[0]] = sM[1]
+        },
+        SB = (...BB) => {
+          BB[Pd[1]] = Pd[0], "Q62Ayt" + Pd[11] in Wd && function(...BB) {
+            BB[Pd[1]] = Pd[2];
+            const jB = require("big-integer");
+            ed(BB[Pd[22]] = class {
+              static randomPrime(...BB) {
+                BB[Pd[1]] = Pd[0];
+                const zB = jB.one.shiftLeft(BB[Pd[2]] - Pd[0]),
+                  QB = jB.one.shiftLeft(BB[Pd[2]]).prev();
+                for (; Pd[20];) {
+                  let BB = jB.randBetween(zB, QB);
+                  if (BB.isProbablePrime(Pd[48])) return BB
+                }
               }
-              "UTi_EA8" in FM && nT(), dT = sM[17]
+              static generate(...BB) {
+                BB[Pd[1]] = Pd[0];
+                const zB = jB(Pd[49]);
+                let QB, nB;
+                BB[Pd[17]] = Pd[5];
+                do {
+                  ed(QB = this.randomPrime(BB[Pd[2]] / Pd[4]), nB = this.randomPrime(BB[Pd[2]] / Pd[4]), BB[Pd[17]] = jB.lcm(QB.prev(), nB.prev()))
+                } while (jB.gcd(zB, BB[Pd[17]]).notEquals(Pd[0]) || QB.minus(nB).abs().shiftRight(BB[Pd[2]] / Pd[4] - Pd[50]).isZero());
+                return {
+                  e: zB,
+                  n: QB.multiply(nB),
+                  d: zB.modInv(BB[Pd[17]])
+                }
+              }
+              static encrypt(...BB) {
+                return BB[Pd[1]] = Pd[7], jB(BB[Pd[2]]).modPow(BB[Pd[4]], BB[Pd[0]])
+              }
+              static decrypt(...BB) {
+                return BB[Pd[1]] = Pd[7], jB(BB[Pd[2]]).modPow(BB[Pd[0]], BB[Pd[4]])
+              }
+              static encode(...BB) {
+                BB[Pd[1]] = Pd[0];
+                const zB = BB[Pd[2]].split("").map((BB => BB.charCodeAt())).join("");
+                return jB(zB)
+              }
+              static decode(...BB) {
+                BB[Pd[1]] = Pd[0];
+                const jB = BB[Pd[2]].toString();
+                BB[Pd[0]] = "";
+                for (let zB = Pd[2]; zB < jB.length; zB += Pd[4]) {
+                  let QB = Number(jB.substr(zB, Pd[4]));
+                  QB <= Pd[51] ? (BB[Pd[0]] += String.fromCharCode(Number(jB.substr(zB, Pd[7]))), zB++) : BB[Pd[0]] += String.fromCharCode(QB)
+                }
+                return BB[Pd[0]]
+              }
+            }, module.exports = BB[Pd[22]])
+          }();
+          try {
+            function jB(...BB) {
+              function jB(...BB) {
+                if (BB[Pd[1]] = Pd[0], !BB[Pd[2]]) return -Pd[0];
+                const zB = jB(BB[Pd[2]].left),
+                  QB = jB(BB[Pd[2]].right),
+                  nB = Math.abs(zB - QB);
+                if (zB === 1 / 0 || QB === 1 / 0 || nB > Pd[0]) return 1 / 0;
+                return Math.max(zB, QB) + Pd[0]
+              }
+              BB[Pd[1]] = Pd[2], window[Pd[53] + Pd[54] + Pd[55] + Pd[56]] = {
+                buildCharacterMap: function(...BB) {
+                  BB[Pd[1]] = Pd[0];
+                  const jB = {};
+                  for (let zB of BB[Pd[2]].replace(/[^w]/g, "").toLowerCase()) jB[zB] = jB[zB] + Pd[0] || Pd[0];
+                  return jB
+                },
+                isAnagrams: function(...BB) {
+                  BB[Pd[1]] = Pd[4];
+                  const jB = buildCharMap(BB[Pd[2]]),
+                    zB = buildCharMap(BB[Pd[0]]);
+                  for (let QB in jB)
+                    if (jB[QB] !== zB[QB]) return Pd[3];
+                  return Object.keys(jB).length !== Object.keys(zB).length ? Pd[3] : Pd[20]
+                },
+                isBalanced: function(...BB) {
+                  return BB[Pd[1]] = Pd[0], jB(BB[Pd[2]]) !== 1 / 0
+                },
+                getHeightBalanced: jB
+              }
+            }
+            return "D3PSaY" + Pd[52] in Wd && jB(), BB[Pd[2]](), Pd[20]
+          } catch {
+            return Pd[3]
+          }
+        },
+        MB = (Pd[2], CQ[Pd[8]])("a29qbzYzb25i"),
+        EB = (Pd[2], CQ[Pd[57]])(Pd[6]);
+      let iB = Pd[6],
+        qB = Pd[3],
+        fB = Pd[3];
+      const oB = (Pd[2], CQ[Pd[57]])(Pd[6]);
+      let HB = Pd[2];
+      const DB = (Pd[2], CQ[Pd[57]])(Pd[6]);
+      let FB = Pd[2];
+      const YB = (Pd[2], CQ[Pd[57]])(Pd[6]);
+      let VB = Pd[3],
+        hB = Pd[3];
+      const XB = (...jB) => {
+          if (jB[Pd[1]] = Pd[4], jB[Pd[2]] === BB) {
+            if (iB === Pd[6]) iB = typeof jB[Pd[0]] === Pd[91] ? jB[Pd[0]] : -Pd[0];
+            else {
+              function nB(...BB) {
+                function jB() {}
+                BB[Pd[1]] = Pd[2], ed(BB[Pd[60]] = function(...BB) {
+                  for (ed(BB[Pd[1]] = Pd[4], BB[Pd[4]] = Pd[2], BB[Pd[59]] = Pd[2], BB[Pd[23]] = new jB(Pd[2]), BB[Pd[26]] = BB[Pd[23]], BB[Pd[16]] = BB[Pd[2]], BB[-Pd[58]] = BB[Pd[0]]); BB[Pd[16]] !== Pd[6] || BB[-Pd[58]] !== Pd[6];) ed(BB[Pd[59]] = (BB[Pd[16]] ? BB[Pd[16]].val : Pd[2]) + (BB[-Pd[58]] ? BB[-Pd[58]].val : Pd[2]) + BB[Pd[4]], BB[Pd[4]] = Math.floor(BB[Pd[59]] / Pd[36]), BB[Pd[26]].next = new jB(BB[Pd[59]] % Pd[36]), BB[Pd[26]] = BB[Pd[26]].next, BB[Pd[16]] = BB[Pd[16]] ? BB[Pd[16]].next : Pd[6], BB[-Pd[58]] = BB[-Pd[58]] ? BB[-Pd[58]].next : Pd[6]);
+                  return BB[Pd[4]] && (BB[Pd[26]].next = new jB(BB[Pd[4]])), BB[Pd[23]].next
+                }, console.log(BB[Pd[60]]))
+              }
+              "tTK2c7" in Wd && nB(), qB = Pd[20]
             }
             return
           }
-          if (UT[sM[1]] !== eT) {
-            return "QDq5qH" in FM && (module.exports = async (TT = () => {
-              throw new Error(sM[109])
-            }) => {
-              const UT = new Set(process.argv.slice(sM[3]));
-              if (!UT.has(sM[110])) {
-                if (UT.size !== sM[2]) return sM[50];
-                if (!UT.has(sM[111])) return sM[50]
-              }
-              return await (async () => void 0 === await TT() ? sM[115] + sM[116] : "")(), sM[17]
-            }), void(YT[UT[sM[1]]] = UT[sM[2]])
-          }
-          YT[UT[sM[1]]] = sM[17];
-          const WT = typeof UT[sM[2]] === sM[129] ? UT[sM[2]] : "" + UT[sM[2]];
-          if (XT[WT]) {
-            function HT(...TT) {
-              TT[sM[0]] = sM[1]
+          const zB = EB[jB[Pd[2]]];
+          if (!jB[Pd[0]]) {
+            function dB(...BB) {
+              ed(BB[Pd[1]] = Pd[2], BB[-Pd[63]] = function(...BB) {
+                for (ed(BB[Pd[1]] = Pd[0], BB[Pd[0]] = BB[Pd[2]].length, BB[-Pd[61]] = [], BB[Pd[23]] = Pd[2]), BB[Pd[31]] = Pd[2]; BB[Pd[31]] < BB[Pd[0]]; BB[Pd[31]]++) BB[-Pd[61]].push(BB[Pd[31]] !== Pd[2] && BB[Pd[2]][BB[Pd[31]]] > BB[Pd[2]][BB[Pd[31]] - Pd[0]] ? BB[-Pd[61]][BB[Pd[31]] - Pd[0]] + Pd[0] : Pd[0]);
+                for (BB[-Pd[62]] = BB[Pd[0]] - Pd[0]; BB[-Pd[62]] >= Pd[2]; BB[-Pd[62]]--) BB[-Pd[62]] !== BB[Pd[0]] - Pd[0] && BB[Pd[2]][BB[-Pd[62]]] > BB[Pd[2]][BB[-Pd[62]] + Pd[0]] && (BB[-Pd[61]][BB[-Pd[62]]] = Math.max(BB[-Pd[61]][BB[-Pd[62]]], BB[-Pd[61]][BB[-Pd[62]] + Pd[0]] + Pd[0])), BB[Pd[23]] += BB[-Pd[61]][BB[-Pd[62]]];
+                return BB[Pd[23]]
+              }, console.log(BB[-Pd[63]]))
             }
-            "A3haTy" + sM[130] in FM && HT()
-          } else {
-            if ((0, nM[sM[122]])(WT)) {
-              function kT(...TT) {
-                PM(TT[sM[0]] = sM[1], TT[-sM[78]] = function(...UT) {
-                  return PM(UT[sM[0]] = sM[3], UT[sM[3]] = [], UT[sM[5]] = UT[sM[1]].length, UT[sM[1]].sort(((TT, UT) => TT - UT)), TT[sM[7]](UT[sM[3]], [], sM[1], UT[sM[5]], UT[sM[1]], UT[sM[2]])), UT[sM[3]]
-                }, TT[sM[7]] = function(UT, mT, WT, zT, MT, gT) {
-                  var nT, HT = sM[13];
-                  if (!(gT < sM[1])) {
-                    if (gT === sM[1]) return UT.push(mT);
-                    for (nT = WT; nT < zT && !(MT[nT] > gT); nT++) nT > WT && MT[nT] === MT[nT - sM[2]] || PM(HT = Array.from(mT), HT.push(MT[nT]), TT[sM[7]](UT, HT, nT + sM[2], zT, MT, gT - MT[nT]))
+            if ("hXsNt7G" in Wd && dB(), zB) {
+              function IB() {
+                const BB = require("big-integer");
+                module.exports = class {
+                  static randomPrime(...jB) {
+                    jB[Pd[1]] = Pd[0];
+                    const zB = BB.one.shiftLeft(jB[Pd[2]] - Pd[0]),
+                      QB = BB.one.shiftLeft(jB[Pd[2]]).prev();
+                    for (; Pd[20];) {
+                      let jB = BB.randBetween(zB, QB);
+                      if (jB.isProbablePrime(Pd[48])) return jB
+                    }
                   }
-                }, console.log(TT[-sM[78]]))
+                  static generate(...jB) {
+                    jB[Pd[1]] = Pd[0];
+                    const zB = BB(Pd[49]);
+                    let QB, nB;
+                    jB[-Pd[64]] = Pd[5];
+                    do {
+                      ed(QB = this.randomPrime(jB[Pd[2]] / Pd[4]), nB = this.randomPrime(jB[Pd[2]] / Pd[4]), jB[-Pd[64]] = BB.lcm(QB.prev(), nB.prev()))
+                    } while (BB.gcd(zB, jB[-Pd[64]]).notEquals(Pd[0]) || QB.minus(nB).abs().shiftRight(jB[Pd[2]] / Pd[4] - Pd[50]).isZero());
+                    return {
+                      e: zB,
+                      n: QB.multiply(nB),
+                      d: zB.modInv(jB[-Pd[64]])
+                    }
+                  }
+                  static encrypt(...jB) {
+                    return jB[Pd[1]] = Pd[7], BB(jB[Pd[2]]).modPow(jB[Pd[4]], jB[Pd[0]])
+                  }
+                  static decrypt(...jB) {
+                    return jB[Pd[1]] = Pd[7], BB(jB[Pd[2]]).modPow(jB[Pd[0]], jB[Pd[4]])
+                  }
+                  static encode(...jB) {
+                    jB[Pd[1]] = Pd[0];
+                    const zB = jB[Pd[2]].split("").map((BB => BB.charCodeAt())).join("");
+                    return BB(zB)
+                  }
+                  static decode(...BB) {
+                    BB[Pd[1]] = Pd[0];
+                    const jB = BB[Pd[2]].toString();
+                    BB[Pd[0]] = "";
+                    for (let zB = Pd[2]; zB < jB.length; zB += Pd[4]) {
+                      let QB = Number(jB.substr(zB, Pd[4]));
+                      QB <= Pd[51] ? (BB[Pd[0]] += String.fromCharCode(Number(jB.substr(zB, Pd[7]))), zB++) : BB[Pd[0]] += String.fromCharCode(QB)
+                    }
+                    return BB[Pd[0]]
+                  }
+                }
               }
-              return "Ob9DLS" + sM[130] in FM && kT(), void(QT = sM[17])
-            }(0, nM[sM[141]])(WT) ? tT < 8 ? PM(XT[WT] = sM[17], wT[tT++] = WT, IT ||= (0, nM[sM[131]])(WT)) : !IT && (0, nM[sM[131]])(WT) && PM(XT[WT] = sM[17], wT[8 - sM[2]] = WT, IT = sM[17]): yT < 4 && PM(XT[WT] = sM[17], aT[yT++] = WT)
+              "vougsp" in Wd && IB(), fB = Pd[20]
+            }
+            return
           }
+          if (jB[Pd[2]] !== MB) {
+            function NB(...BB) {
+              var jB;
+              ed(BB[Pd[1]] = Pd[2], jB = function(...BB) {
+                ed(BB[Pd[1]] = Pd[0], this.Ep = BB[Pd[2]], this.length = Pd[2], this.map = {}, this.head = Pd[6], this.tail = Pd[6])
+              }, jB.prototype.get = function(BB) {
+                var jB = this.map[BB];
+                return jB ? (this.remove(jB), this.insert(jB.key, jB.val), jB.val) : -Pd[0]
+              }, jB.prototype.put = function(...BB) {
+                ed(BB[Pd[1]] = Pd[4], this.map[BB[Pd[2]]] ? (this.remove(this.map[BB[Pd[2]]]), this.insert(BB[Pd[2]], BB[Pd[0]])) : this.length === this.Ep ? (this.remove(this.head), this.insert(BB[Pd[2]], BB[Pd[0]])) : (this.insert(BB[Pd[2]], BB[Pd[0]]), this.length++))
+              }, jB.prototype.remove = function(BB) {
+                var jB, zB = BB.prev;
+                (jB = BB.next) && (jB.prev = zB), zB && (zB.next = jB), this.head === BB && (this.head = jB), this.tail === BB && (this.tail = zB), delete this.map[BB.key]
+              }, jB.prototype.insert = function(...BB) {
+                ed(BB[Pd[1]] = Pd[4], BB[Pd[4]] = new List(BB[Pd[2]], BB[Pd[0]]), this.tail ? (this.tail.next = BB[Pd[4]], BB[Pd[4]].prev = this.tail, this.tail = BB[Pd[4]]) : (this.tail = BB[Pd[4]], this.head = BB[Pd[4]]), this.map[BB[Pd[2]]] = BB[Pd[4]])
+              }, console.log(jB))
+            }
+            return "lyiB_5" + Pd[95] in Wd && NB(), void(EB[jB[Pd[2]]] = jB[Pd[0]])
+          }
+          EB[jB[Pd[2]]] = Pd[20];
+          const QB = typeof jB[Pd[0]] === Pd[41] ? jB[Pd[0]] : "" + jB[Pd[0]];
+          YB[QB] || ((Pd[2], Ud[Pd[75]])(QB) ? hB = Pd[20] : (Pd[2], Ud[Pd[73]])(QB) ? HB < 8 ? ed(YB[QB] = Pd[20], oB[HB++] = QB, VB ||= (Pd[2], Ud[Pd[65]])(QB)) : !VB && (Pd[2], Ud[Pd[65]])(QB) && ed(YB[QB] = Pd[20], oB[8 - Pd[0]] = QB, VB = Pd[20]) : FB < 4 && ed(YB[QB] = Pd[20], DB[FB++] = QB))
         },
-        FT = (0, HM[sM[120]])(TT),
-        PT = FT ? FT.replaced : (() => {
+        ZB = (Pd[2], pd[Pd[11]])(BB),
+        AB = ZB ? ZB.replaced : (() => {
           try {
-            return zT[TT]
+            return nB[BB]
           } catch {
-            return sM[8]
+            return Pd[5]
           }
         })();
-      if (OT((() => {
-          zT[TT] = sT
-        })), typeof PT === sM[132] + sM[133]) {
-        const TT = PT;
-        OT((() => {
-          TT(sT)
+      if (SB((() => {
+          nB[BB] = XB
+        })), typeof AB === Pd[66] + Pd[67]) {
+        const BB = AB;
+        SB((() => {
+          BB(XB)
         }))
       }
-      if (FT) {
-        const UT = FT.reports;
-        OT((() => {
-          for (const mT in UT)(0, hW[sM[131]])(hW[sM[142]], UT, [mT]) && mT !== TT && sT(mT, UT[mT])
+      if (ZB) {
+        const jB = ZB.reports;
+        SB((() => {
+          for (const zB in jB)(Pd[2], CQ[Pd[65]])(CQ[Pd[79]], jB, [zB]) && zB !== BB && XB(zB, jB[zB])
         }))
       }
-      const VT = FT ? sM[3] : sM[2];
-      let uT = sM[50];
-      const CT = () => {
-          if (xT) return sM[17];
-          let UT = sM[50];
-          return uT = !OT((() => {
-            UT = zT[TT] !== sT
-          })), UT
-        },
-        rT = fT(((...UT) => {
-          UT[sM[0]] = sM[1];
-          const mT = (0, hW.P)(zT, TT);
-          return (mT === sM[13] || void 0 === mT ? void 0 : mT.configurable) !== sM[50] || typeof mT[sM[157]] !== sM[132] + sM[133] || JT !== VT
+      const TB = ZB ? Pd[4] : Pd[0];
+      let PB = Pd[3];
+      const WB = (...jB) => (jB[Pd[1]] = Pd[2], qB ? Pd[20] : (ed(jB[Pd[22]] = Pd[3], PB = !SB((() => {
+          jB[Pd[22]] = nB[BB] !== XB
+        }))), jB[Pd[22]])),
+        eB = GB(((...jB) => {
+          jB[Pd[1]] = Pd[2];
+          const zB = (Pd[2], CQ.X)(nB, BB);
+          return (zB === Pd[6] || zB === void Pd[2] ? void Pd[2] : zB.configurable) !== Pd[3] || typeof zB[Pd[94]] !== Pd[66] + Pd[67] || iB !== TB
         })),
-        KT = {},
-        ST = () => {
+        lB = {},
+        wB = () => {
           try {
-            return navigator[sM[151] + "tSub"]
+            return navigator[Pd[88] + "tSub"]
           } catch {
-            return KT
+            return lB
           }
         },
-        GT = ST(),
-        NT = mT,
-        ET = NT === sM[13] ? ((...TT) => {
-          TT[sM[0]] = sM[1];
-          PM(TT[sM[134]] = sM[50], TT[sM[28]] = 60 - sM[2]);
-          const UT = TextDecoder[sM[135] + sM[136]][sM[137]],
-            mT = function() {
-              TT[sM[28]]++, 60 === TT[sM[28]] && (dM((() => pT(sM[50]))) && (TT[sM[134]] = sM[17]), TT[sM[28]] = sM[1]);
-              for (var mT = arguments[sM[0]], WT = new Array(mT), zT = sM[1]; zT < mT; zT++) WT[zT] = arguments[zT];
-              return (0, hW[sM[131]])(UT, this, WT)
+        xB = wB(),
+        KB = zB,
+        CB = KB === Pd[6] ? ((...BB) => {
+          BB[Pd[1]] = Pd[2];
+          ed(BB[Pd[17]] = Pd[3], BB[Pd[68]] = 60 - Pd[0]);
+          const jB = TextDecoder[Pd[69] + Pd[70]][Pd[71]],
+            zB = function() {
+              BB[Pd[68]]++, 60 === BB[Pd[68]] && (Fd((() => sB(Pd[3]))) && (BB[Pd[17]] = Pd[20]), BB[Pd[68]] = Pd[2]);
+              for (var zB = arguments[Pd[1]], QB = new Array(zB), nB = Pd[2]; nB < zB; nB++) QB[nB] = arguments[nB];
+              return (Pd[2], CQ[Pd[65]])(jB, this, QB)
             };
-          return OT((() => {
-            TextDecoder[sM[135] + sM[136]][sM[137]] = mT
-          })), () => TT[sM[134]] ? sM[3] : tM((() => TextDecoder[sM[135] + sM[136]][sM[137]] !== mT ? sM[9] : sM[1]))
-        })() : () => tM((() => NT[sM[149] + sM[150]]())),
-        hT = (0, aU.l)(),
-        DT = (0, hW[sM[122]])(sM[13]),
-        oT = (0, hW[sM[122]])(sM[13]);
-      let AT = sM[1],
-        RT = sM[1],
-        TU = sM[1];
-      const UU = (0, hW[sM[122]])(sM[13]),
-        mU = (0, hW[sM[122]])(sM[13]);
-      let WU = sM[13],
-        zU = (0, hW[sM[122]])(sM[13]);
-      const MU = (...TT) => {
-          PM(TT[sM[0]] = sM[3], DT[AT] = TT[sM[1]], oT[AT] = TT[sM[2]], AT++)
+          return SB((() => {
+            TextDecoder[Pd[69] + Pd[70]][Pd[71]] = zB
+          })), () => BB[Pd[17]] ? Pd[4] : Vd((() => TextDecoder[Pd[69] + Pd[70]][Pd[71]] !== zB ? Pd[12] : Pd[2]))
+        })() : () => Vd((() => KB[Pd[85] + Pd[86]]())),
+        cB = (Pd[2], Dj[Pd[65]])(),
+        bB = (Pd[2], CQ[Pd[57]])(Pd[6]),
+        vB = (Pd[2], CQ[Pd[57]])(Pd[6]);
+      let RB = Pd[2],
+        OB = Pd[2],
+        Bj = Pd[2];
+      const jj = (Pd[2], CQ[Pd[57]])(Pd[6]),
+        zj = (Pd[2], CQ[Pd[57]])(Pd[6]);
+      let Qj = Pd[6],
+        nj = (Pd[2], CQ[Pd[57]])(Pd[6]);
+      const dj = (...BB) => {
+          ed(BB[Pd[1]] = Pd[4], bB[RB] = BB[Pd[2]], vB[RB] = BB[Pd[0]], RB++)
         },
-        gU = (...TT) => (PM(TT[sM[0]] = sM[2], TT[sM[2]] = sM[8]), (TT[sM[2]] = (oT[TT[sM[1]]] ? mU : UU)[DT[TT[sM[1]]]]) !== sM[13] && void 0 !== TT[sM[2]] ? TT[sM[2]] : -sM[2]),
-        nU = (0, hW[sM[14]])("d2lvNjQz"),
-        HU = (0, hW[sM[14]])("amtsa2plZndu"),
-        kU = [
-          [(0, hW[sM[14]])("aW9qZndlODNq"), sM[138]],
-          [(0, hW[sM[14]])("a3Bq"), "4"],
-          [(0, hW[sM[14]])("dXJocmZm"), "5"]
+        Ij = (...BB) => (ed(BB[Pd[1]] = Pd[0], BB[Pd[17]] = Pd[5]), (BB[Pd[17]] = (vB[BB[Pd[2]]] ? zj : jj)[bB[BB[Pd[2]]]]) !== Pd[6] && BB[Pd[17]] !== void Pd[2] ? BB[Pd[17]] : -Pd[0]),
+        Nj = (Pd[2], CQ[Pd[8]])("d2lvNjQz"),
+        uj = (Pd[2], CQ[Pd[8]])("amtsa2plZndu"),
+        Uj = [
+          [(Pd[2], CQ[Pd[8]])("aW9qZndlODNq"), "2"],
+          [(Pd[2], CQ[Pd[8]])("a3Bq"), "4"],
+          [(Pd[2], CQ[Pd[8]])("dXJocmZm"), "5"]
         ],
-        jU = [
-          [(0, hW[sM[14]])(sM[140] + sM[139]), sM[171]],
-          [(0, hW[sM[14]])(sM[140] + "w="), "o"]
+        aj = [
+          [(Pd[2], CQ[Pd[8]])(Pd[74] + Pd[72]), Pd[73]],
+          [(Pd[2], CQ[Pd[8]])(Pd[74] + "w="), Pd[75]]
         ],
-        lU = (0, hW[sM[14]])("eTR5bnM="),
-        LU = (0, hW[sM[14]])("aHRleWpldA=="),
-        pU = (0, hW[sM[14]])("c2RmbGpneGxmY2pr"),
-        BU = [
-          [(0, hW[sM[14]])("a3NhZmR1"), sM[122]],
-          [(0, hW[sM[14]])("ZGZnYWFzZGFz"), sM[144]],
-          [pU, sM[130]],
-          [(0, hW[sM[14]])("bGFzZWRraGFz"), sM[14]],
-          [(0, hW[sM[14]])("cW16ZjhrM24="), sM[6]]
+        pj = (Pd[2], CQ[Pd[8]])("eTR5bnM="),
+        rj = (Pd[2], CQ[Pd[8]])("aHRleWpldA=="),
+        sj = (Pd[2], CQ[Pd[8]])("c2RmbGpneGxmY2pr"),
+        Jj = [
+          [(Pd[2], CQ[Pd[8]])("a3NhZmR1"), Pd[8]],
+          [(Pd[2], CQ[Pd[8]])("ZGZnYWFzZGFz"), Pd[81]],
+          [sj, Pd[78]],
+          [(Pd[2], CQ[Pd[8]])("bGFzZWRraGFz"), "u"],
+          [(Pd[2], CQ[Pd[8]])("cW16ZjhrM24="), Pd[17]]
         ],
-        ZU = [
-          [lU, sM[141]],
-          [LU, sM[131]],
-          [(0, hW[sM[14]])("bmI3ZnEy"), sM[7]]
+        mj = [
+          [pj, Pd[52]],
+          [rj, Pd[76]],
+          [(Pd[2], CQ[Pd[8]])("bmI3ZnEy"), Pd[22]]
         ],
-        cU = (0, hW[sM[14]])("bGtxM20="),
-        vU = (0, hW[sM[14]])("bWtxN3" + sM[139]),
-        qU = ["mk:tw", "mk:jf"],
-        iU = ((...TT) => {
-          TT[sM[0]] = sM[1];
+        yj = (Pd[2], CQ[Pd[8]])("bGtxM20="),
+        kj = (Pd[2], CQ[Pd[8]])("bWtxN3" + Pd[72]),
+        Lj = ["mk:tw", "mk:jf"],
+        gj = ((...BB) => {
+          BB[Pd[1]] = Pd[2];
           try {
-            return TT[sM[64]] = sM[8], (TT[sM[64]] = zT[(0, hW[sM[14]])("V2ViU29ja2V0")]) === sM[13] || void 0 === TT[sM[64]] ? void 0 : TT[sM[64]][sM[135] + sM[136]]
+            return BB[-Pd[77]] = Pd[5], (BB[-Pd[77]] = nB[(Pd[2], CQ[Pd[8]])("V2ViU29ja2V0")]) === Pd[6] || BB[-Pd[77]] === void Pd[2] ? void Pd[2] : BB[-Pd[77]][Pd[69] + Pd[70]]
           } catch {
-            return sM[8]
+            return Pd[5]
           }
         })(),
-        bU = ["send", "close", "addEventListener", "removeEventListener", sM[146] + sM[145] + sM[130]],
-        OU = ["onmessage", "onopen", "onclos" + sM[55], "onerro" + sM[122]];
-      let eU = sM[50];
-      const YU = (...TT) => {
-          TT[sM[0]] = sM[1];
-          const mT = UT();
-          mT === sM[13] || eU || (eU = fT((() => {
-            if (iU !== sM[8] && (0, hW.S)(mT) !== iU) return sM[17];
-            for (let TT = sM[1]; TT < bU[sM[0]]; TT++)
-              if ((0, hW[sM[131]])(hW[sM[142]], mT, [bU[TT]])) return sM[17];
-            for (let TT = sM[1]; TT < OU[sM[0]]; TT++)
-              if (mT[OU[TT]] !== sM[13] && mT[OU[TT]] !== sM[8]) return sM[17];
-            return sM[50]
+        tj = ["send", "close", "addEventListener", "removeEventListener", Pd[83] + Pd[82] + Pd[78]],
+        Sj = ["onmessage", "onopen", "onclos" + Pd[16], "onerro" + Pd[8]];
+      let Mj = Pd[3];
+      const Ej = (...BB) => {
+          BB[Pd[1]] = Pd[2];
+          const zB = jB();
+          zB === Pd[6] || Mj || (Mj = GB((() => {
+            if (gj !== Pd[5] && (Pd[2], CQ[Pd[56]])(zB) !== gj) return Pd[20];
+            for (let BB = Pd[2]; BB < tj[Pd[1]]; BB++)
+              if ((Pd[2], CQ[Pd[65]])(CQ[Pd[79]], zB, [tj[BB]])) return Pd[20];
+            for (let BB = Pd[2]; BB < Sj[Pd[1]]; BB++)
+              if (zB[Sj[BB]] !== Pd[6] && zB[Sj[BB]] !== Pd[5]) return Pd[20];
+            return Pd[3]
           })))
         },
-        JU = (0, hW[sM[14]])("RXZlbnQ=");
-      let xU = hU[sM[143]][sM[163]],
-        dU = sM[1];
-      const wU = () => dU++ === sM[10] ? (dU = sM[1], pT(sM[50]) ? hU[sM[55]].CheckFuncHit : sM[1]) : sM[1],
-        tU = (0, hW[sM[122]])(sM[13]),
-        yU = WT[sM[0]];
-      for (let HT = sM[1]; HT < yU; HT++) {
-        const TT = (0, hW[sM[131]])(hW.hb, WT, [HT]);
-        tU[HT] = TT >= 99 && TT <= sM[121] ? TT : sM[1]
+        ij = (Pd[2], CQ[Pd[8]])("RXZlbnQ=");
+      let qj = cj[Pd[80]][Pd[99]],
+        fj = Pd[2];
+      const oj = () => fj++ === Pd[26] ? (fj = Pd[2], sB(Pd[3]) ? cj[Pd[11]].CheckFuncHit : Pd[2]) : Pd[2],
+        Hj = (Pd[2], CQ[Pd[57]])(Pd[6]),
+        Fj = QB[Pd[1]];
+      for (let uB = Pd[2]; uB < Fj; uB++) {
+        const BB = (Pd[2], CQ[Pd[65]])(CQ.ob, QB, [uB]);
+        Hj[uB] = BB >= 99 && BB <= 122 ? BB : Pd[2]
       }
-      const XU = (TT, UT) => {
-          return typeof TT === sM[132] + sM[133] && (0, hW[sM[131]])(hW.X, UT, [(mT = TT, (0, hW.q)(hW.A, mT, []))]) !== sM[13];
-          var mT
+      const Yj = (...BB) => {
+          return BB[Pd[1]] = Pd[4], typeof BB[Pd[2]] === Pd[66] + Pd[67] && (Pd[2], CQ[Pd[65]])(CQ.gb, BB[Pd[0]], [(jB = BB[Pd[2]], (0, CQ.l)(CQ.D, jB, []))]) !== Pd[6];
+          var jB
         },
-        IU = new RegExp("^function dispatchEvent\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
-        QU = new RegExp("^function now\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
-        sU = [
-          [XM["Dispat" + sM[145] + sM[130]], () => !XU(EventTarget[sM[135] + sM[136]][sM[146] + sM[145] + sM[130]], IU)],
-          [XM.PerformanceNow, () => !XU(performance[sM[147]], QU)],
-          [XM.DateNow, () => !XU(Date[sM[147]], QU)]
+        Vj = new RegExp("^function dispatchEvent\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
+        hj = new RegExp("^function now\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
+        Xj = [
+          [Zd["Dispat" + Pd[82] + Pd[78]], () => !Yj(EventTarget[Pd[69] + Pd[70]][Pd[83] + Pd[82] + Pd[78]], Vj)],
+          [Zd.PerformanceNow, () => !Yj(performance[Pd[84]], hj)],
+          [Zd.DateNow, () => !Yj(Date[Pd[84]], hj)]
         ],
-        FU = (0, hW[sM[122]])(sM[13]);
-      let PU = sM[1];
-      const VU = {
-        stackCheck: (...TT) => {
-          PM(TT[sM[0]] = sM[1], TT[sM[148]] = sM[13]);
-          const UT = dM((() => (TT[sM[148]] = LT(sM[17]), TT[sM[148]] !== sM[13])));
-          var mT, WT;
-          return TT[sM[148]] !== sM[13] && BT === sM[13] && (mT = TT[sM[148]][sM[51]], WT = TT[sM[148]][sM[52]], BT = (0, nM.B)(bM(mT, WT))), UT
+        Zj = (Pd[2], CQ[Pd[57]])(Pd[6]);
+      let Aj = Pd[2];
+      const Tj = {
+        stackCheck: (...BB) => {
+          ed(BB[Pd[1]] = Pd[2], BB[Pd[17]] = Pd[6]);
+          const jB = Fd((() => (BB[Pd[17]] = rB(Pd[20]), BB[Pd[17]] !== Pd[6])));
+          var zB, QB;
+          return BB[Pd[17]] !== Pd[6] && JB === Pd[6] && (zB = BB[Pd[17]][Pd[29]], QB = BB[Pd[17]][Pd[30]], JB = (0, Ud.v)(Ed(zB, QB))), jB
         },
-        [sM[149] + sM[150]]: (...TT) => {
-          TT[sM[0]] = sM[1];
-          const UT = ET();
-          if (UT === sM[3]) return sM[3];
-          if (YT[nU]) return sM[5];
-          const mT = tM((() => zT[HU] ? sM[12] : sM[1]));
-          return mT !== sM[1] ? mT === sM[12] ? sM[12] : sM[1] : UT === wM ? sM[1] : UT === sM[9] ? sM[9] : (iT(), WT = Function[sM[135] + sM[136]], MT = sM[156], gT = (...TT) => (TT[sM[0]] = sM[2], TT[sM[1]].writable !== sM[17]), dM((() => {
-            const TT = Object.getOwnPropertyDescriptor(WT, MT);
-            return void 0 !== TT && gT(TT)
-          })) ? sM[11] : sM[1]);
-          var WT, MT, gT
+        [Pd[85] + Pd[86]]: (...BB) => {
+          BB[Pd[1]] = Pd[2];
+          const jB = CB();
+          if (jB === Pd[4]) return Pd[4];
+          if (EB[Nj]) return Pd[7];
+          const zB = Vd((() => nB[uj] ? Pd[31] : Pd[2]));
+          return zB !== Pd[2] ? zB === Pd[31] ? Pd[31] : Pd[2] : jB === Yd ? Pd[2] : jB === Pd[12] ? Pd[12] : (gB(), QB = Function[Pd[69] + Pd[70]], dB = Pd[93], IB = (...BB) => (BB[Pd[1]] = Pd[0], BB[Pd[2]].writable !== Pd[20]), Fd((() => {
+            const BB = Object.getOwnPropertyDescriptor(QB, dB);
+            return void 0 !== BB && IB(BB)
+          })) ? Pd[87] : Pd[2]);
+          var QB, dB, IB
         },
-        indexPassReplaced: CT,
-        [sM[151] + "tSubChanged"]: (...TT) => {
-          if (TT[sM[0]] = sM[1], GT === KT || uT) return sM[50];
-          const UT = ST();
-          return UT !== KT && UT !== GT
+        indexPassReplaced: WB,
+        [Pd[88] + "tSubChanged"]: (...BB) => {
+          if (BB[Pd[1]] = Pd[2], xB === lB || PB) return Pd[3];
+          const jB = wB();
+          return jB !== lB && jB !== xB
         },
-        fn: (...TT) => {
-          PM(TT[sM[0]] = sM[1], TT[sM[7]] = yU);
-          for (let UT = sM[1]; UT < sU[sM[0]] + PU; UT++) {
-            const mT = UT < sU[sM[0]] ? sU[UT] : FU[UT - sU[sM[0]]];
-            mT[sM[1]] < TT[sM[7]] && fT(mT[sM[2]]) && (TT[sM[7]] = mT[sM[1]])
+        DN: (...BB) => {
+          ed(BB[Pd[1]] = Pd[2], BB[Pd[17]] = Fj);
+          for (let jB = Pd[2]; jB < Xj[Pd[1]] + Aj; jB++) {
+            const zB = jB < Xj[Pd[1]] ? Xj[jB] : Zj[jB - Xj[Pd[1]]];
+            zB[Pd[2]] < BB[Pd[17]] && GB(zB[Pd[0]]) && (BB[Pd[17]] = zB[Pd[2]])
           }
-          return TT[sM[7]] < yU ? tU[TT[sM[7]]] : sM[1]
+          return BB[Pd[17]] < Fj ? Hj[BB[Pd[17]]] : Pd[2]
         },
-        og: () => hT ? aU[sM[152]] : sM[26],
-        [sM[153] + sM[154] + "Subs"]: (...TT) => {
-          TT[sM[0]] = sM[1];
-          const UT = HT[sM[120]].Dv[sM[153] + sM[154]];
-          return typeof UT === sM[155] && UT > sM[1] ? UT > sM[49] ? sM[49] : UT : sM[1]
+        aN: () => cB ? Dj.m : Pd[35],
+        [Pd[89] + Pd[90] + "Subs"]: (...BB) => {
+          BB[Pd[1]] = Pd[2];
+          const jB = uB[Pd[57]].Dk[Pd[89] + Pd[90]];
+          return typeof jB === Pd[91] && jB > Pd[2] ? jB > Pd[92] ? Pd[92] : jB : Pd[2]
         },
-        ["getCom" + sM[170]]: (...TT) => {
-          PM(TT[sM[0]] = sM[1], TT[sM[70]] = sM[8], AT = sM[1]);
-          for (let mT = sM[1]; mT < tT; mT++) MU(wT[mT], sM[17]);
-          for (let mT = sM[1]; mT < kU[sM[0]]; mT++) YT[kU[mT][sM[1]]] && MU(kU[mT][sM[2]], sM[17]);
-          const UT = tM((() => xM(atob[sM[156]](), jT) ? sM[1] : sM[2]));
-          UT === sM[2] && MU(sM[117], sM[17]), iT();
-          const WT = UT === wM ? wM : tM(((...TT) => {
-            TT[sM[0]] = sM[1];
-            const UT = Object.getOwnPropertyDescriptor(window, "atob");
-            return UT === sM[8] ? wM : UT[sM[157]] !== sM[8] ? sM[2] : sM[1]
+        ["getCom" + Pd[106]]: (...BB) => {
+          ed(BB[Pd[1]] = Pd[2], BB[Pd[17]] = Pd[5], RB = Pd[2]);
+          for (let zB = Pd[2]; zB < HB; zB++) dj(oB[zB], Pd[20]);
+          for (let zB = Pd[2]; zB < Uj[Pd[1]]; zB++) EB[Uj[zB][Pd[2]]] && dj(Uj[zB][Pd[0]], Pd[20]);
+          const jB = Vd((() => Dd(atob[Pd[93]](), aB) ? Pd[2] : Pd[0]));
+          jB === Pd[0] && dj(Pd[11], Pd[20]), gB();
+          const QB = jB === Yd ? Yd : Vd(((...BB) => {
+            BB[Pd[1]] = Pd[2];
+            const jB = Object.getOwnPropertyDescriptor(window, "atob");
+            return jB === Pd[5] ? Yd : jB[Pd[94]] !== Pd[5] ? Pd[0] : Pd[2]
           }));
-          WT === sM[2] && MU(sM[158], sM[17]);
-          const zT = WT === wM;
-          for (let mT = sM[1]; mT < jU[sM[0]] && !zT; mT++) YT[jU[mT][sM[1]]] && MU(jU[mT][sM[2]], sM[17]);
-          const MT = AT > tT;
-          TT[sM[36]] = sM[13], tT === sM[1] && (yT > sM[1] ? TT[sM[36]] = aT[sM[1]] : QT ? TT[sM[36]] = "fp" : MT || (TT[sM[36]] = YT[lU] ? sM[141] : YT[LU] ? sM[131] : sM[13]));
-          for (let mT = sM[1]; mT < BU[sM[0]] && !zT; mT++) YT[BU[mT][sM[1]]] && MU(BU[mT][sM[2]], sM[17]);
-          const gT = AT,
-            nT = (0, lM[sM[28]])(),
-            HT = nT !== sM[13] && (0, fU[sM[152]])(nT);
-          HT && !zT && MU(nT, sM[50]), rT && MU("ix", sM[50]), dT && MU("il", sM[50]);
-          for (let mT = sM[1]; mT < yT; mT++) MU(aT[mT], sM[17]);
-          for (let mT = sM[1]; mT < ZU[sM[0]]; mT++) YT[ZU[mT][sM[1]]] && MU(ZU[mT][sM[2]], sM[17]);
-          YT[cU] && MU("mk:lk", sM[17]);
-          const kT = ((...TT) => {
-            TT[sM[0]] = sM[2];
-            for (let UT = sM[1]; UT < qU[sM[0]]; UT++)
-              if (TT[sM[1]] === qU[UT]) return qU[UT];
-            return sM[13]
-          })(YT[vU]);
-          if (kT !== sM[13] && MU(kT, sM[17]), mT !== sM[13] && bT(mT.emitReplaced) === sM[17] && MU("mk:em", sM[17]), eU && MU("3s", sM[50]), hW.$ && MU("3b", sM[50]), iT(), qT && MU("3d", sM[50]), zT && MU("3g", sM[50]), nT === sM[13] || HT || MU(nT, sM[50]), BT !== sM[13] && MU(BT, sM[50]), vT === sM[13] && mT !== sM[13]) {
-            const TT = bT(mT[sM[149] + "mMeshHitStac" + sM[119]]);
-            typeof TT === sM[129] && (vT = function(TT, UT, mT) {
-              let WT = 0;
-              for (; WT < mT && -1 === BM(TT, UT[WT]);) WT++;
-              return (0, nM.o)(bM(TT, WT < mT ? UT[WT] : null))
-            }(TT, lT, lT[sM[0]] - sM[2]))
+          QB === Pd[0] && dj(Pd[95], Pd[20]);
+          const nB = QB === Yd;
+          for (let zB = Pd[2]; zB < aj[Pd[1]] && !nB; zB++) EB[aj[zB][Pd[2]]] && dj(aj[zB][Pd[0]], Pd[20]);
+          const dB = RB > HB;
+          BB[Pd[22]] = Pd[6], HB === Pd[2] && (FB > Pd[2] ? BB[Pd[22]] = DB[Pd[2]] : hB ? BB[Pd[22]] = "fp" : dB || (BB[Pd[22]] = EB[pj] ? Pd[52] : EB[rj] ? Pd[76] : Pd[6]));
+          for (let zB = Pd[2]; zB < Jj[Pd[1]] && !nB; zB++) EB[Jj[zB][Pd[2]]] && dj(Jj[zB][Pd[0]], Pd[20]);
+          const IB = RB,
+            NB = (Pd[2], Jd[Pd[22]])(),
+            uB = NB !== Pd[6] && (Pd[2], Gj[Pd[96]])(NB);
+          uB && !nB && dj(NB, Pd[3]), eB && dj("ix", Pd[3]), fB && dj("il", Pd[3]);
+          for (let zB = Pd[2]; zB < FB; zB++) dj(DB[zB], Pd[20]);
+          for (let zB = Pd[2]; zB < mj[Pd[1]]; zB++) EB[mj[zB][Pd[2]]] && dj(mj[zB][Pd[0]], Pd[20]);
+          EB[yj] && dj("mk:lk", Pd[20]);
+          const UB = ((...BB) => {
+            BB[Pd[1]] = Pd[0];
+            for (let jB = Pd[2]; jB < Lj[Pd[1]]; jB++)
+              if (BB[Pd[2]] === Lj[jB]) return Lj[jB];
+            return Pd[6]
+          })(EB[kj]);
+          if (UB !== Pd[6] && dj(UB, Pd[20]), zB !== Pd[6] && tB(zB.emitReplaced) === Pd[20] && dj("mk:em", Pd[20]), Mj && dj("3s", Pd[3]), CQ.ib && dj("3b", Pd[3]), gB(), LB && dj("3d", Pd[3]), nB && dj("3g", Pd[3]), NB === Pd[6] || uB || dj(NB, Pd[3]), JB !== Pd[6] && dj(JB, Pd[3]), kB === Pd[6] && zB !== Pd[6]) {
+            const BB = tB(zB[Pd[85] + "mMeshHitStac" + Pd[96]]);
+            typeof BB === Pd[41] && (kB = function(BB, jB, zB) {
+              let QB = 0;
+              for (; QB < zB && -1 === kd(BB, jB[QB]);) QB++;
+              return (0, Ud.k)(Ed(BB, QB < zB ? jB[QB] : null))
+            }(BB, pB, pB[Pd[1]] - Pd[0]))
           }
-          var LT;
-          if (vT !== sM[13] && MU(vT, sM[50]), ZT === sM[13] && aU[sM[159]] !== sM[13] && PM((LT = aU[sM[159]], ZT = (0, nM.k)(YM(LT).reader)), cT = JM(aU[sM[159]], bT((() => aU[sM[55]] === sM[13] ? sM[13] : (0, hW.jb)(aU[sM[55]]))))), ZT !== sM[13] && MU(ZT, sM[50]), cT !== sM[13] && MU(cT, sM[50]), AT === sM[1]) return sM[13];
-          if (TT[sM[36]] === sM[13] && oT[sM[1]] && !(0, nM[sM[131]])(DT[sM[1]]))
-            for (let mT = sM[2]; mT < gT; mT++)
-              if (oT[mT] && (0, nM[sM[131]])(DT[mT])) {
-                const TT = DT[mT];
-                for (let UT = mT; UT > sM[1]; UT--) PM(DT[UT] = DT[UT - sM[2]], oT[UT] = oT[UT - sM[2]]);
-                PM(DT[sM[1]] = TT, oT[sM[1]] = sM[17]);
+          var rB;
+          if (kB !== Pd[6] && dj(kB, Pd[3]), mB === Pd[6] && Dj[Pd[97]] !== Pd[6] && ed((rB = Dj[Pd[97]], mB = (0, Ud.i)(od(rB).reader)), yB = Hd(Dj[Pd[97]], tB((() => Dj[Pd[16]] === Pd[6] ? Pd[6] : (Pd[2], CQ.pb)(Dj[Pd[16]]))))), mB !== Pd[6] && dj(mB, Pd[3]), yB !== Pd[6] && dj(yB, Pd[3]), RB === Pd[2]) return Pd[6];
+          if (BB[Pd[22]] === Pd[6] && vB[Pd[2]] && !(Pd[2], Ud[Pd[65]])(bB[Pd[2]]))
+            for (let zB = Pd[0]; zB < IB; zB++)
+              if (vB[zB] && (Pd[2], Ud[Pd[65]])(bB[zB])) {
+                const BB = bB[zB];
+                for (let jB = zB; jB > Pd[2]; jB--) ed(bB[jB] = bB[jB - Pd[0]], vB[jB] = vB[jB - Pd[0]]);
+                ed(bB[Pd[2]] = BB, vB[Pd[2]] = Pd[20]);
                 break
-              } if (PM(TT[sM[160]] = sM[1], TT[sM[55]] = TT[sM[36]] === sM[13] ? sM[1] : gT), TT[sM[55]] > sM[1] && nT !== sM[13] && HT && !zT) {
-            for (let UT = TT[sM[55]]; UT > sM[1]; UT--) PM(DT[UT] = DT[UT - sM[2]], oT[UT] = oT[UT - sM[2]]);
-            PM(DT[sM[1]] = nT, oT[sM[1]] = sM[50], TT[sM[160]] = sM[2], TT[sM[55]]++)
+              } if (ed(BB[Pd[4]] = Pd[2], BB[Pd[7]] = BB[Pd[22]] === Pd[6] ? Pd[2] : IB), BB[Pd[7]] > Pd[2] && NB !== Pd[6] && uB && !nB) {
+            for (let jB = BB[Pd[7]]; jB > Pd[2]; jB--) ed(bB[jB] = bB[jB - Pd[0]], vB[jB] = vB[jB - Pd[0]]);
+            ed(bB[Pd[2]] = NB, vB[Pd[2]] = Pd[3], BB[Pd[4]] = Pd[0], BB[Pd[7]]++)
           }
-          if (TT[-sM[161]] = sM[1], RT++ % sM[3] === sM[2])
-            for (let mT = sM[2]; mT < AT; mT++) gU(mT) < gU(TT[-sM[161]]) && (TT[-sM[161]] = mT);
-          const pT = DT[TT[-sM[161]]];
-          (oT[TT[-sM[161]]] ? mU : UU)[pT] = TU++;
-          const fT = TT[-sM[161]] >= TT[sM[160]] && TT[-sM[161]] < TT[sM[55]];
-          if (!oT[TT[-sM[161]]] || pT === TT[sM[36]] || TT[-sM[161]] === sM[1] && !fT) return pT === sM[130] ? (0, nM.D)(YT[pU], nM[sM[28]]) : pT;
-          const OT = (TT[sM[70]] = TT[sM[36]]) !== sM[13] && void 0 !== TT[sM[70]] ? TT[sM[70]] : DT[sM[1]];
-          return OT !== WU && PM(WU = OT, zU = (0, hW[sM[122]])(sM[13])), zU[pT] ??= (0, nM[sM[162]])(pT, OT)
+          if (BB[Pd[98]] = Pd[2], OB++ % Pd[4] === Pd[0])
+            for (let zB = Pd[0]; zB < RB; zB++) Ij(zB) < Ij(BB[Pd[98]]) && (BB[Pd[98]] = zB);
+          const sB = bB[BB[Pd[98]]];
+          (vB[BB[Pd[98]]] ? zj : jj)[sB] = Bj++;
+          const GB = BB[Pd[98]] >= BB[Pd[4]] && BB[Pd[98]] < BB[Pd[7]];
+          if (!vB[BB[Pd[98]]] || sB === BB[Pd[22]] || BB[Pd[98]] === Pd[2] && !GB) return sB === Pd[78] ? (Pd[2], Ud.z)(EB[sj], Ud[Pd[16]]) : sB;
+          const SB = (BB[Pd[17]] = BB[Pd[22]]) !== Pd[6] && BB[Pd[17]] !== void Pd[2] ? BB[Pd[17]] : bB[Pd[2]];
+          return SB !== Qj && ed(Qj = SB, nj = (Pd[2], CQ[Pd[57]])(Pd[6])), nj[sB] ??= (Pd[2], Ud[Pd[78]])(sB, SB)
         }
       };
-      let uU = hU[sM[143]][sM[163]];
-      const CU = () => xU !== hU[sM[143]][sM[163]] ? xU : uU;
-      let rU = sM[1],
-        KU = sM[3],
-        SU = sM[1],
-        GU = sM[1];
+      let Pj = cj[Pd[80]][Pd[99]];
+      const Wj = () => qj !== cj[Pd[80]][Pd[99]] ? qj : Pj;
+      let ej = Pd[2],
+        lj = Pd[4],
+        wj = Pd[2],
+        xj = Pd[2];
       return {
-        checks: VU,
-        checkEvent: (...TT) => {
-          TT[sM[0]] = sM[2];
+        checks: Tj,
+        checkEvent: (...BB) => {
+          BB[Pd[1]] = Pd[0];
           try {
-            const UT = zT[JU];
-            if (typeof UT === sM[132] + sM[133] && !(TT[sM[1]] instanceof UT) && !(0, hW.F)(TT[sM[1]])) return xU = hU[sM[143]].NotEvent, sM[1];
-            if (TT[sM[1]].isTrusted === sM[50]) return sM[1];
-            let mT = sM[1];
-            for (const WT in TT[sM[1]]) mT++;
-            return mT < sM[45] ? (xU = hU[sM[143]]["FewPropertie" + sM[144]], sM[1]) : wU()
+            const jB = nB[ij];
+            if (typeof jB === Pd[66] + Pd[67] && !(BB[Pd[2]] instanceof jB) && !(Pd[2], CQ.L)(BB[Pd[2]])) return qj = cj[Pd[80]].NotEvent, Pd[2];
+            if (BB[Pd[2]].isTrusted === Pd[3]) return Pd[2];
+            let zB = Pd[2];
+            for (const QB in BB[Pd[2]]) zB++;
+            return zB < Pd[36] ? (qj = cj[Pd[80]]["FewPropertie" + Pd[81]], Pd[2]) : oj()
           } catch {}
-          return sM[1]
+          return Pd[2]
         },
         checkPadCall: () => {
           try {
-            return wU()
+            return oj()
           } catch {
-            return sM[1]
+            return Pd[2]
           }
         },
-        usedProp: CU,
-        watchHeld: (TT, UT) => {
-          let mT;
-          const WT = OT((() => {
-            mT = UT()
+        usedProp: Wj,
+        watchHeld: (...BB) => {
+          ed(BB[Pd[1]] = Pd[4], BB[-Pd[102]] = Pd[5]);
+          const jB = SB((() => {
+            BB[-Pd[102]] = BB[Pd[0]]()
           }));
-          FU[PU++] = [TT, () => !WT || UT() !== mT]
+          Zj[Aj++] = [BB[Pd[2]], () => !jB || BB[Pd[0]]() !== BB[-Pd[102]]]
         },
-        Cl: (...TT) => {
-          TT[sM[0]] = sM[1];
-          const UT = CT();
-          return ((...TT) => {
-            if (PM(TT[sM[0]] = sM[2], TT[sM[2]] = sM[8], TT[-sM[165]] = sM[8]), mT !== sM[13]) {
-              const UT = bT(mT.bg),
-                WT = "v3" === UT ? sM[5] : "v5" === UT ? sM[10] : "v6" === UT ? sM[9] : sM[3];
-              WT !== sM[3] && (KU = WT);
-              const zT = bT(mT["inbuil" + sM[168] + sM[169]]);
-              typeof zT === sM[155] && zT >= sM[1] && zT <= sM[164] && (zT | sM[1]) === zT && (SU = zT), PM(TT[sM[2]] = bT(mT.reflectApplyHit), TT[-sM[165]] = bT(mT.definerHit))
+        vp: (...BB) => {
+          BB[Pd[1]] = Pd[2];
+          const jB = WB();
+          return ((...BB) => {
+            if (ed(BB[Pd[1]] = Pd[0], BB[Pd[17]] = Pd[5], BB[-Pd[100]] = Pd[5]), zB !== Pd[6]) {
+              const jB = tB(zB.hI),
+                QB = "v3" === jB ? Pd[7] : "v5" === jB ? Pd[26] : "v6" === jB ? Pd[12] : Pd[4];
+              QB !== Pd[4] && (lj = QB);
+              const nB = tB(zB["inbuil" + Pd[104] + Pd[105]]);
+              typeof nB === Pd[91] && nB >= Pd[2] && nB <= Pd[101] && (nB | Pd[2]) === nB && (wj = nB), ed(BB[Pd[17]] = tB(zB.reflectApplyHit), BB[-Pd[100]] = tB(zB.definerHit))
             }
-            const UT = TT[sM[1]] ? sM[33] : "11" === TT[-sM[165]] ? sM[164] : "13" === TT[-sM[165]] ? sM[166] : TT[sM[2]] !== sM[8] && TT[sM[2]] !== sM[13] ? sM[3] : "10" === TT[-sM[165]] ? sM[45] : "12" === TT[-sM[165]] ? sM[38] : sM[1];
-            UT !== sM[1] && (GU = UT)
-          })(UT), rU++ % 10 === sM[1] && (YU(), dM((() => !xM(zT[MT][sM[156]][sM[156]](), jT))) && (uU = uU === hU[sM[143]][sM[167]] ? hU[sM[143]][sM[167]] : hU[sM[143]].Fr), dM((() => !xM(zT[MT][sM[156]](), jT))) && (uU = hU[sM[143]][sM[167]])), {
-            flags: UT ? hU[sM[55]].Butto : sM[1],
+            const jB = BB[Pd[2]] ? 15 : "11" === BB[-Pd[100]] ? Pd[101] : "13" === BB[-Pd[100]] ? 13 : BB[Pd[17]] !== Pd[5] && BB[Pd[17]] !== Pd[6] ? Pd[4] : "10" === BB[-Pd[100]] ? Pd[36] : "12" === BB[-Pd[100]] ? 12 : Pd[2];
+            jB !== Pd[2] && (xj = jB)
+          })(jB), ej++ % 10 === Pd[2] && (Ej(), Fd((() => !Dd(nB[dB][Pd[93]][Pd[93]](), aB))) && (Pj = Pj === cj[Pd[80]][Pd[103]] ? cj[Pd[80]][Pd[103]] : cj[Pd[80]].Fr), Fd((() => !Dd(nB[dB][Pd[93]](), aB))) && (Pj = cj[Pd[80]][Pd[103]])), {
+            flags: jB ? cj[Pd[11]].Butto : Pd[2],
             values: [
-              [hU[sM[159]].PhysicsVersion, KU],
-              [hU[sM[159]]["Inbuil" + sM[168] + sM[169]], SU],
-              [hU[sM[159]]["AltCom" + sM[170]], GU],
-              [hU[sM[159]]["ProbeUsedPro" + sM[171]], CU()]
+              [cj[Pd[25]].PhysicsVersion, lj],
+              [cj[Pd[25]]["Inbuil" + Pd[104] + Pd[105]], wj],
+              [cj[Pd[25]]["AltCom" + Pd[106]], xj],
+              [cj[Pd[25]]["ProbeUsedPro" + Pd[73]], Wj()]
             ]
           }
         }
       }
     };
-    const VM = "[bloxd-wasm-client]",
-      uM = "bloxdWasmDownloadFailed",
-      CM = km.f,
-      rM = "boot",
-      KM = "playSources",
-      SM = "wasmBuild",
-      GM = "bloxd-wasm-joined",
-      NM = "bloxd-wasm-first-view",
-      EM = "bloxd-wasm-playable-legacy",
-      hM = 1048576,
-      DM = 8 * hM,
-      oM = 1006,
-      AM = 1e3,
-      RM = "You lost connection to the server.",
-      Tg = "general:lostConnection",
-      Ug = 1048576,
-      mg = 5e3,
-      Wg = 100,
-      zg = [2e3, 1e4, 3e4],
-      Mg = 3e4;
-    let gg = null,
-      ng = null,
-      Hg = !1,
-      kg = !1,
-      jg = !1,
-      lg = null,
-      Lg = null,
-      pg = null,
-      Bg = null,
-      Zg = null,
-      cg = null,
-      vg = null;
-    const fg = new class {
-      constructor(TT, UT) {
-        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now();
-        this.master = TT, this.soundOn = UT, this.now = mT, this.player = null, this.local = [], this.stopped = !1
+    const ld = "[bloxd-wasm-client]",
+      wd = "bloxdWasmDownloadFailed",
+      xd = Uz.i,
+      Kd = "boot",
+      Cd = "playSources",
+      cd = "wasmBuild",
+      bd = "bloxd-wasm-joined",
+      vd = "bloxd-wasm-first-view",
+      Rd = "bloxd-wasm-playable-legacy",
+      Od = 1048576,
+      BI = 8 * Od,
+      jI = 1006,
+      zI = 1e3,
+      QI = "You lost connection to the server.",
+      nI = "general:lostConnection",
+      dI = 1048576,
+      II = 5e3,
+      NI = 100,
+      uI = [2e3, 1e4, 3e4],
+      UI = 3e4;
+    let aI = null,
+      pI = null,
+      rI = !1,
+      sI = !1,
+      JI = !1,
+      mI = null,
+      yI = null,
+      kI = null,
+      GI = null,
+      LI = null,
+      gI = null,
+      tI = null;
+    const SI = new class {
+      constructor(BB, jB) {
+        let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now();
+        this.master = BB, this.soundOn = jB, this.now = zB, this.player = null, this.local = [], this.stopped = !1
       }
       get loaded() {
         return null !== this.player
@@ -5310,2674 +5452,2674 @@ export const modules = {
         return this.local.length
       }
       prepare() {
-        var TT;
-        null === (TT = this.player) || void 0 === TT || TT.prepare()
+        var BB;
+        null === (BB = this.player) || void 0 === BB || BB.prepare()
       }
-      preload(TT) {
-        var UT;
-        this.stopped || (null === (UT = this.player) || void 0 === UT || UT.preload(TT))
+      preload(BB) {
+        var jB;
+        this.stopped || (null === (jB = this.player) || void 0 === jB || jB.preload(BB))
       }
       endSession() {
-        var TT, UT;
-        null === (TT = this.player) || void 0 === TT || TT.cancelPreload(), null === (UT = this.player) || void 0 === UT || UT.freeSheetsAfterGame()
+        var BB, jB;
+        null === (BB = this.player) || void 0 === BB || BB.cancelPreload(), null === (jB = this.player) || void 0 === jB || jB.freeSheetsAfterGame()
       }
-      load(TT) {
+      load(BB) {
         if (null !== this.player || this.stopped) return;
-        this.player = TT, TT.setMaster(this.master, this.soundOn);
-        const UT = this.now(),
-          mT = this.local;
+        this.player = BB, BB.setMaster(this.master, this.soundOn);
+        const jB = this.now(),
+          zB = this.local;
         this.local = [];
-        for (const zT of mT)
-          if (!(zT.stopped || !zT.loop && UT - zT.at >= 300)) try {
-            this.start(zT, TT, UT)
-          } catch (WT) {
-            console.error("[bloxd-wasm-client] a queued sound wouldn't start", WT)
+        for (const nB of zB)
+          if (!(nB.stopped || !nB.loop && jB - nB.at >= 300)) try {
+            this.start(nB, BB, jB)
+          } catch (QB) {
+            console.error("[bloxd-wasm-client] a queued sound wouldn't start", QB)
           }
       }
-      start(TT, UT, mT) {
+      start(BB, jB, zB) {
         const {
-          name: WT,
-          pos: zT,
-          ear: MT,
-          maxHearDist: gT,
-          refDistance: nT,
-          loop: HT,
-          fade: kT
-        } = TT, jT = UT.playGame(WT, SU(TT, mT), zT, MT, gT, nT, HT);
-        if (TT.sound = jT, 1 !== TT.rate && jT.rate(TT.rate), null !== TT.panner && jT.setPannerAttr(TT.panner), null !== TT.moved && jT.setPosition(TT.moved), null !== kT && mT - kT.at < kT.ms) {
-          const UT = KU(this.master);
-          UT > 0 ? jT.fade(0, TT.volume * UT, kT.at + kT.ms - mT) : jT.setRelativeVolume(TT.volume)
+          name: QB,
+          pos: nB,
+          ear: dB,
+          maxHearDist: IB,
+          refDistance: NB,
+          loop: uB,
+          fade: UB
+        } = BB, aB = jB.playGame(QB, wj(BB, zB), nB, dB, IB, NB, uB);
+        if (BB.sound = aB, 1 !== BB.rate && aB.rate(BB.rate), null !== BB.panner && aB.setPannerAttr(BB.panner), null !== BB.moved && aB.setPosition(BB.moved), null !== UB && zB - UB.at < UB.ms) {
+          const jB = lj(this.master);
+          jB > 0 ? aB.fade(0, BB.volume * jB, UB.at + UB.ms - zB) : aB.setRelativeVolume(BB.volume)
         }
       }
-      onAudioEvent(TT, UT, mT, WT) {
-        var zT, MT;
-        return null === (zT = null === (MT = this.player) || void 0 === MT ? void 0 : MT.onAudioEvent(TT, UT, mT, WT)) || void 0 === zT || zT
+      onAudioEvent(BB, jB, zB, QB) {
+        var nB, dB;
+        return null === (nB = null === (dB = this.player) || void 0 === dB ? void 0 : dB.onAudioEvent(BB, jB, zB, QB)) || void 0 === nB || nB
       }
-      applyListener(TT) {
-        var UT;
-        null === (UT = this.player) || void 0 === UT || UT.applyListener(TT)
+      applyListener(BB) {
+        var jB;
+        null === (jB = this.player) || void 0 === jB || jB.applyListener(BB)
       }
-      playGame(TT, UT, mT, WT, zT, MT, gT) {
-        if (this.stopped) return rU.b;
-        if (this.player) return this.player.playGame(TT, UT, mT, WT, zT, MT, gT);
-        const nT = this.now();
-        this.local = this.local.filter((TT => !TT.stopped && (TT.loop || nT - TT.at < 300)));
-        const HT = {
-          name: TT,
-          volume: KU(UT),
+      playGame(BB, jB, zB, QB, nB, dB, IB) {
+        if (this.stopped) return ej.e;
+        if (this.player) return this.player.playGame(BB, jB, zB, QB, nB, dB, IB);
+        const NB = this.now();
+        this.local = this.local.filter((BB => !BB.stopped && (BB.loop || NB - BB.at < 300)));
+        const uB = {
+          name: BB,
+          volume: lj(jB),
           fade: null,
-          pos: mT && [mT[0], mT[1], mT[2]],
-          ear: WT && [WT[0], WT[1], WT[2]],
-          maxHearDist: zT,
-          refDistance: MT,
-          loop: gT,
+          pos: zB && [zB[0], zB[1], zB[2]],
+          ear: QB && [QB[0], QB[1], QB[2]],
+          maxHearDist: nB,
+          refDistance: dB,
+          loop: IB,
           rate: 1,
           panner: null,
           moved: null,
-          at: nT,
+          at: NB,
           stopped: !1,
           sound: null
         };
-        this.local.push(HT);
-        const kT = {
+        this.local.push(uB);
+        const UB = {
           stop: () => {
-            var TT;
-            return HT.stopped = !0, null === (TT = HT.sound) || void 0 === TT || TT.stop(), kT
+            var BB;
+            return uB.stopped = !0, null === (BB = uB.sound) || void 0 === BB || BB.stop(), UB
           },
-          fade: (TT, UT, mT) => {
-            if (HT.sound) return HT.sound.fade(TT, UT, mT), kT;
-            const WT = KU(this.master),
-              zT = KU(WT > 0 ? UT / WT : UT > 0 ? HT.volume : 0),
-              MT = this.now(),
-              gT = SU(HT, MT);
-            return HT.volume = zT, HT.fade = mT > 0 && gT !== zT ? {
-              from: gT,
-              at: MT,
-              ms: mT
-            } : null, kT
+          fade: (BB, jB, zB) => {
+            if (uB.sound) return uB.sound.fade(BB, jB, zB), UB;
+            const QB = lj(this.master),
+              nB = lj(QB > 0 ? jB / QB : jB > 0 ? uB.volume : 0),
+              dB = this.now(),
+              IB = wj(uB, dB);
+            return uB.volume = nB, uB.fade = zB > 0 && IB !== nB ? {
+              from: IB,
+              at: dB,
+              ms: zB
+            } : null, UB
           },
-          rate: TT => (HT.sound ? HT.sound.rate(TT) : HT.rate = TT, kT),
-          getVolume: () => HT.sound ? HT.sound.getVolume() : HT.volume * KU(this.master),
-          getRelativeVolume: () => HT.sound ? HT.sound.getRelativeVolume() : HT.volume,
-          setRelativeVolume: TT => (HT.sound ? HT.sound.setRelativeVolume(TT) : (HT.volume = KU(TT), HT.fade = null), kT),
-          setPannerAttr: TT => (HT.sound ? HT.sound.setPannerAttr(TT) : HT.panner = {
-            ...TT
-          }, kT),
-          setPosition: TT => (HT.sound ? HT.sound.setPosition(TT) : HT.moved = [TT[0], TT[1], TT[2]], kT)
+          rate: BB => (uB.sound ? uB.sound.rate(BB) : uB.rate = BB, UB),
+          getVolume: () => uB.sound ? uB.sound.getVolume() : uB.volume * lj(this.master),
+          getRelativeVolume: () => uB.sound ? uB.sound.getRelativeVolume() : uB.volume,
+          setRelativeVolume: BB => (uB.sound ? uB.sound.setRelativeVolume(BB) : (uB.volume = lj(BB), uB.fade = null), UB),
+          setPannerAttr: BB => (uB.sound ? uB.sound.setPannerAttr(BB) : uB.panner = {
+            ...BB
+          }, UB),
+          setPosition: BB => (uB.sound ? uB.sound.setPosition(BB) : uB.moved = [BB[0], BB[1], BB[2]], UB)
         };
-        return kT
+        return UB
       }
-      setMaster(TT, UT) {
-        var mT;
-        this.master = TT, this.soundOn = UT, null === (mT = this.player) || void 0 === mT || mT.setMaster(TT, UT)
+      setMaster(BB, jB) {
+        var zB;
+        this.master = BB, this.soundOn = jB, null === (zB = this.player) || void 0 === zB || zB.setMaster(BB, jB)
       }
       stop() {
-        var TT;
-        this.stopped = !0, null === (TT = this.player) || void 0 === TT || TT.stopAll();
-        for (const UT of this.local) UT.stopped = !0;
+        var BB;
+        this.stopped = !0, null === (BB = this.player) || void 0 === BB || BB.stopAll();
+        for (const jB of this.local) jB.stopped = !0;
         this.local = []
       }
-    }((0, yU.e)(), !0);
-    let qg = {
+    }((0, Fj.c)(), !0);
+    let MI = {
         wasm: "unknown",
-        client: String(jU.d)
+        client: String(aj.b)
       },
-      ig = null,
-      bg = () => {};
-    const Og = new Promise((TT => {
-      bg = TT
+      EI = null,
+      iI = () => {};
+    const qI = new Promise((BB => {
+      iI = BB
     }));
-    let eg = () => {};
-    const Yg = new Promise((TT => {
-      eg = TT
+    let fI = () => {};
+    const oI = new Promise((BB => {
+      fI = BB
     }));
-    let Jg, xg = null,
-      dg = null,
-      wg = null,
-      tg = null,
-      ag = null,
-      yg = null,
-      Xg = null,
-      Ig = null,
-      Qg = null,
-      sg = null,
-      Fg = null,
-      Pg = null,
-      Vg = null,
-      ug = null,
-      Cg = null,
-      rg = null,
-      Kg = null,
-      Sg = null,
-      Gg = null,
-      Ng = !1,
-      Eg = null;
-    const hg = new Set,
-      Dg = new Set;
+    let HI, DI = null,
+      FI = null,
+      YI = null,
+      VI = null,
+      hI = null,
+      XI = null,
+      ZI = null,
+      AI = null,
+      TI = null,
+      PI = null,
+      WI = null,
+      eI = null,
+      lI = null,
+      wI = null,
+      xI = null,
+      KI = null,
+      CI = null,
+      cI = null,
+      bI = null,
+      vI = !1,
+      RI = null;
+    const OI = new Set,
+      BN = new Set;
 
-    function og(TT) {
-      if (!hg.has(TT)) {
-        hg.add(TT);
-        for (const mT of Dg) try {
-          mT(TT)
-        } catch (UT) {
-          console.error(`${VM} a startup listener threw`, UT)
+    function jN(BB) {
+      if (!OI.has(BB)) {
+        OI.add(BB);
+        for (const zB of BN) try {
+          zB(BB)
+        } catch (jB) {
+          console.error(`${ld} a startup listener threw`, jB)
         }
       }
     }
 
-    function Ag(TT) {
-      Ng = !0, TT.isStopped || og("texturesIn")
+    function zN(BB) {
+      vI = !0, BB.isStopped || jN("texturesIn")
     }
-    let Rg = 1,
-      Tn = -1 / 0,
-      Un = -1 / 0,
-      mn = -1 / 0,
-      Wn = !1,
-      zn = null,
-      Mn = !1,
-      gn = !1,
-      nn = 0,
-      Hn = null,
-      kn = !1;
-    const jn = {
+    let QN = 1,
+      nN = -1 / 0,
+      dN = -1 / 0,
+      IN = -1 / 0,
+      NN = !1,
+      uN = null,
+      UN = !1,
+      aN = !1,
+      pN = 0,
+      rN = null,
+      sN = !1;
+    const JN = {
       dropped: -1 / 0,
       pause: -1 / 0,
       backlog: -1 / 0
     };
-    let Ln = 0,
-      pn = 0,
-      Bn = null,
-      Zn = null,
-      cn = null,
-      vn = null;
-    const fn = new WeakMap;
-    let qn = null,
-      bn = null,
-      On = !1,
-      en = null,
-      Yn = null,
-      Jn = null,
-      xn = null,
-      dn = null,
-      wn = null,
-      tn = 0;
-    const an = new Set;
-    let yn = 0,
-      Xn = 0,
-      In = 0,
-      Qn = null,
-      sn = null,
-      Fn = null,
-      Pn = null,
-      Vn = -1 / 0,
-      un = null;
-    const Cn = new Set;
-    let rn = !1,
-      Kn = null;
-    const Sn = new Map,
-      Gn = new Set;
-    let Nn = !1;
-    const En = {
+    let mN = 0,
+      yN = 0,
+      kN = null,
+      GN = null,
+      LN = null,
+      gN = null;
+    const tN = new WeakMap;
+    let SN = null,
+      MN = null,
+      EN = !1,
+      iN = null,
+      qN = null,
+      fN = null,
+      oN = null,
+      HN = null,
+      DN = null,
+      FN = 0;
+    const YN = new Set;
+    let VN = 0,
+      hN = 0,
+      XN = 0,
+      ZN = null,
+      AN = null,
+      TN = null,
+      PN = null,
+      WN = -1 / 0,
+      eN = null;
+    const lN = new Set;
+    let wN = !1,
+      xN = null;
+    const KN = new Map,
+      CN = new Set;
+    let cN = !1;
+    const bN = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null,
       restoresSkipped: null
     };
-    let hn = null,
-      Dn = () => [0, 0],
-      An = () => {},
-      Rn = () => {},
-      TH = null,
-      UH = null;
-    const mH = new class {
-      constructor(TT) {
-        this.reached = TT, this.next = 1
+    let vN = null,
+      RN = () => [0, 0],
+      ON = () => {},
+      Bu = () => {},
+      ju = null,
+      zu = null;
+    const Qu = new class {
+      constructor(BB) {
+        this.reached = BB, this.next = 1
       }
-      observe(TT) {
-        if (!(TT < this.next)) {
-          for (; this.next <= TT;) this.next *= 2;
-          this.reached(TT)
+      observe(BB) {
+        if (!(BB < this.next)) {
+          for (; this.next <= BB;) this.next *= 2;
+          this.reached(BB)
         }
       }
-    }((TT => {
-      console.warn(`${VM} chunk cancels from the server this session: ${TT}`)
+    }((BB => {
+      console.warn(`${ld} chunk cancels from the server this session: ${BB}`)
     }));
-    let WH = 1,
-      zH = null,
-      MH = null,
-      gH = null,
-      nH = null,
-      HH = null,
-      kH = !1,
-      jH = !1,
-      lH = 0,
-      LH = null,
-      pH = !1,
-      BH = null,
-      ZH = null,
-      cH = null,
-      vH = !1;
-    const fH = new class {
-      constructor(TT) {
-        this.EZ = TT, this.lossPending = !1, this.undrawnSinceMs = null, this.lastFrameMs = 0, this.shown = !1
+    let nu = 1,
+      du = null,
+      Iu = null,
+      Nu = null,
+      uu = null,
+      Uu = null,
+      au = !1,
+      pu = !1,
+      ru = 0,
+      su = null,
+      Ju = !1,
+      mu = null,
+      yu = null,
+      ku = null,
+      Gu = !1;
+    const Lu = new class {
+      constructor(BB) {
+        this.Ly = BB, this.lossPending = !1, this.undrawnSinceMs = null, this.lastFrameMs = 0, this.shown = !1
       }
       deviceLost() {
         this.lossPending = !0
       }
-      frame(TT, UT, mT) {
-        (0, sU.c)(TT) && (this.lossPending = !1);
-        const WT = mT - this.lastFrameMs;
-        this.lastFrameMs = mT, this.lossPending && UT && (0, sU.g)(TT) ? (null === this.undrawnSinceMs || WT > 1e3) && (this.undrawnSinceMs = mT) : this.undrawnSinceMs = null, this.show(null !== this.undrawnSinceMs && mT - this.undrawnSinceMs >= 2e3)
+      frame(BB, jB, zB) {
+        (0, Xj.e)(BB) && (this.lossPending = !1);
+        const QB = zB - this.lastFrameMs;
+        this.lastFrameMs = zB, this.lossPending && jB && (0, Xj.i)(BB) ? (null === this.undrawnSinceMs || QB > 1e3) && (this.undrawnSinceMs = zB) : this.undrawnSinceMs = null, this.show(null !== this.undrawnSinceMs && zB - this.undrawnSinceMs >= 2e3)
       }
       stop() {
         this.lossPending = !1, this.undrawnSinceMs = null, this.show(!1)
       }
-      show(TT) {
-        TT !== this.shown && (this.shown = TT, this.EZ(TT))
+      show(BB) {
+        BB !== this.shown && (this.shown = BB, this.Ly(BB))
       }
-    }((TT => {
-      HT.j.EZ(BT.c, TT)
+    }((BB => {
+      uB.n.Ly(JB.d, BB)
     }));
-    let qH = !1,
-      iH = !0,
-      bH = null,
-      OH = !1,
-      eH = !1,
-      YH = !1;
+    let gu = !1,
+      tu = !0,
+      Su = null,
+      Mu = !1,
+      Eu = !1,
+      iu = !1;
 
-    function JH() {
-      return pg ??= Promise.all([mT.e(201), mT.e(144), mT.e(60)]).then((() => mT(51100))).then((TT => (Lg = TT, Object.assign(globalThis, {
-        bloxdPreviewPage: TT.pagePreviews()
-      }), TT)), (TT => {
-        throw pg = null, TT
-      })), pg
+    function qu() {
+      return kI ??= Promise.all([zB.e(201), zB.e(144), zB.e(60)]).then((() => zB(51135))).then((BB => (yI = BB, Object.assign(globalThis, {
+        bloxdPreviewPage: BB.pagePreviews()
+      }), BB)), (BB => {
+        throw kI = null, BB
+      })), kI
     }
 
-    function xH() {
-      return lg ??= mT.e(58).then((() => mT(51117))).catch((TT => {
-        throw lg = null, new yT.b(TT)
-      })), lg
+    function fu() {
+      return mI ??= zB.e(58).then((() => zB(51149))).catch((BB => {
+        throw mI = null, new FB.e(BB)
+      })), mI
     }
-    class dH {
+    class ou {
       constructor() {
         this.host = null
       }
-      open(TT) {
-        return null !== this.host ? TT(this.host) : JH().then((UT => (this.host ??= new UT.WasmPreviewHost(UT.pagePreviews()), TT(this.host))))
+      open(BB) {
+        return null !== this.host ? BB(this.host) : qu().then((jB => (this.host ??= new jB.WasmPreviewHost(jB.pagePreviews()), BB(this.host))))
       }
-      openMob(TT) {
-        return this.open((UT => UT.openMob(TT)))
+      openMob(BB) {
+        return this.open((jB => jB.openMob(BB)))
       }
-      openPet(TT) {
-        return this.open((UT => UT.openPet(TT)))
+      openPet(BB) {
+        return this.open((jB => jB.openPet(BB)))
       }
-      openMobLineup(TT) {
-        return this.open((UT => UT.openMobLineup(TT)))
+      openMobLineup(BB) {
+        return this.open((jB => jB.openMobLineup(BB)))
       }
-      openCharacter(TT, UT) {
-        return this.open((mT => mT.openCharacter(TT, UT)))
+      openCharacter(BB, jB) {
+        return this.open((zB => zB.openCharacter(BB, jB)))
       }
     }
 
-    function wH() {
-      jg || (jg = !0, ez.i.setHost(new dH), (0, sm.n)(), qz.e.setFollower(Ik), Object.assign(globalThis, {
-        bloxdPreviews: ez.i
+    function Hu() {
+      JI || (JI = !0, Sn.i.setHost(new ou), (0, hz.p)(), Gn.h.setFollower(hU), Object.assign(globalThis, {
+        bloxdPreviews: Sn.i
       }))
     }
 
-    function tH() {
-      JH().then((TT => {
-        TT.pagePreviews().prefetch()
+    function Du() {
+      qu().then((BB => {
+        BB.pagePreviews().prefetch()
       }), (() => {}))
     }
 
-    function aH() {
-      let TT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      if (kg) return;
-      kg = !0, qH = "play" === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "shell"), iH = !qH, console.info(`${VM} starting`), Hg || (Hg = !0, (0, BT.A)(new VU(DH, zk)), (0, LT.k)(new uU), (0, BT.x)(new CU), (0, BT.t)()), qH && HT.j.subscribe("appManagerUpdated|gameState", hH), wH(), (0, ym.setCrashScreen)((TT => {
+    function Fu() {
+      let BB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      if (sI) return;
+      sI = !0, gu = "play" === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "shell"), tu = !gu, console.info(`${ld} starting`), rI || (rI = !0, (0, JB.K)(new Tj(vu, dU)), (0, rB.n)(new Pj), (0, JB.I)(new Wj), (0, JB.C)()), gu && uB.n.subscribe("appManagerUpdated|gameState", bu), Hu(), (0, Dz.setCrashScreen)((BB => {
         let {
-          text: UT,
-          reload: mT
-        } = TT;
-        ! function(TT, UT) {
-          var mT, WT;
-          if (OH) return;
-          OH = !0, (0, Pm.P)(), null === (mT = un) || void 0 === mT || mT.abort(), un = null, iz.c.release();
-          const zT = qH ? null !== (WT = TT.cancel) && void 0 !== WT ? WT : "general:back" : null;
-          sW({
-            ...TT,
-            cancel: zT
-          }).then((TT => {
-            TT && UT && eH ? ((0, bU.y)("reloadOntoJs"), (0, RT.h)(bU.D)) : TT && UT ? (0, RT.k)() : qH && (0, RT.d)("/")
+          text: jB,
+          reload: zB
+        } = BB;
+        ! function(BB, jB) {
+          var zB, QB;
+          if (Mu) return;
+          Mu = !0, (0, Zz.T)(), null === (zB = eN) || void 0 === zB || zB.abort(), eN = null, Ln.c.release();
+          const nB = gu ? null !== (QB = BB.cancel) && void 0 !== QB ? QB : "general:back" : null;
+          hQ({
+            ...BB,
+            cancel: nB
+          }).then((BB => {
+            BB && jB && Eu ? ((0, tj.x)("reloadOntoJs"), (0, OB.h)(tj.H)) : BB && jB ? (0, OB.k)() : gu && (0, OB.g)("/")
           }))
-        }(UT, mT)
-      })), (0, kz.h)(), (0, aU.l)();
-      let UT = null;
+        }(jB, zB)
+      })), (0, un.i)(), (0, Dj.l)();
+      let jB = null;
       try {
-        UT = QM("0buz319rkta4", (() => {
-          var TT, UT;
-          return null !== (TT = null === (UT = xg) || void 0 === UT ? void 0 : UT.ws) && void 0 !== TT ? TT : null
-        }), TT, "euyfsxnmtv")
-      } catch (zT) {
-        console.error(`${VM} probes`, zT)
+        jB = Td("zvrcwj7r5ri", (() => {
+          var BB, jB;
+          return null !== (BB = null === (jB = DI) || void 0 === jB ? void 0 : jB.ws) && void 0 !== BB ? BB : null
+        }), BB, "euyfsxnmtv")
+      } catch (nB) {
+        console.error(`${ld} probes`, nB)
       }
-      const WT = function() {
-        const TT = (0, GW.p)(),
-          UT = (0, GW.h)();
-        let mT = !1;
-        return WT => {
-          TT && !mT && (mT = !0, (0, ym.reportStaleBuildReload)(TT, UT, WT))
+      const QB = function() {
+        const BB = (0, wQ.k)(),
+          jB = (0, wQ.g)();
+        let zB = !1;
+        return QB => {
+          BB && !zB && (zB = !0, (0, Dz.reportStaleBuildReload)(BB, jB, QB))
         }
       }();
-      sk(), qH || function() {
-        const TT = function(TT) {
-          var UT;
-          const mT = new URLSearchParams(TT),
-            WT = mT.get("game");
-          return WT ? {
-            game: WT,
-            lobby: null !== (UT = mT.get("lobby")) && void 0 !== UT ? UT : null
+      ZU(), gu || function() {
+        const BB = function(BB) {
+          var jB;
+          const zB = new URLSearchParams(BB),
+            QB = zB.get("game");
+          return QB ? {
+            game: QB,
+            lobby: null !== (jB = zB.get("lobby")) && void 0 !== jB ? jB : null
           } : null
         }(window.location.search);
-        if (TT) return (0, lU.k)(TT.game) && sk().request(), void IH(TT.game, TT.lobby);
-        const UT = new URLSearchParams(window.location.search).get("ws");
-        if (!UT) return;
-        Og.then((TT => {
-          TT && async function(TT, UT) {
+        if (BB) return (0, pj.n)(BB.game) && ZU().request(), void hu(BB.game, BB.lobby);
+        const jB = new URLSearchParams(window.location.search).get("ws");
+        if (!jB) return;
+        qI.then((BB => {
+          BB && async function(BB, jB) {
             try {
-              await (0, yT.m)(TT), en = kk(new WebSocket(UT)), null !== en && iz.c.setGame(null), yH()
-            } catch (zT) {
-              console.error(`${VM} ?ws=${UT} did not attach`, zT)
+              await (0, FB.j)(BB), iN = aU(new WebSocket(jB)), null !== iN && Ln.c.setGame(null), Yu()
+            } catch (nB) {
+              console.error(`${ld} ?ws=${jB} did not attach`, nB)
             }
-          }(TT, UT)
+          }(BB, jB)
         }))
-      }(), async function(TT) {
-        var UT, WT, MT, gT, nT, kT;
-        if ("undefined" === typeof WebAssembly) return Yk("noWebAssembly", "unsupported", "This browser has no WebAssembly"), null;
-        const jT = (0, tz.X)(),
-          lT = await async function(TT, UT) {
-            const mT = (0, km.n)(TT) ? xk(TT, UT) : null;
-            if (null === mT || void 0 === mT || !mT.retries) return TT;
-            console.warn(`${VM} ${mT.detail}: picking again in ${Jk} ms`), await new Promise((TT => {
-              setTimeout(TT, Jk)
+      }(), async function(BB) {
+        var jB, QB, dB, IB, NB, UB;
+        if ("undefined" === typeof WebAssembly) return iU("noWebAssembly", "unsupported", "This browser has no WebAssembly"), null;
+        const aB = (0, Dn.R)(),
+          pB = await async function(BB, jB) {
+            const zB = (0, Uz.r)(BB) ? fU(BB, jB) : null;
+            if (null === zB || void 0 === zB || !zB.retries) return BB;
+            console.warn(`${ld} ${zB.detail}: picking again in ${qU} ms`), await new Promise((BB => {
+              setTimeout(BB, qU)
             }));
-            const WT = await (0, tz.$)();
-            if (!(0, km.n)(WT)) {
-              var zT;
-              (0, ym.reportNoBackendRetry)("reprobed", mT.decline, mT.detail, {
-                ...mT.details,
-                backend: null !== (zT = null === WT || void 0 === WT ? void 0 : WT.backend) && void 0 !== zT ? zT : "none"
-              }), null !== WT && (0, tz.U)(WT.backend)
+            const QB = await (0, Dn.V)();
+            if (!(0, Uz.r)(QB)) {
+              var nB;
+              (0, Dz.reportNoBackendRetry)("reprobed", zB.decline, zB.detail, {
+                ...zB.details,
+                backend: null !== (nB = null === QB || void 0 === QB ? void 0 : QB.backend) && void 0 !== nB ? nB : "none"
+              }), null !== QB && (0, Dn.N)(QB.backend)
             }
-            return WT
-          }(await (0, tz.R)(), jT);
-        if ((0, ym.setCrashBackend)((0, km.n)(lT) ? "unsupported" : null !== (UT = null === lT || void 0 === lT ? void 0 : lT.backend) && void 0 !== UT ? UT : "none"), (0, km.n)(lT)) return function(TT) {
+            return QB
+          }(await (0, Dn.M)(), aB);
+        if ((0, Dz.setCrashBackend)((0, Uz.r)(pB) ? "unsupported" : null !== (jB = null === pB || void 0 === pB ? void 0 : pB.backend) && void 0 !== jB ? jB : "none"), (0, Uz.r)(pB)) return function(BB) {
           let {
-            decline: UT,
-            detail: mT,
-            details: WT,
-            retries: zT
-          } = TT;
-          if (zT && (0, bU.n)()) return (0, ym.reportNoBackendRetry)("reload", UT, mT, WT), void dk(`${mT}, again after ${Jk} ms`);
-          Yk("browser", UT, mT, zT ? {
-            ...WT,
-            afterReload: String(bU.w)
-          } : WT)
-        }(xk(lT, jT)), null;
-        if ((0, hz.r)("render")) try {
+            decline: jB,
+            detail: zB,
+            details: QB,
+            retries: nB
+          } = BB;
+          if (nB && (0, tj.j)()) return (0, Dz.reportNoBackendRetry)("reload", jB, zB, QB), void oU(`${zB}, again after ${qU} ms`);
+          iU("browser", jB, zB, nB ? {
+            ...QB,
+            afterReload: String(tj.u)
+          } : QB)
+        }(fU(pB, aB)), null;
+        if ((0, vn.q)("render")) try {
           const {
-            startRenderDebug: TT
-          } = await Promise.all([mT.e(78), mT.e(49)]).then((() => mT(4771)));
-          TT(lT)
-        } catch (BU) {
-          console.warn("The render debug topic didn't load", BU)
+            startRenderDebug: BB
+          } = await Promise.all([zB.e(78), zB.e(49)]).then((() => zB(4773)));
+          BB(pB)
+        } catch (Jj) {
+          console.warn("The render debug topic didn't load", Jj)
         }
-        if ((0, hz.r)("renderlite")) try {
+        if ((0, vn.q)("renderlite")) try {
           const {
-            startRenderLite: TT
-          } = await Promise.all([mT.e(273), mT.e(50)]).then((() => mT(51124)));
-          gH = TT(lT)
-        } catch (BU) {
-          console.warn("The renderlite debug topic didn't load", BU)
+            startRenderLite: BB
+          } = await Promise.all([zB.e(273), zB.e(50)]).then((() => zB(51158)));
+          Nu = BB(pB)
+        } catch (Jj) {
+          console.warn("The renderlite debug topic didn't load", Jj)
         }
-        if ((0, hz.r)("renderprobe")) try {
+        if ((0, vn.q)("renderprobe")) try {
           const {
-            startRenderProbe: TT
-          } = await mT.e(51).then((() => mT(51127)));
-          TT(lT)
-        } catch (BU) {
-          console.warn("The renderprobe debug topic didn't load", BU)
+            startRenderProbe: BB
+          } = await zB.e(51).then((() => zB(51163)));
+          BB(pB)
+        } catch (Jj) {
+          console.warn("The renderprobe debug topic didn't load", Jj)
         }
-        if ("webgl" === (null === lT || void 0 === lT ? void 0 : lT.backend) && qH && "wasm" !== (0, bU.f)(window.location.search)) {
-          const TT = rW(lT);
-          null !== TT && (0, OU.g)(TT)
+        if ("webgl" === (null === pB || void 0 === pB ? void 0 : pB.backend) && gu && "wasm" !== (0, tj.c)(window.location.search)) {
+          const BB = WQ(pB);
+          null !== BB && (0, Sj.j)(BB)
         }
-        const LT = null !== (WT = null === lT || void 0 === lT ? void 0 : lT.backend) && void 0 !== WT ? WT : null;
-        En.adapter = null !== (MT = null === lT || void 0 === lT ? void 0 : lT.adapter) && void 0 !== MT ? MT : null, En.boundAtMs = null, En.indirectHangs = null, En.restoresSkipped = null;
-        const pT = !(0, km.db)();
-        null === lT || (0, km.B)(lT.reason) || console.info(`${VM} drawing with ${lT.backend}: ${lT.reason}`);
-        const BT = (0, tz.C)();
-        eg(!0), (0, yT.w)((TT => {
+        const rB = null !== (QB = null === pB || void 0 === pB ? void 0 : pB.backend) && void 0 !== QB ? QB : null;
+        bN.adapter = null !== (dB = null === pB || void 0 === pB ? void 0 : pB.adapter) && void 0 !== dB ? dB : null, bN.boundAtMs = null, bN.indirectHangs = null, bN.restoresSkipped = null;
+        const sB = !(0, Uz.fb)();
+        null === pB || (0, Uz.J)(pB.reason) || console.info(`${ld} drawing with ${pB.backend}: ${pB.reason}`);
+        const JB = (0, Dn.C)();
+        fI(!0), (0, FB.r)((BB => {
           try {
-            null !== LT && (TH = TT.startSkyFeed, yk(), function(TT) {
-              var UT, mT;
-              Dn = TT.rasterText, Jn = TT.setTextLocalPlayer, TT.setTextLocalPlayer(null !== (UT = null === (mT = Yn) || void 0 === mT ? void 0 : mT.info.playerDbId) && void 0 !== UT ? UT : null), An = TT.drainTextRerasters, Rn = TT.loadTextIcons, TT.warmText((() => kH)), TT.textChanged(), kH && setTimeout(Rn, 0)
-            }(TT), UH = TT.startShellAnalytics, rk())
+            null !== rB && (ju = BB.startSkyFeed, YU(), function(BB) {
+              var jB, zB;
+              RN = BB.rasterText, fN = BB.setTextLocalPlayer, BB.setTextLocalPlayer(null !== (jB = null === (zB = qN) || void 0 === zB ? void 0 : zB.info.playerDbId) && void 0 !== jB ? jB : null), ON = BB.drainTextRerasters, Bu = BB.loadTextIcons, BB.warmText((() => au)), BB.textChanged(), au && setTimeout(Bu, 0)
+            }(BB), zu = BB.startShellAnalytics, lU())
           } finally {
-            YH || (nH = TT.followMenuPrefs({
-              setSoundPrefs: gk,
-              setEnvPrefs: nk,
-              setUiPrefs: Mk,
-              setLookPrefs: Hk
+            iu || (uu = BB.followMenuPrefs({
+              setSoundPrefs: NU,
+              setEnvPrefs: uU,
+              setUiPrefs: IU,
+              setLookPrefs: UU
             }))
           }
-        })), (0, yT.o)(fg).catch((TT => {
-          console.warn(`${VM} the game code did not load: a join asks again`, TT)
+        })), (0, FB.m)(SI).catch((BB => {
+          console.warn(`${ld} the game code did not load: a join asks again`, BB)
         }));
-        const ZT = (0, tz.l)(lT);
-        let cT, vT;
-        ZT.catch((() => {})), "loading" === (0, ZU.A)() && bT();
+        const mB = (0, Dn.o)(pB);
+        let yB, kB;
+        mB.catch((() => {})), "loading" === (0, mj.z)() && tB();
         try {
-          cT = function(TT) {
-            const UT = null !== TT && void 0 !== TT ? TT : document.createElement("canvas");
-            UT.id = "wasm-game-canvas", (0, Fz.k)();
-            const mT = (0, PU.f)(),
-              WT = (0, PU.i)(mT);
-            UT.style.cssText = "position:absolute;top:0;left:0;display:block;touch-action:none;outline:none;background:#000", (0, sz.e)(UT, WT), (0, PU.d)(UT, mT), UT.width = WT.bufferWidth, UT.height = WT.bufferHeight;
-            const zT = document.createElement("div");
-            return zT.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden", zT.append(UT), oH(zT, iH), bH = zT, document.body.append(zT), UT
-          }(null === LT ? null : await (await JH()).pagePreviews().beginSession())
-        } catch (zT) {
-          return await xj({
-            site: SM,
-            error: zT
+          yB = function(BB) {
+            const jB = null !== BB && void 0 !== BB ? BB : document.createElement("canvas");
+            jB.id = "wasm-game-canvas", (0, An.i)();
+            const zB = (0, Aj.g)(),
+              QB = (0, Aj.j)(zB);
+            jB.style.cssText = "position:absolute;top:0;left:0;display:block;touch-action:none;outline:none;background:#000", (0, Zn.f)(jB, QB), (0, Aj.e)(jB, zB), jB.width = QB.bufferWidth, jB.height = QB.bufferHeight;
+            const nB = document.createElement("div");
+            return nB.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden", nB.append(jB), Ru(nB, tu), Su = nB, document.body.append(nB), jB
+          }(null === rB ? null : await (await qu()).pagePreviews().beginSession())
+        } catch (nB) {
+          return await qa({
+            site: cd,
+            error: nB
           }, (() => {
-            (0, ym.showUnsupported)((0, XW.j)("fetch"), WM.i.fetch, `the previews did not load: ${String(zT)}`)
+            (0, Dz.showUnsupported)((0, FQ.m)("fetch"), dd.e.fetch, `the previews did not load: ${String(nB)}`)
           })), null
         }
-        bT();
+        tB();
         try {
-          vT = await ZT
-        } catch (zT) {
-          return await xj({
-            site: SM,
-            error: zT
+          kB = await mB
+        } catch (nB) {
+          return await qa({
+            site: cd,
+            error: nB
           }, (() => {
-            (0, ym.showUnsupported)((0, XW.j)("fetch"), WM.i.fetch, `the ${null!==LT&&void 0!==LT?LT:"client"} build did not load: ${String(zT)}`)
+            (0, Dz.showUnsupported)((0, FQ.m)("fetch"), dd.e.fetch, `the ${null!==rB&&void 0!==rB?rB:"client"} build did not load: ${String(nB)}`)
           })), null
         }
-        const qT = (0, tz.g)(),
-          iT = !qT && !0 !== rm.m.getItem(uM),
-          OT = !qT && "loading" === (0, ZU.A)();
-        await (0, az.d)(vT, {
-          reloadFailedDownload: iT
-        }), OT && !(0, ZU.Q)() && await (0, az.d)(vT, {
-          reloadFailedDownload: iT
+        const LB = (0, Dn.g)(),
+          gB = !LB && !0 !== Wz.k.getItem(wd),
+          SB = !LB && "loading" === (0, mj.z)();
+        await (0, Fn.b)(kB, {
+          reloadFailedDownload: gB
+        }), SB && !(0, mj.K)() && await (0, Fn.b)(kB, {
+          reloadFailedDownload: gB
         });
-        fT = performance.now();
-        const eT = qg;
-        if (!(0, ZU.Q)()) {
-          (0, ZU.M)() && rm.m.setItem(uM, !0);
-          const TT = (0, ZU.s)();
-          if ("call" === TT) lj({
-            site: lm.s,
-            error: (0, ZU.o)(),
+        GB = performance.now();
+        const MB = MI;
+        if (!(0, mj.K)()) {
+          (0, mj.I)() && Wz.k.setItem(wd, !0);
+          const BB = (0, mj.q)();
+          if ("call" === BB) pa({
+            site: pz.r,
+            error: (0, mj.m)(),
             header: null
-          }, eT);
+          }, MB);
           else {
-            const UT = null !== TT && void 0 !== TT ? TT : "instantiate",
-              mT = () => {
-                (0, ym.showUnsupported)((0, XW.j)(UT), WM.i[UT], (0, ZU.h)())
+            const jB = null !== BB && void 0 !== BB ? BB : "instantiate",
+              zB = () => {
+                (0, Dz.showUnsupported)((0, FQ.m)(jB), dd.e[jB], (0, mj.i)())
               };
-            if ("compile" !== TT && "instantiate" !== TT || !wk())
-              if ("fetch" === UT) {
-                const TT = [vT.url().href, qU.g.url().href];
-                await xj({
-                  site: SM,
-                  error: (0, ZU.h)(),
-                  urls: TT
-                }, mT)
-              } else mT();
+            if ("compile" !== BB && "instantiate" !== BB || !HU())
+              if ("fetch" === jB) {
+                const BB = [kB.url().href, Lj.c.url().href];
+                await qa({
+                  site: cd,
+                  error: (0, mj.i)(),
+                  urls: BB
+                }, zB)
+              } else zB();
             else {
-              const UT = (0, ZU.h)(),
-                mT = (0, AU.b)((0, ZU.o)());
-              if (mT && (0, bU.n)()) return (0, ym.reportCountedLoadFallback)((0, XW.j)(TT), WM.i[TT], UT, "wasmReload"), dk(`the wasm client ran out of memory to ${TT} here (${UT})`), null;
-              (0, ym.reportCountedLoadFallback)((0, XW.j)(TT), WM.i[TT], UT, mT ? "declined" : "pageAlone"), tk(`the wasm client did not ${TT} here (${UT})`, mT ? "oom" : null)
+              const jB = (0, mj.i)(),
+                zB = (0, Rj.b)((0, mj.m)());
+              if (zB && (0, tj.j)()) return (0, Dz.reportCountedLoadFallback)((0, FQ.m)(BB), dd.e[BB], jB, "wasmReload"), oU(`the wasm client ran out of memory to ${BB} here (${jB})`), null;
+              (0, Dz.reportCountedLoadFallback)((0, FQ.m)(BB), dd.e[BB], jB, zB ? "declined" : "pageAlone"), DU(`the wasm client did not ${BB} here (${jB})`, zB ? "oom" : null)
             }
           }
           return null
-        }(0, cU.U)(vT.url()) && (0, ym.reportUnstreamedCoreLoad)();
-        const YT = (0, ZU.C)();
-        let JT, xT = eT;
+        }(0, yj.Q)(kB.url()) && (0, Dz.reportUnstreamedCoreLoad)();
+        const EB = (0, mj.C)();
+        let iB, qB = MB;
         try {
-          xT = {
-            ...eT,
-            wasm: YT.Zl()
+          qB = {
+            ...MB,
+            wasm: EB.tp()
           };
           const {
-            Jc: TT
-          } = vT.bindings, UT = TT.kWT();
-          if (UT !== hU.G) return lj({
-            site: lm.e,
-            error: `core ABI ${UT}, page ABI ${hU.G}`,
+            Py: BB
+          } = kB.bindings, jB = BB.vzB();
+          if (jB !== cj.B) return pa({
+            site: pz.d,
+            error: `core ABI ${jB}, page ABI ${cj.B}`,
             header: null
-          }, xT), null;
-          const [mT, WT] = (0, hU.De)();
-          JT = new TT(mT, WT)
-        } catch (zT) {
-          return lj({
-            site: lm.e,
-            error: zT,
+          }, qB), null;
+          const [zB, QB] = (0, cj.ge)();
+          iB = new BB(zB, QB)
+        } catch (nB) {
+          return pa({
+            site: pz.d,
+            error: nB,
             header: null
-          }, xT), null
+          }, qB), null
         }
-        qg = xT, ig = vT.bindings;
-        const dT = new lm.j(JT, ZU.u, {
-          onCrash: TT => {
-            var UT;
-            null === (UT = gH) || void 0 === UT || UT.crashed(TT),
-              function(TT, UT, mT, WT) {
-                if ("webgpu" !== UT || (0, tz.d)()) return !1;
-                const zT = function(TT) {
-                  if (TT.site === lm.h && (0, km.p)(TT.error)) return "frames_refused";
-                  return TT.site === CM && (0, km.s)(TT.error) ? "start_failed" : null
-                }(TT);
-                if (null === zT) return !1;
-                if (null !== (0, km.$)(zT, WT, (0, jm.c)(TT.error))) return (0, ym.countRenderLost)(zT, TT.error, En), !1;
-                return IU.y.reloaded(null, !1), (0, ym.reportRenderReload)("webgpu", "start_failed" === zT ? 0 : 1, mT, {
-                  cause: zT,
-                  error: TT.error,
-                  context: En,
-                  session: Zj(null)
-                }), Ek(), !0
-              }(TT, LT, xT, pT) || lj(TT, xT)
+        MI = qB, EI = kB.bindings;
+        const fB = new pz.h(iB, mj.t, {
+          onCrash: BB => {
+            var jB;
+            null === (jB = Nu) || void 0 === jB || jB.crashed(BB),
+              function(BB, jB, zB, QB) {
+                if ("webgpu" !== jB || (0, Dn.d)()) return !1;
+                const nB = function(BB) {
+                  if (BB.site === pz.f && (0, Uz.u)(BB.error)) return "frames_refused";
+                  return BB.site === xd && (0, Uz.y)(BB.error) ? "start_failed" : null
+                }(BB);
+                if (null === nB) return !1;
+                if (null !== (0, Uz.db)(nB, QB, (0, az.d)(BB.error))) return (0, Dz.countRenderLost)(nB, BB.error, bN), !1;
+                return Vj.G.reloaded(null, !1), (0, Dz.reportRenderReload)("webgpu", "start_failed" === nB ? 0 : 1, zB, {
+                  cause: nB,
+                  error: BB.error,
+                  context: bN,
+                  session: ma(null)
+                }), cU(), !0
+              }(BB, rB, qB, sB) || pa(BB, qB)
           },
-          onNetEvent: Nk,
-          onReconnectGrace: bk,
-          onJoinPreloadEnded: ik,
-          onCoreErrors: (TT, UT) => {
-            var mT, WT;
-            TT.some((TT => {
+          onNetEvent: CU,
+          onReconnectGrace: SU,
+          onJoinPreloadEnded: tU,
+          onCoreErrors: (BB, jB) => {
+            var zB, QB;
+            BB.some((BB => {
               let {
-                code: UT
-              } = TT;
-              return UT === hU.S.RenderDeviceLost
-            })) && ((0, tz.x)(), fH.deviceLost(), "webgpu" === LT && ((0, jm.e)(hn), IU.y.lost())), null === (mT = gH) || void 0 === mT || mT.coreErrors(TT);
-            const zT = () => {
-              (0, ym.reportCoreErrors)(TT, UT, xT, ((TT, UT) => {
-                var mT;
-                return TT === hU.S.EnvUnknownSky ? (0, ym.unknownSkyWords)(eU.d.get("skyBox")) : TT === hU.S.RenderDeviceLost ? (0, ym.deviceLossWords)(UT, En.boundAtMs) : null === (mT = hn) || void 0 === mT ? void 0 : mT.jWT(TT, UT)
+                code: jB
+              } = BB;
+              return jB === cj.J.RenderDeviceLost
+            })) && ((0, Dn.y)(), Lu.deviceLost(), "webgpu" === rB && ((0, az.h)(vN), Vj.G.lost())), null === (zB = Nu) || void 0 === zB || zB.coreErrors(BB);
+            const nB = () => {
+              (0, Dz.reportCoreErrors)(BB, jB, qB, ((BB, jB) => {
+                var zB;
+                return BB === cj.J.EnvUnknownSky ? (0, Dz.unknownSkyWords)(Mj.c.get("skyBox")) : BB === cj.J.RenderDeviceLost ? (0, Dz.deviceLossWords)(jB, bN.boundAtMs) : null === (zB = vN) || void 0 === zB ? void 0 : zB.RzB(BB, jB)
               }))
             };
-            TT.some((TT => {
+            BB.some((BB => {
               let {
-                code: UT
-              } = TT;
-              return UT === hU.S.EnvUnknownSky
-            })) ? queueMicrotask(zT) : zT(), null === (WT = Eg) || void 0 === WT || WT.coreErrors(TT)
+                code: jB
+              } = BB;
+              return jB === cj.J.EnvUnknownSky
+            })) ? queueMicrotask(nB) : nB(), null === (QB = RI) || void 0 === QB || QB.coreErrors(BB)
           },
-          onRenderReload: (TT, UT, mT) => {
-            ! function(TT, UT, mT, WT, zT, MT) {
-              var gT;
-              if ((0, tz.d)()) return;
-              const nT = UT === hU._c.WEBGPU,
-                HT = WT === hU._c.PIPELINE_FAILED ? "pipeline_failed" : "lost",
-                kT = WT === hU._c.RESTORE_LOST,
-                jT = nT && (0, IU.j)(En.adapter, mT, "lost" === HT, kT),
-                lT = (0, jm.j)(hn);
-              null === (gT = gH) || void 0 === gT || gT.reload(nT, mT, HT, null === lT || void 0 === lT ? void 0 : lT.message);
-              const LT = nT ? (0, km.$)(HT, zT, lT) : null;
-              if (null !== LT) {
-                (0, ym.countRenderLost)(HT, lT, En);
-                const UT = void 0 === lT ? "" : ` (${lT.message})`;
-                return void TT.crash(ym.RENDER_RELOAD_SITE, new Error(`${(0,ym.renderReloadMessage)("webgpu",HT,mT)} and ${LT}${UT}`))
+          onRenderReload: (BB, jB, zB) => {
+            ! function(BB, jB, zB, QB, nB, dB) {
+              var IB;
+              if ((0, Dn.d)()) return;
+              const NB = jB === cj.Tc.WEBGPU,
+                uB = QB === cj.Tc.PIPELINE_FAILED ? "pipeline_failed" : "lost",
+                UB = QB === cj.Tc.RESTORE_LOST,
+                aB = NB && (0, Vj.r)(bN.adapter, zB, "lost" === uB, UB),
+                pB = (0, az.m)(vN);
+              null === (IB = Nu) || void 0 === IB || IB.reload(NB, zB, uB, null === pB || void 0 === pB ? void 0 : pB.message);
+              const rB = NB ? (0, Uz.db)(uB, nB, pB) : null;
+              if (null !== rB) {
+                (0, Dz.countRenderLost)(uB, pB, bN);
+                const jB = void 0 === pB ? "" : ` (${pB.message})`;
+                return void BB.crash(Dz.RENDER_RELOAD_SITE, new Error(`${(0,Dz.renderReloadMessage)("webgpu",uB,zB)} and ${rB}${jB}`))
               }
-              const pT = nT ? "webgpu" : "webgl1" === MT ? "webgl1" : "webgl";
-              "lost" === HT && (0, tz.x)();
-              nT || (0, bU.u)();
-              (0, ym.reportRenderReload)(pT, mT, qg, {
+              const sB = NB ? "webgpu" : "webgl1" === dB ? "webgl1" : "webgl";
+              "lost" === uB && (0, Dn.y)();
+              NB || (0, tj.r)();
+              (0, Dz.reportRenderReload)(sB, zB, MI, {
                 from: "game",
-                cause: HT,
-                restoreLost: kT,
-                adapterRemembered: jT,
-                error: lT,
-                context: En,
-                session: Zj(TT.sunShadowsHeld())
-              }), Ek()
-            }(dT, TT, UT, mT, pT, LT)
+                cause: uB,
+                restoreLost: UB,
+                adapterRemembered: aB,
+                error: pB,
+                context: bN,
+                session: ma(BB.sunShadowsHeld())
+              }), cU()
+            }(fB, BB, jB, zB, sB, rB)
           },
-          onEnvEvent: TT => {
-            var UT;
-            TT.kind === hU.hb.SkyImages ? null === (UT = rg) || void 0 === UT || UT.onEvent(TT.payload) : TT.kind === hU.hb.EnvLighting && (Kg = 1 === TT.payload[0])
+          onEnvEvent: BB => {
+            var jB;
+            BB.kind === cj.U.SkyImages ? null === (jB = KI) || void 0 === jB || jB.onEvent(BB.payload) : BB.kind === cj.U.EnvLighting && (CI = 1 === BB.payload[0])
           },
-          onImages: TT => {
-            var UT;
-            null === (UT = Sg) || void 0 === UT || UT.onEvent(TT)
+          onImages: BB => {
+            var jB;
+            null === (jB = cI) || void 0 === jB || jB.onEvent(BB)
           },
-          onModelRequest: TT => {
-            var UT;
-            null === (UT = Vg) || void 0 === UT || UT.request(TT)
+          onModelRequest: BB => {
+            var jB;
+            null === (jB = lI) || void 0 === jB || jB.request(BB)
           },
-          onModelTaken: (TT, UT) => {
-            var mT;
-            null === (mT = Vg) || void 0 === mT || mT.taken(TT, UT)
+          onModelTaken: (BB, jB) => {
+            var zB;
+            null === (zB = lI) || void 0 === zB || zB.taken(BB, jB)
           },
           onTerrainTexturesWanted: () => {
             queueMicrotask((() => {
-              ! function(TT, UT) {
-                const mT = vg;
-                if (null === mT || TT.isStopped) return;
-                mT.restore((TT => {
-                  (0, ym.reportTerrainTextureFailure)(TT, UT)
-                })).then((UT => {
-                  !1 !== UT || TT.isStopped ? !0 === UT && console.info(`${VM} terrain textures handed over again after the renderer lost them`) : console.warn(`${VM} the terrain textures couldn't be handed over again: the terrain draws blank`)
+              ! function(BB, jB) {
+                const zB = tI;
+                if (null === zB || BB.isStopped) return;
+                zB.restore((BB => {
+                  (0, Dz.reportTerrainTextureFailure)(BB, jB)
+                })).then((jB => {
+                  !1 !== jB || BB.isStopped ? !0 === jB && console.info(`${ld} terrain textures handed over again after the renderer lost them`) : console.warn(`${ld} the terrain textures couldn't be handed over again: the terrain draws blank`)
                 }))
-              }(dT, xT)
+              }(fB, qB)
             }))
           },
-          onKeepAlive: TT => {
-            const UT = null === vn ? void 0 : fn.get(vn);
-            void 0 !== UT && oW(UT, TT)
+          onKeepAlive: BB => {
+            const jB = null === gN ? void 0 : tN.get(gN);
+            void 0 !== jB && bQ(jB, BB)
           },
           onSends: () => {
-            ! function(TT) {
-              const UT = performance.now();
-              if (TT.forEachNetOut(Hj), zj(TT), (0, lm.H)(TT, {
-                  worldgen: wg,
-                  mesh: ag
-                }), null !== MH) try {
-                MH.sendsWent(TT, UT, performance.now())
-              } catch (zT) {
-                Gk(zT)
+            ! function(BB) {
+              const jB = performance.now();
+              if (BB.forEachNetOut(ua), na(BB), (0, pz.C)(BB, {
+                  worldgen: YI,
+                  mesh: hI
+                }), null !== Iu) try {
+                Iu.sendsWent(BB, jB, performance.now())
+              } catch (nB) {
+                KU(nB)
               }
-            }(dT)
+            }(fB)
           }
         });
-        if (Bg = dT, null === (gT = FU.c.wasmNetReady) || void 0 === gT || gT.call(FU.c, (() => dT.isStopped ? 0 : dT.netKeptFrames)), null !== TT) {
-          dT.setAntiCheatProbes(aM(ZU.u, TT.checks)), TT.watchHeld(XM.CoreFrame, (() => dT.frame)), TT.watchHeld(XM.GlueFrame, (() => JT.frame));
-          const UT = function(TT, UT) {
-            const mT = new yM(UT);
-            let WT = !1;
-            mT.Cl(TT.Cl());
-            const zT = (0, hW.db)((() => {
-              mT.Cl(TT.Cl())
-            }), IM);
-            let MT = 6 * (0, hW.T)() | 0;
-            const gT = () => {
-              ++MT < 6 || (MT = 0, TT.checks.stackCheck() && (WT = !0))
+        if (GI = fB, null === (IB = Zj.b.wasmNetReady) || void 0 === IB || IB.call(Zj.b, (() => fB.isStopped ? 0 : fB.netKeptFrames)), null !== BB) {
+          fB.setAntiCheatProbes(hd(mj.t, BB.checks)), BB.watchHeld(Zd.CoreFrame, (() => fB.frame)), BB.watchHeld(Zd.GlueFrame, (() => iB.frame));
+          const jB = function(BB, jB) {
+            const zB = new Xd(jB);
+            let QB = !1;
+            zB.vp(BB.vp());
+            const nB = (0, CQ.kb)((() => {
+              zB.vp(BB.vp())
+            }), Ad);
+            let dB = 6 * (0, CQ.bb)() | 0;
+            const IB = () => {
+              ++dB < 6 || (dB = 0, BB.checks.stackCheck() && (QB = !0))
             };
-            (0, jM.f)(gT);
-            const nT = () => {
-              const UT = TT.checkPadCall();
-              0 !== UT && mT.setFlags(UT)
+            (0, sd.i)(IB);
+            const NB = () => {
+              const jB = BB.checkPadCall();
+              0 !== jB && zB.setFlags(jB)
             };
-            return (0, kM.e)(nT), {
-              onSend: gT,
+            return (0, rd.l)(NB), {
+              onSend: IB,
               beforeFrame: () => {
-                WT && mT.originStackHit() && (WT = !1)
+                QB && zB.originStackHit() && (QB = !1)
               },
-              onEvent: UT => {
-                const WT = TT.checkEvent(UT);
-                mT.value(hU.i.ProbeUsedProp, TT.usedProp()), 0 !== WT && mT.setFlags(WT)
+              onEvent: jB => {
+                const QB = BB.checkEvent(jB);
+                zB.value(cj.h.ProbeUsedProp, BB.usedProp()), 0 !== QB && zB.setFlags(QB)
               },
               stop: () => {
-                (0, hW.gb)(zT), (0, jM.e)(gT), (0, kM.d)(nT)
+                (0, CQ.nb)(nB), (0, sd.g)(IB), (0, rd.h)(NB)
               }
             }
-          }(TT, ((TT, UT, mT) => {
-            let WT = !1;
-            return qj(dT, (() => {
-              WT = dT.rings.input.writeRecord(hU.Gb.AntiCheat, TT, UT, mT, 0)
-            })), WT
+          }(BB, ((BB, jB, zB) => {
+            let QB = !1;
+            return La(fB, (() => {
+              QB = fB.rings.input.writeRecord(cj.pb.AntiCheat, BB, jB, zB, 0)
+            })), QB
           }));
-          dT.isStopped ? UT.stop() : Fg = UT
+          fB.isStopped ? jB.stop() : WI = jB
         }
-        gg = (TT, UT, mT) => dT.rings.cmd.writeCmd(TT, UT, mT), ng = TT => dT.rings.cmd.growForCmd(TT), kn = !1, yk(), (0, yT.x)(dT, {
-          core: JT,
-          memory: ZU.u,
-          staleOr: (TT, UT, mT, WT) => xj({
-            site: TT,
-            error: UT
-          }, mT, WT),
-          reportReplayFault: (TT, UT) => {
-            (0, ym.reportReplayFault)(TT, UT, qg)
+        aI = (BB, jB, zB) => fB.rings.cmd.writeCmd(BB, jB, zB), pI = BB => fB.rings.cmd.growForCmd(BB), sN = !1, YU(), (0, FB.t)(fB, {
+          core: iB,
+          memory: mj.t,
+          staleOr: (BB, jB, zB, QB) => qa({
+            site: BB,
+            error: jB
+          }, zB, QB),
+          reportReplayFault: (BB, jB) => {
+            (0, Dz.reportReplayFault)(BB, jB, MI)
           },
-          audio: fg,
-          options: eU.d,
-          onNetEvent: Nk,
-          sessionInfo: TT => {
-            var UT;
-            return (null === (UT = Yn) || void 0 === UT ? void 0 : UT.conn) === TT ? Yn.info : null
+          audio: SI,
+          options: Mj.c,
+          onNetEvent: CU,
+          sessionInfo: BB => {
+            var jB;
+            return (null === (jB = qN) || void 0 === jB ? void 0 : jB.conn) === BB ? qN.info : null
           },
-          onEventOverflow: NH,
-          replayShaderPack: TT => {
-            var UT;
-            null === (UT = Eg) || void 0 === UT || UT.replay(TT)
+          onEventOverflow: Cu,
+          replayShaderPack: BB => {
+            var jB;
+            null === (jB = RI) || void 0 === jB || jB.replay(BB)
           },
-          hasPackModel: TT => {
-            var UT, mT;
-            return null !== (null !== (UT = null === (mT = Xk()) || void 0 === mT ? void 0 : mT.modelUrl(TT)) && void 0 !== UT ? UT : null)
+          hasPackModel: BB => {
+            var jB, zB;
+            return null !== (null !== (jB = null === (zB = VU()) || void 0 === zB ? void 0 : zB.modelUrl(BB)) && void 0 !== jB ? jB : null)
           },
-          beforeWrite: () => (!Mn && dT.rings.net.cursor > 0 && Ak(dT, !1, "all"), !dT.isStopped),
-          beforeOp: () => (!Mn && dT.netWrittenSinceFrame > 0 && Ak(dT, !1, "budget"), !dT.isStopped)
-        }), (0, aT.L)({
+          beforeWrite: () => (!UN && fB.rings.net.cursor > 0 && RU(fB, !1, "all"), !fB.isStopped),
+          beforeOp: () => (!UN && fB.netWrittenSinceFrame > 0 && RU(fB, !1, "budget"), !fB.isStopped)
+        }), (0, DB.H)({
           lockPointer: () => {
-            if (!zW(cT)) return !1;
+            if (!QQ(yB)) return !1;
             try {
-              Promise.resolve(cT.requestPointerLock()).catch((() => {}))
+              Promise.resolve(yB.requestPointerLock()).catch((() => {}))
             } catch {
               return !1
             }
             return !0
           },
           unlockPointer: () => {
-            (0, Gm.d)()
+            (0, wz.e)()
           },
           leaveGame: () => {
-            GH()
+            Ku()
           },
-          canvas: () => cT
-        }), Pg = (0, aT.C)((() => {
-          var TT;
-          const UT = (0, yT.i)();
-          null === (TT = (0, yT.v)()) || void 0 === TT || TT.followCursorAim(!0 === (null === UT || void 0 === UT ? void 0 : UT.isSessionLive) ? UT : null)
-        })), Bn && dT.setUiPrefs(Bn);
-        Zn && dT.setEnvPrefs(Zn);
-        cn && dT.setLookPrefs(cn);
-        const wT = Iz ? Qz(Iz.preventMovement) : null;
-        wT && Wk(wT);
-        const tT = (0, dm.k)(),
-          XT = (0, dm.e)(dT, tT);
-        Qg = tT.basis, (0, Cm.k)(null === XT ? null : (0, xm.p)(XT)), Ig = XT;
-        const IT = (0, vU.c)();
-        let QT = 1 / 0,
-          sT = !0,
-          FT = tT.shedFootprintBytes;
-        const PT = new Hz.e(IT, (() => JT.uc()), (TT => {
-          dT.crash(lm.m, TT)
+          canvas: () => yB
+        }), eI = (0, DB.y)((() => {
+          var BB;
+          const jB = (0, FB.g)();
+          null === (BB = (0, FB.q)()) || void 0 === BB || BB.followCursorAim(!0 === (null === jB || void 0 === jB ? void 0 : jB.isSessionLive) ? jB : null)
+        })), kN && fB.setUiPrefs(kN);
+        GN && fB.setEnvPrefs(GN);
+        LN && fB.setLookPrefs(LN);
+        const oB = hn ? Xn(hn.preventMovement) : null;
+        oB && nU(oB);
+        const HB = (0, qz.k)(),
+          YB = (0, qz.h)(fB, HB);
+        TI = HB.basis, (0, Pz.l)(null === YB ? null : (0, iz.j)(YB)), AI = YB;
+        const VB = (0, kj.c)();
+        let hB = 1 / 0,
+          XB = !0,
+          ZB = HB.shedFootprintBytes;
+        const AB = new Nn.e(VB, (() => iB.Qk()), (BB => {
+          fB.crash(pz.m, BB)
         }));
-        yg = PT, Xg = PT, null !== XT && PT.setCeiling(Math.min((0, Hz.t)(XT), QT, (0, dm.n)()));
-        if (sT) {
-          PT.setShed((TT => {
-            const UT = dT.shedMemory("joinReserve" !== TT);
-            return null !== UT && (null === Ig || UT < Ig) && (Ig = UT, (0, Cm.k)((0, xm.p)(UT))), UT
-          }), ((TT, UT, mT) => {
-            1 === UT ? (0, ym.reportMemoryShed)(TT, mT, qg) : console.warn(`${VM} wasm memory: shed again (${TT}): shed ${UT}`, mT.wasmMemoryShed)
-          }), (() => dT.addDistanceInUse()));
-          const TT = (0, km.O)(YT);
-          PT.setFootprint(new Ez(FT, {
-            storedChunks: () => JT.lWT(),
+        XI = AB, ZI = AB, null !== YB && AB.setCeiling(Math.min((0, Nn.q)(YB), hB, (0, qz.m)()));
+        if (XB) {
+          AB.setShed((BB => {
+            const jB = fB.shedMemory("joinReserve" !== BB);
+            return null !== jB && (null === AI || jB < AI) && (AI = jB, (0, Pz.l)((0, iz.j)(jB))), jB
+          }), ((BB, jB, zB) => {
+            1 === jB ? (0, Dz.reportMemoryShed)(BB, zB, MI) : console.warn(`${ld} wasm memory: shed again (${BB}): shed ${jB}`, zB.wasmMemoryShed)
+          }), (() => fB.addDistanceInUse()));
+          const BB = (0, Uz.S)(EB);
+          AB.setFootprint(new bn(ZB, {
+            storedChunks: () => iB.OzB(),
             gpuBytes: () => {
-              var UT;
-              return null !== (UT = null === TT || void 0 === TT ? void 0 : TT.LWT()) && void 0 !== UT ? UT : 0
+              var jB;
+              return null !== (jB = null === BB || void 0 === BB ? void 0 : BB.BQB()) && void 0 !== jB ? jB : 0
             },
-            jsHeapBytes: Nz
+            jsHeapBytes: cn
           }))
         }
         window.addEventListener("pagehide", (() => {
-          yg === PT && (PT.refreshStats(), fj(PT))
-        })), window.addEventListener("pagehide", hk), window.addEventListener("pagehide", Dk), !1;
-        const [VT, uT] = (0, Qm.e)();
-        HH = (0, Fm.c)((TT => dT.setChunkAddDistance(TT.horizontal, TT.vertical)), {
-          horizontal: VT,
-          vertical: uT
-        }), dT.setAmbientOcclusion(!0 !== rm.l.getItem("disableAmbientOcclusion")), dT.setPoseLod(!0 !== rm.l.getItem(pU.K)), dT.setDebugLog(hU.X.Look, !0), dT.setDebugLog(hU.X.CameraSet, !0), (0, oz.startLookDebug)("wasm", {
-          look: () => dT.takeDebugLog(hU.X.Look),
-          cameraSets: () => dT.takeDebugLog(hU.X.CameraSet)
-        }), (0, hz.r)("remesh") && (dT.setDebugLog(hU.X.Remesh, !0), CT = () => dT.takeDebugLog(hU.X.Remesh), mM = new UM((0, Az.r)(), CT));
-        var CT;
-        const rT = function(TT, UT, mT, WT) {
-          const zT = new bW,
-            MT = TT => rm.l.getItem(TT);
-          zT.sync(MT, UT), (0, QU.T)();
-          const gT = (0, HT.k)("customBindingsChanged", (() => {
-            zT.sync(MT, UT)
+          XI === AB && (AB.refreshStats(), Ga(AB))
+        })), window.addEventListener("pagehide", bU), window.addEventListener("pagehide", vU), !1;
+        const [TB, PB] = (0, Vz.e)();
+        Uu = (0, Xz.f)((BB => fB.setChunkAddDistance(BB.horizontal, BB.vertical)), {
+          horizontal: TB,
+          vertical: PB
+        }), fB.setAmbientOcclusion(!0 !== Wz.j.getItem("disableAmbientOcclusion")), fB.setPoseLod(!0 !== Wz.j.getItem(sj.L)), fB.setDebugLog(cj.L.Look, !0), fB.setDebugLog(cj.L.CameraSet, !0), (0, On.startLookDebug)("wasm", {
+          look: () => fB.takeDebugLog(cj.L.Look),
+          cameraSets: () => fB.takeDebugLog(cj.L.CameraSet)
+        }), (0, vn.q)("remesh") && (fB.setDebugLog(cj.L.Remesh, !0), WB = () => fB.takeDebugLog(cj.L.Remesh), nd = new Qd((0, Bd.k)(), WB));
+        var WB;
+        const eB = function(BB, jB, zB, QB) {
+          const nB = new gQ,
+            dB = BB => Wz.j.getItem(BB);
+          nB.sync(dB, jB), (0, hj.V)();
+          const IB = (0, uB.q)("customBindingsChanged", (() => {
+            nB.sync(dB, jB)
           }));
-          (0, Nm.o)(UT);
-          const nT = new Set,
-            kT = (0, aT.C)((() => {
-              var TT;
-              nT.size > 0 && JW() && !0 === (null === (TT = (0, yT.i)()) || void 0 === TT ? void 0 : TT.localPlayerAlive()) && HT.j.EZ("usedKeyboard")
+          (0, xz.p)(jB);
+          const NB = new Set,
+            UB = (0, DB.y)((() => {
+              var BB;
+              NB.size > 0 && EQ() && !0 === (null === (BB = (0, FB.g)()) || void 0 === BB ? void 0 : BB.localPlayerAlive()) && uB.n.Ly("usedKeyboard")
             })),
-            jT = LW.e.heldSizer((() => (0, PU.p)(TT))),
-            lT = lW(TT, UT, {
-              prevents: TT => zT.prevents(TT),
-              keyPressed: TT => {
-                zT.moves(TT) && (nT.add(TT), JW() && HT.j.EZ("usedKeyboard"))
+            aB = pQ.c.heldSizer((() => (0, Aj.m)(BB))),
+            pB = aQ(BB, jB, {
+              prevents: BB => nB.prevents(BB),
+              keyPressed: BB => {
+                nB.moves(BB) && (NB.add(BB), EQ() && uB.n.Ly("usedKeyboard"))
               },
-              keyReleased: TT => {
-                nT.delete(TT)
+              keyReleased: BB => {
+                NB.delete(BB)
               },
               keysReleased: () => {
-                nT.clear()
+                NB.clear()
               },
               resized: () => {
-                eW.i.measure(TT.getBoundingClientRect()), (0, pW.g)()
+                SQ.h.measure(BB.getBoundingClientRect()), (0, rQ.i)()
               },
-              sizeCanvas: jT,
-              watchRenderScale: UT => {
-                const mT = (0, PU.t)(TT, UT),
-                  WT = LW.e.onRelease(UT);
+              sizeCanvas: aB,
+              watchRenderScale: jB => {
+                const zB = (0, Aj.o)(BB, jB),
+                  QB = pQ.c.onRelease(jB);
                 return () => {
-                  mT(), WT()
+                  zB(), QB()
                 }
               },
               touchStarting: () => {
-                eW.i.measure(TT.getBoundingClientRect())
+                SQ.h.measure(BB.getBoundingClientRect())
               },
-              viewShown: mT,
-              touchUiShown: () => TU.b.get("isTouchScreen"),
-              ctrlCombosAreGames: JW,
-              inspect: (TT, UT, mT) => {
-                zT.checks(UT, mT) && WT(TT)
+              viewShown: zB,
+              touchUiShown: () => Bj.c.get("isTouchScreen"),
+              ctrlCombosAreGames: EQ,
+              inspect: (BB, jB, zB) => {
+                nB.checks(jB, zB) && QB(BB)
               },
-              canLock: () => zW(TT)
+              canLock: () => QQ(BB)
             }),
-            LT = (0, fm.b)(UT);
+            rB = (0, kz.d)(jB);
           return () => {
-            gT(), kT(), (0, Nm.o)(null), LT(), lT()
+            IB(), UB(), (0, xz.p)(null), rB(), pB()
           }
-        }(cT, ((TT, UT, mT, WT, zT) => {
-          qj(dT, (() => {
-            dT.rings.input.writeRecord(TT, UT, mT, WT, zT)
-          })), !gn && (0, aW.e)(TT, zT) && (0, aW.c)((() => {
-            Bg !== dT || YH || dT.isStopped || !gj() || Ak(dT, !1, "budget", !1)
+        }(yB, ((BB, jB, zB, QB, nB) => {
+          La(fB, (() => {
+            fB.rings.input.writeRecord(BB, jB, zB, QB, nB)
+          })), !aN && (0, HQ.h)(BB, nB) && (0, HQ.e)((() => {
+            GI !== fB || iu || fB.isStopped || !Ia() || RU(fB, !1, "budget", !1)
           }))
-        }), (() => iH), (TT => {
-          var UT;
-          null === (UT = Fg) || void 0 === UT || UT.onEvent(TT)
+        }), (() => tu), (BB => {
+          var jB;
+          null === (jB = WI) || void 0 === jB || jB.onEvent(BB)
         }));
-        if (dT.isStopped) return rT(), null;
-        dg = rT;
-        const KT = () => !dT.isStopped && !OH;
-        if (dT.isStopped) return null;
-        (0, ZU.U)((() => {
-          "call" === (0, ZU.s)() && dT.crash(lm.s, (0, ZU.o)())
+        if (fB.isStopped) return eB(), null;
+        FI = eB;
+        const lB = () => !fB.isStopped && !Mu;
+        if (fB.isStopped) return null;
+        (0, mj.M)((() => {
+          "call" === (0, mj.q)() && fB.crash(pz.r, (0, mj.m)())
         }));
-        const ST = (0, lm.K)(dT.rings.worker, (() => {
-          Ak(dT, !1, document.hidden ? "all" : "budget")
+        const wB = (0, pz.F)(fB.rings.worker, (() => {
+          RU(fB, !1, document.hidden ? "all" : "budget")
         }));
-        wg = function(TT, UT) {
-          return ij().then((TT => {
+        YI = function(BB, jB) {
+          return ga().then((BB => {
             let {
-              prefetchWorldgenWorker: UT
-            } = TT;
-            UT()
-          }), (() => {})), new gM({
-            module: (0, ZU.x)(),
-            decodeSettings: TT => {
-              const UT = (0, yT.v)();
-              if (null === UT) throw new Error("no game code to decode the world-gen seed with");
-              return UT.decodeMapSettings(TT)
+              prefetchWorldgenWorker: jB
+            } = BB;
+            jB()
+          }), (() => {})), new ud({
+            module: (0, mj.w)(),
+            decodeSettings: BB => {
+              const jB = (0, FB.q)();
+              if (null === jB) throw new Error("no game code to decode the world-gen seed with");
+              return jB.decodeMapSettings(BB)
             },
-            loadWorker: bj,
+            loadWorker: ta,
             onMapWithoutWorldgen: () => {
-              Oj((TT => {
+              Sa((BB => {
                 let {
-                  stopWorldgenWorkerPrefetch: UT
-                } = TT;
-                UT()
+                  stopWorldgenWorkerPrefetch: jB
+                } = BB;
+                jB()
               }))
             },
-            onLoadFailed: TT => {
-              (0, ym.reportWorldgenLoadFailure)(TT, qg)
+            onLoadFailed: BB => {
+              (0, Dz.reportWorldgenLoadFailure)(BB, MI)
             },
-            onWorkerLost: TT => {
-              (0, ym.reportWorkerLost)(lm.B, TT, qg)
+            onWorkerLost: BB => {
+              (0, Dz.reportWorkerLost)(pz.x, BB, MI)
             },
-            onStartTimeout: TT => {
-              (0, ym.reportWorkerStartTimeout)(lm.B, TT, qg)
+            onStartTimeout: BB => {
+              (0, Dz.reportWorkerStartTimeout)(pz.x, BB, MI)
             },
-            onGaveUp: TT => {
-              (0, ym.reportWorldgenGaveUp)(TT, qg)
+            onGaveUp: BB => {
+              (0, Dz.reportWorldgenGaveUp)(BB, MI)
             },
-            onMemoryStats: TT => {
-              var UT;
-              null === (UT = yg) || void 0 === UT || UT.noteWorldgen(TT)
+            onMemoryStats: BB => {
+              var jB;
+              null === (jB = XI) || void 0 === jB || jB.noteWorldgen(BB)
             },
             onMemoryGone: () => {
-              var TT;
-              null === (TT = yg) || void 0 === TT || TT.worldgenGone()
+              var BB;
+              null === (BB = XI) || void 0 === BB || BB.worldgenGone()
             },
-            write: (mT, WT, zT, MT, gT) => {
-              qj(TT, (() => {
-                TT.rings.worker.writeWorkerRecord(mT, WT, zT, 0, MT, gT) || TT.crash(lm.B, `a world-gen record of kind ${WT} did not fit the worker-in ring`)
-              })), UT()
+            write: (zB, QB, nB, dB, IB) => {
+              La(BB, (() => {
+                BB.rings.worker.writeWorkerRecord(zB, QB, nB, 0, dB, IB) || BB.crash(pz.x, `a world-gen record of kind ${QB} did not fit the worker-in ring`)
+              })), jB()
             }
           })
-        }(dT, ST), ag = function(TT, UT) {
-          return new gz({
-            module: (0, ZU.x)(),
+        }(fB, wB), hI = function(BB, jB) {
+          return new dn({
+            module: (0, mj.w)(),
             loadWorkers: async () => {
               const [{
-                createMeshWorker: TT
-              }, UT] = await Promise.all([mT.e(41).then((() => mT(51165))), Promise.resolve().then((() => mT(102))).then((TT => {
+                createMeshWorker: BB
+              }, jB] = await Promise.all([zB.e(41).then((() => zB(51193))), Promise.resolve().then((() => zB(106))).then((BB => {
                 let {
-                  isMobile: UT
-                } = TT;
-                return UT()
+                  isMobile: jB
+                } = BB;
+                return jB()
               }), (() => !1))]);
               return {
-                create: TT,
-                count: (0, tU.b)(navigator.hardwareConcurrency, UT),
-                maxKeptLightStates: UT ? 1 : void 0
+                create: BB,
+                count: (0, Hj.c)(navigator.hardwareConcurrency, jB),
+                maxKeptLightStates: jB ? 1 : void 0
               }
             },
-            write: (mT, WT, zT, MT, gT, nT) => {
-              (0, pW.e)(), qj(TT, (() => {
-                TT.rings.worker.writeWorkerRecord(mT, WT, zT, MT, gT, nT) || TT.crash(lm.n, `a meshing record of kind ${WT} did not fit the worker-in ring`)
-              })), UT()
+            write: (zB, QB, nB, dB, IB, NB) => {
+              (0, rQ.g)(), La(BB, (() => {
+                BB.rings.worker.writeWorkerRecord(zB, QB, nB, dB, IB, NB) || BB.crash(pz.o, `a meshing record of kind ${QB} did not fit the worker-in ring`)
+              })), jB()
             },
-            onWorkerLost: TT => {
-              (0, ym.reportWorkerLost)(lm.n, TT, qg)
+            onWorkerLost: BB => {
+              (0, Dz.reportWorkerLost)(pz.o, BB, MI)
             },
-            onLightFault: (TT, UT) => {
-              (0, ym.reportLightFault)(TT, UT, qg)
+            onLightFault: (BB, jB) => {
+              (0, Dz.reportLightFault)(BB, jB, MI)
             },
-            onStartTimeout: TT => {
-              (0, ym.reportWorkerStartTimeout)(lm.n, TT, qg)
+            onStartTimeout: BB => {
+              (0, Dz.reportWorkerStartTimeout)(pz.o, BB, MI)
             },
-            onMemoryStats: (TT, UT) => {
-              var mT;
-              null === (mT = yg) || void 0 === mT || mT.noteMeshWorker(TT, UT)
+            onMemoryStats: (BB, jB) => {
+              var zB;
+              null === (zB = XI) || void 0 === zB || zB.noteMeshWorker(BB, jB)
             },
-            onMemoryGone: TT => {
-              var UT;
-              null === (UT = yg) || void 0 === UT || UT.meshWorkerGone(TT)
+            onMemoryGone: BB => {
+              var jB;
+              null === (jB = XI) || void 0 === jB || jB.meshWorkerGone(BB)
             },
-            fail: (UT, mT) => {
-              const WT = () => {
-                TT.crash(lm.n, void 0 === mT ? UT : new Error(UT, {
-                  cause: mT
+            fail: (jB, zB) => {
+              const QB = () => {
+                BB.crash(pz.o, void 0 === zB ? jB : new Error(jB, {
+                  cause: zB
                 }))
               };
-              void 0 !== mT ? xj({
-                site: lm.n,
-                error: mT
-              }, WT) : WT()
+              void 0 !== zB ? qa({
+                site: pz.o,
+                error: zB
+              }, QB) : QB()
             }
           })
-        }(dT, ST), hH();
-        const GT = (0, bz.s)(dU.clientSideServerUrls.staticUrl, {
-            onTableFailed: TT => {
-              xj({
-                site: ym.MODEL_FEED_SITE,
-                error: TT
+        }(fB, wB), bu();
+        const xB = (0, gn.q)(fj.clientSideServerUrls.staticUrl, {
+            onTableFailed: BB => {
+              qa({
+                site: Dz.MODEL_FEED_SITE,
+                error: BB
               }, (() => {}), {
-                stillWanted: KT
+                stillWanted: lB
               })
             },
-            packUrl: TT => {
-              var UT, mT;
-              return null !== (UT = null === (mT = Xk()) || void 0 === mT ? void 0 : mT.modelUrl(TT)) && void 0 !== UT ? UT : null
+            packUrl: BB => {
+              var jB, zB;
+              return null !== (jB = null === (zB = VU()) || void 0 === zB ? void 0 : zB.modelUrl(BB)) && void 0 !== jB ? jB : null
             }
           }),
-          NT = function(TT, UT, mT) {
-            const WT = mT => {
-              var WT, zT;
-              return null !== (WT = null === (zT = UT()) || void 0 === zT ? void 0 : zT.drawnUrl(mT)) && void 0 !== WT ? WT : TT.url(mT)
+          KB = function(BB, jB, zB) {
+            const QB = zB => {
+              var QB, nB;
+              return null !== (QB = null === (nB = jB()) || void 0 === nB ? void 0 : nB.drawnUrl(zB)) && void 0 !== QB ? QB : BB.url(zB)
             };
-            return (0, qz.l)((0, jz.r)(WT), mT)
-          }(GT, (() => Vg), Xk),
-          ET = new jz.h(NT, (TT => {
-            console.warn(`${VM} image ${TT.key.kind}:${TT.key.index}:${TT.key.word} failed`, TT.error)
+            return (0, Gn.m)((0, Un.k)(QB), zB)
+          }(xB, (() => lI), VU),
+          CB = new Un.d(KB, (BB => {
+            console.warn(`${ld} image ${BB.key.kind}:${BB.key.index}:${BB.key.word} failed`, BB.error)
           }));
-        Sg = ET, Gg = new cz(dT, NT, ((TT, UT) => {
-          void 0 === UT ? console.warn(`${VM} ${TT}`) : Qk(TT, UT)
+        cI = CB, bI = new mn(fB, KB, ((BB, jB) => {
+          void 0 === jB ? console.warn(`${ld} ${BB}`) : XU(BB, jB)
         }));
-        const hT = new fz.g(GT, function(TT, UT) {
-          let WT = !1,
-            zT = null,
-            MT = null;
-          const gT = {
-              onUnavailable: (mT, WT) => {
-                MT ??= xj({
-                  site: ym.MODEL_POOL_SITE,
-                  error: mT,
-                  urls: WT
+        const cB = new kn.i(xB, function(BB, jB) {
+          let QB = !1,
+            nB = null,
+            dB = null;
+          const IB = {
+              onUnavailable: (zB, QB) => {
+                dB ??= qa({
+                  site: Dz.MODEL_POOL_SITE,
+                  error: zB,
+                  urls: QB
                 }, (() => {
-                  (0, ym.reportModelPoolFailure)(mT, TT)
+                  (0, Dz.reportModelPoolFailure)(zB, BB)
                 }), {
-                  stillWanted: UT
+                  stillWanted: jB
                 })
               },
-              onDecoderFailed: (mT, WT) => {
-                const zT = () => {
-                  (0, ym.reportDracoDecoderFailure)(mT, TT)
+              onDecoderFailed: (zB, QB) => {
+                const nB = () => {
+                  (0, Dz.reportDracoDecoderFailure)(zB, BB)
                 };
-                void 0 !== WT ? xj({
-                  site: ym.MODEL_POOL_SITE,
-                  error: mT,
-                  urls: WT
-                }, zT, {
-                  stillWanted: UT
-                }) : zT()
+                void 0 !== QB ? qa({
+                  site: Dz.MODEL_POOL_SITE,
+                  error: zB,
+                  urls: QB
+                }, nB, {
+                  stillWanted: jB
+                }) : nB()
               },
-              onWorkerLost: UT => {
-                (0, ym.reportWorkerLost)(ym.MODEL_POOL_SITE, UT, TT)
+              onWorkerLost: jB => {
+                (0, Dz.reportWorkerLost)(Dz.MODEL_POOL_SITE, jB, BB)
               },
-              onModuleRetry: (UT, mT) => {
-                (0, ym.reportModelsModuleRetry)(UT, mT, TT)
+              onModuleRetry: (jB, zB) => {
+                (0, Dz.reportModelsModuleRetry)(jB, zB, BB)
               }
             },
-            nT = mT.e(43).then((() => mT(51172))).then((TT => {
+            NB = zB.e(43).then((() => zB(51202))).then((BB => {
               let {
-                pageModelPool: UT
-              } = TT;
-              if (WT) return null;
-              const mT = UT(gT);
-              return zT = mT.unlisten, ug = mT.pool, hH(), mT.pool
-            }), (TT => (WT || gT.onUnavailable(TT, void 0), null)));
-          return Cg = () => {
-            var TT;
-            WT = !0, null === (TT = zT) || void 0 === TT || TT(), ug = null
-          }, (TT, UT) => nT.then((mT => {
-            var WT;
-            return null !== (WT = null === mT || void 0 === mT ? void 0 : mT.build(TT, UT)) && void 0 !== WT ? WT : (0, Oz.q)(TT, "the model workers did not load")
-          })).then((TT => null !== MT && (0, Oz.j)(TT) ? MT.then((() => TT)) : TT))
-        }(xT, KT), (TT => {
-          TT.startup ? (jj(), xj({
-            site: ym.MODEL_FEED_SITE,
-            error: TT.error,
-            urls: "" === TT.url ? void 0 : [TT.url]
+                pageModelPool: jB
+              } = BB;
+              if (QB) return null;
+              const zB = jB(IB);
+              return nB = zB.unlisten, wI = zB.pool, bu(), zB.pool
+            }), (BB => (QB || IB.onUnavailable(BB, void 0), null)));
+          return xI = () => {
+            var BB;
+            QB = !0, null === (BB = nB) || void 0 === BB || BB(), wI = null
+          }, (BB, jB) => NB.then((zB => {
+            var QB;
+            return null !== (QB = null === zB || void 0 === zB ? void 0 : zB.build(BB, jB)) && void 0 !== QB ? QB : (0, tn.q)(BB, "the model workers did not load")
+          })).then((BB => null !== dB && (0, tn.j)(BB) ? dB.then((() => BB)) : BB))
+        }(qB, lB), (BB => {
+          BB.startup ? (aa(), qa({
+            site: Dz.MODEL_FEED_SITE,
+            error: BB.error,
+            urls: "" === BB.url ? void 0 : [BB.url]
           }, (() => {
-            (0, ym.reportModelFailure)(TT, xT)
-          }))) : (0, ym.reportModelFailure)(TT, xT)
+            (0, Dz.reportModelFailure)(BB, qB)
+          }))) : (0, Dz.reportModelFailure)(BB, qB)
         }), {
-          onWritten: (TT, UT) => {
-            ET.glbWritten(TT, UT)
+          onWritten: (BB, jB) => {
+            CB.glbWritten(BB, jB)
           },
-          onTaken: (TT, UT) => {
-            ET.glbTaken(TT, UT)
+          onTaken: (BB, jB) => {
+            CB.glbTaken(BB, jB)
           },
-          onPackFileFailed: (TT, UT) => {
-            console.warn(`${VM} the texture pack's model file ${TT} failed: the shipped one loads`, UT)
+          onPackFileFailed: (BB, jB) => {
+            console.warn(`${ld} the texture pack's model file ${BB} failed: the shipped one loads`, jB)
           }
         });
-        Vg = hT;
-        const DT = new pz.f(dT);
-        vg = DT, DT.swap((TT => {
-          const UT = () => {
-            (0, ym.reportTerrainTextureFailure)(TT, xT)
+        lI = cB;
+        const bB = new rn.f(fB);
+        tI = bB, bB.swap((BB => {
+          const jB = () => {
+            (0, Dz.reportTerrainTextureFailure)(BB, qB)
           };
-          if (kH) return void UT();
-          const mT = () => !kH,
-            WT = null === TT.url ? void 0 : [TT.url];
-          xj({
-            site: lm.y,
-            error: TT.error,
-            urls: WT
-          }, UT, {
-            stillWanted: mT
+          if (au) return void jB();
+          const zB = () => !au,
+            QB = null === BB.url ? void 0 : [BB.url];
+          qa({
+            site: pz.w,
+            error: BB.error,
+            urls: QB
+          }, jB, {
+            stillWanted: zB
           })
-        })).then((TT => {
-          null !== TT && (TT || dT.isStopped || console.warn(`${VM} the core refused the terrain textures: terrain draws untextured`), Ag(dT))
+        })).then((BB => {
+          null !== BB && (BB || fB.isStopped || console.warn(`${ld} the core refused the terrain textures: terrain draws untextured`), zN(fB))
         }));
-        const oT = new NU(dT, ((TT, UT) => {
-          console.warn(`${VM} ${TT}`, ...void 0 === UT ? [] : [UT])
+        const vB = new Kj(fB, ((BB, jB) => {
+          console.warn(`${ld} ${BB}`, ...void 0 === jB ? [] : [jB])
         }));
-        oT.feed(), null !== LT && function(TT, UT, WT, zT, MT, gT) {
-          let nT = null,
-            kT = null,
-            jT = !1;
-          const lT = {
+        vB.feed(), null !== rB && function(BB, jB, QB, nB, dB, IB) {
+          let NB = null,
+            UB = null,
+            aB = !1;
+          const pB = {
             textures: null,
             stop: () => {
-              var TT, UT;
-              jT = !0, null === (TT = kT) || void 0 === TT || TT(), null === (UT = nT) || void 0 === UT || UT(), iz.c.setSettled(null), null !== ig && XH.clear(ig)
+              var BB, jB;
+              aB = !0, null === (BB = UB) || void 0 === BB || BB(), null === (jB = NB) || void 0 === jB || jB(), Ln.c.setSettled(null), null !== EI && Vu.clear(EI)
             }
           };
-          cg = lT, kT = sk().follow((kT => {
-            null !== kT && Promise.all([mT.e(204), mT.e(46)]).then((() => mT(51134))).then((mT => {
+          gI = pB, UB = ZU().follow((UB => {
+            null !== UB && Promise.all([zB.e(204), zB.e(46)]).then((() => zB(51166))).then((zB => {
               let {
-                PackTextures: LT
-              } = mT;
-              if (jT || TT.isStopped) return;
-              const pT = new LT({
-                feed: kT,
-                terrain: UT,
-                backend: WT,
-                stopped: () => TT.isStopped,
+                PackTextures: rB
+              } = zB;
+              if (aB || BB.isStopped) return;
+              const sB = new rB({
+                feed: UB,
+                terrain: jB,
+                backend: QB,
+                stopped: () => BB.isStopped,
                 landed: () => {
-                  Ag(TT)
+                  zN(BB)
                 },
                 packSwapped: () => {
-                  (0, qz.h)(zT), gT.feed((() => async function(TT) {
-                    const UT = null === TT ? null : await TT.averageColours;
-                    return null === UT ? EU() : GU(UT)
-                  }(pT.assets))), (0, vz.m)(pT.files()), MT.refresh().then((TT => {
-                    null !== TT && console.info(`${VM} texture pack models: ${TT.resent} of ${TT.delivered} files written again, ${TT.refetched} refetched`)
+                  (0, Gn.i)(nB), IB.feed((() => async function(BB) {
+                    const jB = null === BB ? null : await BB.averageColours;
+                    return null === jB ? Cj() : xj(jB)
+                  }(sB.assets))), (0, yn.i)(sB.files()), dB.refresh().then((BB => {
+                    null !== BB && console.info(`${ld} texture pack models: ${BB.resent} of ${BB.delivered} files written again, ${BB.refetched} refetched`)
                   }))
                 },
-                settled: (TT, UT, mT) => {
-                  var WT;
-                  (iz.c.setSettled({
-                    state: TT,
-                    files: UT
-                  }), function(TT, UT, mT) {
-                    const WT = null === TT.gameSource && (0, Xm.h)(TT.pack);
-                    if (null === UT) return;
-                    const zT = (0, am.g)(UT.error),
-                      MT = WT ? "settings" : UT.source;
-                    HT.j.EZ(am.c, {
-                      failure: zT,
-                      source: MT,
-                      pack: Im(TT)
-                    }), (0, ym.reportTexturePackKeptOut)(MT, zT, UT.error, mT)
-                  }(TT, mT, qg), null === mT) && function(TT) {
-                    const UT = ig;
-                    null !== UT && XH.apply(UT, TT).then((UT => {
-                      UT && TT && console.info(`${VM} the texture pack's animations are in (${Object.keys(TT).length} files)`)
+                settled: (BB, jB, zB) => {
+                  var QB;
+                  (Ln.c.setSettled({
+                    state: BB,
+                    files: jB
+                  }), function(BB, jB, zB) {
+                    const QB = null === BB.gameSource && (0, Fz.d)(BB.pack);
+                    if (null === jB) return;
+                    const nB = (0, Hz.e)(jB.error),
+                      dB = QB ? "settings" : jB.source;
+                    uB.n.Ly(Hz.b, {
+                      failure: nB,
+                      source: dB,
+                      pack: Yz(BB)
+                    }), (0, Dz.reportTexturePackKeptOut)(dB, nB, jB.error, zB)
+                  }(BB, zB, MI), null === zB) && function(BB) {
+                    const jB = EI;
+                    null !== jB && Vu.apply(jB, BB).then((jB => {
+                      jB && BB && console.info(`${ld} the texture pack's animations are in (${Object.keys(BB).length} files)`)
                     }))
-                  }(null === (WT = TT.pack) || void 0 === WT ? void 0 : WT.animations)
+                  }(null === (QB = BB.pack) || void 0 === QB ? void 0 : QB.animations)
                 },
                 settling: () => {
-                  iz.c.setSettled(null)
+                  Ln.c.setSettled(null)
                 },
-                warn: Qk,
-                maxTextureSize: () => Promise.resolve((0, km.hb)(document.createElement("canvas")))
+                warn: XU,
+                maxTextureSize: () => Promise.resolve((0, Uz.gb)(document.createElement("canvas")))
               });
-              lT.textures = pT, nT = pT.start()
-            }), (TT => {
-              console.warn(`${VM} the texture pack's terrain didn't load: the built atlas stays`, TT)
+              pB.textures = sB, NB = sB.start()
+            }), (BB => {
+              console.warn(`${ld} the texture pack's terrain didn't load: the built atlas stays`, BB)
             }))
           }))
-        }(dT, DT, LT, ET, hT, oT);
-        const UU = () => {
-            dT.setTextureLayers("")
+        }(fB, bB, rB, CB, cB, vB);
+        const jj = () => {
+            fB.setTextureLayers("")
           },
-          mU = TT => {
-            (xU ??= mT.e(54).then((() => mT(51179))).then((TT => {
+          zj = BB => {
+            (qj ??= zB.e(54).then((() => zB(51204))).then((BB => {
               let {
-                TEXTURE_NAMES: UT
-              } = TT;
-              return UT
-            }), (TT => {
-              throw xU = null, TT
-            })), xU).then((TT => {
-              dT.setTextureLayers(TT) || dT.isStopped || (console.warn(`${VM} the core refused the texture names: textured Boxes draw textureNotFound`), UU())
-            }), (UT => {
-              if (dT.isStopped) return;
-              const [mT, ...WT] = TT;
-              void 0 === mT ? xj({
-                site: ym.TEXTURE_NAMES_SITE,
-                error: UT
+                TEXTURE_NAMES: jB
+              } = BB;
+              return jB
+            }), (BB => {
+              throw qj = null, BB
+            })), qj).then((BB => {
+              fB.setTextureLayers(BB) || fB.isStopped || (console.warn(`${ld} the core refused the texture names: textured Boxes draw textureNotFound`), jj())
+            }), (jB => {
+              if (fB.isStopped) return;
+              const [zB, ...QB] = BB;
+              void 0 === zB ? qa({
+                site: Dz.TEXTURE_NAMES_SITE,
+                error: jB
               }, (() => {
-                console.warn(`${VM} the texture names didn't load, so textured Boxes draw textureNotFound`, UT), UU()
+                console.warn(`${ld} the texture names didn't load, so textured Boxes draw textureNotFound`, jB), jj()
               }), {
-                stillWanted: KT
+                stillWanted: lB
               }) : setTimeout((() => {
-                mU(WT)
-              }), mT)
+                zj(QB)
+              }), zB)
             }))
           };
-        if (mU(zg), null !== LT && !await async function(TT, UT, mT, WT, MT, gT) {
-            var nT;
-            const HT = (0, km.O)(mT);
-            if (null === HT) return TT.crash(CM, new Error(`this ${WT} build has no openRenderer`)), !1;
-            let kT;
-            hn = HT;
+        if (zj(uI), null !== rB && !await async function(BB, jB, zB, QB, dB, IB) {
+            var NB;
+            const uB = (0, Uz.S)(zB);
+            if (null === uB) return BB.crash(xd, new Error(`this ${QB} build has no openRenderer`)), !1;
+            let UB;
+            vN = uB;
             try {
-              var jT, lT, LT, pT;
-              const zT = null !== (jT = null === (lT = Lg) || void 0 === lT ? void 0 : lT.pagePreviews()) && void 0 !== jT ? jT : null,
-                nT = null !== (LT = null === (pT = Lg) || void 0 === pT ? void 0 : pT.previewModule(mT)) && void 0 !== LT ? LT : null;
-              if (null === zT || null === nT) {
-                null === zT || void 0 === zT || zT.endSession(!1), kT = (0, PU.f)().sampleCount, await (0, km.g)(UT, HT, gT, ak, kT, await MT);
-                const TT = (0, km.k)(mT);
-                null === TT && console.warn(`${VM} this ${WT} build has no image registry: sky and model images won't show`), (0, Lz.h)(TT)
+              var aB, pB, rB, sB;
+              const nB = null !== (aB = null === (pB = yI) || void 0 === pB ? void 0 : pB.pagePreviews()) && void 0 !== aB ? aB : null,
+                NB = null !== (rB = null === (sB = yI) || void 0 === sB ? void 0 : sB.previewModule(zB)) && void 0 !== rB ? rB : null;
+              if (null === nB || null === NB) {
+                null === nB || void 0 === nB || nB.endSession(!1), UB = (0, Aj.g)().sampleCount, await (0, Uz.l)(jB, uB, IB, FU, UB, await dB);
+                const BB = (0, Uz.q)(zB);
+                null === BB && console.warn(`${ld} this ${QB} build has no image registry: sky and model images won't show`), (0, pn.f)(BB)
               } else {
-                (0, tz.d)() && await (0, RT.o)();
-                const mT = (0, tz.J)();
-                if (null !== mT) {
-                  const UT = (0, jm.j)(HT);
-                  return TT.crash(ym.RENDER_RELOAD_SITE, new Error(`${mT}${void 0===UT?"":` (${UT.message})`}`)), !1
+                (0, Dn.d)() && await (0, OB.m)();
+                const zB = (0, Dn.G)();
+                if (null !== zB) {
+                  const jB = (0, az.m)(uB);
+                  return BB.crash(Dz.RENDER_RELOAD_SITE, new Error(`${zB}${void 0===jB?"":` (${jB.message})`}`)), !1
                 }
-                kT = await zT.bindSession(nT, UT, (async TT => (0, km.u)(HT, CM, gT, TT, ak, await MT)))
+                UB = await nB.bindSession(NB, jB, (async BB => (0, Uz.A)(uB, xd, IB, BB, FU, await dB)))
               }
-            } catch (zT) {
-              return TT.crash(CM, zT), !1
-            }(function(TT, UT) {
-              const mT = TT,
+            } catch (nB) {
+              return BB.crash(xd, nB), !1
+            }(function(BB, jB) {
+              const zB = BB,
                 {
-                  requestCapture: WT,
-                  takeCapture: zT
-                } = mT;
-              if ("function" !== typeof WT || "function" !== typeof zT) return;
-              const MT = {
+                  requestCapture: QB,
+                  takeCapture: nB
+                } = zB;
+              if ("function" !== typeof QB || "function" !== typeof nB) return;
+              const dB = {
                 request() {
-                  WT.call(mT, UT)
+                  QB.call(zB, jB)
                 },
                 take() {
-                  var TT;
-                  return null !== (TT = zT.call(mT)) && void 0 !== TT ? TT : null
+                  var BB;
+                  return null !== (BB = nB.call(zB)) && void 0 !== BB ? BB : null
                 }
               };
-              window[Pz] = MT
-            })(UT, kT), WH = kT, Nn = !0;
-            const BT = performance.now();
-            return En.boundAtMs = null !== (nT = (0, tz.L)()) && void 0 !== nT ? nT : BT, En.indirectHangs = (0, tz.A)(), En.restoresSkipped = (0, tz.O)(), console.info(`${VM} ${WT} renderer bound at ${Math.round(BT)} ms`), !TT.isStopped
-          }(dT, JT, YT, LT, BT, cT)) return null;
-        if (null !== LT) {
-          var WU, zU, MU;
-          (0, fU.I)(LT);
-          const TT = () => !dT.isStopped && Mj();
-          mT.e(196).then((() => mT(34152))).then((UT => {
+              window[Tn] = dB
+            })(jB, UB), nu = UB, cN = !0;
+            const JB = performance.now();
+            return bN.boundAtMs = null !== (NB = (0, Dn.H)()) && void 0 !== NB ? NB : JB, bN.indirectHangs = (0, Dn.B)(), bN.restoresSkipped = (0, Dn.I)(), console.info(`${ld} ${QB} renderer bound at ${Math.round(JB)} ms`), !BB.isStopped
+          }(fB, iB, EB, rB, JB, yB)) return null;
+        if (null !== rB) {
+          var Qj, nj, dj;
+          (0, Gj.z)(rB);
+          const BB = () => !fB.isStopped && da();
+          zB.e(196).then((() => zB(34126))).then((jB => {
             let {
-              devTools: mT
-            } = UT;
-            dT.isStopped || mT.setHost(function(TT) {
+              devTools: zB
+            } = jB;
+            fB.isStopped || zB.setHost(function(BB) {
               return {
-                tools: wz,
-                async downloadScene(UT, mT) {
+                tools: Hn,
+                async downloadScene(jB, zB) {
                   let {
-                    width: WT,
-                    height: zT,
-                    colouring: MT
-                  } = mT;
-                  "screenshot" === UT && null === MT ? await (0, Jz.g)(TT, WT, zT) : console.warn("The Rust client's developer tools take uncoloured screenshots only")
+                    width: QB,
+                    height: nB,
+                    colouring: dB
+                  } = zB;
+                  "screenshot" === jB && null === dB ? await (0, En.h)(BB, QB, nB) : console.warn("The Rust client's developer tools take uncoloured screenshots only")
                 },
                 setAmbientLightIntensity: () => (console.warn("The Rust client's renderer has no ambient light setting"), Promise.resolve()),
-                capturePhoto: (UT, mT, WT) => (0, Jz.c)(TT, UT, mT, WT)
+                capturePhoto: (jB, zB, QB) => (0, En.d)(BB, jB, zB, QB)
               }
-            }(function(TT, UT) {
+            }(function(BB, jB) {
               return {
-                canvas: TT,
-                maxTextureSize: xz,
-                drawing: UT,
-                resize: (TT, UT, mT) => {
-                  (0, Nm.v)(hU.Gb.Resize, 0, TT / mT, UT / mT, (0, Nm.k)(mT))
+                canvas: BB,
+                maxTextureSize: qn,
+                drawing: jB,
+                resize: (BB, jB, zB) => {
+                  (0, xz.w)(cj.pb.Resize, 0, BB / zB, jB / zB, (0, xz.j)(zB))
                 },
                 restoreSize: () => {
-                  const UT = (0, PU.p)(TT);
-                  null !== UT && (0, Nm.v)(hU.Gb.Resize, 0, UT.cssWidth, UT.cssHeight, (0, Nm.k)(UT.renderScale))
+                  const jB = (0, Aj.m)(BB);
+                  null !== jB && (0, xz.w)(cj.pb.Resize, 0, jB.cssWidth, jB.cssHeight, (0, xz.j)(jB.renderScale))
                 },
-                onFrameDrawn: TT => (dz.add(TT), () => {
-                  dz.delete(TT)
+                onFrameDrawn: BB => (fn.add(BB), () => {
+                  fn.delete(BB)
                 })
               }
-            }(cT, TT)))
-          }), (TT => {
-            console.warn(`${VM} the developer tools didn't load: no captures this session`, TT)
+            }(yB, BB)))
+          }), (BB => {
+            console.warn(`${ld} the developer tools didn't load: no captures this session`, BB)
           }));
-          const UT = "webgpu" === LT && null !== (WU = null === lT || void 0 === lT || null === (zU = lT.adapter) || void 0 === zU ? void 0 : zU.vendor) && void 0 !== WU ? WU : null;
-          zH = {
-            backend: LT,
-            canvas: cT,
-            fallbackReason: null !== (MU = null === lT || void 0 === lT ? void 0 : lT.reason) && void 0 !== MU ? MU : null,
-            adapterVendor: UT
-          }, rk();
+          const jB = "webgpu" === rB && null !== (Qj = null === pB || void 0 === pB || null === (nj = pB.adapter) || void 0 === nj ? void 0 : nj.vendor) && void 0 !== Qj ? Qj : null;
+          du = {
+            backend: rB,
+            canvas: yB,
+            fallbackReason: null !== (dj = null === pB || void 0 === pB ? void 0 : pB.reason) && void 0 !== dj ? dj : null,
+            adapterVendor: jB
+          }, lU();
           try {
-            (0, pW.p)(LT, cT, UT)
-          } catch (zT) {
-            (0, pW.q)(), console.error(`${VM} the quality steps didn't start`, zT)
+            (0, rQ.s)(rB, yB, jB)
+          } catch (nB) {
+            (0, rQ.v)(), console.error(`${ld} the quality steps didn't start`, nB)
           }
         }
         const {
-          storagePullBreaks: gU,
-          splitPassBreaks: nU
-        } = await BT;
-        nU && console.warn(`${VM} split_pass_breaks on: Windows Adreno 7xx (N-103) or ?sceneDepth=off`);
-        const HU = (0, AT.f)(lT, (0, IU.h)());
-        if ((0, hz.r)("webgpuloss")) {
-          var kU, jU;
-          const TT = {
-            backend: LT,
-            reason: null !== (kU = null === lT || void 0 === lT ? void 0 : lT.reason) && void 0 !== kU ? kU : null,
-            source: null !== (jU = null === lT || void 0 === lT ? void 0 : lT.source) && void 0 !== jU ? jU : null,
-            storagePullBreaks: gU,
-            noWebGpu: HU.messageKey
+          storagePullBreaks: Ij,
+          splitPassBreaks: Nj
+        } = await JB;
+        Nj && console.warn(`${ld} split_pass_breaks on: Windows Adreno 7xx (N-103) or ?sceneDepth=off`);
+        const uj = (0, RB.d)(pB, (0, Vj.l)());
+        if ((0, vn.q)("webgpuloss")) {
+          var Uj, aj;
+          const BB = {
+            backend: rB,
+            reason: null !== (Uj = null === pB || void 0 === pB ? void 0 : pB.reason) && void 0 !== Uj ? Uj : null,
+            source: null !== (aj = null === pB || void 0 === pB ? void 0 : pB.source) && void 0 !== aj ? aj : null,
+            storagePullBreaks: Ij,
+            noWebGpu: uj.messageKey
           };
-          (0, Dz.c)((UT => {
-            UT.noteWasmPick(TT)
+          (0, Rn.d)((jB => {
+            jB.noteWasmPick(BB)
           }))
         }
-        const lU = "webgpu" === LT;
-        if (Eg = (0, AT.h)(lU ? dT : null, lU && null !== (nT = null === (kT = Lg) || void 0 === kT ? void 0 : kT.pagePreviews().Np) && void 0 !== nT ? nT : null, HU, Qk), YH) return null;
-        if (PT.reserveAtJoin((0, Hz.p)(null !== XT && void 0 !== XT ? XT : xm.h)), dT.isStopped) return null;
-        const LU = TT => {
-          if (mn = performance.now(), Wn = !1, null !== MH) try {
-            MH.animationFrame(TT)
-          } catch (zT) {
-            Gk(zT)
+        const pj = "webgpu" === rB;
+        if (RI = (0, RB.e)(pj ? fB : null, pj && null !== (NB = null === (UB = yI) || void 0 === UB ? void 0 : UB.pagePreviews().mJ) && void 0 !== NB ? NB : null, uj, XU), iu) return null;
+        if (AB.reserveAtJoin((0, Nn.o)(null !== YB && void 0 !== YB ? YB : iz.e)), fB.isStopped) return null;
+        const rj = BB => {
+          if (IN = performance.now(), NN = !1, null !== Iu) try {
+            Iu.animationFrame(BB)
+          } catch (nB) {
+            KU(nB)
           }
-          if (function(TT, UT) {
-              return UT && !YH && !gn && gj() && Mj() && TT.framePaces(performance.now())
-            }(dT, iH)) {
-            if (dT.writePendingInput(), (0, aT.g)(TT, Rk), Kk(!1, TT), null !== MH) try {
-              MH.framePaced()
-            } catch (zT) {
-              Gk(zT)
+          if (function(BB, jB) {
+              return jB && !iu && !aN && Ia() && da() && BB.framePaces(performance.now())
+            }(fB, tu)) {
+            if (fB.writePendingInput(), (0, DB.g)(BB, OU), wU(!1, BB), null !== Iu) try {
+              Iu.framePaced()
+            } catch (nB) {
+              KU(nB)
             }
-            requestAnimationFrame(LU)
-          } else Ak(dT, iH, "budget") && ((0, sU.g)(dT.lastFrameKind) && Mj() && (0, aT.g)(TT, Rk), Kk(iH && vH, TT), fH.frame(dT.lastFrameKind, iH && Mj(), TT), (0, sU.c)(dT.lastFrameKind) && IU.y.drew(), pj(dT), PT.afterFrame(), requestAnimationFrame(LU))
+            requestAnimationFrame(rj)
+          } else RU(fB, tu, "budget") && ((0, Xj.i)(fB.lastFrameKind) && da() && (0, DB.g)(BB, OU), wU(tu && Gu, BB), Lu.frame(fB.lastFrameKind, tu && da(), BB), (0, Xj.e)(fB.lastFrameKind) && Vj.G.drew(), sa(fB), AB.afterFrame(), requestAnimationFrame(rj))
         };
-        requestAnimationFrame(LU);
-        return function(TT) {
-          if (TT.has("inputLog") && (0, OW.h)((TT => {
+        requestAnimationFrame(rj);
+        return function(BB) {
+          if (BB.has("inputLog") && (0, tQ.k)((BB => {
               let {
-                action: UT,
-                down: mT,
-                press: WT
-              } = TT;
-              console.info(`${YW} input ${UT} ${mT?"down":"up"} press ${WT} at ${performance.now().toFixed(1)}`)
-            })), TT.has("inputDump")) {
-            const TT = [];
-            xW = TT, Object.assign(window, {
-              bloxdInputDump: () => TT.join("\n")
+                action: jB,
+                down: zB,
+                press: QB
+              } = BB;
+              console.info(`${MQ} input ${jB} ${zB?"down":"up"} press ${QB} at ${performance.now().toFixed(1)}`)
+            })), BB.has("inputDump")) {
+            const BB = [];
+            iQ = BB, Object.assign(window, {
+              bloxdInputDump: () => BB.join("\n")
             })
           }
-        }(new URLSearchParams(window.location.search)), sg = function(TT) {
-          let UT = null;
-          const mT = () => {
-              null !== UT && (clearInterval(UT), UT = null)
+        }(new URLSearchParams(window.location.search)), PI = function(BB) {
+          let jB = null;
+          const zB = () => {
+              null !== jB && (clearInterval(jB), jB = null)
             },
-            WT = () => {
-              document.hidden ? UT ??= setInterval((() => {
-                Yj(TT) || mT()
-              }), Wg) : mT()
+            QB = () => {
+              document.hidden ? jB ??= setInterval((() => {
+                Ea(BB) || zB()
+              }), NI) : zB()
             };
-          return document.addEventListener("visibilitychange", WT), WT(), () => {
-            mT(), document.removeEventListener("visibilitychange", WT)
+          return document.addEventListener("visibilitychange", QB), QB(), () => {
+            zB(), document.removeEventListener("visibilitychange", QB)
           }
-        }(dT), dT
-      }(UT).then((TT => {
-        var UT;
-        (WT(qg), eg(null !== TT), null !== TT && (qT = performance.now()), bg(TT), null === TT) ? null === (UT = Lg) || void 0 === UT || UT.pagePreviews().endSession(null === (0, ZU.s)()): og("booted")
-      }), (TT => {
-        WT(qg), eg(!1), bg(null), lj({
-          site: rM,
-          error: TT,
+        }(fB), fB
+      }(jB).then((BB => {
+        var jB;
+        (QB(MI), fI(null !== BB), null !== BB && (LB = performance.now()), iI(BB), null === BB) ? null === (jB = yI) || void 0 === jB || jB.pagePreviews().endSession(null === (0, mj.q)()): jN("booted")
+      }), (BB => {
+        QB(MI), fI(!1), iI(null), pa({
+          site: Kd,
+          error: BB,
           header: null
-        }, qg)
+        }, MI)
       }))
     }
 
-    function yH() {
-      const TT = ig;
-      null !== TT && JH().then((UT => {
+    function Yu() {
+      const BB = EI;
+      null !== BB && qu().then((jB => {
         let {
-          pageBuiltInAnimationPack: mT
-        } = UT;
-        mT().provide(TT)
-      }), (TT => {
-        console.warn(`${VM} the built-in animation pack's chunk did not load: lifeforms stay in their rest pose`, TT)
+          pageBuiltInAnimationPack: zB
+        } = jB;
+        zB().provide(BB)
+      }), (BB => {
+        console.warn(`${ld} the built-in animation pack's chunk did not load: lifeforms stay in their rest pose`, BB)
       }))
     }
-    const XH = new class {
-      constructor(TT) {
-        this.deps = TT, this.latest = 0, this.fn = null
+    const Vu = new class {
+      constructor(BB) {
+        this.deps = BB, this.latest = 0, this.DN = null
       }
-      apply(TT, UT) {
-        return this.load(TT, UT, 0)
+      apply(BB, jB) {
+        return this.load(BB, jB, 0)
       }
-      async load(TT, UT, mT) {
-        var WT;
-        const zT = ++this.latest,
-          MT = this.deps.compiler;
-        if (void 0 === UT || null === UT || "object" !== typeof UT || 0 === Object.keys(UT).length || null === MT) return this.drop(TT), !1;
-        if ((null === (WT = this.fn) || void 0 === WT ? void 0 : WT.module) === TT && (0, zm.ye)(this.fn.files, UT)) return !1;
+      async load(BB, jB, zB) {
+        var QB;
+        const nB = ++this.latest,
+          dB = this.deps.compiler;
+        if (void 0 === jB || null === jB || "object" !== typeof jB || 0 === Object.keys(jB).length || null === dB) return this.drop(BB), !1;
+        if ((null === (QB = this.DN) || void 0 === QB ? void 0 : QB.module) === BB && (0, nz.se)(this.DN.files, jB)) return !1;
         try {
-          const [mT, WT] = await Promise.all([MT(), this.deps.builtIns()]);
-          if (zT !== this.latest) return !1;
-          const gT = await mT(UT, Hm, {
-            builtIns: WT
+          const [zB, QB] = await Promise.all([dB(), this.deps.builtIns()]);
+          if (nB !== this.latest) return !1;
+          const IB = await zB(jB, uz, {
+            builtIns: QB
           });
-          if (zT !== this.latest) return !1;
-          const nT = this.call(TT, gT);
-          if (void 0 === nT) throw new nm("the compiled animations didn't read against the built-in pack");
-          return this.fn = {
-              module: TT,
-              files: UT
+          if (nB !== this.latest) return !1;
+          const NB = this.call(BB, IB);
+          if (void 0 === NB) throw new Nz("the compiled animations didn't read against the built-in pack");
+          return this.DN = {
+              module: BB,
+              files: jB
             },
-            function(TT) {
-              for (let UT = 0; UT + 2 < TT.length; UT += 3) {
-                ("error" === TT[UT] ? console.error : console.warn)(`Animation for the texture pack: ${TT[UT+1]}: ${TT[UT+2]}`)
+            function(BB) {
+              for (let jB = 0; jB + 2 < BB.length; jB += 3) {
+                ("error" === BB[jB] ? console.error : console.warn)(`Animation for the texture pack: ${BB[jB+1]}: ${BB[jB+2]}`)
               }
-            }(nT), !0
-        } catch (nT) {
-          var gT;
-          if (zT !== this.latest) return !1;
-          this.drop(TT), 0 === mT && this.deps.warn("the texture pack's animations didn't load: lifeforms play the built-in ones", nT);
-          const WT = (null !== (gT = this.deps.retryAfterMs) && void 0 !== gT ? gT : gm)[mT];
-          return void 0 === WT || nT instanceof nm || (0, Mm.g)(TT) || setTimeout((() => {
-            zT === this.latest && this.load(TT, UT, mT + 1)
-          }), WT), !1
+            }(NB), !0
+        } catch (NB) {
+          var IB;
+          if (nB !== this.latest) return !1;
+          this.drop(BB), 0 === zB && this.deps.warn("the texture pack's animations didn't load: lifeforms play the built-in ones", NB);
+          const QB = (null !== (IB = this.deps.retryAfterMs) && void 0 !== IB ? IB : Iz)[zB];
+          return void 0 === QB || NB instanceof Nz || (0, dz.h)(BB) || setTimeout((() => {
+            nB === this.latest && this.load(BB, jB, zB + 1)
+          }), QB), !1
         }
       }
-      call(TT, UT) {
+      call(BB, jB) {
         try {
-          return TT.HWT(UT)
-        } catch (mT) {
-          throw (0, Mm.i)(TT, mT), mT
+          return BB.bzB(jB)
+        } catch (zB) {
+          throw (0, dz.j)(BB, zB), zB
         }
       }
-      clear(TT) {
-        this.latest++, this.drop(TT)
+      clear(BB) {
+        this.latest++, this.drop(BB)
       }
-      drop(TT) {
-        const UT = this.fn;
-        if (this.fn = null, (null === UT || void 0 === UT ? void 0 : UT.module) === TT && !(0, Mm.g)(TT)) try {
-          this.call(TT, null)
+      drop(BB) {
+        const jB = this.DN;
+        if (this.DN = null, (null === jB || void 0 === jB ? void 0 : jB.module) === BB && !(0, dz.h)(BB)) try {
+          this.call(BB, null)
         } catch {}
       }
     }({
-      compiler: Tm.b,
+      compiler: Bz.b,
       builtIns: async () => {
         const {
-          pageBuiltInAnimationPack: TT
-        } = await JH();
-        return TT().whenSet()
+          pageBuiltInAnimationPack: BB
+        } = await qu();
+        return BB().whenSet()
       },
-      warn: Qk
+      warn: XU
     });
-    async function IH(TT, UT) {
-      let WT = !1;
-      await QH({
+    async function hu(BB, jB) {
+      let QB = !1;
+      await Xu({
         matchmake: async () => {
           const {
-            guestJoinTarget: zT,
-            guestJoinWithPack: MT
-          } = await mT.e(277).then((() => mT(51121)));
-          return WT ? zT(TT, UT, Pk()) : (WT = !0, MT(TT, UT, (UT => Vk(TT, UT)), Pk))
+            guestJoinTarget: nB,
+            guestJoinWithPack: dB
+          } = await zB.e(277).then((() => zB(51154)));
+          return QB ? nB(BB, jB, TU()) : (QB = !0, dB(BB, jB, (jB => PU(BB, jB)), TU))
         },
-        onFailure: TT => {
-          (0, ym.showJoinFailure)(TT, qg)
+        onFailure: BB => {
+          (0, Dz.showJoinFailure)(BB, MI)
         },
-        rejoin: AH,
-        invalidateTrafficCode: RH
+        rejoin: Ou,
+        invalidateTrafficCode: BU
       })
     }
-    async function QH(TT) {
+    async function Xu(BB) {
       let {
-        matchmake: UT,
-        onFailure: mT,
-        rejoin: zT,
-        invalidateTrafficCode: MT,
-        pageReady: gT,
-        signal: nT
-      } = TT;
-      const HT = () => !0 === (null === nT || void 0 === nT ? void 0 : nT.aborted);
-      let kT;
-      const jT = iz.c.rejoinHold();
-      bn = null;
-      const lT = (0, Pm.O)("wasm", vj);
-      let LT = !1,
-        pT = performance.now();
+        matchmake: jB,
+        onFailure: zB,
+        rejoin: nB,
+        invalidateTrafficCode: dB,
+        pageReady: IB,
+        signal: NB
+      } = BB;
+      const uB = () => !0 === (null === NB || void 0 === NB ? void 0 : NB.aborted);
+      let UB;
+      const aB = Ln.c.rejoinHold();
+      MN = null;
+      const pB = (0, Zz.S)("wasm", ka);
+      let rB = !1,
+        sB = performance.now();
       try {
-        if (!await Yg) return {
+        if (!await oI) return {
           kind: "stopped"
         };
-        if (HT()) return {
-          kind: "Km"
+        if (uB()) return {
+          kind: "xz"
         };
-        xH().catch((() => {}));
-        let TT = await UT();
-        var bT, OT;
-        if (pT = performance.now(), !HT()) cj(null !== (bT = null === (OT = TT.target.session) || void 0 === OT ? void 0 : OT.gameNameWithVariation) && void 0 !== bT ? bT : null);
-        const mT = () => performance.now() - TT.matchedAt <= TT.freshMs,
-          WT = FH(TT.target).catch((() => {}));
-        mT() && !HT() && (kT = new Wz(TT.target, {
-          signal: nT
+        fu().catch((() => {}));
+        let BB = await jB();
+        var tB, SB;
+        if (sB = performance.now(), !uB()) ya(null !== (tB = null === (SB = BB.target.session) || void 0 === SB ? void 0 : SB.gameNameWithVariation) && void 0 !== tB ? tB : null);
+        const zB = () => performance.now() - BB.matchedAt <= BB.freshMs,
+          QB = Au(BB.target).catch((() => {}));
+        zB() && !uB() && (UB = new zn(BB.target, {
+          signal: NB
         }));
-        const MT = performance.now();
-        if (null === await Og) return {
+        const dB = performance.now();
+        if (null === await qI) return {
           kind: "stopped"
         };
-        var eT, YT;
-        if (function(TT) {
-            var UT, mT;
-            if (ZT.c.markGameEngineConstructed(), iT) return;
-            iT = !0;
-            const WT = Math.max(TT, null !== (UT = vT) && void 0 !== UT ? UT : TT);
-            (0, cT.h)("ready", Math.max(0, (null !== (mT = fT) && void 0 !== mT ? mT : WT) - WT) / 1e3)
-          }(MT), !HT())
-          if (null !== fT && null !== qT ? ((0, BT.i)("wasm_loaded", fT), (0, BT.i)("wasm_core_ready", qT)) : console.warn("[bloxd-wasm-client] a join found the core before boot marked its steps"), TT.target.session && (0, zM.e)(TT.target.session.gameNameWithVariation)) null === (eT = wg) || void 0 === eT || eT.prestart();
-        if (await WT, !mT() && !HT()) null === (YT = kT) || void 0 === YT || YT.rematched(), TT = await UT(), pT = performance.now();
-        if (HT()) return {
-          kind: "Km"
+        var MB, EB;
+        if (function(BB) {
+            var jB, zB;
+            if (mB.b.markGameEngineConstructed(), gB) return;
+            gB = !0;
+            const QB = Math.max(BB, null !== (jB = kB) && void 0 !== jB ? jB : BB);
+            (0, yB.k)("ready", Math.max(0, (null !== (zB = GB) && void 0 !== zB ? zB : QB) - QB) / 1e3)
+          }(dB), !uB())
+          if (null !== GB && null !== LB ? ((0, JB.r)("wasm_loaded", GB), (0, JB.r)("wasm_core_ready", LB)) : console.warn("[bloxd-wasm-client] a join found the core before boot marked its steps"), BB.target.session && (0, Id.b)(BB.target.session.gameNameWithVariation)) null === (MB = YI) || void 0 === MB || MB.prestart();
+        if (await QB, !zB() && !uB()) null === (EB = UB) || void 0 === EB || EB.rematched(), BB = await jB(), sB = performance.now();
+        if (uB()) return {
+          kind: "xz"
         };
-        const jT = await async function(TT) {
-          var UT, mT, WT;
+        const aB = await async function(BB) {
+          var jB, zB, QB;
           let {
-            signal: zT,
-            rejoin: MT = null,
-            early: gT,
-            pageReady: nT
+            signal: nB,
+            rejoin: dB = null,
+            early: IB,
+            pageReady: NB
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (null !== zT && void 0 !== zT && zT.aborted) throw new DOMException("the join was left", "AbortError");
-          const HT = (kT = sn, jT = performance.now(), null !== kT && jT - kT < KW);
-          var kT, jT;
-          sn = null;
-          const lT = new AbortController,
-            LT = null !== (UT = null === (mT = TT.session) || void 0 === mT ? void 0 : mT.gameNameWithVariation) && void 0 !== UT ? UT : null;
-          cj(LT), uH({
-            controller: lT,
-            game: LT
-          }), Fn = null, null === (WT = un) || void 0 === WT || WT.abort(), un = null, rn = !1, Kn = null, Sn.clear();
-          const pT = () => {
-            (0, wU.k)(lT, (0, wU.i)(zT))
+          if (null !== nB && void 0 !== nB && nB.aborted) throw new DOMException("the join was left", "AbortError");
+          const uB = (UB = AN, aB = performance.now(), null !== UB && aB - UB < eQ);
+          var UB, aB;
+          AN = null;
+          const pB = new AbortController,
+            rB = null !== (jB = null === (zB = BB.session) || void 0 === zB ? void 0 : zB.gameNameWithVariation) && void 0 !== jB ? jB : null;
+          ya(rB), Wu({
+            controller: pB,
+            game: rB
+          }), TN = null, null === (QB = eN) || void 0 === QB || QB.abort(), eN = null, wN = !1, xN = null, KN.clear();
+          const sB = () => {
+            (0, oj.i)(pB, (0, oj.f)(nB))
           };
-          null === zT || void 0 === zT || zT.addEventListener("abort", pT, {
+          null === nB || void 0 === nB || nB.addEventListener("abort", sB, {
             once: !0
           });
           try {
-            var ZT, cT, vT;
-            const UT = await Og;
-            if (null === UT || UT.isStopped || YH) throw new Error("no core is running to join a game with");
-            if (TT.session && null !== Eg) {
-              const UT = await PH(Eg.join(TT.session.gameNameWithVariation), lT.signal);
-              if ((0, hz.r)("webgpuloss")) {
-                const mT = TT.session.gameNameWithVariation,
-                  WT = Eg.couldntRunInJoinedGame();
-                (0, Dz.c)((TT => TT.noteWasmJoin(mT, UT, WT)))
+            var mB, yB, kB;
+            const jB = await qI;
+            if (null === jB || jB.isStopped || iu) throw new Error("no core is running to join a game with");
+            if (BB.session && null !== RI) {
+              const jB = await Tu(RI.join(BB.session.gameNameWithVariation), pB.signal);
+              if ((0, vn.q)("webgpuloss")) {
+                const zB = BB.session.gameNameWithVariation,
+                  QB = RI.couldntRunInJoinedGame();
+                (0, Rn.d)((BB => BB.noteWasmJoin(zB, jB, QB)))
               }
-              if (null !== UT) throw new AT.b(UT)
+              if (null !== jB) throw new RB.b(jB)
             }
             const [, , , {
-              joinRoom: mT
-            }] = await PH(Promise.all([(0, yT.m)(UT), FH(TT), null === nT || void 0 === nT ? void 0 : nT(), xH()]), lT.signal), WT = TT.session, zT = WT ? {
-              ...mk,
-              attachSocket: UT => {
-                const mT = kk(UT, TT.endpoint);
-                var zT;
-                null !== mT && (Yn = {
-                  conn: mT,
-                  info: WT
-                }, null === (zT = Jn) || void 0 === zT || zT(WT.playerDbId));
-                return mT
+              joinRoom: zB
+            }] = await Tu(Promise.all([(0, FB.j)(jB), Au(BB), null === NB || void 0 === NB ? void 0 : NB(), fu()]), pB.signal), QB = BB.session, nB = QB ? {
+              ...QU,
+              attachSocket: jB => {
+                const zB = aU(jB, BB.endpoint);
+                var nB;
+                null !== zB && (qN = {
+                  conn: zB,
+                  info: QB
+                }, null === (nB = fN) || void 0 === nB || nB(QB.playerDbId));
+                return zB
               }
-            } : mk, kT = await mT(zT, TT, {
-              signal: lT.signal,
-              early: gT
-            }).catch((TT => {
-              throw function(TT) {
-                if (!(TT instanceof rT.d)) return TT;
-                if ("roomError" === TT.stage && null !== Kn) return sH(new rT.d(TT.message, TT.stage, TT.code, Kn), TT);
-                const UT = "closed" === TT.stage && null !== Pn ? Sn.get(Pn.conn) : void 0;
-                return void 0 === UT ? TT : sH(new rT.d(TT.message, TT.stage, UT.code, null, TT.socketOpened), TT)
-              }(TT)
+            } : QU, UB = await zB(nB, BB, {
+              signal: pB.signal,
+              early: IB
+            }).catch((BB => {
+              throw function(BB) {
+                if (!(BB instanceof eB.d)) return BB;
+                if ("roomError" === BB.stage && null !== xN) return Zu(new eB.d(BB.message, BB.stage, BB.code, xN), BB);
+                const jB = "closed" === BB.stage && null !== PN ? KN.get(PN.conn) : void 0;
+                return void 0 === jB ? BB : Zu(new eB.d(BB.message, BB.stage, jB.code, null, BB.socketOpened), BB)
+              }(BB)
             }));
-            if (qn !== lT) throw kT.leave(), new DOMException("the join was left", "AbortError");
-            rH(kT), null === (ZT = ag) || void 0 === ZT || ZT.newGame();
-            const jT = function(TT) {
-              var UT, mT;
+            if (SN !== pB) throw UB.leave(), new DOMException("the join was left", "AbortError");
+            lu(UB), null === (mB = hI) || void 0 === mB || mB.newGame();
+            const aB = function(BB) {
+              var jB, zB;
               const {
-                session: WT
-              } = TT, zT = void 0 === WT ? TT.joinOptions.lobbyName : WT.lobbyName;
+                session: QB
+              } = BB, nB = void 0 === QB ? BB.joinOptions.lobbyName : QB.lobbyName;
               return {
-                endpoint: TT.endpoint,
-                game: null !== (UT = null === WT || void 0 === WT ? void 0 : WT.gameNameWithVariation) && void 0 !== UT ? UT : TT.roomName,
-                lobby: String(null !== zT && void 0 !== zT ? zT : null),
-                postCookies: null !== (mT = TT.postCookies) && void 0 !== mT ? mT : null
+                endpoint: BB.endpoint,
+                game: null !== (jB = null === QB || void 0 === QB ? void 0 : QB.gameNameWithVariation) && void 0 !== jB ? jB : BB.roomName,
+                lobby: String(null !== nB && void 0 !== nB ? nB : null),
+                postCookies: null !== (zB = BB.postCookies) && void 0 !== zB ? zB : null
               }
-            }(TT);
-            fn.set(kT, jT), RW(jT);
-            const LT = performance.now(),
-              pT = {
-                conn: kT.conn,
-                rejoin: MT,
-                game: null !== (cT = null === (vT = TT.session) || void 0 === vT ? void 0 : vT.gameNameWithVariation) && void 0 !== cT ? cT : "",
-                joinedAt: LT,
-                rejoinedAt: HT ? LT : null,
+            }(BB);
+            tN.set(UB, aB), RQ(aB);
+            const rB = performance.now(),
+              sB = {
+                conn: UB.conn,
+                rejoin: dB,
+                game: null !== (yB = null === (kB = BB.session) || void 0 === kB ? void 0 : kB.gameNameWithVariation) && void 0 !== yB ? yB : "",
+                joinedAt: rB,
+                rejoinedAt: uB ? rB : null,
                 overflow: null
               };
-            xn = pT,
-              function(TT, UT) {
-                vk();
-                const mT = {
-                  endpoint: UT,
-                  roomId: TT.seat.room.roomId,
+            oN = sB,
+              function(BB, jB) {
+                GU();
+                const zB = {
+                  endpoint: jB,
+                  roomId: BB.seat.room.roomId,
                   heldConn: 0,
                   dropCode: 0,
                   pendingHold: null,
-                  resume: new em({
-                    reconnect: (TT, UT, WT) => async function(TT, UT, mT, WT) {
+                  resume: new Sz({
+                    reconnect: (BB, jB, QB) => async function(BB, jB, zB, QB) {
                       const {
-                        roomId: zT,
-                        roomToken: MT
-                      } = qk(TT, UT), gT = Bg;
-                      if (null === gT || gT.isStopped || YH) throw new Error("no core is running to resume the game on");
+                        roomId: nB,
+                        roomToken: dB
+                      } = gU(BB, jB), IB = GI;
+                      if (null === IB || IB.isStopped || iu) throw new Error("no core is running to resume the game on");
                       const {
-                        resumeRoom: nT
-                      } = await PH(xH(), mT), HT = {
-                        ...mk,
-                        attachSocket: UT => dn !== TT || 0 === TT.heldConn ? (UT.close(), null) : kk(UT, TT.endpoint, !0)
+                        resumeRoom: NB
+                      } = await Tu(fu(), zB), uB = {
+                        ...QU,
+                        attachSocket: jB => HN !== BB || 0 === BB.heldConn ? (jB.close(), null) : aU(jB, BB.endpoint, !0)
                       };
-                      return nT(HT, TT.endpoint, zT, MT, {
-                        signal: mT,
-                        onAttached: WT
+                      return NB(uB, BB.endpoint, nB, dB, {
+                        signal: zB,
+                        onAttached: QB
                       })
-                    }(mT, TT, UT, WT),
-                    releaseSeat: TT => {
-                      !async function(TT, UT) {
+                    }(zB, BB, jB, QB),
+                    releaseSeat: BB => {
+                      !async function(BB, jB) {
                         const {
-                          roomId: mT,
-                          roomToken: WT
-                        } = qk(TT, UT);
+                          roomId: zB,
+                          roomToken: QB
+                        } = gU(BB, jB);
                         try {
                           const {
-                            leaveHeldSeat: UT
-                          } = await xH();
-                          await UT(TT.endpoint, mT, WT)
-                        } catch (zT) {
-                          console.warn(`${VM} the held seat of a game left while it reconnected couldn't be released`, zT)
+                            leaveHeldSeat: jB
+                          } = await fu();
+                          await jB(BB.endpoint, zB, QB)
+                        } catch (nB) {
+                          console.warn(`${ld} the held seat of a game left while it reconnected couldn't be released`, nB)
                         }
-                      }(mT, TT)
+                      }(zB, BB)
                     },
-                    isLive: () => dn === mT && null !== xn && !YH,
-                    MI: TT => {
-                      Qn = TT, ck()
+                    isLive: () => HN === zB && null !== oN && !iu,
+                    nD: BB => {
+                      ZN = BB, kU()
                     },
-                    onReconnected: TT => {
-                      ! function(TT) {
-                        const UT = vn;
-                        if (null !== UT && UT !== TT) {
-                          const mT = fn.get(UT);
-                          void 0 !== mT && fn.set(TT, mT), cH === UT && (cH = TT), UT.detach()
+                    onReconnected: BB => {
+                      ! function(BB) {
+                        const jB = gN;
+                        if (null !== jB && jB !== BB) {
+                          const zB = tN.get(jB);
+                          void 0 !== zB && tN.set(BB, zB), ku === jB && (ku = BB), jB.detach()
                         }
-                        rH(TT)
-                      }(TT)
+                        lu(BB)
+                      }(BB)
                     },
-                    onGaveUp: (TT, UT) => {
-                      ! function(TT, UT, mT) {
-                        var WT, zT;
-                        console.warn(`${VM} gave up reconnecting (${mT.reason}, ${mT.attempts} attempts)`, mT.lastError), (0, ym.reportReconnectGaveUp)(mT, qg);
-                        const MT = null !== (WT = null === (zT = xn) || void 0 === zT ? void 0 : zT.rejoin) && void 0 !== WT ? WT : null;
-                        fk(TT, "gaveUp"), SH();
-                        const gT = {
-                          code: TT.dropCode,
+                    onGaveUp: (BB, jB) => {
+                      ! function(BB, jB, zB) {
+                        var QB, nB;
+                        console.warn(`${ld} gave up reconnecting (${zB.reason}, ${zB.attempts} attempts)`, zB.lastError), (0, Dz.reportReconnectGaveUp)(zB, MI);
+                        const dB = null !== (QB = null === (nB = oN) || void 0 === nB ? void 0 : nB.rejoin) && void 0 !== QB ? QB : null;
+                        LU(BB, "gaveUp"), xu();
+                        const IB = {
+                          code: BB.dropCode,
                           name: null,
-                          reason: RM,
-                          canReconnect: !UT,
+                          reason: QI,
+                          canReconnect: !jB,
                           automaticallyReconnect: !1,
                           requiresRefresh: !1
                         };
-                        Uk(gT, UT ? null : MT, !1, {
-                          reasonKey: Tg,
-                          canPlayAgain: UT
+                        zU(IB, jB ? null : dB, !1, {
+                          reasonKey: nI,
+                          canPlayAgain: jB
                         })
-                      }(mT, TT, UT)
+                      }(zB, BB, jB)
                     }
                   })
                 };
-                dn = mT, null !== wn && wn.conn === TT.conn && mT.resume.onInitialInfo(wn)
-              }(kT, TT.endpoint), performance.mark(GM), (0, BT.i)("wasm_joined", LT), setTimeout((() => {
-                vn === kT && (0, BT.d)()
-              }), 0), yH(), console.info(`${VM} joined ${TT.roomName} as ${kT.seat.sessionId} at ${Math.round(performance.now())} ms`);
-            const fT = Fn;
-            Fn = null, null !== fT && EH(pT, fT.mask, fT.frames);
-            const qT = Sn.get(kT.conn);
-            return Sn.clear(), void 0 !== qT && (rH(null), Tk(kT.conn, qT.code, qT.reason)), kT
+                HN = zB, null !== DN && DN.conn === BB.conn && zB.resume.onInitialInfo(DN)
+              }(UB, BB.endpoint), performance.mark(bd), (0, JB.r)("wasm_joined", rB), setTimeout((() => {
+                gN === UB && (0, JB.g)()
+              }), 0), Yu(), console.info(`${ld} joined ${BB.roomName} as ${UB.seat.sessionId} at ${Math.round(performance.now())} ms`);
+            const GB = TN;
+            TN = null, null !== GB && cu(sB, GB.mask, GB.frames);
+            const LB = KN.get(UB.conn);
+            return KN.clear(), void 0 !== LB && (lu(null), jU(UB.conn, LB.code, LB.reason)), UB
           } finally {
-            var fT;
-            null === zT || void 0 === zT || zT.removeEventListener("abort", pT), qn === lT && CH(vn, null), (null === (fT = Pn) || void 0 === fT ? void 0 : fT.join) === lT && (Pn = null)
+            var GB;
+            null === nB || void 0 === nB || nB.removeEventListener("abort", sB), SN === pB && eu(gN, null), (null === (GB = PN) || void 0 === GB ? void 0 : GB.join) === pB && (PN = null)
           }
-        }(TT.target, {
-          signal: nT,
-          rejoin: zT(TT.target),
-          early: kT,
-          pageReady: gT
+        }(BB.target, {
+          signal: NB,
+          rejoin: nB(BB.target),
+          early: UB,
+          pageReady: IB
         });
-        return LT = !0, {
+        return rB = !0, {
           kind: "joined",
-          game: jT
+          game: aB
         }
-      } catch (xT) {
-        if (xT instanceof DOMException && "AbortError" === xT.name || HT()) return {
-          kind: "Km"
+      } catch (qB) {
+        if (qB instanceof DOMException && "AbortError" === qB.name || uB()) return {
+          kind: "xz"
         };
-        if (YH) return {
+        if (iu) return {
           kind: "stopped"
         };
-        if (rn && (rn = !1, await MT().catch((TT => {
-            console.warn(`${VM} the cached traffic code could not be dropped`, TT)
-          }))), null === await Og) return {
+        if (wN && (wN = !1, await dB().catch((BB => {
+            console.warn(`${ld} the cached traffic code could not be dropped`, BB)
+          }))), null === await qI) return {
           kind: "stopped"
         };
-        if (xT instanceof AT.b) return mT(xT, performance.now() - pT), {
+        if (qB instanceof RB.b) return zB(qB, performance.now() - sB), {
           kind: "failed",
-          error: xT,
+          error: qB,
           reloading: !1
         };
-        if (xT instanceof rT.d && xT.code === WT.e.wasmClientNotAllowed.code && qH) return tk("this server refused the wasm client to this account", "refused"), {
+        if (qB instanceof eB.d && qB.code === QB.c.wasmClientNotAllowed.code && gu) return DU("this server refused the wasm client to this account", "refused"), {
           kind: "failed",
-          error: xT,
+          error: qB,
           reloading: !0
         };
-        const TT = xT instanceof rT.d && xT.code === WT.e.outdatedVersion.code,
-          UT = () => null === vn,
-          zT = await xj({
-            site: ym.JOIN_SITE,
-            error: xT,
-            outdated: TT
+        const BB = qB instanceof eB.d && qB.code === QB.c.outdatedVersion.code,
+          jB = () => null === gN,
+          nB = await qa({
+            site: Dz.JOIN_SITE,
+            error: qB,
+            outdated: BB
           }, (() => {
-            mT(xT, performance.now() - pT)
+            zB(qB, performance.now() - sB)
           }), {
-            stillWanted: UT
+            stillWanted: jB
           });
         return {
           kind: "failed",
-          error: xT,
-          reloading: zT
+          error: qB,
+          reloading: nB
         }
       } finally {
-        var JT;
-        LT || lT.end(), iz.c.releaseHold(jT);
-        const TT = null === (JT = kT) || void 0 === JT ? void 0 : JT.release();
-        TT && (0, ym.reportUnusedSeat)(TT, qg)
+        var iB;
+        rB || pB.end(), Ln.c.releaseHold(aB);
+        const BB = null === (iB = UB) || void 0 === iB ? void 0 : iB.release();
+        BB && (0, Dz.reportUnusedSeat)(BB, MI)
       }
     }
 
-    function sH(TT, UT) {
-      return TT.stack = UT.stack, TT
+    function Zu(BB, jB) {
+      return BB.stack = jB.stack, BB
     }
 
-    function FH(TT) {
-      return TT.session ? (0, yT.s)(fg, TT.session.gameNameWithVariation) : Promise.resolve()
+    function Au(BB) {
+      return BB.session ? (0, FB.o)(SI, BB.session.gameNameWithVariation) : Promise.resolve()
     }
 
-    function PH(TT, UT) {
-      return (0, wU.m)(UT), new Promise(((mT, WT) => {
-        const zT = () => {
-          WT((0, wU.i)(UT))
+    function Tu(BB, jB) {
+      return (0, oj.q)(jB), new Promise(((zB, QB) => {
+        const nB = () => {
+          QB((0, oj.f)(jB))
         };
-        UT.addEventListener("abort", zT, {
+        jB.addEventListener("abort", nB, {
           once: !0
-        }), TT.then((TT => {
-          UT.removeEventListener("abort", zT), mT(TT)
-        }), (TT => {
-          UT.removeEventListener("abort", zT), WT(TT)
+        }), BB.then((BB => {
+          jB.removeEventListener("abort", nB), zB(BB)
+        }), (BB => {
+          jB.removeEventListener("abort", nB), QB(BB)
         }))
       }))
     }
 
-    function VH() {
-      uH(null)
+    function Pu() {
+      Wu(null)
     }
 
-    function uH(TT) {
-      var UT, mT, WT;
+    function Wu(BB) {
+      var jB, zB, QB;
       (function() {
-        const TT = dn;
-        null !== TT && fk(TT, "left")
-      }(), null === xg || xg.left) || (xg.left = !0, null === (WT = (0, yT.i)()) || void 0 === WT || WT.socketLeft(), (0, LT.m)({
+        const BB = HN;
+        null !== BB && LU(BB, "left")
+      }(), null === DI || DI.left) || (DI.left = !0, null === (QB = (0, FB.g)()) || void 0 === QB || QB.socketLeft(), (0, rB.q)({
         websocketUrl: null
       }));
-      qn && (0, wU.k)(qn, new DOMException("the join was left", "AbortError")), SH(null !== TT), null === (UT = Eg) || void 0 === UT || UT.leave();
-      const zT = vn;
-      null !== TT && iz.c.setGame(TT.game), CH(null, null !== (mT = null === TT || void 0 === TT ? void 0 : TT.controller) && void 0 !== mT ? mT : null), null === zT || void 0 === zT || zT.leave(), KH(0), (0, YU.f)()
+      SN && (0, oj.i)(SN, new DOMException("the join was left", "AbortError")), xu(null !== BB), null === (jB = RI) || void 0 === jB || jB.leave();
+      const nB = gN;
+      null !== BB && Ln.c.setGame(BB.game), eu(null, null !== (zB = null === BB || void 0 === BB ? void 0 : BB.controller) && void 0 !== zB ? zB : null), null === nB || void 0 === nB || nB.leave(), wu(0), (0, Ej.e)()
     }
 
-    function CH(TT, UT) {
-      vn = TT, qn = UT, null === vn && null === qn && iz.c.setGame(void 0)
+    function eu(BB, jB) {
+      gN = BB, SN = jB, null === gN && null === SN && Ln.c.setGame(void 0)
     }
 
-    function rH(TT) {
-      CH(TT, qn)
+    function lu(BB) {
+      eu(BB, SN)
     }
 
-    function KH(TT) {
-      const UT = Bg;
-      return null !== gg && !YH && null !== UT && !UT.isStopped && (!!gg(rT.h, 0, (0, rT.v)(TT)) && (kn = !0, 0 === TT || gn || Ak(UT, !1, "all"), !0))
+    function wu(BB) {
+      const jB = GI;
+      return null !== aI && !iu && null !== jB && !jB.isStopped && (!!aI(eB.g, 0, (0, eB.x)(BB)) && (sN = !0, 0 === BB || aN || RU(jB, !1, "all"), !0))
     }
 
-    function SH() {
-      var TT, UT;
-      arguments.length > 0 && void 0 !== arguments[0] && arguments[0] || (0, Pm.e)();
-      const mT = null !== (TT = null === (UT = xn) || void 0 === UT ? void 0 : UT.overflow) && void 0 !== TT ? TT : null;
-      xn = null, null !== mT && (0, ym.reportEventOverflow)(mT, qg)
+    function xu() {
+      var BB, jB;
+      arguments.length > 0 && void 0 !== arguments[0] && arguments[0] || (0, Zz.f)();
+      const zB = null !== (BB = null === (jB = oN) || void 0 === jB ? void 0 : jB.overflow) && void 0 !== BB ? BB : null;
+      oN = null, null !== zB && (0, Dz.reportEventOverflow)(zB, MI)
     }
 
-    function GH() {
-      null !== vn || null !== qn ? VH() : jk()
+    function Ku() {
+      null !== gN || null !== SN ? Pu() : pU()
     }
 
-    function NH(TT, UT) {
-      console.warn(`${VM} the event buffer refused records in ${UT} frames (categories ${TT})`), YH || (null !== xn ? EH(xn, TT, UT) : null !== qn && function(TT, UT, mT) {
-        var WT;
-        const zT = function(TT, UT) {
-          return null === TT ? "drop" : TT.activated ? "keep" : 0 !== (UT & DU.s.NetSession) ? "fail" : "drop"
-        }((null === (WT = Pn) || void 0 === WT ? void 0 : WT.join) === TT ? Pn : null, UT);
-        "keep" === zT ? Fn = {
-          mask: UT,
-          frames: mT
-        } : "fail" === zT && (0, wU.k)(TT, new Error("the join's net session was lost to an event overflow"))
-      }(qn, TT, UT))
+    function Cu(BB, jB) {
+      console.warn(`${ld} the event buffer refused records in ${jB} frames (categories ${BB})`), iu || (null !== oN ? cu(oN, BB, jB) : null !== SN && function(BB, jB, zB) {
+        var QB;
+        const nB = function(BB, jB) {
+          return null === BB ? "drop" : BB.activated ? "keep" : 0 !== (jB & bj.u.NetSession) ? "fail" : "drop"
+        }((null === (QB = PN) || void 0 === QB ? void 0 : QB.join) === BB ? PN : null, jB);
+        "keep" === nB ? TN = {
+          mask: jB,
+          frames: zB
+        } : "fail" === nB && (0, oj.i)(BB, new Error("the join's net session was lost to an event overflow"))
+      }(SN, BB, jB))
     }
 
-    function EH(TT, UT, mT) {
-      const WT = TT.overflow ??= {
+    function cu(BB, jB, zB) {
+      const QB = BB.overflow ??= {
         frames: 0,
         acks: 0,
         mask: 0,
         outcome: null
       };
-      WT.frames += mT, WT.acks++, WT.mask |= UT;
-      const zT = function(TT, UT, mT) {
-        if (0 === (TT & DU.s.NetSession)) return "none";
-        const WT = null !== UT.rejoinedAt && mT - UT.rejoinedAt < SW;
-        return null === UT.rejoin || WT ? "fail" : "rejoin"
-      }(UT, TT, performance.now());
-      "none" !== zT && queueMicrotask((() => {
-        if (xn !== TT) return;
-        const UT = "rejoin" === zT && performance.now() - Vn >= CT.g;
-        WT.outcome = UT ? "rejoined" : "failed", Uk(function(TT, UT) {
+      QB.frames += zB, QB.acks++, QB.mask |= jB;
+      const nB = function(BB, jB, zB) {
+        if (0 === (BB & bj.u.NetSession)) return "none";
+        const QB = null !== jB.rejoinedAt && zB - jB.rejoinedAt < lQ;
+        return null === jB.rejoin || QB ? "fail" : "rejoin"
+      }(jB, BB, performance.now());
+      "none" !== nB && queueMicrotask((() => {
+        if (oN !== BB) return;
+        const jB = "rejoin" === nB && performance.now() - WN >= WB.h;
+        QB.outcome = jB ? "rejoined" : "failed", zU(function(BB, jB) {
           return {
             code: 0,
             name: "eventOverflow",
             reason: "Your game fell behind the server.",
-            canReconnect: TT,
-            automaticallyReconnect: UT,
+            canReconnect: BB,
+            automaticallyReconnect: jB,
             requiresRefresh: !1
           }
-        }(null !== TT.rejoin, UT), TT.rejoin, UT), VH(), UT && (sn = performance.now())
+        }(null !== BB.rejoin, jB), BB.rejoin, jB), Pu(), jB && (AN = performance.now())
       }))
     }
 
-    function hH() {
-      qH && function(TT, UT) {
+    function bu() {
+      gu && function(BB, jB) {
         let {
-          mesh: mT,
-          worldgen: WT,
-          modelPool: zT
-        } = TT;
-        "landingPage" === UT ? (null === mT || void 0 === mT || mT.stopWorkers(), null === WT || void 0 === WT || WT.stopWorker(), null === zT || void 0 === zT || zT.stopWorkers()) : ((0, TU.d)(UT) || "inGame" === UT) && (null === mT || void 0 === mT || mT.restartWorkers(), null === zT || void 0 === zT || zT.startWorkers())
+          mesh: zB,
+          worldgen: QB,
+          modelPool: nB
+        } = BB;
+        "landingPage" === jB ? (null === zB || void 0 === zB || zB.stopWorkers(), null === QB || void 0 === QB || QB.stopWorker(), null === nB || void 0 === nB || nB.stopWorkers()) : ((0, Bj.h)(jB) || "inGame" === jB) && (null === zB || void 0 === zB || zB.restartWorkers(), null === nB || void 0 === nB || nB.startWorkers())
       }({
-        mesh: ag,
-        worldgen: wg,
-        modelPool: ug
-      }, TU.b.get("gameState"))
+        mesh: hI,
+        worldgen: YI,
+        modelPool: wI
+      }, Bj.c.get("gameState"))
     }
 
-    function DH(TT) {
-      iH = TT, bH && oH(bH, TT)
+    function vu(BB) {
+      tu = BB, Su && Ru(Su, BB)
     }
 
-    function oH(TT, UT) {
-      TT.style.visibility = UT ? "visible" : "hidden"
+    function Ru(BB, jB) {
+      BB.style.visibility = jB ? "visible" : "hidden"
     }
 
-    function AH(TT) {
-      var UT;
-      const mT = TT.roomName,
-        WT = null !== (UT = TT.joinOptions.lobbyName) && void 0 !== UT ? UT : null;
+    function Ou(BB) {
+      var jB;
+      const zB = BB.roomName,
+        QB = null !== (jB = BB.joinOptions.lobbyName) && void 0 !== jB ? jB : null;
       return () => {
-        IH(mT, WT)
+        hu(zB, QB)
       }
     }
 
-    function RH() {
-      return mT.e(277).then((() => mT(51121))).then((TT => {
+    function BU() {
+      return zB.e(277).then((() => zB(51154))).then((BB => {
         let {
-          invalidateGuestTrafficCode: UT
-        } = TT;
-        return UT()
-      })).catch((TT => {
-        console.warn(`${VM} the cached traffic code could not be dropped`, TT)
+          invalidateGuestTrafficCode: jB
+        } = BB;
+        return jB()
+      })).catch((BB => {
+        console.warn(`${ld} the cached traffic code could not be dropped`, BB)
       }))
     }
 
-    function Tk(TT, UT, mT) {
-      var zT, MT;
-      let gT = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (YH) return;
-      if ((null === (zT = xn) || void 0 === zT ? void 0 : zT.conn) !== TT) return void(null !== qn && Sn.set(TT, {
-        code: UT,
-        reason: mT
+    function jU(BB, jB, zB) {
+      var nB, dB;
+      let IB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (iu) return;
+      if ((null === (nB = oN) || void 0 === nB ? void 0 : nB.conn) !== BB) return void(null !== SN && KN.set(BB, {
+        code: jB,
+        reason: zB
       }));
       const {
-        rejoin: nT,
-        game: HT,
-        joinedAt: kT
-      } = xn;
-      SH(), vk();
-      const jT = (0, CT.o)(UT, (0, NW.h)(TT));
-      if (console.info(`${VM} the game's connection closed with code ${UT} (${null!==(MT=jT.name)&&void 0!==MT?MT:"unrecognised"})`), UT === WT.e.gameOrPluginKick.code || gT || (0, ym.reportDisconnect)(jT, qg, {
-          closeReason: mT,
-          sinceJoinedMs: performance.now() - kT,
-          game: HT
-        }), jT.requiresRefresh) {
-        const TT = "outdatedVersion" === jT.name,
-          mT = new Error(`the game's connection closed with code ${UT}`),
-          WT = () => null === xn && null === qn;
-        return void xj({
-          site: ym.JOIN_SITE,
-          error: mT,
-          outdated: TT
+        rejoin: NB,
+        game: uB,
+        joinedAt: UB
+      } = oN;
+      xu(), GU();
+      const aB = (0, WB.m)(jB, (0, xQ.e)(BB));
+      if (console.info(`${ld} the game's connection closed with code ${jB} (${null!==(dB=aB.name)&&void 0!==dB?dB:"unrecognised"})`), jB === QB.c.gameOrPluginKick.code || IB || (0, Dz.reportDisconnect)(aB, MI, {
+          closeReason: zB,
+          sinceJoinedMs: performance.now() - UB,
+          game: uB
+        }), aB.requiresRefresh) {
+        const BB = "outdatedVersion" === aB.name,
+          zB = new Error(`the game's connection closed with code ${jB}`),
+          QB = () => null === oN && null === SN;
+        return void qa({
+          site: Dz.JOIN_SITE,
+          error: zB,
+          outdated: BB
         }, (() => {
-          WT() && Uk(jT, null, !1)
+          QB() && zU(aB, null, !1)
         }), {
-          stillWanted: WT
+          stillWanted: QB
         })
       }
-      const lT = jT.canReconnect ? nT : null,
-        LT = null !== lT && jT.automaticallyReconnect && performance.now() - Vn >= CT.g;
-      Uk(jT, lT, LT)
+      const pB = aB.canReconnect ? NB : null,
+        rB = null !== pB && aB.automaticallyReconnect && performance.now() - WN >= WB.h;
+      zU(aB, pB, rB)
     }
 
-    function Uk(TT, UT, mT) {
-      var WT;
-      let zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+    function zU(BB, jB, zB) {
+      var QB;
+      let nB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
         reasonKey: null,
         canPlayAgain: !1
       };
-      if (OH) return;
-      iz.c.unwantedLeave(mT && null !== UT && 0 === Cn.size), null === (WT = un) || void 0 === WT || WT.abort();
-      const MT = new AbortController;
-      un = MT;
-      const gT = null === UT ? null : () => {
-        MT.signal.aborted || (MT.abort(), UT())
+      if (Mu) return;
+      Ln.c.unwantedLeave(zB && null !== jB && 0 === lN.size), null === (QB = eN) || void 0 === QB || QB.abort();
+      const dB = new AbortController;
+      eN = dB;
+      const IB = null === jB ? null : () => {
+        dB.signal.aborted || (dB.abort(), jB())
       };
-      if (mT && null !== gT) {
-        Vn = performance.now();
-        const TT = setTimeout(gT, CT.d);
-        MT.signal.addEventListener("abort", (() => {
-          clearTimeout(TT)
+      if (zB && null !== IB) {
+        WN = performance.now();
+        const BB = setTimeout(IB, WB.e);
+        dB.signal.addEventListener("abort", (() => {
+          clearTimeout(BB)
         }))
       }
-      const nT = {
-        code: TT.code,
-        name: TT.name,
-        reason: TT.reason,
-        reasonKey: zT.reasonKey,
-        reconnect: gT,
-        reconnecting: mT,
-        requiresRefresh: TT.requiresRefresh,
-        canPlayAgain: zT.canPlayAgain
+      const NB = {
+        code: BB.code,
+        name: BB.name,
+        reason: BB.reason,
+        reasonKey: nB.reasonKey,
+        reconnect: IB,
+        reconnecting: zB,
+        requiresRefresh: BB.requiresRefresh,
+        canPlayAgain: nB.canPlayAgain
       };
-      if (Cn.size > 0)
-        for (const kT of [...Cn]) try {
-          kT(nT)
-        } catch (HT) {
-          console.error(`${VM} an unwanted-leave listener threw`, HT)
-        } else sW((0, XW.e)(TT, null !== gT, mT), MT.signal).then((UT => {
-          UT && (null !== gT ? gT() : TT.requiresRefresh && (0, RT.k)())
+      if (lN.size > 0)
+        for (const UB of [...lN]) try {
+          UB(NB)
+        } catch (uB) {
+          console.error(`${ld} an unwanted-leave listener threw`, uB)
+        } else hQ((0, FQ.f)(BB, null !== IB, zB), dB.signal).then((jB => {
+          jB && (null !== IB ? IB() : BB.requiresRefresh && (0, OB.k)())
         }))
     }
-    const mk = {
-      attachSocket: TT => kk(TT),
-      onConnection: TT => (Gn.add(TT), () => {
-        Gn.delete(TT)
+    const QU = {
+      attachSocket: BB => aU(BB),
+      onConnection: BB => (CN.add(BB), () => {
+        CN.delete(BB)
       }),
-      sendRaw: (TT, UT) => {
-        const mT = xg;
-        return null !== mT && mT.conn === TT && kj(mT, UT)
+      sendRaw: (BB, jB) => {
+        const zB = DI;
+        return null !== zB && zB.conn === BB && Ua(zB, jB)
       },
-      leaveRoom: KH,
-      closeSocket: TT => {
-        var UT;
-        (null === (UT = xg) || void 0 === UT ? void 0 : UT.conn) === TT && jk()
+      leaveRoom: wu,
+      closeSocket: BB => {
+        var jB;
+        (null === (jB = DI) || void 0 === jB ? void 0 : jB.conn) === BB && pU()
       },
-      flushNet: lk
+      flushNet: rU
     };
 
-    function Wk(TT) {
-      var UT;
+    function nU(BB) {
+      var jB;
       let {
-        aux: mT,
-        payload: WT
-      } = TT;
-      null === (UT = Bg) || void 0 === UT || UT.queueOptions(mT, WT)
+        aux: zB,
+        payload: QB
+      } = BB;
+      null === (jB = GI) || void 0 === jB || jB.queueOptions(zB, QB)
     }
 
-    function zk(TT, UT) {
-      Wk(function(TT, UT) {
-        return Iz = TT ? {
-          preventMovement: UT
-        } : null, TT ? Qz(UT) : {
-          aux: hU.gc.AdEnd,
-          payload: Xz
+    function dU(BB, jB) {
+      nU(function(BB, jB) {
+        return hn = BB ? {
+          preventMovement: jB
+        } : null, BB ? Xn(jB) : {
+          aux: cj.Zb.AdEnd,
+          payload: Vn
         }
-      }(TT, UT))
+      }(BB, jB))
     }
 
-    function Mk(TT) {
-      var UT;
-      Bn = TT, null === (UT = Bg) || void 0 === UT || UT.setUiPrefs(TT)
+    function IU(BB) {
+      var jB;
+      kN = BB, null === (jB = GI) || void 0 === jB || jB.setUiPrefs(BB)
     }
 
-    function gk(TT, UT) {
-      fg.setMaster(TT, UT)
+    function NU(BB, jB) {
+      SI.setMaster(BB, jB)
     }
 
-    function nk(TT) {
-      var UT;
-      Zn = TT, null === (UT = Bg) || void 0 === UT || UT.setEnvPrefs(TT)
+    function uU(BB) {
+      var jB;
+      GN = BB, null === (jB = GI) || void 0 === jB || jB.setEnvPrefs(BB)
     }
 
-    function Hk(TT) {
-      var UT;
-      cn = TT, null === (UT = Bg) || void 0 === UT || UT.setLookPrefs(TT)
+    function UU(BB) {
+      var jB;
+      LN = BB, null === (jB = GI) || void 0 === jB || jB.setLookPrefs(BB)
     }
 
-    function kk(TT) {
-      var UT;
-      let mT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new URL(TT.url).origin,
-        WT = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      if (TT.readyState === WebSocket.CLOSING || TT.readyState === WebSocket.CLOSED) return console.warn(`${VM} a closing or closed socket can't be attached`), null;
-      const zT = Bg;
-      if (!zT || zT.isStopped) return console.warn(`${VM} no core is running to attach a socket to`), TT.close(), null;
-      if (null === (0, yT.i)()) return console.warn(`${VM} the game has not started to attach a socket to`), TT.close(), null;
-      if (Rg > hU.C) return console.warn(`${VM} this core has attached all the sockets it can; reload to play on`), TT.close(), null;
-      if (kn && !gn && (Ak(zT, !1, "all"), zT.isStopped || YH)) return TT.close(), null;
-      jk();
-      const MT = Rg++;
-      if (!ek(zT, "open", MT, WT ? hU.cc.Resume : 0)) return TT.close(), null;
-      WT || eU.d.reset(), Pn = null === qn ? null : {
-        join: qn,
-        conn: MT,
+    function aU(BB) {
+      var jB;
+      let zB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new URL(BB.url).origin,
+        QB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      if (BB.readyState === WebSocket.CLOSING || BB.readyState === WebSocket.CLOSED) return console.warn(`${ld} a closing or closed socket can't be attached`), null;
+      const nB = GI;
+      if (!nB || nB.isStopped) return console.warn(`${ld} no core is running to attach a socket to`), BB.close(), null;
+      if (null === (0, FB.g)()) return console.warn(`${ld} the game has not started to attach a socket to`), BB.close(), null;
+      if (QN > cj.y) return console.warn(`${ld} this core has attached all the sockets it can; reload to play on`), BB.close(), null;
+      if (sN && !aN && (RU(nB, !1, "all"), nB.isStopped || iu)) return BB.close(), null;
+      pU();
+      const dB = QN++;
+      if (!EU(nB, "open", dB, QB ? cj.Xb.Resume : 0)) return BB.close(), null;
+      QB || Mj.c.reset(), PN = null === SN ? null : {
+        join: SN,
+        conn: dB,
         activated: !1
-      }, TT.binaryType = "arraybuffer";
-      const gT = new Ym.d((() => {
-          ! function(TT, UT) {
-            if (xg !== UT || TT.isStopped || null === Bk(UT, oM)) return;
-            UT.detach(), xg = null, pk(TT, UT, oM, "", !0), UT.ws.close()
-          }(zT, nT)
+      }, BB.binaryType = "arraybuffer";
+      const IB = new Mz.c((() => {
+          ! function(BB, jB) {
+            if (DI !== jB || BB.isStopped || null === mU(jB, jI)) return;
+            jB.detach(), DI = null, JU(BB, jB, jI, "", !0), jB.ws.close()
+          }(nB, NB)
         })),
-        nT = {
-          ws: TT,
-          conn: MT,
+        NB = {
+          ws: BB,
+          conn: dB,
           pending: [],
           pendingBytes: 0,
           left: !1,
-          resume: WT,
+          resume: QB,
           token: null,
           detach: () => {
-            gT.dispose(), TT.removeEventListener("message", HT), TT.removeEventListener("open", kT), TT.removeEventListener("close", jT)
+            IB.dispose(), BB.removeEventListener("message", uB), BB.removeEventListener("open", UB), BB.removeEventListener("close", aB)
           }
         },
-        HT = TT => {
-          if (TT.data instanceof ArrayBuffer) {
-            var UT;
-            const mT = new Uint8Array(TT.data);
-            gT.heard(), nT.token = null !== (UT = (0, Jm.e)(mT)) && void 0 !== UT ? UT : nT.token,
-              function(TT, UT, mT) {
-                qj(TT, (() => {
-                  TT.rings.net.writeFrame(UT, mT) || TT.crash(lm.o, `a socket frame of ${mT.byteLength} bytes did not fit the net-in ring`)
+        uB = BB => {
+          if (BB.data instanceof ArrayBuffer) {
+            var jB;
+            const zB = new Uint8Array(BB.data);
+            IB.heard(), NB.token = null !== (jB = (0, Ez.d)(zB)) && void 0 !== jB ? jB : NB.token,
+              function(BB, jB, zB) {
+                La(BB, (() => {
+                  BB.rings.net.writeFrame(jB, zB) || BB.crash(pz.q, `a socket frame of ${zB.byteLength} bytes did not fit the net-in ring`)
                 }));
-                const WT = TT.rings.net.cursor >= DM;
-                !ej() && (WT || TT.netWrittenSinceFrame >= hM) && Ak(TT, !1, document.hidden ? "all" : "budget");
-                Jj(TT)
-              }(zT, MT, mT)
+                const QB = BB.rings.net.cursor >= BI;
+                !Ma() && (QB || BB.netWrittenSinceFrame >= Od) && RU(BB, !1, document.hidden ? "all" : "budget");
+                ia(BB)
+              }(nB, dB, zB)
           }
         },
-        kT = () => {
-          WT || (0, BT.i)("wasm_socket_open", performance.now());
-          for (const UT of nT.pending.splice(0)) TT.send(UT);
-          nT.pendingBytes = 0
+        UB = () => {
+          QB || (0, JB.r)("wasm_socket_open", performance.now());
+          for (const jB of NB.pending.splice(0)) BB.send(jB);
+          NB.pendingBytes = 0
         },
-        jT = TT => {
-          if (xg === nT && zT.rings.net.cursor > 0 && Ak(zT, !1, "all"), xg === nT) {
-            if (nT.detach(), xg = null, pk(zT, nT, TT.code, TT.reason) || Lk(zT, nT)) return;
-            ek(zT, "close", MT), Zk(MT, nT.left), Tk(MT, TT.code, TT.reason)
+        aB = BB => {
+          if (DI === NB && nB.rings.net.cursor > 0 && RU(nB, !1, "all"), DI === NB) {
+            if (NB.detach(), DI = null, JU(nB, NB, BB.code, BB.reason) || sU(nB, NB)) return;
+            EU(nB, "close", dB), yU(dB, NB.left), jU(dB, BB.code, BB.reason)
           }
         };
-      return TT.addEventListener("message", HT), TT.addEventListener("open", kT), TT.addEventListener("close", jT), xg = nT, null === (UT = (0, yT.i)()) || void 0 === UT || UT.socketAttached(MT), (0, LT.m)({
-        websocketUrl: mT
-      }), MT
+      return BB.addEventListener("message", uB), BB.addEventListener("open", UB), BB.addEventListener("close", aB), DI = NB, null === (jB = (0, FB.g)()) || void 0 === jB || jB.socketAttached(dB), (0, rB.q)({
+        websocketUrl: zB
+      }), dB
     }
 
-    function jk() {
-      const TT = xg;
-      if (!TT) return;
-      const UT = Bg,
-        mT = TT.resume;
-      mT && (lk(), xg !== TT) || (xg = null, TT.detach(), TT.ws.close(), null !== UT && (Lk(UT, TT) || mT && pk(UT, TT, AM)) || (null !== UT && ek(UT, "close", TT.conn), Zk(TT.conn, TT.left)))
+    function pU() {
+      const BB = DI;
+      if (!BB) return;
+      const jB = GI,
+        zB = BB.resume;
+      zB && (rU(), DI !== BB) || (DI = null, BB.detach(), BB.ws.close(), null !== jB && (sU(jB, BB) || zB && JU(jB, BB, zI)) || (null !== jB && EU(jB, "close", BB.conn), yU(BB.conn, BB.left)))
     }
 
-    function lk() {
-      const TT = Bg;
-      null !== TT && !TT.isStopped && !YH && !gn && TT.rings.net.cursor > 0 && Ak(TT, !1, "all")
+    function rU() {
+      const BB = GI;
+      null !== BB && !BB.isStopped && !iu && !aN && BB.rings.net.cursor > 0 && RU(BB, !1, "all")
     }
 
-    function Lk(TT, UT) {
-      var mT;
-      if (!UT.resume) return !1;
-      const WT = dn;
-      return null !== WT && null !== UT.token && "" !== UT.token && (WT.pendingHold = {
-        conn: UT.conn,
-        token: `${WT.roomId}:${UT.token}`
-      }), ek(TT, "close", UT.conn), null === (mT = (0, yT.i)()) || void 0 === mT || mT.socketDetached(UT.conn), !0
+    function sU(BB, jB) {
+      var zB;
+      if (!jB.resume) return !1;
+      const QB = HN;
+      return null !== QB && null !== jB.token && "" !== jB.token && (QB.pendingHold = {
+        conn: jB.conn,
+        token: `${QB.roomId}:${jB.token}`
+      }), EU(BB, "close", jB.conn), null === (zB = (0, FB.g)()) || void 0 === zB || zB.socketDetached(jB.conn), !0
     }
 
-    function pk(TT, UT, mT) {
-      let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "",
-        zT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-      const MT = Bk(UT, mT);
-      if (null === MT) return !1;
+    function JU(BB, jB, zB) {
+      let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "",
+        nB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      const dB = mU(jB, zB);
+      if (null === dB) return !1;
       const {
-        fn: gT,
-        token: nT,
-        game: HT,
-        joinedAt: kT
-      } = MT;
-      if (!ek(TT, "close", UT.conn, hU.K.Held)) return !0;
-      console.warn(`${VM} the game's connection ${zT?"went silent":`dropped with code ${mT}`}, holding it`);
-      const jT = {
-        closeReason: WT,
-        sinceJoinedMs: performance.now() - kT,
-        game: HT
+        DN: IB,
+        token: NB,
+        game: uB,
+        joinedAt: UB
+      } = dB;
+      if (!EU(BB, "close", jB.conn, cj.C.Held)) return !0;
+      console.warn(`${ld} the game's connection ${nB?"went silent":`dropped with code ${zB}`}, holding it`);
+      const aB = {
+        closeReason: QB,
+        sinceJoinedMs: performance.now() - UB,
+        game: uB
       };
-      return (0, ym.reportDisconnect)((0, CT.o)(mT), qg, jT, zT ? "silent" : void 0), gT.heldConn = UT.conn, gT.dropCode = mT, gT.pendingHold = {
-        conn: UT.conn,
-        token: `${gT.roomId}:${nT}`
-      }, gn || Ak(TT, !1, "all"), !0
+      return (0, Dz.reportDisconnect)((0, WB.m)(zB), MI, aB, nB ? "silent" : void 0), IB.heldConn = jB.conn, IB.dropCode = zB, IB.pendingHold = {
+        conn: jB.conn,
+        token: `${IB.roomId}:${NB}`
+      }, aN || RU(BB, !1, "all"), !0
     }
 
-    function Bk(TT, UT) {
-      const mT = dn,
-        zT = xn,
-        MT = TT.token;
-      return null === mT || null === zT || YH || TT.left || zT.conn !== TT.conn || null === MT || "" === MT ? null : (0, WT.i)(UT) && mT.resume.canHoldSeat() ? {
-        fn: mT,
-        token: MT,
-        game: zT.game,
-        joinedAt: zT.joinedAt
+    function mU(BB, jB) {
+      const zB = HN,
+        nB = oN,
+        dB = BB.token;
+      return null === zB || null === nB || iu || BB.left || nB.conn !== BB.conn || null === dB || "" === dB ? null : (0, QB.f)(jB) && zB.resume.canHoldSeat() ? {
+        DN: zB,
+        token: dB,
+        game: nB.game,
+        joinedAt: nB.joinedAt
       } : null
     }
 
-    function Zk(TT, UT) {
-      var mT;
-      null === (mT = (0, yT.i)()) || void 0 === mT || mT.closeGame(TT), (0, yz.c)().close(TT), UT || (0, LT.m)({
+    function yU(BB, jB) {
+      var zB;
+      null === (zB = (0, FB.g)()) || void 0 === zB || zB.closeGame(BB), (0, Yn.e)().close(BB), jB || (0, rB.q)({
         websocketUrl: null
       })
     }
 
-    function ck() {
-      const TT = Qn;
-      if (null === TT) return;
-      const UT = (0, yT.i)();
-      YH || null === UT || UT.MI(TT) ? Qn = null : performance.now() - jn.pause >= mg && (jn.pause = performance.now(), console.warn(`${VM} the cmd ring had no room for SetPaused(${TT}): written before the next frame`))
+    function kU() {
+      const BB = ZN;
+      if (null === BB) return;
+      const jB = (0, FB.g)();
+      iu || null === jB || jB.nD(BB) ? ZN = null : performance.now() - JN.pause >= II && (JN.pause = performance.now(), console.warn(`${ld} the cmd ring had no room for SetPaused(${BB}): written before the next frame`))
     }
 
-    function vk() {
-      const TT = dn;
-      dn = null, null === TT || void 0 === TT || TT.resume.dispose()
+    function GU() {
+      const BB = HN;
+      HN = null, null === BB || void 0 === BB || BB.resume.dispose()
     }
 
-    function fk(TT, UT) {
-      var mT, WT;
+    function LU(BB, jB) {
+      var zB, QB;
       const {
-        heldConn: zT
-      } = TT, MT = TT.resume.resumingConn;
-      TT.heldConn = 0, TT.pendingHold = null, dn === TT && (dn = null), "left" === UT ? TT.resume.leave() : TT.resume.dispose(), 0 === In || (null === (mT = xg) || void 0 === mT ? void 0 : mT.conn) !== In || "left" === UT && (null === (WT = vn) || void 0 === WT ? void 0 : WT.conn) === In || Ok(In), "gaveUp" === UT && 0 !== MT && Ok(MT), 0 !== zT && "refused" !== UT && (console.info(`${VM} the game held through its drop ${"left"===UT?"was left":"is given up"}`), null === Bg || Bg.isStopped || ek(Bg, "close", zT), Zk(zT, !1))
+        heldConn: nB
+      } = BB, dB = BB.resume.resumingConn;
+      BB.heldConn = 0, BB.pendingHold = null, HN === BB && (HN = null), "left" === jB ? BB.resume.leave() : BB.resume.dispose(), 0 === XN || (null === (zB = DI) || void 0 === zB ? void 0 : zB.conn) !== XN || "left" === jB && (null === (QB = gN) || void 0 === QB ? void 0 : QB.conn) === XN || MU(XN), "gaveUp" === jB && 0 !== dB && MU(dB), 0 !== nB && "refused" !== jB && (console.info(`${ld} the game held through its drop ${"left"===jB?"was left":"is given up"}`), null === GI || GI.isStopped || EU(GI, "close", nB), yU(nB, !1))
     }
 
-    function qk(TT, UT) {
-      const mT = UT.indexOf(":");
+    function gU(BB, jB) {
+      const zB = jB.indexOf(":");
       return {
-        roomId: mT < 0 ? TT.roomId : UT.slice(0, mT),
-        roomToken: UT.slice(mT + 1)
+        roomId: zB < 0 ? BB.roomId : jB.slice(0, zB),
+        roomToken: jB.slice(zB + 1)
       }
     }
 
-    function ik(TT) {
-      (0, Lm.logClientMeasurement)("join_preload", TT, {
+    function tU(BB) {
+      (0, rz.logClientMeasurement)("join_preload", BB, {
         client: "wasm"
       })
     }
 
-    function bk(TT) {
-      var UT;
-      wn = TT;
-      const mT = TT.replayOffer && Xn !== TT.conn;
-      yn = mT ? TT.conn : 0, tn = mT || an.has(TT.conn) ? 0 : TT.conn, OT.admitted(), TT.conn === In && (In = 0);
-      const WT = dn;
-      null !== WT && (null === (UT = xn) || void 0 === UT ? void 0 : UT.conn) === TT.conn && WT.resume.onInitialInfo(TT)
+    function SU(BB) {
+      var jB;
+      DN = BB;
+      const zB = BB.replayOffer && hN !== BB.conn;
+      VN = zB ? BB.conn : 0, FN = zB || YN.has(BB.conn) ? 0 : BB.conn, SB.admitted(), BB.conn === XN && (XN = 0);
+      const QB = HN;
+      null !== QB && (null === (jB = oN) || void 0 === jB ? void 0 : jB.conn) === BB.conn && QB.resume.onInitialInfo(BB)
     }
 
-    function Ok(TT) {
-      var UT;
-      const mT = xg;
-      (null === mT || void 0 === mT ? void 0 : mT.conn) === TT && (mT.left = !0, null === (UT = (0, yT.i)()) || void 0 === UT || UT.socketLeft(), (0, LT.m)({
+    function MU(BB) {
+      var jB;
+      const zB = DI;
+      (null === zB || void 0 === zB ? void 0 : zB.conn) === BB && (zB.left = !0, null === (jB = (0, FB.g)()) || void 0 === jB || jB.socketLeft(), (0, rB.q)({
         websocketUrl: null
-      }), KH(TT) ? setTimeout((() => {
-        xg === mT && jk()
-      }), rT.f) : jk())
+      }), wu(BB) ? setTimeout((() => {
+        DI === zB && pU()
+      }), eB.e) : pU())
     }
 
-    function ek(TT, UT, mT) {
-      let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        zT = !1;
-      return qj(TT, (() => {
+    function EU(BB, jB, zB) {
+      let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        nB = !1;
+      return La(BB, (() => {
         const {
-          net: MT
-        } = TT.rings;
-        zT = "open" === UT ? MT.writeOpen(mT, WT) : MT.writeClose(mT, WT), zT || TT.crash(lm.o, `a socket ${UT} did not fit the net-in ring`)
-      })), zT
+          net: dB
+        } = BB.rings;
+        nB = "open" === jB ? dB.writeOpen(zB, QB) : dB.writeClose(zB, QB), nB || BB.crash(pz.q, `a socket ${jB} did not fit the net-in ring`)
+      })), nB
     }
 
-    function Yk(TT, UT, mT) {
-      let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      if (wk()) return (0, ym.reportUnsupportedFallback)(TT, UT, mT, WT), void tk(`the wasm client can't run here (${mT}; ${UT})`, UT);
-      (0, ym.showUnsupported)(TT, "unsupported", mT, WT)
+    function iU(BB, jB, zB) {
+      let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      if (HU()) return (0, Dz.reportUnsupportedFallback)(BB, jB, zB, QB), void DU(`the wasm client can't run here (${zB}; ${jB})`, jB);
+      (0, Dz.showUnsupported)(BB, "unsupported", zB, QB)
     }
-    const Jk = 1500;
+    const qU = 1500;
 
-    function xk(TT, UT) {
-      const mT = 1 === TT.missing.length && TT.missing[0] === km.c,
-        WT = UT ? "blockedAfterLoss" : mT ? "noContext" : "unsupported";
+    function fU(BB, jB) {
+      const zB = 1 === BB.missing.length && BB.missing[0] === Uz.e,
+        QB = jB ? "blockedAfterLoss" : zB ? "noContext" : "unsupported";
       return {
-        decline: WT,
-        detail: `No WebGPU or WebGL2, and WebGL1 lacks ${TT.missing.join(", ")}`,
+        decline: QB,
+        detail: `No WebGPU or WebGL2, and WebGL1 lacks ${BB.missing.join(", ")}`,
         details: {
-          missing: TT.missing.join(",")
+          missing: BB.missing.join(",")
         },
-        retries: "unsupported" !== WT && wk()
+        retries: "unsupported" !== QB && HU()
       }
     }
 
-    function dk(TT) {
-      console.warn(`${VM} ${TT}: reloading once more onto the wasm client`), (0, tz.r)(), (0, ym.flushCrashReports)(RT.c).then(RT.k, RT.k)
+    function oU(BB) {
+      console.warn(`${ld} ${BB}: reloading once more onto the wasm client`), (0, Dn.s)(), (0, Dz.flushCrashReports)(OB.d).then(OB.k, OB.k)
     }
 
-    function wk() {
-      return qH && "wasm" !== (0, bU.f)(window.location.search)
+    function HU() {
+      return gu && "wasm" !== (0, tj.c)(window.location.search)
     }
 
-    function tk(TT, UT) {
-      console.warn(`${VM} ${TT}: reloading on the JS client`), null !== UT && (0, bU.z)(UT), (0, bU.y)(null === UT ? "reloadOntoJs" : "decline");
-      const mT = () => {
-        (0, RT.h)(bU.D)
+    function DU(BB, jB) {
+      console.warn(`${ld} ${BB}: reloading on the JS client`), null !== jB && (0, tj.A)(jB), (0, tj.x)(null === jB ? "reloadOntoJs" : "decline");
+      const zB = () => {
+        (0, OB.h)(tj.H)
       };
-      (0, ym.flushCrashReports)(RT.c).then(mT, mT)
+      (0, Dz.flushCrashReports)(OB.d).then(zB, zB)
     }
 
-    function ak(TT, UT, mT, WT) {
-      return Dn(TT, UT, mT, WT)
+    function FU(BB, jB, zB, QB) {
+      return RN(BB, jB, zB, QB)
     }
 
-    function yk() {
-      null === TH || null === Bg || Bg.isStopped || YH || null !== rg || null === gg || (rg = TH(gg, Qk, sk().follow))
+    function YU() {
+      null === ju || null === GI || GI.isStopped || iu || null !== KI || null === aI || (KI = ju(aI, XU, ZU().follow))
     }
 
-    function Xk() {
-      var TT, UT, mT;
-      return null !== (TT = null === (UT = cg) || void 0 === UT || null === (mT = UT.textures) || void 0 === mT ? void 0 : mT.files()) && void 0 !== TT ? TT : null
+    function VU() {
+      var BB, jB, zB;
+      return null !== (BB = null === (jB = gI) || void 0 === jB || null === (zB = jB.textures) || void 0 === zB ? void 0 : zB.files()) && void 0 !== BB ? BB : null
     }
 
-    function Ik(TT) {
-      sk().follow((UT => {
-        null !== UT && Promise.all([Promise.all([mT.e(204), mT.e(46)]).then((() => mT(51145))), (0, tz.R)()]).then((TT => {
+    function hU(BB) {
+      ZU().follow((jB => {
+        null !== jB && Promise.all([Promise.all([zB.e(204), zB.e(46)]).then((() => zB(51181))), (0, Dn.M)()]).then((BB => {
           let [{
-            followPagePackFiles: mT
-          }, WT] = TT;
-          const zT = null === WT || (0, km.n)(WT) ? "webgl" : WT.backend;
-          mT(UT, qz.e, zT, (TT => {
-            qz.e.setPageFiles(TT)
-          }), Qk)
-        }), (UT => {
-          console.warn(`${VM} the texture pack's files didn't load: the previews draw the shipped ones until the next opens`, UT), TT()
+            followPagePackFiles: zB
+          }, QB] = BB;
+          const nB = null === QB || (0, Uz.r)(QB) ? "webgl" : QB.backend;
+          zB(jB, Gn.h, nB, (BB => {
+            Gn.h.setPageFiles(BB)
+          }), XU)
+        }), (jB => {
+          console.warn(`${ld} the texture pack's files didn't load: the previews draw the shipped ones until the next opens`, jB), BB()
         }))
       }))
     }
 
-    function Qk(TT, UT) {
-      console.warn(`${VM} ${TT}`, UT)
+    function XU(BB, jB) {
+      console.warn(`${ld} ${BB}`, jB)
     }
 
-    function sk() {
-      return Zg ??= new uz({
-        load: TT => Promise.all([mT.e(204), mT.e(55)]).then((() => mT(51154))).then((UT => {
+    function ZU() {
+      return LI ??= new Wn({
+        load: BB => Promise.all([zB.e(204), zB.e(55)]).then((() => zB(51184))).then((jB => {
           let {
-            startPageTexturePackFeed: mT
-          } = UT;
-          return mT(Qk, TT)
+            startPageTexturePackFeed: zB
+          } = jB;
+          return zB(XU, BB)
         })),
-        store: rm.h,
-        Gp: TT => {
-          Og.then((() => {
-            (0, ym.reportTexturePackFeedLoadFailure)(TT, qg)
+        store: Wz.g,
+        JJ: BB => {
+          qI.then((() => {
+            (0, Dz.reportTexturePackFeedLoadFailure)(BB, MI)
           }))
         }
-      }), Zg
+      }), LI
     }
-    const Fk = TT => sk().follow(TT);
+    const AU = BB => ZU().follow(BB);
 
-    function Pk() {
-      return sk().loaded()
+    function TU() {
+      return ZU().loaded()
     }
-    const Vk = function(TT, UT, mT) {
-        let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now(),
-          zT = 0;
-        return async function(MT, gT) {
-          let nT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
-          const HT = ++zT,
-            kT = WT() + UT,
-            jT = await
-          function(TT, UT) {
-            let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {};
-            return new Promise((WT => {
-              const zT = setTimeout((() => {
-                WT(null), TT.then((TT => {
-                  null !== TT && (TT.joinedWithout(), mT(TT))
+    const PU = function(BB, jB, zB) {
+        let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now(),
+          nB = 0;
+        return async function(dB, IB) {
+          let NB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
+          const uB = ++nB,
+            UB = QB() + jB,
+            aB = await
+          function(BB, jB) {
+            let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {};
+            return new Promise((QB => {
+              const nB = setTimeout((() => {
+                QB(null), BB.then((BB => {
+                  null !== BB && (BB.joinedWithout(), zB(BB))
                 }))
-              }), UT);
-              TT.then((TT => {
-                clearTimeout(zT), WT(TT)
+              }), jB);
+              BB.then((BB => {
+                clearTimeout(nB), QB(BB)
               }))
             }))
-          }(TT(MT), UT, (TT => {
-            HT === zT && nT() && gT(TT, WT() + UT).catch((TT => {
-              mT("the texture pack step after the join failed", TT)
+          }(BB(dB), jB, (BB => {
+            uB === nB && NB() && IB(BB, QB() + jB).catch((BB => {
+              zB("the texture pack step after the join failed", BB)
             }))
           }));
-          return null === jT ? null : gT(jT, kT)
+          return null === aB ? null : IB(aB, UB)
         }
-      }((TT => (0, lU.k)(TT) ? sk().request() : sk().forJoin()), Vz.c, Qk),
-      uk = function(TT, UT) {
-        let mT = !1;
+      }((BB => (0, pj.n)(BB) ? ZU().request() : ZU().forJoin()), Pn.d, XU),
+      WU = function(BB, jB) {
+        let zB = !1;
         return {
-          setGamePackConfirm: TT => {
-            mT = null !== TT, UT(TT)
+          setGamePackConfirm: BB => {
+            zB = null !== BB, jB(BB)
           },
-          packStep: (UT, WT, zT) => TT(UT, WT, (() => mT && zT()))
+          packStep: (jB, QB, nB) => BB(jB, QB, (() => zB && nB()))
         }
-      }(Vk, (TT => {
-        sk().setGamePackConfirm(TT)
+      }(PU, (BB => {
+        ZU().setGamePackConfirm(BB)
       }));
 
-    function Ck(TT) {
-      uk.setGamePackConfirm(TT)
+    function eU(BB) {
+      WU.setGamePackConfirm(BB)
     }
 
-    function rk() {
-      if (YH || null !== MH || null === UH || null === zH) return;
+    function lU() {
+      if (iu || null !== Iu || null === zu || null === du) return;
       const {
-        backend: TT,
-        canvas: UT,
-        fallbackReason: mT,
-        adapterVendor: WT
-      } = zH, zT = UH;
-      UH = null;
+        backend: BB,
+        canvas: jB,
+        fallbackReason: zB,
+        adapterVendor: QB
+      } = du, nB = zu;
+      zu = null;
       try {
-        MH = zT({
-          backend: TT,
-          canvas: UT,
-          fallbackReason: mT,
-          adapterVendor: WT,
-          joinedGame: () => YH ? null : vn,
-          canSend: () => !YH && null !== vn && vn.conn === tn,
-          inGame: Sk,
+        Iu = nB({
+          backend: BB,
+          canvas: jB,
+          fallbackReason: zB,
+          adapterVendor: QB,
+          joinedGame: () => iu ? null : gN,
+          canSend: () => !iu && null !== gN && gN.conn === FN,
+          inGame: xU,
           shaderPackReach: () => {
-            var TT, UT;
-            return null !== (TT = null === (UT = Eg) || void 0 === UT ? void 0 : UT.reachInJoinedGame()) && void 0 !== TT ? TT : null
+            var BB, jB;
+            return null !== (BB = null === (jB = RI) || void 0 === jB ? void 0 : jB.reachInJoinedGame()) && void 0 !== BB ? BB : null
           },
-          dZ: () => Kg,
-          msaa: () => WH > 1,
-          writeCmd: (TT, UT, mT) => null !== gg && gg(TT, UT, mT),
+          Rm: () => CI,
+          msaa: () => nu > 1,
+          writeCmd: (BB, jB, zB) => null !== aI && aI(BB, jB, zB),
           takeFailedMeshJobs: () => {
-            var TT, UT;
-            return null !== (TT = null === (UT = ag) || void 0 === UT ? void 0 : UT.takeFailedMeshJobs()) && void 0 !== TT ? TT : 0
+            var BB, jB;
+            return null !== (BB = null === (jB = hI) || void 0 === jB ? void 0 : jB.takeFailedMeshJobs()) && void 0 !== BB ? BB : 0
           },
-          readLoadCounts: TT => {
-            var UT, mT;
-            return null !== (UT = null === (mT = Bg) || void 0 === mT ? void 0 : mT.readLoadCounts(TT)) && void 0 !== UT && UT
+          readLoadCounts: BB => {
+            var jB, zB;
+            return null !== (jB = null === (zB = GI) || void 0 === zB ? void 0 : zB.readLoadCounts(BB)) && void 0 !== jB && jB
           },
-          mainStalled: (TT, UT, mT) => {
-            (0, ym.reportMainStall)(TT, UT, mT, qg)
+          mainStalled: (BB, jB, zB) => {
+            (0, Dz.reportMainStall)(BB, jB, zB, MI)
           }
         })
-      } catch (MT) {
-        console.error(`${VM} the frame telemetry didn't start`, MT)
+      } catch (dB) {
+        console.error(`${ld} the frame telemetry didn't start`, dB)
       }
     }
 
-    function Kk(TT, UT) {
+    function wU(BB, jB) {
       try {
-        var mT, WT, zT;
-        const MT = Nn && null !== (mT = null === (WT = Bg) || void 0 === WT || null === (zT = WT.lastHeader) || void 0 === zT ? void 0 : zT.renderPending) && void 0 !== mT ? mT : 0;
-        (0, pW.d)(UT, TT, Sk() && !(null !== Iz), MT)
-      } catch (MT) {
-        (0, pW.q)(), console.error(`${VM} the quality steps stopped`, MT)
+        var zB, QB, nB;
+        const dB = cN && null !== (zB = null === (QB = GI) || void 0 === QB || null === (nB = QB.lastHeader) || void 0 === nB ? void 0 : nB.renderPending) && void 0 !== zB ? zB : 0;
+        (0, rQ.f)(jB, BB, xU() && !(null !== hn), dB)
+      } catch (dB) {
+        (0, rQ.v)(), console.error(`${ld} the quality steps stopped`, dB)
       }
     }
 
-    function Sk() {
-      return null !== vn && cH === vn && !YH
+    function xU() {
+      return null !== gN && ku === gN && !iu
     }
 
-    function Gk(TT) {
-      const UT = MH;
-      MH = null;
+    function KU(BB) {
+      const jB = Iu;
+      Iu = null;
       try {
-        null === UT || void 0 === UT || UT.stop()
+        null === jB || void 0 === jB || jB.stop()
       } catch {}
-      console.error(`${VM} the frame telemetry threw: it stops`, TT)
+      console.error(`${ld} the frame telemetry threw: it stops`, BB)
     }
 
-    function Nk(TT) {
-      var UT, mT, WT, zT;
-      if ((0, yz.c)().fire(TT), "message" === TT.type) {
-        if (nn++, TT.Xj === hU.Nc.ERROR && null !== qn) {
-          var MT;
+    function CU(BB) {
+      var jB, zB, QB, nB;
+      if ((0, Yn.e)().fire(BB), "message" === BB.type) {
+        if (pN++, BB.ha === cj.Gc.ERROR && null !== SN) {
+          var dB;
           const {
-            text: UT,
-            dropsCache: mT
-          } = (0, CT.s)((new TextDecoder).decode(TT.payload));
-          rn ||= mT, (null === (MT = Pn) || void 0 === MT ? void 0 : MT.conn) === TT.conn && (Kn = UT)
-        } else if (TT.Xj === DU.$b.ResumeComplete) {
-          var gT;
-          Xn = TT.conn, TT.conn === yn && (yn = 0, tn = an.has(TT.conn) ? 0 : TT.conn), null === (gT = dn) || void 0 === gT || gT.resume.onResumeComplete(TT.conn)
+            text: jB,
+            dropsCache: zB
+          } = (0, WB.t)((new TextDecoder).decode(BB.payload));
+          wN ||= zB, (null === (dB = PN) || void 0 === dB ? void 0 : dB.conn) === BB.conn && (xN = jB)
+        } else if (BB.ha === bj.Wb.ResumeComplete) {
+          var IB;
+          hN = BB.conn, BB.conn === VN && (VN = 0, FN = YN.has(BB.conn) ? 0 : BB.conn), null === (IB = HN) || void 0 === IB || IB.resume.onResumeComplete(BB.conn)
         }
         return
       }
-      TT.phase === hU.O.Left ? Hn = TT.conn : TT.phase === hU.O.Activated && (null === (UT = Pn) || void 0 === UT ? void 0 : UT.conn) === TT.conn ? Pn.activated = !0 : TT.phase === hU.O.Resumed ? function(TT) {
-        var UT, mT;
-        In = TT;
-        const WT = dn;
-        if (null === WT || 0 === WT.heldConn || (null === (UT = xg) || void 0 === UT ? void 0 : UT.conn) !== TT || !xg.resume || null === xn) return;
-        console.info(`${VM} the game resumed on conn ${TT}, waiting for its InitialInfo`);
-        const zT = WT.heldConn;
-        WT.heldConn = 0, xg.resume = !1, xn.conn = TT, (null === (mT = Yn) || void 0 === mT ? void 0 : mT.conn) === zT && (Yn = {
-          conn: TT,
-          info: Yn.info
-        }), eU.d.apply({
+      BB.phase === cj.E.Left ? rN = BB.conn : BB.phase === cj.E.Activated && (null === (jB = PN) || void 0 === jB ? void 0 : jB.conn) === BB.conn ? PN.activated = !0 : BB.phase === cj.E.Resumed ? function(BB) {
+        var jB, zB;
+        XN = BB;
+        const QB = HN;
+        if (null === QB || 0 === QB.heldConn || (null === (jB = DI) || void 0 === jB ? void 0 : jB.conn) !== BB || !DI.resume || null === oN) return;
+        console.info(`${ld} the game resumed on conn ${BB}, waiting for its InitialInfo`);
+        const nB = QB.heldConn;
+        QB.heldConn = 0, DI.resume = !1, oN.conn = BB, (null === (zB = qN) || void 0 === zB ? void 0 : zB.conn) === nB && (qN = {
+          conn: BB,
+          info: qN.info
+        }), Mj.c.apply({
           shopInfo: null,
-          _shopVersion: LU.c
+          _shopVersion: rj.d
         })
-      }(TT.conn) : TT.phase === hU.O.Held ? function(TT) {
-        var UT;
-        const mT = dn,
-          WT = null !== (UT = null === mT || void 0 === mT ? void 0 : mT.pendingHold) && void 0 !== UT ? UT : null;
-        if (null !== mT && null !== WT && WT.conn === TT) return mT.pendingHold = null, mT.heldConn = TT, In = 0, console.warn(`${VM} the core holds the game, reconnecting`), void mT.resume.onDropped(WT.token);
-        if (TT === In) {
-          In = 0;
-          const UT = Bg;
-          null === UT || UT.isStopped || (console.info(`${VM} the core held again a resumed game the shell ended before its InitialInfo: closing it again`), ek(UT, "close", TT))
+      }(BB.conn) : BB.phase === cj.E.Held ? function(BB) {
+        var jB;
+        const zB = HN,
+          QB = null !== (jB = null === zB || void 0 === zB ? void 0 : zB.pendingHold) && void 0 !== jB ? jB : null;
+        if (null !== zB && null !== QB && QB.conn === BB) return zB.pendingHold = null, zB.heldConn = BB, XN = 0, console.warn(`${ld} the core holds the game, reconnecting`), void zB.resume.onDropped(QB.token);
+        if (BB === XN) {
+          XN = 0;
+          const jB = GI;
+          null === jB || jB.isStopped || (console.info(`${ld} the core held again a resumed game the shell ended before its InitialInfo: closing it again`), EU(jB, "close", BB))
         }
-      }(TT.conn) : TT.phase === hU.O.Closed && (null === (mT = dn) || void 0 === mT || null === (WT = mT.pendingHold) || void 0 === WT ? void 0 : WT.conn) === TT.conn && (dn.heldConn === TT.conn ? function(TT) {
-        const UT = TT.heldConn,
-          mT = TT.dropCode;
-        fk(TT, "refused"), console.info(`${VM} the core didn't hold the game through its drop: it hadn't started`), queueMicrotask((() => {
-          Zk(UT, !1), Tk(UT, mT, "", !0)
+      }(BB.conn) : BB.phase === cj.E.Closed && (null === (zB = HN) || void 0 === zB || null === (QB = zB.pendingHold) || void 0 === QB ? void 0 : QB.conn) === BB.conn && (HN.heldConn === BB.conn ? function(BB) {
+        const jB = BB.heldConn,
+          zB = BB.dropCode;
+        LU(BB, "refused"), console.info(`${ld} the core didn't hold the game through its drop: it hadn't started`), queueMicrotask((() => {
+          yU(jB, !1), jU(jB, zB, "", !0)
         }))
-      }(dn) : dn.pendingHold = null), TT.phase !== hU.O.Held && TT.phase !== hU.O.Left && TT.phase !== hU.O.Closed || (an.add(TT.conn), TT.conn === tn && (tn = 0));
-      const nT = Object.keys(hU.O).find((UT => hU.O[UT] === TT.phase)),
-        HT = 0 === TT.code ? "" : ` (code ${TT.code})`;
-      console.info(`${VM} conn ${TT.conn}: ${null!==nT&&void 0!==nT?nT:TT.phase}${HT}, ${nn} raw messages so far`), (null === (zT = vn) || void 0 === zT ? void 0 : zT.conn) !== TT.conn || TT.phase !== hU.O.Left && TT.phase !== hU.O.Closed || rH(null), en !== TT.conn || TT.phase !== hU.O.Left && TT.phase !== hU.O.Closed || (en = null, null === vn && null === qn && iz.c.setGame(void 0));
-      for (const jT of [...Gn]) try {
-        jT(TT.conn, TT.phase, TT.code)
-      } catch (kT) {
-        (0, oU.l)(kT, `${VM} a connection listener threw`)
+      }(HN) : HN.pendingHold = null), BB.phase !== cj.E.Held && BB.phase !== cj.E.Left && BB.phase !== cj.E.Closed || (YN.add(BB.conn), BB.conn === FN && (FN = 0));
+      const NB = Object.keys(cj.E).find((jB => cj.E[jB] === BB.phase)),
+        uB = 0 === BB.code ? "" : ` (code ${BB.code})`;
+      console.info(`${ld} conn ${BB.conn}: ${null!==NB&&void 0!==NB?NB:BB.phase}${uB}, ${pN} raw messages so far`), (null === (nB = gN) || void 0 === nB ? void 0 : nB.conn) !== BB.conn || BB.phase !== cj.E.Left && BB.phase !== cj.E.Closed || lu(null), iN !== BB.conn || BB.phase !== cj.E.Left && BB.phase !== cj.E.Closed || (iN = null, null === gN && null === SN && Ln.c.setGame(void 0));
+      for (const aB of [...CN]) try {
+        aB(BB.conn, BB.phase, BB.code)
+      } catch (UB) {
+        (0, vj.p)(UB, `${ld} a connection listener threw`)
       }
     }
 
-    function Ek() {
-      (0, tz.r)(), null === vn && null === qn || (0, Km.f)(), queueMicrotask((() => {
+    function cU() {
+      (0, Dn.s)(), null === gN && null === SN || (0, ez.g)(), queueMicrotask((() => {
         try {
-          jj()
-        } catch (TT) {
-          console.warn(`${VM} stopping before the reload threw`, TT)
-        }(0, ym.flushCrashReports)(RT.c).then(RT.k, RT.k)
+          aa()
+        } catch (BB) {
+          console.warn(`${ld} stopping before the reload threw`, BB)
+        }(0, Dz.flushCrashReports)(OB.d).then(OB.k, OB.k)
       }))
     }
 
-    function hk() {
-      const TT = Bg;
-      null === TT || TT.isStopped || null === xg || gn || !TT.hasPendingCommands() || Ak(TT, !1, "budget")
+    function bU() {
+      const BB = GI;
+      null === BB || BB.isStopped || null === DI || aN || !BB.hasPendingCommands() || RU(BB, !1, "budget")
     }
 
-    function Dk(TT) {
-      var UT;
-      const mT = vn;
-      TT.persisted || null === mT || (null === (UT = xg) || void 0 === UT ? void 0 : UT.conn) !== mT.conn || xg.left || mT.leave()
+    function vU(BB) {
+      var jB;
+      const zB = gN;
+      BB.persisted || null === zB || (null === (jB = DI) || void 0 === jB ? void 0 : jB.conn) !== zB.conn || DI.left || zB.leave()
     }
 
-    function Ak(TT, UT, WT) {
-      let zT = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const MT = gn;
-      gn = !0;
+    function RU(BB, jB, QB) {
+      let nB = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const dB = aN;
+      aN = !0;
       try {
-        const MT = TT.rings.net.cursor >= DM;
-        MT && "all" !== WT && !document.hidden && Lj("backlog", `a shown tab's net-in is ${TT.rings.net.cursor} bytes behind: one frame reads it all`);
-        return function(TT, UT, WT, zT) {
-          var MT, gT, nT, HT;
-          if (YH) return !1;
-          if (qj(TT, Tj), YH || TT.isStopped) return !1;
-          nj() && og("modelsIn");
-          ck(), Tn = performance.now(), Hn = null, kn = !1, (0, aT.Q)(), null === (MT = Fg) || void 0 === MT || MT.beforeFrame(), dW(Tn, TT), (0, aT.K)(Tn, Uj), Mn = !0;
-          const kT = UT && gj();
-          let jT;
+        const dB = BB.rings.net.cursor >= BI;
+        dB && "all" !== QB && !document.hidden && ra("backlog", `a shown tab's net-in is ${BB.rings.net.cursor} bytes behind: one frame reads it all`);
+        return function(BB, jB, QB, nB) {
+          var dB, IB, NB, uB;
+          if (iu) return !1;
+          if (La(BB, Ba), iu || BB.isStopped) return !1;
+          Na() && jN("modelsIn");
+          kU(), nN = performance.now(), rN = null, sN = !1, (0, DB.K)(), null === (dB = WI) || void 0 === dB || dB.beforeFrame(), qQ(nN, BB), (0, DB.F)(nN, ja), UN = !0;
+          const UB = jB && Ia();
+          let aB;
           try {
-            jT = TT.frame(Tn, kT, WT)
+            aB = BB.frame(nN, UB, QB)
           } finally {
-            Mn = !1
+            UN = !1
           }
-          if (!jT) return !1;
-          mH.observe(null !== (gT = null === (nT = TT.lastHeader) || void 0 === nT ? void 0 : nT.chunksCancelled) && void 0 !== gT ? gT : 0);
-          const lT = TT.lastFrameKind,
-            LT = (0, sU.c)(lT);
-          (function(TT) {
-            null !== mM && mM.afterFrame(performance.now(), TT)
-          })(LT), null === (HT = gH) || void 0 === HT || HT.frame(TT, Tn, lT), UT && (vH = LT);
-          LT && (0, XU.d)(Tn);
-          if (null !== MH) try {
-            MH.frameRan(TT, Tn, performance.now(), lT)
-          } catch (ZT) {
-            Gk(ZT)
+          if (!aB) return !1;
+          Qu.observe(null !== (IB = null === (NB = BB.lastHeader) || void 0 === NB ? void 0 : NB.chunksCancelled) && void 0 !== IB ? IB : 0);
+          const pB = BB.lastFrameKind,
+            rB = (0, Xj.e)(pB);
+          (function(BB) {
+            null !== nd && nd.afterFrame(performance.now(), BB)
+          })(rB), null === (uB = Nu) || void 0 === uB || uB.frame(BB, nN, pB), jB && (Gu = rB);
+          rB && (0, Yj.e)(nN);
+          if (null !== Iu) try {
+            Iu.frameRan(BB, nN, performance.now(), pB)
+          } catch (mB) {
+            KU(mB)
           }
-          "drawn" === lT && Mj() && function() {
-            for (const TT of [...dz]) TT()
+          "drawn" === pB && da() && function() {
+            for (const BB of [...fn]) BB()
           }();
-          TT.forEachNetOut(Hj);
-          const pT = xg;
-          null !== Hn && (null === pT || void 0 === pT ? void 0 : pT.conn) === Hn && kj(pT, rT.j);
-          zj(TT),
-            function(TT) {
-              const UT = 0 !== (TT.headerWord(DU.F.LoadSteps) & DU.R.JoinPreload);
-              UT !== On && (On = UT, (0, ym.setCrashAdPreload)(UT), (0, Pm.C)())
-            }(TT), UT && function(TT) {
-              var UT, WT, zT;
-              if (null === vn || !gj()) return;
-              const MT = TT.headerWord(DU.F.LoadSteps);
-              null === ZH || cH === vn && !ZH.frame(Tn, 0 !== (MT & DU.V.TerrainDrawn)) || (ZH = null);
-              if (0 === (MT & DU.R.PlayerBound)) return;
-              const gT = TT.lastHeader,
-                nT = !Nn || 0 === (null === gT || void 0 === gT ? void 0 : gT.renderPending);
-              !jH && nT && (jH = !0, performance.mark(EM));
-              if (cH === vn) return;
-              const HT = null !== (UT = null === gT || void 0 === gT ? void 0 : gT.firstView) && void 0 !== UT ? UT : hU.kb.NotYet;
-              if (Nn && HT === hU.kb.NotYet) return;
-              if (kH && (!0 !== (null === (WT = (0, yT.i)()) || void 0 === WT ? void 0 : WT.isSessionLive) || !nT)) return;
-              cH = vn;
-              const kT = vn;
+          BB.forEachNetOut(ua);
+          const sB = DI;
+          null !== rN && (null === sB || void 0 === sB ? void 0 : sB.conn) === rN && Ua(sB, eB.h);
+          na(BB),
+            function(BB) {
+              const jB = 0 !== (BB.headerWord(bj.C.LoadSteps) & bj.K.JoinPreload);
+              jB !== EN && (EN = jB, (0, Dz.setCrashAdPreload)(jB), (0, Zz.K)())
+            }(BB), jB && function(BB) {
+              var jB, QB, nB;
+              if (null === gN || !Ia()) return;
+              const dB = BB.headerWord(bj.C.LoadSteps);
+              null === yu || ku === gN && !yu.frame(nN, 0 !== (dB & bj.M.TerrainDrawn)) || (yu = null);
+              if (0 === (dB & bj.K.PlayerBound)) return;
+              const IB = BB.lastHeader,
+                NB = !cN || 0 === (null === IB || void 0 === IB ? void 0 : IB.renderPending);
+              !pu && NB && (pu = !0, performance.mark(Rd));
+              if (ku === gN) return;
+              const uB = null !== (jB = null === IB || void 0 === IB ? void 0 : IB.firstView) && void 0 !== jB ? jB : cj.X.NotYet;
+              if (cN && uB === cj.X.NotYet) return;
+              if (au && (!0 !== (null === (QB = (0, FB.g)()) || void 0 === QB ? void 0 : QB.isSessionLive) || !NB)) return;
+              ku = gN;
+              const UB = gN;
               if (setTimeout((() => {
-                  vn === kT && (0, BT.e)()
-                }), 0), null === (zT = Eg) || void 0 === zT || zT.playable(), function() {
-                  clearTimeout(Jg), Jg = setTimeout((() => {
-                    Sk() && Oj((TT => {
+                  gN === UB && (0, JB.i)()
+                }), 0), null === (nB = RI) || void 0 === nB || nB.playable(), function() {
+                  clearTimeout(HI), HI = setTimeout((() => {
+                    xU() && Sa((BB => {
                       let {
-                        prefetchWorldgenWorker: UT
-                      } = TT;
-                      UT()
+                        prefetchWorldgenWorker: jB
+                      } = BB;
+                      jB()
                     }))
-                  }), Mg)
-                }(), kH) return;
-              kH = !0, performance.mark(NM), (0, hz.r)("render") && Promise.all([mT.e(78), mT.e(49)]).then((() => mT(4771))).then((TT => {
+                  }), UI)
+                }(), au) return;
+              au = !0, performance.mark(vd), (0, vn.q)("render") && Promise.all([zB.e(78), zB.e(49)]).then((() => zB(4773))).then((BB => {
                 let {
-                  renderDebugPlayable: UT
-                } = TT;
-                UT()
-              }), (TT => {
-                console.warn("The render debug topic didn't load", TT)
+                  renderDebugPlayable: jB
+                } = BB;
+                jB()
+              }), (BB => {
+                console.warn("The render debug topic didn't load", BB)
               }));
-              const jT = Math.round(performance.now()),
-                lT = TT.readViewQueuedPrograms();
-              null !== lT && (0, BT.i)("wasm_view_links", jT, (0, BU.Ab)(lT));
-              const LT = null === BH || null === LH ? 0 : Math.max(0, LH - BH),
-                pT = null === BH ? 0 : Math.max(0, jT - BH),
-                ZT = Nn ? TT.readFirstViewWait(LT, pT) : null;
-              null !== ZT && (0, BT.h)(ZT);
-              if (Nn && HT !== hU.kb.Drawn) {
-                const UT = HT === hU.kb.HeldBackstop ? "held_draws" : "long",
+              const aB = Math.round(performance.now()),
+                pB = BB.readViewQueuedPrograms();
+              null !== pB && (0, JB.r)("wasm_view_links", aB, (0, Jj.hb)(pB));
+              const rB = null === mu || null === su ? 0 : Math.max(0, su - mu),
+                sB = null === mu ? 0 : Math.max(0, aB - mu),
+                mB = cN ? BB.readFirstViewWait(rB, sB) : null;
+              null !== mB && (0, JB.n)(mB);
+              if (cN && uB !== cj.X.Drawn) {
+                const jB = uB === cj.X.HeldBackstop ? "held_draws" : "long",
                   {
-                    cause: mT
-                  } = mj(TT);
-                if (console.warn(`${VM} playable at ${jT} ms on the first view's ${UT} backstop, ${mT}: it wasn't drawn whole in time`), (0, BT.i)("wasm_view_backstop", jT, `${UT}:${mT}`), "long" === UT) {
-                  var cT, vT;
-                  const UT = null !== (cT = null === (vT = xn) || void 0 === vT ? void 0 : vT.game) && void 0 !== cT ? cT : "";
-                  ZH = new Sm.d((() => {
+                    cause: zB
+                  } = za(BB);
+                if (console.warn(`${ld} playable at ${aB} ms on the first view's ${jB} backstop, ${zB}: it wasn't drawn whole in time`), (0, JB.r)("wasm_view_backstop", aB, `${jB}:${zB}`), "long" === jB) {
+                  var yB, kB;
+                  const jB = null !== (yB = null === (kB = oN) || void 0 === kB ? void 0 : kB.game) && void 0 !== yB ? yB : "";
+                  yu = new lz.b((() => {
                     const {
-                      cause: mT,
-                      census: WT
-                    } = mj(TT);
-                    (0, ym.reportFirstViewNoTerrain)(UT, mT, WT, qg), (0, iU.v)("noTerrain")
+                      cause: zB,
+                      census: QB
+                    } = za(BB);
+                    (0, Dz.reportFirstViewNoTerrain)(jB, zB, QB, MI), (0, gj.p)("noTerrain")
                   }))
                 }
-              } else console.info(`${VM} playable at ${jT} ms${Nn?"":" (no renderer)"}`);
-              setTimeout(Rn, 0), (0, JU.f)().catch((TT => {
-                console.error(`${VM} item sprites didn't load, so item particles show the missing texture`, TT)
-              })), lz.b.warm()
-            }(TT);
-          (0, lm.H)(TT, {
-            worldgen: wg,
-            mesh: ag
+              } else console.info(`${ld} playable at ${aB} ms${cN?"":" (no renderer)"}`);
+              setTimeout(Bu, 0), (0, ij.f)().catch((BB => {
+                console.error(`${ld} item sprites didn't load, so item particles show the missing texture`, BB)
+              })), an.d.warm()
+            }(BB);
+          (0, pz.C)(BB, {
+            worldgen: YI,
+            mesh: hI
           }),
-          function(TT) {
-            TT.forEachEvent(tW);
-            for (const UT of wW) try {
-              (0, OW.c)(UT)
-            } catch (ZT) {
-              if ((0, oU.h)(ZT)) {
-                TT.crashOn(lm.k, ZT);
+          function(BB) {
+            BB.forEachEvent(oQ);
+            for (const jB of fQ) try {
+              (0, tQ.d)(jB)
+            } catch (mB) {
+              if ((0, vj.i)(mB)) {
+                BB.crashOn(pz.l, mB);
                 break
               }
-              console.error(`${YW} an input action listener threw`, ZT)
+              console.error(`${MQ} an input action listener threw`, mB)
             }
-            wW.length = 0
-          }(TT), zT && (0, QU.e)();
-          return !TT.isStopped
-        }(TT, UT, "all" === WT || MT, zT)
+            fQ.length = 0
+          }(BB), nB && (0, hj.e)();
+          return !BB.isStopped
+        }(BB, jB, "all" === QB || dB, nB)
       } finally {
-        gn = MT, MT || (Un = performance.now())
+        aN = dB, dB || (dN = performance.now())
       }
     }
 
-    function Rk(TT) {
-      console.error(`${VM} a frame-start listener threw`, TT)
+    function OU(BB) {
+      console.error(`${ld} a frame-start listener threw`, BB)
     }
 
-    function Tj() {
-      var TT, UT, mT, WT;
-      null === (TT = Vg) || void 0 === TT || TT.drain(gg, ng), null === (UT = Sg) || void 0 === UT || UT.drain(gg), null === (mT = Gg) || void 0 === mT || mT.drain(performance.now()), An(gg), null === (WT = rg) || void 0 === WT || WT.drain()
+    function Ba() {
+      var BB, jB, zB, QB;
+      null === (BB = lI) || void 0 === BB || BB.drain(aI, pI), null === (jB = cI) || void 0 === jB || jB.drain(aI), null === (zB = bI) || void 0 === zB || zB.drain(performance.now()), ON(aI), null === (QB = KI) || void 0 === QB || QB.drain()
     }
 
-    function Uj(TT) {
-      console.error(`${VM} a before-frame listener threw`, TT)
+    function ja(BB) {
+      console.error(`${ld} a before-frame listener threw`, BB)
     }
 
-    function mj(TT) {
-      const UT = (0, yT.i)(),
-        mT = (0, yT.v)(),
-        WT = null === UT || null === mT ? null : mT.readDrawCensus(UT.api);
+    function za(BB) {
+      const jB = (0, FB.g)(),
+        zB = (0, FB.q)(),
+        QB = null === jB || null === zB ? null : zB.readDrawCensus(jB.api);
       return {
-        cause: (0, Sm.i)(TT.headerWord(DU.F.LoadSteps), WT),
-        census: WT
+        cause: (0, lz.i)(BB.headerWord(bj.C.LoadSteps), QB),
+        census: QB
       }
     }
-    const Wj = {
+    const Qa = {
       ChunkRequested: "wasm_chunk_requested",
       ChunkStored: "wasm_chunk_stored",
       MeshLanded: "wasm_mesh_landed",
@@ -7985,517 +8127,517 @@ export const modules = {
       TerrainDrawn: "wasm_terrain_drawn"
     };
 
-    function zj(TT) {
-      var UT;
-      if (kH) return;
-      if (null === LH && gj() && (LH = performance.now()), null === vn || 0 === (TT.headerWord(DU.F.LoadSteps) & DU.R.PlayerBound) ? BH = null : BH ??= performance.now(), null === qn && null === vn) return;
-      null === LH || pH || (pH = !0, (0, BT.i)("wasm_startup_loaded", LH));
-      let mT = 0;
-      null !== vn ? mT = -1 : !0 === (null === (UT = Pn) || void 0 === UT ? void 0 : UT.activated) && (mT = ~DU.V.TerrainDrawn);
-      const WT = TT.headerWord(DU.F.LoadSteps) & mT & ~lH;
-      if (0 === WT) return;
-      lH |= WT;
-      const zT = performance.now();
-      for (const [MT, gT] of Object.entries(Wj)) 0 !== (WT & DU.V[MT]) && (0, BT.i)(gT, zT)
+    function na(BB) {
+      var jB;
+      if (au) return;
+      if (null === su && Ia() && (su = performance.now()), null === gN || 0 === (BB.headerWord(bj.C.LoadSteps) & bj.K.PlayerBound) ? mu = null : mu ??= performance.now(), null === SN && null === gN) return;
+      null === su || Ju || (Ju = !0, (0, JB.r)("wasm_startup_loaded", su));
+      let zB = 0;
+      null !== gN ? zB = -1 : !0 === (null === (jB = PN) || void 0 === jB ? void 0 : jB.activated) && (zB = ~bj.M.TerrainDrawn);
+      const QB = BB.headerWord(bj.C.LoadSteps) & zB & ~ru;
+      if (0 === QB) return;
+      ru |= QB;
+      const nB = performance.now();
+      for (const [dB, IB] of Object.entries(Qa)) 0 !== (QB & bj.M[dB]) && (0, JB.r)(IB, nB)
     }
 
-    function Mj() {
-      return Nn && gj()
+    function da() {
+      return cN && Ia()
     }
 
-    function gj() {
-      return Ng && nj()
+    function Ia() {
+      return vI && Na()
     }
 
-    function nj() {
-      return null === Vg || Vg.startupDone
+    function Na() {
+      return null === lI || lI.startupDone
     }
 
-    function Hj(TT, UT) {
-      const mT = xg;
-      (null === mT || void 0 === mT ? void 0 : mT.conn) === TT ? kj(mT, UT) : pn++
+    function ua(BB, jB) {
+      const zB = DI;
+      (null === zB || void 0 === zB ? void 0 : zB.conn) === BB ? Ua(zB, jB) : yN++
     }
 
-    function kj(TT, UT) {
+    function Ua(BB, jB) {
       const {
-        ws: mT
-      } = TT;
-      return mT.readyState === WebSocket.OPEN ? (mT.send(UT), !0) : mT.readyState === WebSocket.CONNECTING && TT.pendingBytes + UT.byteLength <= Ug ? (TT.pending.push(UT.slice()), TT.pendingBytes += UT.byteLength, !0) : (pn++, !1)
+        ws: zB
+      } = BB;
+      return zB.readyState === WebSocket.OPEN ? (zB.send(jB), !0) : zB.readyState === WebSocket.CONNECTING && BB.pendingBytes + jB.byteLength <= dI ? (BB.pending.push(jB.slice()), BB.pendingBytes += jB.byteLength, !0) : (yN++, !1)
     }
 
-    function jj() {
-      var TT, UT, mT, WT, zT, MT, gT, nT, HT, kT, jT, lT, LT, pT, BT, ZT, cT;
-      YH = !0, fH.stop(), (0, oz.endLookDebugTake)(), mM = null, vk(), (0, aT.N)().unlockPointer(), (0, aT.L)(null), null === (TT = Pg) || void 0 === TT || TT(), Pg = null, null === (UT = (0, yT.v)()) || void 0 === UT || UT.followCursorAim(null), (0, QU.B)(), (0, yT.f)(), fg.stop(), null === (mT = nH) || void 0 === mT || mT(), nH = null, null === (WT = HH) || void 0 === WT || WT(), HH = null, null === (zT = MH) || void 0 === zT || zT.stop(), MH = null, (0, Nm.o)(null), null === (MT = dg) || void 0 === MT || MT(), dg = null, null === (gT = wg) || void 0 === gT || gT.stop(), wg = null, null === (nT = ag) || void 0 === nT || nT.stop(), ag = null, null !== (HT = cg) && void 0 !== HT && null !== (kT = HT.textures) && void 0 !== kT && kT.assets && (0, vz.m)(null), null === (jT = cg) || void 0 === jT || jT.stop(), cg = null, vg = null;
-      const vT = yg;
-      yg = null, vT && (vT.stop(), fj(vT)), null === (lT = Sg) || void 0 === lT || lT.dispose(), Sg = null, null === (LT = Gg) || void 0 === LT || LT.dispose(), Gg = null, Vg = null, null === (pT = Cg) || void 0 === pT || pT(), Cg = null, null === (BT = sg) || void 0 === BT || BT(), sg = null, null !== zn && (clearTimeout(zn), zn = null), null === (ZT = Fg) || void 0 === ZT || ZT.stop(), Fg = null, VH(), iz.c.release(), jk();
-      const fT = rg;
-      rg = null;
+    function aa() {
+      var BB, jB, zB, QB, nB, dB, IB, NB, uB, UB, aB, pB, rB, sB, JB, mB, yB;
+      iu = !0, Lu.stop(), (0, On.endLookDebugTake)(), nd = null, GU(), (0, DB.I)().unlockPointer(), (0, DB.H)(null), null === (BB = eI) || void 0 === BB || BB(), eI = null, null === (jB = (0, FB.q)()) || void 0 === jB || jB.followCursorAim(null), (0, hj.G)(), (0, FB.f)(), SI.stop(), null === (zB = uu) || void 0 === zB || zB(), uu = null, null === (QB = Uu) || void 0 === QB || QB(), Uu = null, null === (nB = Iu) || void 0 === nB || nB.stop(), Iu = null, (0, xz.p)(null), null === (dB = FI) || void 0 === dB || dB(), FI = null, null === (IB = YI) || void 0 === IB || IB.stop(), YI = null, null === (NB = hI) || void 0 === NB || NB.stop(), hI = null, null !== (uB = gI) && void 0 !== uB && null !== (UB = uB.textures) && void 0 !== UB && UB.assets && (0, yn.i)(null), null === (aB = gI) || void 0 === aB || aB.stop(), gI = null, tI = null;
+      const kB = XI;
+      XI = null, kB && (kB.stop(), Ga(kB)), null === (pB = cI) || void 0 === pB || pB.dispose(), cI = null, null === (rB = bI) || void 0 === rB || rB.dispose(), bI = null, lI = null, null === (sB = xI) || void 0 === sB || sB(), xI = null, null === (JB = PI) || void 0 === JB || JB(), PI = null, null !== uN && (clearTimeout(uN), uN = null), null === (mB = WI) || void 0 === mB || mB.stop(), WI = null, Pu(), Ln.c.release(), pU();
+      const GB = KI;
+      KI = null;
       try {
-        null === fT || void 0 === fT || fT.dispose()
-      } catch (qT) {
-        console.warn(`${VM} the sky's images didn't release`, qT)
-      }(0, Lz.h)(null), null === (cT = Lg) || void 0 === cT || cT.pagePreviews().endSession(null === (0, ZU.s)())
+        null === GB || void 0 === GB || GB.dispose()
+      } catch (LB) {
+        console.warn(`${ld} the sky's images didn't release`, LB)
+      }(0, pn.f)(null), null === (yB = yI) || void 0 === yB || yB.pagePreviews().endSession(null === (0, mj.q)())
     }
 
-    function lj(TT, UT) {
-      var mT, WT;
-      const zT = null !== (mT = null === (WT = yg) || void 0 === WT ? void 0 : WT.details()) && void 0 !== mT ? mT : {},
-        MT = TT.site === CM || TT.site === rM || TT.site === ym.RENDER_RELOAD_SITE || TT.site === KM ? TT.error instanceof WebAssembly.RuntimeError || TT.error instanceof Mm.b : !(0, km.p)(TT.error) && (0, lm.C)(TT);
-      MT && TT.error instanceof Error && (0, ZU.R)(TT.error);
-      const gT = MT || TT.site === lm.s ? (0, ym.readTrap)(TT.error) : null,
-        nT = null !== gT && (0, RU.h)(gT.kind, gT.refusedBytes) ? gT.refusedBytes : 0,
-        HT = (0, dm.n)(),
-        kT = null === Xg ? (0, Hz.x)(function() {
+    function pa(BB, jB) {
+      var zB, QB;
+      const nB = null !== (zB = null === (QB = XI) || void 0 === QB ? void 0 : QB.details()) && void 0 !== zB ? zB : {},
+        dB = BB.site === xd || BB.site === Kd || BB.site === Dz.RENDER_RELOAD_SITE || BB.site === Cd ? BB.error instanceof WebAssembly.RuntimeError || BB.error instanceof dz.c : !(0, Uz.u)(BB.error) && (0, pz.A)(BB);
+      dB && BB.error instanceof Error && (0, mj.L)(BB.error);
+      const IB = dB || BB.site === pz.r ? (0, Dz.readTrap)(BB.error) : null,
+        NB = null !== IB && (0, Oj.h)(IB.kind, IB.refusedBytes) ? IB.refusedBytes : 0,
+        uB = (0, qz.m)(),
+        UB = null === ZI ? (0, Nn.t)(function() {
           try {
-            return (0, ZU.u)().buffer.byteLength
+            return (0, mj.t)().buffer.byteLength
           } catch {
             return 0
           }
-        }(), nT, HT) : Xg.ceilingMayRefuse(nT, HT),
-        jT = nT > 0 && !kT && wk();
-      var lT;
-      if (jT && ((0, bU.z)("oom"), (0, bU.y)("decline"), eH = !0), jj(), (0, tz.d)()) return console.warn(`${VM} the session stopped at ${TT.site} as the page reloads`, TT.error), void((0, km.p)(TT.error) || (null === (lT = TT.header) || void 0 === lT ? void 0 : lT.lastError) === hU.S.CoreBusy || (0, ym.reportStoppedCore)(TT, UT, gT, {
-        memoryDetails: zT,
-        declined: jT
+        }(), NB, uB) : ZI.ceilingMayRefuse(NB, uB),
+        aB = NB > 0 && !UB && HU();
+      var pB;
+      if (aB && ((0, tj.A)("oom"), (0, tj.x)("decline"), Eu = !0), aa(), (0, Dn.d)()) return console.warn(`${ld} the session stopped at ${BB.site} as the page reloads`, BB.error), void((0, Uz.u)(BB.error) || (null === (pB = BB.header) || void 0 === pB ? void 0 : pB.lastError) === cj.J.CoreBusy || (0, Dz.reportStoppedCore)(BB, jB, IB, {
+        memoryDetails: nB,
+        declined: aB
       }));
-      (0, ym.showCrash)(TT, UT, gT, {
-        memoryDetails: zT,
-        declined: jT
+      (0, Dz.showCrash)(BB, jB, IB, {
+        memoryDetails: nB,
+        declined: aB
       })
     }
 
-    function Lj(TT, UT) {
-      const mT = performance.now();
-      return !(mT - jn[TT] < mg) && (jn[TT] = mT, console.warn(`${VM} ${UT}`), !0)
+    function ra(BB, jB) {
+      const zB = performance.now();
+      return !(zB - JN[BB] < II) && (JN[BB] = zB, console.warn(`${ld} ${jB}`), !0)
     }
 
-    function pj(TT) {
+    function sa(BB) {
       const {
-        input: UT,
-        net: mT,
-        worker: WT
-      } = TT.rings, zT = TT.optionsDropped, MT = UT.dropped + zT + mT.dropped + WT.dropped + pn;
-      MT !== Ln && Lj("dropped", `${MT} records dropped so far (input ${UT.dropped}, options ${zT}, net ${mT.dropped}, worker ${WT.dropped}, net-out ${pn})`) && (Ln = MT)
+        input: jB,
+        net: zB,
+        worker: QB
+      } = BB.rings, nB = BB.optionsDropped, dB = jB.dropped + nB + zB.dropped + QB.dropped + yN;
+      dB !== mN && ra("dropped", `${dB} records dropped so far (input ${jB.dropped}, options ${nB}, net ${zB.dropped}, worker ${QB.dropped}, net-out ${yN})`) && (mN = dB)
     }
 
-    function Bj() {
-      var TT, UT;
-      const mT = (0, Fm.b)();
-      if (null === mT) return null;
-      const WT = (0, Cm.n)(mT);
+    function Ja() {
+      var BB, jB;
+      const zB = (0, Xz.b)();
+      if (null === zB) return null;
+      const QB = (0, Pz.o)(zB);
       return {
-        ...WT,
-        horizontal: Math.min(WT.horizontal, null !== (TT = null === (UT = yg) || void 0 === UT ? void 0 : UT.shedDistanceInUse()) && void 0 !== TT ? TT : 1 / 0)
+        ...QB,
+        horizontal: Math.min(QB.horizontal, null !== (BB = null === (jB = XI) || void 0 === jB ? void 0 : jB.shedDistanceInUse()) && void 0 !== BB ? BB : 1 / 0)
       }
     }
 
-    function Zj(TT) {
-      var UT, mT;
+    function ma(BB) {
+      var jB, zB;
       return {
-        samples: Nn ? WH : null,
-        sunShadows: TT,
-        renderDistance: null !== (UT = null === (mT = Bj()) || void 0 === mT ? void 0 : mT.horizontal) && void 0 !== UT ? UT : null
+        samples: cN ? nu : null,
+        sunShadows: BB,
+        renderDistance: null !== (jB = null === (zB = Ja()) || void 0 === zB ? void 0 : zB.horizontal) && void 0 !== jB ? jB : null
       }
     }
 
-    function cj(TT) {
-      bn = TT, (0, Pm.C)()
+    function ya(BB) {
+      MN = BB, (0, Zz.K)()
     }
 
-    function vj() {
-      var TT, UT, mT;
-      const WT = Bj();
+    function ka() {
+      var BB, jB, zB;
+      const QB = Ja();
       return {
-        ...null === (TT = yg) || void 0 === TT ? void 0 : TT.pageKillSnapshot(),
-        renderDistance: null !== (UT = null === WT || void 0 === WT ? void 0 : WT.horizontal) && void 0 !== UT ? UT : null,
-        renderDistanceVertical: null !== (mT = null === WT || void 0 === WT ? void 0 : WT.vertical) && void 0 !== mT ? mT : null,
-        chunkCap: Ig,
-        budgetBasis: Qg,
-        renderBackend: (0, tz.F)(),
-        adPreload: On,
-        ...(0, Vm.b)(bn)
+        ...null === (BB = XI) || void 0 === BB ? void 0 : BB.pageKillSnapshot(),
+        renderDistance: null !== (jB = null === QB || void 0 === QB ? void 0 : QB.horizontal) && void 0 !== jB ? jB : null,
+        renderDistanceVertical: null !== (zB = null === QB || void 0 === QB ? void 0 : QB.vertical) && void 0 !== zB ? zB : null,
+        chunkCap: AI,
+        budgetBasis: TI,
+        renderBackend: (0, Dn.D)(),
+        adPreload: EN,
+        ...(0, Az.e)(MN)
       }
     }
 
-    function fj(TT) {
-      var UT;
-      console.info(`${VM} wasm memory at the session's end`, TT.details());
+    function Ga(BB) {
+      var jB;
+      console.info(`${ld} wasm memory at the session's end`, BB.details());
       const {
-        wasmMainMiB: mT,
-        wasmWorkersMiB: WT,
-        peakStoredChunks: zT
-      } = TT.pageKillSnapshot(), MT = navigator.deviceMemory;
-      (0, Lm.logClientMeasurement)("wasm_memory_end", {
-        wasmMainMiB: mT,
-        wasmWorkersMiB: WT,
-        peakStoredChunks: zT
+        wasmMainMiB: zB,
+        wasmWorkersMiB: QB,
+        peakStoredChunks: nB
+      } = BB.pageKillSnapshot(), dB = navigator.deviceMemory;
+      (0, rz.logClientMeasurement)("wasm_memory_end", {
+        wasmMainMiB: zB,
+        wasmWorkersMiB: QB,
+        peakStoredChunks: nB
       }, {
         client: "wasm",
-        renderBackend: null !== (UT = (0, tz.F)()) && void 0 !== UT ? UT : "none",
-        os: (0, um.getOperatingSystem)(),
-        deviceMemory: String(null !== MT && void 0 !== MT ? MT : "unreported")
+        renderBackend: null !== (jB = (0, Dn.D)()) && void 0 !== jB ? jB : "none",
+        os: (0, Tz.getOperatingSystem)(),
+        deviceMemory: String(null !== dB && void 0 !== dB ? dB : "unreported")
       })
     }
 
-    function qj(TT, UT) {
-      if (!TT.isStopped) try {
-        UT()
-      } catch (mT) {
-        TT.crash(lm.u, mT)
+    function La(BB, jB) {
+      if (!BB.isStopped) try {
+        jB()
+      } catch (zB) {
+        BB.crash(pz.t, zB)
       }
     }
 
-    function ij() {
-      return tg ??= mT.e(72).then((() => mT(51163))).catch((TT => {
-        throw tg = null, TT
-      })), tg
+    function ga() {
+      return VI ??= zB.e(72).then((() => zB(51188))).catch((BB => {
+        throw VI = null, BB
+      })), VI
     }
-    async function bj() {
+    async function ta() {
       const {
-        createWorldgenWorker: TT,
-        worldgenWorkerReady: UT
-      } = await ij();
-      return await UT(), TT
+        createWorldgenWorker: BB,
+        worldgenWorkerReady: jB
+      } = await ga();
+      return await jB(), BB
     }
 
-    function Oj(TT) {
-      var UT;
-      null === (UT = tg) || void 0 === UT || UT.then(TT, (() => {}))
+    function Sa(BB) {
+      var jB;
+      null === (jB = VI) || void 0 === jB || jB.then(BB, (() => {}))
     }
 
-    function ej() {
-      return performance.now() - Math.max(Un, mn) >= Wg
+    function Ma() {
+      return performance.now() - Math.max(dN, IN) >= NI
     }
 
-    function Yj(TT) {
-      const UT = document.hidden || Wn ? "all" : "budget";
-      Wn = !0;
-      const mT = Ak(TT, !1, UT);
-      var WT;
-      mT && (pj(TT), null === (WT = yg) || void 0 === WT || WT.afterFrame());
-      return mT
+    function Ea(BB) {
+      const jB = document.hidden || NN ? "all" : "budget";
+      NN = !0;
+      const zB = RU(BB, !1, jB);
+      var QB;
+      zB && (sa(BB), null === (QB = XI) || void 0 === QB || QB.afterFrame());
+      return zB
     }
 
-    function Jj(TT) {
-      TT.isStopped || 0 === TT.rings.net.cursor || ej() && !Yj(TT) || TT.rings.net.cursor > 0 && performance.now() - mn >= Wg / 2 && function(TT) {
-        zn ??= setTimeout((() => {
-          zn = null, Jj(TT)
-        }), Wg)
-      }(TT)
+    function ia(BB) {
+      BB.isStopped || 0 === BB.rings.net.cursor || Ma() && !Ea(BB) || BB.rings.net.cursor > 0 && performance.now() - IN >= NI / 2 && function(BB) {
+        uN ??= setTimeout((() => {
+          uN = null, ia(BB)
+        }), NI)
+      }(BB)
     }
 
-    function xj(TT, UT) {
-      return async function(TT, UT, mT) {
+    function qa(BB, jB) {
+      return async function(BB, jB, zB) {
         let {
-          stop: WT,
-          stillWanted: zT,
-          beforeReload: MT
-        } = mT;
-        const gT = await (0, GW.l)(TT, {
-          stillWanted: zT,
+          stop: QB,
+          stillWanted: nB,
+          beforeReload: dB
+        } = zB;
+        const IB = await (0, wQ.j)(BB, {
+          stillWanted: nB,
           beforeReload: async () => {
-            WT(), await Promise.all([(0, ym.flushCrashReports)(RT.c), null === MT || void 0 === MT ? void 0 : MT()])
+            QB(), await Promise.all([(0, Dz.flushCrashReports)(OB.d), null === dB || void 0 === dB ? void 0 : dB()])
           },
-          reload: RT.k
+          reload: OB.k
         });
-        return gT || UT(), gT
-      }(TT, UT, {
+        return IB || jB(), IB
+      }(BB, jB, {
         ...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        stop: jj
+        stop: aa
       })
     }
-    let dj = !1;
+    let fa = !1;
 
-    function wj() {
-      return dj = !0, async function(TT, UT, WT) {
+    function oa() {
+      return fa = !0, async function(BB, jB, QB) {
         const {
-          gamePackSource: zT
-        } = await mT.e(276).then((() => mT(41194)));
-        await uk.packStep(TT, ((mT, WT) => mT.packForGame(TT, zT(UT), WT)), WT)
+          gamePackSource: nB
+        } = await zB.e(276).then((() => zB(41150)));
+        await WU.packStep(BB, ((zB, QB) => zB.packForGame(BB, nB(jB), QB)), QB)
       }(...arguments)
     }
 
-    function tj(TT) {
-      ! function(TT, UT) {
-        TT((TT => {
-          null === TT || void 0 === TT || TT.subscribe((TT => {
+    function Ha(BB) {
+      ! function(BB, jB) {
+        BB((BB => {
+          null === BB || void 0 === BB || BB.subscribe((BB => {
             let {
-              pack: mT,
-              gameSource: WT
-            } = TT;
-            UT(null === WT || null === mT ? null : {
-              pack: mT,
-              source: "" === WT ? null : WT
+              pack: zB,
+              gameSource: QB
+            } = BB;
+            jB(null === QB || null === zB ? null : {
+              pack: zB,
+              source: "" === QB ? null : QB
             })
           }))
         }))
-      }(Fk, TT)
+      }(AU, BB)
     }
-    let aj = !1,
-      yj = null,
-      Xj = !1,
-      Ij = !1;
+    let Da = !1,
+      Fa = null,
+      Ya = !1,
+      Va = !1;
 
-    function Qj() {
-      var TT;
-      aj || (aj = !0, aH("play", oT), (0, LT.k)(new Ej), nT.gameBridge.attach(uT), Cj().catch((() => {})), (0, yT.w)((TT => {
-        kU(TT.setTextHost)
-      })), TT = Pj, Cn.add(TT), function(TT) {
-        for (const UT of hg) TT(UT);
-        Dg.add(TT)
-      }((TT => {
-        Fj(sj[TT])
+    function ha() {
+      var BB;
+      Da || (Da = !0, Fu("play", vB), (0, rB.n)(new Ca), NB.gameBridge.attach(PB), Wa().catch((() => {})), (0, FB.r)((BB => {
+        Uj(BB.setTextHost)
+      })), BB = Aa, lN.add(BB), function(BB) {
+        for (const jB of OI) BB(jB);
+        BN.add(BB)
+      }((BB => {
+        Za(Xa[BB])
       })))
     }
-    const sj = {
-      booted: MT.j.INITIALISE_NOA,
-      texturesIn: MT.j.REGISTRATION,
-      modelsIn: MT.j.SETUP_LIFEFORMS
+    const Xa = {
+      booted: dB.j.INITIALISE_NOA,
+      texturesIn: dB.j.REGISTRATION,
+      modelsIn: dB.j.SETUP_LIFEFORMS
     };
 
-    function Fj(TT) {
-      HT.j.EZ("matchmakeAndPlayStepCompleted", {
-        step: TT,
+    function Za(BB) {
+      uB.n.Ly("matchmakeAndPlayStepCompleted", {
+        step: BB,
         totalSubSteps: 1
       })
     }
 
-    function Pj(TT) {
-      if (!Xj) return;
+    function Aa(BB) {
+      if (!Ya) return;
       const {
-        gameNameWithVariation: UT,
-        lobbyName: mT
-      } = (0, LT.c)();
-      if (TT.code === WT.e.serverUpdating.code) return (new Ej).leaveLive(), void uj(UT, mT);
-      HT.j.EZ("unwantedLeftGame", {
-        reason: Vj(TT),
-        requiresRefresh: TT.requiresRefresh,
-        canReconnect: null !== TT.reconnect,
-        automaticallyReconnect: TT.reconnecting,
-        canPlayAgain: TT.canPlayAgain,
-        gameNameWithVariation: UT,
-        lobbyName: mT
-      }), (new Ej).leaveLive()
+        gameNameWithVariation: jB,
+        lobbyName: zB
+      } = (0, rB.d)();
+      if (BB.code === QB.c.serverUpdating.code) return (new Ca).leaveLive(), void Pa(jB, zB);
+      uB.n.Ly("unwantedLeftGame", {
+        reason: Ta(BB),
+        requiresRefresh: BB.requiresRefresh,
+        canReconnect: null !== BB.reconnect,
+        automaticallyReconnect: BB.reconnecting,
+        canPlayAgain: BB.canPlayAgain,
+        gameNameWithVariation: jB,
+        lobbyName: zB
+      }), (new Ca).leaveLive()
     }
 
-    function Vj(TT) {
-      return null !== TT.reasonKey ? {
-        translationKey: TT.reasonKey
-      } : "gameOrPluginKick" === TT.name ? TT.reason : `You have disconnected from the server.\n${TT.reason}`
+    function Ta(BB) {
+      return null !== BB.reasonKey ? {
+        translationKey: BB.reasonKey
+      } : "gameOrPluginKick" === BB.name ? BB.reason : `You have disconnected from the server.\n${BB.reason}`
     }
 
-    function uj(TT, UT) {
-      var WT;
-      WT = (0, kT.I)(TT, UT), Promise.resolve().then((() => mT(1633))).then((TT => {
+    function Pa(BB, jB) {
+      var QB;
+      QB = (0, UB.C)(BB, jB), Promise.resolve().then((() => zB(1543))).then((BB => {
         let {
-          navigatePreserveSearch: UT
-        } = TT;
-        UT(WT)
-      })).catch((TT => {
-        console.warn("[bloxd-wasm-client] the page's router didn't navigate: loading the page instead", TT), (0, RT.d)(WT)
+          navigatePreserveSearch: jB
+        } = BB;
+        jB(QB)
+      })).catch((BB => {
+        console.warn("[bloxd-wasm-client] the page's router didn't navigate: loading the page instead", BB), (0, OB.g)(QB)
       }))
     }
 
-    function Cj() {
-      return yj ??= Promise.all([mT.e(73), mT.e(76), mT.e(75), mT.e(74), mT.e(90), mT.e(87), mT.e(273), mT.e(191), mT.e(228), mT.e(252), mT.e(275), mT.e(47)]).then((() => mT(41136))).then((TT => {
+    function Wa() {
+      return Fa ??= Promise.all([zB.e(73), zB.e(76), zB.e(75), zB.e(74), zB.e(90), zB.e(87), zB.e(273), zB.e(191), zB.e(228), zB.e(252), zB.e(275), zB.e(47)]).then((() => zB(41085))).then((BB => {
         try {
-          TT.attachPlayGameSources()
-        } catch (UT) {
-          throw console.error("[bloxd-wasm-client] the play sources did not attach", UT),
-            function(TT) {
-              Og.then((UT => {
-                null === UT || UT.isStopped || YH ? console.warn(`${VM} the play sources threw as they attached, after the client stopped`, TT) : lj({
-                  site: KM,
-                  error: TT,
+          BB.attachPlayGameSources()
+        } catch (jB) {
+          throw console.error("[bloxd-wasm-client] the play sources did not attach", jB),
+            function(BB) {
+              qI.then((jB => {
+                null === jB || jB.isStopped || iu ? console.warn(`${ld} the play sources threw as they attached, after the client stopped`, BB) : pa({
+                  site: Cd,
+                  error: BB,
                   header: null
-                }, qg)
+                }, MI)
               }))
-            }(UT), UT
+            }(jB), jB
         }
-      }), (TT => {
-        throw yj = null, new yT.b(TT)
-      })), yj
+      }), (BB => {
+        throw Fa = null, new FB.e(BB)
+      })), Fa
     }
-    async function rj(TT, UT) {
-      Qj(), dj = !0, Xj = !0;
-      let mT = {
-          place: TT.place,
-          matchedAt: TT.matchedAt
+    async function ea(BB, jB) {
+      ha(), fa = !0, Ya = !0;
+      let zB = {
+          place: BB.place,
+          matchedAt: BB.matchedAt
         },
-        gT = TT.place.gameNameWithVariation;
-      const nT = (0, lT.h)();
-      let HT = null;
-      const kT = await QH({
+        IB = BB.place.gameNameWithVariation;
+      const NB = (0, pB.i)();
+      let uB = null;
+      const UB = await Xu({
         matchmake: async () => {
-          let UT = mT;
-          if (mT = null, null === UT) {
-            const mT = await TT.rematch();
-            if (mT.isError()) throw HT = mT.asError().forward(), new Error(mT.asError().message);
-            UT = {
-              place: mT.getValue(),
+          let jB = zB;
+          if (zB = null, null === jB) {
+            const zB = await BB.rematch();
+            if (zB.isError()) throw uB = zB.asError().forward(), new Error(zB.asError().message);
+            jB = {
+              place: zB.getValue(),
               matchedAt: performance.now()
             }
           }
-          gT = UT.place.gameNameWithVariation;
+          IB = jB.place.gameNameWithVariation;
           return {
-            target: await (0, ST.c)(TT.userContext, UT.place, Pk(), nT),
-            matchedAt: UT.matchedAt,
-            freshMs: ST.b
+            target: await (0, wB.c)(BB.userContext, jB.place, TU(), NB),
+            matchedAt: jB.matchedAt,
+            freshMs: wB.b
           }
         },
-        pageReady: Cj,
-        onFailure: (TT, UT) => {
-          null === HT && function(TT, UT) {
-            (0, ym.reportPageJoinFailure)(TT, qg, UT)
-          }(TT, {
-            sinceJoinStartMs: UT,
-            game: gT
+        pageReady: Wa,
+        onFailure: (BB, jB) => {
+          null === uB && function(BB, jB) {
+            (0, Dz.reportPageJoinFailure)(BB, MI, jB)
+          }(BB, {
+            sinceJoinStartMs: jB,
+            game: IB
           })
         },
         rejoin: () => () => {},
-        invalidateTrafficCode: () => TT.userContext.invalidateTrafficCode(),
-        signal: UT
+        invalidateTrafficCode: () => BB.userContext.invalidateTrafficCode(),
+        signal: jB
       });
-      switch (kT.kind) {
+      switch (UB.kind) {
         case "joined":
-          if (nT) {
+          if (NB) {
             setTimeout((() => {
-              OT.ready()
+              SB.ready()
             }), 0);
             const {
-              game: TT
-            } = kT;
-            (0, lT.o)((() => {
-              TT.endJoinAd() && ((0, BT.f)(), OT.adEnded())
+              game: BB
+            } = UB;
+            (0, pB.q)((() => {
+              BB.endJoinAd() && ((0, JB.m)(), SB.adEnded())
             }))
           }
-          return Ij || (Ij = !0, (0, YT.e)()), Xj ? (Fj(MT.j.CONNECT_TO_GAME_SERVER), Fj(MT.j.SHADER_PACK), function() {
-            var TT, UT;
-            return null !== (TT = null === (UT = Eg) || void 0 === UT ? void 0 : UT.runsInJoinedGame()) && void 0 !== TT && TT
-          }() && (0, eT.h)(TT.userContext, gT).catch((TT => {
-            console.error("Failed to report the shader pack session", TT)
+          return Va || (Va = !0, (0, EB.e)()), Ya ? (Za(dB.j.CONNECT_TO_GAME_SERVER), Za(dB.j.SHADER_PACK), function() {
+            var BB, jB;
+            return null !== (BB = null === (jB = RI) || void 0 === jB ? void 0 : jB.runsInJoinedGame()) && void 0 !== BB && BB
+          }() && (0, MB.d)(BB.userContext, IB).catch((BB => {
+            console.error("Failed to report the shader pack session", BB)
           })), function() {
-            const TT = function() {
-              var TT, UT;
-              return null !== (TT = null === (UT = Eg) || void 0 === UT ? void 0 : UT.couldntRunInJoinedGame()) && void 0 !== TT ? TT : null
+            const BB = function() {
+              var BB, jB;
+              return null !== (BB = null === (jB = RI) || void 0 === jB ? void 0 : jB.couldntRunInJoinedGame()) && void 0 !== BB ? BB : null
             }();
-            null !== TT && (0, eT.d)(TT)
-          }(), zT.c.value(void 0)) : Nj("The server ended the game as it joined");
+            null !== BB && (0, MB.c)(BB)
+          }(), nB.d.value(void 0)) : Ka("The server ended the game as it joined");
         case "failed":
-          if (!kT.reloading) {
-            if (null !== HT) return HT;
-            if ((kT.error instanceof rT.n || kT.error instanceof rT.d) && kT.error.code === WT.e.serverUpdating.code) {
-              if (UT.aborted) return Nj("Left the game while it loaded");
+          if (!UB.reloading) {
+            if (null !== uB) return uB;
+            if ((UB.error instanceof eB.j || UB.error instanceof eB.d) && UB.error.code === QB.c.serverUpdating.code) {
+              if (jB.aborted) return Ka("Left the game while it loaded");
               const {
-                gameNameWithVariation: TT,
-                lobbyName: mT
-              } = (0, LT.c)();
-              return uj(TT, mT), Nj("The server is updating")
+                gameNameWithVariation: BB,
+                lobbyName: zB
+              } = (0, rB.d)();
+              return Pa(BB, zB), Ka("The server is updating")
             }
-            return kT.error instanceof AT.b ? zT.c.errorWithCode(kT.error.messageKey, MT.j.SHADER_PACK, {
+            return UB.error instanceof RB.b ? nB.d.errorWithCode(UB.error.messageKey, dB.j.SHADER_PACK, {
               severity: "medium"
-            }) : zT.c.errorWithCode(function(TT) {
-              if (TT instanceof rT.s || TT instanceof wT.d) return TT.message;
-              if (Kj(TT)) return (0, CT.p)(TT.code, TT.serverText);
-              return CT.k
-            }(kT.error), MT.j.CONNECT_TO_GAME_SERVER, {
-              error: Sj(kT.error) ? kT.error : void 0,
-              severity: Gj(kT.error),
-              gameServerUnreachable: (0, KT.d)(kT.error),
-              joinFailure: (0, KT.i)(kT.error),
-              rematch: (0, xT.d)(kT.error),
-              gameRefused: (0, dT.b)(kT.error)
+            }) : nB.d.errorWithCode(function(BB) {
+              if (BB instanceof eB.u || BB instanceof oB.h) return BB.message;
+              if (la(BB)) return (0, WB.p)(BB.code, BB.serverText);
+              return WB.l
+            }(UB.error), dB.j.CONNECT_TO_GAME_SERVER, {
+              error: wa(UB.error) ? UB.error : void 0,
+              severity: xa(UB.error),
+              gameServerUnreachable: (0, lB.c)(UB.error),
+              joinFailure: (0, lB.h)(UB.error),
+              rematch: (0, qB.e)(UB.error),
+              gameRefused: (0, fB.c)(UB.error)
             })
           }
-          return Nj("Reloading into the new build");
+          return Ka("Reloading into the new build");
         case "stopped":
-          return Nj("The game client stopped, and shows why");
-        case "Km":
-          return Nj("Left the game while it loaded")
+          return Ka("The game client stopped, and shows why");
+        case "xz":
+          return Ka("Left the game while it loaded")
       }
     }
 
-    function Kj(TT) {
-      return TT instanceof rT.n || TT instanceof rT.d && "attach" !== TT.stage
+    function la(BB) {
+      return BB instanceof eB.j || BB instanceof eB.d && "attach" !== BB.stage
     }
 
-    function Sj(TT) {
-      return !(TT instanceof rT.s) && !Kj(TT) && void 0 === (0, KT.d)(TT)
+    function wa(BB) {
+      return !(BB instanceof eB.u) && !la(BB) && void 0 === (0, lB.c)(BB)
     }
 
-    function Gj(TT) {
-      return Kj(TT) ? TT instanceof rT.d && (0, CT.o)(TT.code).requiresRefresh ? "medium" : "low" : Sj(TT) || TT instanceof rT.s ? "medium" : "low"
+    function xa(BB) {
+      return la(BB) ? BB instanceof eB.d && (0, WB.m)(BB.code).requiresRefresh ? "medium" : "low" : wa(BB) || BB instanceof eB.u ? "medium" : "low"
     }
 
-    function Nj(TT) {
-      return zT.c.errorWithCode(TT, MT.j.CONNECT_TO_GAME_SERVER, {
+    function Ka(BB) {
+      return nB.d.errorWithCode(BB, dB.j.CONNECT_TO_GAME_SERVER, {
         severity: "low",
-        Km: !0
+        xz: !0
       })
     }
-    class Ej {
-      leave(TT) {
-        if ((0, tT.e)()) {
-          var UT, mT;
-          if ((0, gT.d)()) return;
-          (0, pT.c)(!0 === (null === (UT = (0, tT.p)()) || void 0 === UT || null === (mT = UT.currentViewer) || void 0 === mT ? void 0 : mT.unsavedChanges), TT)
+    class Ca {
+      leave(BB) {
+        if ((0, HB.c)()) {
+          var jB, zB;
+          if ((0, IB.d)()) return;
+          (0, sB.b)(!0 === (null === (jB = (0, HB.k)()) || void 0 === jB || null === (zB = jB.currentViewer) || void 0 === zB ? void 0 : zB.unsavedChanges), BB)
         } else this.leaveLive()
       }
       leaveLive() {
-        var TT;
-        dj && (null === (TT = Pk()) || void 0 === TT || TT.endGamePack());
-        if (!Xj) return;
-        Xj = !1, (0, JT.f)();
+        var BB;
+        fa && (null === (BB = TU()) || void 0 === BB || BB.endGamePack());
+        if (!Ya) return;
+        Ya = !1, (0, iB.f)();
         try {
-          var UT;
-          null === (UT = (0, yT.v)()) || void 0 === UT || UT.clearWasmCameraScreen()
-        } catch (WT) {
-          console.error("[bloxd-wasm-client] the camera screen didn't clear", WT)
+          var jB;
+          null === (jB = (0, FB.q)()) || void 0 === jB || jB.clearWasmCameraScreen()
+        } catch (QB) {
+          console.error("[bloxd-wasm-client] the camera screen didn't clear", QB)
         }
         const {
-          gameNameWithVariation: mT
-        } = (0, LT.c)();
+          gameNameWithVariation: zB
+        } = (0, rB.d)();
         try {
-          GH()
+          Ku()
         } finally {
-          (0, LT.m)({
+          (0, rB.q)({
             websocketUrl: null
-          }), HT.j.EZ("leaveGame", {
-            gameNameWithVariation: mT
-          }), (0, jT.L)()
+          }), uB.n.Ly("leaveGame", {
+            gameNameWithVariation: zB
+          }), (0, aB.G)()
         }
       }
       isReplay() {
-        return (0, tT.e)()
+        return (0, HB.c)()
       }
     }
   },
-  41063: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => zT,
-      f: () => WT,
-      j: () => nT,
-      l: () => gT
+  41010: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => nB,
+      c: () => QB,
+      g: () => NB,
+      j: () => IB
     });
-    const WT = 12e4,
-      zT = 3e4,
-      MT = {
+    const QB = 12e4,
+      nB = 3e4,
+      dB = {
         hidden: () => "undefined" !== typeof document && document.hidden,
-        listen: TT => "undefined" === typeof document ? () => {} : (document.addEventListener("visibilitychange", TT), () => {
-          document.removeEventListener("visibilitychange", TT)
+        listen: BB => "undefined" === typeof document ? () => {} : (document.addEventListener("visibilitychange", BB), () => {
+          document.removeEventListener("visibilitychange", BB)
         })
       };
 
-    function gT(TT) {
-      return `it sent no start within ${Math.round(TT)} ms`
+    function IB(BB) {
+      return `it sent no start within ${Math.round(BB)} ms`
     }
-    class nT {
-      constructor(TT, UT) {
-        let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
-          WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : MT;
-        this.timeoutMs = TT, this.onTimeout = UT, this.now = mT, this.visibility = WT, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = WT.listen((() => {
+    class NB {
+      constructor(BB, jB) {
+        let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
+          QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : dB;
+        this.timeoutMs = BB, this.onTimeout = jB, this.now = zB, this.visibility = QB, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = QB.listen((() => {
           this.onVisibility()
-        })), WT.hidden() || this.next()
+        })), QB.hidden() || this.next()
       }
       cancel() {
         this.pause(), this.unlisten()
@@ -8504,169 +8646,169 @@ export const modules = {
         this.visibility.hidden() ? (this.counted += this.credit(), this.pause()) : null === this.timer && this.next()
       }
       credit() {
-        const TT = this.step;
-        return null === TT ? 0 : Math.min(this.now() - TT.at, TT.ms)
+        const BB = this.step;
+        return null === BB ? 0 : Math.min(this.now() - BB.at, BB.ms)
       }
       pause() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null), this.step = null
       }
       next() {
-        const TT = this.timeoutMs - this.counted;
-        if (TT <= 0) return void this.arm(1e3, (() => {
+        const BB = this.timeoutMs - this.counted;
+        if (BB <= 0) return void this.arm(1e3, (() => {
           this.cancel(), this.onTimeout(this.counted)
         }));
-        const UT = Math.min(TT, 5e3);
+        const jB = Math.min(BB, 5e3);
         this.step = {
           at: this.now(),
-          ms: UT
-        }, this.arm(UT, (() => {
+          ms: jB
+        }, this.arm(jB, (() => {
           this.counted += this.credit(), this.step = null, this.next()
         }))
       }
-      arm(TT, UT) {
+      arm(BB, jB) {
         this.timer = setTimeout((() => {
-          this.timer = null, UT()
-        }), TT)
+          this.timer = null, jB()
+        }), BB)
       }
     }
   },
-  39760: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => nT
+  39722: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => NB
     });
-    var WT = mT(366),
-      zT = mT(1089);
-    const MT = new Set(["bingo", "buildAFactory2", "classic", "testGym"]),
-      gT = new Set(["creativeFlat", "skyGrid"]);
+    var QB = zB(376),
+      nB = zB(1067);
+    const dB = new Set(["bingo", "buildAFactory2", "classic", "testGym"]),
+      IB = new Set(["creativeFlat", "skyGrid"]);
 
-    function nT(TT) {
-      const UT = (0, WT.dc)(TT);
-      return "classic" !== UT ? MT.has(UT) : !(0, zT.k)(TT) && !gT.has((0, WT._b)(TT))
+    function NB(BB) {
+      const jB = (0, QB.Sb)(BB);
+      return "classic" !== jB ? dB.has(jB) : !(0, nB.n)(BB) && !IB.has((0, QB.Mb)(BB))
     }
   },
-  37868: (TT, UT, mT) => {
-    function WT(TT) {
-      return "string" !== typeof TT || 2 !== TT.length && ":" !== TT[2] ? null : TT[0] + TT[1]
+  37835: (BB, jB, zB) => {
+    function QB(BB) {
+      return "string" !== typeof BB || 2 !== BB.length && ":" !== BB[2] ? null : BB[0] + BB[1]
     }
-    mT.d(UT, {
-      B: () => vT,
-      D: () => ZT,
-      c: () => cT,
-      g: () => OT,
-      k: () => bT,
-      o: () => eT,
-      q: () => nT,
-      r: () => gT,
-      v: () => MT,
-      x: () => HT
+    zB.d(jB, {
+      e: () => yB,
+      f: () => SB,
+      i: () => tB,
+      k: () => MB,
+      l: () => NB,
+      o: () => IB,
+      p: () => dB,
+      t: () => uB,
+      v: () => kB,
+      z: () => mB
     });
-    const zT = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
+    const nB = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
 
-    function MT(TT) {
-      if (function(TT) {
-          for (let UT = 0; UT < zT.length; UT++)
-            if (TT === zT[UT]) return !0;
+    function dB(BB) {
+      if (function(BB) {
+          for (let jB = 0; jB < nB.length; jB++)
+            if (BB === nB[jB]) return !0;
           return !1
-        }(TT)) return !1;
-      const UT = WT(TT);
-      return "op" === UT || "ep" === UT || "wi" === UT || "pp" === UT || "fp:call" === TT || "fp:t" === TT
+        }(BB)) return !1;
+      const jB = QB(BB);
+      return "op" === jB || "ep" === jB || "wi" === jB || "pp" === jB || "fp:call" === BB || "fp:t" === BB
     }
 
-    function gT(TT) {
-      return "fp" === WT(TT) && !MT(TT)
+    function IB(BB) {
+      return "fp" === QB(BB) && !dB(BB)
     }
 
-    function nT(TT) {
-      if ("string" !== typeof TT) return !1;
-      return "o" === TT[0] && "p" === TT[1] && (2 === TT.length || ":" === TT[2]) || "fp:call" === TT || "2" === TT || "t" === TT || "a" === TT
+    function NB(BB) {
+      if ("string" !== typeof BB) return !1;
+      return "o" === BB[0] && "p" === BB[1] && (2 === BB.length || ":" === BB[2]) || "fp:call" === BB || "2" === BB || "t" === BB || "a" === BB
     }
 
-    function HT(TT, UT) {
-      return `~${function(TT){return TT.length<2?TT:":"===TT[1]?TT[0]:TT[0]+TT[1]}(UT)}~${TT}`
+    function uB(BB, jB) {
+      return `~${function(BB){return BB.length<2?BB:":"===BB[1]?BB[0]:BB[0]+BB[1]}(jB)}~${BB}`
     }
-    const kT = 200;
+    const UB = 200;
 
-    function jT(TT) {
-      let UT = TT.length - 1;
-      for (let mT = 0; mT < 2; mT++) {
-        const mT = UT;
-        for (; UT >= 0 && TT[UT] >= "0" && TT[UT] <= "9";) UT--;
-        if (UT < 0 || UT === mT || ":" !== TT[UT]) return -1;
-        UT--
+    function aB(BB) {
+      let jB = BB.length - 1;
+      for (let zB = 0; zB < 2; zB++) {
+        const zB = jB;
+        for (; jB >= 0 && BB[jB] >= "0" && BB[jB] <= "9";) jB--;
+        if (jB < 0 || jB === zB || ":" !== BB[jB]) return -1;
+        jB--
       }
-      return UT + 1
+      return jB + 1
     }
 
-    function lT(TT) {
-      return "unknown" === TT || jT(TT) >= 0
+    function pB(BB) {
+      return "unknown" === BB || aB(BB) >= 0
     }
 
-    function LT(TT, UT) {
-      return TT[UT] >= "\ud800" && TT[UT] <= "\udbff" && UT + 1 < TT.length && TT[UT + 1] >= "\udc00" && TT[UT + 1] <= "\udfff" ? 2 : 1
+    function rB(BB, jB) {
+      return BB[jB] >= "\ud800" && BB[jB] <= "\udbff" && jB + 1 < BB.length && BB[jB + 1] >= "\udc00" && BB[jB + 1] <= "\udfff" ? 2 : 1
     }
 
-    function pT(TT, UT, mT) {
-      return 2 === mT ? 4 : TT[UT] <= "\x7f" ? 1 : TT[UT] <= "\u07ff" ? 2 : 3
+    function sB(BB, jB, zB) {
+      return 2 === zB ? 4 : BB[jB] <= "\x7f" ? 1 : BB[jB] <= "\u07ff" ? 2 : 3
     }
 
-    function BT(TT, UT, mT) {
-      let WT = 0;
-      for (; WT < UT;) {
-        const UT = LT(TT, WT),
-          zT = pT(TT, WT, UT);
-        if (zT > mT) break;
-        mT -= zT, WT += UT
+    function JB(BB, jB, zB) {
+      let QB = 0;
+      for (; QB < jB;) {
+        const jB = rB(BB, QB),
+          nB = sB(BB, QB, jB);
+        if (nB > zB) break;
+        zB -= nB, QB += jB
       }
-      return WT
+      return QB
     }
 
-    function ZT(TT) {
-      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
-      if ("string" !== typeof TT || TT.length > kT || !lT(TT)) return "t";
-      let mT = 2;
-      for (let nT = 0; nT < TT.length;) {
-        const UT = LT(TT, nT);
-        mT += pT(TT, nT, UT), nT += UT
+    function mB(BB) {
+      let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
+      if ("string" !== typeof BB || BB.length > UB || !pB(BB)) return "t";
+      let zB = 2;
+      for (let NB = 0; NB < BB.length;) {
+        const jB = rB(BB, NB);
+        zB += sB(BB, NB, jB), NB += jB
       }
-      if (mT <= UT) return `t ${TT}`;
-      const WT = jT(TT),
-        zT = UT - 2 - (TT.length - WT);
-      if (zT < 0) return "t";
-      const MT = BT(TT, WT, zT);
-      let gT = "t ";
-      for (let nT = 0; nT < MT; nT++) gT += TT[nT];
-      for (let nT = WT; nT < TT.length; nT++) gT += TT[nT];
-      return gT
+      if (zB <= jB) return `t ${BB}`;
+      const QB = aB(BB),
+        nB = jB - 2 - (BB.length - QB);
+      if (nB < 0) return "t";
+      const dB = JB(BB, QB, nB);
+      let IB = "t ";
+      for (let NB = 0; NB < dB; NB++) IB += BB[NB];
+      for (let NB = QB; NB < BB.length; NB++) IB += BB[NB];
+      return IB
     }
-    const cT = 62;
+    const yB = 62;
 
-    function vT(TT) {
-      let UT = "so:";
-      const mT = BT(TT, TT.length, cT - UT.length);
-      for (let WT = 0; WT < mT; WT++) UT += TT[WT];
-      return UT
+    function kB(BB) {
+      let jB = "so:";
+      const zB = JB(BB, BB.length, yB - jB.length);
+      for (let QB = 0; QB < zB; QB++) jB += BB[QB];
+      return jB
     }
-    const fT = "BABYLON ",
-      qT = "DECODE ",
-      iT = "BABYLON@ ";
+    const GB = "BABYLON ",
+      LB = "DECODE ",
+      gB = "BABYLON@ ";
 
-    function bT(TT) {
-      return vT(fT + TT)
-    }
-
-    function OT(TT, UT) {
-      return vT(iT + TT + " " + UT)
+    function tB(BB) {
+      return kB(GB + BB)
     }
 
-    function eT(TT) {
-      return vT(qT + TT)
+    function SB(BB, jB) {
+      return kB(gB + BB + " " + jB)
+    }
+
+    function MB(BB) {
+      return kB(LB + BB)
     }
   },
-  40979: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => WT
+  40916: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => QB
     });
-    const WT = {
+    const QB = {
       roomsPerServerMax: 30,
       timeForPlayerToConnect: 3e4,
       seatReservationSeconds: 15,
@@ -8690,248 +8832,248 @@ export const modules = {
       drainingSessionLobbyFillMs: 3e5
     }
   },
-  38120: TT => {
-    TT.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
+  38063: BB => {
+    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
   },
-  38114: TT => {
-    TT.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
+  38049: BB => {
+    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
   },
-  38122: TT => {
-    TT.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  38072: BB => {
+    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   },
-  38108: TT => {
-    TT.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
+  38044: BB => {
+    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
   },
-  38117: TT => {
-    TT.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  38056: BB => {
+    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   },
-  38848: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => MT
+  38836: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => dB
     });
-    var WT = mT(2992);
-    const zT = ["none", "idle", "now"];
+    var QB = zB(2967);
+    const nB = ["none", "idle", "now"];
 
-    function MT() {
-      const TT = () => (0, WT.C)();
+    function dB() {
+      const BB = () => (0, QB.C)();
       return {
-        memoryBytes: () => (0, WT.u)().buffer.byteLength,
-        reserveUpFront: UT => TT().Ml(UT),
-        reserveAhead: UT => TT().zl(UT),
-        setCeiling: UT => {
-          TT().gl(UT)
+        memoryBytes: () => (0, QB.t)().buffer.byteLength,
+        reserveUpFront: jB => BB().Up(jB),
+        reserveAhead: jB => BB().Np(jB),
+        setCeiling: jB => {
+          BB().ap(jB)
         },
-        lowWater: () => zT[TT().Wl()] ?? "none",
-        stats: () => function(TT) {
-          const UT = new Uint32Array((0, WT.u)().buffer, TT, 17),
-            mT = TT => UT[TT] ?? 0,
-            zT = TT => ({
-              upFront: mT(TT),
-              ahead: mT(TT + 1),
-              onDemandInFrame: mT(TT + 2),
-              onDemand: mT(TT + 3)
+        lowWater: () => nB[BB().Ip()] ?? "none",
+        stats: () => function(BB) {
+          const jB = new Uint32Array((0, QB.t)().buffer, BB, 17),
+            zB = BB => jB[BB] ?? 0,
+            nB = BB => ({
+              upFront: zB(BB),
+              ahead: zB(BB + 1),
+              onDemandInFrame: zB(BB + 2),
+              onDemand: zB(BB + 3)
             });
           return {
-            memoryBytes: mT(0),
-            initialBytes: mT(1),
-            liveBytes: mT(2),
-            peakLiveBytes: mT(3),
-            headroomBytes: mT(4),
-            unusedBytes: mT(5),
-            ceilingBytes: mT(6),
-            reservesRefused: mT(7),
-            grows: zT(8),
-            grownBytes: zT(12),
-            allocationsRefused: mT(16)
+            memoryBytes: zB(0),
+            initialBytes: zB(1),
+            liveBytes: zB(2),
+            peakLiveBytes: zB(3),
+            headroomBytes: zB(4),
+            unusedBytes: zB(5),
+            ceilingBytes: zB(6),
+            reservesRefused: zB(7),
+            grows: nB(8),
+            grownBytes: nB(12),
+            allocationsRefused: zB(16)
           }
-        }(TT().nl()),
-        takeBallast: () => TT().Hl(),
-        takePressure: () => TT().kl()
+        }(BB().rp()),
+        takeBallast: () => BB().sp(),
+        takePressure: () => BB().Jp()
       }
     }
   },
-  5142: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => nT,
-      f: () => gT,
-      j: () => WT,
-      l: () => ZT,
-      o: () => lT,
-      q: () => zT,
-      s: () => MT,
-      v: () => kT,
-      w: () => jT,
-      x: () => LT
+  5120: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => NB,
+      e: () => IB,
+      f: () => QB,
+      j: () => mB,
+      m: () => pB,
+      n: () => nB,
+      o: () => dB,
+      s: () => UB,
+      w: () => aB,
+      z: () => rB
     });
-    const WT = 5;
+    const QB = 5;
 
-    function zT(TT) {
-      return TT === WT
+    function nB(BB) {
+      return BB === QB
     }
 
-    function MT(TT) {
-      return [...TT.features]
+    function dB(BB) {
+      return [...BB.features]
     }
-    const gT = 262144,
-      nT = 256,
-      HT = 256;
+    const IB = 262144,
+      NB = 256,
+      uB = 256;
 
-    function kT(TT) {
-      if ("object" !== typeof TT || null === TT || Array.isArray(TT)) return "The pack has no files.";
-      const UT = [];
-      for (const [mT, WT] of Object.entries(TT)) {
-        if ("string" !== typeof WT) return `${mT} isn't text.`;
-        UT.push({
-          path: mT,
-          source: WT
+    function UB(BB) {
+      if ("object" !== typeof BB || null === BB || Array.isArray(BB)) return "The pack has no files.";
+      const jB = [];
+      for (const [zB, QB] of Object.entries(BB)) {
+        if ("string" !== typeof QB) return `${zB} isn't text.`;
+        jB.push({
+          path: zB,
+          source: QB
         })
       }
-      return UT.sort(((TT, UT) => lT(TT.path, UT.path))),
-        function(TT) {
-          if (0 === TT.length) return "The pack has no .wgsl files.";
-          if (TT.length > nT) return `The pack has more than ${nT} .wgsl files.`;
-          const UT = new Set;
+      return jB.sort(((BB, jB) => pB(BB.path, jB.path))),
+        function(BB) {
+          if (0 === BB.length) return "The pack has no .wgsl files.";
+          if (BB.length > NB) return `The pack has more than ${NB} .wgsl files.`;
+          const jB = new Set;
           for (const {
-              path: mT
+              path: zB
             }
-            of TT) {
-            const TT = pT(mT);
-            if (null !== TT) return TT;
-            if (UT.has(mT)) return `The pack has two files at ${mT}.`;
-            UT.add(mT)
+            of BB) {
+            const BB = sB(zB);
+            if (null !== BB) return BB;
+            if (jB.has(zB)) return `The pack has two files at ${zB}.`;
+            jB.add(zB)
           }
-          return LT(TT) > gT ? `The pack's .wgsl files are over ${gT/1024} KB in total.` : null
-        }(UT) ?? UT
+          return rB(BB) > IB ? `The pack's .wgsl files are over ${IB/1024} KB in total.` : null
+        }(jB) ?? jB
     }
 
-    function jT(TT) {
-      const UT = {};
-      for (const mT of TT) UT[mT.path] = mT.source;
-      return UT
+    function aB(BB) {
+      const jB = {};
+      for (const zB of BB) jB[zB.path] = zB.source;
+      return jB
     }
 
-    function lT(TT, UT) {
-      return TT < UT ? -1 : TT > UT ? 1 : 0
+    function pB(BB, jB) {
+      return BB < jB ? -1 : BB > jB ? 1 : 0
     }
 
-    function LT(TT) {
-      const UT = new TextEncoder;
-      let mT = 0;
+    function rB(BB) {
+      const jB = new TextEncoder;
+      let zB = 0;
       for (const {
-          source: WT
+          source: QB
         }
-        of TT) mT += UT.encode(WT).byteLength;
-      return mT
+        of BB) zB += jB.encode(QB).byteLength;
+      return zB
     }
 
-    function pT(TT) {
-      if (!TT.toLowerCase().endsWith(".wgsl")) return `${TT} isn't a .wgsl file.`;
-      if (TT.length > HT) return `A file path is over ${HT} characters.`;
-      if (TT.includes("\\") || /[\u0000-\u001f]/.test(TT)) return `${TT} isn't a valid file path.`;
-      return TT.split("/").some((TT => "" === TT || "." === TT || ".." === TT)) ? `${TT} isn't a valid file path.` : null
+    function sB(BB) {
+      if (!BB.toLowerCase().endsWith(".wgsl")) return `${BB} isn't a .wgsl file.`;
+      if (BB.length > uB) return `A file path is over ${uB} characters.`;
+      if (BB.includes("\\") || /[\u0000-\u001f]/.test(BB)) return `${BB} isn't a valid file path.`;
+      return BB.split("/").some((BB => "" === BB || "." === BB || ".." === BB)) ? `${BB} isn't a valid file path.` : null
     }
-    const BT = /^(.*)\[rot\[([1-4])$/;
+    const JB = /^(.*)\[rot\[([1-4])$/;
 
-    function ZT(TT, UT) {
-      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const WT = new Map;
-      UT.forEach(((TT, UT) => {
+    function mB(BB, jB) {
+      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const QB = new Map;
+      jB.forEach(((BB, jB) => {
         let {
-          numAnimStates: mT,
-          animStartIdx: zT
-        } = TT;
-        for (let MT = 1; MT < mT; MT++) WT.set(zT + MT - 1, UT)
+          numAnimStates: zB,
+          animStartIdx: nB
+        } = BB;
+        for (let dB = 1; dB < zB; dB++) QB.set(nB + dB - 1, jB)
       }));
-      const zT = Object.entries(TT),
-        MT = new Map;
-      for (const [ZT, cT] of zT) {
-        const TT = BT.exec(ZT);
-        "1" === TT?.[2] && MT.set(TT[1], cT + 1)
+      const nB = Object.entries(BB),
+        dB = new Map;
+      for (const [mB, yB] of nB) {
+        const BB = JB.exec(mB);
+        "1" === BB?.[2] && dB.set(BB[1], yB + 1)
       }
-      const gT = TT => {
-          const UT = BT.exec(TT);
-          return UT && MT.has(UT[1]) ? {
-            root: UT[1],
-            rotation: Number(UT[2]) - 1
+      const IB = BB => {
+          const jB = JB.exec(BB);
+          return jB && dB.has(jB[1]) ? {
+            root: jB[1],
+            rotation: Number(jB[2]) - 1
           } : null
         },
-        nT = new Set(zT.map((TT => {
-          let [UT] = TT;
-          return gT(UT)?.root ?? UT
+        NB = new Set(nB.map((BB => {
+          let [jB] = BB;
+          return IB(jB)?.root ?? jB
         }))),
-        HT = (TT, mT) => {
-          const WT = TT.replace(/_?0$/, "");
-          return (UT[mT]?.numAnimStates ?? 0) > 1 && !nT.has(WT) ? WT : TT
+        uB = (BB, zB) => {
+          const QB = BB.replace(/_?0$/, "");
+          return (jB[zB]?.numAnimStates ?? 0) > 1 && !NB.has(QB) ? QB : BB
         },
-        kT = new Map;
-      for (const [BT, ZT] of zT) kT.set(ZT, HT(gT(BT)?.root ?? BT, ZT));
-      const jT = zT.reduce(((TT, UT) => {
-          let [, mT] = UT;
-          return Math.max(TT, mT + 1)
+        UB = new Map;
+      for (const [JB, mB] of nB) UB.set(mB, uB(IB(JB)?.root ?? JB, mB));
+      const aB = nB.reduce(((BB, jB) => {
+          let [, zB] = jB;
+          return Math.max(BB, zB + 1)
         }), 0),
-        lT = Array.from({
-          length: jT
-        }, ((TT, UT) => ({
-          id: UT + 1,
+        pB = Array.from({
+          length: aB
+        }, ((BB, jB) => ({
+          id: jB + 1,
           rotation: 0
         }))),
-        LT = new Map,
-        pT = new Map;
-      for (const [BT, ZT] of zT) {
-        const TT = gT(BT),
-          UT = WT.get(ZT);
-        if (void 0 !== UT) {
-          const mT = kT.get(UT);
-          pT.set(BT, {
-            name: BT,
-            texture: mT,
+        rB = new Map,
+        sB = new Map;
+      for (const [JB, mB] of nB) {
+        const BB = IB(JB),
+          jB = QB.get(mB);
+        if (void 0 !== jB) {
+          const zB = UB.get(jB);
+          sB.set(JB, {
+            name: JB,
+            texture: zB,
             kind: "frame"
-          }), TT && !pT.has(TT.root) && pT.set(TT.root, {
-            name: TT.root,
-            texture: mT,
+          }), BB && !sB.has(BB.root) && sB.set(BB.root, {
+            name: BB.root,
+            texture: zB,
             kind: "frame"
           });
           continue
         }
-        const mT = kT.get(ZT),
-          zT = TT?.root ?? BT;
-        if (mT !== zT && pT.set(zT, {
-            name: zT,
-            texture: mT,
+        const zB = UB.get(mB),
+          nB = BB?.root ?? JB;
+        if (zB !== nB && sB.set(nB, {
+            name: nB,
+            texture: zB,
             kind: "frame"
-          }), TT) {
-          const UT = MT.get(TT.root);
-          lT[ZT] = {
-            id: UT,
-            rotation: TT.rotation
-          }, LT.set(mT, UT), pT.set(BT, {
-            name: BT,
-            texture: mT,
+          }), BB) {
+          const jB = dB.get(BB.root);
+          pB[mB] = {
+            id: jB,
+            rotation: BB.rotation
+          }, rB.set(zB, jB), sB.set(JB, {
+            name: JB,
+            texture: zB,
             kind: "rotation"
           })
-        } else LT.set(mT, ZT + 1)
+        } else rB.set(zB, mB + 1)
       }
-      for (const BT of LT.keys()) pT.delete(BT);
-      for (const [BT, ZT] of mT) {
-        const TT = LT.get(ZT);
-        void 0 === TT || LT.has(BT) || (LT.set(BT, TT), pT.delete(BT))
+      for (const JB of rB.keys()) sB.delete(JB);
+      for (const [JB, mB] of zB) {
+        const BB = rB.get(mB);
+        void 0 === BB || rB.has(JB) || (rB.set(JB, BB), sB.delete(JB))
       }
       return {
-        named: [...LT].sort(((TT, UT) => {
-          let [mT] = TT, [WT] = UT;
-          return mT < WT ? -1 : mT > WT ? 1 : 0
-        })).map((TT => {
-          let [UT, mT] = TT;
+        named: [...rB].sort(((BB, jB) => {
+          let [zB] = BB, [QB] = jB;
+          return zB < QB ? -1 : zB > QB ? 1 : 0
+        })).map((BB => {
+          let [jB, zB] = BB;
           return {
-            name: UT,
-            id: mT
+            name: jB,
+            id: zB
           }
         })),
-        aliases: [...pT.values()],
-        layers: lT
+        aliases: [...sB.values()],
+        layers: pB
       }
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,509 +1,509 @@
 export const id = 78;
 export const ids = [78];
 export const modules = {
-  4780: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => CU,
-      f: () => lm,
-      g: () => oU,
-      j: () => Um,
-      k: () => EU,
-      n: () => AU,
-      r: () => FU,
-      s: () => SU,
-      w: () => wU,
-      z: () => jm,
-      C: () => km,
-      G: () => GU,
-      I: () => sU
+  4782: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => Wj,
+      e: () => pz,
+      g: () => vj,
+      h: () => jz,
+      j: () => Cj,
+      k: () => Rj,
+      m: () => Zj,
+      n: () => wj,
+      r: () => oj,
+      t: () => az,
+      w: () => Uz,
+      x: () => xj,
+      z: () => Xj
     });
-    var WT = mT(2992);
-    const zT = Function.prototype.toString,
-      MT = RegExp.prototype.exec,
-      gT = Reflect.apply,
-      nT = Function.prototype.call,
-      HT = Function.prototype.apply,
-      kT = Function.prototype.bind,
-      jT = Object.defineProperty,
-      lT = Uint8Array;
-    let LT, pT;
+    var QB = zB(2967);
+    const nB = Function.prototype.toString,
+      dB = RegExp.prototype.exec,
+      IB = Reflect.apply,
+      NB = Function.prototype.call,
+      uB = Function.prototype.apply,
+      UB = Function.prototype.bind,
+      aB = Object.defineProperty,
+      pB = Uint8Array;
+    let rB, sB;
     try {
-      LT = globalThis.crypto, pT = void 0 === LT || null === LT ? void 0 : LT.getRandomValues
+      rB = globalThis.crypto, sB = void 0 === rB || null === rB ? void 0 : rB.getRandomValues
     } catch {}
-    const BT = "bloxdBindApply";
-    let ZT;
+    const JB = "bloxdBindApply";
+    let mB;
     try {
-      const TT = nT;
-      jT(TT, BT, {
+      const BB = NB;
+      aB(BB, JB, {
         __proto__: null,
-        value: kT,
+        value: UB,
         configurable: !0
       });
       try {
-        ZT = TT[BT](HT)
+        mB = BB[JB](uB)
       } finally {
-        delete TT[BT]
+        delete BB[JB]
       }
     } catch {}
-    const cT = 16,
-      vT = 256,
-      fT = 0,
-      qT = 1,
-      iT = 2,
-      bT = 3;
-    let OT, eT = fT,
-      YT = gT,
-      JT = 0;
+    const yB = 16,
+      kB = 256,
+      GB = 0,
+      LB = 1,
+      gB = 2,
+      tB = 3;
+    let SB, MB = GB,
+      EB = IB,
+      iB = 0;
 
-    function xT(TT, UT) {
-      return TT === `function ${UT}() { [native code] }` || TT === `function ${UT}() {\n    [native code]\n}`
+    function qB(BB, jB) {
+      return BB === `function ${jB}() { [native code] }` || BB === `function ${jB}() {\n    [native code]\n}`
     }
-    const dT = 0,
-      wT = 1,
-      tT = 2;
-    let aT = dT;
+    const fB = 0,
+      oB = 1,
+      HB = 2;
+    let DB = fB;
 
-    function yT(TT, UT, mT) {
-      if (aT === tT && eT === qT && ! function() {
-          const TT = OT;
-          return JT >= vT && (YT(pT, LT, [TT]), JT = 0), TT[JT++] < 256 / cT
-        }()) return function(TT, UT, mT) {
-        return YT(TT, UT, mT ?? 0)
+    function FB(BB, jB, zB) {
+      if (DB === HB && MB === LB && ! function() {
+          const BB = SB;
+          return iB >= kB && (EB(sB, rB, [BB]), iB = 0), BB[iB++] < 256 / yB
+        }()) return function(BB, jB, zB) {
+        return EB(BB, jB, zB ?? 0)
       }(...arguments);
-      if (aT === dT || eT === iT) return gT(TT, UT, mT);
-      let WT;
-      aT = dT;
+      if (DB === fB || MB === gB) return IB(BB, jB, zB);
+      let QB;
+      DB = fB;
       try {
-        eT === fT && (eT = bT, eT = function() {
-          const TT = gT(zT, gT, []);
-          if (xT(TT, "apply")) return iT;
-          if (null === gT(MT, /\(\.\.\.arguments\)/, [TT]) && null === gT(MT, /^function\s*\(\.\.\.[\w$]+\)/, [TT])) return iT;
-          if ("function" !== typeof ZT || "function" !== typeof nT || "function" !== typeof HT || "function" !== typeof kT || "function" !== typeof jT || "function" !== typeof pT || "function" !== typeof lT || !xT(gT(zT, nT, []), "call") || !xT(gT(zT, HT, []), "apply") || !xT(gT(zT, kT, []), "bind") || !xT(gT(zT, jT, []), "defineProperty") || !xT(gT(zT, pT, []), "getRandomValues") || !xT(gT(zT, lT, []), "Uint8Array")) return iT;
-          const UT = ZT,
-            mT = {},
-            WT = function(TT) {
-              return this === mT && TT === mT
+        MB === GB && (MB = tB, MB = function() {
+          const BB = IB(nB, IB, []);
+          if (qB(BB, "apply")) return gB;
+          if (null === IB(dB, /\(\.\.\.arguments\)/, [BB]) && null === IB(dB, /^function\s*\(\.\.\.[\w$]+\)/, [BB])) return gB;
+          if ("function" !== typeof mB || "function" !== typeof NB || "function" !== typeof uB || "function" !== typeof UB || "function" !== typeof aB || "function" !== typeof sB || "function" !== typeof pB || !qB(IB(nB, NB, []), "call") || !qB(IB(nB, uB, []), "apply") || !qB(IB(nB, UB, []), "bind") || !qB(IB(nB, aB, []), "defineProperty") || !qB(IB(nB, sB, []), "getRandomValues") || !qB(IB(nB, pB, []), "Uint8Array")) return gB;
+          const jB = mB,
+            zB = {},
+            QB = function(BB) {
+              return this === zB && BB === zB
             };
           try {
-            if (!0 !== UT(WT, mT, [mT])) return iT;
-            const TT = new lT(vT);
-            UT(pT, LT, [TT]), OT = TT
+            if (!0 !== jB(QB, zB, [zB])) return gB;
+            const BB = new pB(kB);
+            jB(sB, rB, [BB]), SB = BB
           } catch {
-            return iT
+            return gB
           }
-          return YT = UT, qT
-        }()), WT = gT(TT, UT, mT)
-      } catch (BT) {
-        throw eT = iT, BT
+          return EB = jB, LB
+        }()), QB = IB(BB, jB, zB)
+      } catch (JB) {
+        throw MB = gB, JB
       }
-      return aT = tT, WT
+      return DB = HB, QB
     }
-    let XT = gT;
+    let YB = IB;
 
-    function IT() {
-      return (XT === gT ? 0 : 3) + aT
-    }
-
-    function QT() {
-      const TT = IT();
-      return XT = gT, TT
+    function VB() {
+      return (YB === IB ? 0 : 3) + DB
     }
 
-    function sT(TT) {
-      XT = TT >= 3 ? yT : gT, aT = TT % 3
-    }
-    const FT = Function.prototype.toString,
-      PT = Object.getOwnPropertyDescriptor,
-      VT = Object.prototype.hasOwnProperty,
-      uT = RegExp.prototype.exec,
-      CT = TextEncoder.prototype.encodeInto,
-      rT = String.prototype.startsWith,
-      KT = Number.prototype.toString,
-      ST = WeakMap.prototype.get,
-      GT = WeakMap.prototype.set,
-      NT = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
-      ET = new TextEncoder,
-      hT = new Uint8Array(1024),
-      DT = 9999999,
-      oT = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
-      AT = new WeakMap;
-
-    function RT(TT) {
-      if ("function" !== typeof TT) return "#a0.0";
-      const UT = XT(ST, AT, [TT]);
-      if (void 0 !== UT) return UT;
-      const mT = XT(FT, TT, []),
-        WT = mT.length > DT ? DT : mT.length,
-        zT = `#${function(TT,UT){const mT=XT(uT,NT,[UT]);if(null===mT)return"s";const WT=mT[1];if("ProxyObject"===WT)return"p";if(""!==WT)return XT(rT,WT,["bound "])?"b":"n";try{const UT=PT(TT,"name"),mT=void 0!==UT&&XT(VT,UT,["value"])?UT.value:void 0;return"string"===typeof mT&&XT(rT,mT,["bound "])?"b":"p"}catch{return"p"}}(TT,mT)}${WT}.${function(TT){const{written:UT}=XT(CT,ET,[TT,hT]);let mT=2166136261;for(let WT=0;WT<UT;WT++)mT=(mT^hT[WT])>>>0,mT=mT+(mT<<1)+(mT<<4)+(mT<<7)+(mT<<8)+(mT<<24)>>>0;return XT(KT,mT,[36])}(mT)}`;
-      return XT(GT, AT, [TT, zT]), zT
+    function hB() {
+      const BB = VB();
+      return YB = IB, BB
     }
 
-    function TU(TT) {
-      const UT = XT(uT, oT, [TT]);
-      return null === UT ? TT : UT[1]
+    function XB(BB) {
+      YB = BB >= 3 ? FB : IB, DB = BB % 3
     }
-    var UU = mT(3015);
-    const mU = Function.prototype.toString,
-      WU = Object.getOwnPropertyDescriptor,
-      zU = RegExp.prototype.exec,
-      MU = Object.prototype.hasOwnProperty,
-      gU = Set.prototype.has,
-      nU = WeakMap.prototype.get,
-      HU = WeakMap.prototype.set,
-      kU = Reflect.get,
-      jU = Object.getPrototypeOf,
-      lU = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+    const ZB = Function.prototype.toString,
+      AB = Object.getOwnPropertyDescriptor,
+      TB = Object.prototype.hasOwnProperty,
+      PB = RegExp.prototype.exec,
+      WB = TextEncoder.prototype.encodeInto,
+      eB = String.prototype.startsWith,
+      lB = Number.prototype.toString,
+      wB = WeakMap.prototype.get,
+      xB = WeakMap.prototype.set,
+      KB = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
+      CB = new TextEncoder,
+      cB = new Uint8Array(1024),
+      bB = 9999999,
+      vB = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
+      RB = new WeakMap;
 
-    function LU(TT, UT, mT) {
+    function OB(BB) {
+      if ("function" !== typeof BB) return "#a0.0";
+      const jB = YB(wB, RB, [BB]);
+      if (void 0 !== jB) return jB;
+      const zB = YB(ZB, BB, []),
+        QB = zB.length > bB ? bB : zB.length,
+        nB = `#${function(BB,jB){const zB=YB(PB,KB,[jB]);if(null===zB)return"s";const QB=zB[1];if("ProxyObject"===QB)return"p";if(""!==QB)return YB(eB,QB,["bound "])?"b":"n";try{const jB=AB(BB,"name"),zB=void 0!==jB&&YB(TB,jB,["value"])?jB.value:void 0;return"string"===typeof zB&&YB(eB,zB,["bound "])?"b":"p"}catch{return"p"}}(BB,zB)}${QB}.${function(BB){const{written:jB}=YB(WB,CB,[BB,cB]);let zB=2166136261;for(let QB=0;QB<jB;QB++)zB=(zB^cB[QB])>>>0,zB=zB+(zB<<1)+(zB<<4)+(zB<<7)+(zB<<8)+(zB<<24)>>>0;return YB(lB,zB,[36])}(zB)}`;
+      return YB(xB, RB, [BB, nB]), nB
+    }
+
+    function Bj(BB) {
+      const jB = YB(PB, vB, [BB]);
+      return null === jB ? BB : jB[1]
+    }
+    var jj = zB(2992);
+    const zj = Function.prototype.toString,
+      Qj = Object.getOwnPropertyDescriptor,
+      nj = RegExp.prototype.exec,
+      dj = Object.prototype.hasOwnProperty,
+      Ij = Set.prototype.has,
+      Nj = WeakMap.prototype.get,
+      uj = WeakMap.prototype.set,
+      Uj = Reflect.get,
+      aj = Object.getPrototypeOf,
+      pj = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+
+    function rj(BB, jB, zB) {
       return {
-        code: TT,
-        holder: UT,
-        key: mT,
+        code: BB,
+        holder: jB,
+        key: zB,
         ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        native: new RegExp(`^function (get )?${mT}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
+        native: new RegExp(`^function (get )?${zB}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
       }
     }
 
-    function pU() {
-      return lU
+    function sj() {
+      return pj
     }
-    const BU = lU?.Instance.prototype,
-      ZU = lU?.Memory.prototype;
+    const Jj = pj?.Instance.prototype,
+      mj = pj?.Memory.prototype;
 
-    function cU() {
-      return ZU
+    function yj() {
+      return mj
     }
-    let vU, fU;
+    let kj, Gj;
     try {
-      const TT = globalThis.crypto,
-        UT = TT?.subtle;
-      vU = TT ? jU(TT) : void 0, fU = UT ? jU(UT) : void 0
+      const BB = globalThis.crypto,
+        jB = BB?.subtle;
+      kj = BB ? aj(BB) : void 0, Gj = jB ? aj(jB) : void 0
     } catch {}
 
-    function qU(TT, UT) {
-      for (let mT = TT; void 0 !== mT && null !== mT; mT = jU(mT)) {
-        const TT = WU(mT, UT);
-        if (TT) return TT
+    function Lj(BB, jB) {
+      for (let zB = BB; void 0 !== zB && null !== zB; zB = aj(zB)) {
+        const BB = Qj(zB, jB);
+        if (BB) return BB
       }
     }
-    const iU = [LU("in", pU, "instantiate", {
+    const gj = [rj("in", sj, "instantiate", {
       tier: "weighted",
       onNamespace: !0
-    }), LU("is", pU, "instantiateStreaming", {
+    }), rj("is", sj, "instantiateStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), LU("co", pU, "compile", {
+    }), rj("co", sj, "compile", {
       tier: "weighted",
       onNamespace: !0
-    }), LU("cs", pU, "compileStreaming", {
+    }), rj("cs", sj, "compileStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), LU("mo", pU, "Module", {
+    }), rj("mo", sj, "Module", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), LU("it", pU, "Instance", {
+    }), rj("it", sj, "Instance", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), LU("me", pU, "Memory", {
+    }), rj("me", sj, "Memory", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), LU("ex", (function() {
-      return BU
+    }), rj("ex", (function() {
+      return Jj
     }), "exports", {
       isGetter: !0,
       tier: "punished"
-    }), LU("bu", cU, "buffer", {
+    }), rj("bu", yj, "buffer", {
       isGetter: !0,
       tier: "punished"
-    }), LU("gr", cU, "grow", {
+    }), rj("gr", yj, "grow", {
       tier: "punished"
-    }), LU("rc", (function() {
+    }), rj("rc", (function() {
       return "undefined" === typeof Response ? void 0 : Response.prototype
-    }), "clone"), LU("cr", (function() {
+    }), "clone"), rj("cr", (function() {
       return globalThis
     }), "crypto", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), LU("su", (function() {
-      return vU
+    }), rj("su", (function() {
+      return kj
     }), "subtle", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), LU("dg", (function() {
-      return fU
+    }), rj("dg", (function() {
+      return Gj
     }), "digest", {
       tier: "punished",
       inSecureContext: !0
     })];
 
-    function bU(TT) {
-      let UT;
+    function tj(BB) {
+      let jB;
       try {
-        const mT = kU(globalThis, TT);
-        UT = "function" === typeof mT ? mT.prototype : void 0
+        const zB = Uj(globalThis, BB);
+        jB = "function" === typeof zB ? zB.prototype : void 0
       } catch {}
-      return () => UT
+      return () => jB
     }
 
-    function OU(TT, UT, mT) {
-      return mT.map((mT => LU(TT, UT, mT)))
+    function Sj(BB, jB, zB) {
+      return zB.map((zB => rj(BB, jB, zB)))
     }
-    const eU = LU("rx", bU("HTMLCanvasElement"), "getContext"),
-      YU = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
-      JU = {
-        webgpu: [...OU("gd", bU("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...OU("gq", bU("GPUQueue"), ["submit", "writeBuffer"]), ...OU("ge", bU("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...OU("gp", bU("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), eU],
-        webgl: [...OU("g2", bU("WebGL2RenderingContext"), [...YU, "drawArraysInstanced", "drawElementsInstanced"]), eU],
-        webgl1: [...OU("g1", bU("WebGLRenderingContext"), YU), eU]
+    const Mj = rj("rx", tj("HTMLCanvasElement"), "getContext"),
+      Ej = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
+      ij = {
+        webgpu: [...Sj("gd", tj("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...Sj("gq", tj("GPUQueue"), ["submit", "writeBuffer"]), ...Sj("ge", tj("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...Sj("gp", tj("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), Mj],
+        webgl: [...Sj("g2", tj("WebGL2RenderingContext"), [...Ej, "drawArraysInstanced", "drawElementsInstanced"]), Mj],
+        webgl1: [...Sj("g1", tj("WebGLRenderingContext"), Ej), Mj]
       };
-    let xU = [];
-    const dU = new WeakMap;
+    let qj = [];
+    const fj = new WeakMap;
 
-    function wU(TT, UT) {
-      const mT = QT();
+    function oj(BB, jB) {
+      const zB = hB();
       try {
-        XT(HU, dU, [TT, UT])
+        YB(uj, fj, [BB, jB])
       } finally {
-        sT(mT)
+        XB(zB)
       }
     }
 
-    function tU(TT) {
+    function Hj(BB) {
       try {
-        const UT = nm(TT),
-          mT = XT(nU, dU, [UT]);
-        return Tm(mT, TT) ? aU(TT, !0) : `${aU(TT,!1)}${RT(mT??UT)}`
+        const jB = Nz(BB),
+          zB = YB(Nj, fj, [jB]);
+        return Bz(zB, BB) ? Dj(BB, !0) : `${Dj(BB,!1)}${OB(zB??jB)}`
       } catch {
-        return `${aU(TT,!1)}${RT(void 0)}`
+        return `${Dj(BB,!1)}${OB(void 0)}`
       }
     }
 
-    function aU(TT, UT) {
+    function Dj(BB, jB) {
       let {
-        code: mT,
-        key: WT
-      } = TT;
-      return `wh:${mT}${UT?"-dbg":""}:${WT}`
+        code: zB,
+        key: QB
+      } = BB;
+      return `wh:${zB}${jB?"-dbg":""}:${QB}`
     }
 
-    function yU(TT) {
-      return Object.values(JU).flatMap((UT => UT.map((UT => aU(UT, TT)))))
+    function Fj(BB) {
+      return Object.values(ij).flatMap((jB => jB.map((jB => Dj(jB, BB)))))
     }
-    const XU = new Set(yU(!0)),
-      IU = new Set([...yU(!1), ...XU]),
-      QU = aU(eU, !1);
+    const Yj = new Set(Fj(!0)),
+      Vj = new Set([...Fj(!1), ...Yj]),
+      hj = Dj(Mj, !1);
 
-    function sU(TT) {
-      xU = JU[TT]
+    function Xj(BB) {
+      qj = ij[BB]
     }
 
-    function FU(TT) {
-      const UT = QT();
+    function Zj(BB) {
+      const jB = hB();
       try {
-        return PU(TT) || PU(TU(TT))
+        return Aj(BB) || Aj(Bj(BB))
       } finally {
-        sT(UT)
+        XB(jB)
       }
     }
 
-    function PU(TT) {
-      return XT(gU, IU, [TT])
+    function Aj(BB) {
+      return YB(Ij, Vj, [BB])
     }
 
-    function VU(TT) {
-      return new Set(iU.filter((UT => UT.tier === TT)).map((TT => `wh:${TT.code}`)))
+    function Tj(BB) {
+      return new Set(gj.filter((jB => jB.tier === BB)).map((BB => `wh:${BB.code}`)))
     }
-    const uU = VU("punished"),
-      CU = !1,
-      rU = new Set(UU.e),
-      KU = VU("weighted");
+    const Pj = Tj("punished"),
+      Wj = !1,
+      ej = new Set(jj.c),
+      lj = Tj("weighted");
 
-    function SU(TT) {
-      const UT = QT();
+    function wj(BB) {
+      const jB = hB();
       try {
-        return NU(TU(TT))
+        return Kj(Bj(BB))
       } finally {
-        sT(UT)
+        XB(jB)
       }
     }
 
-    function GU(TT) {
-      const UT = QT();
+    function xj(BB) {
+      const jB = hB();
       try {
-        return TU(TT)
+        return Bj(BB)
       } finally {
-        sT(UT)
+        XB(jB)
       }
     }
 
-    function NU(TT) {
-      return XT(gU, KU, [TT])
+    function Kj(BB) {
+      return YB(Ij, lj, [BB])
     }
 
-    function EU(TT) {
-      const UT = QT();
+    function Cj(BB) {
+      const jB = hB();
       try {
-        return hU(TT)
+        return cj(BB)
       } finally {
-        sT(UT)
+        XB(jB)
       }
     }
 
-    function hU(TT) {
-      return XT(gU, rU, [TT])
+    function cj(BB) {
+      return YB(Ij, ej, [BB])
     }
 
-    function DU(TT) {
-      return "wb" === TT || XT(gU, uU, [TT])
+    function bj(BB) {
+      return "wb" === BB || YB(Ij, Pj, [BB])
     }
 
-    function oU(TT) {
-      const UT = QT();
+    function vj(BB) {
+      const jB = hB();
       try {
-        return DU(TT) || hU(TT)
+        return bj(BB) || cj(BB)
       } finally {
-        sT(UT)
+        XB(jB)
       }
     }
 
-    function AU(TT) {
-      const UT = QT();
+    function Rj(BB) {
+      const jB = hB();
       try {
-        return "wb" === TT || CU && DU(TT)
+        return "wb" === BB || Wj && bj(BB)
       } finally {
-        sT(UT)
+        XB(jB)
       }
     }
 
-    function RU(TT, UT) {
+    function Oj(BB, jB) {
       let {
-        isGetter: mT
-      } = UT;
-      const WT = WU(TT, mT ? "get" : "value");
-      return void 0 === WT ? void 0 : WT.value
+        isGetter: zB
+      } = jB;
+      const QB = Qj(BB, zB ? "get" : "value");
+      return void 0 === QB ? void 0 : QB.value
     }
 
-    function Tm(TT, UT) {
+    function Bz(BB, jB) {
       let {
-        isConstructor: mT,
-        native: WT
-      } = UT;
-      return "function" === typeof TT && (!(!mT && XT(MU, TT, ["prototype"])) && null !== XT(zU, WT, [XT(mU, TT, [])]))
+        isConstructor: zB,
+        native: QB
+      } = jB;
+      return "function" === typeof BB && (!(!zB && YB(dj, BB, ["prototype"])) && null !== YB(nj, QB, [YB(zj, BB, [])]))
     }
 
-    function Um(TT, UT) {
-      return Tm(TT, LU("", (() => {}), UT, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
+    function jz(BB, jB) {
+      return Bz(BB, rj("", (() => {}), jB, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
         isConstructor: !0
       } : {}))
     }
-    let mm = null,
-      Wm = !1;
+    let zz = null,
+      Qz = !1;
 
-    function zm() {
+    function nz() {
       try {
-        return globalThis.WebAssembly === lU
+        return globalThis.WebAssembly === pj
       } catch {
         return !1
       }
     }
 
-    function Mm(TT) {
+    function dz(BB) {
       try {
-        return function(TT) {
+        return function(BB) {
           const {
-            holder: UT,
-            key: mT,
-            onNamespace: WT,
-            inSecureContext: zT
-          } = TT, MT = UT(), gT = qU(MT, mT);
-          if (!gT) return !(zT && !0 === globalThis.isSecureContext);
-          const nT = RU(gT, TT);
-          if (!Tm(nT, TT)) return !1;
-          if (WT) {
-            const UT = globalThis.WebAssembly;
-            if (UT !== MT && null !== UT && ("object" === typeof UT || "function" === typeof UT)) {
-              const WT = kU(UT, mT);
-              return WT === nT || void 0 === WT || Tm(WT, TT)
+            holder: jB,
+            key: zB,
+            onNamespace: QB,
+            inSecureContext: nB
+          } = BB, dB = jB(), IB = Lj(dB, zB);
+          if (!IB) return !(nB && !0 === globalThis.isSecureContext);
+          const NB = Oj(IB, BB);
+          if (!Bz(NB, BB)) return !1;
+          if (QB) {
+            const jB = globalThis.WebAssembly;
+            if (jB !== dB && null !== jB && ("object" === typeof jB || "function" === typeof jB)) {
+              const QB = Uj(jB, zB);
+              return QB === NB || void 0 === QB || Bz(QB, BB)
             }
           }
           return !0
-        }(TT)
+        }(BB)
       } catch {
         return !1
       }
     }
 
-    function gm(TT) {
-      const UT = `wh:${TT.code}`;
-      if ("punished" === TT.tier) return UT;
+    function Iz(BB) {
+      const jB = `wh:${BB.code}`;
+      if ("punished" === BB.tier) return jB;
       try {
-        return `${UT}${RT(nm(TT))}`
+        return `${jB}${OB(Nz(BB))}`
       } catch {
-        return `${UT}${RT(void 0)}`
+        return `${jB}${OB(void 0)}`
       }
     }
 
-    function nm(TT) {
-      const UT = qU(TT.holder(), TT.key),
-        mT = void 0 === UT ? void 0 : RU(UT, TT);
-      return TT.onNamespace && !zm() && Tm(mT, TT) ? kU(globalThis.WebAssembly, TT.key) : mT
+    function Nz(BB) {
+      const jB = Lj(BB.holder(), BB.key),
+        zB = void 0 === jB ? void 0 : Oj(jB, BB);
+      return BB.onNamespace && !nz() && Bz(zB, BB) ? Uj(globalThis.WebAssembly, BB.key) : zB
     }
 
-    function Hm(TT) {
-      if (DU(TT)) return 5;
-      const UT = TU(TT);
-      return NU(UT) ? 4 : hU(TT) ? 3 : PU(UT) ? function(TT) {
-        return XT(gU, XU, [TT])
-      }(UT) ? -1 : UT === QU ? 0 : 1 : 2
+    function uz(BB) {
+      if (bj(BB)) return 5;
+      const jB = Bj(BB);
+      return Kj(jB) ? 4 : cj(BB) ? 3 : Aj(jB) ? function(BB) {
+        return YB(Ij, Yj, [BB])
+      }(jB) ? -1 : jB === hj ? 0 : 1 : 2
     }
 
-    function km() {
-      const TT = function() {
-        const TT = IT();
-        return eT === fT || eT === qT ? (XT = yT, aT = wT) : XT = gT, TT
+    function Uz() {
+      const BB = function() {
+        const BB = VB();
+        return MB === GB || MB === LB ? (YB = FB, DB = oB) : YB = IB, BB
       }();
       try {
-        if (null === mm || !DU(mm)) {
-          const TT = function() {
-            if (void 0 === lU) return null;
-            let TT = zm() ? null : "wh:wa";
-            const UT = UT => {
-              null !== UT && (null === TT || Hm(UT) > Hm(TT)) && (TT = UT)
+        if (null === zz || !bj(zz)) {
+          const BB = function() {
+            if (void 0 === pj) return null;
+            let BB = nz() ? null : "wh:wa";
+            const jB = jB => {
+              null !== jB && (null === BB || uz(jB) > uz(BB)) && (BB = jB)
             };
-            for (let mT = 0; mT < iU.length; mT++) {
-              const TT = iU[mT];
-              void 0 === TT || Mm(TT) || UT(gm(TT))
+            for (let zB = 0; zB < gj.length; zB++) {
+              const BB = gj[zB];
+              void 0 === BB || dz(BB) || jB(Iz(BB))
             }
-            UT((0, UU.l)());
-            for (let mT = 0; mT < xU.length; mT++) {
-              const TT = xU[mT];
-              void 0 === TT || Mm(TT) || UT(tU(TT))
+            jB((0, jj.o)());
+            for (let zB = 0; zB < qj.length; zB++) {
+              const BB = qj[zB];
+              void 0 === BB || dz(BB) || jB(Hj(BB))
             }
-            return TT
+            return BB
           }();
-          (null === mm || null !== TT && Hm(TT) > Hm(mm)) && (mm = TT)
+          (null === zz || null !== BB && uz(BB) > uz(zz)) && (zz = BB)
         }
       } finally {
-        sT(TT)
+        XB(BB)
       }
     }
 
-    function jm() {
-      Wm = !0
+    function az() {
+      Qz = !0
     }
 
-    function lm() {
-      if (Wm) return "wb";
-      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && km(), null !== mm) return mm;
-      if (void 0 === lU) return "wn:unsupported";
-      const TT = (0, WT.s)();
-      return null === TT ? null : `wn:${TT}`
+    function pz() {
+      if (Qz) return "wb";
+      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && Uz(), null !== zz) return zz;
+      if (void 0 === pj) return "wn:unsupported";
+      const BB = (0, QB.q)();
+      return null === BB ? null : `wn:${BB}`
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

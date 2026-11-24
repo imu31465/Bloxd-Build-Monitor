@@ -1,225 +1,225 @@
 export const id = 197;
 export const ids = [197];
 export const modules = {
-  36458: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      showOnboardingPopup: () => QT
+  36462: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      showOnboardingPopup: () => hB
     });
-    var WT = mT(63),
-      zT = mT(1288),
-      MT = mT(1457),
-      gT = mT(1569),
-      nT = mT(4412),
-      HT = mT(1688),
-      kT = mT(1685),
-      jT = mT(2348),
-      lT = mT(1126),
-      LT = mT.n(lT),
-      pT = mT(1231),
-      BT = mT(36465),
-      ZT = mT(1135),
-      cT = mT(2493),
-      vT = mT(3582),
-      fT = mT(1225),
-      qT = mT(1188);
-    const iT = Object.entries(HT.e).filter((TT => {
-      let [, UT] = TT;
-      return "default" === UT.cosmeticPack
+    var QB = zB(62),
+      nB = zB(1240),
+      dB = zB(1381),
+      IB = zB(1478),
+      NB = zB(4426),
+      uB = zB(1585),
+      UB = zB(1583),
+      aB = zB(2302),
+      pB = zB(1091),
+      rB = zB.n(pB),
+      sB = zB(1173),
+      JB = zB(36467),
+      mB = zB(1108),
+      yB = zB(2458),
+      kB = zB(3593),
+      GB = zB(1169),
+      LB = zB(1148);
+    const gB = Object.entries(uB.d).filter((BB => {
+      let [, jB] = BB;
+      return "default" === jB.cosmeticPack
     }));
 
-    function bT(TT) {
-      return kT.b.default.colourGroups[TT].colours.map(((TT, UT) => {
+    function tB(BB) {
+      return UB.e.default.colourGroups[BB].colours.map(((BB, jB) => {
         let {
-          rbg: mT,
-          order: WT
-        } = TT;
+          rbg: zB,
+          order: QB
+        } = BB;
         return {
-          rbg: mT,
-          order: WT,
-          index: UT
+          rbg: zB,
+          order: QB,
+          index: jB
         }
-      })).sort(((TT, UT) => TT.order - UT.order))
+      })).sort(((BB, jB) => BB.order - jB.order))
     }
-    const OT = bT("eyes"),
-      eT = bT("skin");
+    const SB = tB("eyes"),
+      MB = tB("skin");
 
-    function YT(TT, UT) {
-      var mT;
-      if (void 0 === UT || "default" !== (null === (mT = (0, jT.j)(TT, UT)) || void 0 === mT ? void 0 : mT.cosmeticPack)) return null;
-      const WT = (0, jT.i)(UT);
-      return WT && [WT[0], Number(WT[1])]
-    }
-
-    function JT(TT, UT, mT) {
-      return `${TT}_${UT}_${mT}`
+    function EB(BB, jB) {
+      var zB;
+      if (void 0 === jB || "default" !== (null === (zB = (0, aB.j)(BB, jB)) || void 0 === zB ? void 0 : zB.cosmeticPack)) return null;
+      const QB = (0, aB.f)(jB);
+      return QB && [QB[0], Number(QB[1])]
     }
 
-    function xT(TT) {
+    function iB(BB, jB, zB) {
+      return `${BB}_${jB}_${zB}`
+    }
+
+    function qB(BB) {
       let {
-        label: UT,
-        colours: mT,
-        picked: WT,
-        onPick: MT
-      } = TT;
+        label: jB,
+        colours: zB,
+        picked: QB,
+        onPick: dB
+      } = BB;
       const {
-        t: gT
-      } = (0, zT.z)();
-      return (0, qT.jsxs)("div", {
+        t: IB
+      } = (0, nB.D)();
+      return (0, LB.jsxs)("div", {
         className: "OnboardingColours",
-        children: [(0, qT.jsx)("div", {
+        children: [(0, LB.jsx)("div", {
           className: "OnboardingColoursLabel",
-          children: UT
-        }), (0, qT.jsx)("div", {
+          children: jB
+        }), (0, LB.jsx)("div", {
           className: "OnboardingSwatches",
           role: "radiogroup",
-          "aria-label": UT,
-          children: mT.map(((TT, UT) => {
+          "aria-label": jB,
+          children: zB.map(((BB, jB) => {
             let {
-              rbg: mT,
-              index: zT
-            } = TT;
-            return (0, qT.jsx)("button", {
+              rbg: zB,
+              index: nB
+            } = BB;
+            return (0, LB.jsx)("button", {
               type: "button",
-              className: LT()("OnboardingSwatch", {
-                OnboardingSwatchSelected: zT === WT
+              className: rB()("OnboardingSwatch", {
+                OnboardingSwatchSelected: nB === QB
               }),
               style: {
-                backgroundColor: `rgb(${mT.join(",")})`
+                backgroundColor: `rgb(${zB.join(",")})`
               },
               role: "radio",
-              "aria-checked": zT === WT,
-              "aria-label": gT("homePage:onboardingColour", {
-                number: UT + 1
+              "aria-checked": nB === QB,
+              "aria-label": IB("homePage:onboardingColour", {
+                number: jB + 1
               }),
               onClick: () => {
-                MT(zT)
+                dB(nB)
               }
-            }, zT)
+            }, nB)
           }))
         })]
       })
     }
 
-    function dT() {
+    function fB() {
       const {
-        t: TT
-      } = (0, zT.z)(), {
-        userContext: UT,
-        isUserContextUpdating: mT
-      } = (0, fT.d)(), [MT, gT] = (0, WT.useState)(!1), [, HT] = (0, WT.useReducer)((TT => TT + 1), 0), kT = (0, WT.useRef)({}), jT = (0, WT.useRef)(null), lT = (0, vT.c)(), bT = {
-        ...UT.getPlayerCosmetics(),
-        ...jT.current
-      }, dT = (0, WT.useRef)(null);
-      (0, WT.useEffect)((() => {
-        var TT;
-        MT && (null === (TT = dT.current) || void 0 === TT || TT.scrollIntoView({
+        t: BB
+      } = (0, nB.D)(), {
+        userContext: jB,
+        isUserContextUpdating: zB
+      } = (0, GB.d)(), [dB, IB] = (0, QB.useState)(!1), [, uB] = (0, QB.useReducer)((BB => BB + 1), 0), UB = (0, QB.useRef)({}), aB = (0, QB.useRef)(null), pB = (0, kB.d)(), tB = {
+        ...jB.getPlayerCosmetics(),
+        ...aB.current
+      }, fB = (0, QB.useRef)(null);
+      (0, QB.useEffect)((() => {
+        var BB;
+        dB && (null === (BB = fB.current) || void 0 === BB || BB.scrollIntoView({
           block: "nearest"
         }))
-      }), [MT]);
-      const wT = (TT, UT) => {
-          (0, BT.b)(TT, Object.entries(UT)), lT.current ? HT() : TT.publishUpdateIfCurrent()
+      }), [dB]);
+      const oB = (BB, jB) => {
+          (0, JB.b)(BB, Object.entries(jB)), pB.current ? uB() : BB.publishUpdateIfCurrent()
         },
-        tT = TT => {
-          const WT = {
-            ...jT.current,
-            ...TT
+        HB = BB => {
+          const QB = {
+            ...aB.current,
+            ...BB
           };
-          if (!mT) return jT.current = null, void wT(UT, WT);
-          jT.current = WT, HT(), pT.userContextManager.getCurrentUserContext().then((TT => {
-            jT.current === WT && (jT.current = null, wT(TT, WT))
-          })).catch((TT => {
-            console.warn("Couldn't put on the onboarding look held for the account", TT), jT.current === WT && (jT.current = null, lT.current && HT())
+          if (!zB) return aB.current = null, void oB(jB, QB);
+          aB.current = QB, uB(), sB.userContextManager.getCurrentUserContext().then((BB => {
+            aB.current === QB && (aB.current = null, oB(BB, QB))
+          })).catch((BB => {
+            console.warn("Couldn't put on the onboarding look held for the account", BB), aB.current === QB && (aB.current = null, pB.current && uB())
           }))
         };
-      (0, WT.useEffect)((() => () => {
-        UT.publishUpdateIfCurrent()
-      }), [UT]);
-      const aT = YT("eyes", bT.eyes),
-        yT = YT("skin", bT.skin);
-      return (0, qT.jsxs)(qT.Fragment, {
-        children: [(0, qT.jsx)("div", {
+      (0, QB.useEffect)((() => () => {
+        jB.publishUpdateIfCurrent()
+      }), [jB]);
+      const DB = EB("eyes", tB.eyes),
+        FB = EB("skin", tB.skin);
+      return (0, LB.jsxs)(LB.Fragment, {
+        children: [(0, LB.jsx)("div", {
           className: "OnboardingPresets",
-          children: iT.map(((UT, mT) => {
-            let [WT, {
-              cosmetics: zT
-            }] = UT;
-            const MT = function(TT, UT) {
-              return Object.entries(UT).every((UT => {
-                let [mT, WT] = UT;
-                return "skin" === mT || ("eyes" === mT ? (null === (zT = YT("eyes", TT.eyes)) || void 0 === zT ? void 0 : zT[0]) === (null === (MT = YT("eyes", WT)) || void 0 === MT ? void 0 : MT[0]) : TT[mT] === WT);
-                var zT, MT
+          children: gB.map(((jB, zB) => {
+            let [QB, {
+              cosmetics: nB
+            }] = jB;
+            const dB = function(BB, jB) {
+              return Object.entries(jB).every((jB => {
+                let [zB, QB] = jB;
+                return "skin" === zB || ("eyes" === zB ? (null === (nB = EB("eyes", BB.eyes)) || void 0 === nB ? void 0 : nB[0]) === (null === (dB = EB("eyes", QB)) || void 0 === dB ? void 0 : dB[0]) : BB[zB] === QB);
+                var nB, dB
               }))
-            }(bT, zT);
-            return (0, qT.jsx)("button", {
+            }(tB, nB);
+            return (0, LB.jsx)("button", {
               type: "button",
-              className: LT()("OnboardingPreset", {
-                OnboardingPresetSelected: MT
+              className: rB()("OnboardingPreset", {
+                OnboardingPresetSelected: dB
               }),
-              "aria-label": TT("homePage:onboardingPreset", {
-                number: mT + 1
+              "aria-label": BB("homePage:onboardingPreset", {
+                number: zB + 1
               }),
-              "aria-pressed": MT,
+              "aria-pressed": dB,
               onClick: () => {
-                (0, nT.i)(`preset.${WT}`);
+                (0, NB.i)(`preset.${QB}`);
                 const {
-                  eyes: TT,
-                  skin: UT
-                } = kT.current;
-                tT({
-                  ...zT,
-                  ...void 0 !== TT && {
-                    eyes: JT("eyes", YT("eyes", zT.eyes)[0], TT)
+                  eyes: BB,
+                  skin: jB
+                } = UB.current;
+                HB({
+                  ...nB,
+                  ...void 0 !== BB && {
+                    eyes: iB("eyes", EB("eyes", nB.eyes)[0], BB)
                   },
-                  ...void 0 !== UT && {
-                    skin: JT("skin", "0", UT)
+                  ...void 0 !== jB && {
+                    skin: iB("skin", "0", jB)
                   }
                 })
               },
-              children: (0, qT.jsx)("div", {
+              children: (0, LB.jsx)("div", {
                 className: "OnboardingPresetImage",
                 style: {
-                  backgroundImage: `url(/textures/charSkins/previews/character_${WT}_preview.png)`
+                  backgroundImage: `url(/textures/charSkins/previews/character_${QB}_preview.png)`
                 }
               })
-            }, WT)
+            }, QB)
           }))
-        }), (0, qT.jsxs)("button", {
+        }), (0, LB.jsxs)("button", {
           type: "button",
           className: "OnboardingMoreOptions",
-          "aria-expanded": MT,
+          "aria-expanded": dB,
           onClick: () => {
-            MT || (0, nT.i)("more"), gT(!MT)
+            dB || (0, NB.i)("more"), IB(!dB)
           },
-          children: [TT("homePage:onboardingMoreOptions"), (0, qT.jsx)(ZT.c, {
-            name: MT ? "caret-up" : "caret-down"
+          children: [BB("homePage:onboardingMoreOptions"), (0, LB.jsx)(mB.c, {
+            name: dB ? "caret-up" : "caret-down"
           })]
-        }), MT && (0, qT.jsxs)("div", {
-          ref: dT,
+        }), dB && (0, LB.jsxs)("div", {
+          ref: fB,
           className: "OnboardingMore",
-          children: [(0, qT.jsx)("div", {
+          children: [(0, LB.jsx)("div", {
             className: "OnboardingMorePreview",
-            children: (0, qT.jsx)(cT.e, {
-              cosmetics: bT
+            children: (0, LB.jsx)(yB.c, {
+              cosmetics: tB
             })
-          }), (0, qT.jsxs)("div", {
+          }), (0, LB.jsxs)("div", {
             className: "OnboardingMoreColours",
-            children: [(0, qT.jsx)(xT, {
-              label: TT("homePage:onboardingEyeColour"),
-              colours: OT,
-              picked: null === aT || void 0 === aT ? void 0 : aT[1],
-              onPick: TT => {
-                var UT;
-                (0, nT.i)("eyes"), kT.current.eyes = TT, tT({
-                  eyes: JT("eyes", null !== (UT = null === aT || void 0 === aT ? void 0 : aT[0]) && void 0 !== UT ? UT : "0", TT)
+            children: [(0, LB.jsx)(qB, {
+              label: BB("homePage:onboardingEyeColour"),
+              colours: SB,
+              picked: null === DB || void 0 === DB ? void 0 : DB[1],
+              onPick: BB => {
+                var jB;
+                (0, NB.i)("eyes"), UB.current.eyes = BB, HB({
+                  eyes: iB("eyes", null !== (jB = null === DB || void 0 === DB ? void 0 : DB[0]) && void 0 !== jB ? jB : "0", BB)
                 })
               }
-            }), (0, qT.jsx)(xT, {
-              label: TT("homePage:onboardingSkinColour"),
-              colours: eT,
-              picked: null === yT || void 0 === yT ? void 0 : yT[1],
-              onPick: TT => {
-                (0, nT.i)("skin"), kT.current.skin = TT, tT({
-                  skin: JT("skin", "0", TT)
+            }), (0, LB.jsx)(qB, {
+              label: BB("homePage:onboardingSkinColour"),
+              colours: MB,
+              picked: null === FB || void 0 === FB ? void 0 : FB[1],
+              onPick: BB => {
+                (0, NB.i)("skin"), UB.current.skin = BB, HB({
+                  skin: iB("skin", "0", BB)
                 })
               }
             })]
@@ -227,339 +227,339 @@ export const modules = {
         })]
       })
     }
-    var wT = mT(1367),
-      tT = mT(25),
-      aT = mT(34164),
-      yT = mT(1446),
-      XT = mT(1792);
+    var oB = zB(1297),
+      HB = zB(28),
+      DB = zB(34138),
+      FB = zB(1369),
+      YB = zB(1710);
 
-    function IT(TT) {
+    function VB(BB) {
       const {
-        t: UT
-      } = (0, zT.z)(), {
-        userContext: mT,
-        isUserContextUpdating: MT
-      } = (0, fT.d)(), HT = MT ? null : mT.getPlayerName(), kT = (0, WT.useRef)(null), [jT, lT] = (0, WT.useState)((() => null === HT ? (0, wT.f)() : null)), [LT, pT] = (0, WT.useState)(null), [BT, cT] = (0, WT.useState)(!1), iT = (0, WT.useRef)("Jp"), bT = (0, vT.c)(), OT = (0, WT.useRef)(null !== jT), eT = (0, WT.useRef)(!1), YT = null !== jT && void 0 !== jT ? jT : HT, JT = (0, WT.useRef)(null), xT = TT => {
-        kT.current && (kT.current.value = TT), lT(TT)
-      }, dT = (0, WT.useRef)(!1);
-      (0, WT.useEffect)((() => {
-        var TT, UT;
-        !BT && dT.current && (dT.current = !1, null === (TT = kT.current) || void 0 === TT || TT.focus(), null === (UT = kT.current) || void 0 === UT || UT.select())
-      }), [BT]);
-      const IT = (0, WT.useRef)(null);
-      (0, WT.useEffect)((() => {
-        var TT;
-        null !== LT && (null === (TT = IT.current) || void 0 === TT || TT.scrollIntoView({
+        t: jB
+      } = (0, nB.D)(), {
+        userContext: zB,
+        isUserContextUpdating: dB
+      } = (0, GB.d)(), uB = dB ? null : zB.getPlayerName(), UB = (0, QB.useRef)(null), [aB, pB] = (0, QB.useState)((() => null === uB ? (0, oB.e)() : null)), [rB, sB] = (0, QB.useState)(null), [JB, yB] = (0, QB.useState)(!1), gB = (0, QB.useRef)("Cs"), tB = (0, kB.d)(), SB = (0, QB.useRef)(null !== aB), MB = (0, QB.useRef)(!1), EB = null !== aB && void 0 !== aB ? aB : uB, iB = (0, QB.useRef)(null), qB = BB => {
+        UB.current && (UB.current.value = BB), pB(BB)
+      }, fB = (0, QB.useRef)(!1);
+      (0, QB.useEffect)((() => {
+        var BB, jB;
+        !JB && fB.current && (fB.current = !1, null === (BB = UB.current) || void 0 === BB || BB.focus(), null === (jB = UB.current) || void 0 === jB || jB.select())
+      }), [JB]);
+      const VB = (0, QB.useRef)(null);
+      (0, QB.useEffect)((() => {
+        var BB;
+        null !== rB && (null === (BB = VB.current) || void 0 === BB || BB.scrollIntoView({
           block: "nearest"
         }))
-      }), [LT]);
-      const QT = (TT, UT) => {
-        const mT = document.activeElement === kT.current || dT.current;
-        cT(!0), pT(null), TT.then((TT => {
-          bT.current && (cT(!1), dT.current = mT, UT(TT))
+      }), [rB]);
+      const hB = (BB, jB) => {
+        const zB = document.activeElement === UB.current || fB.current;
+        yB(!0), sB(null), BB.then((BB => {
+          tB.current && (yB(!1), fB.current = zB, jB(BB))
         }))
       };
-      (0, WT.useEffect)((() => {
-        var TT, UT;
-        tT.b.get("isTouchScreen") || (null === (TT = kT.current) || void 0 === TT || TT.focus(), null === (UT = kT.current) || void 0 === UT || UT.select())
+      (0, QB.useEffect)((() => {
+        var BB, jB;
+        HB.c.get("isTouchScreen") || (null === (BB = UB.current) || void 0 === BB || BB.focus(), null === (jB = UB.current) || void 0 === jB || jB.select())
       }), []);
-      const sT = () => {
-          (0, nT.k)(iT.current), TT()
+      const XB = () => {
+          (0, NB.l)(gB.current), BB()
         },
-        FT = TT => "refused" === TT.outcome ? TT.message : UT((0, aT.g)(TT.failure)),
-        PT = TT => !(TT.length >= wT.i) && (pT({
+        ZB = BB => "refused" === BB.outcome ? BB.message : jB((0, DB.f)(BB.failure)),
+        AB = BB => !(BB.length >= oB.k) && (sB({
           kind: "error",
-          message: UT("homePage:changeNameMinLengthError", {
-            length: wT.i
+          message: jB("homePage:changeNameMinLengthError", {
+            length: oB.k
           })
         }), !0),
-        VT = TT => {
-          var WT, zT, MT;
-          TT.toLowerCase() !== (null === (WT = null !== (zT = null === (MT = JT.current) || void 0 === MT ? void 0 : MT.name) && void 0 !== zT ? zT : HT) || void 0 === WT ? void 0 : WT.toLowerCase()) ? PT(TT) || QT((0, aT.e)(mT, TT), (mT => {
-            "taken" !== mT.outcome ? "refused" !== mT.outcome && "failed" !== mT.outcome ? mT.name !== TT ? (iT.current = "suffixed", JT.current = {
-              name: mT.name,
-              outcome: iT.current
-            }, xT(mT.name), pT({
+        TB = BB => {
+          var QB, nB, dB;
+          BB.toLowerCase() !== (null === (QB = null !== (nB = null === (dB = iB.current) || void 0 === dB ? void 0 : dB.name) && void 0 !== nB ? nB : uB) || void 0 === QB ? void 0 : QB.toLowerCase()) ? AB(BB) || hB((0, DB.b)(zB, BB), (zB => {
+            "taken" !== zB.outcome ? "refused" !== zB.outcome && "failed" !== zB.outcome ? zB.name !== BB ? (gB.current = "suffixed", iB.current = {
+              name: zB.name,
+              outcome: gB.current
+            }, qB(zB.name), sB({
               kind: "suffixed",
-              taken: TT,
-              name: mT.name
-            })) : sT() : pT({
+              taken: BB,
+              name: zB.name
+            })) : XB() : sB({
               kind: "error",
-              message: FT(mT)
-            }) : pT({
+              message: ZB(zB)
+            }) : sB({
               kind: "error",
-              message: UT("homePage:onboardingNameAllTaken")
+              message: jB("homePage:onboardingNameAllTaken")
             })
-          })) : sT()
+          })) : XB()
         };
-      (0, WT.useEffect)((() => {
-        if (!BT || null !== HT || !eT.current) return;
-        const TT = setTimeout((() => {
-          eT.current = !1, cT(!1), pT({
+      (0, QB.useEffect)((() => {
+        if (!JB || null !== uB || !MB.current) return;
+        const BB = setTimeout((() => {
+          MB.current = !1, yB(!1), sB({
             kind: "noAccount"
           })
         }), 2e4);
         return () => {
-          clearTimeout(TT)
+          clearTimeout(BB)
         }
-      }), [BT, HT]), (0, WT.useEffect)((() => {
-        if (null === HT) return;
-        const TT = OT.current && "Jp" === iT.current && mT.isLoggedIn();
-        OT.current = !1, "noAccount" === (null === LT || void 0 === LT ? void 0 : LT.kind) && pT(null), TT && xT(HT), eT.current && (eT.current = !1, cT(!1), VT(TT ? HT : YT))
-      }), [HT]);
-      const uT = "error" === (null === LT || void 0 === LT ? void 0 : LT.kind) ? LT.message : "noAccount" === (null === LT || void 0 === LT ? void 0 : LT.kind) ? UT("homePage:onboardingNameNoAccount") : null;
+      }), [JB, uB]), (0, QB.useEffect)((() => {
+        if (null === uB) return;
+        const BB = SB.current && "Cs" === gB.current && zB.isLoggedIn();
+        SB.current = !1, "noAccount" === (null === rB || void 0 === rB ? void 0 : rB.kind) && sB(null), BB && qB(uB), MB.current && (MB.current = !1, yB(!1), TB(BB ? uB : EB))
+      }), [uB]);
+      const PB = "error" === (null === rB || void 0 === rB ? void 0 : rB.kind) ? rB.message : "noAccount" === (null === rB || void 0 === rB ? void 0 : rB.kind) ? jB("homePage:onboardingNameNoAccount") : null;
       return {
-        field: (0, qT.jsxs)("div", {
+        field: (0, LB.jsxs)("div", {
           className: "OnboardingNameField",
-          ref: IT,
-          children: [(0, qT.jsx)("div", {
+          ref: VB,
+          children: [(0, LB.jsx)("div", {
             className: "OnboardingSubtitle",
-            children: UT("general:name")
-          }), null === YT && (0, qT.jsx)(yT.c, {}), null !== YT && (0, qT.jsxs)("div", {
+            children: jB("general:name")
+          }), null === EB && (0, LB.jsx)(FB.e, {}), null !== EB && (0, LB.jsxs)("div", {
             className: "OnboardingNameRow",
-            children: [(0, qT.jsx)(XT.e, {
+            children: [(0, LB.jsx)(YB.d, {
               className: "OnboardingNameInput",
-              ariaLabel: UT("general:name"),
-              maxLength: wT.h,
-              defaultValue: YT,
-              domRef: kT,
-              forcedText: BT ? YT : null,
+              ariaLabel: jB("general:name"),
+              maxLength: oB.g,
+              defaultValue: EB,
+              domRef: UB,
+              forcedText: JB ? EB : null,
               onEnter: () => {
-                var TT;
-                null === (TT = kT.current) || void 0 === TT || TT.blur()
+                var BB;
+                null === (BB = UB.current) || void 0 === BB || BB.blur()
               },
-              onValueChange: TT => {
-                const mT = (0, wT.n)(TT);
-                mT !== TT && kT.current && (kT.current.value = mT), pT(mT !== TT ? {
+              onValueChange: BB => {
+                const zB = (0, oB.m)(BB);
+                zB !== BB && UB.current && (UB.current.value = zB), sB(zB !== BB ? {
                   kind: "error",
-                  message: UT("homePage:nameCharacters")
-                } : null), mT !== YT && (iT.current = "changed"), lT(mT)
+                  message: jB("homePage:nameCharacters")
+                } : null), zB !== EB && (gB.current = "changed"), pB(zB)
               }
-            }), (0, qT.jsx)(gT.e, {
+            }), (0, LB.jsx)(IB.f, {
               className: "OnboardingRandomName",
-              ariaLabel: UT("homePage:onboardingRandomName"),
-              disabled: BT,
+              ariaLabel: jB("homePage:onboardingRandomName"),
+              disabled: JB,
               onClick: () => {
                 (() => {
-                  if (pT(null), null === HT || mT.isLoggedIn()) return xT((0, wT.f)()), void(iT.current = "rolled");
-                  QT((0, aT.m)(mT), (TT => {
-                    var UT, WT;
-                    if ("refused" === TT.outcome || "failed" === TT.outcome) return xT(mT.getPlayerName()), iT.current = null !== (UT = null === (WT = JT.current) || void 0 === WT ? void 0 : WT.outcome) && void 0 !== UT ? UT : "Jp", void pT({
+                  if (sB(null), null === uB || zB.isLoggedIn()) return qB((0, oB.e)()), void(gB.current = "rolled");
+                  hB((0, DB.k)(zB), (BB => {
+                    var jB, QB;
+                    if ("refused" === BB.outcome || "failed" === BB.outcome) return qB(zB.getPlayerName()), gB.current = null !== (jB = null === (QB = iB.current) || void 0 === QB ? void 0 : QB.outcome) && void 0 !== jB ? jB : "Cs", void sB({
                       kind: "error",
-                      message: FT(TT)
+                      message: ZB(BB)
                     });
-                    iT.current = "rolled", JT.current = {
-                      name: TT.name,
+                    gB.current = "rolled", iB.current = {
+                      name: BB.name,
                       outcome: "rolled"
-                    }, xT(TT.name)
+                    }, qB(BB.name)
                   }))
                 })()
               },
-              children: (0, qT.jsx)(ZT.c, {
+              children: (0, LB.jsx)(mB.c, {
                 name: "dice"
               })
             })]
-          }), "suffixed" === (null === LT || void 0 === LT ? void 0 : LT.kind) && (0, qT.jsx)("div", {
+          }), "suffixed" === (null === rB || void 0 === rB ? void 0 : rB.kind) && (0, LB.jsx)("div", {
             className: "OnboardingNameNote",
-            children: UT("homePage:onboardingNameSuffixed", {
-              taken: LT.taken,
-              name: LT.name
+            children: jB("homePage:onboardingNameSuffixed", {
+              taken: rB.taken,
+              name: rB.name
             })
-          }), null !== uT && (0, qT.jsx)("div", {
+          }), null !== PB && (0, LB.jsx)("div", {
             className: "OnboardingNameNote OnboardingNameError",
-            children: uT
+            children: PB
           })]
         }),
         submit: () => {
-          if (!BT && null !== YT) {
-            if (null === HT) {
-              if (PT(YT)) return;
-              return dT.current = document.activeElement === kT.current, eT.current = !0, cT(!0), void pT(null)
+          if (!JB && null !== EB) {
+            if (null === uB) {
+              if (AB(EB)) return;
+              return fB.current = document.activeElement === UB.current, MB.current = !0, yB(!0), void sB(null)
             }
-            VT(YT)
+            TB(EB)
           }
         },
-        busy: BT,
-        ready: null !== YT
+        busy: JB,
+        ready: null !== EB
       }
     }
 
-    function QT() {
-      const TT = {
+    function hB() {
+      const BB = {
         finished: !1
       };
-      return MT.NotificationProvider.showCustomPopup({
-        body: UT => (0, qT.jsx)(sT, {
+      return dB.NotificationProvider.showCustomPopup({
+        body: jB => (0, LB.jsx)(XB, {
           onFinish: () => {
-            (0, nT.e)(), TT.finished = !0, UT()
+            (0, NB.g)(), BB.finished = !0, jB()
           }
         }),
         middleScreenPopupClassName: "OnboardingPopup",
         ignoreBackgroundPress: !0,
         onClose: () => {
-          TT.finished || (0, nT.c)()
+          BB.finished || (0, NB.d)()
         }
       })
     }
 
-    function sT(TT) {
+    function XB(BB) {
       let {
-        onFinish: UT
-      } = TT;
+        onFinish: jB
+      } = BB;
       const {
-        t: mT
-      } = (0, zT.z)(), MT = IT(UT);
-      return (0, WT.useEffect)((() => {
-        (0, nT.m)()
-      }), []), (0, qT.jsxs)("div", {
+        t: zB
+      } = (0, nB.D)(), dB = VB(jB);
+      return (0, QB.useEffect)((() => {
+        (0, NB.o)()
+      }), []), (0, LB.jsxs)("div", {
         className: "Onboarding",
-        children: [(0, qT.jsx)("div", {
+        children: [(0, LB.jsx)("div", {
           className: "OnboardingTitle",
-          children: mT("homePage:onboardingTitle")
-        }), (0, qT.jsxs)("div", {
+          children: zB("homePage:onboardingTitle")
+        }), (0, LB.jsxs)("div", {
           className: "OnboardingBody",
-          children: [MT.field, (0, qT.jsx)(dT, {})]
-        }), (0, qT.jsx)("div", {
+          children: [dB.field, (0, LB.jsx)(fB, {})]
+        }), (0, LB.jsx)("div", {
           className: "OnboardingFooter",
-          children: (0, qT.jsx)(gT.l, {
+          children: (0, LB.jsx)(IB.m, {
             className: "OnboardingPrimaryButton",
             padDefaultFocus: !0,
-            loading: MT.busy,
-            disabled: !MT.ready,
-            onClick: MT.submit,
-            children: mT("homePage:onboardingDone")
+            loading: dB.busy,
+            disabled: !dB.ready,
+            onClick: dB.submit,
+            children: zB("homePage:onboardingDone")
           })
         })]
       })
     }
   },
-  36465: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => gT
+  36467: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => IB
     });
-    var WT = mT(2046),
-      zT = mT(1613);
-    const MT = new class {
+    var QB = zB(1982),
+      nB = zB(1532);
+    const dB = new class {
       constructor() {
         this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
       }
-      save(TT, UT) {
-        TT !== this.userContext && this.sendHeld(), this.userContext = TT;
-        for (const [WT, zT] of UT) this.pending.set(WT, zT);
+      save(BB, jB) {
+        BB !== this.userContext && this.sendHeld(), this.userContext = BB;
+        for (const [QB, nB] of jB) this.pending.set(QB, nB);
         if (null !== this.timer) return;
-        const mT = this.lastSentAt + 1100 - Date.now();
-        mT <= 0 ? this.send(TT) : (this.timer = setTimeout((() => {
+        const zB = this.lastSentAt + 1100 - Date.now();
+        zB <= 0 ? this.send(BB) : (this.timer = setTimeout((() => {
           this.sendHeld()
-        }), mT), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
+        }), zB), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.sendHeld()
         }))))
       }
       sendHeld() {
         null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
       }
-      send(TT) {
-        const UT = Array.from(this.pending, (TT => {
-          let [UT, mT] = TT;
+      send(BB) {
+        const jB = Array.from(this.pending, (BB => {
+          let [jB, zB] = BB;
           return {
-            wM: UT,
-            tM: mT
+            Wd: jB,
+            ld: zB
           }
         }));
-        this.pending.clear(), this.lastSentAt = Date.now(), zT.b.updateCosmetics(TT, UT).catch((TT => {
-          console.error("Failed to update cosmetics", TT)
+        this.pending.clear(), this.lastSentAt = Date.now(), nB.b.updateCosmetics(BB, jB).catch((BB => {
+          console.error("Failed to update cosmetics", BB)
         }))
       }
     };
 
-    function gT(TT, UT) {
-      for (const [mT, WT] of UT) TT.setPlayerCosmetics(mT, WT);
-      if (null === WT.gameBridge.latest("connectedGame").websocketUrl) MT.save(TT, UT);
+    function IB(BB, jB) {
+      for (const [zB, QB] of jB) BB.setPlayerCosmetics(zB, QB);
+      if (null === QB.gameBridge.latest("connectedGame").websocketUrl) dB.save(BB, jB);
       else
-        for (const [mT, zT] of UT) WT.gameBridge.send("updateMyCosmetic", {
-          wM: mT,
-          tM: zT
+        for (const [zB, nB] of jB) QB.gameBridge.send("updateMyCosmetic", {
+          Wd: zB,
+          ld: nB
         })
     }
   },
-  34164: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => fT,
-      g: () => kT,
-      k: () => ZT,
-      m: () => BT
+  34138: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => GB,
+      f: () => UB,
+      g: () => mB,
+      k: () => JB
     });
-    var WT = mT(166),
-      zT = mT(1367),
-      MT = mT(1302),
-      gT = mT(1231),
-      nT = mT(1854);
-    const HT = {
+    var QB = zB(174),
+      nB = zB(1297),
+      dB = zB(1244),
+      IB = zB(1173),
+      NB = zB(1770);
+    const uB = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function kT(TT) {
-      return HT[TT]
+    function UB(BB) {
+      return uB[BB]
     }
 
-    function jT(TT) {
-      return (0, nT.d)(TT) ? "outdated" : TT instanceof WT.d ? 429 === TT.httpCode ? "busy" : "server" : "offline"
+    function aB(BB) {
+      return (0, NB.e)(BB) ? "outdated" : BB instanceof QB.c ? 429 === BB.httpCode ? "busy" : "server" : "offline"
     }
 
-    function lT(TT, UT, mT) {
-      return (0, gT.postJsonWithMetricsCookiesAndJsonResponse)(`${MT.clientSideServerUrls.indexUrl}${UT}`, mT, {
+    function pB(BB, jB, zB) {
+      return (0, IB.postJsonWithMetricsCookiesAndJsonResponse)(`${dB.clientSideServerUrls.indexUrl}${jB}`, zB, {
         retries: 3
-      }, TT.getMetricsCookies()).catch((TT => (console.error("Bad response from the server when trying to change name:", UT, TT), {
+      }, BB.getMetricsCookies()).catch((BB => (console.error("Bad response from the server when trying to change name:", jB, BB), {
         outcome: "failed",
-        failure: jT(TT)
+        failure: aB(BB)
       })))
     }
 
-    function LT(TT) {
-      return "outcome" in TT && "failed" === TT.outcome
+    function rB(BB) {
+      return "outcome" in BB && "failed" === BB.outcome
     }
 
-    function pT(TT) {
-      return console.error("Error when trying to get with new name from DB", TT), {
+    function sB(BB) {
+      return console.error("Error when trying to get with new name from DB", BB), {
         outcome: "refused",
-        message: TT
+        message: BB
       }
     }
-    async function BT(TT) {
-      const UT = await lT(TT, "/index/name/random", {});
-      return LT(UT) ? UT : "err" in UT ? pT(UT.err) : (TT.setPlayerName(UT.name), {
+    async function JB(BB) {
+      const jB = await pB(BB, "/index/name/random", {});
+      return rB(jB) ? jB : "err" in jB ? sB(jB.err) : (BB.setPlayerName(jB.name), {
         outcome: "changed",
-        name: UT.name
+        name: jB.name
       })
     }
-    async function ZT(TT, UT) {
-      const mT = await lT(TT, "/index/name/update", {
-        name: UT
+    async function mB(BB, jB) {
+      const zB = await pB(BB, "/index/name/update", {
+        name: jB
       });
-      return LT(mT) ? mT : "err" in mT ? pT(mT.err) : mT.nameExists ? {
+      return rB(zB) ? zB : "err" in zB ? sB(zB.err) : zB.nameExists ? {
         outcome: "taken"
-      } : (TT.setPlayerName(UT), {
+      } : (BB.setPlayerName(jB), {
         outcome: "changed",
-        name: UT
+        name: jB
       })
     }
 
-    function cT(TT, UT) {
-      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const WT = 1 === UT ? 1 : 10 ** (UT - 1),
-        MT = String(WT + Math.floor(mT() * (10 ** UT - WT)));
-      return `${TT.slice(0,zT.h-UT)}${MT}`
+    function yB(BB, jB) {
+      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const QB = 1 === jB ? 1 : 10 ** (jB - 1),
+        dB = String(QB + Math.floor(zB() * (10 ** jB - QB)));
+      return `${BB.slice(0,nB.g-jB)}${dB}`
     }
-    const vT = [1, 2, 3, 4];
-    async function fT(TT, UT) {
-      const mT = await ZT(TT, UT);
-      if ("taken" !== mT.outcome) return mT;
-      for (const WT of vT) {
-        const mT = cT(UT, WT),
-          zT = await ZT(TT, mT);
-        if ("taken" !== zT.outcome) return zT
+    const kB = [1, 2, 3, 4];
+    async function GB(BB, jB) {
+      const zB = await mB(BB, jB);
+      if ("taken" !== zB.outcome) return zB;
+      for (const QB of kB) {
+        const zB = yB(jB, QB),
+          nB = await mB(BB, zB);
+        if ("taken" !== nB.outcome) return nB
       }
       return {
         outcome: "taken"
@@ -568,4 +568,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

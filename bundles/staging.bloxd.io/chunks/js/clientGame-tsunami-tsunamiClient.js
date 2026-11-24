@@ -1,116 +1,116 @@
 export const id = 26;
 export const ids = [26];
 export const modules = {
-  39666: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      default: () => nT
+  39630: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      default: () => NB
     });
-    var WT = mT(34298);
-    const zT = 1e3 / 3;
+    var QB = zB(34270);
+    const nB = 1e3 / 3;
 
-    function MT(TT, UT, mT) {
-      if ("parenthetical-seconds" === UT) return ` (${TT}s)`;
-      const WT = `${Math.floor(TT/60)}:${(TT%60).toString().padStart(2,"0")}`;
-      return mT ? `${mT}${WT}` : WT
+    function dB(BB, jB, zB) {
+      if ("parenthetical-seconds" === jB) return ` (${BB}s)`;
+      const QB = `${Math.floor(BB/60)}:${(BB%60).toString().padStart(2,"0")}`;
+      return zB ? `${zB}${QB}` : QB
     }
 
-    function gT(TT, UT, mT, zT, MT) {
-      var gT;
-      const nT = {
-        ...zT.baseNametag
+    function IB(BB, jB, zB, nB, dB) {
+      var IB;
+      const NB = {
+        ...nB.baseNametag
       };
-      nT.content = [...null !== (gT = zT.baseNametag.content) && void 0 !== gT ? gT : [], {
+      NB.content = [...null !== (IB = nB.baseNametag.content) && void 0 !== IB ? IB : [], {
         str: " "
       }, {
         icon: "Gold Coin"
       }, {
-        str: `: ${(0,WT.d)(MT)}`
-      }], TT.setOtherEntitySetting(UT, mT, "nameTagInfo", nT)
+        str: `: ${(0,QB.d)(dB)}`
+      }], BB.setOtherEntitySetting(jB, zB, "nameTagInfo", NB)
     }
-    const nT = function(TT, UT, mT, WT) {
-      let nT, {
-        localPlayerId: HT
-      } = WT;
-      const kT = new Map,
-        jT = new Map;
-      let lT = 0,
-        LT = 0;
+    const NB = function(BB, jB, zB, QB) {
+      let NB, {
+        localPlayerId: uB
+      } = QB;
+      const UB = new Map,
+        aB = new Map;
+      let pB = 0,
+        rB = 0;
       return {
-        onCreate: TT => {
-          nT = TT
+        onCreate: BB => {
+          NB = BB
         },
-        Cl: TT => {
-          const UT = Date.now();
-          for (const [WT, zT] of kT) {
-            const TT = Math.floor((UT - zT.startTime) / 1e3),
-              gT = Math.max(0, zT.remainingSeconds - TT);
-            if (gT === zT.lastRenderedSecond) continue;
-            zT.lastRenderedSecond = gT;
-            const jT = {
-                str: MT(gT, zT.format, zT.prefix),
-                style: zT.style
+        vp: BB => {
+          const jB = Date.now();
+          for (const [QB, nB] of UB) {
+            const BB = Math.floor((jB - nB.startTime) / 1e3),
+              IB = Math.max(0, nB.remainingSeconds - BB);
+            if (IB === nB.lastRenderedSecond) continue;
+            nB.lastRenderedSecond = IB;
+            const aB = {
+                str: dB(IB, nB.format, nB.prefix),
+                style: nB.style
               },
-              lT = {
-                ...zT.baseNametag
+              pB = {
+                ...nB.baseNametag
               };
-            var mT;
-            if ("content" === zT.location) lT.content = [...null !== (mT = zT.baseNametag.content) && void 0 !== mT ? mT : [], jT];
-            else lT.subtitle = [jT];
-            nT.setOtherEntitySetting(HT, WT, "nameTagInfo", lT), gT <= 0 && kT.delete(WT)
+            var zB;
+            if ("content" === nB.location) pB.content = [...null !== (zB = nB.baseNametag.content) && void 0 !== zB ? zB : [], aB];
+            else pB.subtitle = [aB];
+            NB.setOtherEntitySetting(uB, QB, "nameTagInfo", pB), IB <= 0 && UB.delete(QB)
           }
-          if (jT.size > 0 && UT - lT >= zT) {
-            lT = UT, LT = (LT + 1) % 3;
-            let TT = 0;
-            for (const [mT, WT] of jT) {
-              if (TT++ % 3 !== LT) continue;
-              const zT = Math.floor((UT - WT.startTime) / 1e3);
-              if (zT === WT.lastRenderedSecond) continue;
-              WT.lastRenderedSecond = zT;
-              const MT = WT.accumulatedIncome + WT.incomePerSecond * BigInt(zT);
-              gT(nT, HT, mT, WT, MT)
+          if (aB.size > 0 && jB - pB >= nB) {
+            pB = jB, rB = (rB + 1) % 3;
+            let BB = 0;
+            for (const [zB, QB] of aB) {
+              if (BB++ % 3 !== rB) continue;
+              const nB = Math.floor((jB - QB.startTime) / 1e3);
+              if (nB === QB.lastRenderedSecond) continue;
+              QB.lastRenderedSecond = nB;
+              const dB = QB.accumulatedIncome + QB.incomePerSecond * BigInt(nB);
+              IB(NB, uB, zB, QB, dB)
             }
           }
         },
-        onReceivedMessageFromServer: (TT, UT) => {
-          if ("startCountdown" === TT) kT.set(UT.eId, {
-            baseNametag: UT.baseNametag,
-            remainingSeconds: UT.remainingSeconds,
+        onReceivedMessageFromServer: (BB, jB) => {
+          if ("startCountdown" === BB) UB.set(jB.eId, {
+            baseNametag: jB.baseNametag,
+            remainingSeconds: jB.remainingSeconds,
             startTime: Date.now(),
-            format: UT.format,
-            location: UT.location,
-            prefix: UT.prefix,
-            style: UT.style,
+            format: jB.format,
+            location: jB.location,
+            prefix: jB.prefix,
+            style: jB.style,
             lastRenderedSecond: -1
           });
-          else if ("stopCountdown" === TT) kT.delete(UT.eId);
-          else if ("startIncomeTicking" === TT) {
-            const TT = {
-              baseNametag: UT.baseNametag,
-              accumulatedIncome: BigInt(UT.accumulatedIncome),
-              incomePerSecond: BigInt(UT.incomePerSecond),
+          else if ("stopCountdown" === BB) UB.delete(jB.eId);
+          else if ("startIncomeTicking" === BB) {
+            const BB = {
+              baseNametag: jB.baseNametag,
+              accumulatedIncome: BigInt(jB.accumulatedIncome),
+              incomePerSecond: BigInt(jB.incomePerSecond),
               startTime: Date.now(),
               lastRenderedSecond: -1
             };
-            jT.set(UT.eId, TT), gT(nT, HT, UT.eId, TT, TT.accumulatedIncome)
-          } else "stopIncomeTicking" === TT && jT.delete(UT.eId) && nT.setOtherEntitySetting(HT, UT.eId, "nameTagInfo", {
+            aB.set(jB.eId, BB), IB(NB, uB, jB.eId, BB, BB.accumulatedIncome)
+          } else "stopIncomeTicking" === BB && aB.delete(jB.eId) && NB.setOtherEntitySetting(uB, jB.eId, "nameTagInfo", {
             content: []
           })
         },
-        onPlayerAltAction: (TT, UT, mT, WT, zT, MT) => {
-          if (MT && "Mesh" === nT.getEntityType(MT)) {
-            const UT = nT.getEntityName(MT);
-            "Upgrades" === UT ? nT.openShop(TT, !1, "Upgrades") : "Items" === UT ? nT.openShop(TT, !1, "Items") : "Prestige" === UT ? nT.openShop(TT, !1, "Prestige") : "Collections" === UT ? nT.openShop(TT, !1, "Collections") : "Base Skins" === UT ? nT.openShop(TT, !1, "Base Skins") : "Gauntlet" === UT ? nT.openShop(TT, !1, "Gauntlet") : "Diamond Shop" === UT && nT.openShop(TT, !1, "Diamond Shop")
+        onPlayerAltAction: (BB, jB, zB, QB, nB, dB) => {
+          if (dB && "Mesh" === NB.getEntityType(dB)) {
+            const jB = NB.getEntityName(dB);
+            "Upgrades" === jB ? NB.openShop(BB, !1, "Upgrades") : "Items" === jB ? NB.openShop(BB, !1, "Items") : "Prestige" === jB ? NB.openShop(BB, !1, "Prestige") : "Collections" === jB ? NB.openShop(BB, !1, "Collections") : "Base Skins" === jB ? NB.openShop(BB, !1, "Base Skins") : "Gauntlet" === jB ? NB.openShop(BB, !1, "Gauntlet") : "Diamond Shop" === jB && NB.openShop(BB, !1, "Diamond Shop")
           }
         }
       }
     }
   },
-  34298: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => zT,
-      h: () => gT
+  34270: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => nB,
+      g: () => IB
     });
-    const WT = [{
+    const QB = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -292,67 +292,67 @@ export const modules = {
       suffix: "K"
     }];
 
-    function zT(TT) {
-      let UT, mT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof TT) {
-        if (!Number.isFinite(TT)) return "0";
-        if (Math.abs(TT) < 100) {
-          const UT = TT < 0 ? "-" : "",
-            mT = Math.abs(TT);
-          return mT >= 10 ? `${UT}${mT.toFixed(1).replace(/\.0$/,"")}` : `${UT}${mT.toFixed(2).replace(/\.?0+$/,"")}`
+    function nB(BB) {
+      let jB, zB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof BB) {
+        if (!Number.isFinite(BB)) return "0";
+        if (Math.abs(BB) < 100) {
+          const jB = BB < 0 ? "-" : "",
+            zB = Math.abs(BB);
+          return zB >= 10 ? `${jB}${zB.toFixed(1).replace(/\.0$/,"")}` : `${jB}${zB.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        UT = BigInt(Math.floor(TT))
-      } else UT = TT;
-      const zT = UT < 0n ? -UT : UT,
-        MT = UT < 0n ? "-" : "",
-        gT = zT.toString();
-      if (gT.length <= mT) return `${MT}${gT}`;
-      const nT = 3 * Math.floor((gT.length - 1) / 3);
-      if (nT < 3) return `${MT}${gT}`;
-      if (nT > 3 * WT.length) {
-        const TT = gT[0],
-          UT = gT.slice(1, 3).replace(/0+$/, "");
-        return `${MT}${UT?`${TT}.${UT}`:TT}e${gT.length-1}`
+        jB = BigInt(Math.floor(BB))
+      } else jB = BB;
+      const nB = jB < 0n ? -jB : jB,
+        dB = jB < 0n ? "-" : "",
+        IB = nB.toString();
+      if (IB.length <= zB) return `${dB}${IB}`;
+      const NB = 3 * Math.floor((IB.length - 1) / 3);
+      if (NB < 3) return `${dB}${IB}`;
+      if (NB > 3 * QB.length) {
+        const BB = IB[0],
+          jB = IB.slice(1, 3).replace(/0+$/, "");
+        return `${dB}${jB?`${BB}.${jB}`:BB}e${IB.length-1}`
       }
       const {
-        threshold: HT,
-        suffix: kT
-      } = WT[WT.length - nT / 3], jT = zT / HT, lT = Number(1000n * (zT % HT) / HT), LT = Number(jT) + lT / 1e3;
-      let pT;
-      return pT = LT >= 100 ? Math.floor(LT).toString() : LT >= 10 ? LT.toFixed(1).replace(/\.0$/, "") : LT.toFixed(2).replace(/\.?0+$/, ""), `${MT}${pT}${kT}`
+        threshold: uB,
+        suffix: UB
+      } = QB[QB.length - NB / 3], aB = nB / uB, pB = Number(1000n * (nB % uB) / uB), rB = Number(aB) + pB / 1e3;
+      let sB;
+      return sB = rB >= 100 ? Math.floor(rB).toString() : rB >= 10 ? rB.toFixed(1).replace(/\.0$/, "") : rB.toFixed(2).replace(/\.?0+$/, ""), `${dB}${sB}${UB}`
     }
-    const MT = WT.map((TT => {
+    const dB = QB.map((BB => {
       let {
-        threshold: UT,
-        suffix: mT
-      } = TT;
+        threshold: jB,
+        suffix: zB
+      } = BB;
       return {
-        threshold: Number(UT),
-        suffix: mT
+        threshold: Number(jB),
+        suffix: zB
       }
-    })).filter((TT => {
+    })).filter((BB => {
       let {
-        threshold: UT
-      } = TT;
-      return Number.isFinite(UT)
+        threshold: jB
+      } = BB;
+      return Number.isFinite(jB)
     }));
 
-    function gT(TT) {
-      const UT = Math.abs(TT),
-        mT = TT < 0 ? "-" : "";
+    function IB(BB) {
+      const jB = Math.abs(BB),
+        zB = BB < 0 ? "-" : "";
       for (const {
-          threshold: WT,
-          suffix: zT
+          threshold: QB,
+          suffix: nB
         }
-        of MT)
-        if (UT >= WT) {
-          const TT = UT / WT;
-          if (TT >= 1e3) return `${mT}${UT.toExponential(2).replace("e+","e")}`;
-          let MT;
-          return MT = TT >= 100 ? Math.floor(TT).toString() : TT >= 10 ? TT.toFixed(1).replace(/\.0$/, "") : TT.toFixed(2).replace(/\.?0+$/, ""), `${mT}${MT}${zT}`
-        } return `${mT}${UT}`
+        of dB)
+        if (jB >= QB) {
+          const BB = jB / QB;
+          if (BB >= 1e3) return `${zB}${jB.toExponential(2).replace("e+","e")}`;
+          let dB;
+          return dB = BB >= 100 ? Math.floor(BB).toString() : BB >= 10 ? BB.toFixed(1).replace(/\.0$/, "") : BB.toFixed(2).replace(/\.?0+$/, ""), `${zB}${dB}${nB}`
+        } return `${zB}${jB}`
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

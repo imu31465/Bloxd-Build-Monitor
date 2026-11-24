@@ -1,22 +1,62 @@
 export const id = 14;
 export const ids = [14];
 export const modules = {
-  38693: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => gT
+  39385: (BB, jB, zB) => {
+    var QB = {
+      "./breach-zero-uncaught.webp": 39388,
+      "./breach-zero.webp": 39397,
+      "./brood-father-uncaught.webp": 39405,
+      "./brood-father.webp": 39407,
+      "./carousel-uncaught.webp": 39415,
+      "./carousel.webp": 39418,
+      "./deadlock-uncaught.webp": 39422,
+      "./deadlock.webp": 39428,
+      "./frost-revenant-uncaught.webp": 39436,
+      "./frost-revenant.webp": 39439,
+      "./hollow-choir-uncaught.webp": 39445,
+      "./hollow-choir.webp": 39447,
+      "./magma-warden-uncaught.webp": 39451,
+      "./magma-warden.webp": 39456,
+      "./patient-zero-uncaught.webp": 39464,
+      "./patient-zero.webp": 39469,
+      "./siege-engine-uncaught.webp": 39471,
+      "./siege-engine.webp": 39478,
+      "./warp-stalker-uncaught.webp": 39481,
+      "./warp-stalker.webp": 39489
+    };
+
+    function nB(BB) {
+      var jB = dB(BB);
+      return zB(jB)
+    }
+
+    function dB(BB) {
+      if (!zB.o(QB, BB)) {
+        var jB = new Error("Cannot find module '" + BB + "'");
+        throw jB.code = "MODULE_NOT_FOUND", jB
+      }
+      return QB[BB]
+    }
+    nB.keys = function() {
+      return Object.keys(QB)
+    }, nB.resolve = dB, BB.exports = nB, nB.id = 39385
+  },
+  38645: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => IB
     });
-    const WT = 4,
-      zT = 12e3,
-      MT = 1e3;
-    class gT {
+    const QB = 4,
+      nB = 12e3,
+      dB = 1e3;
+    class IB {
       constructor() {
         let {
-          limit: TT = WT,
-          windowMs: UT = zT,
-          spacingMs: mT = MT,
-          now: gT = Date.now
+          limit: BB = QB,
+          windowMs: jB = nB,
+          spacingMs: zB = dB,
+          now: IB = Date.now
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = TT, this.windowMs = UT, this.spacingMs = mT, this.now = gT
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = BB, this.windowMs = jB, this.spacingMs = zB, this.now = IB
       }
       isPacing() {
         return !this.canSendPriority() || this.isPriorityWaiting()
@@ -25,61 +65,61 @@ export const modules = {
         return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
       }
       tryStart() {
-        for (const TT of this.priority) TT.flush();
+        for (const BB of this.priority) BB.flush();
         return !this.isPacing() && (this.start(), !0)
       }
       start() {
         this.prune();
-        const TT = this.now();
-        this.sent.push(TT), this.lastSentAt = TT, this.schedule(), this.notify()
+        const BB = this.now();
+        this.sent.push(BB), this.lastSentAt = BB, this.schedule(), this.notify()
       }
-      addPriority(TT) {
-        return this.priority.add(TT), () => {
-          this.priority.delete(TT)
+      addPriority(BB) {
+        return this.priority.add(BB), () => {
+          this.priority.delete(BB)
         }
       }
-      subscribe(TT) {
-        return this.listeners.add(TT), () => {
-          this.listeners.delete(TT)
+      subscribe(BB) {
+        return this.listeners.add(BB), () => {
+          this.listeners.delete(BB)
         }
       }
       dispose() {
         this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
       }
       isPriorityWaiting() {
-        for (const TT of this.priority)
-          if (TT.waiting()) return !0;
+        for (const BB of this.priority)
+          if (BB.waiting()) return !0;
         return !1
       }
       prune() {
-        const TT = this.now() - this.windowMs;
-        for (; this.sent.length > 0 && this.sent[0] <= TT;) this.sent.shift()
+        const BB = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= BB;) this.sent.shift()
       }
       schedule() {
         this.clearTimer();
-        const TT = this.now(),
-          UT = this.lastSentAt + this.spacingMs,
-          mT = Math.min(UT > TT ? UT : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        mT !== 1 / 0 && (this.timer = setTimeout((() => {
+        const BB = this.now(),
+          jB = this.lastSentAt + this.spacingMs,
+          zB = Math.min(jB > BB ? jB : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        zB !== 1 / 0 && (this.timer = setTimeout((() => {
           this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, mT - TT)))
+        }), Math.max(0, zB - BB)))
       }
       notify() {
-        for (const TT of this.listeners) TT()
+        for (const BB of this.listeners) BB()
       }
       clearTimer() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null)
       }
     }
   },
-  38667: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => WT
+  38618: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => QB
     });
-    class WT {
-      constructor(TT, UT, mT) {
-        this.EZ = TT, this.beforeOpen = UT, this.afterClose = mT, this.open = !1, this.kB = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
-          this.isEnabled() && !this.kB && (this.open = !0, this.beforeOpen(this), this.emit())
+    class QB {
+      constructor(BB, jB, zB) {
+        this.Ly = BB, this.beforeOpen = jB, this.afterClose = zB, this.open = !1, this.HJ = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
+          this.isEnabled() && !this.HJ && (this.open = !0, this.beforeOpen(this), this.emit())
         }, this.close = () => {
           this.closePanel(!1)
         }, this.dismiss = () => {
@@ -92,234 +132,234 @@ export const modules = {
       showOrRefresh() {
         this.open ? this.emit() : this.show()
       }
-      closePanel(TT) {
-        this.open = !1, this.onClosed(), this.emit(), this.afterClose(TT)
+      closePanel(BB) {
+        this.open = !1, this.onClosed(), this.emit(), this.afterClose(BB)
       }
       onClosed() {}
       dispose() {
-        this.open = !1, this.emit(), this.kB = !0
+        this.open = !1, this.emit(), this.HJ = !0
       }
       isEnabled() {
         return !0
       }
       emit() {
-        this.kB || (this.snapshot = this.buildSnapshot(), this.EZ(this.snapshot))
+        this.HJ || (this.snapshot = this.buildSnapshot(), this.Ly(this.snapshot))
       }
     }
   },
-  39420: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      default: () => jm
+  39378: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      default: () => az
     });
-    var WT = mT(63);
-    var zT = mT(25),
-      MT = mT(2031),
-      gT = mT(31),
-      nT = mT(36693),
-      HT = mT(1126),
-      kT = mT.n(HT),
-      jT = mT(1567),
-      lT = mT(1288),
-      LT = mT(4639),
-      pT = mT(1452),
-      BT = mT(1569),
-      ZT = mT(2034),
-      cT = mT(1475),
-      vT = mT(2023),
-      fT = mT(2089),
-      qT = mT(218);
-    const iT = mT(39428),
-      bT = Object.fromEntries(iT.keys().map((TT => [TT.replace(/^\.\/(.*)\.webp$/, "$1"), iT(TT)]))),
-      OT = new Set;
+    var QB = zB(62);
+    var nB = zB(28),
+      dB = zB(1964),
+      IB = zB(31),
+      NB = zB(36682),
+      uB = zB(1091),
+      UB = zB.n(uB),
+      aB = zB(1471),
+      pB = zB(1240),
+      rB = zB(4653),
+      sB = zB(1378),
+      JB = zB(1478),
+      mB = zB(1971),
+      yB = zB(1388),
+      kB = zB(1952),
+      GB = zB(2025),
+      LB = zB(225);
+    const gB = zB(39385),
+      tB = Object.fromEntries(gB.keys().map((BB => [BB.replace(/^\.\/(.*)\.webp$/, "$1"), gB(BB)]))),
+      SB = new Set;
 
-    function eT(TT, UT) {
-      const mT = UT ? TT : `${TT}-uncaught`,
-        WT = (0, qT.b)(bT, mT);
-      return void 0 !== WT || OT.has(mT) || (OT.add(mT), console.warn(`Containment Breach has no mugshot ${mT}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), WT
+    function MB(BB, jB) {
+      const zB = jB ? BB : `${BB}-uncaught`,
+        QB = (0, LB.b)(tB, zB);
+      return void 0 !== QB || SB.has(zB) || (SB.add(zB), console.warn(`Containment Breach has no mugshot ${zB}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), QB
     }
-    var YT = mT(1188);
-    const JT = "containmentBreach",
-      xT = "Gold Coin";
+    var EB = zB(1148);
+    const iB = "containmentBreach",
+      qB = "Gold Coin";
 
-    function dT(TT) {
+    function fB(BB) {
       let {
-        open: UT,
-        onDismiss: mT,
-        title: WT,
-        className: zT,
-        decor: MT,
-        headerExtra: gT,
-        status: nT,
-        statusRefused: HT = !1,
-        children: jT
-      } = TT;
-      const lT = `${zT}Title`;
-      return (0, YT.jsx)(LT.e, {
-        show: UT,
-        close: mT,
+        open: jB,
+        onDismiss: zB,
+        title: QB,
+        className: nB,
+        decor: dB,
+        headerExtra: IB,
+        status: NB,
+        statusRefused: uB = !1,
+        children: aB
+      } = BB;
+      const pB = `${nB}Title`;
+      return (0, EB.jsx)(rB.d, {
+        show: jB,
+        close: zB,
         togglePointerLock: !1,
         className: "ContainmentBoardOverlay",
-        children: (0, YT.jsxs)("section", {
-          className: kT()("ContainmentBoardPanel", zT),
+        children: (0, EB.jsxs)("section", {
+          className: UB()("ContainmentBoardPanel", nB),
           role: "dialog",
           "aria-modal": "true",
-          "aria-labelledby": lT,
-          children: [MT && (0, YT.jsx)("div", {
+          "aria-labelledby": pB,
+          children: [dB && (0, EB.jsx)("div", {
             className: "BoardDecor",
             "aria-hidden": "true",
-            children: MT
-          }), (0, YT.jsxs)("header", {
+            children: dB
+          }), (0, EB.jsxs)("header", {
             className: "BoardHeader",
-            children: [(0, YT.jsx)("h2", {
-              id: lT,
+            children: [(0, EB.jsx)("h2", {
+              id: pB,
               className: "VisuallyHidden",
-              children: WT
-            }), gT, (0, YT.jsx)(BT.k, {
-              onClick: mT
+              children: QB
+            }), IB, (0, EB.jsx)(JB.j, {
+              onClick: zB
             })]
-          }), (0, YT.jsx)("div", {
+          }), (0, EB.jsx)("div", {
             className: "BoardBody",
-            children: jT
-          }), void 0 !== nT && (0, YT.jsx)("footer", {
-            className: kT()("BoardStatus", {
-              Refused: HT
+            children: aB
+          }), void 0 !== NB && (0, EB.jsx)("footer", {
+            className: UB()("BoardStatus", {
+              Refused: uB
             }),
-            children: nT
+            children: NB
           })]
         })
       })
     }
 
-    function wT(TT) {
+    function oB(BB) {
       let {
-        itemName: UT
-      } = TT;
-      return (0, YT.jsx)(ZT.b, {
-        itemName: UT,
+        itemName: jB
+      } = BB;
+      return (0, EB.jsx)(mB.c, {
+        itemName: jB,
         amount: 0
       })
     }
 
-    function tT(TT) {
+    function HB(BB) {
       let {
-        anomalyId: UT,
-        caught: mT
-      } = TT;
-      const zT = (0, WT.useRef)(null);
-      return (0, pT.c)(zT, !mT), (0, YT.jsx)("span", {
-        ref: zT,
-        className: kT()("BoardMugshot", {
-          Uncaught: !mT
+        anomalyId: jB,
+        caught: zB
+      } = BB;
+      const nB = (0, QB.useRef)(null);
+      return (0, sB.b)(nB, !zB), (0, EB.jsx)("span", {
+        ref: nB,
+        className: UB()("BoardMugshot", {
+          Uncaught: !zB
         }),
-        children: (0, YT.jsx)("img", {
-          src: eT(UT, mT),
+        children: (0, EB.jsx)("img", {
+          src: MB(jB, zB),
           alt: "",
           draggable: !1
         })
       })
     }
 
-    function aT(TT) {
+    function DB(BB) {
       let {
-        itemName: UT,
-        amount: mT,
-        fn: WT,
-        inTile: zT = !1
-      } = TT;
-      return (0, YT.jsx)(cT.e, {
+        itemName: jB,
+        amount: zB,
+        DN: QB,
+        inTile: nB = !1
+      } = BB;
+      return (0, EB.jsx)(yB.g, {
         delayShow: 200,
-        hoverOnly: zT,
+        hoverOnly: nB,
         placement: "top",
         tooltipClassName: "BoardChipTooltipBox",
-        tooltipInner: (0, YT.jsx)(XT, {
-          itemName: UT,
-          amount: mT,
-          fn: WT
+        tooltipInner: (0, EB.jsx)(YB, {
+          itemName: jB,
+          amount: zB,
+          DN: QB
         }),
-        children: (0, YT.jsxs)("span", {
-          className: kT()("BoardChip", {
-            Short: void 0 !== WT && WT < mT
+        children: (0, EB.jsxs)("span", {
+          className: UB()("BoardChip", {
+            Short: void 0 !== QB && QB < zB
           }),
-          children: [(0, YT.jsx)("span", {
+          children: [(0, EB.jsx)("span", {
             className: "BoardChipIcon",
-            children: (0, YT.jsx)(wT, {
-              itemName: UT
+            children: (0, EB.jsx)(oB, {
+              itemName: jB
             })
-          }), mT.toLocaleString()]
+          }), zB.toLocaleString()]
         })
       })
     }
-    const yT = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
+    const FB = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
 
-    function XT(TT) {
-      var UT;
+    function YB(BB) {
+      var jB;
       let {
-        itemName: mT,
-        amount: WT,
-        fn: zT
-      } = TT;
+        itemName: zB,
+        amount: QB,
+        DN: nB
+      } = BB;
       const {
-        t: MT
-      } = (0, lT.z)(), gT = (0, fT.f)("itemInfo", (TT => TT[mT])), {
-        lore: nT,
-        droppedBy: HT
-      } = function(TT) {
-        if ("string" !== typeof TT) return {
-          lore: TT,
+        t: dB
+      } = (0, pB.D)(), IB = (0, GB.h)("itemInfo", (BB => BB[zB])), {
+        lore: NB,
+        droppedBy: uB
+      } = function(BB) {
+        if ("string" !== typeof BB) return {
+          lore: BB,
           droppedBy: null
         };
-        const UT = yT.exec(TT);
-        return null === UT ? {
-          lore: TT,
+        const jB = FB.exec(BB);
+        return null === jB ? {
+          lore: BB,
           droppedBy: null
         } : {
-          lore: "" === UT[1] ? void 0 : UT[1],
-          droppedBy: UT[2]
+          lore: "" === jB[1] ? void 0 : jB[1],
+          droppedBy: jB[2]
         }
-      }(null === gT || void 0 === gT ? void 0 : gT.description);
-      return (0, YT.jsxs)("div", {
+      }(null === IB || void 0 === IB ? void 0 : IB.description);
+      return (0, EB.jsxs)("div", {
         className: "BoardChipTooltip",
-        children: [(0, YT.jsxs)("div", {
+        children: [(0, EB.jsxs)("div", {
           className: "BoardChipTooltipHeader",
-          children: [(0, YT.jsx)("span", {
+          children: [(0, EB.jsx)("span", {
             className: "BoardChipTooltipIcon",
-            children: (0, YT.jsx)(wT, {
-              itemName: mT
+            children: (0, EB.jsx)(oB, {
+              itemName: zB
             })
-          }), (0, YT.jsx)(vT.e, {
-            text: null !== (UT = null === gT || void 0 === gT ? void 0 : gT.displayName) && void 0 !== UT ? UT : mT,
+          }), (0, EB.jsx)(kB.e, {
+            text: null !== (jB = null === IB || void 0 === IB ? void 0 : IB.displayName) && void 0 !== jB ? jB : zB,
             className: "BoardChipTooltipName"
           })]
-        }), (void 0 !== nT || null !== HT) && (0, YT.jsxs)("div", {
+        }), (void 0 !== NB || null !== uB) && (0, EB.jsxs)("div", {
           className: "BoardChipTooltipBody",
-          children: [void 0 !== nT && (0, YT.jsx)(vT.e, {
-            text: nT,
+          children: [void 0 !== NB && (0, EB.jsx)(kB.e, {
+            text: NB,
             className: "BoardChipTooltipDescription"
-          }), null !== HT && (0, YT.jsxs)("span", {
+          }), null !== uB && (0, EB.jsxs)("span", {
             className: "BoardChipTooltipSource",
-            children: [(0, YT.jsx)("span", {
+            children: [(0, EB.jsx)("span", {
               className: "BoardChipTooltipLabel",
-              children: MT(`${JT}:chipDroppedBy`)
-            }), HT]
+              children: dB(`${iB}:chipDroppedBy`)
+            }), uB]
           })]
-        }), void 0 !== zT && (0, YT.jsxs)("div", {
-          className: kT()("BoardChipTooltipHeld", {
-            Short: zT < WT
+        }), void 0 !== nB && (0, EB.jsxs)("div", {
+          className: UB()("BoardChipTooltipHeld", {
+            Short: nB < QB
           }),
-          children: [(0, YT.jsx)("span", {
+          children: [(0, EB.jsx)("span", {
             className: "BoardChipTooltipLabel",
-            children: MT(`${JT}:chipYouHave`)
-          }), (0, YT.jsxs)("span", {
+            children: dB(`${iB}:chipYouHave`)
+          }), (0, EB.jsxs)("span", {
             className: "BoardChipTooltipCount",
-            children: [(0, YT.jsx)("span", {
+            children: [(0, EB.jsx)("span", {
               className: "BoardChipTooltipHeldAmount",
-              children: zT.toLocaleString()
-            }), ` / ${WT.toLocaleString()}`]
-          }), (0, YT.jsx)("span", {
+              children: nB.toLocaleString()
+            }), ` / ${QB.toLocaleString()}`]
+          }), (0, EB.jsx)("span", {
             className: "BoardChipTooltipMeter",
-            children: (0, YT.jsx)("span", {
+            children: (0, EB.jsx)("span", {
               style: {
-                width: (WT > 0 ? 100 * Math.min(1, zT / WT) : 100) + "%"
+                width: (QB > 0 ? 100 * Math.min(1, nB / QB) : 100) + "%"
               }
             })
           })]
@@ -327,81 +367,81 @@ export const modules = {
       })
     }
 
-    function IT(TT) {
+    function VB(BB) {
       let {
-        icon: UT,
-        name: mT,
-        selected: WT,
-        locked: zT,
-        className: MT,
-        buttonRef: gT,
-        onSelect: nT,
-        children: HT
-      } = TT;
-      return (0, YT.jsxs)("button", {
-        ref: gT,
+        icon: jB,
+        name: zB,
+        selected: QB,
+        locked: nB,
+        className: dB,
+        buttonRef: IB,
+        onSelect: NB,
+        children: uB
+      } = BB;
+      return (0, EB.jsxs)("button", {
+        ref: IB,
         type: "button",
-        className: kT()("BoardTile", MT, {
-          Selected: WT,
-          Locked: zT
+        className: UB()("BoardTile", dB, {
+          Selected: QB,
+          Locked: nB
         }),
-        onClick: nT,
-        children: [(0, YT.jsx)("span", {
+        onClick: NB,
+        children: [(0, EB.jsx)("span", {
           className: "BoardTileIcon",
-          children: UT
-        }), (0, YT.jsx)("span", {
+          children: jB
+        }), (0, EB.jsx)("span", {
           className: "BoardTileName",
-          children: mT
-        }), HT]
+          children: zB
+        }), uB]
       })
     }
 
-    function QT(TT) {
+    function hB(BB) {
       let {
-        icon: UT,
-        name: mT,
-        children: WT
-      } = TT;
-      return (0, YT.jsxs)("header", {
+        icon: jB,
+        name: zB,
+        children: QB
+      } = BB;
+      return (0, EB.jsxs)("header", {
         className: "BoardDetailHeader",
-        children: [(0, YT.jsx)("span", {
+        children: [(0, EB.jsx)("span", {
           className: "BoardDetailIcon",
-          children: UT
-        }), (0, YT.jsxs)("div", {
+          children: jB
+        }), (0, EB.jsxs)("div", {
           className: "BoardDetailHeading",
-          children: [(0, YT.jsx)("h3", {
-            children: mT
-          }), (0, YT.jsx)("span", {
+          children: [(0, EB.jsx)("h3", {
+            children: zB
+          }), (0, EB.jsx)("span", {
             className: "BoardDetailStatus",
-            children: WT
+            children: QB
           })]
         })]
       })
     }
 
-    function sT(TT) {
+    function XB(BB) {
       let {
-        coins: UT,
-        children: mT
-      } = TT;
-      return (0, YT.jsxs)("div", {
+        coins: jB,
+        children: zB
+      } = BB;
+      return (0, EB.jsxs)("div", {
         className: "BoardWallet",
-        children: [(0, YT.jsx)(aT, {
-          itemName: xT,
-          amount: UT
-        }), mT]
+        children: [(0, EB.jsx)(DB, {
+          itemName: qB,
+          amount: jB
+        }), zB]
       })
     }
-    var FT = mT(38667);
-    const PT = "containmentCodexView";
-    class VT extends FT.e {
+    var ZB = zB(38618);
+    const AB = "containmentCodexView";
+    class TB extends ZB.c {
       constructor() {
-        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = TT => {
-          this.selectedId = TT, this.emit()
+        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = BB => {
+          this.selectedId = BB, this.emit()
         }
       }
-      pB(TT) {
-        this.entries = TT.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
+      VJ(BB) {
+        this.entries = BB.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
       }
       buildSnapshot() {
         return {
@@ -411,55 +451,55 @@ export const modules = {
         }
       }
     }
-    const uT = {
-        codexAnyDifficulty: `${JT}:codexNeedsAny`,
-        codexNormalOnly: `${JT}:codexNeedsNormal`,
-        codexHardOnly: `${JT}:codexNeedsHard`
+    const PB = {
+        codexAnyDifficulty: `${iB}:codexNeedsAny`,
+        codexNormalOnly: `${iB}:codexNeedsNormal`,
+        codexHardOnly: `${iB}:codexNeedsHard`
       },
-      CT = {
+      WB = {
         codexContained: "Contained",
         codexEncountered: "Sighted",
         codexUnidentified: "Unknown"
       },
-      rT = {
-        codexContained: `${JT}:codexContainedBadge`,
-        codexEncountered: `${JT}:codexEncounteredBadge`,
-        codexUnidentified: `${JT}:codexUnidentifiedBadge`
+      eB = {
+        codexContained: `${iB}:codexContainedBadge`,
+        codexEncountered: `${iB}:codexEncounteredBadge`,
+        codexUnidentified: `${iB}:codexUnidentifiedBadge`
       },
-      KT = ["94%", "81%", "88%", "46%", "72%"];
+      lB = ["94%", "81%", "88%", "46%", "72%"];
 
-    function ST(TT) {
+    function wB(BB) {
       let {
-        entry: UT
-      } = TT;
+        entry: jB
+      } = BB;
       const {
-        t: mT
-      } = (0, lT.z)();
-      return (0, YT.jsx)("span", {
-        className: kT()("BoardBadge", CT[UT.codexEntryState]),
-        children: mT(rT[UT.codexEntryState])
+        t: zB
+      } = (0, pB.D)();
+      return (0, EB.jsx)("span", {
+        className: UB()("BoardBadge", WB[jB.codexEntryState]),
+        children: zB(eB[jB.codexEntryState])
       })
     }
 
-    function GT(TT) {
+    function xB(BB) {
       const {
-        t: UT
-      } = (0, lT.z)();
-      return "codexUnidentified" === TT.codexEntryState ? UT(`${JT}:codexUnidentifiedName`) : TT.codexEntryName
+        t: jB
+      } = (0, pB.D)();
+      return "codexUnidentified" === BB.codexEntryState ? jB(`${iB}:codexUnidentifiedName`) : BB.codexEntryName
     }
 
-    function NT(TT) {
+    function KB(BB) {
       let {
-        entry: UT
-      } = TT;
-      return "codexUnidentified" === UT.codexEntryState ? (0, YT.jsx)(wT, {
+        entry: jB
+      } = BB;
+      return "codexUnidentified" === jB.codexEntryState ? (0, EB.jsx)(oB, {
         itemName: "Book"
-      }) : (0, YT.jsxs)("span", {
+      }) : (0, EB.jsxs)("span", {
         className: "CodexPhoto",
-        children: [(0, YT.jsx)(tT, {
-          anomalyId: UT.codexEntryId,
-          caught: "codexContained" === UT.codexEntryState
-        }), (0, YT.jsx)("img", {
+        children: [(0, EB.jsx)(HB, {
+          anomalyId: jB.codexEntryId,
+          caught: "codexContained" === jB.codexEntryState
+        }), (0, EB.jsx)("img", {
           className: "CodexPaperclip",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGNggIIXb97/X7V57/+Wvtn/GZDBqs17UQTgClahScBATHrlf5ySeHWimo9NMbokCp9OkmD/oasGCaJLAAC5ZUIBS85GiAAAAABJRU5ErkJggg==",
           alt: "",
@@ -468,27 +508,27 @@ export const modules = {
       })
     }
 
-    function ET(TT) {
+    function CB(BB) {
       let {
-        entry: UT,
-        selected: mT,
-        onSelect: WT
-      } = TT;
-      const zT = "codexUnidentified" === UT.codexEntryState;
-      return (0, YT.jsxs)(IT, {
-        icon: (0, YT.jsx)(NT, {
-          entry: UT
+        entry: jB,
+        selected: zB,
+        onSelect: QB
+      } = BB;
+      const nB = "codexUnidentified" === jB.codexEntryState;
+      return (0, EB.jsxs)(VB, {
+        icon: (0, EB.jsx)(KB, {
+          entry: jB
         }),
-        name: GT(UT),
-        selected: mT,
-        locked: zT,
-        className: kT()("CodexFolder", CT[UT.codexEntryState]),
+        name: xB(jB),
+        selected: zB,
+        locked: nB,
+        className: UB()("CodexFolder", WB[jB.codexEntryState]),
         onSelect: () => {
-          WT(UT.codexEntryId)
+          QB(jB.codexEntryId)
         },
-        children: [!zT && (0, YT.jsx)(ST, {
-          entry: UT
-        }), zT && (0, YT.jsx)("img", {
+        children: [!nB && (0, EB.jsx)(wB, {
+          entry: jB
+        }), nB && (0, EB.jsx)("img", {
           className: "CodexSeal",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAARElEQVR4nGNggIIGHp7/MAzjw+TAnMf+/mB8RkQEjOGKYZLIgsiK4AqQJZA1gBXAOHgVwCRQJJEdCVOEYj8yQPciTAEAz0hgyamUqskAAAAASUVORK5CYII=",
           alt: "",
@@ -497,176 +537,176 @@ export const modules = {
       })
     }
 
-    function hT(TT) {
+    function cB(BB) {
       let {
-        count: UT
-      } = TT;
-      const mT = [];
-      for (let WT = Math.min(UT, 25); WT > 0; WT -= 5) mT.push(Math.min(WT, 5));
-      return (0, YT.jsx)("span", {
+        count: jB
+      } = BB;
+      const zB = [];
+      for (let QB = Math.min(jB, 25); QB > 0; QB -= 5) zB.push(Math.min(QB, 5));
+      return (0, EB.jsx)("span", {
         className: "CodexTallyMarks",
         "aria-hidden": "true",
-        children: mT.map(((TT, UT) => (0, YT.jsx)("span", {
-          className: kT()("CodexTallyGroup", {
-            Gate: 5 === TT
+        children: zB.map(((BB, jB) => (0, EB.jsx)("span", {
+          className: UB()("CodexTallyGroup", {
+            Gate: 5 === BB
           }),
           children: Array.from({
-            length: Math.min(TT, 4)
-          }, ((TT, UT) => (0, YT.jsx)("span", {
+            length: Math.min(BB, 4)
+          }, ((BB, jB) => (0, EB.jsx)("span", {
             className: "CodexTallyMark"
-          }, UT)))
-        }, UT)))
+          }, jB)))
+        }, jB)))
       })
     }
 
-    function DT(TT) {
+    function bB(BB) {
       let {
-        contained: UT,
-        total: mT
-      } = TT;
+        contained: jB,
+        total: zB
+      } = BB;
       const {
-        t: WT
-      } = (0, lT.z)();
-      return (0, YT.jsxs)("div", {
+        t: QB
+      } = (0, pB.D)();
+      return (0, EB.jsxs)("div", {
         className: "CodexProgress",
-        children: [WT(`${JT}:codexProgress`, {
-          contained: String(UT),
-          total: String(mT)
-        }), (0, YT.jsx)("span", {
+        children: [QB(`${iB}:codexProgress`, {
+          contained: String(jB),
+          total: String(zB)
+        }), (0, EB.jsx)("span", {
           className: "CodexProgressMeter",
-          children: (0, YT.jsx)("span", {
+          children: (0, EB.jsx)("span", {
             style: {
-              width: UT / mT * 100 + "%"
+              width: jB / zB * 100 + "%"
             }
           })
         })]
       })
     }
 
-    function oT(TT) {
+    function vB(BB) {
       let {
-        entry: UT,
-        fileNumber: mT
-      } = TT;
+        entry: jB,
+        fileNumber: zB
+      } = BB;
       const {
-        t: WT
-      } = (0, lT.z)(), zT = "codexContained" === UT.codexEntryState;
-      return (0, YT.jsx)("section", {
+        t: QB
+      } = (0, pB.D)(), nB = "codexContained" === jB.codexEntryState;
+      return (0, EB.jsx)("section", {
         className: "BoardDetail",
-        children: (0, YT.jsxs)("article", {
-          className: kT()("CodexDossier", CT[UT.codexEntryState]),
-          children: [(0, YT.jsx)("span", {
+        children: (0, EB.jsxs)("article", {
+          className: UB()("CodexDossier", WB[jB.codexEntryState]),
+          children: [(0, EB.jsx)("span", {
             className: "CodexFileNumber",
-            children: WT(`${JT}:codexFileNumber`, {
-              number: String(mT).padStart(3, "0")
+            children: QB(`${iB}:codexFileNumber`, {
+              number: String(zB).padStart(3, "0")
             })
-          }), (0, YT.jsx)(QT, {
-            icon: (0, YT.jsx)(NT, {
-              entry: UT
+          }), (0, EB.jsx)(hB, {
+            icon: (0, EB.jsx)(KB, {
+              entry: jB
             }),
-            name: GT(UT),
-            children: (0, YT.jsx)(ST, {
-              entry: UT
+            name: xB(jB),
+            children: (0, EB.jsx)(wB, {
+              entry: jB
             })
-          }), zT && (0, YT.jsxs)(YT.Fragment, {
-            children: [(0, YT.jsx)("p", {
+          }), nB && (0, EB.jsxs)(EB.Fragment, {
+            children: [(0, EB.jsx)("p", {
               className: "BoardDescription",
-              children: UT.codexEntryLore
-            }), (0, YT.jsxs)("p", {
+              children: jB.codexEntryLore
+            }), (0, EB.jsxs)("p", {
               className: "CodexTally",
-              children: [WT(`${JT}:codexContainments`, {
-                count: String(UT.codexEntryContainedCount)
-              }), (0, YT.jsx)(hT, {
-                count: UT.codexEntryContainedCount
+              children: [QB(`${iB}:codexContainments`, {
+                count: String(jB.codexEntryContainedCount)
+              }), (0, EB.jsx)(cB, {
+                count: jB.codexEntryContainedCount
               })]
-            }), (0, YT.jsx)("span", {
+            }), (0, EB.jsx)("span", {
               className: "CodexClosedStamp",
               "aria-hidden": "true",
-              children: WT(`${JT}:codexContainedBadge`)
+              children: QB(`${iB}:codexContainedBadge`)
             })]
-          }), !zT && (0, YT.jsxs)(YT.Fragment, {
-            children: [(0, YT.jsxs)("div", {
+          }), !nB && (0, EB.jsxs)(EB.Fragment, {
+            children: [(0, EB.jsxs)("div", {
               className: "CodexRedaction",
-              children: [KT.map((TT => (0, YT.jsx)("span", {
+              children: [lB.map((BB => (0, EB.jsx)("span", {
                 className: "CodexRedactedLine",
                 style: {
-                  width: TT
+                  width: BB
                 }
-              }, TT))), (0, YT.jsx)("p", {
+              }, BB))), (0, EB.jsx)("p", {
                 className: "CodexRedacted",
-                children: WT(`${JT}:codexRedacted`)
+                children: QB(`${iB}:codexRedacted`)
               })]
-            }), "" !== UT.codexEntryHint && (0, YT.jsxs)("aside", {
+            }), "" !== jB.codexEntryHint && (0, EB.jsxs)("aside", {
               className: "CodexNote",
-              children: [(0, YT.jsx)("h4", {
-                children: WT(`${JT}:codexHintLabel`)
-              }), (0, YT.jsx)("p", {
-                children: UT.codexEntryHint
+              children: [(0, EB.jsx)("h4", {
+                children: QB(`${iB}:codexHintLabel`)
+              }), (0, EB.jsx)("p", {
+                children: jB.codexEntryHint
               })]
-            }), (0, YT.jsx)("p", {
+            }), (0, EB.jsx)("p", {
               className: "CodexClearance",
-              children: WT(uT[UT.codexEntryDifficulty])
+              children: QB(PB[jB.codexEntryDifficulty])
             })]
           })]
         })
       })
     }
 
-    function AT(TT) {
+    function RB(BB) {
       let {
-        controller: UT
-      } = TT;
-      const mT = (0, jT.j)(PT, UT.getSnapshot()),
+        controller: jB
+      } = BB;
+      const zB = (0, aB.h)(AB, jB.getSnapshot()),
         {
-          t: WT
-        } = (0, lT.z)();
-      if (0 === mT.entries.length) return null;
-      const zT = mT.entries.find((TT => TT.codexEntryId === mT.selectedId)),
-        MT = mT.entries.filter((TT => "codexContained" === TT.codexEntryState)).length,
-        gT = mT.entries.map((TT => TT.codexEntryId)).sort().indexOf(zT.codexEntryId) + 1;
-      return (0, YT.jsxs)(dT, {
-        open: mT.open,
-        onDismiss: UT.dismiss,
-        title: WT(`${JT}:codexTitle`),
+          t: QB
+        } = (0, pB.D)();
+      if (0 === zB.entries.length) return null;
+      const nB = zB.entries.find((BB => BB.codexEntryId === zB.selectedId)),
+        dB = zB.entries.filter((BB => "codexContained" === BB.codexEntryState)).length,
+        IB = zB.entries.map((BB => BB.codexEntryId)).sort().indexOf(nB.codexEntryId) + 1;
+      return (0, EB.jsxs)(fB, {
+        open: zB.open,
+        onDismiss: jB.dismiss,
+        title: QB(`${iB}:codexTitle`),
         className: "ContainmentCodexPanel",
-        headerExtra: (0, YT.jsx)(DT, {
-          contained: MT,
-          total: mT.entries.length
+        headerExtra: (0, EB.jsx)(bB, {
+          contained: dB,
+          total: zB.entries.length
         }),
-        children: [(0, YT.jsx)("div", {
+        children: [(0, EB.jsx)("div", {
           className: "BoardTiles",
-          children: mT.entries.map((TT => (0, YT.jsx)(ET, {
-            entry: TT,
-            selected: TT === zT,
-            onSelect: UT.select
-          }, TT.codexEntryId)))
-        }), (0, YT.jsx)(oT, {
-          entry: zT,
-          fileNumber: gT
+          children: zB.entries.map((BB => (0, EB.jsx)(CB, {
+            entry: BB,
+            selected: BB === nB,
+            onSelect: jB.select
+          }, BB.codexEntryId)))
+        }), (0, EB.jsx)(vB, {
+          entry: nB,
+          fileNumber: IB
         })]
       })
     }
-    var RT = mT(366);
-    class TU extends FT.e {
-      constructor(TT, UT, mT, WT, zT, MT) {
-        super(TT, UT, mT), this.pacer = WT, this.command = zT, this.predict = MT, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = TT => {
-          this.selectedId = TT, this.emit()
-        }, this.act = (TT, UT) => {
-          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${TT} ${UT}`, this.rollBack)) return;
-          const mT = this.predict(this.board, TT, UT);
-          null !== mT && (this.board = mT.board, this.notice = mT.notice, this.emit())
+    var OB = zB(376);
+    class Bj extends ZB.c {
+      constructor(BB, jB, zB, QB, nB, dB) {
+        super(BB, jB, zB), this.pacer = QB, this.command = nB, this.predict = dB, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = BB => {
+          this.selectedId = BB, this.emit()
+        }, this.act = (BB, jB) => {
+          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${BB} ${jB}`, this.rollBack)) return;
+          const zB = this.predict(this.board, BB, jB);
+          null !== zB && (this.board = zB.board, this.notice = zB.notice, this.emit())
         }, this.rollBack = () => {
           this.board !== this.confirmed && (this.board = this.confirmed, this.notice = null)
-        }, this.unsubscribePacer = WT.subscribe((() => {
+        }, this.unsubscribePacer = QB.subscribe((() => {
           this.emit()
         }))
       }
-      pB(TT) {
-        const UT = this.messageOpens(TT);
-        if (UT && this.open) return this.board === this.confirmed && (this.board = TT), this.confirmed = TT, void this.emit();
-        if (this.board = TT, this.confirmed = TT, this.pacer.onReply(), UT) return this.notice = null, this.selectedId = this.openingSelection(TT), void this.show();
-        const mT = this.messageNotice(TT);
-        null !== mT && (this.notice = mT), this.emit()
+      VJ(BB) {
+        const jB = this.messageOpens(BB);
+        if (jB && this.open) return this.board === this.confirmed && (this.board = BB), this.confirmed = BB, void this.emit();
+        if (this.board = BB, this.confirmed = BB, this.pacer.onReply(), jB) return this.notice = null, this.selectedId = this.openingSelection(BB), void this.show();
+        const zB = this.messageNotice(BB);
+        null !== zB && (this.notice = zB), this.emit()
       }
       dispose() {
         this.unsubscribePacer(), super.dispose()
@@ -676,153 +716,153 @@ export const modules = {
       }
     }
 
-    function UU(TT, UT) {
-      return TT.loadoutCoins >= UT.loadoutCostCoins && UT.loadoutCostParts.every((UT => function(TT, UT) {
-        return mU(TT, UT).loadoutHeldPartAmount
-      }(TT, UT.loadoutPartCurrency) >= UT.loadoutPartAmount))
+    function jj(BB, jB) {
+      return BB.loadoutCoins >= jB.loadoutCostCoins && jB.loadoutCostParts.every((jB => function(BB, jB) {
+        return zj(BB, jB).loadoutHeldPartAmount
+      }(BB, jB.loadoutPartCurrency) >= jB.loadoutPartAmount))
     }
 
-    function mU(TT, UT) {
-      return TT.loadoutHeldParts.find((TT => TT.loadoutHeldPartCurrency === UT))
+    function zj(BB, jB) {
+      return BB.loadoutHeldParts.find((BB => BB.loadoutHeldPartCurrency === jB))
     }
 
-    function WU(TT, UT) {
-      return TT.loadoutSlots.find((TT => TT.loadoutSlotKind === UT))
+    function Qj(BB, jB) {
+      return BB.loadoutSlots.find((BB => BB.loadoutSlotKind === jB))
     }
 
-    function zU(TT) {
-      return TT.loadoutPerks.filter((TT => TT.loadoutPerkEquipped)).length >= TT.loadoutMaxPerks
+    function nj(BB) {
+      return BB.loadoutPerks.filter((BB => BB.loadoutPerkEquipped)).length >= BB.loadoutMaxPerks
     }
 
-    function MU(TT, UT, mT) {
-      for (const zT of TT.loadoutSlots) {
-        const WT = zT.loadoutSlotOptions.find((TT => TT.loadoutOptionId === mT));
-        if (WT) return "loadoutArmour" === zT.loadoutSlotKind ? nU(TT, zT, WT, UT) : gU(TT, zT, WT, UT)
+    function dj(BB, jB, zB) {
+      for (const nB of BB.loadoutSlots) {
+        const QB = nB.loadoutSlotOptions.find((BB => BB.loadoutOptionId === zB));
+        if (QB) return "loadoutArmour" === nB.loadoutSlotKind ? Nj(BB, nB, QB, jB) : Ij(BB, nB, QB, jB)
       }
-      const WT = TT.loadoutPerks.find((TT => TT.loadoutPerkId === mT));
-      return WT ? function(TT, UT, mT) {
-        const WT = UT.loadoutPerkOwned,
-          zT = UT.loadoutPerkEquipped,
-          MT = UT.loadoutPerkName,
-          gT = zU(TT);
-        if ("loadoutUnlock" === mT) {
-          if (WT || !UU(TT, UT.loadoutPerkCost)) return null;
-          const mT = {
-            ...UT,
+      const QB = BB.loadoutPerks.find((BB => BB.loadoutPerkId === zB));
+      return QB ? function(BB, jB, zB) {
+        const QB = jB.loadoutPerkOwned,
+          nB = jB.loadoutPerkEquipped,
+          dB = jB.loadoutPerkName,
+          IB = nj(BB);
+        if ("loadoutUnlock" === zB) {
+          if (QB || !jj(BB, jB.loadoutPerkCost)) return null;
+          const zB = {
+            ...jB,
             loadoutPerkOwned: !0,
-            loadoutPerkEquipped: !gT
+            loadoutPerkEquipped: !IB
           };
           return {
-            board: kU(jU(TT, UT.loadoutPerkCost), mT),
-            notice: lU(gT ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", MT)
+            board: Uj(aj(BB, jB.loadoutPerkCost), zB),
+            notice: pj(IB ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", dB)
           }
         }
-        if ("loadoutUpgrade" === mT || !WT || "loadoutEquip" === mT === zT || !zT && gT) return null;
+        if ("loadoutUpgrade" === zB || !QB || "loadoutEquip" === zB === nB || !nB && IB) return null;
         return {
-          board: kU(TT, {
-            ...UT,
-            loadoutPerkEquipped: !zT
+          board: Uj(BB, {
+            ...jB,
+            loadoutPerkEquipped: !nB
           }),
-          notice: lU(zT ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", MT)
+          notice: pj(nB ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", dB)
         }
-      }(TT, WT, UT) : null
+      }(BB, QB, jB) : null
     }
 
-    function gU(TT, UT, mT, WT) {
-      const zT = mT.loadoutOptionOwnedTier,
-        MT = mT.loadoutOptionName;
-      if ("loadoutEquip" === WT) return 0 === zT ? null : {
-        board: HU(TT, UT, mT.loadoutOptionId, null),
-        notice: lU("loadoutNoticeEquipped", MT)
+    function Ij(BB, jB, zB, QB) {
+      const nB = zB.loadoutOptionOwnedTier,
+        dB = zB.loadoutOptionName;
+      if ("loadoutEquip" === QB) return 0 === nB ? null : {
+        board: uj(BB, jB, zB.loadoutOptionId, null),
+        notice: pj("loadoutNoticeEquipped", dB)
       };
-      const gT = "loadoutUnlock" === WT;
-      if (gT && 0 !== zT || "loadoutUpgrade" === WT && (0 === zT || zT >= mT.loadoutOptionTiers.length) || "loadoutUnequip" === WT) return null;
-      const nT = mT.loadoutOptionTiers[zT].loadoutTierCost;
-      if (!UU(TT, nT)) return null;
-      const HT = {
-          ...mT,
-          loadoutOptionOwnedTier: zT + 1
+      const IB = "loadoutUnlock" === QB;
+      if (IB && 0 !== nB || "loadoutUpgrade" === QB && (0 === nB || nB >= zB.loadoutOptionTiers.length) || "loadoutUnequip" === QB) return null;
+      const NB = zB.loadoutOptionTiers[nB].loadoutTierCost;
+      if (!jj(BB, NB)) return null;
+      const uB = {
+          ...zB,
+          loadoutOptionOwnedTier: nB + 1
         },
-        kT = gT ? mT.loadoutOptionId : UT.loadoutSlotEquippedId;
+        UB = IB ? zB.loadoutOptionId : jB.loadoutSlotEquippedId;
       return {
-        board: HU(jU(TT, nT), UT, kT, HT),
-        notice: gT ? lU("loadoutNoticeUnlocked", MT) : lU("loadoutNoticeUpgraded", MT, zT + 1)
+        board: uj(aj(BB, NB), jB, UB, uB),
+        notice: IB ? pj("loadoutNoticeUnlocked", dB) : pj("loadoutNoticeUpgraded", dB, nB + 1)
       }
     }
 
-    function nU(TT, UT, mT, WT) {
-      const zT = mT.loadoutOptionOwnedTier > 0,
-        MT = mT.loadoutOptionName;
-      if ("loadoutEquip" === WT && zT) return {
-        board: HU(TT, UT, mT.loadoutOptionId, null),
-        notice: lU("loadoutNoticeEquipped", MT)
+    function Nj(BB, jB, zB, QB) {
+      const nB = zB.loadoutOptionOwnedTier > 0,
+        dB = zB.loadoutOptionName;
+      if ("loadoutEquip" === QB && nB) return {
+        board: uj(BB, jB, zB.loadoutOptionId, null),
+        notice: pj("loadoutNoticeEquipped", dB)
       };
-      const gT = mT.loadoutOptionTiers[0].loadoutTierCost;
-      return "loadoutUnlock" !== WT || zT || !UU(TT, gT) ? null : {
-        board: HU(jU(TT, gT), UT, mT.loadoutOptionId, {
-          ...mT,
+      const IB = zB.loadoutOptionTiers[0].loadoutTierCost;
+      return "loadoutUnlock" !== QB || nB || !jj(BB, IB) ? null : {
+        board: uj(aj(BB, IB), jB, zB.loadoutOptionId, {
+          ...zB,
           loadoutOptionOwnedTier: 1
         }),
-        notice: lU("loadoutNoticeUnlocked", MT)
+        notice: pj("loadoutNoticeUnlocked", dB)
       }
     }
 
-    function HU(TT, UT, mT, WT) {
-      const zT = {
-        ...UT,
-        loadoutSlotEquippedId: mT,
-        loadoutSlotOptions: UT.loadoutSlotOptions.map((TT => null !== WT && TT.loadoutOptionId === WT.loadoutOptionId ? WT : TT))
+    function uj(BB, jB, zB, QB) {
+      const nB = {
+        ...jB,
+        loadoutSlotEquippedId: zB,
+        loadoutSlotOptions: jB.loadoutSlotOptions.map((BB => null !== QB && BB.loadoutOptionId === QB.loadoutOptionId ? QB : BB))
       };
       return {
-        ...TT,
-        loadoutSlots: TT.loadoutSlots.map((TT => TT === UT ? zT : TT))
+        ...BB,
+        loadoutSlots: BB.loadoutSlots.map((BB => BB === jB ? nB : BB))
       }
     }
 
-    function kU(TT, UT) {
+    function Uj(BB, jB) {
       return {
-        ...TT,
-        loadoutPerks: TT.loadoutPerks.map((TT => TT.loadoutPerkId === UT.loadoutPerkId ? UT : TT))
+        ...BB,
+        loadoutPerks: BB.loadoutPerks.map((BB => BB.loadoutPerkId === jB.loadoutPerkId ? jB : BB))
       }
     }
 
-    function jU(TT, UT) {
+    function aj(BB, jB) {
       return {
-        ...TT,
-        loadoutCoins: TT.loadoutCoins - UT.loadoutCostCoins,
-        loadoutHeldParts: TT.loadoutHeldParts.map((TT => {
-          const mT = UT.loadoutCostParts.find((UT => UT.loadoutPartCurrency === TT.loadoutHeldPartCurrency));
-          return mT ? {
-            ...TT,
-            loadoutHeldPartAmount: TT.loadoutHeldPartAmount - mT.loadoutPartAmount
-          } : TT
+        ...BB,
+        loadoutCoins: BB.loadoutCoins - jB.loadoutCostCoins,
+        loadoutHeldParts: BB.loadoutHeldParts.map((BB => {
+          const zB = jB.loadoutCostParts.find((jB => jB.loadoutPartCurrency === BB.loadoutHeldPartCurrency));
+          return zB ? {
+            ...BB,
+            loadoutHeldPartAmount: BB.loadoutHeldPartAmount - zB.loadoutPartAmount
+          } : BB
         }))
       }
     }
 
-    function lU(TT, UT) {
+    function pj(BB, jB) {
       return {
-        loadoutNoticeKey: TT,
+        loadoutNoticeKey: BB,
         loadoutNoticeRefused: !1,
-        loadoutNoticeName: UT,
+        loadoutNoticeName: jB,
         loadoutNoticeTier: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0
       }
     }
-    const LU = "containmentLoadoutView";
-    class pU extends TU {
-      constructor(TT, UT, mT, WT) {
-        super(TT, UT, mT, WT, "loadout", MU), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = TT => {
-          this.slot = TT, this.selectedId = BU(this.board, TT), this.emit()
+    const rj = "containmentLoadoutView";
+    class sj extends Bj {
+      constructor(BB, jB, zB, QB) {
+        super(BB, jB, zB, QB, "loadout", dj), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = BB => {
+          this.slot = BB, this.selectedId = Jj(this.board, BB), this.emit()
         }
       }
-      messageOpens(TT) {
-        return TT.loadoutMessageOpens
+      messageOpens(BB) {
+        return BB.loadoutMessageOpens
       }
-      messageNotice(TT) {
-        return TT.loadoutNotice
+      messageNotice(BB) {
+        return BB.loadoutNotice
       }
-      openingSelection(TT) {
-        return BU(TT, this.slot)
+      openingSelection(BB) {
+        return Jj(BB, this.slot)
       }
       buildSnapshot() {
         return {
@@ -836,765 +876,765 @@ export const modules = {
       }
     }
 
-    function BU(TT, UT) {
-      if ("loadoutPerks" === UT) {
-        var mT;
-        const UT = TT.loadoutPerks;
-        return (null !== (mT = UT.find((TT => TT.loadoutPerkEquipped))) && void 0 !== mT ? mT : UT[0]).loadoutPerkId
+    function Jj(BB, jB) {
+      if ("loadoutPerks" === jB) {
+        var zB;
+        const jB = BB.loadoutPerks;
+        return (null !== (zB = jB.find((BB => BB.loadoutPerkEquipped))) && void 0 !== zB ? zB : jB[0]).loadoutPerkId
       }
-      return WU(TT, UT).loadoutSlotEquippedId
+      return Qj(BB, jB).loadoutSlotEquippedId
     }
-    const ZU = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
-    var cU = mT(36974),
-      vU = mT(1376);
-    const fU = {
-        loadoutPrimary: `${JT}:loadoutSlotPrimary`,
-        loadoutSecondary: `${JT}:loadoutSlotSecondary`,
-        loadoutOffensive: `${JT}:loadoutSlotOffensive`,
-        loadoutSelfHelp: `${JT}:loadoutSlotSelfHelp`,
-        loadoutArmour: `${JT}:loadoutSlotArmour`,
-        loadoutPerks: `${JT}:loadoutSlotPerks`
+    const mj = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
+    var yj = zB(36946),
+      kj = zB(1306);
+    const Gj = {
+        loadoutPrimary: `${iB}:loadoutSlotPrimary`,
+        loadoutSecondary: `${iB}:loadoutSlotSecondary`,
+        loadoutOffensive: `${iB}:loadoutSlotOffensive`,
+        loadoutSelfHelp: `${iB}:loadoutSlotSelfHelp`,
+        loadoutArmour: `${iB}:loadoutSlotArmour`,
+        loadoutPerks: `${iB}:loadoutSlotPerks`
       },
-      qU = {
+      Lj = {
         section: "right",
-        VL: "bottom",
+        zs: "bottom",
         act: "top"
       },
-      iU = (0, WT.createContext)({
+      gj = (0, QB.createContext)({
         step: null,
         targetRef: () => {}
       });
 
-    function bU() {
+    function tj() {
       const {
-        step: TT,
-        targetRef: UT
-      } = (0, WT.useContext)(iU);
-      return (mT, WT) => (null === TT || void 0 === TT ? void 0 : TT.kind) === mT && TT.id === WT ? UT : void 0
+        step: BB,
+        targetRef: jB
+      } = (0, QB.useContext)(gj);
+      return (zB, QB) => (null === BB || void 0 === BB ? void 0 : BB.kind) === zB && BB.id === QB ? jB : void 0
     }
 
-    function OU(TT, UT) {
-      const mT = UT.loadoutTargetId;
-      if ("loadoutPerks" === UT.loadoutTargetSection) {
-        const UT = TT.loadoutPerks.find((TT => TT.loadoutPerkId === mT));
+    function Sj(BB, jB) {
+      const zB = jB.loadoutTargetId;
+      if ("loadoutPerks" === jB.loadoutTargetSection) {
+        const jB = BB.loadoutPerks.find((BB => BB.loadoutPerkId === zB));
         return {
-          name: UT.loadoutPerkName,
-          owned: UT.loadoutPerkOwned,
-          equipped: UT.loadoutPerkEquipped
+          name: jB.loadoutPerkName,
+          owned: jB.loadoutPerkOwned,
+          equipped: jB.loadoutPerkEquipped
         }
       }
-      const WT = WU(TT, UT.loadoutTargetSection),
-        zT = WT.loadoutSlotOptions.find((TT => TT.loadoutOptionId === mT));
+      const QB = Qj(BB, jB.loadoutTargetSection),
+        nB = QB.loadoutSlotOptions.find((BB => BB.loadoutOptionId === zB));
       return {
-        name: zT.loadoutOptionName,
-        owned: zT.loadoutOptionOwnedTier > 0,
-        equipped: WT.loadoutSlotEquippedId === mT
+        name: nB.loadoutOptionName,
+        owned: nB.loadoutOptionOwnedTier > 0,
+        equipped: QB.loadoutSlotEquippedId === zB
       }
     }
 
-    function eU(TT, UT, mT, WT) {
-      const [zT, MT] = TT(`${JT}:${UT}`, {
-        [mT]: "\x01"
+    function Mj(BB, jB, zB, QB) {
+      const [nB, dB] = BB(`${iB}:${jB}`, {
+        [zB]: "\x01"
       }).split("\x01");
-      return (0, YT.jsxs)(YT.Fragment, {
-        children: [zT, (0, YT.jsx)("span", {
+      return (0, EB.jsxs)(EB.Fragment, {
+        children: [nB, (0, EB.jsx)("span", {
           className: "LoadoutWalkthroughName",
-          children: WT
-        }), MT]
+          children: QB
+        }), dB]
       })
     }
 
-    function YU(TT) {
+    function Ej(BB) {
       let {
-        view: UT,
-        onDismiss: mT,
-        children: zT
-      } = TT;
+        view: jB,
+        onDismiss: zB,
+        children: nB
+      } = BB;
       const {
-        t: MT
-      } = (0, lT.z)(), gT = UT.loadout, nT = UT.open ? gT.loadoutWalkthrough.map((TT => ({
-        target: TT,
-        info: OU(gT, TT)
-      }))).find((TT => {
+        t: dB
+      } = (0, pB.D)(), IB = jB.loadout, NB = jB.open ? IB.loadoutWalkthrough.map((BB => ({
+        target: BB,
+        info: Sj(IB, BB)
+      }))).find((BB => {
         let {
-          info: UT
-        } = TT;
-        return !UT.equipped
+          info: jB
+        } = BB;
+        return !jB.equipped
       })) : void 0;
-      let HT = null,
-        kT = null;
-      if (void 0 !== nT) {
+      let uB = null,
+        UB = null;
+      if (void 0 !== NB) {
         const {
-          target: TT,
-          info: mT
-        } = nT;
-        UT.slot !== TT.loadoutTargetSection ? (HT = {
+          target: BB,
+          info: zB
+        } = NB;
+        jB.slot !== BB.loadoutTargetSection ? (uB = {
           kind: "section",
-          id: TT.loadoutTargetSection
-        }, kT = eU(MT, "loadoutWalkthroughSection", "section", MT(fU[TT.loadoutTargetSection]))) : UT.selectedId !== TT.loadoutTargetId ? (HT = {
-          kind: "VL",
-          id: TT.loadoutTargetId
-        }, kT = eU(MT, "loadoutWalkthroughPick", "name", mT.name)) : (HT = {
+          id: BB.loadoutTargetSection
+        }, UB = Mj(dB, "loadoutWalkthroughSection", "section", dB(Gj[BB.loadoutTargetSection]))) : jB.selectedId !== BB.loadoutTargetId ? (uB = {
+          kind: "zs",
+          id: BB.loadoutTargetId
+        }, UB = Mj(dB, "loadoutWalkthroughPick", "name", zB.name)) : (uB = {
           kind: "act",
-          id: TT.loadoutTargetId
-        }, kT = eU(MT, mT.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", mT.name))
+          id: BB.loadoutTargetId
+        }, UB = Mj(dB, zB.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", zB.name))
       }
-      const jT = null === HT ? null : function(TT) {
-          return `${TT.kind}:${TT.id}`
-        }(HT),
-        [LT, pT] = (0, WT.useState)(null),
-        BT = (0, WT.useCallback)((TT => {
-          pT((UT => null !== TT ? {
-            key: jT,
-            node: TT
-          } : (null === UT || void 0 === UT ? void 0 : UT.key) === jT ? null : UT))
-        }), [jT]),
-        ZT = null !== jT && (null === LT || void 0 === LT ? void 0 : LT.key) === jT ? LT.node : null;
-      return (0, YT.jsxs)(iU.Provider, {
+      const aB = null === uB ? null : function(BB) {
+          return `${BB.kind}:${BB.id}`
+        }(uB),
+        [rB, sB] = (0, QB.useState)(null),
+        JB = (0, QB.useCallback)((BB => {
+          sB((jB => null !== BB ? {
+            key: aB,
+            node: BB
+          } : (null === jB || void 0 === jB ? void 0 : jB.key) === aB ? null : jB))
+        }), [aB]),
+        mB = null !== aB && (null === rB || void 0 === rB ? void 0 : rB.key) === aB ? rB.node : null;
+      return (0, EB.jsxs)(gj.Provider, {
         value: {
-          step: HT,
-          targetRef: BT
+          step: uB,
+          targetRef: JB
         },
-        children: [zT, null !== HT && null !== ZT && (0, YT.jsx)(JU, {
-          target: ZT,
-          placement: qU[HT.kind],
-          onDismiss: mT,
-          children: kT
-        }, jT)]
+        children: [nB, null !== uB && null !== mB && (0, EB.jsx)(ij, {
+          target: mB,
+          placement: Lj[uB.kind],
+          onDismiss: zB,
+          children: UB
+        }, aB)]
       })
     }
 
-    function JU(TT) {
+    function ij(BB) {
       let {
-        target: UT,
-        placement: mT,
-        onDismiss: zT,
-        children: MT
-      } = TT;
+        target: jB,
+        placement: zB,
+        onDismiss: nB,
+        children: dB
+      } = BB;
       const {
-        t: gT
-      } = (0, lT.z)(), nT = (0, WT.useRef)(UT);
-      return nT.current = UT, (0, vU.p)("popup", nT, zT), (0, YT.jsxs)(cU.d, {
-        target: UT,
-        placement: mT,
+        t: IB
+      } = (0, pB.D)(), NB = (0, QB.useRef)(jB);
+      return NB.current = jB, (0, kj.v)("popup", NB, nB), (0, EB.jsxs)(yj.f, {
+        target: jB,
+        placement: zB,
         className: "LoadoutWalkthroughStep",
         spotlightMargin: 10,
-        children: [(0, YT.jsxs)("div", {
+        children: [(0, EB.jsxs)("div", {
           className: "LoadoutWalkthroughHeader",
-          children: [(0, YT.jsx)("img", {
+          children: [(0, EB.jsx)("img", {
             className: "LoadoutWalkthroughPortrait",
-            src: ZU,
+            src: mj,
             alt: "",
             draggable: !1
-          }), (0, YT.jsx)("span", {
+          }), (0, EB.jsx)("span", {
             className: "LoadoutWalkthroughSpeaker",
-            children: gT(`${JT}:operatorName`)
-          }), (0, YT.jsx)(BT.k, {
-            onClick: zT,
-            ariaLabel: gT(`${JT}:loadoutWalkthroughClose`),
+            children: IB(`${iB}:operatorName`)
+          }), (0, EB.jsx)(JB.j, {
+            onClick: nB,
+            ariaLabel: IB(`${iB}:loadoutWalkthroughClose`),
             padIgnore: !0
           })]
-        }), (0, YT.jsx)("p", {
+        }), (0, EB.jsx)("p", {
           className: "LoadoutWalkthroughText",
-          children: MT
+          children: dB
         })]
       })
     }
-    const xU = new Set(["loadoutStatReload", "loadoutStatResupply"]);
+    const qj = new Set(["loadoutStatReload", "loadoutStatResupply"]);
 
-    function dU(TT) {
+    function fj(BB) {
       let {
-        cost: UT,
-        loadout: mT
-      } = TT;
+        cost: jB,
+        loadout: zB
+      } = BB;
       const {
-        t: WT
-      } = (0, lT.z)();
-      return UT.loadoutCostCoins <= 0 && 0 === UT.loadoutCostParts.length ? (0, YT.jsx)("span", {
+        t: QB
+      } = (0, pB.D)();
+      return jB.loadoutCostCoins <= 0 && 0 === jB.loadoutCostParts.length ? (0, EB.jsx)("span", {
         className: "LoadoutCost",
-        children: WT(`${JT}:loadoutFree`)
-      }) : (0, YT.jsxs)("span", {
+        children: QB(`${iB}:loadoutFree`)
+      }) : (0, EB.jsxs)("span", {
         className: "LoadoutCost",
-        children: [UT.loadoutCostCoins > 0 && (0, YT.jsx)(aT, {
-          itemName: xT,
-          amount: UT.loadoutCostCoins,
-          fn: mT.loadoutCoins
-        }), UT.loadoutCostParts.map((TT => {
-          const UT = mU(mT, TT.loadoutPartCurrency);
-          return (0, YT.jsx)(aT, {
-            itemName: UT.loadoutHeldPartItem,
-            amount: TT.loadoutPartAmount,
-            fn: UT.loadoutHeldPartAmount
-          }, TT.loadoutPartCurrency)
+        children: [jB.loadoutCostCoins > 0 && (0, EB.jsx)(DB, {
+          itemName: qB,
+          amount: jB.loadoutCostCoins,
+          DN: zB.loadoutCoins
+        }), jB.loadoutCostParts.map((BB => {
+          const jB = zj(zB, BB.loadoutPartCurrency);
+          return (0, EB.jsx)(DB, {
+            itemName: jB.loadoutHeldPartItem,
+            amount: BB.loadoutPartAmount,
+            DN: jB.loadoutHeldPartAmount
+          }, BB.loadoutPartCurrency)
         }))]
       })
     }
-    const wU = {
-      loadoutStatFireRate: `${JT}:loadoutUnitPerMinute`,
-      loadoutStatReload: `${JT}:loadoutUnitSeconds`,
-      loadoutStatResupply: `${JT}:loadoutUnitSeconds`
+    const oj = {
+      loadoutStatFireRate: `${iB}:loadoutUnitPerMinute`,
+      loadoutStatReload: `${iB}:loadoutUnitSeconds`,
+      loadoutStatResupply: `${iB}:loadoutUnitSeconds`
     };
 
-    function tU(TT) {
-      return "loadoutStatPotency" === TT.loadoutStatKind ? (0, RT.Z)(TT.loadoutStatValue) : String(TT.loadoutStatValue)
+    function Hj(BB) {
+      return "loadoutStatPotency" === BB.loadoutStatKind ? (0, OB.O)(BB.loadoutStatValue) : String(BB.loadoutStatValue)
     }
 
-    function aU(TT) {
-      var UT;
+    function Dj(BB) {
+      var jB;
       let {
-        option: mT
-      } = TT;
+        option: zB
+      } = BB;
       const {
-        t: WT
-      } = (0, lT.z)(), zT = mT.loadoutOptionTiers, MT = null === (UT = zT[0]) || void 0 === UT ? void 0 : UT.loadoutTierStats.map((TT => TT.loadoutStatKind));
-      if (!MT || 0 === MT.length) return null;
-      const gT = mT.loadoutOptionOwnedTier,
-        nT = (TT, UT) => {
-          var mT;
-          return null === (mT = zT[TT]) || void 0 === mT ? void 0 : mT.loadoutTierStats.find((TT => TT.loadoutStatKind === UT))
+        t: QB
+      } = (0, pB.D)(), nB = zB.loadoutOptionTiers, dB = null === (jB = nB[0]) || void 0 === jB ? void 0 : jB.loadoutTierStats.map((BB => BB.loadoutStatKind));
+      if (!dB || 0 === dB.length) return null;
+      const IB = zB.loadoutOptionOwnedTier,
+        NB = (BB, jB) => {
+          var zB;
+          return null === (zB = nB[BB]) || void 0 === zB ? void 0 : zB.loadoutTierStats.find((BB => BB.loadoutStatKind === jB))
         };
-      return (0, YT.jsxs)("table", {
+      return (0, EB.jsxs)("table", {
         className: "LoadoutTierTable",
-        children: [(0, YT.jsx)("thead", {
-          children: (0, YT.jsxs)("tr", {
-            children: [(0, YT.jsx)("th", {}), zT.map(((TT, UT) => (0, YT.jsx)("th", {
-              className: kT()({
-                Current: UT + 1 === gT,
-                Next: UT === gT
+        children: [(0, EB.jsx)("thead", {
+          children: (0, EB.jsxs)("tr", {
+            children: [(0, EB.jsx)("th", {}), nB.map(((BB, jB) => (0, EB.jsx)("th", {
+              className: UB()({
+                Current: jB + 1 === IB,
+                Next: jB === IB
               }),
-              children: WT(`${JT}:loadoutTier`, {
-                tier: (0, RT.Z)(UT + 1)
+              children: QB(`${iB}:loadoutTier`, {
+                tier: (0, OB.O)(jB + 1)
               })
-            }, UT)))]
+            }, jB)))]
           })
-        }), (0, YT.jsx)("tbody", {
-          children: MT.map((TT => {
-            const UT = wU[TT];
-            return (0, YT.jsxs)("tr", {
-              children: [(0, YT.jsxs)("th", {
+        }), (0, EB.jsx)("tbody", {
+          children: dB.map((BB => {
+            const jB = oj[BB];
+            return (0, EB.jsxs)("tr", {
+              children: [(0, EB.jsxs)("th", {
                 scope: "row",
-                children: [WT(`${JT}:${TT}`), UT && (0, YT.jsx)("span", {
+                children: [QB(`${iB}:${BB}`), jB && (0, EB.jsx)("span", {
                   className: "LoadoutStatUnit",
-                  children: WT(UT)
+                  children: QB(jB)
                 })]
-              }), zT.map(((UT, mT) => {
-                const WT = nT(mT, TT),
-                  zT = mT > 0 ? nT(mT - 1, TT) : void 0,
-                  MT = WT && zT ? WT.loadoutStatValue - zT.loadoutStatValue : 0,
-                  HT = xU.has(TT) ? MT < 0 : MT > 0,
-                  jT = mT === gT;
-                return (0, YT.jsxs)("td", {
-                  className: kT()({
-                    Current: mT + 1 === gT,
-                    Next: jT,
-                    Gain: HT,
-                    Owned: mT < gT
+              }), nB.map(((jB, zB) => {
+                const QB = NB(zB, BB),
+                  nB = zB > 0 ? NB(zB - 1, BB) : void 0,
+                  dB = QB && nB ? QB.loadoutStatValue - nB.loadoutStatValue : 0,
+                  uB = qj.has(BB) ? dB < 0 : dB > 0,
+                  aB = zB === IB;
+                return (0, EB.jsxs)("td", {
+                  className: UB()({
+                    Current: zB + 1 === IB,
+                    Next: aB,
+                    Gain: uB,
+                    Owned: zB < IB
                   }),
-                  children: [jT && HT && (0, YT.jsx)("span", {
+                  children: [aB && uB && (0, EB.jsx)("span", {
                     className: "LoadoutGainArrow",
                     "aria-hidden": "true",
-                    children: MT < 0 ? "\u25bc" : "\u25b2"
-                  }), WT ? tU(WT) : "-"]
-                }, mT)
+                    children: dB < 0 ? "\u25bc" : "\u25b2"
+                  }), QB ? Hj(QB) : "-"]
+                }, zB)
               }))]
-            }, TT)
+            }, BB)
           }))
         })]
       })
     }
 
-    function yU(TT) {
+    function Fj(BB) {
       let {
-        view: UT,
-        controller: mT,
-        slot: WT,
-        option: zT
-      } = TT;
+        view: jB,
+        controller: zB,
+        slot: QB,
+        option: nB
+      } = BB;
       const {
-        t: MT
-      } = (0, lT.z)(), gT = UT.loadout, nT = zT.loadoutOptionOwnedTier, HT = zT.loadoutOptionTiers.length, kT = WT.loadoutSlotEquippedId === zT.loadoutOptionId, jT = nT < HT ? zT.loadoutOptionTiers[nT].loadoutTierCost : null, LT = null !== jT && UU(gT, jT), pT = zT.loadoutOptionId, ZT = bU();
-      return (0, YT.jsxs)(YT.Fragment, {
-        children: [(0, YT.jsx)(IU, {
-          icon: zT.loadoutOptionIcon,
-          name: zT.loadoutOptionName,
-          status: 0 === nT ? MT(`${JT}:loadoutLocked`) : HT > 1 ? MT(`${JT}:loadoutTier`, {
-            tier: (0, RT.Z)(nT)
+        t: dB
+      } = (0, pB.D)(), IB = jB.loadout, NB = nB.loadoutOptionOwnedTier, uB = nB.loadoutOptionTiers.length, UB = QB.loadoutSlotEquippedId === nB.loadoutOptionId, aB = NB < uB ? nB.loadoutOptionTiers[NB].loadoutTierCost : null, rB = null !== aB && jj(IB, aB), sB = nB.loadoutOptionId, mB = tj();
+      return (0, EB.jsxs)(EB.Fragment, {
+        children: [(0, EB.jsx)(Vj, {
+          icon: nB.loadoutOptionIcon,
+          name: nB.loadoutOptionName,
+          status: 0 === NB ? dB(`${iB}:loadoutLocked`) : uB > 1 ? dB(`${iB}:loadoutTier`, {
+            tier: (0, OB.O)(NB)
           }) : null,
-          locked: 0 === nT,
-          equipped: kT
-        }), (0, YT.jsx)("p", {
+          locked: 0 === NB,
+          equipped: UB
+        }), (0, EB.jsx)("p", {
           className: "BoardDescription",
-          children: zT.loadoutOptionDescription
-        }), (0, YT.jsx)(aU, {
-          option: zT
-        }), (0, YT.jsxs)("div", {
-          ref: ZT("act", pT),
+          children: nB.loadoutOptionDescription
+        }), (0, EB.jsx)(Dj, {
+          option: nB
+        }), (0, EB.jsxs)("div", {
+          ref: mB("act", sB),
           className: "BoardActions",
-          children: [null !== jT && (0, YT.jsxs)("div", {
+          children: [null !== aB && (0, EB.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, YT.jsx)(dU, {
-              cost: jT,
-              loadout: gT
-            }), (0, YT.jsx)(BT.l, {
-              disabled: !LT || UT.pending,
+            children: [(0, EB.jsx)(fj, {
+              cost: aB,
+              loadout: IB
+            }), (0, EB.jsx)(JB.m, {
+              disabled: !rB || jB.pending,
               onClick: () => {
-                mT.act(0 === nT ? "loadoutUnlock" : "loadoutUpgrade", pT)
+                zB.act(0 === NB ? "loadoutUnlock" : "loadoutUpgrade", sB)
               },
-              children: 0 === nT ? MT(`${JT}:loadoutUnlock`) : MT(`${JT}:loadoutUpgrade`, {
-                tier: (0, RT.Z)(nT + 1)
+              children: 0 === NB ? dB(`${iB}:loadoutUnlock`) : dB(`${iB}:loadoutUpgrade`, {
+                tier: (0, OB.O)(NB + 1)
               })
             })]
-          }), null === jT && HT > 1 && (0, YT.jsx)("span", {
+          }), null === aB && uB > 1 && (0, EB.jsx)("span", {
             className: "BoardHint",
-            children: MT(`${JT}:loadoutMaxed`)
-          }), nT > 0 && !kT && (0, YT.jsx)(BT.e, {
-            disabled: UT.pending,
+            children: dB(`${iB}:loadoutMaxed`)
+          }), NB > 0 && !UB && (0, EB.jsx)(JB.f, {
+            disabled: jB.pending,
             onClick: () => {
-              mT.act("loadoutEquip", pT)
+              zB.act("loadoutEquip", sB)
             },
-            children: MT(`${JT}:loadoutEquip`)
+            children: dB(`${iB}:loadoutEquip`)
           })]
         })]
       })
     }
 
-    function XU(TT) {
+    function Yj(BB) {
       let {
-        view: UT,
-        controller: mT,
-        perk: WT
-      } = TT;
+        view: jB,
+        controller: zB,
+        perk: QB
+      } = BB;
       const {
-        t: zT
-      } = (0, lT.z)(), MT = UT.loadout, gT = zU(MT), nT = WT.loadoutPerkId, HT = bU();
-      return (0, YT.jsxs)(YT.Fragment, {
-        children: [(0, YT.jsx)(IU, {
-          icon: WT.loadoutPerkIcon,
-          name: WT.loadoutPerkName,
-          status: WT.loadoutPerkOwned ? null : zT(`${JT}:loadoutLocked`),
-          locked: !WT.loadoutPerkOwned,
-          equipped: WT.loadoutPerkEquipped
-        }), (0, YT.jsx)("p", {
+        t: nB
+      } = (0, pB.D)(), dB = jB.loadout, IB = nj(dB), NB = QB.loadoutPerkId, uB = tj();
+      return (0, EB.jsxs)(EB.Fragment, {
+        children: [(0, EB.jsx)(Vj, {
+          icon: QB.loadoutPerkIcon,
+          name: QB.loadoutPerkName,
+          status: QB.loadoutPerkOwned ? null : nB(`${iB}:loadoutLocked`),
+          locked: !QB.loadoutPerkOwned,
+          equipped: QB.loadoutPerkEquipped
+        }), (0, EB.jsx)("p", {
           className: "BoardDescription",
-          children: WT.loadoutPerkDescription
-        }), (0, YT.jsxs)("div", {
-          ref: HT("act", nT),
+          children: QB.loadoutPerkDescription
+        }), (0, EB.jsxs)("div", {
+          ref: uB("act", NB),
           className: "BoardActions",
-          children: [!WT.loadoutPerkOwned && (0, YT.jsxs)("div", {
+          children: [!QB.loadoutPerkOwned && (0, EB.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, YT.jsx)(dU, {
-              cost: WT.loadoutPerkCost,
-              loadout: MT
-            }), (0, YT.jsx)(BT.l, {
-              disabled: !UU(MT, WT.loadoutPerkCost) || UT.pending,
+            children: [(0, EB.jsx)(fj, {
+              cost: QB.loadoutPerkCost,
+              loadout: dB
+            }), (0, EB.jsx)(JB.m, {
+              disabled: !jj(dB, QB.loadoutPerkCost) || jB.pending,
               onClick: () => {
-                mT.act("loadoutUnlock", nT)
+                zB.act("loadoutUnlock", NB)
               },
-              children: zT(`${JT}:loadoutUnlock`)
+              children: nB(`${iB}:loadoutUnlock`)
             })]
-          }), WT.loadoutPerkOwned && !WT.loadoutPerkEquipped && (0, YT.jsx)(BT.e, {
-            disabled: gT || UT.pending,
+          }), QB.loadoutPerkOwned && !QB.loadoutPerkEquipped && (0, EB.jsx)(JB.f, {
+            disabled: IB || jB.pending,
             onClick: () => {
-              mT.act("loadoutEquip", nT)
+              zB.act("loadoutEquip", NB)
             },
-            children: zT(`${JT}:loadoutEquip`)
-          }), WT.loadoutPerkOwned && !WT.loadoutPerkEquipped && gT && (0, YT.jsx)("span", {
+            children: nB(`${iB}:loadoutEquip`)
+          }), QB.loadoutPerkOwned && !QB.loadoutPerkEquipped && IB && (0, EB.jsx)("span", {
             className: "BoardHint",
-            children: zT(`${JT}:loadoutSocketsFullHint`)
-          }), WT.loadoutPerkEquipped && (0, YT.jsx)(BT.L, {
-            disabled: UT.pending,
+            children: nB(`${iB}:loadoutSocketsFullHint`)
+          }), QB.loadoutPerkEquipped && (0, EB.jsx)(JB.M, {
+            disabled: jB.pending,
             onClick: () => {
-              mT.act("loadoutUnequip", nT)
+              zB.act("loadoutUnequip", NB)
             },
-            children: zT(`${JT}:loadoutUnequip`)
+            children: nB(`${iB}:loadoutUnequip`)
           })]
         })]
       })
     }
 
-    function IU(TT) {
+    function Vj(BB) {
       let {
-        icon: UT,
-        name: mT,
-        status: WT,
-        locked: zT,
-        equipped: MT
-      } = TT;
+        icon: jB,
+        name: zB,
+        status: QB,
+        locked: nB,
+        equipped: dB
+      } = BB;
       const {
-        t: gT
-      } = (0, lT.z)();
-      return (0, YT.jsxs)(QT, {
-        icon: (0, YT.jsx)(wT, {
-          itemName: UT
+        t: IB
+      } = (0, pB.D)();
+      return (0, EB.jsxs)(hB, {
+        icon: (0, EB.jsx)(oB, {
+          itemName: jB
         }),
-        name: mT,
-        children: [null !== WT && (0, YT.jsx)("span", {
-          className: kT()("LoadoutStatusText", {
-            Locked: zT
+        name: zB,
+        children: [null !== QB && (0, EB.jsx)("span", {
+          className: UB()("LoadoutStatusText", {
+            Locked: nB
           }),
-          children: WT
-        }), MT && (0, YT.jsx)("span", {
+          children: QB
+        }), dB && (0, EB.jsx)("span", {
           className: "BoardBadge",
-          children: gT(`${JT}:loadoutEquippedBadge`)
+          children: IB(`${iB}:loadoutEquippedBadge`)
         })]
       })
     }
 
-    function QU(TT) {
+    function hj(BB) {
       let {
-        view: UT,
-        controller: mT
-      } = TT;
-      const WT = UT.loadout;
-      if ("loadoutPerks" === UT.slot) {
-        const TT = WT.loadoutPerks.find((TT => TT.loadoutPerkId === UT.selectedId));
-        return (0, YT.jsx)("section", {
+        view: jB,
+        controller: zB
+      } = BB;
+      const QB = jB.loadout;
+      if ("loadoutPerks" === jB.slot) {
+        const BB = QB.loadoutPerks.find((BB => BB.loadoutPerkId === jB.selectedId));
+        return (0, EB.jsx)("section", {
           className: "BoardDetail",
-          children: TT && (0, YT.jsx)(XU, {
-            view: UT,
-            controller: mT,
-            perk: TT
+          children: BB && (0, EB.jsx)(Yj, {
+            view: jB,
+            controller: zB,
+            perk: BB
           })
         })
       }
-      const zT = WU(WT, UT.slot),
-        MT = zT.loadoutSlotOptions.find((TT => TT.loadoutOptionId === UT.selectedId));
-      return (0, YT.jsx)("section", {
+      const nB = Qj(QB, jB.slot),
+        dB = nB.loadoutSlotOptions.find((BB => BB.loadoutOptionId === jB.selectedId));
+      return (0, EB.jsx)("section", {
         className: "BoardDetail",
-        children: MT && (0, YT.jsx)(yU, {
-          view: UT,
-          controller: mT,
-          slot: zT,
-          option: MT
+        children: dB && (0, EB.jsx)(Fj, {
+          view: jB,
+          controller: zB,
+          slot: nB,
+          option: dB
         })
       })
     }
 
-    function sU(TT) {
+    function Xj(BB) {
       let {
-        owned: UT,
-        total: mT
-      } = TT;
-      return mT <= 1 ? null : (0, YT.jsx)("span", {
+        owned: jB,
+        total: zB
+      } = BB;
+      return zB <= 1 ? null : (0, EB.jsx)("span", {
         className: "LoadoutPips",
         children: Array.from({
-          length: mT
-        }, ((TT, mT) => (0, YT.jsx)("span", {
-          className: kT()("LoadoutPip", {
-            Filled: mT < UT
+          length: zB
+        }, ((BB, zB) => (0, EB.jsx)("span", {
+          className: UB()("LoadoutPip", {
+            Filled: zB < jB
           })
-        }, mT)))
+        }, zB)))
       })
     }
 
-    function FU(TT) {
+    function Zj(BB) {
       let {
-        view: UT,
-        controller: mT
-      } = TT;
+        view: jB,
+        controller: zB
+      } = BB;
       const {
-        t: WT
-      } = (0, lT.z)(), zT = UT.loadout, MT = bU();
-      return (0, YT.jsxs)("nav", {
+        t: QB
+      } = (0, pB.D)(), nB = jB.loadout, dB = tj();
+      return (0, EB.jsxs)("nav", {
         className: "LoadoutKit",
-        "aria-label": WT(`${JT}:loadoutKit`),
-        children: [zT.loadoutSlots.map((TT => {
-          const zT = TT.loadoutSlotOptions.find((UT => UT.loadoutOptionId === TT.loadoutSlotEquippedId));
-          return (0, YT.jsxs)("button", {
-            ref: MT("section", TT.loadoutSlotKind),
+        "aria-label": QB(`${iB}:loadoutKit`),
+        children: [nB.loadoutSlots.map((BB => {
+          const nB = BB.loadoutSlotOptions.find((jB => jB.loadoutOptionId === BB.loadoutSlotEquippedId));
+          return (0, EB.jsxs)("button", {
+            ref: dB("section", BB.loadoutSlotKind),
             type: "button",
-            className: kT()("LoadoutKitSlot", {
-              Selected: UT.slot === TT.loadoutSlotKind
+            className: UB()("LoadoutKitSlot", {
+              Selected: jB.slot === BB.loadoutSlotKind
             }),
             onClick: () => {
-              mT.selectSlot(TT.loadoutSlotKind)
+              zB.selectSlot(BB.loadoutSlotKind)
             },
-            children: [(0, YT.jsx)("span", {
+            children: [(0, EB.jsx)("span", {
               className: "LoadoutKitIcon",
-              children: zT && (0, YT.jsx)(wT, {
-                itemName: zT.loadoutOptionIcon
+              children: nB && (0, EB.jsx)(oB, {
+                itemName: nB.loadoutOptionIcon
               })
-            }), (0, YT.jsxs)("span", {
+            }), (0, EB.jsxs)("span", {
               className: "LoadoutKitText",
-              children: [(0, YT.jsxs)("span", {
+              children: [(0, EB.jsxs)("span", {
                 className: "LoadoutKitTop",
-                children: [(0, YT.jsx)("span", {
+                children: [(0, EB.jsx)("span", {
                   className: "LoadoutKitLabel",
-                  children: WT(fU[TT.loadoutSlotKind])
-                }), zT && (0, YT.jsx)(sU, {
-                  owned: zT.loadoutOptionOwnedTier,
-                  total: zT.loadoutOptionTiers.length
+                  children: QB(Gj[BB.loadoutSlotKind])
+                }), nB && (0, EB.jsx)(Xj, {
+                  owned: nB.loadoutOptionOwnedTier,
+                  total: nB.loadoutOptionTiers.length
                 })]
-              }), (0, YT.jsx)("span", {
+              }), (0, EB.jsx)("span", {
                 className: "LoadoutKitName",
-                children: null === zT || void 0 === zT ? void 0 : zT.loadoutOptionName
+                children: null === nB || void 0 === nB ? void 0 : nB.loadoutOptionName
               })]
             })]
-          }, TT.loadoutSlotKind)
-        })), (0, YT.jsx)(PU, {
-          view: UT,
-          controller: mT
+          }, BB.loadoutSlotKind)
+        })), (0, EB.jsx)(Aj, {
+          view: jB,
+          controller: zB
         })]
       })
     }
 
-    function PU(TT) {
+    function Aj(BB) {
       let {
-        view: UT,
-        controller: mT
-      } = TT;
+        view: jB,
+        controller: zB
+      } = BB;
       const {
-        t: WT
-      } = (0, lT.z)(), zT = UT.loadout, MT = zT.loadoutPerks.filter((TT => TT.loadoutPerkEquipped)), gT = bU();
-      return (0, YT.jsxs)("button", {
-        ref: gT("section", "loadoutPerks"),
+        t: QB
+      } = (0, pB.D)(), nB = jB.loadout, dB = nB.loadoutPerks.filter((BB => BB.loadoutPerkEquipped)), IB = tj();
+      return (0, EB.jsxs)("button", {
+        ref: IB("section", "loadoutPerks"),
         type: "button",
-        className: kT()("LoadoutKitSlot", "LoadoutPerks", {
-          Selected: "loadoutPerks" === UT.slot
+        className: UB()("LoadoutKitSlot", "LoadoutPerks", {
+          Selected: "loadoutPerks" === jB.slot
         }),
         onClick: () => {
-          mT.selectSlot("loadoutPerks")
+          zB.selectSlot("loadoutPerks")
         },
-        children: [(0, YT.jsxs)("span", {
+        children: [(0, EB.jsxs)("span", {
           className: "LoadoutKitTop",
-          children: [(0, YT.jsx)("span", {
+          children: [(0, EB.jsx)("span", {
             className: "LoadoutKitLabel",
-            children: WT(fU.loadoutPerks)
-          }), (0, YT.jsx)("span", {
+            children: QB(Gj.loadoutPerks)
+          }), (0, EB.jsx)("span", {
             className: "LoadoutPerkCount",
-            children: WT(`${JT}:loadoutPerkCount`, {
-              equipped: String(MT.length),
-              max: String(zT.loadoutMaxPerks)
+            children: QB(`${iB}:loadoutPerkCount`, {
+              equipped: String(dB.length),
+              max: String(nB.loadoutMaxPerks)
             })
           })]
-        }), (0, YT.jsx)("span", {
+        }), (0, EB.jsx)("span", {
           className: "LoadoutSockets",
           children: Array.from({
-            length: zT.loadoutMaxPerks
-          }, ((TT, UT) => {
-            const mT = MT[UT];
-            return (0, YT.jsxs)("span", {
-              className: kT()("LoadoutSocket", {
-                Filled: mT,
-                Empty: !mT
+            length: nB.loadoutMaxPerks
+          }, ((BB, jB) => {
+            const zB = dB[jB];
+            return (0, EB.jsxs)("span", {
+              className: UB()("LoadoutSocket", {
+                Filled: zB,
+                Empty: !zB
               }),
-              children: [(0, YT.jsx)("span", {
+              children: [(0, EB.jsx)("span", {
                 className: "LoadoutSocketWell",
-                children: mT && (0, YT.jsx)(wT, {
-                  itemName: mT.loadoutPerkIcon
+                children: zB && (0, EB.jsx)(oB, {
+                  itemName: zB.loadoutPerkIcon
                 })
-              }), (0, YT.jsx)("span", {
+              }), (0, EB.jsx)("span", {
                 className: "LoadoutSocketName",
-                children: mT ? mT.loadoutPerkName : WT(`${JT}:loadoutPerkSocketEmpty`)
+                children: zB ? zB.loadoutPerkName : QB(`${iB}:loadoutPerkSocketEmpty`)
               })]
-            }, UT)
+            }, jB)
           }))
         })]
       })
     }
 
-    function VU(TT) {
+    function Tj(BB) {
       let {
-        icon: UT,
-        name: mT,
-        selected: WT,
-        equipped: zT,
-        locked: MT,
-        ownedTier: gT,
-        tiers: nT,
-        buttonRef: HT,
-        onSelect: kT
-      } = TT;
+        icon: jB,
+        name: zB,
+        selected: QB,
+        equipped: nB,
+        locked: dB,
+        ownedTier: IB,
+        tiers: NB,
+        buttonRef: uB,
+        onSelect: UB
+      } = BB;
       const {
-        t: jT
-      } = (0, lT.z)();
-      return (0, YT.jsxs)(IT, {
-        icon: (0, YT.jsx)(wT, {
-          itemName: UT
+        t: aB
+      } = (0, pB.D)();
+      return (0, EB.jsxs)(VB, {
+        icon: (0, EB.jsx)(oB, {
+          itemName: jB
         }),
-        name: mT,
-        selected: WT,
-        locked: MT,
-        buttonRef: HT,
-        onSelect: kT,
-        children: [zT && (0, YT.jsx)("span", {
+        name: zB,
+        selected: QB,
+        locked: dB,
+        buttonRef: uB,
+        onSelect: UB,
+        children: [nB && (0, EB.jsx)("span", {
           className: "BoardBadge",
-          children: jT(`${JT}:loadoutEquippedBadge`)
-        }), MT && (0, YT.jsx)("span", {
+          children: aB(`${iB}:loadoutEquippedBadge`)
+        }), dB && (0, EB.jsx)("span", {
           className: "BoardBadge Muted",
-          children: jT(`${JT}:loadoutLocked`)
-        }), !MT && (0, YT.jsx)(sU, {
-          owned: gT,
-          total: nT
+          children: aB(`${iB}:loadoutLocked`)
+        }), !dB && (0, EB.jsx)(Xj, {
+          owned: IB,
+          total: NB
         })]
       })
     }
 
-    function uU(TT) {
+    function Pj(BB) {
       let {
-        view: UT,
-        controller: mT
-      } = TT;
-      const WT = UT.loadout,
-        zT = bU();
-      if ("loadoutPerks" === UT.slot) return (0, YT.jsx)("div", {
+        view: jB,
+        controller: zB
+      } = BB;
+      const QB = jB.loadout,
+        nB = tj();
+      if ("loadoutPerks" === jB.slot) return (0, EB.jsx)("div", {
         className: "BoardTiles",
-        children: WT.loadoutPerks.map((TT => (0, YT.jsx)(VU, {
-          icon: TT.loadoutPerkIcon,
-          name: TT.loadoutPerkName,
-          selected: UT.selectedId === TT.loadoutPerkId,
-          equipped: TT.loadoutPerkEquipped,
-          locked: !TT.loadoutPerkOwned,
+        children: QB.loadoutPerks.map((BB => (0, EB.jsx)(Tj, {
+          icon: BB.loadoutPerkIcon,
+          name: BB.loadoutPerkName,
+          selected: jB.selectedId === BB.loadoutPerkId,
+          equipped: BB.loadoutPerkEquipped,
+          locked: !BB.loadoutPerkOwned,
           ownedTier: 0,
           tiers: 0,
-          buttonRef: zT("VL", TT.loadoutPerkId),
+          buttonRef: nB("zs", BB.loadoutPerkId),
           onSelect: () => {
-            mT.select(TT.loadoutPerkId)
+            zB.select(BB.loadoutPerkId)
           }
-        }, TT.loadoutPerkId)))
+        }, BB.loadoutPerkId)))
       });
-      const MT = WU(WT, UT.slot);
-      return (0, YT.jsx)("div", {
+      const dB = Qj(QB, jB.slot);
+      return (0, EB.jsx)("div", {
         className: "BoardTiles",
-        children: MT.loadoutSlotOptions.map((TT => (0, YT.jsx)(VU, {
-          icon: TT.loadoutOptionIcon,
-          name: TT.loadoutOptionName,
-          selected: UT.selectedId === TT.loadoutOptionId,
-          equipped: MT.loadoutSlotEquippedId === TT.loadoutOptionId,
-          locked: 0 === TT.loadoutOptionOwnedTier,
-          ownedTier: TT.loadoutOptionOwnedTier,
-          tiers: TT.loadoutOptionTiers.length,
-          buttonRef: zT("VL", TT.loadoutOptionId),
+        children: dB.loadoutSlotOptions.map((BB => (0, EB.jsx)(Tj, {
+          icon: BB.loadoutOptionIcon,
+          name: BB.loadoutOptionName,
+          selected: jB.selectedId === BB.loadoutOptionId,
+          equipped: dB.loadoutSlotEquippedId === BB.loadoutOptionId,
+          locked: 0 === BB.loadoutOptionOwnedTier,
+          ownedTier: BB.loadoutOptionOwnedTier,
+          tiers: BB.loadoutOptionTiers.length,
+          buttonRef: nB("zs", BB.loadoutOptionId),
           onSelect: () => {
-            mT.select(TT.loadoutOptionId)
+            zB.select(BB.loadoutOptionId)
           }
-        }, TT.loadoutOptionId)))
+        }, BB.loadoutOptionId)))
       })
     }
 
-    function CU(TT) {
+    function Wj(BB) {
       let {
-        loadout: UT
-      } = TT;
-      return (0, YT.jsx)(sT, {
-        coins: UT.loadoutCoins,
-        children: UT.loadoutHeldParts.filter((TT => TT.loadoutHeldPartAmount > 0)).map((TT => (0, YT.jsx)(aT, {
-          itemName: TT.loadoutHeldPartItem,
-          amount: TT.loadoutHeldPartAmount
-        }, TT.loadoutHeldPartCurrency)))
+        loadout: jB
+      } = BB;
+      return (0, EB.jsx)(XB, {
+        coins: jB.loadoutCoins,
+        children: jB.loadoutHeldParts.filter((BB => BB.loadoutHeldPartAmount > 0)).map((BB => (0, EB.jsx)(DB, {
+          itemName: BB.loadoutHeldPartItem,
+          amount: BB.loadoutHeldPartAmount
+        }, BB.loadoutHeldPartCurrency)))
       })
     }
 
-    function rU(TT) {
+    function ej(BB) {
       let {
-        controller: UT
-      } = TT;
-      const mT = (0, jT.j)(LU, UT.getSnapshot()),
+        controller: jB
+      } = BB;
+      const zB = (0, aB.h)(rj, jB.getSnapshot()),
         {
-          t: WT
-        } = (0, lT.z)();
-      if (null === mT.loadout) return null;
-      const zT = mT.notice;
-      return (0, YT.jsx)(YU, {
-        view: mT,
-        onDismiss: UT.dismiss,
-        children: (0, YT.jsxs)(dT, {
-          open: mT.open,
-          onDismiss: UT.dismiss,
-          title: WT(`${JT}:loadoutTitle`),
+          t: QB
+        } = (0, pB.D)();
+      if (null === zB.loadout) return null;
+      const nB = zB.notice;
+      return (0, EB.jsx)(Ej, {
+        view: zB,
+        onDismiss: jB.dismiss,
+        children: (0, EB.jsxs)(fB, {
+          open: zB.open,
+          onDismiss: jB.dismiss,
+          title: QB(`${iB}:loadoutTitle`),
           className: "ContainmentLoadoutPanel",
-          headerExtra: (0, YT.jsx)(CU, {
-            loadout: mT.loadout
+          headerExtra: (0, EB.jsx)(Wj, {
+            loadout: zB.loadout
           }),
-          statusRefused: null === zT || void 0 === zT ? void 0 : zT.loadoutNoticeRefused,
-          status: (0, YT.jsxs)(YT.Fragment, {
-            children: [(0, YT.jsx)("span", {
+          statusRefused: null === nB || void 0 === nB ? void 0 : nB.loadoutNoticeRefused,
+          status: (0, EB.jsxs)(EB.Fragment, {
+            children: [(0, EB.jsx)("span", {
               className: "LoadoutRadioBadge",
-              children: WT(`${JT}:loadoutRadioBadge`)
-            }), null !== zT && WT(`${JT}:${zT.loadoutNoticeKey}`, {
-              name: zT.loadoutNoticeName,
-              tier: (0, RT.Z)(zT.loadoutNoticeTier),
-              max: String(mT.loadout.loadoutMaxPerks)
+              children: QB(`${iB}:loadoutRadioBadge`)
+            }), null !== nB && QB(`${iB}:${nB.loadoutNoticeKey}`, {
+              name: nB.loadoutNoticeName,
+              tier: (0, OB.O)(nB.loadoutNoticeTier),
+              max: String(zB.loadout.loadoutMaxPerks)
             })]
           }),
-          children: [(0, YT.jsx)(FU, {
-            view: mT,
-            controller: UT
-          }), (0, YT.jsx)(uU, {
-            view: mT,
-            controller: UT
-          }), (0, YT.jsx)(QU, {
-            view: mT,
-            controller: UT
+          children: [(0, EB.jsx)(Zj, {
+            view: zB,
+            controller: jB
+          }), (0, EB.jsx)(Pj, {
+            view: zB,
+            controller: jB
+          }), (0, EB.jsx)(hj, {
+            view: zB,
+            controller: jB
           })]
         })
       })
     }
 
-    function KU(TT, UT, mT) {
-      const WT = TT.locatorEntries.find((TT => TT.locatorEntryId === mT));
-      if (!WT) return null;
-      const zT = WT.locatorEntryName;
-      if ("locatorDisarm" === UT) return WT.locatorEntryArmed ? {
-        board: SU(TT, null),
-        notice: GU("locatorNoticeDisarmed", zT)
+    function lj(BB, jB, zB) {
+      const QB = BB.locatorEntries.find((BB => BB.locatorEntryId === zB));
+      if (!QB) return null;
+      const nB = QB.locatorEntryName;
+      if ("locatorDisarm" === jB) return QB.locatorEntryArmed ? {
+        board: wj(BB, null),
+        notice: xj("locatorNoticeDisarmed", nB)
       } : null;
-      if ("locatorArm" === UT) return WT.locatorEntryOwned && !WT.locatorEntryArmed ? {
-        board: SU(TT, mT),
-        notice: GU("locatorNoticeArmed", zT)
+      if ("locatorArm" === jB) return QB.locatorEntryOwned && !QB.locatorEntryArmed ? {
+        board: wj(BB, zB),
+        notice: xj("locatorNoticeArmed", nB)
       } : null;
-      if (WT.locatorEntryOwned || TT.locatorCoins < WT.locatorEntryPrice) return null;
-      const MT = SU({
-        ...TT,
-        locatorCoins: TT.locatorCoins - WT.locatorEntryPrice
-      }, mT);
+      if (QB.locatorEntryOwned || BB.locatorCoins < QB.locatorEntryPrice) return null;
+      const dB = wj({
+        ...BB,
+        locatorCoins: BB.locatorCoins - QB.locatorEntryPrice
+      }, zB);
       return {
         board: {
-          ...MT,
-          locatorEntries: MT.locatorEntries.map((TT => TT.locatorEntryId === mT ? {
-            ...TT,
+          ...dB,
+          locatorEntries: dB.locatorEntries.map((BB => BB.locatorEntryId === zB ? {
+            ...BB,
             locatorEntryOwned: !0
-          } : TT))
+          } : BB))
         },
-        notice: GU("locatorNoticeBought", zT)
+        notice: xj("locatorNoticeBought", nB)
       }
     }
 
-    function SU(TT, UT) {
+    function wj(BB, jB) {
       return {
-        ...TT,
-        locatorEntries: TT.locatorEntries.map((TT => {
-          const mT = TT.locatorEntryId === UT;
-          return TT.locatorEntryArmed === mT ? TT : {
-            ...TT,
-            locatorEntryArmed: mT
+        ...BB,
+        locatorEntries: BB.locatorEntries.map((BB => {
+          const zB = BB.locatorEntryId === jB;
+          return BB.locatorEntryArmed === zB ? BB : {
+            ...BB,
+            locatorEntryArmed: zB
           }
         }))
       }
     }
 
-    function GU(TT, UT) {
+    function xj(BB, jB) {
       return {
-        locatorNoticeKey: TT,
+        locatorNoticeKey: BB,
         locatorNoticeRefused: !1,
-        locatorNoticeName: UT
+        locatorNoticeName: jB
       }
     }
-    const NU = "containmentLocatorView";
-    class EU extends TU {
-      constructor(TT, UT, mT, WT) {
-        super(TT, UT, mT, WT, "locator", KU), this.snapshot = this.buildSnapshot()
+    const Kj = "containmentLocatorView";
+    class Cj extends Bj {
+      constructor(BB, jB, zB, QB) {
+        super(BB, jB, zB, QB, "locator", lj), this.snapshot = this.buildSnapshot()
       }
-      messageOpens(TT) {
-        return TT.locatorMessageOpens
+      messageOpens(BB) {
+        return BB.locatorMessageOpens
       }
-      messageNotice(TT) {
-        return TT.locatorNotice
+      messageNotice(BB) {
+        return BB.locatorNotice
       }
-      openingSelection(TT) {
-        var UT;
-        const mT = TT.locatorEntries;
-        return (null !== (UT = mT.find((TT => TT.locatorEntryArmed))) && void 0 !== UT ? UT : mT[0]).locatorEntryId
+      openingSelection(BB) {
+        var jB;
+        const zB = BB.locatorEntries;
+        return (null !== (jB = zB.find((BB => BB.locatorEntryArmed))) && void 0 !== jB ? jB : zB[0]).locatorEntryId
       }
       buildSnapshot() {
         return {
@@ -1606,245 +1646,245 @@ export const modules = {
         }
       }
     }
-    const hU = {
-        locatorContained: `${JT}:locatorFlavourContained`,
-        locatorEncountered: `${JT}:locatorFlavourEncountered`,
-        locatorUnseen: `${JT}:locatorFlavourUnseen`
+    const cj = {
+        locatorContained: `${iB}:locatorFlavourContained`,
+        locatorEncountered: `${iB}:locatorFlavourEncountered`,
+        locatorUnseen: `${iB}:locatorFlavourUnseen`
       },
-      DU = {
+      bj = {
         codexAnyDifficulty: null,
-        codexNormalOnly: `${JT}:locatorAttunedNormal`,
-        codexHardOnly: `${JT}:locatorAttunedHard`
+        codexNormalOnly: `${iB}:locatorAttunedNormal`,
+        codexHardOnly: `${iB}:locatorAttunedHard`
       };
 
-    function oU() {
-      return (0, YT.jsx)(YT.Fragment, {
+    function vj() {
+      return (0, EB.jsx)(EB.Fragment, {
         children: Array.from({
           length: 5
-        }, ((TT, UT) => (0, YT.jsx)("span", {
+        }, ((BB, jB) => (0, EB.jsx)("span", {
           className: "LocatorFly",
-          children: (0, YT.jsx)("img", {
+          children: (0, EB.jsx)("img", {
             src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgoBboMlb5LyUjD8YgNtHyJ6/d+Q/CILa1lz9YAbo4DCDLYxjQv3gt3AYQG90AdHkUQ/qhkjAb0BURkgcDmAQMo7sSXR7deyiGoIvDvIOsGasB+ACyBmTNACS0go3ibhumAAAAAElFTkSuQmCC",
             alt: "",
             draggable: !1
           })
-        }, UT)))
+        }, jB)))
       })
     }
 
-    function AU(TT) {
+    function Rj(BB) {
       let {
-        entry: UT
-      } = TT;
+        entry: jB
+      } = BB;
       const {
-        t: mT
-      } = (0, lT.z)();
-      return UT.locatorEntryArmed ? (0, YT.jsx)("span", {
+        t: zB
+      } = (0, pB.D)();
+      return jB.locatorEntryArmed ? (0, EB.jsx)("span", {
         className: "BoardBadge Armed",
-        children: mT(`${JT}:locatorArmedBadge`)
-      }) : UT.locatorEntryOwned ? (0, YT.jsx)("span", {
+        children: zB(`${iB}:locatorArmedBadge`)
+      }) : jB.locatorEntryOwned ? (0, EB.jsx)("span", {
         className: "BoardBadge",
-        children: mT(`${JT}:locatorOwnedBadge`)
+        children: zB(`${iB}:locatorOwnedBadge`)
       }) : null
     }
 
-    function RU(TT) {
+    function Oj(BB) {
       let {
-        entry: UT,
-        coins: mT,
-        inTile: WT = !1
-      } = TT;
-      return (0, YT.jsx)(aT, {
-        itemName: xT,
-        amount: UT.locatorEntryPrice,
-        fn: mT,
-        inTile: WT
+        entry: jB,
+        coins: zB,
+        inTile: QB = !1
+      } = BB;
+      return (0, EB.jsx)(DB, {
+        itemName: qB,
+        amount: jB.locatorEntryPrice,
+        DN: zB,
+        inTile: QB
       })
     }
 
-    function Tm(TT) {
+    function Bz(BB) {
       let {
-        view: UT,
-        controller: mT,
-        entry: WT
-      } = TT;
+        view: jB,
+        controller: zB,
+        entry: QB
+      } = BB;
       const {
-        t: zT
-      } = (0, lT.z)(), MT = WT.locatorEntryId, gT = UT.locators.locatorEntries.find((TT => TT.locatorEntryArmed && TT !== WT));
-      return (0, YT.jsxs)("div", {
+        t: nB
+      } = (0, pB.D)(), dB = QB.locatorEntryId, IB = jB.locators.locatorEntries.find((BB => BB.locatorEntryArmed && BB !== QB));
+      return (0, EB.jsxs)("div", {
         className: "BoardActions",
-        children: [WT.locatorEntryArmed && (0, YT.jsx)(BT.L, {
-          disabled: UT.pending,
+        children: [QB.locatorEntryArmed && (0, EB.jsx)(JB.M, {
+          disabled: jB.pending,
           onClick: () => {
-            mT.act("locatorDisarm", MT)
+            zB.act("locatorDisarm", dB)
           },
-          children: zT(`${JT}:locatorDisarm`)
-        }), WT.locatorEntryOwned && !WT.locatorEntryArmed && (0, YT.jsx)(BT.e, {
-          disabled: UT.pending,
+          children: nB(`${iB}:locatorDisarm`)
+        }), QB.locatorEntryOwned && !QB.locatorEntryArmed && (0, EB.jsx)(JB.f, {
+          disabled: jB.pending,
           onClick: () => {
-            mT.act("locatorArm", MT)
+            zB.act("locatorArm", dB)
           },
-          children: zT(`${JT}:locatorArm`)
-        }), !WT.locatorEntryOwned && (0, YT.jsxs)("div", {
+          children: nB(`${iB}:locatorArm`)
+        }), !QB.locatorEntryOwned && (0, EB.jsxs)("div", {
           className: "LocatorBuy",
-          children: [(0, YT.jsx)(RU, {
-            entry: WT,
-            coins: UT.locators.locatorCoins
-          }), (0, YT.jsx)(BT.l, {
-            disabled: UT.locators.locatorCoins < WT.locatorEntryPrice || UT.pending,
+          children: [(0, EB.jsx)(Oj, {
+            entry: QB,
+            coins: jB.locators.locatorCoins
+          }), (0, EB.jsx)(JB.m, {
+            disabled: jB.locators.locatorCoins < QB.locatorEntryPrice || jB.pending,
             onClick: () => {
-              mT.act("locatorBuy", MT)
+              zB.act("locatorBuy", dB)
             },
-            children: zT(`${JT}:locatorBuy`)
+            children: nB(`${iB}:locatorBuy`)
           })]
-        }), gT && !WT.locatorEntryArmed && (0, YT.jsx)("span", {
+        }), IB && !QB.locatorEntryArmed && (0, EB.jsx)("span", {
           className: "BoardHint",
-          children: zT(`${JT}:locatorReplacesHint`, {
-            name: gT.locatorEntryName
+          children: nB(`${iB}:locatorReplacesHint`, {
+            name: IB.locatorEntryName
           })
         })]
       })
     }
 
-    function Um(TT) {
+    function jz(BB) {
       let {
-        entry: UT
-      } = TT;
-      return "locatorUnseen" === UT.locatorEntryStanding ? (0, YT.jsx)(wT, {
+        entry: jB
+      } = BB;
+      return "locatorUnseen" === jB.locatorEntryStanding ? (0, EB.jsx)(oB, {
         itemName: "Compass"
-      }) : (0, YT.jsx)(tT, {
-        anomalyId: UT.locatorEntryId,
-        caught: "locatorContained" === UT.locatorEntryStanding
+      }) : (0, EB.jsx)(HB, {
+        anomalyId: jB.locatorEntryId,
+        caught: "locatorContained" === jB.locatorEntryStanding
       })
     }
 
-    function mm(TT) {
+    function zz(BB) {
       let {
-        view: UT,
-        controller: mT,
-        entry: WT
-      } = TT;
+        view: jB,
+        controller: zB,
+        entry: QB
+      } = BB;
       const {
-        t: zT
-      } = (0, lT.z)(), MT = DU[WT.locatorEntryDifficulty];
-      return (0, YT.jsxs)("section", {
+        t: nB
+      } = (0, pB.D)(), dB = bj[QB.locatorEntryDifficulty];
+      return (0, EB.jsxs)("section", {
         className: "BoardDetail",
-        children: [(0, YT.jsxs)("div", {
-          className: kT()("LocatorLabel", {
-            Armed: WT.locatorEntryArmed
+        children: [(0, EB.jsxs)("div", {
+          className: UB()("LocatorLabel", {
+            Armed: QB.locatorEntryArmed
           }),
-          children: [(0, YT.jsx)(QT, {
-            icon: (0, YT.jsx)(Um, {
-              entry: WT
+          children: [(0, EB.jsx)(hB, {
+            icon: (0, EB.jsx)(jz, {
+              entry: QB
             }),
-            name: zT(`${JT}:locatorName`, {
-              name: WT.locatorEntryName
+            name: nB(`${iB}:locatorName`, {
+              name: QB.locatorEntryName
             }),
-            children: (0, YT.jsx)(AU, {
-              entry: WT
+            children: (0, EB.jsx)(Rj, {
+              entry: QB
             })
-          }), (0, YT.jsx)("p", {
+          }), (0, EB.jsx)("p", {
             className: "BoardDescription",
-            children: zT(WT.locatorEntryArmed ? `${JT}:locatorFlavourArmed` : hU[WT.locatorEntryStanding])
-          }), null !== MT && (0, YT.jsx)("p", {
+            children: nB(QB.locatorEntryArmed ? `${iB}:locatorFlavourArmed` : cj[QB.locatorEntryStanding])
+          }), null !== dB && (0, EB.jsx)("p", {
             className: "LocatorAttuned",
-            children: zT(MT)
-          }), (0, YT.jsx)("p", {
+            children: nB(dB)
+          }), (0, EB.jsx)("p", {
             className: "BoardDescription LocatorUsage",
-            children: zT(`${JT}:locatorUsage`)
+            children: nB(`${iB}:locatorUsage`)
           })]
-        }), (0, YT.jsx)(Tm, {
-          view: UT,
-          controller: mT,
-          entry: WT
+        }), (0, EB.jsx)(Bz, {
+          view: jB,
+          controller: zB,
+          entry: QB
         })]
       })
     }
 
-    function Wm(TT) {
+    function Qz(BB) {
       let {
-        controller: UT
-      } = TT;
-      const mT = (0, jT.j)(NU, UT.getSnapshot()),
+        controller: jB
+      } = BB;
+      const zB = (0, aB.h)(Kj, jB.getSnapshot()),
         {
-          t: WT
-        } = (0, lT.z)(),
-        zT = mT.locators;
-      if (null === zT) return null;
-      const MT = zT.locatorEntries.find((TT => TT.locatorEntryId === mT.selectedId)),
-        gT = mT.notice;
-      return (0, YT.jsxs)(dT, {
-        open: mT.open,
-        onDismiss: UT.dismiss,
-        title: WT(`${JT}:locatorTitle`),
+          t: QB
+        } = (0, pB.D)(),
+        nB = zB.locators;
+      if (null === nB) return null;
+      const dB = nB.locatorEntries.find((BB => BB.locatorEntryId === zB.selectedId)),
+        IB = zB.notice;
+      return (0, EB.jsxs)(fB, {
+        open: zB.open,
+        onDismiss: jB.dismiss,
+        title: QB(`${iB}:locatorTitle`),
         className: "ContainmentLocatorPanel",
-        decor: (0, YT.jsx)(oU, {}),
-        headerExtra: (0, YT.jsx)(sT, {
-          coins: zT.locatorCoins
+        decor: (0, EB.jsx)(vj, {}),
+        headerExtra: (0, EB.jsx)(XB, {
+          coins: nB.locatorCoins
         }),
-        statusRefused: null === gT || void 0 === gT ? void 0 : gT.locatorNoticeRefused,
-        status: (0, YT.jsxs)(YT.Fragment, {
-          children: [(0, YT.jsx)("span", {
+        statusRefused: null === IB || void 0 === IB ? void 0 : IB.locatorNoticeRefused,
+        status: (0, EB.jsxs)(EB.Fragment, {
+          children: [(0, EB.jsx)("span", {
             className: "LocatorKeeperBadge",
-            children: WT(`${JT}:locatorKeeperName`)
-          }), null !== gT && WT(`${JT}:${gT.locatorNoticeKey}`, {
-            name: gT.locatorNoticeName
+            children: QB(`${iB}:locatorKeeperName`)
+          }), null !== IB && QB(`${iB}:${IB.locatorNoticeKey}`, {
+            name: IB.locatorNoticeName
           })]
         }),
-        children: [(0, YT.jsx)("div", {
+        children: [(0, EB.jsx)("div", {
           className: "BoardTiles",
-          children: zT.locatorEntries.map((TT => (0, YT.jsxs)(IT, {
-            icon: (0, YT.jsx)(Um, {
-              entry: TT
+          children: nB.locatorEntries.map((BB => (0, EB.jsxs)(VB, {
+            icon: (0, EB.jsx)(jz, {
+              entry: BB
             }),
-            name: TT.locatorEntryName,
-            selected: TT === MT,
+            name: BB.locatorEntryName,
+            selected: BB === dB,
             locked: !1,
-            className: kT()("LocatorTag", {
-              Armed: TT.locatorEntryArmed
+            className: UB()("LocatorTag", {
+              Armed: BB.locatorEntryArmed
             }),
             onSelect: () => {
-              UT.select(TT.locatorEntryId)
+              jB.select(BB.locatorEntryId)
             },
-            children: [(0, YT.jsx)(AU, {
-              entry: TT
-            }), !TT.locatorEntryOwned && (0, YT.jsx)(RU, {
-              entry: TT,
-              coins: zT.locatorCoins,
+            children: [(0, EB.jsx)(Rj, {
+              entry: BB
+            }), !BB.locatorEntryOwned && (0, EB.jsx)(Oj, {
+              entry: BB,
+              coins: nB.locatorCoins,
               inTile: !0
             })]
-          }, TT.locatorEntryId)))
-        }), (0, YT.jsx)(mm, {
-          view: mT,
-          controller: UT,
-          entry: MT
+          }, BB.locatorEntryId)))
+        }), (0, EB.jsx)(zz, {
+          view: zB,
+          controller: jB,
+          entry: dB
         })]
       })
     }
 
-    function zm(TT) {
+    function nz(BB) {
       let {
-        loadout: UT,
-        codex: mT,
-        locator: WT
-      } = TT;
-      return (0, YT.jsxs)(YT.Fragment, {
-        children: [(0, YT.jsx)(rU, {
-          controller: UT
-        }), (0, YT.jsx)(AT, {
-          controller: mT
-        }), (0, YT.jsx)(Wm, {
-          controller: WT
+        loadout: jB,
+        codex: zB,
+        locator: QB
+      } = BB;
+      return (0, EB.jsxs)(EB.Fragment, {
+        children: [(0, EB.jsx)(ej, {
+          controller: jB
+        }), (0, EB.jsx)(RB, {
+          controller: zB
+        }), (0, EB.jsx)(Qz, {
+          controller: QB
         })]
       })
     }
-    var Mm = mT(38693);
-    class gm {
-      constructor(TT) {
-        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.sendCommand = TT, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new Mm.d({
+    var dz = zB(38645);
+    class Iz {
+      constructor(BB) {
+        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.sendCommand = BB, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new dz.b({
           spacingMs: 0,
-          now: UT
+          now: jB
         }), this.budget.subscribe((() => {
           this.notify()
         }))
@@ -1852,17 +1892,17 @@ export const modules = {
       isPending() {
         return this.awaitingReply || this.budget.isPacing()
       }
-      send(TT, UT) {
+      send(BB, jB) {
         return !this.isPending() && (this.awaitingReply = !0, this.replyTimer = setTimeout((() => {
-          this.replyTimer = null, this.awaitingReply = !1, UT(), this.notify()
-        }), 8e3), this.budget.start(), this.sendCommand(TT), !0)
+          this.replyTimer = null, this.awaitingReply = !1, jB(), this.notify()
+        }), 8e3), this.budget.start(), this.sendCommand(BB), !0)
       }
       onReply() {
         this.awaitingReply = !1, this.clearReplyTimer()
       }
-      subscribe(TT) {
-        return this.listeners.add(TT), () => {
-          this.listeners.delete(TT)
+      subscribe(BB) {
+        return this.listeners.add(BB), () => {
+          this.listeners.delete(BB)
         }
       }
       dispose() {
@@ -1872,177 +1912,137 @@ export const modules = {
         null !== this.replyTimer && (clearTimeout(this.replyTimer), this.replyTimer = null)
       }
       notify() {
-        for (const TT of this.listeners) TT()
+        for (const BB of this.listeners) BB()
       }
     }
-    var nm = mT(38684);
-    const Hm = new Map([
-      ["npc_general", ZU],
-      ["npc_tentacle_guy", nm]
+    var Nz = zB(38640);
+    const uz = new Map([
+      ["npc_general", mj],
+      ["npc_tentacle_guy", Nz]
     ]);
 
-    function km(TT) {
-      const UT = Hm.get(TT);
-      if (void 0 === UT) return null;
-      const mT = document.createElement("img");
-      return mT.src = UT, mT.alt = "", mT.draggable = !1, mT.style.imageRendering = "pixelated", mT
+    function Uz(BB) {
+      const jB = uz.get(BB);
+      if (void 0 === jB) return null;
+      const zB = document.createElement("img");
+      return zB.src = jB, zB.alt = "", zB.draggable = !1, zB.style.imageRendering = "pixelated", zB
     }
-    const jm = function() {
-      let TT, UT = !1,
-        mT = null,
-        HT = null;
-      const kT = [],
-        jT = TT => {
-          for (const UT of kT) UT !== TT && UT.close();
-          (0, nT.l)()
+    const az = function() {
+      let BB, jB = !1,
+        zB = null,
+        uB = null;
+      const UB = [],
+        aB = BB => {
+          for (const jB of UB) jB !== BB && jB.close();
+          (0, NB.o)()
         },
-        lT = TT => {
-          TT && (0, nT.f)()
+        pB = BB => {
+          BB && (0, NB.f)()
         },
-        LT = new gm((UT => {
-          TT.sendCommand(UT)
+        rB = new Iz((jB => {
+          BB.sendCommand(jB)
         })),
-        pT = new pU((TT => {
-          gT.j.EZ(LU, TT, !0)
-        }), jT, lT, LT),
-        BT = new VT((TT => {
-          gT.j.EZ(PT, TT, !0)
-        }), jT, lT),
-        ZT = new EU((TT => {
-          gT.j.EZ(NU, TT, !0)
-        }), jT, lT, LT);
-      kT.push(pT, BT, ZT);
+        sB = new sj((BB => {
+          IB.n.Ly(rj, BB, !0)
+        }), aB, pB, rB),
+        JB = new TB((BB => {
+          IB.n.Ly(AB, BB, !0)
+        }), aB, pB),
+        mB = new Cj((BB => {
+          IB.n.Ly(Kj, BB, !0)
+        }), aB, pB, rB);
+      UB.push(sB, JB, mB);
       return {
-        onCreate: UT => {
-          TT = UT, mT = (0, nT.q)(null, {
-            content: (0, WT.createElement)(zm, {
-              loadout: pT,
-              codex: BT,
-              locator: ZT
+        onCreate: jB => {
+          BB = jB, zB = (0, NB.t)(null, {
+            content: (0, QB.createElement)(nz, {
+              loadout: sB,
+              codex: JB,
+              locator: mB
             }),
             onClose: () => {
-              for (const TT of kT) TT.close()
+              for (const BB of UB) BB.close()
             }
-          }), HT = (0, MT.i)(km)
+          }), uB = (0, dB.g)(Uz)
         },
-        onReceivedMessageFromServer: (TT, UT) => {
-          "containmentLoadout" === TT ? pT.pB(UT) : "containmentLoadoutClose" === TT ? pT.isOpen() && (pT.close(), (0, nT.d)()) : "containmentCodex" === TT ? BT.pB(UT) : "containmentLocator" === TT && ZT.pB(UT)
+        onReceivedMessageFromServer: (BB, jB) => {
+          "containmentLoadout" === BB ? sB.VJ(jB) : "containmentLoadoutClose" === BB ? sB.isOpen() && (sB.close(), (0, NB.d)()) : "containmentCodex" === BB ? JB.VJ(jB) : "containmentLocator" === BB && mB.VJ(jB)
         },
-        Cl: () => {
-          UT || zT.b.get("loadingOverlayVisible") || (UT = !0, TT.sendCommand("containmentEntered"))
+        vp: () => {
+          jB || nB.c.get("loadingOverlayVisible") || (jB = !0, BB.sendCommand("containmentEntered"))
         },
         onClose: () => {
-          var TT, UT;
-          null === (TT = mT) || void 0 === TT || TT(), mT = null, null === (UT = HT) || void 0 === UT || UT(), HT = null;
-          for (const mT of kT) mT.dispose();
-          LT.dispose()
+          var BB, jB;
+          null === (BB = zB) || void 0 === BB || BB(), zB = null, null === (jB = uB) || void 0 === jB || jB(), uB = null;
+          for (const zB of UB) zB.dispose();
+          rB.dispose()
         }
       }
     }
   },
-  39428: (TT, UT, mT) => {
-    var WT = {
-      "./breach-zero-uncaught.webp": 39436,
-      "./breach-zero.webp": 39440,
-      "./brood-father-uncaught.webp": 39444,
-      "./brood-father.webp": 39451,
-      "./carousel-uncaught.webp": 39458,
-      "./carousel.webp": 39462,
-      "./deadlock-uncaught.webp": 39464,
-      "./deadlock.webp": 39472,
-      "./frost-revenant-uncaught.webp": 39480,
-      "./frost-revenant.webp": 39483,
-      "./hollow-choir-uncaught.webp": 39490,
-      "./hollow-choir.webp": 39493,
-      "./magma-warden-uncaught.webp": 39498,
-      "./magma-warden.webp": 39505,
-      "./patient-zero-uncaught.webp": 39509,
-      "./patient-zero.webp": 39515,
-      "./siege-engine-uncaught.webp": 39517,
-      "./siege-engine.webp": 39522,
-      "./warp-stalker-uncaught.webp": 39530,
-      "./warp-stalker.webp": 39539
-    };
-
-    function zT(TT) {
-      var UT = MT(TT);
-      return mT(UT)
-    }
-
-    function MT(TT) {
-      if (!mT.o(WT, TT)) {
-        var UT = new Error("Cannot find module '" + TT + "'");
-        throw UT.code = "MODULE_NOT_FOUND", UT
-      }
-      return WT[TT]
-    }
-    zT.keys = function() {
-      return Object.keys(WT)
-    }, zT.resolve = MT, TT.exports = zT, zT.id = 39428
+  39388: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
   },
-  39436: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
+  39397: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
   },
-  39440: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
+  39405: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
   },
-  39444: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
+  39407: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/brood-father.e48391955a574c1155fa.webp"
   },
-  39451: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/brood-father.e48391955a574c1155fa.webp"
+  39415: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
   },
-  39458: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
+  39418: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
   },
-  39462: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
+  39422: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
   },
-  39464: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
+  39428: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
   },
-  39472: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
+  39436: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
   },
-  39480: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
+  39439: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
   },
-  39483: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
+  39445: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
   },
-  39490: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
+  39447: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
   },
-  39493: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
+  39451: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
   },
-  39498: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
+  39456: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
   },
-  39505: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
+  39464: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
   },
-  39509: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
+  39469: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
   },
-  39515: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
+  39471: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
   },
-  39517: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
+  39478: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
   },
-  39522: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
+  39481: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
   },
-  39530: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
+  39489: (BB, jB, zB) => {
+    BB.exports = zB.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
   },
-  39539: (TT, UT, mT) => {
-    TT.exports = mT.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
-  },
-  38684: TT => {
-    TT.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
+  38640: BB => {
+    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

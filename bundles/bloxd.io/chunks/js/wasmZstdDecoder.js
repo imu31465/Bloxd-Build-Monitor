@@ -1,477 +1,477 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var TT = __webpack_require__.u,
-        UT = __webpack_require__.e,
-        mT = {},
-        WT = {};
-      __webpack_require__.u = function(UT) {
-        return TT(UT) + (mT.hasOwnProperty(UT) ? "?" + mT[UT] : "")
-      }, __webpack_require__.e = function(zT) {
-        return UT(zT).catch((function(UT) {
-          var MT = WT.hasOwnProperty(zT) ? WT[zT] : 4;
-          if (MT < 1) {
-            var gT = TT(zT);
-            if (UT.message = "Loading chunk " + zT + " failed after 4 retries.\n(" + gT + ")", UT.request = gT, mT[zT] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete WT[zT]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === UT.code) {
-              var nT = __webpack_require__.miniCssF(zT);
-              UT.message = UT.message.replace("Loading chunk", "Loading CSS chunk").replace(gT, nT), UT.request = nT
+      var BB = __webpack_require__.u,
+        jB = __webpack_require__.e,
+        zB = {},
+        QB = {};
+      __webpack_require__.u = function(jB) {
+        return BB(jB) + (zB.hasOwnProperty(jB) ? "?" + zB[jB] : "")
+      }, __webpack_require__.e = function(nB) {
+        return jB(nB).catch((function(jB) {
+          var dB = QB.hasOwnProperty(nB) ? QB[nB] : 4;
+          if (dB < 1) {
+            var IB = BB(nB);
+            if (jB.message = "Loading chunk " + nB + " failed after 4 retries.\n(" + IB + ")", jB.request = IB, zB[nB] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete QB[nB]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === jB.code) {
+              var NB = __webpack_require__.miniCssF(nB);
+              jB.message = jB.message.replace("Loading chunk", "Loading CSS chunk").replace(IB, NB), jB.request = NB
             }
-            throw UT
+            throw jB
           }
-          return new Promise((function(TT) {
-            var UT = 4 - MT + 1;
+          return new Promise((function(BB) {
+            var jB = 4 - dB + 1;
             setTimeout((function() {
-              var UT = "cache-bust=" + Date.now();
-              mT[zT] = UT, WT[zT] = MT - 1, TT(__webpack_require__.e(zT))
-            }), function(TT) {
-              return 500 * Math.pow(2, TT)
-            }(UT))
+              var jB = "cache-bust=" + Date.now();
+              zB[nB] = jB, QB[nB] = dB - 1, BB(__webpack_require__.e(nB))
+            }), function(BB) {
+              return 500 * Math.pow(2, BB)
+            }(jB))
           }))
         }))
       }
     }
   })();
 
-  function TT(TT) {
-    return TT instanceof Error ? TT.message : String(TT)
+  function BB(BB) {
+    return BB instanceof Error ? BB.message : String(BB)
   }
-  const UT = ArrayBuffer,
-    mT = Uint8Array,
-    WT = Uint16Array,
-    zT = Int16Array,
-    MT = Int32Array,
-    gT = (TT, UT, WT) => {
-      if (mT.prototype.slice) return mT.prototype.slice.call(TT, UT, WT);
-      (null == UT || UT < 0) && (UT = 0), (null == WT || WT > TT.length) && (WT = TT.length);
-      const zT = new mT(WT - UT);
-      return zT.set(TT.subarray(UT, WT)), zT
+  const jB = ArrayBuffer,
+    zB = Uint8Array,
+    QB = Uint16Array,
+    nB = Int16Array,
+    dB = Int32Array,
+    IB = (BB, jB, QB) => {
+      if (zB.prototype.slice) return zB.prototype.slice.call(BB, jB, QB);
+      (null == jB || jB < 0) && (jB = 0), (null == QB || QB > BB.length) && (QB = BB.length);
+      const nB = new zB(QB - jB);
+      return nB.set(BB.subarray(jB, QB)), nB
     },
-    nT = (TT, UT, WT, zT) => {
-      if (mT.prototype.fill) return mT.prototype.fill.call(TT, UT, WT, zT);
-      for ((null == WT || WT < 0) && (WT = 0), (null == zT || zT > TT.length) && (zT = TT.length); WT < zT; ++WT) TT[WT] = UT;
-      return TT
+    NB = (BB, jB, QB, nB) => {
+      if (zB.prototype.fill) return zB.prototype.fill.call(BB, jB, QB, nB);
+      for ((null == QB || QB < 0) && (QB = 0), (null == nB || nB > BB.length) && (nB = BB.length); QB < nB; ++QB) BB[QB] = jB;
+      return BB
     },
-    HT = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-    kT = (TT, UT, mT) => {
-      const WT = new Error(UT || HT[TT]);
-      if (WT.code = TT, Error.captureStackTrace && Error.captureStackTrace(WT, kT), !mT) throw WT;
-      return WT
+    uB = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+    UB = (BB, jB, zB) => {
+      const QB = new Error(jB || uB[BB]);
+      if (QB.code = BB, Error.captureStackTrace && Error.captureStackTrace(QB, UB), !zB) throw QB;
+      return QB
     },
-    jT = (TT, UT, mT) => {
-      let WT = 0,
-        zT = 0;
-      for (; WT < mT; ++WT) zT |= TT[UT++] << (WT << 3);
-      return zT
+    aB = (BB, jB, zB) => {
+      let QB = 0,
+        nB = 0;
+      for (; QB < zB; ++QB) nB |= BB[jB++] << (QB << 3);
+      return nB
     },
-    lT = (TT, UT) => {
-      const WT = TT[0] | TT[1] << 8 | TT[2] << 16;
-      if (3126568 == WT && 253 == TT[3]) {
-        const WT = TT[4],
-          zT = WT >> 5 & 1,
-          gT = WT >> 2 & 1,
-          nT = 3 & WT,
-          HT = WT >> 6;
-        8 & WT && kT(0);
-        let lT = 6 - zT;
-        const LT = 3 == nT ? 4 : nT,
-          pT = jT(TT, lT, LT);
-        lT += LT;
-        const BT = HT ? 1 << HT : zT,
-          ZT = jT(TT, lT, BT) + (1 == HT && 256);
-        let cT = ZT;
-        if (!zT) {
-          const UT = 1 << 10 + (TT[5] >> 3);
-          cT = UT + (UT >> 3) * (7 & TT[5])
+    pB = (BB, jB) => {
+      const QB = BB[0] | BB[1] << 8 | BB[2] << 16;
+      if (3126568 == QB && 253 == BB[3]) {
+        const QB = BB[4],
+          nB = QB >> 5 & 1,
+          IB = QB >> 2 & 1,
+          NB = 3 & QB,
+          uB = QB >> 6;
+        8 & QB && UB(0);
+        let pB = 6 - nB;
+        const rB = 3 == NB ? 4 : NB,
+          sB = aB(BB, pB, rB);
+        pB += rB;
+        const JB = uB ? 1 << uB : nB,
+          mB = aB(BB, pB, JB) + (1 == uB && 256);
+        let yB = mB;
+        if (!nB) {
+          const jB = 1 << 10 + (BB[5] >> 3);
+          yB = jB + (jB >> 3) * (7 & BB[5])
         }
-        cT > 2145386496 && kT(1);
-        const vT = new mT((1 == UT ? ZT || cT : UT ? 0 : cT) + 12);
-        return vT[0] = 1, vT[4] = 4, vT[8] = 8, {
-          b: lT + BT,
+        yB > 2145386496 && UB(1);
+        const kB = new zB((1 == jB ? mB || yB : jB ? 0 : yB) + 12);
+        return kB[0] = 1, kB[4] = 4, kB[8] = 8, {
+          b: pB + JB,
           y: 0,
           l: 0,
-          d: pT,
-          w: UT && 1 != UT ? UT : vT.subarray(12),
-          e: cT,
-          o: new MT(vT.buffer, 0, 3),
-          u: ZT,
-          c: gT,
-          m: Math.min(131072, cT)
+          d: sB,
+          w: jB && 1 != jB ? jB : kB.subarray(12),
+          e: yB,
+          o: new dB(kB.buffer, 0, 3),
+          u: mB,
+          c: IB,
+          m: Math.min(131072, yB)
         }
       }
-      if (25481893 == (WT >> 4 | TT[3] << 20)) return 8 + (((zT = TT)[gT = 4] | zT[gT + 1] << 8 | zT[gT + 2] << 16 | zT[gT + 3] << 24) >>> 0);
-      var zT, gT;
-      kT(0)
+      if (25481893 == (QB >> 4 | BB[3] << 20)) return 8 + (((nB = BB)[IB = 4] | nB[IB + 1] << 8 | nB[IB + 2] << 16 | nB[IB + 3] << 24) >>> 0);
+      var nB, IB;
+      UB(0)
     },
-    LT = TT => {
-      let UT = 0;
-      for (; 1 << UT <= TT; ++UT);
-      return UT - 1
+    rB = BB => {
+      let jB = 0;
+      for (; 1 << jB <= BB; ++jB);
+      return jB - 1
     },
-    pT = (TT, MT, gT) => {
-      let nT = 4 + (MT << 3);
-      const HT = 5 + (15 & TT[MT]);
-      HT > gT && kT(3);
-      const jT = 1 << HT;
-      let lT = jT,
-        pT = -1,
-        BT = -1,
-        ZT = -1,
-        cT = jT;
-      const vT = new UT(512 + (jT << 2)),
-        fT = new zT(vT, 0, 256),
-        qT = new WT(vT, 0, 256),
-        iT = new WT(vT, 512, jT),
-        bT = 512 + (jT << 1),
-        OT = new mT(vT, bT, jT),
-        eT = new mT(vT, bT + jT);
-      for (; pT < 255 && lT > 0;) {
-        const UT = LT(lT + 1),
-          mT = nT >> 3,
-          WT = (1 << UT + 1) - 1;
-        let zT = (TT[mT] | TT[mT + 1] << 8 | TT[mT + 2] << 16) >> (7 & nT) & WT;
-        const MT = (1 << UT) - 1,
-          gT = WT - lT - 1,
-          HT = zT & MT;
-        if (HT < gT ? (nT += UT, zT = HT) : (nT += UT + 1, zT > MT && (zT -= gT)), fT[++pT] = --zT, -1 == zT ? (lT += zT, OT[--cT] = pT) : lT -= zT, !zT)
+    sB = (BB, dB, IB) => {
+      let NB = 4 + (dB << 3);
+      const uB = 5 + (15 & BB[dB]);
+      uB > IB && UB(3);
+      const aB = 1 << uB;
+      let pB = aB,
+        sB = -1,
+        JB = -1,
+        mB = -1,
+        yB = aB;
+      const kB = new jB(512 + (aB << 2)),
+        GB = new nB(kB, 0, 256),
+        LB = new QB(kB, 0, 256),
+        gB = new QB(kB, 512, aB),
+        tB = 512 + (aB << 1),
+        SB = new zB(kB, tB, aB),
+        MB = new zB(kB, tB + aB);
+      for (; sB < 255 && pB > 0;) {
+        const jB = rB(pB + 1),
+          zB = NB >> 3,
+          QB = (1 << jB + 1) - 1;
+        let nB = (BB[zB] | BB[zB + 1] << 8 | BB[zB + 2] << 16) >> (7 & NB) & QB;
+        const dB = (1 << jB) - 1,
+          IB = QB - pB - 1,
+          uB = nB & dB;
+        if (uB < IB ? (NB += jB, nB = uB) : (NB += jB + 1, nB > dB && (nB -= IB)), GB[++sB] = --nB, -1 == nB ? (pB += nB, SB[--yB] = sB) : pB -= nB, !nB)
           do {
-            const UT = nT >> 3;
-            BT = (TT[UT] | TT[UT + 1] << 8) >> (7 & nT) & 3, nT += 2, pT += BT
-          } while (3 == BT)
-      }(pT > 255 || lT) && kT(0);
-      let YT = 0;
-      const JT = (jT >> 1) + (jT >> 3) + 3,
-        xT = jT - 1;
-      for (let UT = 0; UT <= pT; ++UT) {
-        const TT = fT[UT];
-        if (TT < 1) qT[UT] = -TT;
+            const jB = NB >> 3;
+            JB = (BB[jB] | BB[jB + 1] << 8) >> (7 & NB) & 3, NB += 2, sB += JB
+          } while (3 == JB)
+      }(sB > 255 || pB) && UB(0);
+      let EB = 0;
+      const iB = (aB >> 1) + (aB >> 3) + 3,
+        qB = aB - 1;
+      for (let jB = 0; jB <= sB; ++jB) {
+        const BB = GB[jB];
+        if (BB < 1) LB[jB] = -BB;
         else
-          for (ZT = 0; ZT < TT; ++ZT) {
-            OT[YT] = UT;
+          for (mB = 0; mB < BB; ++mB) {
+            SB[EB] = jB;
             do {
-              YT = YT + JT & xT
-            } while (YT >= cT)
+              EB = EB + iB & qB
+            } while (EB >= yB)
           }
       }
-      for (YT && kT(0), ZT = 0; ZT < jT; ++ZT) {
-        const TT = qT[OT[ZT]]++,
-          UT = eT[ZT] = HT - LT(TT);
-        iT[ZT] = (TT << UT) - jT
+      for (EB && UB(0), mB = 0; mB < aB; ++mB) {
+        const BB = LB[SB[mB]]++,
+          jB = MB[mB] = uB - rB(BB);
+        gB[mB] = (BB << jB) - aB
       }
-      return [nT + 7 >> 3, {
-        b: HT,
-        s: OT,
-        n: eT,
-        t: iT
+      return [NB + 7 >> 3, {
+        b: uB,
+        s: SB,
+        n: MB,
+        t: gB
       }]
     },
-    BT = pT(new mT([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-    ZT = pT(new mT([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-    cT = pT(new mT([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-    vT = (TT, UT) => {
-      const mT = TT.length,
-        WT = new MT(mT);
-      for (let zT = 0; zT < mT; ++zT) WT[zT] = UT, UT += 1 << TT[zT];
-      return WT
+    JB = sB(new zB([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+    mB = sB(new zB([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+    yB = sB(new zB([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+    kB = (BB, jB) => {
+      const zB = BB.length,
+        QB = new dB(zB);
+      for (let nB = 0; nB < zB; ++nB) QB[nB] = jB, jB += 1 << BB[nB];
+      return QB
     },
-    fT = new mT(new MT([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-    qT = vT(fT, 0),
-    iT = new mT(new MT([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-    bT = vT(iT, 3),
-    OT = (TT, UT, mT) => {
-      const WT = TT.length,
-        zT = UT.length,
-        MT = TT[WT - 1],
-        gT = (1 << mT.b) - 1,
-        nT = -mT.b;
-      MT || kT(0);
-      let HT = 0,
-        jT = mT.b,
-        lT = (WT << 3) - 8 + LT(MT) - jT,
-        pT = -1;
-      for (; lT > nT && pT < zT;) {
-        const WT = lT >> 3;
-        HT = (HT << jT | (TT[WT] | TT[WT + 1] << 8 | TT[WT + 2] << 16) >> (7 & lT)) & gT, UT[++pT] = mT.s[HT], lT -= jT = mT.n[HT]
+    GB = new zB(new dB([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+    LB = kB(GB, 0),
+    gB = new zB(new dB([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+    tB = kB(gB, 3),
+    SB = (BB, jB, zB) => {
+      const QB = BB.length,
+        nB = jB.length,
+        dB = BB[QB - 1],
+        IB = (1 << zB.b) - 1,
+        NB = -zB.b;
+      dB || UB(0);
+      let uB = 0,
+        aB = zB.b,
+        pB = (QB << 3) - 8 + rB(dB) - aB,
+        sB = -1;
+      for (; pB > NB && sB < nB;) {
+        const QB = pB >> 3;
+        uB = (uB << aB | (BB[QB] | BB[QB + 1] << 8 | BB[QB + 2] << 16) >> (7 & pB)) & IB, jB[++sB] = zB.s[uB], pB -= aB = zB.n[uB]
       }
-      lT == nT && pT + 1 == zT || kT(0)
+      pB == NB && sB + 1 == nB || UB(0)
     },
-    eT = (TT, UT, mT) => {
-      let WT = 6;
-      const zT = UT.length + 3 >> 2,
-        MT = zT << 1,
-        gT = zT + MT;
-      OT(TT.subarray(WT, WT += TT[0] | TT[1] << 8), UT.subarray(0, zT), mT), OT(TT.subarray(WT, WT += TT[2] | TT[3] << 8), UT.subarray(zT, MT), mT), OT(TT.subarray(WT, WT += TT[4] | TT[5] << 8), UT.subarray(MT, gT), mT), OT(TT.subarray(WT), UT.subarray(gT), mT)
+    MB = (BB, jB, zB) => {
+      let QB = 6;
+      const nB = jB.length + 3 >> 2,
+        dB = nB << 1,
+        IB = nB + dB;
+      SB(BB.subarray(QB, QB += BB[0] | BB[1] << 8), jB.subarray(0, nB), zB), SB(BB.subarray(QB, QB += BB[2] | BB[3] << 8), jB.subarray(nB, dB), zB), SB(BB.subarray(QB, QB += BB[4] | BB[5] << 8), jB.subarray(dB, IB), zB), SB(BB.subarray(QB), jB.subarray(IB), zB)
     },
-    YT = (TT, UT, zT) => {
-      let MT = UT.b;
-      const HT = TT[MT],
-        jT = HT >> 1 & 3;
-      UT.l = 1 & HT;
-      const lT = HT >> 3 | TT[MT + 1] << 5 | TT[MT + 2] << 13,
-        vT = (MT += 3) + lT;
-      if (1 == jT) {
-        if (MT >= TT.length) return;
-        return UT.b = MT + 1, zT ? (nT(zT, TT[MT], UT.y, UT.y += lT), zT) : nT(new mT(lT), TT[MT])
+    EB = (BB, jB, nB) => {
+      let dB = jB.b;
+      const uB = BB[dB],
+        aB = uB >> 1 & 3;
+      jB.l = 1 & uB;
+      const pB = uB >> 3 | BB[dB + 1] << 5 | BB[dB + 2] << 13,
+        kB = (dB += 3) + pB;
+      if (1 == aB) {
+        if (dB >= BB.length) return;
+        return jB.b = dB + 1, nB ? (NB(nB, BB[dB], jB.y, jB.y += pB), nB) : NB(new zB(pB), BB[dB])
       }
-      if (!(vT > TT.length)) {
-        if (0 == jT) return UT.b = vT, zT ? (zT.set(TT.subarray(MT, vT), UT.y), UT.y += lT, zT) : gT(TT, MT, vT);
-        if (2 == jT) {
-          const HT = TT[MT],
-            jT = 3 & HT,
-            lT = HT >> 2 & 3;
-          let YT = HT >> 4,
-            JT = 0,
-            xT = 0;
-          jT < 2 ? 1 & lT ? YT |= TT[++MT] << 4 | (2 & lT && TT[++MT] << 12) : YT = HT >> 3 : (xT = lT, lT < 2 ? (YT |= (63 & TT[++MT]) << 4, JT = TT[MT] >> 6 | TT[++MT] << 2) : 2 == lT ? (YT |= TT[++MT] << 4 | (3 & TT[++MT]) << 12, JT = TT[MT] >> 2 | TT[++MT] << 6) : (YT |= TT[++MT] << 4 | (63 & TT[++MT]) << 12, JT = TT[MT] >> 6 | TT[++MT] << 2 | TT[++MT] << 10)), ++MT;
-          let dT = zT ? zT.subarray(UT.y, UT.y + UT.m) : new mT(UT.m),
-            wT = dT.length - YT;
-          if (wT < 0 && kT(0), 0 == jT) dT.set(TT.subarray(MT, MT += YT), wT);
-          else if (1 == jT) nT(dT, TT[MT++], wT);
+      if (!(kB > BB.length)) {
+        if (0 == aB) return jB.b = kB, nB ? (nB.set(BB.subarray(dB, kB), jB.y), jB.y += pB, nB) : IB(BB, dB, kB);
+        if (2 == aB) {
+          const uB = BB[dB],
+            aB = 3 & uB,
+            pB = uB >> 2 & 3;
+          let EB = uB >> 4,
+            iB = 0,
+            qB = 0;
+          aB < 2 ? 1 & pB ? EB |= BB[++dB] << 4 | (2 & pB && BB[++dB] << 12) : EB = uB >> 3 : (qB = pB, pB < 2 ? (EB |= (63 & BB[++dB]) << 4, iB = BB[dB] >> 6 | BB[++dB] << 2) : 2 == pB ? (EB |= BB[++dB] << 4 | (3 & BB[++dB]) << 12, iB = BB[dB] >> 2 | BB[++dB] << 6) : (EB |= BB[++dB] << 4 | (63 & BB[++dB]) << 12, iB = BB[dB] >> 6 | BB[++dB] << 2 | BB[++dB] << 10)), ++dB;
+          let fB = nB ? nB.subarray(jB.y, jB.y + jB.m) : new zB(jB.m),
+            oB = fB.length - EB;
+          if (oB < 0 && UB(0), 0 == aB) fB.set(BB.subarray(dB, dB += EB), oB);
+          else if (1 == aB) NB(fB, BB[dB++], oB);
           else {
-            let zT = UT.h;
-            if (2 == jT) {
-              const gT = ((TT, UT) => {
-                let zT = 0,
-                  MT = -1;
-                const gT = new mT(292),
-                  HT = TT[UT],
-                  jT = gT.subarray(0, 256),
-                  lT = gT.subarray(256, 268),
-                  BT = new WT(gT.buffer, 268);
-                if (HT < 128) {
-                  const [mT, WT] = pT(TT, UT + 1, 6), zT = mT << 3, gT = TT[UT += HT];
-                  gT || kT(0);
-                  let nT = 0,
-                    lT = 0,
-                    BT = WT.b,
-                    ZT = BT,
-                    cT = (++UT << 3) - 8 + LT(gT);
-                  for (; MT > 254 && kT(0), cT -= BT, !(cT < zT);) {
-                    let UT = cT >> 3;
-                    if (nT += (TT[UT] | TT[UT + 1] << 8) >> (7 & cT) & (1 << BT) - 1, jT[++MT] = WT.s[nT], cT -= ZT, cT < zT) break;
-                    UT = cT >> 3, lT += (TT[UT] | TT[UT + 1] << 8) >> (7 & cT) & (1 << ZT) - 1, jT[++MT] = WT.s[lT], BT = WT.n[nT], nT = WT.t[nT], ZT = WT.n[lT], lT = WT.t[lT]
-                  }++MT > 255 && kT(0)
+            let nB = jB.h;
+            if (2 == aB) {
+              const IB = ((BB, jB) => {
+                let nB = 0,
+                  dB = -1;
+                const IB = new zB(292),
+                  uB = BB[jB],
+                  aB = IB.subarray(0, 256),
+                  pB = IB.subarray(256, 268),
+                  JB = new QB(IB.buffer, 268);
+                if (uB < 128) {
+                  const [zB, QB] = sB(BB, jB + 1, 6), nB = zB << 3, IB = BB[jB += uB];
+                  IB || UB(0);
+                  let NB = 0,
+                    pB = 0,
+                    JB = QB.b,
+                    mB = JB,
+                    yB = (++jB << 3) - 8 + rB(IB);
+                  for (; dB > 254 && UB(0), yB -= JB, !(yB < nB);) {
+                    let jB = yB >> 3;
+                    if (NB += (BB[jB] | BB[jB + 1] << 8) >> (7 & yB) & (1 << JB) - 1, aB[++dB] = QB.s[NB], yB -= mB, yB < nB) break;
+                    jB = yB >> 3, pB += (BB[jB] | BB[jB + 1] << 8) >> (7 & yB) & (1 << mB) - 1, aB[++dB] = QB.s[pB], JB = QB.n[NB], NB = QB.t[NB], mB = QB.n[pB], pB = QB.t[pB]
+                  }++dB > 255 && UB(0)
                 } else {
-                  for (MT = HT - 127; zT < MT; zT += 2) {
-                    const mT = TT[++UT];
-                    jT[zT] = mT >> 4, jT[zT + 1] = 15 & mT
-                  }++UT
+                  for (dB = uB - 127; nB < dB; nB += 2) {
+                    const zB = BB[++jB];
+                    aB[nB] = zB >> 4, aB[nB + 1] = 15 & zB
+                  }++jB
                 }
-                let ZT = 0;
-                for (zT = 0; zT < MT; ++zT) {
-                  const TT = jT[zT];
-                  TT > 11 && kT(0), ZT += TT && 1 << TT - 1
+                let mB = 0;
+                for (nB = 0; nB < dB; ++nB) {
+                  const BB = aB[nB];
+                  BB > 11 && UB(0), mB += BB && 1 << BB - 1
                 }
-                const cT = LT(ZT) + 1,
-                  vT = 1 << cT,
-                  fT = vT - ZT;
-                for (fT & fT - 1 && kT(0), jT[MT++] = LT(fT) + 1, zT = 0; zT < MT; ++zT) {
-                  const TT = jT[zT];
-                  ++lT[jT[zT] = TT && cT + 1 - TT]
+                const yB = rB(mB) + 1,
+                  kB = 1 << yB,
+                  GB = kB - mB;
+                for (GB & GB - 1 && UB(0), aB[dB++] = rB(GB) + 1, nB = 0; nB < dB; ++nB) {
+                  const BB = aB[nB];
+                  ++pB[aB[nB] = BB && yB + 1 - BB]
                 }
-                const qT = new mT(vT << 1),
-                  iT = qT.subarray(0, vT),
-                  bT = qT.subarray(vT);
-                for (BT[cT] = 0, zT = cT; zT > 0; --zT) {
-                  const TT = BT[zT];
-                  nT(bT, zT, TT, BT[zT - 1] = TT + lT[zT] * (1 << cT - zT))
+                const LB = new zB(kB << 1),
+                  gB = LB.subarray(0, kB),
+                  tB = LB.subarray(kB);
+                for (JB[yB] = 0, nB = yB; nB > 0; --nB) {
+                  const BB = JB[nB];
+                  NB(tB, nB, BB, JB[nB - 1] = BB + pB[nB] * (1 << yB - nB))
                 }
-                for (BT[0] != vT && kT(0), zT = 0; zT < MT; ++zT) {
-                  const TT = jT[zT];
-                  if (TT) {
-                    const UT = BT[TT];
-                    nT(iT, zT, UT, BT[TT] = UT + (1 << cT - TT))
+                for (JB[0] != kB && UB(0), nB = 0; nB < dB; ++nB) {
+                  const BB = aB[nB];
+                  if (BB) {
+                    const jB = JB[BB];
+                    NB(gB, nB, jB, JB[BB] = jB + (1 << yB - BB))
                   }
                 }
-                return [UT, {
-                  n: bT,
-                  b: cT,
-                  s: iT
+                return [jB, {
+                  n: tB,
+                  b: yB,
+                  s: gB
                 }]
-              })(TT, MT);
-              JT += MT - (MT = gT[0]), UT.h = zT = gT[1]
-            } else zT || kT(0);
-            (xT ? eT : OT)(TT.subarray(MT, MT += JT), dT.subarray(wT), zT)
+              })(BB, dB);
+              iB += dB - (dB = IB[0]), jB.h = nB = IB[1]
+            } else nB || UB(0);
+            (qB ? MB : SB)(BB.subarray(dB, dB += iB), fB.subarray(oB), nB)
           }
-          let tT = TT[MT++];
-          if (tT) {
-            255 == tT ? tT = 32512 + (TT[MT++] | TT[MT++] << 8) : tT > 127 && (tT = tT - 128 << 8 | TT[MT++]);
-            const nT = TT[MT++];
-            3 & nT && kT(0);
-            const HT = [ZT, cT, BT];
-            for (let zT = 2; zT > -1; --zT) {
-              const gT = nT >> 2 + (zT << 1) & 3;
-              if (1 == gT) {
-                const UT = new mT([0, 0, TT[MT++]]);
-                HT[zT] = {
-                  s: UT.subarray(2, 3),
-                  n: UT.subarray(0, 1),
-                  t: new WT(UT.buffer, 0, 1),
+          let HB = BB[dB++];
+          if (HB) {
+            255 == HB ? HB = 32512 + (BB[dB++] | BB[dB++] << 8) : HB > 127 && (HB = HB - 128 << 8 | BB[dB++]);
+            const NB = BB[dB++];
+            3 & NB && UB(0);
+            const uB = [mB, yB, JB];
+            for (let nB = 2; nB > -1; --nB) {
+              const IB = NB >> 2 + (nB << 1) & 3;
+              if (1 == IB) {
+                const jB = new zB([0, 0, BB[dB++]]);
+                uB[nB] = {
+                  s: jB.subarray(2, 3),
+                  n: jB.subarray(0, 1),
+                  t: new QB(jB.buffer, 0, 1),
                   b: 0
                 }
-              } else 2 == gT ? [MT, HT[zT]] = pT(TT, MT, 9 - (1 & zT)) : 3 == gT && (UT.t || kT(0), HT[zT] = UT.t[zT])
+              } else 2 == IB ? [dB, uB[nB]] = sB(BB, dB, 9 - (1 & nB)) : 3 == IB && (jB.t || UB(0), uB[nB] = jB.t[nB])
             }
-            const [jT, lT, OT] = UT.t = HT, eT = TT[vT - 1];
-            eT || kT(0);
-            let YT = (vT << 3) - 8 + LT(eT) - OT.b,
-              JT = YT >> 3,
-              xT = 0,
-              aT = (TT[JT] | TT[JT + 1] << 8) >> (7 & YT) & (1 << OT.b) - 1;
-            JT = (YT -= lT.b) >> 3;
-            let yT = (TT[JT] | TT[JT + 1] << 8) >> (7 & YT) & (1 << lT.b) - 1;
-            JT = (YT -= jT.b) >> 3;
-            let XT = (TT[JT] | TT[JT + 1] << 8) >> (7 & YT) & (1 << jT.b) - 1;
-            for (++tT; --tT;) {
-              const mT = OT.s[aT],
-                WT = OT.n[aT],
-                zT = jT.s[XT],
-                MT = jT.n[XT],
-                gT = lT.s[yT],
-                nT = lT.n[yT];
-              JT = (YT -= gT) >> 3;
-              const HT = 1 << gT;
-              let LT = HT + ((TT[JT] | TT[JT + 1] << 8 | TT[JT + 2] << 16 | TT[JT + 3] << 24) >>> (7 & YT) & HT - 1);
-              JT = (YT -= iT[zT]) >> 3;
-              let pT = bT[zT] + ((TT[JT] | TT[JT + 1] << 8 | TT[JT + 2] << 16) >> (7 & YT) & (1 << iT[zT]) - 1);
-              JT = (YT -= fT[mT]) >> 3;
-              const BT = qT[mT] + ((TT[JT] | TT[JT + 1] << 8 | TT[JT + 2] << 16) >> (7 & YT) & (1 << fT[mT]) - 1);
-              if ((YT < 0 || wT + BT > dT.length || xT + BT + pT > dT.length) && kT(0), JT = (YT -= WT) >> 3, aT = OT.t[aT] + ((TT[JT] | TT[JT + 1] << 8) >> (7 & YT) & (1 << WT) - 1), JT = (YT -= MT) >> 3, XT = jT.t[XT] + ((TT[JT] | TT[JT + 1] << 8) >> (7 & YT) & (1 << MT) - 1), JT = (YT -= nT) >> 3, yT = lT.t[yT] + ((TT[JT] | TT[JT + 1] << 8) >> (7 & YT) & (1 << nT) - 1), LT > 3) UT.o[2] = UT.o[1], UT.o[1] = UT.o[0], UT.o[0] = LT -= 3;
+            const [aB, pB, SB] = jB.t = uB, MB = BB[kB - 1];
+            MB || UB(0);
+            let EB = (kB << 3) - 8 + rB(MB) - SB.b,
+              iB = EB >> 3,
+              qB = 0,
+              DB = (BB[iB] | BB[iB + 1] << 8) >> (7 & EB) & (1 << SB.b) - 1;
+            iB = (EB -= pB.b) >> 3;
+            let FB = (BB[iB] | BB[iB + 1] << 8) >> (7 & EB) & (1 << pB.b) - 1;
+            iB = (EB -= aB.b) >> 3;
+            let YB = (BB[iB] | BB[iB + 1] << 8) >> (7 & EB) & (1 << aB.b) - 1;
+            for (++HB; --HB;) {
+              const zB = SB.s[DB],
+                QB = SB.n[DB],
+                nB = aB.s[YB],
+                dB = aB.n[YB],
+                IB = pB.s[FB],
+                NB = pB.n[FB];
+              iB = (EB -= IB) >> 3;
+              const uB = 1 << IB;
+              let rB = uB + ((BB[iB] | BB[iB + 1] << 8 | BB[iB + 2] << 16 | BB[iB + 3] << 24) >>> (7 & EB) & uB - 1);
+              iB = (EB -= gB[nB]) >> 3;
+              let sB = tB[nB] + ((BB[iB] | BB[iB + 1] << 8 | BB[iB + 2] << 16) >> (7 & EB) & (1 << gB[nB]) - 1);
+              iB = (EB -= GB[zB]) >> 3;
+              const JB = LB[zB] + ((BB[iB] | BB[iB + 1] << 8 | BB[iB + 2] << 16) >> (7 & EB) & (1 << GB[zB]) - 1);
+              if ((EB < 0 || oB + JB > fB.length || qB + JB + sB > fB.length) && UB(0), iB = (EB -= QB) >> 3, DB = SB.t[DB] + ((BB[iB] | BB[iB + 1] << 8) >> (7 & EB) & (1 << QB) - 1), iB = (EB -= dB) >> 3, YB = aB.t[YB] + ((BB[iB] | BB[iB + 1] << 8) >> (7 & EB) & (1 << dB) - 1), iB = (EB -= NB) >> 3, FB = pB.t[FB] + ((BB[iB] | BB[iB + 1] << 8) >> (7 & EB) & (1 << NB) - 1), rB > 3) jB.o[2] = jB.o[1], jB.o[1] = jB.o[0], jB.o[0] = rB -= 3;
               else {
-                const TT = LT - (0 != BT);
-                TT ? (LT = 3 == TT ? UT.o[0] - 1 : UT.o[TT], TT > 1 && (UT.o[2] = UT.o[1]), UT.o[1] = UT.o[0], UT.o[0] = LT) : LT = UT.o[0]
+                const BB = rB - (0 != JB);
+                BB ? (rB = 3 == BB ? jB.o[0] - 1 : jB.o[BB], BB > 1 && (jB.o[2] = jB.o[1]), jB.o[1] = jB.o[0], jB.o[0] = rB) : rB = jB.o[0]
               }
-              for (let TT = 0; TT < BT; ++TT) dT[xT + TT] = dT[wT + TT];
-              xT += BT, wT += BT;
-              let ZT = xT - LT;
-              if (ZT < 0) {
-                let TT = -ZT;
-                const mT = UT.e + ZT;
-                mT < 0 && kT(4), TT > pT && (TT = pT);
-                for (let WT = 0; WT < TT; ++WT) dT[xT + WT] = UT.w[mT + WT];
-                xT += TT, pT -= TT, ZT = 0
+              for (let BB = 0; BB < JB; ++BB) fB[qB + BB] = fB[oB + BB];
+              qB += JB, oB += JB;
+              let mB = qB - rB;
+              if (mB < 0) {
+                let BB = -mB;
+                const zB = jB.e + mB;
+                zB < 0 && UB(4), BB > sB && (BB = sB);
+                for (let QB = 0; QB < BB; ++QB) fB[qB + QB] = jB.w[zB + QB];
+                qB += BB, sB -= BB, mB = 0
               }
-              for (let TT = 0; TT < pT; ++TT) dT[xT + TT] = dT[ZT + TT];
-              xT += pT
+              for (let BB = 0; BB < sB; ++BB) fB[qB + BB] = fB[mB + BB];
+              qB += sB
             }
-            if (xT != wT)
-              for (; wT < dT.length;) dT[xT++] = dT[wT++];
-            else xT = dT.length;
-            zT ? UT.y += xT : dT = gT(dT, 0, xT)
-          } else if (zT) {
-            if (UT.y += YT, wT)
-              for (let TT = 0; TT < YT; ++TT) dT[TT] = dT[wT + TT]
-          } else wT && (dT = gT(dT, wT));
-          return UT.b = vT, dT
+            if (qB != oB)
+              for (; oB < fB.length;) fB[qB++] = fB[oB++];
+            else qB = fB.length;
+            nB ? jB.y += qB : fB = IB(fB, 0, qB)
+          } else if (nB) {
+            if (jB.y += EB, oB)
+              for (let BB = 0; BB < EB; ++BB) fB[BB] = fB[oB + BB]
+          } else oB && (fB = IB(fB, oB));
+          return jB.b = kB, fB
         }
-        kT(2)
+        UB(2)
       }
     };
-  class JT {
+  class iB {
     output = null;
     decoded = 0;
     done = !1;
     st = null;
     parts = [];
-    fn = 0;
+    DN = 0;
     needed = 18;
     size;
-    constructor(TT) {
-      this.size = TT
+    constructor(BB) {
+      this.size = BB
     }
-    push(TT) {
+    push(BB) {
       if (this.done) return;
-      if (this.parts.push(TT), this.fn += TT.length, this.fn < this.needed) return;
-      const UT = ((TT, UT) => {
-        if (1 == TT.length) return TT[0];
-        const WT = new mT(UT);
-        for (let mT = 0, zT = 0; mT < TT.length; ++mT) {
-          const UT = TT[mT];
-          WT.set(UT, zT), zT += UT.length
+      if (this.parts.push(BB), this.DN += BB.length, this.DN < this.needed) return;
+      const jB = ((BB, jB) => {
+        if (1 == BB.length) return BB[0];
+        const QB = new zB(jB);
+        for (let zB = 0, nB = 0; zB < BB.length; ++zB) {
+          const jB = BB[zB];
+          QB.set(jB, nB), nB += jB.length
         }
-        return WT
-      })(this.parts, this.fn);
-      let WT = this.st;
-      if (!WT) {
-        const TT = lT(UT, new mT(0));
-        "number" != typeof TT && TT.u === this.size || kT(0, `not a zstd frame of ${this.size} bytes`), WT = this.st = lT(UT, 1), WT.e = 0, this.output = WT.w
+        return QB
+      })(this.parts, this.DN);
+      let QB = this.st;
+      if (!QB) {
+        const BB = pB(jB, new zB(0));
+        "number" != typeof BB && BB.u === this.size || UB(0, `not a zstd frame of ${this.size} bytes`), QB = this.st = pB(jB, 1), QB.e = 0, this.output = QB.w
       }
       for (;;) {
-        const TT = UT.length - WT.b;
-        if (TT < 3) {
+        const BB = jB.length - QB.b;
+        if (BB < 3) {
           this.needed = 3;
           break
         }
-        const mT = UT[WT.b],
-          zT = mT >> 1 & 3;
-        3 == zT && kT(2);
-        const MT = mT >> 3 | UT[WT.b + 1] << 5 | UT[WT.b + 2] << 13;
-        MT > WT.m && kT(0), 0 == zT && WT.y + MT > WT.u && kT(0);
-        const gT = 1 == zT ? 4 : 3 + MT;
-        if (TT < gT) {
-          this.needed = gT;
+        const zB = jB[QB.b],
+          nB = zB >> 1 & 3;
+        3 == nB && UB(2);
+        const dB = zB >> 3 | jB[QB.b + 1] << 5 | jB[QB.b + 2] << 13;
+        dB > QB.m && UB(0), 0 == nB && QB.y + dB > QB.u && UB(0);
+        const IB = 1 == nB ? 4 : 3 + dB;
+        if (BB < IB) {
+          this.needed = IB;
           break
         }
-        if (YT(UT, WT, WT.w) || kT(5), WT.e = WT.y, (WT.y > WT.u || WT.l && WT.y != WT.u) && kT(0), WT.l) {
+        if (EB(jB, QB, QB.w) || UB(5), QB.e = QB.y, (QB.y > QB.u || QB.l && QB.y != QB.u) && UB(0), QB.l) {
           this.done = !0;
           break
         }
       }
-      this.decoded = WT.y;
-      const zT = UT.subarray(WT.b);
-      this.parts = zT.length ? [zT] : [], this.fn = zT.length, WT.b = 0
+      this.decoded = QB.y;
+      const nB = jB.subarray(QB.b);
+      this.parts = nB.length ? [nB] : [], this.DN = nB.length, QB.b = 0
     }
   }
-  class xT {
+  class qB {
     post;
     href = "";
-    Dp = null;
+    GJ = null;
     given = 0;
     stopped = !1;
-    constructor(TT) {
-      this.post = TT
+    constructor(BB) {
+      this.post = BB
     }
-    take(UT) {
+    take(jB) {
       if (!this.stopped) try {
-        this.answer(UT)
-      } catch (mT) {
-        this.stop(mT instanceof RangeError ? `out of memory decoding ${this.href}: ${TT(mT)}` : `${this.href} did not decode: ${TT(mT)}`)
+        this.answer(jB)
+      } catch (zB) {
+        this.stop(zB instanceof RangeError ? `out of memory decoding ${this.href}: ${BB(zB)}` : `${this.href} did not decode: ${BB(zB)}`)
       }
     }
-    answer(TT) {
-      if (null === this.Dp) {
-        const [UT, mT] = TT;
-        return this.href = UT, void(this.Dp = new JT(mT))
+    answer(BB) {
+      if (null === this.GJ) {
+        const [jB, zB] = BB;
+        return this.href = jB, void(this.GJ = new iB(zB))
       }
-      if (null === TT) return void this.stop(`${this.href} ended before its module did`);
-      const UT = this.Dp;
-      UT.push(TT);
+      if (null === BB) return void this.stop(`${this.href} ended before its module did`);
+      const jB = this.GJ;
+      jB.push(BB);
       const {
-        output: mT,
-        decoded: WT
-      } = UT;
-      if (null !== mT && WT > this.given) {
-        const TT = mT.slice(this.given, WT).buffer;
-        this.given = WT, this.post(TT, [TT])
+        output: zB,
+        decoded: QB
+      } = jB;
+      if (null !== zB && QB > this.given) {
+        const BB = zB.slice(this.given, QB).buffer;
+        this.given = QB, this.post(BB, [BB])
       }
-      UT.done && this.stop(!0)
+      jB.done && this.stop(!0)
     }
-    stop(TT) {
-      this.stopped = !0, this.post(TT)
+    stop(BB) {
+      this.stopped = !0, this.post(BB)
     }
   }
-  const dT = globalThis.WorkerGlobalScope;
-  if (void 0 !== dT && globalThis instanceof dT) {
-    const TT = globalThis,
-      UT = new xT((function(UT) {
-        let mT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        TT.postMessage(UT, mT)
+  const fB = globalThis.WorkerGlobalScope;
+  if (void 0 !== fB && globalThis instanceof fB) {
+    const BB = globalThis,
+      jB = new qB((function(jB) {
+        let zB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        BB.postMessage(jB, zB)
       }));
-    TT.addEventListener("message", (TT => {
+    BB.addEventListener("message", (BB => {
       let {
-        data: mT
-      } = TT;
-      UT.take(mT)
+        data: zB
+      } = BB;
+      jB.take(zB)
     }))
   }
 })();

@@ -1,29 +1,29 @@
 export const id = 300;
 export const ids = [300];
 export const modules = {
-  41549: TT => {
-    function UT(TT) {
-      var UT = new Error("Cannot find module '" + TT + "'");
-      throw UT.code = "MODULE_NOT_FOUND", UT
+  41497: BB => {
+    function jB(BB) {
+      var jB = new Error("Cannot find module '" + BB + "'");
+      throw jB.code = "MODULE_NOT_FOUND", jB
     }
-    UT.keys = () => [], UT.resolve = UT, UT.id = 41549, TT.exports = UT
+    jB.keys = () => [], jB.resolve = jB, jB.id = 41497, BB.exports = jB
   },
-  41599: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => WT,
-      g: () => zT
+  41567: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => QB,
+      g: () => nB
     });
-    const WT = "Sends one question to the AI",
-      zT = {
-        title: WT,
+    const QB = "Sends one question to the AI",
+      nB = {
+        title: QB,
         "data-asks-ai": !0
       }
   },
-  41524: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => WT
+  41474: (BB, jB, zB) => {
+    zB.d(jB, {
+      e: () => QB
     });
-    const WT = String.raw`
+    const QB = String.raw`
 	/** The ID of the player running the code.
 	 *
 	 * Lobby code usually has nobody running it, so this is null.
@@ -4258,21 +4258,21 @@ type OtherEntitySettings = {
 		nameColour: "default" | "yellow" | "lime" | "green" | "aqua" | "cyan" | "blue" | "purple" | "pink" | "red" | "orange"
 	}`
   },
-  41584: TT => {
-    function UT(TT) {
-      var UT = new Error("Cannot find module '" + TT + "'");
-      throw UT.code = "MODULE_NOT_FOUND", UT
+  41551: BB => {
+    function jB(BB) {
+      var jB = new Error("Cannot find module '" + BB + "'");
+      throw jB.code = "MODULE_NOT_FOUND", jB
     }
-    UT.keys = () => [], UT.resolve = UT, UT.id = 41584, TT.exports = UT
+    jB.keys = () => [], jB.resolve = jB, jB.id = 41551, BB.exports = jB
   },
-  41541: () => {},
-  41577: () => {},
-  41565: () => {},
-  41587: () => {},
-  41573: () => {},
-  41569: () => {},
-  41559: () => {},
-  41579: () => {}
+  41495: () => {},
+  41535: () => {},
+  41518: () => {},
+  41553: () => {},
+  41526: () => {},
+  41521: () => {},
+  41509: () => {},
+  41543: () => {}
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

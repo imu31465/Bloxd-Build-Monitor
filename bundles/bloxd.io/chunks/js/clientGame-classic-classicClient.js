@@ -1,35 +1,35 @@
 export const id = 12;
 export const ids = [12];
 export const modules = {
-  38633: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => gT
+  38588: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => IB
     });
-    var WT = mT(38641);
-    const zT = [0, 0, 0];
-    class MT {
-      constructor(TT) {
-        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zT;
-        this.pool = TT, this.origin = UT, this.count = 0, this.free = []
+    var QB = zB(38592);
+    const nB = [0, 0, 0];
+    class dB {
+      constructor(BB) {
+        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nB;
+        this.pool = BB, this.origin = jB, this.count = 0, this.free = []
       }
       take() {
-        var TT;
-        const UT = null !== (TT = this.free.pop()) && void 0 !== TT ? TT : this.count++;
-        return UT >= this.pool.fl && this.pool.grow(Math.max(2 * this.pool.fl, UT + 1)), this.hide(UT), UT
+        var BB;
+        const jB = null !== (BB = this.free.pop()) && void 0 !== BB ? BB : this.count++;
+        return jB >= this.pool.Ep && this.pool.grow(Math.max(2 * this.pool.Ep, jB + 1)), this.hide(jB), jB
       }
-      release(TT) {
-        this.hide(TT), this.free.push(TT)
+      release(BB) {
+        this.hide(BB), this.free.push(BB)
       }
-      write(TT, UT, mT, zT) {
+      write(BB, jB, zB, nB) {
         const {
-          records: MT
+          records: dB
         } = this.pool, {
-          origin: gT
-        } = this, nT = TT * WT.b;
-        MT[nT] = UT - gT[0], MT[nT + 1] = mT - gT[1], MT[nT + 2] = zT - gT[2], MT[nT + WT.f] = 0, this.pool.markDirty(TT)
+          origin: IB
+        } = this, NB = BB * QB.c;
+        dB[NB] = jB - IB[0], dB[NB + 1] = zB - IB[1], dB[NB + 2] = nB - IB[2], dB[NB + QB.f] = 0, this.pool.markDirty(BB)
       }
-      hide(TT) {
-        this.pool.records[TT * WT.b + WT.f] = 1, this.pool.markDirty(TT)
+      hide(BB) {
+        this.pool.records[BB * QB.c + QB.f] = 1, this.pool.markDirty(BB)
       }
       commit() {
         this.pool.commit(this.count)
@@ -38,159 +38,159 @@ export const modules = {
         this.pool.dispose()
       }
     }
-    class gT {
-      constructor(TT, UT, mT) {
-        this.api = TT, this.model = UT, this.initialCapacity = mT, this.kinds = new Map, this.origin = [0, 0, 0]
+    class IB {
+      constructor(BB, jB, zB) {
+        this.api = BB, this.model = jB, this.initialCapacity = zB, this.kinds = new Map, this.origin = [0, 0, 0]
       }
-      kindOf(TT) {
-        let UT = this.kinds.get(TT);
-        if (void 0 === UT) {
-          const mT = this.api.createInstancePool({
+      kindOf(BB) {
+        let jB = this.kinds.get(BB);
+        if (void 0 === jB) {
+          const zB = this.api.createInstancePool({
             ...this.model,
-            item: TT
+            item: BB
           }, this.initialCapacity);
-          null === mT || void 0 === mT || mT.setOrigin(this.origin[0], this.origin[1], this.origin[2]), UT = mT && new MT(mT, this.origin), this.kinds.set(TT, UT)
+          null === zB || void 0 === zB || zB.setOrigin(this.origin[0], this.origin[1], this.origin[2]), jB = zB && new dB(zB, this.origin), this.kinds.set(BB, jB)
         }
-        return UT
+        return jB
       }
-      follow(TT) {
+      follow(BB) {
         const {
-          origin: UT
+          origin: jB
         } = this;
-        if (Math.abs(TT[0] - UT[0]) <= 512 && Math.abs(TT[1] - UT[1]) <= 512 && Math.abs(TT[2] - UT[2]) <= 512) return !1;
-        UT[0] = Math.floor(TT[0]), UT[1] = Math.floor(TT[1]), UT[2] = Math.floor(TT[2]);
-        for (const mT of this.kinds.values()) null === mT || void 0 === mT || mT.pool.setOrigin(UT[0], UT[1], UT[2]);
+        if (Math.abs(BB[0] - jB[0]) <= 512 && Math.abs(BB[1] - jB[1]) <= 512 && Math.abs(BB[2] - jB[2]) <= 512) return !1;
+        jB[0] = Math.floor(BB[0]), jB[1] = Math.floor(BB[1]), jB[2] = Math.floor(BB[2]);
+        for (const zB of this.kinds.values()) null === zB || void 0 === zB || zB.pool.setOrigin(jB[0], jB[1], jB[2]);
         return !0
       }
       commit() {
-        for (const TT of this.kinds.values()) null === TT || void 0 === TT || TT.commit()
+        for (const BB of this.kinds.values()) null === BB || void 0 === BB || BB.commit()
       }
       dispose() {
-        for (const TT of this.kinds.values()) null === TT || void 0 === TT || TT.dispose();
+        for (const BB of this.kinds.values()) null === BB || void 0 === BB || BB.dispose();
         this.kinds.clear()
       }
     }
   },
-  39403: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      default: () => lT
+  39365: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      default: () => pB
     });
-    const WT = "Pipe",
-      zT = "Extractor Pipe",
-      MT = (new Set([WT, zT]), new Set([WT, zT, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
-    var gT = mT(38633);
-    class nT {
-      constructor(TT) {
-        this.api = TT, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new gT.c(TT, {
+    const QB = "Pipe",
+      nB = "Extractor Pipe",
+      dB = (new Set([QB, nB]), new Set([QB, nB, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
+    var IB = zB(38588);
+    class NB {
+      constructor(BB) {
+        this.api = BB, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new IB.c(BB, {
           scale: .3,
           yaw: 0
         }, 16)
       }
-      onSpawn(TT) {
-        if (TT.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${TT.id} with < 2 waypoints`);
-        const UT = this.kinds.kindOf(TT.itemName);
-        if (!UT) return void(this.unshown.has(TT.itemName) || (this.unshown.add(TT.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${TT.itemName}"`)));
-        this.remove(TT.id);
-        const mT = function(TT) {
-          return (TT.waypoints.length - 1) / 2 * 1e3
-        }(TT);
-        if (Date.now() - TT.startTimeMs > mT + 2e3) return;
-        const WT = UT.take();
-        this.items.set(TT.id, {
-          kind: UT,
-          slot: WT,
-          waypoints: TT.waypoints,
-          startTimeMs: TT.startTimeMs,
-          durationMs: mT
+      onSpawn(BB) {
+        if (BB.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${BB.id} with < 2 waypoints`);
+        const jB = this.kinds.kindOf(BB.itemName);
+        if (!jB) return void(this.unshown.has(BB.itemName) || (this.unshown.add(BB.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${BB.itemName}"`)));
+        this.remove(BB.id);
+        const zB = function(BB) {
+          return (BB.waypoints.length - 1) / 2 * 1e3
+        }(BB);
+        if (Date.now() - BB.startTimeMs > zB + 2e3) return;
+        const QB = jB.take();
+        this.items.set(BB.id, {
+          kind: jB,
+          slot: QB,
+          waypoints: BB.waypoints,
+          startTimeMs: BB.startTimeMs,
+          durationMs: zB
         })
       }
-      onEnd(TT) {
-        this.remove(TT.id)
+      onEnd(BB) {
+        this.remove(BB.id)
       }
-      hq() {
+      mG() {
         if (0 === this.items.size) return void this.kinds.commit();
-        const TT = Date.now();
+        const BB = Date.now();
         this.kinds.follow(this.api.getCameraPosition());
-        for (const [UT, mT] of this.items) TT - mT.startTimeMs > mT.durationMs + 2e3 ? this.remove(UT) : this.write(mT, TT);
+        for (const [jB, zB] of this.items) BB - zB.startTimeMs > zB.durationMs + 2e3 ? this.remove(jB) : this.write(zB, BB);
         this.kinds.commit()
       }
       dispose() {
         this.kinds.dispose(), this.items.clear()
       }
-      remove(TT) {
-        const UT = this.items.get(TT);
-        UT && (UT.kind.release(UT.slot), this.items.delete(TT))
+      remove(BB) {
+        const jB = this.items.get(BB);
+        jB && (jB.kind.release(jB.slot), this.items.delete(BB))
       }
-      write(TT, UT) {
-        const mT = TT.waypoints.length - 1;
-        let WT = (UT - TT.startTimeMs) / TT.durationMs;
-        WT < 0 ? WT = 0 : WT > 1 && (WT = 1);
-        const zT = WT * mT;
-        let MT = Math.floor(zT);
-        MT >= mT && (MT = mT - 1);
-        const gT = zT - MT,
-          [nT, HT, kT] = TT.waypoints[MT],
-          [jT, lT, LT] = TT.waypoints[MT + 1];
-        TT.kind.write(TT.slot, nT + (jT - nT) * gT + .5, HT + (lT - HT) * gT + .5, kT + (LT - kT) * gT + .5)
+      write(BB, jB) {
+        const zB = BB.waypoints.length - 1;
+        let QB = (jB - BB.startTimeMs) / BB.durationMs;
+        QB < 0 ? QB = 0 : QB > 1 && (QB = 1);
+        const nB = QB * zB;
+        let dB = Math.floor(nB);
+        dB >= zB && (dB = zB - 1);
+        const IB = nB - dB,
+          [NB, uB, UB] = BB.waypoints[dB],
+          [aB, pB, rB] = BB.waypoints[dB + 1];
+        BB.kind.write(BB.slot, NB + (aB - NB) * IB + .5, uB + (pB - uB) * IB + .5, UB + (rB - UB) * IB + .5)
       }
     }
-    const HT = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
-      kT = new Set(HT);
-    class jT {
+    const uB = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
+      UB = new Set(uB);
+    class aB {
       constructor() {
         this.pipeVisualizer = null, this.api = void 0
       }
-      onCreate(TT) {
-        this.api = TT, this.pipeVisualizer = new nT(TT)
+      onCreate(BB) {
+        this.api = BB, this.pipeVisualizer = new NB(BB)
       }
       onClose() {
-        var TT;
-        null === (TT = this.pipeVisualizer) || void 0 === TT || TT.dispose(), this.pipeVisualizer = null
+        var BB;
+        null === (BB = this.pipeVisualizer) || void 0 === BB || BB.dispose(), this.pipeVisualizer = null
       }
-      onReceivedMessageFromServer(TT, UT) {
+      onReceivedMessageFromServer(BB, jB) {
         const {
-          pipeVisualizer: mT
+          pipeVisualizer: zB
         } = this;
-        if (mT)
-          if ("pipeItemSpawnBatch" === TT)
-            for (const WT of UT.items) mT.onSpawn(WT);
-          else if ("pipeItemEndBatch" === TT)
-          for (const WT of UT.items) mT.onEnd(WT)
+        if (zB)
+          if ("pipeItemSpawnBatch" === BB)
+            for (const QB of jB.items) zB.onSpawn(QB);
+          else if ("pipeItemEndBatch" === BB)
+          for (const QB of jB.items) zB.onEnd(QB)
       }
-      hq() {
-        var TT;
-        null === (TT = this.pipeVisualizer) || void 0 === TT || TT.hq()
+      mG() {
+        var BB;
+        null === (BB = this.pipeVisualizer) || void 0 === BB || BB.mG()
       }
-      onPlayerAttemptAltAction(TT, UT, mT, WT, zT, gT) {
-        var nT;
-        if (!kT.has(this.api.getMetaInfo(zT).rootName)) return;
-        const HT = null === (nT = this.api.RUT(TT)) || void 0 === nT ? void 0 : nT.name;
-        return void 0 !== HT && MT.has(HT) ? "preventAction" : void 0
+      onPlayerAttemptAltAction(BB, jB, zB, QB, nB, IB) {
+        var NB;
+        if (!UB.has(this.api.getMetaInfo(nB).rootName)) return;
+        const uB = null === (NB = this.api.ZjB(BB)) || void 0 === NB ? void 0 : NB.name;
+        return void 0 !== uB && dB.has(uB) ? "preventAction" : void 0
       }
     }
-    const lT = function(TT, UT, mT) {
-      if ("survivalFactory" !== mT && "survivalFactoryPersistent" !== mT) {
+    const pB = function(BB, jB, zB) {
+      if ("survivalFactory" !== zB && "survivalFactoryPersistent" !== zB) {
         return {}
       }
-      const WT = new jT;
+      const QB = new aB;
       return {
-        onCreate: TT => {
-          WT.onCreate(TT)
+        onCreate: BB => {
+          QB.onCreate(BB)
         },
         onClose: () => {
-          WT.onClose()
+          QB.onClose()
         },
-        onReceivedMessageFromServer: (TT, UT) => {
-          WT.onReceivedMessageFromServer(TT, UT)
+        onReceivedMessageFromServer: (BB, jB) => {
+          QB.onReceivedMessageFromServer(BB, jB)
         },
-        Cl: () => {
-          WT.hq()
+        vp: () => {
+          QB.mG()
         },
-        altVetoBlocks: HT,
-        onPlayerAttemptAltAction: (TT, UT, mT, zT, MT, gT) => WT.onPlayerAttemptAltAction(TT, UT, mT, zT, MT, gT)
+        altVetoBlocks: uB,
+        onPlayerAttemptAltAction: (BB, jB, zB, nB, dB, IB) => QB.onPlayerAttemptAltAction(BB, jB, zB, nB, dB, IB)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

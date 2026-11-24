@@ -1,341 +1,341 @@
 export const id = 99;
 export const ids = [99];
 export const modules = {
-  4979: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      default: () => KT
+  4971: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      default: () => lB
     });
-    var WT = mT(63),
-      zT = mT(1641),
-      MT = mT(366),
-      gT = mT(1327),
-      nT = mT(1731),
-      HT = mT(1367),
-      kT = mT(1667),
-      jT = mT(1613),
-      lT = mT(2779);
-    const LT = {
+    var QB = zB(62),
+      nB = zB(1547),
+      dB = zB(376),
+      IB = zB(1268),
+      NB = zB(1637),
+      uB = zB(1297),
+      UB = zB(1570),
+      aB = zB(1532),
+      pB = zB(2790);
+    const rB = {
       retries: 2,
       minTimeout: 2e3
     };
-    var pT = mT(1213),
-      BT = mT(1723),
-      ZT = mT(1225),
-      cT = mT(2023),
-      vT = mT(1288),
-      fT = mT(1321),
-      qT = mT(3568),
-      iT = mT(1446),
-      bT = mT(1569),
-      OT = mT(1633),
-      eT = mT(2727),
-      YT = mT(2733),
-      JT = mT(4988),
-      xT = mT(2286),
-      dT = mT(1126),
-      wT = mT.n(dT),
-      tT = mT(1135),
-      aT = mT(4995),
-      yT = mT(25),
-      XT = mT(2046),
-      IT = mT(3748),
-      QT = mT(2131),
-      sT = mT(3692),
-      FT = mT(102),
-      PT = mT(4655),
-      VT = mT(1188);
-    const uT = [JT];
+    var sB = zB(1162),
+      JB = zB(1630),
+      mB = zB(1169),
+      yB = zB(1952),
+      kB = zB(1240),
+      GB = zB(1263),
+      LB = zB(3587),
+      gB = zB(1369),
+      tB = zB(1478),
+      SB = zB(1543),
+      MB = zB(2729),
+      EB = zB(2737),
+      iB = zB(4974),
+      qB = zB(2224),
+      fB = zB(1091),
+      oB = zB.n(fB),
+      HB = zB(1108),
+      DB = zB(4981),
+      FB = zB(28),
+      YB = zB(1982),
+      VB = zB(3749),
+      hB = zB(2078),
+      XB = zB(3693),
+      ZB = zB(106),
+      AB = zB(4668),
+      TB = zB(1148);
+    const PB = [iB];
 
-    function CT(TT) {
+    function WB(BB) {
       let {
-        icon: UT,
-        label: mT,
-        value: WT
-      } = TT;
-      return (0, VT.jsxs)("div", {
+        icon: jB,
+        label: zB,
+        value: QB
+      } = BB;
+      return (0, TB.jsxs)("div", {
         className: "PlayerProfileStat",
-        children: [(0, VT.jsx)(tT.c, {
-          name: UT,
+        children: [(0, TB.jsx)(HB.c, {
+          name: jB,
           className: "PlayerProfileStatIcon"
-        }), (0, VT.jsxs)("div", {
+        }), (0, TB.jsxs)("div", {
           className: "PlayerProfileStatText",
-          children: [(0, VT.jsx)("div", {
+          children: [(0, TB.jsx)("div", {
             className: "PlayerProfileStatLabel SmallTextLight",
-            children: mT
-          }), (0, VT.jsx)("div", {
+            children: zB
+          }), (0, TB.jsx)("div", {
             className: "PlayerProfileStatValue",
-            children: WT
+            children: QB
           })]
         })]
       })
     }
 
-    function rT(TT) {
+    function eB(BB) {
       let {
-        profile: UT
-      } = TT;
+        profile: jB
+      } = BB;
       const {
-        t: mT,
-        selectedLanguage: WT
-      } = (0, vT.z)();
-      let zT = mT("homePage:profileUnknown");
-      if (UT.lastOnline) {
-        const TT = (0, vT.m)(WT.code, "homePage:profileTimeAgo");
-        zT = mT("homePage:profileTimeAgo", {
-          time: (0, MT.nb)(TT, UT.lastOnline, Date.now())
+        t: zB,
+        selectedLanguage: QB
+      } = (0, kB.D)();
+      let nB = zB("homePage:profileUnknown");
+      if (jB.lastOnline) {
+        const BB = (0, kB.n)(QB.code, "homePage:profileTimeAgo");
+        nB = zB("homePage:profileTimeAgo", {
+          time: (0, dB.$)(BB, jB.lastOnline, Date.now())
         })
       }
-      let gT = mT("homePage:profileUnknown");
-      return UT.accountCreatedAt && (gT = new Date(UT.accountCreatedAt).toLocaleDateString(void 0, {
+      let IB = zB("homePage:profileUnknown");
+      return jB.accountCreatedAt && (IB = new Date(jB.accountCreatedAt).toLocaleDateString(void 0, {
         year: "numeric",
         month: "short",
         day: "numeric"
-      })), (0, VT.jsxs)("div", {
+      })), (0, TB.jsxs)("div", {
         className: "PlayerProfileStats",
-        children: [(0, VT.jsx)(CT, {
+        children: [(0, TB.jsx)(WB, {
           icon: "hourglass",
-          label: mT("homePage:profileTimePlayed"),
-          value: (0, IT.b)(UT.totalPlayMinutes)
-        }), (0, VT.jsx)(CT, {
+          label: zB("homePage:profileTimePlayed"),
+          value: (0, VB.e)(jB.totalPlayMinutes)
+        }), (0, TB.jsx)(WB, {
           icon: "wifi",
-          label: mT("homePage:profileLastOnline"),
-          value: zT
-        }), (0, VT.jsx)(CT, {
+          label: zB("homePage:profileLastOnline"),
+          value: nB
+        }), (0, TB.jsx)(WB, {
           icon: "calendar",
-          label: mT("homePage:profileJoined"),
-          value: gT
+          label: zB("homePage:profileJoined"),
+          value: IB
         })]
       })
     }
 
-    function KT() {
+    function lB() {
       const {
-        t: TT
-      } = (0, vT.z)(), UT = (0, OT.useNavigatePreserveSearch)(), mT = (0, pT.i)(), {
-        playerName: JT,
-        playerUrlName: dT
-      } = (0, zT.y)(), IT = (0, zT.p)(), CT = (0, gT.i)(IT.pathname), KT = CT && ("urlId" in CT ? `urlId:${CT.urlId}` : `name:${CT.lowerCaseName}`), ST = (0, WT.useRef)(KT);
-      ST.current = KT;
+        t: BB
+      } = (0, kB.D)(), jB = (0, SB.useNavigatePreserveSearch)(), zB = (0, sB.d)(), {
+        playerName: iB,
+        playerUrlName: fB
+      } = (0, nB.w)(), VB = (0, nB.n)(), WB = (0, IB.e)(VB.pathname), lB = WB && ("urlId" in WB ? `urlId:${WB.urlId}` : `name:${WB.lowerCaseName}`), wB = (0, QB.useRef)(lB);
+      wB.current = lB;
       const {
-        userContext: GT,
-        isUserContextUpdating: NT
-      } = (0, ZT.d)(), ET = (0, WT.useRef)(null), hT = (0, WT.useRef)(null), DT = (0, WT.useRef)(null), oT = (0, WT.useRef)(!1), AT = (0, WT.useRef)((0, MT.pc)(uT)), [RT, TU] = (0, WT.useState)((() => {
-        const TT = CT && YT.d.peek(GT, CT);
-        return TT ? {
+        userContext: xB,
+        isUserContextUpdating: KB
+      } = (0, mB.d)(), CB = (0, QB.useRef)(null), cB = (0, QB.useRef)(null), bB = (0, QB.useRef)(null), vB = (0, QB.useRef)(!1), RB = (0, QB.useRef)((0, dB.cc)(PB)), [OB, Bj] = (0, QB.useState)((() => {
+        const BB = WB && EB.b.peek(xB, WB);
+        return BB ? {
           status: "loaded",
-          profile: TT,
-          playerKey: KT
+          profile: BB,
+          playerKey: lB
         } : {
           status: "loading"
         }
-      })), [UU, mU] = (0, WT.useState)(0);
-      (0, WT.useEffect)(eT.h, []), (0, WT.useEffect)((() => {
-        XT.gameBridge.send("leaveGame", {
+      })), [jj, zj] = (0, QB.useState)(0);
+      (0, QB.useEffect)(MB.e, []), (0, QB.useEffect)((() => {
+        YB.gameBridge.send("leaveGame", {
           reloadPath: null
-        }), yT.b.set({
+        }), FB.c.set({
           gameState: "landingPage",
           openEverythingMenuName: null,
           openInGameMenuName: null
         })
-      }), [IT.key]);
-      const WU = () => {
-        const TT = (0, OT.getPreviousLocation)();
-        null === TT || TT.startsWith("/play") ? (0, OT.navigateToHomePage)() : UT(-1)
+      }), [VB.key]);
+      const Qj = () => {
+        const BB = (0, SB.getPreviousLocation)();
+        null === BB || BB.startsWith("/play") ? (0, SB.navigateToHomePage)() : jB(-1)
       };
-      (0, PT.d)(WU), (0, WT.useEffect)((() => {
-        var TT;
-        if (NT) return;
-        if (!CT) return void TU({
+      (0, AB.b)(Qj), (0, QB.useEffect)((() => {
+        var BB;
+        if (KB) return;
+        if (!WB) return void Bj({
           status: "notFound",
-          playerKey: KT
+          playerKey: lB
         });
-        const UT = "urlId" in CT && (null === (TT = hT.current) || void 0 === TT ? void 0 : TT.urlId) === CT.urlId && DT.current === GT;
-        if (UT && oT.current) return;
-        const mT = UT ? null : YT.d.peek(GT, CT);
-        let WT = !1;
-        const zT = TT => "loaded" === TT.status && (TT.playerKey === KT || "urlId" in CT && TT.profile.urlId === CT.urlId);
-        return mT ? (DT.current = GT, oT.current = !1, TU({
+        const jB = "urlId" in WB && (null === (BB = cB.current) || void 0 === BB ? void 0 : BB.urlId) === WB.urlId && bB.current === xB;
+        if (jB && vB.current) return;
+        const zB = jB ? null : EB.b.peek(xB, WB);
+        let QB = !1;
+        const nB = BB => "loaded" === BB.status && (BB.playerKey === lB || "urlId" in WB && BB.profile.urlId === WB.urlId);
+        return zB ? (bB.current = xB, vB.current = !1, Bj({
           status: "loaded",
-          profile: mT,
-          playerKey: KT
-        }), YT.d.invalidate(CT)) : TU((TT => zT(TT) ? TT : {
+          profile: zB,
+          playerKey: lB
+        }), EB.b.invalidate(WB)) : Bj((BB => nB(BB) ? BB : {
           status: "loading"
-        })), async function(TT, UT) {
-          if ("lowerCaseName" in UT && UT.lowerCaseName.length > HT.h) return {
+        })), async function(BB, jB) {
+          if ("lowerCaseName" in jB && jB.lowerCaseName.length > uB.g) return {
             status: "notFound"
           };
           try {
             return {
               status: "loaded",
-              profile: await jT.b.getPlayerProfile(TT, UT, LT)
+              profile: await aB.b.getPlayerProfile(BB, jB, rB)
             }
-          } catch (mT) {
-            return (0, lT.c)(mT) ? {
+          } catch (zB) {
+            return (0, pB.d)(zB) ? {
               status: "notFound"
-            } : (console.error("Failed to load user profile", mT), {
+            } : (console.error("Failed to load user profile", zB), {
               status: "failed"
             })
           }
-        }(GT, CT).then((TT => {
-          WT || ("loaded" === TT.status && (DT.current = GT, oT.current = !0), TU((UT => "failed" === TT.status && zT(UT) ? UT : {
-            ...TT,
-            playerKey: KT
+        }(xB, WB).then((BB => {
+          QB || ("loaded" === BB.status && (bB.current = xB, vB.current = !0), Bj((jB => "failed" === BB.status && nB(jB) ? jB : {
+            ...BB,
+            playerKey: lB
           })))
         })), () => {
-          WT = !0
+          QB = !0
         }
-      }), [NT, KT, GT, UU]);
-      const zU = "loading" === RT.status || RT.playerKey === KT || "loaded" === RT.status && !!CT && "urlId" in CT && RT.profile.urlId === CT.urlId ? RT : {
+      }), [KB, lB, xB, jj]);
+      const nj = "loading" === OB.status || OB.playerKey === lB || "loaded" === OB.status && !!WB && "urlId" in WB && OB.profile.urlId === WB.urlId ? OB : {
           status: "loading"
         },
-        MU = "loaded" === zU.status ? zU.profile : null,
-        gU = "loading" === zU.status ? null : function(TT) {
-          if ("loaded" === TT.status) {
+        dj = "loaded" === nj.status ? nj.profile : null,
+        Ij = "loading" === nj.status ? null : function(BB) {
+          if ("loaded" === BB.status) {
             const {
-              profile: UT
-            } = TT;
-            return (0, kT.L)({
-              urlId: UT.urlId,
-              name: UT.player.name,
-              ranks: UT.player.ranks,
-              socialLinks: UT.socialLinks
+              profile: jB
+            } = BB;
+            return (0, UB.I)({
+              urlId: jB.urlId,
+              name: jB.player.name,
+              ranks: jB.player.ranks,
+              socialLinks: jB.socialLinks
             })
           }
-          return "notFound" === TT.status ? (0, kT.V)() : null
-        }(zU),
-        nU = null !== MU && void 0 !== MU && MU.urlId ? (0, gT.m)({
-          urlId: MU.urlId,
-          name: MU.player.name
+          return "notFound" === BB.status ? (0, UB.R)() : null
+        }(nj),
+        Nj = null !== dj && void 0 !== dj && dj.urlId ? (0, IB.h)({
+          urlId: dj.urlId,
+          name: dj.player.name
         }) : null;
-      (0, BT.i)(nU);
-      const HU = null !== MU && void 0 !== MU && MU.player.cosmetics.profileEffect ? xT.c[MU.player.cosmetics.profileEffect] : void 0,
-        kU = null !== MU && !NT && GT.getPlayerName().toLowerCase() === MU.player.name.toLowerCase(),
-        jU = (0, QT.c)(null === MU || void 0 === MU ? void 0 : MU.player.name),
-        lU = kU && GT.playerHasRank("youtuber");
-      hT.current = MU;
-      const LU = (0, WT.useCallback)((() => {
-          CT && (YT.d.invalidate(CT), YT.d.get(GT, CT).then((TT => {
-            ST.current === KT && (oT.current = !0, TU({
+      (0, JB.d)(Nj);
+      const uj = null !== dj && void 0 !== dj && dj.player.cosmetics.profileEffect ? qB.d[dj.player.cosmetics.profileEffect] : void 0,
+        Uj = null !== dj && !KB && xB.getPlayerName().toLowerCase() === dj.player.name.toLowerCase(),
+        aj = (0, hB.c)(null === dj || void 0 === dj ? void 0 : dj.player.name),
+        pj = Uj && xB.playerHasRank("youtuber");
+      cB.current = dj;
+      const rj = (0, QB.useCallback)((() => {
+          WB && (EB.b.invalidate(WB), EB.b.get(xB, WB).then((BB => {
+            wB.current === lB && (vB.current = !0, Bj({
               status: "loaded",
-              profile: TT,
-              playerKey: KT
+              profile: BB,
+              playerKey: lB
             }))
-          })).catch((TT => {
-            console.error("Failed to refresh user profile", TT)
+          })).catch((BB => {
+            console.error("Failed to refresh user profile", BB)
           })))
-        }), [KT, GT]),
-        pU = (0, WT.useCallback)((() => {
-          var TT;
-          const UT = hT.current;
-          return !(!UT || null === (TT = ET.current) || void 0 === TT || !TT.isReady()) && (ET.current.setAllCosmetics(UT.player.cosmetics), !0)
+        }), [lB, xB]),
+        sj = (0, QB.useCallback)((() => {
+          var BB;
+          const jB = cB.current;
+          return !(!jB || null === (BB = CB.current) || void 0 === BB || !BB.isReady()) && (CB.current.setAllCosmetics(jB.player.cosmetics), !0)
         }), []);
-      return (0, WT.useEffect)((() => {
-        if (!MU) return;
-        let TT, UT = !1;
-        const mT = () => {
-          UT || pU() || (TT = setTimeout(mT, 100))
+      return (0, QB.useEffect)((() => {
+        if (!dj) return;
+        let BB, jB = !1;
+        const zB = () => {
+          jB || sj() || (BB = setTimeout(zB, 100))
         };
-        return mT(), () => {
-          UT = !0, clearTimeout(TT)
+        return zB(), () => {
+          jB = !0, clearTimeout(BB)
         }
-      }), [MU, pU]), (0, VT.jsxs)("div", {
-        className: wT()("PlayerProfile", {
-          PlayerProfilePortrait: mT
+      }), [dj, sj]), (0, TB.jsxs)("div", {
+        className: oB()("PlayerProfile", {
+          PlayerProfilePortrait: zB
         }),
-        children: [gU && (0, VT.jsx)(nT.e, {
-          meta: gU
-        }), (0, VT.jsxs)("div", {
+        children: [Ij && (0, TB.jsx)(NB.b, {
+          meta: Ij
+        }), (0, TB.jsxs)("div", {
           className: "PlayerProfileBackgroundContainer",
-          children: [HU && (0, VT.jsx)(HU, {}), !HU && (0, VT.jsx)("div", {
+          children: [uj && (0, TB.jsx)(uj, {}), !uj && (0, TB.jsx)("div", {
             className: "PlayerProfileBackground",
             style: {
-              backgroundImage: `url(${AT.current})`
+              backgroundImage: `url(${RB.current})`
             }
           })]
-        }), (0, VT.jsxs)("div", {
+        }), (0, TB.jsxs)("div", {
           className: "PlayerProfileHeader",
-          children: [(0, VT.jsx)(bT.d, {
-            onClick: WU,
-            children: TT("general:back")
-          }), MU && !NT && !kU && FT.featureFlags.useSocialFeatures && (0, VT.jsx)("div", {
+          children: [(0, TB.jsx)(tB.c, {
+            onClick: Qj,
+            children: BB("general:back")
+          }), dj && !KB && !Uj && ZB.featureFlags.useSocialFeatures && (0, TB.jsx)("div", {
             className: "PlayerProfileExclusionActions",
-            children: (0, VT.jsx)(sT.d, {
-              playerName: MU.player.name,
+            children: (0, TB.jsx)(XB.b, {
+              playerName: dj.player.name,
               className: "SmallTextLight"
             })
           })]
-        }), "loading" === zU.status && (0, VT.jsx)("div", {
+        }), "loading" === nj.status && (0, TB.jsx)("div", {
           className: "PlayerProfileCentredMessage",
-          children: (0, VT.jsx)(iT.c, {})
-        }), ("notFound" === zU.status || "failed" === zU.status) && (0, VT.jsxs)("div", {
+          children: (0, TB.jsx)(gB.e, {})
+        }), ("notFound" === nj.status || "failed" === nj.status) && (0, TB.jsxs)("div", {
           className: "PlayerProfileCentredMessage PlayerProfileError",
-          children: [(0, VT.jsx)(tT.c, {
+          children: [(0, TB.jsx)(HB.c, {
             name: "face-dizzy"
-          }), (0, VT.jsx)("div", {
+          }), (0, TB.jsx)("div", {
             className: "PlayerProfileErrorText",
-            children: "notFound" === zU.status ? TT("socialBar:playerNotFound", {
-              playerName: null !== dT && void 0 !== dT ? dT : JT
-            }) : TT("playerProfile:loadFailed")
-          }), "failed" === zU.status && (0, VT.jsx)(bT.e, {
+            children: "notFound" === nj.status ? BB("socialBar:playerNotFound", {
+              playerName: null !== fB && void 0 !== fB ? fB : iB
+            }) : BB("playerProfile:loadFailed")
+          }), "failed" === nj.status && (0, TB.jsx)(tB.f, {
             onClick: () => {
-              mU((TT => TT + 1))
+              zj((BB => BB + 1))
             },
-            children: TT("general:tryAgain")
+            children: BB("general:tryAgain")
           })]
-        }), MU && (0, VT.jsxs)("div", {
+        }), dj && (0, TB.jsxs)("div", {
           className: "PlayerProfileContent",
-          children: [(0, VT.jsxs)("div", {
+          children: [(0, TB.jsxs)("div", {
             className: "PlayerProfileLeft",
-            children: [(0, VT.jsx)("div", {
+            children: [(0, TB.jsx)("div", {
               className: "PlayerProfileName FullyFancyText",
-              children: (0, VT.jsx)(cT.e, {
-                text: (0, fT.z)(MU.player.ranks, MU.player.name, MU.player.nameColour),
-                friendBadgeFor: jU ? MU.player.name : void 0
+              children: (0, TB.jsx)(yB.e, {
+                text: (0, GB.s)(dj.player.ranks, dj.player.name, dj.player.nameColour),
+                friendBadgeFor: aj ? dj.player.name : void 0
               })
-            }), (0, VT.jsx)("div", {
+            }), (0, TB.jsx)("div", {
               className: "PlayerProfileModel",
-              children: (0, VT.jsx)(WT.Suspense, {
-                fallback: (0, VT.jsx)("div", {
+              children: (0, TB.jsx)(QB.Suspense, {
+                fallback: (0, TB.jsx)("div", {
                   className: "PlayerProfileModelLoading",
-                  children: (0, VT.jsx)(iT.c, {})
+                  children: (0, TB.jsx)(gB.e, {})
                 }),
-                children: (0, VT.jsx)(eT.e, {
-                  ref: ET,
+                children: (0, TB.jsx)(MB.d, {
+                  ref: CB,
                   onReady: () => {
-                    pU()
+                    sj()
                   }
                 })
               })
             })]
-          }), (0, VT.jsxs)("div", {
+          }), (0, TB.jsxs)("div", {
             className: "PlayerProfileRight",
-            children: [(0, VT.jsx)(rT, {
-              profile: MU
-            }), (MU.socialLinks.length > 0 || lU) && (0, VT.jsx)(aT.d, {
-              socialLinks: MU.socialLinks,
-              editable: lU,
-              userContext: GT,
-              onLinksUpdated: LU
-            }), (0, VT.jsxs)("div", {
+            children: [(0, TB.jsx)(eB, {
+              profile: dj
+            }), (dj.socialLinks.length > 0 || pj) && (0, TB.jsx)(DB.b, {
+              socialLinks: dj.socialLinks,
+              editable: pj,
+              userContext: xB,
+              onLinksUpdated: rj
+            }), (0, TB.jsxs)("div", {
               className: "PlayerProfileGames",
-              children: [(0, VT.jsx)("div", {
+              children: [(0, TB.jsx)("div", {
                 className: "PlayerProfileGamesTitle SmallTextBold",
-                children: TT("homePage:profileReleasedGames")
-              }), 0 === MU.releasedGames.length && (0, VT.jsx)("div", {
+                children: BB("homePage:profileReleasedGames")
+              }), 0 === dj.releasedGames.length && (0, TB.jsx)("div", {
                 className: "PlayerProfileNoGames",
-                children: TT("homePage:profileNoReleasedGames")
-              }), MU.releasedGames.length > 0 && (0, VT.jsx)("div", {
+                children: BB("homePage:profileNoReleasedGames")
+              }), dj.releasedGames.length > 0 && (0, TB.jsx)("div", {
                 className: "PlayerProfileGamesGrid",
-                children: MU.releasedGames.map((TT => (0, VT.jsx)(qT.f, {
+                children: dj.releasedGames.map((BB => (0, TB.jsx)(LB.f, {
                   source: {
                     type: "preview",
-                    preview: TT
+                    preview: BB
                   },
                   gameWidth: "100%",
                   useLongRatio: !0,
                   hideFavourites: !0,
                   entrySource: "other"
-                }, TT.schematicId)))
+                }, BB.schematicId)))
               })]
             })]
           })]
@@ -343,21 +343,21 @@ export const modules = {
       })
     }
   },
-  4995: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => cT
+  4981: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => yB
     });
-    var WT = mT(1126),
-      zT = mT.n(WT),
-      MT = mT(4731),
-      gT = mT(1288),
-      nT = mT(1135),
-      HT = mT(1569),
-      kT = mT(1613),
-      jT = mT(1457),
-      lT = mT(2632),
-      LT = mT(1188);
-    const pT = {
+    var QB = zB(1091),
+      nB = zB.n(QB),
+      dB = zB(4733),
+      IB = zB(1240),
+      NB = zB(1108),
+      uB = zB(1478),
+      UB = zB(1532),
+      aB = zB(1381),
+      pB = zB(2611),
+      rB = zB(1148);
+    const sB = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -385,163 +385,163 @@ export const modules = {
       }
     };
 
-    function BT(TT) {
+    function JB(BB) {
       let {
-        platform: UT
-      } = TT;
-      const mT = "youtube" === UT;
-      return (0, LT.jsxs)("span", {
-        className: zT()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: mT
+        platform: jB
+      } = BB;
+      const zB = "youtube" === jB;
+      return (0, rB.jsxs)("span", {
+        className: nB()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: zB
         }),
-        children: [mT && (0, LT.jsx)(lT.c, {
+        children: [zB && (0, rB.jsx)(pB.d, {
           variant: "white"
-        }), !mT && (0, LT.jsx)(nT.c, {
-          name: pT[UT].icon,
+        }), !zB && (0, rB.jsx)(NB.c, {
+          name: sB[jB].icon,
           kit: "brands"
         })]
       })
     }
 
-    function ZT(TT) {
+    function mB(BB) {
       let {
-        platform: UT,
-        link: mT,
-        editable: WT,
-        userContext: zT,
-        onLinksUpdated: lT
-      } = TT;
+        platform: jB,
+        link: zB,
+        editable: QB,
+        userContext: nB,
+        onLinksUpdated: pB
+      } = BB;
       const {
-        t: ZT
-      } = (0, gT.z)(), cT = pT[UT];
-      if (!mT && !WT) return null;
+        t: mB
+      } = (0, IB.D)(), yB = sB[jB];
+      if (!zB && !QB) return null;
 
-      function vT() {
-        var TT;
-        if (!zT || !lT) return;
-        jT.NotificationProvider.showInputPopup({
+      function kB() {
+        var BB;
+        if (!nB || !pB) return;
+        aB.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: cT.name
+              platform: yB.name
             }
           },
-          prefixText: MT.o[UT],
+          prefixText: dB.r[jB],
           placeholderText: "playBloxd",
-          initialValue: null !== (TT = null === mT || void 0 === mT ? void 0 : mT.handle) && void 0 !== TT ? TT : "",
+          initialValue: null !== (BB = null === zB || void 0 === zB ? void 0 : zB.handle) && void 0 !== BB ? BB : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: mT ? "general:remove" : void 0
-        }).getResult().then((async TT => {
-          if ("notificationTornDown" !== TT && null !== TT) try {
-            "submit" === TT.type ? await kT.b.setSocialLink(zT, UT, TT.value) : await kT.b.clearSocialLink(zT, UT), lT()
-          } catch (mT) {
-            console.error("Failed to update social link", mT), jT.NotificationProvider.showAlertPopup({
-              title: mT.errorMessageForUser,
+          secondaryButtonText: zB ? "general:remove" : void 0
+        }).getResult().then((async BB => {
+          if ("notificationTornDown" !== BB && null !== BB) try {
+            "submit" === BB.type ? await UB.b.setSocialLink(nB, jB, BB.value) : await UB.b.clearSocialLink(nB, jB), pB()
+          } catch (zB) {
+            console.error("Failed to update social link", zB), aB.NotificationProvider.showAlertPopup({
+              title: zB.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (mT) {
-        const TT = `@${mT.handle}`;
-        return (0, LT.jsxs)("a", {
+      if (zB) {
+        const BB = `@${zB.handle}`;
+        return (0, rB.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: cT.color
+            background: yB.color
           },
-          href: mT.profileUrl,
+          href: zB.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, LT.jsxs)("div", {
+          children: [(0, rB.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, LT.jsx)(BT, {
-              platform: UT
-            }), (0, LT.jsx)("span", {
+            children: [(0, rB.jsx)(JB, {
+              platform: jB
+            }), (0, rB.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, LT.jsx)("span", {
+              children: (0, rB.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: TT
+                children: BB
               })
             })]
-          }), WT && (0, LT.jsx)("button", {
+          }), QB && (0, rB.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, HT.R)({
+            ...(0, uB.S)({
               stopPropagation: !0
             }),
-            onClick: TT => {
-              TT.stopPropagation(), TT.preventDefault(), vT()
+            onClick: BB => {
+              BB.stopPropagation(), BB.preventDefault(), kB()
             },
-            children: (0, LT.jsx)(nT.c, {
+            children: (0, rB.jsx)(NB.c, {
               name: "pen-to-square"
             })
-          }), !WT && (0, LT.jsx)("span", {
+          }), !QB && (0, rB.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, LT.jsx)(nT.c, {
+            children: (0, rB.jsx)(NB.c, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, LT.jsxs)("button", {
+      return (0, rB.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: cT.color
+          background: yB.color
         },
-        ...(0, HT.R)(),
+        ...(0, uB.S)(),
         onClick: () => {
-          vT()
+          kB()
         },
-        children: [(0, LT.jsx)(BT, {
-          platform: UT
-        }), (0, LT.jsxs)("span", {
+        children: [(0, rB.jsx)(JB, {
+          platform: jB
+        }), (0, rB.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, LT.jsx)("span", {
+          children: [(0, rB.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: cT.name
-          }), (0, LT.jsx)("span", {
+            children: yB.name
+          }), (0, rB.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: ZT("homePage:profileSocialLinkAdd")
+            children: mB("homePage:profileSocialLinkAdd")
           })]
-        }), (0, LT.jsx)("span", {
+        }), (0, rB.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, LT.jsx)(nT.c, {
+          children: (0, rB.jsx)(NB.c, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function cT(TT) {
+    function yB(BB) {
       let {
-        socialLinks: UT,
-        editable: mT = !1,
-        userContext: WT,
-        onLinksUpdated: zT
-      } = TT;
-      if (!mT && 0 === UT.length) return null;
-      const gT = new Map(UT.map((TT => [TT.platform, TT]))),
-        nT = mT ? MT.n : UT.map((TT => TT.platform));
-      return (0, LT.jsx)("div", {
+        socialLinks: jB,
+        editable: zB = !1,
+        userContext: QB,
+        onLinksUpdated: nB
+      } = BB;
+      if (!zB && 0 === jB.length) return null;
+      const IB = new Map(jB.map((BB => [BB.platform, BB]))),
+        NB = zB ? dB.q : jB.map((BB => BB.platform));
+      return (0, rB.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, LT.jsx)("div", {
+        children: (0, rB.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: nT.map((TT => (0, LT.jsx)(ZT, {
-            platform: TT,
-            link: gT.get(TT),
-            editable: mT,
-            userContext: WT,
-            onLinksUpdated: zT
-          }, TT)))
+          children: NB.map((BB => (0, rB.jsx)(mB, {
+            platform: BB,
+            link: IB.get(BB),
+            editable: zB,
+            userContext: QB,
+            onLinksUpdated: nB
+          }, BB)))
         })
       })
     }
   },
-  4988: TT => {
-    TT.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
+  4974: BB => {
+    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,156 +1,156 @@
 export const id = 296;
 export const ids = [296];
 export const modules = {
-  41439: (TT, UT, mT) => {
-    mT.r(UT), mT.d(UT, {
-      CharacterPreview: () => lT
+  41379: (BB, jB, zB) => {
+    zB.r(jB), zB.d(jB, {
+      CharacterPreview: () => pB
     });
-    var WT = mT(63),
-      zT = mT(2856),
-      MT = mT(1336),
-      gT = mT(2685),
-      nT = mT(34311),
-      HT = mT(3746),
-      kT = mT(1188);
-    const jT = .6 * Math.PI,
-      lT = (0, WT.memo)((0, WT.forwardRef)((function(TT, UT) {
+    var QB = zB(62),
+      nB = zB(2853),
+      dB = zB(1270),
+      IB = zB(2667),
+      NB = zB(34283),
+      uB = zB(3742),
+      UB = zB(1148);
+    const aB = .6 * Math.PI,
+      pB = (0, QB.memo)((0, QB.forwardRef)((function(BB, jB) {
         let {
-          onReady: mT,
-          onDrawn: lT,
-          owner: LT = "other",
-          framing: pT = "player",
-          forcedCosmetics: BT,
-          tn: ZT,
-          emotePlaySeq: cT,
-          turntableFromYaw: vT = null
-        } = TT;
-        const fT = (0, WT.useRef)(null),
+          onReady: zB,
+          onDrawn: pB,
+          owner: rB = "other",
+          framing: sB = "player",
+          forcedCosmetics: JB,
+          TN: mB,
+          emotePlaySeq: yB,
+          turntableFromYaw: kB = null
+        } = BB;
+        const GB = (0, QB.useRef)(null),
           {
-            width: qT,
-            height: iT
-          } = (0, zT.b)(fT),
-          bT = (0, WT.useRef)(null),
-          OT = (0, WT.useRef)({}),
-          eT = (0, WT.useRef)({}),
-          [YT, JT] = (0, WT.useState)(!1),
-          xT = (0, WT.useRef)(mT);
-        xT.current = mT;
-        const dT = (0, WT.useRef)(lT);
-        dT.current = lT;
-        const wT = (0, WT.useRef)(null),
-          tT = (0, WT.useRef)(!1),
-          aT = (0, WT.useRef)(!1),
-          yT = (0, WT.useCallback)((() => {
-            const TT = bT.current;
-            if (!TT || !dT.current || tT.current || !aT.current) return;
-            const UT = {};
-            wT.current = UT, queueMicrotask((() => {
-              if (wT.current !== UT) return;
-              const mT = Promise.all(MT.t.map((UT => TT.untilDrawn(UT)))).catch((TT => {
-                  console.error("Failed to draw the character preview", TT)
+            width: LB,
+            height: gB
+          } = (0, nB.b)(GB),
+          tB = (0, QB.useRef)(null),
+          SB = (0, QB.useRef)({}),
+          MB = (0, QB.useRef)({}),
+          [EB, iB] = (0, QB.useState)(!1),
+          qB = (0, QB.useRef)(zB);
+        qB.current = zB;
+        const fB = (0, QB.useRef)(pB);
+        fB.current = pB;
+        const oB = (0, QB.useRef)(null),
+          HB = (0, QB.useRef)(!1),
+          DB = (0, QB.useRef)(!1),
+          FB = (0, QB.useCallback)((() => {
+            const BB = tB.current;
+            if (!BB || !fB.current || HB.current || !DB.current) return;
+            const jB = {};
+            oB.current = jB, queueMicrotask((() => {
+              if (oB.current !== jB) return;
+              const zB = Promise.all(dB.v.map((jB => BB.untilDrawn(jB)))).catch((BB => {
+                  console.error("Failed to draw the character preview", BB)
                 })),
-                WT = new Promise((TT => {
-                  setTimeout(TT, 1e4)
+                QB = new Promise((BB => {
+                  setTimeout(BB, 1e4)
                 }));
-              Promise.race([mT, WT]).then((() => {
-                var mT;
-                bT.current !== TT || wT.current !== UT || tT.current || (tT.current = !0, null === (mT = dT.current) || void 0 === mT || mT.call(dT))
+              Promise.race([zB, QB]).then((() => {
+                var zB;
+                tB.current !== BB || oB.current !== jB || HB.current || (HB.current = !0, null === (zB = fB.current) || void 0 === zB || zB.call(fB))
               }))
             }))
           }), []);
-        return (0, WT.useImperativeHandle)(UT, (() => {
-          const TT = (TT, UT) => {
-            var mT;
-            (OT.current[TT] = UT, null !== BT && void 0 !== BT && BT[TT]) || (null === (mT = bT.current) || void 0 === mT || mT.setCosmetic(TT, UT), yT())
+        return (0, QB.useImperativeHandle)(jB, (() => {
+          const BB = (BB, jB) => {
+            var zB;
+            (SB.current[BB] = jB, null !== JB && void 0 !== JB && JB[BB]) || (null === (zB = tB.current) || void 0 === zB || zB.setCosmetic(BB, jB), FB())
           };
           return {
-            updateCosmetic: TT,
-            setAllCosmetics(UT) {
-              for (const WT of MT.t) {
-                var mT;
-                TT(WT, null !== (mT = UT[WT]) && void 0 !== mT ? mT : (0, gT.e)(WT))
+            updateCosmetic: BB,
+            setAllCosmetics(jB) {
+              for (const QB of dB.v) {
+                var zB;
+                BB(QB, null !== (zB = jB[QB]) && void 0 !== zB ? zB : (0, IB.d)(QB))
               }
             },
             isReady() {
-              var TT, UT;
-              return null !== (TT = null === (UT = bT.current) || void 0 === UT ? void 0 : UT.isReady()) && void 0 !== TT && TT
+              var BB, jB;
+              return null !== (BB = null === (jB = tB.current) || void 0 === jB ? void 0 : jB.isReady()) && void 0 !== BB && BB
             },
             resetCamera() {
-              var TT;
-              null === (TT = bT.current) || void 0 === TT || TT.resetCamera()
+              var BB;
+              null === (BB = tB.current) || void 0 === BB || BB.resetCamera()
             },
-            setOrbit(TT) {
-              var UT;
-              null === (UT = bT.current) || void 0 === UT || UT.setOrbit(TT)
+            setOrbit(BB) {
+              var jB;
+              null === (jB = tB.current) || void 0 === jB || jB.setOrbit(BB)
             },
-            async ensureReadyForCapture(TT) {
-              var UT;
-              await (null === (UT = bT.current) || void 0 === UT ? void 0 : UT.untilDrawn(TT))
+            async ensureReadyForCapture(BB) {
+              var jB;
+              await (null === (jB = tB.current) || void 0 === jB ? void 0 : jB.untilDrawn(BB))
             },
             getDevTools() {
-              var TT;
-              return null !== (TT = bT.current) && void 0 !== TT && TT.isReady() ? bT.current.dev : null
+              var BB;
+              return null !== (BB = tB.current) && void 0 !== BB && BB.isReady() ? tB.current.dev : null
             }
           }
-        }), [BT, yT]), (0, WT.useEffect)((() => {
-          const TT = HT.c.register(LT),
-            UT = nT.g.openCharacter(fT.current, pT);
-          bT.current = UT;
-          let mT = !0;
-          return UT.ready.then((() => {
-            mT && (JT(!0), xT.current())
-          })).catch((TT => {
-            console.error("Failed to set up the character preview", TT)
+        }), [JB, FB]), (0, QB.useEffect)((() => {
+          const BB = uB.e.register(rB),
+            jB = NB.i.openCharacter(GB.current, sB);
+          tB.current = jB;
+          let zB = !0;
+          return jB.ready.then((() => {
+            zB && (iB(!0), qB.current())
+          })).catch((BB => {
+            console.error("Failed to set up the character preview", BB)
           })), () => {
-            mT = !1, TT(), UT.resetCamera(), UT.close(), bT.current = null
+            zB = !1, BB(), jB.resetCamera(), jB.close(), tB.current = null
           }
-        }), []), (0, WT.useEffect)((() => {
-          qT <= 0 || iT <= 0 || bT.current.resize(qT, iT)
-        }), [qT, iT]), (0, WT.useEffect)((() => {
-          if (!YT) return;
-          const TT = eT.current;
-          for (const UT of MT.t) {
-            const mT = null === BT || void 0 === BT ? void 0 : BT[UT],
-              WT = TT[UT];
-            mT && mT !== WT ? bT.current.setCosmetic(UT, mT) : !mT && WT && OT.current[UT] && bT.current.setCosmetic(UT, OT.current[UT])
+        }), []), (0, QB.useEffect)((() => {
+          LB <= 0 || gB <= 0 || tB.current.resize(LB, gB)
+        }), [LB, gB]), (0, QB.useEffect)((() => {
+          if (!EB) return;
+          const BB = MB.current;
+          for (const jB of dB.v) {
+            const zB = null === JB || void 0 === JB ? void 0 : JB[jB],
+              QB = BB[jB];
+            zB && zB !== QB ? tB.current.setCosmetic(jB, zB) : !zB && QB && SB.current[jB] && tB.current.setCosmetic(jB, SB.current[jB])
           }
-          eT.current = {
-            ...BT
-          }, aT.current = !0, yT()
-        }), [BT, YT, yT]), (0, WT.useEffect)((() => {
-          YT && bT.current.playEmote(null !== ZT && void 0 !== ZT ? ZT : null)
-        }), [ZT, cT, YT]), (0, WT.useEffect)((() => {
-          if (!YT || null === vT) return;
-          const TT = bT.current,
+          MB.current = {
+            ...JB
+          }, DB.current = !0, FB()
+        }), [JB, EB, FB]), (0, QB.useEffect)((() => {
+          EB && tB.current.playEmote(null !== mB && void 0 !== mB ? mB : null)
+        }), [mB, yB, EB]), (0, QB.useEffect)((() => {
+          if (!EB || null === kB) return;
+          const BB = tB.current,
             {
-              pitch: UT,
-              radius: mT
-            } = nT.c[pT];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return TT.setOrbit({
-            yaw: vT + jT,
-            pitch: UT,
-            radius: mT
+              pitch: jB,
+              radius: zB
+            } = NB.d[sB];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return BB.setOrbit({
+            yaw: kB + aB,
+            pitch: jB,
+            radius: zB
           }), () => {
-            TT.resetCamera()
+            BB.resetCamera()
           };
-          const WT = performance.now();
-          let zT = 0;
-          const MT = gT => {
-            TT.setOrbit({
-              yaw: vT + (gT - WT) / 6e3 * 2 * Math.PI,
-              pitch: UT,
-              radius: mT
-            }), zT = requestAnimationFrame(MT)
+          const QB = performance.now();
+          let nB = 0;
+          const dB = IB => {
+            BB.setOrbit({
+              yaw: kB + (IB - QB) / 6e3 * 2 * Math.PI,
+              pitch: jB,
+              radius: zB
+            }), nB = requestAnimationFrame(dB)
           };
-          return zT = requestAnimationFrame(MT), () => {
-            cancelAnimationFrame(zT), TT.resetCamera()
+          return nB = requestAnimationFrame(dB), () => {
+            cancelAnimationFrame(nB), BB.resetCamera()
           }
-        }), [YT, vT]), (0, kT.jsx)("div", {
+        }), [EB, kB]), (0, UB.jsx)("div", {
           className: "CharCustomisationPreview",
-          ref: fT
+          ref: GB
         })
       })))
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

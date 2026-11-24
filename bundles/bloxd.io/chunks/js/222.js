@@ -1,240 +1,240 @@
-/*! For license information please see yma3ej.222.a255cae5.chunk.js.LICENSE.txt */
+/*! For license information please see 7zvlu.222.81a10c82.chunk.js.LICENSE.txt */
 export const id = 222;
 export const ids = [222];
 export const modules = {
-  39692: (TT, UT, mT) => {
-    TT.exports = zT;
-    var WT = mT(375);
+  39654: (BB, jB, zB) => {
+    BB.exports = nB;
+    var QB = zB(386);
 
-    function zT(TT, UT) {
-      if (!(this instanceof zT)) return new zT(TT, UT);
-      var mT = WT.create();
-      WT.add(mT, TT, UT), this.base = WT.min(WT.create(), TT, mT), this.vec = WT.clone(UT), this.max = WT.max(WT.create(), TT, mT), this.mag = WT.length(this.vec)
+    function nB(BB, jB) {
+      if (!(this instanceof nB)) return new nB(BB, jB);
+      var zB = QB.create();
+      QB.add(zB, BB, jB), this.base = QB.min(QB.create(), BB, zB), this.vec = QB.clone(jB), this.max = QB.max(QB.create(), BB, zB), this.mag = QB.length(this.vec)
     }
-    var MT = zT.prototype;
-    MT.width = function() {
+    var dB = nB.prototype;
+    dB.width = function() {
       return this.vec[0]
-    }, MT.height = function() {
+    }, dB.height = function() {
       return this.vec[1]
-    }, MT.depth = function() {
+    }, dB.depth = function() {
       return this.vec[2]
-    }, MT.x0 = function() {
+    }, dB.x0 = function() {
       return this.base[0]
-    }, MT.y0 = function() {
+    }, dB.y0 = function() {
       return this.base[1]
-    }, MT.z0 = function() {
+    }, dB.z0 = function() {
       return this.base[2]
-    }, MT.x1 = function() {
+    }, dB.x1 = function() {
       return this.max[0]
-    }, MT.y1 = function() {
+    }, dB.y1 = function() {
       return this.max[1]
-    }, MT.z1 = function() {
+    }, dB.z1 = function() {
       return this.max[2]
-    }, MT.translate = function(TT) {
-      return WT.add(this.max, this.max, TT), WT.add(this.base, this.base, TT), this
-    }, MT.setPosition = function(TT) {
-      return WT.add(this.max, TT, this.vec), WT.copy(this.base, TT), this
-    }, MT.expand = function(TT) {
-      var UT = WT.create(),
-        mT = WT.create();
-      return WT.max(UT, TT.max, this.max), WT.min(mT, TT.base, this.base), WT.subtract(UT, UT, mT), new zT(mT, UT)
-    }, MT.intersects = function(TT) {
-      return !(TT.base[0] > this.max[0]) && (!(TT.base[1] > this.max[1]) && (!(TT.base[2] > this.max[2]) && (!(TT.max[0] < this.base[0]) && (!(TT.max[1] < this.base[1]) && !(TT.max[2] < this.base[2])))))
-    }, MT.touches = function(TT) {
-      var UT = this.union(TT);
-      return null !== UT && (0 == UT.width() || 0 == UT.height() || 0 == UT.depth())
-    }, MT.union = function(TT) {
-      if (!this.intersects(TT)) return null;
-      var UT = Math.max(TT.base[0], this.base[0]),
-        mT = Math.max(TT.base[1], this.base[1]),
-        WT = Math.max(TT.base[2], this.base[2]);
-      return new zT([UT, mT, WT], [Math.min(TT.max[0], this.max[0]) - UT, Math.min(TT.max[1], this.max[1]) - mT, Math.min(TT.max[2], this.max[2]) - WT])
+    }, dB.translate = function(BB) {
+      return QB.add(this.max, this.max, BB), QB.add(this.base, this.base, BB), this
+    }, dB.setPosition = function(BB) {
+      return QB.add(this.max, BB, this.vec), QB.copy(this.base, BB), this
+    }, dB.expand = function(BB) {
+      var jB = QB.create(),
+        zB = QB.create();
+      return QB.max(jB, BB.max, this.max), QB.min(zB, BB.base, this.base), QB.subtract(jB, jB, zB), new nB(zB, jB)
+    }, dB.intersects = function(BB) {
+      return !(BB.base[0] > this.max[0]) && (!(BB.base[1] > this.max[1]) && (!(BB.base[2] > this.max[2]) && (!(BB.max[0] < this.base[0]) && (!(BB.max[1] < this.base[1]) && !(BB.max[2] < this.base[2])))))
+    }, dB.touches = function(BB) {
+      var jB = this.union(BB);
+      return null !== jB && (0 == jB.width() || 0 == jB.height() || 0 == jB.depth())
+    }, dB.union = function(BB) {
+      if (!this.intersects(BB)) return null;
+      var jB = Math.max(BB.base[0], this.base[0]),
+        zB = Math.max(BB.base[1], this.base[1]),
+        QB = Math.max(BB.base[2], this.base[2]);
+      return new nB([jB, zB, QB], [Math.min(BB.max[0], this.max[0]) - jB, Math.min(BB.max[1], this.max[1]) - zB, Math.min(BB.max[2], this.max[2]) - QB])
     }
   },
-  39688: TT => {
-    TT.exports = function(TT, UT, mT, WT, zT, MT) {
-      var gT = +UT[0],
-        nT = +UT[1],
-        HT = +UT[2],
-        kT = +mT[0],
-        jT = +mT[1],
-        lT = +mT[2],
-        LT = Math.sqrt(kT * kT + jT * jT + lT * lT);
-      if (0 === LT) throw new Error("Can't raycast along a zero vector");
-      return function(TT, UT, mT, WT, zT, MT, gT, nT, HT, kT) {
-        for (var jT = 0, lT = Math.floor, LT = 0 | lT(UT), pT = 0 | lT(mT), BT = 0 | lT(WT), ZT = zT > 0 ? 1 : -1, cT = MT > 0 ? 1 : -1, vT = gT > 0 ? 1 : -1, fT = Math.abs(1 / zT), qT = Math.abs(1 / MT), iT = Math.abs(1 / gT), bT = fT < 1 / 0 ? fT * (ZT > 0 ? LT + 1 - UT : UT - LT) : 1 / 0, OT = qT < 1 / 0 ? qT * (cT > 0 ? pT + 1 - mT : mT - pT) : 1 / 0, eT = iT < 1 / 0 ? iT * (vT > 0 ? BT + 1 - WT : WT - BT) : 1 / 0, YT = -1; jT <= nT;) {
-          var JT = TT(LT, pT, BT);
-          if (JT) return HT && (HT[0] = UT + jT * zT, HT[1] = mT + jT * MT, HT[2] = WT + jT * gT), kT && (kT[0] = kT[1] = kT[2] = 0, 0 === YT && (kT[0] = -ZT), 1 === YT && (kT[1] = -cT), 2 === YT && (kT[2] = -vT)), JT;
-          bT < OT ? bT < eT ? (LT += ZT, jT = bT, bT += fT, YT = 0) : (BT += vT, jT = eT, eT += iT, YT = 2) : OT < eT ? (pT += cT, jT = OT, OT += qT, YT = 1) : (BT += vT, jT = eT, eT += iT, YT = 2)
+  39646: BB => {
+    BB.exports = function(BB, jB, zB, QB, nB, dB) {
+      var IB = +jB[0],
+        NB = +jB[1],
+        uB = +jB[2],
+        UB = +zB[0],
+        aB = +zB[1],
+        pB = +zB[2],
+        rB = Math.sqrt(UB * UB + aB * aB + pB * pB);
+      if (0 === rB) throw new Error("Can't raycast along a zero vector");
+      return function(BB, jB, zB, QB, nB, dB, IB, NB, uB, UB) {
+        for (var aB = 0, pB = Math.floor, rB = 0 | pB(jB), sB = 0 | pB(zB), JB = 0 | pB(QB), mB = nB > 0 ? 1 : -1, yB = dB > 0 ? 1 : -1, kB = IB > 0 ? 1 : -1, GB = Math.abs(1 / nB), LB = Math.abs(1 / dB), gB = Math.abs(1 / IB), tB = GB < 1 / 0 ? GB * (mB > 0 ? rB + 1 - jB : jB - rB) : 1 / 0, SB = LB < 1 / 0 ? LB * (yB > 0 ? sB + 1 - zB : zB - sB) : 1 / 0, MB = gB < 1 / 0 ? gB * (kB > 0 ? JB + 1 - QB : QB - JB) : 1 / 0, EB = -1; aB <= NB;) {
+          var iB = BB(rB, sB, JB);
+          if (iB) return uB && (uB[0] = jB + aB * nB, uB[1] = zB + aB * dB, uB[2] = QB + aB * IB), UB && (UB[0] = UB[1] = UB[2] = 0, 0 === EB && (UB[0] = -mB), 1 === EB && (UB[1] = -yB), 2 === EB && (UB[2] = -kB)), iB;
+          tB < SB ? tB < MB ? (rB += mB, aB = tB, tB += GB, EB = 0) : (JB += kB, aB = MB, MB += gB, EB = 2) : SB < MB ? (sB += yB, aB = SB, SB += LB, EB = 1) : (JB += kB, aB = MB, MB += gB, EB = 2)
         }
-        return HT && (HT[0] = UT + jT * zT, HT[1] = mT + jT * MT, HT[2] = WT + jT * gT), kT && (kT[0] = kT[1] = kT[2] = 0), 0
-      }(TT, gT, nT, HT, kT /= LT, jT /= LT, lT /= LT, WT = "undefined" === typeof WT ? 64 : +WT, zT, MT)
+        return uB && (uB[0] = jB + aB * nB, uB[1] = zB + aB * dB, uB[2] = QB + aB * IB), UB && (UB[0] = UB[1] = UB[2] = 0), 0
+      }(BB, IB, NB, uB, UB /= rB, aB /= rB, pB /= rB, QB = "undefined" === typeof QB ? 64 : +QB, nB, dB)
     }
   },
-  39256: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => nT,
-      e: () => MT
+  39203: (BB, jB, zB) => {
+    zB.d(jB, {
+      e: () => NB,
+      h: () => dB
     });
-    var WT = mT(4170);
-    let zT = null;
+    var QB = zB(4169);
+    let nB = null;
 
-    function MT(TT) {
-      return null !== zT && TT === zT
+    function dB(BB) {
+      return null !== nB && BB === nB
     }
 
-    function gT() {
-      this.wG = !1, this.stopPropagation = !1, this.aG = !1, this.disabled = !1
+    function IB() {
+      this.oW = !1, this.stopPropagation = !1, this.DW = !1, this.disabled = !1
     }
-    class nT {
-      constructor(TT, UT) {
+    class NB {
+      constructor(BB, jB) {
         this.version = "0.7.0";
-        var mT = Object.assign({}, new gT, UT || {});
-        this.element = TT || document, this.wG = !!mT.wG, this.stopPropagation = !!mT.stopPropagation, this.aG = !!mT.aG, this.disabled = !!mT.disabled, this.filterEvents = (TT, UT) => !0, this.ignoreEvent = TT => !1, this.down = new WT.EventEmitter, this.up = new WT.EventEmitter, this.state = {}, this.yG = {
+        var zB = Object.assign({}, new IB, jB || {});
+        this.element = BB || document, this.oW = !!zB.oW, this.stopPropagation = !!zB.stopPropagation, this.DW = !!zB.DW, this.disabled = !!zB.disabled, this.filterEvents = (BB, jB) => !0, this.ignoreEvent = BB => !1, this.down = new QB.EventEmitter, this.up = new QB.EventEmitter, this.state = {}, this.FW = {
           dx: 0,
           dy: 0,
-          jUT: 0,
-          lUT: 0,
-          pUT: 0
+          RBB: 0,
+          BjB: 0,
+          jjB: 0
         }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
           lastX: 0,
           lastY: 0,
           currID: null
-        }, "loading" !== document.readyState ? kT(this) : document.addEventListener("DOMContentLoaded", (TT => {
-          kT(this)
+        }, "loading" !== document.readyState ? UB(this) : document.addEventListener("DOMContentLoaded", (BB => {
+          UB(this)
         }), {
           once: !0
         })
       }
-      bind(TT) {
-        for (var UT = arguments.length, mT = new Array(UT > 1 ? UT - 1 : 0), WT = 1; WT < UT; WT++) mT[WT - 1] = arguments[WT];
-        mT.forEach((UT => {
-          var mT = this._keyBindmap[UT] || [];
-          mT.includes(TT) || (mT.push(TT), this._keyBindmap[UT] = mT)
-        })), this.state[TT] = !!this.state[TT], this.pressCount[TT] = this.pressCount[TT] || 0, this.releaseCount[TT] = this.releaseCount[TT] || 0
+      bind(BB) {
+        for (var jB = arguments.length, zB = new Array(jB > 1 ? jB - 1 : 0), QB = 1; QB < jB; QB++) zB[QB - 1] = arguments[QB];
+        zB.forEach((jB => {
+          var zB = this._keyBindmap[jB] || [];
+          zB.includes(BB) || (zB.push(BB), this._keyBindmap[jB] = zB)
+        })), this.state[BB] = !!this.state[BB], this.pressCount[BB] = this.pressCount[BB] || 0, this.releaseCount[BB] = this.releaseCount[BB] || 0
       }
-      unbind(TT) {
-        for (var UT in this._keyBindmap) {
-          var mT = this._keyBindmap[UT],
-            WT = mT.indexOf(TT);
-          WT > -1 && mT.splice(WT, 1)
+      unbind(BB) {
+        for (var jB in this._keyBindmap) {
+          var zB = this._keyBindmap[jB],
+            QB = zB.indexOf(BB);
+          QB > -1 && zB.splice(QB, 1)
         }
       }
       getBindings() {
-        var TT = {};
-        for (var UT in this._keyBindmap) {
-          this._keyBindmap[UT].forEach((mT => {
-            TT[mT] = TT[mT] || [], TT[mT].push(UT)
+        var BB = {};
+        for (var jB in this._keyBindmap) {
+          this._keyBindmap[jB].forEach((zB => {
+            BB[zB] = BB[zB] || [], BB[zB].push(jB)
           }))
         }
-        return TT
+        return BB
       }
-      Cl() {
-        HT(this.yG), HT(this.pressCount), HT(this.releaseCount)
+      vp() {
+        uB(this.FW), uB(this.pressCount), uB(this.releaseCount)
       }
     }
 
-    function HT(TT) {
-      for (var UT in TT) TT[UT] = 0
+    function uB(BB) {
+      for (var jB in BB) BB[jB] = 0
     }
 
-    function kT(TT) {
-      window.addEventListener("keydown", cT.bind(null, TT, !0), !1), window.addEventListener("keyup", cT.bind(null, TT, !1), !1);
-      var UT = {
+    function UB(BB) {
+      window.addEventListener("keydown", yB.bind(null, BB, !0), !1), window.addEventListener("keyup", yB.bind(null, BB, !1), !1);
+      var jB = {
         passive: !0
       };
-      TT.element.addEventListener("touchstart", pT.bind(void 0, TT), {
+      BB.element.addEventListener("touchstart", sB.bind(void 0, BB), {
         passive: !1
-      }), TT.element.addEventListener("touchend", ZT.bind(void 0, TT), UT), TT.element.addEventListener("mousedown", vT.bind(null, TT, !0), UT), window.document.addEventListener("mouseup", vT.bind(null, TT, !1), UT), TT.element.addEventListener("touchmove", fT.bind(null, TT), UT), TT.element.addEventListener("mousemove", fT.bind(null, TT), UT), window.PointerEvent, TT.element.addEventListener("wheel", qT.bind(null, TT), UT), TT.element.addEventListener("contextmenu", iT.bind(null, TT), !1), window.addEventListener("blur", eT.bind(null, TT), !1)
+      }), BB.element.addEventListener("touchend", mB.bind(void 0, BB), jB), BB.element.addEventListener("mousedown", kB.bind(null, BB, !0), jB), window.document.addEventListener("mouseup", kB.bind(null, BB, !1), jB), BB.element.addEventListener("touchmove", GB.bind(null, BB), jB), BB.element.addEventListener("mousemove", GB.bind(null, BB), jB), window.PointerEvent, BB.element.addEventListener("wheel", LB.bind(null, BB), jB), BB.element.addEventListener("contextmenu", gB.bind(null, BB), !1), window.addEventListener("blur", MB.bind(null, BB), !1)
     }
-    var jT = 0,
-      lT = 0,
-      LT = null;
+    var aB = 0,
+      pB = 0,
+      rB = null;
 
-    function pT(TT, UT) {
-      UT.preventDefault(), BT(UT)
+    function sB(BB, jB) {
+      jB.preventDefault(), JB(jB)
     }
 
-    function BT(TT) {
-      let UT = !1;
-      for (let mT = 0; mT < TT.touches.length; ++mT)
-        if (TT.touches[mT].identifier === LT) {
-          UT = !0;
+    function JB(BB) {
+      let jB = !1;
+      for (let zB = 0; zB < BB.touches.length; ++zB)
+        if (BB.touches[zB].identifier === rB) {
+          jB = !0;
           break
-        } if (!UT) {
-        const UT = TT.changedTouches[0];
-        jT = UT.clientX, lT = UT.clientY, LT = UT.identifier
+        } if (!jB) {
+        const jB = BB.changedTouches[0];
+        aB = jB.clientX, pB = jB.clientY, rB = jB.identifier
       }
     }
 
-    function ZT(TT, UT) {
-      for (var mT = UT.changedTouches, WT = 0; WT < mT.length; ++WT) mT[WT].identifier === LT && (LT = null)
+    function mB(BB, jB) {
+      for (var zB = jB.changedTouches, QB = 0; QB < zB.length; ++QB) zB[QB].identifier === rB && (rB = null)
     }
 
-    function cT(TT, UT, mT) {
-      if (!TT.ignoreEvent(mT)) try {
-        YT(TT, mT), UT && mT.isTrusted && !mT.repeat && TT._keyStates[mT.code] && JT(TT, mT.code)
+    function yB(BB, jB, zB) {
+      if (!BB.ignoreEvent(zB)) try {
+        EB(BB, zB), jB && zB.isTrusted && !zB.repeat && BB._keyStates[zB.code] && iB(BB, zB.code)
       } finally {
-        xT(mT.code, UT, TT, mT)
+        qB(zB.code, jB, BB, zB)
       }
     }
 
-    function vT(TT, UT, mT) {
-      if (!TT.ignoreEvent(mT)) try {
-        YT(TT, mT)
+    function kB(BB, jB, zB) {
+      if (!BB.ignoreEvent(zB)) try {
+        EB(BB, zB)
       } finally {
-        ! function(TT, UT, mT) {
-          if ("pointerId" in mT)
-            if (UT) {
-              if (null !== TT._touches.currID) return;
-              TT._touches.currID = mT.pointerId
+        ! function(BB, jB, zB) {
+          if ("pointerId" in zB)
+            if (jB) {
+              if (null !== BB._touches.currID) return;
+              BB._touches.currID = zB.pointerId
             } else {
-              if (TT._touches.currID !== mT.pointerId) return;
-              TT._touches.currID = null
-            } var WT = "button" in mT ? mT.button + 1 : 1;
-          xT("Mouse" + WT, UT, TT, mT)
-        }(TT, UT, mT)
+              if (BB._touches.currID !== zB.pointerId) return;
+              BB._touches.currID = null
+            } var QB = "button" in zB ? zB.button + 1 : 1;
+          qB("Mouse" + QB, jB, BB, zB)
+        }(BB, jB, zB)
       }
     }
 
-    function fT(TT, UT) {
-      var mT = UT.movementX || UT.mozMovementX || 0,
-        WT = UT.movementY || UT.mozMovementY || 0;
-      if (UT.touches && 0 === (mT | WT)) {
-        var zT = function(TT) {
-          BT(TT);
-          for (let UT = 0; UT < TT.changedTouches.length; ++UT)
-            if (TT.changedTouches[UT].identifier == LT) {
-              const mT = TT.changedTouches[UT],
-                WT = [mT.clientX - jT, mT.clientY - lT];
-              return jT = mT.clientX, lT = mT.clientY, WT
-            } return console.error(`Did not find touch id ${LT}`), [0, 0]
-        }(UT);
-        mT = zT[0], WT = zT[1]
+    function GB(BB, jB) {
+      var zB = jB.movementX || jB.mozMovementX || 0,
+        QB = jB.movementY || jB.mozMovementY || 0;
+      if (jB.touches && 0 === (zB | QB)) {
+        var nB = function(BB) {
+          JB(BB);
+          for (let jB = 0; jB < BB.changedTouches.length; ++jB)
+            if (BB.changedTouches[jB].identifier == rB) {
+              const zB = BB.changedTouches[jB],
+                QB = [zB.clientX - aB, zB.clientY - pB];
+              return aB = zB.clientX, pB = zB.clientY, QB
+            } return console.error(`Did not find touch id ${rB}`), [0, 0]
+        }(jB);
+        zB = nB[0], QB = nB[1]
       }
-      TT.yG.dx += mT, TT.yG.dy += WT
+      BB.FW.dx += zB, BB.FW.dy += QB
     }
 
-    function qT(TT, UT) {
-      YT(TT, UT);
-      var mT = 1;
-      switch (UT.deltaMode) {
+    function LB(BB, jB) {
+      EB(BB, jB);
+      var zB = 1;
+      switch (jB.deltaMode) {
         case 0:
-          mT = 1;
+          zB = 1;
           break;
         case 1:
-          mT = 12;
+          zB = 12;
           break;
         case 2:
-          mT = TT.element.clientHeight || window.innerHeight
+          zB = BB.element.clientHeight || window.innerHeight
       }
-      TT.yG.jUT += (UT.deltaX || 0) * mT, TT.yG.lUT += (UT.deltaY || 0) * mT, TT.yG.pUT += (UT.deltaZ || 0) * mT
+      BB.FW.RBB += (jB.deltaX || 0) * zB, BB.FW.BjB += (jB.deltaY || 0) * zB, BB.FW.jjB += (jB.deltaZ || 0) * zB
     }
 
-    function iT(TT, UT) {
-      if (!TT.aG) return UT.preventDefault(), !1
+    function gB(BB, jB) {
+      if (!BB.DW) return jB.preventDefault(), !1
     }
-    var bT = {
+    var tB = {
       AltLeft: "altKey",
       AltRight: "altKey",
       ControlLeft: "ctrlKey",
@@ -245,91 +245,91 @@ export const modules = {
       MetaRight: "metaKey"
     };
 
-    function OT(TT, UT) {
-      return !!TT[bT[UT]] || ("AltRight" === UT || "ControlLeft" === UT) && "function" === typeof TT.getModifierState && !0 === TT.getModifierState("AltGraph")
+    function SB(BB, jB) {
+      return !!BB[tB[jB]] || ("AltRight" === jB || "ControlLeft" === jB) && "function" === typeof BB.getModifierState && !0 === BB.getModifierState("AltGraph")
     }
 
-    function eT(TT, UT) {
-      for (var mT in TT._modifiersHeldThroughBlur = {}, bT) TT._keyStates[mT] && (TT._modifiersHeldThroughBlur[mT] = !0);
-      UT && UT.isTrusted && function() {
+    function MB(BB, jB) {
+      for (var zB in BB._modifiersHeldThroughBlur = {}, tB) BB._keyStates[zB] && (BB._modifiersHeldThroughBlur[zB] = !0);
+      jB && jB.isTrusted && function() {
         try {
           return window.self !== window.top
-        } catch (TT) {
+        } catch (BB) {
           return !0
         }
-      }() && (clearTimeout(TT._blurRelease), TT._blurRelease = setTimeout((function() {
+      }() && (clearTimeout(BB._blurRelease), BB._blurRelease = setTimeout((function() {
         if (!document.hasFocus())
-          for (var UT in TT._modifiersHeldThroughBlur = {}, TT._keyStates) TT._keyStates[UT] && !/^Mouse\d/.test(UT) && JT(TT, UT)
+          for (var jB in BB._modifiersHeldThroughBlur = {}, BB._keyStates) BB._keyStates[jB] && !/^Mouse\d/.test(jB) && iB(BB, jB)
       }), 0))
     }
 
-    function YT(TT, UT) {
-      var mT = TT._modifiersHeldThroughBlur;
-      if (mT && UT.isTrusted && document.hasFocus())
-        for (var WT in mT) delete mT[WT], TT._keyStates[WT] && WT !== UT.code && (OT(UT, WT) || JT(TT, WT))
+    function EB(BB, jB) {
+      var zB = BB._modifiersHeldThroughBlur;
+      if (zB && jB.isTrusted && document.hasFocus())
+        for (var QB in zB) delete zB[QB], BB._keyStates[QB] && QB !== jB.code && (SB(jB, QB) || iB(BB, QB))
     }
 
-    function JT(TT, UT) {
-      const mT = {
-          code: UT,
+    function iB(BB, jB) {
+      const zB = {
+          code: jB,
           preventDefault: () => {},
           stopPropagation: () => {}
         },
-        WT = zT;
-      zT = mT;
+        QB = nB;
+      nB = zB;
       try {
-        xT(UT, !1, TT, mT)
+        qB(jB, !1, BB, zB)
       } finally {
-        zT = WT
+        nB = QB
       }
     }
 
-    function xT(TT, UT, mT, WT) {
-      var zT = mT._keyBindmap[TT];
-      zT && (dT(mT._keyStates[TT], UT) && (mT._keyStates[TT] = UT, zT.forEach((TT => {
-        (!mT.filterEvents || mT.filterEvents(WT, TT)) && function(TT, UT, mT, WT) {
-          var zT = UT ? mT.pressCount : mT.releaseCount;
-          zT[TT] = (zT[TT] || 0) + 1;
-          var MT = mT._bindPressCount[TT] || 0;
-          (MT += UT ? 1 : -1) < 0 && (MT = 0);
-          mT._bindPressCount[TT] = MT;
-          var gT = mT.state[TT];
-          if (dT(gT, MT)) {
-            mT.state[TT] = MT > 0;
-            var nT = UT ? mT.down : mT.up;
-            mT.disabled || nT.emit(TT, WT)
+    function qB(BB, jB, zB, QB) {
+      var nB = zB._keyBindmap[BB];
+      nB && (fB(zB._keyStates[BB], jB) && (zB._keyStates[BB] = jB, nB.forEach((BB => {
+        (!zB.filterEvents || zB.filterEvents(QB, BB)) && function(BB, jB, zB, QB) {
+          var nB = jB ? zB.pressCount : zB.releaseCount;
+          nB[BB] = (nB[BB] || 0) + 1;
+          var dB = zB._bindPressCount[BB] || 0;
+          (dB += jB ? 1 : -1) < 0 && (dB = 0);
+          zB._bindPressCount[BB] = dB;
+          var IB = zB.state[BB];
+          if (fB(IB, dB)) {
+            zB.state[BB] = dB > 0;
+            var NB = jB ? zB.down : zB.up;
+            zB.disabled || NB.emit(BB, QB)
           }
-        }(TT, UT, mT, WT)
-      }))), "button" in WT || (mT.wG && !WT.defaultPrevented && WT.preventDefault(), mT.stopPropagation && WT.stopPropagation()))
+        }(BB, jB, zB, QB)
+      }))), "button" in QB || (zB.oW && !QB.defaultPrevented && QB.preventDefault(), zB.stopPropagation && QB.stopPropagation()))
     }
 
-    function dT(TT, UT) {
-      return TT ? !UT : UT
+    function fB(BB, jB) {
+      return BB ? !jB : jB
     }
   },
-  36617: (TT, UT) => {
-    function mT(TT) {
-      if (TT && "object" === typeof TT) {
-        var UT = TT.which || TT.keyCode || TT.charCode;
-        UT && (TT = UT)
+  36619: (BB, jB) => {
+    function zB(BB) {
+      if (BB && "object" === typeof BB) {
+        var jB = BB.which || BB.keyCode || BB.charCode;
+        jB && (BB = jB)
       }
-      if ("number" === typeof TT) return gT[TT];
-      var mT, MT = String(TT);
-      return (mT = WT[MT.toLowerCase()]) ? mT : (mT = zT[MT.toLowerCase()]) || (1 === MT.length ? MT.charCodeAt(0) : void 0)
+      if ("number" === typeof BB) return IB[BB];
+      var zB, dB = String(BB);
+      return (zB = QB[dB.toLowerCase()]) ? zB : (zB = nB[dB.toLowerCase()]) || (1 === dB.length ? dB.charCodeAt(0) : void 0)
     }
-    mT.isEventKey = function(TT, UT) {
-      if (TT && "object" === typeof TT) {
-        var mT = TT.which || TT.keyCode || TT.charCode;
-        if (null === mT || void 0 === mT) return !1;
-        if ("string" === typeof UT) {
-          var MT;
-          if (MT = WT[UT.toLowerCase()]) return MT === mT;
-          if (MT = zT[UT.toLowerCase()]) return MT === mT
-        } else if ("number" === typeof UT) return UT === mT;
+    zB.isEventKey = function(BB, jB) {
+      if (BB && "object" === typeof BB) {
+        var zB = BB.which || BB.keyCode || BB.charCode;
+        if (null === zB || void 0 === zB) return !1;
+        if ("string" === typeof jB) {
+          var dB;
+          if (dB = QB[jB.toLowerCase()]) return dB === zB;
+          if (dB = nB[jB.toLowerCase()]) return dB === zB
+        } else if ("number" === typeof jB) return jB === zB;
         return !1
       }
     };
-    var WT = (UT = TT.exports = mT).code = UT.codes = {
+    var QB = (jB = BB.exports = zB).code = jB.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -374,7 +374,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      zT = UT.aliases = {
+      nB = jB.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -396,139 +396,139 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (MT = 97; MT < 123; MT++) WT[String.fromCharCode(MT)] = MT - 32;
-    for (var MT = 48; MT < 58; MT++) WT[MT - 48] = MT;
-    for (MT = 1; MT < 13; MT++) WT["f" + MT] = MT + 111;
-    for (MT = 0; MT < 10; MT++) WT["numpad " + MT] = MT + 96;
-    var gT = UT.names = UT.title = {};
-    for (MT in WT) gT[WT[MT]] = MT;
-    for (var nT in zT) WT[nT] = zT[nT]
+    for (dB = 97; dB < 123; dB++) QB[String.fromCharCode(dB)] = dB - 32;
+    for (var dB = 48; dB < 58; dB++) QB[dB - 48] = dB;
+    for (dB = 1; dB < 13; dB++) QB["f" + dB] = dB + 111;
+    for (dB = 0; dB < 10; dB++) QB["numpad " + dB] = dB + 96;
+    var IB = jB.names = jB.title = {};
+    for (dB in QB) IB[QB[dB]] = dB;
+    for (var NB in nB) QB[NB] = nB[NB]
   },
-  39674: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => WT
+  39639: (BB, jB, zB) => {
+    zB.d(jB, {
+      e: () => QB
     });
-    class WT {
+    class QB {
       constructor() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
-        this.zC = !1, this.gC = !1, this.sF = 30, this.Xu = 0, this.nC = 100, this.yc = !1, this.fullscreen = !1, this.hq = function(TT) {}, this.lC = function(TT, UT, mT) {}, this.fC = function() {}, this.Qq = function() {}, this.pC = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(TT) {}, this._data = new zT(UT),
-          function(TT) {
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+        this.hV = !1, this.XV = !1, this.KF = 30, this.oV = 0, this.lV = 100, this.Ky = !1, this.fullscreen = !1, this.mG = function(BB) {}, this.wV = function(BB, jB, zB) {}, this.cV = function() {}, this.rG = function() {}, this.xV = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(BB) {}, this._data = new nB(jB),
+          function(BB) {
             if ("loading" === document.readyState) {
-              var UT = () => {
-                document.removeEventListener("readystatechange", UT), TT()
+              var jB = () => {
+                document.removeEventListener("readystatechange", jB), BB()
               };
-              document.addEventListener("readystatechange", UT)
-            } else setTimeout(TT, 0)
+              document.addEventListener("readystatechange", jB)
+            } else setTimeout(BB, 0)
           }((() => {
-            ! function(TT) {
-              var UT = TT._data,
-                mT = UT.nowObject.now();
-              UT.lastTickStarted = mT, UT.lastFrameStarted = mT, UT.lastRenderStarted = mT, UT.frameCB = () => function(TT) {
-                var UT = TT._data;
-                requestAnimationFrame(UT.frameCB), nT(TT);
-                var mT = UT.nowObject.now(),
-                  WT = mT - UT.lastFrameStarted;
-                if (UT.lastFrameStarted = mT, TT.Xu > 0) {
-                  UT.renderAccum += WT;
-                  var zT = 1e3 / TT.Xu;
-                  if (UT.renderAccum < zT) return;
-                  UT.renderAccum -= zT, UT.renderAccum > zT && (UT.renderAccum = zT)
+            ! function(BB) {
+              var jB = BB._data,
+                zB = jB.nowObject.now();
+              jB.lastTickStarted = zB, jB.lastFrameStarted = zB, jB.lastRenderStarted = zB, jB.frameCB = () => function(BB) {
+                var jB = BB._data;
+                requestAnimationFrame(jB.frameCB), NB(BB);
+                var zB = jB.nowObject.now(),
+                  QB = zB - jB.lastFrameStarted;
+                if (jB.lastFrameStarted = zB, BB.oV > 0) {
+                  jB.renderAccum += QB;
+                  var nB = 1e3 / BB.oV;
+                  if (jB.renderAccum < nB) return;
+                  jB.renderAccum -= nB, jB.renderAccum > nB && (jB.renderAccum = nB)
                 }
-                var MT = mT - UT.lastRenderStarted;
-                UT.lastRenderStarted = mT;
-                var gT = 1e3 / TT.sF,
-                  HT = (mT - UT.lastTickStarted) / gT;
-                HT < 0 && (HT = 0);
-                TT.lC(MT, HT, gT), setTimeout(nT, 0, TT, !0)
-              }(TT), UT.intervalCB = () => nT(TT), requestAnimationFrame(UT.frameCB), UT.pollTime > 0 && (UT.intervalID = setInterval(UT.intervalCB, Math.max(UT.pollTime, 1e3 / TT.sF / 2)))
+                var dB = zB - jB.lastRenderStarted;
+                jB.lastRenderStarted = zB;
+                var IB = 1e3 / BB.KF,
+                  uB = (zB - jB.lastTickStarted) / IB;
+                uB < 0 && (uB = 0);
+                BB.wV(dB, uB, IB), setTimeout(NB, 0, BB, !0)
+              }(BB), jB.intervalCB = () => NB(BB), requestAnimationFrame(jB.frameCB), jB.pollTime > 0 && (jB.intervalID = setInterval(jB.intervalCB, Math.max(jB.pollTime, 1e3 / BB.KF / 2)))
             }(this),
-            function(TT, UT) {
-              if (!UT) return;
-              var mT = !1,
-                WT = !1,
-                zT = TT => {
-                  if (!!TT !== (mT = UT === document.pointerLockElement))
-                    if (TT) {
-                      var WT = UT.requestPointerLock();
-                      WT && WT.catch && WT.catch((TT => {}))
+            function(BB, jB) {
+              if (!jB) return;
+              var zB = !1,
+                QB = !1,
+                nB = BB => {
+                  if (!!BB !== (zB = jB === document.pointerLockElement))
+                    if (BB) {
+                      var QB = jB.requestPointerLock();
+                      QB && QB.catch && QB.catch((BB => {}))
                     } else document.exitPointerLock()
                 },
-                MT = TT => {
-                  !!TT !== (WT = UT === document.fullscreenElement) && (TT ? UT.requestFullscreen ? UT.requestFullscreen() : UT.webkitRequestFullscreen && UT.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
+                dB = BB => {
+                  !!BB !== (QB = jB === document.fullscreenElement) && (BB ? jB.requestFullscreen ? jB.requestFullscreen() : jB.webkitRequestFullscreen && jB.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
                 };
-              document.addEventListener("pointerlockchange", (WT => {
-                mT = UT === document.pointerLockElement, TT.pC(mT)
-              })), document.addEventListener("fullscreenchange", (mT => {
-                WT = UT === document.fullscreenElement, TT.onFullscreenChanged(WT)
-              })), document.addEventListener("pointerlockerror", (WT => {
-                mT = UT === document.pointerLockElement, TT.onPointerLockError(WT)
-              })), Object.defineProperty(TT, "yc", {
-                get: () => mT,
-                set: zT
-              }), Object.defineProperty(TT, "fullscreen", {
-                get: () => WT,
-                set: MT
-              }), UT.addEventListener("click", (UT => {
-                TT.zC && zT(!0), TT.gC && MT(!0)
+              document.addEventListener("pointerlockchange", (QB => {
+                zB = jB === document.pointerLockElement, BB.xV(zB)
+              })), document.addEventListener("fullscreenchange", (zB => {
+                QB = jB === document.fullscreenElement, BB.onFullscreenChanged(QB)
+              })), document.addEventListener("pointerlockerror", (QB => {
+                zB = jB === document.pointerLockElement, BB.onPointerLockError(QB)
+              })), Object.defineProperty(BB, "Ky", {
+                get: () => zB,
+                set: nB
+              }), Object.defineProperty(BB, "fullscreen", {
+                get: () => QB,
+                set: dB
+              }), jB.addEventListener("click", (jB => {
+                BB.hV && nB(!0), BB.XV && dB(!0)
               }));
-              var gT = () => TT.Qq();
+              var IB = () => BB.rG();
               if (window.ResizeObserver) {
-                new ResizeObserver(gT).observe(UT)
-              } else window.addEventListener("resize", gT)
-            }(this, TT), this.fC()
+                new ResizeObserver(IB).observe(jB)
+              } else window.addEventListener("resize", IB)
+            }(this, BB), this.cV()
           }))
       }
     }
 
-    function zT() {
-      let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      this.nowObject = performance || Date, this.pollTime = TT, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
+    function nB() {
+      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      this.nowObject = performance || Date, this.pollTime = BB, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
     }
-    var MT = 3,
-      gT = 20;
+    var dB = 3,
+      IB = 20;
 
-    function nT(TT) {
-      for (var UT = TT._data, mT = 1e3 / TT.sF, WT = UT.nowObject.now() + gT, zT = 0; UT.nowObject.now() >= UT.lastTickStarted + mT && UT.nowObject.now() < WT && ++zT <= MT;) TT.hq(mT), UT.lastTickStarted += mT;
-      var nT = 5 * (mT + 5),
-        HT = UT.nowObject.now();
-      if (HT - UT.lastTickStarted > nT)
-        for (; HT >= UT.lastTickStarted + mT;) UT.lastTickStarted += mT
+    function NB(BB) {
+      for (var jB = BB._data, zB = 1e3 / BB.KF, QB = jB.nowObject.now() + IB, nB = 0; jB.nowObject.now() >= jB.lastTickStarted + zB && jB.nowObject.now() < QB && ++nB <= dB;) BB.mG(zB), jB.lastTickStarted += zB;
+      var NB = 5 * (zB + 5),
+        uB = jB.nowObject.now();
+      if (uB - jB.lastTickStarted > NB)
+        for (; uB >= jB.lastTickStarted + zB;) jB.lastTickStarted += zB
     }
   },
-  36791: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => gT
+  36775: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => IB
     });
-    var WT = mT(63);
-    const zT = WT.useLayoutEffect;
-    const MT = function(TT) {
-      var UT = (0, WT.useRef)(TT);
-      return zT((function() {
-        UT.current = TT
-      })), UT
+    var QB = zB(62);
+    const nB = QB.useLayoutEffect;
+    const dB = function(BB) {
+      var jB = (0, QB.useRef)(BB);
+      return nB((function() {
+        jB.current = BB
+      })), jB
     };
-    var gT = function(TT) {
-      var UT = MT(TT);
-      (0, WT.useEffect)((function() {
-        var TT = function(TT) {
-          var mT;
-          if (null != UT.current && (mT = UT.current(TT)), TT.defaultPrevented && (TT.returnValue = ""), "string" === typeof mT) return TT.returnValue = mT, mT
+    var IB = function(BB) {
+      var jB = dB(BB);
+      (0, QB.useEffect)((function() {
+        var BB = function(BB) {
+          var zB;
+          if (null != jB.current && (zB = jB.current(BB)), BB.defaultPrevented && (BB.returnValue = ""), "string" === typeof zB) return BB.returnValue = zB, zB
         };
-        return window.addEventListener("beforeunload", TT),
+        return window.addEventListener("beforeunload", BB),
           function() {
-            window.removeEventListener("beforeunload", TT)
+            window.removeEventListener("beforeunload", BB)
           }
       }), [])
     }
   },
-  36672: TT => {
-    var UT, mT = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      WT = /OS X/.test(mT),
-      zT = /Opera/.test(mT),
-      MT = !/like Gecko/.test(mT) && !zT,
-      gT = TT.exports = {
-        0: WT ? "<menu>" : "<UNK>",
+  36662: BB => {
+    var jB, zB = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      QB = /OS X/.test(zB),
+      nB = /Opera/.test(zB),
+      dB = !/like Gecko/.test(zB) && !nB,
+      IB = BB.exports = {
+        0: QB ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -571,7 +571,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: WT ? "<meta>" : "<menu>",
+        93: QB ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -594,7 +594,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: WT && MT ? "-" : "<volume-mute>",
+        173: QB && dB ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -620,7 +620,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: zT ? "`" : "<unicode>",
+        231: nB ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -631,183 +631,183 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (UT = 58; UT < 65; ++UT) gT[UT] = String.fromCharCode(UT);
-    for (UT = 48; UT < 58; ++UT) gT[UT] = UT - 48 + "";
-    for (UT = 65; UT < 91; ++UT) gT[UT] = String.fromCharCode(UT);
-    for (UT = 96; UT < 106; ++UT) gT[UT] = "<num-" + (UT - 96) + ">";
-    for (UT = 112; UT < 136; ++UT) gT[UT] = "F" + (UT - 111)
+    for (jB = 58; jB < 65; ++jB) IB[jB] = String.fromCharCode(jB);
+    for (jB = 48; jB < 58; ++jB) IB[jB] = jB - 48 + "";
+    for (jB = 65; jB < 91; ++jB) IB[jB] = String.fromCharCode(jB);
+    for (jB = 96; jB < 106; ++jB) IB[jB] = "<num-" + (jB - 96) + ">";
+    for (jB = 112; jB < 136; ++jB) IB[jB] = "F" + (jB - 111)
   },
-  39114: (TT, UT, mT) => {
-    function WT(TT, UT, mT, WT, zT) {
-      var MT = {};
-      return Object.keys(WT).forEach((function(TT) {
-        MT[TT] = WT[TT]
-      })), MT.enumerable = !!MT.enumerable, MT.configurable = !!MT.configurable, ("value" in MT || MT.initializer) && (MT.writable = !0), MT = mT.slice().reverse().reduce((function(mT, WT) {
-        return WT(TT, UT, mT) || mT
-      }), MT), zT && void 0 !== MT.initializer && (MT.value = MT.initializer ? MT.initializer.call(zT) : void 0, MT.initializer = void 0), void 0 === MT.initializer && (Object.defineProperty(TT, UT, MT), MT = null), MT
+  39093: (BB, jB, zB) => {
+    function QB(BB, jB, zB, QB, nB) {
+      var dB = {};
+      return Object.keys(QB).forEach((function(BB) {
+        dB[BB] = QB[BB]
+      })), dB.enumerable = !!dB.enumerable, dB.configurable = !!dB.configurable, ("value" in dB || dB.initializer) && (dB.writable = !0), dB = zB.slice().reverse().reduce((function(zB, QB) {
+        return QB(BB, jB, zB) || zB
+      }), dB), nB && void 0 !== dB.initializer && (dB.value = dB.initializer ? dB.initializer.call(nB) : void 0, dB.initializer = void 0), void 0 === dB.initializer && (Object.defineProperty(BB, jB, dB), dB = null), dB
     }
-    mT.d(UT, {
-      e: () => WT
+    zB.d(jB, {
+      d: () => QB
     })
   },
-  39108: (TT, UT, mT) => {
-    function WT(TT, UT, mT, WT) {
-      mT && Object.defineProperty(TT, UT, {
-        enumerable: mT.enumerable,
-        configurable: mT.configurable,
-        writable: mT.writable,
-        value: mT.initializer ? mT.initializer.call(WT) : void 0
+  39087: (BB, jB, zB) => {
+    function QB(BB, jB, zB, QB) {
+      zB && Object.defineProperty(BB, jB, {
+        enumerable: zB.enumerable,
+        configurable: zB.configurable,
+        writable: zB.writable,
+        value: zB.initializer ? zB.initializer.call(QB) : void 0
       })
     }
-    mT.d(UT, {
-      d: () => WT
+    zB.d(jB, {
+      c: () => QB
     })
   },
-  38793: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => MT
+  38780: (BB, jB, zB) => {
+    zB.d(jB, {
+      e: () => dB
     });
-    var WT = mT(38800);
-    const zT = (TT, UT, mT) => TT ? TT.getClassName && "Mesh" === TT.getClassName() ? null : !TT.getClassName || "SubMesh" !== TT.getClassName() && "PhysicsBody" !== TT.getClassName() ? TT.clone ? TT.clone() : Array.isArray(TT) ? TT.slice() : mT && "object" === typeof TT ? {
-      ...TT
-    } : null : TT.clone(UT) : null;
-    class MT {
-      static DeepCopy(TT, UT, mT, MT) {
-        let gT = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const nT = function(TT) {
-          const UT = [];
+    var QB = zB(38783);
+    const nB = (BB, jB, zB) => BB ? BB.getClassName && "Mesh" === BB.getClassName() ? null : !BB.getClassName || "SubMesh" !== BB.getClassName() && "PhysicsBody" !== BB.getClassName() ? BB.clone ? BB.clone() : Array.isArray(BB) ? BB.slice() : zB && "object" === typeof BB ? {
+      ...BB
+    } : null : BB.clone(jB) : null;
+    class dB {
+      static DeepCopy(BB, jB, zB, dB) {
+        let IB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const NB = function(BB) {
+          const jB = [];
           do {
-            const mT = Object.getOwnPropertyNames(TT);
-            for (const TT of mT) - 1 === UT.indexOf(TT) && UT.push(TT)
-          } while (TT = Object.getPrototypeOf(TT));
-          return UT
-        }(TT);
-        for (const kT of nT) {
-          if ("_" === kT[0] && (!MT || -1 === MT.indexOf(kT))) continue;
-          if (kT.endsWith("Observable")) continue;
-          if (mT && -1 !== mT.indexOf(kT)) continue;
-          const nT = TT[kT],
-            jT = typeof nT;
-          if ("function" !== jT) try {
-            if ("object" === jT)
-              if (nT instanceof Uint8Array) UT[kT] = Uint8Array.from(nT);
-              else if (nT instanceof Array) {
-              if (UT[kT] = [], nT.length > 0)
-                if ("object" == typeof nT[0])
-                  for (let TT = 0; TT < nT.length; TT++) {
-                    const mT = zT(nT[TT], UT, gT); - 1 === UT[kT].indexOf(mT) && UT[kT].push(mT)
-                  } else UT[kT] = nT.slice(0)
-            } else UT[kT] = zT(nT, UT, gT);
-            else UT[kT] = nT
-          } catch (HT) {
-            WT.b.Warn(HT.message)
+            const zB = Object.getOwnPropertyNames(BB);
+            for (const BB of zB) - 1 === jB.indexOf(BB) && jB.push(BB)
+          } while (BB = Object.getPrototypeOf(BB));
+          return jB
+        }(BB);
+        for (const UB of NB) {
+          if ("_" === UB[0] && (!dB || -1 === dB.indexOf(UB))) continue;
+          if (UB.endsWith("Observable")) continue;
+          if (zB && -1 !== zB.indexOf(UB)) continue;
+          const NB = BB[UB],
+            aB = typeof NB;
+          if ("function" !== aB) try {
+            if ("object" === aB)
+              if (NB instanceof Uint8Array) jB[UB] = Uint8Array.from(NB);
+              else if (NB instanceof Array) {
+              if (jB[UB] = [], NB.length > 0)
+                if ("object" == typeof NB[0])
+                  for (let BB = 0; BB < NB.length; BB++) {
+                    const zB = nB(NB[BB], jB, IB); - 1 === jB[UB].indexOf(zB) && jB[UB].push(zB)
+                  } else jB[UB] = NB.slice(0)
+            } else jB[UB] = nB(NB, jB, IB);
+            else jB[UB] = NB
+          } catch (uB) {
+            QB.c.Warn(uB.message)
           }
         }
       }
     }
   },
-  38824: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => zT,
-      d: () => MT,
-      h: () => gT,
-      j: () => nT
+  38811: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => nB,
+      c: () => dB,
+      f: () => IB,
+      j: () => NB
     });
-    var WT = mT(37367);
-    class zT {
-      constructor(TT, UT, mT) {
-        this.gradient = TT, this.color1 = UT, this.color2 = mT
+    var QB = zB(37379);
+    class nB {
+      constructor(BB, jB, zB) {
+        this.gradient = BB, this.color1 = jB, this.color2 = zB
       }
-      getColorToRef(TT) {
-        this.color2 ? WT.g.LerpToRef(this.color1, this.color2, Math.random(), TT) : TT.Gw(this.color1)
-      }
-    }
-    class MT {
-      constructor(TT, UT) {
-        this.gradient = TT, this.color = UT
+      getColorToRef(BB) {
+        this.color2 ? QB.g.LerpToRef(this.color1, this.color2, Math.random(), BB) : BB.jH(this.color1)
       }
     }
-    class gT {
-      constructor(TT, UT, mT) {
-        this.gradient = TT, this.factor1 = UT, this.factor2 = mT
+    class dB {
+      constructor(BB, jB) {
+        this.gradient = BB, this.color = jB
+      }
+    }
+    class IB {
+      constructor(BB, jB, zB) {
+        this.gradient = BB, this.factor1 = jB, this.factor2 = zB
       }
       getFactor() {
         return void 0 === this.factor2 || this.factor2 === this.factor1 ? this.factor1 : this.factor1 + (this.factor2 - this.factor1) * Math.random()
       }
     }
-    class nT {
-      static GetCurrentGradient(TT, UT, mT) {
-        if (UT[0].gradient > TT) return void mT(UT[0], UT[0], 1);
-        for (let zT = 0; zT < UT.length - 1; zT++) {
-          const WT = UT[zT],
-            MT = UT[zT + 1];
-          if (TT >= WT.gradient && TT <= MT.gradient) {
-            return void mT(WT, MT, (TT - WT.gradient) / (MT.gradient - WT.gradient))
+    class NB {
+      static GetCurrentGradient(BB, jB, zB) {
+        if (jB[0].gradient > BB) return void zB(jB[0], jB[0], 1);
+        for (let nB = 0; nB < jB.length - 1; nB++) {
+          const QB = jB[nB],
+            dB = jB[nB + 1];
+          if (BB >= QB.gradient && BB <= dB.gradient) {
+            return void zB(QB, dB, (BB - QB.gradient) / (dB.gradient - QB.gradient))
           }
         }
-        const WT = UT.length - 1;
-        mT(UT[WT], UT[WT], 1)
+        const QB = jB.length - 1;
+        zB(jB[QB], jB[QB], 1)
       }
     }
   },
-  38800: (TT, UT, mT) => {
-    mT.d(UT, {
-      b: () => WT
+  38783: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => QB
     });
-    class WT {
-      static _CheckLimit(TT, UT) {
-        let mT = WT._LogLimitOutputs[TT];
-        return mT ? mT.current++ : (mT = {
-          limit: UT,
+    class QB {
+      static _CheckLimit(BB, jB) {
+        let zB = QB._LogLimitOutputs[BB];
+        return zB ? zB.current++ : (zB = {
+          limit: jB,
           current: 1
-        }, WT._LogLimitOutputs[TT] = mT), mT.current <= mT.limit
+        }, QB._LogLimitOutputs[BB] = zB), zB.current <= zB.limit
       }
-      static _GenerateLimitMessage(TT) {
-        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const mT = WT._LogLimitOutputs[TT];
-        if (!mT || !WT.MessageLimitReached) return;
-        const zT = this._Levels[UT];
-        mT.current === mT.limit && WT[zT.name](WT.MessageLimitReached.replace(/%LIMIT%/g, "" + mT.limit).replace(/%TYPE%/g, zT.name ?? ""))
+      static _GenerateLimitMessage(BB) {
+        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const zB = QB._LogLimitOutputs[BB];
+        if (!zB || !QB.MessageLimitReached) return;
+        const nB = this._Levels[jB];
+        zB.current === zB.limit && QB[nB.name](QB.MessageLimitReached.replace(/%LIMIT%/g, "" + zB.limit).replace(/%TYPE%/g, nB.name ?? ""))
       }
-      static _AddLogEntry(TT) {
-        WT._LogCache = TT + WT._LogCache, WT.OnNewCacheEntry && WT.OnNewCacheEntry(TT)
+      static _AddLogEntry(BB) {
+        QB._LogCache = BB + QB._LogCache, QB.OnNewCacheEntry && QB.OnNewCacheEntry(BB)
       }
-      static _FormatMessage(TT) {
-        const UT = TT => TT < 10 ? "0" + TT : "" + TT,
-          mT = new Date;
-        return "[" + UT(mT.getHours()) + ":" + UT(mT.getMinutes()) + ":" + UT(mT.getSeconds()) + "]: " + TT
+      static _FormatMessage(BB) {
+        const jB = BB => BB < 10 ? "0" + BB : "" + BB,
+          zB = new Date;
+        return "[" + jB(zB.getHours()) + ":" + jB(zB.getMinutes()) + ":" + jB(zB.getSeconds()) + "]: " + BB
       }
-      static _LogDisabled(TT, UT) {}
+      static _LogDisabled(BB, jB) {}
       static _LogEnabled() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          UT = arguments.length > 1 ? arguments[1] : void 0,
-          mT = arguments.length > 2 ? arguments[2] : void 0;
-        const zT = Array.isArray(UT) ? UT[0] : UT;
-        if (void 0 !== mT && !WT._CheckLimit(zT, mT)) return;
-        const MT = WT._FormatMessage(zT),
-          gT = this._Levels[TT],
-          nT = Array.isArray(UT) ? UT.slice(1) : [];
-        gT.logFunc && gT.logFunc("BJS - " + MT, ...nT);
-        const HT = `<div style='color:${gT.color}'>${MT}</div><br>`;
-        WT._AddLogEntry(HT), WT._GenerateLimitMessage(zT, TT)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          jB = arguments.length > 1 ? arguments[1] : void 0,
+          zB = arguments.length > 2 ? arguments[2] : void 0;
+        const nB = Array.isArray(jB) ? jB[0] : jB;
+        if (void 0 !== zB && !QB._CheckLimit(nB, zB)) return;
+        const dB = QB._FormatMessage(nB),
+          IB = this._Levels[BB],
+          NB = Array.isArray(jB) ? jB.slice(1) : [];
+        IB.logFunc && IB.logFunc("BJS - " + dB, ...NB);
+        const uB = `<div style='color:${IB.color}'>${dB}</div><br>`;
+        QB._AddLogEntry(uB), QB._GenerateLimitMessage(nB, BB)
       }
       static get LogCache() {
-        return WT._LogCache
+        return QB._LogCache
       }
       static ClearLogCache() {
-        WT._LogCache = "", WT._LogLimitOutputs = {}, WT.errorsCount = 0
+        QB._LogCache = "", QB._LogLimitOutputs = {}, QB.errorsCount = 0
       }
-      static set LogLevels(TT) {
-        WT.Log = WT._LogDisabled, WT.Warn = WT._LogDisabled, WT.Error = WT._LogDisabled;
-        const UT = [WT.MessageLogLevel, WT.WarningLogLevel, WT.ErrorLogLevel];
-        for (const mT of UT)
-          if ((TT & mT) === mT) {
-            const TT = this._Levels[mT];
-            WT[TT.name] = WT._LogEnabled.bind(WT, mT)
+      static set LogLevels(BB) {
+        QB.Log = QB._LogDisabled, QB.Warn = QB._LogDisabled, QB.Error = QB._LogDisabled;
+        const jB = [QB.MessageLogLevel, QB.WarningLogLevel, QB.ErrorLogLevel];
+        for (const zB of jB)
+          if ((BB & zB) === zB) {
+            const BB = this._Levels[zB];
+            QB[BB.name] = QB._LogEnabled.bind(QB, zB)
           }
       }
     }
-    WT.NoneLogLevel = 0, WT.MessageLogLevel = 1, WT.WarningLogLevel = 2, WT.ErrorLogLevel = 4, WT.AllLogLevel = 7, WT.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", WT._LogCache = "", WT._LogLimitOutputs = {}, WT._Levels = [{}, {
+    QB.NoneLogLevel = 0, QB.MessageLogLevel = 1, QB.WarningLogLevel = 2, QB.ErrorLogLevel = 4, QB.AllLogLevel = 7, QB.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", QB._LogCache = "", QB._LogLimitOutputs = {}, QB._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -819,42 +819,42 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], WT.errorsCount = 0, WT.Log = WT._LogEnabled.bind(WT, WT.MessageLogLevel), WT.Warn = WT._LogEnabled.bind(WT, WT.WarningLogLevel), WT.Error = WT._LogEnabled.bind(WT, WT.ErrorLogLevel)
+    }], QB.errorsCount = 0, QB.Log = QB._LogEnabled.bind(QB, QB.MessageLogLevel), QB.Warn = QB._LogEnabled.bind(QB, QB.WarningLogLevel), QB.Error = QB._LogEnabled.bind(QB, QB.ErrorLogLevel)
   },
-  38830: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => gT
+  38813: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => IB
     });
-    var WT = mT(37188),
-      zT = mT(37226),
-      MT = mT(38793);
-    class gT {
+    var QB = zB(37171),
+      nB = zB(37208),
+      dB = zB(38780);
+    class IB {
       constructor() {
-        this.direction1 = new WT.p(0, 1, 0), this.direction2 = new WT.p(0, 1, 0), this.minEmitBox = new WT.p(-.5, -.5, -.5), this.maxEmitBox = new WT.p(.5, .5, .5)
+        this.direction1 = new QB.m(0, 1, 0), this.direction2 = new QB.m(0, 1, 0), this.minEmitBox = new QB.m(-.5, -.5, -.5), this.maxEmitBox = new QB.m(.5, .5, .5)
       }
-      startDirectionFunction(TT, UT, mT, MT) {
-        const gT = (0, zT.RandomRange)(this.direction1.x, this.direction2.x),
-          nT = (0, zT.RandomRange)(this.direction1.y, this.direction2.y),
-          HT = (0, zT.RandomRange)(this.direction1.z, this.direction2.z);
-        if (MT) return UT.x = gT, UT.y = nT, void(UT.z = HT);
-        WT.p.TransformNormalFromFloatsToRef(gT, nT, HT, TT, UT)
+      startDirectionFunction(BB, jB, zB, dB) {
+        const IB = (0, nB.RandomRange)(this.direction1.x, this.direction2.x),
+          NB = (0, nB.RandomRange)(this.direction1.y, this.direction2.y),
+          uB = (0, nB.RandomRange)(this.direction1.z, this.direction2.z);
+        if (dB) return jB.x = IB, jB.y = NB, void(jB.z = uB);
+        QB.m.TransformNormalFromFloatsToRef(IB, NB, uB, BB, jB)
       }
-      startPositionFunction(TT, UT, mT, MT) {
-        const gT = (0, zT.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
-          nT = (0, zT.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
-          HT = (0, zT.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
-        if (MT) return UT.x = gT, UT.y = nT, void(UT.z = HT);
-        WT.p.TransformCoordinatesFromFloatsToRef(gT, nT, HT, TT, UT)
+      startPositionFunction(BB, jB, zB, dB) {
+        const IB = (0, nB.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
+          NB = (0, nB.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
+          uB = (0, nB.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
+        if (dB) return jB.x = IB, jB.y = NB, void(jB.z = uB);
+        QB.m.TransformCoordinatesFromFloatsToRef(IB, NB, uB, BB, jB)
       }
       clone() {
-        const TT = new gT;
-        return MT.c.DeepCopy(this, TT), TT
+        const BB = new IB;
+        return dB.e.DeepCopy(this, BB), BB
       }
-      applyToShader(TT) {
-        TT.setVector3("direction1", this.direction1), TT.setVector3("direction2", this.direction2), TT.setVector3("minEmitBox", this.minEmitBox), TT.setVector3("maxEmitBox", this.maxEmitBox)
+      applyToShader(BB) {
+        BB.setVector3("direction1", this.direction1), BB.setVector3("direction2", this.direction2), BB.setVector3("minEmitBox", this.minEmitBox), BB.setVector3("maxEmitBox", this.maxEmitBox)
       }
-      buildUniformLayout(TT) {
-        TT.addUniform("direction1", 3), TT.addUniform("direction2", 3), TT.addUniform("minEmitBox", 3), TT.addUniform("maxEmitBox", 3)
+      buildUniformLayout(BB) {
+        BB.addUniform("direction1", 3), BB.addUniform("direction2", 3), BB.addUniform("minEmitBox", 3), BB.addUniform("maxEmitBox", 3)
       }
       getEffectDefines() {
         return "#define BOXEMITTER"
@@ -863,54 +863,54 @@ export const modules = {
         return "BoxParticleEmitter"
       }
       serialize() {
-        const TT = {};
-        return TT.type = this.getClassName(), TT.direction1 = this.direction1.cWT(), TT.direction2 = this.direction2.cWT(), TT.minEmitBox = this.minEmitBox.cWT(), TT.maxEmitBox = this.maxEmitBox.cWT(), TT
+        const BB = {};
+        return BB.type = this.getClassName(), BB.direction1 = this.direction1.nQB(), BB.direction2 = this.direction2.nQB(), BB.minEmitBox = this.minEmitBox.nQB(), BB.maxEmitBox = this.maxEmitBox.nQB(), BB
       }
-      parse(TT) {
-        WT.p.FromArrayToRef(TT.direction1, 0, this.direction1), WT.p.FromArrayToRef(TT.direction2, 0, this.direction2), WT.p.FromArrayToRef(TT.minEmitBox, 0, this.minEmitBox), WT.p.FromArrayToRef(TT.maxEmitBox, 0, this.maxEmitBox)
+      parse(BB) {
+        QB.m.FromArrayToRef(BB.direction1, 0, this.direction1), QB.m.FromArrayToRef(BB.direction2, 0, this.direction2), QB.m.FromArrayToRef(BB.minEmitBox, 0, this.minEmitBox), QB.m.FromArrayToRef(BB.maxEmitBox, 0, this.maxEmitBox)
       }
     }
   },
-  38791: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => nT,
-      f: () => gT
+  38773: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => NB,
+      g: () => IB
     });
-    var WT = mT(37188),
-      zT = mT(37226),
-      MT = mT(38793);
-    class gT {
+    var QB = zB(37171),
+      nB = zB(37208),
+      dB = zB(38780);
+    class IB {
       constructor() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.radius = TT, this.height = UT, this.radiusRange = mT, this.directionRandomizer = zT, this._tempVector = WT.p.Zero()
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          nB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.radius = BB, this.height = jB, this.radiusRange = zB, this.directionRandomizer = nB, this._tempVector = QB.m.Zero()
       }
-      startDirectionFunction(TT, UT, mT, MT, gT) {
-        mT.position.subtractToRef(TT.getTranslation(), this._tempVector), this._tempVector.normalize(), WT.p.TransformNormalToRef(this._tempVector, gT, this._tempVector);
-        const nT = (0, zT.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
-        let HT = Math.atan2(this._tempVector.x, this._tempVector.z);
-        HT += (0, zT.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = nT, this._tempVector.x = Math.sin(HT), this._tempVector.z = Math.cos(HT), this._tempVector.normalize(), MT ? UT.Gw(this._tempVector) : WT.p.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, TT, UT)
+      startDirectionFunction(BB, jB, zB, dB, IB) {
+        zB.position.subtractToRef(BB.getTranslation(), this._tempVector), this._tempVector.normalize(), QB.m.TransformNormalToRef(this._tempVector, IB, this._tempVector);
+        const NB = (0, nB.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
+        let uB = Math.atan2(this._tempVector.x, this._tempVector.z);
+        uB += (0, nB.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = NB, this._tempVector.x = Math.sin(uB), this._tempVector.z = Math.cos(uB), this._tempVector.normalize(), dB ? jB.jH(this._tempVector) : QB.m.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, BB, jB)
       }
-      startPositionFunction(TT, UT, mT, MT) {
-        const gT = (0, zT.RandomRange)(-this.height / 2, this.height / 2),
-          nT = (0, zT.RandomRange)(0, 2 * Math.PI),
-          HT = (0, zT.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
-          kT = Math.sqrt(HT) * this.radius,
-          jT = kT * Math.cos(nT),
-          lT = kT * Math.sin(nT);
-        MT ? UT.J9(jT, gT, lT) : WT.p.TransformCoordinatesFromFloatsToRef(jT, gT, lT, TT, UT)
+      startPositionFunction(BB, jB, zB, dB) {
+        const IB = (0, nB.RandomRange)(-this.height / 2, this.height / 2),
+          NB = (0, nB.RandomRange)(0, 2 * Math.PI),
+          uB = (0, nB.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
+          UB = Math.sqrt(uB) * this.radius,
+          aB = UB * Math.cos(NB),
+          pB = UB * Math.sin(NB);
+        dB ? jB.U3(aB, IB, pB) : QB.m.TransformCoordinatesFromFloatsToRef(aB, IB, pB, BB, jB)
       }
       clone() {
-        const TT = new gT(this.radius, this.directionRandomizer);
-        return MT.c.DeepCopy(this, TT), TT
+        const BB = new IB(this.radius, this.directionRandomizer);
+        return dB.e.DeepCopy(this, BB), BB
       }
-      applyToShader(TT) {
-        TT.setFloat("radius", this.radius), TT.setFloat("height", this.height), TT.setFloat("radiusRange", this.radiusRange), TT.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(BB) {
+        BB.setFloat("radius", this.radius), BB.setFloat("height", this.height), BB.setFloat("radiusRange", this.radiusRange), BB.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(TT) {
-        TT.addUniform("radius", 1), TT.addUniform("height", 1), TT.addUniform("radiusRange", 1), TT.addUniform("directionRandomizer", 1)
+      buildUniformLayout(BB) {
+        BB.addUniform("radius", 1), BB.addUniform("height", 1), BB.addUniform("radiusRange", 1), BB.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER"
@@ -919,37 +919,37 @@ export const modules = {
         return "CylinderParticleEmitter"
       }
       serialize() {
-        const TT = {};
-        return TT.type = this.getClassName(), TT.radius = this.radius, TT.height = this.height, TT.radiusRange = this.radiusRange, TT.directionRandomizer = this.directionRandomizer, TT
+        const BB = {};
+        return BB.type = this.getClassName(), BB.radius = this.radius, BB.height = this.height, BB.radiusRange = this.radiusRange, BB.directionRandomizer = this.directionRandomizer, BB
       }
-      parse(TT) {
-        this.radius = TT.radius, this.height = TT.height, this.radiusRange = TT.radiusRange, this.directionRandomizer = TT.directionRandomizer
+      parse(BB) {
+        this.radius = BB.radius, this.height = BB.height, this.radiusRange = BB.radiusRange, this.directionRandomizer = BB.directionRandomizer
       }
     }
-    class nT extends gT {
+    class NB extends IB {
       constructor() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          zT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new WT.p(0, 1, 0),
-          MT = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new WT.p(0, 1, 0);
-        super(TT, UT, mT), this.direction1 = zT, this.direction2 = MT
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          nB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new QB.m(0, 1, 0),
+          dB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new QB.m(0, 1, 0);
+        super(BB, jB, zB), this.direction1 = nB, this.direction2 = dB
       }
-      startDirectionFunction(TT, UT, mT, MT) {
-        const gT = (0, zT.RandomRange)(this.direction1.x, this.direction2.x),
-          nT = (0, zT.RandomRange)(this.direction1.y, this.direction2.y),
-          HT = (0, zT.RandomRange)(this.direction1.z, this.direction2.z);
-        MT ? UT.J9(gT, nT, HT) : WT.p.TransformNormalFromFloatsToRef(gT, nT, HT, TT, UT)
+      startDirectionFunction(BB, jB, zB, dB) {
+        const IB = (0, nB.RandomRange)(this.direction1.x, this.direction2.x),
+          NB = (0, nB.RandomRange)(this.direction1.y, this.direction2.y),
+          uB = (0, nB.RandomRange)(this.direction1.z, this.direction2.z);
+        dB ? jB.U3(IB, NB, uB) : QB.m.TransformNormalFromFloatsToRef(IB, NB, uB, BB, jB)
       }
       clone() {
-        const TT = new nT(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
-        return MT.c.DeepCopy(this, TT), TT
+        const BB = new NB(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
+        return dB.e.DeepCopy(this, BB), BB
       }
-      applyToShader(TT) {
-        TT.setFloat("radius", this.radius), TT.setFloat("height", this.height), TT.setFloat("radiusRange", this.radiusRange), TT.setVector3("direction1", this.direction1), TT.setVector3("direction2", this.direction2)
+      applyToShader(BB) {
+        BB.setFloat("radius", this.radius), BB.setFloat("height", this.height), BB.setFloat("radiusRange", this.radiusRange), BB.setVector3("direction1", this.direction1), BB.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(TT) {
-        TT.addUniform("radius", 1), TT.addUniform("height", 1), TT.addUniform("radiusRange", 1), TT.addUniform("direction1", 3), TT.addUniform("direction2", 3)
+      buildUniformLayout(BB) {
+        BB.addUniform("radius", 1), BB.addUniform("height", 1), BB.addUniform("radiusRange", 1), BB.addUniform("direction1", 3), BB.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER\n#define DIRECTEDCYLINDEREMITTER"
@@ -958,239 +958,239 @@ export const modules = {
         return "CylinderDirectedParticleEmitter"
       }
       serialize() {
-        const TT = super.serialize();
-        return TT.direction1 = this.direction1.cWT(), TT.direction2 = this.direction2.cWT(), TT
+        const BB = super.serialize();
+        return BB.direction1 = this.direction1.nQB(), BB.direction2 = this.direction2.nQB(), BB
       }
-      parse(TT) {
-        super.parse(TT), WT.p.FromArrayToRef(TT.direction1, 0, this.direction1), WT.p.FromArrayToRef(TT.direction2, 0, this.direction2)
+      parse(BB) {
+        super.parse(BB), QB.m.FromArrayToRef(BB.direction1, 0, this.direction1), QB.m.FromArrayToRef(BB.direction2, 0, this.direction2)
       }
     }
   },
-  38907: (TT, UT, mT) => {
-    mT.d(UT, {
-      e: () => lT
+  38904: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => pB
     });
-    const WT = .5 * (Math.sqrt(3) - 1),
-      zT = (3 - Math.sqrt(3)) / 6,
-      MT = 1 / 3,
-      gT = 1 / 6,
-      nT = (Math.sqrt(5) - 1) / 4,
-      HT = (5 - Math.sqrt(5)) / 20,
-      kT = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
-      jT = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
-    const lT = class {
+    const QB = .5 * (Math.sqrt(3) - 1),
+      nB = (3 - Math.sqrt(3)) / 6,
+      dB = 1 / 3,
+      IB = 1 / 6,
+      NB = (Math.sqrt(5) - 1) / 4,
+      uB = (5 - Math.sqrt(5)) / 20,
+      UB = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
+      aB = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
+    const pB = class {
       constructor() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
-        const UT = "function" == typeof TT ? TT : function(TT) {
-          let UT = 0,
-            mT = 0,
-            WT = 0,
-            zT = 1;
-          const MT = function() {
-            let TT = 4022871197;
-            return function(UT) {
-              UT = UT.toString();
-              for (let mT = 0; mT < UT.length; mT++) {
-                TT += UT.charCodeAt(mT);
-                let WT = .02519603282416938 * TT;
-                TT = WT >>> 0, WT -= TT, WT *= TT, TT = WT >>> 0, WT -= TT, TT += 4294967296 * WT
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
+        const jB = "function" == typeof BB ? BB : function(BB) {
+          let jB = 0,
+            zB = 0,
+            QB = 0,
+            nB = 1;
+          const dB = function() {
+            let BB = 4022871197;
+            return function(jB) {
+              jB = jB.toString();
+              for (let zB = 0; zB < jB.length; zB++) {
+                BB += jB.charCodeAt(zB);
+                let QB = .02519603282416938 * BB;
+                BB = QB >>> 0, QB -= BB, QB *= BB, BB = QB >>> 0, QB -= BB, BB += 4294967296 * QB
               }
-              return 2.3283064365386963e-10 * (TT >>> 0)
+              return 2.3283064365386963e-10 * (BB >>> 0)
             }
           }();
-          UT = MT(" "), mT = MT(" "), WT = MT(" "), UT -= MT(TT), UT < 0 && (UT += 1);
-          mT -= MT(TT), mT < 0 && (mT += 1);
-          WT -= MT(TT), WT < 0 && (WT += 1);
+          jB = dB(" "), zB = dB(" "), QB = dB(" "), jB -= dB(BB), jB < 0 && (jB += 1);
+          zB -= dB(BB), zB < 0 && (zB += 1);
+          QB -= dB(BB), QB < 0 && (QB += 1);
           return function() {
-            const TT = 2091639 * UT + 2.3283064365386963e-10 * zT;
-            return UT = mT, mT = WT, WT = TT - (zT = 0 | TT)
+            const BB = 2091639 * jB + 2.3283064365386963e-10 * nB;
+            return jB = zB, zB = QB, QB = BB - (nB = 0 | BB)
           }
-        }(TT);
-        this.p = function(TT) {
-          const UT = new Uint8Array(256);
-          for (let mT = 0; mT < 256; mT++) UT[mT] = mT;
-          for (let mT = 0; mT < 255; mT++) {
-            const WT = mT + ~~(TT() * (256 - mT)),
-              zT = UT[mT];
-            UT[mT] = UT[WT], UT[WT] = zT
+        }(BB);
+        this.p = function(BB) {
+          const jB = new Uint8Array(256);
+          for (let zB = 0; zB < 256; zB++) jB[zB] = zB;
+          for (let zB = 0; zB < 255; zB++) {
+            const QB = zB + ~~(BB() * (256 - zB)),
+              nB = jB[zB];
+            jB[zB] = jB[QB], jB[QB] = nB
           }
-          return UT
-        }(UT), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
-        for (let mT = 0; mT < 512; mT++) this.perm[mT] = this.p[255 & mT], this.permMod12[mT] = this.perm[mT] % 12
+          return jB
+        }(jB), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
+        for (let zB = 0; zB < 512; zB++) this.perm[zB] = this.p[255 & zB], this.permMod12[zB] = this.perm[zB] % 12
       }
-      noise2D(TT, UT) {
-        const mT = this.permMod12,
-          MT = this.perm;
-        let gT = 0,
-          nT = 0,
-          HT = 0;
-        const jT = (TT + UT) * WT,
-          lT = Math.floor(TT + jT),
-          LT = Math.floor(UT + jT),
-          pT = (lT + LT) * zT,
-          BT = TT - (lT - pT),
-          ZT = UT - (LT - pT);
-        let cT, vT;
-        BT > ZT ? (cT = 1, vT = 0) : (cT = 0, vT = 1);
-        const fT = BT - cT + zT,
-          qT = ZT - vT + zT,
-          iT = BT - 1 + 2 * zT,
-          bT = ZT - 1 + 2 * zT,
-          OT = 255 & lT,
-          eT = 255 & LT;
-        let YT = .5 - BT * BT - ZT * ZT;
-        if (YT >= 0) {
-          const TT = 3 * mT[OT + MT[eT]];
-          YT *= YT, gT = YT * YT * (kT[TT] * BT + kT[TT + 1] * ZT)
+      noise2D(BB, jB) {
+        const zB = this.permMod12,
+          dB = this.perm;
+        let IB = 0,
+          NB = 0,
+          uB = 0;
+        const aB = (BB + jB) * QB,
+          pB = Math.floor(BB + aB),
+          rB = Math.floor(jB + aB),
+          sB = (pB + rB) * nB,
+          JB = BB - (pB - sB),
+          mB = jB - (rB - sB);
+        let yB, kB;
+        JB > mB ? (yB = 1, kB = 0) : (yB = 0, kB = 1);
+        const GB = JB - yB + nB,
+          LB = mB - kB + nB,
+          gB = JB - 1 + 2 * nB,
+          tB = mB - 1 + 2 * nB,
+          SB = 255 & pB,
+          MB = 255 & rB;
+        let EB = .5 - JB * JB - mB * mB;
+        if (EB >= 0) {
+          const BB = 3 * zB[SB + dB[MB]];
+          EB *= EB, IB = EB * EB * (UB[BB] * JB + UB[BB + 1] * mB)
         }
-        let JT = .5 - fT * fT - qT * qT;
-        if (JT >= 0) {
-          const TT = 3 * mT[OT + cT + MT[eT + vT]];
-          JT *= JT, nT = JT * JT * (kT[TT] * fT + kT[TT + 1] * qT)
+        let iB = .5 - GB * GB - LB * LB;
+        if (iB >= 0) {
+          const BB = 3 * zB[SB + yB + dB[MB + kB]];
+          iB *= iB, NB = iB * iB * (UB[BB] * GB + UB[BB + 1] * LB)
         }
-        let xT = .5 - iT * iT - bT * bT;
-        if (xT >= 0) {
-          const TT = 3 * mT[OT + 1 + MT[eT + 1]];
-          xT *= xT, HT = xT * xT * (kT[TT] * iT + kT[TT + 1] * bT)
+        let qB = .5 - gB * gB - tB * tB;
+        if (qB >= 0) {
+          const BB = 3 * zB[SB + 1 + dB[MB + 1]];
+          qB *= qB, uB = qB * qB * (UB[BB] * gB + UB[BB + 1] * tB)
         }
-        return 70 * (gT + nT + HT)
+        return 70 * (IB + NB + uB)
       }
-      noise3D(TT, UT, mT) {
-        const WT = this.permMod12,
-          zT = this.perm;
-        let nT, HT, jT, lT;
-        const LT = (TT + UT + mT) * MT,
-          pT = Math.floor(TT + LT),
-          BT = Math.floor(UT + LT),
-          ZT = Math.floor(mT + LT),
-          cT = (pT + BT + ZT) * gT,
-          vT = TT - (pT - cT),
-          fT = UT - (BT - cT),
-          qT = mT - (ZT - cT);
-        let iT, bT, OT, eT, YT, JT;
-        vT >= fT ? fT >= qT ? (iT = 1, bT = 0, OT = 0, eT = 1, YT = 1, JT = 0) : vT >= qT ? (iT = 1, bT = 0, OT = 0, eT = 1, YT = 0, JT = 1) : (iT = 0, bT = 0, OT = 1, eT = 1, YT = 0, JT = 1) : fT < qT ? (iT = 0, bT = 0, OT = 1, eT = 0, YT = 1, JT = 1) : vT < qT ? (iT = 0, bT = 1, OT = 0, eT = 0, YT = 1, JT = 1) : (iT = 0, bT = 1, OT = 0, eT = 1, YT = 1, JT = 0);
-        const xT = vT - iT + gT,
-          dT = fT - bT + gT,
-          wT = qT - OT + gT,
-          tT = vT - eT + 2 * gT,
-          aT = fT - YT + 2 * gT,
-          yT = qT - JT + 2 * gT,
-          XT = vT - 1 + .5,
-          IT = fT - 1 + .5,
-          QT = qT - 1 + .5,
-          sT = 255 & pT,
-          FT = 255 & BT,
-          PT = 255 & ZT;
-        let VT = .6 - vT * vT - fT * fT - qT * qT;
-        if (VT < 0) nT = 0;
+      noise3D(BB, jB, zB) {
+        const QB = this.permMod12,
+          nB = this.perm;
+        let NB, uB, aB, pB;
+        const rB = (BB + jB + zB) * dB,
+          sB = Math.floor(BB + rB),
+          JB = Math.floor(jB + rB),
+          mB = Math.floor(zB + rB),
+          yB = (sB + JB + mB) * IB,
+          kB = BB - (sB - yB),
+          GB = jB - (JB - yB),
+          LB = zB - (mB - yB);
+        let gB, tB, SB, MB, EB, iB;
+        kB >= GB ? GB >= LB ? (gB = 1, tB = 0, SB = 0, MB = 1, EB = 1, iB = 0) : kB >= LB ? (gB = 1, tB = 0, SB = 0, MB = 1, EB = 0, iB = 1) : (gB = 0, tB = 0, SB = 1, MB = 1, EB = 0, iB = 1) : GB < LB ? (gB = 0, tB = 0, SB = 1, MB = 0, EB = 1, iB = 1) : kB < LB ? (gB = 0, tB = 1, SB = 0, MB = 0, EB = 1, iB = 1) : (gB = 0, tB = 1, SB = 0, MB = 1, EB = 1, iB = 0);
+        const qB = kB - gB + IB,
+          fB = GB - tB + IB,
+          oB = LB - SB + IB,
+          HB = kB - MB + 2 * IB,
+          DB = GB - EB + 2 * IB,
+          FB = LB - iB + 2 * IB,
+          YB = kB - 1 + .5,
+          VB = GB - 1 + .5,
+          hB = LB - 1 + .5,
+          XB = 255 & sB,
+          ZB = 255 & JB,
+          AB = 255 & mB;
+        let TB = .6 - kB * kB - GB * GB - LB * LB;
+        if (TB < 0) NB = 0;
         else {
-          const TT = 3 * WT[sT + zT[FT + zT[PT]]];
-          VT *= VT, nT = VT * VT * (kT[TT] * vT + kT[TT + 1] * fT + kT[TT + 2] * qT)
+          const BB = 3 * QB[XB + nB[ZB + nB[AB]]];
+          TB *= TB, NB = TB * TB * (UB[BB] * kB + UB[BB + 1] * GB + UB[BB + 2] * LB)
         }
-        let uT = .6 - xT * xT - dT * dT - wT * wT;
-        if (uT < 0) HT = 0;
+        let PB = .6 - qB * qB - fB * fB - oB * oB;
+        if (PB < 0) uB = 0;
         else {
-          const TT = 3 * WT[sT + iT + zT[FT + bT + zT[PT + OT]]];
-          uT *= uT, HT = uT * uT * (kT[TT] * xT + kT[TT + 1] * dT + kT[TT + 2] * wT)
+          const BB = 3 * QB[XB + gB + nB[ZB + tB + nB[AB + SB]]];
+          PB *= PB, uB = PB * PB * (UB[BB] * qB + UB[BB + 1] * fB + UB[BB + 2] * oB)
         }
-        let CT = .6 - tT * tT - aT * aT - yT * yT;
-        if (CT < 0) jT = 0;
+        let WB = .6 - HB * HB - DB * DB - FB * FB;
+        if (WB < 0) aB = 0;
         else {
-          const TT = 3 * WT[sT + eT + zT[FT + YT + zT[PT + JT]]];
-          CT *= CT, jT = CT * CT * (kT[TT] * tT + kT[TT + 1] * aT + kT[TT + 2] * yT)
+          const BB = 3 * QB[XB + MB + nB[ZB + EB + nB[AB + iB]]];
+          WB *= WB, aB = WB * WB * (UB[BB] * HB + UB[BB + 1] * DB + UB[BB + 2] * FB)
         }
-        let rT = .6 - XT * XT - IT * IT - QT * QT;
-        if (rT < 0) lT = 0;
+        let eB = .6 - YB * YB - VB * VB - hB * hB;
+        if (eB < 0) pB = 0;
         else {
-          const TT = 3 * WT[sT + 1 + zT[FT + 1 + zT[PT + 1]]];
-          rT *= rT, lT = rT * rT * (kT[TT] * XT + kT[TT + 1] * IT + kT[TT + 2] * QT)
+          const BB = 3 * QB[XB + 1 + nB[ZB + 1 + nB[AB + 1]]];
+          eB *= eB, pB = eB * eB * (UB[BB] * YB + UB[BB + 1] * VB + UB[BB + 2] * hB)
         }
-        return 32 * (nT + HT + jT + lT)
+        return 32 * (NB + uB + aB + pB)
       }
-      noise4D(TT, UT, mT, WT) {
-        const zT = this.perm;
-        let MT, gT, kT, lT, LT;
-        const pT = (TT + UT + mT + WT) * nT,
-          BT = Math.floor(TT + pT),
-          ZT = Math.floor(UT + pT),
-          cT = Math.floor(mT + pT),
-          vT = Math.floor(WT + pT),
-          fT = (BT + ZT + cT + vT) * HT,
-          qT = TT - (BT - fT),
-          iT = UT - (ZT - fT),
-          bT = mT - (cT - fT),
-          OT = WT - (vT - fT);
-        let eT = 0,
-          YT = 0,
-          JT = 0,
-          xT = 0;
-        qT > iT ? eT++ : YT++, qT > bT ? eT++ : JT++, qT > OT ? eT++ : xT++, iT > bT ? YT++ : JT++, iT > OT ? YT++ : xT++, bT > OT ? JT++ : xT++;
-        const dT = eT >= 3 ? 1 : 0,
-          wT = YT >= 3 ? 1 : 0,
-          tT = JT >= 3 ? 1 : 0,
-          aT = xT >= 3 ? 1 : 0,
-          yT = eT >= 2 ? 1 : 0,
-          XT = YT >= 2 ? 1 : 0,
-          IT = JT >= 2 ? 1 : 0,
-          QT = xT >= 2 ? 1 : 0,
-          sT = eT >= 1 ? 1 : 0,
-          FT = YT >= 1 ? 1 : 0,
-          PT = JT >= 1 ? 1 : 0,
-          VT = xT >= 1 ? 1 : 0,
-          uT = qT - dT + HT,
-          CT = iT - wT + HT,
-          rT = bT - tT + HT,
-          KT = OT - aT + HT,
-          ST = qT - yT + 2 * HT,
-          GT = iT - XT + 2 * HT,
-          NT = bT - IT + 2 * HT,
-          ET = OT - QT + 2 * HT,
-          hT = qT - sT + 3 * HT,
-          DT = iT - FT + 3 * HT,
-          oT = bT - PT + 3 * HT,
-          AT = OT - VT + 3 * HT,
-          RT = qT - 1 + 4 * HT,
-          TU = iT - 1 + 4 * HT,
-          UU = bT - 1 + 4 * HT,
-          mU = OT - 1 + 4 * HT,
-          WU = 255 & BT,
-          zU = 255 & ZT,
-          MU = 255 & cT,
-          gU = 255 & vT;
-        let nU = .6 - qT * qT - iT * iT - bT * bT - OT * OT;
-        if (nU < 0) MT = 0;
+      noise4D(BB, jB, zB, QB) {
+        const nB = this.perm;
+        let dB, IB, UB, pB, rB;
+        const sB = (BB + jB + zB + QB) * NB,
+          JB = Math.floor(BB + sB),
+          mB = Math.floor(jB + sB),
+          yB = Math.floor(zB + sB),
+          kB = Math.floor(QB + sB),
+          GB = (JB + mB + yB + kB) * uB,
+          LB = BB - (JB - GB),
+          gB = jB - (mB - GB),
+          tB = zB - (yB - GB),
+          SB = QB - (kB - GB);
+        let MB = 0,
+          EB = 0,
+          iB = 0,
+          qB = 0;
+        LB > gB ? MB++ : EB++, LB > tB ? MB++ : iB++, LB > SB ? MB++ : qB++, gB > tB ? EB++ : iB++, gB > SB ? EB++ : qB++, tB > SB ? iB++ : qB++;
+        const fB = MB >= 3 ? 1 : 0,
+          oB = EB >= 3 ? 1 : 0,
+          HB = iB >= 3 ? 1 : 0,
+          DB = qB >= 3 ? 1 : 0,
+          FB = MB >= 2 ? 1 : 0,
+          YB = EB >= 2 ? 1 : 0,
+          VB = iB >= 2 ? 1 : 0,
+          hB = qB >= 2 ? 1 : 0,
+          XB = MB >= 1 ? 1 : 0,
+          ZB = EB >= 1 ? 1 : 0,
+          AB = iB >= 1 ? 1 : 0,
+          TB = qB >= 1 ? 1 : 0,
+          PB = LB - fB + uB,
+          WB = gB - oB + uB,
+          eB = tB - HB + uB,
+          lB = SB - DB + uB,
+          wB = LB - FB + 2 * uB,
+          xB = gB - YB + 2 * uB,
+          KB = tB - VB + 2 * uB,
+          CB = SB - hB + 2 * uB,
+          cB = LB - XB + 3 * uB,
+          bB = gB - ZB + 3 * uB,
+          vB = tB - AB + 3 * uB,
+          RB = SB - TB + 3 * uB,
+          OB = LB - 1 + 4 * uB,
+          Bj = gB - 1 + 4 * uB,
+          jj = tB - 1 + 4 * uB,
+          zj = SB - 1 + 4 * uB,
+          Qj = 255 & JB,
+          nj = 255 & mB,
+          dj = 255 & yB,
+          Ij = 255 & kB;
+        let Nj = .6 - LB * LB - gB * gB - tB * tB - SB * SB;
+        if (Nj < 0) dB = 0;
         else {
-          const TT = zT[WU + zT[zU + zT[MU + zT[gU]]]] % 32 * 4;
-          nU *= nU, MT = nU * nU * (jT[TT] * qT + jT[TT + 1] * iT + jT[TT + 2] * bT + jT[TT + 3] * OT)
+          const BB = nB[Qj + nB[nj + nB[dj + nB[Ij]]]] % 32 * 4;
+          Nj *= Nj, dB = Nj * Nj * (aB[BB] * LB + aB[BB + 1] * gB + aB[BB + 2] * tB + aB[BB + 3] * SB)
         }
-        let HU = .6 - uT * uT - CT * CT - rT * rT - KT * KT;
-        if (HU < 0) gT = 0;
+        let uj = .6 - PB * PB - WB * WB - eB * eB - lB * lB;
+        if (uj < 0) IB = 0;
         else {
-          const TT = zT[WU + dT + zT[zU + wT + zT[MU + tT + zT[gU + aT]]]] % 32 * 4;
-          HU *= HU, gT = HU * HU * (jT[TT] * uT + jT[TT + 1] * CT + jT[TT + 2] * rT + jT[TT + 3] * KT)
+          const BB = nB[Qj + fB + nB[nj + oB + nB[dj + HB + nB[Ij + DB]]]] % 32 * 4;
+          uj *= uj, IB = uj * uj * (aB[BB] * PB + aB[BB + 1] * WB + aB[BB + 2] * eB + aB[BB + 3] * lB)
         }
-        let kU = .6 - ST * ST - GT * GT - NT * NT - ET * ET;
-        if (kU < 0) kT = 0;
+        let Uj = .6 - wB * wB - xB * xB - KB * KB - CB * CB;
+        if (Uj < 0) UB = 0;
         else {
-          const TT = zT[WU + yT + zT[zU + XT + zT[MU + IT + zT[gU + QT]]]] % 32 * 4;
-          kU *= kU, kT = kU * kU * (jT[TT] * ST + jT[TT + 1] * GT + jT[TT + 2] * NT + jT[TT + 3] * ET)
+          const BB = nB[Qj + FB + nB[nj + YB + nB[dj + VB + nB[Ij + hB]]]] % 32 * 4;
+          Uj *= Uj, UB = Uj * Uj * (aB[BB] * wB + aB[BB + 1] * xB + aB[BB + 2] * KB + aB[BB + 3] * CB)
         }
-        let jU = .6 - hT * hT - DT * DT - oT * oT - AT * AT;
-        if (jU < 0) lT = 0;
+        let aj = .6 - cB * cB - bB * bB - vB * vB - RB * RB;
+        if (aj < 0) pB = 0;
         else {
-          const TT = zT[WU + sT + zT[zU + FT + zT[MU + PT + zT[gU + VT]]]] % 32 * 4;
-          jU *= jU, lT = jU * jU * (jT[TT] * hT + jT[TT + 1] * DT + jT[TT + 2] * oT + jT[TT + 3] * AT)
+          const BB = nB[Qj + XB + nB[nj + ZB + nB[dj + AB + nB[Ij + TB]]]] % 32 * 4;
+          aj *= aj, pB = aj * aj * (aB[BB] * cB + aB[BB + 1] * bB + aB[BB + 2] * vB + aB[BB + 3] * RB)
         }
-        let lU = .6 - RT * RT - TU * TU - UU * UU - mU * mU;
-        if (lU < 0) LT = 0;
+        let pj = .6 - OB * OB - Bj * Bj - jj * jj - zj * zj;
+        if (pj < 0) rB = 0;
         else {
-          const TT = zT[WU + 1 + zT[zU + 1 + zT[MU + 1 + zT[gU + 1]]]] % 32 * 4;
-          lU *= lU, LT = lU * lU * (jT[TT] * RT + jT[TT + 1] * TU + jT[TT + 2] * UU + jT[TT + 3] * mU)
+          const BB = nB[Qj + 1 + nB[nj + 1 + nB[dj + 1 + nB[Ij + 1]]]] % 32 * 4;
+          pj *= pj, rB = pj * pj * (aB[BB] * OB + aB[BB + 1] * Bj + aB[BB + 2] * jj + aB[BB + 3] * zj)
         }
-        return 27 * (MT + gT + kT + lT + LT)
+        return 27 * (dB + IB + UB + pB + rB)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);

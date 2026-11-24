@@ -1,39 +1,39 @@
 export const id = 237;
 export const ids = [237];
 export const modules = {
-  37367: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => lT,
-      g: () => LT,
-      k: () => ZT,
-      m: () => pT
+  37379: (BB, jB, zB) => {
+    zB.d(jB, {
+      d: () => pB,
+      g: () => rB,
+      k: () => mB,
+      o: () => sB
     });
-    var WT = mT(37205),
-      zT = mT(37196),
-      MT = mT(37226),
-      gT = mT(37239);
+    var QB = zB(37186),
+      nB = zB(37178),
+      dB = zB(37208),
+      IB = zB(37222);
 
-    function nT(TT) {
-      return Math.pow(TT, zT.f)
+    function NB(BB) {
+      return Math.pow(BB, nB.h)
     }
 
-    function HT(TT) {
-      return TT <= .04045 ? .0773993808 * TT : Math.pow(.947867299 * (TT + .055), 2.4)
+    function uB(BB) {
+      return BB <= .04045 ? .0773993808 * BB : Math.pow(.947867299 * (BB + .055), 2.4)
     }
 
-    function kT(TT) {
-      return Math.pow(TT, zT.d)
+    function UB(BB) {
+      return Math.pow(BB, nB.g)
     }
 
-    function jT(TT) {
-      return TT <= .0031308 ? 12.92 * TT : 1.055 * Math.pow(TT, .41666) - .055
+    function aB(BB) {
+      return BB <= .0031308 ? 12.92 * BB : 1.055 * Math.pow(BB, .41666) - .055
     }
-    class lT {
+    class pB {
       constructor() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.r = TT, this.g = UT, this.b = mT
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.r = BB, this.g = jB, this.b = zB
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + "}"
@@ -42,416 +42,416 @@ export const modules = {
         return "Color3"
       }
       getHashCode() {
-        let TT = 255 * this.r | 0;
-        return TT = 397 * TT ^ 255 * this.g, TT = 397 * TT ^ 255 * this.b, TT
+        let BB = 255 * this.r | 0;
+        return BB = 397 * BB ^ 255 * this.g, BB = 397 * BB ^ 255 * this.b, BB
       }
-      toArray(TT) {
-        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return TT[UT] = this.r, TT[UT + 1] = this.g, TT[UT + 2] = this.b, this
+      toArray(BB) {
+        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return BB[jB] = this.r, BB[jB + 1] = this.g, BB[jB + 2] = this.b, this
       }
-      MmT(TT) {
-        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return lT.FromArrayToRef(TT, UT, this), this
+      ljB(BB) {
+        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return pB.FromArrayToRef(BB, jB, this), this
       }
       toColor4() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        return new LT(this.r, this.g, this.b, TT)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        return new rB(this.r, this.g, this.b, BB)
       }
-      cWT() {
+      nQB() {
         return [this.r, this.g, this.b]
       }
       toLuminance() {
         return .3 * this.r + .59 * this.g + .11 * this.b
       }
-      multiply(TT) {
-        return new lT(this.r * TT.r, this.g * TT.g, this.b * TT.b)
+      multiply(BB) {
+        return new pB(this.r * BB.r, this.g * BB.g, this.b * BB.b)
       }
-      multiplyToRef(TT, UT) {
-        return UT.r = this.r * TT.r, UT.g = this.g * TT.g, UT.b = this.b * TT.b, UT
+      multiplyToRef(BB, jB) {
+        return jB.r = this.r * BB.r, jB.g = this.g * BB.g, jB.b = this.b * BB.b, jB
       }
-      multiplyInPlace(TT) {
-        return this.r *= TT.r, this.g *= TT.g, this.b *= TT.b, this
+      multiplyInPlace(BB) {
+        return this.r *= BB.r, this.g *= BB.g, this.b *= BB.b, this
       }
-      multiplyByFloats(TT, UT, mT) {
-        return new lT(this.r * TT, this.g * UT, this.b * mT)
+      multiplyByFloats(BB, jB, zB) {
+        return new pB(this.r * BB, this.g * jB, this.b * zB)
       }
-      divide(TT) {
+      divide(BB) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(TT, UT) {
+      divideToRef(BB, jB) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(TT) {
+      divideInPlace(BB) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(TT) {
-        return this.minimizeInPlaceFromFloats(TT.r, TT.g, TT.b)
+      minimizeInPlace(BB) {
+        return this.minimizeInPlaceFromFloats(BB.r, BB.g, BB.b)
       }
-      maximizeInPlace(TT) {
-        return this.maximizeInPlaceFromFloats(TT.r, TT.g, TT.b)
+      maximizeInPlace(BB) {
+        return this.maximizeInPlaceFromFloats(BB.r, BB.g, BB.b)
       }
-      minimizeInPlaceFromFloats(TT, UT, mT) {
-        return this.r = Math.min(TT, this.r), this.g = Math.min(UT, this.g), this.b = Math.min(mT, this.b), this
+      minimizeInPlaceFromFloats(BB, jB, zB) {
+        return this.r = Math.min(BB, this.r), this.g = Math.min(jB, this.g), this.b = Math.min(zB, this.b), this
       }
-      maximizeInPlaceFromFloats(TT, UT, mT) {
-        return this.r = Math.max(TT, this.r), this.g = Math.max(UT, this.g), this.b = Math.max(mT, this.b), this
+      maximizeInPlaceFromFloats(BB, jB, zB) {
+        return this.r = Math.max(BB, this.r), this.g = Math.max(jB, this.g), this.b = Math.max(zB, this.b), this
       }
-      floorToRef(TT) {
+      floorToRef(BB) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(TT) {
+      fractToRef(BB) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      equals(TT) {
-        return TT && this.r === TT.r && this.g === TT.g && this.b === TT.b
+      equals(BB) {
+        return BB && this.r === BB.r && this.g === BB.g && this.b === BB.b
       }
-      equalsFloats(TT, UT, mT) {
-        return this.UnT(TT, UT, mT)
+      equalsFloats(BB, jB, zB) {
+        return this.YIB(BB, jB, zB)
       }
-      UnT(TT, UT, mT) {
-        return this.r === TT && this.g === UT && this.b === mT
+      YIB(BB, jB, zB) {
+        return this.r === BB && this.g === jB && this.b === zB
       }
-      equalsWithEpsilon(TT) {
-        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zT.c;
-        return (0, MT.WithinEpsilon)(this.r, TT.r, UT) && (0, MT.WithinEpsilon)(this.g, TT.g, UT) && (0, MT.WithinEpsilon)(this.b, TT.b, UT)
+      equalsWithEpsilon(BB) {
+        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nB.c;
+        return (0, dB.WithinEpsilon)(this.r, BB.r, jB) && (0, dB.WithinEpsilon)(this.g, BB.g, jB) && (0, dB.WithinEpsilon)(this.b, BB.b, jB)
       }
-      ck() {
+      bu() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(TT) {
+      negateToRef(BB) {
         throw new ReferenceError("Can not negate a color")
       }
-      scale(TT) {
-        return new lT(this.r * TT, this.g * TT, this.b * TT)
+      scale(BB) {
+        return new pB(this.r * BB, this.g * BB, this.b * BB)
       }
-      scaleInPlace(TT) {
-        return this.r *= TT, this.g *= TT, this.b *= TT, this
+      scaleInPlace(BB) {
+        return this.r *= BB, this.g *= BB, this.b *= BB, this
       }
-      scaleToRef(TT, UT) {
-        return UT.r = this.r * TT, UT.g = this.g * TT, UT.b = this.b * TT, UT
+      scaleToRef(BB, jB) {
+        return jB.r = this.r * BB, jB.g = this.g * BB, jB.b = this.b * BB, jB
       }
-      scaleAndAddToRef(TT, UT) {
-        return UT.r += this.r * TT, UT.g += this.g * TT, UT.b += this.b * TT, UT
+      scaleAndAddToRef(BB, jB) {
+        return jB.r += this.r * BB, jB.g += this.g * BB, jB.b += this.b * BB, jB
       }
       clampToRef() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          mT = arguments.length > 2 ? arguments[2] : void 0;
-        return mT.r = (0, MT.Clamp)(this.r, TT, UT), mT.g = (0, MT.Clamp)(this.g, TT, UT), mT.b = (0, MT.Clamp)(this.b, TT, UT), mT
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          zB = arguments.length > 2 ? arguments[2] : void 0;
+        return zB.r = (0, dB.Clamp)(this.r, BB, jB), zB.g = (0, dB.Clamp)(this.g, BB, jB), zB.b = (0, dB.Clamp)(this.b, BB, jB), zB
       }
-      add(TT) {
-        return new lT(this.r + TT.r, this.g + TT.g, this.b + TT.b)
+      add(BB) {
+        return new pB(this.r + BB.r, this.g + BB.g, this.b + BB.b)
       }
-      addInPlace(TT) {
-        return this.r += TT.r, this.g += TT.g, this.b += TT.b, this
+      addInPlace(BB) {
+        return this.r += BB.r, this.g += BB.g, this.b += BB.b, this
       }
-      addInPlaceFromFloats(TT, UT, mT) {
-        return this.r += TT, this.g += UT, this.b += mT, this
+      addInPlaceFromFloats(BB, jB, zB) {
+        return this.r += BB, this.g += jB, this.b += zB, this
       }
-      addToRef(TT, UT) {
-        return UT.r = this.r + TT.r, UT.g = this.g + TT.g, UT.b = this.b + TT.b, UT
+      addToRef(BB, jB) {
+        return jB.r = this.r + BB.r, jB.g = this.g + BB.g, jB.b = this.b + BB.b, jB
       }
-      subtract(TT) {
-        return new lT(this.r - TT.r, this.g - TT.g, this.b - TT.b)
+      subtract(BB) {
+        return new pB(this.r - BB.r, this.g - BB.g, this.b - BB.b)
       }
-      subtractToRef(TT, UT) {
-        return UT.r = this.r - TT.r, UT.g = this.g - TT.g, UT.b = this.b - TT.b, UT
+      subtractToRef(BB, jB) {
+        return jB.r = this.r - BB.r, jB.g = this.g - BB.g, jB.b = this.b - BB.b, jB
       }
-      FWT(TT) {
-        return this.r -= TT.r, this.g -= TT.g, this.b -= TT.b, this
+      MQB(BB) {
+        return this.r -= BB.r, this.g -= BB.g, this.b -= BB.b, this
       }
-      subtractFromFloats(TT, UT, mT) {
-        return new lT(this.r - TT, this.g - UT, this.b - mT)
+      subtractFromFloats(BB, jB, zB) {
+        return new pB(this.r - BB, this.g - jB, this.b - zB)
       }
-      subtractFromFloatsToRef(TT, UT, mT, WT) {
-        return WT.r = this.r - TT, WT.g = this.g - UT, WT.b = this.b - mT, WT
+      subtractFromFloatsToRef(BB, jB, zB, QB) {
+        return QB.r = this.r - BB, QB.g = this.g - jB, QB.b = this.b - zB, QB
       }
       clone() {
-        return new lT(this.r, this.g, this.b)
+        return new pB(this.r, this.g, this.b)
       }
-      Gw(TT) {
-        return this.r = TT.r, this.g = TT.g, this.b = TT.b, this
+      jH(BB) {
+        return this.r = BB.r, this.g = BB.g, this.b = BB.b, this
       }
-      J9(TT, UT, mT) {
-        return this.r = TT, this.g = UT, this.b = mT, this
+      U3(BB, jB, zB) {
+        return this.r = BB, this.g = jB, this.b = zB, this
       }
-      set(TT, UT, mT) {
-        return this.J9(TT, UT, mT)
+      set(BB, jB, zB) {
+        return this.U3(BB, jB, zB)
       }
-      B3(TT) {
-        return this.r = this.g = this.b = TT, this
+      S_(BB) {
+        return this.r = this.g = this.b = BB, this
       }
       toHexString() {
-        const TT = Math.round(255 * this.r),
-          UT = Math.round(255 * this.g),
-          mT = Math.round(255 * this.b);
-        return "#" + (0, MT.ToHex)(TT) + (0, MT.ToHex)(UT) + (0, MT.ToHex)(mT)
+        const BB = Math.round(255 * this.r),
+          jB = Math.round(255 * this.g),
+          zB = Math.round(255 * this.b);
+        return "#" + (0, dB.ToHex)(BB) + (0, dB.ToHex)(jB) + (0, dB.ToHex)(zB)
       }
-      fromHexString(TT) {
-        return "#" !== TT.substring(0, 1) || 7 !== TT.length || (this.r = parseInt(TT.substring(1, 3), 16) / 255, this.g = parseInt(TT.substring(3, 5), 16) / 255, this.b = parseInt(TT.substring(5, 7), 16) / 255), this
+      fromHexString(BB) {
+        return "#" !== BB.substring(0, 1) || 7 !== BB.length || (this.r = parseInt(BB.substring(1, 3), 16) / 255, this.g = parseInt(BB.substring(3, 5), 16) / 255, this.b = parseInt(BB.substring(5, 7), 16) / 255), this
       }
       toHSV() {
-        return this.toHSVToRef(new lT)
+        return this.toHSVToRef(new pB)
       }
-      toHSVToRef(TT) {
-        const UT = this.r,
-          mT = this.g,
-          WT = this.b,
-          zT = Math.max(UT, mT, WT),
-          MT = Math.min(UT, mT, WT);
-        let gT = 0,
-          nT = 0;
-        const HT = zT,
-          kT = zT - MT;
-        return 0 !== zT && (nT = kT / zT), zT != MT && (zT == UT ? (gT = (mT - WT) / kT, mT < WT && (gT += 6)) : zT == mT ? gT = (WT - UT) / kT + 2 : zT == WT && (gT = (UT - mT) / kT + 4), gT *= 60), TT.r = gT, TT.g = nT, TT.b = HT, TT
+      toHSVToRef(BB) {
+        const jB = this.r,
+          zB = this.g,
+          QB = this.b,
+          nB = Math.max(jB, zB, QB),
+          dB = Math.min(jB, zB, QB);
+        let IB = 0,
+          NB = 0;
+        const uB = nB,
+          UB = nB - dB;
+        return 0 !== nB && (NB = UB / nB), nB != dB && (nB == jB ? (IB = (zB - QB) / UB, zB < QB && (IB += 6)) : nB == zB ? IB = (QB - jB) / UB + 2 : nB == QB && (IB = (jB - zB) / UB + 4), IB *= 60), BB.r = IB, BB.g = NB, BB.b = uB, BB
       }
       toLinearSpace() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const UT = new lT;
-        return this.toLinearSpaceToRef(UT, TT), UT
+        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const jB = new pB;
+        return this.toLinearSpaceToRef(jB, BB), jB
       }
-      toLinearSpaceToRef(TT) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = HT(this.r), TT.g = HT(this.g), TT.b = HT(this.b)) : (TT.r = nT(this.r), TT.g = nT(this.g), TT.b = nT(this.b)), this
+      toLinearSpaceToRef(BB) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (BB.r = uB(this.r), BB.g = uB(this.g), BB.b = uB(this.b)) : (BB.r = NB(this.r), BB.g = NB(this.g), BB.b = NB(this.b)), this
       }
       toGammaSpace() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const UT = new lT;
-        return this.toGammaSpaceToRef(UT, TT), UT
+        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const jB = new pB;
+        return this.toGammaSpaceToRef(jB, BB), jB
       }
-      toGammaSpaceToRef(TT) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = jT(this.r), TT.g = jT(this.g), TT.b = jT(this.b)) : (TT.r = kT(this.r), TT.g = kT(this.g), TT.b = kT(this.b)), this
+      toGammaSpaceToRef(BB) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (BB.r = aB(this.r), BB.g = aB(this.g), BB.b = aB(this.b)) : (BB.r = UB(this.r), BB.g = UB(this.g), BB.b = UB(this.b)), this
       }
-      static HSVtoRGBToRef(TT, UT, mT, WT) {
-        const zT = mT * UT,
-          MT = TT / 60,
-          gT = zT * (1 - Math.abs(MT % 2 - 1));
-        let nT = 0,
-          HT = 0,
-          kT = 0;
-        MT >= 0 && MT <= 1 ? (nT = zT, HT = gT) : MT >= 1 && MT <= 2 ? (nT = gT, HT = zT) : MT >= 2 && MT <= 3 ? (HT = zT, kT = gT) : MT >= 3 && MT <= 4 ? (HT = gT, kT = zT) : MT >= 4 && MT <= 5 ? (nT = gT, kT = zT) : MT >= 5 && MT <= 6 && (nT = zT, kT = gT);
-        const jT = mT - zT;
-        return WT.r = nT + jT, WT.g = HT + jT, WT.b = kT + jT, WT
+      static HSVtoRGBToRef(BB, jB, zB, QB) {
+        const nB = zB * jB,
+          dB = BB / 60,
+          IB = nB * (1 - Math.abs(dB % 2 - 1));
+        let NB = 0,
+          uB = 0,
+          UB = 0;
+        dB >= 0 && dB <= 1 ? (NB = nB, uB = IB) : dB >= 1 && dB <= 2 ? (NB = IB, uB = nB) : dB >= 2 && dB <= 3 ? (uB = nB, UB = IB) : dB >= 3 && dB <= 4 ? (uB = IB, UB = nB) : dB >= 4 && dB <= 5 ? (NB = IB, UB = nB) : dB >= 5 && dB <= 6 && (NB = nB, UB = IB);
+        const aB = zB - nB;
+        return QB.r = NB + aB, QB.g = uB + aB, QB.b = UB + aB, QB
       }
-      static FromHSV(TT, UT, mT) {
-        const WT = new lT(0, 0, 0);
-        return lT.HSVtoRGBToRef(TT, UT, mT, WT), WT
+      static FromHSV(BB, jB, zB) {
+        const QB = new pB(0, 0, 0);
+        return pB.HSVtoRGBToRef(BB, jB, zB, QB), QB
       }
-      static FromHexString(TT) {
-        return new lT(0, 0, 0).fromHexString(TT)
+      static FromHexString(BB) {
+        return new pB(0, 0, 0).fromHexString(BB)
       }
-      static FromArray(TT) {
-        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new lT(TT[UT], TT[UT + 1], TT[UT + 2])
+      static FromArray(BB) {
+        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new pB(BB[jB], BB[jB + 1], BB[jB + 2])
       }
-      static FromArrayToRef(TT) {
-        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          mT = arguments.length > 2 ? arguments[2] : void 0;
-        mT.r = TT[UT], mT.g = TT[UT + 1], mT.b = TT[UT + 2]
+      static FromArrayToRef(BB) {
+        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          zB = arguments.length > 2 ? arguments[2] : void 0;
+        zB.r = BB[jB], zB.g = BB[jB + 1], zB.b = BB[jB + 2]
       }
-      static FromInts(TT, UT, mT) {
-        return new lT(TT / 255, UT / 255, mT / 255)
+      static FromInts(BB, jB, zB) {
+        return new pB(BB / 255, jB / 255, zB / 255)
       }
-      static Lerp(TT, UT, mT) {
-        const WT = new lT(0, 0, 0);
-        return lT.LerpToRef(TT, UT, mT, WT), WT
+      static Lerp(BB, jB, zB) {
+        const QB = new pB(0, 0, 0);
+        return pB.LerpToRef(BB, jB, zB, QB), QB
       }
-      static LerpToRef(TT, UT, mT, WT) {
-        WT.r = TT.r + (UT.r - TT.r) * mT, WT.g = TT.g + (UT.g - TT.g) * mT, WT.b = TT.b + (UT.b - TT.b) * mT
+      static LerpToRef(BB, jB, zB, QB) {
+        QB.r = BB.r + (jB.r - BB.r) * zB, QB.g = BB.g + (jB.g - BB.g) * zB, QB.b = BB.b + (jB.b - BB.b) * zB
       }
-      static Hermite(TT, UT, mT, WT, zT) {
-        const MT = zT * zT,
-          gT = zT * MT,
-          nT = 2 * gT - 3 * MT + 1,
-          HT = -2 * gT + 3 * MT,
-          kT = gT - 2 * MT + zT,
-          jT = gT - MT,
-          LT = TT.r * nT + mT.r * HT + UT.r * kT + WT.r * jT,
-          pT = TT.g * nT + mT.g * HT + UT.g * kT + WT.g * jT,
-          BT = TT.b * nT + mT.b * HT + UT.b * kT + WT.b * jT;
-        return new lT(LT, pT, BT)
+      static Hermite(BB, jB, zB, QB, nB) {
+        const dB = nB * nB,
+          IB = nB * dB,
+          NB = 2 * IB - 3 * dB + 1,
+          uB = -2 * IB + 3 * dB,
+          UB = IB - 2 * dB + nB,
+          aB = IB - dB,
+          rB = BB.r * NB + zB.r * uB + jB.r * UB + QB.r * aB,
+          sB = BB.g * NB + zB.g * uB + jB.g * UB + QB.g * aB,
+          JB = BB.b * NB + zB.b * uB + jB.b * UB + QB.b * aB;
+        return new pB(rB, sB, JB)
       }
-      static Hermite1stDerivative(TT, UT, mT, WT, zT) {
-        const MT = lT.Black();
-        return this.Hermite1stDerivativeToRef(TT, UT, mT, WT, zT, MT), MT
+      static Hermite1stDerivative(BB, jB, zB, QB, nB) {
+        const dB = pB.Black();
+        return this.Hermite1stDerivativeToRef(BB, jB, zB, QB, nB, dB), dB
       }
-      static Hermite1stDerivativeToRef(TT, UT, mT, WT, zT, MT) {
-        const gT = zT * zT;
-        MT.r = 6 * (gT - zT) * TT.r + (3 * gT - 4 * zT + 1) * UT.r + 6 * (-gT + zT) * mT.r + (3 * gT - 2 * zT) * WT.r, MT.g = 6 * (gT - zT) * TT.g + (3 * gT - 4 * zT + 1) * UT.g + 6 * (-gT + zT) * mT.g + (3 * gT - 2 * zT) * WT.g, MT.b = 6 * (gT - zT) * TT.b + (3 * gT - 4 * zT + 1) * UT.b + 6 * (-gT + zT) * mT.b + (3 * gT - 2 * zT) * WT.b
+      static Hermite1stDerivativeToRef(BB, jB, zB, QB, nB, dB) {
+        const IB = nB * nB;
+        dB.r = 6 * (IB - nB) * BB.r + (3 * IB - 4 * nB + 1) * jB.r + 6 * (-IB + nB) * zB.r + (3 * IB - 2 * nB) * QB.r, dB.g = 6 * (IB - nB) * BB.g + (3 * IB - 4 * nB + 1) * jB.g + 6 * (-IB + nB) * zB.g + (3 * IB - 2 * nB) * QB.g, dB.b = 6 * (IB - nB) * BB.b + (3 * IB - 4 * nB + 1) * jB.b + 6 * (-IB + nB) * zB.b + (3 * IB - 2 * nB) * QB.b
       }
       static Red() {
-        return new lT(1, 0, 0)
+        return new pB(1, 0, 0)
       }
       static Green() {
-        return new lT(0, 1, 0)
+        return new pB(0, 1, 0)
       }
       static Blue() {
-        return new lT(0, 0, 1)
+        return new pB(0, 0, 1)
       }
       static Black() {
-        return new lT(0, 0, 0)
+        return new pB(0, 0, 0)
       }
       static get BlackReadOnly() {
-        return lT._BlackReadOnly
+        return pB._BlackReadOnly
       }
       static White() {
-        return new lT(1, 1, 1)
+        return new pB(1, 1, 1)
       }
       static Purple() {
-        return new lT(.5, 0, .5)
+        return new pB(.5, 0, .5)
       }
       static Magenta() {
-        return new lT(1, 0, 1)
+        return new pB(1, 0, 1)
       }
       static Yellow() {
-        return new lT(1, 1, 0)
+        return new pB(1, 1, 0)
       }
       static Gray() {
-        return new lT(.5, .5, .5)
+        return new pB(.5, .5, .5)
       }
       static Teal() {
-        return new lT(0, 1, 1)
+        return new pB(0, 1, 1)
       }
       static Random() {
-        return new lT(Math.random(), Math.random(), Math.random())
+        return new pB(Math.random(), Math.random(), Math.random())
       }
     }
-    lT._V8PerformanceHack = new lT(.5, .5, .5), lT._BlackReadOnly = lT.Black();
-    class LT {
+    pB._V8PerformanceHack = new pB(.5, .5, .5), pB._BlackReadOnly = pB.Black();
+    class rB {
       constructor() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this.r = TT, this.g = UT, this.b = mT, this.a = WT
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this.r = BB, this.g = jB, this.b = zB, this.a = QB
       }
-      cWT() {
+      nQB() {
         return [this.r, this.g, this.b, this.a]
       }
-      toArray(TT) {
-        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return TT[UT] = this.r, TT[UT + 1] = this.g, TT[UT + 2] = this.b, TT[UT + 3] = this.a, this
+      toArray(BB) {
+        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return BB[jB] = this.r, BB[jB + 1] = this.g, BB[jB + 2] = this.b, BB[jB + 3] = this.a, this
       }
-      MmT(TT) {
-        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.r = TT[UT], this.g = TT[UT + 1], this.b = TT[UT + 2], this.a = TT[UT + 3], this
+      ljB(BB) {
+        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.r = BB[jB], this.g = BB[jB + 1], this.b = BB[jB + 2], this.a = BB[jB + 3], this
       }
-      equals(TT) {
-        return TT && this.r === TT.r && this.g === TT.g && this.b === TT.b && this.a === TT.a
+      equals(BB) {
+        return BB && this.r === BB.r && this.g === BB.g && this.b === BB.b && this.a === BB.a
       }
-      add(TT) {
-        return new LT(this.r + TT.r, this.g + TT.g, this.b + TT.b, this.a + TT.a)
+      add(BB) {
+        return new rB(this.r + BB.r, this.g + BB.g, this.b + BB.b, this.a + BB.a)
       }
-      addToRef(TT, UT) {
-        return UT.r = this.r + TT.r, UT.g = this.g + TT.g, UT.b = this.b + TT.b, UT.a = this.a + TT.a, UT
+      addToRef(BB, jB) {
+        return jB.r = this.r + BB.r, jB.g = this.g + BB.g, jB.b = this.b + BB.b, jB.a = this.a + BB.a, jB
       }
-      addInPlace(TT) {
-        return this.r += TT.r, this.g += TT.g, this.b += TT.b, this.a += TT.a, this
+      addInPlace(BB) {
+        return this.r += BB.r, this.g += BB.g, this.b += BB.b, this.a += BB.a, this
       }
-      addInPlaceFromFloats(TT, UT, mT, WT) {
-        return this.r += TT, this.g += UT, this.b += mT, this.a += WT, this
+      addInPlaceFromFloats(BB, jB, zB, QB) {
+        return this.r += BB, this.g += jB, this.b += zB, this.a += QB, this
       }
-      subtract(TT) {
-        return new LT(this.r - TT.r, this.g - TT.g, this.b - TT.b, this.a - TT.a)
+      subtract(BB) {
+        return new rB(this.r - BB.r, this.g - BB.g, this.b - BB.b, this.a - BB.a)
       }
-      subtractToRef(TT, UT) {
-        return UT.r = this.r - TT.r, UT.g = this.g - TT.g, UT.b = this.b - TT.b, UT.a = this.a - TT.a, UT
+      subtractToRef(BB, jB) {
+        return jB.r = this.r - BB.r, jB.g = this.g - BB.g, jB.b = this.b - BB.b, jB.a = this.a - BB.a, jB
       }
-      FWT(TT) {
-        return this.r -= TT.r, this.g -= TT.g, this.b -= TT.b, this.a -= TT.a, this
+      MQB(BB) {
+        return this.r -= BB.r, this.g -= BB.g, this.b -= BB.b, this.a -= BB.a, this
       }
-      subtractFromFloats(TT, UT, mT, WT) {
-        return new LT(this.r - TT, this.g - UT, this.b - mT, this.a - WT)
+      subtractFromFloats(BB, jB, zB, QB) {
+        return new rB(this.r - BB, this.g - jB, this.b - zB, this.a - QB)
       }
-      subtractFromFloatsToRef(TT, UT, mT, WT, zT) {
-        return zT.r = this.r - TT, zT.g = this.g - UT, zT.b = this.b - mT, zT.a = this.a - WT, zT
+      subtractFromFloatsToRef(BB, jB, zB, QB, nB) {
+        return nB.r = this.r - BB, nB.g = this.g - jB, nB.b = this.b - zB, nB.a = this.a - QB, nB
       }
-      scale(TT) {
-        return new LT(this.r * TT, this.g * TT, this.b * TT, this.a * TT)
+      scale(BB) {
+        return new rB(this.r * BB, this.g * BB, this.b * BB, this.a * BB)
       }
-      scaleInPlace(TT) {
-        return this.r *= TT, this.g *= TT, this.b *= TT, this.a *= TT, this
+      scaleInPlace(BB) {
+        return this.r *= BB, this.g *= BB, this.b *= BB, this.a *= BB, this
       }
-      scaleToRef(TT, UT) {
-        return UT.r = this.r * TT, UT.g = this.g * TT, UT.b = this.b * TT, UT.a = this.a * TT, UT
+      scaleToRef(BB, jB) {
+        return jB.r = this.r * BB, jB.g = this.g * BB, jB.b = this.b * BB, jB.a = this.a * BB, jB
       }
-      scaleAndAddToRef(TT, UT) {
-        return UT.r += this.r * TT, UT.g += this.g * TT, UT.b += this.b * TT, UT.a += this.a * TT, UT
+      scaleAndAddToRef(BB, jB) {
+        return jB.r += this.r * BB, jB.g += this.g * BB, jB.b += this.b * BB, jB.a += this.a * BB, jB
       }
       clampToRef() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          mT = arguments.length > 2 ? arguments[2] : void 0;
-        return mT.r = (0, MT.Clamp)(this.r, TT, UT), mT.g = (0, MT.Clamp)(this.g, TT, UT), mT.b = (0, MT.Clamp)(this.b, TT, UT), mT.a = (0, MT.Clamp)(this.a, TT, UT), mT
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          zB = arguments.length > 2 ? arguments[2] : void 0;
+        return zB.r = (0, dB.Clamp)(this.r, BB, jB), zB.g = (0, dB.Clamp)(this.g, BB, jB), zB.b = (0, dB.Clamp)(this.b, BB, jB), zB.a = (0, dB.Clamp)(this.a, BB, jB), zB
       }
-      multiply(TT) {
-        return new LT(this.r * TT.r, this.g * TT.g, this.b * TT.b, this.a * TT.a)
+      multiply(BB) {
+        return new rB(this.r * BB.r, this.g * BB.g, this.b * BB.b, this.a * BB.a)
       }
-      multiplyToRef(TT, UT) {
-        return UT.r = this.r * TT.r, UT.g = this.g * TT.g, UT.b = this.b * TT.b, UT.a = this.a * TT.a, UT
+      multiplyToRef(BB, jB) {
+        return jB.r = this.r * BB.r, jB.g = this.g * BB.g, jB.b = this.b * BB.b, jB.a = this.a * BB.a, jB
       }
-      multiplyInPlace(TT) {
-        return this.r *= TT.r, this.g *= TT.g, this.b *= TT.b, this.a *= TT.a, this
+      multiplyInPlace(BB) {
+        return this.r *= BB.r, this.g *= BB.g, this.b *= BB.b, this.a *= BB.a, this
       }
-      multiplyByFloats(TT, UT, mT, WT) {
-        return new LT(this.r * TT, this.g * UT, this.b * mT, this.a * WT)
+      multiplyByFloats(BB, jB, zB, QB) {
+        return new rB(this.r * BB, this.g * jB, this.b * zB, this.a * QB)
       }
-      divide(TT) {
+      divide(BB) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(TT, UT) {
+      divideToRef(BB, jB) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(TT) {
+      divideInPlace(BB) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(TT) {
-        return this.r = Math.min(this.r, TT.r), this.g = Math.min(this.g, TT.g), this.b = Math.min(this.b, TT.b), this.a = Math.min(this.a, TT.a), this
+      minimizeInPlace(BB) {
+        return this.r = Math.min(this.r, BB.r), this.g = Math.min(this.g, BB.g), this.b = Math.min(this.b, BB.b), this.a = Math.min(this.a, BB.a), this
       }
-      maximizeInPlace(TT) {
-        return this.r = Math.max(this.r, TT.r), this.g = Math.max(this.g, TT.g), this.b = Math.max(this.b, TT.b), this.a = Math.max(this.a, TT.a), this
+      maximizeInPlace(BB) {
+        return this.r = Math.max(this.r, BB.r), this.g = Math.max(this.g, BB.g), this.b = Math.max(this.b, BB.b), this.a = Math.max(this.a, BB.a), this
       }
-      minimizeInPlaceFromFloats(TT, UT, mT, WT) {
-        return this.r = Math.min(TT, this.r), this.g = Math.min(UT, this.g), this.b = Math.min(mT, this.b), this.a = Math.min(WT, this.a), this
+      minimizeInPlaceFromFloats(BB, jB, zB, QB) {
+        return this.r = Math.min(BB, this.r), this.g = Math.min(jB, this.g), this.b = Math.min(zB, this.b), this.a = Math.min(QB, this.a), this
       }
-      maximizeInPlaceFromFloats(TT, UT, mT, WT) {
-        return this.r = Math.max(TT, this.r), this.g = Math.max(UT, this.g), this.b = Math.max(mT, this.b), this.a = Math.max(WT, this.a), this
+      maximizeInPlaceFromFloats(BB, jB, zB, QB) {
+        return this.r = Math.max(BB, this.r), this.g = Math.max(jB, this.g), this.b = Math.max(zB, this.b), this.a = Math.max(QB, this.a), this
       }
-      floorToRef(TT) {
+      floorToRef(BB) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(TT) {
+      fractToRef(BB) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      ck() {
+      bu() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(TT) {
+      negateToRef(BB) {
         throw new ReferenceError("Can not negate a color")
       }
-      equalsWithEpsilon(TT) {
-        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zT.c;
-        return (0, MT.WithinEpsilon)(this.r, TT.r, UT) && (0, MT.WithinEpsilon)(this.g, TT.g, UT) && (0, MT.WithinEpsilon)(this.b, TT.b, UT) && (0, MT.WithinEpsilon)(this.a, TT.a, UT)
+      equalsWithEpsilon(BB) {
+        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nB.c;
+        return (0, dB.WithinEpsilon)(this.r, BB.r, jB) && (0, dB.WithinEpsilon)(this.g, BB.g, jB) && (0, dB.WithinEpsilon)(this.b, BB.b, jB) && (0, dB.WithinEpsilon)(this.a, BB.a, jB)
       }
-      UnT(TT, UT, mT, WT) {
-        return this.r === TT && this.g === UT && this.b === mT && this.a === WT
+      YIB(BB, jB, zB, QB) {
+        return this.r === BB && this.g === jB && this.b === zB && this.a === QB
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + " A:" + this.a + "}"
@@ -460,346 +460,346 @@ export const modules = {
         return "Color4"
       }
       getHashCode() {
-        let TT = 255 * this.r | 0;
-        return TT = 397 * TT ^ 255 * this.g, TT = 397 * TT ^ 255 * this.b, TT = 397 * TT ^ 255 * this.a, TT
+        let BB = 255 * this.r | 0;
+        return BB = 397 * BB ^ 255 * this.g, BB = 397 * BB ^ 255 * this.b, BB = 397 * BB ^ 255 * this.a, BB
       }
       clone() {
-        return (new LT).Gw(this)
+        return (new rB).jH(this)
       }
-      Gw(TT) {
-        return this.r = TT.r, this.g = TT.g, this.b = TT.b, this.a = TT.a, this
+      jH(BB) {
+        return this.r = BB.r, this.g = BB.g, this.b = BB.b, this.a = BB.a, this
       }
-      J9(TT, UT, mT, WT) {
-        return this.r = TT, this.g = UT, this.b = mT, this.a = WT, this
+      U3(BB, jB, zB, QB) {
+        return this.r = BB, this.g = jB, this.b = zB, this.a = QB, this
       }
-      set(TT, UT, mT, WT) {
-        return this.J9(TT, UT, mT, WT)
+      set(BB, jB, zB, QB) {
+        return this.U3(BB, jB, zB, QB)
       }
-      B3(TT) {
-        return this.r = this.g = this.b = this.a = TT, this
+      S_(BB) {
+        return this.r = this.g = this.b = this.a = BB, this
       }
       toHexString() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const UT = Math.round(255 * this.r),
-          mT = Math.round(255 * this.g),
-          WT = Math.round(255 * this.b);
-        if (TT) return "#" + (0, MT.ToHex)(UT) + (0, MT.ToHex)(mT) + (0, MT.ToHex)(WT);
-        const zT = Math.round(255 * this.a);
-        return "#" + (0, MT.ToHex)(UT) + (0, MT.ToHex)(mT) + (0, MT.ToHex)(WT) + (0, MT.ToHex)(zT)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const jB = Math.round(255 * this.r),
+          zB = Math.round(255 * this.g),
+          QB = Math.round(255 * this.b);
+        if (BB) return "#" + (0, dB.ToHex)(jB) + (0, dB.ToHex)(zB) + (0, dB.ToHex)(QB);
+        const nB = Math.round(255 * this.a);
+        return "#" + (0, dB.ToHex)(jB) + (0, dB.ToHex)(zB) + (0, dB.ToHex)(QB) + (0, dB.ToHex)(nB)
       }
-      fromHexString(TT) {
-        return "#" !== TT.substring(0, 1) || 9 !== TT.length && 7 !== TT.length || (this.r = parseInt(TT.substring(1, 3), 16) / 255, this.g = parseInt(TT.substring(3, 5), 16) / 255, this.b = parseInt(TT.substring(5, 7), 16) / 255, 9 === TT.length && (this.a = parseInt(TT.substring(7, 9), 16) / 255)), this
+      fromHexString(BB) {
+        return "#" !== BB.substring(0, 1) || 9 !== BB.length && 7 !== BB.length || (this.r = parseInt(BB.substring(1, 3), 16) / 255, this.g = parseInt(BB.substring(3, 5), 16) / 255, this.b = parseInt(BB.substring(5, 7), 16) / 255, 9 === BB.length && (this.a = parseInt(BB.substring(7, 9), 16) / 255)), this
       }
       toLinearSpace() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const UT = new LT;
-        return this.toLinearSpaceToRef(UT, TT), UT
+        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const jB = new rB;
+        return this.toLinearSpaceToRef(jB, BB), jB
       }
-      toLinearSpaceToRef(TT) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = HT(this.r), TT.g = HT(this.g), TT.b = HT(this.b)) : (TT.r = nT(this.r), TT.g = nT(this.g), TT.b = nT(this.b)), TT.a = this.a, this
+      toLinearSpaceToRef(BB) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (BB.r = uB(this.r), BB.g = uB(this.g), BB.b = uB(this.b)) : (BB.r = NB(this.r), BB.g = NB(this.g), BB.b = NB(this.b)), BB.a = this.a, this
       }
       toGammaSpace() {
-        let TT = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const UT = new LT;
-        return this.toGammaSpaceToRef(UT, TT), UT
+        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const jB = new rB;
+        return this.toGammaSpaceToRef(jB, BB), jB
       }
-      toGammaSpaceToRef(TT) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (TT.r = jT(this.r), TT.g = jT(this.g), TT.b = jT(this.b)) : (TT.r = kT(this.r), TT.g = kT(this.g), TT.b = kT(this.b)), TT.a = this.a, this
+      toGammaSpaceToRef(BB) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (BB.r = aB(this.r), BB.g = aB(this.g), BB.b = aB(this.b)) : (BB.r = UB(this.r), BB.g = UB(this.g), BB.b = UB(this.b)), BB.a = this.a, this
       }
-      static FromHexString(TT) {
-        return "#" !== TT.substring(0, 1) || 9 !== TT.length && 7 !== TT.length ? new LT(0, 0, 0, 0) : new LT(0, 0, 0, 1).fromHexString(TT)
+      static FromHexString(BB) {
+        return "#" !== BB.substring(0, 1) || 9 !== BB.length && 7 !== BB.length ? new rB(0, 0, 0, 0) : new rB(0, 0, 0, 1).fromHexString(BB)
       }
-      static Lerp(TT, UT, mT) {
-        return LT.LerpToRef(TT, UT, mT, new LT)
+      static Lerp(BB, jB, zB) {
+        return rB.LerpToRef(BB, jB, zB, new rB)
       }
-      static LerpToRef(TT, UT, mT, WT) {
-        return WT.r = TT.r + (UT.r - TT.r) * mT, WT.g = TT.g + (UT.g - TT.g) * mT, WT.b = TT.b + (UT.b - TT.b) * mT, WT.a = TT.a + (UT.a - TT.a) * mT, WT
+      static LerpToRef(BB, jB, zB, QB) {
+        return QB.r = BB.r + (jB.r - BB.r) * zB, QB.g = BB.g + (jB.g - BB.g) * zB, QB.b = BB.b + (jB.b - BB.b) * zB, QB.a = BB.a + (jB.a - BB.a) * zB, QB
       }
-      static Hermite(TT, UT, mT, WT, zT) {
-        const MT = zT * zT,
-          gT = zT * MT,
-          nT = 2 * gT - 3 * MT + 1,
-          HT = -2 * gT + 3 * MT,
-          kT = gT - 2 * MT + zT,
-          jT = gT - MT,
-          lT = TT.r * nT + mT.r * HT + UT.r * kT + WT.r * jT,
-          pT = TT.g * nT + mT.g * HT + UT.g * kT + WT.g * jT,
-          BT = TT.b * nT + mT.b * HT + UT.b * kT + WT.b * jT,
-          ZT = TT.a * nT + mT.a * HT + UT.a * kT + WT.a * jT;
-        return new LT(lT, pT, BT, ZT)
+      static Hermite(BB, jB, zB, QB, nB) {
+        const dB = nB * nB,
+          IB = nB * dB,
+          NB = 2 * IB - 3 * dB + 1,
+          uB = -2 * IB + 3 * dB,
+          UB = IB - 2 * dB + nB,
+          aB = IB - dB,
+          pB = BB.r * NB + zB.r * uB + jB.r * UB + QB.r * aB,
+          sB = BB.g * NB + zB.g * uB + jB.g * UB + QB.g * aB,
+          JB = BB.b * NB + zB.b * uB + jB.b * UB + QB.b * aB,
+          mB = BB.a * NB + zB.a * uB + jB.a * UB + QB.a * aB;
+        return new rB(pB, sB, JB, mB)
       }
-      static Hermite1stDerivative(TT, UT, mT, WT, zT) {
-        const MT = new LT;
-        return this.Hermite1stDerivativeToRef(TT, UT, mT, WT, zT, MT), MT
+      static Hermite1stDerivative(BB, jB, zB, QB, nB) {
+        const dB = new rB;
+        return this.Hermite1stDerivativeToRef(BB, jB, zB, QB, nB, dB), dB
       }
-      static Hermite1stDerivativeToRef(TT, UT, mT, WT, zT, MT) {
-        const gT = zT * zT;
-        MT.r = 6 * (gT - zT) * TT.r + (3 * gT - 4 * zT + 1) * UT.r + 6 * (-gT + zT) * mT.r + (3 * gT - 2 * zT) * WT.r, MT.g = 6 * (gT - zT) * TT.g + (3 * gT - 4 * zT + 1) * UT.g + 6 * (-gT + zT) * mT.g + (3 * gT - 2 * zT) * WT.g, MT.b = 6 * (gT - zT) * TT.b + (3 * gT - 4 * zT + 1) * UT.b + 6 * (-gT + zT) * mT.b + (3 * gT - 2 * zT) * WT.b, MT.a = 6 * (gT - zT) * TT.a + (3 * gT - 4 * zT + 1) * UT.a + 6 * (-gT + zT) * mT.a + (3 * gT - 2 * zT) * WT.a
+      static Hermite1stDerivativeToRef(BB, jB, zB, QB, nB, dB) {
+        const IB = nB * nB;
+        dB.r = 6 * (IB - nB) * BB.r + (3 * IB - 4 * nB + 1) * jB.r + 6 * (-IB + nB) * zB.r + (3 * IB - 2 * nB) * QB.r, dB.g = 6 * (IB - nB) * BB.g + (3 * IB - 4 * nB + 1) * jB.g + 6 * (-IB + nB) * zB.g + (3 * IB - 2 * nB) * QB.g, dB.b = 6 * (IB - nB) * BB.b + (3 * IB - 4 * nB + 1) * jB.b + 6 * (-IB + nB) * zB.b + (3 * IB - 2 * nB) * QB.b, dB.a = 6 * (IB - nB) * BB.a + (3 * IB - 4 * nB + 1) * jB.a + 6 * (-IB + nB) * zB.a + (3 * IB - 2 * nB) * QB.a
       }
-      static FromColor3(TT) {
-        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new LT(TT.r, TT.g, TT.b, UT)
+      static FromColor3(BB) {
+        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new rB(BB.r, BB.g, BB.b, jB)
       }
-      static FromArray(TT) {
-        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new LT(TT[UT], TT[UT + 1], TT[UT + 2], TT[UT + 3])
+      static FromArray(BB) {
+        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new rB(BB[jB], BB[jB + 1], BB[jB + 2], BB[jB + 3])
       }
-      static FromArrayToRef(TT) {
-        let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          mT = arguments.length > 2 ? arguments[2] : void 0;
-        mT.r = TT[UT], mT.g = TT[UT + 1], mT.b = TT[UT + 2], mT.a = TT[UT + 3]
+      static FromArrayToRef(BB) {
+        let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          zB = arguments.length > 2 ? arguments[2] : void 0;
+        zB.r = BB[jB], zB.g = BB[jB + 1], zB.b = BB[jB + 2], zB.a = BB[jB + 3]
       }
-      static FromInts(TT, UT, mT, WT) {
-        return new LT(TT / 255, UT / 255, mT / 255, WT / 255)
+      static FromInts(BB, jB, zB, QB) {
+        return new rB(BB / 255, jB / 255, zB / 255, QB / 255)
       }
-      static CheckColors4(TT, UT) {
-        if (TT.length === 3 * UT) {
-          const UT = [];
-          for (let mT = 0; mT < TT.length; mT += 3) {
-            const WT = mT / 3 * 4;
-            UT[WT] = TT[mT], UT[WT + 1] = TT[mT + 1], UT[WT + 2] = TT[mT + 2], UT[WT + 3] = 1
+      static CheckColors4(BB, jB) {
+        if (BB.length === 3 * jB) {
+          const jB = [];
+          for (let zB = 0; zB < BB.length; zB += 3) {
+            const QB = zB / 3 * 4;
+            jB[QB] = BB[zB], jB[QB + 1] = BB[zB + 1], jB[QB + 2] = BB[zB + 2], jB[QB + 3] = 1
           }
-          return UT
+          return jB
         }
-        return TT
+        return BB
       }
     }
-    LT._V8PerformanceHack = new LT(.5, .5, .5, .5);
-    class pT {}
-    pT.Color3 = (0, WT.c)(3, lT.Black), pT.Color4 = (0, WT.c)(3, (() => new LT(0, 0, 0, 0)));
-    let BT = !1;
+    rB._V8PerformanceHack = new rB(.5, .5, .5, .5);
+    class sB {}
+    sB.Color3 = (0, QB.c)(3, pB.Black), sB.Color4 = (0, QB.c)(3, (() => new rB(0, 0, 0, 0)));
+    let JB = !1;
 
-    function ZT() {
-      BT || (BT = !0, Object.defineProperties(lT.prototype, {
+    function mB() {
+      JB || (JB = !0, Object.defineProperties(pB.prototype, {
         dimension: {
           value: [3]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(LT.prototype, {
+      }), Object.defineProperties(rB.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), (0, gT.h)("BABYLON.Color3", lT), (0, gT.h)("BABYLON.Color4", LT))
+      }), (0, IB.d)("BABYLON.Color3", pB), (0, IB.d)("BABYLON.Color4", rB))
     }
   },
-  37196: (TT, UT, mT) => {
-    mT.d(UT, {
-      c: () => MT,
-      d: () => WT,
-      f: () => zT
+  37178: (BB, jB, zB) => {
+    zB.d(jB, {
+      c: () => dB,
+      g: () => QB,
+      h: () => nB
     });
-    const WT = 1 / 2.2,
-      zT = 2.2;
+    const QB = 1 / 2.2,
+      nB = 2.2;
     Math.sqrt(5);
-    let MT = .001
+    let dB = .001
   },
-  37226: (TT, UT, mT) => {
-    function WT(TT) {
-      return parseInt(TT.toString().replace(/\W/g, ""))
+  37208: (BB, jB, zB) => {
+    function QB(BB) {
+      return parseInt(BB.toString().replace(/\W/g, ""))
     }
 
-    function zT(TT, UT) {
-      let mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
-      return Math.abs(TT - UT) <= mT
+    function nB(BB, jB) {
+      let zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
+      return Math.abs(BB - jB) <= zB
     }
 
-    function MT(TT, UT, mT) {
-      let WT = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
-      return TT < UT - WT || TT > mT + WT
+    function dB(BB, jB, zB) {
+      let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
+      return BB < jB - QB || BB > zB + QB
     }
 
-    function gT(TT, UT) {
-      return TT === UT ? TT : Math.random() * (UT - TT) + TT
+    function IB(BB, jB) {
+      return BB === jB ? BB : Math.random() * (jB - BB) + BB
     }
 
-    function nT(TT, UT, mT) {
-      return TT + (UT - TT) * mT
+    function NB(BB, jB, zB) {
+      return BB + (jB - BB) * zB
     }
 
-    function HT(TT, UT, mT) {
-      let WT = cT(UT - TT, 360);
-      return WT > 180 && (WT -= 360), TT + WT * LT(mT)
+    function uB(BB, jB, zB) {
+      let QB = yB(jB - BB, 360);
+      return QB > 180 && (QB -= 360), BB + QB * rB(zB)
     }
 
-    function kT(TT, UT, mT) {
-      let WT;
-      return WT = TT != UT ? LT((mT - TT) / (UT - TT)) : 0, WT
+    function UB(BB, jB, zB) {
+      let QB;
+      return QB = BB != jB ? rB((zB - BB) / (jB - BB)) : 0, QB
     }
 
-    function jT(TT, UT, mT, WT, zT) {
-      const MT = zT * zT,
-        gT = zT * MT;
-      return TT * (2 * gT - 3 * MT + 1) + mT * (-2 * gT + 3 * MT) + UT * (gT - 2 * MT + zT) + WT * (gT - MT)
+    function aB(BB, jB, zB, QB, nB) {
+      const dB = nB * nB,
+        IB = nB * dB;
+      return BB * (2 * IB - 3 * dB + 1) + zB * (-2 * IB + 3 * dB) + jB * (IB - 2 * dB + nB) + QB * (IB - dB)
     }
 
-    function lT(TT, UT, mT, WT, zT) {
-      const MT = zT * zT;
-      return 6 * (MT - zT) * TT + (3 * MT - 4 * zT + 1) * UT + 6 * (-MT + zT) * mT + (3 * MT - 2 * zT) * WT
+    function pB(BB, jB, zB, QB, nB) {
+      const dB = nB * nB;
+      return 6 * (dB - nB) * BB + (3 * dB - 4 * nB + 1) * jB + 6 * (-dB + nB) * zB + (3 * dB - 2 * nB) * QB
     }
 
-    function LT(TT) {
-      let UT = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        mT = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return Math.min(mT, Math.max(UT, TT))
+    function rB(BB) {
+      let jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        zB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Math.min(zB, Math.max(jB, BB))
     }
 
-    function pT(TT) {
-      return TT -= 2 * Math.PI * Math.floor((TT + Math.PI) / (2 * Math.PI))
+    function sB(BB) {
+      return BB -= 2 * Math.PI * Math.floor((BB + Math.PI) / (2 * Math.PI))
     }
 
-    function BT(TT) {
-      const UT = TT.toString(16);
-      return TT <= 15 ? ("0" + UT).toUpperCase() : UT.toUpperCase()
+    function JB(BB) {
+      const jB = BB.toString(16);
+      return BB <= 15 ? ("0" + jB).toUpperCase() : jB.toUpperCase()
     }
 
-    function ZT(TT) {
-      if (Math.log2) return Math.floor(Math.log2(TT));
-      if (TT < 0) return NaN;
-      if (0 === TT) return -1 / 0;
-      let UT = 0;
-      if (TT < 1) {
-        for (; TT < 1;) UT++, TT *= 2;
-        UT = -UT
-      } else if (TT > 1)
-        for (; TT > 1;) UT++, TT = Math.floor(TT / 2);
-      return UT
+    function mB(BB) {
+      if (Math.log2) return Math.floor(Math.log2(BB));
+      if (BB < 0) return NaN;
+      if (0 === BB) return -1 / 0;
+      let jB = 0;
+      if (BB < 1) {
+        for (; BB < 1;) jB++, BB *= 2;
+        jB = -jB
+      } else if (BB > 1)
+        for (; BB > 1;) jB++, BB = Math.floor(BB / 2);
+      return jB
     }
 
-    function cT(TT, UT) {
-      return TT - Math.floor(TT / UT) * UT
+    function yB(BB, jB) {
+      return BB - Math.floor(BB / jB) * jB
     }
 
-    function vT(TT, UT, mT) {
-      return (TT - UT) / (mT - UT)
+    function kB(BB, jB, zB) {
+      return (BB - jB) / (zB - jB)
     }
 
-    function fT(TT, UT, mT) {
-      return TT * (mT - UT) + UT
+    function GB(BB, jB, zB) {
+      return BB * (zB - jB) + jB
     }
 
-    function qT(TT, UT) {
-      let mT = cT(UT - TT, 360);
-      return mT > 180 && (mT -= 360), mT
+    function LB(BB, jB) {
+      let zB = yB(jB - BB, 360);
+      return zB > 180 && (zB -= 360), zB
     }
 
-    function iT(TT, UT) {
-      const mT = cT(TT, 2 * UT);
-      return UT - Math.abs(mT - UT)
+    function gB(BB, jB) {
+      const zB = yB(BB, 2 * jB);
+      return jB - Math.abs(zB - jB)
     }
 
-    function bT(TT, UT, mT) {
-      let WT = LT(mT);
-      return WT = -2 * WT * WT * WT + 3 * WT * WT, UT * WT + TT * (1 - WT)
+    function tB(BB, jB, zB) {
+      let QB = rB(zB);
+      return QB = -2 * QB * QB * QB + 3 * QB * QB, jB * QB + BB * (1 - QB)
     }
 
-    function OT(TT, UT, mT) {
-      let WT;
-      return WT = Math.abs(UT - TT) <= mT ? UT : TT + Math.sign(UT - TT) * mT, WT
+    function SB(BB, jB, zB) {
+      let QB;
+      return QB = Math.abs(jB - BB) <= zB ? jB : BB + Math.sign(jB - BB) * zB, QB
     }
 
-    function eT(TT, UT, mT) {
-      const WT = qT(TT, UT);
-      let zT;
-      return zT = -mT < WT && WT < mT ? UT : OT(TT, UT = TT + WT, mT), zT
+    function MB(BB, jB, zB) {
+      const QB = LB(BB, jB);
+      let nB;
+      return nB = -zB < QB && QB < zB ? jB : SB(BB, jB = BB + QB, zB), nB
     }
 
-    function YT(TT, UT, mT) {
-      return (TT - UT) / (mT - UT)
+    function EB(BB, jB, zB) {
+      return (BB - jB) / (zB - jB)
     }
 
-    function JT(TT, UT, mT) {
-      return (mT - UT) * TT + UT
+    function iB(BB, jB, zB) {
+      return (zB - jB) * BB + jB
     }
 
-    function xT(TT, UT) {
-      const mT = TT % UT;
-      return 0 === mT ? UT : xT(UT, mT)
+    function qB(BB, jB) {
+      const zB = BB % jB;
+      return 0 === zB ? jB : qB(jB, zB)
     }
-    mT.r(UT), mT.d(UT, {
-      Clamp: () => LT,
-      DeltaAngle: () => qT,
-      Denormalize: () => fT,
-      ExtractAsInt: () => WT,
-      Hermite: () => jT,
-      Hermite1stDerivative: () => lT,
-      HighestCommonFactor: () => xT,
-      ILog2: () => ZT,
-      InverseLerp: () => kT,
-      Lerp: () => nT,
-      LerpAngle: () => HT,
-      MoveTowards: () => OT,
-      MoveTowardsAngle: () => eT,
-      Normalize: () => vT,
-      NormalizeRadians: () => pT,
-      OutsideRange: () => MT,
-      PercentToRange: () => JT,
-      PingPong: () => iT,
-      RandomRange: () => gT,
-      RangeToPercent: () => YT,
-      Repeat: () => cT,
-      SmoothStep: () => bT,
-      ToHex: () => BT,
-      WithinEpsilon: () => zT
+    zB.r(jB), zB.d(jB, {
+      Clamp: () => rB,
+      DeltaAngle: () => LB,
+      Denormalize: () => GB,
+      ExtractAsInt: () => QB,
+      Hermite: () => aB,
+      Hermite1stDerivative: () => pB,
+      HighestCommonFactor: () => qB,
+      ILog2: () => mB,
+      InverseLerp: () => UB,
+      Lerp: () => NB,
+      LerpAngle: () => uB,
+      MoveTowards: () => SB,
+      MoveTowardsAngle: () => MB,
+      Normalize: () => kB,
+      NormalizeRadians: () => sB,
+      OutsideRange: () => dB,
+      PercentToRange: () => iB,
+      PingPong: () => gB,
+      RandomRange: () => IB,
+      RangeToPercent: () => EB,
+      Repeat: () => yB,
+      SmoothStep: () => tB,
+      ToHex: () => JB,
+      WithinEpsilon: () => nB
     })
   },
-  37205: (TT, UT, mT) => {
-    function WT(TT, UT) {
-      const mT = [];
-      for (let WT = 0; WT < TT; ++WT) mT.push(UT());
-      return mT
+  37186: (BB, jB, zB) => {
+    function QB(BB, jB) {
+      const zB = [];
+      for (let QB = 0; QB < BB; ++QB) zB.push(jB());
+      return zB
     }
 
-    function zT(TT, UT) {
-      return WT(TT, UT)
+    function nB(BB, jB) {
+      return QB(BB, jB)
     }
-    mT.d(UT, {
-      c: () => WT,
-      d: () => zT,
-      e: () => gT
+    zB.d(jB, {
+      c: () => QB,
+      g: () => nB,
+      k: () => IB
     });
-    const MT = ["push", "splice", "pop", "shift", "unshift"];
+    const dB = ["push", "splice", "pop", "shift", "unshift"];
 
-    function gT(TT, UT) {
-      const mT = MT.map((mT => function(TT, UT, mT) {
-        const WT = TT[UT];
-        if ("function" !== typeof WT) return null;
-        const zT = function() {
-          const WT = TT.length,
-            MT = zT.previous.apply(TT, arguments);
-          return mT(UT, WT), MT
+    function IB(BB, jB) {
+      const zB = dB.map((zB => function(BB, jB, zB) {
+        const QB = BB[jB];
+        if ("function" !== typeof QB) return null;
+        const nB = function() {
+          const QB = BB.length,
+            dB = nB.previous.apply(BB, arguments);
+          return zB(jB, QB), dB
         };
-        return WT.next = zT, zT.previous = WT, TT[UT] = zT, () => {
-          const mT = zT.previous;
-          if (!mT) return;
-          const WT = zT.next;
-          WT ? (mT.next = WT, WT.previous = mT) : (mT.next = void 0, TT[UT] = mT), zT.next = void 0, zT.previous = void 0
+        return QB.next = nB, nB.previous = QB, BB[jB] = nB, () => {
+          const zB = nB.previous;
+          if (!zB) return;
+          const QB = nB.next;
+          QB ? (zB.next = QB, QB.previous = zB) : (zB.next = void 0, BB[jB] = zB), nB.next = void 0, nB.previous = void 0
         }
-      }(TT, mT, UT)));
+      }(BB, zB, jB)));
       return () => {
-        for (const TT of mT) TT?.()
+        for (const BB of zB) BB?.()
       }
     }
   },
-  37239: (TT, UT, mT) => {
-    mT.d(UT, {
-      d: () => MT,
-      h: () => zT
+  37222: (BB, jB, zB) => {
+    zB.d(jB, {
+      b: () => dB,
+      d: () => nB
     });
-    const WT = {};
+    const QB = {};
 
-    function zT(TT, UT) {
-      WT[TT] = UT
+    function nB(BB, jB) {
+      QB[BB] = jB
     }
 
-    function MT(TT) {
-      return WT[TT]
+    function dB(BB) {
+      return QB[BB]
     }
   }
 };
 Object.freeze(modules);
-for (const TT in modules) Object.freeze(modules[TT]);
+for (const BB in modules) Object.freeze(modules[BB]);
